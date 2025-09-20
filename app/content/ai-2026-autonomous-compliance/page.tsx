@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Compliance Operating Model';
-  description: 'Design a compliance-as-code operating model for AI agents with automated evidence collection, continuous controls testing, and audit readiness.',
-};
+  title: 'AI 2026: Autonomous Compliance Operating Model',
+  description: 'Design a compliance-as-code operating model for AI agents with automated evidence collection, continuous controls testing, and audit readiness.'
+},
 export default function AutonomousCompliance2026() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -28,7 +28,6 @@ export default function AutonomousCompliance2026() {,
         <h2>Outcomes</h2>,
         <p>Reduce manual effort, improve control effectiveness, and provide provable assurance of responsible AI operations.</p>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

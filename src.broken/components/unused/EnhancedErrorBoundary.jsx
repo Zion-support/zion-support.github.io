@@ -10,15 +10,15 @@
           {process.env.NODE_ENV === 'development' && error && (
             <details className="mt-6 text-left">
 =======
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
     componentDidCatch(error, errorInfo) {
 
-        this.setState({ errorInfo });
+        this.setState({ errorInfo }),
         // Log error to console'
-        // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
+        // // // // // // // // console.error('Error caught by boundary:', error, errorInfo),
         // Call custom error handler if provided
         if(this.props.onError) {
 
@@ -52,20 +52,20 @@ export default function Page() {
                 width: window.innerWidth,
                 height: window.innerHeight
 
-        };
+        },
         // Log to console for development'
         if(process.env.NODE_ENV === 'development') {
 
-            console.group('Error Report');
-            // // // // // // // // console.log('Error ID:', errorReport.id);
-            // // // // // // // // console.log('Error Details:', errorReport);
-            console.groupEnd();
+            console.group('Error Report'),
+            // // // // // // // // console.log('Error ID:', errorReport.id),
+            // // // // // // // // console.log('Error Details:', errorReport),
+            console.groupEnd(),
 
         // In production, you would send this to your error reporting service
-        // Example: Sentry.captureException(error, { extra: errorReport });
+        // Example: Sentry.captureException(error, { extra: errorReport }),
 
-            // console.log('Error ID:', errorReport.id);
-            // console.log('Error Details:', errorReport);
+            // console.log('Error ID:', errorReport.id),
+            // console.log('Error Details:', errorReport),
             console.groupEnd()}
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport })}
@@ -77,17 +77,17 @@ export default function Page() {
             errorInfo: null,
             errorId: null,
             showStackTrace: false
-        })};
+        })},
     handleGoHome = () => {
 
-        window.location.href = '/'};
+        window.location.href = '/'},
     handleReportIssue = () => {
-        const errorInfo = this.state.errorInfo;
+        const errorInfo = this.state.errorInfo,
         if(error && errorInfo) {
 `
-            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
+            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`,
             window.open(issueUrl,_blank')}
-    };
+    },
                 return this.props.fallback}
             // Default error UI
             return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
@@ -111,18 +111,18 @@ export default function Page() {
                   <p className="text-red-100">We've encountered an unexpected error</p>
 
     // Add global error handler'
-    window.addEventListener('error', handleError);
+    window.addEventListener('error', handleError),
     window.addEventListener('unhandledrejection', (event) => {
 
-      handleError(event.reason, { componentStack: 'Promise rejection' });
-    });
+      handleError(event.reason, { componentStack: 'Promise rejection' }),
+    }),
 
     return () => {
 
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleError);
-    };
-  }, []);
+      window.removeEventListener('error', handleError),
+      window.removeEventListener('unhandledrejection', handleError),
+    },
+  }, []),
 
   if(hasError) {
 
@@ -188,19 +188,19 @@ export default function Page() {
                   </div>
                 )}
               </div>
-            </details>;
+            </details>,
           )}
         </motion.div>
       </div>
-    );
+    ),
 
-    return fallback || defaultFallback;
+    return fallback || defaultFallback,
   }
 
-  return children;
-};
-;
-export { EnhancedErrorBoundary };
-export default EnhancedErrorBoundary;
+  return children,
+},
+,
+export { EnhancedErrorBoundary },
+export default EnhancedErrorBoundary,
 }}}}}}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

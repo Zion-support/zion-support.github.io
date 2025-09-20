@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-      ],
+      ]
     },
     {
       id: 'micro - saas',
@@ -15,56 +15,50 @@ export default function Page() {
           price: '$150 / month',
           marketPrice: '$200 - 400 / month',
           features: [
-            'AI Resource Optimization',
-            'Risk Prediction',
-            'Team Collaboration',
+            'AI Resource OptimizationRisk Prediction',
+            'Team Collaboration'
           ],
-          benefits: ['30% faster completion',
-            '20% resource optimization',
-            'Improved productivity',
+          benefits: ['30% faster completion20% resource optimization',
+            'Improved productivity'
           ],
           icon: Workflow,
           category: 'micro - saas',
           badge: 'Best Value',
-          roi: '200%',
+          roi: '200%'
         },
         {
           name: 'Smart Inventory Management',
           description: 'AI - driven inventory optimization and forecasting',
           price: '$200 / month',
           marketPrice: '$250 - 500 / month',
-          features: ['Demand Forecasting',
-            'Automated Reordering',
-            'Multi - location Support',
+          features: ['Demand ForecastingAutomated Reordering',
+            'Multi - location Support'
           ],
-          benefits: ['25% cost reduction',
-            '99% stock availability',
-            'Automated procurement',
+          benefits: ['25% cost reduction99% stock availability',
+            'Automated procurement'
           ],
           icon: Truck,
           category: 'micro - saas',
           badge: 'Popular',
-          roi: '180%',
+          roi: '180%'
         },
         {
           name: 'AI Content Creation Platform',
           description: 'Automated content generation with SEO optimization',
           price: '$120 / month',
           marketPrice: '$150 - 300 / month',
-          features: ['Multi - format Content',
-            'SEO Optimization',
-            'Brand Consistency',
+          features: ['Multi - format ContentSEO Optimization',
+            'Brand Consistency'
           ],
-          benefits: ['10x faster creation',
-            'Improved SEO rankings',
-            'Consistent brand voice',
+          benefits: ['10x faster creationImproved SEO rankings',
+            'Consistent brand voice'
           ],
           icon: Brain,
           category: 'micro - saas',
           badge: 'New',
-          roi: '150%',
-        },
-      ],
+          roi: '150%'
+        }
+      ]
     },
     {
       id: 'it - infrastructure',
@@ -79,36 +73,32 @@ export default function Page() {
           price: '$5,000 / project',
           marketPrice: '$8,000 - 15,000 / project',
           features: [
-            'Multi - cloud Strategy',
-            'Cost Optimization',
-            'Performance Tuning',
+            'Multi - cloud StrategyCost Optimization',
+            'Performance Tuning'
           ],
-          benefits: ['40% cost reduction',
-            '99.9% uptime',
-            'Scalable infrastructure',
+          benefits: ['40% cost reduction99.9% uptime',
+            'Scalable infrastructure'
           ],
           icon: Cloud,
           category: 'it - infrastructure',
           badge: 'Featured',
-          roi: '350%',
+          roi: '350%'
         },
         {
           name: 'DevOps Automation Platform',
           description: 'End - to - end DevOps automation with CI / CD pipelines',
           price: '$2,800 / month',
           marketPrice: '$3,500 - 6,000 / month',
-          features: ['CI / CD Pipelines',
-            'Infrastructure as Code',
-            'Automated Testing',
+          features: ['CI / CD PipelinesInfrastructure as Code',
+            'Automated Testing'
           ],
-          benefits: ['80% faster deployments',
-            'Reduced errors',
-            'Improved code quality',
+          benefits: ['80% faster deploymentsReduced errors',
+            'Improved code quality'
           ],
           icon: Code,
           category: 'it - infrastructure',
           badge: 'Popular',
-          roi: '280%',
+          roi: '280%'
         },
         {
           name: 'Cybersecurity Compliance Suite',
@@ -116,20 +106,18 @@ export default function Page() {
             'Comprehensive security compliance for industry standards',
           price: '$4,500 / month',
           marketPrice: '$6,000 - 12,000 / month',
-          features: ['Compliance Automation',
-            'Risk Assessment',
-            'Audit Preparation',
+          features: ['Compliance AutomationRisk Assessment',
+            'Audit Preparation'
           ],
-          benefits: ['100% compliance assurance',
-            'Reduced audit time',
-            'Risk mitigation',
+          benefits: ['100% compliance assuranceReduced audit time',
+            'Risk mitigation'
           ],
           icon: Lock,
           category: 'it - infrastructure',
           badge: 'Essential',
-          roi: '500%',
-        },
-      ],
+          roi: '500%'
+        }
+      ]
     },
     {
       id: 'quantum - tech',
@@ -143,18 +131,16 @@ export default function Page() {
           price: '$15,000 / month',
           marketPrice: '$20,000 - 50,000 / month',
           features: [
-            'Quantum Algorithms',
-            'Optimization Problems',
-            'Cryptography',
+            'Quantum AlgorithmsOptimization Problems',
+            'Cryptography'
           ],
-          benefits: ['Exponential speed improvements',
-            'Unbreakable encryption',
-            'Complex problem solving',
+          benefits: ['Exponential speed improvementsUnbreakable encryption',
+            'Complex problem solving'
           ],
           icon: Atom,
           category: 'quantum - tech',
           badge: 'Future Tech',
-          roi: '1000%',
+          roi: '1000%'
         },
         {
           name: 'Blockchain Enterprise Platform',
@@ -162,38 +148,34 @@ export default function Page() {
             'Secure blockchain for supply chain and digital identity',
           price: '$3,500 / month',
           marketPrice: '$5,000 - 15,000 / month',
-          features: ['Smart Contracts',
-            'Supply Chain Tracking',
-            'Digital Identity',
+          features: ['Smart ContractsSupply Chain Tracking',
+            'Digital Identity'
           ],
-          benefits: ['Enhanced transparency',
-            'Reduced fraud',
-            'Automated processes',
+          benefits: ['Enhanced transparencyReduced fraud',
+            'Automated processes'
           ],
           icon: LinkIcon,
           category: 'quantum - tech',
           badge: 'Innovative',
-          roi: '300%',
+          roi: '300%'
         },
         {
           name: 'IoT Edge Computing Platform',
           description: 'Real - time data processing at the edge',
           price: '$2,200 / month',
           marketPrice: '$3,000 - 8,000 / month',
-          features: ['Edge Analytics',
-            'Real - time Processing',
-            'Device Management',
+          features: ['Edge AnalyticsReal - time Processing',
+            'Device Management'
           ],
-          benefits: ['Ultra - low latency',
-            'Reduced bandwidth costs',
-            'Real - time insights',
+          benefits: ['Ultra - low latencyReduced bandwidth costs',
+            'Real - time insights'
           ],
           icon: Cpu,
           category: 'quantum - tech',
           badge: 'Industrial',
-          roi: '250%',
-        },
-      ],
+          roi: '250%'
+        }
+      ]
     },
     {
       id: 'green - tech',
@@ -209,38 +191,34 @@ export default function Page() {
           price: '$800 / month',
           marketPrice: '$1,000 - 2,500 / month',
           features: [
-            'Carbon Tracking',
-            'Sustainability Reporting',
-            'Goal Setting',
+            'Carbon TrackingSustainability Reporting',
+            'Goal Setting'
           ],
-          benefits: ['Reduced carbon footprint',
-            'Cost savings',
-            'Regulatory compliance',
+          benefits: ['Reduced carbon footprintCost savings',
+            'Regulatory compliance'
           ],
           icon: Leaf,
           category: 'green - tech',
           badge: 'Eco - Friendly',
-          roi: '180%',
+          roi: '180%'
         },
         {
           name: 'Smart Energy Management',
           description: 'Intelligent energy optimization using IoT and AI',
           price: '$1,500 / month',
           marketPrice: '$2,000 - 4,000 / month',
-          features: ['Energy Monitoring',
-            'AI Optimization',
-            'Predictive Maintenance',
+          features: ['Energy MonitoringAI Optimization',
+            'Predictive Maintenance'
           ],
-          benefits: ['30% energy cost reduction',
-            'Predictive maintenance',
-            'Real - time monitoring',
+          benefits: ['30% energy cost reductionPredictive maintenance',
+            'Real - time monitoring'
           ],
           icon: Zap,
           category: 'green - tech',
           badge: 'Cost - Effective',
-          roi: '220%',
-        },
-      ],
+          roi: '220%'
+        }
+      ]
     },
     {
       id: 'space - tech',
@@ -254,63 +232,61 @@ export default function Page() {
           price: '$2,800 / month',
           marketPrice: '$4,000 - 10,000 / month',
           features: [
-            'Satellite Imagery',
-            'AI Analysis',
-            'Real - time Monitoring',
+            'Satellite ImageryAI Analysis',
+            'Real - time Monitoring'
           ],
-          benefits: ['Global coverage',
-            'Real - time insights',
-            'Cost - effective monitoring',
+          benefits: ['Global coverageReal - time insights',
+            'Cost - effective monitoring'
           ],
           icon: Satellite,
           category: 'space - tech',
           badge: 'Global',
-          roi: '350%',
-        },
-      ],
-    },
-  ];
+          roi: '350%'
+        }
+      ]
+    }
+  ],
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'
+  },
 
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter (service => {
-      const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+      const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
       const matchesSearch = searchQuery === '' ||
         service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-        service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
+        service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
       const matchesPrice = priceRange === 'all' || (priceRange === 'low' &&
           parseFloat(service.price.replace (/[^0 - 9.]/g, '') ) < 1000) || (priceRange === 'medium' &&
           parseFloat(service.price.replace (/[^0 - 9.]/g, '') ) >= 1000 &&
           parseFloat(service.price.replace (/[^0 - 9.]/g, '') ) < 5000) || (priceRange === 'high' &&
-          parseFloat(service.price.replace (/[^0 - 9.]/g, '') ) >= 5000) ;
+          parseFloat(service.price.replace (/[^0 - 9.]/g, '') ) >= 5000) ,
 
-      return matchesCategory && matchesSearch && matchesPrice;
-    }) ) ;
+      return matchesCategory && matchesSearch && matchesPrice,
+    }) ) ,
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+        staggerChildren: 0.1
+      }
+    }
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
+      transition: { duration: 0.6 }
+    }
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text-white">
       <SEO
@@ -423,9 +399,9 @@ export default function Page() {
                 Try adjusting your search criteria or filters
               </p>
               <button     onClick={ () => {
-                  setSearchQuery('') ;
-                  setActiveCategory('all') ;
-                  setPriceRange('all') ;
+                  setSearchQuery('') ,
+                  setActiveCategory('all') ,
+                  setPriceRange('all') ,
                 }}
                 className="px-6 py-3 bg-cyan - 500 text-white rounded-lg hover:bg-cyan - 600 transition - colors duration -300"
               >
@@ -703,26 +679,26 @@ export default function Page() {
                 icon: Award,
                 title: 'Proven Expertise',
                 description:
-                  '500 + successful projects across industries with measurable results',
+                  '500 + successful projects across industries with measurable results'
               },
               {
                 icon: Zap,
                 title: 'Innovation First',
                 description:
-                  'Cutting - edge technologies and methodologies for competitive advantage',
+                  'Cutting - edge technologies and methodologies for competitive advantage'
               },
               {
                 icon: Shield,
                 title: 'Enterprise Security',
                 description:
-                  'Bank - level security and compliance for enterprise - grade solutions',
+                  'Bank - level security and compliance for enterprise - grade solutions'
               },
               {
                 icon: Heart,
                 title: '24 / 7 Support',
                 description:
-                  'Round - the - clock technical support and maintenance services',
-              },
+                  'Round - the - clock technical support and maintenance services'
+              }
             ].map((item, index) => (<motion.div
                 key={index}
                 variants={itemVariants}
@@ -739,5 +715,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

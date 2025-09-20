@@ -1,61 +1,61 @@
-import { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { TokenTransaction } from '@/types/tokens';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { useToast } from '@/hooks/use-toast';
-import { apiClient } from '@/utils/apiClient';
+import { useEffect, useState } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { useAuth } from '@/hooks/useAuth',
+import { supabase } from '@/integrations/supabase/client',
+import { TokenTransaction } from '@/types/tokens',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
+import { useToast } from '@/hooks/use-toast',
+import { apiClient } from '@/utils/apiClient',
 
 export default function TokenManager() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
-  const [userId, setUserId] = useState('');
-  const [amount, setAmount] = useState(0);
+  const { user } = useAuth(),
+  const { toast } = useToast(),
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
+  const [userId, setUserId] = useState(''),
+  const [amount, setAmount] = useState(0),
 
-  const isAdmin = user?.userType === 'admin';
+  const isAdmin = user?.userType === 'admin',
 
   useEffect(() => {
-    if (isAdmin) fetchTransactions();
-  }, [isAdmin]);
+    if (isAdmin) fetchTransactions(),
+  }, [isAdmin]),
 
   const fetchTransactions = async () => {
     const { data, error } = await supabase
       .from('token_transactions')
       .select('*')
       .order('created_at', { ascending: false })
-      .limit(100);
-    if (!error) setTransactions(data || []);
-  };
+      .limit(100),
+    if (!error) setTransactions(data || []),
+  },
 
   const handleIssue = async (type: 'earn' | 'burn') => {
-    if (!userId || amount <= 0) return;
+    if (!userId || amount <= 0) return,
     const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, amount }),
-    });
+      body: JSON.stringify({ userId, amount })
+    }),
     if (res.ok) {
       toast({
         title: 'Success',
         description: 'Transaction processed'
-      });
-      fetchTransactions();
+      }),
+      fetchTransactions(),
     } else {
-      const err = res.data;
+      const err = res.data,
       toast({
         title: 'Error',
         description: err.error || 'Failed',
         variant: 'destructive'
-      });
+      }),
     }
-  };
+  },
 
   return (
     <ProtectedRoute adminOnly>
@@ -98,5 +98,5 @@ export default function TokenManager() {
         <Footer />
       </div>
     </ProtectedRoute>
-  );
+  ),
 }

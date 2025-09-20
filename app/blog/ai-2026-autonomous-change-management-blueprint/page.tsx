@@ -25,6 +25,5 @@ export default function Page() {,
         Need an implementation plan tailored to your stack? Our team can help you ship governed,
         autonomy with confidence.,
       </p>,
-    </main>,
-  ),}
+    </main>)}
 ,

@@ -1,36 +1,36 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
-import { ModeToggle } from "@/components/ModeToggle";
-import { MainNavigation } from '@/layout/MainNavigation';
-import { useAuth } from '@/hooks/useAuth';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { slugify } from "@/lib/slugify";
-import { useRouter } from "next/router"; // Changed from react-router-dom
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { Logo } from './Logo',
+import { UserMenu } from './UserMenu',
+import { LanguageSelector } from './LanguageSelector',
+import { ModeToggle } from "@/components/ModeToggle",
+import { MainNavigation } from '@/layout/MainNavigation',
+import { useAuth } from '@/hooks/useAuth',
+import { useWhitelabel } from '@/context/WhitelabelContext',
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { slugify } from "@/lib/slugify",
+import { useRouter } from "next/router", // Changed from react-router-dom
+import { PointsBadge } from '@/components/loyalty/PointsBadge',
 
 export interface HeaderProps {
-  hideLogin?: boolean;
-  customLogo?: string;
+  hideLogin?: boolean,
+  customLogo?: string,
   customTheme?: {
-    primaryColor: string;
-    backgroundColor: string;
-    textColor: string;
-  };
+    primaryColor: string,
+    backgroundColor: string,
+    textColor: string
+  },
 }
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
-  const { user } = useAuth();
+  const { user } = useAuth(),
   const firstName =
-    (user && typeof user !== 'boolean' ? (user.displayName?.split(' ')[0]) : undefined) || '';
-  const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();
-  const [query, setQuery] = useState("");
-  const searchSuggestions = generateSearchSuggestions();
+    (user && typeof user !== 'boolean' ? (user.displayName?.split(' ')[0]) : undefined) || '',
+  const { isWhitelabel, primaryColor } = useWhitelabel(),
+  const navigate = useNavigate(),
+  const [query, setQuery] = useState(""),
+  const searchSuggestions = generateSearchSuggestions(),
   
   // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color
@@ -38,21 +38,21 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     primaryColor,
     backgroundColor: '#000000', // Default dark background
     textColor: '#ffffff', // Default light text
-  } : undefined);
+  } : undefined),
   
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor,
     color: effectiveTheme.textColor,
     borderColor: `${effectiveTheme.primaryColor}20`
-  } : {};
+  } : {},
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (query.trim()) {
-      navigate(`/search?q=${encodeURIComponent(query)}`);
-      setQuery("");
+      navigate(`/search?q=${encodeURIComponent(query)}`),
+      setQuery(""),
     }
-  };
+  },
   
   return (
     <header 
@@ -70,8 +70,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             value={query}
             onChange={setQuery}
             onSelectSuggestion={(text) => {
-              navigate(`/search?q=${encodeURIComponent(text)}`);
-              setQuery("");
+              navigate(`/search?q=${encodeURIComponent(text)}`),
+              setQuery(""),
             }}
             searchSuggestions={searchSuggestions}
           />
@@ -85,5 +85,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </div>
       </div>
     </header>
-  );
+  ),
 }

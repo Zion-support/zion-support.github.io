@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Infrastructure Security",
     reliability: "Critical"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "40% efficiency improvement, real - time monitoring, predictive maintenance, cost savings",
     logo: "MC"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,42 +76,42 @@ const processSteps = [{
     icon: Gauge,
     duration: "2 - 6 weeks"
 
-];
+],
 
 const infrastructureBenefits = [{
     title: "High Availability",
     description: "99.99% uptime with redundant systems and failover capabilities",
     icon: Shield,
-    examples["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"];
-  },;
+    examples["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"],
+  },
   {
     title: "Scalability",
     description: "Infrastructure that grows with your business needs",
     icon: TrendingUp,
-    examples["Horizontal scaling", "Vertical scaling", "Auto - scaling", "Resource optimization"];
-  },;
+    examples["Horizontal scaling", "Vertical scaling", "Auto - scaling", "Resource optimization"],
+  },
   {
     title: "Security",
     description: "Enterprise - grade security with compliance and monitoring",
     icon: Lock,
-    examples["Multi - layer security", "Compliance frameworks", "Threat detection", "Access controls"];
-  },;
+    examples["Multi - layer security", "Compliance frameworks", "Threat detection", "Access controls"],
+  },
   {
     title: "Performance",
     description: "Optimized infrastructure for maximum performance and efficiency",
     icon: Zap,
-    examples["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"];
+    examples["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Data Center', 'Cloud', 'Networking', 'Security', 'Storage', 'Monitoring'];
+  const categories = ['AllData Center', 'CloudNetworking', 'SecurityStorage', 'Monitoring'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? infrastructureSolutions
-    : infrastructureSolutions.filter(solution => solution.category === selectedCategory) ;
+    : infrastructureSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -182,10 +182,10 @@ const infrastructureBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Infrastructure Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -241,13 +241,13 @@ const infrastructureBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Infrastructure Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -305,13 +305,13 @@ const infrastructureBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -367,13 +367,13 @@ const infrastructureBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -473,7 +473,7 @@ const infrastructureBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -544,13 +544,13 @@ const infrastructureBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

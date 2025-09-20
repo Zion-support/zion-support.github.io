@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI Governance 2026: Policy, Risk, and Compliance Framework';
-  description: 'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.',
-};
+  title: 'AI Governance 2026: Policy, Risk, and Compliance Framework',
+  description: 'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.'
+},
 export default function AIGovernance2026Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -20,7 +20,7 @@ export default function AIGovernance2026Page() {,
           <article className="prose prose-lg max-w-none">,
             <h2>Why AI Governance Now</h2>,
             <p>,
-              With rapid adoption of foundation models and autonomous agents, organizations must institute policy;
+              With rapid adoption of foundation models and autonomous agents, organizations must institute policy,
               control, and assurance mechanisms that keep pace with innovation. This guide outlines a pragmatic,
               approach to governance that accelerates delivery while reducing risk.,
             </p>,
@@ -34,7 +34,7 @@ export default function AIGovernance2026Page() {,
             </ul>,
             <h3>Outcomes</h3>,
             <p>,
-              Ship faster with built-in controls, strong assurance, and clear accountability across product, risk;
+              Ship faster with built-in controls, strong assurance, and clear accountability across product, risk,
               and engineering teams.,
             </p>,
           </article>,
@@ -48,6 +48,5 @@ export default function AIGovernance2026Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

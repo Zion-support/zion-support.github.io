@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function RealEstateTechnologySolutions() {,
   return (,
     <>,
@@ -14,12 +14,11 @@ export default function RealEstateTechnologySolutions() {,
           <p className="text-gray-300">Unlock data-driven decisions and automation across property lifecycle, valuation, and operations.</p>,
         </section>,
       </div>,
-    </>,
-  ),
+    </>)
 }
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-;
+,

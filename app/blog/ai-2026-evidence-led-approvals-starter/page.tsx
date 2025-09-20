@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Evidence‑Led Approvals — Starter Templates';
+  title: 'AI 2026: Evidence‑Led Approvals — Starter Templates',
   description:,
-    'Copy‑paste approval policies, risk tiers, and evidence fields wired to evaluation gates and runtime guardrails.',
-};
+    'Copy‑paste approval policies, risk tiers, and evidence fields wired to evaluation gates and runtime guardrails.'
+},
 export default function EvidenceLedApprovalsStarterPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">,
@@ -58,7 +58,7 @@ evidence: ,
 gates:,
   - name: safety_scorecard,
     min_score: 0.8,
-`,}</code></pre>,
+`}</code></pre>,
             <h3>CI wiring</h3>,
             <pre><code>{`# .github/workflows/release.yml,
 - name: Approvals,
@@ -66,7 +66,7 @@ gates:,
   with:,
     policy: approvals/production_release_minimal.yaml,
     evidence: evidence.json,
-`,}</code></pre>,
+`}</code></pre>,
             <h3>Next steps</h3>,
             <ul>,
               <li>Instrument evals and export a single pass/fail metric per gate</li>,
@@ -84,5 +84,5 @@ gates:,
         </article>,
       </main>,
     </div>,
-  ),}
+  )}
 ,

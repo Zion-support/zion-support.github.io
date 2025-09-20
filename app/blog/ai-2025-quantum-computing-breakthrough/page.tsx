@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../../components/SEO',
+import Link from 'next/link',
 export default function AIQuantumComputingBreakthrough2025() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -11,7 +11,7 @@ export default function AIQuantumComputingBreakthrough2025() {,
         url="/blog/ai-2025-quantum-computing-breakthrough",
       />,
       <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-3 mb-6">,
             <Link href="/blog" className="text-blue-600 hover: text-blue-700 font-medium">,
@@ -75,7 +75,7 @@ export default function AIQuantumComputingBreakthrough2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className="prose prose-lg max-w-none">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Quantum Computing Revolution in AI</h2>,
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">,
@@ -211,7 +211,7 @@ export default function AIQuantumComputingBreakthrough2025() {,
               <div>,
                 <h5 className="text-lg font-semibold text-gray-900 mb-2">Quantum Approximate Optimization Algorithm (QAOA)</h5>,
                 <p className="text-gray-700">,
-                  Solves combinatorial optimization problems that are intractable for classical computers;
+                  Solves combinatorial optimization problems that are intractable for classical computers,
                   with applications in clustering and classification.,
                 </p>,
               </div>,
@@ -352,7 +352,7 @@ export default function AIQuantumComputingBreakthrough2025() {,
             </Link>,
           </div>,
         </div>,
-        {/* Related Articles */,}
+        {/* Related Articles */}
         <div className="mt-16">,
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -393,4 +393,4 @@ export default function AIQuantumComputingBreakthrough2025() {,
         </div>,
       </article>,
     </div>,
-  ),}
+  )}

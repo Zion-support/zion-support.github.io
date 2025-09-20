@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Ops Starter Kit';
+  title: 'AI 2026: Autonomous Ops Starter Kit',
   description:,
-    'Kickstart evaluation-first operations: templates for SLOs, incident runbooks, and policy-as-code gates.',
-};
+    'Kickstart evaluation-first operations: templates for SLOs, incident runbooks, and policy-as-code gates.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -42,6 +42,5 @@ export default function Page() {,
         <Link href="/blog/ai-2026-operational-resilience-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Operational Resilience</Link>,
         <Link href="/blog/ai-2026-production-guardrails-playbook" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Production Guardrails</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

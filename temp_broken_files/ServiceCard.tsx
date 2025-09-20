@@ -1,32 +1,32 @@
-"use client";
-import React, { useState, useCallback } from 'react';
-import { ArrowRight, Brain } from 'lucide-react';
+"use client",
+import React, { useState, useCallback } from 'react',
+import { ArrowRight, Brain } from 'lucide-react',
 interface ServiceCardProps {,
   service: {,
-    id: string;
-    name: string;
-    description: string;
-    type: string;
+    id: string,
+    name: string,
+    description: string,
+    type: string,
     pricing: {,
-      starter: string,};
-    slug: string,};
-  index: number;
-  isCurrent: boolean;
-  onClick: (service: { slug: string ,}) => void;
+      starter: string},
+    slug: string},
+  index: number,
+  isCurrent: boolean,
+  onClick: (service: { slug: string }) => void,
 }
 ,
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) => {,
   return (,
     <div,
       className={`relative group cursor-pointer ${,
-        isCurrent ? 'scale-105' : 'scale-100',
+        isCurrent ? 'scale-105' : 'scale-100'
       } transition-transform duration-500`}
       onClick={() => onClick(service)}
       role="button",
       tabIndex={0}
       onKeyDown={(e) => {,
         if (e.key === 'Enter' || e.key === ' ') {,
-          onClick(service);
+          onClick(service),
         }
       }}
       aria-label={`Learn more about ${service.name}`}
@@ -43,7 +43,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
             </span>,
           </div>,
           <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors duration-300">,
-            {service.name,}
+            {service.name}
           </h3>,
           <p className="text-gray-400 text-sm leading-relaxed mb-4">,
             {service.description.substring(0, 120)}...,
@@ -56,12 +56,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
           </div>,
         </div>,
       </div>,
-      {/* Card Content */,}
+      {/* Card Content */}
       <div className="relative z-10 p-6 h-full flex flex-col">,
         {/* Header Section */}
         <div className="flex items-start justify-between mb-4">,
           <div className="flex items-center space-x-3">,
-            <div className={`p-3 rounded-xl bg-gradient-to-br ${categoryColor} group-hover: scale-110 transition-transform duration-300`,}>,
+            <div className={`p-3 rounded-xl bg-gradient-to-br ${categoryColor} group-hover: scale-110 transition-transform duration-300`}>,
               <CategoryIcon className="w-6 h-6 text-white" />,
             </div>,
             <div>,
@@ -75,25 +75,22 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
               <div className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full flex items-center">,
                 <Star className="w-3 h-3 mr-1" />,
                 Featured,
-              </div>,
-            )}
+              </div>)}
             {service.badge && (,
               <div className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold rounded-full">,
                 {service.badge}
-              </div>,
-            )}
+              </div>)}
           </div>,
         </div>,
         {/* Title and Description */}
         <div className="flex-1 mb-4">,
           <h3 className="text-lg font-semibold text-white mb-3 group-hover: text-cyan-400 transition-colors duration-300 line-clamp-2">,
-            {serviceTitle,}
+            {serviceTitle}
           </h3>,
           {service.tagline && (,
             <p className="text-sm text-cyan-400 mb-2 font-medium">,
               {service.tagline}
-            </p>,
-          )}
+            </p>)}
           <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">,
             {service.description}
           </p>,
@@ -110,13 +107,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
                 <div key={index} className="flex items-center space-x-2 text-xs text-gray-500">,
                   <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />,
                   <span className="line-clamp-1">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
               {service.features.length > 2 && (,
                 <div className="text-xs text-gray-600">,
                   +{service.features.length - 2} more features,
-                </div>,
-              )}
+                </div>)}
             </div>,
           </div>,
         )}
@@ -126,26 +121,22 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
             <div className="flex items-center space-x-1 text-xs text-gray-400">,
               <Star className="w-3 h-3 text-yellow-400 fill-current" />,
               <span>{service.rating}</span>,
-            </div>,
-          )}
+            </div>)}
           {service.users && (,
             <div className="flex items-center space-x-1 text-xs text-gray-400">,
               <Users className="w-3 h-3 text-blue-400" />,
               <span>{service.users}</span>,
-            </div>,
-          )}
+            </div>)}
           {service.responseTime && (,
             <div className="flex items-center space-x-1 text-xs text-gray-400">,
               <Clock className="w-3 h-3 text-green-400" />,
               <span>{service.responseTime}</span>,
-            </div>,
-          )}
+            </div>)}
           {!service.rating && !service.users && !service.responseTime && service.marketSize && (,
             <div className="flex items-center space-x-1 text-xs text-gray-400 col-span-3">,
               <TrendingUp className="w-3 h-3 text-emerald-400" />,
               <span>{service.marketSize}</span>,
-            </div>,
-          )}
+            </div>)}
         </div>,
         {/* Pricing and CTA */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">,
@@ -155,13 +146,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
               <span className="text-lg font-bold text-white">,
                 {pricingDisplay.price}
               </span>,
-            </div>,
-          ) : (,
+            </div>) : (,
             <div className="flex items-center space-x-2">,
               <TrendingUp className="w-4 h-4 text-emerald-400" />,
               <span className="text-sm text-emerald-400 font-medium">Available Now</span>,
-            </div>,
-          )}
+            </div>)}
 ,
           <div,
             className="flex items-center space-x-2 text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300",
@@ -170,14 +159,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />,
           </div>,
         </div>,
-        {/* Hover Overlay */,}
+        {/* Hover Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover: opacity-100 transition-opacity duration-500 pointer-events-none" />,
-        {/* Glow Effect */,}
+        {/* Glow Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-0 group-hover: opacity-100 transition-opacity duration-500 blur-xl pointer-events-none" />,
       </div>,
-      {/* Enhanced Border Glow */,}
+      {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 to-blue-500/0 opacity-0 group-hover: opacity-100 transition-opacity duration-500 pointer-events-none" />,
-import React from "react";
+import React from "react",
 const ServiceCard = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -187,8 +176,7 @@ const ServiceCard = () => {,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-export default ServiceCard;
+    </div>)
+},
+export default ServiceCard,
 })

@@ -1,15 +1,15 @@
 export type AddedService = {
-  id: string;
-  title: string;
-  description: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics';
-  price: string; // average market starting price string like "$299"
-  billing: 'month' | 'project' | 'hour';
-  features: string[];
-  benefits: string[];
-  ctaLabel: string;
-  href: string; // external or internal URL
-};
+  id: string,
+  title: string,
+  description: string,
+  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics',
+  price: string, // average market starting price string like "$299"
+  billing: 'month' | 'project' | 'hour',
+  features: string[],
+  benefits: string[],
+  ctaLabel: string,
+  href: string, // external or internal URL
+},
 
 export const ADDED_SERVICES_2025: AddedService[] = [{
     id: 'ai-sales-email-copilot',
@@ -19,13 +19,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     price: '$149',
     billing: 'month',
     features: [
-      'Auto-draft and personalize emails',
-      'Inbox triage and reply suggestions',
-      'Salesforce/HubSpot sync',
-      'Compliance guardrails(PII/PHI redaction)'
+      'Auto-draft and personalize emailsInbox triage and reply suggestions',
+      'Salesforce/HubSpot syncCompliance guardrails(PII/PHI redaction)'
     ],
-    benefits: ['Increase reply rate 20–40%',
-      'Save 5–8 hours per rep weekly'
+    benefits: ['Increase reply rate 20–40%Save 5–8 hours per rep weekly'
     ],
     ctaLabel: 'Start 14‑day Trial',
     href: 'https://ziontechgroup.com/contact'
@@ -37,13 +34,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'AI Solutions',
     price: '$2,999',
     billing: 'month',
-    features: ['Vector + keyword hybrid search',
-      'Source citations and grounding',
-      'SSO/Okta and row‑level permissions',
-      'Plugins: Confluence, Google Drive, SharePoint'
+    features: ['Vector + keyword hybrid searchSource citations and grounding',
+      'SSO/Okta and row‑level permissionsPlugins: Confluence, Google Drive, SharePoint'
     ],
-    benefits: ['Deflect internal tickets 15–30%',
-      'Accelerate onboarding and support'
+    benefits: ['Deflect internal tickets 15–30%Accelerate onboarding and support'
     ],
     ctaLabel: 'Book Demo',
     href: 'https://ziontechgroup.com/services'
@@ -55,13 +49,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'Micro SaaS',
     price: '$69',
     billing: 'month',
-    features: ['Accurate transcription',
-      'Action item and owner extraction',
-      'Calendar integration',
-      'CRM/PM sync'
+    features: ['Accurate transcriptionAction item and owner extraction',
+      'Calendar integrationCRM/PM sync'
     ],
-    benefits: ['Reduce manual note time by 90%',
-      'Improve accountability and follow‑through'
+    benefits: ['Reduce manual note time by 90%Improve accountability and follow‑through'
     ],
     ctaLabel: 'Start Now',
     href: 'https://ziontechgroup.com/services'
@@ -73,13 +64,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'Cloud & DevOps',
     price: '$1,999',
     billing: 'month',
-    features: ['Automated rightsizing and scheduling',
-      'RI/SP recommendations',
-      'Unused resource detection',
-      'Budget alerts and governance'
+    features: ['Automated rightsizing and schedulingRI/SP recommendations',
+      'Unused resource detectionBudget alerts and governance'
     ],
-    benefits: ['Cut monthly cloud spend 15–35%',
-      'Prevent surprise overages'
+    benefits: ['Cut monthly cloud spend 15–35%Prevent surprise overages'
     ],
     ctaLabel: 'Get Assessment',
     href: 'https://ziontechgroup.com/contact'
@@ -91,13 +79,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'Cybersecurity',
     price: '$4,000',
     billing: 'project',
-    features: ['Pre‑built policy library',
-      'Automated evidence collection',
-      'Vendor risk tracking',
-      'Continuous control monitoring'
+    features: ['Pre‑built policy libraryAutomated evidence collection',
+      'Vendor risk trackingContinuous control monitoring'
     ],
-    benefits: ['Accelerate audit readiness',
-      'Reduce manual effort 50%+'
+    benefits: ['Accelerate audit readinessReduce manual effort 50%+'
     ],
     ctaLabel: 'Request Quote',
     href: 'https://ziontechgroup.com/contact'
@@ -109,13 +94,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'Cybersecurity',
     price: '$1,499',
     billing: 'month',
-    features: ['SharePoint/OneDrive exposure scan',
-      'Conditional Access review',
-      'Phishing simulation and training',
-      'Automated hardening playbooks'
+    features: ['SharePoint/OneDrive exposure scanConditional Access review',
+      'Phishing simulation and trainingAutomated hardening playbooks'
     ],
-    benefits: ['Reduce breach risk significantly',
-      'Meet compliance requirements'
+    benefits: ['Reduce breach risk significantlyMeet compliance requirements'
     ],
     ctaLabel: 'Schedule Assessment',
     href: 'https://ziontechgroup.com/services'
@@ -127,13 +109,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'Cloud & DevOps',
     price: '$8,000',
     billing: 'project',
-    features: ['CI/CD pipeline design',
-      'Automated tests and linting',
-      'Deploy previews and canary',
-      'Observability integration'
+    features: ['CI/CD pipeline designAutomated tests and linting',
+      'Deploy previews and canaryObservability integration'
     ],
-    benefits: ['Ship faster with confidence',
-      'Reduce change failure rate'
+    benefits: ['Ship faster with confidenceReduce change failure rate'
     ],
     ctaLabel: 'Get Proposal',
     href: 'https://ziontechgroup.com/contact'
@@ -145,13 +124,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'Data & Analytics',
     price: '$12,000',
     billing: 'project',
-    features: ['Column‑level lineage',
-      'Quality rules and SLAs',
-      'Access policies and anonymization',
-      'dbt/Great Expectations integration'
+    features: ['Column‑level lineageQuality rules and SLAs',
+      'Access policies and anonymizationdbt/Great Expectations integration'
     ],
-    benefits: ['Trustworthy analytics',
-      'Faster root‑cause analysis'
+    benefits: ['Trustworthy analyticsFaster root‑cause analysis'
     ],
     ctaLabel: 'Talk to Data Team',
     href: 'https://ziontechgroup.com/contact'
@@ -163,13 +139,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'AI Solutions',
     price: '$299',
     billing: 'month',
-    features: ['Automated PR review comments',
-      'Test case generation hints',
-      'Security and secret scanning',
-      'Code search with embeddings'
+    features: ['Automated PR review commentsTest case generation hints',
+      'Security and secret scanningCode search with embeddings'
     ],
-    benefits: ['Higher code quality',
-      'Fewer regressions and faster PRs'
+    benefits: ['Higher code qualityFewer regressions and faster PRs'
     ],
     ctaLabel: 'Try Copilot',
     href: 'https://ziontechgroup.com/services'
@@ -181,13 +154,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'AI Solutions',
     price: '$399',
     billing: 'month',
-    features: ['Zendesk/Freshdesk connectors',
-      'Escalation to human with context',
-      'Analytics and feedback loops',
-      'Multilingual responses'
+    features: ['Zendesk/Freshdesk connectorsEscalation to human with context',
+      'Analytics and feedback loopsMultilingual responses'
     ],
-    benefits: ['Reduce support load 20–50%',
-      'Improve CSAT/NPS'
+    benefits: ['Reduce support load 20–50%Improve CSAT/NPS'
     ],
     ctaLabel: 'Launch Bot',
     href: 'https://ziontechgroup.com/services'
@@ -199,13 +169,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'Micro SaaS',
     price: '$99',
     billing: 'month',
-    features: ['Templates tuned for conversion',
-      'A/B testing support',
-      'SEO meta and schema automation',
-      'Image and copy generation'
+    features: ['Templates tuned for conversionA/B testing support',
+      'SEO meta and schema automationImage and copy generation'
     ],
-    benefits: ['Ship pages in minutes',
-      'Increase lead conversion'
+    benefits: ['Ship pages in minutesIncrease lead conversion'
     ],
     ctaLabel: 'Generate a Page',
     href: 'https://ziontechgroup.com/services'
@@ -217,13 +184,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'IT Services',
     price: '$125',
     billing: 'hour',
-    features: ['EKS/AKS/GKE setup and hardening',
-      'Terraform modules and GitOps',
-      'Prometheus/Grafana/Alerting',
-      'Runbooks and incident response'
+    features: ['EKS/AKS/GKE setup and hardeningTerraform modules and GitOps',
+      'Prometheus/Grafana/AlertingRunbooks and incident response'
     ],
-    benefits: ['Resilient infra with best practices',
-      'Lower downtime and faster MTTR'
+    benefits: ['Resilient infra with best practicesLower downtime and faster MTTR'
     ],
     ctaLabel: 'Engage SRE Team',
     href: 'https://ziontechgroup.com/contact'
@@ -235,13 +199,10 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'AI Solutions',
     price: '$15,000',
     billing: 'project',
-    features: ['MLflow/Weights & Biases integration',
-      'Feature store and model registry',
-      'CI/CD for models',
-      'Monitoring and drift detection'
+    features: ['MLflow/Weights & Biases integrationFeature store and model registry',
+      'CI/CD for modelsMonitoring and drift detection'
     ],
-    benefits: ['Shorter time‑to‑production',
-      'Better governance and reproducibility'
+    benefits: ['Shorter time‑to‑productionBetter governance and reproducibility'
     ],
     ctaLabel: 'Plan Your Platform',
     href: 'https://ziontechgroup.com/contact'
@@ -253,16 +214,13 @@ export const ADDED_SERVICES_2025: AddedService[] = [{
     category: 'Data & Analytics',
     price: '$9,000',
     billing: 'project',
-    features: ['dbt models and tests',
-      'DuckDB or warehouse targets',
-      'Superset/Metabase dashboards',
-      'Data contracts and docs'
+    features: ['dbt models and testsDuckDB or warehouse targets',
+      'Superset/Metabase dashboardsData contracts and docs'
     ],
-    benefits: ['Lower analytics spend',
-      'Maintainable data models'
+    benefits: ['Lower analytics spendMaintainable data models'
     ],
     ctaLabel: 'Get a BI Sprint',
     href: 'https://ziontechgroup.com/contact'
   }
-];
+],
 

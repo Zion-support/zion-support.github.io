@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
-const categoryToCourses: Record<string, { slug: string; title: string; level: string; lessons: number }[]> = {
+const categoryToCourses: Record<string, { slug: string, title: string, level: string, lessons: number }[]> = {
   'ai-engineering': [
     { slug: 'ai-engineering-foundations', title: 'AI Engineering Foundations', level: 'Beginner', lessons: 8 }
   ],
@@ -14,16 +14,16 @@ const categoryToCourses: Record<string, { slug: string; title: string; level: st
   'remote-work': [
     { slug: 'remote-work-pro', title: 'Remote Work Pro', level: 'All', lessons: 5 }
   ]
-};
+},
 
 export default function CategoryPage() {
-  const { query } = useRouter();
-  const category = String(query.category || '');
-  const courses = categoryToCourses[category] || [];
+  const { query } = useRouter(),
+  const category = String(query.category || ''),
+  const courses = categoryToCourses[category] || [],
 
   return (
     <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-4">Category: {category.replace('-', ' ')}</h1>
+      <h1 className="text-2xl font-semibold mb-4">Category: {category.replace('- ')}</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {courses.map((c) => (
           <Link key={c.slug} href={`/academy/course/${c.slug}`}>
@@ -35,5 +35,5 @@ export default function CategoryPage() {
         ))}
       </div>
     </div>
-  );
+  ),
 }

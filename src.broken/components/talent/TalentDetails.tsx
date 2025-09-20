@@ -1,6 +1,6 @@
 
 interface TalentDetailsProps {
-  talent: TalentProfile;
+  talent: TalentProfile
 }
 
 const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => (
@@ -37,6 +37,6 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => (
       </div> {/* Closing the wrapper div */}
     </div>
   </main>
-);
+),
 
-export default TalentDetails;
+export default TalentDetails,

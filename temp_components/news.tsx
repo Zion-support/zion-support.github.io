@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
   Calendar, Newspaper, Play, Mic, FileText, ExternalLink as ExternalLinkIcon
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function NewsPage() {
   const newsArticles = [
@@ -90,7 +90,7 @@ export default function NewsPage() {
       featured: false,
       tags: ["Research", "Quantum Computing", "Cryptography", "Security"]
     }
-  ];
+  ],
 
   const pressReleases = [
     {
@@ -114,7 +114,7 @@ export default function NewsPage() {
       summary: "Strong financial performance driven by increased demand for AI and cybersecurity solutions.",
       link: "https://ziontechgroup.com/press/q4-2024-results"
     }
-  ];
+  ],
 
   const mediaKit = [
     {
@@ -141,23 +141,23 @@ export default function NewsPage() {
       icon: FileText,
       link: "/media-kit/fact-sheet.pdf"
     }
-  ];
+  ],
 
-  const categories = ["All", "Product Launch", "Company News", "Awards & Recognition", "Partnerships", "Media Coverage", "Research"];
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const categories = ["All", "Product Launch", "Company News", "Awards & Recognition", "Partnerships", "Media Coverage", "Research"],
+  const [selectedCategory, setSelectedCategory] = React.useState("All"),
 
   const filteredNews = selectedCategory === "All" 
     ? newsArticles 
-    : newsArticles.filter(article => article.category === selectedCategory);
+    : newsArticles.filter(article => article.category === selectedCategory),
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
-  };
+    }),
+  },
 
 const news: React.FC = () => {
   return (
@@ -165,7 +165,7 @@ const news: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">news</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default news;
+export default news,

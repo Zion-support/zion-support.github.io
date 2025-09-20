@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface EnhancedServicesPageProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function EnhancedServicesPage({ }: EnhancedServicesPageProps) {,
@@ -8,8 +8,7 @@ export default function EnhancedServicesPage({ }: EnhancedServicesPageProps) {,
     <div>,
       <h1>EnhancedServicesPage</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

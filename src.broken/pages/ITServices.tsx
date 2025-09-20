@@ -1,56 +1,56 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       icon: Cable,
       title: 'IT Onsite & Managed Services',
       desc: 'Hands - on deployment, device lifecycle, patching, help desk, and inventory.',
-      price: '$1,500 - $15,000 / mo',
+      price: '$1,500 - $15,000 / mo'
     },
     {
       icon: LifeBuoy,
       title: 'Business Continuity',
       desc: 'Backups, DR plans, tabletop exercises, and RTO / RPO aligned architecture.',
-      price: '$2,500 - $30,000+',
+      price: '$2,500 - $30,000+'
     },
     // New items
     {
       icon: Wrench,
       title: 'Platform Engineering',
       desc: 'Golden paths, internal developer platforms, Backstage portals, and paved - road governance.',
-      price: '$8,000 - $90,000+',
+      price: '$8,000 - $90,000+'
     },
     {
       icon: Database,
       title: 'Data Platforms & MLOps',
       desc: 'Lakehouse setups, ELT pipelines, feature stores, and ML deployment with observability.',
-      price: '$7,000 - $95,000+',
+      price: '$7,000 - $95,000+'
     },
     {
       icon: Building,
       title: 'Enterprise SaaS Rollouts',
       desc: 'Okta SSO, RBAC, tenant provisioning, and SOC2 - aligned configuration baselines at scale.',
-      price: '$5,000 - $70,000+',
+      price: '$5,000 - $70,000+'
     },
     {
       icon: Cloud,
       title: 'Cloud Landing Zones',
       desc: 'Secure multi - account landing zones with guardrails, budgets, CI / CD and golden patterns.',
-      price: '$8,000 - $65,000+',
+      price: '$8,000 - $65,000+'
     },
     {
       icon: Server,
       title: 'Database Reliability Engineering',
       desc: 'HA / DR, performance tuning, migrations and observability for Postgres, MySQL and SQL Server.',
-      price: '$4,000 - $45,000+',
+      price: '$4,000 - $45,000+'
     },
     {
       icon: Shield,
       title: 'Zero Trust Enablement',
       desc: 'Network segmentation, identity - aware proxies, device posture and continuous verification.',
-      price: '$6,000 - $60,000+',
-    },
-  ];
+      price: '$6,000 - $60,000+'
+    }
+  ],
 
   return (<div className="min - h-screen bg-futuristic">
       <SEO
@@ -102,5 +102,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Wifi, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPowered5GNetworkOptimization: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPowered5GNetworkOptimization: React.FC = () => {
       title: 'Multi-carrier Support',
       description: 'Network optimization across various carriers and technologies'
     }
-  ];
+  ],
 
   const networkCapabilities = [
     {
       area: 'Network Performance',
-      capabilities: ['Bandwidth optimization', 'Latency reduction', 'Throughput enhancement', 'QoS management'],
+      capabilities: ['Bandwidth optimizationLatency reduction', 'Throughput enhancementQoS management'],
       improvement: '60% performance boost',
       performance: 'Optimized'
     },
     {
       area: 'Resource Management',
-      capabilities: ['Dynamic allocation', 'Load balancing', 'Capacity planning', 'Traffic optimization'],
+      capabilities: ['Dynamic allocationLoad balancing', 'Capacity planningTraffic optimization'],
       improvement: '40% efficiency gain',
       efficiency: 'Enhanced'
     },
     {
       area: 'Coverage Optimization',
-      capabilities: ['Signal strength', 'Interference reduction', 'Handover optimization', 'Edge computing'],
+      capabilities: ['Signal strengthInterference reduction', 'Handover optimizationEdge computing'],
       improvement: '90% coverage',
       coverage: 'Comprehensive'
     },
     {
       area: 'Predictive Maintenance',
-      capabilities: ['Failure prediction', 'Proactive alerts', 'Maintenance scheduling', 'Performance monitoring'],
+      capabilities: ['Failure predictionProactive alerts', 'Maintenance schedulingPerformance monitoring'],
       improvement: '99.9% uptime',
       reliability: 'Maximum'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Mobile Networks',
       description: 'AI-powered 5G optimization for mobile network operators and carriers',
-      benefits: ['Improved coverage', 'Better performance', 'Reduced costs', 'Enhanced user experience']
+      benefits: ['Improved coverageBetter performance', 'Reduced costsEnhanced user experience']
     },
     {
       title: 'Enterprise Networks',
       description: '5G network optimization for enterprise and industrial applications',
-      benefits: ['Private networks', 'Low latency', 'High reliability', 'Secure connectivity']
+      benefits: ['Private networksLow latency', 'High reliabilitySecure connectivity']
     },
     {
       title: 'Smart Cities',
       description: '5G optimization for smart city infrastructure and IoT applications',
-      benefits: ['Traffic management', 'Public safety', 'Environmental monitoring', 'Resource optimization']
+      benefits: ['Traffic managementPublic safety', 'Environmental monitoringResource optimization']
     },
     {
       title: 'Industrial IoT',
       description: '5G network optimization for industrial automation and IoT deployments',
-      benefits: ['Real-time control', 'Predictive maintenance', 'Remote monitoring', 'Automation efficiency']
+      benefits: ['Real-time controlPredictive maintenance', 'Remote monitoringAutomation efficiency']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPowered5GNetworkOptimization: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with 5G network optimization',
       features: [
-        'Basic optimization',
-        'Single network support',
-        'Standard monitoring',
-        'Email support',
+        'Basic optimizationSingle network support',
+        'Standard monitoringEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPowered5GNetworkOptimization: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced 5G optimization needs',
       features: [
-        'Advanced optimization',
-        'Multi-network support',
-        'Custom algorithms',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced optimizationMulti-network support',
+        'Custom algorithmsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-carrier support'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPowered5GNetworkOptimization: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex 5G optimization requirements',
       features: [
-        'Custom optimization development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom optimization developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPowered5GNetworkOptimization: React.FC = () => {
       position: "Enterprise Director",
       company: "Advanced Networks Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPowered5GNetworkOptimization: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Optimize with AI-Powered 5G Network Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPowered5GNetworkOptimization: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPowered5GNetworkOptimization;
+export default AIPowered5GNetworkOptimization,

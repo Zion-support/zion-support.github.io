@@ -1,67 +1,67 @@
-"use client";
-import React{ useState } from 'react';
+"use client",
+import React{ useState } from 'react',
 CalendarClockUsersZapCheckCircleArrowRightX,
 interface DemoFormData {,
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  role: string;
-  companySize: string;
-  industry: string;
-  interests: string[];
-  preferredDate: string;
-  preferredTime: string;
-  message: string,}
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  role: string,
+  companySize: string,
+  industry: string,
+  interests: string[],
+  preferredDate: string,
+  preferredTime: string,
+  message: string}
 const industries = [,
-  Technology', 'HealthcareFinance', 'ManufacturingRetail', 'EducationGovernment', 'Other',
-];
+  TechnologyHealthcareFinance', 'ManufacturingRetailEducationGovernment', 'Other'
+],
 const companySizes = [,
-  '1-10 employees'11-50 employees'51-200 employees'201-1000 employees'1000+ employees',
-];
+  '1-10 employees'11-50 employees'51-200 employees'201-1000 employees'1000+ employees'
+],
 const interests = [,
-  'AI 'AutomationCybersecurity'Cloud 'SolutionsData 'Analytics', 'Digital 'TransformationProcess Optimization',
-];
+  'AI 'AutomationCybersecurity'Cloud 'SolutionsData 'AnalyticsDigital 'TransformationProcess Optimization'
+],
 const timeSlots = [,
-  '9: 00 AM'10:00 AM'11:00 AM'1:00 PM'2:00 PM'3:00 PM'4:00 PM',};
+  '9: 00 AM'10:00 AM'11:00 AM'1:00 PM'2:00 PM'3:00 PM'4:00 PM'},
 export default function InteractiveDemoRequest() {,
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
+  const [isOpen, setIsOpen] = useState(false),
+  const [currentStep, setCurrentStep] = useState(1),
   const [formData, setFormData] = useState<DemoFormData>({,
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    role: '';
-    companySize: '';
-    industry: '';
-    interests: [];
-    preferredDate: '';
-    preferredTime: '';
-    message: '',});
-  const [isSubmittedsetIsSubmitted] = useState(false);
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    role: '',
+    companySize: '',
+    industry: '',
+    interests: [],
+    preferredDate: '',
+    preferredTime: '',
+    message: ''}),
+  const [isSubmittedsetIsSubmitted] = useState(false),
   const handleInputChange = (field: keyof DemoFormDatavalue: string | string[]) => {,
-    setFormData(prev => ({ ...prev[field]: value ,}));
-  };
+    setFormData(prev => ({ ...prev[field]: value })),
+  },
   const handleInterestToggle = (interest: string) => {,
     setFormData(prev => ({,
-      ...prev;
+      ...prev,
       interests: prev.interests.includes(interest),
         ? prev.interests.filter(i => i !== interest),
-        : [...prev.interestsinterest],}));
-  };
+        : [...prev.interestsinterest]})),
+  },
   const handleSubmit = (e: React.FormEvent) => {,
-    e.preventDefault();
+    e.preventDefault(),
     // Here you would typically send the data to your backend,
-    console.log('Demo request submitted:'formData);
-    setIsSubmitted(true),
-  };
+    console.log('Demo request submitted: 'formData),
+    setIsSubmitted(true)
+  },
   const nextStep = () => {,
-    if (currentStep < 3) setCurrentStep(currentStep + 1);
-  };
+    if (currentStep < 3) setCurrentStep(currentStep + 1),
+  },
   const prevStep = () => {,
-    if (currentStep > 1) setCurrentStep(currentStep - 1);
-  };
+    if (currentStep > 1) setCurrentStep(currentStep - 1),
+  },
   return (,
     <>,
       {/* Floating Demo Button */}
@@ -72,7 +72,7 @@ export default function InteractiveDemoRequest() {,
         <Calendar className="w-5 h-5 mr-2" />,
         Request Demo,
       </button>,
-      {/* Modal */,}
+      {/* Modal */}
       <div>,
         {isOpen && (,
           <div,
@@ -94,17 +94,16 @@ export default function InteractiveDemoRequest() {,
                     className="text-white/80 hover: text-white transition-colors",
                   >,
                     <X className="w-6 h-6" />,
-                {/* Progress Bar */,}
+                {/* Progress Bar */}
                 <div className="mt-4">,
                   <div className="flex space-x-2">,
                     {[123].map((step) => (,
                       <div,
                         key={step}
                         className={`flex-1 h-2 rounded-full ${,
-                          step <= currentStep ? 'bg-white' : 'bg-white/30',
+                          step <= currentStep ? 'bg-white' : 'bg-white/30'
                         }`}
-                      />,
-                    ))}
+                      />))}
                   <div className="flex justify-between mt-2 text-sm">,
                     <span>Personal Info</span>,
                     <span>Business Details</span>,
@@ -128,8 +127,8 @@ export default function InteractiveDemoRequest() {,
                     </button>,
                   </div>,
                 ) : (,
-                  <form onSubmit={handleSubmit,}>,
-                      {/* Step 1: Personal Information */,}
+                  <form onSubmit={handleSubmit}>,
+                      {/* Step 1: Personal Information */}
                       {currentStep === 1 && (,
                         <div,
                           key="step1",
@@ -143,7 +142,7 @@ export default function InteractiveDemoRequest() {,
                                 type="text",
                                 required,
                                 value={formData.name}
-                                onChange={(e) => handleInputChange(name', 'e.target.value)}
+                                onChange={(e) => handleInputChange(namee.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                                 placeholder="John Doe",
                               />,
@@ -152,7 +151,7 @@ export default function InteractiveDemoRequest() {,
                               <input,
                                 type="email",
                                 required,
-                                value={formData.email,}
+                                value={formData.email}
                                 onChange={(e) => handleInputChange(email', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                                 placeholder="john@company.com",
@@ -162,8 +161,8 @@ export default function InteractiveDemoRequest() {,
                               <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>,
                               <input,
                                 type="tel",
-                                value={formData.phone,}
-                                onChange={(e) => handleInputChange(phone', 'e.target.value)}
+                                value={formData.phone}
+                                onChange={(e) => handleInputChange(phonee.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                                 placeholder="+1 (555) 123-4567",
                               />,
@@ -172,7 +171,7 @@ export default function InteractiveDemoRequest() {,
                               <input,
                                 type="text",
                                 required,
-                                value={formData.role,}
+                                value={formData.role}
                                 onChange={(e) => handleInputChange(role', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                                 placeholder="CTOCEOetc.",
@@ -180,8 +179,8 @@ export default function InteractiveDemoRequest() {,
                             </div>,
                           </div>,
                         </div>,
-                      ),}
-                      {/* Step 2: Business Details */,}
+                      )}
+                      {/* Step 2: Business Details */}
                       {currentStep === 2 && (,
                         <div,
                           key="step2",
@@ -194,7 +193,7 @@ export default function InteractiveDemoRequest() {,
                               type="text",
                               required,
                               value={formData.company}
-                              onChange={(e) => handleInputChange(company', 'e.target.value)}
+                              onChange={(e) => handleInputChange(companye.target.value)}
                               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                               placeholder="Your Company",
                             />,
@@ -203,26 +202,24 @@ export default function InteractiveDemoRequest() {,
                               <label className="block text-sm font-medium text-gray-700 mb-2">Company Size *</label>,
                               <select,
                                 required,
-                                value={formData.companySize,}
+                                value={formData.companySize}
                                 onChange={(e) => handleInputChange(companySize', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                               >,
                                 <option value="">Select size</option>,
                                 {companySizes.map(size => (,
-                                  <option key={size,} value={size}>{size}</option>,
-                                ))}
+                                  <option key={size} value={size}>{size}</option>))}
                             <div>,
                               <label className="block text-sm font-medium text-gray-700 mb-2">Industry *</label>,
                               <select,
                                 required,
                                 value={formData.industry}
-                                onChange={(e) => handleInputChange(industry', 'e.target.value)}
+                                onChange={(e) => handleInputChange(industrye.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                               >,
                                 <option value="">Select industry</option>,
                                 {industries.map(industry => (,
-                                  <option key={industry,} value={industry}>{industry}</option>,
-                                ))}
+                                  <option key={industry} value={industry}>{industry}</option>))}
                           <div>,
                             <label className="block text-sm font-medium text-gray-700 mb-2">Areas of Interest</label>,
                             <div className="grid grid-cols-2 gap-2">,
@@ -234,7 +231,7 @@ export default function InteractiveDemoRequest() {,
                                   className={`p-3 rounded-lg text-sm font-medium transition-all duration-200 ${,
                                     formData.interests.includes(interest),
                                       ? 'bg-blue-100 text-blue-700 border-2 border-blue-300',
-                                      : 'bg-gray-50 text-gray-700 border-2 border-gray-200 hover: border-gray-300',}`}
+                                      : 'bg-gray-50 text-gray-700 border-2 border-gray-200 hover: border-gray-300'}`}
                                 >,
                                   {interest}
                               ))}
@@ -242,7 +239,7 @@ export default function InteractiveDemoRequest() {,
                           </div>,
                         </div>,
                       )}
-                      {/* Step 3: Schedule */,}
+                      {/* Step 3: Schedule */}
                       {currentStep === 3 && (,
                         <div,
                           key="step3",
@@ -256,7 +253,7 @@ export default function InteractiveDemoRequest() {,
                                 type="date",
                                 required,
                                 value={formData.preferredDate}
-                                onChange={(e) => handleInputChange(preferredDate', 'e.target.value)}
+                                onChange={(e) => handleInputChange(preferredDatee.target.value)}
                                 min={new Date().toISOString().split('T')[0]}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                               />,
@@ -264,14 +261,13 @@ export default function InteractiveDemoRequest() {,
                               <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Time *</label>,
                               <select,
                                 required,
-                                value={formData.preferredTime,}
-                                onChange={(e) => handleInputChange(preferredTime', 'e.target.value)}
+                                value={formData.preferredTime}
+                                onChange={(e) => handleInputChange(preferredTimee.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                               >,
                                 <option value="">Select time</option>,
                                 {timeSlots.map(time => (,
-                                  <option key={time,} value={time}>{time}</option>,
-                                ))}
+                                  <option key={time} value={time}>{time}</option>))}
                           <div>,
                             <label className="block text-sm font-medium text-gray-700 mb-2">Additional Message</label>,
                             <textarea,
@@ -283,7 +279,7 @@ export default function InteractiveDemoRequest() {,
                             />,
                           </div>,
                         </div>,
-                      ),}
+                      )}
                     </div>,
                   </form>,
                 )}
@@ -295,8 +291,7 @@ export default function InteractiveDemoRequest() {,
                       onClick={prevStep}
                       className="px-6 py-2 text-gray-600 hover: text-gray-800 transition-colors",
                     >,
-                      Back,
-                  ),}
+                      Back)}
                   <div className="flex-1" />,
                   {currentStep < 3 ? (,
                     <button,
@@ -304,20 +299,18 @@ export default function InteractiveDemoRequest() {,
                       className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center",
                     >,
                       Next,
-                      <ArrowRight className="w-4 h-4 ml-2" />,
-                  ) : (,
+                      <ArrowRight className="w-4 h-4 ml-2" />) : (,
                     <button,
-                      onClick={handleSubmit,}
+                      onClick={handleSubmit}
                       className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center",
                     >,
                       <Calendar className="w-4 h-4 mr-2" />,
-                      Schedule Demo,
-                  ),}
+                      Schedule Demo)}
               )}
             </div>,
           </div>,
         )}
       </div>,
     </>,
-  );
-export default InteractiveDemoRequest;]
+  ),
+export default InteractiveDemoRequest,]

@@ -1,43 +1,43 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List, Filter,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Database, Cloud, Lock, Zap, Globe, ChartBar,
   Users, Briefcase, TrendingUp, Award, Star, Clock, DollarSign
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new innovative services
-import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services';
-import { innovative2037ITServices } from '../data/innovative-2037-it-services';
-import { innovative2037AIServices } from '../data/innovative-2037-ai-services';
+import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services',
+import { innovative2037ITServices } from '../data/innovative-2037-it-services',
+import { innovative2037AIServices } from '../data/innovative-2037-ai-services',
 
 const Innovative2037ServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   // Combine all services
   const allServices = [
     ...innovative2037MicroSaasServices.map(service => ({ ...service, type: 'micro-saas' })),
     ...innovative2037ITServices.map(service => ({ ...service, type: 'it-service' })),
     ...innovative2037AIServices.map(service => ({ ...service, type: 'ai-service' }))
-  ];
+  ],
 
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
     
     const matchesCategory = selectedCategory === 'all' || 
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-                           service.type === selectedCategory;
+                           service.type === selectedCategory,
     
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory,
+  }),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: <Grid className="w-5 h-5" />, count: allServices.length },
@@ -48,7 +48,7 @@ const Innovative2037ServicesShowcase: React.FC = () => {
     { id: 'data-analytics', name: 'Data Analytics', icon: <ChartBar className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Data') || s.category.includes('Analytics')).length },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length },
     { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure')).length }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -58,7 +58,7 @@ const Innovative2037ServicesShowcase: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -69,7 +69,7 @@ const Innovative2037ServicesShowcase: React.FC = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -341,7 +341,7 @@ const Innovative2037ServicesShowcase: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -377,7 +377,7 @@ const Innovative2037ServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default Innovative2037ServicesShowcase;
+export default Innovative2037ServicesShowcase,

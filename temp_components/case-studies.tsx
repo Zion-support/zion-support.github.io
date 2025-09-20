@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
   DollarSign, ChartBar, Target as TargetIcon, Lightbulb
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function CaseStudiesPage() {
   const caseStudies = [
@@ -132,26 +132,26 @@ export default function CaseStudiesPage() {
       image: "/api/placeholder/600/400",
       category: "DevOps"
     }
-  ];
+  ],
 
-  const categories = ["All", "AI & Machine Learning", "Cybersecurity", "Edge Computing", "Space Technology", "Neural Interfaces", "DevOps"];
-  const industries = ["All", "Financial Services", "Government & Defense", "IoT & Telecommunications", "Space & Aerospace", "Healthcare & Research", "Technology & Startups"];
+  const categories = ["All", "AI & Machine Learning", "Cybersecurity", "Edge Computing", "Space Technology", "Neural Interfaces", "DevOps"],
+  const industries = ["All", "Financial Services", "Government & Defense", "IoT & Telecommunications", "Space & Aerospace", "Healthcare & Research", "Technology & Startups"],
   
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
-  const [selectedIndustry, setSelectedIndustry] = React.useState("All");
+  const [selectedCategory, setSelectedCategory] = React.useState("All"),
+  const [selectedIndustry, setSelectedIndustry] = React.useState("All"),
 
   const filteredCaseStudies = caseStudies.filter(study => {
-    const categoryMatch = selectedCategory === "All" || study.category === selectedCategory;
-    const industryMatch = selectedIndustry === "All" || study.industry === selectedIndustry;
-    return categoryMatch && industryMatch;
-  });
+    const categoryMatch = selectedCategory === "All" || study.category === selectedCategory,
+    const industryMatch = selectedIndustry === "All" || study.industry === selectedIndustry,
+    return categoryMatch && industryMatch,
+  }),
 
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: CheckCircle },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Success Rate", icon: Star },
     { number: "$100M+", label: "Value Delivered", icon: DollarSign }
-  ];
+  ],
 
 const case-studies: React.FC = () => {
   return (
@@ -159,7 +159,7 @@ const case-studies: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">case-studies</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default case-studies;
+export default case-studies,

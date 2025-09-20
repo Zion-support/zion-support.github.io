@@ -1,28 +1,28 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Target, Zap, Star, Users, TrendingUp, 
   CheckCircle, ArrowRight, Phone, Mail, MapPin,
   Brain, Shield, Globe, Cpu, Lock, Cloud
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const heroStats = [
   { label: 'SAAS Solutions', value: '20+', icon: <Rocket className="w-6 h-6" /> },
   { label: 'Business Clients', value: '800+', icon: <Users className="w-6 h-6" /> },
   { label: 'Success Rate', value: '99.5%', icon: <Star className="w-6 h-6" /> },
   { label: 'ROI Average', value: '350%', icon: <TrendingUp className="w-6 h-6" /> }
-];
+],
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -32,7 +32,7 @@ const containerVariants = {
       staggerChildren: 0.1
     }
   }
-};
+},
 
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
@@ -43,7 +43,7 @@ const itemVariants = {
       duration: 0.5
     }
   }
-};
+},
 
 export default function InnovativeMicroSaasSolutions2025() {
   return (
@@ -60,6 +60,6 @@ export default function InnovativeMicroSaasSolutions2025() {
         </div>
       </div>
     </div>
-  );
-};
-export default 2025-innovative-micro-saas-solutions;
+  ),
+},
+export default 2025-innovative-micro-saas-solutions,

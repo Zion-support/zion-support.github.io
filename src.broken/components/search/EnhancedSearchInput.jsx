@@ -1,83 +1,83 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react',
 import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {
 
-    const [query, setQuery] = useState('');
-    const [showSuggestions, setShowSuggestions] = useState(false);
-    const [filteredSuggestions, setFilteredSuggestions] = useState([]);
-    const [selectedIndex, setSelectedIndex] = useState(-1);
-    const inputRef = useRef(null);
-    const suggestionsRef = useRef(null);
+    const [query, setQuery] = useState(''),
+    const [showSuggestions, setShowSuggestions] = useState(false),
+    const [filteredSuggestions, setFilteredSuggestions] = useState([]),
+    const [selectedIndex, setSelectedIndex] = useState(-1),
+    const inputRef = useRef(null),
+    const suggestionsRef = useRef(null),
     useEffect(() => {
         if(query.trim()) {
 
             const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
-                suggestion.description?.toLowerCase().includes(query.toLowerCase()));
-            setFilteredSuggestions(filtered.slice(0, 5));
-            setShowSuggestions(true);
+                suggestion.description?.toLowerCase().includes(query.toLowerCase())),
+            setFilteredSuggestions(filtered.slice(0, 5)),
+            setShowSuggestions(true),
             setSelectedIndex(-1)}
         else {
 
-            setFilteredSuggestions([]);
+            setFilteredSuggestions([]),
             setShowSuggestions(false)}
-    }, [query, suggestions]);
+    }, [query, suggestions]),
     useEffect(() => {
         const handleClickOutside = (event) => {
 
             if(suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
 
                 setShowSuggestions(false)}
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+        },
+        document.addEventListener('mousedown', handleClickOutside),
+        return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
     const handleClear = () => {
 
-        setQuery('');
-        setShowSuggestions(false);
-        inputRef.current?.focus()};
+        setQuery(''),
+        setShowSuggestions(false),
+        inputRef.current?.focus()},
     const handleSubmit = (e) => {
 
-        e.preventDefault();
+        e.preventDefault(),
         if(query.trim() && onSearch) {
 
-            onSearch(query.trim());
+            onSearch(query.trim()),
             setShowSuggestions(false)}
-    };
+    },
     const handleSuggestionClick = (suggestion) => {
 
-        setQuery(suggestion.title);
-        setShowSuggestions(false);
+        setQuery(suggestion.title),
+        setShowSuggestions(false),
         if(onSearch) {
 
             onSearch(suggestion.title)}
-    };
+    },
     const handleKeyDown = (e) => {
 
         if(!showSuggestions)
-            return;
+            return,
         switch(e.key) {
 
             case 'ArrowDown':
-                e.preventDefault();
-                setSelectedIndex(prev => prev < filteredSuggestions.length-1 ? prev + 1 : prev);
-                break;
+                e.preventDefault(),
+                setSelectedIndex(prev => prev < filteredSuggestions.length-1 ? prev + 1 : prev),
+                break,
             case 'ArrowUp':
-                e.preventDefault();
-                setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-                break;
+                e.preventDefault(),
+                setSelectedIndex(prev => prev > 0 ? prev - 1 : -1),
+                break,
             case 'Enter':
-                e.preventDefault();
+                e.preventDefault(),
                 if(selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
 
                     handleSuggestionClick(filteredSuggestions[selectedIndex])}
                 else if(query.trim()) {
 
                     handleSubmit(e)}
-                break;
+                break,
             case 'Escape':
-                setShowSuggestions(false);
-                setSelectedIndex(-1);
+                setShowSuggestions(false),
+                setSelectedIndex(-1),
                 break}
-    };
+    },
     return (<div className={`relative ${className}`} ref={suggestionsRef}>"
       <form onSubmit={handleSubmit} className="relative">"
         <div className="relative">"
@@ -113,5 +113,5 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
               </div>
             </button>))}
         </div>)}
-    </div>)};
+    </div>)},
 '"`

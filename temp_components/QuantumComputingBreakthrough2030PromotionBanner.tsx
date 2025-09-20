@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function QuantumComputingBreakthrough2030PromotionBanner() {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">,
@@ -12,7 +12,7 @@ export default function QuantumComputingBreakthrough2030PromotionBanner() {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center">,
-          {/* Badge */,}
+          {/* Badge */}
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold mb-6 animate-pulse">,
             ⚛️ QUANTUM SUPREMACY ACHIEVED,
           </div>,
@@ -23,7 +23,7 @@ export default function QuantumComputingBreakthrough2030PromotionBanner() {,
               Breakthrough 2030,
             </span>,
           </h2>,
-          {/* Description */,}
+          {/* Description */}
           <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
             Revolutionary quantum computing breakthroughs featuring error-corrected quantum computers,
             quantum internetand 50,000% processing improvements that will transform everything.,
@@ -59,12 +59,11 @@ export default function QuantumComputingBreakthrough2030PromotionBanner() {,
               Watch Demo,
             </button>,
           </div>,
-          {/* Additional info */,}
+          {/* Additional info */}
           <p className="text-sm text-gray-400 mt-6">,
             Error-corrected quantum computers with 1,000,000+ qubits,
           </p>,
         </div>,
       </div>,
-    </div>,
-  );
+    </div>),
 }

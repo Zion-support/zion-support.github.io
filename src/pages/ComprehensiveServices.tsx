@@ -1,21 +1,16 @@
-import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
+import { SEO } from "@/components/SEO";
+import { motion } from "framer-motion";
 import {
     ArrowRight, Cloud as CloudIcon,
     Cpu, ExternalLink, Globe as GlobeIcon, Mail, MapPin, MessageSquare, Phone, Search, Sparkles, Star
-} from 'lucide-react';
-import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
-
+} from "lucide-react";
+import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
+import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services";
+import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services";
 // Section component for displaying service categories
 const Section: React.FC<{
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  items: any[];
-  gradient: string;
+  icon: React.ReactNode,title: string,description: string,items: any[],gradient: string
 }> = ({ icon, title, description, items, gradient }) => (
   <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r ${gradient}`}>
     <div className="max-w-7xl mx-auto">
@@ -37,7 +32,7 @@ const Section: React.FC<{
         <div className="text-center mt-12">
           <Link
             to="/services"
-            className="inline-flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+            className="inline-flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-500/10 transition-all duration-300"
           >
             View All {title}
             <ArrowRight className="w-4 h-4 ml-2" />
@@ -47,9 +42,8 @@ const Section: React.FC<{
     </div>
   </section>
 );
-
 // Service Card component
-const ServiceCard: React.FC<{ service: any; index: number }> = ({ service, index }) => (
+const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -90,55 +84,51 @@ const ServiceCard: React.FC<{ service: any; index: number }> = ({ service, index
     </div>
     <Link
       to={service.cta || '#'}
-      className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium"
+      className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium"
     >
       Learn More
       <ArrowRight className="w-4 h-4 ml-2" />
     </Link>
   </motion.div>
 );
-
 export default function ComprehensiveServices() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('popular');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('popular'),
 
   // Combine all services
-  const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
+  const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029],
 
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase() === selectedCategory.toLowerCase();
-    return matchesSearch && matchesCategory;
-  });
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase() === selectedCategory.toLowerCase(),
+    return matchesSearch && matchesCategory,
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'price-high':
-        return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', ''));
+        return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''));
       case 'rating':
         return b.rating - a.rating;
       case 'newest':
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-      default:
-        return b.isPopular ? 1 : -1;
+      default: return b.isPopular ? 1 : -1
     }
   });
-
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
 
   // Sample data for sections
-  const microSaaS = allServices.filter(service => service.category === 'Micro SaaS').slice(0, 6);
-  const itServices = allServices.filter(service => service.category === 'IT Services').slice(0, 6);
+  const microSaaS = allServices.filter(service => service.category === 'Micro SaaS').slice(0, 6),
+  const itServices = allServices.filter(service => service.category === 'IT Services').slice(0, 6),
   const aiSolutions = allServices.filter(service => service.category === 'AI Solutions').slice(0, 6);
-
   return (
     <>
       <SEO
@@ -239,7 +229,7 @@ export default function ComprehensiveServices() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mt-8">
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
@@ -251,5 +241,5 @@ export default function ComprehensiveServices() {
         </motion.div>
       </section>
     </>
-  );
+  )
 }

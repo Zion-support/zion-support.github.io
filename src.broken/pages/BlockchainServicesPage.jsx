@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -16,7 +16,7 @@ export default function Page() {
         description: "Build financial services without intermediaries using smart contracts and DeFi protocols",
         icon: <Wallet className="h-6 w-6"/>
 
-];
+],
     return (<div className="min - h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient - to - br from - zion - blue via - zion - purple to - zion - blue - dark py-20">

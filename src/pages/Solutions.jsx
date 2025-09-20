@@ -1,19 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Target, Brain, Cloud, Shield, BarChart3, Building } from 'lucide-react';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Target, Brain, Cloud, Shield, BarChart3, Building } from "lucide-react";
 export default function Solutions() {
   const solutions = [
-    { name: 'Enterprise Solutions', path: '/solutions', icon: Building, description: 'End-to-end solutions for large organizations' },
-    { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Applied AI for real business outcomes' },
-    { name: 'Cloud & DevOps', path: '/services/devops-cloud', icon: Cloud, description: 'Modernize delivery with DevOps and cloud' },
-    { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Protect systems with AI-powered security' },
-    { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Turn data into decisions' },
+    { name: 'Enterprise Solutions', path: '/solutions', icon: Building, description: 'End-to-end solutions for large organizations' };
+    { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Applied AI for real business outcomes' };
+    { name: 'Cloud & DevOps', path: '/services/devops-cloud', icon: Cloud, description: 'Modernize delivery with DevOps and cloud' };
+    { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Protect systems with AI-powered security' };
+    { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Turn data into decisions' }
   ];
-
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO title="Solutions - Zion Tech Group" description="Industry and capability solutions by Zion Tech Group." canonical="https://ziontechgroup.com/solutions" />

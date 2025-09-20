@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react';
-import Head from 'next/head';
+import { useEffect, useState } from 'react',
+import Head from 'next/head',
 
 interface Report {
-  generatedAt: string;
-  totalRoutes: number;
-  seeds: string[];
-  reachableCount: number;
-  orphanCount: number;
-  orphans: string[];
+  generatedAt: string,
+  totalRoutes: number,
+  seeds: string[],
+  reachableCount: number,
+  orphanCount: number,
+  orphans: string[]
 }
 
 export default function OrphanRoutesReport() {
-  const [data, setData] = useState<Report | null>(null);
+  const [data, setData] = useState<Report | null>(null),
   useEffect(() => {
     fetch('/reports/orphan-routes.json')
       .then((r) => r.json())
       .then(setData)
-      .catch(() => setData(null));
-  }, []);
+      .catch(() => setData(null)),
+  }, []),
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -45,5 +45,5 @@ export default function OrphanRoutesReport() {
         )}
       </main>
     </div>
-  );
+  ),
 }

@@ -1,16 +1,16 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 interface Stat {
-  id: string;
-  icon: React.ComponentType < any>;
-  value: string;
-  label: string;
-  description: string;
-  color: string;
+  id: string,
+  icon: React.ComponentType < any>,
+  value: string,
+  label: string,
+  description: string,
+  color: string,
   gradient: string
 }
-;
+,
 const stats: Stat[] = [{
 
     id: 'clients',
@@ -71,48 +71,48 @@ const stats: Stat[] = [{
     color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-cyan'
 
-];
+],
 
 export default function EnhancedStatsSection(...args[]):  {
 
-  const [countedValues, setCountedValues] = useState<any>({});
+  const [countedValues, setCountedValues] = useState<any>({}),
   
   const [ref, inView] = useInView({
 
     threshold: 0.3,
     triggerOnce: true
-  }) ;
+  }) ,
 
 =======
   useEffect(() => {
     if(inView) {
 
       controls.start('visible')}
-  }, [controls, inView]);
+  }, [controls, inView]),
 
-    const increment = numericValue / (duration / 16) ; // 60fps
+    const increment = numericValue / (duration / 16) , // 60fps
 
-    let current = start;
+    let current = start,
     
-      current += increment;
+      current += increment,
       if(current >= numericValue) {
 
-        current = numericValue;
+        current = numericValue,
         clearInterval(timer) }
-setCountedValues(prev:  > ({;
-        ...prev,;
-        [target]: Math.floor (current) }) ) }, 16) ;
+setCountedValues(prev: > ({,
+        ...prev,
+        [target]: Math.floor (current) }) ) }, 16) ,
 
-    return timer};
+    return timer},
 
   useEffect(() => {
     if(inView) {
 
       stats.forEach((stat) => {
 
-          animateCount(stat.value)}, stats.indexOf(stat) * 200);
+          animateCount(stat.value)}, stats.indexOf(stat) * 200),
         return () => clearTimeout(timer)})}
-  }, [inView]) ;
+  }, [inView]) ,
   return ()
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Background decoration */}"
@@ -252,7 +252,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                   initial={false}
                 />
               </motion.div>
-            </motion.div>;) ) }
+            </motion.div>,) ) }
         </div>
 
         {/* Bottom Achievement Section */}
@@ -268,7 +268,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
             visible: {
 
               opacity: 1,
-              y: 0,;
+              y: 0,
               transition: {
 
                 duration: 0.6,
@@ -276,7 +276,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
           }}"
           className="mt-16"
 "
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">;
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg: p-12 text-center">,
             <motion.div"
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 360 }}
@@ -290,7 +290,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.</p>
 "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">"
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto">"
               <div className="text-center">"
                 <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>"
                 <div className="text-gray-300">Industry Awards</div>
@@ -303,10 +303,10 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>"
                 <div className="text-gray-300">Client Retention</div>
               </div>
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

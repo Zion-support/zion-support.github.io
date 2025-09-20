@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface AIAnalyticsProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function AIAnalytics({ }: AIAnalyticsProps) {,
@@ -8,8 +8,7 @@ export default function AIAnalytics({ }: AIAnalyticsProps) {,
     <div>,
       <h1>AIAnalytics</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

@@ -1,6 +1,6 @@
 export function slugify(title: string, separator = "-"): string {
-  const sep = separator;
-  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const sep = separator,
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
 
   return title
     .trim()
@@ -10,8 +10,8 @@ export function slugify(title: string, separator = "-"): string {
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/[\s-]+/g, sep)
-    .replace(new RegExp(`${escaped}{2,}`, "g"), sep)
-    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
+    .replace(new RegExp(`${escaped}{2}`, "g"), sep)
+    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), ""),
 }
 
 /**
@@ -24,6 +24,6 @@ export function unslugify(slug: string, separator = "-"): string {
     .split(separator)
     .filter(Boolean)
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
+    .join(" "),
 }
 

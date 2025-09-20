@@ -2,21 +2,21 @@
 }>
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
 =======
-import React, { useState } from "react";"
-import { Button } from '@/components/ui/button';"
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';"
-import { Input } from '@/components/ui/input';"
-import { Textarea } from '@/components/ui/textarea';"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';"
-import { Calendar } from '@/components/ui/calendar';"
-import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';"
-import { cn } from '@/lib/utils';"
-import { zodResolver } from '@hookform/resolvers/zod';"
-import { useForm } from 'react-hook-form';"
-import { z } from 'zod';"
-import { format, addDays } from 'date-fns';"
-import { CalendarIcon import { toast } from '@/components/ui/use-toast';"
-import { useInterviews } from '@/hooks/useInterviews';
+import React, { useState } from "react","
+import { Button } from '@/components/ui/button',"
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',"
+import { Input } from '@/components/ui/input',"
+import { Textarea } from '@/components/ui/textarea',"
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select',"
+import { Calendar } from '@/components/ui/calendar',"
+import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover',"
+import { cn } from '@/lib/utils',"
+import { zodResolver } from '@hookform/resolvers/zod',"
+import { useForm } from 'react-hook-form',"
+import { z } from 'zod',"
+import { format, addDays } from 'date-fns',"
+import { CalendarIcon import { toast } from '@/components/ui/use-toast',"
+import { useInterviews } from '@/hooks/useInterviews',
 ).refine(date => date > new Date(), {
 "
         message: "Interview date must be in the future"
@@ -26,11 +26,11 @@ import { useInterviews } from '@/hooks/useInterviews';
     platform: z.string().min(1, "Please select a meeting platform."),
     meetingLink: z.string().optional(),"
     title: z.string().min(3, "Please provide a brief title for the interview."),
-    notes: z.string().optional()});
+    notes: z.string().optional()}),
 export function InterviewRequestForm({ talent, onClose, userDetails }) {
 
-    const { requestInterview } = useInterviews();
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    const { requestInterview } = useInterviews(),
+    const [isSubmitting, setIsSubmitting] = useState(false),
     const form = useForm({
 
         resolver: zodResolver(formSchema),
@@ -40,7 +40,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             duration: "30","
             platform: "zoom","
             notes: "","
-            meetingLink: ""}});
+            meetingLink: ""}}),
     async function onSubmit(values) {
 
         if(!userDetails?.id) {
@@ -49,15 +49,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
 "
                 title: "Authentication required","
                 description: "Please log in to schedule an interview","
-                variant: "destructive"});
+                variant: "destructive"}),
             return}
-        setIsSubmitting(true);
+        setIsSubmitting(true),
         try {
             // Combine date and time`
-            const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
-            const scheduledDate = new Date(dateTimeString);
+            const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`,
+            const scheduledDate = new Date(dateTimeString),
             // Calculate end time based on duration
-            const durationMinutes = parseInt(values.duration);
+            const durationMinutes = parseInt(values.duration),
             await requestInterview({
 
                 talent_id: talent.id,
@@ -69,15 +69,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 meeting_link: values.meetingLink,"
                 interview_type: "video",
                 title: values.title
-            });
+            }),
             toast({
 "
                 title: "Interview requested",`
-                description: `Your interview request with ${talent.full_name} has been sent.`});
+                description: `Your interview request with ${talent.full_name} has been sent.`}),
             onClose()}
         catch(error) {
 "
-            // // // // // // // // console.error("Failed to schedule interview:", error);
+            // // // // // // // // console.error("Failed to schedule interview:", error),
             toast({
 "
                 title: "Failed to schedule interview","
@@ -91,8 +91,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         "09:00", "09:30", "10:00", "10:30", "11:00", "11:30","
         "12:00", "12:30", "13:00", "13:30", "14:00", "14:30","
         "15:00", "15:30", "16:00", "16:30", "17:00", "17:30","
-        "18:00", "18:30", "19:00", "19:30", "20:00"
-    ];
+        "18:00", "18:30", "19:00", "19:30", "20: 00"
+    ],
     return (<Form {...form}>"
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">"
         <div className="flex items-center mb-6">"

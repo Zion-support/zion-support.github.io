@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 ArrowRightBrainZapShieldRocketSparklesStarTrendingUpGlobeCpuLockCloudAtomMicroscopeSatelliteDollarSignFactoryEarthTestTubeMegaphoneScaleNetwork
-import Link from 'next/link';
+import Link from 'next/link',
 
 const Revolutionary2027ServicesShowcase = () => {
   const featuredServices = [
@@ -83,14 +83,14 @@ const Revolutionary2027ServicesShowcase = () => {
       marketSize: '$500B cybersecurity market',
       growthRate: '500% annual growth'
     }
-  ];
+  ],
 
   const categories = [
     { name: 'Quantum AI Services'count: '25+'icon: Atomcolor: 'from-purple-500 to-indigo-600' },
     { name: 'Space Technology'count: '15+'icon: Satellitecolor: 'from-blue-500 to-cyan-600' },
     { name: 'Biotechnology'count: '20+'icon: TestTubecolor: 'from-green-500 to-emerald-600' },
     { name: 'Emerging Tech'count: '30+'icon: Sparklescolor: 'from-pink-500 to-rose-600' }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -100,7 +100,7 @@ const Revolutionary2027ServicesShowcase = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0y: 20 },
@@ -112,13 +112,13 @@ const Revolutionary2027ServicesShowcase = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">Revolutionary2027ServicesShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default Revolutionary2027ServicesShowcase;
+  ),
+},
+export default Revolutionary2027ServicesShowcase,

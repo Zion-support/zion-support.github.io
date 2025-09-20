@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Zap, Brain, Atom, Shield, Rocket, 
   Globe, Mail, Phone, MapPin, ArrowRight,
@@ -10,14 +10,14 @@ import {
   DollarSign, Palette, Code, Database, Users,
   Twitter, Linkedin, Facebook, Instagram, Youtube,
   Github, MessageCircle, MessageSquare
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -84,7 +84,7 @@ const serviceCategories = [
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about', description: 'Our mission and vision' },
@@ -99,7 +99,7 @@ const companyLinks = [
   { name: 'Diversity & Inclusion', href: '/diversity-inclusion', description: 'Our values' },
   { name: 'Terms of Service', href: '/terms', description: 'Legal terms' },
   { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' }
-];
+],
 
 const socialLinks = [
   { name: 'Twitter', href: '#', icon: <Twitter className="w-5 h-5" /> },
@@ -110,20 +110,20 @@ const socialLinks = [
   { name: 'GitHub', href: '#', icon: <Github className="w-5 h-5" /> },
   { name: 'Discord', href: '#', icon: <MessageCircle className="w-5 h-5" /> },
   { name: 'Slack', href: '#', icon: <MessageSquare className="w-5 h-5" /> }
-];
+],
 
 const stats = [
   { number: '500+', label: 'Services Delivered', icon: Star, color: 'text-cyan-400' },
   { number: '1000+', label: 'Happy Clients', icon: Users, color: 'text-purple-400' },
   { number: '99.9%', label: 'Uptime', icon: Award, color: 'text-green-400' },
   { number: '300%', label: 'Average ROI', icon: TrendingUp, color: 'text-orange-400' }
-];
+],
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   transition: { duration: 0.6, ease: "easeOut" }
-};
+},
 
 const staggerContainer = {
   animate: {
@@ -131,7 +131,7 @@ const staggerContainer = {
       staggerChildren: 0.1
     }
   }
-};
+},
 
 export default function UltraFuturisticFooter2034() {
   return (
@@ -139,6 +139,6 @@ export default function UltraFuturisticFooter2034() {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2034</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default UltraFuturisticFooter2034;
+  ),
+},
+export default UltraFuturisticFooter2034,

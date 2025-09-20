@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 const NewsletterSignup: React.FC = () => {,
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState(''),
+  const [isSubscribed, setIsSubscribed] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
   const handleSubmit = async (e: React.FormEvent) => {,
-    e.preventDefault();
-    setIsLoading(true);
+    e.preventDefault(),
+    setIsLoading(true),
     // Simulate API call,
     setTimeout(() => {,
-      setIsSubscribed(true);
-      setIsLoading(false);
-      setEmail(''),
-    }, 2000);
-  };
+      setIsSubscribed(true),
+      setIsLoading(false),
+      setEmail('')
+    }, 2000),
+  },
   if (isSubscribed) {,
     return (,
       <div,
@@ -23,12 +23,11 @@ const NewsletterSignup: React.FC = () => {,
         <p className="text-lg opacity-90">,
           You're now subscribed to our exclusive newsletter. Get ready for the latest breakthroughs in AI, quantum computing, and neural interfaces.,
         </p>,
-      </div>,
-    );
+      </div>),
   }
   return (,
     <div,
-      whileInView={{ opacity: 1, y: 0 ,}}
+      whileInView={{ opacity: 1, y: 0 }}
       className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden",
     >,
       {/* Background Effects */}
@@ -49,7 +48,7 @@ const NewsletterSignup: React.FC = () => {,
           <div className="flex flex-col sm: flex-row gap-4">,
             <input,
               type="email",
-              value={email,}
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address",
               className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus: outline-none focus:ring-2 focus:ring-white/50",
@@ -57,10 +56,10 @@ const NewsletterSignup: React.FC = () => {,
             />,
             <button,
               type="submit",
-              disabled={isLoading,}
+              disabled={isLoading}
               className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed",
             >,
-              {isLoading ? 'Subscribing...' : 'Subscribe Now →',}
+              {isLoading ? 'Subscribing...' : 'Subscribe Now →'}
             </button>,
           </div>,
         </form>,
@@ -89,6 +88,6 @@ const NewsletterSignup: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default NewsletterSignup;
+  ),
+export default NewsletterSignup,
 }

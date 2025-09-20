@@ -87,7 +87,7 @@ const Testimonials: React.FC = () => {
     <section className="testimonials-section">
       <div className="testimonials-container">
         <h2>What Our Clients Say</h2>
-        <p>Don&apos;t just take our word for it - hear from our satisfied clients</p>
+        <p>Don&apos,t just take our word for it - hear from our satisfied clients</p>
         <div 
           className="testimonials-carousel"
           onMouseEnter={() => setIsAutoPlaying(false)}
@@ -95,7 +95,7 @@ const Testimonials: React.FC = () => {
         >
           <div className="testimonial-card">
             <div className="testimonial-content">
-              <div className="quote-mark">&ldquo;
+              <div className="quote-mark">&ldquo,
               <p>{testimonials[currentIndex].content}</p>
               <div className="rating">
                 {renderStars(testimonials[currentIndex].rating)}

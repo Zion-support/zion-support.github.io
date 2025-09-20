@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-  ];
+  ],
 
   const serviceCategories = [{
       title: 'AI & Machine Learning',
@@ -11,24 +11,24 @@ export default function Page() {
         {
           name: 'AI Content Creation',
           price: '$50 - 500',
-          description: 'Per article or monthly package',
+          description: 'Per article or monthly package'
         },
         {
           name: 'AI Business Intelligence',
           price: '$200 - 2000',
-          description: 'Monthly subscription',
+          description: 'Monthly subscription'
         },
         {
           name: 'Machine Learning Models',
           price: '$500 - 5000',
-          description: 'Custom development',
+          description: 'Custom development'
         },
         {
           name: 'AI Automation',
           price: '$100 - 1000',
-          description: 'Per workflow / month',
-        },
-      ],
+          description: 'Per workflow / month'
+        }
+      ]
     },
     {
       title: 'Cloud & Infrastructure',
@@ -37,24 +37,24 @@ export default function Page() {
       services: [{
           name: 'Cloud Migration',
           price: '$1000 - 10000',
-          description: 'One - time project',
+          description: 'One - time project'
         },
         {
           name: 'DevOps Automation',
           price: '$200 - 2000',
-          description: 'Monthly service',
+          description: 'Monthly service'
         },
         {
           name: 'Infrastructure Management',
           price: '$500 - 5000',
-          description: 'Monthly service',
+          description: 'Monthly service'
         },
         {
           name: 'Security Audits',
           price: '$500 - 3000',
-          description: 'Per audit',
-        },
-      ],
+          description: 'Per audit'
+        }
+      ]
     },
     {
       title: 'Cybersecurity',
@@ -63,24 +63,24 @@ export default function Page() {
       services: [{
           name: 'Security Assessment',
           price: '$1000 - 5000',
-          description: 'Per assessment',
+          description: 'Per assessment'
         },
         {
           name: 'Penetration Testing',
           price: '$2000 - 10000',
-          description: 'Per test',
+          description: 'Per test'
         },
         {
           name: 'Security Monitoring',
           price: '$200 - 2000',
-          description: 'Monthly service',
+          description: 'Monthly service'
         },
         {
           name: 'Incident Response',
           price: '$500 - 5000',
-          description: 'Per incident',
-        },
-      ],
+          description: 'Per incident'
+        }
+      ]
     },
     {
       title: 'Data & Analytics',
@@ -89,58 +89,58 @@ export default function Page() {
       services: [{
           name: 'Data Analytics Platform',
           price: '$300 - 3000',
-          description: 'Monthly subscription',
+          description: 'Monthly subscription'
         },
         {
           name: 'Business Intelligence',
           price: '$500 - 5000',
-          description: 'Monthly service',
+          description: 'Monthly service'
         },
         {
           name: 'Data Migration',
           price: '$1000 - 10000',
-          description: 'One - time project',
+          description: 'One - time project'
         },
         {
           name: 'Custom Dashboards',
           price: '$200 - 2000',
-          description: 'Per dashboard',
-        },
-      ],
-    },
-  ];
+          description: 'Per dashboard'
+        }
+      ]
+    }
+  ],
 
   const industrySolutions = [{
       title: 'Healthcare',
       icon: Heart,
       color: 'from - red - 500 to - pink - 500',
-      pricing: 'Custom pricing based on patient volume and requirements',
+      pricing: 'Custom pricing based on patient volume and requirements'
     },
     {
       title: 'Financial Services',
       icon: TrendingUp,
       color: 'from - green - 500 to - blue - 500',
-      pricing: 'Enterprise pricing with compliance requirements',
+      pricing: 'Enterprise pricing with compliance requirements'
     },
     {
       title: 'Manufacturing',
       icon: Factory,
       color: 'from - orange - 500 to - red - 500',
-      pricing: 'Volume - based pricing for production scale',
+      pricing: 'Volume - based pricing for production scale'
     },
     {
       title: 'Retail & E-commerce',
       icon: ShoppingCart,
       color: 'from - purple - 500 to - indigo - 500',
-      pricing: 'Revenue - based pricing model',
-    },
-  ];
+      pricing: 'Revenue - based pricing model'
+    }
+  ],
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
@@ -478,5 +478,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
-    const { user } = useAuth();
-    const router = useRouter();
+    const { user } = useAuth(),
+    const router = useRouter(),
     // Check if user has billing permissions
     const hasBillingAccess = user?.role === "enterprise_admin" ||
         (user?.permissions && user.permissions.includes('billing_access'));

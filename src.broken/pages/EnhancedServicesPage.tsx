@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Badge } from '@/components / ui / badge';
+import React, { useState } from 'react',
+import { Badge } from '@/components / ui / badge',
 
 export default function Page() {
               >
@@ -18,9 +18,9 @@ export default function Page() {
 
                 Request Enterprise Consultation
               </Button>
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) ,
 }

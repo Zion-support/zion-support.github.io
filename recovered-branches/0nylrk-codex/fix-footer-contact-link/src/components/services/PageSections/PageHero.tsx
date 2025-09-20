@@ -1,9 +1,9 @@
 
 ,
-import {GradientHeading} from "@/components/GradientHeading";
-import {Clock, Map, DollarSign} from "lucide-react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from "lucide-react";
+import {GradientHeading} from "@/components/GradientHeading",
+import {Clock, Map, DollarSign} from "lucide-react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Clock, Map, DollarSign } from "lucide-react",
 export function PageHero() {,
   return (,
     <div className="text-center mb-12">,
@@ -25,7 +25,6 @@ export function PageHero() {,
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>,
         </div>,
       </div>,
-    </div>,
-  );
+    </div>),
 }
 ,

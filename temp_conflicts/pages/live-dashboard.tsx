@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const LiveDashboard = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState(new Date()),
   const [systemStatus, setSystemStatus] = useState({
     uptime: '99.9%',
     responseTime: '45ms',
@@ -11,24 +11,24 @@ const LiveDashboard = () => {
     serverLoad: 23,
     memoryUsage: 67,
     diskUsage: 42
-  });
+  }),
 
   const [metrics, setMetrics] = useState({
     requestsPerMinute: 1247,
     errorRate: 0.12,
     throughput: '2.4 GB/s',
     latency: '23ms'
-  });
+  }),
 
   const [alerts, setAlerts] = useState([
     { id: 1, level: 'info', message: 'System maintenance scheduled for 2:00 AM', time: '2 min ago' },
     { id: 2, level: 'warning', message: 'Memory usage approaching threshold', time: '5 min ago' },
     { id: 3, level: 'success', message: 'Backup completed successfully', time: '15 min ago' }
-  ]);
+  ]),
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentTime(new Date());
+      setCurrentTime(new Date()),
       // Simulate real-time updates
       setSystemStatus(prev => ({
         ...prev,
@@ -36,37 +36,37 @@ const LiveDashboard = () => {
         serverLoad: Math.max(0, Math.min(100, prev.serverLoad + Math.floor(Math.random() * 6) - 3)),
         memoryUsage: Math.max(0, Math.min(100, prev.memoryUsage + Math.floor(Math.random() * 4) - 2)),
         diskUsage: Math.max(0, Math.min(100, prev.diskUsage + Math.floor(Math.random() * 2) - 1))
-      }));
-    }, 5000);
+      })),
+    }, 5000),
 
-    return () => clearInterval(timer);
-  }, []);
+    return () => clearInterval(timer),
+  }, []),
 
   const getStatusColor = (value, threshold) => {
-    if (value < threshold * 0.7) return 'text-green-600';
-    if (value < threshold * 0.9) return 'text-yellow-600';
-    return 'text-red-600';
-  };
+    if (value < threshold * 0.7) return 'text-green-600',
+    if (value < threshold * 0.9) return 'text-yellow-600',
+    return 'text-red-600',
+  },
 
   const getAlertIcon = (level) => {
     switch (level) {
-      case 'info': return 'ℹ️';
-      case 'warning': return '⚠️';
-      case 'success': return '✅';
-      case 'error': return '❌';
-      default: return 'ℹ️';
+      case 'info': return 'ℹ️',
+      case 'warning': return '⚠️',
+      case 'success': return '✅',
+      case 'error': return '❌',
+      default: return 'ℹ️'
     }
-  };
+  },
 
   const getAlertColor = (level) => {
     switch (level) {
-      case 'info': return 'bg-blue-50 border-blue-200 text-blue-800';
-      case 'warning': return 'bg-yellow-50 border-yellow-200 text-yellow-800';
-      case 'success': return 'bg-green-50 border-green-200 text-green-800';
-      case 'error': return 'bg-red-50 border-red-200 text-red-800';
-      default: return 'bg-gray-50 border-gray-200 text-gray-800';
+      case 'info': return 'bg-blue-50 border-blue-200 text-blue-800',
+      case 'warning': return 'bg-yellow-50 border-yellow-200 text-yellow-800',
+      case 'success': return 'bg-green-50 border-green-200 text-green-800',
+      case 'error': return 'bg-red-50 border-red-200 text-red-800',
+      default: return 'bg-gray-50 border-gray-200 text-gray-800'
     }
-  };
+  },
 
   return (
     <>
@@ -286,7 +286,7 @@ const LiveDashboard = () => {
         </div>
       </div>
     </>
-  );
-};
+  ),
+},
 
-export default LiveDashboard;
+export default LiveDashboard,

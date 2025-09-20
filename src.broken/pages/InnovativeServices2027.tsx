@@ -1,48 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 export default React.memo(function InnovativeServices2027 () {
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027',
 export default function Page() {
  = {
-  'AI & Customer Success': 'from - cyan - 500 to - blue - 600',
-  'Blockchain & DeFi': 'from - purple - 500 to - indigo - 600',
-  'Quantum Computing': 'from - violet - 500 to - purple - 600',
-  'AI & Healthcare': 'from - emerald - 500 to - green - 600',
-  'Metaverse & AR / VR': 'from - pink - 500 to - rose - 600',
-  'Autonomous Systems': 'from - orange - 500 to - red - 600',
-  'Green Tech': 'from - green - 500 to - emerald - 600',
-  'Space Tech': 'from - slate - 500 to - gray - 600',
-  FinTech: 'from - yellow-500 to - amber - 600',
-  'IoT & Smart Cities': 'from - blue - 500 to - cyan - 600',
-};
+  'AI & Customer Success': 'from - cyan - 500 to - blue - 600Blockchain & DeFi': 'from - purple - 500 to - indigo - 600Quantum Computing': 'from - violet - 500 to - purple - 600AI & Healthcare': 'from - emerald - 500 to - green - 600Metaverse & AR / VR': 'from - pink - 500 to - rose - 600Autonomous Systems': 'from - orange - 500 to - red - 600Green Tech': 'from - green - 500 to - emerald - 600Space Tech': 'from - slate - 500 to - gray - 600',
+  FinTech: 'from - yellow-500 to - amber - 600IoT & Smart Cities': 'from - blue - 500 to - cyan - 600'
+},
 
-  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'> ('innovation') ;
+  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ,
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'> ('innovation') ,
 
   const categories = ['all',
-    ...Array.from(new Set (INNOVATIVE_MICRO_SAAS_SERVICES_2027.map (service => service.category) ) ) ,
-  ];
+    ...Array.from(new Set (INNOVATIVE_MICRO_SAAS_SERVICES_2027.map (service => service.category) ) ) 
+  ],
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {
       const matchesSearch = service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
         service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
         service.tags.some(tag =>
-          tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-      return matchesCategory && matchesSearch;
-    }) ;
+          tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
+      return matchesCategory && matchesSearch,
+    }) ,
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch(sortBy) {
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'roi':
-        return (parseInt (b.roi.replace ('%', '') ) - parseInt(a.roi.replace ('%', '') ) ) ;
+        return (parseInt (b.roi.replace ('%', '') ) - parseInt(a.roi.replace ('%', '') ) ) ,
       case 'innovation':
-        return a.innovationLevel === 'revolutionary' ? 1 : -1;
-      default:
-        return 0;
+        return a.innovationLevel === 'revolutionary' ? 1 : -1,
+      default: return 0
     }
-  }) ;
+  }) ,
 
   return (<div  className="min - h-screen bg-futuristic">
       <SEO
@@ -160,7 +151,7 @@ export default function Page() {
                       {React.createElement(categoryIcons[service.category] || Star,
                         {
                           className: 'w-8 h-8 text-white',
-                          size: 32,
+                          size: 32
                         }) }
                       <span className="px-3 py-1 bg-white / 20 rounded-full text-sm font - medium text-white">
                         {service.innovationLevel}
@@ -292,8 +283,8 @@ export default function Page() {
                 No services found matching your criteria
               </div>
               <button     onClick={ () => {
-                  setSelectedCategory('all') ;
-                  setSearchQuery('') ;
+                  setSelectedCategory('all') ,
+                  setSearchQuery('') ,
                 }}
                 className="px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration -300"
               >
@@ -384,5 +375,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

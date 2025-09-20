@@ -1,119 +1,119 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import React, { useState, useEffect } from 'react',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
 
 interface HealthData {
-  status: 'healthy' | 'warning' | 'critical';
-  timestamp: string;
-  uptime: number;
-  version: string;
-  environment: string;
+  status: 'healthy' | 'warning' | 'critical',
+  timestamp: string,
+  uptime: number,
+  version: string,
+  environment: string,
   metrics: {
-    errorRate: number;
-    criticalErrors: number;
-    responseTime: number;
-    memoryUsage: number;
-  };
+    errorRate: number,
+    criticalErrors: number,
+    responseTime: number,
+    memoryUsage: number
+  },
   health: {
-    status: string;
-    score: number;
-    issues: string[];
-    recommendations: string[];
-  };
+    status: string,
+    score: number,
+    issues: string[],
+    recommendations: string[]
+  },
   errors: {
     summary: {
-      total: number;
-      critical: number;
-      high: number;
-      medium: number;
-      low: number;
-    };
+      total: number,
+      critical: number,
+      high: number,
+      medium: number,
+      low: number
+    },
     topErrors: Array<{
-      patternId: string;
-      description: string;
-      occurrences: number;
-      severity: string;
-      solution?: string;
-    }>;
-    byCategory: { [category: string]: number };
-  };
+      patternId: string,
+      description: string,
+      occurrences: number,
+      severity: string,
+      solution?: string
+    }>,
+    byCategory: { [category: string]: number },
+  },
 }
 
 const HealthDashboard: React.FC = () => {
-  const [healthData, setHealthData] = useState<HealthData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [autoRefresh, setAutoRefresh] = useState(true);
+  const [healthData, setHealthData] = useState<HealthData | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+  const [autoRefresh, setAutoRefresh] = useState(true),
 
   const fetchHealthData = async () => {
     try {
-      const response = await fetch('/api/admin/health');
+      const response = await fetch('/api/admin/health'),
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+        throw new Error(`HTTP ${response.status}`),
       }
-      const data = await response.json();
-      setHealthData(data);
-      setError(null);
+      const data = await response.json(),
+      setHealthData(data),
+      setError(null),
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch health data');
+      setError(err instanceof Error ? err.message : 'Failed to fetch health data'),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   useEffect(() => {
-    fetchHealthData();
+    fetchHealthData(),
 
     if (autoRefresh) {
-      const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
-      return () => clearInterval(interval);
+      const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds
+      return () => clearInterval(interval),
     }
     
-    return undefined;
-  }, [autoRefresh]);
+    return undefined,
+  }, [autoRefresh]),
 
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'healthy':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
+        return <CheckCircle className="w-5 h-5 text-green-500" />,
       case 'warning':
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
+        return <AlertTriangle className="w-5 h-5 text-yellow-500" />,
       case 'critical':
-        return <XCircle className="w-5 h-5 text-red-500" />;
+        return <XCircle className="w-5 h-5 text-red-500" />,
       default:
-        return <Activity className="w-5 h-5 text-gray-500" />;
+        return <Activity className="w-5 h-5 text-gray-500" />
     }
-  };
+  },
 
   const getStatusBadge = (status: string) => {
     const variant = status === 'healthy' ? 'default' : 
-                   status === 'warning' ? 'secondary' : 'destructive';
+                   status === 'warning' ? 'secondary' : 'destructive',
     return (
       <Badge variant={variant} className="ml-2">
         {status.toUpperCase()}
       </Badge>
-    );
-  };
+    ),
+  },
 
   const formatUptime = (seconds: number) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    return `${hours}h ${minutes}m`;
-  };
+    const hours = Math.floor(seconds / 3600),
+    const minutes = Math.floor((seconds % 3600) / 60),
+    return `${hours}h ${minutes}m`,
+  },
 
   const formatBytes = (bytes: number) => {
-    return `${bytes.toFixed(1)} MB`;
-  };
+    return `${bytes.toFixed(1)} MB`,
+  },
 
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
       </div>
-    );
+    ),
   }
 
   if (error) {
@@ -129,10 +129,10 @@ const HealthDashboard: React.FC = () => {
           </Button>
         </CardContent>
       </Card>
-    );
+    ),
   }
 
-  if (!healthData) return null;
+  if (!healthData) return null,
 
   return (
     <div className="space-y-6">
@@ -388,7 +388,7 @@ const HealthDashboard: React.FC = () => {
         </TabsContent>
       </Tabs>
     </div>
-  );
-};
+  ),
+},
 
-export default HealthDashboard; 
+export default HealthDashboard, 

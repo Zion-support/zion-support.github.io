@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 const RevolutionaryContentPromo: React.FC = () => {,
   return (,
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">,
       <div className="container mx-auto px-4">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -14,7 +14,7 @@ const RevolutionaryContentPromo: React.FC = () => {,
             Revolutionary Technology Content,
           </h2>,
           <p className="text-xl text-purple-200 max-w-4xl mx-auto">,
-            Explore our latest breakthrough content featuring cutting-edge AI, Quantum Computing;
+            Explore our latest breakthrough content featuring cutting-edge AI, Quantum Computing,
             Neural Interfaces, and Next-Generation Technologies that will transform our world,
           </p>,
         </div>,
@@ -25,7 +25,7 @@ const RevolutionaryContentPromo: React.FC = () => {,
               key={index}
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
-              className={`bg-gradient-to-br ${item.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${item.borderColor} hover: scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden`,}
+              className={`bg-gradient-to-br ${item.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${item.borderColor} hover: scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden`}
             >,
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent"></div>,
@@ -43,12 +43,11 @@ const RevolutionaryContentPromo: React.FC = () => {,
                     <div key={featureIndex} className="flex items-center text-purple-300 text-sm">,
                       <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>,
                       {feature}
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <a,
                   href={item.link}
-                  className={`block w-full bg-gradient-to-r ${item.color} text-white py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center`,}
+                  className={`block w-full bg-gradient-to-r ${item.color} text-white py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center`}
                 >,
                   Explore {item.title.split(' ')[0]} →,
                 </a>,
@@ -57,8 +56,7 @@ const RevolutionaryContentPromo: React.FC = () => {,
               {hoveredCard === index && (,
                 <div,
                   className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent",
-                />,
-              )}
+                />)}
             </div>,
           ))}
         </div>,
@@ -88,7 +86,7 @@ const RevolutionaryContentPromo: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div,
           className="text-center",
         >,
@@ -108,5 +106,5 @@ const RevolutionaryContentPromo: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default RevolutionaryContentPromo;
+  )},
+export default RevolutionaryContentPromo,

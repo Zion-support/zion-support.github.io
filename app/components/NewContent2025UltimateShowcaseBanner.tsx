@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 const NewContent2025UltimateShowcaseBanner: React.FC = () => {,
   return (,
     <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">,
@@ -68,6 +68,5 @@ const NewContent2025UltimateShowcaseBanner: React.FC = () => {,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),};
-export default NewContent2025UltimateShowcaseBanner;
+    </section>)},
+export default NewContent2025UltimateShowcaseBanner,

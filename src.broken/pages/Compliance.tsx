@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 export default React.memo(function Compliance () {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -14,100 +14,90 @@ export default function Page() {
       scope: 'Protected health information(PHI) ',
       lastAudit: 'September 2024',
       nextAudit: 'September 2025',
-      benefits: ['Healthcare data security',
-        'Patient privacy protection',
-        'Administrative safeguards',
-        'Technical safeguards',
-      ],
-    },
-  ];
+      benefits: ['Healthcare data securityPatient privacy protection',
+        'Administrative safeguardsTechnical safeguards'
+      ]
+    }
+  ],
 
   const complianceMetrics = [{
       metric: '99.9%',
       label: 'Uptime',
       description: 'System availability',
       icon: Server,
-      trend: 'up',
+      trend: 'up'
     },
     {
       metric: '100%',
       label: 'Data Encryption',
       description: 'At rest and in transit',
       icon: Lock,
-      trend: 'stable',
+      trend: 'stable'
     },
     {
       metric: '< 1 hour',
       label: 'Incident Response',
       description: 'Average response time',
       icon: AlertTriangle,
-      trend: 'down',
+      trend: 'down'
     },
     {
       metric: '24 / 7',
       label: 'Monitoring',
       description: 'Security operations center',
       icon: Monitor,
-      trend: 'stable',
-    },
-  ];
+      trend: 'stable'
+    }
+  ],
 
   const securityMeasures = [{
       category: 'Access Control',
       measures: [
-        'Multi - factor authentication(MFA) ',
-        'Role - based access control(RBAC) ',
-        'Single sign - on(SSO) integration',
-        'Privileged access management(PAM) ',
-        'Session management and timeout',
+        'Multi - factor authentication(MFA) Role - based access control(RBAC) ',
+        'Single sign - on(SSO) integrationPrivileged access management(PAM) ',
+        'Session management and timeout'
       ],
-      icon: Key,
+      icon: Key
     },
     {
       category: 'Data Protection',
-      measures: ['End - to - end encryption(AES - 256) ',
-        'Data loss prevention(DLP) ',
-        'Backup and disaster recovery',
-        'Data classification and labeling',
-        'Secure data disposal',
+      measures: ['End - to - end encryption(AES - 256) Data loss prevention(DLP) ',
+        'Backup and disaster recoveryData classification and labeling',
+        'Secure data disposal'
       ],
-      icon: Database,
+      icon: Database
     },
     {
       category: 'Network Security',
-      measures: ['Firewall and intrusion detection',
-        'Virtual private networks(VPN) ',
-        'DDoS protection and mitigation',
-        'Network segmentation',
-        'Regular security assessments',
+      measures: ['Firewall and intrusion detectionVirtual private networks(VPN) ',
+        'DDoS protection and mitigationNetwork segmentation',
+        'Regular security assessments'
       ],
-      icon: Network,
+      icon: Network
     },
     {
       category: 'Application Security',
-      measures: ['Secure software development lifecycle',
-        'Regular vulnerability assessments',
-        'Penetration testing',
-        'Code security reviews',
-        'API security and monitoring',
+      measures: ['Secure software development lifecycleRegular vulnerability assessments',
+        'Penetration testingCode security reviews',
+        'API security and monitoring'
       ],
-      icon: Shield,
-    },
-  ];
+      icon: Shield
+    }
+  ],
 
   const contactInfo = [{
       title: 'Compliance Team',
       email: 'compliance@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      responseTime: '24 - 48 hours',
+      responseTime: '24 - 48 hours'
     },
     {
       title: 'Security Team',
       email: 'security@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      responseTime: '2 - 4 hours',
-    },
-  ];
+      responseTime: '2 - 4 hours'
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
@@ -354,5 +344,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

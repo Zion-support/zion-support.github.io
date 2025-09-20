@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react',
+import Head from 'next/head',
 
 const Examples: React.FC = () => {
-  const [activeLanguage, setActiveLanguage] = useState('javascript');
+  const [activeLanguage, setActiveLanguage] = useState('javascript'),
 
   const languages = [
     { id: 'javascript', name: 'JavaScript', icon: '🟨' },
     { id: 'python', name: 'Python', icon: '🐍' },
     { id: 'curl', name: 'cURL', icon: '📡' },
     { id: 'php', name: 'PHP', icon: '🐘' },
-    { id: 'java', name: 'Java', icon: '☕' },
-  ];
+    { id: 'java', name: 'Java', icon: '☕' }
+  ],
 
   const examples = {
     javascript: [
@@ -19,13 +19,12 @@ const Examples: React.FC = () => {
         description: 'Retrieve all available AI services',
         code: `const response = await fetch('https://api.zion.ai/services', {
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-});
+}),
 
-const services = await response.json();
-console.log(services);`
+const services = await response.json(),
+console.log(services),`
       },
       {
         title: 'Create a New Project',
@@ -35,19 +34,18 @@ console.log(services);`
   description: 'Integrate AI chatbot into our website',
   budget: 5000,
   timeline: '2 weeks'
-};
+},
 
 const response = await fetch('https://api.zion.ai/projects', {
   method: 'POST',
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   },
   body: JSON.stringify(projectData)
-});
+}),
 
-const project = await response.json();
-console.log('Project created:', project);`
+const project = await response.json(),
+console.log('Project created:', project),`
       },
       {
         title: 'Search for Talents',
@@ -56,16 +54,16 @@ console.log('Project created:', project);`
   skills: 'machine-learning,python,tensorflow',
   experience: '3-5',
   location: 'remote'
-});
+}),
 
 const response = await fetch(\`https://api.zion.ai/talents?\${searchParams}\`, {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY'
   }
-});
+}),
 
-const talents = await response.json();
-console.log('Found talents:', talents);`
+const talents = await response.json(),
+console.log('Found talents:', talents),`
       }
     ],
     python: [
@@ -75,8 +73,7 @@ console.log('Found talents:', talents);`
         code: `import requests
 
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 
 response = requests.get('https://api.zion.ai/services', headers=headers)
@@ -89,15 +86,12 @@ print(services)`
         code: `import requests
 
 project_data = {
-    'name': 'AI Chatbot Integration',
-    'description': 'Integrate AI chatbot into our website',
-    'budget': 5000,
+    'name': 'AI Chatbot Integrationdescription': 'Integrate AI chatbot into our websitebudget': 5000,
     'timeline': '2 weeks'
 }
 
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 
 response = requests.post(
@@ -115,9 +109,7 @@ print('Project created:', project)`
         code: `import requests
 
 params = {
-    'skills': 'machine-learning,python,tensorflow',
-    'experience': '3-5',
-    'location': 'remote'
+    'skills': 'machine-learning,python,tensorflowexperience': '3-5location': 'remote'
 }
 
 headers = {
@@ -168,20 +160,19 @@ print('Found talents:', talents)`
         description: 'Retrieve all available AI services',
         code: `<?php
 $headers = [
-    'Authorization: Bearer YOUR_API_KEY',
-    'Content-Type: application/json'
-];
+    'Authorization: Bearer YOUR_API_KEYContent-Type: application/json'
+],
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://api.zion.ai/services');
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$ch = curl_init(),
+curl_setopt($ch, CURLOPT_URL, 'https: //api.zion.ai/services'),
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers),
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true),
 
-$response = curl_exec($ch);
-curl_close($ch);
+$response = curl_exec($ch),
+curl_close($ch),
 
-$services = json_decode($response, true);
-print_r($services);
+$services = json_decode($response, true),
+print_r($services),
 ?>`
       },
       {
@@ -189,27 +180,24 @@ print_r($services);
         description: 'Create a new AI project',
         code: `<?php
 $projectData = [
-    'name' => 'AI Chatbot Integration',
-    'description' => 'Integrate AI chatbot into our website',
-    'budget' => 5000,
+    'name' => 'AI Chatbot Integrationdescription' => 'Integrate AI chatbot into our websitebudget' => 5000,
     'timeline' => '2 weeks'
-];
+],
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://api.zion.ai/projects');
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($projectData));
+$ch = curl_init(),
+curl_setopt($ch, CURLOPT_URL, 'https: //api.zion.ai/projects'),
+curl_setopt($ch, CURLOPT_POST, true),
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($projectData)),
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'Authorization: Bearer YOUR_API_KEY',
-    'Content-Type: application/json'
-]);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    'Authorization: Bearer YOUR_API_KEYContent-Type: application/json'
+]),
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true),
 
-$response = curl_exec($ch);
-curl_close($ch);
+$response = curl_exec($ch),
+curl_close($ch),
 
-$project = json_decode($response, true);
-echo 'Project created: ' . print_r($project, true);
+$project = json_decode($response, true),
+echo 'Project created: ' . print_r($project, true),
 ?>`
       }
     ],
@@ -217,47 +205,47 @@ echo 'Project created: ' . print_r($project, true);
       {
         title: 'Get All Services',
         description: 'Retrieve all available AI services',
-        code: `import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.URI;
+        code: `import java.net.http.HttpClient,
+import java.net.http.HttpRequest,
+import java.net.http.HttpResponse,
+import java.net.URI,
 
-HttpClient client = HttpClient.newHttpClient();
+HttpClient client = HttpClient.newHttpClient(),
 HttpRequest request = HttpRequest.newBuilder()
     .uri(URI.create("https://api.zion.ai/services"))
     .header("Authorization", "Bearer YOUR_API_KEY")
     .header("Content-Type", "application/json")
     .GET()
-    .build();
+    .build(),
 
 HttpResponse<String> response = client.send(request, 
-    HttpResponse.BodyHandlers.ofString());
-System.out.println(response.body());`
+    HttpResponse.BodyHandlers.ofString()),
+System.out.println(response.body()),`
       },
       {
         title: 'Create a New Project',
         description: 'Create a new AI project',
-        code: `import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.URI;
+        code: `import java.net.http.HttpClient,
+import java.net.http.HttpRequest,
+import java.net.http.HttpResponse,
+import java.net.URI,
 
-String projectData = "{\\"name\\":\\"AI Chatbot Integration\\",\\"description\\":\\"Integrate AI chatbot into our website\\",\\"budget\\":5000,\\"timeline\\":\\"2 weeks\\"}";
+String projectData = "{\\"name\\":\\"AI Chatbot Integration\\",\\"description\\":\\"Integrate AI chatbot into our website\\",\\"budget\\":5000,\\"timeline\\":\\"2 weeks\\"}",
 
-HttpClient client = HttpClient.newHttpClient();
+HttpClient client = HttpClient.newHttpClient(),
 HttpRequest request = HttpRequest.newBuilder()
     .uri(URI.create("https://api.zion.ai/projects"))
     .header("Authorization", "Bearer YOUR_API_KEY")
     .header("Content-Type", "application/json")
     .POST(HttpRequest.BodyPublishers.ofString(projectData))
-    .build();
+    .build(),
 
 HttpResponse<String> response = client.send(request, 
-    HttpResponse.BodyHandlers.ofString());
-System.out.println("Project created: " + response.body());`
+    HttpResponse.BodyHandlers.ofString()),
+System.out.println("Project created: " + response.body()),`
       }
     ]
-  };
+  },
 
   return (
     <>
@@ -398,7 +386,7 @@ System.out.println("Project created: " + response.body());`
             <div className="text-center text-gray-400">
               <p>Need help with integration? Check our comprehensive documentation</p>
               <p className="mt-2">
-                <a href="/api-documentation" className="text-blue-400 hover:text-blue-300">
+                <a href="/api-documentation" className="text-blue-400 hover: text-blue-300">
                   View API Docs →
                 </a>
               </p>
@@ -407,7 +395,7 @@ System.out.println("Project created: " + response.body());`
         </footer>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default Examples;
+export default Examples,

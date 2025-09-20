@@ -1,25 +1,25 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { useRequestQuoteWizard } from "@/context";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { useRequestQuoteWizard } from "@/context",
 
 interface ServiceCardProps {
-  service: { id: string; title: string };
-  onSelect?: (id: string) => void;
+  service: { id: string, title: string },
+  onSelect?: (id: string) => void
 }
 
 export default function ServiceCard({ service, onSelect }: ServiceCardProps) {
-  const { startQuote } = useRequestQuoteWizard();
+  const { startQuote } = useRequestQuoteWizard(),
 
   const handleClick = () => {
     if (onSelect) {
-      onSelect(service.id);
+      onSelect(service.id),
     }
-  };
+  },
 
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    startQuote(service.id);
-  };
+    e.stopPropagation(),
+    startQuote(service.id)
+  },
 
   return (
     <div
@@ -32,5 +32,5 @@ export default function ServiceCard({ service, onSelect }: ServiceCardProps) {
         Request Quote
       </Button>
     </div>
-  );
+  ),
 }

@@ -1,25 +1,25 @@
 
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { HeroSection } from "@/components/HeroSection";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { WaitlistSection } from "@/components/WaitlistSection";
-import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
-import { SocialShareSection } from "@/components/SocialShareSection";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/context/LanguageContext";
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { TestimonialCarousel } from "@/components/TestimonialCarousel",
+import { FloatingCTA } from "@/components/FloatingCTA",
+import { HeroSection } from "@/components/HeroSection",
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { BenefitsSection } from "@/components/BenefitsSection",
+import { HowItWorksSection } from "@/components/HowItWorksSection",
+import { WaitlistSection } from "@/components/WaitlistSection",
+import { BlogSection } from "@/components/BlogSection",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
+import { FeaturesGuideSection } from "@/components/FeaturesGuideSection",
+import { SocialShareSection } from "@/components/SocialShareSection",
+import { useTranslation } from "react-i18next",
+import { useLanguage } from "@/context/LanguageContext",
 import { 
-  ArrowRight, 
+  ArrowRight,
   Users, 
   Zap, 
   Settings, 
@@ -28,11 +28,11 @@ import {
   Sparkles,
   BarChart3,
   Smartphone
-} from "lucide-react";
+} from "lucide-react",
 
 export default function Index() {
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
+  const { t } = useTranslation(),
+  const { isRTL } = useLanguage(),
   
   // Tools and features showcase
   const toolsFeatures = [
@@ -72,7 +72,7 @@ export default function Index() {
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">
@@ -138,5 +138,5 @@ export default function Index() {
       <FloatingCTA />
       <Footer />
     </div>
-  );
+  ),
 }

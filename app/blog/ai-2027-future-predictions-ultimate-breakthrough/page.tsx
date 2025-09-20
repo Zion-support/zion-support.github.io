@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2027 Future Predictions: Ultimate Breakthrough Technologies';
-  description: 'Discover the revolutionary AI technologies predicted for 2027. Quantum neural networks, autonomous business systems, and next-generation AI breakthroughs.';
-  keywords: ['AI 2027future predictions', 'quantum AIautonomous systems', 'AI breakthroughstechnology trends'],
-};
+  title: 'AI 2027 Future Predictions: Ultimate Breakthrough Technologies',
+  description: 'Discover the revolutionary AI technologies predicted for 2027. Quantum neural networks, autonomous business systems, and next-generation AI breakthroughs.',
+  keywords: ['AI 2027future predictionsquantum AIautonomous systems', 'AI breakthroughstechnology trends']
+},
 export default function AI2027FuturePredictionsPage() {,
   return (,
     <div>,
@@ -32,7 +32,7 @@ export default function AI2027FuturePredictionsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
@@ -143,5 +143,4 @@ export default function AI2027FuturePredictionsPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

@@ -1,81 +1,81 @@
-import React, { useState } from 'react';
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
+import React, { useState } from 'react',
+import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025',
 export default function Page() {
 ,
     {
       id: 'Cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from - red - 500 to - orange - 600',
+      color: 'from - red - 500 to - orange - 600'
     },
     {
       id: 'Blockchain & Web3',
       name: 'Blockchain & Web3',
       icon: Code,
-      color: 'from - green - 500 to - emerald - 600',
+      color: 'from - green - 500 to - emerald - 600'
     },
     {
       id: 'Marketing & Sales',
       name: 'Marketing & Sales',
       icon: TrendingUp,
-      color: 'from - yellow-500 to - orange - 600',
+      color: 'from - yellow-500 to - orange - 600'
     },
     {
       id: 'IoT & Edge Computing',
       name: 'IoT & Edge Computing',
       icon: Cpu,
-      color: 'from - indigo - 500 to - purple - 600',
+      color: 'from - indigo - 500 to - purple - 600'
     },
     {
       id: 'Cloud & DevOps',
       name: 'Cloud & DevOps',
       icon: Cloud,
-      color: 'from - teal - 500 to - green - 600',
+      color: 'from - teal - 500 to - green - 600'
     },
     {
       id: 'Customer Service',
       name: 'Customer Service',
       icon: Users,
-      color: 'from - pink - 500 to - red - 600',
+      color: 'from - pink - 500 to - red - 600'
     },
     {
       id: 'Compliance & Governance',
       name: 'Compliance & Governance',
       icon: Lock,
-      color: 'from - gray - 500 to - slate - 600',
-    },
-  ];
+      color: 'from - gray - 500 to - slate - 600'
+    }
+  ],
 
   const priceRanges = [{ id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $1,000', range: '< $1,000' },
     { id: 'medium', name: '$1,000 - $3,000', range: '$1,000 - $3,000' },
-    { id: 'high', name: 'Over $3,000', range: '> $3,000' },
-  ];
+    { id: 'high', name: 'Over $3,000', range: '> $3,000' }
+  ],
 
   const sortOptions = [{ id: 'innovation', name: 'Innovation Level', icon: Sparkles },
     { id: 'price', name: 'Price', icon: DollarSign },
     { id: 'roi', name: 'ROI', icon: TrendingUp },
-    { id: 'delivery', name: 'Delivery Time', icon: Clock },
-  ];
+    { id: 'delivery', name: 'Delivery Time', icon: Clock }
+  ],
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
       const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
-        service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
+        service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
 
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
 
-      let matchesPrice = true;
+      let matchesPrice = true,
       if(priceRange === 'low') {
-        matchesPrice = service.price < 1000;
+        matchesPrice = service.price < 1000,
       } else if(priceRange === 'medium') {
-        matchesPrice = service.price >= 1000 && service.price <= 3000;
+        matchesPrice = service.price >= 1000 && service.price <= 3000,
       } else if(priceRange === 'high') {
-        matchesPrice = service.price > 3000;
+        matchesPrice = service.price > 3000,
       }
 
-      return matchesSearch && matchesCategory && matchesPrice;
-    }) ;
+      return matchesSearch && matchesCategory && matchesPrice,
+    }) ,
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch(sortBy) {
@@ -83,68 +83,67 @@ export default function Page() {
         const innovationOrder = {
           Revolutionary: 3,
           'Cutting - edge': 2,
-          Advanced: 1,
-        };
+          Advanced: 1
+        },
         return ((innovationOrder[b.innovationLevel as keyof typeof innovationOrder] ||
             0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] ||
-            0) ) ;
+            0) ) ,
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'roi':
-        const aRoi = parseInt(a.roi.split ('-') [0]) ;
-        const bRoi = parseInt(b.roi.split ('-') [0]) ;
-        return bRoi - aRoi;
+        const aRoi = parseInt(a.roi.split ('-') [0]) ,
+        const bRoi = parseInt(b.roi.split ('-') [0]) ,
+        return bRoi - aRoi,
       case 'delivery':
-        const aDelivery = parseInt(a.estimatedDelivery.split ('-') [0]) ;
-        const bDelivery = parseInt(b.estimatedDelivery.split ('-') [0]) ;
-        return aDelivery - bDelivery;
-      default:
-        return 0;
+        const aDelivery = parseInt(a.estimatedDelivery.split ('-') [0]) ,
+        const bDelivery = parseInt(b.estimatedDelivery.split ('-') [0]) ,
+        return aDelivery - bDelivery,
+      default: return 0
     }
-  }) ;
+  }) ,
 
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category) ;
-    return categoryData ? categoryData.icon : Globe;
-  };
+    const categoryData = categories.find(cat => cat.id === category) ,
+    return categoryData ? categoryData.icon : Globe
+  },
 
   const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category) ;
-    return categoryData ? categoryData.color : 'from - gray - 500 to - slate - 600';
-  };
+    const categoryData = categories.find(cat => cat.id === category) ,
+    return categoryData ? categoryData.color : 'from - gray - 500 to - slate - 600'
+  },
 
   const getPriceRange = (price: number) => {
-    if(price < 1000) return 'low';
-    if(price <= 3000) return 'medium';
-    return 'high';
-  };
+    if(price < 1000) return 'low',
+    if(price <= 3000) return 'medium',
+    return 'high'
+  },
 
   const getPriceColor = (price: number) => {
-    const range = getPriceRange(price) ;
+    const range = getPriceRange(price) ,
     switch(range) {
       case 'low':
-        return 'text-green - 400';
+        return 'text-green - 400',
       case 'medium':
-        return 'text-yellow-400';
+        return 'text-yellow-400',
       case 'high':
-        return 'text-red - 400';
+        return 'text-red - 400',
       default:
-        return 'text-gray - 400';
+        return 'text-gray - 400'
     }
-  };
+  },
 
   const getInnovationColor = (level: string) => {
     switch(level) {
       case 'Revolutionary':
-        return 'text-purple - 400';
+        return 'text-purple - 400',
       case 'Cutting - edge':
-        return 'text-blue - 400';
+        return 'text-blue - 400',
       case 'Advanced':
-        return 'text-green - 400';
+        return 'text-green - 400',
       default:
-        return 'text-gray - 400';
+        return 'text-gray - 400'
     }
-  };
+  },
 
   return (<div className="min - h-screen py-8">
       <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
@@ -245,7 +244,7 @@ export default function Page() {
                   className={`w-16 h-16 bg-gradient - to - r ${getCategoryColor(service.category) } rounded-xl flex items - center justify - center`}
                 >
                   {React.createElement(getCategoryIcon (service.category) , {
-                    className: 'w-8 h-8 text-white',
+                    className: 'w-8 h-8 text-white'
                   }) }
                 </div>
                 <div className="text-right">
@@ -379,7 +378,7 @@ export default function Page() {
               Join thousands of businesses already leveraging our cutting - edge
               AI and technology services.Get started today and experience the
               future of business innovation.</p>
-            <div className="flex flex - col sm:flex - row justify - center space - y-4 sm:space - y-0 sm:space - x-4">
+            <div className="flex flex - col sm: flex - row justify - center space - y-4 sm:space - y-0 sm:space - x-4">
               <a
                 href="mailto:kleber@ziontechgroup.com?subject = Business Transformation Inquiry"
                 className="bg-white text-cyan - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition - all duration -300"
@@ -396,6 +395,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
+    </div>) 
 }
 

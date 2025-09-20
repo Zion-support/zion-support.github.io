@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="mb-16">
@@ -73,15 +73,11 @@ export default function Page() {
             <h2 className="text-4xl font - bold text-white text-center mb-12">
               Trading Assets
             </h2>
-            <div className="grid md:grid - cols - 4 gap-6">
-              {['Stocks',
-                'Forex',
-                'Cryptocurrency',
-                'Commodities',
-                'Options',
-                'Futures',
-                'ETFs',
-                'Bonds',
+            <div className="grid md: grid - cols - 4 gap-6">
+              {['StocksForex',
+                'CryptocurrencyCommodities',
+                'OptionsFutures',
+                'ETFsBonds'
               ].map (asset => (<div
                   key={asset}
                   className="bg-white / 5 rounded-lg p - 4 text-center border border-white / 10"
@@ -144,7 +140,7 @@ export default function Page() {
               Transform your trading with AI that never sleeps and always
               analyzes markets
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-blue - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Start Trading
               </button>
@@ -155,5 +151,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

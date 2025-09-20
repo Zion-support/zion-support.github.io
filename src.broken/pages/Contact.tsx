@@ -1,24 +1,24 @@
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card } from '@/components/ui/card';
-import { toast } from '@/components/ui/use-toast';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import { useState } from 'react',
+import { Header } from '@/components/Header',
+import { SEO } from '@/components/SEO',
+import { GradientHeading } from '@/components/GradientHeading',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { Card } from '@/components/ui/card',
+import { toast } from '@/components/ui/use-toast',
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-import z from 'zod';
-import { ChatAssistant } from '@/components/ChatAssistant';
+  TooltipTrigger
+} from '@/components/ui/tooltip',
+import z from 'zod',
+import { ChatAssistant } from '@/components/ChatAssistant',
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,70 +26,70 @@ export default function Contact() {
     email: "",
     subject: "",
     message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    subject?: string;
-    message?: string;
-  }>({});
-  const [isChatOpen, setIsChatOpen] = useState(false);
+    name?: string,
+    email?: string,
+    subject?: string,
+    message?: string,
+  }>({}),
+  const [isChatOpen, setIsChatOpen] = useState(false),
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: undefined }));
-  };
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+    setErrors(prev => ({ ...prev, [name]: undefined })),
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
 
     const schema = z.object({
       name: z.string().min(2, "Name must be at least 2 characters"),
       email: z.string().email("Invalid email address"),
       subject: z.string().min(2, "Subject must be at least 2 characters"),
-      message: z.string().min(10, "Message must be at least 10 characters"),
-    });
+      message: z.string().min(10, "Message must be at least 10 characters")
+    }),
 
-    const result = schema.safeParse(formData);
+    const result = schema.safeParse(formData),
     if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
+      const fieldErrors: Record<string, string> = {},
       for (const err of result.error.errors) {
         if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message;
+          fieldErrors[err.path[0] as string] = err.message,
         }
       }
-      setErrors(fieldErrors);
+      setErrors(fieldErrors),
       toast({
         title: "Form Validation Error",
         description: result.error.errors[0].message,
-        variant: "destructive",
-      });
-      return;
+        variant: "destructive"
+      }),
+      return,
     }
 
-    setErrors({});
+    setErrors({}),
 
     // Simulate form submission
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     setTimeout(() => {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
       toast({
         title: "Message Sent",
-        description: "We've received your message and will get back to you soon.",
-      });
+        description: "We've received your message and will get back to you soon."
+      }),
 
       // Reset form
       setFormData({
         name: "",
         email: "",
         subject: "",
-        message: "",
-      });
-    }, 1500);
-  };
+        message: ""
+      }),
+    }, 1500),
+  },
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -97,33 +97,33 @@ export default function Contact() {
       const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
-        }),
-      });
+        })
+      }),
       
       if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant");
+        throw new Error("Failed to get response from AI assistant"),
       }
       
-      return Promise.resolve();
+      return Promise.resolve(),
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:", error),
       toast({
         title: "Chat Error",
         description: "There was an error communicating with our AI assistant. Please try again.",
         variant: "destructive"
-      });
-      return Promise.resolve();
+      }),
+      return Promise.resolve(),
     }
-  };
+  },
 
   const offices = [
     {
       value: 'ai - customer - experience',
-      label: 'AI Customer Experience Analytics',
+      label: 'AI Customer Experience Analytics'
     },
     { value: 'ai - financial - risk', label: 'AI Financial Risk Management' },
     { value: 'ai - cybersecurity', label: 'AI Cybersecurity Solutions' },
@@ -133,42 +133,42 @@ export default function Contact() {
     { value: 'it - consulting', label: 'IT Consulting' },
     { value: 'quantum - computing', label: 'Quantum Computing' },
     { value: 'iot - edge', label: 'IoT & Edge Computing' },
-    { value: 'custom - development', label: 'Custom Development' },
-  ];
+    { value: 'custom - development', label: 'Custom Development' }
+  ],
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitStatus, setSubmitStatus] = useState('idle'),
 
   const handleInputChange = useCallback((e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }) ) ;
-  };
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value }) ) ,
+  },
 
   const handleSubmit = async(e: React.FormEvent) => {
-    e.preventDefault () ;
-    setIsSubmitting(true) ;
+    e.preventDefault () ,
+    setIsSubmitting(true) ,
 
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout (resolve, 2000) ) ;
-      setSubmitStatus('success') ;
+      await new Promise(resolve => setTimeout (resolve, 2000) ) ,
+      setSubmitStatus('success') ,
       setFormData({
         name: '',
         email: '',
         company: '',
         phone: '',
         message: '',
-        service: 'general',
-      }) ;
+        service: 'general'
+      }) ,
     } catch(error) {
-      setSubmitStatus('error') ;
+      setSubmitStatus('error') ,
     } finally {
-      setIsSubmitting(false) ;
+      setIsSubmitting(false) ,
     }
-  };
+  },
 
-  const isFormValid = formData.name && formData.email && formData.message;
+  const isFormValid = formData.name && formData.email && formData.message,
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - indigo -900">
       <div className="container mx - auto px-4 py-24">
@@ -352,7 +352,7 @@ export default function Contact() {
           <h2 className="text-3xl font - bold text-white mb-8">
             Why Choose Zion Tech Group?
           </h2>
-          <div className="grid md:grid - cols - 3 gap-8 max - w-4xl mx -auto">
+          <div className="grid md: grid - cols - 3 gap-8 max - w-4xl mx -auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient - to - r from - cyan - 500 to - blue - 500 rounded-full flex items - center justify - center mx - auto mb-4">
                 <Rocket className="w-8 h-8 text-white" />
@@ -388,5 +388,5 @@ export default function Contact() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
+    </div>) 
 }

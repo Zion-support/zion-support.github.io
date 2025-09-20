@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -171,7 +171,7 @@ export default function EnterpriseDemo() {
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Join hundreds of enterprises that have transformed their operations with Zion's AI-powered platform
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link to="/contact?type=demo">
                   Schedule Your Demo
@@ -187,5 +187,5 @@ export default function EnterpriseDemo() {
           </div>
         </div>
       </main>
-    </>);
+    </>)
 }

@@ -1,39 +1,39 @@
 
-import { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { getStripe } from "@/utils/getStripe";
-import { safeStorage } from '@/utils/safeStorage';
+import { useState } from "react",
+import { useParams, useNavigate } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
+import { toast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { getStripe } from "@/utils/getStripe",
+import { safeStorage } from '@/utils/safeStorage',
 
 interface EquipmentSpecification {
-  name: string;
-  value: string;
+  name: string,
+  value: string
 }
 
 interface EquipmentDetails {
-  id: string;
-  name: string;
-  description: string;
-  brand: string;
-  category: string;
-  subcategory?: string;
-  images: string[];
-  price: number;
-  currency: string;
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean;
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[];
-  features: string[];
-  warranty?: string;
-  returnPolicy?: string;
+  id: string,
+  name: string,
+  description: string,
+  brand: string,
+  category: string,
+  subcategory?: string,
+  images: string[],
+  price: number,
+  currency: string,
+  rating?: number,
+  reviewCount?: number,
+  inStock: boolean,
+  expectedShipping?: string,
+  specifications: EquipmentSpecification[],
+  features: string[],
+  warranty?: string,
+  returnPolicy?: string
 }
 
 // Sample data - in a real app this would come from an API
@@ -54,11 +54,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     specifications: [
       { name: "CPU", value: "Dual Xeon" },
       { name: "Memory", value: "64GB RAM" },
-      { name: "Power", value: "Dual PSU" },
+      { name: "Power", value: "Dual PSU" }
     ],
     features: ["Hot-swappable drives", "Remote management"],
     warranty: "1 year manufacturer warranty",
-    returnPolicy: "30-day return policy",
+    returnPolicy: "30-day return policy"
   },
   "pro-camera-x1000": {
     id: "pro-camera-x1000",
@@ -147,18 +147,18 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     warranty: "3 years manufacturer warranty",
     returnPolicy: "21-day return policy for items in original condition"
   }
-};
+},
 
 export default function EquipmentDetail() {
-  const { id } = useParams() as { id?: string };
-  const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
+  const { id } = useParams() as { id?: string },
+  const navigate = useNavigate(),
+  const { isAuthenticated } = useAuth(),
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
+  const [quantity, setQuantity] = useState(1),
+  const [isAdding, setIsAdding] = useState(false),
   
   // In a real app, this would fetch from an API
-  const equipment = id ? SAMPLE_EQUIPMENT[id] : undefined;
+  const equipment = id ? SAMPLE_EQUIPMENT[id] : undefined,
   
   if (!equipment) {
     return (
@@ -172,54 +172,54 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-    );
+    ),
   }
 
   const handleAddToCart = () => {
-    setIsAdding(true);
+    setIsAdding(true),
 
     setTimeout(() => {
-      const stored = safeStorage.getItem('cart');
-      let cart: { id: string; name: string; price: number; quantity: number }[] = [];
+      const stored = safeStorage.getItem('cart'),
+      let cart: { id: string, name: string, price: number, quantity: number }[] = [],
       if (stored) {
-        try { cart = JSON.parse(stored); } catch { /* ignore */ }
+        try { cart = JSON.parse(stored), } catch { /* ignore */ }
       }
-      const existing = cart.find(i => i.id === equipment.id);
-      if (existing) existing.quantity += quantity; else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity });
-      safeStorage.setItem('cart', JSON.stringify(cart));
-      setIsAdding(false);
+      const existing = cart.find(i => i.id === equipment.id),
+      if (existing) existing.quantity += quantity, else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity }),
+      safeStorage.setItem('cart', JSON.stringify(cart)),
+      setIsAdding(false),
       toast({
         title: "Added to cart",
-        description: `${quantity}x ${equipment.name} added to your cart.`,
-      });
-    }, 800);
-  };
+        description: `${quantity}x ${equipment.name} added to your cart.`
+      }),
+    }, 800),
+  },
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      const next = encodeURIComponent(`/checkout?sku=${id}`);
-      navigate(`/login?next=${next}`);
-      return;
+      const next = encodeURIComponent(`/checkout?sku=${id}`),
+      navigate(`/login?next=${next}`),
+      return,
     }
 
-    setIsAdding(true);
+    setIsAdding(true),
     try {
       const response = await fetch('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: id }),
-      });
-      const { sessionId } = await response.json();
-      const stripe = await getStripe();
+        body: JSON.stringify({ productId: id })
+      }),
+      const { sessionId } = await response.json(),
+      const stripe = await getStripe(),
       if (stripe && sessionId) {
-        await stripe.redirectToCheckout({ sessionId });
+        await stripe.redirectToCheckout({ sessionId }),
       }
     } catch (err) {
-      toast({ title: 'Payment error', description: 'Could not start checkout.' });
+      toast({ title: 'Payment error', description: 'Could not start checkout.' }),
     } finally {
-      setIsAdding(false);
+      setIsAdding(false),
     }
-  };
+  },
 
   return (
     <>
@@ -466,5 +466,5 @@ export default function EquipmentDetail() {
         </div>
       </div>
     </>
-  );
+  ),
 }

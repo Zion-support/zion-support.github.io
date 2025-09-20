@@ -1,41 +1,41 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react',
 import { MessageSquare, X } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
+import { Button } from '@/components/ui/button',
+import { ChatMessage, ChatInput } from '@/components/ChatAssistant',
 
-interface Msg { id: string; role: 'user' | 'assistant'; message: string; }
+interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 export function SupportChatbot() {
-  const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState<Msg[]>([]);
-  const endRef = useRef<HTMLDivElement | null>(null);
+  const [open, setOpen] = useState(false),
+  const [messages, setMessages] = useState<Msg[]>([]),
+  const endRef = useRef<HTMLDivElement | null>(null),
 
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages]);
+  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }), }, [messages]),
 
   const sendMessage = async (text: string) => {
-    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text };
-    setMessages(prev => [...prev, userMsg]);
+    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
+    setMessages(prev => [...prev, userMsg]),
     try {
       const res = await fetch('/api/kb-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }] })
-      });
-      const data = await res.json();
-      const botMsg: Msg = { id: Date.now().toString() + '-a', role: 'assistant', message: data.message };
-      setMessages(prev => [...prev, botMsg]);
+      }),
+      const data = await res.json(),
+      const botMsg: Msg = { id: Date.now().toString() + '-a', role: 'assistant', message: data.message },
+      setMessages(prev => [...prev, botMsg]),
     } catch (err) {
-      console.error(err);
-      setMessages(prev => [...prev, { id: Date.now().toString() + '-e', role: 'assistant', message: 'Sorry, something went wrong.' }]);
+      console.error(err),
+      setMessages(prev => [...prev, { id: Date.now().toString() + '-e', role: 'assistant', message: 'Sorry, something went wrong.' }]),
     }
-  };
+  },
 
   if (!open) {
     return (
-      <Button onClick={() => setOpen(true)} size="icon" variant="outline" className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50" aria-label="Open help chat">
+      <Button onClick={() => setOpen(true)} size="icon" variant="outline" className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-50" aria-label="Open help chat">
         <MessageSquare className="h-5 w-5" />
       </Button>
-    );
+    )
   }
 
   return (
@@ -56,5 +56,5 @@ export function SupportChatbot() {
         <ChatInput onSend={sendMessage} />
       </div>
     </div>
-  );
+  ),
 }

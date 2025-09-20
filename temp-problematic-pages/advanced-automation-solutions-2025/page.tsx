@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 ArrowRightSettingsBotZapTargetTrendingUpUsersAwardCheckCircleStarCpuShieldGlobe,
 export const metadata = {,
-  title: 'Advanced Automation Solutions 2025 - Revolutionary Business Automation';
-  description: 'Discover cutting-edge automation solutions: intelligent process automationautonomous operationsand AI-powered business transformation delivering 2,500-4,000% ROI.';
-  keywords: ['Automation Solutions 2025'Intelligent Process Automation'Business Automation'AI Automation'Autonomous Operations'ROI 2500%'],};
+  title: 'Advanced Automation Solutions 2025 - Revolutionary Business Automation',
+  description: 'Discover cutting-edge automation solutions: intelligent process automationautonomous operationsand AI-powered business transformation delivering 2,500-4,000% ROI.',
+  keywords: ['Automation Solutions 2025'Intelligent Process Automation'Business Automation'AI Automation'Autonomous Operations'ROI 2500%']},
 export default function AdvancedAutomationSolutions2025() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">,
@@ -43,7 +43,7 @@ export default function AdvancedAutomationSolutions2025() {,
           </div>,
         </div>,
       </section>,
-      {/* Automation Stats */,}
+      {/* Automation Stats */}
       <section className="py-16 px-4 bg-white">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,
@@ -78,7 +78,7 @@ export default function AdvancedAutomationSolutions2025() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">,
-            {/* Intelligent Process Automation */,}
+            {/* Intelligent Process Automation */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl shadow-lg hover: shadow-xl transition-all duration-300">,
               <div className="flex items-center gap-4 mb-6">,
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">,
@@ -328,7 +328,7 @@ export default function AdvancedAutomationSolutions2025() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -385,7 +385,7 @@ export default function AdvancedAutomationSolutions2025() {,
           </div>,
         </div>,
       </div>,
-      {/* ROI Section */,}
+      {/* ROI Section */}
       <div className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -445,5 +445,4 @@ export default function AdvancedAutomationSolutions2025() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

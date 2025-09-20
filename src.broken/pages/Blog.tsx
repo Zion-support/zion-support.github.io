@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useDebounce } from "@/hooks/useDebounce";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { BlogPost } from "@/types/blog";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { BLOG_POSTS } from "@/data/blog-posts";
+import { useState, useEffect } from "react",
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { useDebounce } from "@/hooks/useDebounce",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { BlogPost } from "@/types/blog",
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
+import { BLOG_POSTS } from "@/data/blog-posts",
 import { Search } from 'lucide-react'
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { fetchWithRetry } from '@/utils/fetchWithRetry',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 export default function Page() {
 ,
@@ -21,8 +21,8 @@ export default function Page() {
     { id: 'cybersecurity', name: 'Cybersecurity', count: 3 },
     { id: 'quantum', name: 'Quantum Computing', count: 2 },
     { id: 'saas', name: 'Micro SaaS', count: 2 },
-    { id: 'business', name: 'Business Insights', count: 1 },
-  ];
+    { id: 'business', name: 'Business Insights', count: 1 }
+  ],
 
   const blogPosts: BlogPost[] = [{
       id: '1',
@@ -33,10 +33,10 @@ export default function Page() {
       author: 'Dr.Sarah Johnson',
       date: '2024 - 01 - 15',
       category: 'ai',
-      tags: ['AI', 'Enterprise', 'Technology', 'Innovation'],
+      tags: ['AIEnterprise', 'TechnologyInnovation'],
       readTime: '5 min read',
       views: 1247,
-      featured: true,
+      featured: true
     },
     {
       id: '2',
@@ -47,10 +47,10 @@ export default function Page() {
       author: 'Michael Chen',
       date: '2024 - 01 - 10',
       category: 'quantum',
-      tags: ['Quantum Computing', 'Technology', 'Research'],
+      tags: ['Quantum ComputingTechnology', 'Research'],
       readTime: '8 min read',
       views: 892,
-      featured: true,
+      featured: true
     },
     {
       id: '3',
@@ -61,10 +61,10 @@ export default function Page() {
       author: 'Emily Rodriguez',
       date: '2024 - 01 - 08',
       category: 'cybersecurity',
-      tags: ['Cybersecurity', 'AI', 'Security'],
+      tags: ['CybersecurityAI', 'Security'],
       readTime: '6 min read',
       views: 756,
-      featured: false,
+      featured: false
     },
     {
       id: '4',
@@ -75,33 +75,33 @@ export default function Page() {
       author: 'David Kim',
       date: '2024 - 01 - 05',
       category: 'saas',
-      tags: ['SaaS', 'Business', 'Startup'],
+      tags: ['SaaSBusiness', 'Startup'],
       readTime: '7 min read',
       views: 634,
-      featured: false,
-    },
-  ];
+      featured: false
+    }
+  ],
 
   const filteredPosts = useMemo(() => {
     return blogPosts.filter(post => {
       const matchesSearch = post.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
         post.excerpt.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
         post.tags.some(tag =>
-          tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ;
+          tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ,
 
-      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory,
 
-      return matchesSearch && matchesCategory;
-    }) ;
-  }, [searchTerm, selectedCategory]) ;
+      return matchesSearch && matchesCategory,
+    }) ,
+  }, [searchTerm, selectedCategory]) ,
 
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    }) ;
-  };
+      day: 'numeric'
+    }) ,
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - blue - 900 via - purple - 900 to - indigo -900">
       {/* Header */}
@@ -124,22 +124,22 @@ export default function Page() {
             Insights, trends, and expert analysis on AI, cybersecurity, quantum
             computing, and business technology.</motion.p>
 
-    fetchPosts();
-  }, [query]);
+    fetchPosts(),
+  }, [query]),
 
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-      selectedCategory === "All Categories" || post.category === selectedCategory;
+      selectedCategory === "All Categories" || post.category === selectedCategory,
 
-    return matchesCategory;
-  });
+    return matchesCategory,
+  }),
   
   // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured);
+  const featuredPosts = posts.filter(post => post.isFeatured),
 
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts });
+  logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
   return (
     <>
@@ -161,8 +161,8 @@ export default function Page() {
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0];
-            if (!featuredPost) return null;
+            const featuredPost = featuredPosts[0],
+            if (!featuredPost) return null,
             
             return (
             <div className="mb-16">
@@ -172,10 +172,10 @@ export default function Page() {
                   <img
                     src={featuredPost.featuredImage}
                     alt={featuredPost.featuredImageAlt || featuredPost.title}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                     onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.src = "/images/blog-placeholder.svg";
+                      const target = e.currentTarget as HTMLImageElement,
+                      target.src = "/images/blog-placeholder.svg"
                     }}
                   />
                 </div>
@@ -195,8 +195,8 @@ export default function Page() {
                       alt={featuredPost.author.name}
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg",
                       }}
                     />
                     <div>
@@ -217,7 +217,7 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            );
+            ),
           })()}
         
           {/* Filters and Search */}
@@ -268,10 +268,10 @@ export default function Page() {
                     <img
                       src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg"
                       }}
                     />
                   </div>
@@ -296,8 +296,8 @@ export default function Page() {
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";
+                          const target = e.currentTarget as HTMLImageElement,
+                          target.src = "/images/blog-placeholder.svg",
                         }}
                       />
                       <span className="text-sm text-white">{post.author.name}</span>
@@ -320,8 +320,8 @@ export default function Page() {
               <Button
                 variant="outline"
                 onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
+                  setSearchQuery(""),
+                  setSelectedCategory("All Categories"),
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -503,7 +503,7 @@ export default function Page() {
             <p className="text-gray - 300 mb-6">
               Get the latest articles, industry trends, and expert analysis
               delivered to your inbox.</p>
-            <div  className="flex flex - col sm:flex - row gap-4 max - w-md mx -auto">
+            <div  className="flex flex - col sm: flex - row gap-4 max - w-md mx -auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -517,6 +517,6 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

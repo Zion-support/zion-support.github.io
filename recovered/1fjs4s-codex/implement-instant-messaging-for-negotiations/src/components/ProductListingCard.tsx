@@ -1,18 +1,18 @@
-import { useNavigate, Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { Star, DollarSign } from "lucide-react";
+import { useNavigate, Link } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings",
+import { Star, DollarSign } from "lucide-react",
 
 interface ProductListingCardProps {
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  listing: ProductListing,
+  view?: 'grid' | 'list',
+  onRequestQuote?: (id: string) => void,
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
-  detailBasePath?: string;
+  detailBasePath?: string
 }
 
 export function ProductListingCard({
@@ -21,42 +21,42 @@ export function ProductListingCard({
   onRequestQuote,
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
+  const isGrid = view === 'grid',
+  const navigate = useNavigate(),
   
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
-    : '/placeholder.svg';
+    : '/placeholder.svg',
     
   // Format price display
   const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  };
+    if (listing.price === null) return "Custom pricing",
+    return `${listing.currency}${listing.price.toLocaleString()}`,
+  },
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg';
-  };
+    e.currentTarget.src = '/placeholder.svg'
+  },
   
   // Handle navigating to listing detail
   const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
-  };
+    navigate(`${detailBasePath}/${listing.id}`),
+  },
   
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
+      onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
-      navigate(`/request-quote?listing=${listing.id}`);
+      navigate(`/request-quote?listing=${listing.id}`),
     }
-  };
+  },
   
   return (
     <div
@@ -167,5 +167,5 @@ export function ProductListingCard({
         </div>
       </div>
     </div>
-  );
+  ),
 }

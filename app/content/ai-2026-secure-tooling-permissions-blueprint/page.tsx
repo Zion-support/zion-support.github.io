@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Secure Tooling & Permissions Blueprint | Zion Tech Group';
-  description: 'Design a secure tool-access model for autonomous agents with least-privilege IAM, approvals, and runtime enforcement.',
-};
+  title: 'AI 2026: Secure Tooling & Permissions Blueprint | Zion Tech Group',
+  description: 'Design a secure tool-access model for autonomous agents with least-privilege IAM, approvals, and runtime enforcement.'
+},
 export default function SecureToolingPermissionsBlueprint2026() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -45,6 +45,5 @@ export default function SecureToolingPermissionsBlueprint2026() {,
           <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Discuss Security Review</Link>,
         </footer>,
       </article>,
-    </div>,
-  ),}
+    </div>)}
 ,

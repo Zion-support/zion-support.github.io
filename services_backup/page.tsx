@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI & Technology Services - Zion Tech Group';
-  description: 'Comprehensive AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services for enterprise transformation.';
-  keywords: ['AI automationcloud computing', 'micro SaaStechnology consulting', 'enterprise solutionsdigital transformation'],
-};
+  title: 'AI & Technology Services - Zion Tech Group',
+  description: 'Comprehensive AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services for enterprise transformation.',
+  keywords: ['AI automationcloud computingmicro SaaStechnology consulting', 'enterprise solutionsdigital transformation']
+},
 export default function ServicesPage() {,
   return (,
     <>,
@@ -47,7 +47,7 @@ export default function ServicesPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Services Overview */,}
+        {/* Services Overview */}
         <section className="py-20 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -60,7 +60,7 @@ export default function ServicesPage() {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {/* AI Automation */,}
+              {/* AI Automation */}
               <div className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,
                 <div className="text-4xl mb-6">🤖</div>,
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Automation</h3>,
@@ -77,7 +77,7 @@ export default function ServicesPage() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Cloud Infrastructure */,}
+              {/* Cloud Infrastructure */}
               <div className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,
                 <div className="text-4xl mb-6">☁️</div>,
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Cloud Infrastructure</h3>,
@@ -94,7 +94,7 @@ export default function ServicesPage() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Micro SaaS */,}
+              {/* Micro SaaS */}
               <div className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,
                 <div className="text-4xl mb-6">💼</div>,
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>,
@@ -111,7 +111,7 @@ export default function ServicesPage() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Quantum Computing */,}
+              {/* Quantum Computing */}
               <div className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,
                 <div className="text-4xl mb-6">⚡</div>,
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantum Computing</h3>,
@@ -128,7 +128,7 @@ export default function ServicesPage() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Data Analytics */,}
+              {/* Data Analytics */}
               <div className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,
                 <div className="text-4xl mb-6">📊</div>,
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Data Analytics</h3>,
@@ -145,7 +145,7 @@ export default function ServicesPage() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Cybersecurity */,}
+              {/* Cybersecurity */}
               <div className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,
                 <div className="text-4xl mb-6">🔒</div>,
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Cybersecurity</h3>,
@@ -165,7 +165,7 @@ export default function ServicesPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <section className="py-16 bg-white">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-12">,
@@ -196,7 +196,7 @@ export default function ServicesPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Process Section */,}
+        {/* Process Section */}
         <section className="py-20 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -265,5 +265,4 @@ export default function ServicesPage() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),}
+    </>)}

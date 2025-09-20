@@ -1,83 +1,83 @@
 <<<<<<< HEAD
 
 export default function Page() {
-    );
+    ),
 
     if(element) {
-    switch(sortBy) {;
-      case 'name':;
-        return a.title.localeCompare(b.title);
-      case 'price':;
-        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));
+    switch(sortBy) {,
+      case 'name':,
+        return a.title.localeCompare(b.title),
+      case 'price':,
+        return parseFloat(a.price.replace(/[^0-9.]/g)) - parseFloat(b.price.replace(/[^0-9.]/g)),
 
-    if(numPrice < 100) return 'Low';
-    if(numPrice < 1000) return 'Medium';
-    return 'High'};
+    if(numPrice < 100) return 'Low',
+    if(numPrice < 1000) return 'Medium',
+    return 'High'},
 
                   type="text"
                   placeholder="Search services..."
 =======
 '
-    const element = document.getElementById('comprehensive-pricing-guide');    if(element) {
+    const element = document.getElementById('comprehensive-pricing-guide'),    if(element) {
 
       observer.observe(element)}
 
-    return () => observer.disconnect () }, []) ;
+    return () => observer.disconnect () }, []) ,
 
   // Combine all services
   
-      source: 'innovative',;
-      category: service.category,;
-      features: service.features || [],;
-      ctaLabel: service.ctaLabel || 'Get Started',;
-      href: service.href || '/contact'}) ) ;  ];
+      source: 'innovative',
+      category: service.category,
+      features: service.features || [],
+      ctaLabel: service.ctaLabel || 'Get Started',
+      href: service.href || '/contact'}) ) ,  ],
 
   // Filter services based on search and category
 
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase()),
 
-    return matchesSearch && matchesCategory && matchesPrice}) ;
+    return matchesSearch && matchesCategory && matchesPrice}) ,
 
   // Sort services
   
-    switch(sortBy) {;'      case 'name':;
-        return a.title.localeCompare(b.title);'
-      case 'price':;'
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));'
-      case 'category':;
-        return a.category.localeCompare(b.category) ;
-      default:;
+    switch(sortBy) {,'      case 'name':,
+        return a.title.localeCompare(b.title),'
+      case 'price':,'
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),'
+      case 'category':,
+        return a.category.localeCompare(b.category) ,
+      default:,
         return 0}
-  });
+  }),
 
-  ;
+  ,
 =======
 '
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;  ;
-  ;
-  ;
-  ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
+  phone: '+1 302 464 0950
+    email: 'kleber@ziontechgroup.com',  ,
+  ,
+  ,
+  ,
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  
 
-};
+},
 
-  const getPriceRange = (price: string) => {;'
-    const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));'
-    if(numPrice < 100) return 'Low';'
-    if(numPrice < 1000) return 'Medium';'    return 'High'};
+  const getPriceRange = (price: string) => {,'
+    const numPrice = parseFloat(price.replace(/[^0-9.]/g, '')),'
+    if(numPrice < 100) return 'Low
+    if(numPrice < 1000) return 'Medium','    return 'High'},
 '
       default: return 'text-white'}
-  };
+  },
 
-      'Robotics & Automation': Cpu,;
-      'AR/VR Solutions': Eye,;
-      'Biotech Solutions': Dna,;
-      'LegalTech Solutions': Scale,;
-      'Real Estate Tech': Home,;
-      'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
+      'Robotics & Automation': Cpu,
+      'AR/VR Solutions': Eye,
+      'Biotech Solutions': Dna,
+      'LegalTech Solutions': Scale,
+      'Real Estate Tech': Home,
+      'Supply Chain Solutions': Truck},    return iconMap[category] || Target},
 
   return ("
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -204,7 +204,7 @@ export default function Page() {
                 </span>) }
             </div>
           </div>
-        </motion.div>;
+        </motion.div>,
 
         {/* Services Grid */}
         <motion.div
@@ -213,13 +213,13 @@ export default function Page() {
   { opacity: 0,
   y: 30 }}          animate = {
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1,
   y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map((service, index) => (;
+          {sortedServices.map((service, index) => (,
             <motion.div
               key={`${service.source}-${service.id}`}
               initial = {
@@ -276,7 +276,7 @@ export default function Page() {
                           +{service.features.length-3}
                         </span>) }
                     </div>
-                  </div>;) }
+                  </div>,) }
 
                 {/* Pricing & Billing */}"
                 <div className="mb-4">"
@@ -327,13 +327,13 @@ export default function Page() {
   { opacity: 0,
   y: 30 }}          animate = {
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1,
   y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
   delay: 0.6 }}"          className="text-center"
 "
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">,"
             <h3 className="text-3xl font-bold text-white mb-6">
               Need Custom Pricing or Have Questions?
             </h3>"
@@ -355,7 +355,7 @@ export default function Page() {
               </div>
             </div>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
@@ -370,10 +370,10 @@ export default function Page() {
 
                 Visit Website"
                 <ExternalLink className="w-4 h-4"  />              </a>
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) };
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import React from 'react',
 
 export default function AIEthicsAutomation() {
   return (
@@ -231,7 +231,7 @@ export default function AIEthicsAutomation() {
                 </h3>
                 <p className='text-white/80 mb-4'>
                   At Zion Tech Group, we believe that ethical AI development is
-                  not just a responsibility—it&apos;s a competitive advantage
+                  not just a responsibility—it&apos,s a competitive advantage
                   that builds trust and drives long-term success.
                 </p>
                 <div className='flex flex-wrap gap-4'>
@@ -375,7 +375,7 @@ export default function AIEthicsAutomation() {
                 </p>
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-green-400 to-blue-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-500 hover:to-blue-500 transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-green-400 to-blue-400 text-white px-6 py-3 rounded-lg font-semibold hover: from-green-500 hover:to-blue-500 transition-all duration-300"
                 >
                   Let's Discuss Ethics
                   <span aria-hidden>→</span>
@@ -386,5 +386,5 @@ export default function AIEthicsAutomation() {
         </main>
       </div>
     </>
-  );
+  )
 }

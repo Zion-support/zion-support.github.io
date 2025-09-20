@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const CloudNativeArchitecture2025 = () => {
   return (
@@ -123,16 +123,16 @@ const CloudNativeArchitecture2025 = () => {
 {`// Example: Event-driven service communication
 class OrderService {
   async createOrder(orderData) {
-    const order = await this.orderRepository.create(orderData);
+    const order = await this.orderRepository.create(orderData),
     
     // Publish event instead of direct service call
     await this.eventBus.publish('order.created', {
       orderId: order.id,
       userId: order.userId,
       total: order.total
-    });
+    }),
     
-    return order;
+    return order,
   }
 }`}
                   </code>
@@ -308,7 +308,7 @@ spec:
           {/* Related Posts */}
           <section className="mt-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               <Link href="/blog/ai-automation-trends-2025" className="block p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Automation Trends 2025</h3>
                 <p className="text-gray-600">Discover how artificial intelligence is transforming automation workflows.</p>
@@ -322,7 +322,7 @@ spec:
         </div>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default CloudNativeArchitecture2025;
+export default CloudNativeArchitecture2025,

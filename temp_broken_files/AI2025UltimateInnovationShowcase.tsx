@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu,
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const AI2025UltimateInnovationShowcase: React.FC = () => {,
@@ -8,7 +8,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {,
     <div,
       className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20",
     >,
-      {/* Background Effects */,}
+      {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>,
       <div className="container mx-auto px-4 relative z-10">,
         {/* Header */}
@@ -26,17 +26,17 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {,
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.,
           </p>,
         </div>,
-        {/* Innovation Cards */,}
+        {/* Innovation Cards */}
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">,
           {innovations.map((innovationindex) => (,
             <div,
-              key={index,}
+              key={index}
               className="group relative",
             >,
               <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover: opacity-20 transition-opacity duration-300 rounded-2xl blur-xl",
-                   style={{ background: `linear-gradient(to right${innovation.color,})` }}></div>,
+                   style={{ background: `linear-gradient(to right${innovation.color})` }}></div>,
               <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 h-full hover: border-gray-600 transition-all duration-300">,
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${innovation.color,} mb-4`}>,
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${innovation.color} mb-4`}>,
                   <innovation.icon className="w-6 h-6 text-white" />,
                 </div>,
                 <h3 className="text-xl font-bold text-white mb-3">{innovation.title}</h3>,
@@ -54,15 +54,14 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {,
           <div className="grid md: grid-cols-5 gap-6">,
             {benefits.map((benefitindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="text-center",
               >,
                 <div className="inline-flex p-4 bg-gray-700 rounded-xl mb-4">,
                   <benefit.icon className={`w-6 h-6 ${benefit.color}`} />,
                 </div>,
                 <p className="text-white font-semibold text-sm">{benefit.text}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Call to Action */}
@@ -90,5 +89,5 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default AI2025UltimateInnovationShowcase;
+  )},
+export default AI2025UltimateInnovationShowcase,

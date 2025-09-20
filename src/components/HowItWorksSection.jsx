@@ -1,131 +1,87 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from "lucide-react";
 const steps = [
     {
-        icon: <Search className="w-8 h-8"/>,
-        title: "Discover",
-        description: "Browse our comprehensive catalog of 100+ micro SAAS services and solutions",
-        color: "from-zion-cyan to-zion-cyan-dark",
-        bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-        details: [
-            "AI-powered search and filtering",
+        icon: <Search className="w-8 h-8"/>,title: "Discover",description: "Browse our comprehensive catalog of 100+ micro SAAS services and solutions",color: "from-zion-cyan to-zion-cyan-dark",bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",details: [
+            "AI-powered search and filtering";
             "Curated service categories",
             "Industry-specific solutions",
             "Real-time availability"
         ],
-        duration: "Immediate",
-        success: "95% match rate"
-    },
+        duration: "Immediate",success: "95% match rate"
+    };
     {
-        icon: <Users className="w-8 h-8"/>,
-        title: "Connect",
-        description: "Get matched with the perfect service or solution for your business needs",
-        color: "from-zion-purple to-zion-purple-dark",
-        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        details: [
-            "Smart matching algorithm",
+        icon: <Users className="w-8 h-8"/>,title: "Connect",description: "Get matched with the perfect service or solution for your business needs",color: "from-zion-purple to-zion-purple-dark",bgColor: "from-zion-purple/20 to-zion-purple-dark/20",details: [
+            "Smart matching algorithm";
             "Service verification",
             "Portfolio review",
             "Direct communication"
         ],
-        duration: "2-4 hours",
-        success: "98% satisfaction"
-    },
+        duration: "2-4 hours",success: "98% satisfaction"
+    };
     {
-        icon: <FileText className="w-8 h-8"/>,
-        title: "Plan",
-        description: "Collaborate on requirements, timeline, and implementation strategy",
-        color: "from-zion-blue to-zion-blue-dark",
-        bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-        details: [
-            "Interactive planning",
+        icon: <FileText className="w-8 h-8"/>,title: "Plan",description: "Collaborate on requirements, timeline, and implementation strategy",
+        color: "from-zion-blue to-zion-blue-dark",bgColor: "from-zion-blue/20 to-zion-blue-dark/20",details: [
+            "Interactive planning";
             "Timeline optimization",
             "Resource allocation",
             "Risk assessment"
         ],
-        duration: "4-8 hours",
-        success: "90% on-time delivery"
-    },
+        duration: "4-8 hours",success: "90% on-time delivery"
+    };
     {
-        icon: <Rocket className="w-8 h-8"/>,
-        title: "Execute",
-        description: "Watch your vision come to life with our expert implementation",
-        color: "from-zion-cyan-light to-zion-cyan",
-        bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-        details: [
-            "Agile implementation",
+        icon: <Rocket className="w-8 h-8"/>,title: "Execute",description: "Watch your vision come to life with our expert implementation",color: "from-zion-cyan-light to-zion-cyan",bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",details: [
+            "Agile implementation";
             "Regular progress updates",
             "Quality assurance",
             "Performance monitoring"
         ],
-        duration: "1-4 weeks",
-        success: "99% quality score"
-    },
+        duration: "1-4 weeks",success: "99% quality score"
+    };
     {
-        icon: <CheckCircle className="w-8 h-8"/>,
-        title: "Deliver",
-        description: "Receive your completed solution with ongoing support and maintenance",
-        color: "from-zion-purple-light to-zion-purple",
-        bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-        details: [
-            "Comprehensive testing",
+        icon: <CheckCircle className="w-8 h-8"/>,title: "Deliver",description: "Receive your completed solution with ongoing support and maintenance",color: "from-zion-purple-light to-zion-purple",bgColor: "from-zion-purple-light/20 to-zion-purple/20",details: [
+            "Comprehensive testing";
             "Documentation delivery",
             "Training and handover",
             "Post-launch support"
         ],
-        duration: "Ongoing",
-        success: "100% client retention"
+        duration: "Ongoing",success: "100% client retention"
     }
 ];
-
 const stats = [
-    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Implementation" },
-    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
+    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Implementation" };
+    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" };
+    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" };
     { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Services Delivered" }
 ];
-
 export function HowItWorksSection() {
     const [hoveredStep, setHoveredStep] = useState(null);
     const [activeStep, setActiveStep] = useState(0);
-
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0 };
         visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
+            opacity: 1,transition: {
+                staggerChildren: 0.2,delayChildren: 0.1
             }
         }
     };
-
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+        hidden: { y: 30, opacity: 0 };
         visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut"
+            opacity: 1,y: 0,transition: {
+                duration: 0.8,ease: "easeOut"
             }
         }
     };
-
     const statsVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
+        hidden: { opacity: 0, scale: 0.8 };
         visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
+            opacity: 1,scale: 1,transition: {
+                duration: 0.6,ease: "easeOut"
             }
         }
     };
-
     return (
         <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
             {/* Background decorative elements */}
@@ -310,7 +266,7 @@ export function HowItWorksSection() {
                             <p className="text-white text-lg mb-4">
                                 Ready to get started with your micro SAAS solution?
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <div className="flex flex-col sm: flex-row gap-4 justify-center">
                                 <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                                     <Shield className="w-5 h-5" />
                                     Get Started Today
@@ -325,5 +281,5 @@ export function HowItWorksSection() {
                 </motion.div>
             </div>
         </section>
-    );
+    )
 }

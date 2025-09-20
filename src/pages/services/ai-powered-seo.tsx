@@ -1,42 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone } from 'lucide-react';
-import SEO from '@/components/SEO';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone } from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function AIPoweredSEO() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Keyword Research",
-      description: "Advanced machine learning algorithms identify high-impact keywords and search opportunities"
-    },
+      icon: Brain,title: "AI-Powered Keyword Research",description: "Advanced machine learning algorithms identify high-impact keywords and search opportunities"
+    };
     {
-      icon: Analytics,
-      title: "Predictive Analytics",
-      description: "Forecast search trends and optimize content before competitors"
-    },
+      icon: Analytics,title: "Predictive Analytics",description: "Forecast search trends and optimize content before competitors"
+    };
     {
-      icon: Target,
-      title: "Intent-Based Optimization",
-      description: "Understand and target user search intent with precision"
-    },
+      icon: Target,title: "Intent-Based Optimization",description: "Understand and target user search intent with precision"
+    };
     {
-      icon: TrendingUp,
-      title: "Real-Time Performance Tracking",
-      description: "Monitor rankings and performance with live dashboards"
-    },
+      icon: TrendingUp,title: "Real-Time Performance Tracking",description: "Monitor rankings and performance with live dashboards"
+    };
     {
-      icon: Code,
-      title: "Technical SEO Automation",
-      description: "Automated technical audits and optimization recommendations"
-    },
+      icon: Code,title: "Technical SEO Automation",description: "Automated technical audits and optimization recommendations"
+    };
     {
-      icon: Users,
-      title: "User Experience Optimization",
-      description: "AI-driven insights to improve user engagement and conversion"
+      icon: Users,title: "User Experience Optimization",description: "AI-driven insights to improve user engagement and conversion"
     }
   ];
-
   const benefits = [
     "Increase organic traffic by 200-400%",
     "Improve search rankings in 30-60 days",
@@ -44,30 +30,22 @@ export default function AIPoweredSEO() {
     "Boost conversion rates by 15-30%",
     "Save 20+ hours per week on SEO tasks",
     "Stay ahead of algorithm updates"
-  ];
+  ],
 
   const services = [
     {
-      title: "AI Keyword Research & Strategy",
-      description: "Comprehensive keyword analysis using machine learning",
-      price: "From $2,500/month"
+      title: "AI Keyword Research & Strategy",description: "Comprehensive keyword analysis using machine learning",price: "From $2,500/month"
     },
     {
-      title: "Content Optimization & Creation",
-      description: "AI-powered content strategy and optimization",
-      price: "From $3,500/month"
+      title: "Content Optimization & Creation",description: "AI-powered content strategy and optimization",price: "From $3,500/month"
     },
     {
-      title: "Technical SEO & Performance",
-      description: "Automated technical audits and optimization",
-      price: "From $4,000/month"
+      title: "Technical SEO & Performance",description: "Automated technical audits and optimization",price: "From $4,000/month"
     },
     {
-      title: "Full-Service SEO Management",
-      description: "Complete end-to-end SEO solution",
-      price: "From $6,500/month"
+      title: "Full-Service SEO Management",description: "Complete end-to-end SEO solution",price: "From $6,500/month"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -140,7 +118,7 @@ export default function AIPoweredSEO() {
               Powered by Advanced AI Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO platform combines machine learning, natural language processing, 
+              Our AI-powered SEO platform combines machine learning, natural language processing;
               and predictive analytics to deliver results that traditional SEO methods can't match.
             </p>
           </motion.div>
@@ -266,7 +244,7 @@ export default function AIPoweredSEO() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover: bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950
@@ -276,5 +254,5 @@ export default function AIPoweredSEO() {
         </div>
       </section>
     </div>
-  );
+  )
 }

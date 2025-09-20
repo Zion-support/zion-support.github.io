@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Zap, Brain, Atom, Rocket, Shield, Target, 
   Phone, Mail, MapPin, Globe, ExternalLink,
   Twitter, Linkedin, Github, Facebook, Instagram,
   ArrowRight, Star, TrendingUp, Users, Award
-} from 'lucide-react';
+} from 'lucide-react',
 
 const EnhancedFooter: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const EnhancedFooter: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedFooter</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedFooter;
+export default EnhancedFooter,

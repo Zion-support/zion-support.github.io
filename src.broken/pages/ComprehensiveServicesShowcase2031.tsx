@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 export default React.memo(function ComprehensiveServicesShowcase2031 () {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     {
@@ -11,13 +11,12 @@ export default function Page() {
       icon: Brain,
       color: 'from - green - 500 to - emerald - 500',
       price: '$799 / month',
-      features: ['Predictive Analytics',
-        'Real - time Dashboards',
-        'Automated Reporting',
+      features: ['Predictive AnalyticsReal - time Dashboards',
+        'Automated Reporting'
       ],
       href: '/services / ai - business - intelligence',
       category: 'AI & Analytics',
-      featured: true,
+      featured: true
     },
     {
       id: 'ai - financial - analytics',
@@ -27,13 +26,12 @@ export default function Page() {
       icon: TrendingUp,
       color: 'from - yellow-500 to - orange - 500',
       price: '$999 / month',
-      features: ['Financial Forecasting',
-        'Risk Assessment',
-        'Portfolio Optimization',
+      features: ['Financial ForecastingRisk Assessment',
+        'Portfolio Optimization'
       ],
       href: '/services / ai - financial - analytics',
       category: 'AI & Finance',
-      featured: true,
+      featured: true
     },
     {
       id: 'ai - marketing - automation',
@@ -43,88 +41,71 @@ export default function Page() {
       icon: Target,
       color: 'from - pink - 500 to - purple - 500',
       price: '$699 / month',
-      features: ['Personalized Campaigns',
-        'ROI Optimization',
-        'Customer Segmentation',
+      features: ['Personalized CampaignsROI Optimization',
+        'Customer Segmentation'
       ],
       href: '/services / ai - marketing - automation',
       category: 'AI & Marketing',
-      featured: true,
-    },
-  ];
+      featured: true
+    }
+  ],
 
   const serviceCategories = [{
       title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from - purple - 500 to - cyan - 500',
       services: [
-        'AI Business Intelligence',
-        'AI Financial Analytics',
-        'AI Marketing Automation',
-        'AI Customer Support',
-        'AI Content Creation',
-        'AI HR Platform',
-      ],
+        'AI Business IntelligenceAI Financial Analytics',
+        'AI Marketing AutomationAI Customer Support',
+        'AI Content CreationAI HR Platform'
+      ]
     },
     {
       title: 'Quantum Computing',
       icon: Atom,
       color: 'from - indigo - 500 to - purple - 500',
-      services: ['AI Quantum Hybrid Platform',
-        'Quantum Computing Solutions',
-        'Quantum Machine Learning',
-        'Quantum Cryptography',
-      ],
+      services: ['AI Quantum Hybrid PlatformQuantum Computing Solutions',
+        'Quantum Machine LearningQuantum Cryptography'
+      ]
     },
     {
       title: 'Cybersecurity',
       icon: Shield,
       color: 'from - red - 500 to - orange - 500',
-      services: ['AI Cybersecurity Threat Intelligence',
-        'Zero Trust Network Access',
-        'Security Headers & CSP',
-        'DSR Privacy Portal',
-      ],
+      services: ['AI Cybersecurity Threat IntelligenceZero Trust Network Access',
+        'Security Headers & CSPDSR Privacy Portal'
+      ]
     },
     {
       title: 'Research & Analytics',
       icon: Search,
       color: 'from - blue - 500 to - cyan - 500',
-      services: ['AI Autonomous Research Assistant',
-        'Data Analytics Platform',
-        'Business Intelligence',
-        'Predictive Analytics',
-      ],
+      services: ['AI Autonomous Research AssistantData Analytics Platform',
+        'Business IntelligencePredictive Analytics'
+      ]
     },
     {
       title: 'Cloud & Infrastructure',
       icon: Cloud,
       color: 'from - cyan - 500 to - blue - 500',
-      services: ['Cloud DevOps',
-        'IT Infrastructure',
-        'Digital Twin Platform',
-        'IoT Edge Computing',
-      ],
+      services: ['Cloud DevOpsIT Infrastructure',
+        'Digital Twin PlatformIoT Edge Computing'
+      ]
     },
     {
       title: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       color: 'from - orange - 500 to - red - 500',
-      services: ['Micro CRM',
-        'Helpdesk Platform',
-        'Website Analytics',
-        'Affiliate Tracking',
-      ],
-    },
-  ];
+      services: ['Micro CRMHelpdesk Platform',
+        'Website AnalyticsAffiliate Tracking'
+      ]
+    }
+  ],
 
-  const benefits = ['Cutting - edge AI technology with proven results',
-    'Transparent pricing with no hidden fees',
-    '24 / 7 support and dedicated account management',
-    'Custom integrations and white - label solutions',
-    'Comprehensive compliance and security standards',
-    'Scalable solutions that grow with your business',
-  ];
+  const benefits = ['Cutting - edge AI technology with proven resultsTransparent pricing with no hidden fees',
+    '24 / 7 support and dedicated account managementCustom integrations and white - label solutions',
+    'Comprehensive compliance and security standardsScalable solutions that grow with your business'
+  ],
 
   const pricingTiers = [{
       name: 'Starter',
@@ -132,37 +113,31 @@ export default function Page() {
       period: 'monthly',
       description: 'Perfect for small businesses and startups',
       features: [
-        'Basic AI features',
-        'Standard support',
-        'Core integrations',
-        'Basic analytics',
-      ],
+        'Basic AI featuresStandard support',
+        'Core integrationsBasic analytics'
+      ]
     },
     {
       name: 'Professional',
       price: '$799',
       period: 'monthly',
       description: 'Advanced features for growing organizations',
-      features: ['Advanced AI capabilities',
-        'Priority support',
-        'Custom integrations',
-        'Advanced analytics',
-        'API access',
-      ],
+      features: ['Advanced AI capabilitiesPriority support',
+        'Custom integrationsAdvanced analytics',
+        'API access'
+      ]
     },
     {
       name: 'Enterprise',
       price: '$1,999',
       period: 'monthly',
       description: 'Full - scale solutions for large enterprises',
-      features: ['Custom AI development',
-        '24 / 7 dedicated support',
-        'White - label solutions',
-        'On - premise deployment',
-        'Custom consulting',
-      ],
-    },
-  ];
+      features: ['Custom AI development24 / 7 dedicated support',
+        'White - label solutionsOn - premise deployment',
+        'Custom consulting'
+      ]
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -488,7 +463,7 @@ export default function Page() {
               </p>
               <p > Visit us at{' '}
                 <a
-                  href="https://ziontechgroup.com"
+                  href="https: //ziontechgroup.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-purple - 400 hover:text-purple -300"
@@ -500,5 +475,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

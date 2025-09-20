@@ -1,33 +1,33 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import React, { useState, useRef, useEffect } from 'react',
+import Link from 'next/link',
+import { useAuth } from '@/hooks/useAuth',
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
 
 const UserProfileDropdown: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { logout, user } = useAuth(); // Destructure user as well, if needed for display or checks
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const { logout, user } = useAuth(), // Destructure user as well, if needed for display or checks
+  const dropdownRef = useRef<HTMLDivElement>(null),
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleDropdown = () => setIsOpen(!isOpen),
 
   const handleLogout = () => {
-    logout();
-    setIsOpen(false); // Close dropdown after logout
-  };
+    logout(),
+    setIsOpen(false), // Close dropdown after logout
+  },
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
-    };
+    },
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside),
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener('mousedown', handleClickOutside),
+    },
+  }, []),
 
   return (
     <div style={{ position: 'relative' }} ref={dropdownRef}>
@@ -55,7 +55,7 @@ const UserProfileDropdown: React.FC = () => {
             borderRadius: '4px',
             boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
             zIndex: 1000,
-            minWidth: '150px',
+            minWidth: '150px'
           }}
         >
           <ul style={{ listStyle: 'none', margin: 0, padding: '8px 0' }}>
@@ -97,7 +97,7 @@ const UserProfileDropdown: React.FC = () => {
         </div>
       )}
     </div>
-  );
-};
+  ),
+},
 
-export default UserProfileDropdown;
+export default UserProfileDropdown,

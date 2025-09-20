@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   ArrowRight
   TrendingUp
@@ -20,15 +20,15 @@ import {
   Globe,
   Brain,
   Rocket
-} from 'lucide-react';
+} from 'lucide-react',
 
 const BusinessTransformation2028Showcase = () => {
-  const [activeSolutionsetActiveSolution] = useState('ai-automation');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeSolutionsetActiveSolution] = useState('ai-automation'),
+  const [isVisiblesetIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
 
   const solutions = {
     'ai-automation': {
@@ -155,16 +155,16 @@ const BusinessTransformation2028Showcase = () => {
         }
       ]
     }
-  };
+  },
 
   const solutionTabs = [
     { id: 'ai-automation'label: 'AI Automation'icon: Brain },
     { id: 'quantum-optimization'label: 'Quantum Optimization'icon: Zap },
     { id: 'neural-business'label: 'Neural Business'icon: Target },
     { id: 'future-operations'label: 'Future Operations'icon: Rocket }
-  ];
+  ],
 
-  const currentSolution = solutions[activeSolution as keyof typeof solutions];
+  const currentSolution = solutions[activeSolution as keyof typeof solutions],
 
 const BusinessTransformation2028Showcase: React.FC = () => {
   return (
@@ -172,7 +172,7 @@ const BusinessTransformation2028Showcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">BusinessTransformation2028Showcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default BusinessTransformation2028Showcase;
+export default BusinessTransformation2028Showcase,

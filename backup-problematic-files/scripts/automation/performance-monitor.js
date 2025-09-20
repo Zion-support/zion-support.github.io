@@ -1,5 +1,5 @@
 
-#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '📊 Starting continuous performance monitoring automation...'),"}),"}) ,"}),"}) '📊 Starting continuous performance monitoring automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000, async function runPerformanceMonitor() {,"}),"}) try {,"}),"}) 🏗️ Building project for performance analysis...'),"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit ,}),"}),"}) 📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit ,}),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) '🔍 Running Lighthouse performance tests...'),"}),"}) try {,"}),"}) if (fs.existsSync(,"}),"}) 'lighthouserc.json')) {,"}),"}) execSync(,"}),"}) 'npx lighthouse --config=lighthouserc.json',{ stdio: 'inherit ,}),"}),"}) ✅ Lighthouse tests completed'),"}),"}) } else {,"}),"}) 'ℹ️ No Lighthouse configuration found'),"}),"}) '🏗️ Building project for performance analysis...'),"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit ,}),"}),"}) 📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit ,}),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) }"}),"}) '🔍 Running Lighthouse performance tests...'),"}),"}) try {,"}),"}) if (fs.existsSync(,"}),"}) 'lighthouserc.json')) {,"}),"}) execSync(,"}),"}) 'npx lighthouse --config=lighthouserc.json',{ stdio: 'inherit ,}),"}),"}) '✅ Lighthouse tests completed'),"}),"}) } else {,"}),"}) 'ℹ️ No Lighthouse configuration found'),"}),"}) }"}),"}) } catch (error) {,"}),"}) '⚠️ Lighthouse tests failed but continuing...'),"}),"}) }"}),"}) '📁 Checking build output for large files...'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) '⚠️ Lighthouse tests failed but continuing...'),"}),"}) '📁 Checking build output for large files...'),"}),"}) const distPath = path.join(process.cwd(),"}),"}) 'dist'),"}),"}) if (fs.existsSync(distPath)) {,"}),"}) const largeFiles = findLargeFiles(distPath),"}),"}) if (largeFiles.length > 0) {,"}),"}) '⚠️ Large files found in build output:'),"}),"}) largeFiles.forEach(file => {,"}),"}) }),"}),"}) } else {,"}),"}) ✅ No excessively large files found'),"}),"}) '🔍 Checking for unused dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx depcheck',{ stdio: 'inherit ,}),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Dependency check not available'),"}),"}) '⚠️ Large files found in build output:'),"}),"}) largeFiles.forEach(file => {,"}),"}) }),"}),"}) } else {,"}),"}) ✅ No excessively large files found'),"}),"}) }"}),"}) }"}),"}) '🔍 Checking for unused dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx depcheck',{ stdio: 'inherit ,}),"}),"}) } catch (error) {,"}),"}) ℹ️ Dependency check not available'),"}),"}) }"}),"}) '📊 Generating performance report...'),"}),"}) ,"}),"}) summary: 'Performance monitoring completed,"}),"}) },"}),"}) ,"}),"}) ,"}) '📊 Generating performance report...'),"}),"}) const reportPath = path.join(process.cwd(),"}),"}) 'performance-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous performance monitoring completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous performance monitoring failed:',error.message),"}),"}) '✅ Continuous performance monitoring completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous performance monitoring failed:',error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) function findLargeFiles(dir,maxSize = 1024 * 1024) { const largeFiles = [],"}),"}) function scanDirectory(currentDir) {,"}),"}) try {,"}),"}) const items = fs.readdirSync(currentDir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(currentDir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) scanDirectory(fullPath),"}),"}) } else if (stat.isFile() && stat.size > maxSize) {,"}),"}) largeFiles.push({,"}),"}) path: path.relative(process.cwd(),fullPath),"}),"}) size: stat.size,"}),"}) }),"}),"}) } catch (error) {,"}),"}) t be accessed,"}),"}) scanDirectory(dir),"}),"}) return largeFiles.sort((a,b) => b.size - a.size),"}),"}) function getDirectorySize(dir) {,"}),"}) const totalSize = 0,"}),"}) function calculateSize(currentDir) {,"}),"}) try {,"}),"}) const items = fs.readdirSync(currentDir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(currentDir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) calculateSize(fullPath),"}),"}) } else if (stat.isFile()) {,"}),"}) totalSize += stat.size,"}),"}) } catch (error) {,"}),"}) 't be accessed,"}),"}) calculateSize(dir),"}),"}) return totalSize,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runPerformanceMonitor(),"}),"}) setInterval(async () => {,"}),"}) await runPerformanceMonitor(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}}}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 async function runPerformanceMonitor() { try {',🏗️ Building project for performance analysis...`), execSync( `npm run build`,{ stdio: `inherit ,}) 'npm run build',{ stdio: 'inherit ,}), 📦 Analyzing bundle size...'), try { execSync(node scripts/analyze-bundle.js',{ stdio: 'inherit ,});
+#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '📊 Starting continuous performance monitoring automation...'),"}),"}) ,"}),"}) '📊 Starting continuous performance monitoring automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000, async function runPerformanceMonitor() {,"}),"}) try {,"}),"}) 🏗️ Building project for performance analysis...'),"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) 📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) '🔍 Running Lighthouse performance tests...'),"}),"}) try {,"}),"}) if (fs.existsSync(,"}),"}) 'lighthouserc.json')) {,"}),"}) execSync(,"}),"}) 'npx lighthouse --config=lighthouserc.json',{ stdio: 'inherit }),"}),"}) ✅ Lighthouse tests completed'),"}),"}) } else {,"}),"}) 'ℹ️ No Lighthouse configuration found'),"}),"}) '🏗️ Building project for performance analysis...'),"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) 📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) }"}),"}) '🔍 Running Lighthouse performance tests...'),"}),"}) try {,"}),"}) if (fs.existsSync(,"}),"}) 'lighthouserc.json')) {,"}),"}) execSync(,"}),"}) 'npx lighthouse --config=lighthouserc.json',{ stdio: 'inherit }),"}),"}) '✅ Lighthouse tests completed'),"}),"}) } else {,"}),"}) 'ℹ️ No Lighthouse configuration found'),"}),"}) }"}),"}) } catch (error) {,"}),"}) '⚠️ Lighthouse tests failed but continuing...'),"}),"}) }"}),"}) '📁 Checking build output for large files...'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) '⚠️ Lighthouse tests failed but continuing...'),"}),"}) '📁 Checking build output for large files...'),"}),"}) const distPath = path.join(process.cwd(),"}),"}) 'dist'),"}),"}) if (fs.existsSync(distPath)) {,"}),"}) const largeFiles = findLargeFiles(distPath),"}),"}) if (largeFiles.length > 0) {,"}),"}) '⚠️ Large files found in build output:'),"}),"}) largeFiles.forEach(file => {,"}),"}) }),"}),"}) } else {,"}),"}) ✅ No excessively large files found'),"}),"}) '🔍 Checking for unused dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx depcheck',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) 'ℹ️ Dependency check not available'),"}),"}) '⚠️ Large files found in build output:'),"}),"}) largeFiles.forEach(file => {,"}),"}) }),"}),"}) } else {,"}),"}) ✅ No excessively large files found'),"}),"}) }"}),"}) }"}),"}) '🔍 Checking for unused dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npx depcheck',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ℹ️ Dependency check not available'),"}),"}) }"}),"}) '📊 Generating performance report...'),"}),"}) ,"}),"}) summary: 'Performance monitoring completed,"}),"}) },"}),"}) ,"}),"}) ,"}) '📊 Generating performance report...'),"}),"}) const reportPath = path.join(process.cwd(),"}),"}) 'performance-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous performance monitoring completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous performance monitoring failed:',error.message),"}),"}) '✅ Continuous performance monitoring completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous performance monitoring failed:',error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) function findLargeFiles(dir,maxSize = 1024 * 1024) { const largeFiles = [],"}),"}) function scanDirectory(currentDir) {,"}),"}) try {,"}),"}) const items = fs.readdirSync(currentDir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(currentDir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) scanDirectory(fullPath),"}),"}) } else if (stat.isFile() && stat.size > maxSize) {,"}),"}) largeFiles.push({,"}),"}) path: path.relative(process.cwd(),fullPath),"}),"}) size: stat.size,"}),"}) }),"}),"}) } catch (error) {,"}),"}) t be accessed,"}),"}) scanDirectory(dir),"}),"}) return largeFiles.sort((a,b) => b.size - a.size),"}),"}) function getDirectorySize(dir) {,"}),"}) const totalSize = 0,"}),"}) function calculateSize(currentDir) {,"}),"}) try {,"}),"}) const items = fs.readdirSync(currentDir),"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(currentDir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) if (stat.isDirectory()) {,"}),"}) calculateSize(fullPath),"}),"}) } else if (stat.isFile()) {,"}),"}) totalSize += stat.size,"}),"}) } catch (error) {,"}),"}) 't be accessed,"}),"}) calculateSize(dir),"}),"}) return totalSize,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runPerformanceMonitor(),"}),"}) setInterval(async () => {,"}),"}) await runPerformanceMonitor(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}}}}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 async function runPerformanceMonitor() { try {',🏗️ Building project for performance analysis...`), execSync( `npm run build`,{ stdio: `inherit }) 'npm run build',{ stdio: 'inherit }), 📦 Analyzing bundle size...'), try { execSync(node scripts/analyze-bundle.js',{ stdio: 'inherit }),
 #!/usr/bin/env node,"}),"}),
 import { execSync } from,"}),"}),
   'child_process',"}),"}),
@@ -16,7 +16,7 @@ const __dirname = path && path.dirname(__filename),"}),"}),
   '📊 Starting continuous performance monitoring automation...'),"}),"}),
     try {,"}),"}),
       execSync(,"}),"}),
-  'npx depcheck', { "stdio": 'inherit }),"}),"}),
+  'npx depcheck', { "stdio": 'inherit }),"}),"})
     } catch (error) {,"}),"}),
       // // // console && console.log(,"}),"}),
   'ℹ️  Dependency check not available'),"}),"}),
@@ -24,27 +24,27 @@ const __dirname = path && path.dirname(__filename),"}),"}),
         // // // // // // // console && console.log(,"}),"}),
   '⚠️  Large files found in build "output": '),"}),"}),
         largeFiles && largeFiles.forEach(file => {,"}),"}),
-          // // // // // // // console && console.log(`  - ${file && file.path}: ${(file && file.size / 1024 / 1024).toFixed(2)} MB`),"}),"}),
-        }),"}),"}),
+          // // // // // // // console && console.log(`  - ${file && file.path}: ${(file && file.size / 1024 / 1024).toFixed(2)} MB`),"}),"})
+        }),"}),"})
       } else {,"}),"}),
         // // // // // // // console && console.log(,"}),"}),
-  ✅ No excessively large files found'),"}),"}),
-      }"}),"}),
+  ✅ No excessively large files found'),"}),"})
+      }"}),"})
     }"}),"}),
     // Check for unused dependencies,"}),"}),
     // // // // // // // console && console.log(,"}),"}),
   '🔍 Checking for unused dependencies...'),"}),"}),
     try {,"}),"}),
       execSync(,"}),"}),
-  'npx depcheck', { "stdio": 'inherit }),"}),"}),
+  'npx depcheck', { "stdio": 'inherit }),"}),"})
     } catch (error) {,"}),"}),
       // // // // // // // console && console.log(,"}),"}),
-  ℹ️  Dependency check not available'),"}),"}),
+  ℹ️  Dependency check not available'),"}),"})
     }"}),"}),
     // Generate performance report,"}),"}),
     // // // // // // // console && console.log(,"}),"}),
   '📊 Generating performance report...'),"}),"}),"}),"}),
-  "summary": 'Performance monitoring completed,"}),"}),
+  "summary": 'Performance monitoring completed,"}),"})
 },"}),"}),"}),"}),
     console && console.log(,"}),"}),
   '📊 Generating performance report...'),"}),"}),
@@ -53,13 +53,13 @@ const __dirname = path && path.dirname(__filename),"}),"}),
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),"}),"}),
     // // // console && console.log(`✅ Performance report saved to ${reportPath}`),"}),"}),
     // // // console && console.log(,"}),"}),
-  '✅ Continuous performance monitoring completed successfully'),"}),"}),
+  '✅ Continuous performance monitoring completed successfully'),"}),"})
   } catch (error) {,"}),"}),
     // // // console && console.error(,"}),"}),
   '❌ Continuous performance monitoring "failed": ', error && error.message),"}),"}),
     // // // // // // // console && console.log(`✅ Performance report saved to ${reportPath}`),"}),"}),
     // // // // // // // console && console.log(,"}),"}),
-  '✅ Continuous performance monitoring completed successfully'),"}),"}),
+  '✅ Continuous performance monitoring completed successfully'),"}),"})
   } catch (error) {,"}),"}),
     // // // // // // // console && console.error(,"}),"}),
   '❌ Continuous performance monitoring "failed": ', error && error.message),"}),"}),"}),"}),
@@ -68,8 +68,8 @@ const __dirname = path && path.dirname(__filename),"}),"}),
 function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default,"}),"}),
   const largeFiles = [],"}),"}),
   function scanDirectory(currentDir) {,"}),"}),
-    try {,"}),"}),
-          }),"}),"}),
+    try {,"}),"})
+          }),"}),"})
     } catch (error) {,"}),"}),
       // Skip directories that can,"}),"}),
   t be accessed,"}),"}),
@@ -78,7 +78,7 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default,"}),"}),
 function getDirectorySize(dir) {,"}),"}),
   const totalSize = 0,"}),"}),
   function calculateSize(currentDir) {,"}),"}),
-    try {,"}),"}),
+    try {,"}),"})
     } catch (error) {,"}),"}),
       // Skip directories that can,"}),"}),
   't be accessed,"}),"}),
@@ -92,9 +92,9 @@ async function runContinuous() {,"}),"}),
   await runPerformanceMonitor(),"}),"}),
   // Set up continuous execution,"}),"}),
   setInterval(async () => {,"}),"}),
-    await runPerformanceMonitor(),"}),"}),
+    await runPerformanceMonitor(),"}),"})
   }, AUTOMATION_INTERVAL),"}),"}),
-  // // // // // // // console && console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"}),
+  // // // // // // // console && console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})
 }"}),"}),
 // Handle graceful shutdown,"}),"}),
 process && process.on('SIGINT,"}),"}),
@@ -107,7 +107,7 @@ process && process.on('SIGINT,"}),"}),
   ', () => {,"}),"}),
   // // // console && console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"}),
   '),"}),"}),
-  process && process.exit(0),"}),"}),
+  process && process.exit(0),"}),"})
 }),"}),"}),
 process && process.on('SIGTERM,"}),"}),
   ', () => {,"}),"}),
@@ -115,28 +115,28 @@ process && process.on('SIGTERM,"}),"}),
   '),"}),"}),"}),"}),
   // // // console && console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"}),
   '),"}),"}),
-  process && process.exit(0),"}),"}),
+  process && process.exit(0),"}),"})
 }),"}),"}),
 // Start the continuous performance monitor,"}),"}),
 runContinuous().catch(error => {,"}),"}),
   // // // // // // // console && console.error('❌ Failed to start continuous performance "monitoring": error),"}),"}),"}),"}),
   // // // console && console.error('❌ Failed to start continuous performance "monitoring": ', error),"}),"}),
-  process && process.exit(1),"}),"}),
-}),"}),"}),
+  process && process.exit(1),"}),"})
+}),"}),"})
 }}}}}}}}}}}}}}}}}}}"}),"}),
-// Get automation interval from environment variable ("default": 2 hours);
-const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours;
+// Get automation interval from environment variable ("default": 2 hours),
+const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours,
 async function runPerformanceMonitor() {,
-  try {';
-    // // // console && console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
-    // Build the project first;
+  try {',
+    // // // console && console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`),
+    // Build the project first,
     // // // console && console.log(,
-  🏗️ Building project for performance analysis...");
+  🏗️ Building project for performance analysis..."),
     execSync(,
   "npm run build", { "stdio": "inherit }),
-  'npm run build', { "stdio": 'inherit });
-    // Check bundle size;
-    // // // console && console.log(;
-  📦 Analyzing bundle size...');
+  'npm run build', { "stdio": 'inherit }),
+    // Check bundle size,
+    // // // console && console.log(,
+  📦 Analyzing bundle size...'),
     try {,
-      execSync(';
+      execSync(',

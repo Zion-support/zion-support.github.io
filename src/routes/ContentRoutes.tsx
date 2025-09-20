@@ -20,7 +20,6 @@ import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Services from "@/pages/Services";
-
 const ContentRoutes = () => {
   return (
     <Routes>
@@ -76,7 +75,7 @@ const ContentRoutes = () => {
       <Route path="/sitemap" element={<Sitemap />} />
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
-  );
-};
+  ),
+},
 
 export default ContentRoutes;

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function AutonomousSystemsGuide() {
   return (
@@ -282,7 +282,7 @@ export default function AutonomousSystemsGuide() {
                   Ready to implement autonomous technology in your organization? Our experts 
                   can help you design and deploy solutions that drive real business value.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm: flex-row gap-4">
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 text-center"
@@ -302,5 +302,5 @@ export default function AutonomousSystemsGuide() {
         </main>
       </div>
     </>
-  );
+  )
 }

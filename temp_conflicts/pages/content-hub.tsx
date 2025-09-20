@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const ContentHub: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   const categories = [
     { id: 'all', name: 'All Content', count: 156 },
@@ -14,8 +14,8 @@ const ContentHub: React.FC = () => {
     { id: 'whitepapers', name: 'Whitepapers', count: 12 },
     { id: 'videos', name: 'Videos', count: 23 },
     { id: 'webinars', name: 'Webinars', count: 8 },
-    { id: 'news', name: 'News & Updates', count: 28 },
-  ];
+    { id: 'news', name: 'News & Updates', count: 28 }
+  ],
 
   const featuredContent = [
     {
@@ -27,7 +27,7 @@ const ContentHub: React.FC = () => {
       date: '2025-01-15',
       readTime: '8 min read',
       featured: true,
-      image: '/api/placeholder/400/250',
+      image: '/api/placeholder/400/250'
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ const ContentHub: React.FC = () => {
       date: '2025-01-12',
       readTime: '15 min read',
       featured: true,
-      image: '/api/placeholder/400/250',
+      image: '/api/placeholder/400/250'
     },
     {
       id: 3,
@@ -49,9 +49,9 @@ const ContentHub: React.FC = () => {
       date: '2025-01-10',
       readTime: '12 min read',
       featured: true,
-      image: '/api/placeholder/400/250',
-    },
-  ];
+      image: '/api/placeholder/400/250'
+    }
+  ],
 
   const recentContent = [
     {
@@ -62,7 +62,7 @@ const ContentHub: React.FC = () => {
       author: 'Security Team',
       date: '2025-01-14',
       readTime: '10 min read',
-      image: '/api/placeholder/300/200',
+      image: '/api/placeholder/300/200'
     },
     {
       id: 5,
@@ -72,7 +72,7 @@ const ContentHub: React.FC = () => {
       author: 'Jenny Thompson',
       date: '2025-01-13',
       readTime: '6 min read',
-      image: '/api/placeholder/300/200',
+      image: '/api/placeholder/300/200'
     },
     {
       id: 6,
@@ -82,7 +82,7 @@ const ContentHub: React.FC = () => {
       author: 'Expert Panel',
       date: '2025-01-11',
       readTime: '60 min',
-      image: '/api/placeholder/300/200',
+      image: '/api/placeholder/300/200'
     },
     {
       id: 7,
@@ -92,7 +92,7 @@ const ContentHub: React.FC = () => {
       author: 'Research Team',
       date: '2025-01-09',
       readTime: '20 min read',
-      image: '/api/placeholder/300/200',
+      image: '/api/placeholder/300/200'
     },
     {
       id: 8,
@@ -102,7 +102,7 @@ const ContentHub: React.FC = () => {
       author: 'News Team',
       date: '2025-01-08',
       readTime: '5 min read',
-      image: '/api/placeholder/300/200',
+      image: '/api/placeholder/300/200'
     },
     {
       id: 9,
@@ -112,42 +112,40 @@ const ContentHub: React.FC = () => {
       author: 'Architecture Team',
       date: '2025-01-07',
       readTime: '18 min read',
-      image: '/api/placeholder/300/200',
-    },
-  ];
+      image: '/api/placeholder/300/200'
+    }
+  ],
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
       blog: 'bg-blue-100 text-blue-800',
-      guides: 'bg-green-100 text-green-800',
-      'case-studies': 'bg-purple-100 text-purple-800',
+      guides: 'bg-green-100 text-green-800case-studies': 'bg-purple-100 text-purple-800',
       whitepapers: 'bg-orange-100 text-orange-800',
       videos: 'bg-red-100 text-red-800',
       webinars: 'bg-indigo-100 text-indigo-800',
-      news: 'bg-gray-100 text-gray-800',
-    };
-    return colors[category] || 'bg-gray-100 text-gray-800';
-  };
+      news: 'bg-gray-100 text-gray-800'
+    },
+    return colors[category] || 'bg-gray-100 text-gray-800',
+  },
 
   const getCategoryName = (category: string) => {
     const names: { [key: string]: string } = {
       blog: 'Blog Posts',
-      guides: 'Guides & Tutorials',
-      'case-studies': 'Case Studies',
+      guides: 'Guides & Tutorialscase-studies': 'Case Studies',
       whitepapers: 'Whitepapers',
       videos: 'Videos',
       webinars: 'Webinars',
-      news: 'News & Updates',
-    };
-    return names[category] || category;
-  };
+      news: 'News & Updates'
+    },
+    return names[category] || category,
+  },
 
   const filteredContent = recentContent.filter(item => {
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || item.category === activeCategory,
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         item.excerpt.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -291,7 +289,7 @@ const ContentHub: React.FC = () => {
               We're always looking for new topics and contributors. Let us know what you'd like to see!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
                 Suggest Topics
               </Link>
               <Link href="/blog" className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
@@ -302,7 +300,7 @@ const ContentHub: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ContentHub;
+export default ContentHub,

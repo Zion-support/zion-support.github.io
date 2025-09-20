@@ -1,40 +1,40 @@
 
-import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
+import { useEffect, useState } from "react",
+import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { useProjects } from "@/hooks/useProjects",
+import { Project } from "@/types/projects",
 
 export function ProjectOfferBanner() {
-  const router = useRouter();
-  const { projects, isLoading } = useProjects();
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+  const router = useRouter(),
+  const { projects, isLoading } = useProjects(),
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
   
   useEffect(() => {
     if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent');
-      setPendingOffers(offers);
+      const offers = projects.filter(p => p.status === 'offer_sent'),
+      setPendingOffers(offers),
     }
-  }, [projects, isLoading]);
+  }, [projects, isLoading]),
   
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation(),
     setDismissed(prev => {
-      const updated = new Set(prev);
-      updated.add(projectId);
-      return updated;
-    });
-  };
+      const updated = new Set(prev),
+      updated.add(projectId),
+      return updated
+    }),
+  },
   
   const handleViewOffer = (projectId: string) => {
-    router.push(`/project/${projectId}`);
-  };
+    router.push(`/project/${projectId}`),
+  },
   
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-    return null;
+    return null,
   }
   
   return (
@@ -76,5 +76,5 @@ export function ProjectOfferBanner() {
           </Card>
         ))}
     </div>
-  );
+  ),
 }

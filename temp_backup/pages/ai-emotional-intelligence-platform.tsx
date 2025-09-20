@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { Heart, Brain, Users, Target, Award, Clock, CheckCircle, Shield, Database, Server, Layers, FileText } from 'lucide-react';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
+import { Heart, Brain, Users, Target, Award, Clock, CheckCircle, Shield, Database, Server, Layers, FileText } from 'lucide-react',
 export default function EmotionalIQPage() {,
 	return (,
 		<>,
@@ -21,6 +21,5 @@ export default function EmotionalIQPage() {,
 				industries={["Customer Support", "Sales", "HR", "Healthcare"]}
 				url="https: //ziontechgroup.com/ai-emotional-intelligence-platform",
 			/>,
-		</>,
-	),}
+		</>)}
 ,

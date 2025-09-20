@@ -1,45 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
-import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
-import type { TalentProfile as TalentProfileType } from '@/types/talent';
+import React, { useState, useEffect } from 'react',
+import { useParams } from 'react-router-dom',
+import { SEO } from '@/components/SEO',
+import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState',
+import { ProfileErrorState } from '@/components/profile/ProfileErrorState',
+import type { TalentProfile as TalentProfileType } from '@/types/talent',
 
 interface TalentProfileWithSocial extends TalentProfileType {
-  social?: Record<string, string>;
+  social?: Record<string, string>,
 }
 
 export default function TalentProfilePage() {
-  const { id } = useParams() as { id?: string };
-  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { id } = useParams() as { id?: string },
+  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) {
-        setError('Profile not found');
-        setLoading(false);
-        return;
+        setError('Profile not found'),
+        setLoading(false),
+        return,
       }
 
       try {
-        const res = await fetch(`/api/talent/${id}`);
-        if (!res.ok) throw new Error('Failed to load profile');
-        const data = await res.json();
-        setProfile(data.profile);
+        const res = await fetch(`/api/talent/${id}`),
+        if (!res.ok) throw new Error('Failed to load profile'),
+        const data = await res.json(),
+        setProfile(data.profile),
       } catch (err) {
-        setError('Profile not found');
+        setError('Profile not found'),
       } finally {
-        setLoading(false);
+        setLoading(false),
       }
-    };
+    },
 
-    fetchProfile();
-  }, [id]);
+    fetchProfile(),
+  }, [id]),
 
-  if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <ProfileErrorState error={error} />;
+  if (loading) return <ProfileLoadingState />,
+  if (error || !profile) return <ProfileErrorState error={error} />,
 
   return (
     <>
@@ -83,5 +83,5 @@ export default function TalentProfilePage() {
         </div>
       </main>
     </>
-  );
+  ),
 }

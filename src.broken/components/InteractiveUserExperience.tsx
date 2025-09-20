@@ -27,8 +27,8 @@ export default function Page() {
         type: 'select',
         options: ['en',es',fr',de'],
         category: 'language',
-        description: 'Select your preferred language'},
-    ];
+        description: 'Select your preferred language'}
+    ],
 
     const sampleActivities: UserActivity[] = [{
 
@@ -53,8 +53,8 @@ export default function Page() {
         timestamp: new Date(Date.now () - 900000) ,
         duration: 5,
         success: true,
-        category: 'search'},
-    ];
+        category: 'search'}
+    ],
 
     const sampleAccessibility: AccessibilityFeature[] = [{
 
@@ -83,42 +83,42 @@ export default function Page() {
         name: 'Voice Commands',
         enabled: false,
         description: 'Control the app with voice commands',
-        impact: 'low'},
-    ];
+        impact: 'low'}
+    ],
 
-    setPreferences(samplePreferences);
-    setUserActivities(sampleActivities);
-    setAccessibilityFeatures(sampleAccessibility);
+    setPreferences(samplePreferences),
+    setUserActivities(sampleActivities),
+    setAccessibilityFeatures(sampleAccessibility),
     setIsLoading(false)}, [])}, [])}, [])},
     []
-  )}, []);
+  )}, []),
 
       case 'accessibility':"
-        return <Accessibility className="w-4 h-4"  />;
+        return <Accessibility className="w-4 h-4"  />,
       case 'performance':"
-        return <Zap className="w-4 h-4"  />;
+        return <Zap className="w-4 h-4"  />,
       case 'language':"
-        return <Languages className="w-4 h-4"  />;
+        return <Languages className="w-4 h-4"  />,
       default:"
         return <Settings className="w-4 h-4"  />}
-  };
+  },
 
       case 'interaction':"
-        return <User className="w-4 h-4"  />;
+        return <User className="w-4 h-4"  />,
       case 'search':"
-        return <Eye className="w-4 h-4"  />;
+        return <Eye className="w-4 h-4"  />,
       case 'purchase':"
-        return <ShoppingCart className="w-4 h-4"  />;
+        return <ShoppingCart className="w-4 h-4"  />,
       default:"
         return <Activity className="w-4 h-4"  />}
-  };
+  },
 
       case 'medium':'
-        return 'bg-yellow-500';
+        return 'bg-yellow-500',
       case 'low':'
-        return 'bg-blue-500';
+        return 'bg-blue-500',
       default:'
-        return 'bg-gray-500'}  };
+        return 'bg-gray-500'}  },
 
   if(isLoading) {
 
@@ -284,8 +284,8 @@ export default function Page() {
           </div>
         </TabsContent>
       </Tabs>
-    </div>) };
-export { InteractiveUserExperience };
+    </div>) },
+export { InteractiveUserExperience },
 '"
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

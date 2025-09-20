@@ -1,32 +1,32 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-    ];
+    ],
     const useCases = [{
             title: 'Customer Support',
             description: 'Provide instant, accurate responses to customer inquiries',
             icon: Users,
-            benefits['Reduced response time', 'Improved customer satisfaction', 'Lower support costs'];
-        },;
+            benefits['Reduced response timeImproved customer satisfaction', 'Lower support costs'],
+        },
         {
             title: 'Internal Knowledge Management',
             description: 'Help employees find information quickly and efficiently',
             icon: Brain,
-            benefits['Faster problem resolution', 'Knowledge retention', 'Training support'];
-        },;
+            benefits['Faster problem resolutionKnowledge retention', 'Training support'],
+        },
         {
             title: 'Sales Support',
             description: 'Assist sales teams with product information and customer queries',
             icon: BarChart3,
-            benefits['Increased conversion rates', 'Better customer engagement', 'Sales enablement'];
-        },;
+            benefits['Increased conversion ratesBetter customer engagement', 'Sales enablement'],
+        },
         {
             title: 'Technical Documentation',
             description: 'Provide technical support and documentation assistance',
             icon: Globe,
-            benefits['Reduced support tickets', 'Faster issue resolution', 'Improved user experience'];
+            benefits['Reduced support ticketsFaster issue resolution', 'Improved user experience'],
         }
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - green - 900 to - slate -900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

@@ -18,6 +18,5 @@ export default function Page() {,
         <li>Audit readiness: continuous</li>,
       </ul>,
       <p>Need a field deployment? Our team can help design, implement, and harden your agent stack.</p>,
-    </main>,
-  );
+    </main>),
 }

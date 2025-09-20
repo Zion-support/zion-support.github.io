@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default StartupSolutions;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default StartupSolutions,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -10,14 +10,12 @@ export default function Page() {
     description:
       "Protect your startup's data and systems with enterprise - grade security solutions.",
     icon: Shield,
-    features: ['Threat detection',
-      'Data encryption',
-      'Compliance management',
-      'Security audits',
+    features: ['Threat detectionData encryption',
+      'Compliance managementSecurity audits'
     ],
     price: 'From $12,000',
     timeline: '3 - 6 weeks',
-    category: 'Security',
+    category: 'Security'
   },
   {
     id: 5,
@@ -25,14 +23,12 @@ export default function Page() {
     description:
       'Native and cross - platform mobile applications that engage users and drive growth.',
     icon: Smartphone,
-    features: ['iOS & Android development',
-      'Cross - platform solutions',
-      'Performance optimization',
-      'App store optimization',
+    features: ['iOS & Android developmentCross - platform solutions',
+      'Performance optimizationApp store optimization'
     ],
     price: 'From $20,000',
     timeline: '6 - 12 weeks',
-    category: 'Development',
+    category: 'Development'
   },
   {
     id: 6,
@@ -40,16 +36,14 @@ export default function Page() {
     description:
       'Comprehensive marketing tools to acquire, engage, and retain customers effectively.',
     icon: Target,
-    features: ['Multi - channel campaigns',
-      'Automation workflows',
-      'Analytics & reporting',
-      'A / B testing tools',
+    features: ['Multi - channel campaignsAutomation workflows',
+      'Analytics & reportingA / B testing tools'
     ],
     price: 'From $10,000',
     timeline: '3 - 5 weeks',
-    category: 'Marketing',
-  },
-];
+    category: 'Marketing'
+  }
+],
 
 const successStories = [{
     logo: '🚀',
@@ -60,7 +54,7 @@ const successStories = [{
     solution:
       'Built rapid MVP with cloud infrastructure and AI analytics integration.',
     results:
-      'Launched in 6 weeks, secured $500K funding, 1000 + beta users in first month.',
+      'Launched in 6 weeks, secured $500K funding, 1000 + beta users in first month.'
   },
   {
     logo: '💡',
@@ -71,7 +65,7 @@ const successStories = [{
     solution:
       'Implemented cybersecurity framework with cloud infrastructure and compliance tools.',
     results:
-      'Achieved SOC2 compliance in 4 months, 99.9% uptime, zero security incidents.',
+      'Achieved SOC2 compliance in 4 months, 99.9% uptime, zero security incidents.'
   },
   {
     logo: '📱',
@@ -81,24 +75,21 @@ const successStories = [{
     solution:
       'Developed cross - platform mobile app with integrated analytics and marketing tools.',
     results:
-      'App launched in 8 weeks, 50% increase in mobile conversions, 4.8 - star rating.',
-  },
-];
+      'App launched in 8 weeks, 50% increase in mobile conversions, 4.8 - star rating.'
+  }
+],
 
 const StartupSolutions = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
 
-  const categories = ['All',
-    'Development',
-    'AI & Analytics',
-    'Infrastructure',
-    'Security',
-    'Marketing',
-  ];
+  const categories = ['AllDevelopment',
+    'AI & AnalyticsInfrastructure',
+    'SecurityMarketing'
+  ],
 
   const filteredSolutions = selectedCategory === 'All'
       ? startupSolutions
-      : startupSolutions.filter(solution => solution.category === selectedCategory) ;
+      : startupSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       {/* Hero Section */}
@@ -292,7 +283,7 @@ const StartupSolutions = () => {
               growth, reduce time to market, and help you achieve your business
               goals.</p>
 
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - purple - 600 to - pink - 600 text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-purple - 500 / 25 transition - all duration - 300 transform hover:scale -105"
@@ -309,6 +300,6 @@ const StartupSolutions = () => {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Zap, Cpu, Brain, Shield, Rocket, Database, 
   Globe, Users, Award, Clock, CheckCircle, ArrowRight,
   Settings, Workflow, Bot, Play, TrendingUp
-} from 'lucide-react';
-import SEO from '../components/SEO';
+} from 'lucide-react',
+import SEO from '../components/SEO',
 
 const Automation: React.FC = () => {
   const features = [
@@ -46,7 +46,7 @@ const Automation: React.FC = () => {
       description: "Self-healing and self-scaling infrastructure management",
       color: "from-indigo-500 to-purple-500"
     }
-  ];
+  ],
 
   const solutions = [
     {
@@ -82,7 +82,7 @@ const Automation: React.FC = () => {
         "Release Management"
       ]
     }
-  ];
+  ],
 
   const technologies = [
     "AI Consciousness Integration",
@@ -93,7 +93,7 @@ const Automation: React.FC = () => {
     "Natural Language Processing",
     "Cloud-Native Architecture",
     "Edge Computing Solutions"
-  ];
+  ],
 
   const benefits = [
     {
@@ -116,7 +116,7 @@ const Automation: React.FC = () => {
       title: "Better User Experience",
       description: "Faster response times and consistent service quality"
     }
-  ];
+  ],
 
 export default function AutomationPage() {
   return (
@@ -364,7 +364,7 @@ export default function AutomationPage() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
+                    className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover: bg-white/20 transition-all duration-300"
                   >
                     Schedule a Demo
                   </motion.button>
@@ -375,6 +375,6 @@ export default function AutomationPage() {
         </div>
       </Layout>
     </>
-  );
-};
+  )
+},
 

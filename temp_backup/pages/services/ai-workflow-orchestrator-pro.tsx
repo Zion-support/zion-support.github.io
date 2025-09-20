@@ -1,10 +1,10 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, Users, Zap, Shield, TrendingUp,
   ArrowRight, Play, Clock, Award, Globe, Cpu, Brain
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIWorkflowOrchestratorPro() {
   return (
@@ -21,6 +21,6 @@ export default function AIWorkflowOrchestratorPro() {
         </div>
       </div>
     </div>
-  );
-};
-export default ai-workflow-orchestrator-pro;
+  ),
+},
+export default ai-workflow-orchestrator-pro,

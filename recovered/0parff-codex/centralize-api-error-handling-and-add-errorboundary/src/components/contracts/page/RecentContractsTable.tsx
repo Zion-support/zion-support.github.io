@@ -1,18 +1,18 @@
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button",
 
 interface Contract {
-  id: string;
-  title: string;
-  client: string;
-  talent: string;
-  date: string;
-  isSmartContract: boolean;
+  id: string,
+  title: string,
+  client: string,
+  talent: string,
+  date: string,
+  isSmartContract: boolean
 }
 
 interface RecentContractsTableProps {
-  contracts: Contract[];
-  onViewContract: (contractId: string) => void;
+  contracts: Contract[],
+  onViewContract: (contractId: string) => void
 }
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
@@ -84,5 +84,5 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
         </table>
       </div>
     </>
-  );
+  ),
 }

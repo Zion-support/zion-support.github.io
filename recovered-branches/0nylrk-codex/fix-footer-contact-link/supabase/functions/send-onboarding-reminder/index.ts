@@ -1,67 +1,66 @@
 
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-import { Resend } from "npm: resend@1.0.0";
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
+import { Resend } from "npm: resend@1.0.0",
+const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const corsHeaders = {,
-  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":,
 interface ReminderPayload {,
-  user_id: string;
-  missing_milestone: string;
-  role: string,}
+  user_id: string,
+  missing_milestone: string,
+  role: string}
 ,
 serve(async (req: Request) => {,
   // Handle CORS,
   if (req.method === "OPTIONS") {,
     return new Response(null, {,
-      status: 204,}
+      status: 204}
 ,
   try {,
     const supabase = createClient(,
-      supabaseUrl;
-      supabaseServiceKey,
-    );
-    const payload = await req.json() as ReminderPayload;
-    const { user_id, missing_milestone, role } = payload;
+      supabaseUrl,
+      supabaseServiceKey),
+    const payload = await req.json() as ReminderPayload,
+    const { user_id, missing_milestone, role } = payload,
     if (!user_id || !missing_milestone || !role) {,
       return new Response(,
-        JSON.stringify({ error: "Missing required fields" ,});
+        JSON.stringify({ error: "Missing required fields" }),
         {,
-          status: 400;
-      );
+          status: 400,
+      )
     }
 ,
     // Get user data,
-    const { data: userData, error: userError ,} = await supabase,
+    const { data: userData, error: userError } = await supabase,
       .from("profiles"),
       .select("email, display_name"),
       .eq("id", user_id),
-      .single();
+      .single(),
     if (userError || !userData) {,
       return new Response(,
-        JSON.stringify({ error: "User not found", details: userError ,});
+        JSON.stringify({ error: "User not found", details: userError }),
         {,
-          status: 404;
-      );
+          status: 404,
+      )
     }
 ,
     // Create message based on role and missing milestone,
     const milestoneMessages = {,
       talent: {,
-        profile_completed: "complete your profile to get discovered by clients";
-        skills_added: "add your skills to get better job matches";
-    const name = userData.display_name || "there";
+        profile_completed: "complete your profile to get discovered by clients",
+        skills_added: "add your skills to get better job matches",
+    const name = userData.display_name || "there",
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[,
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"],
-    ] || "complete your next step";
+      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
+    ] || "complete your next step",
     // Send email,
-    const { data: emailData, error: emailError ,} = await resend.emails.send({,
-      from: "Zion AI Marketplace <notifications@zion.ai>";
-      to: userData.email;
-      subject: "Complete your next step on Zion AI Marketplace";
+    const { data: emailData, error: emailError } = await resend.emails.send({,
+      from: "Zion AI Marketplace <notifications@zion.ai>",
+      to: userData.email,
+      subject: "Complete your next step on Zion AI Marketplace",
       html: `,
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">,
           <h2>Hi ${name},</h2>,
@@ -77,31 +76,31 @@ serve(async (req: Request) => {,
         </div>,
     if (emailError) {,
       return new Response(,
-        JSON.stringify({ error: "Failed to send email", details: emailError ,});
+        JSON.stringify({ error: "Failed to send email", details: emailError }),
         {,
-          status: 500;
-      );
+          status: 500,
+      )
     }
 ,
     // Create notification in database,
-    const { data: notification, error: notificationError ,} = await supabase.rpc("create_notification";
+    const { data: notification, error: notificationError } = await supabase.rpc("create_notification",
       {,
-        _user_id: user_id;
-        _title: "Complete your next step";
-        _message: `Don't forget to ${action,} to get the most out of Zion AI Marketplace.`);
+        _user_id: user_id,
+        _title: "Complete your next step",
+        _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`),
     if (notificationError) {,
-      console.error("Failed to create notification:", notificationError);
+      console.error("Failed to create notification:", notificationError),
     }
 ,
     return new Response(JSON.stringify({,
-        message: "Reminder sent successfully");
+        message: "Reminder sent successfully")
   } catch (error) {,
-    console.error(error);
+    console.error(error),
     return new Response(,
-      JSON.stringify({ error: "Internal server error", details: error.message ,});
+      JSON.stringify({ error: "Internal server error", details: error.message }),
       {,
-        status: 500;
-    );
+        status: 500,
+    )
   }
-});
+}),
 }}}}}}}}}}})))

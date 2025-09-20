@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Check, Star, ArrowRight, Phone, Mail, Globe,
   Brain, Atom, Shield, Target, Rocket, Zap,
   TrendingUp, Users, Award, Clock, DollarSign
-} from 'lucide-react';
-import { services2025AdvertisingCampaign } from '../data/2025-services-advertising-campaign';
+} from 'lucide-react',
+import { services2025AdvertisingCampaign } from '../data/2025-services-advertising-campaign',
 
 const Services2025Launch = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('overview'),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -641,7 +641,7 @@ const Services2025Launch = () => {
         </div>
       </footer>
     </div>
-  );
-};
+  ),
+},
 
-export default Services2025Launch;
+export default Services2025Launch,

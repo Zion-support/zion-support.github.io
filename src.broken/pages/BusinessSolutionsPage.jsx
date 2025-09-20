@@ -1,11 +1,11 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
         title: "Change Management",
         description: "Navigate organizational changes successfully",
         price: "$150 - $300 / hour",
-        features["Change strategy", "Communication planning", "Training programs", "Success measurement"],;
+        features["Change strategy", "Communication planning", "Training programs", "Success measurement"],
         icon: <Users className="h-8 w-8 text-zion -purple"/>,
         category: "Change Management",
         link: "/request - quote?service = change - management"
@@ -14,7 +14,7 @@ export default function Page() {
         title: "Financial Planning & Analysis",
         description: "Strategic financial guidance and forecasting",
         price: "$1,500 - $8,000 / month",
-        features["Budget planning", "Financial modeling", "Cash flow analysis", "Investment strategy"],;
+        features["Budget planning", "Financial modeling", "Cash flow analysis", "Investment strategy"],
         icon: <DollarSign className="h-8 w-8 text-zion -blue"/>,
         category: "Finance",
         link: "/request - quote?service = financial - planning"
@@ -23,7 +23,7 @@ export default function Page() {
         title: "Market Research & Analysis",
         description: "Deep insights into your market and customers",
         price: "$3,000 - $25,000",
-        features["Customer surveys", "Competitive analysis", "Market sizing", "Trend forecasting"],;
+        features["Customer surveys", "Competitive analysis", "Market sizing", "Trend forecasting"],
         icon: <Search className="h-8 w-8 text-zion -cyan"/>,
         category: "Research",
         link: "/request - quote?service = market - research"
@@ -32,7 +32,7 @@ export default function Page() {
         title: "Operational Excellence",
         description: "Optimize your operations for maximum efficiency",
         price: "$5,000 - $40,000",
-        features["Process improvement", "Quality management", "Lean methodology", "Performance metrics"],;
+        features["Process improvement", "Quality management", "Lean methodology", "Performance metrics"],
         icon: <CheckCircle className="h-8 w-8 text-zion -purple"/>,
         category: "Operations",
         link: "/request - quote?service = operational - excellence"
@@ -41,7 +41,7 @@ export default function Page() {
         title: "Customer Experience Design",
         description: "Create exceptional customer journeys",
         price: "$8,000 - $60,000",
-        features["Journey mapping", "UX research", "Service design", "Implementation"],;
+        features["Journey mapping", "UX research", "Service design", "Implementation"],
         icon: <Eye className="h-8 w-8 text-zion -blue"/>,
         category: "Customer Experience",
         link: "/request - quote?service = customer - experience"
@@ -50,7 +50,7 @@ export default function Page() {
         title: "Supply Chain Optimization",
         description: "Streamline your supply chain for cost and efficiency",
         price: "$10,000 - $75,000",
-        features["Supply chain audit", "Optimization strategy", "Vendor management", "Implementation"],;
+        features["Supply chain audit", "Optimization strategy", "Vendor management", "Implementation"],
         icon: <Globe className="h-8 w-8 text-zion -cyan"/>,
         category: "Supply Chain",
         link: "/request - quote?service = supply - chain"
@@ -59,7 +59,7 @@ export default function Page() {
         title: "Risk Management & Compliance",
         description: "Identify and mitigate business risks",
         price: "$2,000 - $20,000",
-        features["Risk assessment", "Compliance audit", "Policy development", "Training programs"],;
+        features["Risk assessment", "Compliance audit", "Policy development", "Training programs"],
         icon: <Shield className="h-8 w-8 text-zion -purple"/>,
         category: "Risk Management",
         link: "/request - quote?service = risk - management"
@@ -68,7 +68,7 @@ export default function Page() {
         title: "Performance Management Systems",
         description: "Implement effective performance tracking and improvement",
         price: "$3,000 - $25,000",
-        features["KPI framework", "Performance tracking", "Feedback systems", "Improvement plans"],;
+        features["KPI framework", "Performance tracking", "Feedback systems", "Improvement plans"],
         icon: <Star className="h-8 w-8 text-zion -blue"/>,
         category: "Performance",
         link: "/request - quote?service = performance - management"
@@ -77,7 +77,7 @@ export default function Page() {
         title: "Innovation & R&D Strategy",
         description: "Drive innovation and research initiatives",
         price: "$5,000 - $50,000",
-        features["Innovation strategy", "R & D planning", "Partnership development", "IP protection"],;
+        features["Innovation strategy", "R & D planning", "Partnership development", "IP protection"],
         icon: <Lightbulb className="h-8 w-8 text-zion -cyan"/>,
         category: "Innovation",
         link: "/request - quote?service = innovation - strategy"
@@ -86,7 +86,7 @@ export default function Page() {
         title: "Mergers & Acquisitions Support",
         description: "Navigate complex M & A transactions successfully",
         price: "$25,000 - $200,000",
-        features["Due diligence", "Valuation analysis", "Integration planning", "Post - merger support"],;
+        features["Due diligence", "Valuation analysis", "Integration planning", "Post - merger support"],
         icon: <Building className="h-8 w-8 text-zion -purple"/>,
         category: "M & A",
         link: "/request - quote?service = mergers - acquisitions"
@@ -95,7 +95,7 @@ export default function Page() {
         title: "International Expansion",
         description: "Expand your business globally with confidence",
         price: "$15,000 - $100,000",
-        features["Market entry strategy", "Legal compliance", "Local partnerships", "Cultural adaptation"],;
+        features["Market entry strategy", "Legal compliance", "Local partnerships", "Cultural adaptation"],
         icon: <Globe className="h-8 w-8 text-zion -blue"/>,
         category: "Expansion",
         link: "/request - quote?service = international - expansion"
@@ -104,13 +104,13 @@ export default function Page() {
         title: "Sustainability & ESG Consulting",
         description: "Build sustainable business practices and ESG compliance",
         price: "$3,000 - $30,000",
-        features["Sustainability audit", "ESG strategy", "Implementation planning", "Reporting"],;
+        features["Sustainability audit", "ESG strategy", "Implementation planning", "Reporting"],
         icon: <Leaf className="h-8 w-8 text-zion -cyan"/>,
         category: "Sustainability",
         badge: "New",
         link: "/request - quote?service = sustainability - consulting"
 
-];
+],
 const categories = [{ name: "All", value: "all", icon: <Building className="h-4 w-4"/> },
     { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4"/> },
     { name: "Automation", value: "automation", icon: <Zap className="h-4 w-4"/> },
@@ -128,11 +128,11 @@ const categories = [{ name: "All", value: "all", icon: <Building className="h-4 
     { name: "M & A", value: "m & a", icon: <Building className="h-4 w-4"/> },
     { name: "Expansion", value: "expansion", icon: <Globe className="h-4 w-4"/> },
     { name: "Sustainability", value: "sustainability", icon: <Leaf className="h-4 w-4"/> }
-];
-    const [selectedCategory, setSelectedCategory] = React.useState("all");
+],
+    const [selectedCategory, setSelectedCategory] = React.useState("all"),
     const filteredSolutions = selectedCategory === "all"
         ? BusinessSolutions
-        : BusinessSolutions.filter(solution => solution.category.toLowerCase () === selectedCategory) ;
+        : BusinessSolutions.filter(solution => solution.category.toLowerCase () === selectedCategory) ,
     return (<div className="min - h-screen bg-gradient - to - br from - zion - slate via - zion - blue - dark to - zion -slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient - to - r from - zion - blue - dark via - zion - blue to - zion - cyan py-20">

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Operational Excellence Blueprint';
-  description: 'A practical blueprint to drive AI-powered operational excellence: reliability, quality, cost, and speed.';
-  keywords: ['AI 2026operational excellence', 'SREAIOps', 'automationgovernance'],
-};
+  title: 'AI 2026: Operational Excellence Blueprint',
+  description: 'A practical blueprint to drive AI-powered operational excellence: reliability, quality, cost, and speed.',
+  keywords: ['AI 2026operational excellenceSREAIOps', 'automationgovernance']
+},
 export default function OperationalExcellenceBlueprint2026Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -70,6 +70,5 @@ export default function OperationalExcellenceBlueprint2026Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

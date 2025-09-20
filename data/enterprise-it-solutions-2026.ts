@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface EnterpriseITSolutions2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
   // Zero Trust Network Architecture
@@ -49,16 +49,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     period: '/month',
     description: 'Comprehensive zero trust network architecture that provides advanced security, continuous monitoring, and adaptive access control for enterprise networks.',
     features: [
-      'Zero trust security model',
-      'Continuous monitoring',
-      'Adaptive access control',
-      'Multi-factor authentication',
-      'Real-time threat detection',
-      'Advanced firewall protection',
-      'Compliance certifications',
-      'Custom security policies',
-      'Integration APIs',
-      '24/7 security support'
+      'Zero trust security modelContinuous monitoring',
+      'Adaptive access controlMulti-factor authentication',
+      'Real-time threat detectionAdvanced firewall protection',
+      'Compliance certificationsCustom security policies',
+      'Integration APIs24/7 security support'
     ],
     popular: true,
     icon: '🛡️',
@@ -71,11 +66,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     setupTime: '4-6 weeks',
     category: 'Enterprise IT & Security',
     realService: true,
-    technology: ['Zero Trust Security', 'Network Security', 'Advanced Authentication', 'Threat Detection', 'Real-time Monitoring', 'AI Security'],
-    integrations: ['Enterprise systems', 'Government platforms', 'Financial systems', 'Healthcare systems', 'Tech infrastructure', 'Defense systems'],
-    useCases: ['Network security', 'Access control', 'Threat prevention', 'Compliance management', 'Security monitoring', 'Incident response'],
+    technology: ['Zero Trust SecurityNetwork Security', 'Advanced AuthenticationThreat Detection', 'Real-time MonitoringAI Security'],
+    integrations: ['Enterprise systemsGovernment platforms', 'Financial systemsHealthcare systems', 'Tech infrastructureDefense systems'],
+    useCases: ['Network securityAccess control', 'Threat preventionCompliance management', 'Security monitoringIncident response'],
     roi: 'Large enterprises see 500% ROI through improved security and reduced breach risks.',
-    competitors: ['Traditional network security', 'Custom security solutions', 'Government security systems'],
+    competitors: ['Traditional network securityCustom security solutions', 'Government security systems'],
     marketSize: '$40B market',
     growthRate: '300% annual growth',
     variant: 'enterprise-futuristic',
@@ -101,16 +96,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     period: '/month',
     description: 'Advanced edge computing orchestration platform that manages distributed computing resources, optimizes performance, and provides real-time analytics across edge locations.',
     features: [
-      'Distributed computing management',
-      'AI-powered orchestration',
-      'Real-time performance optimization',
-      'Edge location management',
-      'Load balancing',
-      'Resource optimization',
-      'Real-time analytics',
-      'Custom orchestration rules',
-      'API integration',
-      '24/7 monitoring'
+      'Distributed computing managementAI-powered orchestration',
+      'Real-time performance optimizationEdge location management',
+      'Load balancingResource optimization',
+      'Real-time analyticsCustom orchestration rules',
+      'API integration24/7 monitoring'
     ],
     popular: true,
     icon: '🌐',
@@ -123,11 +113,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     setupTime: '3-4 weeks',
     category: 'Enterprise IT & Edge Computing',
     realService: true,
-    technology: ['Edge Computing', 'AI Orchestration', 'Distributed Systems', 'Real-time Processing', 'Performance Optimization', 'Resource Management'],
-    integrations: ['Cloud platforms', 'IoT systems', 'Manufacturing systems', 'Retail platforms', 'Government systems', 'Edge devices'],
-    useCases: ['Edge computing management', 'Performance optimization', 'Resource management', 'IoT orchestration', 'Real-time analytics', 'Load balancing'],
+    technology: ['Edge ComputingAI Orchestration', 'Distributed SystemsReal-time Processing', 'Performance OptimizationResource Management'],
+    integrations: ['Cloud platformsIoT systems', 'Manufacturing systemsRetail platforms', 'Government systemsEdge devices'],
+    useCases: ['Edge computing managementPerformance optimization', 'Resource managementIoT orchestration', 'Real-time analyticsLoad balancing'],
     roi: 'Tech companies see 600% ROI through optimized edge computing and improved performance.',
-    competitors: ['Traditional cloud management', 'Custom orchestration solutions', 'Basic edge computing tools'],
+    competitors: ['Traditional cloud managementCustom orchestration solutions', 'Basic edge computing tools'],
     marketSize: '$30B market',
     growthRate: '350% annual growth',
     variant: 'enterprise-futuristic',
@@ -153,16 +143,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     period: '/month',
     description: 'Advanced 5G private network solutions that provide high-speed, low-latency connectivity for enterprises, with custom network configurations and advanced security.',
     features: [
-      '5G private networks',
-      'Custom network configurations',
-      'Low-latency connectivity',
-      'Advanced security protocols',
-      'Real-time monitoring',
-      'Custom bandwidth allocation',
-      'Integration APIs',
-      'Compliance certifications',
-      'Advanced analytics',
-      '24/7 network support'
+      '5G private networksCustom network configurations',
+      'Low-latency connectivityAdvanced security protocols',
+      'Real-time monitoringCustom bandwidth allocation',
+      'Integration APIsCompliance certifications',
+      'Advanced analytics24/7 network support'
     ],
     popular: true,
     icon: '📡',
@@ -175,11 +160,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     setupTime: '6-8 weeks',
     category: 'Enterprise IT & 5G Networks',
     realService: true,
-    technology: ['5G Technology', 'Private Networks', 'Network Security', 'Real-time Monitoring', 'Custom Configurations', 'Advanced Analytics'],
-    integrations: ['Enterprise systems', 'Manufacturing platforms', 'Healthcare systems', 'Government platforms', 'Tech infrastructure', 'Research systems'],
-    useCases: ['Private network deployment', 'High-speed connectivity', 'Low-latency applications', 'Network security', 'Custom configurations', 'Performance monitoring'],
+    technology: ['5G TechnologyPrivate Networks', 'Network SecurityReal-time Monitoring', 'Custom ConfigurationsAdvanced Analytics'],
+    integrations: ['Enterprise systemsManufacturing platforms', 'Healthcare systemsGovernment platforms', 'Tech infrastructureResearch systems'],
+    useCases: ['Private network deploymentHigh-speed connectivity', 'Low-latency applicationsNetwork security', 'Custom configurationsPerformance monitoring'],
     roi: 'Large enterprises see 700% ROI through improved network performance and reduced latency.',
-    competitors: ['Traditional network providers', 'Custom network solutions', 'Government network systems'],
+    competitors: ['Traditional network providersCustom network solutions', 'Government network systems'],
     marketSize: '$45B market',
     growthRate: '400% annual growth',
     variant: 'enterprise-futuristic',
@@ -205,16 +190,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     period: '/month',
     description: 'Comprehensive blockchain infrastructure platform that provides secure, scalable blockchain solutions for enterprise applications, with custom smart contracts and advanced security.',
     features: [
-      'Custom blockchain networks',
-      'Smart contract development',
-      'Advanced security protocols',
-      'Scalable infrastructure',
-      'Real-time monitoring',
-      'Custom integrations',
-      'API access',
-      'Advanced analytics',
-      'Compliance features',
-      '24/7 technical support'
+      'Custom blockchain networksSmart contract development',
+      'Advanced security protocolsScalable infrastructure',
+      'Real-time monitoringCustom integrations',
+      'API accessAdvanced analytics',
+      'Compliance features24/7 technical support'
     ],
     popular: true,
     icon: '⛓️',
@@ -227,11 +207,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     setupTime: '3-4 weeks',
     category: 'Enterprise IT & Blockchain',
     realService: true,
-    technology: ['Blockchain Technology', 'Smart Contracts', 'Advanced Security', 'Scalable Infrastructure', 'Real-time Processing', 'Custom Development'],
-    integrations: ['Financial platforms', 'Tech systems', 'Government platforms', 'Healthcare systems', 'Manufacturing platforms', 'Retail systems'],
-    useCases: ['Financial transactions', 'Supply chain tracking', 'Identity verification', 'Smart contracts', 'Decentralized applications', 'Asset management'],
+    technology: ['Blockchain TechnologySmart Contracts', 'Advanced SecurityScalable Infrastructure', 'Real-time ProcessingCustom Development'],
+    integrations: ['Financial platformsTech systems', 'Government platformsHealthcare systems', 'Manufacturing platformsRetail systems'],
+    useCases: ['Financial transactionsSupply chain tracking', 'Identity verificationSmart contracts', 'Decentralized applicationsAsset management'],
     roi: 'Financial institutions see 500% ROI through improved security and reduced transaction costs.',
-    competitors: ['Specialized blockchain solutions', 'Custom blockchain development', 'Traditional financial systems'],
+    competitors: ['Specialized blockchain solutionsCustom blockchain development', 'Traditional financial systems'],
     marketSize: '$35B market',
     growthRate: '320% annual growth',
     variant: 'enterprise-futuristic',
@@ -257,16 +237,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     period: '/month',
     description: 'Advanced AI-powered IT operations center that automates IT processes, provides intelligent monitoring, and optimizes IT infrastructure with minimal human intervention.',
     features: [
-      'AI-powered automation',
-      'Intelligent monitoring',
-      'Predictive maintenance',
-      'Automated incident response',
-      'Performance optimization',
-      'Custom AI models',
-      'Real-time analytics',
-      'Integration APIs',
-      'Advanced reporting',
-      '24/7 AI support'
+      'AI-powered automationIntelligent monitoring',
+      'Predictive maintenanceAutomated incident response',
+      'Performance optimizationCustom AI models',
+      'Real-time analyticsIntegration APIs',
+      'Advanced reporting24/7 AI support'
     ],
     popular: true,
     icon: '🤖',
@@ -279,11 +254,11 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     setupTime: '4-5 weeks',
     category: 'Enterprise IT & AI Operations',
     realService: true,
-    technology: ['Advanced AI', 'IT Automation', 'Predictive Analytics', 'Real-time Monitoring', 'Machine Learning', 'Process Optimization'],
-    integrations: ['Enterprise systems', 'Tech platforms', 'Government systems', 'Healthcare platforms', 'Financial systems', 'Manufacturing platforms'],
-    useCases: ['IT process automation', 'Predictive maintenance', 'Incident response', 'Performance optimization', 'Infrastructure management', 'Real-time monitoring'],
+    technology: ['Advanced AIIT Automation', 'Predictive AnalyticsReal-time Monitoring', 'Machine LearningProcess Optimization'],
+    integrations: ['Enterprise systemsTech platforms', 'Government systemsHealthcare platforms', 'Financial systemsManufacturing platforms'],
+    useCases: ['IT process automationPredictive maintenance', 'Incident responsePerformance optimization', 'Infrastructure managementReal-time monitoring'],
     roi: 'Large enterprises see 600% ROI through automated IT operations and improved efficiency.',
-    competitors: ['Traditional IT management', 'Custom automation solutions', 'Basic monitoring tools'],
+    competitors: ['Traditional IT managementCustom automation solutions', 'Basic monitoring tools'],
     marketSize: '$40B market',
     growthRate: '350% annual growth',
     variant: 'enterprise-futuristic',
@@ -300,4 +275,4 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.9,
     reviews: 112
   }
-];
+],

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Database, 
+  Database,
   Shield, 
   Lock, 
   Eye, 
@@ -21,102 +21,64 @@ import {
   AlertTriangle,
   Globe,
   Key
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIDataGovernancePlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Data Discovery',
-      description: 'Automatically discover, classify, and catalog data across your entire organization using advanced machine learning.',
+      icon: Brain,title: 'AI-Powered Data Discovery',description: 'Automatically discover, classify, and catalog data across your entire organization using advanced machine learning.',
       price: '$399/month'
-    },
+    };
     {
-      icon: Shield,
-      title: 'Intelligent Compliance Management',
-      description: 'Automated compliance monitoring for GDPR, CCPA, HIPAA, and other regulatory frameworks with real-time alerts.',
+      icon: Shield,title: 'Intelligent Compliance Management',description: 'Automated compliance monitoring for GDPR, CCPA, HIPAA, and other regulatory frameworks with real-time alerts.',
       price: '$299/month'
-    },
+    };
     {
-      icon: Lock,
-      title: 'Advanced Access Control',
-      description: 'Role-based access control with AI-driven permission recommendations and automated privilege management.',
-      price: '$199/month'
-    },
+      icon: Lock,title: 'Advanced Access Control',description: 'Role-based access control with AI-driven permission recommendations and automated privilege management.',price: '$199/month'
+    };
     {
-      icon: BarChart3,
-      title: 'Data Quality Analytics',
-      description: 'Continuous monitoring of data quality, integrity, and lineage with predictive analytics and automated remediation.',
+      icon: BarChart3,title: 'Data Quality Analytics',description: 'Continuous monitoring of data quality, integrity, and lineage with predictive analytics and automated remediation.',
       price: '$249/month'
     }
   ];
-
   const pricingPlans = [
     {
-      name: 'Foundation',
-      price: '$149',
-      period: '/month',
-      description: 'Essential data governance for small to medium organizations',
-      features: [
-        'Up to 10TB data management',
-        'Basic AI discovery',
-        'GDPR compliance tools',
-        'Standard access control',
-        'Email support',
-        'Basic reporting'
+      name: 'Foundation',price: '$149',period: '/month',description: 'Essential data governance for small to medium organizations',features: [
+        'Up to 10TB data managementBasic AI discovery';
+        'GDPR compliance toolsStandard access control',
+        'Email supportBasic reporting'
       ],
       popular: false
-    },
+    };
     {
-      name: 'Professional',
-      price: '$399',
-      period: '/month',
-      description: 'Comprehensive data governance for growing enterprises',
-      features: [
-        'Up to 100TB data management',
-        'Advanced AI discovery',
-        'Multi-compliance framework',
-        'Advanced access control',
-        'Priority support',
-        'Advanced analytics',
+      name: 'Professional',price: '$399',period: '/month',description: 'Comprehensive data governance for growing enterprises',features: [
+        'Up to 100TB data managementAdvanced AI discovery';
+        'Multi-compliance frameworkAdvanced access control',
+        'Priority supportAdvanced analytics',
         'Custom policies'
       ],
       popular: true
-    },
+    };
     {
-      name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      description: 'Enterprise-grade data governance with custom solutions',
-      features: [
-        'Unlimited data management',
-        'Custom AI models',
-        'White-label solution',
-        '24/7 dedicated support',
-        'Custom compliance frameworks',
-        'Advanced security features',
+      name: 'Enterprise',price: '$999',period: '/month',description: 'Enterprise-grade data governance with custom solutions',features: [
+        'Unlimited data managementCustom AI models';
+        'White-label solution24/7 dedicated support',
+        'Custom compliance frameworksAdvanced security features',
         'SLA guarantees'
       ],
       popular: false
     }
   ];
-
   const benefits = [
-    'Ensure 100% regulatory compliance',
-    'Reduce data breach risk by 90%',
-    'Improve data quality by 75%',
-    'Cut compliance costs by 60%',
+    'Ensure 100% regulatory complianceReduce data breach risk by 90%',
+    'Improve data quality by 75%Cut compliance costs by 60%',
     'Automate 80% of governance tasks'
-  ];
+  ],
 
   const complianceFrameworks = [
-    'GDPR (General Data Protection Regulation)',
-    'CCPA (California Consumer Privacy Act)',
-    'HIPAA (Health Insurance Portability and Accountability Act)',
-    'SOX (Sarbanes-Oxley Act)',
-    'ISO 27001 (Information Security Management)',
-    'SOC 2 Type II (Service Organization Control)'
-  ];
+    'GDPR (General Data Protection Regulation)CCPA (California Consumer Privacy Act)',
+    'HIPAA (Health Insurance Portability and Accountability Act)SOX (Sarbanes-Oxley Act)',
+    'ISO 27001 (Information Security Management)SOC 2 Type II (Service Organization Control)'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -418,6 +380,6 @@ const AIDataGovernancePlatform: React.FC = () => {
       </div>
     </div>
   );
-};
+},
 
 export default AIDataGovernancePlatform;

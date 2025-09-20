@@ -1,41 +1,41 @@
-import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight  } from 'lucide-react';
+import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight  } from 'lucide-react',
 export default function Page() {
 ,
             { name: "Data Analytics Platform", starter: 999, professional: 1999, enterprise: 4999 },
             { name: "Computer Vision API", starter: 799, professional: 1499, enterprise: 3999 }
         ]
-    },;
+    },
     {
         name: "IT Services",
         icon: <Shield className="w-6 h-6"/>,
-        services[;
+        services[,
             { name: "Cloud Migration", starter: 1999, professional: 4999, enterprise: 9999 },
             { name: "Cybersecurity Audit", starter: 1499, professional: 3999, enterprise: 7999 },
             { name: "DevOps Automation", starter: 999, professional: 3499, enterprise: 6999 },
             { name: "Infrastructure Setup", starter: 1299, professional: 2999, enterprise: 5999 }
         ]
-    },;
+    },
     {
         name: "Business Solutions",
         icon: <TrendingUp className="w-6 h-6"/>,
-        services[;
+        services[,
             { name: "Workflow Automation", starter: 799, professional: 2499, enterprise: 4999 },
             { name: "Customer Support System", starter: 599, professional: 1799, enterprise: 3999 },
             { name: "Project Management", starter: 699, professional: 1999, enterprise: 4499 },
             { name: "HR Management Suite", starter: 899, professional: 2499, enterprise: 5499 }
         ]
-    },;
+    },
     {
         name: "Digital Solutions",
         icon: <Globe className="w-6 h-6"/>,
-        services[;
+        services[,
             { name: "E - commerce Optimization", starter: 1499, professional: 3999, enterprise: 7999 },
             { name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 },
             { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
             { name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }
         ]
 
-];
+],
 const benefits = [{
         icon: <CheckCircle className="w-8 h-8"/>,
         title: "Scalable Solutions",
@@ -66,8 +66,8 @@ const benefits = [{
         title: "Continuous Innovation",
         description: "Regular updates and new features to keep you ahead"
 
-];
-    const [selectedTier, setSelectedTier] = useState('professional');
+],
+    const [selectedTier, setSelectedTier] = useState('professional'),
     return (<div className="min - h-screen bg-gradient - to - br from - zion - blue - dark via - zion - blue to - zion - blue -light">
       <SEO title="Micro SAAS Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS services.Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget." keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing" url="https://ziontechgroup.com / services - pricing"/>
 

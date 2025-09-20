@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Brain,
@@ -10,145 +10,145 @@ import {,
   TrendingUp,
   Users,
   Globe,
-  Shield;
-  ChevronRight;
-  Star;
-  Award;
-  Lightbulb;
-  Cpu;
-  Database;
-  Cloud;
-  BarChart3;
-  CheckCircle;
-  ArrowRight,
-} from 'lucide-react';
+  Shield,
+  ChevronRight,
+  Star,
+  Award,
+  Lightbulb,
+  Cpu,
+  Database,
+  Cloud,
+  BarChart3,
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react',
 const UltimateContentRevolution2025 = () => {,
-  const [activeTabsetActiveTab] = useState('breakthroughs');
-  const [currentSlidesetCurrentSlide] = useState(0);
+  const [activeTabsetActiveTab] = useState('breakthroughs'),
+  const [currentSlidesetCurrentSlide] = useState(0),
   const contentSections = {,
     breakthroughs: {,
-      title: "Revolutionary AI Breakthroughs 2025";
-      subtitle: "Discover the most advanced AI technologies transforming industries";
+      title: "Revolutionary AI Breakthroughs 2025",
+      subtitle: "Discover the most advanced AI technologies transforming industries",
       items: [,
         {,
-          title: "Quantum-Neural Fusion Technology";
-          description: "Breakthrough integration of quantum computing with neural networks achieving 10,000x processing speed";
-          icon: Brain;
-          metrics: "99.9% Accuracy";
-          color: "from-purple-500 to-pink-500",};
+          title: "Quantum-Neural Fusion Technology",
+          description: "Breakthrough integration of quantum computing with neural networks achieving 10,000x processing speed",
+          icon: Brain,
+          metrics: "99.9% Accuracy",
+          color: "from-purple-500 to-pink-500"},
         {,
-          title: "Autonomous Business Operations";
-          description: "Self-managing systems that reduce operational costs by 85% while increasing efficiency";
-          icon: Zap;
-          metrics: "85% Cost Reduction";
-          color: "from-blue-500 to-cyan-500",};
+          title: "Autonomous Business Operations",
+          description: "Self-managing systems that reduce operational costs by 85% while increasing efficiency",
+          icon: Zap,
+          metrics: "85% Cost Reduction",
+          color: "from-blue-500 to-cyan-500"},
         {,
-          title: "Consciousness-Level AI";
-          description: "AI systems with human-like reasoning and emotional intelligence capabilities";
-          icon: Lightbulb;
-          metrics: "Human-Level IQ";
-          color: "from-green-500 to-emerald-500",};
+          title: "Consciousness-Level AI",
+          description: "AI systems with human-like reasoning and emotional intelligence capabilities",
+          icon: Lightbulb,
+          metrics: "Human-Level IQ",
+          color: "from-green-500 to-emerald-500"},
         {,
-          title: "Predictive Reality Modeling";
-          description: "AI that can predict and model future scenarios with 95% accuracy";
-          icon: Target;
-          metrics: "95% Accuracy";
-          color: "from-orange-500 to-red-500",}
-      ],
-    };
+          title: "Predictive Reality Modeling",
+          description: "AI that can predict and model future scenarios with 95% accuracy",
+          icon: Target,
+          metrics: "95% Accuracy",
+          color: "from-orange-500 to-red-500"}
+      ]
+    },
     solutions: {,
-      title: "Enterprise AI Solutions";
-      subtitle: "Comprehensive AI implementations delivering measurable ROI";
+      title: "Enterprise AI Solutions",
+      subtitle: "Comprehensive AI implementations delivering measurable ROI",
       items: [,
         {,
-          title: "Financial Services AI";
-          description: "Automated tradingrisk assessmentand fraud detection systems";
-          icon: BarChart3;
-          metrics: "2,500% ROI";
-          color: "from-green-500 to-teal-500",};
+          title: "Financial Services AI",
+          description: "Automated tradingrisk assessmentand fraud detection systems",
+          icon: BarChart3,
+          metrics: "2,500% ROI",
+          color: "from-green-500 to-teal-500"},
         {,
-          title: "Manufacturing Automation";
-          description: "Smart factories with predictive maintenance and quality control";
-          icon: Cpu;
-          metrics: "60% Efficiency Gain";
-          color: "from-blue-500 to-indigo-500",};
+          title: "Manufacturing Automation",
+          description: "Smart factories with predictive maintenance and quality control",
+          icon: Cpu,
+          metrics: "60% Efficiency Gain",
+          color: "from-blue-500 to-indigo-500"},
         {,
-          title: "Healthcare Diagnostics";
-          description: "AI-powered medical imaging and diagnostic systems";
-          icon: Shield;
-          metrics: "99.7% Accuracy";
-          color: "from-red-500 to-pink-500",};
+          title: "Healthcare Diagnostics",
+          description: "AI-powered medical imaging and diagnostic systems",
+          icon: Shield,
+          metrics: "99.7% Accuracy",
+          color: "from-red-500 to-pink-500"},
         {,
-          title: "Retail Personalization";
-          description: "Dynamic pricing and personalized customer experiences";
-          icon: Users;
-          metrics: "40% Sales Increase";
-          color: "from-purple-500 to-violet-500",}
-      ],
-    };
+          title: "Retail Personalization",
+          description: "Dynamic pricing and personalized customer experiences",
+          icon: Users,
+          metrics: "40% Sales Increase",
+          color: "from-purple-500 to-violet-500"}
+      ]
+    },
     predictions: {,
-      title: "Future Technology Predictions";
-      subtitle: "Expert insights into the next decade of technological advancement";
+      title: "Future Technology Predictions",
+      subtitle: "Expert insights into the next decade of technological advancement",
       items: [,
         {,
-          title: "2026: Quantum Supremacy";
-          description: "Quantum computers solving problems impossible for classical computers";
-          icon: Rocket;
-          metrics: "10^15 Speedup";
-          color: "from-indigo-500 to-purple-500",};
+          title: "2026: Quantum Supremacy",
+          description: "Quantum computers solving problems impossible for classical computers",
+          icon: Rocket,
+          metrics: "10^15 Speedup",
+          color: "from-indigo-500 to-purple-500"},
         {,
-          title: "2027: Neural Interfaces";
-          description: "Direct brain-computer interfaces for enhanced human capabilities";
-          icon: Brain;
-          metrics: "1000x Processing";
-          color: "from-cyan-500 to-blue-500",};
+          title: "2027: Neural Interfaces",
+          description: "Direct brain-computer interfaces for enhanced human capabilities",
+          icon: Brain,
+          metrics: "1000x Processing",
+          color: "from-cyan-500 to-blue-500"},
         {,
-          title: "2028: Space Technology";
-          description: "AI-powered space exploration and resource mining systems";
-          icon: Globe;
-          metrics: "Mars Mission Ready";
-          color: "from-orange-500 to-yellow-500",};
+          title: "2028: Space Technology",
+          description: "AI-powered space exploration and resource mining systems",
+          icon: Globe,
+          metrics: "Mars Mission Ready",
+          color: "from-orange-500 to-yellow-500"},
         {,
-          title: "2030: Transcendent AI";
-          description: "AI systems surpassing human intelligence in all domains";
-          icon: Award;
-          metrics: "Superintelligence";
-          color: "from-pink-500 to-rose-500",}
-      ],
+          title: "2030: Transcendent AI",
+          description: "AI systems surpassing human intelligence in all domains",
+          icon: Award,
+          metrics: "Superintelligence",
+          color: "from-pink-500 to-rose-500"}
+      ]
     }
-  };
+  },
   const testimonials = [,
     {,
-      name: "Sarah Chen";
-      role: "CTOFortune 500 Company";
-      content: "Zion 'Techs AI solutions increased our operational efficiency by 300% and reduced costs by $50M annually.";
-      avatar: "SC";
-      rating: 5,};
+      name: "Sarah Chen",
+      role: "CTOFortune 500 Company",
+      content: "Zion 'Techs AI solutions increased our operational efficiency by 300% and reduced costs by $50M annually.",
+      avatar: "SC",
+      rating: 5},
     {,
-      name: "Michael Rodriguez";
-      role: "CEOGlobal Manufacturing";
-      content: "The quantum-neural fusion technology revolutionized our production line. ROI exceeded 2,500% in the first year.";
-      avatar: "MR";
-      rating: 5,};
+      name: "Michael Rodriguez",
+      role: "CEOGlobal Manufacturing",
+      content: "The quantum-neural fusion technology revolutionized our production line. ROI exceeded 2,500% in the first year.",
+      avatar: "MR",
+      rating: 5},
     {,
-      name: "Dr. Emily Watson";
-      role: "Chief Medical Officer";
-      content: "Our diagnostic accuracy improved to 99.7% with 'Zion', 's AI healthcare solutions. Patient outcomes are remarkable.";
-      avatar: "EW";
-      rating: 5,}
-  ];
+      name: "Dr. Emily Watson",
+      role: "Chief Medical Officer",
+      content: "Our diagnostic accuracy improved to 99.7% with 'Zions AI healthcare solutions. Patient outcomes are remarkable.",
+      avatar: "EW",
+      rating: 5}
+  ],
   const stats = [,
-    { label: "Enterprise Clients"value: "500+"icon: Users ,};
-    { label: "Average ROI"value: "2,500%"icon: TrendingUp ,};
-    { label: "Countries Served"value: "50+"icon: Globe ,};
-    { label: "Success Rate"value: "99.9%"icon: CheckCircle ,}
-  ];
+    { label: "Enterprise Clients"value: "500+"icon: Users },
+    { label: "Average ROI"value: "2,500%"icon: TrendingUp },
+    { label: "Countries Served"value: "50+"icon: Globe },
+    { label: "Success Rate"value: "99.9%"icon: CheckCircle }
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       {/* Hero Section */}
@@ -161,7 +161,7 @@ const UltimateContentRevolution2025 = () => {,
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">,
               Ultimate Content,
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,
-                {" ",}Revolution 2025,
+                {" "}Revolution 2025,
               </span>,
             </h1>,
             <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
@@ -187,13 +187,13 @@ const UltimateContentRevolution2025 = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Stats Section */,}
+      {/* Stats Section */}
       <div className="py-16 bg-black/20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
             {stats.map((statindex) => (,
               <div,
-                key={stat.label,}
+                key={stat.label}
                 className="text-center",
               >,
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4">,
@@ -201,8 +201,7 @@ const UltimateContentRevolution2025 = () => {,
                 </div>,
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
                 <div className="text-gray-300">{stat.label}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
@@ -211,7 +210,7 @@ const UltimateContentRevolution2025 = () => {,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">,
-              {contentSections[activeTab].title,}
+              {contentSections[activeTab].title}
             </h2>,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
               {contentSections[activeTab].subtitle}
@@ -226,7 +225,7 @@ const UltimateContentRevolution2025 = () => {,
                 className={`px-6 py-3 mx-2 mb-2 rounded-lg font-semibold transition-all duration-300 ${,
                   activeTab === tab,
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white',
-                    : 'bg-white/10 text-gray-300 hover: bg-white/20',}`}
+                    : 'bg-white/10 text-gray-300 hover: bg-white/20'}`}
               >,
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>,
@@ -239,10 +238,10 @@ const UltimateContentRevolution2025 = () => {,
             >,
               {contentSections[activeTab].items.map((itemindex) => (,
                 <div,
-                  key={item.title,}
+                  key={item.title}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20 transition-all duration-300 group hover:transform hover:scale-105",
                 >,
-                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${item.color,} rounded-lg mb-4 group-hover: scale-110 transition-transform duration-300`,}>,
+                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${item.color} rounded-lg mb-4 group-hover: scale-110 transition-transform duration-300`}>,
                     <item.icon className="h-6 w-6 text-white" />,
                   </div>,
                   <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>,
@@ -251,8 +250,7 @@ const UltimateContentRevolution2025 = () => {,
                     <span className="text-sm font-medium text-blue-400">{item.metrics}</span>,
                     <Star className="h-4 w-4 text-yellow-400" />,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -266,7 +264,7 @@ const UltimateContentRevolution2025 = () => {,
           </div>,
           <div className="relative">,
               <div,
-                key={currentSlide,}
+                key={currentSlide}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10",
               >,
                 <div className="flex items-center mb-6">,
@@ -278,8 +276,7 @@ const UltimateContentRevolution2025 = () => {,
                     <p className="text-gray-400">{testimonials[currentSlide].role}</p>,
                     <div className="flex">,
                       {[...Array(testimonials[currentSlide].rating)].map((_i) => (,
-                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />,
-                      ))}
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />))}
                     </div>,
                   </div>,
                 </div>,
@@ -293,7 +290,7 @@ const UltimateContentRevolution2025 = () => {,
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${,
-                    index === currentSlide ? 'bg-blue-500' : 'bg-white/30',
+                    index === currentSlide ? 'bg-blue-500' : 'bg-white/30'
                   }`}
                 />,
               ))}
@@ -330,5 +327,5 @@ const UltimateContentRevolution2025 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default UltimateContentRevolution2025;
+  )},
+export default UltimateContentRevolution2025,

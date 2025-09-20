@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const AIPoweredITAssetManagement: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -8,8 +8,7 @@ const AIPoweredITAssetManagement: React.FC = () => {,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default AIPoweredITAssetManagement;
-import { motion } from 'framer-motion';
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
+    </div>)},
+export default AIPoweredITAssetManagement,
+import { motion } from 'framer-motion',
+import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react',

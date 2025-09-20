@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI Trends 2025-2030: Revolutionary Breakthroughs | Zion Tech Group';
-  description: 'Explore the most groundbreaking AI trends and predictions for 2025-2030. Quantum AI, neural interfaces, and autonomous business operations.';
-  keywords: ['AI trends 2025quantum AI', 'neural interfacesautonomous AI', 'AI predictionsfuture technology'],
-};
+  title: 'AI Trends 2025-2030: Revolutionary Breakthroughs | Zion Tech Group',
+  description: 'Explore the most groundbreaking AI trends and predictions for 2025-2030. Quantum AI, neural interfaces, and autonomous business operations.',
+  keywords: ['AI trends 2025quantum AIneural interfacesautonomous AI', 'AI predictionsfuture technology']
+},
 export default function AITrendsPage() {,
   return (,
     <div>,
@@ -32,12 +32,12 @@ export default function AITrendsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Trends Grid */,}
+        {/* Key Trends Grid */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Revolutionary AI Breakthroughs</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {/* Quantum AI */,}
+              {/* Quantum AI */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-500">,
                 <div className="text-4xl mb-4">⚛️</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum AI Computing</h3>,
@@ -53,7 +53,7 @@ export default function AITrendsPage() {,
                   Explore Quantum AI →,
                 </Link>,
               </div>,
-              {/* Neural Interfaces */,}
+              {/* Neural Interfaces */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500">,
                 <div className="text-4xl mb-4">🧠</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Neural Interface Revolution</h3>,
@@ -69,7 +69,7 @@ export default function AITrendsPage() {,
                   Discover Neural AI →,
                 </Link>,
               </div>,
-              {/* Autonomous Operations */,}
+              {/* Autonomous Operations */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">,
                 <div className="text-4xl mb-4">🤖</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Autonomous Business AI</h3>,
@@ -85,7 +85,7 @@ export default function AITrendsPage() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Emotional AI */,}
+              {/* Emotional AI */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-pink-500">,
                 <div className="text-4xl mb-4">💝</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Emotional Intelligence AI</h3>,
@@ -101,7 +101,7 @@ export default function AITrendsPage() {,
                   Explore Emotional AI →,
                 </Link>,
               </div>,
-              {/* Synthetic Intelligence */,}
+              {/* Synthetic Intelligence */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-orange-500">,
                 <div className="text-4xl mb-4">🔬</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Synthetic Intelligence</h3>,
@@ -117,7 +117,7 @@ export default function AITrendsPage() {,
                   Discover Synthetic AI →,
                 </Link>,
               </div>,
-              {/* Predictive Analytics */,}
+              {/* Predictive Analytics */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-500">,
                 <div className="text-4xl mb-4">📊</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Predictive Analytics Revolution</h3>,
@@ -136,7 +136,7 @@ export default function AITrendsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Timeline Section */,}
+        {/* Timeline Section */}
         <section className="py-16 bg-white">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">AI Evolution Timeline</h2>,
@@ -231,5 +231,4 @@ export default function AITrendsPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

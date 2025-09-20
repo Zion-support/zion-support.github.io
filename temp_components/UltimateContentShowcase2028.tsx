@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   ArrowRight
   Star
@@ -19,15 +19,15 @@ import {
   PlayCircle,
   Download,
   ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltimateContentShowcase2028 = () => {
-  const [activeTabsetActiveTab] = useState('ai-innovations');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-innovations'),
+  const [isVisiblesetIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
 
   const contentSections = {
     'ai-innovations': {
@@ -146,16 +146,16 @@ const UltimateContentShowcase2028 = () => {
         }
       ]
     }
-  };
+  },
 
   const tabs = [
     { id: 'ai-innovations'label: 'AI Innovations'icon: Brain },
     { id: 'quantum-computing'label: 'Quantum Computing'icon: Zap },
     { id: 'neural-interfaces'label: 'Neural Interfaces'icon: Target },
     { id: 'future-predictions'label: 'Future Predictions'icon: Rocket }
-  ];
+  ],
 
-  const currentSection = contentSections[activeTab as keyof typeof contentSections];
+  const currentSection = contentSections[activeTab as keyof typeof contentSections],
 
 const UltimateContentShowcase2028: React.FC = () => {
   return (
@@ -163,7 +163,7 @@ const UltimateContentShowcase2028: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltimateContentShowcase2028</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltimateContentShowcase2028;
+export default UltimateContentShowcase2028,

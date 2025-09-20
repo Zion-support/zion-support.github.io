@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const Year10Vision: NextPage = () => {
   return (
@@ -47,7 +47,7 @@ const Year10Vision: NextPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default Year10Vision;
+export default Year10Vision,

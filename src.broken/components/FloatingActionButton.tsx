@@ -18,25 +18,25 @@
   Bookmark,
   Download,
   Printer'
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface FloatingAction {
 
-  id: string;
-  icon: React.ComponentType<{ size?: number; className?: string 
-}>;
-  label: string;
-  action: () => void;
-  color: string;
+  id: string,
+  icon: React.ComponentType<{ size?: number, className?: string 
+}>,
+  label: string,
+  action: () => void,
+  color: string,
   priority: 'high' | 'medium' | 'low'}
 
 interface FloatingActionButtonProps {
-  actions?: FloatingAction[];
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'light' | 'dark' | 'auto';
-  showScrollToTop?: boolean;
-  showContactActions?: boolean;
-  showUtilityActions?: boolean;
+  actions?: FloatingAction[],
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left',
+  theme?: 'light' | 'dark' | 'auto',
+  showScrollToTop?: boolean,
+  showContactActions?: boolean,
+  showUtilityActions?: boolean,
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
@@ -47,30 +47,30 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   showContactActions = true,
   showUtilityActions = true}) => {
 
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [showScrollButton, setShowScrollButton] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
+  const [isExpanded, setIsExpanded] = useState(false),
+  const [showScrollButton, setShowScrollButton] = useState(false),
+  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'),
 
   // Detect theme
   useEffect(() => {
 
     if(theme === 'auto') {
 
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')},
       '
-      mediaQuery.addEventListener('change', handleChange);
+      mediaQuery.addEventListener('change', handleChange),
       return () => mediaQuery.removeEventListener('change', handleChange)} else {
 
       setCurrentTheme(theme)}
-  }, [theme]) ;
+  }, [theme]) ,
 
   // Show scroll to top button when scrolled down
   useEffect(() => {
     
-    };
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
 
   // Default actions
   const defaultActions: FloatingAction[] = [// Contact actions
@@ -179,10 +179,10 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         action: () => {
           // Create a temporary link to trigger download'
           
-          link.href = '/brochure.pdf'; // Adjust path as needed'
-          link.download = 'Zion-Tech-Group-Brochure.pdf';
-          document.body.appendChild(link);
-          link.click();
+          link.href = '/brochure.pdf', // Adjust path as needed'
+          link.download = 'Zion-Tech-Group-Brochure.pdf',
+          document.body.appendChild(link),
+          link.click(),
           document.body.removeChild(link)},
         color: 'bg-teal-500 hover:bg-teal-600',
         priority: 'low' as const
@@ -200,56 +200,56 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     ] : []),
     
     // Custom actions
-    ...actions,
-  ];
+    ...actions
+  ],
 
   // Sort actions by priority
   
-    return priorityOrder[b.priority] - priorityOrder[a.priority]}) ;
+    return priorityOrder[b.priority] - priorityOrder[a.priority]}) ,
 
   // Toggle expansion
   
-  }, []) ;
+  }, []) ,
 
   // Scroll to top
   
-  }, []);
+  }, []),
 
   // Show notification
   
     notification.className="
       fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
       transform translate-x-full transition-transform duration-300 ease-in-out"
-    `;
-    notification.textContent = message;
+    `,
+    notification.textContent = message,
 
-    document.body.appendChild(notification) ;
+    document.body.appendChild(notification) ,
 
     // Animate in
     setTimeout(() => {
 
-      notification.classList.remove('translate-x-full')}, 100);
+      notification.classList.remove('translate-x-full')}, 100),
     
     // Remove after 3 seconds
     setTimeout(() => {
 
-      notification.classList.add('translate-x-full');
+      notification.classList.add('translate-x-full'),
       setTimeout(() => {
-        document.body.removeChild(notification)}, 300)}, 3000)}, []);
+        document.body.removeChild(notification)}, 300)}, 3000)}, []),
 
   // Get position classes
   
       case 'top-right':'
-        return 'top-6 right-6';
+        return 'top-6 right-6',
       case 'top-left':'
-        return 'top-6 left-6';
+        return 'top-6 left-6',
       default:'
         return 'bottom-6 right-6'}
-  };
+  },
 
   // Get theme classes
   
-  };
+  },
 
   return ()
     <>
@@ -318,11 +318,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
           from {
 
-            opacity: 0;
+            opacity: 0,
             transform: translateY(20px) scale(0.75) }
           to {
 
-            opacity: 1;
+            opacity: 1,
             transform: translateY(0) scale(1) }
         }
 
@@ -346,16 +346,16 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
           animation: bounce 2s infinite}`
       `}</style>
-    </>) ;
+    </>) ,
 =======
 
 type FloatingActionButtonProps = {
-  enabled?: boolean;
-};
+  enabled?: boolean,
+},
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
-  const [open, setOpen] = useState(false);
-  if(!enabled) return null;
+  const [open, setOpen] = useState(false),
+  if(!enabled) return null,
   return (<button
       onClick={() => setOpen(!open)}
       aria-expanded={open}
@@ -364,7 +364,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
     >
       <Plus size={24}  />
     </button>
-  )};
+  )},
 
-export default FloatingActionButton;
+export default FloatingActionButton,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

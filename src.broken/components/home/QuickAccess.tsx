@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-  y: 30 ;
+  y: 30 
 
 }}
-  y: 0 ;
+  y: 0 
 
 }}
-  delay: 0.4 ;
+  delay: 0.4 
 
 }}
           viewport={{ once: true }}
@@ -16,19 +16,19 @@
               <Link
 =======
 
-import React from "react";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { cn } from "@/lib/utils";
+import React from "react",
+import Link from "next/link",
+import { useTranslation } from "react-i18next",
+import { cn } from "@/lib/utils",
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
 
 interface QuickAccessProps {
-  className?: string;
-  style?: React.CSSProperties;
+  className?: string,
+  style?: React.CSSProperties,
 }
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation(),
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -66,7 +66,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
     }
-  ];
+  ],
 
   return ("
     <section className="py-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
@@ -236,10 +236,10 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
                 <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {category.name}
                 </div>
-              </motion.div>;
+              </motion.div>,
             ))}
           </div>
-        </motion.div>;
+        </motion.div>,
 
         {/* CTA Section */}
         <motion.div
@@ -248,7 +248,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
           transition={{ duration: 0.6, delay: 0.6 }}"
           className="text-center mt-12"
 "
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'"
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">,'"
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
@@ -291,7 +291,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link "
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -304,12 +304,12 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
 
                 Browse All Services
               </Link>
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )};
-;export { QuickAccess };
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,
+  )},
+,export { QuickAccess },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

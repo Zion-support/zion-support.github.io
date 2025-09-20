@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
@@ -24,14 +24,14 @@ import {
   CreditCard, ShoppingCart, Gift, Award,
   Zap as ZapIcon2, Target as TargetIcon2,
   Handshake, Linkedin, Github, Twitter, Youtube, Instagram
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
@@ -45,7 +45,7 @@ const mainNavigation = [
   { name: 'About', href: '/about', icon: Users, description: 'Learn about our company and mission' },
   { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our innovative team' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our experts' }
-];
+],
 
 const serviceCategories = [
   {
@@ -113,7 +113,7 @@ const serviceCategories = [
       { name: 'AI-Powered Network Security', href: '/ai-powered-network-security', description: 'Intelligent threat detection', price: '$549/month' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Documentation', href: '/docs', icon: FileText },
@@ -124,7 +124,7 @@ const quickLinks = [
   { name: 'Privacy', href: '/privacy', icon: Lock },
   { name: 'Terms', href: '/terms', icon: FileText },
   { name: 'Partners', href: '/partners', icon: Handshake }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -132,7 +132,7 @@ const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
-];
+],
 
 const UltraFuturisticNavigation2034: React.FC = () => {
   return (
@@ -140,7 +140,7 @@ const UltraFuturisticNavigation2034: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2034</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2034;
+export default UltraFuturisticNavigation2034,

@@ -1,11 +1,11 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Link } from "react-router-dom",
 import { 
-  ArrowRight, 
+  ArrowRight,
   Users, 
   Zap, 
   Settings, 
@@ -17,7 +17,7 @@ import {
   Code,
   Building,
   Clock
-} from "lucide-react";
+} from "lucide-react",
 
 export function FeatureCTAs() {
   const features = [
@@ -102,7 +102,7 @@ export function FeatureCTAs() {
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
     }
-  ];
+  ],
 
   return (
     <section className="py-16 bg-gradient-to-b from-background to-background/90">
@@ -145,5 +145,5 @@ export function FeatureCTAs() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

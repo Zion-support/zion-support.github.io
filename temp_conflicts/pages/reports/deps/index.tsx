@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from 'next/head',
 
 export default function DependencyHealthReport() {
   return (
@@ -13,10 +13,10 @@ export default function DependencyHealthReport() {
         <a href="/reports/deps/" className="text-cyan-300 underline">Open generated report</a>
         <script
           dangerouslySetInnerHTML={{
-            __html: `setTimeout(function(){ window.location.href = '/reports/deps/'; }, 200);`,
+            __html: `setTimeout(function(){ window.location.href = '/reports/deps/' }, 200),`
           }}
         />
       </main>
     </div>
-  );
+  ),
 }

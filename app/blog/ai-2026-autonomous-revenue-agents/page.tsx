@@ -1,14 +1,13 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Revenue Agents — From Lead to Closed Won';
+  title: 'AI 2026: Autonomous Revenue Agents — From Lead to Closed Won',
   description:,
-    'How autonomous AI agents will run end-to-end revenue operations by 2026: prospecting, qualification, meetings, proposals, and renewals.';
+    'How autonomous AI agents will run end-to-end revenue operations by 2026: prospecting, qualification, meetings, proposals, and renewals.',
   keywords: [,
-    'autonomous agentsAI sales';
-    'revenue automationgo-to-market AI';
-    'AI 2026 predictions',
-  ],
-};
+    'autonomous agentsAI salesrevenue automationgo-to-market AI',
+    'AI 2026 predictions'
+  ]
+},
 export default function Page() {,
   return (,
     <article className="prose prose-lg max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -53,7 +52,7 @@ export default function Page() {,
       <section>,
         <h3 className="text-xl font-semibold text-gray-900">Reference Architecture</h3>,
         <p>,
-          Use an orchestration layer with role‑scoped tools: CRM (Salesforce/HubSpot);
+          Use an orchestration layer with role‑scoped tools: CRM (Salesforce/HubSpot),
           calendar, email, documents, pricing, and e‑signature. Add a vector memory for,
           account context and a rules engine to enforce policy.,
         </p>,
@@ -100,5 +99,5 @@ export default function Page() {,
         </div>,
       </footer>,
     </article>,
-  ),}
+  )}
 ,

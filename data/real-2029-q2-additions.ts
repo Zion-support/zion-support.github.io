@@ -1,25 +1,25 @@
 export interface Real2029Q2Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
+    mobile: string,
+    email: string,
+    address: string
+  },
 }
 
 const contact = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
-};
+},
 
 export const real2029Q2Additions: Real2029Q2Service[] = [
   {
@@ -166,5 +166,5 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
     realImplementation: true,
     contactInfo: contact
   }
-];
+],
 

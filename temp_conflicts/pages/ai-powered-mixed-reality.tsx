@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   View, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredMixedReality: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredMixedReality: React.FC = () => {
       title: 'Multi-platform Support',
       description: 'MR development across various devices and platforms'
     }
-  ];
+  ],
 
   const mrCapabilities = [
     {
       area: 'World Understanding',
-      capabilities: ['Spatial mapping', 'Object recognition', 'Environment understanding', 'Real-time tracking'],
+      capabilities: ['Spatial mappingObject recognition', 'Environment understandingReal-time tracking'],
       improvement: '99.9% accuracy',
       understanding: 'Real-time'
     },
     {
       area: 'Content Integration',
-      capabilities: ['Virtual object placement', 'Real-world interaction', 'Dynamic content', 'Contextual awareness'],
+      capabilities: ['Virtual object placementReal-world interaction', 'Dynamic contentContextual awareness'],
       improvement: '95% precision',
       integration: 'Seamless'
     },
     {
       area: 'User Interaction',
-      capabilities: ['Gesture recognition', 'Voice commands', 'Eye tracking', 'Haptic feedback'],
+      capabilities: ['Gesture recognitionVoice commands', 'Eye trackingHaptic feedback'],
       improvement: '90% responsiveness',
       interaction: 'Natural'
     },
     {
       area: 'Experience Creation',
-      capabilities: ['Hybrid environments', 'Interactive storytelling', 'Adaptive content', 'Personalization'],
+      capabilities: ['Hybrid environmentsInteractive storytelling', 'Adaptive contentPersonalization'],
       improvement: '10x faster',
       creation: 'Efficient'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Enterprise MR',
       description: 'AI-powered mixed reality solutions for enterprise collaboration and productivity',
-      benefits: ['Remote collaboration', '3D visualization', 'Interactive training', 'Productivity enhancement']
+      benefits: ['Remote collaboration3D visualization', 'Interactive trainingProductivity enhancement']
     },
     {
       title: 'Design & Architecture',
       description: 'MR technology for architectural visualization, product design, and 3D modeling',
-      benefits: ['3D visualization', 'Real-time collaboration', 'Design iteration', 'Client presentation']
+      benefits: ['3D visualizationReal-time collaboration', 'Design iterationClient presentation']
     },
     {
       title: 'Healthcare & Medical',
       description: 'MR applications for surgical planning, medical training, and patient care',
-      benefits: ['Surgical planning', 'Medical training', 'Patient education', 'Treatment visualization']
+      benefits: ['Surgical planningMedical training', 'Patient educationTreatment visualization']
     },
     {
       title: 'Education & Training',
       description: 'MR technology for immersive learning experiences and skill development',
-      benefits: ['Immersive learning', 'Hands-on training', 'Virtual laboratories', 'Interactive education']
+      benefits: ['Immersive learningHands-on training', 'Virtual laboratoriesInteractive education']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredMixedReality: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with MR development',
       features: [
-        'Basic MR features',
-        'Single platform support',
-        'Standard fusion',
-        'Email support',
+        'Basic MR featuresSingle platform support',
+        'Standard fusionEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredMixedReality: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced MR development needs',
       features: [
-        'Advanced MR features',
-        'Multi-platform support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced MR featuresMulti-platform support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         '3D asset library'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredMixedReality: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex MR development requirements',
       features: [
-        'Custom MR development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom MR developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredMixedReality: React.FC = () => {
       position: "Healthcare Director",
       company: "Advanced Medical Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredMixedReality: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Create with AI-Powered MR Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredMixedReality: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredMixedReality;
+export default AIPoweredMixedReality,

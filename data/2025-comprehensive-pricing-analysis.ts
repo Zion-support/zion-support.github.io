@@ -1,43 +1,43 @@
 export interface PricingAnalysis {
-  serviceId: string;
-  serviceName: string;
-  category: string;
-  currentPrice: string;
-  period: string;
+  serviceId: string,
+  serviceName: string,
+  category: string,
+  currentPrice: string,
+  period: string,
   marketAnalysis: {
-    averageMarketPrice: string;
-    priceRange: string;
-    competitivePosition: string;
-    valueProposition: string;
-    targetMarket: string;
-    marketSize: string;
-    growthRate: string;
-  };
+    averageMarketPrice: string,
+    priceRange: string,
+    competitivePosition: string,
+    valueProposition: string,
+    targetMarket: string,
+    marketSize: string,
+    growthRate: string
+  },
   pricingStrategy: {
-    strategy: string;
-    justification: string;
-    priceElasticity: string;
-    bundlingOptions: string[];
-    discountStructure: string[];
-  };
+    strategy: string,
+    justification: string,
+    priceElasticity: string,
+    bundlingOptions: string[],
+    discountStructure: string[]
+  },
   competitiveAnalysis: {
-    directCompetitors: string[];
-    indirectCompetitors: string[];
-    competitiveAdvantages: string[];
-    differentiationFactors: string[];
-  };
+    directCompetitors: string[],
+    indirectCompetitors: string[],
+    competitiveAdvantages: string[],
+    differentiationFactors: string[]
+  },
   roiAnalysis: {
-    customerROI: string;
-    implementationCost: string;
-    paybackPeriod: string;
-    totalCostOfOwnership: string;
-  };
+    customerROI: string,
+    implementationCost: string,
+    paybackPeriod: string,
+    totalCostOfOwnership: string
+  },
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
 }
 export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
   // AI AUTONOMOUS BUSINESS MANAGER
@@ -61,30 +61,24 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       justification: 'First-to-market autonomous business management with no direct competitors',
       priceElasticity: 'Low - High value proposition justifies premium pricing',
       bundlingOptions: [
-        'Enterprise package: $8,999/month (includes customization + support)',
-        'Professional package: $4,999/month (includes training + integration)',
+        'Enterprise package: $8,999/month (includes customization + support)Professional package: $4,999/month (includes training + integration)',
         'Starter package: $1,999/month (limited features)'
       ],
       discountStructure: [
-        'Annual billing: 20% discount',
-        'Multi-year contracts: 30% discount',
+        'Annual billing: 20% discountMulti-year contracts: 30% discount',
         'Enterprise volume: 40% discount'
       ]
     },
     competitiveAnalysis: {
       directCompetitors: ['No direct competitors'],
-      indirectCompetitors: ['Traditional consulting firms ($500-2,000/hour)', 'ERP systems ($10,000-100,000/month)'],
+      indirectCompetitors: ['Traditional consulting firms ($500-2,000/hour)ERP systems ($10,000-100,000/month)'],
       competitiveAdvantages: [
-        'First-to-market autonomous operations',
-        '99.9% accuracy guarantee',
-        '24/7 operational oversight',
-        'Zero human intervention required'
+        'First-to-market autonomous operations99.9% accuracy guarantee',
+        '24/7 operational oversightZero human intervention required'
       ],
       differentiationFactors: [
-        'Fully autonomous decision-making',
-        'Real-time market analysis',
-        'Predictive business modeling',
-        'Multi-department coordination'
+        'Fully autonomous decision-makingReal-time market analysis',
+        'Predictive business modelingMulti-department coordination'
       ]
     },
     roiAnalysis: {
@@ -121,30 +115,24 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       justification: 'Revolutionary quantum computing capabilities with limited competition',
       priceElasticity: 'Low - High-value research applications',
       bundlingOptions: [
-        'Research package: $15,999/month (includes collaboration tools)',
-        'Enterprise package: $9,999/month (includes support + training)',
+        'Research package: $15,999/month (includes collaboration tools)Enterprise package: $9,999/month (includes support + training)',
         'Academic package: $2,999/month (discounted for research)'
       ],
       discountStructure: [
-        'Annual billing: 25% discount',
-        'Research collaboration: 40% discount',
+        'Annual billing: 25% discountResearch collaboration: 40% discount',
         'Government contracts: 30% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['IBM Quantum ($1,000-10,000/month)', 'Google Quantum AI ($5,000-25,000/month)'],
-      indirectCompetitors: ['Traditional HPC clusters ($50,000-500,000/month)', 'Cloud computing services'],
+      directCompetitors: ['IBM Quantum ($1,000-10,000/month)Google Quantum AI ($5,000-25,000/month)'],
+      indirectCompetitors: ['Traditional HPC clusters ($50,000-500,000/month)Cloud computing services'],
       competitiveAdvantages: [
-        '1000x performance improvement',
-        'Quantum neural networks',
-        'Hybrid classical-quantum computing',
-        'Advanced simulation capabilities'
+        '1000x performance improvementQuantum neural networks',
+        'Hybrid classical-quantum computingAdvanced simulation capabilities'
       ],
       differentiationFactors: [
-        'Quantum neural network processing',
-        'Quantum machine learning algorithms',
-        'Complex problem solving',
-        'Research collaboration tools'
+        'Quantum neural network processingQuantum machine learning algorithms',
+        'Complex problem solvingResearch collaboration tools'
       ]
     },
     roiAnalysis: {
@@ -181,30 +169,24 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       justification: 'High returns justify premium pricing in growing DeFi market',
       priceElasticity: 'Medium - Performance-driven market',
       bundlingOptions: [
-        'Premium package: $2,999/month (includes advanced features)',
-        'Professional package: $1,999/month (includes support)',
+        'Premium package: $2,999/month (includes advanced features)Professional package: $1,999/month (includes support)',
         'Basic package: $799/month (limited features)'
       ],
       discountStructure: [
-        'Annual billing: 15% discount',
-        'Performance bonuses: 5-20% based on returns',
+        'Annual billing: 15% discountPerformance bonuses: 5-20% based on returns',
         'Volume discounts: 10-30% for large portfolios'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['Traditional DeFi platforms (free-2% fees)', 'Manual trading services ($100-1,000/month)'],
-      indirectCompetitors: ['Traditional investment platforms', 'Hedge funds'],
+      directCompetitors: ['Traditional DeFi platforms (free-2% fees)Manual trading services ($100-1,000/month)'],
+      indirectCompetitors: ['Traditional investment platformsHedge funds'],
       competitiveAdvantages: [
-        '200% average annual returns',
-        '95% risk reduction',
-        'Autonomous trading algorithms',
-        'Multi-chain DeFi integration'
+        '200% average annual returns95% risk reduction',
+        'Autonomous trading algorithmsMulti-chain DeFi integration'
       ],
       differentiationFactors: [
-        'AI-powered autonomous trading',
-        'Risk management systems',
-        'Portfolio optimization',
-        'Regulatory compliance'
+        'AI-powered autonomous tradingRisk management systems',
+        'Portfolio optimizationRegulatory compliance'
       ]
     },
     roiAnalysis: {
@@ -241,30 +223,24 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       justification: 'High threat detection rate justifies premium pricing',
       priceElasticity: 'Medium - Security-critical applications',
       bundlingOptions: [
-        'Enterprise package: $2,999/month (includes 24/7 support)',
-        'Professional package: $1,499/month (includes training)',
+        'Enterprise package: $2,999/month (includes 24/7 support)Professional package: $1,499/month (includes training)',
         'Standard package: $899/month (basic features)'
       ],
       discountStructure: [
-        'Annual billing: 20% discount',
-        'Multi-year contracts: 30% discount',
+        'Annual billing: 20% discountMulti-year contracts: 30% discount',
         'Government/education: 25% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['CrowdStrike ($8-15/user/month)', 'SentinelOne ($5-12/user/month)', 'Darktrace ($50-100/user/month)'],
-      indirectCompetitors: ['Traditional SIEM systems', 'Manual security monitoring'],
+      directCompetitors: ['CrowdStrike ($8-15/user/month)SentinelOne ($5-12/user/month)', 'Darktrace ($50-100/user/month)'],
+      indirectCompetitors: ['Traditional SIEM systemsManual security monitoring'],
       competitiveAdvantages: [
-        '99.99% threat detection rate',
-        'Autonomous incident response',
-        'Predictive threat intelligence',
-        'Zero-day vulnerability detection'
+        '99.99% threat detection rateAutonomous incident response',
+        'Predictive threat intelligenceZero-day vulnerability detection'
       ],
       differentiationFactors: [
-        'AI-powered autonomous hunting',
-        'Predictive threat intelligence',
-        'Behavioral analysis',
-        'Security orchestration'
+        'AI-powered autonomous huntingPredictive threat intelligence',
+        'Behavioral analysisSecurity orchestration'
       ]
     },
     roiAnalysis: {
@@ -301,30 +277,24 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       justification: 'High production increase and uptime guarantee justify premium pricing',
       priceElasticity: 'Medium - Manufacturing efficiency critical',
       bundlingOptions: [
-        'Enterprise package: $8,999/month (includes customization)',
-        'Professional package: $5,999/month (includes training)',
+        'Enterprise package: $8,999/month (includes customization)Professional package: $5,999/month (includes training)',
         'Standard package: $3,499/month (basic features)'
       ],
       discountStructure: [
-        'Annual billing: 20% discount',
-        'Multi-site deployment: 25% discount',
+        'Annual billing: 20% discountMulti-site deployment: 25% discount',
         'Manufacturing association: 15% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['Traditional MES systems ($10,000-100,000/month)', 'Manual optimization services'],
-      indirectCompetitors: ['ERP systems', 'Basic monitoring tools'],
+      directCompetitors: ['Traditional MES systems ($10,000-100,000/month)Manual optimization services'],
+      indirectCompetitors: ['ERP systemsBasic monitoring tools'],
       competitiveAdvantages: [
-        '99.9% uptime guarantee',
-        '30% production increase',
-        '50% downtime reduction',
-        'Autonomous operation'
+        '99.9% uptime guarantee30% production increase',
+        '50% downtime reductionAutonomous operation'
       ],
       differentiationFactors: [
-        'AI-powered autonomous management',
-        'Predictive maintenance',
-        'Quality control automation',
-        'Resource optimization'
+        'AI-powered autonomous managementPredictive maintenance',
+        'Quality control automationResource optimization'
       ]
     },
     roiAnalysis: {
@@ -340,14 +310,14 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       website: 'https://ziontechgroup.com'
     }
   }
-];
+],
 export const getPricingAnalysisByService = (serviceId: string) => {
-  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId);
-};
+  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId)
+},
 export const getPricingAnalysisByCategory = (category: string) => {
-  if (!category || category === 'All') return comprehensivePricingAnalysis2025;
-  return comprehensivePricingAnalysis2025.filter(s => s.category === category);
-};
+  if (!category || category === 'All') return comprehensivePricingAnalysis2025,
+  return comprehensivePricingAnalysis2025.filter(s => s.category === category)
+},
 export const getMarketInsights = () => {
   const insights = {
     totalMarketSize: '$1.2T+',
@@ -357,15 +327,15 @@ export const getMarketInsights = () => {
     mostAffordableCategory: 'IoT & Edge Computing',
     highestROI: '1000% (Quantum Neural Network Platform)',
     fastestPayback: '2-4 months (DeFi Trading Platform)'
-  };
-  return insights;
-};
+  },
+  return insights,
+},
 export const getCompetitiveLandscape = () => {
   return {
-    aiServices: ['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],
-    quantumComputing: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],
-    cybersecurity: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],
-    manufacturing: ['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],
-    blockchain: ['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura']
-  };
-};
+    aiServices: ['IBM WatsonGoogle AI', 'Microsoft Azure AIAmazon SageMaker'],
+    quantumComputing: ['IBM QuantumGoogle Quantum AI', 'Microsoft Azure QuantumD-Wave'],
+    cybersecurity: ['CrowdStrikeSentinelOne', 'DarktracePalo Alto Networks'],
+    manufacturing: ['SiemensRockwell Automation', 'ABBGE Digital'],
+    blockchain: ['ChainalysisConsenSys', 'AlchemyInfura']
+  },
+},

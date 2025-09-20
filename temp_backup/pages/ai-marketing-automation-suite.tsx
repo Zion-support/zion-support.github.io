@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Megaphone, Target, Users, BarChart3, Zap, Shield, 
   Mail, Calendar, CheckCircle, Star, Globe, Lock, 
   Smartphone, Monitor, TrendingUp
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIMarketingAutomationSuite() {
   const features = [
@@ -39,25 +39,21 @@ export default function AIMarketingAutomationSuite() {
       title: 'Advanced Analytics & ROI',
       description: 'Comprehensive marketing analytics with AI-powered insights to optimize campaigns and maximize ROI.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Increase marketing ROI by 300%',
-    'Reduce customer acquisition costs by 50%',
-    'Improve email open rates by 40%',
-    'Boost conversion rates by 60%',
-    'Reduce manual work by 80%',
-    'Improve customer lifetime value by 45%',
-    'Scale marketing operations effortlessly',
-    'Gain real-time campaign insights'
-  ];
+    'Increase marketing ROI by 300%Reduce customer acquisition costs by 50%',
+    'Improve email open rates by 40%Boost conversion rates by 60%',
+    'Reduce manual work by 80%Improve customer lifetime value by 45%',
+    'Scale marketing operations effortlesslyGain real-time campaign insights'
+  ],
 
   const integrations = [
-    'HubSpot', 'Mailchimp', 'Salesforce', 'Google Analytics',
-    'Facebook Ads', 'Google Ads', 'LinkedIn Ads', 'Twitter Ads',
-    'Shopify', 'WooCommerce', 'Zapier', 'Slack',
-    'Microsoft Teams', 'Discord', 'WhatsApp Business'
-  ];
+    'HubSpotMailchimp', 'SalesforceGoogle Analytics',
+    'Facebook AdsGoogle Ads', 'LinkedIn AdsTwitter Ads',
+    'ShopifyWooCommerce', 'ZapierSlack',
+    'Microsoft TeamsDiscord', 'WhatsApp Business'
+  ],
 
 const ai-marketing-automation-suite: React.FC = () => {
   return (
@@ -74,8 +70,8 @@ const ai-marketing-automation-suite: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default QuantumComputingSolutions2026;
+export default QuantumComputingSolutions2026,

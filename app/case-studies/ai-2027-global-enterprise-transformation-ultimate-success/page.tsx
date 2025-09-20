@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2027 Global Enterprise Transformation: Ultimate Success Story';
-  description: 'Discover how a Fortune 500 company achieved $15+ billion ROI through comprehensive AI transformation using quantum neural networks and autonomous business systems.';
-  keywords: ['AI transformationenterprise success', 'quantum AIautonomous systems', 'ROIFortune 500', 'AI 2027'],
-};
+  title: 'AI 2027 Global Enterprise Transformation: Ultimate Success Story',
+  description: 'Discover how a Fortune 500 company achieved $15+ billion ROI through comprehensive AI transformation using quantum neural networks and autonomous business systems.',
+  keywords: ['AI transformationenterprise successquantum AIautonomous systems', 'ROIFortune 500AI 2027']
+},
 export default function AI2027GlobalEnterpriseTransformationPage() {,
   return (,
     <div>,
@@ -32,7 +32,7 @@ export default function AI2027GlobalEnterpriseTransformationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Transformation Results</h2>,
@@ -56,7 +56,7 @@ export default function AI2027GlobalEnterpriseTransformationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Case Study Content */,}
+        {/* Case Study Content */}
         <section className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
@@ -186,7 +186,7 @@ export default function AI2027GlobalEnterpriseTransformationPage() {,
                 </ul>,
               </div>,
             </div>,
-            {/* Call to Action */,}
+            {/* Call to Action */}
             <div className="mt-12 bg-gray-50 rounded-lg p-8 text-center">,
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>,
               <p className="text-gray-600 mb-6">,
@@ -210,5 +210,4 @@ export default function AI2027GlobalEnterpriseTransformationPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

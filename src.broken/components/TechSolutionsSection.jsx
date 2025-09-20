@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -41,7 +41,7 @@ export default function Page() {
         projects: 250,
         category: 'Mobile'
     }
-];
+],
 const industries = ['"
     { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },"
     { name: 'Finance', icon: <TrendingUp className="w-5 h-5"/>, projects: 120 },"
@@ -49,9 +49,9 @@ const industries = ['"
     { name: 'Manufacturing', icon: <Cpu className="w-5 h-5"/>, projects: 75 },"
     { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },"
     { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
-];
-    const [selectedSolution, setSelectedSolution] = useState(null);
-    const [hoveredSolution, setHoveredSolution] = useState(null);
+],
+    const [selectedSolution, setSelectedSolution] = useState(null),
+    const [hoveredSolution, setHoveredSolution] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -64,7 +64,7 @@ const industries = ['"
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -81,7 +81,7 @@ const industries = ['"
                 ease: "easeOut"
             }
         }
-    };
+    },
     const cardVariants = {
 
   hidden: { scale: 0.95,
@@ -98,7 +98,7 @@ const industries = ['"
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"
@@ -111,7 +111,7 @@ const industries = ['"
         {/* Header */}"
         <motion.div className="text-center mb-20" initial = {
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
             Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Solutions</span>

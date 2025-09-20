@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface ManageditProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Managedit({ }: ManageditProps) {,
@@ -8,7 +8,6 @@ export default function Managedit({ }: ManageditProps) {,
     <div>,
       <h1>Managedit</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

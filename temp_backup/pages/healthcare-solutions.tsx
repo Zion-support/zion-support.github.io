@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity, Stethoscope } from 'lucide-react';
-import SEO from '../components/SEO';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Heart, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity, Stethoscope } from 'lucide-react',
+import SEO from '../components/SEO',
 
 const healthcareServices = [
   {
@@ -9,44 +9,44 @@ const healthcareServices = [
     description: 'Advanced AI-powered diagnostic systems for accurate and rapid medical assessments',
     icon: <Brain className="w-8 h-8 text-cyan-400" />,
     href: '/ai-healthcare-diagnostics',
-    features: ['Medical Imaging Analysis', 'Symptom Assessment', 'Diagnostic Accuracy']
+    features: ['Medical Imaging AnalysisSymptom Assessment', 'Diagnostic Accuracy']
   },
   {
     title: 'Telemedicine Platform',
     description: 'Comprehensive virtual healthcare platform for remote patient care',
     icon: <Users className="w-8 h-8 text-blue-400" />,
     href: '/telemedicine-platform',
-    features: ['Video Consultations', 'Patient Management', 'Prescription Management']
+    features: ['Video ConsultationsPatient Management', 'Prescription Management']
   },
   {
     title: 'Healthcare Data Analytics',
     description: 'Advanced analytics for healthcare insights and patient outcomes',
     icon: <Activity className="w-8 h-8 text-green-400" />,
     href: '/healthcare-analytics-platform',
-    features: ['Patient Analytics', 'Outcome Prediction', 'Resource Optimization']
+    features: ['Patient AnalyticsOutcome Prediction', 'Resource Optimization']
   },
   {
     title: 'Medical Device Integration',
     description: 'Seamless integration of medical devices and health monitoring systems',
     icon: <Stethoscope className="w-8 h-8 text-purple-400" />,
     href: '/medical-device-integration',
-    features: ['IoT Health Devices', 'Real-time Monitoring', 'Data Synchronization']
+    features: ['IoT Health DevicesReal-time Monitoring', 'Data Synchronization']
   },
   {
     title: 'Healthcare Security & Compliance',
     description: 'HIPAA-compliant security solutions for healthcare data protection',
     icon: <Shield className="w-8 h-8 text-red-400" />,
     href: '/healthcare-security-compliance',
-    features: ['HIPAA Compliance', 'Data Encryption', 'Access Control']
+    features: ['HIPAA ComplianceData Encryption', 'Access Control']
   },
   {
     title: 'Patient Engagement Platform',
     description: 'Interactive platforms to improve patient engagement and outcomes',
     icon: <Heart className="w-8 h-8 text-pink-400" />,
     href: '/patient-engagement-platform',
-    features: ['Patient Portals', 'Health Education', 'Appointment Scheduling']
+    features: ['Patient PortalsHealth Education', 'Appointment Scheduling']
   }
-];
+],
 
 export default function HealthcareSolutions() {
   return (
@@ -63,6 +63,6 @@ export default function HealthcareSolutions() {
         </div>
       </div>
     </div>
-  );
-};
-export default healthcare-solutions;
+  ),
+},
+export default healthcare-solutions,

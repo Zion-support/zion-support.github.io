@@ -1,31 +1,31 @@
 
-import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { X, MessageCircle, ChevronUp, Zap } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react",
+import { Button } from "@/components/ui/button",
+import { X, MessageCircle, ChevronUp, Zap } from "lucide-react",
+import { motion, AnimatePresence } from "framer-motion",
+import { Link } from "react-router-dom",
 
 export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false),
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 3000);
+      setIsVisible(true),
+    }, 3000),
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer),
+  }, []),
 
   const handleClose = () => {
-    setIsVisible(false);
-  };
+    setIsVisible(false),
+  },
 
   const handleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
+    setIsExpanded(!isExpanded),
+  },
 
-  if (!isVisible) return null;
+  if (!isVisible) return null,
 
   return (
     <AnimatePresence>
@@ -116,5 +116,5 @@ export function FloatingCTA() {
         </AnimatePresence>
       </motion.div>
     </AnimatePresence>
-  );
+  ),
 }

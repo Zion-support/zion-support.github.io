@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function CloudNativeAutomation() {,
   return (,
     <>,
@@ -299,5 +299,4 @@ export default function CloudNativeAutomation() {,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),}
+    </>)}

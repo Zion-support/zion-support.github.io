@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react',
+import { Link, useLocation  } from 'react-router-dom',
 
 export default function Page() {
-;
+,
         if(isOpen) {
 
-            document.addEventListener('mousedown', handleClickOutside);
+            document.addEventListener('mousedown', handleClickOutside),
             document.body.style.overflow = 'hidden'}
         return () => {
 
-            document.removeEventListener('mousedown', handleClickOutside);
-            document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
+            document.removeEventListener('mousedown', handleClickOutside),
+            document.body.style.overflow = 'unset'}}, [isOpen, onToggle]),
     const navigationItems = [{
 
             label: 'Services',
             href: '/services',
-            children[;
+            children[,
                 { label: 'AI & Machine Learning', href: '/services/ai' },
                 { label: 'Quantum Computing', href: '/services/quantum' },
                 { label: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -23,35 +23,35 @@ export default function Page() {
                 { label: 'Digital Transformation', href: '/services/transformation' },
                 { label: 'Consulting', href: '/services/consulting' }
             ]
-        },;
+        },
         {
 
             label: 'Solutions',
             href: '/solutions',
-            children[;
+            children[,
                 { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
                 { label: 'Startup Solutions', href: '/solutions/startup' },
                 { label: 'Government Solutions', href: '/solutions/government' },
                 { label: 'Healthcare Solutions', href: '/solutions/healthcare' }
             ]
-        },;
+        },
         {
 
             label: 'Industries',
             href: '/industries',
-            children[;
+            children[,
                 { label: 'Technology', href: '/industries/technology' },
                 { label: 'Healthcare', href: '/industries/healthcare' },
                 { label: 'Finance', href: '/industries/finance' },
                 { label: 'Manufacturing', href: '/industries/manufacturing' },
                 { label: 'Education', href: '/industries/education' }
             ]
-        },;
+        },
         {
 
             label: 'Comp',
             href: '/about',
-            children[;
+            children[,
                 { label: 'About Us', href: '/about' },
                 { label: 'Careers', href: '/careers' },
                 { label: 'News', href: '/news' },
@@ -59,17 +59,17 @@ export default function Page() {
                 { label: 'Contact', href: '/contact' }
             ]
 
-    ];
+    ],
     const toggleDropdown = (label) => {
 
-        setActiveDropdown(activeDropdown === label ? null : label)};
+        setActiveDropdown(activeDropdown === label ? null : label)},
     const handleSearch = (e) => {
 
-        e.preventDefault();
+        e.preventDefault(),
         // Implement search functionality'
-        // // // // // // // // console.log('Search query:', searchQuery);
-    };
-        // console.log('Search query:', searchQuery)};
+        // // // // // // // // console.log('Search query:', searchQuery),
+    },
+        // console.log('Search query:', searchQuery)},
     const menuVariants = {
 
   closed: {
@@ -92,7 +92,7 @@ export default function Page() {
                 duration: 0.3,
                 ease: 'easeInOut'
 
-    };
+    },
     const dropdownVariants = {
 
   closed: {
@@ -115,9 +115,9 @@ export default function Page() {
                 duration: 0.2,
                 ease: 'easeInOut'
 
-    };
-    return (<AnimatePresence>;
-      {isOpen && (<>;
+    },
+    return (<AnimatePresence>,
+      {isOpen && (<>,
           {/* Backdrop */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg-black / 50 backdrop - blur - sm z -40" onClick={onToggle}/>
 
@@ -210,6 +210,6 @@ export default function Page() {
             </div>
           </motion.div>
         </>)}
-    </AnimatePresence>)};
-export default MobileNavigation;
+    </AnimatePresence>)},
+export default MobileNavigation,
 }}}}}}}}}</motion.div>}'"`

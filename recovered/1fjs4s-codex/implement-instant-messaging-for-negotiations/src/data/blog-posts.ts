@@ -1,5 +1,5 @@
 
-import { BlogPost } from "@/types/blog";
+import { BlogPost } from "@/types/blog",
 
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
@@ -226,4 +226,4 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ["Edge AI", "IoT", "Real-Time Analytics", "Machine Learning"],
     featuredImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&h=630"
   }
-];
+],

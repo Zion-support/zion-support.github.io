@@ -1,7 +1,7 @@
 
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Check } from "lucide-react",
 
 export function FeatureHighlights() {
   const highlightsData = [
@@ -38,7 +38,7 @@ export function FeatureHighlights() {
         "Customizable workflow and approval processes"
       ]
     }
-  ];
+  ],
 
   return (
     <section className="py-16 bg-zion-blue">
@@ -69,5 +69,5 @@ export function FeatureHighlights() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

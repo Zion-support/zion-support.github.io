@@ -1,9 +1,9 @@
 
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Footer } from '@/components/Footer';
-import { DisputeDashboard } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { Footer } from '@/components/Footer',
+import { DisputeDashboard } from '@/components/disputes',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
 
 function DisputesPage() {
   return (
@@ -17,7 +17,7 @@ function DisputesPage() {
         <Footer />
       </>
     </ProtectedRoute>
-  );
+  ),
 }
 
-export default DisputesPage;
+export default DisputesPage,

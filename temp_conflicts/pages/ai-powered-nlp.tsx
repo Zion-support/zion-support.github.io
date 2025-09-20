@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   MessageSquare, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, TrendingUp,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredNLP: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredNLP: React.FC = () => {
       title: 'Multi-language Support',
       description: 'Comprehensive support for multiple languages and dialects'
     }
-  ];
+  ],
 
   const nlpCapabilities = [
     {
       area: 'Text Analysis',
-      capabilities: ['Sentiment analysis', 'Entity recognition', 'Topic modeling', 'Language detection'],
+      capabilities: ['Sentiment analysisEntity recognition', 'Topic modelingLanguage detection'],
       improvement: '99% accuracy',
       speed: 'Real-time'
     },
     {
       area: 'Language Generation',
-      capabilities: ['Text generation', 'Summarization', 'Translation', 'Content creation'],
+      capabilities: ['Text generationSummarization', 'TranslationContent creation'],
       improvement: 'Human-like quality',
       creativity: 'High'
     },
     {
       area: 'Conversation AI',
-      capabilities: ['Chatbots', 'Virtual assistants', 'Customer service', 'Interactive systems'],
+      capabilities: ['ChatbotsVirtual assistants', 'Customer serviceInteractive systems'],
       improvement: 'Natural conversations',
       context: 'Full understanding'
     },
     {
       area: 'Document Processing',
-      capabilities: ['Document analysis', 'Information extraction', 'Classification', 'Search optimization'],
+      capabilities: ['Document analysisInformation extraction', 'ClassificationSearch optimization'],
       improvement: '100x faster',
       accuracy: '99.9%'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Customer Service',
       description: 'AI-powered chatbots and virtual assistants for enhanced customer support',
-      benefits: ['24/7 availability', 'Instant responses', 'Multilingual support', 'Cost reduction']
+      benefits: ['24/7 availabilityInstant responses', 'Multilingual supportCost reduction']
     },
     {
       title: 'Content Creation',
       description: 'Automated content generation and optimization for marketing and communication',
-      benefits: ['Faster content creation', 'SEO optimization', 'Multilingual content', 'Consistent quality']
+      benefits: ['Faster content creationSEO optimization', 'Multilingual contentConsistent quality']
     },
     {
       title: 'Data Analysis',
       description: 'Text mining and analysis for business intelligence and insights',
-      benefits: ['Customer insights', 'Market trends', 'Competitive analysis', 'Risk assessment']
+      benefits: ['Customer insightsMarket trends', 'Competitive analysisRisk assessment']
     },
     {
       title: 'Healthcare',
       description: 'Medical text analysis and patient communication automation',
-      benefits: ['Medical record analysis', 'Patient communication', 'Clinical decision support', 'Research insights']
+      benefits: ['Medical record analysisPatient communication', 'Clinical decision supportResearch insights']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredNLP: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses starting with NLP',
       features: [
-        'Up to 10,000 requests/month',
-        'Basic language processing',
-        'Standard API access',
-        'Email support',
+        'Up to 10,000 requests/monthBasic language processing',
+        'Standard API accessEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredNLP: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing companies with advanced NLP needs',
       features: [
-        'Up to 100,000 requests/month',
-        'Advanced language processing',
-        'Custom model training',
-        'Priority support',
-        'Advanced analytics',
-        'Full API access',
+        'Up to 100,000 requests/monthAdvanced language processing',
+        'Custom model trainingPriority support',
+        'Advanced analyticsFull API access',
         'Multi-language support'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredNLP: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex NLP requirements',
       features: [
-        'Unlimited requests',
-        'Custom NLP development',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited requestsCustom NLP development',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredNLP: React.FC = () => {
       position: "Research Director",
       company: "Advanced Medical Research"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredNLP: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Process with AI-Powered NLP?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredNLP: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredNLP;
+export default AIPoweredNLP,

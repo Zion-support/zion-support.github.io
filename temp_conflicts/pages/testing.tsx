@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function TestingPage() {
   return (
@@ -16,7 +16,7 @@ export default function TestingPage() {
           </nav>
           <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">Testing</h1>
           <p className="text-white/80 max-w-3xl mb-8">Robust automated testing across unit, integration, end-to-end, and performance ensures reliability at scale.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h2 className="text-lg font-semibold text-amber-400 mb-3">Coverage</h2>
               <ul className="text-white/80 text-sm space-y-2">
@@ -44,6 +44,6 @@ export default function TestingPage() {
         </main>
       </div>
     </>
-  );
+  )
 }
 

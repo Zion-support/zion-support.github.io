@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-export default AdvancedServicesShowcase2025;
-import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
+import React, { useState } from 'react',
+export default AdvancedServicesShowcase2025,
+import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025',
 export default function Page() {
-) ;
+) ,
 
-  const categories = [;
-    { id: 'all', name: 'All Services', count: allServices.length },;
-    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;
-    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;
-    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
-  ];
+  const categories = [,
+    { id: 'all', name: 'All Services', count: allServices.length },
+    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },
+    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },
+    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length },
+  ],
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -52,7 +52,7 @@ export default function Page() {
       </div>
 
       {/* Contact Information Banner */}
-      <div  className="bg-gradient - to - r from - blue - 600 to - purple - 600 py-8">;
+      <div  className="bg-gradient - to - r from - blue - 600 to - purple - 600 py-8">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <div  className="text-center text-white">
             <h2 className="text-2xl font - bold mb-4">Ready to Transform Your Business?</h2>
@@ -75,7 +75,7 @@ export default function Page() {
       </div>
 
       {/* Services Overview */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-16">,
         <div  className="text-center mb-12">
           <h2 className="text-3xl font - bold text-white mb-4">Our Service Categories</h2>
           <p className="text-gray - 300 text-lg">Comprehensive solutions across three key technology domains</p>
@@ -112,7 +112,7 @@ export default function Page() {
       </div>
 
       {/* Services Filter and Search */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-8">,
         <div  className="bg-slate - 800 rounded-xl p - 6 mb-8">
           <div  className="flex flex - col md:flex - row gap-4">
             <div  className="flex -1">
@@ -132,15 +132,15 @@ export default function Page() {
                       : 'bg-slate - 700 text-gray - 300 hover:bg-slate - 600'
                   }`}
 
-                  {category.name} ({category.count}) ;
-                </button>;) ) }
+                  {category.name} ({category.count}) ,
+                </button>,) ) }
             </div>
           </div>
         </div>
       </div>
 
       {/* Services Grid */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-8">,
         <div  className="grid md: grid - cols - 2 lg:grid - cols - 3 gap-8">
           {filteredServices.map((service) => (<div  key={service.id} className="bg-slate - 800 rounded-xl p - 6 hover:bg-slate - 700 transition - colors duration -200">
               <div  className="flex items - start justify - between mb-4">
@@ -208,21 +208,21 @@ export default function Page() {
                 </a>
                 <a
                   href={`tel:+13024640950`}
-                  className="w-full bg-slate - 700 hover:bg-slate - 600 text-white font - medium py-3 px-4 rounded-lg transition - colors duration - 200 text-center block"
+                  className="w-full bg-slate - 700 hover: bg-slate - 600 text-white font - medium py-3 px-4 rounded-lg transition - colors duration - 200 text-center block"
 
                   Call Now
                 </a>
-              </div>;
+              </div>,
             </div>) ) }
-        </div>;
-;
-        {filteredServices.length === 0 && (;
-          <div  className="text-center py-16">;
-            <div  className="text-gray - 400 text-xl mb-4">No services found matching your criteria</div>;
-            <button;
-              onClick={ () => {;
-                setSearchTerm('') ;
-                setSelectedCategory('all') ;
+        </div>,
+,
+        {filteredServices.length === 0 && (,
+          <div  className="text-center py-16">,
+            <div  className="text-gray - 400 text-xl mb-4">No services found matching your criteria</div>,
+            <button,
+              onClick={ () => {,
+                setSearchTerm('') ,
+                setSelectedCategory('all') ,
               }}
               className="text-blue - 400 hover:text-blue -300 underline"
             >
@@ -232,7 +232,7 @@ export default function Page() {
       </div>
 
       {/* Call to Action */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-16">,
         <div  className="bg-gradient - to - r from - blue - 600 to - purple - 600 rounded-2xl p - 12 text-center text-white">
           <h2 className="text-3xl font - bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue - 100 mb-8 max - w-2xl mx -auto">
@@ -255,8 +255,8 @@ export default function Page() {
       </div>
 
       {/* Footer Contact Information */}
-      <div  className="bg-slate - 800 py-12">;
-        <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
+      <div  className="bg-slate - 800 py-12">,
+        <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8">
           <div  className="grid md:grid - cols - 3 gap-8 text-center">
             <div>
               <h3 className="text-xl font - bold text-white mb-4">Contact Information</h3>
@@ -284,9 +284,9 @@ export default function Page() {
                 <p>✓ Competitive Pricing</p>
                 <p>✓ 24 / 7 Support</p>
               </div>
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
-};
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) 
+},

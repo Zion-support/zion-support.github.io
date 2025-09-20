@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
       ]
@@ -78,7 +78,7 @@ export default function Page() {
         }
       ]
     }
-  };
+  },
 
   const enterprisePackages = [{
       name: "Starter Enterprise",
@@ -126,7 +126,7 @@ export default function Page() {
       ],
       popular: false
     }
-  ];
+  ],
 
   const marketComparison = [{
       feature: "AI Workflow Automation",
@@ -156,7 +156,7 @@ export default function Page() {
       competitor2: "$1,599 / month",
       savings: "50 - 63%"
     }
-  ];
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - 900 via - zion - slate - 800 to - zion - slate -900">
       {/* Futuristic Animated Background */}
@@ -441,7 +441,7 @@ export default function Page() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion - slate -800 / 50">
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-zion - slate -800 / 50">
           <div className="max - w-4xl mx - auto text-center">
             <h3 className="text-2xl font - bold text-white mb-8">Get in Touch</h3>
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
@@ -461,6 +461,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </div>) ;
-};
+    </div>) 
+},
 

@@ -1,77 +1,77 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import React, { useState, useEffect } from 'react',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Progress } from '@/components/ui/progress',
 import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react'
-import { bundleMonitor } from '@/utils/bundleMonitor';
-import { logInfo } from '@/utils/productionLogger';
+import { bundleMonitor } from '@/utils/bundleMonitor',
+import { logInfo } from '@/utils/productionLogger',
 
 interface PerformanceMetrics {
-  bundleSize: number;
-  loadTime: number;
-  performanceScore: number;
-  chunkCount: number;
-  cacheHitRate: number;
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  cls: number; // Cumulative Layout Shift
-  fid: number; // First Input Delay
+  bundleSize: number,
+  loadTime: number,
+  performanceScore: number,
+  chunkCount: number,
+  cacheHitRate: number,
+  fcp: number, // First Contentful Paint
+  lcp: number, // Largest Contentful Paint
+  cls: number, // Cumulative Layout Shift
+  fid: number, // First Input Delay
 }
 
 interface BundleChunk {
-  name: string;
-  size: number;
-  loadTime: number;
-  cached: boolean;
-  type: string;
+  name: string,
+  size: number,
+  loadTime: number,
+  cached: boolean,
+  type: string
 }
 
 // Helper functions moved outside the component for stability
 const categorizeChunk = (filename: string): string => {
-  if (filename.includes('framework')) return 'framework';
-  if (filename.includes('vendor')) return 'vendor';
-  if (filename.includes('pages')) return 'page';
-  if (filename.includes('chunks')) return 'chunk';
-  return 'other';
-};
+  if (filename.includes('framework')) return 'framework',
+  if (filename.includes('vendor')) return 'vendor',
+  if (filename.includes('pages')) return 'page',
+  if (filename.includes('chunks')) return 'chunk',
+  return 'other'
+},
 
 const formatSize = (bytes: number): string => {
-  if (bytes === 0) return '0 B';
-  const k = 1024;
-  const sizes = ['B', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-};
+  if (bytes === 0) return '0 B',
+  const k = 1024,
+  const sizes = ['BKB', 'MBGB'],
+  const i = Math.floor(Math.log(bytes) / Math.log(k)),
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i],
+},
 
 const getScoreColorHelper = (score: number): string => { // Renamed to avoid conflict if used as prop
-  if (score >= 90) return 'text-green-600';
-  if (score >= 70) return 'text-yellow-600';
-  return 'text-red-600';
-};
+  if (score >= 90) return 'text-green-600',
+  if (score >= 70) return 'text-yellow-600',
+  return 'text-red-600'
+},
 
 const getScoreIconHelper = (score: number) => { // Renamed
-  if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />;
-  if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />;
-  return <AlertTriangle className="w-4 h-4 text-red-600" />;
-};
+  if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,
+  if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,
+  return <AlertTriangle className="w-4 h-4 text-red-600" />
+},
 
 
 export function PerformanceDashboard() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [chunks, setChunks] = useState<BundleChunk[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
+  const [chunks, setChunks] = useState<BundleChunk[]>([]),
+  const [isLoading, setIsLoading] = useState(false),
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null),
 
   const collectWebVitals = React.useCallback(async (): Promise<Partial<PerformanceMetrics>> => {
-    if (typeof window === 'undefined') return {};
+    if (typeof window === 'undefined') return {},
     
-    const vitals: Partial<PerformanceMetrics> = {};
+    const vitals: Partial<PerformanceMetrics> = {},
     
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
     if (navigation) {
-      vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart;
-      vitals.lcp = navigation.loadEventEnd - navigation.fetchStart;
+      vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart,
+      vitals.lcp = navigation.loadEventEnd - navigation.fetchStart,
     }
     
     if ('PerformanceObserver' in window) {
@@ -80,39 +80,39 @@ export function PerformanceDashboard() {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'paint') {
               if (entry.name === 'first-contentful-paint') {
-                vitals.fcp = entry.startTime;
+                vitals.fcp = entry.startTime,
               }
             }
             if (entry.entryType === 'largest-contentful-paint') {
-              vitals.lcp = entry.startTime;
+              vitals.lcp = entry.startTime,
             }
             if (entry.entryType === 'layout-shift') {
-              vitals.cls = (vitals.cls || 0) + (entry as any).value;
+              vitals.cls = (vitals.cls || 0) + (entry as any).value,
             }
             if (entry.entryType === 'first-input') {
-              vitals.fid = (entry as any).processingStart - entry.startTime;
+              vitals.fid = (entry as any).processingStart - entry.startTime,
             }
-          });
-        });
+          }),
+        }),
         
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+        observer.observe({ entryTypes: ['paintlargest-contentful-paint', 'layout-shiftfirst-input'] }),
         
         setTimeout(() => {
-          observer.disconnect();
-          resolve(vitals);
-        }, 2000);
-      });
+          observer.disconnect(),
+          resolve(vitals),
+        }, 2000),
+      }),
     }
-    return vitals;
-  }, []);
+    return vitals,
+  }, []),
 
   const collectChunkData = React.useCallback(async (): Promise<BundleChunk[]> => {
-    if (typeof window === 'undefined') return [];
+    if (typeof window === 'undefined') return [],
     
-    const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+    const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[],
     const scriptEntries = resourceEntries.filter(entry => 
       entry.name.includes('/_next/static/') && entry.name.endsWith('.js')
-    );
+    ),
 
     return scriptEntries.map(entry => ({
       name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
@@ -120,23 +120,23 @@ export function PerformanceDashboard() {
       loadTime: entry.responseEnd - entry.requestStart,
       cached: entry.transferSize === 0,
       type: categorizeChunk(entry.name) // categorizeChunk is stable as it's outside component
-    })).sort((a, b) => b.size - a.size);
-  }, []);
+    })).sort((a, b) => b.size - a.size),
+  }, []),
 
   const collectMetrics = React.useCallback(async () => {
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       // Force bundle monitor to collect metrics
-      bundleMonitor.forceCollect();
+      bundleMonitor.forceCollect(),
 
       // Get bundle metrics
-      const bundleMetrics = bundleMonitor.getLatestMetrics();
+      const bundleMetrics = bundleMonitor.getLatestMetrics(),
 
       // Collect Web Vitals if available
-      const webVitals = await collectWebVitals(); // This function needs to be stable or a dependency
+      const webVitals = await collectWebVitals(), // This function needs to be stable or a dependency
 
       // Get resource timing data
-      const chunkData = await collectChunkData(); // This function needs to be stable or a dependency
+      const chunkData = await collectChunkData(), // This function needs to be stable or a dependency
 
       setMetrics({
         bundleSize: bundleMetrics?.totalBundleSize || 0,
@@ -148,26 +148,26 @@ export function PerformanceDashboard() {
         lcp: webVitals.lcp || 0,
         cls: webVitals.cls || 0,
         fid: webVitals.fid || 0
-      });
+      }),
 
-      setChunks(chunkData);
-      setLastUpdated(new Date());
+      setChunks(chunkData),
+      setLastUpdated(new Date()),
 
       logInfo('Performance metrics collected', {
         bundleSize: bundleMetrics?.totalBundleSize,
         score: bundleMetrics?.performanceScore
-      });
+      }),
 
     } catch (error) {
-      console.error('Failed to collect performance metrics:', error);
+      console.error('Failed to collect performance metrics:', error),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  }, [setIsLoading, setMetrics, setChunks, setLastUpdated, collectWebVitals, collectChunkData]); // Added logInfo if it's from component scope and not stable
+  }, [setIsLoading, setMetrics, setChunks, setLastUpdated, collectWebVitals, collectChunkData]), // Added logInfo if it's from component scope and not stable
 
   useEffect(() => {
-    collectMetrics();
-  }, [collectMetrics]);
+    collectMetrics(),
+  }, [collectMetrics]),
 
   return (
     <div className="space-y-6">
@@ -393,5 +393,5 @@ export function PerformanceDashboard() {
         </CardContent>
       </Card>
     </div>
-  );
+  ),
 } 

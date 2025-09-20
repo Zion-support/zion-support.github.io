@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function EntertainmentMediaSolutions() {,
   return (,
     <>,
@@ -14,12 +14,11 @@ export default function EntertainmentMediaSolutions() {,
           <p className="text-gray-300">Accelerate production, optimize distribution, and personalize experiences with AI-driven media platforms.</p>,
         </section>,
       </div>,
-    </>,
-  ),
+    </>)
 }
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-;
+,

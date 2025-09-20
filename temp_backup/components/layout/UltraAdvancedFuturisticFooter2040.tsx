@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  Rocket, 
+  Rocket,
   Brain, 
   Atom, 
   Shield, 
@@ -42,7 +42,7 @@ import {
   BarChart3,
   Lightbulb,
   Settings
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltraAdvancedFuturisticFooter2040: React.FC = () => {
   return (
@@ -50,7 +50,7 @@ const UltraAdvancedFuturisticFooter2040: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticFooter2040</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedFuturisticFooter2040;
+export default UltraAdvancedFuturisticFooter2040,

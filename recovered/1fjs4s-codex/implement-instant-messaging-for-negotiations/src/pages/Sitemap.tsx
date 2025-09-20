@@ -1,6 +1,6 @@
-import { SEO } from "@/components/SEO";
-import { completeSitemap } from "@/config/sitemap";
-import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO",
+import { completeSitemap } from "@/config/sitemap",
+import { Link } from "react-router-dom",
 
 export default function Sitemap() {
   return (
@@ -26,5 +26,5 @@ export default function Sitemap() {
         </div>
       </main>
     </>
-  );
+  ),
 }

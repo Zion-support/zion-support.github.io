@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Home,
   Brain,
@@ -43,79 +43,68 @@ import {
   Leaf,
   Building,
   User
-} from 'lucide-react';
-
+} from "lucide-react";
 export const EnhancedSidebar: React.FC = () => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
-
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
+      newExpanded.delete(section)
     } else {
-      newExpanded.add(section);
+      newExpanded.add(section),
     }
-    setExpandedSections(newExpanded);
-  };
+    setExpandedSections(newExpanded),
+  },
 
   const isActive = (path: string) => location.pathname === path;
-
   const navigationSections = [
     {
-      title: "Main",
-      icon: Home,
-      items: [
-        { name: "Home", href: "/", icon: Home },
-        { name: "Solutions", href: "/solutions", icon: Target },
-        { name: "Services", href: "/services", icon: Zap },
-        { name: "Case Studies", href: "/case-studies", icon: FileText },
-        { name: "Blog", href: "/blog", icon: FileText },
-        { name: "Partners", href: "/partners", icon: Handshake },
-        { name: "About", href: "/about", icon: Users },
-        { name: "Contact", href: "/contact", icon: MessageCircle },
+      title: "Main",icon: Home,items: [
+        { name: "Home", href: "/", icon: Home };
+        { name: "Solutions", href: "/solutions", icon: Target };
+        { name: "Services", href: "/services", icon: Zap };
+        { name: "Case Studies", href: "/case-studies", icon: FileText };
+        { name: "Blog", href: "/blog", icon: FileText };
+        { name: "Partners", href: "/partners", icon: Handshake };
+        { name: "About", href: "/about", icon: Users };
+        { name: "Contact", href: "/contact", icon: MessageCircle };
         { name: "Careers", href: "/careers", icon: Briefcase }
       ]
-    },
+    };
     {
-      title: "Service Areas",
-      icon: Zap,
-      items: [
-        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
-        { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu },
-        { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp },
-        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
-        { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain },
-        { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users },
-        { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar },
-        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
+      title: "Service Areas",icon: Zap,items: [
+        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud };
+        { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu };
+        { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp };
+        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server };
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain };
+        { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain };
+        { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users };
+        { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar };
+        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp };
         { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
       ]
-    },
+    };
     {
-      title: "Resources",
-      icon: BookOpen,
-      items: [
-        { name: "Documentation", href: "/documentation", icon: FileText },
-        { name: "API Reference", href: "/api", icon: Code },
-        { name: "Developer Portal", href: "/developer", icon: Cpu },
-        { name: "Support Center", href: "/help-center", icon: HelpCircle },
-        { name: "FAQ", href: "/faq", icon: HelpCircle },
-        { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
-        { name: "Login", href: "/login", icon: User },
+      title: "Resources",icon: BookOpen,items: [
+        { name: "Documentation", href: "/documentation", icon: FileText };
+        { name: "API Reference", href: "/api", icon: Code };
+        { name: "Developer Portal", href: "/developer", icon: Cpu };
+        { name: "Support Center", href: "/help-center", icon: HelpCircle };
+        { name: "FAQ", href: "/faq", icon: HelpCircle };
+        { name: "Request a Quote", href: "/request-quote", icon: MessageCircle };
+        { name: "Dashboard", href: "/dashboard", icon: BarChart3 };
+        { name: "Login", href: "/login", icon: User };
         { name: "Support", href: "/support", icon: HelpCircle }
       ]
     }
   ];
-
   const quickActions = [
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
-    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" };
+    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" };
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
-
   return (
     <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
       <div className="p-6">
@@ -259,5 +248,5 @@ export const EnhancedSidebar: React.FC = () => {
         </motion.div>
       </div>
     </aside>
-  );
+  ),
 };

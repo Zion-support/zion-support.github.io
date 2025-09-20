@@ -1,9 +1,9 @@
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
 
 interface NoJobsCardProps {
-  onUpdateProfile?: () => void;
+  onUpdateProfile?: () => void,
 }
 
 export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
@@ -20,5 +20,5 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
         )}
       </CardContent>
     </Card>
-  );
+  ),
 }

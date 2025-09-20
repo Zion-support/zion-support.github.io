@@ -1,24 +1,24 @@
 
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",
+import { useAuth } from "@/hooks/useAuth",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",
 import { 
-  RequestsHeader, 
+  RequestsHeader,
   QuoteRequestsList 
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+} from "@/components/quotes",
+import type { QuoteRequest } from "@/types/quotes",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
 
 export default function RequestsPanel() {
-  const { user } = useAuth();
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+  const { user } = useAuth(),
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
   
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
 
   const {
     quotes,
@@ -31,21 +31,21 @@ export default function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
-  } = useTalentQuotes();
+  } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true);
+    setSelectedQuote(quote),
+    setShowDetails(true),
     
     // If status is new, mark as viewed
     if (quote.status === 'new') {
-      markAsViewed(quote.id);
+      markAsViewed(quote.id),
     }
-  };
+  },
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter(q => !q.is_archived);
-  const archivedQuotes = quotes.filter(q => q.is_archived);
+  const activeQuotes = quotes.filter(q => !q.is_archived),
+  const archivedQuotes = quotes.filter(q => q.is_archived),
 
   return (
     <ProtectedRoute>
@@ -98,13 +98,13 @@ export default function RequestsPanel() {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null);
+            setShowDetails(false),
+            setSelectedQuote(null),
           }}
         />
         
         <Footer />
       </div>
     </ProtectedRoute>
-  );
+  ),
 }

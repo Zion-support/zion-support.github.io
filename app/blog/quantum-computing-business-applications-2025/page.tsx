@@ -1,18 +1,18 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'Quantum Computing Business Applications 2025 | Zion Tech Group';
-  description: 'Explore how quantum computing is revolutionizing business operations, from optimization problems to cryptography, and discover practical applications transforming industries in 2025.';
-  keywords: ['quantum computingbusiness applications', 'future technologyinnovation', 'optimizationcryptography'];
+  title: 'Quantum Computing Business Applications 2025 | Zion Tech Group',
+  description: 'Explore how quantum computing is revolutionizing business operations, from optimization problems to cryptography, and discover practical applications transforming industries in 2025.',
+  keywords: ['quantum computingbusiness applicationsfuture technologyinnovation', 'optimizationcryptography'],
   openGraph: {,
-    title: 'Quantum Computing Business Applications 2025';
-    description: 'Revolutionary applications transforming industries with quantum advantage';
-    type: 'article';
-    publishedTime: '2025-01-14';
-    authors: ['Zion Tech Group'],}
-};
+    title: 'Quantum Computing Business Applications 2025',
+    description: 'Revolutionary applications transforming industries with quantum advantage',
+    type: 'article',
+    publishedTime: '2025-01-14',
+    authors: ['Zion Tech Group']}
+},
 export default function QuantumComputingBusinessApplicationsPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -44,7 +44,7 @@ export default function QuantumComputingBusinessApplicationsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Article Content */,}
+      {/* Article Content */}
       <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="prose prose-lg max-w-none">,
           <h2>The Quantum Revolution is Here</h2>,
@@ -254,7 +254,7 @@ export default function QuantumComputingBusinessApplicationsPage() {,
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">,
             <p className="text-sm text-gray-700">,
               <strong>Note:</strong> The quantum computing landscape is rapidly evolving. This article reflects,
-              current capabilities and projections as of January 2025. For the latest developments;
+              current capabilities and projections as of January 2025. For the latest developments,
               consult our quantum computing experts.,
             </p>,
           </div>,
@@ -299,4 +299,4 @@ export default function QuantumComputingBusinessApplicationsPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

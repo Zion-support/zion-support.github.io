@@ -1,7 +1,7 @@
 
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
 
 export function ApiErrorCodes() {
   const errorExample = `{
@@ -17,13 +17,13 @@ export function ApiErrorCodes() {
       "error": "Budget minimum must be greater than 0"
     }
   ]
-}`;
+}`,
 
   const rateLimitExample = `{
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Try again in 30 seconds",
   "retry_after": 30
-}`;
+}`,
 
   const errorCodes = [
     {
@@ -80,7 +80,7 @@ export function ApiErrorCodes() {
       message: "Service temporarily unavailable.",
       details: "The API is temporarily unavailable due to maintenance or high load."
     }
-  ];
+  ],
 
   const rateLimits = [
     {
@@ -118,7 +118,7 @@ export function ApiErrorCodes() {
       limit: "N/A",
       notes: "Webhooks don't count against your rate limits"
     }
-  ];
+  ],
 
   return (
     <ApiDocsLayout>
@@ -176,13 +176,12 @@ export function ApiErrorCodes() {
 
         <h2>Handling Errors</h2>
         <p>
-          Your application should be prepared to handle error responses appropriately:
-        </p>
+          Your application should be prepared to handle error responses appropriately: </p>
         
         <ul>
           <li><strong>401 and 403 errors</strong>: Check your API key and permissions</li>
           <li><strong>429 errors</strong>: Implement retry logic with backoff</li>
-          <li><strong>5xx errors</strong>: These are server-side issues; retry with backoff</li>
+          <li><strong>5xx errors</strong>: These are server-side issues, retry with backoff</li>
         </ul>
         
         <h3>Rate Limiting</h3>
@@ -245,7 +244,7 @@ export function ApiErrorCodes() {
         </p>
       </div>
     </ApiDocsLayout>
-  );
+  ),
 }
 
-export default ApiErrorCodes;
+export default ApiErrorCodes,

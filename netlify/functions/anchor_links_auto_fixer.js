@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 anchor_links_auto_fixer function triggered');
+    console.log('🤖 anchor_links_auto_fixer function triggered'),
     
     // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     return {
       statusCode: 200,
@@ -12,9 +12,9 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'anchor_links_auto_fixer'
       })
-    };
+    },
   } catch (error) {
-    console.error('❌ anchor_links_auto_fixer function failed:', error);
+    console.error('❌ anchor_links_auto_fixer function failed:', error),
     
     return {
       statusCode: 500,
@@ -23,6 +23,6 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    };
+    },
   }
-};
+},

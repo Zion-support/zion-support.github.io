@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   FileText, Search, Clock, Shield, Brain, Users, 
   CheckCircle, ArrowRight, Zap, Target, Award,
   BookOpen, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AILegalAssistant: React.FC = () => {
   const features = [
@@ -39,30 +39,30 @@ const AILegalAssistant: React.FC = () => {
       title: 'Multi-User Collaboration',
       description: 'Team-based legal work with role-based access and audit trails'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Contract Management',
       description: 'Automated contract creation, review, and lifecycle management',
-      benefits: ['Reduced review time by 80%', '99.5% accuracy in clause identification', 'Automated compliance checking']
+      benefits: ['Reduced review time by 80%99.5% accuracy in clause identification', 'Automated compliance checking']
     },
     {
       title: 'Legal Research',
       description: 'AI-powered case law research and precedent analysis',
-      benefits: ['90% faster research completion', 'Comprehensive precedent database', 'Real-time legal updates']
+      benefits: ['90% faster research completionComprehensive precedent database', 'Real-time legal updates']
     },
     {
       title: 'Document Generation',
       description: 'Intelligent legal document creation and customization',
-      benefits: ['Standardized document templates', 'Customizable clause libraries', 'Multi-format export options']
+      benefits: ['Standardized document templatesCustomizable clause libraries', 'Multi-format export options']
     },
     {
       title: 'Risk Assessment',
       description: 'Automated legal risk analysis and mitigation recommendations',
-      benefits: ['Proactive risk identification', 'Compliance gap analysis', 'Mitigation strategy suggestions']
+      benefits: ['Proactive risk identificationCompliance gap analysis', 'Mitigation strategy suggestions']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -71,10 +71,8 @@ const AILegalAssistant: React.FC = () => {
       period: '/month',
       description: 'Perfect for solo practitioners and small law firms',
       features: [
-        'Up to 100 documents/month',
-        'Basic legal research tools',
-        'Standard contract templates',
-        'Email support',
+        'Up to 100 documents/monthBasic legal research tools',
+        'Standard contract templatesEmail support',
         'Basic compliance monitoring'
       ],
       popular: false
@@ -85,12 +83,9 @@ const AILegalAssistant: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing law firms and legal departments',
       features: [
-        'Up to 500 documents/month',
-        'Advanced AI research capabilities',
-        'Custom contract templates',
-        'Priority support',
-        'Advanced compliance features',
-        'Multi-user collaboration'
+        'Up to 500 documents/monthAdvanced AI research capabilities',
+        'Custom contract templatesPriority support',
+        'Advanced compliance featuresMulti-user collaboration'
       ],
       popular: true
     },
@@ -100,17 +95,14 @@ const AILegalAssistant: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large legal organizations',
       features: [
-        'Unlimited documents',
-        'Custom AI model training',
-        'White-label solutions',
-        'Dedicated support team',
-        'Advanced analytics',
-        'API integration',
+        'Unlimited documentsCustom AI model training',
+        'White-label solutionsDedicated support team',
+        'Advanced analyticsAPI integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -131,7 +123,7 @@ const AILegalAssistant: React.FC = () => {
       position: "General Counsel",
       company: "Tech Innovations Inc"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -403,7 +395,7 @@ const AILegalAssistant: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Legal Practice?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -425,7 +417,7 @@ const AILegalAssistant: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AILegalAssistant;
+export default AILegalAssistant,

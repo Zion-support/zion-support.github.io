@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Badge } from '@/components / ui / badge';
+import React, { useState } from 'react',
+import { Badge } from '@/components / ui / badge',
 export default function Page() {
 ,
         {
@@ -222,7 +222,7 @@ export default function Page() {
             rating: 4.7,
             reviews: 112
 
-    ];
+    ],
     const categories = ["All Services",
         "Marketing",
         "Productivity",
@@ -236,11 +236,11 @@ export default function Page() {
         "Inventory",
         "Scheduling",
         "Feedback"
-    ];
-    const [selectedCategory, setSelectedCategory] = React.useState("All Services");
+    ],
+    const [selectedCategory, setSelectedCategory] = React.useState("All Services"),
     const filteredServices = selectedCategory === "All Services"
         ? microSAASServices
-        : microSAASServices.filter(service => service.category === selectedCategory) ;
+        : microSAASServices.filter(service => service.category === selectedCategory) ,
     return (<div className="min - h-screen bg-gradient - to - br from - zion - blue - dark via - zion - slate to - zion - blue -dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

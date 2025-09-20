@@ -1,21 +1,21 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Bookmark, Share2, BookOpen, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeft, Calendar, Clock, User, Bookmark, Share2, BookOpen, CheckCircle, TrendingUp, Users, Award } from 'lucide-react',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'AI Transformation 2025: The Complete Guide to Enterprise Success';
-  description: 'Discover the ultimate roadmap for AI transformation in 2025. Learn proven strategies, implementation frameworks, and real-world success stories that will revolutionize your business.';
-  keywords: ['AI TransformationDigital Transformation', 'EnterpriseAutomation', 'Machine Learning2025'];
+  title: 'AI Transformation 2025: The Complete Guide to Enterprise Success',
+  description: 'Discover the ultimate roadmap for AI transformation in 2025. Learn proven strategies, implementation frameworks, and real-world success stories that will revolutionize your business.',
+  keywords: ['AI TransformationDigital TransformationEnterpriseAutomation', 'Machine Learning2025'],
   openGraph: {,
-    title: 'AI Transformation 2025: The Complete Guide to Enterprise Success';
-    description: 'Discover the ultimate roadmap for AI transformation in 2025. Learn proven strategies, implementation frameworks, and real-world success stories.';
-    type: 'article';
-    publishedTime: '2025-01-15T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI TransformationDigital Transformation', 'EnterpriseAutomation'],
+    title: 'AI Transformation 2025: The Complete Guide to Enterprise Success',
+    description: 'Discover the ultimate roadmap for AI transformation in 2025. Learn proven strategies, implementation frameworks, and real-world success stories.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI TransformationDigital TransformationEnterpriseAutomation']
   }
-};
+},
 export default function AITransformation2025Guide() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -45,7 +45,7 @@ export default function AITransformation2025Guide() {,
               AI Transformation 2025: The Complete Guide to Enterprise Success,
             </h1>,
             <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">,
-              Discover the ultimate roadmap for AI transformation in 2025. Learn proven strategies;
+              Discover the ultimate roadmap for AI transformation in 2025. Learn proven strategies,
               implementation frameworks, and real-world success stories that will revolutionize your business.,
             </p>,
           </div>,
@@ -77,7 +77,7 @@ export default function AITransformation2025Guide() {,
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>,
             <p className="text-gray-700 leading-relaxed">,
               The year 2025 marks a pivotal moment in artificial intelligence evolution. Organizations worldwide are,
-              experiencing unprecedented opportunities to transform their operations, enhance customer experiences;
+              experiencing unprecedented opportunities to transform their operations, enhance customer experiences,
               and drive exponential growth through strategic AI implementation. This comprehensive guide provides,
               everything you need to know about successful AI transformation in 2025.,
             </p>,
@@ -257,7 +257,7 @@ export default function AITransformation2025Guide() {,
           </div>,
         </div>,
       </article>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className="bg-gray-50 py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -311,4 +311,4 @@ export default function AITransformation2025Guide() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Quantum Computing Business Applications 2025: Ultimate Guide';
-  description: 'Explore how quantum computing is revolutionizing business operations in 2025. Learn about practical applications, implementation strategies, and real-world success stories.';
-  keywords: ['quantum computingbusiness applications', '2025technology innovation', 'digital transformation'],
-};
+  title: 'Quantum Computing Business Applications 2025: Ultimate Guide',
+  description: 'Explore how quantum computing is revolutionizing business operations in 2025. Learn about practical applications, implementation strategies, and real-world success stories.',
+  keywords: ['quantum computingbusiness applications2025technology innovation', 'digital transformation']
+},
 export default function QuantumComputingBusinessPage() {,
   return (,
     <div>,
@@ -46,7 +46,7 @@ export default function QuantumComputingBusinessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -69,7 +69,7 @@ export default function QuantumComputingBusinessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Core Applications */,}
+        {/* Core Applications */}
         <section id="applications" className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core Business Applications</h2>,
@@ -184,7 +184,7 @@ export default function QuantumComputingBusinessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Stories */,}
+        {/* Success Stories */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Industry Success Stories</h2>,
@@ -198,7 +198,7 @@ export default function QuantumComputingBusinessPage() {,
                   </div>,
                 </div>,
                 <p className="text-gray-700 mb-4">,
-                  Reduced portfolio optimization time from 3 hours to 3 minutes using quantum algorithms;
+                  Reduced portfolio optimization time from 3 hours to 3 minutes using quantum algorithms,
                   achieving 40% better risk-adjusted returns.,
                 </p>,
                 <div className="text-sm text-gray-600">,
@@ -230,7 +230,7 @@ export default function QuantumComputingBusinessPage() {,
                   </div>,
                 </div>,
                 <p className="text-gray-700 mb-4">,
-                  Reduced drug discovery time from 10 years to 3 years using quantum molecular simulation;
+                  Reduced drug discovery time from 10 years to 3 years using quantum molecular simulation,
                   identifying 5 new drug candidates.,
                 </p>,
                 <div className="text-sm text-gray-600">,
@@ -256,7 +256,7 @@ export default function QuantumComputingBusinessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Ready to Harness Quantum Computing?</h2>,
@@ -281,5 +281,4 @@ export default function QuantumComputingBusinessPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

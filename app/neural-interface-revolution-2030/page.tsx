@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Neural Interface Revolution 2030: Brain-Computer Integration | Zion Tech Group';
-  description: 'Explore the revolutionary neural interface technology that will connect human brains directly to AI systems by 2030.';
-  keywords: ['neural interfacesbrain computer interface', 'BCIneural implants', 'thought controlcognitive enhancement'],
-};
+  title: 'Neural Interface Revolution 2030: Brain-Computer Integration | Zion Tech Group',
+  description: 'Explore the revolutionary neural interface technology that will connect human brains directly to AI systems by 2030.',
+  keywords: ['neural interfacesbrain computer interfaceBCIneural implants', 'thought controlcognitive enhancement']
+},
 export default function NeuralInterfacePage() {,
   return (,
     <div>,
@@ -55,12 +55,12 @@ export default function NeuralInterfacePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Neural Interface Types */,}
+        {/* Neural Interface Types */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Types of Neural Interfaces</h2>,
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
-              {/* Non-Invasive Interfaces */,}
+              {/* Non-Invasive Interfaces */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-cyan-500">,
                 <div className="flex items-center mb-6">,
                   <div className="text-4xl mr-4">🎧</div>,
@@ -144,7 +144,7 @@ export default function NeuralInterfacePage() {,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Revolutionary Applications</h2>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-              {/* Thought Control */,}
+              {/* Thought Control */}
               <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl">,
                 <div className="text-4xl mb-4">🎮</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Thought-Controlled Devices</h3>,
@@ -338,7 +338,7 @@ export default function NeuralInterfacePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Prepare for the Neural Revolution</h2>,
@@ -362,5 +362,4 @@ export default function NeuralInterfacePage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

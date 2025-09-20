@@ -1,28 +1,28 @@
 <<<<<<< HEAD
-import { Badge } from '@/components / ui / badge';
+import { Badge } from '@/components / ui / badge',
 export default function Page() {
-;
+,
   const handleImageError = () => {
     if(!imageError) {
 
       // Prevent infinite loops if placeholder also fails'
-      setImageSrc('/placeholder.svg');
-      setImageError(true);
+      setImageSrc('/placeholder.svg'),
+      setImageError(true),
     }
-  };
+  },
   const handleRequestQuote = e => {
 
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     if(onRequestQuote) {
 
-      onRequestQuote(listing.id);
+      onRequestQuote(listing.id),
     } else {
 `
-      router(`/request-quote?listing=${listing.id}`);
+      router(`/request-quote?listing=${listing.id}`),
     }
-  };
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+  },
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
   return ()
     <div
       data-testid="equipment-link"'`
@@ -34,8 +34,8 @@ export default function Page() {
 
         if(e.key === 'Enter' || e.key === ' ') {
 
-          e.preventDefault();
-          handleViewListing();
+          e.preventDefault(),
+          handleViewListing(),
         }
       }}
     >
@@ -49,8 +49,8 @@ export default function Page() {
 
           if(e.key === 'Enter' || e.key === ' ') {
 
-            e.preventDefault();
-            handleViewListing();
+            e.preventDefault(),
+            handleViewListing(),
           }
         }}
       >`
@@ -131,11 +131,11 @@ export default function Page() {
           <div className="flex gap-2">
             <Button"
               size="sm"
-              className="bg-primary hover:bg-primary/80 text-primary-foreground"
+              className="bg-primary hover: bg-primary/80 text-primary-foreground"
               onClick={e => {
 
-                e.stopPropagation();`
-                router(`${detailBasePath}/${listing.id}`);
+                e.stopPropagation(),`
+                router(`${detailBasePath}/${listing.id}`),
               }}
               disabled={loading}
             >
@@ -181,9 +181,9 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"`
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -2,66 +2,66 @@
 ArrowRightTrendingUpUsersDollarSignZapAwardTarget,
 const caseStudies = [,
   {,
-    id: 1;
-    title: "Global Manufacturing AI Transformation";
-    company: "Fortune 500 Manufacturer";
-    industry: "Manufacturing";
+    id: 1,
+    title: "Global Manufacturing AI Transformation",
+    company: "Fortune 500 Manufacturer",
+    industry: "Manufacturing",
     results: {,
-      roi: "2500%";
-      efficiency: "95%";
-      costReduction: "60%";
-      timeSaved: "40 hours/week",};
-    description: "Implemented AI-powered predictive maintenance and autonomous quality control systems across 50+ facilities worldwide.";
-    image: "/images/case-studies/manufacturing-ai.jpg";
-    featured: true,};
+      roi: "2500%",
+      efficiency: "95%",
+      costReduction: "60%",
+      timeSaved: "40 hours/week"},
+    description: "Implemented AI-powered predictive maintenance and autonomous quality control systems across 50+ facilities worldwide.",
+    image: "/images/case-studies/manufacturing-ai.jpg",
+    featured: true},
   {,
-    id: 2;
-    title: "Healthcare AI Diagnostic Revolution";
-    company: "Leading Hospital Network";
-    industry: "Healthcare";
+    id: 2,
+    title: "Healthcare AI Diagnostic Revolution",
+    company: "Leading Hospital Network",
+    industry: "Healthcare",
     results: {,
-      roi: "1800%";
-      accuracy: "98%";
-      diagnosisSpeed: "10x faster";
-      patientSatisfaction: "45% increase",};
-    description: "Deployed AI diagnostic systems that reduced diagnosis time by 90% while improving accuracy to 98%.";
-    image: "/images/case-studies/healthcare-ai.jpg";
-    featured: true,};
+      roi: "1800%",
+      accuracy: "98%",
+      diagnosisSpeed: "10x faster",
+      patientSatisfaction: "45% increase"},
+    description: "Deployed AI diagnostic systems that reduced diagnosis time by 90% while improving accuracy to 98%.",
+    image: "/images/case-studies/healthcare-ai.jpg",
+    featured: true},
   {,
-    id: 3;
-    title: "Financial Services AI Automation";
-    company: "Major Bank";
-    industry: "Finance";
+    id: 3,
+    title: "Financial Services AI Automation",
+    company: "Major Bank",
+    industry: "Finance",
     results: {,
-      roi: "3200%";
-      processingTime: "85% reduction";
-      fraudDetection: "99.5%";
-      customerSatisfaction: "60% increase",};
-    description: "Transformed loan processing and fraud detection with AIreducing processing time from days to minutes.";
-    image: "/images/case-studies/finance-ai.jpg";
-    featured: false,};
+      roi: "3200%",
+      processingTime: "85% reduction",
+      fraudDetection: "99.5%",
+      customerSatisfaction: "60% increase"},
+    description: "Transformed loan processing and fraud detection with AIreducing processing time from days to minutes.",
+    image: "/images/case-studies/finance-ai.jpg",
+    featured: false},
   {,
-    id: 4;
-    title: "Retail AI Customer Experience";
-    company: "Global Retail Chain";
-    industry: "Retail";
+    id: 4,
+    title: "Retail AI Customer Experience",
+    company: "Global Retail Chain",
+    industry: "Retail",
     results: {,
-      roi: "2100%";
-      salesIncrease: "35%";
-      customerRetention: "50%";
-      inventoryOptimization: "40%",};
-    description: "Implemented AI-powered personalization and inventory optimization across 1000+ stores globally.";
-    image: "/images/case-studies/retail-ai.jpg";
-    featured: false,}
-];
+      roi: "2100%",
+      salesIncrease: "35%",
+      customerRetention: "50%",
+      inventoryOptimization: "40%"},
+    description: "Implemented AI-powered personalization and inventory optimization across 1000+ stores globally.",
+    image: "/images/case-studies/retail-ai.jpg",
+    featured: false}
+],
 export default function RevolutionaryCaseStudiesShowcase() {,
   return (,
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center mb-16",
         >,
           <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 rounded-full px-6 py-2 mb-6">,
@@ -71,23 +71,23 @@ export default function RevolutionaryCaseStudiesShowcase() {,
             Real Results from Real Businesses,
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
             Discover how leading companies are achieving extraordinary results with our AI solutions.,
-            These 'arent just numbers—'they', 're transformations that matter.,
+            These 'arent just numbers—'theyre transformations that matter.,
           </p>,
         </div>,
         {/* Featured Case Studies */}
         <div className="grid lg: grid-cols-2 gap-8 mb-16">,
           {caseStudies.filter(study => study.featured).map((studyindex) => (,
             <div,
-              key={study.id,}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              key={study.id}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-300 group",
             >,
               <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600">,
                 <div className="absolute inset-0 bg-black/20"></div>,
                 <div className="absolute top-4 left-4">,
                   <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">,
-                    {study.industry,}
+                    {study.industry}
                 <div className="absolute bottom-4 left-4 right-4">,
                   <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>,
                   <p className="text-white/90 text-sm">{study.company}</p>,
@@ -109,23 +109,23 @@ export default function RevolutionaryCaseStudiesShowcase() {,
                 </a>,
               </div>,
             </div>,
-          )),}
+          ))}
         {/* Additional Case Studies */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="grid md: grid-cols-2 gap-6 mb-12",
         >,
           {caseStudies.filter(study => !study.featured).map((studyindex) => (,
             <div,
-              key={study.id,}
-              whileInView={{ opacity: 1x: 0 ,}}
-              viewport={{ once: true ,}}
+              key={study.id}
+              whileInView={{ opacity: 1x: 0 }}
+              viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6 hover: shadow-xl transition-all duration-300 group",
             >,
               <div className="flex items-start justify-between mb-4">,
                 <div>,
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{study.title,}</h3>,
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{study.title}</h3>,
                   <p className="text-gray-600 text-sm">{study.company} • {study.industry}</p>,
                 <div className="text-right">,
                   <div className="text-2xl font-bold text-green-600">{study.results.roi}</div>,
@@ -147,13 +147,12 @@ export default function RevolutionaryCaseStudiesShowcase() {,
                   <ArrowRight className="w-3 h-3 ml-1" />,
                 </a>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* CTA Section */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white",
         >,
           <h3 className="text-2xl md: text-3xl font-bold mb-4">,
@@ -179,9 +178,9 @@ export default function RevolutionaryCaseStudiesShowcase() {,
         </div>,
       </div>,
     </section>,
-  ),};
-export default RevolutionaryCaseStudiesShowcase;
-import React from "react";
+  )},
+export default RevolutionaryCaseStudiesShowcase,
+import React from "react",
 const function RevolutionaryCaseStudiesShowcase() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -192,7 +191,7 @@ const function RevolutionaryCaseStudiesShowcase() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function RevolutionaryCaseStudiesShowcase() {;
+  ),
+},
+export default function RevolutionaryCaseStudiesShowcase() {,
 }}}

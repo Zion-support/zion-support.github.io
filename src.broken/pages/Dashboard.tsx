@@ -1,20 +1,20 @@
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CommunityDiscussion } from "@/components/CommunityDiscussion";
-import { Badge } from "@/components/ui/badge";
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CommunityDiscussion } from "@/components/CommunityDiscussion",
+import { Badge } from "@/components/ui/badge",
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-import { useFavorites } from '@/hooks/useFavorites';
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { useGetOrdersQuery } from '@/hooks/useOrders',
+import { useFavorites } from '@/hooks/useFavorites',
+import { useToast } from "@/hooks/use-toast",
+import { Link } from "react-router-dom",
 
- from 'lucide - react';
+ from 'lucide - react',
 
-  const stats = [icon: <TrendingUp className="h-6 w-6 text-orange -500" />;
-    };
-  ];
+  const stats = [icon: <TrendingUp className="h-6 w-6 text-orange -500" />
+    },
+  ],
 
   const recentProjects = [{
       id: 1,
@@ -46,9 +46,9 @@ import { Link } from "react-router-dom";
       status: "In Progress",
       progress: 60,
       dueDate: "2024 - 02 - 28",
-      priority: "Medium";
-    };
-  ];
+      priority: "Medium"
+    },
+  ],
 
   const notifications = [{
       id: 1,
@@ -69,9 +69,9 @@ import { Link } from "react-router-dom";
       title: "System update",
       message: "Scheduled maintenance completed successfully",
       time: "1 day ago",
-      read: true;
-    };
-  ];
+      read: true
+    },
+  ],
 
   const quickActions = [{
       title: "Create Project",
@@ -97,48 +97,48 @@ import { Link } from "react-router-dom";
       icon: <MessageSquare className="h-8 w-8 text-zion -purple" />,
       color: "bg-zion - purple / 10 border-zion - purple / 20"
     }
-    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from - blue - 500 to - cyan - 500' },;
-    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from - purple - 500 to - pink - 500' },;
-    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from - indigo - 500 to - blue - 500' },;
-    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from - green - 500 to - emerald - 500' },;
-    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from - orange - 500 to - red - 500' },;
-    { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from - teal - 500 to - green - 500' };
-  ];
+    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from - blue - 500 to - cyan - 500' },
+    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from - purple - 500 to - pink - 500' },
+    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from - indigo - 500 to - blue - 500' },
+    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from - green - 500 to - emerald - 500' },
+    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from - orange - 500 to - red - 500' },
+    { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from - teal - 500 to - green - 500' },
+  ],
 
-  const recentServices = [;
-    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from - blue - 500 to - indigo - 500' },;
-    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from - indigo - 500 to - blue - 500' },;
-    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from - red - 500 to - orange - 500' },;
-    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from - purple - 500 to - indigo - 500' },;
-    { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from - cyan - 500 to - blue - 500' };
-  ];
+  const recentServices = [,
+    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from - blue - 500 to - indigo - 500' },
+    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from - indigo - 500 to - blue - 500' },
+    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from - red - 500 to - orange - 500' },
+    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from - purple - 500 to - indigo - 500' },
+    { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from - cyan - 500 to - blue - 500' },
+  ],
 
-  const upcomingEvents = [;
-    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;
-    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
-    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
-    { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom };
-  ];
+  const upcomingEvents = [,
+    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },
+    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },
+    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },
+    { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom },
+  ],
 
   const handleTestNotification = async () => {
     if (!user || !user.id) {
-      toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
-      return;
+      toast({ title: "Error", description: "User ID not found.", variant: "destructive" }),
+      return,
     }
-    const result = await createTestNotification(user.id);
+    const result = await createTestNotification(user.id),
     if (result.success) {
       toast({
         title: "Test notification created",
-        description: "Check your notification center",
-      });
+        description: "Check your notification center"
+      }),
     } else {
       toast({
         title: "Error creating test notification",
         description: "Something went wrong",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     }
-  };
+  },
 
   return (
     <>
@@ -217,18 +217,18 @@ import { Link } from "react-router-dom";
                       variant="outline"
                       onClick={async () => {
                         if (!user || !user.id) {
-                          toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
-                          return;
+                          toast({ title: "Error", description: "User ID not found.", variant: "destructive" }),
+                          return,
                         }
                         await createOnboardingNotification({
                           userId: user.id,
                           missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
-                        });
+                        }),
                         toast({
                           title: "Onboarding notification sent",
                           description: "Check your notification center"
-                        });
+                        }),
                       }}
                     >
                       <Settings size={16} className="text-zion-purple" />
@@ -240,8 +240,8 @@ import { Link } from "react-router-dom";
                       variant="outline"
                       onClick={async () => {
                         if (!user || !user.id) {
-                          toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
-                          return;
+                          toast({ title: "Error", description: "User ID not found.", variant: "destructive" }),
+                          return,
                         }
                         await createSystemNotification({
                           userId: user.id,
@@ -249,11 +249,11 @@ import { Link } from "react-router-dom";
                           message: "We've added a new notification center to help you stay updated with important information.",
                           actionUrl: "/notifications",
                           actionText: "Explore Now"
-                        });
+                        }),
                         toast({
                           title: "System notification sent",
                           description: "Check your notification center"
-                        });
+                        }),
                       }}
                     >
                       <Bell size={16} className="text-yellow-500" />
@@ -411,7 +411,7 @@ import { Link } from "react-router-dom";
 
             {/* Notifications */}
             <motion.div
-              className="bg-zion - blue - dark border border-zion - purple / 20 rounded-lg p -6";
+              className="bg-zion - blue - dark border border-zion - purple / 20 rounded-lg p -6",
               initial = {
   { opacity: 0,
   x: 20
@@ -551,7 +551,7 @@ import { Link } from "react-router-dom";
         </div>
 
         {/* Service Performance Chart */}
-        <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray - 200 p -6">;
+        <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray - 200 p -6">,
           <div className="flex items - center justify - between mb-6">
             <h2 className="text-xl font - semibold text-gray -900">Service Performance</h2>
             <div className="flex items - center space - x-4">
@@ -571,13 +571,13 @@ import { Link } from "react-router-dom";
           </div>
 
           {/* Placeholder for chart */}
-          <div className="h-64 bg-gray - 50 rounded-lg flex items - center justify -center">;
+          <div className="h-64 bg-gray - 50 rounded-lg flex items - center justify -center">,
             <div className="text-center">
               <BarChart3 className="h-12 w-12 text-gray - 400 mx - auto mb-2" />
               <p className="text-gray -500">Performance chart will be displayed here</p>
               <p className="text-sm text-gray -400">Integration with analytics service required</p>
             </div>
-          </div>;
+          </div>,
         </div>
       </div>
     </div>) }
@@ -596,12 +596,12 @@ import { Link } from "react-router-dom";
           <div className="h-64 bg-gray - 50 rounded-lg flex items - center justify -center">
             <div className="text-center">
               <BarChart3 className="h-12 w-12 text-gray - 400 mx - auto mb-2" />
-              <p className="text-gray -500">Performance chart will be displayed here</p>;
-              <p className="text-sm text-gray -400">Integration with analytics service required</p>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
+              <p className="text-gray -500">Performance chart will be displayed here</p>,
+              <p className="text-sm text-gray -400">Integration with analytics service required</p>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) ,
 }
 }

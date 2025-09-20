@@ -1,2 +1,2 @@
-  return repoWebUrl?.replace(/#.*$/, "");
+  return repoWebUrl?.replace(/#.*$/, ""),
 }

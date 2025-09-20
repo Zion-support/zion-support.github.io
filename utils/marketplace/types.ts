@@ -1,6 +1,6 @@
 
 ,
-  id: string;
-  createdAtIso: string;
-  client_id: string;
-  talent_slug: string;
+  id: string,
+  createdAtIso: string,
+  client_id: string,
+  talent_slug: string,

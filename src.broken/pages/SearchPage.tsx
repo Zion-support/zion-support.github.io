@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useEffect, useState } from "react",
+import { useRouter } from 'next/router',
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
+import {logErrorToProduction} from '@/utils/productionLogger',
 import {
   Tabs,
   TabsContent,
   TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+  TabsTrigger
+} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 
     // Cloud Services
@@ -21,7 +21,7 @@ import { Loader2 } from 'lucide-react'
       url: '/services / cloud - devops',
       type: 'service',
       category: 'Cloud & Infrastructure',
-      tags: ['Cloud', 'DevOps', 'Automation', 'Infrastructure', 'AWS', 'Azure'],
+      tags: ['CloudDevOps', 'AutomationInfrastructure', 'AWSAzure'],
       relevance: 0.87,
       lastUpdated: '2024 - 11 - 20',
       icon: Cloud
@@ -33,7 +33,7 @@ import { Loader2 } from 'lucide-react'
       url: '/services / it - infrastructure',
       type: 'service',
       category: 'Cloud & Infrastructure',
-      tags: ['Infrastructure', 'IT', 'Enterprise', 'Networking', 'Security'],
+      tags: ['InfrastructureIT', 'EnterpriseNetworking', 'Security'],
       relevance: 0.84,
       lastUpdated: '2024 - 11 - 18',
       icon: Server
@@ -47,7 +47,7 @@ import { Loader2 } from 'lucide-react'
       url: '/services / ai - cybersecurity - platform',
       type: 'service',
       category: 'Security & Compliance',
-      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security', 'Compliance'],
+      tags: ['CybersecurityAI', 'Threat DetectionSecurity', 'Compliance'],
       relevance: 0.91,
       lastUpdated: '2024 - 11 - 22',
       icon: Shield,
@@ -60,7 +60,7 @@ import { Loader2 } from 'lucide-react'
       url: '/services / zero - trust - network - access',
       type: 'service',
       category: 'Security & Compliance',
-      tags: ['Zero Trust', 'Security', 'Network', 'Access Control', 'Compliance'],
+      tags: ['Zero TrustSecurity', 'NetworkAccess Control', 'Compliance'],
       relevance: 0.86,
       lastUpdated: '2024 - 11 - 15',
       icon: Lock
@@ -74,66 +74,65 @@ import { Loader2 } from 'lucide-react'
       url: '/services / quantum - computing',
       type: 'service',
       category: 'Quantum Computing',
-      tags: ['Quantum Computing', 'Optimization', 'Cryptography', 'AI', 'Research'],
+      tags: ['Quantum ComputingOptimization', 'CryptographyAI', 'Research'],
       relevance: 0.88,
       lastUpdated: '2024 - 11 - 10',
       icon: Atom
     },
 
 export default function SearchPage() {
-  const router = useRouter();
-  const initial = (router.query.q as string) || "";
-  const [query, setQuery] = useState(initial);
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
+  const router = useRouter(),
+  const initial = (router.query.q as string) || "",
+  const [query, setQuery] = useState(initial),
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [loading, setLoading] = useState(false),
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
   useEffect(() => {
     if(searchQuery) {
-      performSearch () ;
+      performSearch () 
     }
-  }, [searchQuery, selectedFilters, sortBy]) ;
+  }, [searchQuery, selectedFilters, sortBy]) ,
 
   const performSearch = async () => {
-    setIsSearching(true) ;
+    setIsSearching(true) ,
 
     // Simulate API call delay
-    await new Promise(resolve => setTimeout (resolve, 800) ) ;
+    await new Promise(resolve => setTimeout (resolve, 800) ) ,
 
     let filtered = mockSearchResults.filter(result => {
       const matchesQuery = result.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                           result.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-                          result.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
+                          result.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
 
       const matchesFilters = selectedFilters.size === 0 ||
                            selectedFilters.has(result.category.toLowerCase () .replace(/\s+/g, '-') ) ||
-                           selectedFilters.has(result.type) ;
+                           selectedFilters.has(result.type) ,
 
-      return matchesQuery && matchesFilters;
-    }) ;
+      return matchesQuery && matchesFilters,
+    }) ,
 
     // Sort results
     filtered.sort((a, b) => {
       switch(sortBy) {
         case 'date':
-          return new Date(b.lastUpdated) .getTime () - new Date(a.lastUpdated) .getTime () ;
+          return new Date(b.lastUpdated) .getTime () - new Date(a.lastUpdated) .getTime () ,
         case 'popularity':
-          return b.relevance - a.relevance;
-        default:
-          return b.relevance - a.relevance;
+          return b.relevance - a.relevance,
+        default: return b.relevance - a.relevance
       }
-    }) ;
+    }) ,
 
-    setSearchResults(filtered) ;
-    setIsSearching(false) ;
-  };
+    setSearchResults(filtered) ,
+    setIsSearching(false) ,
+  },
 
   const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes (value) ? prev[filterType].filter(v => v !== value) : [...prev[filterType], value]
-    }) ) ;
-  };
+    }) ) ,
+  },
 
   const clearAllFilters = () => {
     setActiveFilters({
@@ -142,64 +141,64 @@ export default function SearchPage() {
       location: [],
       priceRange: [],
       rating: []
-    }) ;
-  };
+    }) ,
+  },
 
   // Handle search
   const handleSearch = useCallback((e: React.FormEvent) => {
-    e.preventDefault () ;
+    e.preventDefault () ,
     if(searchQuery.trim () ) {
-      setSearchParams({ q: searchQuery.trim () }) ;
-      setIsSearching(true) ;
-      setTimeout(() => setIsSearching(false) , 1000) ;
+      setSearchParams({ q: searchQuery.trim () }) ,
+      setIsSearching(true) ,
+      setTimeout(() => setIsSearching(false) , 1000) ,
     }
-  };
+  },
 
   const toggleFilter = (filterId: string) => {
-    const newFilters = new Set(selectedFilters) ;
+    const newFilters = new Set(selectedFilters) ,
     if(newFilters.has (filterId) ) {
-      newFilters.delete(filterId) ;
+      newFilters.delete(filterId) 
     } else {
-      newFilters.add(filterId) ;
+      newFilters.add(filterId) ,
     }
-    setSelectedFilters(newFilters) ;
-  };
+    setSelectedFilters(newFilters) ,
+  },
 
   // Clear all filters
   const clearFilters = () => {
-    setSelectedCategory('all') ;
-    setSelectedTags([]) ;
-    setSearchQuery('') ;
-    setSearchParams({}) ;
-  };
+    setSelectedCategory('all') ,
+    setSelectedTags([]) ,
+    setSearchQuery('') ,
+    setSearchParams({}) ,
+  },
 
   const getResultIcon = (type: string) => {
     switch(type) {
-      case 'service': return Zap;
-      case 'page': return FileText;
-      case 'blog': return BookOpen;
-      case 'case - study': return FileText;
-      case 'documentation': return Code;
-      default: return FileText;
+      case 'service': return Zap,
+      case 'page': return FileText,
+      case 'blog': return BookOpen,
+      case 'case - study': return FileText,
+      case 'documentation': return Code,
+      default: return FileText
     }
-  };
+  },
 
   const getResultColor = (type: string) => {
     switch(type) {
-      case 'service': return 'from - blue - 500 to - indigo - 500';
-      case 'blog': return 'from - green - 500 to - emerald - 500';
-      case 'case - study': return 'from - purple - 500 to - pink - 500';
-      case 'documentation': return 'from - orange - 500 to - red - 500';
-      default: return 'from - gray - 500 to - slate - 500';
+      case 'service': return 'from - blue - 500 to - indigo - 500',
+      case 'blog': return 'from - green - 500 to - emerald - 500',
+      case 'case - study': return 'from - purple - 500 to - pink - 500',
+      case 'documentation': return 'from - orange - 500 to - red - 500',
+      default: return 'from - gray - 500 to - slate - 500'
     }
-  };
+  },
 
   // Calculate filter counts
   filterOptions.forEach(filter => {
     filter.count = mockSearchResults.filter (result =>
       result.category.toLowerCase () .replace(/\s+/g, '-') === filter.id ||
-      result.type === filter.id) .length;
-  }) ;
+      result.type === filter.id) .length,
+  }) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">
       {/* Header */}
@@ -356,7 +355,7 @@ export default function SearchPage() {
                 <Search className="w-8 h-8 text-slate -400" />
               </div>) }
           </div>
-        </div>;
+        </div>,
       </div>
-    </div>;) ;
+    </div>,) ,
 }

@@ -1,10 +1,10 @@
-import React from 'react';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Building, Shield, Brain, Zap, Cpu, Globe, 
   Lock, CheckCircle, ArrowRight, BarChart3, Users
-} from 'lucide-react';
+} from 'lucide-react',
 export default function GovernmentSolutions() {,
   return (,
     <Layout>,
@@ -13,9 +13,9 @@ export default function GovernmentSolutions() {,
         <section className="relative py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center",
             >,
               <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-indigo-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent mb-6">,
@@ -32,23 +32,23 @@ export default function GovernmentSolutions() {,
         <section className="py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center mb-16",
             >,
               <h2 className="text-4xl font-bold text-white mb-4">Our Government Solutions</h2>,
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">,
-                Cutting-edge technology solutions designed specifically for federal;
+                Cutting-edge technology solutions designed specifically for federal,
                 state, and local government agencies and departments.,
               </p>,
             </motion.div>,
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {/* Cybersecurity */,}
+              {/* Cybersecurity */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.3 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 className="bg-gradient-to-br from-red-900/20 to-pink-900/20 border border-red-500/20 rounded-2xl p-8 hover: border-red-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -58,7 +58,7 @@ export default function GovernmentSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Cybersecurity Platform</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Advanced cybersecurity platform with threat detection;
+                  Advanced cybersecurity platform with threat detection,
                   incident response, and compliance management.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -79,11 +79,11 @@ export default function GovernmentSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Digital Services */,}
+              {/* Digital Services */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.4 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
                 className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/20 rounded-2xl p-8 hover: border-blue-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -93,7 +93,7 @@ export default function GovernmentSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Digital Citizen Services</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Modern digital services platform for citizen engagement;
+                  Modern digital services platform for citizen engagement,
                   online applications, and government service delivery.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -114,11 +114,11 @@ export default function GovernmentSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Data Analytics */,}
+              {/* Data Analytics */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.5 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-2xl p-8 hover: border-green-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -128,7 +128,7 @@ export default function GovernmentSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Data Analytics Platform</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Comprehensive data analytics platform for government insights;
+                  Comprehensive data analytics platform for government insights,
                   performance monitoring, and decision support.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -149,11 +149,11 @@ export default function GovernmentSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* AI Operations */,}
+              {/* AI Operations */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.6 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 rounded-2xl p-8 hover: border-purple-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -163,7 +163,7 @@ export default function GovernmentSolutions() {,
                   <h3 className="text-2xl font-bold text-white">AI Operations Center</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  AI-powered operations center for government efficiency;
+                  AI-powered operations center for government efficiency,
                   automation, and intelligent decision-making.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -184,11 +184,11 @@ export default function GovernmentSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Infrastructure */,}
+              {/* Infrastructure */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.7 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-2xl p-8 hover: border-yellow-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -198,7 +198,7 @@ export default function GovernmentSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Critical Infrastructure</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Secure infrastructure solutions for government systems;
+                  Secure infrastructure solutions for government systems,
                   networks, and critical operations.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -219,11 +219,11 @@ export default function GovernmentSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Compliance */,}
+              {/* Compliance */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.8 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
                 className="bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border border-teal-500/20 rounded-2xl p-8 hover: border-teal-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -233,7 +233,7 @@ export default function GovernmentSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Compliance Management</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Automated compliance management system for government regulations;
+                  Automated compliance management system for government regulations,
                   audits, and policy enforcement.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -257,13 +257,13 @@ export default function GovernmentSolutions() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/20 to-blue-900/20">,
           <div className="container mx-auto max-w-4xl text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.9 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
             >,
               <h2 className="text-4xl font-bold text-white mb-6">,
                 Ready to Transform Government?,
@@ -290,6 +290,5 @@ export default function GovernmentSolutions() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),}
+    </Layout>)}
 ,

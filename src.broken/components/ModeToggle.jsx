@@ -15,6 +15,6 @@ export function ModeToggle() {
         />
       </svg>
     </button>
-  );
+  ),
 }
 "

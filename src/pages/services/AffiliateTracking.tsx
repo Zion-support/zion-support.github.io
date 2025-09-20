@@ -1,79 +1,54 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from "lucide-react";
 export default function AffiliateTracking() {
-  const features: { title: string; description: string }[] = [
+  const features: { title: string, description: string }[] = [
     {
-      title: 'Multi-channel attribution',
-      description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.'
+      title: 'Multi-channel attribution',description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.'
     },
     {
-      title: 'Real-time fraud prevention',
-      description: 'Auto-flag suspicious clicks, proxy traffic and cookie stuffing using device fingerprinting.'
+      title: 'Real-time fraud prevention',description: 'Auto-flag suspicious clicks, proxy traffic and cookie stuffing using device fingerprinting.'
     },
     {
-      title: 'Payout automation',
-      description: 'Automate tiered commissions, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'
+      title: 'Payout automation',description: 'Automate tiered commissions, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'
     },
     {
-      title: 'Partner CRM',
-      description: 'Manage applications, onboarding, contracts, and partner lifecycle with nurture workflows.'
+      title: 'Partner CRM',description: 'Manage applications, onboarding, contracts, and partner lifecycle with nurture workflows.'
     },
     {
-      title: 'E‑commerce integrations',
-      description: 'Native integrations for Shopify, WooCommerce, BigCommerce and custom checkouts via webhooks.'
+      title: 'E‑commerce integrations',description: 'Native integrations for Shopify, WooCommerce, BigCommerce and custom checkouts via webhooks.'
     },
     {
-      title: 'Analytics & BI',
-      description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
+      title: 'Analytics & BI',description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
     }
-  ];
+  ],
 
   const plans = [
     {
-      name: 'Starter',
-      price: 49,
-      unit: 'month',
-      bestFor: 'Founders validating their first affiliate program',
-      bullets: [
-        'Up to 200 partners',
-        'Basic tracking links and coupons',
-        'Manual approvals and payouts',
-        'Email support'
+      name: 'Starter',price: 49,unit: 'month',bestFor: 'Founders validating their first affiliate program',bullets: [
+        'Up to 200 partnersBasic tracking links and coupons';
+        'Manual approvals and payoutsEmail support'
       ]
     },
     {
-      name: 'Growth',
-      price: 199,
-      unit: 'month',
-      bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',
-      bullets: [
-        'Up to 2,500 partners',
-        'Attribution across links, QR and coupons',
-        'Fraud prevention + sandbox',
-        'Automated Stripe/PayPal payouts',
+      name: 'Growth',price: 199,unit: 'month',bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',bullets: [
+        'Up to 2,500 partnersAttribution across links, QR and coupons',
+        'Fraud prevention + sandboxAutomated Stripe/PayPal payouts',
         'Slack alerts and webhooks'
       ]
     },
     {
-      name: 'Enterprise',
-      price: 599,
-      unit: 'month',
-      bestFor: 'Global programs, agencies and marketplaces',
+      name: 'Enterprise',price: 599,unit: 'month',bestFor: 'Global programs, agencies and marketplaces',
       bullets: [
-        'Unlimited partners and campaigns',
-        'SAML SSO and audit trails',
-        'Custom data retention + warehouse sync',
-        'Dedicated CSM and 99.9% SLA'
+        'Unlimited partners and campaignsSAML SSO and audit trails';
+        'Custom data retention + warehouse syncDedicated CSM and 99.9% SLA'
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -227,7 +202,7 @@ export default function AffiliateTracking() {
       </section>
 
       {/* References */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-white text-lg font-semibold mb-4">Helpful links</h3>
           <ul className="space-y-2">
@@ -250,7 +225,7 @@ export default function AffiliateTracking() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
 // Duplicate leftover block removed

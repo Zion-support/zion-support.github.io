@@ -1,25 +1,25 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import Enhanced2026ServicesShowcaseV4 from '../components/sections/Enhanced2026ServicesShowcaseV4';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026',
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
+import Enhanced2026ServicesShowcaseV4 from '../components/sections/Enhanced2026ServicesShowcaseV4',
+import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4',
+import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4',
+import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4',
+import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4',
 export default function ServicesShowcase2026V4() {,
   const allServices = [,
-    ...innovative2026MicroSaasServicesV4;
-    ...emergingTech2026ServicesV4;
-    ...enterpriseIT2026ServicesV4;
-    ...innovative2026AIServicesV4,
-  ];
+    ...innovative2026MicroSaasServicesV4,
+    ...emergingTech2026ServicesV4,
+    ...enterpriseIT2026ServicesV4,
+    ...innovative2026AIServicesV4
+  ],
   const contactInfo = {,
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (,
     <UltraFuturisticBackground2026>,
       <div className="min-h-screen">,
@@ -35,15 +35,15 @@ export default function ServicesShowcase2026V4() {,
           <meta property="og:type" content="website" />,
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v4" />,
         </Head>,
-        {/* Ultra Advanced Navigation */,}
+        {/* Ultra Advanced Navigation */}
         <UltraAdvancedNavigation2026 />,
         {/* Hero Section */}
         <section className="py-32 px-4 sm: px-6 lg:px-8 relative overflow-hidden">,
           <div className="max-w-7xl mx-auto text-center relative z-10">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h1 className="text-5xl md: text-7xl font-bold mb-8">,
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,
@@ -58,9 +58,9 @@ export default function ServicesShowcase2026V4() {,
               {/* Service Categories */}
               <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">,
                 <motion.div,
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  animate={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.6, delay: 0.1 ,}}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
                   className="text-center",
                 >,
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-3">,
@@ -70,9 +70,9 @@ export default function ServicesShowcase2026V4() {,
                   <p className="text-sm text-gray-400">Consciousness & Intelligence</p>,
                 </motion.div>,
                 <motion.div,
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  animate={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.6, delay: 0.2 ,}}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-center",
                 >,
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-3">,
@@ -82,9 +82,9 @@ export default function ServicesShowcase2026V4() {,
                   <p className="text-sm text-gray-400">Computing & Security</p>,
                 </motion.div>,
                 <motion.div,
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  animate={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.6, delay: 0.3 ,}}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
                   className="text-center",
                 >,
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-3">,
@@ -94,9 +94,9 @@ export default function ServicesShowcase2026V4() {,
                   <p className="text-sm text-gray-400">Neuromorphic & Holographic</p>,
                 </motion.div>,
                 <motion.div,
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  animate={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.6, delay: 0.4 ,}}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-center",
                 >,
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-3">,
@@ -119,10 +119,10 @@ export default function ServicesShowcase2026V4() {,
         <section className="py-20 px-4 sm: px-6 lg:px-8 relative">,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,
@@ -134,17 +134,17 @@ export default function ServicesShowcase2026V4() {,
               </p>,
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">,
                 <motion.a,
-                  href={`tel:${contactInfo.mobile,}`}
-                  whileHover={{ scale: 1.05 ,}}
-                  whileTap={{ scale: 0.95 ,}}
+                  href={`tel:${contactInfo.mobile}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover: shadow-xl hover:shadow-cyan-500/40 transition-all duration-200",
                 >,
-                  <span>Call {contactInfo.mobile,}</span>,
+                  <span>Call {contactInfo.mobile}</span>,
                 </motion.a>,
                 <motion.a,
-                  href={`mailto: ${contactInfo.email,}`}
-                  whileHover={{ scale: 1.05 ,}}
-                  whileTap={{ scale: 0.95 ,}}
+                  href={`mailto: ${contactInfo.email}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500/10 transition-all duration-200",
                 >,
                   <span>Email Us</span>,
@@ -154,7 +154,7 @@ export default function ServicesShowcase2026V4() {,
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">,
                   <div>,
                     <p className="text-cyan-400 font-medium mb-1">Phone</p>,
-                    <p className="text-white font-medium">{contactInfo.mobile,}</p>,
+                    <p className="text-white font-medium">{contactInfo.mobile}</p>,
                   </div>,
                   <div>,
                     <p className="text-purple-400 font-medium mb-1">Email</p>,
@@ -170,6 +170,5 @@ export default function ServicesShowcase2026V4() {,
           </div>,
         </section>,
       </div>,
-    </UltraFuturisticBackground2026>,
-  );
+    </UltraFuturisticBackground2026>),
 }

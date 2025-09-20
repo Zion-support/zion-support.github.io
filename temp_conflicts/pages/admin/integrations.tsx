@@ -1,67 +1,67 @@
-import { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
+import { useEffect, useMemo, useState } from 'react',
+import Head from 'next/head',
 
-interface ProviderMeta { id: string; name: string; category: 'crm' | 'ats'; description?: string }
+interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
 
 function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnected' }) {
-  const label = status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
-  return <span className="text-xl" title={status}>{label}</span>;
+  const label = status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌',
+  return <span className="text-xl" title={status}>{label}</span>,
 }
 
 export default function AdminIntegrationsPage() {
-  const [providers, setProviders] = useState<ProviderMeta[]>([]);
-  const [connections, setConnections] = useState<ConnectionMap>({});
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
+  const [providers, setProviders] = useState<ProviderMeta[]>([]),
+  const [connections, setConnections] = useState<ConnectionMap>({}),
+  const [loading, setLoading] = useState(false),
+  const [selected, setSelected] = useState<string | null>(null),
+  const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
 
   async function refresh() {
     const [p, s] = await Promise.all([
       fetch('/api/integrations/providers').then(r => r.json()),
-      fetch('/api/integrations/status').then(r => r.json()),
-    ]);
-    setProviders(p.providers || []);
-    setConnections(s.connections || {});
+      fetch('/api/integrations/status').then(r => r.json())
+    ]),
+    setProviders(p.providers || []),
+    setConnections(s.connections || {}),
   }
 
-  useEffect(() => { refresh(); }, []);
+  useEffect(() => { refresh(), }, []),
 
   async function connect(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
       // Open mock oauth popup
-      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauth', 'width=500,height=700');
-      await new Promise(r => setTimeout(r, 500));
-      await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
-      await refresh();
-    } finally { setLoading(false); }
+      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700'),
+      await new Promise(r => setTimeout(r, 500)),
+      await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) }),
+      await refresh(),
+    } finally { setLoading(false), }
   }
 
   async function disconnect(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
-      await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
-      await refresh();
-    } finally { setLoading(false); }
+      await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
+      await refresh(),
+    } finally { setLoading(false), }
   }
 
   async function resync(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
-      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
-      await refresh();
-    } finally { setLoading(false); }
+      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
+      await refresh(),
+    } finally { setLoading(false), }
   }
 
   const grouped = useMemo(() => ({
     crm: providers.filter(p => p.category === 'crm'),
-    ats: providers.filter(p => p.category === 'ats'),
-  }), [providers]);
+    ats: providers.filter(p => p.category === 'ats')
+  }), [providers]),
 
   function Card({ p }: { p: ProviderMeta }) {
-    const conn = connections[p.id] || { status: 'disconnected' };
-    const isConnected = conn.status === 'connected';
+    const conn = connections[p.id] || { status: 'disconnected' },
+    const isConnected = conn.status === 'connected',
     return (
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
         <div className="flex items-center justify-between">
@@ -87,13 +87,13 @@ export default function AdminIntegrationsPage() {
           )}
         </div>
       </div>
-    );
+    ),
   }
 
   function RulesModal() {
-    if (!selected) return null;
-    const provider = providers.find(p => p.id === selected)!;
-    const isCrm = provider.category === 'crm';
+    if (!selected) return null,
+    const provider = providers.find(p => p.id === selected)!,
+    const isCrm = provider.category === 'crm',
     return (
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
@@ -119,11 +119,11 @@ export default function AdminIntegrationsPage() {
           </div>
           <div className="mt-4 flex justify-end gap-2">
             <button className="px-3 py-1.5 rounded border text-sm" onClick={() => setSelected(null)}>Close</button>
-            <button className="px-3 py-1.5 rounded bg-black text-white text-sm" onClick={async () => { await connect(provider.id); setSelected(null); }}>Save</button>
+            <button className="px-3 py-1.5 rounded bg-black text-white text-sm" onClick={async () => { await connect(provider.id), setSelected(null), }}>Save</button>
           </div>
         </div>
       </div>
-    );
+    ),
   }
 
   return (
@@ -149,7 +149,7 @@ export default function AdminIntegrationsPage() {
 
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-2">Zapier</h2>
-          <div className="text-sm text-gray-600">Polling endpoints:</div>
+          <div className="text-sm text-gray-600">Polling endpoints: </div>
           <ul className="list-disc pl-6 text-sm mt-2">
             <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
@@ -163,19 +163,19 @@ export default function AdminIntegrationsPage() {
       </main>
       <RulesModal />
     </>
-  );
+  )
 }
 
 function ManualOverrideForm() {
-  const [jobId, setJobId] = useState('');
-  const [disableCrmSync, setDisableCrmSync] = useState(false);
-  const [disableAtsSync, setDisableAtsSync] = useState(false);
-  const [message, setMessage] = useState('');
+  const [jobId, setJobId] = useState(''),
+  const [disableCrmSync, setDisableCrmSync] = useState(false),
+  const [disableAtsSync, setDisableAtsSync] = useState(false),
+  const [message, setMessage] = useState(''),
 
   async function save() {
-    setMessage('');
-    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
-    if (res.ok) setMessage('Saved'); else setMessage('Error');
+    setMessage(''),
+    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
+    if (res.ok) setMessage('Saved'), else setMessage('Error'),
   }
 
   return (
@@ -192,5 +192,5 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

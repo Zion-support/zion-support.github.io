@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
-      ],
+      ]
     },
     {
       category: 'Cloud & Infrastructure',
@@ -13,23 +13,19 @@ export default function Page() {
           description: 'Streamlined development and operations',
           href: '/services / cloud - devops',
           features: [
-            'CI / CD Pipelines',
-            'Infrastructure as Code',
-            'Monitoring',
-            'Automation',
-          ],
+            'CI / CD PipelinesInfrastructure as Code',
+            'MonitoringAutomation'
+          ]
         },
         {
           name: 'FinOps Advisor',
           description: 'Cloud cost optimization and management',
           href: '/services / finops - advisor',
-          features: ['Cost Analysis',
-            'Resource Optimization',
-            'Budget Management',
-            'ROI Tracking',
-          ],
-        },
-      ],
+          features: ['Cost AnalysisResource Optimization',
+            'Budget ManagementROI Tracking'
+          ]
+        }
+      ]
     },
     {
       category: 'Cybersecurity',
@@ -39,23 +35,19 @@ export default function Page() {
           description: 'AI - powered threat detection and response',
           href: '/services / ai - cybersecurity - platform',
           features: [
-            'Threat Detection',
-            'Automated Response',
-            'Risk Assessment',
-            'Compliance',
-          ],
+            'Threat DetectionAutomated Response',
+            'Risk AssessmentCompliance'
+          ]
         },
         {
           name: 'Zero Trust Network Access',
           description: 'Secure access control and network security',
           href: '/services / zero - trust - network - access',
-          features: ['Identity Verification',
-            'Access Control',
-            'Network Segmentation',
-            'Monitoring',
-          ],
-        },
-      ],
+          features: ['Identity VerificationAccess Control',
+            'Network SegmentationMonitoring'
+          ]
+        }
+      ]
     },
     {
       category: 'Emerging Technologies',
@@ -65,23 +57,19 @@ export default function Page() {
           description: 'Next - generation quantum computing services',
           href: '/services / quantum - computing',
           features: [
-            'Quantum Algorithms',
-            'Optimization',
-            'Simulation',
-            'Research',
-          ],
+            'Quantum AlgorithmsOptimization',
+            'SimulationResearch'
+          ]
         },
         {
           name: 'IoT Edge Computing',
           description: 'Smart device networks and edge processing',
           href: '/services / iot - edge - computing',
-          features: ['Device Management',
-            'Edge Processing',
-            'Real - time Analytics',
-            'Connectivity',
-          ],
-        },
-      ],
+          features: ['Device ManagementEdge Processing',
+            'Real - time AnalyticsConnectivity'
+          ]
+        }
+      ]
     },
     {
       category: 'Micro SaaS Solutions',
@@ -91,25 +79,21 @@ export default function Page() {
           description: 'Customer relationship management for small businesses',
           href: '/services / micro - crm',
           features: [
-            'Contact Management',
-            'Sales Tracking',
-            'Customer Insights',
-            'Automation',
-          ],
+            'Contact ManagementSales Tracking',
+            'Customer InsightsAutomation'
+          ]
         },
         {
           name: 'Website Analytics',
           description: 'Privacy - first analytics for small businesses',
           href: '/services / website - analytics',
-          features: ['Visitor Tracking',
-            'Performance Metrics',
-            'Privacy Compliance',
-            'Insights',
-          ],
-        },
-      ],
-    },
-  ];
+          features: ['Visitor TrackingPerformance Metrics',
+            'Privacy ComplianceInsights'
+          ]
+        }
+      ]
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -222,7 +206,7 @@ export default function Page() {
             <p className="text-xl text-gray - 300 mb-8">
               Join the future of technology with our comprehensive suite of AI,
               cloud, and emerging technology solutions.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button     className="px-8 py-4 bg-gradient - to - r from - blue - 500 to - purple - 600 text-white rounded-lg font - semibold hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale -105">
                 Start Your Journey
               </button>
@@ -233,5 +217,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

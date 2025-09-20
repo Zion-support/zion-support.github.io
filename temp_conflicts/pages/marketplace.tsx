@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 
-interface Job { id: string; title: string; description: string; reward: number; createdByAddress: string; createdAt: number }
-interface Talent { id: string; name: string; skills: string[]; bio?: string }
+interface Job { id: string, title: string, description: string, reward: number, createdByAddress: string, createdAt: number }
+interface Talent { id: string, name: string, skills: string[], bio?: string }
 
 export default function MarketplacePage() {
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [talent, setTalent] = useState<Talent[]>([]);
-  const [title, setTitle] = useState('Build Feature');
-  const [description, setDescription] = useState('Implement mock feature');
-  const [reward, setReward] = useState(100);
-  const [addr, setAddr] = useState('dev:alice');
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [talent, setTalent] = useState<Talent[]>([]),
+  const [title, setTitle] = useState('Build Feature'),
+  const [description, setDescription] = useState('Implement mock feature'),
+  const [reward, setReward] = useState(100),
+  const [addr, setAddr] = useState('dev: alice'),
 
   async function load() {
-    const res = await fetch('/api/devnet/marketplace');
-    const data = await res.json();
-    setJobs(data.jobs || []);
-    setTalent(data.talent || []);
+    const res = await fetch('/api/devnet/marketplace'),
+    const data = await res.json(),
+    setJobs(data.jobs || []),
+    setTalent(data.talent || [])
   }
 
   async function createJob() {
     await fetch('/api/devnet/marketplace', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, description, reward, createdByAddress: addr }),
-    });
-    load();
+      body: JSON.stringify({ title, description, reward, createdByAddress: addr })
+    }),
+    load(),
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(), }, []),
 
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-6">
@@ -67,5 +67,5 @@ export default function MarketplacePage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

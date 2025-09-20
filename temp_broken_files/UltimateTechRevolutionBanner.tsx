@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 const UltimateTechRevolutionBanner: React.FC = () => {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white">,
       <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/50 to-cyan-600/50 backdrop-blur-sm"></div>,
       <div className="absolute inset-0 bg-black/20"></div>,
-      {/* Animated Background Elements */,}
+      {/* Animated Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">,
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>,
         <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>,
@@ -21,7 +21,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {,
             <span className="text-4xl animate-bounce delay-1000">🚀</span>,
           </div>,
           <p className="text-xl md:text-2xl opacity-95 mb-8 max-w-6xl mx-auto">,
-            Experience the most advanced technology showcase featuring Quantum Consciousness Computing;
+            Experience the most advanced technology showcase featuring Quantum Consciousness Computing,
             Interdimensional Neural Networks, and Holographic Reality Engines,
           </p>,
           {/* Feature Highlights */}
@@ -48,7 +48,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {,
               <p className="text-sm opacity-90">Indistinguishable virtual reality experiences</p>,
             </div>,
           </div>,
-          {/* Action Buttons */,}
+          {/* Action Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             <a,
               href="/pages/AdvancedTechShowcase2027",
@@ -63,7 +63,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {,
               🚀 View All Services →,
             </a>,
           </div>,
-          {/* Stats */,}
+          {/* Stats */}
           <div,
             className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto",
           >,
@@ -86,7 +86,6 @@ const UltimateTechRevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default UltimateTechRevolutionBanner;
+    </div>)},
+export default UltimateTechRevolutionBanner,
 </div></div>,

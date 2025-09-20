@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {,
   return (,
     <divsection,
       className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden",
     >,
-      {/* Animated Background Elements */,}
+      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">,
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-pulse"></div>,
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-pulse"></div>,
@@ -13,7 +13,7 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center">,
-          {/* Badge */,}
+          {/* Badge */}
           <div,
             className="inline-flex items-center bg-gradient-to-r from-green-600 to-teal-600 rounded-full px-6 py-3 mb-8 shadow-lg",
           >,
@@ -28,7 +28,7 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {,
               Master Framework,
             </span>,
           </divh1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <divp,
             className="text-xl md: text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90",
           >,
@@ -93,7 +93,7 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div,
             className="flex flex-col sm: flex-row gap-4 justify-center items-center",
           >,
@@ -110,7 +110,7 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {,
               🎯 Start Implementation,
             </a>,
           </div>,
-          {/* Social Proof */,}
+          {/* Social Proof */}
           <div,
             className="mt-12 pt-8 border-t border-white border-opacity-20",
           >,
@@ -127,10 +127,9 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {,
       </div>,
       {/* Floating Elements */}
       <div className="absolute top-16 right-16 w-4 h-4 bg-cyan-400 rounded-full animate-bounce opacity-60"></div>,
-      <div className="absolute top-32 left-16 w-3 h-3 bg-green-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.7s' ,}}></div>,
-      <div className="absolute bottom-40 right-32 w-5 h-5 bg-teal-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1.4s' ,}}></div>,
-    </divsection>,
-  );
-};
-export default AI2026ImplementationMasterFrameworkBanner;
+      <div className="absolute top-32 left-16 w-3 h-3 bg-green-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.7s' }}></div>,
+      <div className="absolute bottom-40 right-32 w-5 h-5 bg-teal-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1.4s' }}></div>,
+    </divsection>),
+},
+export default AI2026ImplementationMasterFrameworkBanner,
 </div></div></div>,

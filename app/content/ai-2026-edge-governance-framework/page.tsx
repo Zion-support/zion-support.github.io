@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import React from 'react';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Edge AI Governance Framework | Zion Tech Group';
-  description: 'A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments.';
-  keywords: ['edge AI governancepolicy-as-code', 'AI guardrailstelemetry', 'AI governance 2026'],
-};
+  title: 'AI 2026: Edge AI Governance Framework | Zion Tech Group',
+  description: 'A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments.',
+  keywords: ['edge AI governancepolicy-as-codeAI guardrailstelemetry', 'AI governance 2026']
+},
 export default function EdgeAIGovernanceFramework2026() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -49,7 +49,6 @@ export default function EdgeAIGovernanceFramework2026() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  );
+    </div>),
 }
 ,

@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface Innovative2026Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const innovative2026Services: Innovative2026Service[] = [
   // AI-Powered Business Intelligence
@@ -49,16 +49,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that predicts market trends, customer behavior, and business opportunities with unprecedented accuracy using quantum computing algorithms.',
     features: [
-      'Quantum AI market prediction engine',
-      'Real-time data analysis from 100+ sources',
-      'Predictive analytics dashboard',
-      'Custom AI model training',
-      'Automated report generation',
-      'Risk assessment algorithms',
-      'Competitive intelligence tracking',
-      'ROI forecasting tools',
-      'API integration suite',
-      'White-label solutions'
+      'Quantum AI market prediction engineReal-time data analysis from 100+ sources',
+      'Predictive analytics dashboardCustom AI model training',
+      'Automated report generationRisk assessment algorithms',
+      'Competitive intelligence trackingROI forecasting tools',
+      'API integration suiteWhite-label solutions'
     ],
     popular: true,
     icon: '🔮',
@@ -71,11 +66,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '2 hours',
     category: 'AI & Business Intelligence',
     realService: true,
-    technology: ['Quantum AI', 'TensorFlow', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS Quantum'],
-    integrations: ['Salesforce', 'HubSpot', 'Slack', 'Microsoft Teams', 'Zapier', 'Tableau', 'Power BI'],
-    useCases: ['Market trend prediction', 'Customer churn prevention', 'Investment decision support', 'Strategic planning', 'Risk management', 'Competitive analysis'],
+    technology: ['Quantum AITensorFlow', 'PythonReact', 'Node.jsPostgreSQL', 'RedisAWS Quantum'],
+    integrations: ['SalesforceHubSpot', 'SlackMicrosoft Teams', 'ZapierTableau', 'Power BI'],
+    useCases: ['Market trend predictionCustomer churn prevention', 'Investment decision supportStrategic planning', 'Risk managementCompetitive analysis'],
     roi: 'Average enterprise customer achieves 500% ROI within 6 months through improved decision-making and market timing.',
-    competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker', 'Domo'],
+    competitors: ['TableauPower BI', 'QlikLooker', 'Domo'],
     marketSize: '$29.5B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -101,16 +96,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Next-generation communication platform that uses quantum encryption to provide mathematically unbreakable security for enterprise communications, surpassing all existing encryption standards.',
     features: [
-      'Quantum key distribution (QKD)',
-      'End-to-end quantum encryption',
-      'Multi-channel communication (voice, video, text)',
-      'Quantum random number generation',
-      'Zero-knowledge proof authentication',
-      'Quantum-resistant algorithms',
-      'Real-time threat detection',
-      'Compliance reporting (GDPR, HIPAA, SOX)',
-      'API for custom integrations',
-      'White-label enterprise solutions'
+      'Quantum key distribution (QKD)End-to-end quantum encryption',
+      'Multi-channel communication (voice, video, text)Quantum random number generation',
+      'Zero-knowledge proof authenticationQuantum-resistant algorithms',
+      'Real-time threat detectionCompliance reporting (GDPR, HIPAA, SOX)',
+      'API for custom integrationsWhite-label enterprise solutions'
     ],
     popular: true,
     icon: '🔐',
@@ -123,11 +113,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '4 hours',
     category: 'Quantum Security & Communication',
     realService: true,
-    technology: ['Quantum Computing', 'Post-Quantum Cryptography', 'React Native', 'Node.js', 'Quantum Key Distribution', 'Zero-Knowledge Proofs'],
-    integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth 2.0', 'REST API', 'WebRTC', 'SIP'],
-    useCases: ['Secure government communications', 'Financial transaction security', 'Healthcare data protection', 'Legal document sharing', 'Military communications', 'Research collaboration'],
+    technology: ['Quantum ComputingPost-Quantum Cryptography', 'React NativeNode.js', 'Quantum Key DistributionZero-Knowledge Proofs'],
+    integrations: ['Active DirectoryLDAP', 'SAMLOAuth 2.0', 'REST APIWebRTC', 'SIP'],
+    useCases: ['Secure government communicationsFinancial transaction security', 'Healthcare data protectionLegal document sharing', 'Military communicationsResearch collaboration'],
     roi: 'Financial institutions report 800% ROI through reduced security incidents and compliance cost savings.',
-    competitors: ['Signal', 'Wickr', 'Telegram', 'WhatsApp Business', 'Microsoft Teams'],
+    competitors: ['SignalWickr', 'TelegramWhatsApp Business', 'Microsoft Teams'],
     marketSize: '$15.2B market',
     growthRate: '300% annual growth',
     variant: 'quantum-futuristic',
@@ -153,16 +143,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Comprehensive AI legal assistant that automates legal research, document analysis, contract review, and case preparation, reducing legal costs by up to 70%.',
     features: [
-      'AI-powered legal research engine',
-      'Contract analysis and risk assessment',
-      'Legal document generation',
-      'Case law prediction algorithms',
-      'Compliance monitoring',
-      'Legal precedent analysis',
-      'Multi-jurisdiction support',
-      'Document comparison tools',
-      'Legal citation verification',
-      'Client portal and collaboration'
+      'AI-powered legal research engineContract analysis and risk assessment',
+      'Legal document generationCase law prediction algorithms',
+      'Compliance monitoringLegal precedent analysis',
+      'Multi-jurisdiction supportDocument comparison tools',
+      'Legal citation verificationClient portal and collaboration'
     ],
     popular: true,
     icon: '⚖️',
@@ -175,11 +160,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '1 hour',
     category: 'AI & Legal Technology',
     realService: true,
-    technology: ['OpenAI GPT-4', 'BERT Legal', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Elasticsearch', 'AWS'],
-    integrations: ['Clio', 'MyCase', 'PracticePanther', 'Microsoft Office', 'Google Workspace', 'Dropbox', 'Box'],
-    useCases: ['Legal research automation', 'Contract review and analysis', 'Case preparation', 'Compliance monitoring', 'Document generation', 'Legal risk assessment'],
+    technology: ['OpenAI GPT-4BERT Legal', 'PythonReact', 'Node.jsPostgreSQL', 'ElasticsearchAWS'],
+    integrations: ['ClioMyCase', 'PracticePantherMicrosoft Office', 'Google WorkspaceDropbox', 'Box'],
+    useCases: ['Legal research automationContract review and analysis', 'Case preparationCompliance monitoring', 'Document generationLegal risk assessment'],
     roi: 'Law firms report 400% ROI through reduced research time and improved case outcomes.',
-    competitors: ['LexisNexis', 'Westlaw', 'Casetext', 'Ravel Law', 'Fastcase'],
+    competitors: ['LexisNexisWestlaw', 'CasetextRavel Law', 'Fastcase'],
     marketSize: '$8.7B market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -205,16 +190,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Advanced quantum AI trading platform that uses quantum computing and machine learning to execute trades with unprecedented speed and accuracy, generating consistent profits in any market condition.',
     features: [
-      'Quantum AI trading algorithms',
-      'Real-time market analysis',
-      'Multi-asset trading support',
-      'Risk management systems',
-      'Portfolio optimization',
-      'Backtesting and simulation',
-      'Regulatory compliance tools',
-      'Performance analytics',
-      'API for custom strategies',
-      'White-label solutions'
+      'Quantum AI trading algorithmsReal-time market analysis',
+      'Multi-asset trading supportRisk management systems',
+      'Portfolio optimizationBacktesting and simulation',
+      'Regulatory compliance toolsPerformance analytics',
+      'API for custom strategiesWhite-label solutions'
     ],
     popular: true,
     icon: '📈',
@@ -227,11 +207,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '8 hours',
     category: 'Quantum AI & Finance',
     realService: true,
-    technology: ['Quantum Computing', 'Deep Learning', 'Python', 'C++', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'TradingView', 'MetaTrader', 'Interactive Brokers API', 'Alpaca API'],
-    useCases: ['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis', 'Arbitrage trading', 'Quantitative research'],
+    technology: ['Quantum ComputingDeep Learning', 'PythonC++', 'ReactNode.js', 'PostgreSQLRedis', 'AWS'],
+    integrations: ['Bloomberg TerminalReuters Eikon', 'TradingViewMetaTrader', 'Interactive Brokers APIAlpaca API'],
+    useCases: ['Algorithmic tradingPortfolio management', 'Risk assessmentMarket analysis', 'Arbitrage tradingQuantitative research'],
     roi: 'Professional traders achieve 1000%+ ROI through improved trading accuracy and reduced losses.',
-    competitors: ['Alpaca', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE', 'Robinhood Pro'],
+    competitors: ['AlpacaInteractive Brokers', 'TD AmeritradeE*TRADE', 'Robinhood Pro'],
     marketSize: '$45.2B market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -257,16 +237,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Advanced AI healthcare platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations, improving patient outcomes by 40%.',
     features: [
-      'AI medical image analysis',
-      'Symptom checker and diagnosis',
-      'Treatment recommendation engine',
-      'Patient data analytics',
-      'Drug interaction checking',
-      'Medical literature search',
-      'Compliance with HIPAA',
-      'Integration with EHR systems',
-      'Mobile app for doctors',
-      'Patient portal'
+      'AI medical image analysisSymptom checker and diagnosis',
+      'Treatment recommendation enginePatient data analytics',
+      'Drug interaction checkingMedical literature search',
+      'Compliance with HIPAAIntegration with EHR systems',
+      'Mobile app for doctorsPatient portal'
     ],
     popular: true,
     icon: '🏥',
@@ -279,11 +254,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '6 hours',
     category: 'AI & Healthcare',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'Computer Vision', 'Natural Language Processing', 'React Native', 'Python', 'PostgreSQL', 'AWS'],
-    integrations: ['Epic EHR', 'Cerner', 'Allscripts', 'Practice Fusion', 'DICOM systems', 'HL7 FHIR'],
-    useCases: ['Medical image analysis', 'Patient diagnosis', 'Treatment planning', 'Drug safety monitoring', 'Medical research', 'Clinical decision support'],
+    technology: ['TensorFlowPyTorch', 'Computer VisionNatural Language Processing', 'React NativePython', 'PostgreSQLAWS'],
+    integrations: ['Epic EHRCerner', 'AllscriptsPractice Fusion', 'DICOM systemsHL7 FHIR'],
+    useCases: ['Medical image analysisPatient diagnosis', 'Treatment planningDrug safety monitoring', 'Medical researchClinical decision support'],
     roi: 'Healthcare providers report 300% ROI through improved diagnostic accuracy and reduced misdiagnosis costs.',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Amazon Comprehend Medical', 'Nuance'],
+    competitors: ['IBM Watson HealthGoogle Health AI', 'Microsoft HealthcareAmazon Comprehend Medical', 'Nuance'],
     marketSize: '$67.8B market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -309,16 +284,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms and quantum key distribution to protect against both current and future quantum computing threats.',
     features: [
-      'Quantum-resistant encryption',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Zero-trust architecture',
-      'Behavioral analytics',
-      'Automated incident response',
-      'Compliance reporting',
-      'Real-time monitoring',
-      'API security',
-      'Cloud security integration'
+      'Quantum-resistant encryptionQuantum key distribution',
+      'Advanced threat detectionZero-trust architecture',
+      'Behavioral analyticsAutomated incident response',
+      'Compliance reportingReal-time monitoring',
+      'API securityCloud security integration'
     ],
     popular: true,
     icon: '🛡️',
@@ -331,11 +301,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '8 hours',
     category: 'Quantum Security & Cybersecurity',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Machine Learning', 'React', 'Node.js', 'Python', 'PostgreSQL', 'AWS'],
-    integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth 2.0', 'SIEM systems', 'EDR platforms', 'Firewall systems'],
-    useCases: ['Network security', 'Data protection', 'Identity management', 'Threat detection', 'Incident response', 'Compliance management'],
+    technology: ['Post-Quantum CryptographyQuantum Key Distribution', 'Machine LearningReact', 'Node.jsPython', 'PostgreSQLAWS'],
+    integrations: ['Active DirectoryLDAP', 'SAMLOAuth 2.0', 'SIEM systemsEDR platforms', 'Firewall systems'],
+    useCases: ['Network securityData protection', 'Identity managementThreat detection', 'Incident responseCompliance management'],
     roi: 'Enterprises achieve 600% ROI through reduced security incidents and future-proof protection.',
-    competitors: ['CrowdStrike', 'Palo Alto Networks', 'Fortinet', 'Cisco', 'Symantec'],
+    competitors: ['CrowdStrikePalo Alto Networks', 'FortinetCisco', 'Symantec'],
     marketSize: '$182.3B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -361,16 +331,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Advanced AI marketing platform that automates customer segmentation, campaign optimization, and content personalization, increasing conversion rates by up to 300%.',
     features: [
-      'AI customer segmentation',
-      'Predictive campaign optimization',
-      'Dynamic content personalization',
-      'Multi-channel automation',
-      'Real-time analytics',
-      'A/B testing automation',
-      'Customer journey mapping',
-      'Lead scoring algorithms',
-      'Email marketing automation',
-      'Social media management'
+      'AI customer segmentationPredictive campaign optimization',
+      'Dynamic content personalizationMulti-channel automation',
+      'Real-time analyticsA/B testing automation',
+      'Customer journey mappingLead scoring algorithms',
+      'Email marketing automationSocial media management'
     ],
     popular: true,
     icon: '📊',
@@ -383,11 +348,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '3 hours',
     category: 'AI & Marketing',
     realService: true,
-    technology: ['Machine Learning', 'Natural Language Processing', 'React', 'Node.js', 'Python', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Facebook Ads', 'Google Ads', 'Shopify', 'WooCommerce'],
-    useCases: ['Customer segmentation', 'Campaign automation', 'Content personalization', 'Lead nurturing', 'Email marketing', 'Social media management'],
+    technology: ['Machine LearningNatural Language Processing', 'ReactNode.js', 'PythonPostgreSQL', 'RedisAWS'],
+    integrations: ['SalesforceHubSpot', 'MailchimpFacebook Ads', 'Google AdsShopify', 'WooCommerce'],
+    useCases: ['Customer segmentationCampaign automation', 'Content personalizationLead nurturing', 'Email marketingSocial media management'],
     roi: 'Marketing teams achieve 400% ROI through improved conversion rates and reduced manual work.',
-    competitors: ['HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign', 'ConvertKit'],
+    competitors: ['HubSpotMarketo', 'PardotActiveCampaign', 'ConvertKit'],
     marketSize: '$25.1B market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -413,16 +378,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Next-generation blockchain platform that uses quantum computing to achieve infinite scalability, instant finality, and quantum-resistant security for enterprise applications.',
     features: [
-      'Quantum consensus mechanism',
-      'Infinite scalability',
-      'Instant transaction finality',
-      'Quantum-resistant cryptography',
-      'Smart contract platform',
-      'Cross-chain interoperability',
-      'Enterprise governance tools',
-      'Regulatory compliance',
-      'API for developers',
-      'White-label solutions'
+      'Quantum consensus mechanismInfinite scalability',
+      'Instant transaction finalityQuantum-resistant cryptography',
+      'Smart contract platformCross-chain interoperability',
+      'Enterprise governance toolsRegulatory compliance',
+      'API for developersWhite-label solutions'
     ],
     popular: true,
     icon: '⛓️',
@@ -435,11 +395,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '12 hours',
     category: 'Quantum Blockchain & Web3',
     realService: true,
-    technology: ['Quantum Computing', 'Blockchain', 'Smart Contracts', 'React', 'Node.js', 'Rust', 'PostgreSQL', 'AWS'],
-    integrations: ['MetaMask', 'WalletConnect', 'Web3.js', 'Ethers.js', 'Hardhat', 'Truffle', 'OpenZeppelin'],
-    useCases: ['DeFi applications', 'Supply chain tracking', 'Digital identity', 'Asset tokenization', 'Gaming platforms', 'Voting systems'],
+    technology: ['Quantum ComputingBlockchain', 'Smart ContractsReact', 'Node.jsRust', 'PostgreSQLAWS'],
+    integrations: ['MetaMaskWalletConnect', 'Web3.jsEthers.js', 'HardhatTruffle', 'OpenZeppelin'],
+    useCases: ['DeFi applicationsSupply chain tracking', 'Digital identityAsset tokenization', 'Gaming platformsVoting systems'],
     roi: 'Enterprises achieve 800% ROI through improved efficiency and new revenue streams.',
-    competitors: ['Ethereum', 'Solana', 'Polygon', 'Cardano', 'Polkadot'],
+    competitors: ['EthereumSolana', 'PolygonCardano', 'Polkadot'],
     marketSize: '$19.9B market',
     growthRate: '350% annual growth',
     variant: 'quantum-futuristic',
@@ -465,16 +425,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Intelligent education platform that uses AI to create personalized learning experiences, adapt curriculum in real-time, and provide instant feedback to improve student outcomes.',
     features: [
-      'AI-powered adaptive learning',
-      'Personalized curriculum generation',
-      'Real-time progress tracking',
-      'Intelligent tutoring system',
-      'Automated assessment',
-      'Learning analytics dashboard',
-      'Multi-language support',
-      'Mobile learning apps',
-      'Integration with LMS',
-      'White-label solutions'
+      'AI-powered adaptive learningPersonalized curriculum generation',
+      'Real-time progress trackingIntelligent tutoring system',
+      'Automated assessmentLearning analytics dashboard',
+      'Multi-language supportMobile learning apps',
+      'Integration with LMSWhite-label solutions'
     ],
     popular: true,
     icon: '🎓',
@@ -487,11 +442,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '2 hours',
     category: 'AI & Education',
     realService: true,
-    technology: ['Machine Learning', 'Natural Language Processing', 'React', 'React Native', 'Node.js', 'Python', 'PostgreSQL', 'AWS'],
-    integrations: ['Canvas', 'Blackboard', 'Moodle', 'Google Classroom', 'Microsoft Teams', 'Zoom', 'LTI standards'],
-    useCases: ['K-12 education', 'Higher education', 'Corporate training', 'Skill development', 'Test preparation', 'Language learning'],
+    technology: ['Machine LearningNatural Language Processing', 'ReactReact Native', 'Node.jsPython', 'PostgreSQLAWS'],
+    integrations: ['CanvasBlackboard', 'MoodleGoogle Classroom', 'Microsoft TeamsZoom', 'LTI standards'],
+    useCases: ['K-12 educationHigher education', 'Corporate trainingSkill development', 'Test preparationLanguage learning'],
     roi: 'Educational institutions report 300% ROI through improved student performance and reduced dropout rates.',
-    competitors: ['Coursera', 'Udemy', 'Khan Academy', 'edX', 'Skillshare'],
+    competitors: ['CourseraUdemy', 'Khan AcademyedX', 'Skillshare'],
     marketSize: '$89.1B market',
     growthRate: '190% annual growth',
     variant: 'ai-futuristic',
@@ -517,16 +472,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Advanced IoT platform that uses quantum computing to provide unlimited device scalability, real-time data processing, and quantum-resistant security for enterprise IoT deployments.',
     features: [
-      'Unlimited device scalability',
-      'Quantum-secured communication',
-      'Real-time data processing',
-      'Edge computing capabilities',
-      'Predictive maintenance',
-      'Energy optimization',
-      'Security monitoring',
-      'Data analytics dashboard',
-      'API for developers',
-      'Enterprise deployment tools'
+      'Unlimited device scalabilityQuantum-secured communication',
+      'Real-time data processingEdge computing capabilities',
+      'Predictive maintenanceEnergy optimization',
+      'Security monitoringData analytics dashboard',
+      'API for developersEnterprise deployment tools'
     ],
     popular: true,
     icon: '🌐',
@@ -539,11 +489,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '8 hours',
     category: 'Quantum IoT & Edge Computing',
     realService: true,
-    technology: ['Quantum Computing', 'Edge Computing', 'IoT Protocols', 'React', 'Node.js', 'Python', 'PostgreSQL', 'AWS'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP', 'HTTP/HTTPS', 'LoRaWAN'],
-    useCases: ['Smart manufacturing', 'Smart cities', 'Energy management', 'Transportation monitoring', 'Healthcare monitoring', 'Agricultural monitoring'],
+    technology: ['Quantum ComputingEdge Computing', 'IoT ProtocolsReact', 'Node.jsPython', 'PostgreSQLAWS'],
+    integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTMQTT', 'CoAPHTTP/HTTPS', 'LoRaWAN'],
+    useCases: ['Smart manufacturingSmart cities', 'Energy managementTransportation monitoring', 'Healthcare monitoringAgricultural monitoring'],
     roi: 'Manufacturing companies achieve 600% ROI through improved efficiency and predictive maintenance.',
-    competitors: ['AWS IoT', 'Microsoft Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT', 'Siemens Mindsphere'],
+    competitors: ['AWS IoTMicrosoft Azure IoT', 'Google Cloud IoTIBM Watson IoT', 'Siemens Mindsphere'],
     marketSize: '$384.7B market',
     growthRate: '320% annual growth',
     variant: 'quantum-futuristic',
@@ -560,4 +510,4 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 112
   }
-];
+],

@@ -1,8 +1,8 @@
-import { renderHook, waitFor } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { vi } from 'vitest';
-import { usePostsByCategory } from '@/hooks/usePostsByCategory';
-import * as forumService from '@/services/forumPostService';
+import { renderHook, waitFor } from '@testing-library/react',
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query',
+import { vi } from 'vitest',
+import { usePostsByCategory } from '@/hooks/usePostsByCategory',
+import * as forumService from '@/services/forumPostService',
 
 it('returns posts for slug', async () => {
   vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([
@@ -18,16 +18,16 @@ it('returns posts for slug', async () => {
       updatedAt: '',
       upvotes: 0,
       downvotes: 0,
-      replyCount: 0,
-    },
-  ]);
+      replyCount: 0
+    }
+  ]),
 
-  const queryClient = new QueryClient();
+  const queryClient = new QueryClient(),
   const wrapper = ({ children }: { children: React.ReactNode }) => (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-  );
+  ),
 
-  const { result } = renderHook(() => usePostsByCategory('getting-hired'), { wrapper });
+  const { result } = renderHook(() => usePostsByCategory('getting-hired'), { wrapper }),
 
-  await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0));
-});
+  await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0)),
+}),

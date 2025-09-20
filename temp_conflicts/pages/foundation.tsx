@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import CharterGenerator from '../components/foundation/CharterGenerator';
+import Head from 'next/head',
+import Link from 'next/link',
+import CharterGenerator from '../components/foundation/CharterGenerator',
 
 export default function FoundationPage() {
   return (
@@ -52,10 +52,10 @@ export default function FoundationPage() {
 
         <section className="space-y-4" id="mou">
           <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>
-          <p className="text-gray-600 dark:text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>
+          <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400">No MOUs published yet.</div>
         </section>
       </div>
     </>
-  );
+  )
 }

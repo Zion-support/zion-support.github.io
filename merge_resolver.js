@@ -1,193 +1,193 @@
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { execSync, spawn } = require('child_process'),
+const fs = require('fs'),
+const path = require('path'),
 class MergeResolver {,
     constructor() {,
-        this.repoPath = '/workspace';
-        this.timeout = 30000, // 30 seconds timeout,
+        this.repoPath = '/workspace',
+        this.timeout = 30000, // 30 seconds timeout
     }
 ,
     runCommand(command, options = {}) {,
         try {,
-            console.log(`Running: ${command,}`);
+            console.log(`Running: ${command}`),
             const result = execSync(command, {,
-                cwd: this.repoPath;
-                timeout: this.timeout;
-                encoding: 'utf8';
-                ...options,
-            });
-            return { success: true, output: result ,};
+                cwd: this.repoPath,
+                timeout: this.timeout,
+                encoding: 'utf8',
+                ...options
+            }),
+            return { success: true, output: result },
         } catch (error) {,
-            console.log(`Command failed: ${command,}`);
-            return { success: false, error: error.message ,};
+            console.log(`Command failed: ${command}`),
+            return { success: false, error: error.message },
         }
     }
 ,
     getCurrentBranch() {,
-        const result = this.runCommand('git branch --show-current');
+        const result = this.runCommand('git branch --show-current'),
         if (result.success) {,
-            return result.output.trim();
+            return result.output.trim(),
         }
-        return null;
+        return null,
     }
 ,
     isInMergeState() {,
-        return fs.existsSync(path.join(this.repoPath, '.git/MERGE_HEAD'));
+        return fs.existsSync(path.join(this.repoPath, '.git/MERGE_HEAD')),
     }
 ,
     resolveConflicts() {,
-        console.log('🔧 Resolving merge conflicts...');
+        console.log('🔧 Resolving merge conflicts...'),
         if (!this.isInMergeState()) {,
-            console.log('✅ Not in merge state');
-            return true;
+            console.log('✅ Not in merge state'),
+            return true,
         }
 ,
         // Get conflicted files,
-        const conflictedResult = this.runCommand('git diff --name-only --diff-filter=U');
+        const conflictedResult = this.runCommand('git diff --name-only --diff-filter=U'),
         if (!conflictedResult.success) {,
-            console.log('❌ Error getting conflicted files');
-            return false;
+            console.log('❌ Error getting conflicted files'),
+            return false,
         }
 ,
-        const conflictedFiles = conflictedResult.output.trim().split('\n').filter(f => f.trim());
+        const conflictedFiles = conflictedResult.output.trim().split('\n').filter(f => f.trim()),
         if (conflictedFiles.length === 0) {,
-            console.log('✅ No conflicted files found');
-            const commitResult = this.runCommand('git commit -m "Merge completed"');
-            return commitResult.success;
+            console.log('✅ No conflicted files found'),
+            const commitResult = this.runCommand('git commit -m "Merge completed"'),
+            return commitResult.success,
         }
 ,
-        console.log(`🔍 Found ${conflictedFiles.length} conflicted files`);
+        console.log(`🔍 Found ${conflictedFiles.length} conflicted files`),
         // Resolve each conflict by accepting main branch version,
         for (const file of conflictedFiles) {,
-            console.log(`🔧 Resolving: ${file,}`);
-            this.runCommand(`git checkout --theirs "${file}"`);
-            this.runCommand(`git add "${file}"`);
+            console.log(`🔧 Resolving: ${file}`),
+            this.runCommand(`git checkout --theirs "${file}"`),
+            this.runCommand(`git add "${file}"`),
         }
 ,
         // Commit resolved conflicts,
-        const commitResult = this.runCommand('git commit -m "Resolved merge conflicts automatically"');
+        const commitResult = this.runCommand('git commit -m "Resolved merge conflicts automatically"'),
         if (commitResult.success) {,
-            console.log('✅ Successfully resolved all merge conflicts');
-            return true;
+            console.log('✅ Successfully resolved all merge conflicts'),
+            return true,
         } else {,
-            console.log('❌ Error committing resolved conflicts');
-            return false;
+            console.log('❌ Error committing resolved conflicts'),
+            return false,
         }
     }
 ,
     switchToMain() {,
-        console.log('🔄 Switching to main branch...');
-        let result = this.runCommand('git checkout main');
+        console.log('🔄 Switching to main branch...'),
+        let result = this.runCommand('git checkout main'),
         if (!result.success) {,
-            console.log('🆕 Creating main branch...');
-            result = this.runCommand('git checkout -b main');
+            console.log('🆕 Creating main branch...'),
+            result = this.runCommand('git checkout -b main'),
         }
 ,
         if (result.success) {,
-            this.runCommand('git pull origin main');
-            console.log('✅ Switched to main branch');
+            this.runCommand('git pull origin main'),
+            console.log('✅ Switched to main branch'),
         }
 ,
-        return result.success;
+        return result.success,
     }
 ,
     mergeBranch(branchName) {,
-        console.log(`🔄 Merging ${branchName} into main...`);
-        const result = this.runCommand(`git merge ${branchName}`);
+        console.log(`🔄 Merging ${branchName} into main...`),
+        const result = this.runCommand(`git merge ${branchName}`),
         if (result.success) {,
-            console.log(`✅ Successfully merged ${branchName}`);
-            return true;
+            console.log(`✅ Successfully merged ${branchName}`),
+            return true,
         } else {,
-            console.log(`⚠️ Merge conflict with ${branchName}, resolving...`);
+            console.log(`⚠️ Merge conflict with ${branchName}, resolving...`),
             if (this.resolveConflicts()) {,
-                console.log(`✅ Resolved conflicts and merged ${branchName}`);
-                return true;
+                console.log(`✅ Resolved conflicts and merged ${branchName}`),
+                return true,
             } else {,
-                console.log(`❌ Failed to resolve conflicts for ${branchName}`);
-                return false;
+                console.log(`❌ Failed to resolve conflicts for ${branchName}`),
+                return false,
             }
         }
     }
 ,
     getRemoteBranches() {,
-        console.log('📡 Fetching remote branches...');
-        this.runCommand('git fetch origin');
-        const result = this.runCommand('git branch -r');
+        console.log('📡 Fetching remote branches...'),
+        this.runCommand('git fetch origin'),
+        const result = this.runCommand('git branch -r'),
         if (!result.success) {,
-            return [];
+            return [],
         }
 ,
         const branches = result.output,
             .split('\n'),
             .filter(line => line.trim() && !line.includes('origin/main') && line.includes('origin/cursor')),
-            .map(line => line.trim().replace('origin/', ''));
-        console.log(`📋 Found ${branches.length} remote branches to process`);
-        return branches;
+            .map(line => line.trim().replace('origin/', '')),
+        console.log(`📋 Found ${branches.length} remote branches to process`),
+        return branches,
     }
 ,
     processAllBranches() {,
-        console.log('🚀 Processing all branches...');
+        console.log('🚀 Processing all branches...'),
         // Handle current branch first,
-        const currentBranch = this.getCurrentBranch();
+        const currentBranch = this.getCurrentBranch(),
         if (currentBranch && currentBranch !== 'main') {,
-            console.log(`📌 Processing current branch: ${currentBranch,}`);
+            console.log(`📌 Processing current branch: ${currentBranch}`),
             if (this.switchToMain()) {,
-                this.mergeBranch(currentBranch);
+                this.mergeBranch(currentBranch),
             }
         }
 ,
         // Get and process remote branches,
-        const remoteBranches = this.getRemoteBranches();
+        const remoteBranches = this.getRemoteBranches(),
         for (const branch of remoteBranches.slice(0, 5)) { // Limit to first 5 branches,
-            console.log(`\n🔄 Processing branch: ${branch,}`);
+            console.log(`\n🔄 Processing branch: ${branch}`),
             // Checkout the branch,
-            this.runCommand(`git checkout ${branch}`);
+            this.runCommand(`git checkout ${branch}`),
             // Switch back to main,
             if (this.switchToMain()) {,
-                this.mergeBranch(branch);
+                this.mergeBranch(branch),
             }
         }
     }
 ,
     pushToRemote() {,
-        console.log('📤 Pushing changes to remote...');
-        const result = this.runCommand('git push origin main');
+        console.log('📤 Pushing changes to remote...'),
+        const result = this.runCommand('git push origin main'),
         if (result.success) {,
-            console.log('✅ Successfully pushed to remote');
+            console.log('✅ Successfully pushed to remote'),
         } else {,
-            console.log('⚠️ Push failed, but merge may have succeeded locally');
+            console.log('⚠️ Push failed, but merge may have succeeded locally'),
         }
-        return result.success;
+        return result.success,
     }
 ,
     runComprehensiveMerge() {,
-        console.log('🎯 Starting comprehensive merge process...');
+        console.log('🎯 Starting comprehensive merge process...'),
         // Check if we're in a git repository,
         if (!fs.existsSync(path.join(this.repoPath, '.git'))) {,
-            console.log('❌ Not in a git repository!');
-            return false;
+            console.log('❌ Not in a git repository!'),
+            return false,
         }
 ,
         // Show initial status,
-        console.log(`\n📊 Initial Status: `);
-        console.log(`Current branch: ${this.getCurrentBranch(),}`);
+        console.log(`\n📊 Initial Status: `),
+        console.log(`Current branch: ${this.getCurrentBranch()}`),
         // Resolve any current conflicts,
         if (this.isInMergeState()) {,
-            this.resolveConflicts();
+            this.resolveConflicts(),
         }
 ,
         // Process all branches,
-        this.processAllBranches();
+        this.processAllBranches(),
         // Push to remote,
-        this.pushToRemote();
+        this.pushToRemote(),
         // Show final status,
-        console.log(`\n📊 Final Status: `);
-        console.log(`Current branch: ${this.getCurrentBranch(),}`);
-        console.log('🎉 Comprehensive merge process completed!');
-        return true;
+        console.log(`\n📊 Final Status: `),
+        console.log(`Current branch: ${this.getCurrentBranch()}`),
+        console.log('🎉 Comprehensive merge process completed!'),
+        return true,
     }
 }
 ,
 // Run the merge resolver,
-const resolver = new MergeResolver();
-resolver.runComprehensiveMerge();
+const resolver = new MergeResolver(),
+resolver.runComprehensiveMerge(),

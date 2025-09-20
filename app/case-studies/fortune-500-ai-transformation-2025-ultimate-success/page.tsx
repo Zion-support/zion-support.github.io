@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025: Fortune 500 $1.8B Revenue Transformation | Zion Tech Group';
-  description: 'The ultimate Fortune 500 transformation success story. How a Fortune 500 company generated $1.8 billion in additional revenue through comprehensive AI implementation.';
-  keywords: ['Fortune 500 transformationAI transformation', 'enterprise AIdigital transformation', 'AI ROIFortune 500'],
-};
+  title: 'AI 2025: Fortune 500 $1.8B Revenue Transformation | Zion Tech Group',
+  description: 'The ultimate Fortune 500 transformation success story. How a Fortune 500 company generated $1.8 billion in additional revenue through comprehensive AI implementation.',
+  keywords: ['Fortune 500 transformationAI transformationenterprise AIdigital transformation', 'AI ROIFortune 500']
+},
 export default function EnterpriseTransformationPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -171,7 +171,7 @@ export default function EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-center mb-12">More Transformation Success Stories</h2>,
@@ -218,4 +218,4 @@ export default function EnterpriseTransformationPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

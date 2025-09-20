@@ -1,2 +1,2 @@
 
-export default TestimonialCarousel;
+export default TestimonialCarousel,

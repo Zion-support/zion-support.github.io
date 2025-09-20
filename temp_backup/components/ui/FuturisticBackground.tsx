@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode,
+  className?: string
 }
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, className = '' }) => {
@@ -12,6 +12,6 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
       <h3 className="text-xl font-bold mb-4">FuturisticBackground</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default FuturisticBackground;
+  ),
+},
+export default FuturisticBackground,

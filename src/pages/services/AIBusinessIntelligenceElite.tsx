@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   BarChart3, 
   TrendingUp, 
   Shield, 
@@ -22,50 +22,34 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIBusinessIntelligenceElite: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "Advanced AI Analytics Engine",
-      description: "Powered by GPT-4 and Claude 3.5 Sonnet for intelligent data interpretation and insights generation"
-    },
+      icon: Brain,title: "Advanced AI Analytics Engine",description: "Powered by GPT-4 and Claude 3.5 Sonnet for intelligent data interpretation and insights generation"
+    };
     {
-      icon: BarChart3,
-      title: "Real-time Business Intelligence",
-      description: "Live dashboards with predictive analytics and trend forecasting capabilities"
-    },
+      icon: BarChart3,title: "Real-time Business Intelligence",description: "Live dashboards with predictive analytics and trend forecasting capabilities"
+    };
     {
-      icon: Shield,
-      title: "Enterprise-Grade Security",
-      description: "SOC 2 Type II compliant with end-to-end encryption and role-based access control"
-    },
+      icon: Shield,title: "Enterprise-Grade Security",description: "SOC 2 Type II compliant with end-to-end encryption and role-based access control"
+    };
     {
-      icon: Zap,
-      title: "Automated Reporting",
-      description: "AI-generated executive summaries and automated KPI tracking"
-    },
+      icon: Zap,title: "Automated Reporting",description: "AI-generated executive summaries and automated KPI tracking"
+    };
     {
-      icon: Users,
-      title: "Multi-User Collaboration",
-      description: "Team-based analytics with real-time collaboration and sharing capabilities"
-    },
+      icon: Users,title: "Multi-User Collaboration",description: "Team-based analytics with real-time collaboration and sharing capabilities"
+    };
     {
-      icon: Globe,
-      title: "Global Data Integration",
-      description: "Connect to 500+ data sources including CRM, ERP, databases, and cloud platforms"
+      icon: Globe,title: "Global Data Integration",description: "Connect to 500+ data sources including CRM, ERP, databases, and cloud platforms"
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,500",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "Up to 10 data sources",
+      name: "Starter",price: "$2,500",
+      period: "/month",description: "Perfect for small businesses and startups",features: [
+        "Up to 10 data sources";
         "Basic AI analytics",
         "Standard reporting",
         "Email support",
@@ -73,12 +57,9 @@ const AIBusinessIntelligenceElite: React.FC = () => {
       ]
     },
     {
-      name: "Professional",
-      price: "$5,000",
-      period: "/month",
-      description: "Ideal for growing businesses and teams",
-      features: [
-        "Up to 50 data sources",
+      name: "Professional",price: "$5,000",
+      period: "/month",description: "Ideal for growing businesses and teams",features: [
+        "Up to 50 data sources";
         "Advanced AI analytics",
         "Custom dashboards",
         "Priority support",
@@ -86,14 +67,11 @@ const AIBusinessIntelligenceElite: React.FC = () => {
         "API access"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$12,000",
-      period: "/month",
-      description: "For large organizations with complex needs",
-      features: [
-        "Unlimited data sources",
+      name: "Enterprise",price: "$12,000",
+      period: "/month",description: "For large organizations with complex needs",features: [
+        "Unlimited data sources";
         "Full AI suite",
         "Custom development",
         "24/7 dedicated support",
@@ -101,26 +79,22 @@ const AIBusinessIntelligenceElite: React.FC = () => {
         "White-label options"
       ]
     }
-  ];
+  ],
 
   const useCases = [
     {
-      title: "Financial Analytics",
-      description: "Real-time financial reporting, budget tracking, and cash flow analysis with AI-powered forecasting"
+      title: "Financial Analytics",description: "Real-time financial reporting, budget tracking, and cash flow analysis with AI-powered forecasting"
     },
     {
-      title: "Sales Intelligence",
-      description: "Sales performance tracking, lead scoring, and revenue optimization using machine learning"
+      title: "Sales Intelligence",description: "Sales performance tracking, lead scoring, and revenue optimization using machine learning"
     },
     {
-      title: "Customer Analytics",
-      description: "Customer behavior analysis, segmentation, and lifetime value prediction"
+      title: "Customer Analytics",description: "Customer behavior analysis, segmentation, and lifetime value prediction"
     },
     {
-      title: "Operational Efficiency",
-      description: "Process optimization, resource allocation, and performance monitoring"
+      title: "Operational Efficiency",description: "Process optimization, resource allocation, and performance monitoring"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -372,7 +346,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
 
           <div className="text-center">
             <a
-              href="https://ziontechgroup.com/contact"
+              href="https: //ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule a Demo
@@ -383,7 +357,7 @@ const AIBusinessIntelligenceElite: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light">
+      <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
             © 2024 Zion Tech Group. All rights reserved.
@@ -412,7 +386,6 @@ const AIBusinessIntelligenceElite: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
+  )
 };
-
 export default AIBusinessIntelligenceElite;

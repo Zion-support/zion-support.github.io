@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   ArrowRight
   TrendingUp
@@ -15,23 +15,23 @@ import {
   Users,
   Award,
   BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 
 const BusinessTransformation2028PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentMetricsetCurrentMetric] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentMetricsetCurrentMetric] = useState(0),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-rotate metrics
     const interval = setInterval(() => {
-      setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }2500);
+      setCurrentMetric((prev) => (prev + 1) % metrics.length),
+    }2500),
 
-    return () => clearInterval(interval);
-  }[]);
+    return () => clearInterval(interval),
+  }[]),
 
   const metrics = [
     {
@@ -58,16 +58,16 @@ const BusinessTransformation2028PromotionBanner = () => {
       label: 'Businesses Transformed',
       color: 'text-cyan-400'
     }
-  ];
+  ],
 
   const solutions = [
     { icon: Brainlabel: 'AI Automation' },
     { icon: Zaplabel: 'Quantum Optimization' },
     { icon: Targetlabel: 'Neural Business' },
     { icon: Building2label: 'Future Operations' }
-  ];
+  ],
 
-  if (isDismissed) return null;
+  if (isDismissed) return null,
 
 const BusinessTransformation2028PromotionBanner: React.FC = () => {
   return (
@@ -75,7 +75,7 @@ const BusinessTransformation2028PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">BusinessTransformation2028PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default BusinessTransformation2028PromotionBanner;
+export default BusinessTransformation2028PromotionBanner,

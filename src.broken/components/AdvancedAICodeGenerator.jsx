@@ -8,22 +8,22 @@
   .animate - shimmer {
     background: linear - gradient(90deg,
 =======
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react',
 export function AdvancedAICodeGenerator () {
 export function useApi < T> ({ url, method = 'GET', body, headers }: UseApiOptions < T>) {
 export function useLocalStorage < T> (key: string, initialValue: T) {
-import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge const mockCodeSnippets = [; { id: '1', title: 'React Hook for API Calls', description: 'Custom hook for managing API calls with loading states and error handling', language: 'typescript', code: `import { useState, useEffect } from 'react';
+import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge const mockCodeSnippets = [, { id: '1', title: 'React Hook for API Calls', description: 'Custom hook for managing API calls with loading states and error handling', language: 'typescript', code: `import { useState, useEffect } from 'react',
 
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
 
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [data, setData] = useState<T | null>(null),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
   const execute = async () => {
     try {
-      setLoading(true) ;
-      setError(null) ;
+      setLoading(true) ,
+      setError(null) ,
 
       const response = await fetch(url, {
 
@@ -32,29 +32,29 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
           'Content-Type': 'application/json',
           ...headers},
-        body: body ? JSON.stringify(body) : null});
+        body: body ? JSON.stringify(body) : null}),
 
       if(!response.ok) {
 `
         throw new Error(\`HTTP error! status: \${response.status}\`)}
 
-      const result = await response.json();
+      const result = await response.json(),
       setData(result)} catch(err) {
 
       setError(err instanceof Error ? err.message : 'An error occurred')} finally {
 
       setLoading(false)}
-  };
+  },
 
   useEffect(() => {
 
     if(method === 'GET') {
 
       execute()}
-  }, [url]);
+  }, [url]),
 `
   return { data, loading, error, execute }}`,
-        tags['react',hooks',api',typescript'],;
+        tags['react',hooks',api',typescript'],
         complexity: 'medium',
         rating: 4.8,
         usageCount: 1250,
@@ -82,8 +82,8 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       90deg,
       transparent,
       rgba(255, 255, 255, 0.4) ,
-      transparent) ;
-    background - size: 200% 100%;
+      transparent) ,
+    background - size: 200% 100%,
     animation: shimmer 1.5s infinite}
 }
 
@@ -104,7 +104,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   0% { background-position: -200% 0}
   100% { background-position: 200% 0}`
 }`,
-        tags['css',tailwind',animations',utilities'],;
+        tags['css',tailwind',animations',utilities'],
         complexity: 'low',
         rating: 4.6,
         usageCount: 890,
@@ -119,7 +119,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         code: `class FormValidator {
   constructor(form, options = { /* empty */ }) {
 
-    this.form = form;
+    this.form = form,
     this.options = {
 
   validateOnBlur: true,
@@ -127,10 +127,10 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       showErrors: true,
   ...options
 
-};
+},
 
-    this.rules = new Map () ;
-    this.errors = new Map () ;
+    this.rules = new Map () ,
+    this.errors = new Map () ,
     this.init () }
 
   addRule(field, rule) {
@@ -142,30 +142,30 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   validateField(field) {
 
-    const value = this.form[field]?.value;
-    const fieldErrors = [];
+    const value = this.form[field]?.value,
+    const fieldErrors = [],
 
-    for(const result = rule (value, this.form) ;
+    for(const result = rule (value, this.form) ,
       if(result !== true) {
 
         fieldErrors.push(result)}
     }
 
-    this.errors.set(field, fieldErrors) ;
-    this.updateFieldUI(field) ;
+    this.errors.set(field, fieldErrors) ,
+    this.updateFieldUI(field) ,
     return fieldErrors.length === 0}
 
   validateForm () {
-    let isValid = true;
-    for(const fieldElement = this.form[field];
-    const errors = this.errors.get (field) || [];
+    let isValid = true,
+    for(const fieldElement = this.form[field],
+    const errors = this.errors.get (field) || [],
 
     if(errors.length > 0) {
 
-      fieldElement.classList.add('error');
+      fieldElement.classList.add('error'),
       this.showFieldErrors(field, errors)} else {
 
-      fieldElement.classList.remove('error');
+      fieldElement.classList.remove('error'),
       this.hideFieldErrors(field)}
   }
 
@@ -197,112 +197,112 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       })}
   }`
 }`,
-        tags['javascript',forms',validation',class'],;
+        tags['javascript',forms',validation',class'],
         complexity: 'high',
         rating: 4.9,
         usageCount: 2100,
         createdAt: '2024-01-08'
 
-];
+],
 const mockAIGenerations = [{
 
         id: '1',
         prompt: 'Create a React hook for managing local storage with TypeScript',`
-        generatedCode: `import { useState, useEffect } from 'react';
+        generatedCode: `import { useState, useEffect } from 'react',
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
 
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
-      const item = window.localStorage.getItem(key);`
-      // // // // // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
-      return initialValue;
+      const item = window.localStorage.getItem(key),`
+      // // // // // // // // console.error(\`Error reading localStorage key "\${key}":\`, error),
+      return initialValue,
 
       return item ? JSON.parse(item) : initialValue} catch(error) {
 "`
-      // console.error(\`Error reading localStorage key "\${key}":\`, error);
+      // console.error(\`Error reading localStorage key "\${key}":\`, error),
       return initialValue}
-  }) ;
+  }) ,
 
   const setValue = (value: T | ((val: T) => T)) => {
 
     try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value;
-      setStoredValue(valueToStore);"`
-      // // // // // // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
+      const valueToStore = value instanceof Function ? value(storedValue) : value,
+      setStoredValue(valueToStore),"`
+      // // // // // // // // console.error(\`Error setting localStorage key "\${key}":\`, error),
     }
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch(error) {
 "`
       // console.error(\`Error setting localStorage key "\${key}":\`, error)}
-  };
+  },
 `
   return [storedValue, setValue] as const}`,
         language: 'typescript',
         confidence: 0.94,
-        alternatives[;
+        alternatives[,
             'Alternative 1: With error boundaries',Alternative 2: With event listeners',Alternative 3: With custom serializer'
-        ],;
+        ],
         timestamp: '2024-01-15T11:45:00Z'
 
-];
+],
 export function AdvancedAICodeGenerator() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('generator');
-    const [selectedLanguage, setSelectedLanguage] = useState('all');
-    const [selectedComplexity, setSelectedComplexity] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [aiPrompt, setAiPrompt] = useState('');
-    const [generatedCode, setGeneratedCode] = useState('');
-    const [isGenerating, setIsGenerating] = useState(false);
-    const [codeSnippets, setCodeSnippets] = useState(mockCodeSnippets);
-    const [codeAnalysis, setCodeAnalysis] = useState(mockCodeAnalysis);
-    const [aiGenerations, setAiGenerations] = useState(mockAIGenerations);
-    const [showSuggestions, setShowSuggestions] = useState(true);
-    const containerRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false),
+    const [isMinimized, setIsMinimized] = useState(false),
+    const [isFullscreen, setIsFullscreen] = useState(false),
+    const [activeTab, setActiveTab] = useState('generator'),
+    const [selectedLanguage, setSelectedLanguage] = useState('all'),
+    const [selectedComplexity, setSelectedComplexity] = useState('all'),
+    const [searchQuery, setSearchQuery] = useState(''),
+    const [aiPrompt, setAiPrompt] = useState(''),
+    const [generatedCode, setGeneratedCode] = useState(''),
+    const [isGenerating, setIsGenerating] = useState(false),
+    const [codeSnippets, setCodeSnippets] = useState(mockCodeSnippets),
+    const [codeAnalysis, setCodeAnalysis] = useState(mockCodeAnalysis),
+    const [aiGenerations, setAiGenerations] = useState(mockAIGenerations),
+    const [showSuggestions, setShowSuggestions] = useState(true),
+    const containerRef = useRef(null),
     const getComplexityColor = (complexity) => {
 
         switch(complexity) {
 
-            case 'low': return 'text-green-500';
-            case 'medium': return 'text-yellow-500';
-            case 'high': return 'text-red-500';
+            case 'low': return 'text-green-500',
+            case 'medium': return 'text-yellow-500',
+            case 'high': return 'text-red-500',
             default: return 'text-gray-500'}
-    };
+    },
     const getQualityColor = (score) => {
 
         if(score >= 90)
-            return 'text-green-500';
+            return 'text-green-500',
         if(score >= 80)
-            return 'text-yellow-500';
-        return 'text-red-500'};
+            return 'text-yellow-500',
+        return 'text-red-500'},
     const generateCode = async () => {
-        if(!aiPrompt.trim () ) return;
-        setIsGenerating(true) ;
+        if(!aiPrompt.trim () ) return,
+        setIsGenerating(true) ,
         // Simulate AI code generation
         setTimeout(() => {
             const newGeneration = {
 
   id: Date.now().toString(),
                 prompt: aiPrompt,"`
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // // // // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,`
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // // // // // // console.log("Hello from AI!"),\n  return "Generated code",\n}`,`
   generatedCode: `// Generated code for: ${aiPrompt
 
 "`
-}\n\nfunction example() {\n  // console.log("Hello from AI!");\n  return "Generated code";\n}`,
+}\n\nfunction example() {\n  // console.log("Hello from AI!"),\n  return "Generated code",\n}`,
                 language: 'javascript',
                 confidence: 0.87,
-                alternatives[;
+                alternatives[,
                     'Alternative 1: Functional approach',Alternative 2: Class-based approach',Alternative 3: Async/await pattern'
-                ],;
-                timestamp: new Date () .toISOString () };
-            setAiGenerations(prev => [newGeneration, ...prev]) ;
-            setGeneratedCode(newGeneration.generatedCode) ;
-            setIsGenerating(false) }, 2000) };
+                ],
+                timestamp: new Date () .toISOString () },
+            setAiGenerations(prev => [newGeneration, ...prev]) ,
+            setGeneratedCode(newGeneration.generatedCode) ,
+            setIsGenerating(false) }, 2000) },
     const copyToClipboard = (text) => {
 
-        navigator.clipboard.writeText(text)};
+        navigator.clipboard.writeText(text)},
     if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">"
@@ -514,7 +514,7 @@ export function AdvancedAICodeGenerator() {
           </div>)}
 '"
         {activeTab === 'analysis' && (<div className="space-y-6">"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">"
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">"
                 <div className="flex items-center space-x-3">"
                   <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">"
@@ -564,7 +564,7 @@ export function AdvancedAICodeGenerator() {
             <div className="space-y-4">
               {codeAnalysis.map((analysis) => {
 
-                const snippet = codeSnippets.find(s => s.id === analysis.snippetId);"
+                const snippet = codeSnippets.find(s => s.id === analysis.snippetId),"
                 return (<div key={analysis.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">"
                     <div className="flex items-start justify-between mb-4">
                       <div>"

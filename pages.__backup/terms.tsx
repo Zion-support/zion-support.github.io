@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function TermsPage() {,
   return (,
     <>,
@@ -11,7 +11,7 @@ export default function TermsPage() {,
       </Head>,
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">,
         <main className="container mx-auto px-6 py-12">,
-          {/* Header */,}
+          {/* Header */}
           <div className="mb-12">,
             <Link href="/" className="inline-flex items-center text-cyan-400 hover: text-cyan-300 mb-8">,
               <span className="mr-2">←</span>,
@@ -20,7 +20,7 @@ export default function TermsPage() {,
             <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>,
             <p className="text-xl text-white/80">Last updated: January 172025</p>,
           </div>,
-          {/* Terms Content */,}
+          {/* Terms Content */}
           <div className="prose prose-invert max-w-4xl mx-auto">,
             <section className="mb-8">,
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">1. Acceptance of Terms</h2>,
@@ -101,7 +101,7 @@ export default function TermsPage() {,
               </div>,
             </section>,
           </div>,
-          {/* Navigation */,}
+          {/* Navigation */}
           <div className="mt-12 text-center">,
             <Link href="/contact" className="px-6 py-3 bg-cyan-400 hover: bg-cyan-300 text-black font-semibold rounded-lg transition-colors mr-4">,
               Contact Us,
@@ -112,5 +112,4 @@ export default function TermsPage() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),}
+    </>)}

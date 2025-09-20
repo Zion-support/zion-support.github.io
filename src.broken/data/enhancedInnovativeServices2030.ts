@@ -2,41 +2,41 @@
 // Comprehensive micro SAAS, IT, and AI services with real market data and pricing
 
 export interface EnhancedService {
-  id: string;
-  title: string;
-  description: string;
-  category: 'Micro SAAS' | 'IT Services' | 'AI Solutions' | 'Emerging Tech';
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
+  id: string,
+  title: string,
+  description: string,
+  category: 'Micro SAAS' | 'IT Services' | 'AI Solutions' | 'Emerging Tech',
+  subcategory: string,
+  price: number,
+  currency: string,
+  pricingModel: string,
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  tags: string[],
+  estimatedDelivery: string,
+  supportLevel: string,
+  marketPrice: string,
+  roi: string,
+  innovationLevel: string,
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string};
+    phone: string,
+    email: string,
+    website: string,
+    address: string},
   technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[]};
-  competitors?: string[];
-  marketSize?: string;
-  freeTier?: boolean;
-  trialPeriod?: string;
-  setupTime?: string;
-  growthRate?: string;
+    technology: string[],
+    integrations: string[],
+    apiEndpoints: number,
+    uptime: string,
+    security: string[]},
+  competitors?: string[],
+  marketSize?: string,
+  freeTier?: boolean,
+  trialPeriod?: string,
+  setupTime?: string,
+  growthRate?: string,
   compliance?: string[]}
 
 // Zion Tech Group Contact Information
@@ -624,6 +624,6 @@ export const enhancedInnovativeServices2030: EnhancedService[] = [// NEW MICRO S
     growthRate: "31% annually",
     compliance: ["GDPR", "Attorney-client privilege", "SOC 2"]
   }
-];
+],
 
-export default enhancedInnovativeServices2030;
+export default enhancedInnovativeServices2030,

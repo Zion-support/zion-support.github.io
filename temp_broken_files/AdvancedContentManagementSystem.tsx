@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Settings,
   BarChart3,
@@ -8,141 +8,141 @@ import {,
   TrendingUp,
   Eye,
   Heart,
-  Share2;
-  Download;
-  Edit;
-  Trash2;
-  Plus;
-  Search;
-  Filter;
-  Calendar;
-  Tag;
-  Globe;
-  Zap;
-  Brain;
-  Cpu;
-  Database;
-  Cloud;
-  Shield;
-  CheckCircle;
-  AlertCircle;
-  Clock;
-  Star;
-  ArrowRight;
-  RefreshCw;
-  Target;
-  Activity,
-} from 'lucide-react';
+  Share2,
+  Download,
+  Edit,
+  Trash2,
+  Plus,
+  Search,
+  Filter,
+  Calendar,
+  Tag,
+  Globe,
+  Zap,
+  Brain,
+  Cpu,
+  Database,
+  Cloud,
+  Shield,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Star,
+  ArrowRight,
+  RefreshCw,
+  Target,
+  Activity
+} from 'lucide-react',
 const AdvancedContentManagementSystem = () => {,
-  const [activeTabsetActiveTab] = useState('dashboard');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('dashboard'),
+  const [isVisiblesetIsVisible] = useState(false),
   const [contentStatsetContentStats] = useState({,
-    totalContent: 1247;
-    publishedContent: 1156;
-    draftContent: 91;
-    totalViews: 2847392;
-    totalEngagement: 156789;
-    avgEngagementRate: 5.5;
-    topPerformingContent: 23;
-    newContentThisWeek: 47,});
+    totalContent: 1247,
+    publishedContent: 1156,
+    draftContent: 91,
+    totalViews: 2847392,
+    totalEngagement: 156789,
+    avgEngagementRate: 5.5,
+    topPerformingContent: 23,
+    newContentThisWeek: 47}),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const contentTypes = [,
-    { id: ''allname: 'All 'Contentcount: 1247icon: Databasecolor: 'blue' ,};
-    { id: ''blogname: 'Blog 'Postscount: 342icon: Globecolor: 'green' ,};
-    { id: 'case-'studiesname: 'Case 'Studiescount: 156icon: Targetcolor: 'purple' ,};
-    { id: ''tutorialsname: ''Tutorialscount: 289icon: Braincolor: 'orange' ,};
-    { id: ''researchname: ''Researchcount: 123icon: Cpucolor: 'cyan' ,};
-    { id: ''videosname: ''Videoscount: 89icon: Activitycolor: 'red' ,};
-    { id: ''whitepapersname: ''Whitepaperscount: 78icon: Shieldcolor: 'indigo' ,};
-    { id: ''toolsname: ''Toolscount: 170icon: Zapcolor: 'yellow' ,}
-  ];
+    { id: ''allname: 'All 'Contentcount: 1247icon: Databasecolor: 'blue' },
+    { id: ''blogname: 'Blog 'Postscount: 342icon: Globecolor: 'green' },
+    { id: 'case-'studiesname: 'Case 'Studiescount: 156icon: Targetcolor: 'purple' },
+    { id: ''tutorialsname: ''Tutorialscount: 289icon: Braincolor: 'orange' },
+    { id: ''researchname: ''Researchcount: 123icon: Cpucolor: 'cyan' },
+    { id: ''videosname: ''Videoscount: 89icon: Activitycolor: 'red' },
+    { id: ''whitepapersname: ''Whitepaperscount: 78icon: Shieldcolor: 'indigo' },
+    { id: ''toolsname: ''Toolscount: 170icon: Zapcolor: 'yellow' }
+  ],
   const recentContent = [,
     {,
-      id: 1;
-      title: 'AI 2026: The Future of Autonomous Business Operations';
-      type: 'blog';
-      status: 'published';
-      views: 15420;
-      engagement: 892;
-      publishedAt: '2025-01-15';
-      author: 'Dr. Sarah Chen';
-      tags: ['aiautomation', 'business2026'];
-      featured: true,};
+      id: 1,
+      title: 'AI 2026: The Future of Autonomous Business Operations',
+      type: 'blog',
+      status: 'published',
+      views: 15420,
+      engagement: 892,
+      publishedAt: '2025-01-15',
+      author: 'Dr. Sarah Chen',
+      tags: ['aiautomationbusiness2026'],
+      featured: true},
     {,
-      id: 2;
-      title: 'Quantum Computing Breakthrough: Real-World Applications';
-      type: 'case-study';
-      status: 'published';
-      views: 8930;
-      engagement: 456;
-      publishedAt: '2025-01-14';
-      author: 'Prof. Michael Rodriguez';
-      tags: [quantum', 'computing'applications'];
-      featured: true,};
+      id: 2,
+      title: 'Quantum Computing Breakthrough: Real-World Applications',
+      type: 'case-study',
+      status: 'published',
+      views: 8930,
+      engagement: 456,
+      publishedAt: '2025-01-14',
+      author: 'Prof. Michael Rodriguez',
+      tags: [quantumcomputing'applications'],
+      featured: true},
     {,
-      id: 3;
-      title: 'Neural Interface Revolution: A Complete Guide';
-      type: 'tutorial';
-      status: 'draft';
-      views: 0;
-      engagement: 0;
-      publishedAt: null;
-      author: 'Emily Watson';
-      tags: ['neural-'interfaceguide'tutorial'];
-      featured: false,};
+      id: 3,
+      title: 'Neural Interface Revolution: A Complete Guide',
+      type: 'tutorial',
+      status: 'draft',
+      views: 0,
+      engagement: 0,
+      publishedAt: null,
+      author: 'Emily Watson',
+      tags: ['neural-'interfaceguide'tutorial'],
+      featured: false},
     {,
-      id: 4;
-      title: 'Edge AI Computing: Performance Optimization';
-      type: 'research';
-      status: 'published';
-      views: 6780;
-      engagement: 234;
-      publishedAt: '2025-01-13';
-      author: 'Alex Thompson';
-      tags: ['edge-'aiperformance'optimization'];
-      featured: false,}
-  ];
+      id: 4,
+      title: 'Edge AI Computing: Performance Optimization',
+      type: 'research',
+      status: 'published',
+      views: 6780,
+      engagement: 234,
+      publishedAt: '2025-01-13',
+      author: 'Alex Thompson',
+      tags: ['edge-'aiperformance'optimization'],
+      featured: false}
+  ],
   const analytics = {,
     viewsOverTime: [,
-      { date: '2025-01-01'views: 12000 ,};
-      { date: '2025-01-02'views: 15000 ,};
-      { date: '2025-01-03'views: 18000 ,};
-      { date: '2025-01-04'views: 22000 ,};
-      { date: '2025-01-05'views: 25000 ,};
-      { date: '2025-01-06'views: 28000 ,};
-      { date: '2025-01-07'views: 32000 ,}
-    ];
-    topContent: [,
-      { title: 'AI 2026: The Future of Autonomous Business 'Operationsviews: 15420engagement: 892 ,};
-      { title: 'Quantum Computing Breakthrough: Real-World 'Applicationsviews: 8930engagement: 456 ,};
-      { title: 'Edge AI Computing: Performance 'Optimizationviews: 6780engagement: 234 ,};
-      { title: 'Neural Interface Revolution: A Complete 'Guideviews: 5420engagement: 189 ,}
-    ];
-    engagementByType: [,
-      { type: 'Blog 'Postsengagement: 45.2 ,};
-      { type: 'Case 'Studiesengagement: 32.1 ,};
-      { type: ''Tutorialsengagement: 28.7 ,};
-      { type: ''Researchengagement: 24.3 ,};
-      { type: ''Videosengagement: 38.9 ,}
+      { date: '2025-01-01'views: 12000 },
+      { date: '2025-01-02'views: 15000 },
+      { date: '2025-01-03'views: 18000 },
+      { date: '2025-01-04'views: 22000 },
+      { date: '2025-01-05'views: 25000 },
+      { date: '2025-01-06'views: 28000 },
+      { date: '2025-01-07'views: 32000 }
     ],
-  };
+    topContent: [,
+      { title: 'AI 2026: The Future of Autonomous Business 'Operationsviews: 15420engagement: 892 },
+      { title: 'Quantum Computing Breakthrough: Real-World 'Applicationsviews: 8930engagement: 456 },
+      { title: 'Edge AI Computing: Performance 'Optimizationviews: 6780engagement: 234 },
+      { title: 'Neural Interface Revolution: A Complete 'Guideviews: 5420engagement: 189 }
+    ],
+    engagementByType: [,
+      { type: 'Blog 'Postsengagement: 45.2 },
+      { type: 'Case 'Studiesengagement: 32.1 },
+      { type: ''Tutorialsengagement: 28.7 },
+      { type: ''Researchengagement: 24.3 },
+      { type: ''Videosengagement: 38.9 }
+    ]
+  },
   const getStatusColor = (status) => {,
     switch (status) {,
-      case 'published': return 'text-green-600 bg-green-100';
-      case 'draft': return 'text-yellow-600 bg-yellow-100';
-      case 'review': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100',}
-  };
+      case 'published': return 'text-green-600 bg-green-100',
+      case 'draft': return 'text-yellow-600 bg-yellow-100',
+      case 'review': return 'text-blue-600 bg-blue-100',
+      default: return 'text-gray-600 bg-gray-100'}
+  },
   const getTypeIcon = (type) => {,
-    const typeConfig = contentTypes.find(t => t.id === type);
-    return typeConfig ? typeConfig.icon : Database;
-  };
+    const typeConfig = contentTypes.find(t => t.id === type),
+    return typeConfig ? typeConfig.icon : Database,
+  },
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="mb-8",
         >,
@@ -167,15 +167,15 @@ const AdvancedContentManagementSystem = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Stats Overview */,}
+        {/* Stats Overview */}
         <div,
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8",
         >,
           {[,
-            { label: 'Total 'Contentvalue: contentStats.totalContenticon: Databasecolor: 'blue' ,};
-            { label: 'Total 'Viewsvalue: contentStats.totalViews.toLocaleString()icon: Eyecolor: 'green' ,};
-            { label: ''Engagementvalue: contentStats.totalEngagement.toLocaleString()icon: Heartcolor: 'purple' ,};
-            { label: 'Avg. Engagement 'Ratevalue: `${contentStats.avgEngagementRate,}%`icon: TrendingUpcolor: 'orange' ,}
+            { label: 'Total 'Contentvalue: contentStats.totalContenticon: Databasecolor: 'blue' },
+            { label: 'Total 'Viewsvalue: contentStats.totalViews.toLocaleString()icon: Eyecolor: 'green' },
+            { label: ''Engagementvalue: contentStats.totalEngagement.toLocaleString()icon: Heartcolor: 'purple' },
+            { label: 'Avg. Engagement 'Ratevalue: `${contentStats.avgEngagementRate}%`icon: TrendingUpcolor: 'orange' }
           ].map((statindex) => (,
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg">,
               <div className="flex items-center justify-between">,
@@ -187,8 +187,7 @@ const AdvancedContentManagementSystem = () => {,
                   <stat.icon className={`w-6 h-6 text-${stat.color}-600`} />,
                 </div>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Navigation Tabs */}
         <div,
@@ -196,11 +195,11 @@ const AdvancedContentManagementSystem = () => {,
         >,
           <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">,
             {[,
-              { id: ''dashboardname: ''Dashboardicon: BarChart3 ,};
-              { id: ''contentname: ''Contenticon: Database ,};
-              { id: ''analyticsname: ''Analyticsicon: TrendingUp ,};
-              { id: ''usersname: ''Usersicon: Users ,};
-              { id: ''settingsname: ''Settingsicon: Settings ,}
+              { id: ''dashboardname: ''Dashboardicon: BarChart3 },
+              { id: ''contentname: ''Contenticon: Database },
+              { id: ''analyticsname: ''Analyticsicon: TrendingUp },
+              { id: ''usersname: ''Usersicon: Users },
+              { id: ''settingsname: ''Settingsicon: Settings }
             ].map((tab) => (,
               <button,
                 key={tab.id}
@@ -208,7 +207,7 @@ const AdvancedContentManagementSystem = () => {,
                 className={`flex-1 flex items-center justify-center px-4 py-2 rounded-md transition-colors ${,
                   activeTab === tab.id,
                     ? 'bg-white text-blue-600 shadow-sm',
-                    : 'text-gray-600 hover: text-gray-900',}`}
+                    : 'text-gray-600 hover: text-gray-900'}`}
               >,
                 <tab.icon className="w-4 h-4 mr-2" />,
                 {tab.name}
@@ -223,16 +222,15 @@ const AdvancedContentManagementSystem = () => {,
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Content Types</h2>,
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-8 gap-4">,
             {contentTypes.map((type) => (,
-              <div key={type.id,} className="bg-white rounded-lg p-4 shadow-sm hover: shadow-md transition-shadow cursor-pointer">,
+              <div key={type.id} className="bg-white rounded-lg p-4 shadow-sm hover: shadow-md transition-shadow cursor-pointer">,
                 <div className="text-center">,
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${type.color,}-100 mb-3`}>,
+                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${type.color}-100 mb-3`}>,
                     <type.icon className={`w-6 h-6 text-${type.color}-600`} />,
                   </div>,
                   <h3 className="font-medium text-gray-900 text-sm">{type.name}</h3>,
                   <p className="text-2xl font-bold text-gray-900">{type.count}</p>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Recent Content */}
@@ -271,7 +269,7 @@ const AdvancedContentManagementSystem = () => {,
               </thead>,
               <tbody>,
                 {recentContent.map((content) => {,
-                  const TypeIcon = getTypeIcon(content.type);
+                  const TypeIcon = getTypeIcon(content.type),
                   return (,
                     <tr key={content.id} className="border-b border-gray-100 hover: bg-gray-50">,
                       <td className="py-4 px-4">,
@@ -280,14 +278,13 @@ const AdvancedContentManagementSystem = () => {,
                             <TypeIcon className="w-5 h-5 text-gray-400" />,
                           </div>,
                           <div className="ml-3">,
-                            <p className="font-medium text-gray-900">{content.title,}</p>,
+                            <p className="font-medium text-gray-900">{content.title}</p>,
                             <p className="text-sm text-gray-500">by {content.author}</p>,
                             {content.featured && (,
                               <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 mt-1">,
                                 <Star className="w-3 h-3 mr-1" />,
                                 Featured,
-                              </span>,
-                            )}
+                              </span>)}
                           </div>,
                         </div>,
                       </td>,
@@ -320,7 +317,7 @@ const AdvancedContentManagementSystem = () => {,
                         </div>,
                       </td>,
                     </tr>,
-                  ),})}
+                  )})}
               </tbody>,
             </table>,
           </div>,
@@ -350,6 +347,6 @@ const AdvancedContentManagementSystem = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default AdvancedContentManagementSystem;
+  ),
+export default AdvancedContentManagementSystem,
 }

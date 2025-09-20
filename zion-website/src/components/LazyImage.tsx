@@ -1,75 +1,74 @@
-import React from 'react',
-'use client';
-import { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
+import React from 'reactuse client',
+import { useState, useRef, useEffect } from 'react',
+import Image from 'next/image',
 interface LazyImageProps {,
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
-  fill?: boolean;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void,
+  src: string,
+  alt: string,
+  width?: number,
+  height?: number,
+  className?: string,
+  priority?: boolean,
+  quality?: number,
+  placeholder?: 'blur' | 'empty',
+  blurDataURL?: string,
+  sizes?: string,
+  fill?: boolean,
+  style?: React.CSSProperties,
+  onLoad?: () => void,
+  onError?: () => void
 }
 ,
 export default function LazyImage({,
-  src;
-  alt;
-  width;
-  height;
-  className = '';
-  priority = false;
-  quality = 80;
-  placeholder = 'empty';
-  blurDataURL;
-  sizes;
-  fill = false;
-  style;
-  onLoad;
-  onError,
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  quality = 80,
+  placeholder = 'empty',
+  blurDataURL,
+  sizes,
+  fill = false,
+  style,
+  onLoad,
+  onError
 }: LazyImageProps) {,
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false),
+  const [isInView, setIsInView] = useState(priority),
+  const [hasError, setHasError] = useState(false),
+  const imgRef = useRef<HTMLDivElement>(null),
   useEffect(() => {,
-    if (priority || isInView) return;
+    if (priority || isInView) return,
     const observer = new IntersectionObserver(,
       (entries) => {,
         entries.forEach((entry) => {,
           if (entry.isIntersecting) {,
-            setIsInView(true);
-            observer.disconnect();
+            setIsInView(true),
+            observer.disconnect(),
           }
-        });
-      };
+        }),
+      },
       {,
         rootMargin: '50px 0px', // Start loading 50px before the image comes into view,
-        threshold: 0.1,}
-    );
+        threshold: 0.1}
+    ),
     if (imgRef.current) {,
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current),
     }
 ,
-    return () => observer.disconnect();
-  }, [priority, isInView]);
+    return () => observer.disconnect(),
+  }, [priority, isInView]),
   const handleLoad = () => {,
-    setIsLoaded(true);
-    onLoad?.();
-  };
+    setIsLoaded(true),
+    onLoad?.(),
+  },
   const handleError = () => {,
-    setHasError(true);
-    onError?.();
-  };
+    setHasError(true),
+    onError?.(),
+  },
   // Generate a simple blur placeholder if none provided,
-  const defaultBlurDataURL = 'data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+  const defaultBlurDataURL = 'data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=',
   if (hasError) {,
     return (,
       <div,
@@ -83,8 +82,7 @@ export default function LazyImage({,
           </svg>,
           <p className="text-xs">Image failed to load</p>,
         </div>,
-      </div>,
-    );
+      </div>),
   }
 ,
   if (!isInView) {,
@@ -93,8 +91,7 @@ export default function LazyImage({,
         ref={imgRef}
         className={`bg-gray-100 animate-pulse ${className}`}
         style={{ width, height, ...style }}
-      />,
-    );
+      />),
   }
 ,
   return (,
@@ -113,9 +110,8 @@ export default function LazyImage({,
         onLoad={handleLoad}
         onError={handleError}
         className={`transition-opacity duration-300 ${,
-          isLoaded ? 'opacity-100' : 'opacity-0',
+          isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       />,
-    </div>,
-  );
+    </div>),
 }

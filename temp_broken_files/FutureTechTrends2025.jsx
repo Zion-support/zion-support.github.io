@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const FutureTechTrends2025 = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -29,6 +29,5 @@ const FutureTechTrends2025 = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default FutureTechTrends2025;
+    </div>)},
+export default FutureTechTrends2025,

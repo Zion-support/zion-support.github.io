@@ -12,22 +12,22 @@ export const SERVICE_STATISTICS_2030 = {
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
   aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  =>
     service.category.includes('AI') || service.aiScore > 90
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;
-};
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+},
 
 // Featured Services
-export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
+export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured),
 
 // High-ROI Services(ROI > 500%)
-export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
-  const roi = service.roi;
+export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {,
+  const roi = service.roi,
 =======
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
-;
+,
 export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [...REVOLUTIONARY_SERVICES_2030
-];
+],
 
 // Service Categories for easy filtering
 :src/data/comprehensiveServicesIndex2030.tsx
@@ -54,77 +54,76 @@ export const SERVICE_CATEGORIES_2030 = ["
   "Cybersecurity","
   "Cloud & DevOps","
   "Quantum Computing","
-  "IoT & Edge Computing",;"
-  "Blockchain & Web3",;"
-  "Digital Twin",;"
-  "Space Technology",;"
-  "Sustainable Technology",;"
-  "IT Infrastructure",;"
-  "Emerging Technology";
-];
+  "IoT & Edge Computing","
+  "Blockchain & Web3","
+  "Digital Twin","
+  "Space Technology","
+  "Sustainable Technology","
+  "IT Infrastructure","
+  "Emerging Technology",
+],
 
-// Service Statistics;
+// Service Statistics,
 export 
 =======
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;'
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ,'
 export 
-  "Blockchain & Web3",;
-  "Digital Twin",;
-  "Space Technology",;
-  "Sustainable Technology",;
-  "IT Infrastructure",;
-  "Emerging Technology";
-];
+  "Blockchain & Web3",
+  "Digital Twin",
+  "Space Technology",
+  "Sustainable Technology",
+  "IT Infrastructure",
+  "Emerging Technology",
+],
 
 // Service Statistics
 export 
     service.category === 'Emerging Technology'
   ).length
-  ).length,;
-  ;
-  ;
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
-    service.category === 'Emerging Technology';
-  ).length};
+  ).length,
+  ,
+  ,
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ,
+    service.category === 'Emerging Technology').length},
 
 :src/data/comprehensiveServicesIndex2030.tsx
-// Featured Services;
+// Featured Services,
 export 
-// High-ROI Services (ROI > 500%);
+// High-ROI Services (ROI > 500%),
 export 
   
-  if(typeof roi = == 'string') {;
+  if(typeof roi = == 'string') {,
     
     return roiNumber > 500}
-  return false});
+  return false}),
 
-// Quick Setup Services(< 8 weeks);
+// Quick Setup Services(< 8 weeks),
 export 
   
-  if(typeof setupTime = == 'string') {;
+  if(typeof setupTime = == 'string') {,
     
 // Featured Services
 export 
 // High-ROI Services(ROI > 500%)
 export 
   
-  if(typeof roi = == 'string') {;
+  if(typeof roi = == 'string') {,
     
     return roiNumber > 500}
-  return false});
+  return false}),
 
 // Quick Setup Services(< 8 weeks)
 export 
   
-  if(typeof setupTime = == 'string') {;
+  if(typeof setupTime = == 'string') {,
     
     return weeks < 8}
-  return false});
+  return false}),
 
-// Export individual service arrays for specific use cases;
+// Export individual service arrays for specific use cases,
 export {
 
   REVOLUTIONARY_SERVICES_2030
-};
+},
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

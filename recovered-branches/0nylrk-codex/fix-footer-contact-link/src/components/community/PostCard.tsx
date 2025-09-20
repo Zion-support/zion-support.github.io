@@ -9,17 +9,14 @@
         <div className="flex-1">,
           <div className="flex items-center">,
             <Link to={`/community/post/${post.id}`} className="font-semibold text-lg hover: text-zion-purple transition-colors">,
-              {post.title,}
+              {post.title}
             </Link>,
             {post.isAnswered && (,
-              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />,
-            )}
+              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />)}
             {post.isPinned && (,
-              <Pin className="h-4 w-4 text-amber-500 ml-2" />,
-            )}
+              <Pin className="h-4 w-4 text-amber-500 ml-2" />)}
             {post.isLocked && (,
-              <Lock className="h-4 w-4 text-red-500 ml-2" />,
-            )}
+              <Lock className="h-4 w-4 text-red-500 ml-2" />)}
           </div>,
           <div className="text-sm text-muted-foreground">,
             Posted by {post.authorName} {timeAgo}
@@ -28,17 +25,15 @@
           <div className="flex flex-wrap gap-2 mt-2">,
             {post.tags?.map(tag => (,
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover: bg-zion-purple/20">,
-                {tag,}
-              </Badge>,
-            ))}
+                {tag}
+              </Badge>))}
           </div>,
         </div>,
       </CardHeader>,
       {!compact && (,
         <CardContent>,
           <div className="line-clamp-3">{post.content}</div>,
-        </CardContent>,
-      )}
+        </CardContent>)}
       <CardFooter className="flex justify-between">,
         <div className="flex items-center gap-4">,
           <div className="flex items-center gap-1">,
@@ -59,12 +54,11 @@
         {post.isFeatured && (,
           <div>,
             <Badge className="bg-zion-purple">Featured</Badge>,
-          </div>,
-        )}
+          </div>)}
 ,
-export default PostCard;
+export default PostCard,
       </CardFooter>,
     </Card>,
-  );
-};
-export default PostCard;
+  ),
+},
+export default PostCard,

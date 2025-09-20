@@ -1,55 +1,55 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Shield, Rocket, Brain, Sparkles, Globe, Cpu, Database, Phone, Mail, MapPin } from 'lucide-react';
-import Button from '../ui/Button';
-import UltraQuantumHolographicBackground from '../ui/UltraQuantumHolographicBackground';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, Zap, Shield, Rocket, Brain, Sparkles, Globe, Cpu, Database, Phone, Mail, MapPin } from 'lucide-react',
+import Button from '../ui/Button',
+import UltraQuantumHolographicBackground from '../ui/UltraQuantumHolographicBackground',
 interface EnhancedHero2026V2Props {,
   contactInfo: {,
-    mobile: string;
-    email: string;
-    address: string;
-    website: string,};
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
 }
 ,
 export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Props) {,
   const containerVariants = {,
-    hidden: { opacity: 0 ,};
+    hidden: { opacity: 0 },
     visible: {,
-      opacity: 1;
+      opacity: 1,
       transition: {,
-        staggerChildren: 0.1;
-        delayChildren: 0.3,}
+        staggerChildren: 0.1,
+        delayChildren: 0.3}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { y: 20, opacity: 0 ,};
+    hidden: { y: 20, opacity: 0 },
     visible: {,
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {,
-        duration: 0.6;
-        ease: "easeOut" as const,}
+        duration: 0.6,
+        ease: "easeOut" as const}
     }
-  };
+  },
   const floatingVariants = {,
     animate: {,
-      y: [-10, 10, -10];
+      y: [-10, 10, -10],
       transition: {,
-        duration: 3;
-        repeat: Infinity;
-        ease: "easeInOut" as const,}
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut" as const}
     }
-  };
+  },
   const pulseVariants = {,
     animate: {,
-      scale: [1, 1.05, 1];
-      opacity: [0.8, 1, 0.8];
+      scale: [1, 1.05, 1],
+      opacity: [0.8, 1, 0.8],
       transition: {,
-        duration: 2;
-        repeat: Infinity;
-        ease: "easeInOut" as const,}
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut" as const}
     }
-  };
+  },
   return (,
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">,
       {/* Enhanced Background */}
@@ -68,7 +68,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
         <motion.div,
           variants={floatingVariants}
           animate="animate",
-          style={{ animationDelay: '1s' ,}}
+          style={{ animationDelay: '1s' }}
           className="absolute top-40 right-20 text-5xl opacity-20",
         >,
           ⚛️,
@@ -76,7 +76,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
         <motion.div,
           variants={floatingVariants}
           animate="animate",
-          style={{ animationDelay: '2s' ,}}
+          style={{ animationDelay: '2s' }}
           className="absolute bottom-40 left-32 text-4xl opacity-20",
         >,
           🧠,
@@ -84,7 +84,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
         <motion.div,
           variants={floatingVariants}
           animate="animate",
-          style={{ animationDelay: '0.5s' ,}}
+          style={{ animationDelay: '0.5s' }}
           className="absolute bottom-20 right-32 text-5xl opacity-20",
         >,
           🌐,
@@ -93,7 +93,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
         <motion.div,
-          variants={containerVariants,}
+          variants={containerVariants}
           initial="hidden",
           animate="visible",
           className="space-y-8",
@@ -116,7 +116,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
               </span>,
             </h1>,
             <p className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 max-w-4xl mx-auto leading-relaxed">,
-              Pioneering the Future with{' ',}
+              Pioneering the Future with{' '}
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-semibold">,
                 AI, Quantum Computing & Emerging Technologies,
               </span>,
@@ -152,7 +152,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
               </span>,
             </Button>,
           </motion.div>,
-          {/* Contact Info */,}
+          {/* Contact Info */}
           <motion.div,
             variants={itemVariants}
             className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 max-w-2xl mx-auto",
@@ -160,7 +160,7 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
             <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">,
               <div className="flex items-center justify-center space-x-2 text-gray-300">,
                 <Phone className="w-4 h-4 text-blue-400" />,
-                <span>{contactInfo.mobile,}</span>,
+                <span>{contactInfo.mobile}</span>,
               </div>,
               <div className="flex items-center justify-center space-x-2 text-gray-300">,
                 <Mail className="w-4 h-4 text-purple-400" />,
@@ -184,33 +184,32 @@ export default function EnhancedHero2026V2({ contactInfo }: EnhancedHero2026V2Pr
         <motion.div,
           variants={pulseVariants}
           animate="animate",
-          style={{ animationDelay: '0s' ,}}
+          style={{ animationDelay: '0s' }}
         >,
           <Cpu className="w-8 h-8 text-blue-400" />,
         </motion.div>,
         <motion.div,
           variants={pulseVariants}
           animate="animate",
-          style={{ animationDelay: '0.5s' ,}}
+          style={{ animationDelay: '0.5s' }}
         >,
           <Database className="w-8 h-8 text-purple-400" />,
         </motion.div>,
         <motion.div,
           variants={pulseVariants}
           animate="animate",
-          style={{ animationDelay: '1s' ,}}
+          style={{ animationDelay: '1s' }}
         >,
           <Brain className="w-8 h-8 text-pink-400" />,
         </motion.div>,
         <motion.div,
           variants={pulseVariants}
           animate="animate",
-          style={{ animationDelay: '1.5s' ,}}
+          style={{ animationDelay: '1.5s' }}
         >,
           <Globe className="w-8 h-8 text-cyan-400" />,
         </motion.div>,
       </motion.div>,
-    </section>,
-  );
+    </section>),
 }
 ,

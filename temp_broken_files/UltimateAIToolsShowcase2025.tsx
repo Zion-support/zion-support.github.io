@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
@@ -9,141 +9,141 @@ import {,
   Shield,
   Globe,
   Smartphone,
-  Database;
-  Cpu;
-  Network;
-  Bot;
-  Sparkles;
-  ArrowRight;
-  Star;
-  Users;
-  TrendingUp;
-  CheckCircle;
-  Play;
-  Download;
-  ExternalLink,
-} from 'lucide-react';
+  Database,
+  Cpu,
+  Network,
+  Bot,
+  Sparkles,
+  ArrowRight,
+  Star,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  Play,
+  Download,
+  ExternalLink
+} from 'lucide-react',
 const UltimateAIToolsShowcase2025 = () => {,
-  const [activeCategorysetActiveCategory] = useState('all');
-  const [hoveredToolsetHoveredTool] = useState(null);
-  const [searchQuerysetSearchQuery] = useState('');
+  const [activeCategorysetActiveCategory] = useState('all'),
+  const [hoveredToolsetHoveredTool] = useState(null),
+  const [searchQuerysetSearchQuery] = useState(''),
   const categories = [,
-    { id: ''allname: 'All 'Toolsicon: Sparklescount: 24 ,};
-    { id: ''automationname: ''Automationicon: Zapcount: 8 ,};
-    { id: ''analyticsname: ''Analyticsicon: BarChart3count: 6 ,};
-    { id: ''developmentname: ''Developmenticon: Codecount: 5 ,};
-    { id: ''securityname: ''Securityicon: Shieldcount: 3 ,};
-    { id: ''mobilename: ''Mobileicon: Smartphonecount: 2 ,}
-  ];
+    { id: ''allname: 'All 'Toolsicon: Sparklescount: 24 },
+    { id: ''automationname: ''Automationicon: Zapcount: 8 },
+    { id: ''analyticsname: ''Analyticsicon: BarChart3count: 6 },
+    { id: ''developmentname: ''Developmenticon: Codecount: 5 },
+    { id: ''securityname: ''Securityicon: Shieldcount: 3 },
+    { id: ''mobilename: ''Mobileicon: Smartphonecount: 2 }
+  ],
   const aiTools = [,
     {,
-      id: 1;
-      name: 'Neural Code Generator';
-      category: 'development';
-      description: 'AI-powered code generation that understands context and creates production-ready code';
-      features: ['Multi-language 'supportContext-aware 'generation', 'Real-time collaboration'];
-      rating: 4.9;
-      users: '12.5K';
-      price: 'Free';
-      image: '/api/placeholder/400/300';
-      badge: 'Most Popular';
-      demo: true;
-      download: true,};
+      id: 1,
+      name: 'Neural Code Generator',
+      category: 'development',
+      description: 'AI-powered code generation that understands context and creates production-ready code',
+      features: ['Multi-language 'supportContext-aware 'generationReal-time collaboration'],
+      rating: 4.9,
+      users: '12.5K',
+      price: 'Free',
+      image: '/api/placeholder/400/300',
+      badge: 'Most Popular',
+      demo: true,
+      download: true},
     {,
-      id: 2;
-      name: 'Smart Analytics Pro';
-      category: 'analytics';
-      description: 'Advanced AI analytics platform with predictive insights and automated reporting';
-      features: ['Predictive 'analyticsAutomated 'insights', 'Custom dashboards'];
-      rating: 4.8;
-      users: '8.2K';
-      price: '$99/mo';
-      image: '/api/placeholder/400/300';
-      badge: 'Enterprise';
-      demo: true;
-      download: false,};
+      id: 2,
+      name: 'Smart Analytics Pro',
+      category: 'analytics',
+      description: 'Advanced AI analytics platform with predictive insights and automated reporting',
+      features: ['Predictive 'analyticsAutomated 'insightsCustom dashboards'],
+      rating: 4.8,
+      users: '8.2K',
+      price: '$99/mo',
+      image: '/api/placeholder/400/300',
+      badge: 'Enterprise',
+      demo: true,
+      download: false},
     {,
-      id: 3;
-      name: 'AutoWorkflow Engine';
-      category: 'automation';
-      description: 'Intelligent workflow automation that learns from your processes and optimizes them';
-      features: ['Process 'learningSmart 'optimization', 'Integration hub'];
-      rating: 4.7;
-      users: '15.3K';
-      price: '$49/mo';
-      image: '/api/placeholder/400/300';
-      badge: 'Trending';
-      demo: true;
-      download: true,};
+      id: 3,
+      name: 'AutoWorkflow Engine',
+      category: 'automation',
+      description: 'Intelligent workflow automation that learns from your processes and optimizes them',
+      features: ['Process 'learningSmart 'optimizationIntegration hub'],
+      rating: 4.7,
+      users: '15.3K',
+      price: '$49/mo',
+      image: '/api/placeholder/400/300',
+      badge: 'Trending',
+      demo: true,
+      download: true},
     {,
-      id: 4;
-      name: 'Quantum Security Suite';
-      category: 'security';
-      description: 'Next-generation security powered by quantum computing principles';
-      features: ['Quantum 'encryptionThreat 'detection', 'Zero-trust architecture'];
-      rating: 4.9;
-      users: '5.1K';
-      price: '$199/mo';
-      image: '/api/placeholder/400/300';
-      badge: 'Cutting Edge';
-      demo: true;
-      download: false,};
+      id: 4,
+      name: 'Quantum Security Suite',
+      category: 'security',
+      description: 'Next-generation security powered by quantum computing principles',
+      features: ['Quantum 'encryptionThreat 'detectionZero-trust architecture'],
+      rating: 4.9,
+      users: '5.1K',
+      price: '$199/mo',
+      image: '/api/placeholder/400/300',
+      badge: 'Cutting Edge',
+      demo: true,
+      download: false},
     {,
-      id: 5;
-      name: 'Mobile AI Assistant';
-      category: 'mobile';
-      description: 'Personal AI assistant that works across all your mobile devices';
-      features: ['Cross-platform 'syncVoice 'commands', 'Smart scheduling'];
-      rating: 4.6;
-      users: '22.7K';
-      price: 'Free';
-      image: '/api/placeholder/400/300';
-      badge: 'New';
-      demo: true;
-      download: true,};
+      id: 5,
+      name: 'Mobile AI Assistant',
+      category: 'mobile',
+      description: 'Personal AI assistant that works across all your mobile devices',
+      features: ['Cross-platform 'syncVoice 'commandsSmart scheduling'],
+      rating: 4.6,
+      users: '22.7K',
+      price: 'Free',
+      image: '/api/placeholder/400/300',
+      badge: 'New',
+      demo: true,
+      download: true},
     {,
-      id: 6;
-      name: 'Data Intelligence Hub';
-      category: 'analytics';
-      description: 'Transform raw data into actionable insights with AI-powered analysis';
-      features: ['Real-time 'processingNatural language 'queries', 'Visual insights'];
-      rating: 4.8;
-      users: '9.8K';
-      price: '$79/mo';
-      image: '/api/placeholder/400/300';
-      badge: 'Popular';
-      demo: true;
-      download: true,}
-  ];
+      id: 6,
+      name: 'Data Intelligence Hub',
+      category: 'analytics',
+      description: 'Transform raw data into actionable insights with AI-powered analysis',
+      features: ['Real-time 'processingNatural language 'queriesVisual insights'],
+      rating: 4.8,
+      users: '9.8K',
+      price: '$79/mo',
+      image: '/api/placeholder/400/300',
+      badge: 'Popular',
+      demo: true,
+      download: true}
+  ],
   const filteredTools = aiTools.filter(tool => {,
-    const matchesCategory = activeCategory === 'all' || tool.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || tool.category === activeCategory,
     const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-                         tool.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         tool.description.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
   const containerVariants = {,
-    hidden: { opacity: 0 ,};
+    hidden: { opacity: 0 },
     visible: {,
-      opacity: 1;
+      opacity: 1,
       transition: {,
-        staggerChildren: 0.1,}
+        staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { y: 20opacity: 0 ,};
+    hidden: { y: 20opacity: 0 },
     visible: {,
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {,
-        duration: 0.5,}
+        duration: 0.5}
     }
-  };
+  },
   return (,
     <div className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16",
         >,
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">,
@@ -161,24 +161,24 @@ const UltimateAIToolsShowcase2025 = () => {,
             createand innovate in 2025.,
           </p>,
         </div>,
-        {/* Search and Filter */,}
+        {/* Search and Filter */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="mb-12",
         >,
           <div className="flex flex-col lg: flex-row gap-6 items-center justify-between">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative w-full lg: w-96">,
               <input,
                 type="text",
                 placeholder="Search AI tools...",
-                value={searchQuery,}
+                value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 pl-12 bg-white border border-gray-200 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
               />,
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="flex flex-wrap gap-2">,
               {categories.map((category) => (,
                 <button,
@@ -187,7 +187,7 @@ const UltimateAIToolsShowcase2025 = () => {,
                   className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 ${,
                     activeCategory === category.id,
                       ? 'bg-blue-600 text-white shadow-lg',
-                      : 'bg-white text-gray-700 hover: bg-gray-50 border border-gray-200',}`}
+                      : 'bg-white text-gray-700 hover: bg-gray-50 border border-gray-200'}`}
                 >,
                   <category.icon className="w-4 h-4 mr-2" />,
                   {category.name}
@@ -207,9 +207,9 @@ const UltimateAIToolsShowcase2025 = () => {,
           <div>,
             {filteredTools.map((tool) => (,
               <div,
-                key={tool.id,}
+                key={tool.id}
                 className="group bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100",
-                onHoverStart={() => setHoveredTool(tool.id),}
+                onHoverStart={() => setHoveredTool(tool.id)}
                 onHoverEnd={() => setHoveredTool(null)}
               >,
                 {/* Tool Image */}
@@ -222,7 +222,7 @@ const UltimateAIToolsShowcase2025 = () => {,
                       tool.badge === 'Trending' ? 'bg-orange-100 text-orange-800' :,
                       tool.badge === 'Cutting Edge' ? 'bg-red-100 text-red-800' :,
                       tool.badge === 'New' ? 'bg-blue-100 text-blue-800' :,
-                      'bg-gray-100 text-gray-800',
+                      'bg-gray-100 text-gray-800'
                     }`}>,
                       {tool.badge}
                     </span>,
@@ -237,7 +237,7 @@ const UltimateAIToolsShowcase2025 = () => {,
                 <div className="p-6">,
                   <div className="flex items-start justify-between mb-4">,
                     <h3 className="text-xl font-bold text-gray-900 group-hover: text-blue-600 transition-colors">,
-                      {tool.name,}
+                      {tool.name}
                     </h3>,
                     <div className="flex items-center text-yellow-500">,
                       <Star className="w-4 h-4 fill-current" />,
@@ -253,8 +253,7 @@ const UltimateAIToolsShowcase2025 = () => {,
                       <div key={index} className="flex items-center text-sm text-gray-600">,
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />,
                         {feature}
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-6">,
@@ -276,20 +275,19 @@ const UltimateAIToolsShowcase2025 = () => {,
                       <button className="px-4 py-2 border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center">,
                         <Download className="w-4 h-4 mr-2" />,
                         Download,
-                      </button>,
-                    ),}
+                      </button>)}
                     <button className="px-4 py-2 border border-gray-200 text-gray-700 rounded-lg font-medium hover: bg-gray-50 transition-colors">,
                       <ExternalLink className="w-4 h-4" />,
                     </button>,
                   </div>,
                 </div>,
               </div>,
-            )),}
+            ))}
           </div>,
         </div>,
         {/* CTA Section */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16",
         >,
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">,
@@ -313,5 +311,5 @@ const UltimateAIToolsShowcase2025 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default UltimateAIToolsShowcase2025;
+  )},
+export default UltimateAIToolsShowcase2025,

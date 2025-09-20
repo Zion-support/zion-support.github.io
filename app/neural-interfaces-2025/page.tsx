@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Neural Interfaces 2025 - Zion Tech Group';
-  description: 'Revolutionary brain-computer interfaces enabling 300% productivity gains through direct thought control. Explore the future of human-computer interaction.';
-  keywords: ['neural interfacesbrain-computer interface', 'BCIcognitive enhancement', 'AI 2025'],
-};
+  title: 'Neural Interfaces 2025 - Zion Tech Group',
+  description: 'Revolutionary brain-computer interfaces enabling 300% productivity gains through direct thought control. Explore the future of human-computer interaction.',
+  keywords: ['neural interfacesbrain-computer interfaceBCIcognitive enhancement', 'AI 2025']
+},
 export default function NeuralInterfaces2025Page() {,
   return (,
     <div>,
@@ -47,7 +47,7 @@ export default function NeuralInterfaces2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Benefits */,}
+        {/* Key Benefits */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">,
@@ -75,7 +75,7 @@ export default function NeuralInterfaces2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Applications */,}
+        {/* Applications */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Business Applications</h2>,
@@ -139,7 +139,7 @@ export default function NeuralInterfaces2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* ROI Metrics */,}
+        {/* ROI Metrics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Proven Results</h2>,
@@ -163,7 +163,7 @@ export default function NeuralInterfaces2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Ready to Experience Neural Interface Technology?</h2>,
@@ -188,5 +188,4 @@ export default function NeuralInterfaces2025Page() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

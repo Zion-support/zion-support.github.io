@@ -4,7 +4,7 @@ interface PerformanceMetrics {,
   loadTime: number,
   renderTime: number,
   memoryUsage?: number,
-  connectionType?: string,}
+  connectionType?: string}
 ,
 export default function PerformanceOptimizer() {,
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
@@ -15,31 +15,30 @@ export default function PerformanceOptimizer() {,
       if (typeof window !== 'undefined' && 'performance' in window) {,
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
         const renderStart = performance.getEntriesByType('paint').find(,
-          entry => entry.name === 'first-contentful-paint',
-        ),
+          entry => entry.name === 'first-contentful-paint'),
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart,
         const renderTime = renderStart ? (renderStart as any).startTime : 0,
         // Check connection type for adaptive loading,
         const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection,
         const performanceData: PerformanceMetrics = {,
-          loadTime;
-          renderTime;
-          connectionType: connection?.effectiveType || 'unknown',}
+          loadTime,
+          renderTime,
+          connectionType: connection?.effectiveType || 'unknown'}
 ,
         setMetrics(performanceData),
         // Optimize based on connection,
         if (connection?.effectiveType === 'slow-2g' || connection?.effectiveType === '2g') {,
           // Disable non-critical features for slow connections,
-          setIsOptimized(true),
+          setIsOptimized(true)
         }
       }
     }
 ,
     // Measure after page load,
     if (document.readyState === 'complete') {,
-      measurePerformance(),
+      measurePerformance()
     } else {,
-      window.addEventListener('load', measurePerformance),
+      window.addEventListener('load', measurePerformance)
     }
 ,
     // Preload critical resources,
@@ -52,15 +51,15 @@ export default function PerformanceOptimizer() {,
           link.rel = 'preload',
           link.as = 'image',
           link.href = src,
-          document.head.appendChild(link),
+          document.head.appendChild(link)
         }
-      }),
+      })
     }
 ,
     preloadCriticalResources(),
     // Cleanup,
     return () => {,
-      window.removeEventListener('load', measurePerformance),
+      window.removeEventListener('load', measurePerformance)
     }
   }, []),
   // Adaptive loading based on connection,
@@ -76,11 +75,11 @@ export default function PerformanceOptimizer() {,
             const img = entry.target as HTMLImageElement,
             img.src = img.dataset.src || '',
             img.removeAttribute('data-lazy'),
-            imageObserver.unobserve(img),
+            imageObserver.unobserve(img)
           }
-        }),
+        })
       }),
-      lazyImages.forEach(img => imageObserver.observe(img)),
+      lazyImages.forEach(img => imageObserver.observe(img))
     }
   }, [isOptimized]),
   // Service Worker registration for caching,
@@ -88,33 +87,33 @@ export default function PerformanceOptimizer() {,
     if ('serviceWorker' in navigator && !isOptimized) {,
       navigator.serviceWorker.register('/sw.js'),
         .then(registration => {,
-          console.log('SW registered: ', registration),
+          console.log('SW registered: ', registration)
         }),
         .catch(registrationError => {,
-          console.log('SW registration failed: ', registrationError),
-        }),
+          console.log('SW registration failed: ', registrationError)
+        })
     }
   }, [isOptimized]),
   // Performance monitoring (only in development),
   if (process.env.NODE_ENV === 'development' && metrics) {,
     return (,
       <div style={{,
-        position: 'fixed';
-        top: 0;
-        right: 0;
-        background: 'rgba(0,0,0,0.8)';
-        color: 'white';
-        padding: '8px';
-        fontSize: '12px';
-        zIndex: 9999;
-        fontFamily: 'monospace',}}>,
-        <div>Load: {metrics.loadTime.toFixed(0),}ms</div>,
-        <div>Render: {metrics.renderTime.toFixed(0),}ms</div>,
-        <div>Connection: {metrics.connectionType,}</div>,
-        <div>Optimized: {isOptimized ? 'Yes' : 'No',}</div>,
+        position: 'fixed',
+        top: 0,
+        right: 0,
+        background: 'rgba(0,0,0,0.8)',
+        color: 'white',
+        padding: '8px',
+        fontSize: '12px',
+        zIndex: 9999,
+        fontFamily: 'monospace'}}>,
+        <div>Load: {metrics.loadTime.toFixed(0)}ms</div>,
+        <div>Render: {metrics.renderTime.toFixed(0)}ms</div>,
+        <div>Connection: {metrics.connectionType}</div>,
+        <div>Optimized: {isOptimized ? 'Yes' : 'No'}</div>,
       </div>,
-    ),
+    )
   }
 ,
-  return null,
+  return null
 }

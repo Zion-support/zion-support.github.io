@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
+      router.push(`/search/${slugify(query)}`),
+      setQuery(''),
 
 
                 <div className="pt-4 border-t border-white/10 space-y-2">
@@ -9,48 +9,48 @@
                   <Link
                   <Link
 =======
-import { useState } from 'react';
-import { logDev, logError } from '@/utils/productionLogger';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { useState } from 'react',
+import { logDev, logError } from '@/utils/productionLogger',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
+import { Logo } from '@/components/header/Logo',
+import { PointsBadge } from '@/components/loyalty/PointsBadge',
+import { UserMenu } from '@/components/header/UserMenu',
+import { LanguageSelector } from '@/components/header/LanguageSelector',
+import { ModeToggle } from '@/components/ModeToggle',
+import { useAuth } from '@/hooks/useAuth',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { useMessaging } from '@/context/MessagingContext',
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',
+import { generateSearchSuggestions } from '@/data/marketplaceData',
+import { slugify } from '@/lib/slugify',
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',
+import { MobileMenu } from '@/components/header/MobileMenu',
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',
 import { Menu, X } from 'lucide-react'
-import { useTranslation } from 'react-i18next';
-import { CartDrawer } from '@/components/cart/CartDrawer';
-import { LoginModal } from '@/components/auth/LoginModal';
+import { useTranslation } from 'react-i18next',
+import { CartDrawer } from '@/components/cart/CartDrawer',
+import { LoginModal } from '@/components/auth/LoginModal',
 
-      // // // // // // // // console.log('PrimaryNav search submit:', query);
-      router.push(`/search/${slugify(query)}`);'      setQuery('');
+      // // // // // // // // console.log('PrimaryNav search submit:', query),
+      router.push(`/search/${slugify(query)}`),'      setQuery(''),
 '
-      // // // // // console.log('PrimaryNav search submit:', query);`
-      router.push(`/search/${slugify(query)}`);
+      // // // // // console.log('PrimaryNav search submit:', query),`
+      router.push(`/search/${slugify(query)}`),
       setQuery('')}
-// Theme toggle component;
+// Theme toggle component,
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const trimmed = query.trim();
+    e.preventDefault(),
+    const trimmed = query.trim(),
     if (trimmed) {
-      logDev('PrimaryNav search submit:', trimmed);
+      logDev('PrimaryNav search submit:', trimmed),
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
         .then(() => setQuery(''))
-        .catch((err) => logError('Search navigation failed', err));
+        .catch((err) => logError('Search navigation failed', err)),
     }
-  };
+  },
 
   return ()
     <>
@@ -76,7 +76,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  logDev('PrimaryNav search suggestion selected:', sugg);
+                  logDev('PrimaryNav search suggestion selected:', sugg),
                   // Handle different suggestion types with proper navigation
                   if(sugg.id) {
 
@@ -91,9 +91,9 @@ import { LoginModal } from '@/components/auth/LoginModal';
                     // Blog posts navigate to blog detail page`
                     router.push(`/blog/${sugg.slug}`)} else {
 
-                    // Default: search results page with slug;`
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
-                  setQuery('');
+                    // Default: search results page with slug,`
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)},
+                  setQuery(''),
 
                   // Track analytics event'
                   if(typeof window !== 'null' && window.gtag) {
@@ -250,13 +250,13 @@ import { LoginModal } from '@/components/auth/LoginModal';
                   >
                     Contact
                   </Link>
-                </div>;
-              </div>;
-            </motion.div>;
-          )};
-        </AnimatePresence>;
-      </nav>;
-    </header>;
+                </div>,
+              </div>,
+            </motion.div>,
+          )},
+        </AnimatePresence>,
+      </nav>,
+    </header>,
   )}
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

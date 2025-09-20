@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function OfflineToast() {
   return (
     <div className="space-y-3">
@@ -96,5 +96,5 @@ export function OfflineToast() {
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  );
+  ),
 }

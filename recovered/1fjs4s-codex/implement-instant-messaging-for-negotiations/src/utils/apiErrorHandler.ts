@@ -1,4 +1,4 @@
-import { toast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast",
 
 /**
  * Display a toast for API errors using a consistent style.
@@ -10,11 +10,11 @@ export function showApiError(error: unknown, fallback = "Something went wrong") 
       ? error
       : error instanceof Error && error.message
       ? error.message
-      : fallback;
+      : fallback,
 
   toast({
     title: "Error",
     description: message,
-    variant: "destructive",
-  });
+    variant: "destructive"
+  }),
 }

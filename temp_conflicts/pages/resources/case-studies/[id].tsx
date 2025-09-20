@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
 export default function ResourceCaseStudyPage() {
-  const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter(),
+  const { id } = router.query,
 
   // Case study data - in a real app, this would come from an API or database
   const caseStudies = {
@@ -17,10 +17,8 @@ export default function ResourceCaseStudyPage() {
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
       fullDescription: 'This comprehensive case study explores how Global Manufacturing Corp transformed their operations through AI automation. The implementation included predictive maintenance systems, quality control automation, and production optimization algorithms that resulted in significant efficiency gains and cost reductions.',
       keyInsights: [
-        'Predictive maintenance reduced unplanned downtime by 60%',
-        'AI-powered quality control improved product quality by 35%',
-        'Production optimization algorithms increased efficiency by 40%',
-        'Overall operational costs were reduced by 25%'
+        'Predictive maintenance reduced unplanned downtime by 60%AI-powered quality control improved product quality by 35%',
+        'Production optimization algorithms increased efficiency by 40%Overall operational costs were reduced by 25%'
       ],
       implementation: 'The project was implemented over 6 months with a team of 8 engineers, focusing on gradual rollout and continuous optimization based on real-time data feedback.'
     },
@@ -32,10 +30,8 @@ export default function ResourceCaseStudyPage() {
       description: 'Transforming content creation through autonomous AI systems.',
       fullDescription: 'This case study demonstrates how a digital marketing agency scaled their content production capabilities by 10x while maintaining quality and improving engagement metrics. The solution involved deploying autonomous content generation systems with human oversight and quality control mechanisms.',
       keyInsights: [
-        'AI content generation increased output by 10x',
-        'Engagement metrics improved by 85%',
-        'Content creation time was reduced by 70%',
-        'Client satisfaction rate reached 95%'
+        'AI content generation increased output by 10xEngagement metrics improved by 85%',
+        'Content creation time was reduced by 70%Client satisfaction rate reached 95%'
       ],
       implementation: 'The project was completed in 4 months with a team of 5 engineers and 3 content specialists, focusing on maintaining brand voice and quality standards.'
     },
@@ -47,16 +43,14 @@ export default function ResourceCaseStudyPage() {
       description: 'Building self-healing, auto-scaling cloud infrastructure.',
       fullDescription: 'This case study showcases the development of a self-healing, auto-scaling cloud infrastructure that significantly reduced operational costs while improving performance and reliability. The solution eliminated the need for manual intervention in scaling and maintenance operations.',
       keyInsights: [
-        'Cloud costs were reduced by 50%',
-        '99.9% uptime was achieved consistently',
-        'Response times improved by 3x',
-        'Zero manual intervention required for scaling'
+        'Cloud costs were reduced by 50%99.9% uptime was achieved consistently',
+        'Response times improved by 3xZero manual intervention required for scaling'
       ],
       implementation: 'The project spanned 8 months with a team of 6 DevOps engineers, focusing on building robust monitoring and automation systems.'
     }
-  };
+  },
 
-  const caseStudy = caseStudies[id as keyof typeof caseStudies];
+  const caseStudy = caseStudies[id as keyof typeof caseStudies],
 
   if (!caseStudy) {
     return (
@@ -64,12 +58,12 @@ export default function ResourceCaseStudyPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
           <p className="text-white/80 mb-8">The requested case study could not be found.</p>
-          <Link href="/resources" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+          <Link href="/resources" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
             Back to Resources
           </Link>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -147,7 +141,7 @@ export default function ResourceCaseStudyPage() {
                     This case study demonstrates the real impact of AI automation. 
                     Explore our other resources or get in touch to discuss your specific needs.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm: flex-row gap-4 justify-center">
                     <Link 
                       href="/case-studies"
                       className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -168,5 +162,5 @@ export default function ResourceCaseStudyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

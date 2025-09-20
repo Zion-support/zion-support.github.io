@@ -1,31 +1,31 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+'use client',
+import React, { Component, ErrorInfo, ReactNode } from 'react',
 interface Props {,
-  children: ReactNode;
-  fallback?: ReactNode,
+  children: ReactNode,
+  fallback?: ReactNode
 }
 ,
 interface State {,
-  hasError: boolean;
-  error?: Error,
+  hasError: boolean,
+  error?: Error
 }
 ,
 class ErrorBoundary extends Component<Props, State> {,
   constructor(props: Props) {,
-    super(props);
-    this.state = { hasError: false ,};
+    super(props),
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 ,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo),
     // Log to external service in production,
     if (process.env.NODE_ENV === 'production') {,
       // You can integrate with services like Sentry here,
-      console.error('Production error:', error, errorInfo);
+      console.error('Production error:', error, errorInfo),
     }
   }
 ,
@@ -63,10 +63,10 @@ class ErrorBoundary extends Component<Props, State> {,
             </button>,
           </div>,
         </div>,
-      ),}
+      )}
 ,
-    return this.props.children;
+    return this.props.children,
   }
 }
 ,
-export default ErrorBoundary;
+export default ErrorBoundary,

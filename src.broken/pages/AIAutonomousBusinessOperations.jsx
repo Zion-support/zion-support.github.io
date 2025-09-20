@@ -1,19 +1,19 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             category: "Financial Operations",
-            capabilities["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"];
-        },;
+            capabilities["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"],
+        },
         {
             category: "Human Resources",
-            capabilities["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"];
-        },;
+            capabilities["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"],
+        },
         {
             category: "Customer Operations",
-            capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"];
+            capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"],
         }
-    ];
+    ],
     const useCases = [{
             title: "Manufacturing",
             description: "Optimize production processes and quality control",
@@ -34,7 +34,7 @@ export default function Page() {
             description: "Risk assessment and portfolio optimization",
             icon: "💼"
 
-    ];
+    ],
     const benefits = [{
             title: "Efficiency Gains",
             description: "Improve operational efficiency by 40%",
@@ -55,7 +55,7 @@ export default function Page() {
             description: "Easily scale operations as business grows",
             metric: "Unlimited"
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max - w-7xl mx -auto">
@@ -211,5 +211,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}}

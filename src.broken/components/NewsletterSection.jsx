@@ -1,24 +1,24 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 export function NewsletterSection() {
 
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState(''),
+  const [isSubscribed, setIsSubscribed] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
 
   const handleSubmit = async e => {
 
-    e.preventDefault();
-    setIsLoading(true);
+    e.preventDefault(),
+    setIsLoading(true),
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000)),
 
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail('');
-  };
+    setIsSubscribed(true),
+    setIsLoading(false),
+    setEmail(''),
+  },
 
   const benefits = [{
 
@@ -39,15 +39,15 @@ export function NewsletterSection() {
 "
       icon: <Users className="w-6 h-6" />,
       title: 'Community Access',
-      description: 'Join our exclusive tech community'},
-  ];
+      description: 'Join our exclusive tech community'}
+  ],
 
   const stats = ['
     { value: '50K+', label: 'Subscribers' },
     { value: '95%', label: 'Satisfaction' },
     { value: '24/7', label: 'Support' },
-    { value: '100%', label: 'Free' },
-  ];
+    { value: '100%', label: 'Free' }
+  ],
 
   const containerVariants = {
 
@@ -58,12 +58,12 @@ export function NewsletterSection() {
       transition: {
 
         staggerChildren: 0.2,
-        delayChildren: 0.1}}};
+        delayChildren: 0.1}}},
 
   const itemVariants = {
 
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }};
+    visible: { opacity: 1, y: 0 }},
 
   if(isSubscribed) {
 
@@ -108,12 +108,12 @@ export function NewsletterSection() {
           <motion.button
             variants={itemVariants}
             onClick={() => setIsSubscribed(false)}"
-            className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg border border-white/20 transition-all duration-300"
+            className="bg-white/10 hover: bg-white/20 text-white px-8 py-3 rounded-lg border border-white/20 transition-all duration-300"
           >
             Subscribe Another Email
           </motion.button>
         </motion.div>
-      </section>) ;
+      </section>) 
   }
 
   return ("
@@ -237,7 +237,7 @@ export function NewsletterSection() {
               <div className="text-center mt-6">"
                 <p className="text-xs text-zion-slate-light">
                   By subscribing, you agree to our{' '}"
-                  <a href="/privacy" className="text-zion-cyan hover:underline">
+                  <a href="/privacy" className="text-zion-cyan hover: underline">
                     Privacy Policy
                   </a>
                 </p>
@@ -246,10 +246,10 @@ export function NewsletterSection() {
           </motion.div>
         </div>
       </motion.div>
-    </section>) ;
+    </section>) 
 }
 '"
 =======
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

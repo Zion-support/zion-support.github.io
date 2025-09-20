@@ -1,30 +1,30 @@
-import { useInfiniteQuery } from '@tanstack / react -query';
+import { useInfiniteQuery } from '@tanstack / react -query',
 export default function Page() {
-&limit=${LIMIT}`) ;
-            if(!res.ok) throw new Error("Failed to fetch") ;
+&limit=${LIMIT}`) ,
+            if(!res.ok) throw new Error("Failed to fetch") ,
             return (await res.json () ) },
         enabled: !!query,
         initialPageParam: 1,
         getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? null : pages.length + 1
-    }) ;
+    }) ,
     // Refetch when the URL param changes
     useEffect(() => {
         if(initialQuery !== query) {
-            setQuery(initialQuery) ;
+            setQuery(initialQuery) ,
             refetch () }
-    }, [initialQuery]) ;
-    const allResults = data?.pages.flat () ?? [];
-    const loader = useRef(null) ;
+    }, [initialQuery]) ,
+    const allResults = data?.pages.flat () ?? [],
+    const loader = useRef(null) ,
     useEffect(() => {
-        const el = loader.current;
-        if(!el) return;
+        const el = loader.current,
+        if(!el) return,
         const observer = new IntersectionObserver((entries) => {
             if(entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
                 fetchNextPage () }
-        }) ;
-        observer.observe(el) ;
-        return () => observer.disconnect () }, [loader.current, hasNextPage, isFetchingNextPage]) ;
-    const suggestions = generateSearchSuggestions () .slice(0, 5) ;
+        }) ,
+        observer.observe(el) ,
+        return () => observer.disconnect () }, [loader.current, hasNextPage, isFetchingNextPage]) ,
+    const suggestions = generateSearchSuggestions () .slice(0, 5) ,
     return (<main className="container mx - auto px-4 py-8">
       <div className="mb-6">
         <SearchBar value={query} onChange={setQuery}/>

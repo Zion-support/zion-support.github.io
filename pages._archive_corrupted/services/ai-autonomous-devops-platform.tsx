@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 export default function AiAutonomousDevOpsPlatform() {,
   return (,
     <>,
@@ -44,6 +44,5 @@ export default function AiAutonomousDevOpsPlatform() {,
           </aside>,
         </div>,
       </div>,
-    </>,
-  ),}
+    </>)}
 ,

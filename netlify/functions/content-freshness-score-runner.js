@@ -1,23 +1,21 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 content-freshness-score-runner function triggered');
+  console.log('🤖 content-freshness-score-runner function triggered'),
   
   try {
     // Content freshness score runner logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate content freshness operations
     const freshnessOperations = [
-      'content-age-analysis',
-      'update-frequency-assessment',
-      'relevance-scoring',
-      'freshness-optimization'
-    ];
+      'content-age-analysisupdate-frequency-assessment',
+      'relevance-scoringfreshness-optimization'
+    ],
     
     // Simulate operation execution
-    const operationResults = {};
+    const operationResults = {},
     for (const operation of freshnessOperations) {
-      await new Promise(resolve => setTimeout(resolve, 150)); // Simulate freshness analysis time
-      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-update'; // 96% success rate
+      await new Promise(resolve => setTimeout(resolve, 150)), // Simulate freshness analysis time
+      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-update', // 96% success rate
     }
     
     // Simulate freshness metrics
@@ -26,7 +24,7 @@ exports.handler = async function(event, context) {
       freshContent: Math.floor(Math.random() * 2500) + 1000, // 1000-3500
       staleContent: Math.floor(Math.random() * 800) + 200, // 200-1000
       averageAge: Math.floor(Math.random() * 180) + 30 // 30-210 days
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -41,13 +39,13 @@ exports.handler = async function(event, context) {
         freshnessHealth: freshnessMetrics.averageAge < 60 ? 'excellent' : freshnessMetrics.averageAge < 120 ? 'good' : 'needs-update',
         nextRun: new Date(Date.now() + 12 * 60 * 60 * 1000).toISOString() // 12 hours from now
       })
-    };
+    },
     
-    console.log('✅ content-freshness-score-runner completed successfully');
-    return result;
+    console.log('✅ content-freshness-score-runner completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ content-freshness-score-runner failed:', error);
+    console.error('❌ content-freshness-score-runner failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -56,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'content-freshness-score-runner',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

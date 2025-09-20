@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Atom, Brain, Rocket, Shield, Zap, Target, Cpu, 
   Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
@@ -11,7 +11,7 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
@@ -19,7 +19,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-neural-networks',
       name: 'Quantum Neural Networks',
       description: 'Next-generation neural networks powered by quantum computing',
-      features: ['Quantum Superposition', 'Entanglement Processing', 'Quantum Memory', 'Hybrid Classical-Quantum'],
+      features: ['Quantum SuperpositionEntanglement Processing', 'Quantum MemoryHybrid Classical-Quantum'],
       price: '$3,999',
       period: 'month',
       popular: true,
@@ -29,7 +29,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-financial-trading',
       name: 'Quantum Financial Trading',
       description: 'Quantum-powered algorithmic trading and risk management',
-      features: ['Quantum Risk Assessment', 'Portfolio Optimization', 'Market Prediction', 'Real-time Analysis'],
+      features: ['Quantum Risk AssessmentPortfolio Optimization', 'Market PredictionReal-time Analysis'],
       price: '$2,999',
       period: 'month',
       popular: false,
@@ -39,7 +39,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-materials-discovery',
       name: 'Quantum Materials Discovery',
       description: 'Accelerated materials research using quantum simulation',
-      features: ['Quantum Simulation', 'Molecular Modeling', 'Property Prediction', 'Discovery Automation'],
+      features: ['Quantum SimulationMolecular Modeling', 'Property PredictionDiscovery Automation'],
       price: '$2,499',
       period: 'month',
       popular: false,
@@ -49,7 +49,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-bio-computing',
       name: 'Quantum Bio-Computing',
       description: 'Quantum computing for biological and pharmaceutical research',
-      features: ['Protein Folding', 'Drug Discovery', 'Genetic Analysis', 'Bioinformatics'],
+      features: ['Protein FoldingDrug Discovery', 'Genetic AnalysisBioinformatics'],
       price: '$2,799',
       period: 'month',
       popular: false,
@@ -59,7 +59,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-internet-security',
       name: 'Quantum Internet Security',
       description: 'Unbreakable quantum encryption and secure communications',
-      features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Secure Networks', 'Quantum Authentication'],
+      features: ['Quantum Key DistributionPost-Quantum Cryptography', 'Secure NetworksQuantum Authentication'],
       price: '$1,999',
       period: 'month',
       popular: false,
@@ -69,13 +69,13 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-cloud-infrastructure',
       name: 'Quantum Cloud Infrastructure',
       description: 'Quantum-ready cloud computing infrastructure',
-      features: ['Quantum Processing Units', 'Hybrid Computing', 'Scalable Architecture', 'Performance Optimization'],
+      features: ['Quantum Processing UnitsHybrid Computing', 'Scalable ArchitecturePerformance Optimization'],
       price: '$3,499',
       period: 'month',
       popular: false,
       icon: <Cloud className="w-8 h-8" />
     }
-  ];
+  ],
 
   const quantumCapabilities = [
     {
@@ -108,7 +108,7 @@ const QuantumServicesPage: React.FC = () => {
       description: 'Secure quantum information transfer',
       icon: <Globe className="w-6 h-6" />
     }
-  ];
+  ],
 
 export default function QuantumServices() {
   return (
@@ -275,7 +275,7 @@ export default function QuantumServices() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Ready for the Quantum Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -300,7 +300,7 @@ export default function QuantumServices() {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumServicesPage;
+export default QuantumServicesPage,

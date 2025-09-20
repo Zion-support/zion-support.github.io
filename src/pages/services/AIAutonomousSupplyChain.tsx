@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Truck, 
+  Truck,
   Brain, 
   Shield, 
   Zap, 
@@ -30,56 +30,36 @@ import {
   ShoppingCart,
   Heart,
   Leaf
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousSupplyChain = () => {
   const features = [
     {
-      title: "AI Demand Forecasting",
-      description: "Machine learning algorithms predict demand with 95% accuracy, optimizing inventory levels and reducing waste",
-      icon: Brain,
-      color: "from-blue-500 to-indigo-500"
-    },
+      title: "AI Demand Forecasting",description: "Machine learning algorithms predict demand with 95% accuracy, optimizing inventory levels and reducing waste",
+      icon: Brain,color: "from-blue-500 to-indigo-500"
+    };
     {
-      title: "Autonomous Route Optimization",
-      description: "AI-powered logistics optimization reduces delivery times by 30% and fuel costs by 25%",
-      icon: Route,
-      color: "from-green-500 to-emerald-500"
-    },
+      title: "Autonomous Route Optimization",description: "AI-powered logistics optimization reduces delivery times by 30% and fuel costs by 25%",icon: Route,color: "from-green-500 to-emerald-500"
+    };
     {
-      title: "Real-time Inventory Management",
-      description: "IoT sensors and AI analytics provide real-time visibility across all warehouses and distribution centers",
-      icon: Warehouse,
-      color: "from-purple-500 to-pink-500"
-    },
+      title: "Real-time Inventory Management",description: "IoT sensors and AI analytics provide real-time visibility across all warehouses and distribution centers",icon: Warehouse,color: "from-purple-500 to-pink-500"
+    };
     {
-      title: "Predictive Maintenance",
-      description: "AI monitors equipment health and predicts failures before they occur, reducing downtime by 40%",
-      icon: AlertTriangle,
-      color: "from-red-500 to-orange-500"
-    },
+      title: "Predictive Maintenance",description: "AI monitors equipment health and predicts failures before they occur, reducing downtime by 40%",
+      icon: AlertTriangle,color: "from-red-500 to-orange-500"
+    };
     {
-      title: "Supplier Risk Assessment",
-      description: "AI analyzes supplier performance, financial health, and geopolitical risks in real-time",
-      icon: Shield,
-      color: "from-yellow-500 to-orange-500"
-    },
+      title: "Supplier Risk Assessment",description: "AI analyzes supplier performance, financial health, and geopolitical risks in real-time",
+      icon: Shield,color: "from-yellow-500 to-orange-500"
+    };
     {
-      title: "End-to-End Visibility",
-      description: "Complete transparency across the entire supply chain from raw materials to final delivery",
-      icon: Eye,
-      color: "from-cyan-500 to-blue-500"
+      title: "End-to-End Visibility",description: "Complete transparency across the entire supply chain from raw materials to final delivery",icon: Eye,color: "from-cyan-500 to-blue-500"
     }
   ];
-
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$1,999",
-      period: "/month",
-      description: "Perfect for small to medium businesses",
-      features: [
-        "AI demand forecasting",
+      name: "Starter",price: "$1,999",
+      period: "/month",description: "Perfect for small to medium businesses",features: [
+        "AI demand forecasting";
         "Basic inventory management",
         "Route optimization",
         "Up to 5 warehouses",
@@ -87,14 +67,11 @@ const AIAutonomousSupplyChain = () => {
         "Mobile app access"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$4,999",
-      period: "/month",
-      description: "Ideal for growing enterprises",
-      features: [
-        "Advanced AI algorithms",
+      name: "Professional",price: "$4,999",
+      period: "/month",description: "Ideal for growing enterprises",features: [
+        "Advanced AI algorithms";
         "Multi-warehouse management",
         "Predictive maintenance",
         "Supplier risk assessment",
@@ -103,14 +80,11 @@ const AIAutonomousSupplyChain = () => {
         "Custom integrations"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$12,999",
-      period: "/month",
-      description: "For large corporations and global operations",
-      features: [
-        "Custom AI model development",
+      name: "Enterprise",price: "$12,999",
+      period: "/month",description: "For large corporations and global operations",features: [
+        "Custom AI model development";
         "Global supply chain visibility",
         "Advanced analytics dashboard",
         "Dedicated support team",
@@ -121,57 +95,37 @@ const AIAutonomousSupplyChain = () => {
       popular: false
     }
   ];
-
   const benefits = [
     {
-      title: "Cost Reduction",
-      description: "Optimize operations and reduce supply chain costs significantly",
-      metric: "25-40% savings"
-    },
+      title: "Cost Reduction",description: "Optimize operations and reduce supply chain costs significantly",metric: "25-40% savings"
+    };
     {
-      title: "Improved Efficiency",
-      description: "Streamline processes and increase productivity across operations",
-      metric: "35% efficiency gain"
-    },
+      title: "Improved Efficiency",description: "Streamline processes and increase productivity across operations",metric: "35% efficiency gain"
+    };
     {
-      title: "Better Customer Service",
-      description: "Faster delivery times and improved order accuracy",
-      metric: "50% faster delivery"
-    },
+      title: "Better Customer Service",description: "Faster delivery times and improved order accuracy",metric: "50% faster delivery"
+    };
     {
-      title: "Risk Mitigation",
-      description: "Identify and prevent supply chain disruptions proactively",
-      metric: "80% risk reduction"
+      title: "Risk Mitigation",description: "Identify and prevent supply chain disruptions proactively",metric: "80% risk reduction"
     }
   ];
-
   const useCases = [
     {
-      title: "Manufacturing",
-      description: "Optimize production schedules, manage raw materials, and coordinate with suppliers",
-      icon: Package,
-      color: "from-blue-500 to-cyan-500"
-    },
+      title: "Manufacturing",description: "Optimize production schedules, manage raw materials, and coordinate with suppliers",
+      icon: Package,color: "from-blue-500 to-cyan-500"
+    };
     {
-      title: "Retail & E-commerce",
-      description: "Manage inventory across multiple locations, optimize fulfillment, and improve customer experience",
-      icon: ShoppingCart,
-      color: "from-purple-500 to-pink-500"
-    },
+      title: "Retail & E-commerce",description: "Manage inventory across multiple locations, optimize fulfillment, and improve customer experience",
+      icon: ShoppingCart,color: "from-purple-500 to-pink-500"
+    };
     {
-      title: "Healthcare",
-      description: "Ensure critical medical supplies are always available and properly distributed",
-      icon: Heart,
-      color: "from-red-500 to-pink-500"
-    },
+      title: "Healthcare",description: "Ensure critical medical supplies are always available and properly distributed",icon: Heart,color: "from-red-500 to-pink-500"
+    };
     {
-      title: "Food & Beverage",
-      description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",
-      icon: Leaf,
-      color: "from-green-500 to-emerald-500"
+      title: "Food & Beverage",description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",
+      icon: Leaf,color: "from-green-500 to-emerald-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -226,7 +180,7 @@ const AIAutonomousSupplyChain = () => {
               Intelligent Supply Chain Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform provides comprehensive supply chain management with predictive analytics, 
+              Our AI platform provides comprehensive supply chain management with predictive analytics;
               autonomous optimization, and real-time visibility.
             </p>
           </motion.div>
@@ -439,7 +393,7 @@ const AIAutonomousSupplyChain = () => {
 
       {/* Contact Information */}
       <section className="py-16 bg-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
@@ -465,7 +419,6 @@ const AIAutonomousSupplyChain = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousSupplyChain;

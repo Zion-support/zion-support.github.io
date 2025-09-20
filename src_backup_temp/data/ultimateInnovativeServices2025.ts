@@ -1,51 +1,50 @@
-export interface UltimateInnovativeService { "id": "string, "title": string, "description": string, "category": string, "subcategory": string, "price": number, "currency": string, "pricingModel": string, "features": string[], "benefits": string[], "useCases": string[], "targetAudience": string[], "tags": string[], "estimatedDelivery": string, "supportLevel": string, "marketPrice": string, "roi": string, "innovationLevel": string, "contactInfo": { "phone": string, "email": string, "website": string "} }, technicalSpecs?: "{ "technology": 'string[], "integrations": string[], "apiEndpoints": number, "uptime": string, "security": string[]'"}, competitors?: "string[], caseStudies?: string[]"} , export 'IoT & Edge ComputingMetaverse & AR/VR', 'Robotics & AutomationBiotechnology', 'Space TechnologyGreen Technology', 'AI & Automation 'Quantum Computing',' 'Blockchain & Web3 'Cybersecurity',' 'IoT & Edge Computing 'Metaverse & AR/VR',' 'Robotics & Automation 'Biotechnology',' 'Space Technology 'Green Technology', ], export const SERVICE_SUBCATEGORIES = {,
-export interface UltimateInnovativeService { id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[], useCases: string[], targetAudience: string[], tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string, roi: string, innovationLevel: string, contactInfo: { phone: string, email: string, website: string ,}, technicalSpecs?: { technology: string[], integrations: string[], apiEndpoints: number, uptime: string, security: string[],}, competitors?: string[], caseStudies?: string[]} , export &apos,IoT & Edge Computing&apos,&apos,Metaverse & AR/VR&apos,&apos,Robotics & Automation&apos,&apos,Biotechnology&apos,&apos,Space Technology&apos,&apos,Green Technology&apos,&apos,&apos, &apos,AI & Automation&apos,&apos, &apos,Quantum Computing&apos,&apos, &apos,Blockchain & Web3&apos,&apos, &apos,Cybersecurity&apos,&apos, &apos,IoT & Edge Computing&apos,&apos, &apos,Metaverse & AR/VR&apos,&apos, &apos,Robotics & Automation&apos,&apos, &apos,Biotechnology&apos,&apos, &apos,Space Technology&apos,&apos, &apos,Green Technology&apos,], export const SERVICE_SUBCATEGORIES = {,
+export interface UltimateInnovativeService { "id": "string, "title": string, "description": string, "category": string, "subcategory": string, "price": number, "currency": string, "pricingModel": string, "features": string[], "benefits": string[], "useCases": string[], "targetAudience": string[], "tags": string[], "estimatedDelivery": string, "supportLevel": string, "marketPrice": string, "roi": string, "innovationLevel": string, "contactInfo": { "phone": string, "email": string, "website": string "} }, technicalSpecs?: "{ "technology": 'string[], "integrations": string[], "apiEndpoints": number, "uptime": string, "security": string[]'"}, competitors?: "string[], caseStudies?: string[]"} , export 'IoT & Edge ComputingMetaverse & AR/VRRobotics & AutomationBiotechnology', 'Space TechnologyGreen TechnologyAI & Automation 'Quantum Computing',' 'Blockchain & Web3 'Cybersecurity 'IoT & Edge Computing 'Metaverse & AR/VR 'Robotics & Automation 'Biotechnology 'Space Technology 'Green Technology' ], export const SERVICE_SUBCATEGORIES = {,
+export interface UltimateInnovativeService { id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[], useCases: string[], targetAudience: string[], tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string, roi: string, innovationLevel: string, contactInfo: { phone: string, email: string, website: string }, technicalSpecs?: { technology: string[], integrations: string[], apiEndpoints: number, uptime: string, security: string[]}, competitors?: string[], caseStudies?: string[]} , export &apos,IoT & Edge Computing&apos,&apos,Metaverse & AR/VR&apos,&apos,Robotics & Automation&apos,&apos,Biotechnology&apos,&apos,Space Technology&apos,&apos,Green Technology&apos,&apos,&apos, &apos,AI & Automation&apos,&apos, &apos,Quantum Computing&apos,&apos, &apos,Blockchain & Web3&apos,&apos, &apos,Cybersecurity&apos,&apos, &apos,IoT & Edge Computing&apos,&apos, &apos,Metaverse & AR/VR&apos,&apos, &apos,Robotics & Automation&apos,&apos, &apos,Biotechnology&apos,&apos, &apos,Space Technology&apos,&apos, &apos,Green Technology&apos], export const SERVICE_SUBCATEGORIES = {,
 export interface UltimateInnovativeService {,
-  "id": string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
+  "id": string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
+  price: number,
+  currency: string,
+  pricingModel: string,
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  tags: string[],
+  estimatedDelivery: string,
+  supportLevel: string,
+  marketPrice: string,
+  roi: string,
+  innovationLevel: string,
 contactInfo: {,
-    phone: string;
-    email: string;
-    website: string,};
+    phone: string,
+    email: string,
+    website: string},
   technicalSpecs?: {,
-    "technology": string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[],};
-  competitors?: string[];
+    "technology": string[],
+    integrations: string[],
+    apiEndpoints: number,
+    uptime: string,
+    security: string[]},
+  competitors?: string[],
   caseStudies?: string[]}
-;
+,
 export,
-  'IoT & Edge ComputingMetaverse & AR/VR';
-  'Robotics & AutomationBiotechnology';
-  'Space TechnologyGreen Technology',',AI & Automation',',
+  'IoT & Edge ComputingMetaverse & AR/VRRobotics & AutomationBiotechnology',
+  'Space TechnologyGreen Technology,AI & Automation',',
   'Quantum Computing,
-  'Blockchain & Web3',',
+  'Blockchain & Web3,
   'Cybersecurity,
-  'IoT & Edge Computing',',
+  'IoT & Edge Computing,
   'Metaverse & AR/VR,
-  'Robotics & Automation',',
+  'Robotics & Automation,
   'Biotechnology,
-  'Space Technology','  'Green Technology'];
-;
-export const SERVICE_SUBCATEGORIES = {,';
-export interface UltimateInnovativeService { id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[], useCases: string[], targetAudience: string[], tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string, roi: string, innovationLevel: string, contactInfo: { phone: string, email: string, website: string ,} }, technicalSpecs?: { technology: 'string[], integrations: string[], apiEndpoints: number, uptime: string, security: string[]',}, competitors?: string[], caseStudies?: string[]} , export 'IoT & Edge ComputingMetaverse & AR/VR', 'Robotics & AutomationBiotechnology', 'Space TechnologyGreen Technology', 'AI & Automation 'Quantum Computing',' 'Blockchain & Web3 'Cybersecurity',' 'IoT & Edge Computing 'Metaverse & AR/VR',' 'Robotics & Automation 'Biotechnology',' 'Space Technology 'Green Technology', ], export const SERVICE_SUBCATEGORIES = {,
+  'Space Technology  'Green Technology'],
+,
+export const SERVICE_SUBCATEGORIES = {,',
+export interface UltimateInnovativeService { id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[], useCases: string[], targetAudience: string[], tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string, roi: string, innovationLevel: string, contactInfo: { phone: string, email: string, website: string } }, technicalSpecs?: { technology: 'string[], integrations: string[], apiEndpoints: number, uptime: string, security: string[]'}, competitors?: string[], caseStudies?: string[]} , export 'IoT & Edge ComputingMetaverse & AR/VRRobotics & AutomationBiotechnology', 'Space TechnologyGreen TechnologyAI & Automation 'Quantum Computing',' 'Blockchain & Web3 'Cybersecurity 'IoT & Edge Computing 'Metaverse & AR/VR 'Robotics & Automation 'Biotechnology 'Space Technology 'Green Technology' ], export const SERVICE_SUBCATEGORIES = {,
 export const SERVICE_SUBCATEGORIES = {,
-export interface UltimateInnovativeService { id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[], useCases: string[], targetAudience: string[], tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string, roi: string, innovationLevel: string, contactInfo: { phone: string, email: string, website: string ,}, technicalSpecs?: { technology: string[], integrations: string[], apiEndpoints: number, uptime: string, security: string[],}, competitors?: string[], caseStudies?: string[]} , export 'IoT & Edge ComputingMetaverse & AR/VR','Robotics & AutomationBiotechnology','Space TechnologyGreen Technology',',AI & Automation',' 'Quantum Computing 'Blockchain & Web3',' 'Cybersecurity 'IoT & Edge Computing',' 'Metaverse & AR/VR 'Robotics & Automation',' 'Biotechnology 'Space Technology',' 'Green Technology'], export const SERVICE_SUBCATEGORIES = {}}}}
+export interface UltimateInnovativeService { id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[], useCases: string[], targetAudience: string[], tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string, roi: string, innovationLevel: string, contactInfo: { phone: string, email: string, website: string }, technicalSpecs?: { technology: string[], integrations: string[], apiEndpoints: number, uptime: string, security: string[]}, competitors?: string[], caseStudies?: string[]} , export 'IoT & Edge ComputingMetaverse & AR/VRRobotics & AutomationBiotechnology','Space TechnologyGreen Technology,AI & Automation',' 'Quantum Computing 'Blockchain & Web3 'Cybersecurity 'IoT & Edge Computing 'Metaverse & AR/VR 'Robotics & Automation 'Biotechnology 'Space Technology 'Green Technology'], export const SERVICE_SUBCATEGORIES = {}}}}

@@ -1,36 +1,36 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback, useRef } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown, X, Phone, Mail, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
   DollarSign, BarChart3, Globe, Grid, Heart, Database,
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor,
   Search, User, Lock, Zap, Users, BookOpen, FileText, Video
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-  color?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  category?: string,
+  color?: string
 }
 
 function normalizeHref(href: string): string {
-  if (!href) return href;
+  if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href;
+    return href
   }
-  if (!href.startsWith('/')) return href;
-  const hasQueryOrHash = href.includes('?') || href.includes('#');
-  if (hasQueryOrHash) return href;
-  return href.endsWith('/') ? href : href + '/';
+  if (!href.startsWith('/')) return href,
+  const hasQueryOrHash = href.includes('?') || href.includes('#'),
+  if (hasQueryOrHash) return href,
+  return href.endsWith('/') ? href : href + '/',
 }
 
 const navigationItems: NavigationItem[] = [
@@ -204,13 +204,13 @@ const navigationItems: NavigationItem[] = [
     category: 'contact',
     color: 'from-cyan-500 to-blue-500'
   }
-];
+],
 
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
-};
+},
 
 const ImprovedNavigation: React.FC = () => {
   return (
@@ -218,7 +218,7 @@ const ImprovedNavigation: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">ImprovedNavigation</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default ImprovedNavigation;
+export default ImprovedNavigation,

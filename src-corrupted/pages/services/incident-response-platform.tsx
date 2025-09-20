@@ -11,6 +11,5 @@ const incident-response-platform: React.FC = () => {,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default incident-response-platform;
+    </div>)},
+export default incident-response-platform,

@@ -218,16 +218,16 @@
                   {analysis && (<button onClick = {
 
   () => {
-                        const report = JSON.stringify(analysis, null, 2);
+                        const report = JSON.stringify(analysis, null, 2),
                         const blob = new Blob([report],
   { type: 'application/json'
 
-});
-                        const url = URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = 'content-quality-report.json';
-                        a.click();"
+}),
+                        const url = URL.createObjectURL(blob),
+                        const a = document.createElement('a'),
+                        a.href = url,
+                        a.download = 'content-quality-report.json',
+                        a.click(),"
                         URL.revokeObjectURL(url)}} className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
                       Export Report
                     </button>)}
@@ -240,13 +240,13 @@
       <style>{`
         .content-highlight {
 
-          outline: 3px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-          background-color: rgba(139, 92, 246, 0.1) !important;
+          outline: 3px solid #8b5cf6 !important,
+          outline-offset: 2px !important,
+          background-color: rgba(139, 92, 246, 0.1) !important,
           transition: all 0.3s ease !important}`
       `}</style>
-    </>)};
-export { ContentQualityEnhancer };
-export default ContentQualityEnhancer;
+    </>)},
+export { ContentQualityEnhancer },
+export default ContentQualityEnhancer,
 }}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

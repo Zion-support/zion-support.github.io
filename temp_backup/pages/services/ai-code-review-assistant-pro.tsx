@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Code, 
+  Code,
   CheckCircle, 
   Shield, 
   Zap, 
@@ -22,7 +22,7 @@ import {
   Eye,
   AlertTriangle,
   Lightbulb
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AICodeReviewAssistantPro() {
   const features = [
@@ -46,46 +46,31 @@ export default function AICodeReviewAssistantPro() {
       title: 'Code Optimization',
       description: 'Intelligent suggestions for performance improvements and code refactoring'
     }
-  ];
+  ],
 
   const capabilities = [
-    'Static Code Analysis',
-    'Security Vulnerability Detection',
-    'Code Quality Metrics',
-    'Performance Optimization',
-    'Best Practice Enforcement',
-    'Compliance Checking',
-    'Documentation Review',
-    'Test Coverage Analysis',
-    'Dependency Scanning',
-    'Integration APIs'
-  ];
+    'Static Code AnalysisSecurity Vulnerability Detection',
+    'Code Quality MetricsPerformance Optimization',
+    'Best Practice EnforcementCompliance Checking',
+    'Documentation ReviewTest Coverage Analysis',
+    'Dependency ScanningIntegration APIs'
+  ],
 
   const languages = [
-    'JavaScript/TypeScript',
-    'Python',
-    'Java',
-    'C/C++',
-    'Go',
-    'Rust',
-    'PHP',
-    'Ruby',
-    'C#',
-    'Swift',
-    'Kotlin',
-    'Scala'
-  ];
+    'JavaScript/TypeScriptPython',
+    'JavaC/C++',
+    'GoRust',
+    'PHPRuby',
+    'C#Swift',
+    'KotlinScala'
+  ],
 
   const benefits = [
-    'Faster Code Reviews',
-    'Improved Code Quality',
-    'Reduced Security Risks',
-    'Consistent Standards',
-    'Knowledge Sharing',
-    'Cost Reduction',
-    'Faster Development',
-    'Better Maintainability'
-  ];
+    'Faster Code ReviewsImproved Code Quality',
+    'Reduced Security RisksConsistent Standards',
+    'Knowledge SharingCost Reduction',
+    'Faster DevelopmentBetter Maintainability'
+  ],
 
 const ai-code-review-assistant-pro: React.FC = () => {
   return (
@@ -102,7 +87,7 @@ const ai-code-review-assistant-pro: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-code-review-assistant-pro;
+export default ai-code-review-assistant-pro,

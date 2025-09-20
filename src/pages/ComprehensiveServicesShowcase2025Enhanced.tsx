@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { 
-    Search, 
+    Search,
     Filter, 
     TrendingUp, 
     Shield, 
@@ -23,75 +23,64 @@ import {
     Mail,
     MapPin,
     ExternalLink
-} from 'lucide-react';
-import { comprehensiveServices2025Enhanced, EnhancedService } from '../data/comprehensive-services-2025-enhanced';
-
+} from "lucide-react";
+import { comprehensiveServices2025Enhanced, EnhancedService } from "../data/comprehensive-services-2025-enhanced";
 const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState<string>('all');
-    const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('name');
+    const [searchTerm, setSearchTerm] = useState(''),
+    const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+    const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('name'),
 
     const categories = [
-        { id: 'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length },
-        { id: 'fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'fintech').length },
-        { id: 'healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'healthtech').length },
-        { id: 'edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'edutech').length },
-        { id: 'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'martech').length },
-        { id: 'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'micro-saas').length },
-        { id: 'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'ai-services').length },
-        { id: 'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'it-services').length },
+        { id: 'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length };
+        { id: 'fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'fintech').length };
+        { id: 'healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'healthtech').length };
+        { id: 'edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'edutech').length };
+        { id: 'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'martech').length };
+        { id: 'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'micro-saas').length };
+        { id: 'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'ai-services').length };
+        { id: 'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'it-services').length };
         { id: 'emerging-tech', name: 'Emerging Tech', icon: TrendingUp, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'emerging-tech').length }
     ];
-
     const filteredServices = useMemo(() => {
-        let filtered = comprehensiveServices2025Enhanced;
+        let filtered = comprehensiveServices2025Enhanced,
 
         if (searchTerm) {
             filtered = filtered.filter(service =>
                 service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-            );
+            ),
         }
 
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
+            filtered = filtered.filter(service => service.category === selectedCategory),
         }
 
         // Sort services
         filtered.sort((a, b) => {
             switch (sortBy) {
                 case 'price':
-                    const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''));
-                    const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g, ''));
-                    return priceA - priceB;
+                    const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, '')),
+                    const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g, '')),
+                    return priceA - priceB,
                 case 'popularity':
-                    return b.trialDays - a.trialDays; // More trial days = more popular
-                default:
-                    return a.name.localeCompare(b.name);
+                    return b.trialDays - a.trialDays, // More trial days = more popular
+                default: return a.name.localeCompare(b.name)
             }
         });
-
-        return filtered;
-    }, [searchTerm, selectedCategory, sortBy]);
+        return filtered,
+    }, [searchTerm, selectedCategory, sortBy]),
 
     const getCategoryColor = (category: string) => {
         const colors: { [key: string]: string } = {
-            'fintech': 'from-green-500 to-emerald-600',
-            'healthtech': 'from-red-500 to-pink-600',
-            'edutech': 'from-purple-500 to-violet-600',
-            'martech': 'from-pink-500 to-rose-600',
-            'micro-saas': 'from-blue-500 to-indigo-600',
-            'ai-services': 'from-cyan-500 to-blue-600',
-            'it-services': 'from-slate-500 to-gray-600',
-            'emerging-tech': 'from-orange-500 to-yellow-600'
+            'fintech': 'from-green-500 to-emerald-600healthtech': 'from-red-500 to-pink-600edutech': 'from-purple-500 to-violet-600martech': 'from-pink-500 to-rose-600micro-saas': 'from-blue-500 to-indigo-600ai-services': 'from-cyan-500 to-blue-600it-services': 'from-slate-500 to-gray-600emerging-tech': 'from-orange-500 to-yellow-600'
         };
-        return colors[category] || 'from-gray-500 to-gray-600';
-    };
+        return colors[category] || 'from-gray-500 to-gray-600',
+    },
 
     const getCategoryIcon = (category: string) => {
         const icons: { [key: string]: React.ReactNode } = {
-            'fintech': <DollarSign className="w-5 h-5" />,
+            'fintech': <DollarSign className="w-5 h-5" />;
             'healthtech': <Heart className="w-5 h-5" />,
             'edutech': <GraduationCap className="w-5 h-5" />,
             'martech': <Target className="w-5 h-5" />,
@@ -99,9 +88,9 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
             'ai-services': <Zap className="w-5 h-5" />,
             'it-services': <Shield className="w-5 h-5" />,
             'emerging-tech': <TrendingUp className="w-5 h-5" />
-        };
-        return icons[category] || <Globe className="w-5 h-5" />;
-    };
+        },
+        return icons[category] || <Globe className="w-5 h-5" />,
+    },
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -354,7 +343,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+            <footer className="bg-gray-900 text-white py-12 px-4 sm: px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
@@ -386,12 +375,12 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
                         </div>
                     </div>
                     <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-                        <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+                        <p>&copy, 2025 Zion Tech Group. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
         </div>
-    );
-};
+    )
+},
 
 export default ComprehensiveServicesShowcase2025Enhanced;

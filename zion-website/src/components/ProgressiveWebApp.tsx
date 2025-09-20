@@ -1,73 +1,73 @@
-'use client';
-import { useEffect, useState } from 'react';
+'use client',
+import { useEffect, useState } from 'react',
 interface PWAInstallPrompt {,
-  prompt: () => Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' ,}>;
+  prompt: () => Promise<void>,
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>,
 }
 ,
 export default function ProgressiveWebApp() {,
-  const [installPrompt, setInstallPrompt] = useState<PWAInstallPrompt | null>(null);
-  const [isInstalled, setIsInstalled] = useState(false);
-  const [showInstallBanner, setShowInstallBanner] = useState(false);
+  const [installPrompt, setInstallPrompt] = useState<PWAInstallPrompt | null>(null),
+  const [isInstalled, setIsInstalled] = useState(false),
+  const [showInstallBanner, setShowInstallBanner] = useState(false),
   useEffect(() => {,
     // Check if app is already installed,
     const checkIfInstalled = () => {,
       if (window.matchMedia('(display-mode: standalone)').matches) {,
-        setIsInstalled(true);
-        return,
+        setIsInstalled(true),
+        return
       }
 ,
       // Check for iOS Safari,
       if (window.navigator.standalone === true) {,
-        setIsInstalled(true);
-        return;
+        setIsInstalled(true),
+        return,
       }
-    };
-    checkIfInstalled();
+    },
+    checkIfInstalled(),
     // Listen for beforeinstallprompt event,
     const handleBeforeInstallPrompt = (e: Event) => {,
-      e.preventDefault();
-      setInstallPrompt(e as any);
-      setShowInstallBanner(true),
-    };
+      e.preventDefault(),
+      setInstallPrompt(e as any),
+      setShowInstallBanner(true)
+    },
     // Listen for appinstalled event,
     const handleAppInstalled = () => {,
-      setIsInstalled(true);
-      setShowInstallBanner(false);
-      setInstallPrompt(null);
-    };
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
+      setIsInstalled(true),
+      setShowInstallBanner(false),
+      setInstallPrompt(null),
+    },
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt),
+    window.addEventListener('appinstalled', handleAppInstalled),
     return () => {,
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
-    };
-  }, []);
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt),
+      window.removeEventListener('appinstalled', handleAppInstalled),
+    },
+  }, []),
   const handleInstallClick = async () => {,
-    if (!installPrompt) return;
+    if (!installPrompt) return,
     try {,
-      await installPrompt.prompt();
-      const choiceResult = await installPrompt.userChoice;
+      await installPrompt.prompt(),
+      const choiceResult = await installPrompt.userChoice,
       if (choiceResult.outcome === 'accepted') {,
-        console.log('User accepted the install prompt');
+        console.log('User accepted the install prompt'),
       } else {,
-        console.log('User dismissed the install prompt');
+        console.log('User dismissed the install prompt'),
       }
 ,
-      setInstallPrompt(null);
-      setShowInstallBanner(false);
+      setInstallPrompt(null),
+      setShowInstallBanner(false),
     } catch (error) {,
-      console.error('Error during installation:', error);
+      console.error('Error during installation:', error),
     }
-  };
+  },
   const handleDismissBanner = () => {,
-    setShowInstallBanner(false);
+    setShowInstallBanner(false),
     // Don't show again for this session,
-    sessionStorage.setItem('pwa-banner-dismissedtrue');
-  };
+    sessionStorage.setItem('pwa-banner-dismissedtrue'),
+  },
   // Don't show banner if already installed or dismissed,
   if (isInstalled || !showInstallBanner || sessionStorage.getItem('pwa-banner-dismissed')) {,
-    return null;
+    return null,
   }
 ,
   return (,
@@ -77,7 +77,7 @@ export default function ProgressiveWebApp() {,
           <div className="flex-shrink-0">,
             <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">,
               <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />,
               </svg>,
             </div>,
           </div>,
@@ -96,7 +96,7 @@ export default function ProgressiveWebApp() {,
                 Install,
               </button>,
               <button,
-                onClick={handleDismissBanner,}
+                onClick={handleDismissBanner}
                 className="inline-flex items-center px-3 py-1.5 border border-gray-300 text-xs font-medium rounded text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
               >,
                 Not now,
@@ -105,7 +105,7 @@ export default function ProgressiveWebApp() {,
           </div>,
           <div className="ml-2 flex-shrink-0">,
             <button,
-              onClick={handleDismissBanner,}
+              onClick={handleDismissBanner}
               className="bg-white rounded-md inline-flex text-gray-400 hover: text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
             >,
               <span className="sr-only">Close</span>,
@@ -116,46 +116,45 @@ export default function ProgressiveWebApp() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}
 ,
 // PWA utility functions,
 export const pwaUtils = {,
   // Check if PWA is installable,
   isInstallable: () => {,
-    return typeof window !== 'undefined' && 'serviceWorker' in navigator,};
+    return typeof window !== 'undefined' && 'serviceWorker' in navigator},
   // Check if PWA is already installed,
   isInstalled: () => {,
-    if (typeof window === 'undefined') return false;
+    if (typeof window === 'undefined') return false,
     return window.matchMedia('(display-mode: standalone)').matches ||,
-           (window.navigator as any).standalone === true,};
+           (window.navigator as any).standalone === true},
   // Register service worker,
   registerServiceWorker: async () => {,
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {,
-      return false,}
+      return false}
 ,
     try {,
-      const registration = await navigator.serviceWorker.register('/sw.js');
-      console.log('Service Worker registered:', registration);
-      return true;
+      const registration = await navigator.serviceWorker.register('/sw.js'),
+      console.log('Service Worker registered:', registration),
+      return true,
     } catch (error) {,
-      console.error('Service Worker registration failed:', error);
-      return false;
+      console.error('Service Worker registration failed:', error),
+      return false,
     }
-  };
+  },
   // Unregister service worker,
   unregisterServiceWorker: async () => {,
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {,
-      return false,}
+      return false}
 ,
     try {,
-      const registrations = await navigator.serviceWorker.getRegistrations();
-      await Promise.all(registrations.map(registration => registration.unregister()));
-      console.log('Service Workers unregistered');
-      return true;
+      const registrations = await navigator.serviceWorker.getRegistrations(),
+      await Promise.all(registrations.map(registration => registration.unregister())),
+      console.log('Service Workers unregistered'),
+      return true,
     } catch (error) {,
-      console.error('Service Worker unregistration failed:', error);
-      return false;
+      console.error('Service Worker unregistration failed:', error),
+      return false,
     }
   }
-};
+},

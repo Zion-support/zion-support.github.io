@@ -1,76 +1,72 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-
+import React, { Component, ErrorInfo, ReactNode } from "react";
+import { motion } from "framer-motion";
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: ReactNode
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  retryCount: number;
+  error?: Error,
+  errorInfo?: ErrorInfo,
+  retryCount: number
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
-      retryCount: 0
+      hasError: false,retryCount: 0
     };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true,
+      hasError: true;
       error,
       retryCount: 0
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo),
     this.setState({
-      error,
+error,
       errorInfo
-    });
+    
+}),
 
     // Log error to external service
-    this.logError(error, errorInfo);
+    this.logError(error, errorInfo),
   }
 
   logError = (error: Error, errorInfo: ErrorInfo) => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.groupEnd();
+      console.error('Error:', error),
+      console.error('Error Info:', errorInfo),
+      console.groupEnd(),
     }
 
     // In production, you could send to error reporting service
     // Example: Sentry, LogRocket, etc.
-  };
+  },
 
   handleRetry = () => {
     this.setState(prevState => ({
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      retryCount: prevState.retryCount + 1
+      hasError: false,error: undefined,errorInfo: undefined,retryCount: prevState.retryCount + 1
     }));
-  };
+  },
 
   handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload(),
+  },
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback,
       }
 
       return (
@@ -157,8 +153,7 @@ class ErrorBoundary extends Component<Props, State> {
               {/* Contact Information */}
               <div className="mt-6 pt-6 border-t border-white/20">
                 <p className="text-sm text-gray-400 mb-2">
-                  If this problem persists, please contact us:
-                </p>
+                  If this problem persists, please contact us: </p>
                 <div className="text-sm text-gray-300 space-y-1">
                   <div>📧 kleber@ziontechgroup.com</div>
                   <div>📱 +1 302 464 0950</div>
@@ -167,7 +162,7 @@ class ErrorBoundary extends Component<Props, State> {
             </motion.div>
           </div>
         </motion.div>
-      );
+      )
     }
 
     return this.props.children;

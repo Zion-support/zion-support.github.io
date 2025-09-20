@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Production Guardrails for Autonomous Agents';
+  title: 'AI 2026: Production Guardrails for Autonomous Agents',
   description:,
-    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.',
-};
+    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.'
+},
 export default function ProductionGuardrailsForAutonomousAgentsPage() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -51,6 +51,5 @@ export default function ProductionGuardrailsForAutonomousAgentsPage() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

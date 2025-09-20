@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { getStripe } from '@/utils/getStripe';
+import React, { useEffect, useState } from 'react',
+import { Button } from '@/components/ui/button',
+import { useNavigate, useLocation } from 'react-router-dom',
+import { getStripe } from '@/utils/getStripe',
 
 interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
+  id: string,
+  name: string,
+  price: number,
+  quantity: number
 }
 
 export default function Checkout() {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [items, setItems] = useState<CartItem[]>([]);
+  const navigate = useNavigate(),
+  const location = useLocation(),
+  const [items, setItems] = useState<CartItem[]>([]),
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const productParam = params.get('product');
-    const stored = localStorage.getItem('cart');
+    const params = new URLSearchParams(location.search),
+    const productParam = params.get('product'),
+    const stored = localStorage.getItem('cart'),
     if (stored) {
       try {
-        const parsed = JSON.parse(stored) as CartItem[];
+        const parsed = JSON.parse(stored) as CartItem[],
         if (parsed.length > 0) {
-          setItems(parsed);
-          return;
+          setItems(parsed),
+          return,
         }
       } catch {
         // ignore parsing errors
@@ -32,8 +32,8 @@ export default function Checkout() {
     }
     if (productParam) {
       setItems([
-        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
-      ]);
+        { id: productParam, name: 'Test Item', price: 25, quantity: 1 }
+      ]),
     } else {
       // Provide mock data if cart empty
       setItems([
@@ -41,31 +41,31 @@ export default function Checkout() {
           id: 'prod_mock',
           name: 'Test Item',
           price: 25,
-          quantity: 1,
-        },
-      ]);
+          quantity: 1
+        }
+      ]),
     }
-  }, [location.search]);
+  }, [location.search]),
 
   const handleCheckout = async () => {
-    const product = items[0];
+    const product = items[0],
     try {
       const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: product.id }),
-      });
-      const { sessionId } = await response.json();
-      const stripe = await getStripe();
+        body: JSON.stringify({ productId: product.id })
+      }),
+      const { sessionId } = await response.json(),
+      const stripe = await getStripe(),
       if (stripe && sessionId) {
-        await stripe.redirectToCheckout({ sessionId });
+        await stripe.redirectToCheckout({ sessionId }),
       }
     } catch (err) {
-      console.error('Checkout error', err);
+      console.error('Checkout error', err),
     }
-  };
+  },
 
-  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
 
   return (
     <div className="min-h-screen bg-zion-blue p-6">
@@ -87,5 +87,5 @@ export default function Checkout() {
         <Button variant="outline" className="w-full" onClick={() => navigate(-1)}>Back</Button>
       </div>
     </div>
-  );
+  ),
 }

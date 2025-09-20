@@ -1,66 +1,66 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as MessageSquareIcon2, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as MessageSquareIcon2, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react',
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',
 
 export default function Services2026ShowcaseEnhancedPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   // Map service variants to supported card variants
   const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
-    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced';
-    if (serviceVariant.includes('quantum')) return 'quantum';
-    if (serviceVariant.includes('ai')) return 'ai-futuristic';
-    if (serviceVariant.includes('holographic')) return 'holographic';
-    if (serviceVariant.includes('neural')) return 'neural';
-    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk';
-    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic';
-    if (serviceVariant.includes('cloud')) return 'quantum-advanced';
-    if (serviceVariant.includes('security')) return 'cyberpunk';
-    if (serviceVariant.includes('data')) return 'neural';
-    if (serviceVariant.includes('mobility')) return 'holographic';
-    if (serviceVariant.includes('network')) return 'quantum-advanced';
-    if (serviceVariant.includes('backup')) return 'quantum-advanced';
-    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic';
-    if (serviceVariant.includes('monitoring')) return 'neural';
-    if (serviceVariant.includes('blockchain')) return 'quantum-advanced';
-    if (serviceVariant.includes('metaverse')) return 'holographic';
-    if (serviceVariant.includes('iot')) return 'quantum-iot';
-    if (serviceVariant.includes('edge')) return 'quantum-advanced';
-    if (serviceVariant.includes('ar')) return 'holographic';
-    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced';
-    if (serviceVariant.includes('5g')) return 'quantum-advanced';
-    if (serviceVariant.includes('biometric')) return 'cyberpunk';
-    if (serviceVariant.includes('autonomous')) return 'ai-futuristic';
-    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced';
-    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic';
-    if (serviceVariant.includes('api')) return 'quantum-advanced';
-    if (serviceVariant.includes('integration')) return 'quantum-advanced';
-    if (serviceVariant.includes('analytics')) return 'neural';
-    return 'default';
-  };
+    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced',
+    if (serviceVariant.includes('quantum')) return 'quantum',
+    if (serviceVariant.includes('ai')) return 'ai-futuristic',
+    if (serviceVariant.includes('holographic')) return 'holographic',
+    if (serviceVariant.includes('neural')) return 'neural',
+    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk',
+    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('cloud')) return 'quantum-advanced',
+    if (serviceVariant.includes('security')) return 'cyberpunk',
+    if (serviceVariant.includes('data')) return 'neural',
+    if (serviceVariant.includes('mobility')) return 'holographic',
+    if (serviceVariant.includes('network')) return 'quantum-advanced',
+    if (serviceVariant.includes('backup')) return 'quantum-advanced',
+    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('monitoring')) return 'neural',
+    if (serviceVariant.includes('blockchain')) return 'quantum-advanced',
+    if (serviceVariant.includes('metaverse')) return 'holographic',
+    if (serviceVariant.includes('iot')) return 'quantum-iot',
+    if (serviceVariant.includes('edge')) return 'quantum-advanced',
+    if (serviceVariant.includes('ar')) return 'holographic',
+    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced',
+    if (serviceVariant.includes('5g')) return 'quantum-advanced',
+    if (serviceVariant.includes('biometric')) return 'cyberpunk',
+    if (serviceVariant.includes('autonomous')) return 'ai-futuristic',
+    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced',
+    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('api')) return 'quantum-advanced',
+    if (serviceVariant.includes('integration')) return 'quantum-advanced',
+    if (serviceVariant.includes('analytics')) return 'neural',
+    return 'default'
+  },
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all 2026 services including new ones
   const all2026Services = [
@@ -70,7 +70,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
-  ];
+  ],
 
   // Enhanced categories for 2026
   const categories = [
@@ -82,7 +82,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -90,7 +90,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
-  ];
+  ],
 
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
@@ -99,11 +99,11 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'popularity', name: 'Most Popular' },
     { id: 'newest', name: 'Newest First' },
     { id: 'rating', name: 'Highest Rated' }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
-    let filtered = all2026Services;
+    let filtered = all2026Services,
 
     // Search filter
     if (searchTerm) {
@@ -111,60 +111,59 @@ export default function Services2026ShowcaseEnhancedPage() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
 
     // Category filter
     if (selectedCategory !== 'all') {
       if (selectedCategory === 'ai') {
-        filtered = filtered.filter(service => service.category.includes('AI'));
+        filtered = filtered.filter(service => service.category.includes('AI')),
       } else if (selectedCategory === 'quantum') {
-        filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging'));
+        filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging')),
       } else if (selectedCategory === 'enterprise') {
-        filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT'));
+        filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT')),
       } else if (selectedCategory === 'micro-saas') {
-        filtered = filtered.filter(service => service.category.includes('SaaS'));
+        filtered = filtered.filter(service => service.category.includes('SaaS')),
       } else if (selectedCategory === 'healthcare') {
-        filtered = filtered.filter(service => service.category.includes('Healthcare') || service.category.includes('Biotech'));
+        filtered = filtered.filter(service => service.category.includes('Healthcare') || service.category.includes('Biotech')),
       } else if (selectedCategory === 'financial') {
-        filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'));
+        filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading')),
       } else if (selectedCategory === 'manufacturing') {
-        filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'));
+        filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT')),
       }
     }
 
     // Price filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-        if (selectedPriceRange === 'low') return price < 1000;
-        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
-        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
-        if (selectedPriceRange === 'premium') return price >= 20000;
-        return true;
-      });
+        const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+        if (selectedPriceRange === 'low') return price < 1000,
+        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000,
+        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000,
+        if (selectedPriceRange === 'premium') return price >= 20000,
+        return true,
+      }),
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
         case 'price-high':
-          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
+          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
         case 'popularity':
-          return (b.rating * b.reviews) - (a.rating * a.reviews);
+          return (b.rating * b.reviews) - (a.rating * a.reviews),
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
         case 'rating':
-          return b.rating - a.rating;
-        default:
-          return a.name.localeCompare(b.name);
+          return b.rating - a.rating,
+        default: return a.name.localeCompare(b.name)
       }
-    });
+    }),
 
-    return filtered;
-  }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+    return filtered,
+  }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   // Service statistics
   const serviceStats = {
@@ -176,7 +175,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
-  };
+  },
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
@@ -527,5 +526,5 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  );
+  ),
 }

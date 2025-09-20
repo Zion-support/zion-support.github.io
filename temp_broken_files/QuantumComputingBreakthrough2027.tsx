@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 const function QuantumComputingBreakthrough2027() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -9,7 +9,7 @@ const function QuantumComputingBreakthrough2027() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function QuantumComputingBreakthrough2027() {;
+  ),
+},
+export default function QuantumComputingBreakthrough2027() {,
 }}}

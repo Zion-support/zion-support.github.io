@@ -1,7 +1,7 @@
-import React from 'react';
-import SEO from '../../components/SEO';
+import React from "react";
+import { SEO } from "../../components/SEO";
 import { 
-  Brain, 
+  Brain,
   Search, 
   BookOpen, 
   Zap, 
@@ -27,94 +27,61 @@ import {
   Network,
   Shield,
   ArrowRight
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousResearchAssistant: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'Autonomous Learning',
-      description: 'Self-improving AI that continuously learns and adapts to new research domains'
-    },
+      icon: Brain,title: 'Autonomous Learning',description: 'Self-improving AI that continuously learns and adapts to new research domains'
+    };
     {
-      icon: Search,
-      title: 'Intelligent Discovery',
-      description: 'Advanced algorithms that uncover hidden patterns and connections in data'
-    },
+      icon: Search,title: 'Intelligent Discovery',description: 'Advanced algorithms that uncover hidden patterns and connections in data'
+    };
     {
-      icon: BookOpen,
-      title: 'Knowledge Synthesis',
-      description: 'Automated literature review and synthesis across multiple research fields'
-    },
+      icon: BookOpen,title: 'Knowledge Synthesis',description: 'Automated literature review and synthesis across multiple research fields'
+    };
     {
-      icon: Zap,
-      title: 'Real-time Analysis',
-      description: 'Instant processing and analysis of complex research datasets'
-    },
+      icon: Zap,title: 'Real-time Analysis',description: 'Instant processing and analysis of complex research datasets'
+    };
     {
-      icon: Users,
-      title: 'Collaborative Research',
-      description: 'Multi-user platform for team-based research and knowledge sharing'
-    },
+      icon: Users,title: 'Collaborative Research',description: 'Multi-user platform for team-based research and knowledge sharing'
+    };
     {
-      icon: Clock,
-      title: '24/7 Research',
-      description: 'Continuous research operations without human intervention'
+      icon: Clock,title: '24/7 Research',description: 'Continuous research operations without human intervention'
     }
   ];
-
   const capabilities = [
     {
-      icon: Lightbulb,
-      title: 'Hypothesis Generation',
-      description: 'AI-powered hypothesis creation based on data patterns and existing research'
-    },
+      icon: Lightbulb,title: 'Hypothesis Generation',description: 'AI-powered hypothesis creation based on data patterns and existing research'
+    };
     {
-      icon: Target,
-      title: 'Research Planning',
-      description: 'Automated research methodology design and experimental planning'
-    },
+      icon: Target,title: 'Research Planning',description: 'Automated research methodology design and experimental planning'
+    };
     {
-      icon: Database,
-      title: 'Data Mining',
-      description: 'Advanced data extraction and analysis from multiple sources'
-    },
+      icon: Database,title: 'Data Mining',description: 'Advanced data extraction and analysis from multiple sources'
+    };
     {
-      icon: Lock,
-      title: 'Secure Research',
-      description: 'Enterprise-grade security for sensitive research data and findings'
-    },
+      icon: Lock,title: 'Secure Research',description: 'Enterprise-grade security for sensitive research data and findings'
+    };
     {
-      icon: Globe,
-      title: 'Global Collaboration',
-      description: 'Connect with researchers worldwide through our platform'
-    },
+      icon: Globe,title: 'Global Collaboration',description: 'Connect with researchers worldwide through our platform'
+    };
     {
-      icon: Smartphone,
-      title: 'Mobile Access',
-      description: 'Access your research assistant from anywhere, anytime'
+      icon: Smartphone,title: 'Mobile Access',description: 'Access your research assistant from anywhere, anytime'
     }
-  ];
+  ],
 
   const applications = [
-    'Scientific Research & Discovery',
-    'Medical Research & Drug Development',
-    'Academic Research & Publications',
-    'Market Research & Analysis',
-    'Technology Innovation',
-    'Environmental Studies',
-    'Social Sciences Research',
-    'Engineering & Design Research'
-  ];
+    'Scientific Research & DiscoveryMedical Research & Drug Development',
+    'Academic Research & PublicationsMarket Research & Analysis',
+    'Technology InnovationEnvironmental Studies',
+    'Social Sciences ResearchEngineering & Design Research'
+  ],
 
   const benefits = [
-    'Accelerate research by 10x',
-    'Reduce research costs by 60%',
-    'Improve research accuracy by 85%',
-    'Enable 24/7 research operations',
-    'Facilitate cross-disciplinary collaboration',
-    'Automate repetitive research tasks'
-  ];
+    'Accelerate research by 10xReduce research costs by 60%',
+    'Improve research accuracy by 85%Enable 24/7 research operations',
+    'Facilitate cross-disciplinary collaborationAutomate repetitive research tasks'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -132,11 +99,11 @@ const AIAutonomousResearchAssistant: React.FC = () => {
               <Brain className="w-4 h-4 mr-2" />
               Autonomous AI Research
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               AI Autonomous Research Assistant
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              The future of research is autonomous. Our AI assistant works independently to discover, 
+              The future of research is autonomous. Our AI assistant works independently to discover;
               analyze, and synthesize knowledge across all research domains, accelerating breakthroughs 
               and enabling 24/7 research operations.
             </p>
@@ -195,7 +162,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, index) => (
-              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200 hover:scale-105">
+              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-400/40 group-hover:to-cyan-500/40 transition-all duration-200">
                   <capability.icon className="w-6 h-6 text-blue-400" />
                 </div>
@@ -218,7 +185,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
                 Research Across All Domains
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our AI research assistant is designed to work across all research fields, 
+                Our AI research assistant is designed to work across all research fields;
                 from hard sciences to social sciences, adapting its approach to each domain.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -274,7 +241,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200">
+              <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-purple-400" />
                 </div>
@@ -295,7 +262,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
             Join leading researchers and institutions that are already experiencing 
             the future of autonomous AI-powered research.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-purple-400 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">
               Start Free Trial
             </button>
@@ -306,7 +273,6 @@ const AIAutonomousResearchAssistant: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousResearchAssistant;

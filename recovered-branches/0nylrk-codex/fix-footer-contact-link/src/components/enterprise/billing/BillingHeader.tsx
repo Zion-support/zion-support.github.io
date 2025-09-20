@@ -1,7 +1,7 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
 export function BillingHeader() {,
   return (,
     <div className="space-y-2">,
@@ -26,7 +26,6 @@ export function BillingHeader() {,
       </div>,
       <p className="text-muted-foreground">,
       </p>,
-    </div>,
-  );
+    </div>),
 }
 ,

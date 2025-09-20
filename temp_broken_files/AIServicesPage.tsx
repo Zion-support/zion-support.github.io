@@ -1,37 +1,37 @@
-import React from 'react';
-import { Brain, ArrowRight } from 'lucide-react';
+import React from 'react',
+import { Brain, ArrowRight } from 'lucide-react',
 const AIServicesPage = () => {,
   const aiServices = [,
     {,
-      title: 'AI Business Intelligence';
-      description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.';
-      price: 'Starting at $2,999/month',
-    };
+      title: 'AI Business Intelligence',
+      description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
+      price: 'Starting at $2,999/month'
+    },
     {,
-      title: 'Machine Learning Automation';
-      description: 'Automate complex processes and decision-making with custom machine learning models.';
-      price: 'Starting at $4,999/month',
-    };
+      title: 'Machine Learning Automation',
+      description: 'Automate complex processes and decision-making with custom machine learning models.',
+      price: 'Starting at $4,999/month'
+    },
     {,
-      title: 'AI Customer Support';
-      description: 'Enhance customer experience with intelligent chatbots and automated support systems.';
-      price: 'Starting at $1,999/month',
-    };
+      title: 'AI Customer Support',
+      description: 'Enhance customer experience with intelligent chatbots and automated support systems.',
+      price: 'Starting at $1,999/month'
+    },
     {,
-      title: 'Predictive Analytics';
-      description: 'Forecast trends and make data-driven decisions with our predictive modeling services.';
-      price: 'Starting at $3,499/month',
-    };
+      title: 'Predictive Analytics',
+      description: 'Forecast trends and make data-driven decisions with our predictive modeling services.',
+      price: 'Starting at $3,499/month'
+    },
     {,
-      title: 'AI Content Generation';
-      description: 'Create high-quality content at scale with our AI-powered content generation tools.';
-      price: 'Starting at $999/month',};
+      title: 'AI Content Generation',
+      description: 'Create high-quality content at scale with our AI-powered content generation tools.',
+      price: 'Starting at $999/month'},
     {,
-      title: 'Computer Vision Solutions';
-      description: 'Implement image recognition and visual analysis for your business applications.';
-      price: 'Starting at $5,999/month',
+      title: 'Computer Vision Solutions',
+      description: 'Implement image recognition and visual analysis for your business applications.',
+      price: 'Starting at $5,999/month'
     }
-  ];
+  ],
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       {/* Hero Section */}
@@ -62,7 +62,7 @@ const AIServicesPage = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Services Grid */,}
+      {/* Services Grid */}
       <section className="py-20 px-4">,
         <div className="container mx-auto max-w-7xl">,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -75,7 +75,7 @@ const AIServicesPage = () => {,
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mr-4">,
                     <Brain className="w-6 h-6 text-white" />,
                   </div>,
-                  <h3 className="text-xl font-semibold text-white">{service.title,}</h3>,
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>,
                 </div>,
                 <p className="text-gray-300 mb-4">{service.description}</p>,
                 <div className="flex items-center justify-between">,
@@ -84,8 +84,7 @@ const AIServicesPage = () => {,
                     <ArrowRight className="w-5 h-5" />,
                   </button>,
                 </div>,
-              </div>,
-            )),}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -115,5 +114,5 @@ const AIServicesPage = () => {,
         </div>,
       </section>,
     </div>,
-  ),};
-export default AIServicesPage;
+  )},
+export default AIServicesPage,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const AdvancedBiotechRevolution2026: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -9,6 +9,5 @@ const AdvancedBiotechRevolution2026: React.FC = () => {,
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center">,
       </div>,
-    </div>,
-  ),};
-export default AdvancedBiotechRevolution2026;
+    </div>)},
+export default AdvancedBiotechRevolution2026,

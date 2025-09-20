@@ -1,61 +1,61 @@
-import Head from 'next/head';
+import Head from 'next/head',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
-  Building, Factory, Camera, Video, Music, Gamepad2,
-} from 'lucide-react';
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
+  Building, Factory, Camera, Video, Music, Gamepad2
+} from 'lucide-react',
+import { futuristic2028Services } from '../data/2028-futuristic-innovations',
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
 const contactInfo = {,
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [,
   {,
-    title: '🚀 2028 Futuristic Innovations';
-    description: 'Beyond the future of technology';
-    icon: Rocket;
-    color: 'from-violet-600 to-purple-600';
-    services: futuristic2028Services.slice(0, 4),
-  };
+    title: '🚀 2028 Futuristic Innovations',
+    description: 'Beyond the future of technology',
+    icon: Rocket,
+    color: 'from-violet-600 to-purple-600',
+    services: futuristic2028Services.slice(0, 4)
+  },
   {,
-    title: '🏙️ Smart City & Infrastructure';
-    description: 'Intelligent urban solutions';
-    icon: Building;
-    color: 'from-blue-600 to-cyan-600';
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4),
-  };
+    title: '🏙️ Smart City & Infrastructure',
+    description: 'Intelligent urban solutions',
+    icon: Building,
+    color: 'from-blue-600 to-cyan-600',
+    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4)
+  },
   {,
-    title: '⚛️ Quantum & Advanced Tech';
-    description: 'Quantum computing and beyond';
-    icon: Atom;
-    color: 'from-indigo-600 to-blue-600';
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4),
-  };
+    title: '⚛️ Quantum & Advanced Tech',
+    description: 'Quantum computing and beyond',
+    icon: Atom,
+    color: 'from-indigo-600 to-blue-600',
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
+  },
   {,
-    title: '🤖 AI & Machine Learning';
-    description: 'Next-generation AI solutions';
-    icon: Brain;
-    color: 'from-emerald-600 to-teal-600';
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4),
-  };
+    title: '🤖 AI & Machine Learning',
+    description: 'Next-generation AI solutions',
+    icon: Brain,
+    color: 'from-emerald-600 to-teal-600',
+    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+  },
   {,
-    title: '⛓️ Blockchain & Web3';
-    description: 'Decentralized solutions';
-    icon: Globe;
-    color: 'from-orange-600 to-red-600';
-    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4),
-  };
+    title: '⛓️ Blockchain & Web3',
+    description: 'Decentralized solutions',
+    icon: Globe,
+    color: 'from-orange-600 to-red-600',
+    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4)
+  },
   {,
-    title: '🚗 Autonomous & Mobility';
-    description: 'Self-driving and mobility solutions';
-    icon: Car;
-    color: 'from-red-600 to-pink-600';
-    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4),
-  };
+    title: '🚗 Autonomous & Mobility',
+    description: 'Self-driving and mobility solutions',
+    icon: Car,
+    color: 'from-red-600 to-pink-600',
+    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
+  },
 export default function ServicesShowcase2028() {,
   return (,
     <>,
@@ -69,7 +69,7 @@ export default function ServicesShowcase2028() {,
         <meta property="og:type" content="website" />,
         <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />,
       <UltraFuturisticNavigation2028 />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden">,
         {/* Animated Background */}
         <div className="absolute inset-0">,
@@ -104,7 +104,7 @@ export default function ServicesShowcase2028() {,
               >,
                 <span>View Pricing</span>,
                 <DollarSign className="w-5 h-5" />,
-            {/* Stats */,}
+            {/* Stats */}
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8 pt-16">,
               <div className="text-center">,
                 <div className="text-3xl font-bold text-purple-400">50+</div>,
@@ -123,7 +123,7 @@ export default function ServicesShowcase2028() {,
           </div>,
         </div>,
       </section>,
-      {/* Services Categories */,}
+      {/* Services Categories */}
       <section className="py-20 bg-black/50">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -136,14 +136,14 @@ export default function ServicesShowcase2028() {,
             {serviceCategories.map((category, index) => (,
               <div,
                 key={category.title}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="group relative",
               >,
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover: border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">,
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>,
                   <div className="relative z-10">,
-                    <div className={`w-16 h-16 bg-gradient-to-r ${category.color,} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`,}>,
+                    <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`}>,
                       <category.icon className="w-8 h-8 text-white" />,
                     <h3 className="text-2xl font-bold text-white mb-3">{category.title}</h3>,
                     <p className="text-purple-300 mb-6">{category.description}</p>,
@@ -151,8 +151,7 @@ export default function ServicesShowcase2028() {,
                       {category.services.slice(0, 3).map((service) => (,
                         <div key={service.id} className="flex items-center space-x-3">,
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
-                          <span className="text-purple-200 text-sm">{service.name}</span>,
-                      ))}
+                          <span className="text-purple-200 text-sm">{service.name}</span>))}
                     <a,
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className="inline-flex items-center space-x-2 text-purple-400 hover: text-purple-300 transition-colors group",
@@ -163,7 +162,7 @@ export default function ServicesShowcase2028() {,
                   </div>,
                 </div>,
               </div>,
-            )),}
+            ))}
       {/* Featured Services */}
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -176,15 +175,15 @@ export default function ServicesShowcase2028() {,
             {futuristic2028Services.slice(0, 6).map((service, index) => (,
               <div,
                 key={service.id}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 className="group relative",
               >,
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover: border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">,
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>,
                   <div className="relative z-10">,
                     <div className="flex items-start justify-between mb-4">,
-                      <div className="text-4xl">{service.icon,}</div>,
+                      <div className="text-4xl">{service.icon}</div>,
                       <div className="text-right">,
                         <div className="text-2xl font-bold text-purple-400">{service.price}</div>,
                         <div className="text-sm text-purple-300">{service.period}</div>,
@@ -196,9 +195,9 @@ export default function ServicesShowcase2028() {,
                         <span className="text-white font-medium">{service.rating}</span>,
                         <span className="text-purple-300">({service.reviews} reviews)</span>,
                       <div className="text-sm text-purple-300">,
-                        <span className="font-medium">Market Size: </span> {service.marketSize,}
+                        <span className="font-medium">Market Size: </span> {service.marketSize}
                       <div className="text-sm text-purple-300">,
-                        <span className="font-medium">Growth Rate: </span> {service.growthRate,}
+                        <span className="font-medium">Growth Rate: </span> {service.growthRate}
                     <div className="flex items-center justify-between">,
                       <a,
                         href={service.link}
@@ -207,7 +206,7 @@ export default function ServicesShowcase2028() {,
                         Learn More,
                       <div className="text-right">,
                         <div className="text-sm text-purple-300">Setup Time</div>,
-                        <div className="text-white font-medium">{service.setupTime,}</div>,
+                        <div className="text-white font-medium">{service.setupTime}</div>,
                       </div>,
                     </div>,
                   </div>,
@@ -224,21 +223,21 @@ export default function ServicesShowcase2028() {,
               Understand the market dynamics and growth potential of our futuristic services.,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl",
             >,
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />,
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>,
               <p className="text-purple-300 mb-6">,
-                Our services target markets with exponential growth potential;
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 300-800% annually.,
               <div className="text-3xl font-bold text-green-400">500%+</div>,
               <div className="text-purple-300">Average Annual Growth</div>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl",
             >,
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />,
@@ -250,8 +249,8 @@ export default function ServicesShowcase2028() {,
               <div className="text-blue-300">Total Addressable Market</div>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl",
             >,
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />,
@@ -269,8 +268,8 @@ export default function ServicesShowcase2028() {,
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="space-y-8",
           >,
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
@@ -308,8 +307,8 @@ export default function ServicesShowcase2028() {,
       </section>,
       <UltraFuturisticFooter2028 />,
     </>,
-  ),}
-import React from "react";
+  )}
+import React from "react",
 const function ServicesShowcase2028() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -320,7 +319,7 @@ const function ServicesShowcase2028() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function ServicesShowcase2028() {;
+  ),
+},
+export default function ServicesShowcase2028() {,
 }}}]

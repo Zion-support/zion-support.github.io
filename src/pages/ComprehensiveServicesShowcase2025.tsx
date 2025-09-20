@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Brain,
   Zap,
@@ -30,29 +30,27 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from '../data/advancedMicroSaasServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025";
+import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 export default function ComprehensiveServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
 
   const allServices = [
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025,
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025;
     ...EMERGING_TECH_SERVICES_2025
   ];
-
   const categories = ['all', ...new Set(allServices.map(service => service.category))];
   const priceRanges = [
-    { value: 'all', label: 'All Prices' },
+    { value: 'all', label: 'All Prices' };
     { value: 'low', label: 'Under $1,000/month' },
     { value: 'medium', label: '$1,000 - $5,000/month' },
     { value: 'high', label: '$5,000 - $15,000/month' },
     { value: 'premium', label: 'Over $15,000/month' }
-  ];
+  ],
 
   const filteredServices = allServices
     .filter(service =>
@@ -62,49 +60,46 @@ export default function ComprehensiveServicesShowcase2025() {
     )
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
     .filter(service => {
-      if (selectedPriceRange === 'all') return true;
-      const priceRange = getPriceRange(service.price);
-      return priceRange === selectedPriceRange;
-    });
+      if (selectedPriceRange === 'all') return true,
+      const priceRange = getPriceRange(service.price),
+      return priceRange === selectedPriceRange,
+    }),
 
   const getPriceRange = (price: number) => {
     if (price < 1000) return 'low';
-    if (price < 5000) return 'medium';
-    if (price < 15000) return 'high';
-    return 'premium';
-  };
+    if (price < 5000) return 'medium',
+    if (price < 15000) return 'high',
+    return 'premium'
+  },
 
   const getPriceRangeColor = (range: string) => {
     switch (range) {
       case 'low': return 'bg-green-100 text-green-800';
-      case 'medium': return 'bg-blue-100 text-blue-800';
-      case 'high': return 'bg-yellow-100 text-yellow-800';
-      case 'premium': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'medium': return 'bg-blue-100 text-blue-800',
+      case 'high': return 'bg-yellow-100 text-yellow-800',
+      case 'premium': return 'bg-purple-100 text-purple-800',
+      default: return 'bg-gray-100 text-gray-800'
     }
   };
-
   const getInnovationColor = (level: string) => {
     switch (level) {
       case 'high': return 'from-purple-500 to-pink-500';
-      case 'medium': return 'from-blue-500 to-cyan-500';
-      case 'low': return 'from-green-500 to-emerald-500';
-      default: return 'from-gray-500 to-slate-500';
+      case 'medium': return 'from-blue-500 to-cyan-500',
+      case 'low': return 'from-green-500 to-emerald-500',
+      default: return 'from-gray-500 to-slate-500'
     }
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI/ML': return Brain;
-      case 'Cybersecurity': return Shield;
-      case 'Analytics': return BarChart3;
-      case 'Communication': return MessageSquare;
-      case 'Infrastructure': return Server;
-      case 'Development': return Code;
-      default: return Globe;
+      case 'Cybersecurity': return Shield,
+      case 'Analytics': return BarChart3,
+      case 'Communication': return MessageSquare,
+      case 'Infrastructure': return Server,
+      case 'Development': return Code,
+      default: return Globe
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -274,7 +269,7 @@ export default function ComprehensiveServicesShowcase2025() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -335,5 +330,5 @@ export default function ComprehensiveServicesShowcase2025() {
         </div>
       </section>
     </div>
-  );
+  )
 }

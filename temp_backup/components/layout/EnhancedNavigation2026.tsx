@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import Link from 'next/link',
 import { 
   Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
   Brain, Shield,
   Target,
   Sparkles, Atom, Satellite, Search
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -82,7 +82,7 @@ const serviceCategories = [
       { name: 'Space Debris Tracking System', href: '/space-debris-tracking-system', description: 'Advanced space debris monitoring', price: '$1,999/month' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -94,30 +94,30 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' }
-];
+],
 
 const EnhancedNavigation2026 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category);
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)
+  },
 
   const closeDropdown = () => {
-    setActiveDropdown(null);
-  };
+    setActiveDropdown(null),
+  },
 
 const EnhancedNavigation2026: React.FC = () => {
   return (
@@ -125,7 +125,7 @@ const EnhancedNavigation2026: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedNavigation2026</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedNavigation2026;
+export default EnhancedNavigation2026,

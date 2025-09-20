@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Home, Zap, Target, Shield, TrendingUp, Globe, 
   CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Cpu
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIRealEstatePlatform() {
   const features = [
@@ -39,25 +39,19 @@ export default function AIRealEstatePlatform() {
       title: 'Global Market Access',
       description: 'Access to global real estate markets with AI-powered cross-border analysis and opportunities.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Improve investment returns by 300%',
-    'Reduce risk exposure by 70%',
-    'Increase market insights by 500%',
-    'Accelerate decision making by 200%',
-    'Enable 24/7 market monitoring',
-    'Optimize portfolio performance',
-    'Scale real estate operations globally',
-    'Future-proof investment strategy'
-  ];
+    'Improve investment returns by 300%Reduce risk exposure by 70%',
+    'Increase market insights by 500%Accelerate decision making by 200%',
+    'Enable 24/7 market monitoringOptimize portfolio performance',
+    'Scale real estate operations globallyFuture-proof investment strategy'
+  ],
 
   const useCases = [
-    'Property Investment', 'Market Analysis', 'Portfolio Management',
-    'Risk Assessment', 'Valuation Models', 'Investment Intelligence',
-    'Real Estate Analytics', 'Market Research', 'Portfolio Optimization',
-    'Investment Strategy', 'Market Prediction', 'Asset Management'
-  ];
+    'Property InvestmentMarket Analysis', 'Portfolio ManagementRisk Assessment', 'Valuation ModelsInvestment Intelligence',
+    'Real Estate AnalyticsMarket Research', 'Portfolio OptimizationInvestment Strategy', 'Market PredictionAsset Management'
+  ],
 
 const ai-real-estate-platform: React.FC = () => {
   return (
@@ -74,7 +68,7 @@ const ai-real-estate-platform: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-real-estate-platform;
+export default ai-real-estate-platform,

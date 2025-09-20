@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
 import { 
   Calculator, FileText, Send, CheckCircle, 
   ArrowRight, Brain, Atom, Rocket, Shield, 
   Zap, Globe, Users, DollarSign, Clock,
   Mail, Phone, MapPin, Building, Target
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function Quote() {
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]),
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,19 +18,16 @@ export default function Quote() {
     timeline: '',
     budget: '',
     teamSize: ''
-  });
+  }),
 
   const serviceCategories = [
     {
       name: 'AI & Machine Learning',
       icon: <Brain className="w-6 h-6" />,
       services: [
-        'AI Consciousness Development',
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision Systems',
-        'Predictive Analytics',
-        'AI Automation'
+        'AI Consciousness DevelopmentMachine Learning Models',
+        'Natural Language ProcessingComputer Vision Systems',
+        'Predictive AnalyticsAI Automation'
       ],
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
@@ -40,12 +37,9 @@ export default function Quote() {
       name: 'Quantum Computing',
       icon: <Atom className="w-6 h-6" />,
       services: [
-        'Quantum Algorithms',
-        'Quantum Cryptography',
-        'Quantum Machine Learning',
-        'Quantum Simulation',
-        'Post-Quantum Security',
-        'Quantum Cloud Infrastructure'
+        'Quantum AlgorithmsQuantum Cryptography',
+        'Quantum Machine LearningQuantum Simulation',
+        'Post-Quantum SecurityQuantum Cloud Infrastructure'
       ],
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
@@ -55,12 +49,9 @@ export default function Quote() {
       name: 'Autonomous Systems',
       icon: <Rocket className="w-6 h-6" />,
       services: [
-        'Business Process Automation',
-        'DevOps Automation',
-        'Infrastructure Automation',
-        'Security Automation',
-        'Data Pipeline Automation',
-        'Customer Success Automation'
+        'Business Process AutomationDevOps Automation',
+        'Infrastructure AutomationSecurity Automation',
+        'Data Pipeline AutomationCustomer Success Automation'
       ],
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
@@ -70,57 +61,54 @@ export default function Quote() {
       name: 'Enterprise Solutions',
       icon: <Building className="w-6 h-6" />,
       services: [
-        'Cloud Infrastructure',
-        'Cybersecurity Platforms',
-        'Data Management',
-        'API Development',
-        'Microservices Architecture',
-        'Legacy System Modernization'
+        'Cloud InfrastructureCybersecurity Platforms',
+        'Data ManagementAPI Development',
+        'Microservices ArchitectureLegacy System Modernization'
       ],
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       borderColor: 'border-blue-500/30'
     }
-  ];
+  ],
 
   const timelineOptions = [
     { value: 'immediate', label: 'Immediate (1-2 weeks)', description: 'Urgent project requiring immediate attention' },
     { value: '1-3-months', label: '1-3 months', description: 'Standard project timeline' },
     { value: '3-6-months', label: '3-6 months', description: 'Complex project with multiple phases' },
     { value: '6+months', label: '6+ months', description: 'Long-term strategic initiative' }
-  ];
+  ],
 
   const budgetRanges = [
     { value: 'under-50k', label: 'Under $50K', description: 'Small to medium projects' },
     { value: '50k-100k', label: '$50K - $100K', description: 'Medium complexity projects' },
     { value: '100k-500k', label: '$100K - $500K', description: 'Large enterprise projects' },
     { value: '500k+', label: '$500K+', description: 'Strategic initiatives and transformations' }
-  ];
+  ],
 
   const teamSizeOptions = [
     { value: '1-5', label: '1-5 people', description: 'Small team or startup' },
     { value: '6-25', label: '6-25 people', description: 'Growing company' },
     { value: '26-100', label: '26-100 people', description: 'Medium enterprise' },
     { value: '100+', label: '100+ people', description: 'Large enterprise' }
-  ];
+  ],
 
   const handleServiceToggle = (service: string) => {
     setSelectedServices(prev => 
       prev.includes(service) 
         ? prev.filter(s => s !== service)
         : [...prev, service]
-    );
-  };
+    ),
+  },
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
+    setFormData(prev => ({ ...prev, [field]: value })),
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     // Handle form submission
-    console.log('Form submitted:', { ...formData, selectedServices });
-  };
+    console.log('Form submitted:', { ...formData, selectedServices }),
+  },
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -482,7 +470,7 @@ export default function Quote() {
               Have questions or need to discuss your project in detail? 
               Our team is here to help you succeed.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
@@ -501,5 +489,5 @@ export default function Quote() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,90 +1,62 @@
-import React from 'react';
+import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AIContentGenerator() {
     const features = [
         {
-            title: "AI Writing Assistant",
-            description: "Generate high-quality content for blogs, social media, and marketing campaigns",
+            title: "AI Writing Assistant",description: "Generate high-quality content for blogs, social media, and marketing campaigns",
             icon: <PenTool className="h-6 w-6 text-zion-cyan"/>
-        },
+        };
         {
-            title: "Multi-Format Support",
-            description: "Create content in various formats: text, images, videos, and audio",
+            title: "Multi-Format Support",description: "Create content in various formats: text, images, videos, and audio",
             icon: <FileText className="h-6 w-6 text-zion-purple"/>
-        },
+        };
         {
-            title: "Brand Voice Consistency",
-            description: "Maintain your brand's unique voice across all content pieces",
-            icon: <Type className="h-6 w-6 text-zion-blue"/>
-        },
+            title: "Brand Voice Consistency",description: "Maintain your brand's unique voice across all content pieces",icon: <Type className="h-6 w-6 text-zion-blue"/>
+        };
         {
-            title: "SEO Optimization",
-            description: "AI-powered SEO suggestions to improve content visibility and ranking",
-            icon: <Target className="h-6 w-6 text-zion-cyan"/>
+            title: "SEO Optimization",description: "AI-powered SEO suggestions to improve content visibility and ranking",icon: <Target className="h-6 w-6 text-zion-cyan"/>
         }
     ];
-
     const contentTypes = [
         {
-            title: "Blog Posts",
-            description: "Long-form articles and blog content",
-            icon: <FileText className="h-8 w-8 text-zion-cyan"/>
-        },
+            title: "Blog Posts",description: "Long-form articles and blog content",icon: <FileText className="h-8 w-8 text-zion-cyan"/>
+        };
         {
-            title: "Social Media",
-            description: "Posts for all major social platforms",
-            icon: <Users className="h-8 w-8 text-zion-purple"/>
-        },
+            title: "Social Media",description: "Posts for all major social platforms",icon: <Users className="h-8 w-8 text-zion-purple"/>
+        };
         {
-            title: "Marketing Copy",
-            description: "Ads, landing pages, and promotional content",
+            title: "Marketing Copy",description: "Ads, landing pages, and promotional content",
             icon: <Target className="h-8 w-8 text-zion-blue"/>
-        },
+        };
         {
-            title: "Product Descriptions",
-            description: "Compelling product and service descriptions",
-            icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>
-        },
+            title: "Product Descriptions",description: "Compelling product and service descriptions",icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>
+        };
         {
-            title: "Email Campaigns",
-            description: "Newsletters and email marketing content",
-            icon: <Mail className="h-8 w-8 text-zion-purple"/>
-        },
+            title: "Email Campaigns",description: "Newsletters and email marketing content",icon: <Mail className="h-8 w-8 text-zion-purple"/>
+        };
         {
-            title: "Video Scripts",
-            description: "Scripts for video content and presentations",
-            icon: <Video className="h-8 w-8 text-zion-blue"/>
+            title: "Video Scripts",description: "Scripts for video content and presentations",icon: <Video className="h-8 w-8 text-zion-blue"/>
         }
     ];
-
     const pricingPlans = [
         {
-            name: "Starter",
-            price: "$49",
-            period: "/month",
-            description: "Perfect for individuals and small businesses",
-            features: [
-                "Up to 50 content pieces/month",
+            name: "Starter",price: "$49",period: "/month",description: "Perfect for individuals and small businesses",features: [
+                "Up to 50 content pieces/month";
                 "Basic AI writing tools",
                 "Standard templates",
                 "Email support",
                 "Basic SEO suggestions"
             ],
             popular: false
-        },
+        };
         {
-            name: "Professional",
-            price: "$99",
-            period: "/month",
-            description: "Ideal for growing businesses and content teams",
-            features: [
-                "Up to 200 content pieces/month",
+            name: "Professional",price: "$99",period: "/month",description: "Ideal for growing businesses and content teams",features: [
+                "Up to 200 content pieces/month";
                 "Advanced AI writing tools",
                 "Premium templates",
                 "Priority support",
@@ -94,14 +66,10 @@ export default function AIContentGenerator() {
                 "Team collaboration"
             ],
             popular: true
-        },
+        };
         {
-            name: "Enterprise",
-            price: "$199",
-            period: "/month",
-            description: "For large organizations with advanced needs",
-            features: [
-                "Unlimited content pieces",
+            name: "Enterprise",price: "$199",period: "/month",description: "For large organizations with advanced needs",features: [
+                "Unlimited content pieces";
                 "Custom AI models",
                 "White-label solutions",
                 "Dedicated account manager",
@@ -113,7 +81,6 @@ export default function AIContentGenerator() {
             popular: false
         }
     ];
-
     const benefits = [
         "AI-powered content generation for any industry",
         "SEO-optimized content with keyword research",
@@ -127,7 +94,7 @@ export default function AIContentGenerator() {
         "Team collaboration tools",
         "API access for enterprise integration",
         "24/7 customer support"
-    ];
+    ],
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -137,7 +104,7 @@ export default function AIContentGenerator() {
             />
             
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <section className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
                 <div className="relative max-w-7xl mx-auto text-center">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6">
@@ -148,7 +115,7 @@ export default function AIContentGenerator() {
                         AI Content Generator
                     </h1>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                        Transform your content creation with AI-powered writing tools. Generate high-quality, 
+                        Transform your content creation with AI-powered writing tools. Generate high-quality;
                         SEO-optimized content for blogs, social media, marketing campaigns, and more.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -172,7 +139,7 @@ export default function AIContentGenerator() {
                             Powerful Features for <span className="text-cyan-400">Content Creation</span>
                         </h2>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                            Our AI content generator provides everything you need to create engaging, 
+                            Our AI content generator provides everything you need to create engaging;
                             high-quality content that drives results.
                         </p>
                     </div>
@@ -296,7 +263,7 @@ export default function AIContentGenerator() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <section className="py-20 px-4 sm: px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Ready to Transform Your <span className="text-cyan-400">Content Creation</span>?
@@ -317,5 +284,5 @@ export default function AIContentGenerator() {
                 </div>
             </section>
         </div>
-    );
+    )
 }

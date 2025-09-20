@@ -1,3 +1,3 @@
 const contact: React.FC = () => {,
-  return (,
+  return (
 })

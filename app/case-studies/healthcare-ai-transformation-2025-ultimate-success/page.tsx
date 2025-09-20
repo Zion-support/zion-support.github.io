@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User,  Share2, Building, DollarSign, TrendingUp, Users, CheckCircle, Award } from 'lucide-react';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import { ArrowLeft, Calendar, Clock, User,  Share2, Building, DollarSign, TrendingUp, Users, CheckCircle, Award } from 'lucide-react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Healthcare AI Transformation 2025: $50M Annual Savings & 95% Patient Satisfaction';
-  description: 'How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned.';
-  keywords: ['Healthcare AImedical automation', 'patient satisfactioncost savings', 'ROIdigital transformation', 'clinical documentationhealthcare technology', 'medical AIhealthcare efficiency'],
-};
+  title: 'Healthcare AI Transformation 2025: $50M Annual Savings & 95% Patient Satisfaction',
+  description: 'How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned.',
+  keywords: ['Healthcare AImedical automationpatient satisfactioncost savings', 'ROIdigital transformationclinical documentationhealthcare technology', 'medical AIhealthcare efficiency']
+},
 export default function HealthcareAITransformationPage() {,
   return (,
     <div>,
@@ -29,9 +29,9 @@ export default function HealthcareAITransformationPage() {,
             </Link>,
           </div>,
         </div>,
-        {/* Case Study Header */,}
+        {/* Case Study Header */}
         <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-          {/* Meta Information */,}
+          {/* Meta Information */}
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">,
             <div className="flex items-center">,
               <Calendar className="w-4 h-4 mr-2" />,
@@ -54,7 +54,7 @@ export default function HealthcareAITransformationPage() {,
           <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6 leading-tight">,
             Healthcare AI Transformation 2025: $50M Annual Savings & 95% Patient Satisfaction,
           </h1>,
-          {/* Subtitle */,}
+          {/* Subtitle */}
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">,
             A major regional healthcare system serving over 2 million patients achieved unprecedented results through comprehensive AI transformation. In just 8 months, they realized <strong>$50 million in annual savings</strong>, achieved <strong>95% patient satisfaction</strong>, and improved operational efficiency by <strong>340%</strong>.,
           </p>,
@@ -80,7 +80,7 @@ export default function HealthcareAITransformationPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Article Content */,}
+          {/* Article Content */}
           <div className="prose prose-lg max-w-none">,
             <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge: Healthcare at a Crossroads</h2>,
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Initial Situation</h3>,
@@ -341,7 +341,7 @@ export default function HealthcareAITransformationPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Share Section */,}
+          {/* Share Section */}
           <div className="border-t border-gray-200 pt-8 mt-12">,
             <div className="flex items-center justify-between">,
               <div>,
@@ -364,4 +364,4 @@ export default function HealthcareAITransformationPage() {,
         </article>,
       </div>,
     </div>,
-  ),}
+  )}

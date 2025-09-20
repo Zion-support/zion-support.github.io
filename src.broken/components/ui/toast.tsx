@@ -3,7 +3,7 @@ import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from 'lucide-react'
 import { cn } from "@/lib/utils"
-import { logInfo } from '@/utils/productionLogger';
+import { logInfo } from '@/utils/productionLogger',
 
 import { cn } from "@/lib/utils"
 
@@ -32,12 +32,12 @@ const toastVariants = cva(
         default: "border bg-background text-foreground",
         destructive:
           "destructive group border-destructive bg-destructive text-destructive-foreground",
-        success: "border bg-background text-foreground",
-      },
+        success: "border bg-background text-foreground"
+      }
     },
     defaultVariants: {
-      variant: "default",
-    },
+      variant: "default"
+    }
   }
 )
 
@@ -126,7 +126,7 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
-  ToastAction,
+  ToastAction
 }
 
 // Add useToast hook export
@@ -136,6 +136,6 @@ export function useToast() {
     toast: (props: any) => {
       // Implementation of toast functionality
       console.log("Toast:", props)
-    },
+    }
   }
 }

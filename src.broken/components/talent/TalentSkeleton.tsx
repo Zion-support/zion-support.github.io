@@ -1,5 +1,5 @@
-import React from 'react';
-import { Skeleton } from '@/components/ui/skeleton';
+import React from 'react',
+import { Skeleton } from '@/components/ui/skeleton',
 
 export function TalentSkeleton() {
   return (
@@ -20,5 +20,5 @@ export function TalentSkeleton() {
         </div>
       ))}
     </div>
-  );
+  ),
 }

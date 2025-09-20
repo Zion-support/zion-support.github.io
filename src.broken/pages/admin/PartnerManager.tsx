@@ -1,69 +1,69 @@
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from 'next/router';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { toast } from "@/hooks/use-toast";
+import { useState, useEffect } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { useRouter } from 'next/router',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { EmptyState } from "@/components/ui/empty-state";
+import { supabase } from "@/integrations/supabase/client",
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { EmptyState } from "@/components/ui/empty-state",
 
 interface PartnerProfile {
-  id: string;
-  user_id: string;
-  name: string;
-  status: 'pending' | 'approved' | 'rejected';
-  created_at: string;
-  niche: string;
-  audience_size: string;
-  social_media?: Record<string, string>;
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
-  commission_rate?: number;
+  id: string,
+  user_id: string,
+  name: string,
+  status: 'pending' | 'approved' | 'rejected',
+  created_at: string,
+  niche: string,
+  audience_size: string,
+  social_media?: Record<string, string>,
+  website?: string,
+  bio?: string,
+  payout_method?: string,
+  fraud_flags?: number,
+  commission_rate?: number,
 }
 
 export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]);
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
-  const router = useRouter();
+  const [partners, setPartners] = useState<PartnerProfile[]>([]),
+  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
+  const [commissionRate, setCommissionRate] = useState(25),
+  const { user, isAuthenticated } = useAuth(),
+  const router = useRouter(),
 
   useEffect(() => {
     if (!isAuthenticated) {
-      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'));
-      return;
+      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),
+      return,
     }
 
-    fetchPartners();
-  }, [isAuthenticated, router]);
+    fetchPartners(),
+  }, [isAuthenticated, router]),
 
   const fetchPartners = async () => {
     try {
-      setIsLoading(true);
+      setIsLoading(true),
       // In a real application, check admin permissions here
       
       const { data, error } = await supabase
         .from('partner_profiles')
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false }),
         
-      if (error) throw error;
+      if (error) throw error,
       
       // If no data is returned, use mock data
       if (!data || data.length === 0) {
@@ -143,168 +143,168 @@ export default function PartnerManager() {
             fraud_flags: 1,
             commission_rate: 20
           }
-        ];
+        ],
         
-        setPartners(mockData);
-        filterPartners(mockData, activeTab, searchQuery);
+        setPartners(mockData),
+        filterPartners(mockData, activeTab, searchQuery),
       } else {
-        setPartners(data as PartnerProfile[]);
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery);
+        setPartners(data as PartnerProfile[]),
+        filterPartners(data as PartnerProfile[], activeTab, searchQuery),
       }
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' });
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' }),
       toast({
         title: "Error",
         description: "Failed to load partner data",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
-    let filtered = partners;
+    let filtered = partners,
     
     // Filter by status
     if (status !== "all") {
-      filtered = filtered.filter(p => p.status === status);
+      filtered = filtered.filter(p => p.status === status)
     }
     
     // Filter by search query
     if (query) {
-      const lowerQuery = query.toLowerCase();
+      const lowerQuery = query.toLowerCase(),
       filtered = filtered.filter(p => 
         p.name.toLowerCase().includes(lowerQuery) ||
         p.niche.toLowerCase().includes(lowerQuery) ||
         p.bio?.toLowerCase().includes(lowerQuery) ||
         p.website?.toLowerCase().includes(lowerQuery)
-      );
+      ),
     }
     
-    setFilteredPartners(filtered);
-  };
+    setFilteredPartners(filtered),
+  },
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
-    filterPartners(partners, activeTab, e.target.value);
-  };
+    setSearchQuery(e.target.value),
+    filterPartners(partners, activeTab, e.target.value),
+  },
 
   const handleTabChange = (value: string) => {
-    setActiveTab(value);
-    filterPartners(partners, value, searchQuery);
-  };
+    setActiveTab(value),
+    filterPartners(partners, value, searchQuery),
+  },
 
   const handleViewDetails = (partner: PartnerProfile) => {
-    setSelectedPartner(partner);
-    setIsDetailsOpen(true);
-  };
+    setSelectedPartner(partner),
+    setIsDetailsOpen(true)
+  },
 
   const handleOpenSettings = (partner: PartnerProfile) => {
-    setSelectedPartner(partner);
-    setCommissionRate(partner.commission_rate || 25);
-    setIsSettingsOpen(true);
-  };
+    setSelectedPartner(partner),
+    setCommissionRate(partner.commission_rate || 25),
+    setIsSettingsOpen(true)
+  },
 
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p => 
         p.id === partnerId ? { ...p, status } : p
-      ));
+      )),
       
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery
-      );
+      ),
       
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,
-        variant: status === 'approved' ? "default" : "destructive",
-      });
+        variant: status === 'approved' ? "default" : "destructive"
+      }),
       
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
-        setIsDetailsOpen(false);
+        setIsDetailsOpen(false),
       }
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' });
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' }),
       toast({
         title: "Error",
         description: "Failed to update partner status",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     }
-  };
+  },
 
   const handleSaveSettings = async () => {
-    if (!selectedPartner) return;
+    if (!selectedPartner) return,
     
     try {
       // Update commission rate
       setPartners(partners.map(p => 
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
-      ));
+      )),
       
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
         activeTab,
         searchQuery
-      );
+      ),
       
       toast({
         title: "Settings Updated",
         description: "Partner settings have been updated successfully.",
-        variant: "default",
-      });
+        variant: "default"
+      }),
       
-      setIsSettingsOpen(false);
+      setIsSettingsOpen(false),
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' });
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),
       toast({
         title: "Error",
         description: "Failed to update partner settings",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     }
-  };
+  },
 
   const getAudienceSizeLabel = (size: string) => {
     switch (size) {
-      case 'under1k': return 'Under 1,000';
-      case '1k-10k': return '1,000 - 10,000';
-      case '10k-50k': return '10,000 - 50,000';
-      case '50k-100k': return '50,000 - 100,000';
-      case 'over100k': return 'Over 100,000';
-      default: return size;
+      case 'under1k': return 'Under 1,000',
+      case '1k-10k': return '1,000 - 10,000',
+      case '10k-50k': return '10,000 - 50,000',
+      case '50k-100k': return '50,000 - 100,000',
+      case 'over100k': return 'Over 100,000',
+      default: return size
     }
-  };
+  },
 
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
+        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
       case 'approved':
-        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
+        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,
       case 'rejected':
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>;
+        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,
       default:
-        return <Badge variant="outline">{status}</Badge>;
+        return <Badge variant="outline">{status}</Badge>,
     }
-  };
+  },
 
   const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null;
+    if (flags === 0) return null,
     
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
         {flags}
       </Badge>
-    );
-  };
+    ),
+  },
 
   return (
     <div className="container max-w-7xl py-10">
@@ -603,17 +603,17 @@ export default function PartnerManager() {
         </DialogContent>
       </Dialog>
     </div>
-  );
+  ),
 }
 
 interface PartnerTableProps {
-  partners: PartnerProfile[];
-  isLoading: boolean;
-  onViewDetails: (partner: PartnerProfile) => void;
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void;
-  onOpenSettings: (partner: PartnerProfile) => void;
-  getStatusBadge: (status: string) => JSX.Element;
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null;
+  partners: PartnerProfile[],
+  isLoading: boolean,
+  onViewDetails: (partner: PartnerProfile) => void,
+  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,
+  onOpenSettings: (partner: PartnerProfile) => void,
+  getStatusBadge: (status: string) => JSX.Element,
+  getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
 
 function PartnerTable({ 
@@ -630,7 +630,7 @@ function PartnerTable({
       <div className="text-center py-8">
         <p className="text-zion-slate-light">Loading partner data...</p>
       </div>
-    );
+    ),
   }
   
   if (partners.length === 0) {
@@ -643,7 +643,7 @@ function PartnerTable({
           className="border-none bg-transparent text-center"
         />
       </div>
-    );
+    ),
   }
   
   return (
@@ -669,7 +669,7 @@ function PartnerTable({
             </TableCell>
             <TableCell>{partner.niche}</TableCell>
             <TableCell>
-              {partner.audience_size.replace('k', ',000').replace('-', ' - ').replace('over', 'Over ')}
+              {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
             </TableCell>
             <TableCell>{getStatusBadge(partner.status)}</TableCell>
             <TableCell>
@@ -723,5 +723,5 @@ function PartnerTable({
         ))}
       </TableBody>
     </Table>
-  );
+  ),
 }

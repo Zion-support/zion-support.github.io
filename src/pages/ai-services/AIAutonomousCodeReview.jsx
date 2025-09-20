@@ -1,32 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
-import SEO from '@/components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from "lucide-react";
+import SEO from "@/components/SEO";
 const features = [
     {
-        title: "Automated Code Analysis",
-        description: "AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities.",
-        icon: Code,
-        color: "from-blue-500 to-cyan-500"
-    },
+        title: "Automated Code Analysis",description: "AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities.",
+        icon: Code,color: "from-blue-500 to-cyan-500"
+    };
     {
-        title: "Security Vulnerability Detection",
-        description: "Advanced security scanning that detects potential threats and compliance issues in your codebase.",
-        icon: Shield,
-        color: "from-red-500 to-pink-500"
-    },
+        title: "Security Vulnerability Detection",description: "Advanced security scanning that detects potential threats and compliance issues in your codebase.",icon: Shield,color: "from-red-500 to-pink-500"
+    };
     {
-        title: "Performance Optimization",
-        description: "Intelligent suggestions for improving code performance, readability, and maintainability.",
-        icon: Zap,
-        color: "from-green-500 to-emerald-500"
-    },
+        title: "Performance Optimization",description: "Intelligent suggestions for improving code performance, readability, and maintainability.",
+        icon: Zap,color: "from-green-500 to-emerald-500"
+    };
     {
-        title: "Learning & Adaptation",
-        description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",
-        icon: Brain,
-        color: "from-purple-500 to-indigo-500"
+        title: "Learning & Adaptation",description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",icon: Brain,color: "from-purple-500 to-indigo-500"
     }
 ];
 const benefits = [
@@ -36,40 +26,28 @@ const benefits = [
     "Standardize coding practices across teams",
     "Reduce technical debt and bug fixes",
     "Accelerate development cycles"
-];
+],
 const useCases = [
     {
-        title: "Development Teams",
-        description: "Streamline code review processes for development teams of any size.",
-        icon: Users
-    },
+        title: "Development Teams",description: "Streamline code review processes for development teams of any size.",icon: Users
+    };
     {
-        title: "Open Source Projects",
-        description: "Maintain high code quality standards in open source contributions.",
-        icon: GitFork
-    },
+        title: "Open Source Projects",description: "Maintain high code quality standards in open source contributions.",icon: GitFork
+    };
     {
-        title: "Enterprise Applications",
-        description: "Ensure security and compliance in enterprise-grade applications.",
-        icon: Shield
-    },
+        title: "Enterprise Applications",description: "Ensure security and compliance in enterprise-grade applications.",icon: Shield
+    };
     {
-        title: "CI/CD Pipelines",
-        description: "Integrate automated code review into your continuous integration workflows.",
-        icon: Cpu
+        title: "CI/CD Pipelines",description: "Integrate automated code review into your continuous integration workflows.",icon: Cpu
     }
 ];
 const testimonials = [
     {
-        content: "The AI Autonomous Code Review has transformed our development process. We catch issues much earlier and our code quality has improved significantly.",
-        name: "Alex Thompson",
-        role: "Lead Developer, CodeFlow Inc",
+        content: "The AI Autonomous Code Review has transformed our development process. We catch issues much earlier and our code quality has improved significantly.",name: "Alex Thompson",role: "Lead Developer, CodeFlow Inc",
         rating: 5
-    },
+    };
     {
-        content: "This tool is a game-changer for our security team. It catches vulnerabilities that human reviewers might miss.",
-        name: "Maria Santos",
-        role: "Security Engineer, SecureTech",
+        content: "This tool is a game-changer for our security team. It catches vulnerabilities that human reviewers might miss.",name: "Maria Santos",role: "Security Engineer, SecureTech",
         rating: 5
     }
 ];
@@ -174,7 +152,7 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon;
+            const IconComponent = useCase.icon,
             return (<motion.div key={useCase.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>
@@ -220,7 +198,7 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md: text-5xl font-bold mb-4 text-white">
               Ready to Transform Your Code Review?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -239,5 +217,5 @@ export default function AIAutonomousCodeReview() {
           </motion.div>
         </div>
       </section>
-    </div>);
+    </div>)
 }

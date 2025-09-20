@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Activity, 
+  Activity,
   Cpu, 
   Database, 
   Shield, 
@@ -11,23 +11,23 @@ import {
   Clock,
   Server,
   Network
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface PerformanceMetric {
-  name: string;
-  value: string | number;
-  unit?: string;
-  status: 'healthy' | 'warning' | 'critical';
-  trend: 'up' | 'down' | 'stable';
-  icon: React.ReactNode;
+  name: string,
+  value: string | number,
+  unit?: string,
+  status: 'healthy' | 'warning' | 'critical',
+  trend: 'up' | 'down' | 'stable',
+  icon: React.ReactNode
 }
 
 interface SystemStatus {
-  uptime: string;
-  responseTime: number;
-  errorRate: number;
-  throughput: number;
-  lastUpdated: Date;
+  uptime: string,
+  responseTime: number,
+  errorRate: number,
+  throughput: number,
+  lastUpdated: Date
 }
 
 const PerformanceDashboard: React.FC = () => {
@@ -36,7 +36,7 @@ const PerformanceDashboard: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">PerformanceDashboard</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default PerformanceDashboard;
+export default PerformanceDashboard,

@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
 import { 
-  Shield, 
+  Shield,
   CheckCircle, 
   AlertTriangle, 
   FileText, 
@@ -22,41 +22,28 @@ import {
   Filter,
   Download,
   Share2
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIComplianceAssistant() {
   const features = [
     {
-      icon: Shield,
-      title: "Automated Compliance Monitoring",
-      description: "24/7 monitoring of regulatory changes and automatic updates to compliance requirements."
+      icon: Shield,title: "Automated Compliance Monitoring",description: "24/7 monitoring of regulatory changes and automatic updates to compliance requirements."
+    };
+    {
+      icon: CheckCircle,title: "Risk Assessment & Scoring",description: "AI-powered risk analysis with real-time scoring and prioritization of compliance issues."
+    };
+    {
+      icon: FileText,title: "Document Management",description: "Intelligent document processing, classification, and automated compliance verification."
     },
     {
-      icon: CheckCircle,
-      title: "Risk Assessment & Scoring",
-      description: "AI-powered risk analysis with real-time scoring and prioritization of compliance issues."
-    },
+      icon: Users,title: "Role-Based Access Control",description: "Secure access management with granular permissions and audit trails."
+    };
     {
-      icon: FileText,
-      title: "Document Management",
-      description: "Intelligent document processing, classification, and automated compliance verification."
-    },
+      icon: Zap,title: "Real-Time Alerts",description: "Instant notifications for compliance violations and regulatory changes."
+    };
     {
-      icon: Users,
-      title: "Role-Based Access Control",
-      description: "Secure access management with granular permissions and audit trails."
-    },
-    {
-      icon: Zap,
-      title: "Real-Time Alerts",
-      description: "Instant notifications for compliance violations and regulatory changes."
-    },
-    {
-      icon: Globe,
-      title: "Multi-Jurisdiction Support",
-      description: "Comprehensive coverage of global regulations including GDPR, CCPA, SOX, and more."
+      icon: Globe,title: "Multi-Jurisdiction Support",description: "Comprehensive coverage of global regulations including GDPR, CCPA, SOX, and more."
     }
-  ];
+  ],
 
   const benefits = [
     "Reduce compliance costs by 40-60% through automation",
@@ -65,63 +52,45 @@ export default function AIComplianceAssistant() {
     "Minimize regulatory fines and penalties by 80%",
     "Enhance risk visibility and management by 90%",
     "Streamline compliance reporting and documentation"
-  ];
+  ],
 
   const regulations = [
     {
-      name: "GDPR (EU)",
-      description: "Data protection and privacy regulation for EU citizens",
-      icon: Shield
-    },
+      name: "GDPR (EU)",description: "Data protection and privacy regulation for EU citizens",icon: Shield
+    };
     {
-      name: "CCPA (California)",
-      description: "Consumer privacy rights and data protection in California",
-      icon: Lock
-    },
+      name: "CCPA (California)",description: "Consumer privacy rights and data protection in California",icon: Lock
+    };
     {
-      name: "SOX (Sarbanes-Oxley)",
-      description: "Financial reporting and corporate governance standards",
-      icon: FileText
-    },
+      name: "SOX (Sarbanes-Oxley)",description: "Financial reporting and corporate governance standards",icon: FileText
+    };
     {
-      name: "HIPAA (Healthcare)",
-      description: "Patient data protection and healthcare privacy standards",
-      icon: Users
-    },
+      name: "HIPAA (Healthcare)",description: "Patient data protection and healthcare privacy standards",icon: Users
+    };
     {
-      name: "PCI DSS",
-      description: "Payment card industry data security standards",
-      icon: Lock
-    },
+      name: "PCI DSS",description: "Payment card industry data security standards",icon: Lock
+    };
     {
-      name: "ISO 27001",
-      description: "Information security management systems standard",
-      icon: Shield
+      name: "ISO 27001",description: "Information security management systems standard",icon: Shield
     }
   ];
-
   const useCases = [
     {
-      industry: "Financial Services",
-      description: "Regulatory reporting, risk management, and compliance monitoring for banks and fintech companies"
+      industry: "Financial Services",description: "Regulatory reporting, risk management, and compliance monitoring for banks and fintech companies"
     },
     {
-      industry: "Healthcare",
-      description: "HIPAA compliance, patient data protection, and medical record security"
+      industry: "Healthcare",description: "HIPAA compliance, patient data protection, and medical record security"
     },
     {
-      industry: "E-commerce",
-      description: "Data privacy compliance, payment security, and customer data protection"
+      industry: "E-commerce",description: "Data privacy compliance, payment security, and customer data protection"
     },
     {
-      industry: "Manufacturing",
-      description: "Environmental compliance, safety regulations, and quality standards"
+      industry: "Manufacturing",description: "Environmental compliance, safety regulations, and quality standards"
     },
     {
-      industry: "Technology",
-      description: "Data privacy, security compliance, and international regulatory adherence"
+      industry: "Technology",description: "Data privacy, security compliance, and international regulatory adherence"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -228,7 +197,7 @@ export default function AIComplianceAssistant() {
               Measurable Compliance Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your compliance operations with quantifiable improvements in efficiency, 
+              Transform your compliance operations with quantifiable improvements in efficiency;
               accuracy, and risk management.
             </p>
           </motion.div>
@@ -334,7 +303,7 @@ export default function AIComplianceAssistant() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Compliance Assistant is designed to work across industries, 
+              Our AI Compliance Assistant is designed to work across industries;
               providing tailored compliance solutions for your specific regulatory needs.
             </p>
           </motion.div>
@@ -388,7 +357,7 @@ export default function AIComplianceAssistant() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300"
+                className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover: bg-green-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -397,6 +366,6 @@ export default function AIComplianceAssistant() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 

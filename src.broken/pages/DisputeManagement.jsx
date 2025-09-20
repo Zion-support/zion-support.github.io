@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-  import SEO from '../SEO';
+import React, { useState } from 'react',
+  import SEO from '../SEO',
 export default function DisputeManagement () {
 
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('overview'),
   return (<>
       <SEO
         title="Dispute Management | Zion Tech Group"
@@ -398,5 +398,5 @@ export default function DisputeManagement () {
             </div>) }
         </div>
       </main>
-    </>) ;
+    </>) ,
 }

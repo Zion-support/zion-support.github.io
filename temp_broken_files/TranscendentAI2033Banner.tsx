@@ -1,10 +1,10 @@
-import React from 'react';
-import { ArrowRight, Zap, Brain, Globe, Atom, Eye, Infinity } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { ArrowRight, Zap, Brain, Globe, Atom, Eye, Infinity } from 'lucide-react',
+import { Link } from 'react-router-dom',
 const TranscendentAI2033Banner: React.FC = () => {,
   return (,
     <divsection,
-      whileInView={{ opacity: 1, y: 0 ,}}
+      whileInView={{ opacity: 1, y: 0 }}
       className="relative py-16 px-4 overflow-hidden",
     >,
       {/* Background Effects */}
@@ -16,9 +16,9 @@ const TranscendentAI2033Banner: React.FC = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto">,
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
-            whileInView={{ opacity: 1, x: 0 ,}}
+            whileInView={{ opacity: 1, x: 0 }}
             className="text-center lg: text-left",
           >,
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 px-4 py-2 rounded-full border border-indigo-500/30 mb-6">,
@@ -47,45 +47,44 @@ const TranscendentAI2033Banner: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Feature Grid */,}
+          {/* Right Content - Feature Grid */}
           <div,
-            whileInView={{ opacity: 1, x: 0 ,}}
+            whileInView={{ opacity: 1, x: 0 }}
             className="grid grid-cols-2 gap-6",
           >,
             {[,
               {,
-                icon: <Brain className="w-8 h-8" />;
-                title: "Consciousness";
-                description: "Digital immortality technology",};
+                icon: <Brain className="w-8 h-8" />,
+                title: "Consciousness",
+                description: "Digital immortality technology"},
               {,
-                icon: <Atom className="w-8 h-8" />;
-                title: "Quantum";
-                description: "Reality manipulation interface",};
+                icon: <Atom className="w-8 h-8" />,
+                title: "Quantum",
+                description: "Reality manipulation interface"},
               {,
-                icon: <Eye className="w-8 h-8" />;
-                title: "Reality";
-                description: "Multi-dimensional perception",};
+                icon: <Eye className="w-8 h-8" />,
+                title: "Reality",
+                description: "Multi-dimensional perception"},
               {,
-                icon: <Infinity className="w-8 h-8" />;
-                title: "Infinity";
-                description: "Omniversal travel network",}
+                icon: <Infinity className="w-8 h-8" />,
+                title: "Infinity",
+                description: "Omniversal travel network"}
             ].map((feature, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
+                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-indigo-800/20 to-purple-800/20 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 text-center hover: border-indigo-400/40 transition-all group",
               >,
                 <div className="text-indigo-400 mb-4 group-hover:text-purple-300 transition-colors flex justify-center">,
-                  {feature.icon,}
+                  {feature.icon}
                 </div>,
                 <h3 className="text-lg font-bold mb-2 text-white group-hover: text-purple-300 transition-colors">,
-                  {feature.title,}
+                  {feature.title}
                 </h3>,
                 <p className="text-sm text-gray-400 group-hover: text-gray-300 transition-colors">,
-                  {feature.description,}
+                  {feature.description}
                 </p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
@@ -95,7 +94,7 @@ const TranscendentAI2033Banner: React.FC = () => {,
       <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-pink-400 rounded-full animate-ping"></div>,
       <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>,
     </divsection>,
-  );
-};
-export default TranscendentAI2033Banner;
+  ),
+},
+export default TranscendentAI2033Banner,
 </div></div></div>,

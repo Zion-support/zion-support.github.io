@@ -1,5 +1,5 @@
-"use client";
+"use client",
 export default function themeprovider() {,
-  return <div />;
+  return <div />,
 }
 ,

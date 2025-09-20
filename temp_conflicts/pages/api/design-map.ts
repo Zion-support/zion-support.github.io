@@ -6,14 +6,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const base = getZionDesignMap()
     const [localTokens, cmsTokens] = await Promise.all([
       buildTokenSet(),
-      fetchLovableTokens(),
+      fetchLovableTokens()
     ])
 
     const tokens = {
       colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) },
       typography: {
-        fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) },
-      },
+        fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }
+      }
     }
 
     res.status(200).json({ route: base.route, products: base.products, tokens })

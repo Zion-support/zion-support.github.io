@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 import {
   Phone,
   Mail,
@@ -28,8 +28,8 @@ import {
   Lightbulb,
   Building,
   Handshake
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const UltraAdvancedFuturisticFooter2038: React.FC = () => {
   return (
@@ -37,7 +37,7 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticFooter2038</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedFuturisticFooter2038;
+export default UltraAdvancedFuturisticFooter2038,

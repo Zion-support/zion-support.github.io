@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface UltimateFuturisticITService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
   // Zero-Trust Quantum Security Platform
@@ -49,16 +49,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Revolutionary security platform that combines zero-trust architecture with quantum encryption to provide the most secure IT infrastructure possible.',
     features: [
-      'Quantum encryption at all levels',
-      'Zero-trust network architecture',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Behavioral analytics',
-      'Real-time security monitoring',
-      'Automated incident response',
-      'Compliance automation',
-      'Quantum-resistant algorithms',
-      'Multi-factor quantum authentication'
+      'Quantum encryption at all levelsZero-trust network architecture',
+      'Quantum key distributionAdvanced threat detection',
+      'Behavioral analyticsReal-time security monitoring',
+      'Automated incident responseCompliance automation',
+      'Quantum-resistant algorithmsMulti-factor quantum authentication'
     ],
     popular: true,
     icon: '🛡️',
@@ -101,16 +96,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Next-generation DevOps platform that autonomously manages infrastructure, deployments, monitoring, and optimization without human intervention.',
     features: [
-      'Fully autonomous deployments',
-      'AI-powered infrastructure management',
-      'Self-healing systems',
-      'Automatic scaling and optimization',
-      'Predictive maintenance',
-      'Zero-downtime deployments',
-      'Intelligent monitoring',
-      'Automated testing and QA',
-      'Performance optimization',
-      'Cost optimization algorithms'
+      'Fully autonomous deploymentsAI-powered infrastructure management',
+      'Self-healing systemsAutomatic scaling and optimization',
+      'Predictive maintenanceZero-downtime deployments',
+      'Intelligent monitoringAutomated testing and QA',
+      'Performance optimizationCost optimization algorithms'
     ],
     popular: true,
     icon: '⚡',
@@ -153,16 +143,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Revolutionary cloud infrastructure platform that leverages quantum computing to provide unprecedented performance, security, and scalability.',
     features: [
-      'Quantum-enhanced processing',
-      'Quantum-secured storage',
-      'Quantum networking',
-      'Quantum machine learning',
-      'Quantum optimization algorithms',
-      'Quantum-resistant encryption',
-      'Quantum key distribution',
-      'Quantum error correction',
-      'Quantum simulation capabilities',
-      'Quantum research tools'
+      'Quantum-enhanced processingQuantum-secured storage',
+      'Quantum networkingQuantum machine learning',
+      'Quantum optimization algorithmsQuantum-resistant encryption',
+      'Quantum key distributionQuantum error correction',
+      'Quantum simulation capabilitiesQuantum research tools'
     ],
     popular: true,
     icon: '☁️',
@@ -205,16 +190,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Advanced IT asset management platform that uses AI to automatically discover, track, optimize, and manage all IT assets across the organization.',
     features: [
-      'AI-powered asset discovery',
-      'Automatic asset classification',
-      'Predictive maintenance scheduling',
-      'Cost optimization algorithms',
-      'License compliance automation',
-      'Asset lifecycle management',
-      'Real-time asset monitoring',
-      'Automated reporting',
-      'Integration with ITSM tools',
-      'Mobile asset tracking'
+      'AI-powered asset discoveryAutomatic asset classification',
+      'Predictive maintenance schedulingCost optimization algorithms',
+      'License compliance automationAsset lifecycle management',
+      'Real-time asset monitoringAutomated reporting',
+      'Integration with ITSM toolsMobile asset tracking'
     ],
     popular: true,
     icon: '💻',
@@ -257,16 +237,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Revolutionary network management platform that autonomously monitors, optimizes, and maintains network infrastructure without human intervention.',
     features: [
-      'Fully autonomous network monitoring',
-      'Self-optimizing network performance',
-      'Automatic traffic routing',
-      'Predictive network maintenance',
-      'Self-healing network infrastructure',
-      'Intelligent bandwidth allocation',
-      'Automatic security updates',
-      'Performance optimization',
-      'Cost optimization',
-      'Real-time analytics'
+      'Fully autonomous network monitoringSelf-optimizing network performance',
+      'Automatic traffic routingPredictive network maintenance',
+      'Self-healing network infrastructureIntelligent bandwidth allocation',
+      'Automatic security updatesPerformance optimization',
+      'Cost optimizationReal-time analytics'
     ],
     popular: true,
     icon: '🌐',
@@ -309,16 +284,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Next-generation data center platform that combines traditional data center services with quantum encryption for ultimate security and performance.',
     features: [
-      'Quantum encryption at rest',
-      'Quantum-secured data transmission',
-      'Quantum-resistant storage',
-      'Zero-trust data access',
-      'Quantum key distribution',
-      'Advanced threat protection',
-      'Automated compliance',
-      'High-performance computing',
-      'Quantum simulation capabilities',
-      'Research-grade infrastructure'
+      'Quantum encryption at restQuantum-secured data transmission',
+      'Quantum-resistant storageZero-trust data access',
+      'Quantum key distributionAdvanced threat protection',
+      'Automated complianceHigh-performance computing',
+      'Quantum simulation capabilitiesResearch-grade infrastructure'
     ],
     popular: true,
     icon: '🏢',
@@ -361,16 +331,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Advanced IT service desk platform that uses AI to automatically resolve common issues, route complex problems, and provide intelligent support.',
     features: [
-      'AI-powered ticket resolution',
-      'Automatic issue classification',
-      'Intelligent routing algorithms',
-      'Predictive problem prevention',
-      'Self-service knowledge base',
-      'Automated workflow management',
-      'Real-time performance analytics',
-      'Multi-channel support',
-      'Integration with ITSM tools',
-      'Mobile support capabilities'
+      'AI-powered ticket resolutionAutomatic issue classification',
+      'Intelligent routing algorithmsPredictive problem prevention',
+      'Self-service knowledge baseAutomated workflow management',
+      'Real-time performance analyticsMulti-channel support',
+      'Integration with ITSM toolsMobile support capabilities'
     ],
     popular: true,
     icon: '🎧',
@@ -413,16 +378,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Next-generation backup and recovery platform that uses quantum encryption to provide the most secure data protection possible.',
     features: [
-      'Quantum-encrypted backups',
-      'Zero-knowledge encryption',
-      'Quantum-resistant algorithms',
-      'Instant recovery capabilities',
-      'Cross-platform compatibility',
-      'Automated backup scheduling',
-      'Real-time backup monitoring',
-      'Disaster recovery planning',
-      'Compliance automation',
-      'Performance optimization'
+      'Quantum-encrypted backupsZero-knowledge encryption',
+      'Quantum-resistant algorithmsInstant recovery capabilities',
+      'Cross-platform compatibilityAutomated backup scheduling',
+      'Real-time backup monitoringDisaster recovery planning',
+      'Compliance automationPerformance optimization'
     ],
     popular: true,
     icon: '💾',
@@ -465,16 +425,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     period: '/month',
     description: 'Revolutionary compliance platform that autonomously monitors, manages, and maintains IT compliance across all regulatory frameworks.',
     features: [
-      'Autonomous compliance monitoring',
-      'Real-time compliance tracking',
-      'Automated audit preparation',
-      'Regulatory update management',
-      'Compliance risk assessment',
-      'Automated reporting',
-      'Policy management automation',
-      'Training tracking',
-      'Incident management',
-      'Compliance analytics'
+      'Autonomous compliance monitoringReal-time compliance tracking',
+      'Automated audit preparationRegulatory update management',
+      'Compliance risk assessmentAutomated reporting',
+      'Policy management automationTraining tracking',
+      'Incident managementCompliance analytics'
     ],
     popular: true,
     icon: '📋',
@@ -508,4 +463,4 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.7,
     reviews: 10
   }
-];
+],

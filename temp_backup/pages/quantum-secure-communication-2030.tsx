@@ -1,16 +1,16 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Shield, Lock, Key, Eye, Users, Zap, 
   CheckCircle, Star, ArrowRight, Phone, Mail, MapPin,
   Globe, Network, Server, Database, Cpu, Cloud, 
   Target, Activity, Calendar, FileText, Search, Filter
-} from 'lucide-react';
-import Link from 'next/link';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+} from 'lucide-react',
+import Link from 'next/link',
+import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 
 export default function QuantumSecureCommunication2030() {
   const contactInfo = {
@@ -18,46 +18,33 @@ export default function QuantumSecureCommunication2030() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
-    'Quantum key distribution (QKD)',
-    'Post-quantum cryptography algorithms',
-    'End-to-end encryption',
-    'Real-time threat detection',
-    'Multi-channel communication support',
-    'Advanced audit logging',
-    'Compliance reporting tools',
-    'API for custom integrations',
-    'Mobile and desktop applications',
-    '24/7 security monitoring'
-  ];
+    'Quantum key distribution (QKD)Post-quantum cryptography algorithms',
+    'End-to-end encryptionReal-time threat detection',
+    'Multi-channel communication supportAdvanced audit logging',
+    'Compliance reporting toolsAPI for custom integrations',
+    'Mobile and desktop applications24/7 security monitoring'
+  ],
 
   const useCases = [
-    'Secure messaging',
-    'File sharing',
-    'Video conferencing',
-    'Document collaboration',
-    'Compliance reporting',
-    'Audit trails'
-  ];
+    'Secure messagingFile sharing',
+    'Video conferencingDocument collaboration',
+    'Compliance reportingAudit trails'
+  ],
 
   const integrations = [
-    'Active Directory',
-    'LDAP',
-    'SAML',
-    'OAuth',
-    'Slack',
-    'Microsoft Teams'
-  ];
+    'Active DirectoryLDAP',
+    'SAMLOAuth',
+    'SlackMicrosoft Teams'
+  ],
 
   const competitors = [
-    'Signal Enterprise ($15/user/month)',
-    'Wickr Enterprise ($25/user/month)',
-    'Wire (enterprise pricing)',
-    'Threema (enterprise pricing)',
+    'Signal Enterprise ($15/user/month)Wickr Enterprise ($25/user/month)',
+    'Wire (enterprise pricing)Threema (enterprise pricing)',
     'Custom solutions ($1000+/month)'
-  ];
+  ],
 
 const quantum-secure-communication-2030: React.FC = () => {
   return (
@@ -74,7 +61,7 @@ const quantum-secure-communication-2030: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default quantum-secure-communication-2030;
+export default quantum-secure-communication-2030,

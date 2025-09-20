@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Operational Evals Blueprint';
-  description: 'An evaluation-first blueprint with metrics, harnesses, and governance to ship reliable AI systems in 2026.',
-};
+  title: 'AI 2026: Operational Evals Blueprint',
+  description: 'An evaluation-first blueprint with metrics, harnesses, and governance to ship reliable AI systems in 2026.'
+},
 export default function OperationalEvalsBlueprint2026() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -23,7 +23,6 @@ export default function OperationalEvalsBlueprint2026() {,
           Start by identifying high-value tasks and drafting task-specific success criteria. Build a small set of representative test cases and wire them into CI, then expand coverage and introduce red/blue team scenarios.,
         </p>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

@@ -1,91 +1,91 @@
-import React, { useState, useEffect } from 'react';
-export default ServicesComparisonMatrix2025;
-import { Brain, import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import React, { useState, useEffect } from 'react',
+export default ServicesComparisonMatrix2025,
+import { Brain,
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025',
 export default function Page() {
-,;
-    { id: any'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance') .length },;
-    { id: any'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics') .length },;
-    { id: any'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing') .length },;
-    { id: any'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management') .length },;
-    { id: any'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources') .length },;
-    { id: any'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity') .length },;
-    { id: any'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management') .length },;
-    { id: any'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process') .length },;
-  ];
+,
+    { id: any'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance') .length },
+    { id: any'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics') .length },
+    { id: any'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing') .length },
+    { id: any'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management') .length },
+    { id: any'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources') .length },
+    { id: any'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity') .length },
+    { id: any'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management') .length },
+    { id: any'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process') .length },
+  ],
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
     .filter(service => {
-      const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                           service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                           service.tags.some(tag => tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ;
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                           service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                           service.tags.some(tag => tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ,
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+      return matchesSearch && matchesCategory,
     }) .sort((a, b) => {
       switch(sortBy) {
         case 'name':
-          return a.title.localeCompare(b.title) ;
+          return a.title.localeCompare(b.title) ,
         case 'price':
-          return a.price - b.price;
+          return a.price - b.price,
         case 'innovation':
-          return a.innovationLevel === 'Revolutionary' ? -1 : 1;
+          return a.innovationLevel === 'Revolutionary' ? -1 : 1,
         case 'roi':
-          return parseInt(a.roi.split ('-') [0]) - parseInt(b.roi.split ('-') [0]) ;
-        default:
-          return 0;
+          return parseInt(a.roi.split ('-') [0]) - parseInt(b.roi.split ('-') [0]) ,
+        default: return 0
       }
-    }) ;
+    }) ,
 
-  const toggleServiceSelection = (serviceId: anystring) => {;
-    if(selectedServices.includes (serviceId) ) {;
-      setSelectedServices(selectedServices.filter (id => id !== serviceId) ) ;
+  const toggleServiceSelection = (serviceId: anystring) => {,
+    if(selectedServices.includes (serviceId) ) {,
+      setSelectedServices(selectedServices.filter (id => id !== serviceId) ) 
     } else {
       if(selectedServices.length < 5) {
-        setSelectedServices([...selectedServices, serviceId]) ;
+        setSelectedServices([...selectedServices, serviceId]) ,
       }
     }
-  };
+  },
 
-  const toggleFeatureExpansion = (feature: anystring) => {;
-    if(expandedFeatures.includes (feature) ) {;
-      setExpandedFeatures(expandedFeatures.filter (f => f !== feature) ) ;
+  const toggleFeatureExpansion = (feature: anystring) => {,
+    if(expandedFeatures.includes (feature) ) {,
+      setExpandedFeatures(expandedFeatures.filter (f => f !== feature) ) 
     } else {
-      setExpandedFeatures([...expandedFeatures, feature]) ;
+      setExpandedFeatures([...expandedFeatures, feature]) ,
     }
-  };
+  },
 
   const getInnovationColor = (level: anystring) => {
-    switch(level) {;
-      case 'Revolutionary':;
-        return 'text-purple - 600 bg-purple - 100 border-purple - 200';
-      case 'Advanced':;
-        return 'text-blue - 600 bg-blue - 100 border-blue - 200';
-      case 'Cutting - edge':;
-        return 'text-green - 600 bg-green - 100 border-green - 200';
-      default:;
-        return 'text-gray - 600 bg-gray - 100 border-gray - 200';
+    switch(level) {,
+      case 'Revolutionary':,
+        return 'text-purple - 600 bg-purple - 100 border-purple - 200',
+      case 'Advanced':,
+        return 'text-blue - 600 bg-blue - 100 border-blue - 200',
+      case 'Cutting - edge':,
+        return 'text-green - 600 bg-green - 100 border-green - 200',
+      default:,
+        return 'text-gray - 600 bg-gray - 100 border-gray - 200'
     }
-  };
+  },
 
-  const getROIColor = (roi: anystring) => {;
-    const minROI = parseInt(roi.split ('-') [0]) ;
-    if(minROI >= 500) return 'text-green - 600 bg-green - 100 border-green - 200';
-    if(minROI >= 300) return 'text-blue - 600 bg-blue - 100 border-blue - 200';
-    if(minROI >= 200) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
-    return 'text-gray - 600 bg-gray - 100 border-gray - 200';
-  };
+  const getROIColor = (roi: anystring) => {,
+    const minROI = parseInt(roi.split ('-') [0]) ,
+    if(minROI >= 500) return 'text-green - 600 bg-green - 100 border-green - 200',
+    if(minROI >= 300) return 'text-blue - 600 bg-blue - 100 border-blue - 200',
+    if(minROI >= 200) return 'text-yellow-600 bg-yellow-100 border-yellow-200',
+    return 'text-gray - 600 bg-gray - 100 border-gray - 200'
+  },
 
-  const getPriceTier = (price: anynumber) => {;
-    if(price <= 500) return 'text-green - 600 bg-green - 100 border-green - 200';
-    if(price <= 1000) return 'text-blue - 600 bg-blue - 100 border-blue - 200';
-    if(price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
-    return 'text-purple - 600 bg-purple - 100 border-purple - 200';
-  };
+  const getPriceTier = (price: anynumber) => {,
+    if(price <= 500) return 'text-green - 600 bg-green - 100 border-green - 200',
+    if(price <= 1000) return 'text-blue - 600 bg-blue - 100 border-blue - 200',
+    if(price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200',
+    return 'text-purple - 600 bg-purple - 100 border-purple - 200'
+  },
 
-  const selectedServicesData = selectedServices.map(id => ;
-    INNOVATIVE_MICRO_SAAS_SERVICES_2025.find (service => service.id === id) ;) .filter(Boolean) ;
+  const selectedServicesData = selectedServices.map(id => ,
+    INNOVATIVE_MICRO_SAAS_SERVICES_2025.find (service => service.id === id) ,) .filter(Boolean) ,
 
   const allFeatures = Array.from(new Set (selectedServicesData.flatMap (service =>
-      service ? [...service.features, ...service.benefits] : [];) ;) ) ;
+      service ? [...service.features, ...service.benefits] : [],) ,) ) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -100">
       {/* Hero Section */}
@@ -411,7 +411,7 @@ export default function Page() {
                               <strong > API Endpoints:</strong> {service.technicalSpecs.apiEndpoints}
                             </div>
                             <div>
-                              <strong > Security:</strong> {service.technicalSpecs.security.slice(0, 2) .join(', ') }
+                              <strong > Security:</strong> {service.technicalSpecs.security.slice(0, 2) .join() }
                             </div>
                           </div>) : (<div  className="text-xs text-gray -400">Not specified</div>) }
                       </div>) ) }
@@ -615,7 +615,7 @@ export default function Page() {
                 transform their operations with cutting - edge technology and intelligent automation.</p>
               <div  className="flex items - center gap-4">
                 <a
-                  href="https://ziontechgroup.com"
+                  href="https: //ziontechgroup.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue - 400 hover:text-blue - 300 transition - colors duration -200"
@@ -665,11 +665,11 @@ export default function Page() {
               </div>
             </div>
           </div>
-          ;
-          <div  className="border-t border-gray - 800 mt-8 pt - 8 text-center text-gray -400">;
-            <p>&copy; 2025 Zion Tech Group.All rights reserved.</p>
+          ,
+          <div  className="border-t border-gray - 800 mt-8 pt - 8 text-center text-gray -400">,
+            <p>&copy, 2025 Zion Tech Group.All rights reserved.</p>
           </div>
         </div>
       </footer>
-    </div>) ;
-};
+    </div>) 
+},

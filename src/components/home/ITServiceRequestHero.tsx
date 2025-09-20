@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Calendar,
@@ -9,67 +9,38 @@ import {
   Phone,
   Star,
   Users
-} from 'lucide-react';
-import React, { useState } from 'react';
-
+} from "lucide-react";
+import React, { useState } from "react";
 export const ITServiceRequestHero: React.FC = () => {
   const [activeTab, setActiveTab] = useState('contact');
-
   const contactMethods = [
     {
-      icon: Phone,
-      title: 'Call Us',
-      description: 'Speak directly with our experts',
-      action: '+1 302 464 0950',
-      href: 'tel:+13024640950',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Phone,title: 'Call Us',description: 'Speak directly with our experts',action: '+1 302 464 0950',href: 'tel:+13024640950',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Mail,
-      title: 'Email Us',
-      description: 'Send us your requirements',
-      action: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com',
-      color: 'from-purple-500 to-pink-500'
-    },
+      icon: Mail,title: 'Email Us',description: 'Send us your requirements',action: 'kleber@ziontechgroup.com',href: 'mailto:kleber@ziontechgroup.com',color: 'from-purple-500 to-pink-500'
+    };
     {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Get instant support',
-      action: 'Start Chat',
-      href: '#chat',
-      color: 'from-green-500 to-emerald-500'
+      icon: MessageCircle,title: 'Live Chat',description: 'Get instant support',action: 'Start Chat',href: '#chat',color: 'from-green-500 to-emerald-500'
     }
   ];
-
   const quickActions = [
     {
-      title: 'Request Quote',
-      description: 'Get a customized quote for your project',
-      icon: CheckCircle,
-      href: '/request-quote'
-    },
+      title: 'Request Quote',description: 'Get a customized quote for your project',icon: CheckCircle,href: '/request-quote'
+    };
     {
-      title: 'Schedule Consultation',
-      description: 'Book a free 30-minute consultation',
-      icon: Calendar,
-      href: '/consultation'
-    },
+      title: 'Schedule Consultation',description: 'Book a free 30-minute consultation',icon: Calendar,href: '/consultation'
+    };
     {
-      title: 'View Services',
-      description: 'Explore our comprehensive service offerings',
-      icon: Star,
-      href: '/services'
+      title: 'View Services',description: 'Explore our comprehensive service offerings',icon: Star,href: '/services'
     }
   ];
-
   const stats = [
-    { value: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { value: '99%', label: 'Client Satisfaction', icon: Star },
-    { value: '24/7', label: 'Support Available', icon: Clock },
+    { value: '500+', label: 'Projects Completed', icon: CheckCircle };
+    { value: '99%', label: 'Client Satisfaction', icon: Star };
+    { value: '24/7', label: 'Support Available', icon: Clock };
     { value: '50+', label: 'Expert Team Members', icon: Users }
   ];
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto">

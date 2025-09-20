@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, Globe, 
   Brain, Rocket, Shield, Zap, Cpu,
   Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 interface UltraFuturisticNavigationProps {
-  className?: string;
+  className?: string,
 }
 
 const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navigationItems = [
     {
@@ -72,14 +72,14 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
         { name: 'Support', href: '/support', icon: <Shield className="w-4 h-4" /> }
       ]
     }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
 const UltraFuturisticNavigation: React.FC = () => {
   return (
@@ -87,7 +87,7 @@ const UltraFuturisticNavigation: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation;
+export default UltraFuturisticNavigation,

@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function AIAgentFleetAutomation() {,
   return (,
     <>,
@@ -48,7 +48,6 @@ export default function AIAgentFleetAutomation() {,
           </div>,
         </section>,
       </main>,
-    </>,
-  ),
+    </>)
 }
 ,

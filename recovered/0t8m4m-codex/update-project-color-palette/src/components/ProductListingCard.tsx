@@ -1,13 +1,13 @@
-import { useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { Star, DollarSign } from "lucide-react";
+import { useNavigate } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings",
+import { Star, DollarSign } from "lucide-react",
 
 interface ProductListingCardProps {
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  listing: ProductListing,
+  view?: 'grid' | 'list',
+  onRequestQuote?: (id: string) => void
 }
 
 export function ProductListingCard({ 
@@ -15,42 +15,42 @@ export function ProductListingCard({
   view = 'grid',
   onRequestQuote
 }: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
+  const isGrid = view === 'grid',
+  const navigate = useNavigate(),
   
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
-    : '/placeholder.svg';
+    : '/placeholder.svg',
     
   // Format price display
   const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  };
+    if (listing.price === null) return "Custom pricing",
+    return `${listing.currency}${listing.price.toLocaleString()}`,
+  },
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg';
-  };
+    e.currentTarget.src = '/placeholder.svg'
+  },
   
   // Handle navigating to listing detail
   const handleViewListing = () => {
-    navigate(`/marketplace/listing/${listing.id}`);
-  };
+    navigate(`/marketplace/listing/${listing.id}`),
+  },
   
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
+      onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
-      navigate(`/request-quote?listing=${listing.id}`);
+      navigate(`/request-quote?listing=${listing.id}`),
     }
-  };
+  },
   
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
@@ -134,8 +134,8 @@ export function ProductListingCard({
             <Button 
               size="sm" 
               onClick={(e) => {
-                e.stopPropagation();
-                navigate(`/marketplace/listing/${listing.id}`);
+                e.stopPropagation(),
+                navigate(`/marketplace/listing/${listing.id}`),
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
@@ -156,5 +156,5 @@ export function ProductListingCard({
         </div>
       </div>
     </div>
-  );
+  ),
 }

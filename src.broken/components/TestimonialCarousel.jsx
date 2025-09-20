@@ -2,8 +2,8 @@
 }} dragElastic={1} onDragEnd = { (e, { offset,
   velocity
 =======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,
     {
@@ -30,27 +30,27 @@ export default function Page() {
         category: 'Infrastructure',
         project: 'Cloud Infrastructure'
 
-];
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [direction, setDirection] = useState(0);
+],
+    const [currentIndex, setCurrentIndex] = useState(0),
+    const [direction, setDirection] = useState(0),
     useEffect(() => {
         const timer = setInterval(() => {
-            setDirection(1) ;
-            setCurrentIndex((prev) => (prev + 1) % testimonials.length) ;
-        }, 5000) ;
-        return () => clearInterval(timer) ;
-    }, []) ;
+            setDirection(1) ,
+            setCurrentIndex((prev) => (prev + 1) % testimonials.length) ,
+        }, 5000) ,
+        return () => clearInterval(timer) ,
+    }, []) ,
     const swipePower = (offset, velocity) => {
 
-        return Math.abs(offset) * velocity};
+        return Math.abs(offset) * velocity},
     const paginate = (newDirection) => {
 
-        setDirection(newDirection);
-        setCurrentIndex((prev) => (prev + newDirection + testimonials.length) % testimonials.length)};
+        setDirection(newDirection),
+        setCurrentIndex((prev) => (prev + newDirection + testimonials.length) % testimonials.length)},
     const goToSlide = (index) => {
 
-        setDirection(index > currentIndex ? 1 : -1);
-        setCurrentIndex(index)};
+        setDirection(index > currentIndex ? 1 : -1),
+        setCurrentIndex(index)},
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"
@@ -105,7 +105,7 @@ export default function Page() {
 
 }) => {
 
-            const swipe = swipePower(offset.x, velocity.x);
+            const swipe = swipePower(offset.x, velocity.x),
             if(swipe < -swipeConfidenceThreshold) {
 
                 paginate(1)}

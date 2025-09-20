@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -84,20 +84,20 @@ export default function Page() {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from - green - 500 to - blue - 500',
-      innovationLevel: 'Advanced';
-    };
-  ];
+      innovationLevel: 'Advanced'
+    },
+  ],
 
   const filteredCategories = selectedCategory === 'all'
     ? serviceCategories
-    : serviceCategories.filter(cat => cat.id === selectedCategory) ;
+    : serviceCategories.filter(cat => cat.id === selectedCategory) ,
 
-  const toggleCategoryExpansion = (categoryId: string) => {;
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId) ;
-  };
+  const toggleCategoryExpansion = (categoryId: string) => {,
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId) 
+  },
 
-  const totalMarketSize = '$3.2 + trillion';
-  const avgROI = '400 - 1500%';
+  const totalMarketSize = '$3.2 + trillion',
+  const avgROI = '400 - 1500%',
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       <SEO
@@ -155,12 +155,12 @@ export default function Page() {
                 <div  className="text-white / 80">Average ROI</div>
               </motion.div>
             </div>
-          </motion.div>;
+          </motion.div>,
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-12 bg-white / 5 backdrop - blur -sm">;
+      <section className="py-12 bg-white / 5 backdrop - blur -sm">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-8">
             <h2 className="text-3xl font - bold text-white mb-4">Explore by Category</h2>
@@ -190,7 +190,7 @@ export default function Page() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16">;
+      <section className="py-16">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-4">
@@ -246,7 +246,7 @@ export default function Page() {
                   </div>
 
                   {/* Innovation Level Badge */}
-                  <div  className="flex items - center gap-4 mb-6">;
+                  <div  className="flex items - center gap-4 mb-6">,
                     <div  className={`px-4 py-2 rounded-full text-sm font - semibold ${category.innovationLevel === 'Revolutionary'
                         ? 'bg-red - 500 / 20 text-red - 400 border border-red - 500 / 30'
                         : category.innovationLevel === 'Cutting - edge'
@@ -258,7 +258,7 @@ export default function Page() {
                     <div  className="text-zion - slate -400">
                       {category.services.length} service{category.services.length !== 1 ? 's' : ''}
                     </div>
-                  </div>;
+                  </div>,
 
                   {/* Services Preview */}
                   <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-4 mb-6">
@@ -283,9 +283,9 @@ export default function Page() {
 
                   {/* Expand / Collapse Button */}
                   <button     onClick={ () => toggleCategoryExpansion(category.id) }
-                    className="w-full flex items - center justify - center gap-2 py-3 text-zion - cyan hover:text-white transition - colors border-t border-zion - slate -600 / 30"
+                    className="w-full flex items - center justify - center gap-2 py-3 text-zion - cyan hover: text-white transition - colors border-t border-zion - slate -600 / 30"
 
-                    {expandedCategory === category.id ? (;
+                    {expandedCategory === category.id ? (,
                       <>
                         <EyeOff className="w-4 h-4" />
                         Show Less
@@ -357,11 +357,11 @@ export default function Page() {
 
                               <Link
                                 to="/contact"
-                                className="w-full flex items - center justify - center gap-2 py-2 px-4 bg-gradient - to - r from - zion - cyan to - zion - blue text-white rounded-lg hover:from - zion - blue hover:to - zion - cyan transition - all duration - 200 font - semibold text-sm"
+                                className="w-full flex items - center justify - center gap-2 py-2 px-4 bg-gradient - to - r from - zion - cyan to - zion - blue text-white rounded-lg hover: from - zion - blue hover:to - zion - cyan transition - all duration - 200 font - semibold text-sm"
 
                                 <MessageCircle className="w-4 h-4" />
-                                Get Started;
-                              </Link>;
+                                Get Started,
+                              </Link>,
                             </div>) ) }
                         </div>
                       </motion.div>) }
@@ -373,7 +373,7 @@ export default function Page() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - blue / 10 to - zion -purple / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - blue / 10 to - zion -purple / 10">,
         <div  className="max - w-4xl mx - auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -389,7 +389,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
-            <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
               Ready to Explore the Future?
             </h2>
             <p className="text-xl text-zion - slate - 300 mb-8">
@@ -413,9 +413,9 @@ export default function Page() {
             <div  className="mt-8 text-zion - slate -400">
               <p > Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p > Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
 }

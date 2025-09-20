@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  TrendingUp, 
+  TrendingUp,
   CheckCircle, 
   Shield, 
   Zap, 
@@ -24,7 +24,7 @@ import {
   Lightbulb,
   PieChart,
   LineChart
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIRevenueForecastingCopilot() {
   const features = [
@@ -48,42 +48,29 @@ export default function AIRevenueForecastingCopilot() {
       title: 'Strategic Insights',
       description: 'Actionable recommendations for revenue optimization and growth strategies'
     }
-  ];
+  ],
 
   const capabilities = [
-    'Machine Learning Forecasting',
-    'Seasonal Pattern Recognition',
-    'Market Trend Analysis',
-    'Customer Behavior Modeling',
-    'Risk Assessment',
-    'Scenario Planning',
-    'Performance Benchmarking',
-    'Automated Reporting',
-    'Integration APIs',
-    'Real-time Dashboards'
-  ];
+    'Machine Learning ForecastingSeasonal Pattern Recognition',
+    'Market Trend AnalysisCustomer Behavior Modeling',
+    'Risk AssessmentScenario Planning',
+    'Performance BenchmarkingAutomated Reporting',
+    'Integration APIsReal-time Dashboards'
+  ],
 
   const useCases = [
-    'Sales Forecasting',
-    'Budget Planning',
-    'Investment Decisions',
-    'Resource Allocation',
-    'Pricing Strategy',
-    'Market Expansion',
-    'Product Launch Planning',
-    'Customer Acquisition'
-  ];
+    'Sales ForecastingBudget Planning',
+    'Investment DecisionsResource Allocation',
+    'Pricing StrategyMarket Expansion',
+    'Product Launch PlanningCustomer Acquisition'
+  ],
 
   const benefits = [
-    'Improved Accuracy',
-    'Faster Decision Making',
-    'Risk Mitigation',
-    'Cost Reduction',
-    'Better Planning',
-    'Increased Revenue',
-    'Competitive Advantage',
-    'Data-Driven Insights'
-  ];
+    'Improved AccuracyFaster Decision Making',
+    'Risk MitigationCost Reduction',
+    'Better PlanningIncreased Revenue',
+    'Competitive AdvantageData-Driven Insights'
+  ],
 
 const ai-revenue-forecasting-copilot: React.FC = () => {
   return (
@@ -100,7 +87,7 @@ const ai-revenue-forecasting-copilot: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-revenue-forecasting-copilot;
+export default ai-revenue-forecasting-copilot,

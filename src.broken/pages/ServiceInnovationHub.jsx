@@ -1,21 +1,21 @@
-import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield  } from 'lucide-react';
+import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield  } from 'lucide-react',
 export default function Page() {
 ,
         {
             icon: <Leaf className="w-8 h-8 text-zion -emerald"/>,
             title: 'Green Technology',
             description: 'Fusion energy, climate engineering, and sustainable technology solutions',
-            trends['Fusion Energy', 'Climate Engineering', 'Sustainable Tech'],;
+            trends['Fusion EnergyClimate Engineering', 'Sustainable Tech'],
             investment: '$500B+'
         },
         {
             icon: <Cpu className="w-8 h-8 text-zion -orange"/>,
             title: 'Advanced Computing',
             description: 'Neuromorphic computing, edge AI, and model compression technologies',
-            trends['Neuromorphic Computing', 'Edge AI', 'Model Compression'],;
+            trends['Neuromorphic ComputingEdge AI', 'Model Compression'],
             investment: '$80B+'
 
-    ];
+    ],
     const keyInsights = [{
             title: 'Quantum Revolution',
             description: 'Quantum computing will transform industries from finance to pharmaceuticals within the next decade',
@@ -40,7 +40,7 @@ export default function Page() {
             impact: 'High',
             timeline: '2025 - 2035'
 
-    ];
+    ],
     return (<div className="min - h-screen bg-zion - blue -dark">
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan relative overflow-hidden">
@@ -70,8 +70,7 @@ export default function Page() {
               <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick={ () => document.getElementById('innovation - hub') ?.scrollIntoView({ behavior: 'smooth' }) }>
                 Explore Innovation Hub < ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Innovation Strategy Consultation',
-  '_blank') }>
+              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Innovation Strategy Consultation_blank') }>
                 Get Innovation Strategy
               </Button>
             </div>
@@ -256,13 +255,11 @@ export default function Page() {
               Our innovation hub provides the insights, strategies, and tools you need to stay ahead
               of emerging technologies and capitalize on future opportunities.</p>
             <div className="flex flex - col sm:flex - row gap-4 justify -center">
-              <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Innovation Leadership Consultation',
-  '_blank') }>
+              <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Innovation Leadership Consultation_blank') }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Lead Innovation
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('tel:+13024640950',
-  '_blank') }>
+              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('tel:+13024640950_blank') }>
                 <Shield className="w-5 h-5 mr-2"/>
                 Speak with an Expert
               </Button>
@@ -270,5 +267,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

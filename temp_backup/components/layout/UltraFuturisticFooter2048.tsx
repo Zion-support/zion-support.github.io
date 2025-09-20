@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
 import { 
-  Phone, 
+  Phone,
   Mail, 
   MapPin, 
   Linkedin, 
@@ -30,7 +30,7 @@ import {
   TrendingUp,
   Sparkles,
   BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltraFuturisticFooter2048: React.FC = () => {
   return (
@@ -38,7 +38,7 @@ const UltraFuturisticFooter2048: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2048</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2048;
+export default UltraFuturisticFooter2048,

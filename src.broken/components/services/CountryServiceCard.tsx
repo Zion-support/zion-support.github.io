@@ -1,15 +1,15 @@
 
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
-import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryPricing } from "@/data/onsiteServicePricing",
 
 interface CountryServiceCardProps {
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  isPopular?: boolean;
+  country: CountryPricing,
+  onSelect: (country: CountryPricing) => void,
+  onQuote?: (country: CountryPricing) => void,
+  isPopular?: boolean
 }
 
 export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
@@ -32,24 +32,24 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       "South Africa": "🇿🇦",
       // Default if no flag is found
       "default": "🌐"
-    };
+    },
     
-    return emojiMap[countryName] || emojiMap["default"];
-  };
+    return emojiMap[countryName] || emojiMap["default"],
+  },
   
   // Get response time estimate based on country
   const getResponseTime = (countryName: string): string => {
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
     
     if (tier1.includes(countryName)) {
-      return "4 hours";
+      return "4 hours",
     } else if (tier2.includes(countryName)) {
-      return "6 hours";
+      return "6 hours",
     } else {
-      return "8-24 hours";
+      return "8-24 hours",
     }
-  };
+  },
   
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
@@ -113,11 +113,11 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
         <Button
           asChild
           variant="ghost"
-          className="w-full text-zion-cyan hover:text-zion-purple"
+          className="w-full text-zion-cyan hover: text-zion-purple"
         >
           <a href="/contact">Contact Sales</a>
         </Button>
       </CardFooter>
     </Card>
-  );
+  )
 }

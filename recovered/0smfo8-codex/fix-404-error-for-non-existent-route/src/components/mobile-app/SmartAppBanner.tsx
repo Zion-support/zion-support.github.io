@@ -1,15 +1,15 @@
 
-import React, { useState, useEffect } from "react";
-import { X, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useIsMobile } from "@/hooks/use-mobile";
+import React, { useState, useEffect } from "react",
+import { X, ArrowRight } from "lucide-react",
+import { Link } from "react-router-dom",
+import { useIsMobile } from "@/hooks/use-mobile",
 
 interface SmartAppBannerProps {
-  appName?: string;
-  appIconSrc?: string;
-  appStoreUrl?: string;
-  googlePlayUrl?: string;
-  delay?: number; // Delay in milliseconds before showing the banner
+  appName?: string,
+  appIconSrc?: string,
+  appStoreUrl?: string,
+  googlePlayUrl?: string,
+  delay?: number, // Delay in milliseconds before showing the banner
 }
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
@@ -19,29 +19,29 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   googlePlayUrl = "/download",
   delay = 1500
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
   
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, delay);
+        setIsVisible(true),
+      }, delay),
       
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer),
     }
-  }, [isMobile, delay]);
+  }, [isMobile, delay]),
   
   const dismissBanner = () => {
-    setIsVisible(false);
-    localStorage.setItem("smartBannerDismissed", "true");
-  };
+    setIsVisible(false),
+    localStorage.setItem("smartBannerDismissed", "true"),
+  },
 
   const resetBanner = () => {
-    localStorage.removeItem("smartBannerDismissed");
-    setIsVisible(true);
-  };
+    localStorage.removeItem("smartBannerDismissed"),
+    setIsVisible(true),
+  },
   
   // Only render on mobile devices
   if (!isMobile || !isVisible) {
@@ -49,12 +49,12 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-400">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
-    ) : null;
+    ) : null,
   }
   
   // Detect iOS or Android
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
@@ -87,5 +87,5 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  ),
+},

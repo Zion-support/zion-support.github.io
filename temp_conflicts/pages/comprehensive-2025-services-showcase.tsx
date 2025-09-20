@@ -1,57 +1,57 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Database, Cloud, Lock, Star, Zap, Users, Award, Globe,
   Filter, ChevronDown, ExternalLink, Sparkles, Eye, Clock, CheckCircle, TrendingUp, DollarSign, Phone
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new service data
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services',
+import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services',
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
 
 // Import existing service data
-import { realMicroSaasServices } from '../data/real-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
+import { realMicroSaasServices } from '../data/real-micro-saas-services',
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { enterpriseITServices } from '../data/enterprise-it-services',
 
 // Unified service interface for showcase display
 interface UnifiedService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  icon?: string;
-  popular?: boolean;
-  link?: string;
-  price?: string | number;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  category: string,
+  icon?: string,
+  popular?: boolean,
+  link?: string,
+  price?: string | number,
   pricing?: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom: string;
-  };
-  price_monthly?: number;
-  price_yearly?: number;
-  trialDays?: number;
-  setupTime?: string;
-  features?: string[];
-  benefits?: string[];
-  rating?: number;
-  reviews?: number;
+    starter: string,
+    professional: string,
+    enterprise: string,
+    custom: string
+  },
+  price_monthly?: number,
+  price_yearly?: number,
+  trialDays?: number,
+  setupTime?: string,
+  features?: string[],
+  benefits?: string[],
+  rating?: number,
+  reviews?: number,
 }
 
 const Comprehensive2025ServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [viewMode, setViewMode] = useState('grid');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [sortBy, setSortBy] = useState('popularity'),
+  const [viewMode, setViewMode] = useState('grid'),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: enhancedMicroSaasServices.length },
@@ -68,7 +68,7 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
     { id: 'Climate Technology', name: 'Climate Tech', icon: '🌍', count: enhancedMicroSaasServices.filter(s => s.category === 'Climate Technology').length },
     { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: enhancedMicroSaasServices.filter(s => s.category === 'Education Technology').length },
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: enhancedMicroSaasServices.filter(s => s.category === 'Manufacturing Technology').length }
-  ];
+  ],
 
   // Categories
   const categories = [
@@ -78,40 +78,39 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
     { id: 'it', name: 'IT & Infrastructure', icon: <Cpu className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length },
     { id: 'security', name: 'Security & Compliance', icon: <Shield className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Compliance')).length }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
       const matchesCategory = selectedCategory === 'all' || 
         service.category.toLowerCase().includes(selectedCategory) ||
-        service.name.toLowerCase().includes(selectedCategory);
+        service.name.toLowerCase().includes(selectedCategory),
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+      return matchesCategory && matchesSearch,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         case 'price-low':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'price-high':
-          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
         case 'name':
-          return a.name.localeCompare(b.name);
-        default:
-          return 0;
+          return a.name.localeCompare(b.name),
+        default: return 0
       }
-    });
+    }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -143,7 +142,7 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
               backgroundSize: '200px 200px'
             }}
             animate={{
-              backgroundPosition: ['0px 0px', '200px 200px']
+              backgroundPosition: ['0px 0px200px 200px']
             }}
             transition={{
               duration: 20,
@@ -484,7 +483,7 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  ),
+},
 
-export default Comprehensive2025ServicesShowcase;
+export default Comprehensive2025ServicesShowcase,

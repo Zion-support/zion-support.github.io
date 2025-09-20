@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
-import { toast } from "@/components/ui/use-toast";
-import { z } from "zod";
-import { ChatAssistant } from "@/components/ChatAssistant";
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-import { AppLayout } from "@/components/layout/AppLayout";
+import { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card } from "@/components/ui/card",
+import { toast } from "@/components/ui/use-toast",
+import { z } from "zod",
+import { ChatAssistant } from "@/components/ChatAssistant",
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
+import { AppLayout } from "@/components/layout/AppLayout",
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,17 +19,17 @@ export default function Contact() {
     email: "",
     subject: "",
     message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isChatOpen, setIsChatOpen] = useState(false),
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+  },
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     
     try {
       // Basic validation with Zod
@@ -38,19 +38,19 @@ export default function Contact() {
         email: z.string().email("Invalid email address"),
         subject: z.string().min(2, "Subject must be at least 2 characters"),
         message: z.string().min(10, "Message must be at least 10 characters")
-      });
+      }),
       
-      schema.parse(formData);
+      schema.parse(formData),
       
       // Simulate form submission
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       
       setTimeout(() => {
-        setIsSubmitting(false);
+        setIsSubmitting(false),
         toast({
           title: "Message Sent",
-          description: "We've received your message and will get back to you soon.",
-        });
+          description: "We've received your message and will get back to you soon."
+        }),
         
         // Reset form
         setFormData({
@@ -58,24 +58,24 @@ export default function Contact() {
           email: "",
           subject: "",
           message: ""
-        });
-      }, 1500);
+        }),
+      }, 1500),
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
           title: "Form Validation Error",
           description: error.errors[0].message,
           variant: "destructive"
-        });
+        }),
       } else {
         toast({
           title: "An error occurred",
           description: "Please try again later",
           variant: "destructive"
-        });
+        }),
       }
     }
-  };
+  },
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -83,28 +83,28 @@ export default function Contact() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
-        }),
-      });
+        })
+      }),
       
       if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant");
+        throw new Error("Failed to get response from AI assistant"),
       }
       
-      return Promise.resolve();
+      return Promise.resolve(),
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:", error),
       toast({
         title: "Chat Error",
         description: "There was an error communicating with our AI assistant. Please try again.",
         variant: "destructive"
-      });
-      return Promise.resolve();
+      }),
+      return Promise.resolve(),
     }
-  };
+  },
 
   const offices = [
     {
@@ -119,7 +119,7 @@ export default function Contact() {
       phone: "+1 302 464 0950", 
       email: "commercial@ziontechgroup.com"
     }
-  ];
+  ],
 
   return (
     <AppLayout>
@@ -315,5 +315,5 @@ export default function Contact() {
         />
       )}
     </AppLayout>
-  );
+  ),
 }

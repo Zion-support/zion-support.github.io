@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
         {
@@ -10,10 +10,10 @@ export default function Page() {
             action: 'Mon-Fri: 9AM-6PM EST',
             href: '#'
 
-    ];
+    ],
     const services = ['
         'AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation',IT Infrastructure',Consulting',Other'
-    ];
+    ],
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -24,7 +24,7 @@ export default function Page() {
 
                 staggerChildren: 0.1
 
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 20,
@@ -40,7 +40,7 @@ export default function Page() {
                 duration: 0.6,
                 ease: "easeOut"
 
-    };
+    },
     const cardVariants = {
 
   hidden: { scale: 0.9,
@@ -66,26 +66,26 @@ export default function Page() {
                 duration: 0.3,"
                 ease: "easeOut"
 
-    };
+    },
     const handleInputChange = (e) => {
 
-        const { name, value } = e.target;
+        const { name, value } = e.target,
         setFormData(prev => ({
 
             ...prev,
             [name]: value
-        }) ) };
+        }) ) },
     const handleSubmit = async(e) => {
 
-        e.preventDefault();
-        setIsSubmitting(true);
+        e.preventDefault(),
+        setIsSubmitting(true),
         // Simulate form submission
-        await new Promise(resolve => setTimeout (resolve, 2000) ) ;
-        setIsSubmitting(false) ;
-        setIsSubmitted(true) ;
+        await new Promise(resolve => setTimeout (resolve, 2000) ) ,
+        setIsSubmitting(false) ,
+        setIsSubmitted(true) ,
         // Reset form after 3 seconds
         setTimeout(() => {
-            setIsSubmitted(false);
+            setIsSubmitted(false),
             setFormData({
 
                 name: '',
@@ -94,7 +94,7 @@ export default function Page() {
                 phone: '',
                 service: '',
                 message: ''
-            }) }, 3000) };
+            }) }, 3000) },
     if(isSubmitted) {
 "
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial = {
@@ -268,5 +268,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>)};
+    </div>)},
 '"

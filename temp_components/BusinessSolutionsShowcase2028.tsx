@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   TrendingUp
   Users
@@ -25,11 +25,11 @@ import {
   Award,
   Clock,
   PieChart
-} from 'lucide-react';
+} from 'lucide-react',
 
 const BusinessSolutionsShowcase2028 = () => {
-  const [activeSolutionsetActiveSolution] = useState('automation');
-  const [currentMetricsetCurrentMetric] = useState(0);
+  const [activeSolutionsetActiveSolution] = useState('automation'),
+  const [currentMetricsetCurrentMetric] = useState(0),
 
   const solutions = {
     automation: {
@@ -39,10 +39,8 @@ const BusinessSolutionsShowcase2028 = () => {
       color: 'from-blue-600 to-cyan-600',
       description: 'Complete business process automation using advanced AI algorithms that learn and adapt to your specific needs.',
       features: [
-        'Automated workflow management',
-        'Intelligent decision making',
-        'Real-time process optimization',
-        'Predictive maintenance',
+        'Automated workflow managementIntelligent decision making',
+        'Real-time process optimizationPredictive maintenance',
         'Cost reduction up to 80%'
       ],
       metrics: [
@@ -59,10 +57,8 @@ const BusinessSolutionsShowcase2028 = () => {
       color: 'from-purple-600 to-pink-600',
       description: 'Comprehensive analytics platform that transforms raw data into actionable business intelligence.',
       features: [
-        'Real-time data visualization',
-        'Predictive analytics',
-        'Custom dashboard creation',
-        'Automated reporting',
+        'Real-time data visualizationPredictive analytics',
+        'Custom dashboard creationAutomated reporting',
         'ROI tracking and optimization'
       ],
       metrics: [
@@ -79,10 +75,8 @@ const BusinessSolutionsShowcase2028 = () => {
       color: 'from-red-600 to-orange-600',
       description: 'Comprehensive security framework protecting your business from cyber threats and ensuring compliance.',
       features: [
-        'AI-powered threat detection',
-        'Zero-trust architecture',
-        'Automated incident response',
-        'Compliance management',
+        'AI-powered threat detectionZero-trust architecture',
+        'Automated incident responseCompliance management',
         '24/7 security monitoring'
       ],
       metrics: [
@@ -99,10 +93,8 @@ const BusinessSolutionsShowcase2028 = () => {
       color: 'from-green-600 to-teal-600',
       description: 'Modern cloud infrastructure that scales with your business and provides unmatched reliability.',
       features: [
-        'Auto-scaling infrastructure',
-        'Global content delivery',
-        'Disaster recovery',
-        'Cost optimization',
+        'Auto-scaling infrastructureGlobal content delivery',
+        'Disaster recoveryCost optimization',
         'Multi-cloud management'
       ],
       metrics: [
@@ -112,7 +104,7 @@ const BusinessSolutionsShowcase2028 = () => {
         { label: 'Deployment Speed'value: '10x faster'icon: Zap }
       ]
     }
-  };
+  },
 
   const caseStudies = [
     {
@@ -121,10 +113,8 @@ const BusinessSolutionsShowcase2028 = () => {
       challenge: 'Manual processes causing delays and errors',
       solution: 'AI-powered automation platform',
       results: [
-        '500% efficiency improvement',
-        '$2.5M annual cost savings',
-        '99.9% error reduction',
-        '40 hours saved per week'
+        '500% efficiency improvement$2.5M annual cost savings',
+        '99.9% error reduction40 hours saved per week'
       ],
       logo: 'TC',
       rating: 5
@@ -135,10 +125,8 @@ const BusinessSolutionsShowcase2028 = () => {
       challenge: 'Compliance and security concerns',
       solution: 'Enterprise security framework',
       results: [
-        '100% compliance achievement',
-        'Zero security incidents',
-        '50% faster audits',
-        '99.99% uptime'
+        '100% compliance achievementZero security incidents',
+        '50% faster audits99.99% uptime'
       ],
       logo: 'FF',
       rating: 5
@@ -149,15 +137,13 @@ const BusinessSolutionsShowcase2028 = () => {
       challenge: 'Data analysis and customer insights',
       solution: 'Advanced analytics platform',
       results: [
-        '300% increase in insights',
-        '25% boost in sales',
-        '90% faster decisions',
-        '98.5% accuracy rate'
+        '300% increase in insights25% boost in sales',
+        '90% faster decisions98.5% accuracy rate'
       ],
       logo: 'RM',
       rating: 5
     }
-  ];
+  ],
 
   const pricingTiers = [
     {
@@ -166,10 +152,8 @@ const BusinessSolutionsShowcase2028 = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Basic automation tools',
-        'Standard analytics',
-        'Email support',
-        'Up to 10 users',
+        'Basic automation toolsStandard analytics',
+        'Email supportUp to 10 users',
         '5GB storage'
       ],
       popular: false
@@ -180,12 +164,9 @@ const BusinessSolutionsShowcase2028 = () => {
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Advanced automation suite',
-        'Comprehensive analytics',
-        'Priority support',
-        'Up to 50 users',
-        '100GB storage',
-        'Custom integrations'
+        'Advanced automation suiteComprehensive analytics',
+        'Priority supportUp to 50 users',
+        '100GB storageCustom integrations'
       ],
       popular: true
     },
@@ -195,23 +176,20 @@ const BusinessSolutionsShowcase2028 = () => {
       period: '',
       description: 'For large organizations',
       features: [
-        'Full platform access',
-        'Custom analytics',
-        'Dedicated support',
-        'Unlimited users',
-        'Unlimited storage',
-        'White-label options'
+        'Full platform accessCustom analytics',
+        'Dedicated supportUnlimited users',
+        'Unlimited storageWhite-label options'
       ],
       popular: false
     }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentMetric((prev) => (prev + 1) % 4);
-    }2000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentMetric((prev) => (prev + 1) % 4),
+    }2000),
+    return () => clearInterval(interval),
+  }[]),
 
 const BusinessSolutionsShowcase2028: React.FC = () => {
   return (
@@ -219,7 +197,7 @@ const BusinessSolutionsShowcase2028: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">BusinessSolutionsShowcase2028</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default BusinessSolutionsShowcase2028;
+export default BusinessSolutionsShowcase2028,

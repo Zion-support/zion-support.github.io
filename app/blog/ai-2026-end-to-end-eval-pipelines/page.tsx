@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: End-to-End Eval Pipelines';
-  description: 'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.',
-};
+  title: 'AI 2026: End-to-End Eval Pipelines',
+  description: 'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -10,7 +10,7 @@ export default function Page() {,
         <p className="text-sm text-purple-700 font-semibold">New • September 2025</p>,
         <h1>AI 2026: End-to-End Eval Pipelines</h1>,
         <p>,
-          Ship safer autonomy by integrating evaluations across the full lifecycle: data, prompts;
+          Ship safer autonomy by integrating evaluations across the full lifecycle: data, prompts,
           tools, agents, and workflows. This guide outlines reference architectures, metrics, and,
           governance patterns to continuously measure quality, safety, and cost.,
         </p>,
@@ -41,7 +41,6 @@ export default function Page() {,
           </ul>,
         </div>,
       </article>,
-    </main>,
-  );
+    </main>),
 }
 ,

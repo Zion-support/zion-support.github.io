@@ -229,9 +229,9 @@ export default function ContactPage() {
                 Absolutely! We specialize in integrating with existing infrastructure and can work with your current systems to enhance and optimize them.
               </p>
 =======
-'use client';
+'use client',
 
-import { useState } from 'react';
+import { useState } from 'react',
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -241,28 +241,28 @@ export default function ContactPage() {
     phone: '',
     service: '',
     message: ''
-  });
+  }),
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitSuccess, setSubmitSuccess] = useState(false),
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    })),
+  },
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)),
     
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
+    setIsSubmitting(false),
+    setSubmitSuccess(true),
     
     // Reset form
     setFormData({
@@ -272,8 +272,8 @@ export default function ContactPage() {
       phone: '',
       service: '',
       message: ''
-    });
-  };
+    }),
+  },
 
   const contactInfo = [
     {
@@ -296,17 +296,14 @@ export default function ContactPage() {
       description: '+1 (302) 464-0950',
       icon: '📞'
     }
-  ];
+  ],
 
   const services = [
-    'AI Automation Services',
-    'Autonomous Business Operations',
-    'Advanced Cybersecurity Suite',
-    'IT Infrastructure Services',
-    'Quantum Computing Services',
-    'Space Technology Solutions',
+    'AI Automation ServicesAutonomous Business Operations',
+    'Advanced Cybersecurity SuiteIT Infrastructure Services',
+    'Quantum Computing ServicesSpace Technology Solutions',
     'Other'
-  ];
+  ],
 
   if (submitSuccess) {
     return (
@@ -321,13 +318,13 @@ export default function ContactPage() {
           <p className="text-gray-600 mb-6">Your message has been sent successfully. We'll get back to you within 24 hours.</p>
           <button
             onClick={() => setSubmitSuccess(false)}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+            className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
           >
             Send Another Message
           </button>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -536,7 +533,7 @@ export default function ContactPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
@@ -555,6 +552,6 @@ export default function ContactPage() {
       </section>
 =======
     </div>
-  );
+  )
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,34 +1,34 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
- from '@/components/ui/dialog';
- from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { useForm } from 'react-hook-form';
-import { Mail, PaperPlane import api from '@/services/apiClient'; import { toast } from '@/hooks/use-toast';
-);
+import React, { useState } from 'react',
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog',
+ from '@/components/ui/dialog',
+ from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',
+import { useForm } from 'react-hook-form',
+import { Mail, PaperPlane import api from '@/services/apiClient', import { toast } from '@/hooks/use-toast',
+),
 export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail}) {
 
-    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [isSubmitting, setIsSubmitting] = React.useState(false),
     const form = useForm({
 
         resolver: zodResolver(schema),
         mode: 'onChange',
-        defaultValues: { subject: '', message: '' }});
+        defaultValues: { subject: '', message: '' }}),
     const handleSend = async () => {
-        const values = form.getValues();
-        setIsSubmitting(true);
+        const values = form.getValues(),
+        setIsSubmitting(true),
         try {
 
             await api.post('/messages', {
 
                 productId,
                 subject: values.subject,
-                body: values.message});
-            toast.success('Message sent!');
-            form.reset();
+                body: values.message}),
+            toast.success('Message sent!'),
+            form.reset(),
             onClose()}
         catch(err) {
 
@@ -36,7 +36,7 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
         finally {
 
             setIsSubmitting(false)}
-    };
+    },
     return (<Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
         <DialogHeader>"

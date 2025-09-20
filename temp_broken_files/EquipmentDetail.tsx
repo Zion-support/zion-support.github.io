@@ -4,7 +4,7 @@
           </div>,
         </div>,
       </>,
-    );
+    ),
   }
   return (,
     <>,
@@ -12,9 +12,9 @@
         title={`${equipment.name} - Zion Marketplace`}
         description={equipment.description}
         openGraph={{,
-          title: `${equipment.name,} - Zion Marketplace`;
-          description: equipment.description;
-          images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] ,}] : undefined,
+          title: `${equipment.name} - Zion Marketplace`,
+          description: equipment.description,
+          images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
         }}
       />,
       <div className="min-h-screen bg-zion-blue py-8 px-4">,
@@ -29,16 +29,16 @@
             >,
               Equipment,
             <span className="mx-2 text-zion-slate-light">/</span>,
-            <span className="text-zion-slate-light">{equipment.name,}</span>,
+            <span className="text-zion-slate-light">{equipment.name}</span>,
           </divnav>,
           <div className="grid lg: grid-cols-2 gap-12">,
-            {/* Images */,}
+            {/* Images */}
             <div,
               className="space-y-4",
             >,
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">,
                 <ImageWithRetry,
-                  src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https: //images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',}
+                  src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https: //images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
                   className="object-cover",
                 />,
@@ -51,7 +51,7 @@
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${,
                         selectedImageIndex === index,
                           ? 'border-zion-cyan',
-                          : 'border-transparent hover: border-zion-slate-light',}`}
+                          : 'border-transparent hover: border-zion-slate-light'}`}
                     >,
                       <ImageWithRetry,
                         src={image}
@@ -82,7 +82,7 @@
                           className={`h-4 w-4 ${,
                             i < Math.floor(equipment.rating!),
                               ? 'text-yellow-400 fill-current',
-                              : 'text-zion-slate-light',
+                              : 'text-zion-slate-light'
                           }`}
                         />,
                       ))}
@@ -109,8 +109,7 @@
                     {equipment.specifications.map((spec, index) => (,
                       <div key={index} className="flex justify-between py-2 border-b border-zion-blue-light">,
                         <span className="text-zion-slate-light">{spec.name}</span>,
-                        <span className="text-white">{spec.value || 'Enterprise Grade'}</span>,
-                    ))}
+                        <span className="text-white">{spec.value || 'Enterprise Grade'}</span>))}
               )}
               {/* Add to Cart */}
               <div className="space-y-4 pt-6 border-t border-zion-blue-light">,
@@ -141,7 +140,7 @@
                   data-testid="add-to-cart-button",
                 >,
                   <ShoppingCart className="h-4 w-4 mr-2" />,
-                  {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart',}
+                  {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
               {/* Additional Info */}
               <div className="space-y-4 border-t border-zion-blue-light pt-4">,
                 {/* Shipping */}
@@ -156,26 +155,24 @@
                     <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />,
                     <div>,
                       <p className="text-white text-sm font-medium">Warranty</p>,
-                      <p className="text-xs">{equipment.warranty}</p>,
-                )}
+                      <p className="text-xs">{equipment.warranty}</p>)}
                 {/* Return Policy */}
                 {equipment.returnPolicy && (,
                   <div className="flex gap-3 text-zion-slate-light">,
                     <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />,
                     <div>,
                       <p className="text-white text-sm font-medium">Returns</p>,
-                      <p className="text-xs">{equipment.returnPolicy}</p>,
-                )}
+                      <p className="text-xs">{equipment.returnPolicy}</p>)}
               </div>,
             </div>,
           </div>,
         </div>,
       </div>,
     </>,
-  );
-};
-export default EquipmentDetail;
-import React from 'react';
+  ),
+},
+export default EquipmentDetail,
+import React from 'react',
 const function EquipmentDetail() {: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -186,7 +183,7 @@ const function EquipmentDetail() {: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function EquipmentDetail() {;
+  ),
+},
+export default function EquipmentDetail() {,
 }

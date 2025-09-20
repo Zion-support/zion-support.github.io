@@ -3,10 +3,10 @@
 // Sample blog data - in a real app this would come from an API or CMS,
 const BLOG_POSTS: BlogPost[] = [,
   {,
-    id: "ai-trends-2025";
-    title: "10 Emerging AI Trends to Watch in 2025";
-    slug: "ai-trends-2025";
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+    id: "ai-trends-2025",
+    title: "10 Emerging AI Trends to Watch in 2025",
+    slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>,
 <h2>1. Multimodal AI Systems</h2>,
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>,
@@ -17,7 +17,7 @@ const BLOG_POSTS: BlogPost[] = [,
 <h2>4. Quantum AI</h2>,
 <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>,
 <h2>5. AI for Climate Solutions</h2>,
-<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
+<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
     author: {,
 <h2>1. Multimodal AI Systems</h2>,
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>,
@@ -28,34 +28,34 @@ const BLOG_POSTS: BlogPost[] = [,
 <h2>4. Quantum AI</h2>,
 <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>,
 <h2>5. AI for Climate Solutions</h2>,
-<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
+<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
     author: {,
-      name: "Dr. Alicia Zhang";
-      title: "AI Research Director";
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200",};
-    publishedDate: "Apr 15, 2025";
-    readTime: "5 min read";
-    category: "Trends";
-    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
-    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630";
-    isFeatured: true,};
+      name: "Dr. Alicia Zhang",
+      title: "AI Research Director",
+      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"},
+    publishedDate: "Apr 15, 2025",
+    readTime: "5 min read",
+    category: "Trends",
+    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"],
+    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630",
+    isFeatured: true},
   {,
-    id: "optimize-ai-listings";
-    title: "How to Optimize Your AI Service Listings for Maximum Visibility";
-    slug: "optimize-ai-listings";
-    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.";
-    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>,
-    };
-    publishedDate: "Apr 10, 2025";
-    readTime: "8 min read";
-    category: "Marketing";
-    tags: ["Marketing", "AI Services", "Visibility", "SEO"];
+    id: "optimize-ai-listings",
+    title: "How to Optimize Your AI Service Listings for Maximum Visibility",
+    slug: "optimize-ai-listings",
+    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
+    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
+    },
+    publishedDate: "Apr 10, 2025",
+    readTime: "8 min read",
+    category: "Marketing",
+    tags: ["Marketing", "AI Services", "Visibility", "SEO"],
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630",
   {,
-    id: "green-it";
-    title: "Green IT: Reducing Your Data Center's Carbon Footprint";
-    slug: "green-it";
-    excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.";
+    id: "green-it",
+    title: "Green IT: Reducing Your Data Center's Carbon Footprint",
+    slug: "green-it",
+    excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>,
 <h2>Energy-Efficient Hardware Selection</h2>,
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>,
@@ -66,16 +66,16 @@ const BLOG_POSTS: BlogPost[] = [,
 <h2>Workload Optimization and Consolidation</h2>,
 <p>Right-sizing infrastructure and implementing dynamic workload management ensures computing resources are used efficiently. Modern orchestration tools can automatically balance workloads to maximize utilization while powering down unused capacity.</p>,
 <h2>Measuring and Reporting Impact</h2>,
-<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`;
+<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`,
     author: {,
       name: "Sophia Chen",
       title: "Sustainability Engineer",
-      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200",}
-    publishedDate: "Apr 5, 2025";
+      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"}
+    publishedDate: "Apr 5, 2025",
     readTime: "6 min read",
     category: "Sustainability",
-    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630",}
+    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
+    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"}
 ,
 <h2>Energy-Efficient Hardware Selection</h2>,
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>,
@@ -86,43 +86,43 @@ const BLOG_POSTS: BlogPost[] = [,
 <h2>Workload Optimization and Consolidation</h2>,
 <p>Right-sizing infrastructure and implementing dynamic workload management ensures computing resources are used efficiently. Modern orchestration tools can automatically balance workloads to maximize utilization while powering down unused capacity.</p>,
 <h2>Measuring and Reporting Impact</h2>,
-<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`;
+<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`,
     author: {,
-      name: "Sophia Chen";
-      title: "Sustainability Engineer";
-      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200",};
-    publishedDate: "Apr 5, 2025";
-    readTime: "6 min read";
-    category: "Sustainability";
-    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630",}
-    };
-    publishedDate: "Mar 30, 2025";
-    readTime: "7 min read";
-    category: "Ethics";
-    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630",}
-    };
-    publishedDate: "Mar 22, 2025";
-    readTime: "9 min read";
-    category: "Recruitment";
-    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"];
-    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630",}
-    };
-    publishedDate: "Mar 15, 2025";
-    readTime: "6 min read";
-    category: "Infrastructure";
-    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630",}
+      name: "Sophia Chen",
+      title: "Sustainability Engineer",
+      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"},
+    publishedDate: "Apr 5, 2025",
+    readTime: "6 min read",
+    category: "Sustainability",
+    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
+    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"}
+    },
+    publishedDate: "Mar 30, 2025",
+    readTime: "7 min read",
+    category: "Ethics",
+    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
+    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"}
+    },
+    publishedDate: "Mar 22, 2025",
+    readTime: "9 min read",
+    category: "Recruitment",
+    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
+    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"}
+    },
+    publishedDate: "Mar 15, 2025",
+    readTime: "6 min read",
+    category: "Infrastructure",
+    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
+    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"}
 ,
 // Categories for filtering,
 const CATEGORIES = [,
-  "All Categories";
-  "Trends";
-  "Marketing";
-  "Sustainability";
-  "Ethics";
-  "Recruitment";
+  "All Categories",
+  "Trends",
+  "Marketing",
+  "Sustainability",
+  "Ethics",
+  "Recruitment",
   "Infrastructure",
   // Filter blog posts based on search and category,
   const filteredPosts = BLOG_POSTS.filter(post => {,
@@ -142,57 +142,57 @@ const CATEGORIES = [,
             </p>,
           </div>,
           {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts && featuredPosts.length > 0 && (;
-            <div className="mb-16">;
-              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
-              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
-                <div className="aspect-video overflow-hidden rounded-lg">;
+          {featuredPosts && featuredPosts.length > 0 && (,
+            <div className="mb-16">,
+              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>,
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
+                <div className="aspect-video overflow-hidden rounded-lg">,
                   <img,
                     src={featuredPosts[0].featuredImage} ,
                     alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover: scale-105 transition-transform duration-300",
-                  />;
-                </div>;
-                <div className="flex flex-col justify-center">;
-                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">;
+                  />,
+                </div>,
+                <div className="flex flex-col justify-center">,
+                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">,
                     {featuredPosts[0].category}
-                  </span>;
-                  <h3 className="text-3xl font-bold text-white mb-4">;
+                  </span>,
+                  <h3 className="text-3xl font-bold text-white mb-4">,
                     {featuredPosts[0].title}
-                  </h3>;
-                  <p className="text-zion-slate-light mb-6">;
+                  </h3>,
+                  <p className="text-zion-slate-light mb-6">,
                     {featuredPosts[0].excerpt}
 ,
-                  </p>;
-                  <div className="flex items-center mb-6">;
+                  </p>,
+                  <div className="flex items-center mb-6">,
                     <img,
                       src={featuredPosts[0].author && author.avatarUrl} ,
                       alt={featuredPosts[0].author && author.name}
 ,
                       className="w-10 h-10 rounded-full mr-3",
-                    />;
-                    <div>;
-                      <p className="text-white font-medium">{featuredPosts[0].author && author.name}</p>;
-                      <p className="text-sm text-zion-slate-light">;
+                    />,
+                    <div>,
+                      <p className="text-white font-medium">{featuredPosts[0].author && author.name}</p>,
+                      <p className="text-sm text-zion-slate-light">,
                         {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
 ,
-                      </p>;
-                    </div>;
-                  </div>;
+                      </p>,
+                    </div>,
+                  </div>,
                   <Button,
                     asChild,
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit">;
-                    <Link to={`/blog/${featuredPosts[0].slug}`}>;
-                      Read Article;
-                    </Link>;
-                  </Button>;
-                </div>;
-              </div>;
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit">,
+                    <Link to={`/blog/${featuredPosts[0].slug}`}>,
+                      Read Article,
+                    </Link>,
+                  </Button>,
+                </div>,
+              </div>,
           {/* Filters and Search */}
-          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-4">;
-              <div className="relative">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
+          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">,
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
+              <div className="relative">,
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />,
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (,
             <div className="mb-16">,
@@ -200,14 +200,14 @@ const CATEGORIES = [,
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
                 <div className="aspect-video overflow-hidden rounded-lg">,
                   <img,
-                    src={featuredPosts[0].featuredImage,} ,
+                    src={featuredPosts[0].featuredImage} ,
                     alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover: scale-105 transition-transform duration-300",
                   />,
                 </div>,
                 <div className="flex flex-col justify-center">,
                   <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">,
-                    {featuredPosts[0].category,}
+                    {featuredPosts[0].category}
                   </span>,
                   <h3 className="text-3xl font-bold text-white mb-4">,
                     {featuredPosts[0].title}
@@ -232,14 +232,13 @@ const CATEGORIES = [,
                     asChild,
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit",
                   >,
-                    <Link to={`/blog/${featuredPosts[0].slug,}`}>,
+                    <Link to={`/blog/${featuredPosts[0].slug}`}>,
                       Read Article,
                     </Link>,
                   </Button>,
                 </div>,
               </div>,
-            </div>,
-          )}
+            </div>)}
 ,
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">,
@@ -249,26 +248,26 @@ const CATEGORIES = [,
                 <Input,
                   type="text",
                   placeholder="Search articles...",
-                  value={searchQuery,}
+                  value={searchQuery}
                 }}
                 className="border-zion-purple text-zion-purple hover: bg-zion-purple/10",
               >,
                 Clear all filters,
               </Button>,
             </div>,
-          ),}
-        </div>;
-      </div>;
-      <Footer />;
-    </>;
-  );
-}
-;
           )}
         </div>,
       </div>,
       <Footer />,
     </>,
-  );
+  ),
 }
-,]]
+,
+          )}
+        </div>,
+      </div>,
+      <Footer />,
+    </>,
+  ),
+}
+]]

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 const AppMinimal: React.FC = () => {
   return (<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0b1220', color: '#fff' }}>
@@ -7,7 +7,7 @@ const AppMinimal: React.FC = () => {
         <p style={{ color: '#9ca3af' }}>Build sanity check</p>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default AppMinimal;
+export default AppMinimal,

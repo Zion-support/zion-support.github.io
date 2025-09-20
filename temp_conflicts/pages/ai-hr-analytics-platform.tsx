@@ -1,33 +1,28 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import Link from 'next/link';
-import { Check, ExternalLink, Users, BarChart3, Smile } from 'lucide-react';
+import React from 'react',
+import SEO from '../components/SEO',
+import Link from 'next/link',
+import { Check, ExternalLink, Users, BarChart3, Smile } from 'lucide-react',
 
 export default function AIHRAnalyticsPlatformPage() {
-	const title = 'AI HR Analytics Platform — Zion Tech Group';
-	const description = 'People analytics for talent, engagement, and retention. Unified HRIS + survey + performance data with explainable insights.';
+	const title = 'AI HR Analytics Platform — Zion Tech Group',
+	const description = 'People analytics for talent, engagement, and retention. Unified HRIS + survey + performance data with explainable insights.',
 	const features = [
-		'Attrition risk models and retention drivers',
-		'Comp and pay equity analysis with cohorts',
-		'Headcount, hiring funnel, and time-to-fill analytics',
-		'Engagement surveys with AI theme detection',
-		'DEI dashboards and cohort comparisons',
-		'Integrations: Workday, BambooHR, Greenhouse, Lever',
-		'RBAC, anonymization, and privacy safeguards',
-		'Exports to BI tools and data warehouses'
-	];
+		'Attrition risk models and retention driversComp and pay equity analysis with cohorts',
+		'Headcount, hiring funnel, and time-to-fill analyticsEngagement surveys with AI theme detection',
+		'DEI dashboards and cohort comparisonsIntegrations: Workday, BambooHR, Greenhouse, Lever',
+		'RBAC, anonymization, and privacy safeguardsExports to BI tools and data warehouses'
+	],
 
 	const pricingNotes = [
-		'Starter: $299–$999/mo (up to 250 employees)',
-		'Growth: $1,000–$3,999/mo (up to 2,500 employees)',
+		'Starter: $299–$999/mo (up to 250 employees)Growth: $1,000–$3,999/mo (up to 2,500 employees)',
 		'Enterprise: Custom (SSO/SCIM, SLAs, privacy add-ons)'
-	];
+	],
 
 	const references = [
 		{ name: 'ChartHop pricing', url: 'https://www.charthop.com/pricing' },
 		{ name: 'Lattice pricing', url: 'https://lattice.com/pricing' },
 		{ name: 'Culture Amp pricing', url: 'https://www.cultureamp.com/pricing' }
-	];
+	],
 
 	return (
 		<>
@@ -86,5 +81,5 @@ export default function AIHRAnalyticsPlatformPage() {
 				</section>
 			</main>
 		</>
-	);
+	),
 }

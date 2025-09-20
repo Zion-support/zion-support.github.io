@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   ArrowRight,
@@ -10,73 +10,73 @@ import {,
   Zap,
   Shield,
   Brain,
-  Globe;
-  CheckCircle;
-  Play;
-  Download;
-  ExternalLink;
-  Sparkles;
-  Target;
-  Award;
-  Rocket;
-  DollarSign;
-  BarChart3;
-  Clock;
-  Building;
-  Quote;
-  ThumbsUp;
-  Eye;
-  Share2;
-  Heart;
-  Fire;
-  TrendingDown,
-} from 'lucide-react';
+  Globe,
+  CheckCircle,
+  Play,
+  Download,
+  ExternalLink,
+  Sparkles,
+  Target,
+  Award,
+  Rocket,
+  DollarSign,
+  BarChart3,
+  Clock,
+  Building,
+  Quote,
+  ThumbsUp,
+  Eye,
+  Share2,
+  Heart,
+  Fire,
+  TrendingDown
+} from 'lucide-react',
 const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
-  const [currentStorysetCurrentStory] = useState(0);
+  const [currentStorysetCurrentStory] = useState(0),
   const featuredStories = [,
     {,
-      company: 'TechCorp Global';
-      industry: 'Technology';
-      result: '+300% Efficiency';
-      roi: '450% ROI';
-      icon: Brain;
-      color: 'from-purple-500 to-blue-500',};
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      result: '+300% Efficiency',
+      roi: '450% ROI',
+      icon: Brain,
+      color: 'from-purple-500 to-blue-500'},
     {,
-      company: 'FinanceFirst Bank';
-      industry: 'Financial Services';
-      result: 'Zero Breaches';
-      roi: '320% ROI';
-      icon: Shield;
-      color: 'from-green-500 to-teal-500',};
+      company: 'FinanceFirst Bank',
+      industry: 'Financial Services',
+      result: 'Zero Breaches',
+      roi: '320% ROI',
+      icon: Shield,
+      color: 'from-green-500 to-teal-500'},
     {,
-      company: 'ManufacturingPro Inc';
-      industry: 'Manufacturing';
-      result: '-80% Downtime';
-      roi: '280% ROI';
-      icon: Zap;
-      color: 'from-orange-500 to-red-500',};
+      company: 'ManufacturingPro Inc',
+      industry: 'Manufacturing',
+      result: '-80% Downtime',
+      roi: '280% ROI',
+      icon: Zap,
+      color: 'from-orange-500 to-red-500'},
     {,
-      company: 'HealthTech Solutions';
-      industry: 'Healthcare';
-      result: '+95% Accuracy';
-      roi: '520% ROI';
-      icon: Target;
-      color: 'from-blue-500 to-indigo-500',}
-  ];
+      company: 'HealthTech Solutions',
+      industry: 'Healthcare',
+      result: '+95% Accuracy',
+      roi: '520% ROI',
+      icon: Target,
+      color: 'from-blue-500 to-indigo-500'}
+  ],
   const stats = [,
-    { label: 'Success 'Storiesvalue: '500+'icon: Award ,};
-    { label: 'Average 'ROIvalue: '380%'icon: TrendingUp ,};
-    { label: ''Industriesvalue: '15+'icon: Building ,};
-    { label: 'Happy 'Clientsvalue: '10K+'icon: Users ,}
-  ];
+    { label: 'Success 'Storiesvalue: '500+'icon: Award },
+    { label: 'Average 'ROIvalue: '380%'icon: TrendingUp },
+    { label: ''Industriesvalue: '15+'icon: Building },
+    { label: 'Happy 'Clientsvalue: '10K+'icon: Users }
+  ],
   useEffect(() => {,
     const timer = setInterval(() => {,
-      setCurrentStory((prev) => (prev + 1) % featuredStories.length);
-    }3000);
-    return () => clearInterval(timer);
-  }[featuredStories.length]);
-  const currentStoryData = featuredStories[currentStory];
-  const Icon = currentStoryData.icon;
+      setCurrentStory((prev) => (prev + 1) % featuredStories.length),
+    }3000),
+    return () => clearInterval(timer),
+  }[featuredStories.length]),
+  const currentStoryData = featuredStories[currentStory],
+  const Icon = currentStoryData.icon,
   return (,
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">,
       {/* Background Effects */}
@@ -90,14 +90,14 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Content */,}
+          {/* Content */}
           <div,
-            whileInView={{ opacity: 1x: 0 ,}}
+            whileInView={{ opacity: 1x: 0 }}
             className="text-white",
           >,
             {/* Badge */}
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-400/30 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-6",
             >,
               <Sparkles className="w-4 h-4" />,
@@ -106,7 +106,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
             </div>,
             {/* Title */}
             <divh2,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="text-4xl md: text-6xl font-bold mb-6",
             >,
               <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">,
@@ -117,9 +117,9 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
                 Real Businesses,
               </span>,
             </divh2>,
-            {/* Subtitle */,}
+            {/* Subtitle */}
             <divp,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="text-xl text-purple-100 mb-6",
             >,
               Discover how leading companies achieved unprecedented success with our AI solutions,
@@ -151,11 +151,11 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
             </div>,
             {/* Stats */}
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8",
             >,
               {stats.map((statindex) => {,
-                const StatIcon = stat.icon;
+                const StatIcon = stat.icon,
                 return (,
                   <div key={index} className="text-center">,
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-2">,
@@ -163,13 +163,12 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
                     </div>,
                     <div className="text-2xl font-bold text-white">{stat.value}</div>,
                     <div className="text-sm text-purple-200">{stat.label}</div>,
-                  </div>,
-                );
+                  </div>),
               })}
             </div>,
             {/* CTA Buttons */}
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="flex flex-col sm: flex-row gap-4",
             >,
               <button className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">,
@@ -182,9 +181,9 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
                 Start Your Journey,
               </button>,
             </div>,
-            {/* Trust Indicators */,}
+            {/* Trust Indicators */}
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-400",
             >,
               <div className="flex items-center gap-1">,
@@ -203,7 +202,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
           </div>,
           {/* Visual */}
           <div,
-            whileInView={{ opacity: 1x: 0 ,}}
+            whileInView={{ opacity: 1x: 0 }}
             className="relative",
           >,
             {/* Main Success Story Card */}
@@ -219,16 +218,16 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
               {/* Story Content */}
               <div className="space-y-4">,
                 {featuredStories.map((storyindex) => {,
-                  const StoryIcon = story.icon;
-                  const isActive = index === currentStory;
+                  const StoryIcon = story.icon,
+                  const isActive = index === currentStory,
                   return (,
                     <div,
                       key={index}
                         opacity: isActive ? 1 : 0.6,
-                        x: 0;
-                        scale: isActive ? 1 : 0.95,}}
+                        x: 0,
+                        scale: isActive ? 1 : 0.95}}
                       className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 cursor-pointer ${,
-                        isActive ? 'bg-white/10 border border-white/30' : 'hover: bg-white/5',}`}
+                        isActive ? 'bg-white/10 border border-white/30' : 'hover: bg-white/5'}`}
                       onClick={() => setCurrentStory(index)}
                     >,
                       <div className="flex items-center gap-3">,
@@ -245,7 +244,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
                         </div>,
                       </div>,
                     </div>,
-                  );
+                  ),
                 })}
               </div>,
               {/* Testimonial */}
@@ -274,7 +273,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
                 Read Full Success Story,
               </button>,
             </div>,
-            {/* Floating Elements */,}
+            {/* Floating Elements */}
             <div,
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg",
             >,
@@ -301,12 +300,12 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {,
               className={`w-3 h-3 rounded-full transition-all duration-300 ${,
                 currentStory === index,
                   ? 'bg-white scale-125',
-                  : 'bg-white/30 hover: bg-white/50',}`}
+                  : 'bg-white/30 hover: bg-white/50'}`}
             />,
           ))}
         </div>,
       </div>,
     </div>,
-  );
-export default BusinessSuccessStoriesShowcase2026PromotionBanner;
+  ),
+export default BusinessSuccessStoriesShowcase2026PromotionBanner,
 </div></div></div></div></div></div>,

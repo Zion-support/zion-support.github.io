@@ -1,19 +1,19 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Brain, Atom, Shield, Target, Rocket, ArrowRight, Check,
   Building, Cpu, Database, Cloud, Lock, ShoppingCart, Lightbulb,
   Users, TrendingUp, Globe, Zap, Star, Award, Target as TargetIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import 2038 innovative services
-import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
-import { innovative2038ITServices } from '../data/innovative-2038-it-services';
-import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
-import { innovative2038IndustryServices } from '../data/innovative-2038-industry-services';
-import { innovative2038ConsultingServices } from '../data/innovative-2038-consulting-services';
+import { innovative2038AIServices } from '../data/innovative-2038-ai-services',
+import { innovative2038ITServices } from '../data/innovative-2038-it-services',
+import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services',
+import { innovative2038IndustryServices } from '../data/innovative-2038-industry-services',
+import { innovative2038ConsultingServices } from '../data/innovative-2038-consulting-services',
 
 const Innovative2038ServicesShowcase: React.FC = () => {
   const all2038Services = [
@@ -22,14 +22,14 @@ const Innovative2038ServicesShowcase: React.FC = () => {
     ...innovative2038MicroSaasServices,
     ...innovative2038IndustryServices,
     ...innovative2038ConsultingServices
-  ];
+  ],
 
   const stats = [
     { number: "25+", label: "Innovative Services", icon: Star },
     { number: "500+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Success Rate", icon: TrendingUp },
     { number: "24/7", label: "Expert Support", icon: Globe }
-  ];
+  ],
 
   const highlights = [
     {
@@ -56,7 +56,7 @@ const Innovative2038ServicesShowcase: React.FC = () => {
       icon: Lightbulb,
       color: "from-orange-500 to-red-600"
     }
-  ];
+  ],
 
   return (
     <>
@@ -334,7 +334,7 @@ const Innovative2038ServicesShowcase: React.FC = () => {
                     href="/services"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-500/50 text-cyan-300 font-bold text-lg rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200"
+                    className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-500/50 text-cyan-300 font-bold text-lg rounded-xl hover: bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200"
                   >
                     <TargetIcon className="w-6 h-6" />
                     <span>Explore Services</span>
@@ -346,7 +346,7 @@ const Innovative2038ServicesShowcase: React.FC = () => {
         </div>
       </Layout>
     </>
-  );
-};
+  )
+},
 
-export default Innovative2038ServicesShowcase;
+export default Innovative2038ServicesShowcase,

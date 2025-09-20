@@ -1,18 +1,18 @@
 
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
+import React from "react",
+import { Link, useLocation } from "react-router-dom",
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
 
 interface MobileBottomNavProps {
-  unreadCount?: number;
+  unreadCount?: number,
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
+  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
 
   const navItems = [
     {
@@ -48,12 +48,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/dashboard"),
       authRequired: true
     }
-  ];
+  ],
 
   // Filter items based on auth status
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
-  );
+  ),
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
@@ -82,5 +82,5 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
         ))}
       </div>
     </nav>
-  );
+  ),
 }

@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-  ];
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ export default function Page() {
                 capabilities.</p>
               <Link
                 to="/contact"
-                className="inline - flex items - center px-6 py-3 bg-gradient - to - r from - blue - 600 to - cyan - 600 text-white font - semibold rounded-lg hover:from - blue - 700 hover:to - cyan - 700 transition - all duration -300"
+                className="inline - flex items - center px-6 py-3 bg-gradient - to - r from - blue - 600 to - cyan - 600 text-white font - semibold rounded-lg hover: from - blue - 700 hover:to - cyan - 700 transition - all duration -300"
               >
                 Explore Space Solutions
               </Link>
@@ -67,5 +67,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},

@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
           <div className="grid grid - cols - 1 md:grid - cols - 4 gap-6 mb-12">
@@ -327,7 +327,7 @@ export default function Page() {
 
       {/* Contact Section */}
       <section className="py-20 bg-slate -800 / 50">
-        <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -385,5 +385,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},

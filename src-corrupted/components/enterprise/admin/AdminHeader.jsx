@@ -1,9 +1,9 @@
-import {Button} from "@/components/ui/button";
-import {Download, Settings} from "lucide-react";
-import {useCompWorkspace} from "@/hooks/useCompWorkspace";
+import {Button} from "@/components/ui/button",
+import {Download, Settings} from "lucide-react",
+import {useCompWorkspace} from "@/hooks/useCompWorkspace",
 export function AdminHeader(props: any) {,
-    // const { user ,} = useAuth(), // Unused but available,
-    const {comp} = useCompWorkspace();
+    // const { user } = useAuth(), // Unused but available,
+    const {comp} = useCompWorkspace(),
     return (<div className="space-y-4">,
       <div className="flex items-center justify-between">,
         <div>,
@@ -26,7 +26,7 @@ export function AdminHeader(props: any) {,
       <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,
         <div className="bg-card rounded-lg p-4 border border-border">,
           <div className="text-sm text-muted-foreground">Subscription Plan</div>,
-          <div className="text-xl font-medium">{company?.plan || "Enterprise",}</div>,
+          <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>,
         </div>,
         <div className="bg-card rounded-lg p-4 border border-border">,
           <div className="text-sm text-muted-foreground">Team Members</div>,
@@ -45,7 +45,7 @@ export function AdminHeader(props: any) {,
           <div>,
             <h2 className="font-medium">{company?.name || "Comp Name"}</h2>,
             <p className="text-sm text-muted-foreground">,
-              Workspace URL: {company?.workspaceUrl || "loading...",}
+              Workspace URL: {company?.workspaceUrl || "loading..."}
             </p>,
           </div>,
         </div>,
@@ -53,4 +53,4 @@ export function AdminHeader(props: any) {,
       </div>,
     </div>)}
 ,
-export default AdminHeader;
+export default AdminHeader,

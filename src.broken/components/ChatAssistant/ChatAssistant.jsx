@@ -1,51 +1,51 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
-import { AuthContext } from '../../context/auth/AuthContext';"
-import { useDebounce } from '../../hooks/useDebounce';"
-import { useLocalStorage } from '../../hooks/useLocalStorage';"
-import { ChatMessage } from './ChatMessage';"
-import { ChatInput } from './ChatInput';"
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';"
-import { Button } from '@/components/ui/button';
+import React, { useState, useEffect, useRef, useContext } from 'react',
+import { AuthContext } from '../../context/auth/AuthContext',"
+import { useDebounce } from '../../hooks/useDebounce',"
+import { useLocalStorage } from '../../hooks/useLocalStorage',"
+import { ChatMessage } from './ChatMessage',"
+import { ChatInput } from './ChatInput',"
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',"
+import { Button } from '@/components/ui/button',
 
 export default function Page() {
-    }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
+    }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]),
     // Effect for logged-in user messages
     useEffect(() => {
         if(!isGuest) {
 
             // Update state if initialMessages prop changes(e.g. new conversation loaded)
             setLoggedInMessages(initialMessages)}
-    }, [isGuest, initialMessages, recipient.id]);
+    }, [isGuest, initialMessages, recipient.id]),
     // Determine currentMessages and setCurrentMessages based on isGuest
-    const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
+    const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,
     const setCurrentMessages = (valueOrFn) => {
 
         if(isGuest) {
 
-            const newMessages = valueOrFn instanceof Function ? valueOrFn(displayGuestMessages) : valueOrFn;
-            setDisplayGuestMessages(newMessages);
-            setStoredGuestMessages(newMessages); // Always update localStorage for guests
+            const newMessages = valueOrFn instanceof Function ? valueOrFn(displayGuestMessages) : valueOrFn,
+            setDisplayGuestMessages(newMessages),
+            setStoredGuestMessages(newMessages), // Always update localStorage for guests
 
         else {
 
-            const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
+            const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
             setLoggedInMessages(newMessages)}
-    };
-    const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
+    },
+    const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),
     useEffect(() => {
         if(debouncedApiCallParams) {
 
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}
-    }, [debouncedApiCallParams, onSendMessage]);
+    }, [debouncedApiCallParams, onSendMessage]),
     useEffect(() => {
-        scrollToBottom()}, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
+        scrollToBottom()}, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state
     const scrollToBottom = () => {
 
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })},
     const handleSendMessage = async(messageContent) => {
 
         if(!messageContent.trim())
-            return;
+            return,
         if(!isGuest) { // Logged-in user
             const newMessage = {
 
@@ -54,16 +54,16 @@ export default function Page() {
                 message: messageContent,
   timestamp: new Date()
 
-};
-            setCurrentMessages((prev) => [...prev, newMessage]);
+},
+            setCurrentMessages((prev) => [...prev, newMessage]),
             setPendingApiCallParams({ message: messageContent, conversationId })}
         else { // Guest user
-            setGuestMessage(messageContent);
+            setGuestMessage(messageContent),
             setShowGuestModal(true)}
-    };
+    },
     const handleModalSendConfirm = () => {
         if(!guestMessage)
-            return;
+            return,
         const newMessage = {
 
   id: Date.now().toString(),
@@ -71,44 +71,44 @@ export default function Page() {
             message: guestMessage,
   timestamp: new Date()
 
-};
-        setCurrentMessages((prev) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages
-        setPendingApiCallParams({ message: guestMessage, conversationId });
-        setShowGuestModal(false);
-        setGuestMessage(null)};
+},
+        setCurrentMessages((prev) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
+        setPendingApiCallParams({ message: guestMessage, conversationId }),
+        setShowGuestModal(false),
+        setGuestMessage(null)},
     const handleModalCancel = () => {
-        setShowGuestModal(false);
-        setGuestMessage(null)};
+        setShowGuestModal(false),
+        setGuestMessage(null)},
     useEffect(() => {
         if(!showGuestModal)
-            return;
+            return,
         const handleKey = (e) => {
 
             if(e.key === 'Escape') {
 
-                e.preventDefault();
+                e.preventDefault(),
                 handleModalCancel()}
-        };
-        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;
-        document.addEventListener('keydown', handleKey);
+        },
+        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null,
+        document.addEventListener('keydown', handleKey),
         return () => {
 
-            document.removeEventListener('keydown', handleKey);
-            removeTrap && removeTrap()}}, [showGuestModal]);
+            document.removeEventListener('keydown', handleKey),
+            removeTrap && removeTrap()}}, [showGuestModal]),
     useEffect(() => {
         if(!isOpen)
-            return;
+            return,
         const handleKeyDown = (e) => {
 
             if(e.key === 'Escape') {
 
-                e.preventDefault();
+                e.preventDefault(),
                 onClose()}
-        };
-        document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]);
+        },
+        document.addEventListener('keydown', handleKeyDown),
+        return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]),
     if(!isOpen)
-        return null;"
+        return null,"
     return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="chat-assistant-title">"
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
         {/* Header */}"

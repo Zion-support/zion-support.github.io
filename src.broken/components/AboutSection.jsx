@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-    ];
+    ],
     const values = [{
 "
             title: "Innovation First","
@@ -27,12 +27,12 @@ export default function Page() {
             description: "Your data and systems are protected with enterprise-grade security and compliance standards.","
             icon: <Shield className="w-8 h-8"/>
 
-    ];
+    ],
     const technologies = ["
         "Artificial Intelligence & ML", "Cloud Computing", "Cybersecurity", "Data Analytics","
         "Blockchain Technology", "IoT Solutions", "Mobile Development", "Web Applications","
         "DevOps & Automation", "Quantum Computing", "Edge Computing", "5G Networks"
-    ];"
+    ],"
     return (<section className="py-20 bg-gradient-to-br from-slate-800 via-zion-blue-dark to-slate-900">"
       <div className="container mx-auto px-4">"
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
@@ -110,7 +110,7 @@ export default function Page() {
 "
                 <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"
                 <span className="text-zion-slate-light text-sm">{tech}</span>
-              </div>;
+              </div>,
             ))}
           </div>
         </div>

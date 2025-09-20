@@ -1,24 +1,24 @@
 
-import React from "react";
-import { Link, useNavigate  } from 'react-router-dom';
+import React from "react",
+import { Link, useNavigate  } from 'react-router-dom',
 
 export default function Page() {
-;
+,
 
   const handleSignOut = async () => {
     try {
-      await logout();
+      await logout(),
     } catch(error) {
       toast({
         title: "Error signing out",
         description: "There was an error signing you out.Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     }
-  };
+  },
 
   if(!user) {
-    return (<div className="hidden md:flex items-center space-x-4">
+    return (<div className="hidden md: flex items-center space-x-4">
         <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
         <Link
           to="/signup"
@@ -27,7 +27,7 @@ export default function Page() {
           Register
         </Link>
       </div>
-    );
+    )
   }
 
   return (<DropdownMenu open={open} onOpenChange={setOpen}>
@@ -62,5 +62,5 @@ export default function Page() {
         <DropdownMenuItem role="menuitem" onClick={handleSignOut}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  ),
 }

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agentic Sales Acceleration Playbook | Zion Tech Group';
+  title: 'AI 2026: Agentic Sales Acceleration Playbook | Zion Tech Group',
   description:,
-    'A step-by-step playbook to deploy AI agents that qualify leads, personalize outreach, and accelerate revenue.',
-};
+    'A step-by-step playbook to deploy AI agents that qualify leads, personalize outreach, and accelerate revenue.'
+},
 export default function AgenticSalesAccelerationPlaybookPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -24,7 +24,7 @@ export default function AgenticSalesAccelerationPlaybookPage() {,
       <section className="mb-10">,
         <h2 className="text-2xl font-semibold text-gray-900 mb-3">Operating Model</h2>,
         <p className="text-gray-700 mb-4">,
-          Start with a constrained scope (one segment, one region), define KPIs (reply rate, meetings;
+          Start with a constrained scope (one segment, one region), define KPIs (reply rate, meetings,
           pipeline created), and iterate weekly with evals and policy updates. Gradually expand channels and,
           autonomy as guardrails and performance mature.,
         </p>,
@@ -38,6 +38,6 @@ export default function AgenticSalesAccelerationPlaybookPage() {,
         </ol>,
       </section>,
     </main>,
-  );
+  ),
 }
 ,

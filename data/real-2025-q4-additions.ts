@@ -1,49 +1,49 @@
 export interface Q4Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link: string;
-  marketPosition?: string;
-  targetAudience?: string;
-  trialDays?: number;
-  setupTime?: string;
-  category: string;
-  realService: boolean;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[];
-  roi?: string;
-  competitors?: string[];
-  marketSize?: string;
-  growthRate?: string;
-  variant?: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+  icon?: string,
+  color?: string,
+  textColor?: string,
+  link: string,
+  marketPosition?: string,
+  targetAudience?: string,
+  trialDays?: number,
+  setupTime?: string,
+  category: string,
+  realService: boolean,
+  technology?: string[],
+  integrations?: string[],
+  useCases?: string[],
+  roi?: string,
+  competitors?: string[],
+  marketSize?: string,
+  growthRate?: string,
+  variant?: string,
   contactInfo?: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails?: string;
-  launchDate?: string;
-  customers?: number;
-  rating?: number;
-  reviews?: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails?: string,
+  launchDate?: string,
+  customers?: number,
+  rating?: number,
+  reviews?: number
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const realQ4Services2025: RealQ4Service[] = [
 	{
 		id: 'affiliate-marketing-hub',
@@ -53,29 +53,26 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.',
 		features: [
-			'Multi-channel attribution and cookie-less tracking',
-			'Fraud rules, device fingerprinting, IP reputation checks',
-			'Customizable commission structures and tiers',
-			'Automated payouts and tax form collection',
-			'Shareable links, coupons, and influencer codes',
-			'Partner portal and real-time analytics'
+			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checks',
+			'Customizable commission structures and tiersAutomated payouts and tax form collection',
+			'Shareable links, coupons, and influencer codesPartner portal and real-time analytics'
 		],
 		popular: true,
 		icon: '🔗',
 		color: 'from-violet-600 to-fuchsia-700',
 		textColor: 'text-fuchsia-400',
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
-		marketPosition: 'Comparable to Refersion and LeadDyno; stronger fraud prevention and flexible payouts.',
+		marketPosition: 'Comparable to Refersion and LeadDyno, stronger fraud prevention and flexible payouts.',
 		targetAudience: 'E-commerce stores, marketplaces, media sites',
 		trialDays: 14,
 		setupTime: '1 day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis'],
-		integrations: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
-		useCases: ['Affiliate programs', 'Influencer tracking', 'Partnership analytics'],
+		technology: ['Next.jsNode.js', 'PostgreSQLRedis'],
+		integrations: ['ShopifyWooCommerce', 'StripePayPal'],
+		useCases: ['Affiliate programsInfluencer tracking', 'Partnership analytics'],
 		roi: 'Increase attributed sales 10–25% with optimized partnerships.',
-		competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
+		competitors: ['RefersionLeadDyno', 'Tapfiliate'],
 		marketSize: '$1.5B affiliate software',
 		growthRate: '15% YoY',
 		variant: 'ai-futuristic',
@@ -95,35 +92,32 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
 		features: [
-			'Multi-speaker diarization',
-			'Timestamps and filler removal',
-			'Chapter detection and show notes',
-			'Embeddings and semantic search',
-			'Export to SRT, VTT, DOCX',
-			'Podcast platform integrations'
+			'Multi-speaker diarizationTimestamps and filler removal',
+			'Chapter detection and show notesEmbeddings and semantic search',
+			'Export to SRT, VTT, DOCXPodcast platform integrations'
 		],
 		popular: false,
 		icon: '🎧',
 		color: 'from-cyan-600 to-blue-700',
 		textColor: 'text-cyan-400',
 		link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
-		marketPosition: 'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
+		marketPosition: 'Competitive with Otter and Descript, better show notes and SEO summary pipeline.',
 		targetAudience: 'Podcasters, media teams, agencies',
 		trialDays: 7,
 		setupTime: '10 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['Whisper Large v3', 'Next.js', 'Node.js'],
-		integrations: ['Spotify', 'Apple Podcasts', 'YouTube'],
-		useCases: ['Transcripts', 'SEO summaries', 'Episode search'],
+		technology: ['Whisper Large v3Next.js', 'Node.js'],
+		integrations: ['SpotifyApple Podcasts', 'YouTube'],
+		useCases: ['TranscriptsSEO summaries', 'Episode search'],
 		roi: 'Save 4–8 hours per episode and improve SEO traffic.',
-		competitors: ['Otter', 'Descript', 'Rev'],
+		competitors: ['OtterDescript', 'Rev'],
 		marketSize: '$500M transcription tools',
 		growthRate: '20% YoY',
 		variant: 'ai-futuristic',
 		contactInfo: contact,
 		realImplementation: true,
-		implementationDetails: 'Batch transcription queue with GPU support; diarization and summarization pipeline.',
+		implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
 		launchDate: '2025-09-15',
 		customers: 60,
 		rating: 4.6,
@@ -137,29 +131,26 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
 		features: [
-			'Contact management and segmentation',
-			'Pipelines and kanban views',
-			'Calendar with SMS/email reminders',
-			'Import/export CSV and simple API',
-			'Mobile-friendly PWA',
-			'Basic reporting'
+			'Contact management and segmentationPipelines and kanban views',
+			'Calendar with SMS/email remindersImport/export CSV and simple API',
+			'Mobile-friendly PWABasic reporting'
 		],
 		popular: true,
 		icon: '📇',
 		color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-400',
 		link: 'https://ziontechgroup.com/services/micro-crm-local-business',
-		marketPosition: 'Simpler than HubSpot/Zoho; fast and focused for local SMBs.',
+		marketPosition: 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',
 		targetAudience: 'Local businesses, consultants, freelancers',
 		trialDays: 14,
 		setupTime: '15 minutes',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
-		integrations: ['Gmail', 'Outlook', 'Stripe'],
-		useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
+		technology: ['Next.jsSQLite/Postgres', 'Twilio'],
+		integrations: ['GmailOutlook', 'Stripe'],
+		useCases: ['LeadsFollow-ups', 'Deal tracking'],
 		roi: 'Increase follow-through and close rates 10–20% via reminders.',
-		competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
+		competitors: ['HubSpot StarterZoho CRM', 'Pipedrive'],
 		marketSize: '$5B SMB CRM',
 		growthRate: '12% YoY',
 		variant: 'ai-futuristic',
@@ -179,35 +170,32 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
 		features: [
-			'Customer returns portal',
-			'Prepaid label generation',
-			'RMA approval rules',
-			'Inventory and refund sync',
-			'Email/SMS notifications',
-			'Analytics on reasons and cost'
+			'Customer returns portalPrepaid label generation',
+			'RMA approval rulesInventory and refund sync',
+			'Email/SMS notificationsAnalytics on reasons and cost'
 		],
 		popular: false,
 		icon: '📦',
 		color: 'from-amber-600 to-orange-700',
 		textColor: 'text-amber-400',
 		link: 'https://ziontechgroup.com/services/returns-automation-saas',
-		marketPosition: 'Competes with Returnly/Loop; quick setup for SMBs.',
+		marketPosition: 'Competes with Returnly/Loop, quick setup for SMBs.',
 		targetAudience: 'DTC brands, Shopify/WooCommerce stores',
 		trialDays: 14,
 		setupTime: '2 hours',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
-		integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
-		useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
+		technology: ['Next.jsNode.js', 'StripeShippo'],
+		integrations: ['ShopifyWooCommerce', 'ShippoStripe'],
+		useCases: ['Returns portalExchange workflows', 'Refund automation'],
 		roi: 'Reduce support tickets ~30% and speed refunds.',
-		competitors: ['Loop Returns', 'Returnly'],
+		competitors: ['Loop ReturnsReturnly'],
 		marketSize: '$800M returns software',
 		growthRate: '18% YoY',
 		variant: 'ai-futuristic',
 		contactInfo: contact,
 		realImplementation: true,
-		implementationDetails: 'Webhook-driven order sync; label/provider adapters.',
+		implementationDetails: 'Webhook-driven order sync, label/provider adapters.',
 		launchDate: '2025-10-05',
 		customers: 95,
 		rating: 4.6,
@@ -221,29 +209,26 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.',
 		features: [
-			'Inbox and portal ticket intake',
-			'Auto-routing, SLAs, and escalations',
-			'Public/private knowledge base',
-			'Client portal with reports',
-			'RMM and network tool integrations',
-			'Billing export and time tracking'
+			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalations',
+			'Public/private knowledge baseClient portal with reports',
+			'RMM and network tool integrationsBilling export and time tracking'
 		],
 		popular: true,
 		icon: '🛠️',
 		color: 'from-blue-600 to-indigo-700',
 		textColor: 'text-indigo-400',
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
-		marketPosition: 'Simpler than Zendesk/Freshdesk; MSP-first workflows and pricing.',
+		marketPosition: 'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',
 		targetAudience: 'Managed service providers, internal IT teams',
 		trialDays: 14,
 		setupTime: '1 day',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'PostgreSQL'],
-		integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
-		useCases: ['IT support', 'SLA management', 'Client reporting'],
-		roi: 'Faster resolution, less toil; better client satisfaction.',
-		competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
+		technology: ['Next.jsNode.js', 'PostgreSQL'],
+		integrations: ['ZendeskFreshdesk', 'DatadogGrafana'],
+		useCases: ['IT supportSLA management', 'Client reporting'],
+		roi: 'Faster resolution, less toil, better client satisfaction.',
+		competitors: ['ZendeskFreshdesk', 'HaloPSA'],
 		marketSize: '$10B helpdesk software',
 		growthRate: '10% YoY',
 		variant: 'ai-futuristic',
@@ -255,7 +240,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		rating: 4.5,
 		reviews: 28
 	}
-];
+],
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -265,19 +250,16 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
     features: [
-      'Document sync and chunking pipelines',
-      'Metadata and policy guardrails',
-      'Evals and drift tracking',
-      'Human-in-the-loop approvals',
-      'Observability and cost caps',
-      'SDKs for Node/Python'
+      'Document sync and chunking pipelinesMetadata and policy guardrails',
+      'Evals and drift trackingHuman-in-the-loop approvals',
+      'Observability and cost capsSDKs for Node/Python'
     ],
     popular: true,
     icon: '🧠',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-    marketPosition: 'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
+    marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -307,10 +289,8 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.',
     features: [
-      'Audience builder and traits',
-      'Edge functions and KV cache',
-      'A/B and holdout tests',
-      'Privacy-first scoring',
+      'Audience builder and traitsEdge functions and KV cache',
+      'A/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
     ],
     popular: true,
@@ -318,7 +298,7 @@ export const real2025Q4Additions = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
-    marketPosition: 'Simpler alternative to enterprise CDPs for SMBs; edge-native.',
+    marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudience: 'Growth and eCommerce teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -348,17 +328,15 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
     features: [
-      'One-PR one-env automation',
-      'Seed data and fixtures',
-      'Smoke tests and screenshots',
-      'Secrets and policies as code',
+      'One-PR one-env automationSeed data and fixtures',
+      'Smoke tests and screenshotsSecrets and policies as code',
       'Cost and TTL controls'
     ],
     icon: '🚀',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
     link: `https://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
-    marketPosition: 'Faster than DIY scripts; comparable to Uffizzi/Gitpod previews.',
+    marketPosition: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
     targetAudience: 'Platform and app teams',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -388,17 +366,15 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
     features: [
-      'Streaming ingestion and rules',
-      'Anomaly detection and drift',
-      'LLM summaries and hints',
-      'Slack/Email alerts and tickets',
+      'Streaming ingestion and rulesAnomaly detection and drift',
+      'LLM summaries and hintsSlack/Email alerts and tickets',
       'Dashboards and exports'
     ],
     icon: '📈',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
     link: `https://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
-    marketPosition: 'Adds AI summaries to classic log alerts; vendor-agnostic ingestion.',
+    marketPosition: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
     targetAudience: 'SREs and platform teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -428,10 +404,8 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
     features: [
-      'Policies and approvals',
-      'Change logs and RBAC',
-      'SLO-based rollbacks',
-      'SDKs and edge eval',
+      'Policies and approvalsChange logs and RBAC',
+      'SLO-based rollbacksSDKs and edge eval',
       'Experiments and cohorts'
     ],
     icon: '🏳️',
@@ -468,17 +442,15 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.',
     features: [
-      'Sequence composer and AI draft',
-      'Warm-up and safety checks',
-      'Reply intent and routing',
-      'Blacklist monitoring',
+      'Sequence composer and AI draftWarm-up and safety checks',
+      'Reply intent and routingBlacklist monitoring',
       'CRM sync'
     ],
     icon: '✉️',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: `https://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
-    marketPosition: 'Safer than generic sequencers; deliverability-first.',
+    marketPosition: 'Safer than generic sequencers, deliverability-first.',
     targetAudience: 'Sales and growth teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -508,10 +480,8 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.',
     features: [
-      'Schema registry and versioning',
-      'Back/forward compatibility checks',
-      'Lineage and ownership',
-      'Alerts and SLOs',
+      'Schema registry and versioningBack/forward compatibility checks',
+      'Lineage and ownershipAlerts and SLOs',
       'CI/CD integrations'
     ],
     icon: '🧮',
@@ -548,10 +518,8 @@ export const real2025Q4Additions = [
     period: '/fixed',
     description: 'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.',
     features: [
-      'Okta/Entra app configs',
-      'SAML/OIDC + SCIM',
-      'Security test plans',
-      'Customer enablement kit'
+      'Okta/Entra app configsSAML/OIDC + SCIM',
+      'Security test plansCustomer enablement kit'
     ],
     icon: '🔐',
     color: 'from-slate-600 to-gray-700',
@@ -587,10 +555,8 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.',
     features: [
-      'Risk scoring and hygiene checks',
-      'Stage SLAs and alerts',
-      'Next-best action copilot',
-      'Reporting and dashboards'
+      'Risk scoring and hygiene checksStage SLAs and alerts',
+      'Next-best action copilotReporting and dashboards'
     ],
     icon: '📊',
     color: 'from-amber-600 to-orange-700',
@@ -626,10 +592,8 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.',
     features: [
-      'Signature verification and secrets',
-      'Replay and DLQs',
-      'Retries and backoff',
-      'Fan-out and transformations',
+      'Signature verification and secretsReplay and DLQs',
+      'Retries and backoffFan-out and transformations',
       'Audit logs and RBAC'
     ],
     icon: '🔁',
@@ -666,10 +630,8 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Hands-off Postgres ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.',
     features: [
-      'Automated backups and PITR',
-      'Failover drills and runbooks',
-      'Index and bloat maintenance',
-      'Performance dashboards'
+      'Automated backups and PITRFailover drills and runbooks',
+      'Index and bloat maintenancePerformance dashboards'
     ],
     icon: '🗄️',
     color: 'from-emerald-600 to-teal-700',
@@ -697,4 +659,4 @@ export const real2025Q4Additions = [
     rating: 4.6,
     reviews: 9
   }
-];
+],

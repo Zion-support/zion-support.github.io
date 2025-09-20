@@ -1,64 +1,64 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Building2,
   TrendingUp,
   Users,
   Shield,
   ArrowRight,
-  CheckCircle;
-  Star;
-  Award;
-  Zap;
-  Target;
-  BarChart3;
-  Globe;
-  Rocket;
-  Brain;
-  Sparkles,
-} from 'lucide-react';
+  CheckCircle,
+  Star,
+  Award,
+  Zap,
+  Target,
+  BarChart3,
+  Globe,
+  Rocket,
+  Brain,
+  Sparkles
+} from 'lucide-react',
 const BusinessSolutionsShowcase2027PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [currentStatsetCurrentStat] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentStat((prev) => (prev + 1) % 4);
-    }2000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentStat((prev) => (prev + 1) % 4),
+    }2000),
+    return () => clearInterval(interval),
+  }[]),
   const stats = [,
-    { number: "500+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-500 to-emerald-500" ,};
-    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-500 to-orange-500" ,};
-    { number: "300%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-500 to-cyan-500" ,};
-    { number: "24/7"label: "Support Available"icon: Shieldcolor: "from-purple-500 to-pink-500" ,}
-  ];
+    { number: "500+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-500 to-emerald-500" },
+    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-500 to-orange-500" },
+    { number: "300%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-500 to-cyan-500" },
+    { number: "24/7"label: "Support Available"icon: Shieldcolor: "from-purple-500 to-pink-500" }
+  ],
   const solutions = [,
     {,
-      title: "Enterprise Solutions";
-      description: "Comprehensive enterprise-grade solutions";
-      icon: Building2;
-      color: "from-blue-600 to-indigo-600",};
+      title: "Enterprise Solutions",
+      description: "Comprehensive enterprise-grade solutions",
+      icon: Building2,
+      color: "from-blue-600 to-indigo-600"},
     {,
       title: "Startup Solutions",
-      description: "Rapid deployment for growing startups";
-      icon: Rocket;
-      color: "from-green-600 to-emerald-600",};
+      description: "Rapid deployment for growing startups",
+      icon: Rocket,
+      color: "from-green-600 to-emerald-600"},
     {,
-      title: "SMB Solutions";
-      description: "Affordable yet powerful for SMBs";
-      icon: Users;
-      color: "from-purple-600 to-pink-600",}
-  ];
+      title: "SMB Solutions",
+      description: "Affordable yet powerful for SMBs",
+      icon: Users,
+      color: "from-purple-600 to-pink-600"}
+  ],
   const features = [,
-    "AI-Powered Business Intelligence";
-    "Advanced Security Solutions";
-    "Cloud Infrastructure Management";
-    "Rapid MVP Development";
-    "Growth Analytics Platform";
-    "Digital Transformation",
-  ];
+    "AI-Powered Business Intelligence",
+    "Advanced Security Solutions",
+    "Cloud Infrastructure Management",
+    "Rapid MVP Development",
+    "Growth Analytics Platform",
+    "Digital Transformation"
+  ],
   return (,
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -68,7 +68,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {,
       </div>,
       <div className="relative z-10 container mx-auto px-4 py-16">,
         <div className="grid lg: grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
             className="space-y-8",
           >,
@@ -85,7 +85,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {,
             >,
               Business Solutions Showcase 2027,
             </divh1>,
-            {/* Subtitle */,}
+            {/* Subtitle */}
             <divp,
               className="text-xl text-gray-300 leading-relaxed",
             >,
@@ -100,8 +100,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {,
                 <div key={index} className="flex items-center gap-2">,
                   <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />,
                   <span className="text-gray-300 text-sm">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* CTA Buttons */}
             <div,
@@ -118,7 +117,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content */,}
+          {/* Right Content */}
           <div,
             className="space-y-8",
           >,
@@ -130,7 +129,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {,
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: border-blue-400/50 transition-all duration-300",
                 >,
                   <div className="flex items-center gap-4">,
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${solution.color,}`}>,
+                    <div className={`p-3 rounded-xl bg-gradient-to-r ${solution.color}`}>,
                       <solution.icon className="w-6 h-6 text-white" />,
                     </div>,
                     <div>,
@@ -138,8 +137,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {,
                       <p className="text-gray-300 text-sm">{solution.description}</p>,
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* Animated Stats */}
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">,
@@ -149,14 +147,13 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {,
                   <div,
                     key={index}
                     className={`text-center p-4 rounded-2xl bg-gradient-to-r ${stat.color} ${,
-                      currentStat === index ? 'ring-2 ring-white/30' : '',
+                      currentStat === index ? 'ring-2 ring-white/30' : ''
                     } transition-all duration-300`}
                   >,
                     <stat.icon className="w-6 h-6 text-white mx-auto mb-2" />,
                     <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>,
                     <div className="text-white/80 text-sm">{stat.label}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Trust Indicators */}
@@ -176,7 +173,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default BusinessSolutionsShowcase2027PromotionBanner;
+  ),
+},
+export default BusinessSolutionsShowcase2027PromotionBanner,
 </div></div>,

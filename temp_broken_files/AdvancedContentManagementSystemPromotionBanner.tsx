@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Settings,
   BarChart3,
@@ -8,53 +8,52 @@ import {,
   TrendingUp,
   Eye,
   Heart,
-  Share2;
-  Download;
-  Edit;
-  Plus;
-  Search;
-  Filter;
-  Calendar;
-  Tag;
-  Globe;
-  Zap;
-  Brain;
-  Cpu;
-  Database;
-  Cloud;
-  Shield;
-  CheckCircle;
-  ArrowRight;
-  RefreshCw;
-  Target;
-  Activity;
-  Star;
-  Clock,
-} from 'lucide-react';
+  Share2,
+  Download,
+  Edit,
+  Plus,
+  Search,
+  Filter,
+  Calendar,
+  Tag,
+  Globe,
+  Zap,
+  Brain,
+  Cpu,
+  Database,
+  Cloud,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  RefreshCw,
+  Target,
+  Activity,
+  Star,
+  Clock
+} from 'lucide-react',
 const AdvancedContentManagementSystemPromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const features = [,
-    'Advanced Content AnalyticsReal-Time Performance Tracking';
-    'Automated Content OptimizationMulti-Platform Publishing';
-    'AI-Powered Content SuggestionsCollaborative Workflow Management',
-  ];
+    'Advanced Content AnalyticsReal-Time Performance TrackingAutomated Content OptimizationMulti-Platform Publishing',
+    'AI-Powered Content SuggestionsCollaborative Workflow Management'
+  ],
   const stats = [,
-    { value: '1,247'label: 'Content 'Itemsicon: Database ,};
-    { value: '2.8M+'label: 'Total 'Viewsicon: Eye ,};
-    { value: '156K+'label: ''Engagementsicon: Heart ,};
-    { value: '5.5%'label: 'Avg. 'Rateicon: TrendingUp ,}
-  ];
+    { value: '1,247'label: 'Content 'Itemsicon: Database },
+    { value: '2.8M+'label: 'Total 'Viewsicon: Eye },
+    { value: '156K+'label: ''Engagementsicon: Heart },
+    { value: '5.5%'label: 'Avg. 'Rateicon: TrendingUp }
+  ],
   const contentTypes = [,
-    { icon: Globelabel: 'Blog 'Postscount: '342'color: 'green' ,};
-    { icon: Targetlabel: 'Case 'Studiescount: '156'color: 'purple' ,};
-    { icon: Brainlabel: ''Tutorialscount: '289'color: 'orange' ,};
-    { icon: Cpulabel: ''Researchcount: '123'color: 'cyan' ,};
-    { icon: Activitylabel: ''Videoscount: '89'color: 'red' ,};
-    { icon: Shieldlabel: ''Whitepaperscount: '78'color: 'indigo' ,}
-  ];
+    { icon: Globelabel: 'Blog 'Postscount: '342'color: 'green' },
+    { icon: Targetlabel: 'Case 'Studiescount: '156'color: 'purple' },
+    { icon: Brainlabel: ''Tutorialscount: '289'color: 'orange' },
+    { icon: Cpulabel: ''Researchcount: '123'color: 'cyan' },
+    { icon: Activitylabel: ''Videoscount: '89'color: 'red' },
+    { icon: Shieldlabel: ''Whitepaperscount: '78'color: 'indigo' }
+  ],
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">,
       {/* Background Pattern */}
@@ -97,26 +96,25 @@ const AdvancedContentManagementSystemPromotionBanner = () => {,
             </button>,
           </div>,
         </div>,
-        {/* Stats Grid */,}
+        {/* Stats Grid */}
         <div,
           className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12",
         >,
           {stats.map((statindex) => (,
-            <div key={index,} className="text-center">,
+            <div key={index} className="text-center">,
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4">,
                 <stat.icon className="w-8 h-8 text-white" />,
               </div>,
               <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
               <div className="text-blue-100 text-sm">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Features Grid */}
         <div,
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12",
         >,
           {features.map((featureindex) => (,
-            <div key={index,} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
               <div className="flex items-center mb-3">,
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3">,
                   <CheckCircle className="w-5 h-5 text-white" />,
@@ -126,8 +124,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {,
               <p className="text-blue-100 text-sm">,
                 Advanced capabilities to enhance your content management workflow and boost performance.,
               </p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Content Types Showcase */}
         <div,
@@ -139,14 +136,13 @@ const AdvancedContentManagementSystemPromotionBanner = () => {,
           </div>,
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">,
             {contentTypes.map((typeindex) => (,
-              <div key={index,} className="text-center group">,
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-500/20 rounded-2xl mb-3 group-hover: scale-110 transition-transform duration-300`,}>,
+              <div key={index} className="text-center group">,
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-500/20 rounded-2xl mb-3 group-hover: scale-110 transition-transform duration-300`}>,
                   <type.icon className="w-8 h-8 text-white" />,
                 </div>,
                 <div className="text-white font-semibold text-sm mb-1">{type.label}</div>,
                 <div className="text-blue-200 text-xs">{type.count} items</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Call to Action */}
@@ -177,5 +173,5 @@ const AdvancedContentManagementSystemPromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default AdvancedContentManagementSystemPromotionBanner;
+  )},
+export default AdvancedContentManagementSystemPromotionBanner,

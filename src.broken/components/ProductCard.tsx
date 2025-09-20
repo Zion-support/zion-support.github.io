@@ -1,70 +1,70 @@
-import Link from 'next/link';
+import Link from 'next/link',
 import { Heart } from 'lucide-react'
-import { useWishlist } from '@/hooks/useWishlist';
-import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { getStripe } from '@/utils/getStripe';
-import { useAuth } from '@/hooks/useAuth';
+import { useWishlist } from '@/hooks/useWishlist',
+import { Button } from '@/components/ui/button',
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog',
+import { Input } from '@/components/ui/input',
+import { getStripe } from '@/utils/getStripe',
+import { useAuth } from '@/hooks/useAuth',
 
 interface ProductCardProps {
-  id: string;
-  name: string;
-  price: number;
-  priceId: string;
+  id: string,
+  name: string,
+  price: number,
+  priceId: string
 }
 
 export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled = false }: ProductCardProps) {
-  const { isAuthenticated } = useAuth();
-  const { isWishlisted, toggle } = useWishlist();
-  const [imageError, setImageError] = useState(false);
-  const [isRedirecting, setIsRedirecting] = useState(false); // Added for loading state
-  const router = useRouter();
-  const dispatch = useDispatch<AppDispatch>(); // Moved up
-  const isMobile = useMediaQuery('(max-width: 768px)'); // Moved up
-  const isTablet = useMediaQuery('(max-width: 1200px)'); // Moved up
+  const { isAuthenticated } = useAuth(),
+  const { isWishlisted, toggle } = useWishlist(),
+  const [imageError, setImageError] = useState(false),
+  const [isRedirecting, setIsRedirecting] = useState(false), // Added for loading state
+  const router = useRouter(),
+  const dispatch = useDispatch<AppDispatch>(), // Moved up
+  const isMobile = useMediaQuery('(max-width: 768px)'), // Moved up
+  const isTablet = useMediaQuery('(max-width: 1200px)'), // Moved up
 
   const createSession = async (body: any) => {
     const res = await fetch('/api/create-checkout-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
-    const { sessionId } = await res.json();
-    const stripe = await getStripe();
+      body: JSON.stringify(body)
+    }),
+    const { sessionId } = await res.json(),
+    const stripe = await getStripe(),
     if (stripe && sessionId) {
-      await stripe.redirectToCheckout({ sessionId });
+      await stripe.redirectToCheckout({ sessionId }),
     }
-  };
+  },
 
-  const active = isWishlisted(product.id);
-  // const dispatch = useDispatch<AppDispatch>(); // Removed from here
+  const active = isWishlisted(product.id),
+  // const dispatch = useDispatch<AppDispatch>(), // Removed from here
 
   // Title is now guaranteed to be a non-empty string by the check above.
-  const productTitle = product.title;
+  const productTitle = product.title,
 
   const addToCart = () => {
     if (!isAuthenticated) {
       toast({
         title: 'Login Required',
         description: 'Please log in to add items to your cart.',
-        variant: 'destructive',
-      });
-      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`);
-      return;
+        variant: 'destructive'
+      }),
+      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),
+      return,
     }
-    await createSession({ priceId });
-  };
+    await createSession({ priceId }),
+  },
 
   const handleGuest = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await createSession({ priceId, email, shipping: address });
-  };
+    e.preventDefault(),
+    await createSession({ priceId, email, shipping: address }),
+  },
 
-  // const isMobile = useMediaQuery('(max-width: 768px)'); // Moved up
-  // const isTablet = useMediaQuery('(max-width: 1200px)'); // Moved up
+  // const isMobile = useMediaQuery('(max-width: 768px)'), // Moved up
+  // const isTablet = useMediaQuery('(max-width: 1200px)'), // Moved up
 
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
 
   return (
     <div className="border p-4 rounded-md space-y-3">
@@ -136,19 +136,19 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
               <TooltipTrigger asChild>
                 <Button
                   onClick={(e) => {
-                    e.stopPropagation();
+                    e.stopPropagation(),
                     if (onBuy) {
-                      setIsRedirecting(true);
+                      setIsRedirecting(true),
                       onBuy()
                         .catch(() => {
                           // Error is handled by parent, but we still need to reset loading locally
                         })
                         .finally(() => {
-                          setIsRedirecting(false); // Always reset loading state
+                          setIsRedirecting(false), // Always reset loading state
                           if (onBuyAttemptComplete) {
-                            onBuyAttemptComplete(); // Notify parent if it provided this callback
+                            onBuyAttemptComplete(), // Notify parent if it provided this callback
                           }
-                        });
+                        }),
                     }
                   }}
                   size="sm"
@@ -175,5 +175,5 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         )}
       </div>
     </div>
-  );
+  ),
 }

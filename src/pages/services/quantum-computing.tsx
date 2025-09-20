@@ -1,63 +1,41 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud } from 'lucide-react';
-
+import React from "react";
+import SEO from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud } from "lucide-react";
 const QuantumComputing: React.FC = () => {
   const features = [
     {
-      icon: Zap,
-      title: 'Quantum Supremacy',
-      description: 'Achieve computational power beyond classical computers'
-    },
+      icon: Zap,title: 'Quantum Supremacy',description: 'Achieve computational power beyond classical computers'
+    };
     {
-      icon: Brain,
-      title: 'AI Acceleration',
-      description: 'Train machine learning models exponentially faster'
-    },
+      icon: Brain,title: 'AI Acceleration',description: 'Train machine learning models exponentially faster'
+    };
     {
-      icon: Shield,
-      title: 'Quantum Cryptography',
-      description: 'Unbreakable encryption for next-generation security'
-    },
+      icon: Shield,title: 'Quantum Cryptography',description: 'Unbreakable encryption for next-generation security'
+    };
     {
-      icon: Cpu,
-      title: 'Quantum Simulation',
-      description: 'Model complex molecular and physical systems'
+      icon: Cpu,title: 'Quantum Simulation',description: 'Model complex molecular and physical systems'
     }
   ];
-
   const useCases = [
     {
-      title: 'Drug Discovery',
-      description: 'Accelerate pharmaceutical research and development',
-      icon: '💊'
-    },
+      title: 'Drug Discovery',description: 'Accelerate pharmaceutical research and development',icon: '💊'
+    };
     {
-      title: 'Financial Modeling',
-      description: 'Optimize portfolio management and risk assessment',
-      icon: '💰'
-    },
+      title: 'Financial Modeling',description: 'Optimize portfolio management and risk assessment',icon: '💰'
+    };
     {
-      title: 'Climate Research',
-      description: 'Advanced climate modeling and prediction',
-      icon: '🌍'
-    },
+      title: 'Climate Research',description: 'Advanced climate modeling and prediction',icon: '🌍'
+    };
     {
-      title: 'Logistics Optimization',
-      description: 'Solve complex routing and supply chain problems',
-      icon: '🚚'
+      title: 'Logistics Optimization',description: 'Solve complex routing and supply chain problems',icon: '🚚'
     }
   ];
-
   const benefits = [
-    'Exponential speedup for specific algorithms',
-    'Unprecedented computational power',
-    'Breakthrough capabilities in cryptography',
-    'Revolutionary AI and machine learning',
-    'Advanced scientific research capabilities',
-    'Competitive advantage in innovation'
-  ];
+    'Exponential speedup for specific algorithmsUnprecedented computational power',
+    'Breakthrough capabilities in cryptographyRevolutionary AI and machine learning',
+    'Advanced scientific research capabilitiesCompetitive advantage in innovation'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,7 +226,7 @@ const QuantumComputing: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join the quantum revolution and transform your business with unprecedented computational power
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
                 Start Quantum Journey
               </button>
@@ -260,7 +238,6 @@ const QuantumComputing: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default QuantumComputing;

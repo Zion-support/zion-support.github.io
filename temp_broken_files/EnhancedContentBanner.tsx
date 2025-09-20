@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 const EnhancedContentBanner: React.FC = () => {,
   return (,
     <div className="relative overflow-hidden">,
-      {/* Main Banner */,}
+      {/* Main Banner */}
       <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>,
         <div className="relative z-10">,
@@ -49,7 +49,7 @@ const EnhancedContentBanner: React.FC = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Navigation Controls */,}
+            {/* Navigation Controls */}
             <button,
               onClick={prevSlide}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover: bg-white/30 transition-colors",
@@ -57,20 +57,20 @@ const EnhancedContentBanner: React.FC = () => {,
               ←,
             </button>,
             <button,
-              onClick={nextSlide,}
+              onClick={nextSlide}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover: bg-white/30 transition-colors",
             >,
               →,
             </button>,
           </div>,
-          {/* Dots Indicator */,}
+          {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-6">,
             {featuredContent.map((_, index) => (,
               <button,
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${,
-                  index === currentSlide ? 'bg-white' : 'bg-white/50',
+                  index === currentSlide ? 'bg-white' : 'bg-white/50'
                 }`}
               />,
             ))}
@@ -83,19 +83,18 @@ const EnhancedContentBanner: React.FC = () => {,
           <a,
             key={content.id}
             href={content.link}
-            className={`bg-gradient-to-r ${content.gradient} text-white p-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center relative overflow-hidden group`,}
+            className={`bg-gradient-to-r ${content.gradient} text-white p-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center relative overflow-hidden group`}
           >,
             <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover: opacity-100 transition-opacity"></div>,
             <div className="relative z-10">,
-              <div className="text-2xl mb-2">{content.icon,}</div>,
+              <div className="text-2xl mb-2">{content.icon}</div>,
               <div className="text-sm font-bold mb-1">{content.title}</div>,
               <div className="text-xs opacity-90">{content.description}</div>,
               <span className={`absolute top-2 right-2 px-2 py-1 rounded-full text-xs font-bold ${content.badgeColor}`}>,
                 {content.badge}
               </span>,
             </div>,
-          </a>,
-        ))}
+          </a>))}
       </div>,
       {/* Interactive Stats */}
       <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-8 text-white mb-8">,
@@ -122,7 +121,7 @@ const EnhancedContentBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">,
         <h3 className="text-3xl font-bold mb-4">Stay Ahead of the Curve</h3>,
         <p className="text-xl opacity-90 mb-6 max-w-3xl mx-auto">,
@@ -139,5 +138,5 @@ const EnhancedContentBanner: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default EnhancedContentBanner;
+  )},
+export default EnhancedContentBanner,

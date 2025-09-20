@@ -1,83 +1,83 @@
 <<<<<<< HEAD
 
 export default function Page() {
-);
+),
 
   // Calculate performance score based on Core Web Vitals
   
-      let validMetrics = 0;
+      let validMetrics = 0,
 
       // FCP scoring(0-100)
       if(metrics.fcp !== null) {
 
-        validMetrics++;
-        if(metrics.fcp < 1800) totalScore += 100;
-        else if(metrics.fcp < 3000) totalScore += 50;
+        validMetrics++,
+        if(metrics.fcp < 1800) totalScore += 100,
+        else if(metrics.fcp < 3000) totalScore += 50,
         else totalScore += 0}
 
       // LCP scoring(0-100)
       if(metrics.lcp !== null) {
 
-        validMetrics++;
-        if(metrics.lcp < 2500) totalScore += 100;
-        else if(metrics.lcp < 4000) totalScore += 50;
+        validMetrics++,
+        if(metrics.lcp < 2500) totalScore += 100,
+        else if(metrics.lcp < 4000) totalScore += 50,
         else totalScore += 0}
 
       // FID scoring(0-100)
       if(metrics.fid !== null) {
 
-        validMetrics++;
-        if(metrics.fid < 100) totalScore += 100;
-        else if(metrics.fid < 300) totalScore += 50;
+        validMetrics++,
+        if(metrics.fid < 100) totalScore += 100,
+        else if(metrics.fid < 300) totalScore += 50,
         else totalScore += 0}
 
       // CLS scoring(0-100)
       if(metrics.cls !== null) {
 
-        validMetrics++;
-        if(metrics.cls < 0.1) totalScore += 100;
-        else if(metrics.cls < 0.25) totalScore += 50;
+        validMetrics++,
+        if(metrics.cls < 0.1) totalScore += 100,
+        else if(metrics.cls < 0.25) totalScore += 50,
         else totalScore += 0}
 
-      let rating: 'good' | 'needs-improvement' | 'poor';
-      let color: string;
+      let rating: 'good' | 'needs-improvement' | 'poor',
+      let color: string,
 
       if(averageScore >= 90) {
 
-        rating = 'good';
+        rating = 'good',
         color = 'text-green-500'} else if(averageScore >= 50) {
 
-        rating = 'needs-improvement';
+        rating = 'needs-improvement',
         color = 'text-yellow-500'} else {
 
-        rating = 'poor';
+        rating = 'poor',
         color = 'text-red-500'}
-    });
+    }),
 
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }),
+      clsObserver.observe({ entryTypes: ['layout-shift'] }),
 =======
   TrendingUp,'
-  AlertTriangle} from 'lucide-react';    
-    let grade: 'A' | 'B' | 'C' | 'D' | 'F';
-    let color: string;
+  AlertTriangle} from 'lucide-react',    
+    let grade: 'A' | 'B' | 'C' | 'D' | 'F',
+    let color: string,
 
     if(averageScore >= 90) {
-      grade = 'A';
+      grade = 'A',
       color = 'text-green-500'} else if(averageScore >= 80) {
-      grade = 'B';
+      grade = 'B',
       color = 'text-blue-500'} else if(averageScore >= 70) {
-      grade = 'C';
+      grade = 'C',
       color = 'text-yellow-500'} else if(averageScore >= 60) {
-      grade = 'D';
+      grade = 'D',
       color = 'text-orange-500'} else {
-      grade = 'F';
+      grade = 'F',
       color = 'text-red-500'}
-  }, []) ;
+  }, []) ,
 
       return { score: averageScore, rating, color }},
     []
-  );
+  ),
   // Measure Core Web Vitals
   useEffect(() => {
 
@@ -88,62 +88,62 @@ export default function Page() {
         if(fcpEntry) {
 
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      }),
+      fcpObserver.observe({ entryTypes: ['paint'] }),
 
       // Largest Contentful Paint
 
         if(lastEntry) {
 
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }),
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
 
       // First Input Delay
       const fidObserver = new PerformanceObserver(list => {
 
-        const entries = list.getEntries();        entries.forEach(entry => {
+        const entries = list.getEntries(),        entries.forEach(entry => {
 
           if (entry.processingStart && entry.startTime) {
 
             setMetrics(prev => ({ ...prev, fid }) ) }
-        })});
-      fidObserver.observe({ entryTypes: ['first-input'] });
+        })}),
+      fidObserver.observe({ entryTypes: ['first-input'] }),
 
       // Layout Shift
       const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;        list.getEntries().forEach((entry: any) => {
+        let clsValue = 0,        list.getEntries().forEach((entry: any) => {
 
           if(!entry.hadRecentInput) {
 
             clsValue += entry.value}
-        });
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });'      clsObserver.observe({ entryTypes: ['layout-shift'] });
+        }),
+        setMetrics(prev => ({ ...prev, cls: clsValue })),
+      }),'      clsObserver.observe({ entryTypes: ['layout-shift'] }),
 
       return () => {
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
+        lcpObserver.disconnect(),
+        fidObserver.disconnect(),
         clsObserver.disconnect()}}
-  }, []);
+  }, []),
 
   // Measure other performance metrics
   
       setMetrics(prev => ({ ...prev, ttfb }))}
-  }, []) ;
+  }, []) ,
 
       // First Meaningful Paint(FMP) - approximated
       
-      setMetrics(prev => ({ ...prev, fmp }));
+      setMetrics(prev => ({ ...prev, fmp })),
 
   // Format time values
   
-    return `${Math.round(time)}ms`};
+    return `${Math.round(time)}ms`},
 
   // Format CLS value
   
-    return cls.toFixed(3)};
+    return cls.toFixed(3)},
 
   // Get metric rating
   
@@ -154,27 +154,27 @@ export default function Page() {
           ? '🟢 Good'
           : value < 3000'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';
+            : '🔴 Poor',
       case 'lcp':
         return value < 2500'
           ? '🟢 Good'
           : value < 4000'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';
+            : '🔴 Poor',
       case 'fid':
         return value < 100'
           ? '🟢 Good'
           : value < 300'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';
+            : '🔴 Poor',
       case 'cls':
         return value < 0.1'
           ? '🟢 Good'
           : value < 0.25'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';
+            : '🔴 Poor',
       default:'
-        return 'N/A'}  };
+        return 'N/A'}  },
 
   if(!isVisible) {
 
@@ -208,7 +208,7 @@ export default function Page() {
             {overallScore.score}
           </div>"
           <div className="text-sm text-zion-slate-light">
-            Overall Score({overallScore.rating.replace('-',)})
+            Overall Score({overallScore.rating.replace('-')})
           </div>
         </div>
       </div>
@@ -295,7 +295,7 @@ export default function Page() {
             )}
           </ul>
         </div>) }
-    </div>) };
-export default AdvancedPerformanceMonitor;
+    </div>) },
+export default AdvancedPerformanceMonitor,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

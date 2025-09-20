@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Users,
   Calendar,
@@ -40,174 +40,81 @@ import {
   Database,
   Lock,
   Unlock
-} from 'lucide-react';
-
+} from "lucide-react";
 interface Resource {
-  id: string;
-  name: string;
-  type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility';
-  category: string;
-  status: 'available' | 'allocated' | 'maintenance' | 'unavailable';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  capacity: number;
-  currentUsage: number;
-  location: string;
-  department: string;
-  cost: number;
-  lastUpdated: string;
-  tags: string[];
-  description: string;
-  manager: string;
-  utilization: number;
+  id: string,name: string,type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility',category: string,status: 'available' | 'allocated' | 'maintenance' | 'unavailable',priority: 'low' | 'medium' | 'high' | 'critical',capacity: number,currentUsage: number,location: string,department: string,cost: number,lastUpdated: string,tags: string[],description: string,manager: string,utilization: number
 }
 
 interface ResourceStats {
-  totalResources: number;
-  availableResources: number;
-  allocatedResources: number;
-  maintenanceResources: number;
-  totalCapacity: number;
-  currentUtilization: number;
-  averageCost: number;
-  topDepartments: Array<{ name: string; count: number; percentage: number }>;
+  totalResources: number,availableResources: number,allocatedResources: number,maintenanceResources: number,totalCapacity: number,currentUtilization: number,averageCost: number,topDepartments: Array<{ name: string, count: number, percentage: number }>;
 }
 
 interface ResourceManagementSystemProps {
-  showStats?: boolean;
-  showFilters?: boolean;
-  showCharts?: boolean;
-  maxResources?: number;
+  showStats?: boolean,
+  showFilters?: boolean,
+  showCharts?: boolean,
+  maxResources?: number,
 }
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
-  showStats = true,
+  showStats = true;
   showFilters = true,
   showCharts = true,
   maxResources = 20
 }) => {
-  const [resources, setResources] = useState<Resource[]>([]);
-  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid');
-  const [showResourceForm, setShowResourceForm] = useState(false);
-  const [editingResource, setEditingResource] = useState<Resource | null>(null);
+  const [resources, setResources] = useState<Resource[]>([]),
+  const [filteredResources, setFilteredResources] = useState<Resource[]>([]),
+  const [selectedType, setSelectedType] = useState<string>('all'),
+  const [selectedStatus, setSelectedStatus] = useState<string>('all'),
+  const [selectedPriority, setSelectedPriority] = useState<string>('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid'),
+  const [showResourceForm, setShowResourceForm] = useState(false),
+  const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
   // Sample resource data
   useEffect(() => {
     const sampleResources: Resource[] = [
       {
-        id: '1',
-        name: 'AI Development Team',
-        type: 'human',
-        category: 'Development',
-        status: 'allocated',
-        priority: 'high',
-        capacity: 15,
-        currentUsage: 12,
-        location: 'San Francisco',
-        department: 'Engineering',
-        cost: 250000,
-        lastUpdated: '2024-01-15',
-        tags: ['AI', 'Machine Learning', 'Development'],
-        description: 'Expert team specializing in AI and machine learning development',
-        manager: 'Sarah Johnson',
-        utilization: 80
-      },
+        id: '1',name: 'AI Development Team',type: 'human',category: 'Development',status: 'allocated',priority: 'high',capacity: 15,currentUsage: 12,location: 'San Francisco',department: 'Engineering',cost: 250000,lastUpdated: '2024-01-15',tags: ['AIMachine Learning', 'Development'],
+        description: 'Expert team specializing in AI and machine learning development',manager: 'Sarah Johnson',utilization: 80
+      };
       {
-        id: '2',
-        name: 'Cloud Infrastructure Cluster',
-        type: 'infrastructure',
-        category: 'Cloud Computing',
-        status: 'available',
-        priority: 'critical',
-        capacity: 1000,
-        currentUsage: 750,
-        location: 'AWS US-East-1',
-        department: 'IT Operations',
-        cost: 50000,
-        lastUpdated: '2024-01-14',
-        tags: ['Cloud', 'AWS', 'Infrastructure'],
-        description: 'High-performance cloud computing cluster for enterprise applications',
-        manager: 'Michael Chen',
-        utilization: 75
-      },
+        id: '2',name: 'Cloud Infrastructure Cluster',type: 'infrastructure',category: 'Cloud Computing',status: 'available',priority: 'critical',capacity: 1000,currentUsage: 750,location: 'AWS US-East-1',department: 'IT Operations',cost: 50000,lastUpdated: '2024-01-14',tags: ['CloudAWS', 'Infrastructure'],
+        description: 'High-performance cloud computing cluster for enterprise applications',manager: 'Michael Chen',utilization: 75
+      };
       {
-        id: '3',
-        name: 'Cybersecurity Suite',
-        type: 'software',
-        category: 'Security',
-        status: 'available',
-        priority: 'high',
-        capacity: 100,
-        currentUsage: 85,
-        location: 'Corporate Network',
-        department: 'Security',
-        cost: 75000,
-        lastUpdated: '2024-01-13',
-        tags: ['Security', 'Threat Detection', 'Monitoring'],
-        description: 'Comprehensive cybersecurity monitoring and threat detection system',
-        manager: 'David Kim',
-        utilization: 85
-      },
+        id: '3',name: 'Cybersecurity Suite',type: 'software',category: 'Security',status: 'available',priority: 'high',capacity: 100,currentUsage: 85,location: 'Corporate Network',department: 'Security',cost: 75000,lastUpdated: '2024-01-13',tags: ['SecurityThreat Detection', 'Monitoring'],
+        description: 'Comprehensive cybersecurity monitoring and threat detection system',manager: 'David Kim',utilization: 85
+      };
       {
-        id: '4',
-        name: 'Data Center Facility',
-        type: 'facility',
-        category: 'Infrastructure',
-        status: 'maintenance',
-        priority: 'critical',
-        capacity: 10000,
-        currentUsage: 0,
-        location: 'Austin, TX',
-        department: 'Facilities',
-        cost: 2000000,
-        lastUpdated: '2024-01-12',
-        tags: ['Data Center', 'Facility', 'Infrastructure'],
-        description: 'Primary data center facility with redundant power and cooling',
-        manager: 'Lisa Thompson',
-        utilization: 0
-      },
+        id: '4',name: 'Data Center Facility',type: 'facility',category: 'Infrastructure',status: 'maintenance',priority: 'critical',capacity: 10000,currentUsage: 0,location: 'Austin, TX',
+        department: 'Facilities',cost: 2000000,lastUpdated: '2024-01-12',tags: ['Data CenterFacility', 'Infrastructure'],
+        description: 'Primary data center facility with redundant power and cooling',manager: 'Lisa Thompson',utilization: 0
+      };
       {
-        id: '5',
-        name: 'DevOps Tools Suite',
-        type: 'software',
-        category: 'Development',
-        status: 'allocated',
-        priority: 'medium',
-        capacity: 50,
-        currentUsage: 45,
-        location: 'Cloud Platform',
-        department: 'Engineering',
-        cost: 30000,
-        lastUpdated: '2024-01-11',
-        tags: ['DevOps', 'CI/CD', 'Automation'],
-        description: 'Complete DevOps toolchain for continuous integration and deployment',
-        manager: 'Alex Wong',
-        utilization: 90
+        id: '5',name: 'DevOps Tools Suite',type: 'software',category: 'Development',status: 'allocated',priority: 'medium',capacity: 50,currentUsage: 45,location: 'Cloud Platform',department: 'Engineering',cost: 30000,lastUpdated: '2024-01-11',tags: ['DevOpsCI/CD', 'Automation'],
+        description: 'Complete DevOps toolchain for continuous integration and deployment',manager: 'Alex Wong',utilization: 90
       }
     ];
-
-    setResources(sampleResources);
-    setFilteredResources(sampleResources);
-  }, []);
+    setResources(sampleResources),
+    setFilteredResources(sampleResources),
+  }, []),
 
   // Filter resources
   useEffect(() => {
-    let filtered = resources;
+    let filtered = resources,
 
     if (selectedType !== 'all') {
-      filtered = filtered.filter(r => r.type === selectedType);
+      filtered = filtered.filter(r => r.type === selectedType),
     }
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(r => r.status === selectedStatus);
+      filtered = filtered.filter(r => r.status === selectedStatus),
     }
 
     if (selectedPriority !== 'all') {
-      filtered = filtered.filter(r => r.priority === selectedPriority);
+      filtered = filtered.filter(r => r.priority === selectedPriority),
     }
 
     if (searchQuery) {
@@ -216,26 +123,22 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
+      ),
     }
 
-    setFilteredResources(filtered.slice(0, maxResources));
-  }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
+    setFilteredResources(filtered.slice(0, maxResources)),
+  }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]),
 
   // Calculate resource stats
   const resourceStats = {
-    totalResources: resources.length,
-    availableResources: resources.filter(r => r.status === 'available').length,
-    allocatedResources: resources.filter(r => r.status === 'allocated').length,
-    maintenanceResources: resources.filter(r => r.status === 'maintenance').length,
-    totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
+    totalResources: resources.length,availableResources: resources.filter(r => r.status === 'available').length,allocatedResources: resources.filter(r => r.status === 'allocated').length,maintenanceResources: resources.filter(r => r.status === 'maintenance').length,totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
     currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0,
     averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,
     topDepartments: (() => {
       const deptCounts = resources.reduce((acc, r) => {
-        acc[r.department] = (acc[r.department] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>);
+        acc[r.department] = (acc[r.department] || 0) + 1,
+        return acc,
+      }, {} as Record<string, number>),
 
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
@@ -244,9 +147,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           percentage: (count / resources.length) * 100
         }))
         .sort((a, b) => b.count - a.count)
-        .slice(0, 5);
+        .slice(0, 5),
     })()
-  };
+  },
 
   // Get status color and icon
   const getStatusDisplay = (status: string) => {
@@ -262,48 +165,43 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       default:
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
     }
-  };
+  },
 
   // Get type icon
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'human': return <Users className="w-5 h-5" />;
-      case 'infrastructure': return <Server className="w-5 h-5" />;
-      case 'software': return <Database className="w-5 h-5" />;
-      case 'equipment': return <Briefcase className="w-5 h-5" />;
-      case 'facility': return <Building className="w-5 h-5" />;
-      default: return <Globe className="w-5 h-5" />;
+      case 'infrastructure': return <Server className="w-5 h-5" />,
+      case 'software': return <Database className="w-5 h-5" />,
+      case 'equipment': return <Briefcase className="w-5 h-5" />,
+      case 'facility': return <Building className="w-5 h-5" />,
+      default: return <Globe className="w-5 h-5" />
     }
   };
-
   // Get priority color
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20';
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20',
+      case 'high': return 'text-orange-400 bg-orange-400/20',
+      case 'critical': return 'text-red-400 bg-red-400/20',
+      default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
-
   // Format currency
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
+      style: 'currency',currency: 'USD',minimumFractionDigits: 0,maximumFractionDigits: 0
     }).format(amount);
-  };
+  },
 
   // Get utilization color
   const getUtilizationColor = (utilization: number) => {
     if (utilization >= 90) return 'text-red-400';
-    if (utilization >= 75) return 'text-yellow-400';
-    if (utilization >= 50) return 'text-blue-400';
-    return 'text-green-400';
-  };
+    if (utilization >= 75) return 'text-yellow-400',
+    if (utilization >= 50) return 'text-blue-400',
+    return 'text-green-400'
+  },
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -318,8 +216,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
             {[
-              { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4" /> },
-              { id: 'list', label: 'List', icon: <BarChart3 className="w-4 h-4" /> },
+              { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4" /> };
+              { id: 'list', label: 'List', icon: <BarChart3 className="w-4 h-4" /> };
               { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4" /> }
             ].map((mode) => (
               <button

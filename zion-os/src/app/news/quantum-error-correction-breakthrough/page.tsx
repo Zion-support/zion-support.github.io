@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 export const metadata = {,
-  title: "Quantum Error Correction Breakthrough Reduces Error Rates by 60% | Zion Research";
-  description: "Our research team introduces a new error correction approach that significantly improves quantum computation reliability.";
-  keywords: "quantum computing, error correction, research, Zion Tech Group",
-};
+  title: "Quantum Error Correction Breakthrough Reduces Error Rates by 60% | Zion Research",
+  description: "Our research team introduces a new error correction approach that significantly improves quantum computation reliability.",
+  keywords: "quantum computing, error correction, research, Zion Tech Group"
+},
 export default function ArticlePage() {,
   return (,
     <div className="min-h-screen">,
@@ -51,6 +51,6 @@ export default function ArticlePage() {,
         </div>,
       </section>,
     </div>,
-  );
+  ),
 }
 ,

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Shield, 
+  Shield,
   Eye, 
   AlertTriangle, 
   Target, 
@@ -35,108 +35,68 @@ import {
   TrendingUp,
   Activity,
   ShieldCheck
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIAutonomousThreatIntelligence() {
   const features = [
     {
-      icon: Eye,
-      title: 'Real-time Threat Detection',
-      description: 'AI-powered monitoring that identifies threats before they become attacks',
-      benefits: ['24/7 surveillance', 'Zero-day threat detection', 'Behavioral analysis']
+      icon: Eye,title: 'Real-time Threat Detection',description: 'AI-powered monitoring that identifies threats before they become attacks',benefits: ['24/7 surveillanceZero-day threat detection', 'Behavioral analysis']
     },
     {
-      icon: Shield,
-      title: 'Autonomous Response',
-      description: 'AI that automatically blocks and mitigates threats without human intervention',
-      benefits: ['Instant threat neutralization', 'Adaptive defense strategies', 'Self-learning protection']
+      icon: Shield,title: 'Autonomous Response',description: 'AI that automatically blocks and mitigates threats without human intervention',benefits: ['Instant threat neutralizationAdaptive defense strategies', 'Self-learning protection']
     },
     {
-      icon: Target,
-      title: 'Predictive Intelligence',
-      description: 'Machine learning models that predict and prevent future attacks',
-      benefits: ['Attack pattern recognition', 'Risk assessment', 'Proactive defense']
+      icon: Target,title: 'Predictive Intelligence',description: 'Machine learning models that predict and prevent future attacks',benefits: ['Attack pattern recognitionRisk assessment', 'Proactive defense']
     },
     {
-      icon: Network,
-      title: 'Global Threat Intelligence',
-      description: 'Real-time threat data from worldwide sources and dark web monitoring',
-      benefits: ['Global threat visibility', 'Dark web intelligence', 'Cross-platform correlation']
+      icon: Network,title: 'Global Threat Intelligence',description: 'Real-time threat data from worldwide sources and dark web monitoring',benefits: ['Global threat visibilityDark web intelligence', 'Cross-platform correlation']
     }
-  ];
+  ],
 
   const threatTypes = [
     {
-      title: 'Ransomware Protection',
-      description: 'Advanced ransomware detection and prevention',
-      icon: Lock,
-      price: '$15,000/month',
-      features: ['Behavioral analysis', 'File encryption detection', 'Backup protection']
+      title: 'Ransomware Protection',description: 'Advanced ransomware detection and prevention',icon: Lock,price: '$15,000/month',
+      features: ['Behavioral analysisFile encryption detection', 'Backup protection']
     },
     {
-      title: 'Phishing Defense',
-      description: 'AI-powered email and web phishing detection',
-      icon: Mail,
-      price: '$12,000/month',
-      features: ['URL analysis', 'Content filtering', 'Social engineering detection']
+      title: 'Phishing Defense',description: 'AI-powered email and web phishing detection',icon: Mail,price: '$12,000/month',
+      features: ['URL analysisContent filtering', 'Social engineering detection']
     },
     {
-      title: 'DDoS Mitigation',
-      description: 'Intelligent DDoS attack prevention and mitigation',
-      icon: Network,
-      price: '$18,000/month',
-      features: ['Traffic analysis', 'Rate limiting', 'Geographic blocking']
+      title: 'DDoS Mitigation',description: 'Intelligent DDoS attack prevention and mitigation',icon: Network,price: '$18,000/month',
+      features: ['Traffic analysisRate limiting', 'Geographic blocking']
     },
     {
-      title: 'Insider Threat Detection',
-      description: 'Monitor and detect malicious insider activities',
-      icon: Users,
-      price: '$20,000/month',
-      features: ['User behavior analysis', 'Access monitoring', 'Anomaly detection']
+      title: 'Insider Threat Detection',description: 'Monitor and detect malicious insider activities',icon: Users,price: '$20,000/month',
+      features: ['User behavior analysisAccess monitoring', 'Anomaly detection']
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: 'Threat Shield Basic',
-      price: '$8,000',
-      period: '/month',
-      description: 'Essential threat intelligence for small organizations',
-      features: [
-        'Basic threat detection',
-        'Email security',
-        'Standard support',
-        'Basic reporting'
+      name: 'Threat Shield Basic',price: '$8,000',
+      period: '/month',description: 'Essential threat intelligence for small organizations',features: [
+        'Basic threat detectionEmail security';
+        'Standard supportBasic reporting'
       ]
     },
     {
-      name: 'Threat Shield Pro',
-      price: '$25,000',
-      period: '/month',
-      description: 'Advanced threat intelligence for growing organizations',
-      features: [
-        'Advanced threat detection',
-        'Autonomous response',
-        'Priority support',
-        'Real-time monitoring',
+      name: 'Threat Shield Pro',price: '$25,000',
+      period: '/month',description: 'Advanced threat intelligence for growing organizations',features: [
+        'Advanced threat detectionAutonomous response';
+        'Priority supportReal-time monitoring',
         'Predictive analytics'
       ],
       popular: true
-    },
+    };
     {
-      name: 'Threat Shield Enterprise',
-      price: '$75,000',
-      period: '/month',
-      description: 'Complete threat intelligence for large enterprises',
-      features: [
-        'Everything in Pro',
-        'Custom AI models',
-        'Dedicated security analyst',
-        '24/7 support',
+      name: 'Threat Shield Enterprise',price: '$75,000',
+      period: '/month',description: 'Complete threat intelligence for large enterprises',features: [
+        'Everything in ProCustom AI models';
+        'Dedicated security analyst24/7 support',
         'White-label solutions'
       ]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">
@@ -164,7 +124,7 @@ export default function AIAutonomousThreatIntelligence() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              The world's most advanced AI-powered threat intelligence platform that autonomously detects, 
+              The world's most advanced AI-powered threat intelligence platform that autonomously detects;
               analyzes, and neutralizes cyber threats in real-time.
             </p>
             
@@ -403,7 +363,7 @@ export default function AIAutonomousThreatIntelligence() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
@@ -425,5 +385,5 @@ export default function AIAutonomousThreatIntelligence() {
         </div>
       </section>
     </div>
-  );
+  )
 }

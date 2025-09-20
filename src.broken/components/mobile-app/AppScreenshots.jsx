@@ -4,19 +4,19 @@
   { scrollbarWidth: "none",
   msOverflowStyle: "none"
 =======
-import React, { useRef } from "react";"
-import { ChevronLeft, ChevronRight import { Button } from '@/components/ui/button';
+import React, { useRef } from "react","
+import { ChevronLeft, ChevronRight import { Button } from '@/components/ui/button',
 export default function Page() {
 ,"
-    { id: 5, alt: "Profile screen", src: "/placeholder.svg" },
-];
+    { id: 5, alt: "Profile screen", src: "/placeholder.svg" }
+],
 export const AppScreenshots = () => {
-    const scrollAmount = 300;
+    const scrollAmount = 300,
             scrollContainerRef.current.scrollBy({
 "
                 left: direction === "left" ? -scrollAmount : scrollAmount,"
                 behavior: "smooth"})}
-    };"
+    },"
     return (<section className="py-16 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
         <div className="text-center mb-12">"
@@ -47,6 +47,6 @@ export const AppScreenshots = () => {
           </Button>
         </div>
       </div>
-    </section>)};
+    </section>)},
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

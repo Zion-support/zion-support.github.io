@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { CheckCircle, Star, Phone, Mail, MapPin, Rocket, Shield, Zap, Brain, Cpu } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { innovative2026Services } from '../data/innovative-2026-services';
-import { revolutionaryAIServices2026 } from '../data/revolutionary-ai-services-2026';
-import { enterpriseITSolutions2026 } from '../data/enterprise-it-solutions-2026';
-import { cybersecuritySolutions2026 } from '../data/cybersecurity-solutions-2026';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { CheckCircle, Star, Phone, Mail, MapPin, Rocket, Shield, Zap, Brain, Cpu } from 'lucide-react',
+import Button from '../components/ui/Button',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
+import { innovative2026Services } from '../data/innovative-2026-services',
+import { revolutionaryAIServices2026 } from '../data/revolutionary-ai-services-2026',
+import { enterpriseITSolutions2026 } from '../data/enterprise-it-solutions-2026',
+import { cybersecuritySolutions2026 } from '../data/cybersecurity-solutions-2026',
 
 export default function ComprehensivePricing2026Page() {
   const contactInfo = {
@@ -16,7 +16,7 @@ export default function ComprehensivePricing2026Page() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all 2026 services
   const all2026Services = [
@@ -24,32 +24,32 @@ export default function ComprehensivePricing2026Page() {
     ...revolutionaryAIServices2026,
     ...enterpriseITSolutions2026,
     ...cybersecuritySolutions2026
-  ];
+  ],
 
   // Group services by price range
   const priceRanges = [
     {
       range: 'Entry Level',
-      services: all2026Services.filter(s => parseInt(s.price.replace('$', '').replace(',', '')) < 2000),
+      services: all2026Services.filter(s => parseInt(s.price.replace('$', '').replace(, '')) < 2000),
       color: 'from-green-500 to-emerald-600',
       description: 'Perfect for startups and small businesses'
     },
     {
       range: 'Professional',
       services: all2026Services.filter(s => {
-        const price = parseInt(s.price.replace('$', '').replace(',', ''));
-        return price >= 2000 && price < 4000;
+        const price = parseInt(s.price.replace('$', '').replace(, '')),
+        return price >= 2000 && price < 4000,
       }),
       color: 'from-blue-500 to-indigo-600',
       description: 'Ideal for growing companies and enterprises'
     },
     {
       range: 'Enterprise',
-      services: all2026Services.filter(s => parseInt(s.price.replace('$', '').replace(',', '')) >= 4000),
+      services: all2026Services.filter(s => parseInt(s.price.replace('$', '').replace(, '')) >= 4000),
       color: 'from-purple-500 to-pink-600',
       description: 'For large enterprises and government agencies'
     }
-  ];
+  ],
 
   // Service categories for comparison
   const serviceCategories = [
@@ -83,7 +83,7 @@ export default function ComprehensivePricing2026Page() {
       icon: Shield,
       color: 'from-red-500 to-pink-600'
     }
-  ];
+  ],
 
 const comprehensive-pricing-2026: React.FC = () => {
   return (
@@ -100,7 +100,7 @@ const comprehensive-pricing-2026: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default comprehensive-pricing-2026;
+export default comprehensive-pricing-2026,

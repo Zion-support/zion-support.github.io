@@ -1,91 +1,90 @@
 
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const corsHeaders = {,
-  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":,
 serve(async (req: Request) => {,
   // Handle CORS,
   if (req.method === "OPTIONS") {,
     return new Response(null, {,
-      status: 204,}
+      status: 204}
 ,
   try {,
     const supabase = createClient(,
-      supabaseUrl;
-      supabaseServiceKey,
-    );
+      supabaseUrl,
+      supabaseServiceKey),
     // Run the database function to create scheduled reminders,
-    const { data, error } = await supabase.rpc("create_scheduled_reminders");
+    const { data, error } = await supabase.rpc("create_scheduled_reminders"),
     if (error) {,
-      console.error("Failed to create scheduled reminders:", error);
+      console.error("Failed to create scheduled reminders:", error),
       return new Response(,
-        JSON.stringify({ error: "Failed to create scheduled reminders", details: error ,});
+        JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
         {,
-          status: 500;
-      );
+          status: 500,
+      )
     }
 ,
     // Process pending reminder jobs,
-    const { data: pendingJobs, error: jobsError ,} = await supabase,
+    const { data: pendingJobs, error: jobsError } = await supabase,
       .from("scheduled_jobs"),
       .select("id, payload"),
       .eq("job_type", "onboarding_reminder"),
       .eq("status", "pending"),
-      .lt("scheduled_for", new Date().toISOString());
+      .lt("scheduled_for", new Date().toISOString()),
     if (jobsError) {,
-      console.error("Failed to fetch pending jobs:", jobsError);
+      console.error("Failed to fetch pending jobs:", jobsError),
       return new Response(,
-        JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError ,});
+        JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError }),
         {,
-          status: 500;
-      );
+          status: 500,
+      )
     }
 ,
-    const processedJobs = [];
+    const processedJobs = [],
     if (pendingJobs && pendingJobs.length > 0) {,
       for (const job of pendingJobs) {,
         // Call the send-onboarding-reminder function for each job,
-        const reminderResponse = await fetch(`${supabaseUrl}/functions/v1/send-onboarding-reminder`;
+        const reminderResponse = await fetch(`${supabaseUrl}/functions/v1/send-onboarding-reminder`,
           {,
-            method: "POST";
+            method: "POST",
             headers: {,
-              "Content-Type": "application/json");
+              "Content-Type": "application/json"),
         if (reminderResponse.ok) {,
           // Update job status to completed,
-          const { error: updateError ,} = await supabase,
+          const { error: updateError } = await supabase,
             .from("scheduled_jobs"),
             .update({,
-              status: "completed";
-            .eq("id", job.id);
+              status: "completed",
+            .eq("id", job.id),
           if (updateError) {,
-            console.error("Failed to update job status:", updateError);
+            console.error("Failed to update job status:", updateError),
           } else {,
-            processedJobs.push(job.id);
+            processedJobs.push(job.id),
           }
         } else {,
-          console.error("Failed to send reminder for job:", job.id);
+          console.error("Failed to send reminder for job:", job.id),
           // Update job status to failed,
           await supabase,
             .from("scheduled_jobs"),
             .update({,
-            .eq("id", job.id);
+            .eq("id", job.id),
         }
       }
     }
 ,
     return new Response(JSON.stringify({,
-        message: "Reminders processed successfully";
-        processed_jobs: processedJobs.length);
+        message: "Reminders processed successfully",
+        processed_jobs: processedJobs.length)
   } catch (error) {,
-    console.error(error);
+    console.error(error),
     return new Response(,
-      JSON.stringify({ error: "Internal server error", details: error.message ,});
+      JSON.stringify({ error: "Internal server error", details: error.message }),
       {,
-        status: 500;
-    );
+        status: 500,
+    )
   }
-});
+}),
 }}}}}}}}}}))))

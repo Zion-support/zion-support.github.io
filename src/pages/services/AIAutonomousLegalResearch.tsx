@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  BookOpen, 
+  BookOpen,
   Brain, 
   Target, 
   BarChart3, 
@@ -25,50 +25,33 @@ import {
   Shield,
   Users,
   Scale
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousLegalResearch: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Legal Research',
-      description: 'Advanced machine learning for autonomous legal research and case analysis'
-    },
+      icon: Brain,title: 'AI-Powered Legal Research',description: 'Advanced machine learning for autonomous legal research and case analysis'
+    };
     {
-      icon: BookOpen,
-      title: 'Case Law Analysis',
-      description: 'Comprehensive analysis of case law with AI-driven insights and precedents'
-    },
+      icon: BookOpen,title: 'Case Law Analysis',description: 'Comprehensive analysis of case law with AI-driven insights and precedents'
+    };
     {
-      icon: Target,
-      title: 'Legal Document Review',
-      description: 'Automated review and analysis of legal documents and contracts'
-    },
+      icon: Target,title: 'Legal Document Review',description: 'Automated review and analysis of legal documents and contracts'
+    };
     {
-      icon: BarChart3,
-      title: 'Legal Analytics',
-      description: 'Data-driven legal insights and predictive analytics for case outcomes'
-    },
+      icon: BarChart3,title: 'Legal Analytics',description: 'Data-driven legal insights and predictive analytics for case outcomes'
+    };
     {
-      icon: Scale,
-      title: 'Compliance Monitoring',
-      description: 'Continuous monitoring of legal compliance and regulatory changes'
-    },
+      icon: Scale,title: 'Compliance Monitoring',description: 'Continuous monitoring of legal compliance and regulatory changes'
+    };
     {
-      icon: Shield,
-      title: 'Legal Risk Assessment',
-      description: 'AI-powered risk assessment and mitigation strategies'
+      icon: Shield,title: 'Legal Risk Assessment',description: 'AI-powered risk assessment and mitigation strategies'
     }
   ];
-
   const benefits = [
-    'Reduce research time by 75%',
-    'Improve case analysis by 80%',
-    'Enhance legal accuracy by 90%',
-    'Automate document review',
-    '24/7 autonomous operation',
-    'Real-time legal updates'
-  ];
+    'Reduce research time by 75%Improve case analysis by 80%',
+    'Enhance legal accuracy by 90%Automate document review',
+    '24/7 autonomous operationReal-time legal updates'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -210,7 +193,7 @@ const AIAutonomousLegalResearch: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Legal Research?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -228,7 +211,6 @@ const AIAutonomousLegalResearch: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousLegalResearch;

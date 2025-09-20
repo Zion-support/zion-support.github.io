@@ -1,17 +1,17 @@
 
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { SERVICES } from "@/data/servicesData";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
-import { useEffect, useState } from "react";
-import apiClient from "@/services/apiClient";
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+import { SERVICES } from "@/data/servicesData",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { Globe } from "lucide-react",
+import { useEffect, useState } from "react",
+import apiClient from "@/services/apiClient",
 
 
 function getRandomItem<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
+  return arr[Math.floor(Math.random() * arr.length)]
 }
 
 function generateRandomService(idNum: number): ProductListing {
@@ -21,44 +21,44 @@ function generateRandomService(idNum: number): ProductListing {
       category: "Consulting",
       min: 4000,
       max: 12000,
-      tags: ["Automation", "AI Strategy", "Optimization"],
+      tags: ["Automation", "AI Strategy", "Optimization"]
     },
     {
       title: "Cloud Migration & Support",
       category: "Management",
       min: 3000,
       max: 9000,
-      tags: ["Cloud", "Migration", "DevOps"],
+      tags: ["Cloud", "Migration", "DevOps"]
     },
     {
       title: "Advanced Cybersecurity Suite",
       category: "Security",
       min: 5000,
       max: 15000,
-      tags: ["Cybersecurity", "PenTesting", "Compliance"],
+      tags: ["Cybersecurity", "PenTesting", "Compliance"]
     },
     {
       title: "Big Data Engineering",
       category: "Analytics",
       min: 3500,
       max: 11000,
-      tags: ["Data Engineering", "Analytics", "ETL"],
+      tags: ["Data Engineering", "Analytics", "ETL"]
     },
     {
       title: "AI Model Training Service",
       category: "Development",
       min: 4500,
       max: 13000,
-      tags: ["Machine Learning", "Model Training", "AI"],
+      tags: ["Machine Learning", "Model Training", "AI"]
     },
     {
       title: "Digital Transformation Strategy",
       category: "Strategy",
       min: 6000,
       max: 14000,
-      tags: ["Transformation", "Strategy", "Business"],
-    },
-  ];
+      tags: ["Transformation", "Strategy", "Business"]
+    }
+  ],
 
   const authors = [
     "Global AI Experts",
@@ -66,21 +66,21 @@ function generateRandomService(idNum: number): ProductListing {
     "SecureFuture",
     "CloudOps Partners",
     "DataVisor",
-    "NexGen Solutions",
-  ];
+    "NexGen Solutions"
+  ],
 
   const images = [
     "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
     "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
     "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
-    "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
-  ];
+    "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"
+  ],
 
-  const template = getRandomItem(templates);
-  const author = getRandomItem(authors);
+  const template = getRandomItem(templates),
+  const author = getRandomItem(authors),
   const price = Math.round(
     Math.random() * (template.max - template.min) + template.min
-  );
+  ),
 
   return {
     id: `auto-service-${idNum}`,
@@ -95,8 +95,8 @@ function generateRandomService(idNum: number): ProductListing {
     createdAt: new Date().toISOString(),
     aiScore: Math.floor(90 + Math.random() * 10),
     rating: parseFloat((4 + Math.random()).toFixed(1)),
-    reviewCount: Math.floor(50 + Math.random() * 150),
-  };
+    reviewCount: Math.floor(50 + Math.random() * 150)
+  },
 }
 
 // Filter options specific to services
@@ -106,27 +106,27 @@ const SERVICE_FILTERS = [
   { label: 'Security', value: 'security' },
   { label: 'Analytics', value: 'analytics' },
   { label: 'Consulting', value: 'consulting' },
-  { label: 'Strategy', value: 'strategy' },
-];
+  { label: 'Strategy', value: 'strategy' }
+],
 
 export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>(SERVICES);
+  const [listings, setListings] = useState<ProductListing[]>(SERVICES),
 
   useEffect(() => {
     async function load() {
-      const res = await apiClient.get('/services');
-      setListings(res.data as ProductListing[]);
+      const res = await apiClient.get('/services'),
+      setListings(res.data as ProductListing[]),
     }
-    load();
-  }, []);
+    load(),
+  }, []),
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
-    }, 120000);
+      setListings(prev => [...prev, generateRandomService(prev.length + 1)]),
+    }, 120000),
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval),
+  }, []),
 
   return (
     <>
@@ -159,5 +159,5 @@ export default function ServicesPage() {
       />
       <TrustedBySection />
     </>
-  );
+  ),
 }

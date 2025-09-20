@@ -1,35 +1,35 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 </motion.div>}
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-,;
-    { icon: Zap, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };
-  ];
-}) => {;
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+,
+    { icon: Zap, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" },
+  ],
+}) => {,
+  const [currentFeature, setCurrentFeature] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true) ;
+    setIsVisible(true) ,
 
-    const interval = setInterval(() => {;
-      setCurrentFeature((prev) => (prev + 1) % features.length) ;
-    }, 3000) ;
+    const interval = setInterval(() => {,
+      setCurrentFeature((prev) => (prev + 1) % features.length) ,
+    }, 3000) ,
 =======
   useEffect(() => {
-    setIsVisible(true) ;
+    setIsVisible(true) ,
 
-      setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;
+      setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ,
 
-    return () => clearInterval(interval)}, [features.length]);
+    return () => clearInterval(interval)}, [features.length]),
 
-    // // // // // // // // console.log('Hero CTA clicked');
+    // // // // // // // // console.log('Hero CTA clicked'),
   
-    // Analytics tracking could be added here;
-    // console.log('Hero CTA clicked')}, []);
+    // Analytics tracking could be added here,
+    // console.log('Hero CTA clicked')}, []),
 
   const containerVariants = {
 
@@ -39,22 +39,22 @@ export default function Page() {
 },
     visible: {
 
-      opacity: 1,;      y: 0,;
+      opacity: 1,      y: 0,
       transition: {
-        duration: 0.8,;
-        staggerChildren: 0.2}}};
+        duration: 0.8,
+        staggerChildren: 0.2}}},
 
-  ;
-  y: 30 ;
-;
-},;
-    visible: { opacity: 1, y: 0 }};
+  ,
+  y: 30 ,
 
-  ;
-  scale: 0.8 ;
-;
-},;
-    visible: { opacity: 1, scale: 1 }};
+},
+    visible: { opacity: 1, y: 0 }},
+
+  ,
+  scale: 0.8 ,
+
+},
+    visible: { opacity: 1, scale: 1 }},
 
   return ("
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -135,7 +135,7 @@ export default function Page() {
               <p className="text-gray-300 text-sm">
                 Cutting-edge solutions for modern businesses
               </p>
-            </motion.div>;) ) }
+            </motion.div>,) ) }
         </motion.div>
 
         {/* Stats */}
@@ -143,7 +143,7 @@ export default function Page() {
           className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto"
           variants={itemVariants}
 "
-          <div className="text-center">;"
+          <div className="text-center">,"
             <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>"
             <div className="text-gray-400">Happy Clients</div>
           </div>"
@@ -195,7 +195,7 @@ export default function Page() {
             ease: "easeInOut",
   delay: 1
 
-;
-;
-;
+,
+,
+,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

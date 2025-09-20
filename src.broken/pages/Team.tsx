@@ -1,5 +1,5 @@
-import React from 'react';
-export default Team;
+import React from 'react',
+export default Team,
 
 const Team: React.FC = () => (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify -center">
     <div className="text-center text-white">
@@ -7,4 +7,4 @@ const Team: React.FC = () => (<div className="min - h-screen bg-gradient - to - 
       <p className="text-xl text-gray -300">
         Meet the people behind Zion Tech Group.</p>
     </div>
-  </div>) ;
+  </div>) ,

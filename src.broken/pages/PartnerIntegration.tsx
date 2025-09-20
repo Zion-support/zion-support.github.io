@@ -1,41 +1,41 @@
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
 import {
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage
+} from "@/components/ui/form",
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useForm, ControllerRenderProps } from "react-hook-form"; // Added ControllerRenderProps
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+  SelectValue
+} from "@/components/ui/select",
+import { useForm, ControllerRenderProps } from "react-hook-form", // Added ControllerRenderProps
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
 
 const schema = z.object({
   name: z.string().min(2, "Required"),
   entityType: z.string().min(1, "Required"),
   contact: z.string().email("Enter a valid email"),
   useCase: z.string().min(1, "Required"),
-  message: z.string().optional(),
-});
+  message: z.string().optional()
+}),
 
-type FormValues = z.infer<typeof schema>;
+type FormValues = z.infer<typeof schema>,
 
 export default function PartnerIntegration() {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false),
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -43,14 +43,14 @@ export default function PartnerIntegration() {
       entityType: "",
       contact: "",
       useCase: "",
-      message: "",
-    },
-  });
+      message: ""
+    }
+  }),
 
   const onSubmit = (values: FormValues) => {
-    console.log("Partner API request", values);
-    setSubmitted(true);
-  };
+    console.log("Partner API request", values),
+    setSubmitted(true),
+  },
 
   return (
     <>
@@ -195,5 +195,5 @@ export default function PartnerIntegration() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }

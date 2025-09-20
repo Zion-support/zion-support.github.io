@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { SEO } from '@/components / SEO';
+import React, { useState, useEffect } from 'react',
+import { SEO } from '@/components / SEO',
 
 export default function Page() {
-) ;
+) ,
 
-  const togglePlay = () => setIsPlaying(!isPlaying) ;
-  const toggleMute = () => setVolume(volume > 0 ? 0 : 0.5) ;
+  const togglePlay = () => setIsPlaying(!isPlaying) ,
+  const toggleMute = () => setVolume(volume > 0 ? 0 : 0.5) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 relative overflow-hidden">
       {/* Animated Background */}
@@ -25,16 +25,16 @@ export default function Page() {
             animate={{
               x: [0, 100, 0],
               y: [0, -100, 0],
-              opacity: [0.2, 0.8, 0.2],
+              opacity: [0.2, 0.8, 0.2]
             }}
             transition={{
               duration: Math.random () * 10 + 10,
               repeat: Infinity,
-              delay: Math.random () * 5,
+              delay: Math.random () * 5
             }}
             style={{
               left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`
             }}
           />) ) }
       </div>
@@ -105,7 +105,7 @@ export default function Page() {
               {[{ icon: Users, value: '1,200+', label: 'Active Customers' },
                 { icon: Star, value: '4.9 / 5', label: 'Average Rating' },
                 { icon: TrendingUp, value: '45%', label: 'Cost Reduction' },
-                { icon: Zap, value: '24 / 7', label: 'AI Operations' },
+                { icon: Zap, value: '24 / 7', label: 'AI Operations' }
               ].map((stat, index) => (<div  key={index} className="text-center">
                   <div  className="inline - flex items - center justify - center w-16 h-16 bg-gradient - to - r from - purple - 600 to - pink - 600 rounded-full mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
@@ -348,7 +348,7 @@ export default function Page() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray - 300 mb-8">
@@ -375,50 +375,50 @@ export default function Page() {
 
       <style jsx>{`
         .animate - blob {
-          animation: blob 7s infinite;
+          animation: blob 7s infinite
         }
         .animation - delay - 2000 {
-          animation - delay: 2s;
+          animation - delay: 2s
         }
         .animation - delay - 4000 {
-          animation - delay: 4s;
+          animation - delay: 4s
         }
         @keyframes blob {
           0% {
-            transform: translate(0px, 0px) scale(1) ;
+            transform: translate(0px, 0px) scale(1) ,
           }
           33% {
-            transform: translate(30px, -50px) scale(1.1) ;
+            transform: translate(30px, -50px) scale(1.1) ,
           }
           66% {
-            transform: translate(-20px, 20px) scale(0.9) ;
+            transform: translate(-20px, 20px) scale(0.9) ,
           }
           100% {
-            transform: translate(0px, 0px) scale(1) ;
+            transform: translate(0px, 0px) scale(1) ,
           }
         }
         .line - clamp - 3 {
-          display: -webkit - box;
-          -webkit - line - clamp: 3;
-          -webkit - box - orient: vertical;
-          overflow: hidden;
+          display: -webkit - box,
+          -webkit - line - clamp: 3,
+          -webkit - box - orient: vertical,
+          overflow: hidden
         }
-        .slider::-webkit - slider - thumb {
-          appearance: none;
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #8b5cf6;
-          cursor: pointer;
+        .slider: :-webkit - slider - thumb {
+          appearance: none,
+          height: 20px,
+          width: 20px,
+          border-radius: 50%,
+          background: #8b5cf6,
+          cursor: pointer
         }
-        .slider::-moz - range - thumb {
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #8b5cf6;
-          cursor: pointer;
-          border: none;
+        .slider: :-moz - range - thumb {
+          height: 20px,
+          width: 20px,
+          border-radius: 50%,
+          background: #8b5cf6,
+          cursor: pointer,
+          border: none
         }
       `}</style>
-    </div>) ;
+    </div>) ,
 }

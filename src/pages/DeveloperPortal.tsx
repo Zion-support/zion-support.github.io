@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import SEO from "../components/SEO";
+import { motion } from "framer-motion";
 import {
   Code,
   BookOpen,
@@ -32,90 +32,50 @@ import {
   Target,
   Award,
   Lightbulb
-} from 'lucide-react';
-
+} from "lucide-react";
 const DeveloperPortal: React.FC = () => {
   const tools = [
     {
-      icon: Code,
-      title: 'Code Examples',
-      description: 'Ready-to-use code snippets in multiple languages',
-      category: 'Development'
-    },
+      icon: Code,title: 'Code Examples',description: 'Ready-to-use code snippets in multiple languages',category: 'Development'
+    };
     {
-      icon: Terminal,
-      title: 'API Playground',
-      description: 'Test APIs directly in your browser',
-      category: 'Testing'
-    },
+      icon: Terminal,title: 'API Playground',description: 'Test APIs directly in your browser',category: 'Testing'
+    };
     {
-      icon: BookOpen,
-      title: 'Documentation',
-      description: 'Comprehensive guides and tutorials',
-      category: 'Learning'
-    },
+      icon: BookOpen,title: 'Documentation',description: 'Comprehensive guides and tutorials',category: 'Learning'
+    };
     {
-      icon: Download,
-      title: 'SDKs & Libraries',
-      description: 'Official client libraries for all platforms',
-      category: 'Integration'
+      icon: Download,title: 'SDKs & Libraries',description: 'Official client libraries for all platforms',category: 'Integration'
     }
   ];
-
   const resources = [
     {
-      title: 'Getting Started Guide',
-      description: 'Quick start tutorial for new developers',
-      icon: '🚀',
-      difficulty: 'Beginner'
-    },
+      title: 'Getting Started Guide',description: 'Quick start tutorial for new developers',icon: '🚀',difficulty: 'Beginner'
+    };
     {
-      title: 'API Reference',
-      description: 'Complete endpoint documentation',
-      icon: '📚',
-      difficulty: 'All Levels'
-    },
+      title: 'API Reference',description: 'Complete endpoint documentation',icon: '📚',difficulty: 'All Levels'
+    };
     {
-      title: 'Best Practices',
-      description: 'Development guidelines and patterns',
-      icon: '⭐',
-      difficulty: 'Intermediate'
-    },
+      title: 'Best Practices',description: 'Development guidelines and patterns',icon: '⭐',difficulty: 'Intermediate'
+    };
     {
-      title: 'Code Samples',
-      description: 'Real-world implementation examples',
-      icon: '💻',
-      difficulty: 'All Levels'
+      title: 'Code Samples',description: 'Real-world implementation examples',icon: '💻',difficulty: 'All Levels'
     }
   ];
-
   const community = [
     {
-      name: 'Developer Forum',
-      description: 'Get help from our community',
-      members: '2.5K+',
-      icon: '💬'
-    },
+      name: 'Developer Forum',description: 'Get help from our community',members: '2.5K+',icon: '💬'
+    };
     {
-      name: 'GitHub Discussions',
-      description: 'Open source collaboration',
-      members: '1.8K+',
-      icon: '🐙'
-    },
+      name: 'GitHub Discussions',description: 'Open source collaboration',members: '1.8K+',icon: '🐙'
+    };
     {
-      name: 'Discord Server',
-      description: 'Real-time developer chat',
-      members: '3.2K+',
-      icon: '🎮'
-    },
+      name: 'Discord Server',description: 'Real-time developer chat',members: '3.2K+',icon: '🎮'
+    };
     {
-      name: 'Stack Overflow',
-      description: 'Q&A platform integration',
-      members: '5K+',
-      icon: '📝'
+      name: 'Stack Overflow',description: 'Q&A platform integration',members: '5K+',icon: '📝'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -430,7 +390,7 @@ const DeveloperPortal: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Build Something Amazing?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -449,7 +409,6 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default DeveloperPortal;

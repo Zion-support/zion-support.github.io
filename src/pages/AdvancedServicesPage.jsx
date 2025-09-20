@@ -1,36 +1,35 @@
-import React, { useState } from 'react';
-import { ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/advancedServices';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/Input';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import SEO from '@/components/SEO';
+import React, { useState } from "react";
+import { ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/advancedServices";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/Input";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from "lucide-react";
+import SEO from "@/components/SEO";
 export default function AdvancedServicesPage() {
-    const [searchQuery, setSearchQuery] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [sortBy, setSortBy] = useState('featured');
+    const [searchQuery, setSearchQuery] = useState(''),
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [sortBy, setSortBy] = useState('featured'),
     // Filter services based on search and category
     const filteredServices = ADVANCED_SERVICES.filter(service => {
         const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        return matchesSearch && matchesCategory;
-    });
+            service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+        return matchesSearch && matchesCategory,
+    }),
     // Sort services
     const sortedServices = [...filteredServices].sort((a, b) => {
         switch (sortBy) {
             case 'price-low':
-                return (a.price || 0) - (b.price || 0);
+                return (a.price || 0) - (b.price || 0),
             case 'price-high':
                 return (b.price || 0) - (a.price || 0);
             case 'rating':
                 return (b.rating || 0) - (a.rating || 0);
             case 'ai-score':
                 return (b.aiScore || 0) - (a.aiScore || 0);
-            default:
-                return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+            default: return (b.featured ? 1 : 0) - (a.featured ? 1 : 0)
         }
     });
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
@@ -252,14 +251,14 @@ export default function AdvancedServicesPage() {
           <div className="text-zion-slate-light">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">
-              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1">
+              <a href="https: //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1">
                 ziontechgroup.com <ExternalLink className="w-4 h-4"/>
               </a>
             </p>
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 }
 // Service Card Component
 function ServiceCard({ service }) {
@@ -323,7 +322,7 @@ function ServiceCard({ service }) {
         
         {/* CTA Buttons */}
         <div className="flex gap-2">
-          <Button className="flex-1 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
+          <Button className="flex-1 bg-zion-cyan hover: bg-zion-cyan-dark text-zion-blue font-semibold">
             Get Quote
           </Button>
           <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
@@ -331,5 +330,5 @@ function ServiceCard({ service }) {
           </Button>
         </div>
       </CardContent>
-    </Card>);
+    </Card>)
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function AIAutonomousBusinessOperationsPage() {
 	return (
@@ -51,7 +51,7 @@ export default function AIAutonomousBusinessOperationsPage() {
 						</div>
 						<div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
 							<h3 className="text-xl font-semibold mb-2">Pricing</h3>
-							<p className="text-slate-300">Starter from $1,500/month; Growth $4,000–$12,000/month; Enterprise custom. See <a className="text-cyan-400 underline" href="/market-pricing">market benchmarks</a>.</p>
+							<p className="text-slate-300">Starter from $1,500/month, Growth $4,000–$12,000/month, Enterprise custom. See <a className="text-cyan-400 underline" href="/market-pricing">market benchmarks</a>.</p>
 						</div>
 						<div className="bg-black/30 rounded-2xl border border-pink-500/30 p-6">
 							<h3 className="text-xl font-semibold mb-2">References</h3>
@@ -71,5 +71,5 @@ export default function AIAutonomousBusinessOperationsPage() {
 				</div>
 			</div>
 		</>
-	);
+	)
 }

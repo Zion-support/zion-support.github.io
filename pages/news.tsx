@@ -67,7 +67,7 @@ export default function News() {
 		}
 	]
 
-	const categories = ['All', 'Product Launch', 'Company News', 'Industry Insights', 'Customer Success', 'Security']
+	const categories = ['AllProduct Launch', 'Company NewsIndustry Insights', 'Customer SuccessSecurity']
 
 	return (
 		<>

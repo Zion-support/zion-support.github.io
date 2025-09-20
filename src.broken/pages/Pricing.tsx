@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 const Pricing: React.FC = () => {
   return (
@@ -93,7 +93,7 @@ const Pricing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default Pricing;
+export default Pricing,

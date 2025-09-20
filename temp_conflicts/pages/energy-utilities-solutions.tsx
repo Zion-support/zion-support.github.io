@@ -1,17 +1,17 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import React from 'react',
+import Head from 'next/head',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>
-);
+),
 
 export default function EnergyUtilitiesSolutionsPage() {
 	return (
@@ -86,5 +86,5 @@ export default function EnergyUtilitiesSolutionsPage() {
 				</div>
 			</div>
 		</UltraAdvancedFuturisticBackground>
-	);
+	),
 }

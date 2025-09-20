@@ -1,35 +1,35 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-,;
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
-];
+,
+  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },
+  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },
+  { id: 'industry-insights', label: 'Industry Insights', icon: Zap },
+],
 
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
-  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
-      console.log('Newsletter subscription: ', formData) ;
+  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },
+  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },
+  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' },
+      console.log('Newsletter subscription: ', formData) ,
 
-      setStatus('success') ;
+      setStatus('success') ,
     }
         setStatus('idle')}, 3000)} catch(error) {
 
-      setStatus('error');
+      setStatus('error'),
     }
-  };
+  },
 
 =======
-];
+],
 
   '
-  const [status, setStatus] = useState<any>('idle');
-  const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
+  const [status, setStatus] = useState<any>('idle'),
+  const [errors, setErrors] = useState<Partial<NewsletterFormData>>({}),
 
-    const newErrors: Partial < NewsletterFormData> = {};
+    const newErrors: Partial < NewsletterFormData> = {},
     if(!formData.email) {
 
       newErrors.email = 'Email is required'} else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
@@ -40,25 +40,25 @@ export default function Page() {
 
       newErrors.firstName = 'First name is required'}
 
-    if(formData.interests.length = == 0) {;
+    if(formData.interests.length = == 0) {,
       newErrors.interests = 'Please select at least one interest'}
-    setErrors(newErrors) ;
-    return Object.keys(newErrors) .length === 0};
+    setErrors(newErrors) ,
+    return Object.keys(newErrors) .length === 0},
 
       return}
 
-    setStatus('loading');
+    setStatus('loading'),
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 2000) ) ,
 
       // Here you would typically send the data to your newsletter service'
-      // // // // // // // // console.log('Newsletter subscription:', formData);
+      // // // // // // // // console.log('Newsletter subscription:', formData),
 
-      // console.log('Newsletter subscription: ', formData);
+      // console.log('Newsletter subscription: ', formData),
       '
-      setStatus('success');
+      setStatus('success'),
 
       // Reset form after successful submission
       setTimeout(() => {
@@ -66,26 +66,26 @@ export default function Page() {
 
           email: '',
           firstName: '',
-          interests[],;
+          interests[],
           frequency: 'monthly'
-        });
-      // // // // // // // // console.error('Newsletter subscription error:', error);
+        }),
+      // // // // // // // // console.error('Newsletter subscription error:', error),
     }'        setStatus('idle')}, 3000)} catch(error) {
 '
-      setStatus('error');'
+      setStatus('error'),'
       // console.error('Newsletter subscription error:', error)}
-  };
+  },
 
       setErrors(prev => ({ ...prev, interests: null }) ) }
-  };
+  },
 
-    setFormData(prev => ({ ...prev, [field]: value }) ) ;
+    setFormData(prev => ({ ...prev, [field]: value }) ) ,
 
     // Clear error when user starts typing
     if(errors[field]) {
 
-      setErrors(prev => ({ ...prev, [field]: null }));
-    }  };
+      setErrors(prev => ({ ...prev, [field]: null })),
+    }  },
 '
   if(status = == 'success') {
 
@@ -103,18 +103,18 @@ export default function Page() {
   scale: 1
 
 }}
-        className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
+        className="bg-gradient-to-r from-green-50 to-emerald-50 dark: from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
 "
         <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4"  />"        <h3 className="text-2xl font-bold text-green-900 dark:text-green-100 mb-2">
           Welcome to the Zion Tech Group Community!
         </h3>"
         <p className="text-green-700 dark:text-green-300 mb-4">
           Thank you for subscribing to our newsletter.You'll receive our next update in your inbox.</p>"
-        <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;"
-          <Mail className="h-4 w-4"  />;
-          <span>Check your email for a confirmation message</span>;
-        </div>;
-      </motion.div>;) }
+        <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">,"
+          <Mail className="h-4 w-4"  />,
+          <span>Check your email for a confirmation message</span>,
+        </div>,
+      </motion.div>,) }
   return ("
     <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">"
       <div className="text-center mb-8">
@@ -243,11 +243,11 @@ export default function Page() {
 
         {/* Interests Selection */}
         <div>"
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
-            Areas of Interest * (Select all that apply);
-          </label>;"
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
-            {interests.map((interest) => {;
+          <label className="block text-sm font-medium text-slate-700 dark: text-slate-300 mb-3">,
+            Areas of Interest * (Select all that apply),
+          </label>,"
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">,
+            {interests.map((interest) => {,
 
               return ()                <motion.button
                   key = {interest.id}"
@@ -258,10 +258,10 @@ export default function Page() {
                       : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`
                   }`}
                   whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }};
-                >;'`
-                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`}  />;"                  <span className="text-sm font-medium">{interest.label}</span>;
-                </motion.button>;
+                  whileTap={{ scale: 0.98 }},
+                >,'`
+                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`}  />,"                  <span className="text-sm font-medium">{interest.label}</span>,
+                </motion.button>,
               )})}
           </div>
           {errors.interests && ("
@@ -309,7 +309,7 @@ export default function Page() {
                 }`}>
                   {freq.description}
                 </span>
-              </label>;) ) }
+              </label>,) ) }
           </div>
         </div>
 
@@ -336,8 +336,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
         </motion.button>
 
         {/* Error Message */}
-        {status === 'error' && (
-          <motion.div
+        {status === 'error' && (<motion.div
             initial = {
 
   { opacity: 0,
@@ -350,18 +349,18 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
   y: 0
 
 }}"
-            className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
+            className="p-4 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
 "
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">"
               <AlertCircle className="h-4 w-4"  />              Something went wrong.Please try again later.</p>
-          </motion.div>;) }
+          </motion.div>) }
 
         {/* Privacy Notice */}"
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
-          By subscribing, you agree to receive marketing emails from Zion Tech Group.;
-          You can unsubscribe at any time.We respect your privacy and will never share your information.;
-        </p>;
-      </motion.form>;
-    </div>;) };
+          By subscribing, you agree to receive marketing emails from Zion Tech Group.,
+          You can unsubscribe at any time.We respect your privacy and will never share your information.,
+        </p>,
+      </motion.form>,
+    </div>,) },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

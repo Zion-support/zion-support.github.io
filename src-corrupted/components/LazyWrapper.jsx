@@ -1,1 +1,1 @@
-export default LazyWrapper;
+export default LazyWrapper,

@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Shield, 
+  Shield,
   Brain, 
   Eye, 
   Lock, 
@@ -23,59 +23,37 @@ import {
   Fingerprint,
   Key,
   Search
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function AICybersecurity() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Threat Detection",
-      description: "Advanced machine learning algorithms that identify and respond to threats in real-time"
-    },
+      icon: Brain,title: "AI-Powered Threat Detection",description: "Advanced machine learning algorithms that identify and respond to threats in real-time"
+    };
     {
-      icon: Shield,
-      title: "Intelligent Security",
-      description: "Automated security responses and proactive threat prevention"
-    },
+      icon: Shield,title: "Intelligent Security",description: "Automated security responses and proactive threat prevention"
+    };
     {
-      icon: Eye,
-      title: "Continuous Monitoring",
-      description: "24/7 surveillance of your digital infrastructure with AI-driven insights"
-    },
+      icon: Eye,title: "Continuous Monitoring",description: "24/7 surveillance of your digital infrastructure with AI-driven insights"
+    };
     {
-      icon: Lock,
-      title: "Zero-Trust Security",
-      description: "Comprehensive security framework with AI-enhanced authentication and access control"
+      icon: Lock,title: "Zero-Trust Security",description: "Comprehensive security framework with AI-enhanced authentication and access control"
     }
   ];
-
   const services = [
     {
-      title: "Threat Intelligence",
-      description: "AI-powered analysis of global threat landscapes and predictive security insights",
-      icon: Target,
-      features: ["Real-time threat feeds", "Predictive analytics", "Global threat monitoring"]
+      title: "Threat Intelligence",description: "AI-powered analysis of global threat landscapes and predictive security insights",icon: Target,features: ["Real-time threat feeds", "Predictive analytics", "Global threat monitoring"]
     },
     {
-      title: "Incident Response",
-      description: "Automated incident detection and response with AI-driven decision making",
-      icon: AlertTriangle,
-      features: ["Instant threat detection", "Automated response", "Incident analysis"]
+      title: "Incident Response",description: "Automated incident detection and response with AI-driven decision making",icon: AlertTriangle,features: ["Instant threat detection", "Automated response", "Incident analysis"]
     },
     {
-      title: "Vulnerability Assessment",
-      description: "Continuous scanning and AI-powered vulnerability identification and remediation",
-      icon: Search,
-      features: ["Automated scanning", "Risk prioritization", "Remediation guidance"]
+      title: "Vulnerability Assessment",description: "Continuous scanning and AI-powered vulnerability identification and remediation",icon: Search,features: ["Automated scanning", "Risk prioritization", "Remediation guidance"]
     },
     {
-      title: "Security Analytics",
-      description: "Advanced analytics and reporting for comprehensive security insights",
-      icon: TrendingUp,
-      features: ["Security dashboards", "Compliance reporting", "Performance metrics"]
+      title: "Security Analytics",description: "Advanced analytics and reporting for comprehensive security insights",icon: TrendingUp,features: ["Security dashboards", "Compliance reporting", "Performance metrics"]
     }
-  ];
+  ],
 
   const technologies = [
     "Machine Learning Algorithms",
@@ -87,7 +65,6 @@ export default function AICybersecurity() {
     "Cloud Security Posture Management",
     "Identity and Access Management (IAM)"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
@@ -279,7 +256,7 @@ export default function AICybersecurity() {
               Don't wait for a security breach. Protect your business with AI-powered cybersecurity today.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20"
@@ -298,5 +275,5 @@ export default function AICybersecurity() {
         </div>
       </section>
     </div>
-  );
+  )
 }

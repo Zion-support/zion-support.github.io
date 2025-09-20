@@ -1,13 +1,12 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import React, { Component, ErrorInfo, ReactNode } from "react";
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: ReactNode
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
+  error?: Error
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -17,11 +16,11 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo),
   }
 
   render() {
@@ -33,13 +32,13 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+              className="bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
             >
               Reload Page
             </button>
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;

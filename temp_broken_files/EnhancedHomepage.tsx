@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
-  ArrowRight;
-  TrendingUp;
-  Brain;
-  Shield;
-  Rocket;
-  Atom;
-  Sparkles;
-  Building;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowUpRight,
-} from 'lucide-react';
-import Head from 'next/head';
+  ArrowRight,
+  TrendingUp,
+  Brain,
+  Shield,
+  Rocket,
+  Atom,
+  Sparkles,
+  Building,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowUpRight
+} from 'lucide-react',
+import Head from 'next/head',
 // Import our enhanced components,
-import EnhancedServiceCard from './ui/EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
+import EnhancedServiceCard from './ui/EnhancedServiceCard',
+import PerformanceMonitor from './PerformanceMonitor',
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground',
 // Import service data,
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
+import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
+import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services',
+import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas',
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3',
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3',
+import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services',
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services',
 const EnhancedHomepage: React.FC = () => {,
   return (,
     <>,
@@ -40,7 +40,7 @@ const EnhancedHomepage: React.FC = () => {,
         <meta property="og:url" content="https://ziontechgroup.com" />,
         <meta property="og:type" content="website" />,
         <link rel="canonical" href="https://ziontechgroup.com" />,
-        {/* Performance and SEO Meta Tags */,}
+        {/* Performance and SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />,
         <meta name="theme-color" content="#00d4ff" />,
         <meta name="robots" content="index, follow" />,
@@ -58,7 +58,7 @@ const EnhancedHomepage: React.FC = () => {,
           className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20",
         >,
           <div className="relative z-10 text-center max-w-6xl mx-auto">,
-            {/* Main Heading */,}
+            {/* Main Heading */}
             <divh1,
               className="text-5xl md: text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6",
             >,
@@ -67,7 +67,7 @@ const EnhancedHomepage: React.FC = () => {,
             <divp,
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed",
             >,
-              Pioneering the Future of Technology with Revolutionary AI Consciousness;
+              Pioneering the Future of Technology with Revolutionary AI Consciousness,
               Quantum Computing, and Autonomous Solutions,
             </divp>,
             {/* CTA Buttons */}
@@ -91,7 +91,7 @@ const EnhancedHomepage: React.FC = () => {,
                 </button>,
               </a>,
             </div>,
-            {/* Contact Information */,}
+            {/* Contact Information */}
             <div,
               className="flex flex-col sm: flex-row gap-6 justify-center items-center text-sm text-gray-400",
             >,
@@ -109,7 +109,7 @@ const EnhancedHomepage: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Floating Elements */,}
+          {/* Floating Elements */}
           <div,
             className="absolute top-20 left-10 text-cyan-400/20",
           >,
@@ -117,13 +117,13 @@ const EnhancedHomepage: React.FC = () => {,
           </div>,
           <div,
             className="absolute top-40 right-20 text-blue-400/20",
-            style={{ animationDelay: '1s' ,}}
+            style={{ animationDelay: '1s' }}
           >,
             <Brain className="w-6 h-6" />,
           </div>,
           <div,
             className="absolute bottom-40 left-20 text-purple-400/20",
-            style={{ animationDelay: '2s' ,}}
+            style={{ animationDelay: '2s' }}
           >,
             <Rocket className="w-7 h-7" />,
           </div>,
@@ -143,12 +143,12 @@ const EnhancedHomepage: React.FC = () => {,
             >,
               {categories.map((category) => (,
                 <button,
-                  key={category.id,}
+                  key={category.id}
                   onClick={() => handleCategoryChange(category.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover: scale-105 ${,
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl',
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600',}`}
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'}`}
                 >,
                   <category.icon className="inline-block w-5 h-5 mr-2" />,
                   {category.name}
@@ -173,7 +173,7 @@ const EnhancedHomepage: React.FC = () => {,
                   description={service.description}
                   category={service.category}
                   type={(service as any).type || service.category}
-                  features={service.features?.map(f => ({ name: f, description: f ,}))}
+                  features={service.features?.map(f => ({ name: f, description: f }))}
                   slug={(service as any).slug || service.id}
                   index={index}
                   isPopular={Math.random() > 0.7}
@@ -181,7 +181,7 @@ const EnhancedHomepage: React.FC = () => {,
                   rating={4.0 + Math.random() * 1.0}
                   reviewCount={Math.floor(Math.random() * 100) + 10}
                   estimatedDelivery="2-4 weeks",
-                  technologies={['AICloud', 'SecurityAutomation']}
+                  technologies={['AICloudSecurityAutomation']}
                 />,
               ))}
             </div>,
@@ -197,8 +197,7 @@ const EnhancedHomepage: React.FC = () => {,
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />,
                   </button>,
                 </a>,
-              </div>,
-            ),}
+              </div>)}
           </div>,
         </divsection>,
         {/* Featured Service Showcase */}
@@ -215,12 +214,12 @@ const EnhancedHomepage: React.FC = () => {,
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8",
             >,
                 <div,
-                  key={currentServiceIndex,}
+                  key={currentServiceIndex}
                   className="grid grid-cols-1 lg: grid-cols-2 gap-8 items-center",
                 >,
                   <div>,
                     <h3 className="text-2xl font-bold text-white mb-4">,
-                      {featuredServices[currentServiceIndex]?.name,}
+                      {featuredServices[currentServiceIndex]?.name}
                     </h3>,
                     <p className="text-gray-300 mb-6 leading-relaxed">,
                       {featuredServices[currentServiceIndex]?.description}
@@ -229,8 +228,7 @@ const EnhancedHomepage: React.FC = () => {,
                       {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (,
                         <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">,
                           {feature}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                     <a href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>,
                       <button,
@@ -256,7 +254,7 @@ const EnhancedHomepage: React.FC = () => {,
             </div>,
           </div>,
         </divsection>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <divsection,
           className="py-16 px-4 lg: px-8",
         >,
@@ -295,13 +293,12 @@ const EnhancedHomepage: React.FC = () => {,
           </div>,
         </divsection>,
       </UltraFuturisticBackground>,
-      {/* Performance Monitor */,}
+      {/* Performance Monitor */}
       <div>,
         {showPerformanceMonitor && (,
-          <PerformanceMonitor />,
-        )}
+          <PerformanceMonitor />)}
       </div>,
     </>,
-  );
-};
-export default EnhancedHomepage;
+  ),
+},
+export default EnhancedHomepage,

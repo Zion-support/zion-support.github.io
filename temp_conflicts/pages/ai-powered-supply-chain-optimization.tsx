@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Network, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredSupplyChainOptimization: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredSupplyChainOptimization: React.FC = () => {
       title: 'Multi-stakeholder Support',
       description: 'Supply chain optimization across various stakeholders and partners'
     }
-  ];
+  ],
 
   const optimizationCapabilities = [
     {
       area: 'Demand Forecasting',
-      capabilities: ['Predictive analytics', 'Seasonal patterns', 'Market trends', 'Customer behavior'],
+      capabilities: ['Predictive analyticsSeasonal patterns', 'Market trendsCustomer behavior'],
       improvement: '95% accuracy',
       forecasting: 'Advanced'
     },
     {
       area: 'Inventory Optimization',
-      capabilities: ['Stock level management', 'Reorder optimization', 'Safety stock calculation', 'ABC analysis'],
+      capabilities: ['Stock level managementReorder optimization', 'Safety stock calculationABC analysis'],
       improvement: '30% reduction',
       optimization: 'Intelligent'
     },
     {
       area: 'Route Optimization',
-      capabilities: ['Transportation planning', 'Route optimization', 'Cost minimization', 'Time optimization'],
+      capabilities: ['Transportation planningRoute optimization', 'Cost minimizationTime optimization'],
       improvement: '25% efficiency',
       routing: 'Optimal'
     },
     {
       area: 'Supplier Management',
-      capabilities: ['Supplier evaluation', 'Performance monitoring', 'Risk assessment', 'Relationship optimization'],
+      capabilities: ['Supplier evaluationPerformance monitoring', 'Risk assessmentRelationship optimization'],
       improvement: 'Comprehensive coverage',
       management: 'Strategic'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Manufacturing & Production',
       description: 'AI-powered supply chain optimization for manufacturing operations and production planning',
-      benefits: ['Production planning', 'Resource optimization', 'Cost reduction', 'Efficiency improvement']
+      benefits: ['Production planningResource optimization', 'Cost reductionEfficiency improvement']
     },
     {
       title: 'Retail & E-commerce',
       description: 'Supply chain optimization for retail operations and e-commerce fulfillment',
-      benefits: ['Inventory management', 'Fulfillment optimization', 'Cost reduction', 'Customer satisfaction']
+      benefits: ['Inventory managementFulfillment optimization', 'Cost reductionCustomer satisfaction']
     },
     {
       title: 'Logistics & Transportation',
       description: 'Transportation and logistics optimization for supply chain efficiency',
-      benefits: ['Route optimization', 'Cost reduction', 'Time optimization', 'Resource utilization']
+      benefits: ['Route optimizationCost reduction', 'Time optimizationResource utilization']
     },
     {
       title: 'Healthcare & Pharmaceuticals',
       description: 'Supply chain optimization for healthcare and pharmaceutical distribution',
-      benefits: ['Inventory management', 'Compliance optimization', 'Cost reduction', 'Patient care']
+      benefits: ['Inventory managementCompliance optimization', 'Cost reductionPatient care']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredSupplyChainOptimization: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with supply chain optimization',
       features: [
-        'Basic optimization features',
-        'Single location support',
-        'Standard forecasting',
-        'Email support',
+        'Basic optimization featuresSingle location support',
+        'Standard forecastingEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredSupplyChainOptimization: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced optimization needs',
       features: [
-        'Advanced optimization features',
-        'Multi-location support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced optimization featuresMulti-location support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time optimization'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredSupplyChainOptimization: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex optimization requirements',
       features: [
-        'Custom optimization development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom optimization developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredSupplyChainOptimization: React.FC = () => {
       position: "Logistics Director",
       company: "Advanced Transport Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredSupplyChainOptimization: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Optimize with AI-Powered Supply Chain Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredSupplyChainOptimization: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredSupplyChainOptimization;
+export default AIPoweredSupplyChainOptimization,

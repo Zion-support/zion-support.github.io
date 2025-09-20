@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Play
   Pause
@@ -27,13 +27,13 @@ import {
   Award,
   Clock,
   DollarSign
-} from 'lucide-react';
+} from 'lucide-react',
 
 const InteractiveTechDemo2028 = () => {
-  const [isPlayingsetIsPlaying] = useState(false);
-  const [currentDemosetCurrentDemo] = useState('ai-automation');
-  const [progressetProgress] = useState(0);
-  const [selectedFeaturesetSelectedFeature] = useState(0);
+  const [isPlayingsetIsPlaying] = useState(false),
+  const [currentDemosetCurrentDemo] = useState('ai-automation'),
+  const [progressetProgress] = useState(0),
+  const [selectedFeaturesetSelectedFeature] = useState(0),
 
   const demos = {
     'ai-automation': {
@@ -108,7 +108,7 @@ const InteractiveTechDemo2028 = () => {
         { label: 'Scalability'value: '1000x'change: '+200x' }
       ]
     }
-  };
+  },
 
   const features = [
     { name: 'Real-time Processing'icon: Zap },
@@ -117,26 +117,26 @@ const InteractiveTechDemo2028 = () => {
     { name: 'Security Monitoring'icon: Shield },
     { name: 'Performance Optimization'icon: Target },
     { name: 'Cost Management'icon: DollarSign }
-  ];
+  ],
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: NodeJS.Timeout,
     if (isPlaying) {
       interval = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 100) {
-            setIsPlaying(false);
-            return 0;
+            setIsPlaying(false),
+            return 0
           }
-          return prev + 1;
-        });
-      }100);
+          return prev + 1,
+        }),
+      }100),
     }
-    return () => clearInterval(interval);
-  }[isPlaying]);
+    return () => clearInterval(interval),
+  }[isPlaying]),
 
-  const currentDemoData = demos[currentDemo];
-  const currentStep = Math.floor((progress / 100) * currentDemoData.steps.length);
+  const currentDemoData = demos[currentDemo],
+  const currentStep = Math.floor((progress / 100) * currentDemoData.steps.length),
 
 const InteractiveTechDemo2028: React.FC = () => {
   return (
@@ -144,7 +144,7 @@ const InteractiveTechDemo2028: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">InteractiveTechDemo2028</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default InteractiveTechDemo2028;
+export default InteractiveTechDemo2028,

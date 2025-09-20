@@ -1,6 +1,6 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-) ) , []) ;
+) ) , []) ,
 
   return (<div  className="fixed inset - 0 overflow-hidden pointer - events -none" aria-hidden="true">
       {/* Animated grid with neon effect */}
@@ -14,7 +14,7 @@ export default function Page() {
             x: [0, 200, 0],
             y: [0, -200, 0],
             opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.2, 0.5],
+            scale: [0.5, 1.2, 0.5]
           }}
           transition={{
             duration: particle.duration,
@@ -24,17 +24,17 @@ export default function Page() {
           }}
           style={{
             left: particle.left,
-            top: particle.top,
+            top: particle.top
           }}
         />) ) }
-    </div>) ;
-}) ;
+    </div>) ,
+}) ,
 
-FuturisticBackground.displayName = 'FuturisticBackground';
+FuturisticBackground.displayName = 'FuturisticBackground',
 
 // Enhanced hero section component
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0),
 
   const heroSlides = useMemo(() => [{
       title: "AI - Powered Solutions",
@@ -60,20 +60,20 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       icon: Rocket,
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
     }
-  ], []) ;
+  ], []) ,
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
-  }, [heroSlides.length]) ;
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ,
+  }, [heroSlides.length]) ,
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
-  }, [heroSlides.length]) ;
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ,
+  }, [heroSlides.length]) ,
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000) ;
-    return () => clearInterval(interval) ;
-  }, [nextSlide]) ;
+    const interval = setInterval(nextSlide, 5000) ,
+    return () => clearInterval(interval) ,
+  }, [nextSlide]) ,
 
   return (<section className="relative min - h-screen flex items - center justify - center px-4 sm:px-6 lg:px-8 pt -20">
       <div  className="max - w-7xl mx - auto text-center">
@@ -179,10 +179,10 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           </div>
         </motion.div>
       </div>
-    </section>) ;
-}) ;
+    </section>) ,
+}) ,
 
-HeroSection.displayName = 'HeroSection';
+HeroSection.displayName = 'HeroSection',
 
 // Enhanced features section
 const FeaturesSection = React.memo(() => {
@@ -210,7 +210,7 @@ const FeaturesSection = React.memo(() => {
       description: "Custom software solutions designed for your specific needs",
       color: "from - yellow-500 to - orange - 500"
     }
-  ], []) ;
+  ], []) ,
 
   return (<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div  className="max - w-7xl mx -auto">
@@ -247,10 +247,10 @@ const FeaturesSection = React.memo(() => {
             </motion.div>) ) }
         </div>
       </div>
-    </section>) ;
-}) ;
+    </section>) ,
+}) ,
 
-FeaturesSection.displayName = 'FeaturesSection';
+FeaturesSection.displayName = 'FeaturesSection',
 
 // Enhanced stats section
 const StatsSection = React.memo(() => {
@@ -258,7 +258,7 @@ const StatsSection = React.memo(() => {
     { number: "50+", label: "Expert Team Members", icon: Users },
     { number: "99.9%", label: "Uptime Guarantee", icon: ShieldCheck },
     { number: "24 / 7", label: "Support Available", icon: Clock }
-  ], []) ;
+  ], []) ,
 
   return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - zion - slate - dark to - zion -slate">
       <div  className="max - w-7xl mx -auto">
@@ -279,10 +279,10 @@ const StatsSection = React.memo(() => {
             </motion.div>) ) }
         </div>
       </div>
-    </section>) ;
-}) ;
+    </section>) ,
+}) ,
 
-StatsSection.displayName = 'StatsSection';
+StatsSection.displayName = 'StatsSection',
 
 // Enhanced CTA section
 const CTASection = React.memo(() => {
@@ -294,7 +294,7 @@ const CTASection = React.memo(() => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray - 300 mb-8">
@@ -317,31 +317,31 @@ const CTASection = React.memo(() => {
           </div>
         </motion.div>
       </div>
-    </section>) ;
-}) ;
+    </section>) 
+}) ,
 
-CTASection.displayName = 'CTASection';
+CTASection.displayName = 'CTASection',
 
 // Main EnhancedHome component
 const EnhancedHome: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false),
 
   useEffect(() => {
-    setIsLoaded(true) ;
-  }, []) ;
+    setIsLoaded(true) ,
+  }, []) ,
 
   const handleGetStarted = useCallback(() => {
     // Scroll to services section or navigate
-    const servicesSection = document.getElementById('services') ;
+    const servicesSection = document.getElementById('services') ,
     if(servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' }) ;
+      servicesSection.scrollIntoView({ behavior: 'smooth' }) ,
     }
-  }, []) ;
+  }, []) ,
 
   if(!isLoaded) {
     return (<div  className="min - h-screen bg-zion - slate - dark flex items - center justify -center">
         <div  className="animate - spin rounded-full h-32 w-32 border-b-2 border-cyan -400"></div>
-      </div>) ;
+      </div>) ,
   }
 
   return (<>
@@ -369,5 +369,5 @@ const EnhancedHome: React.FC = () => {
           <CTASection />
         </LazyLoadWrapper>
       </div>
-    </>) ;
-};
+    </>) ,
+},

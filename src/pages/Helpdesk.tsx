@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  MessageCircle, 
+  MessageCircle,
   Users, 
   Ticket, 
   Clock, 
@@ -43,79 +43,48 @@ import {
   TrendingUp,
   PieChart,
   LineChart
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function Helpdesk() {
   const features = [
     {
-      icon: Ticket,
-      title: "Ticket Management",
-      description: "Comprehensive ticket tracking and resolution workflow",
-      color: "from-blue-500 to-cyan-500"
-    },
+      icon: Ticket,title: "Ticket Management",description: "Comprehensive ticket tracking and resolution workflow",color: "from-blue-500 to-cyan-500"
+    };
     {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Multi-agent support with role-based access control",
-      color: "from-purple-500 to-pink-500"
-    },
+      icon: Users,title: "Team Collaboration",description: "Multi-agent support with role-based access control",color: "from-purple-500 to-pink-500"
+    };
     {
-      icon: Clock,
-      title: "SLA Management",
-      description: "Service level agreement monitoring and alerts",
-      color: "from-green-500 to-emerald-500"
-    },
+      icon: Clock,title: "SLA Management",description: "Service level agreement monitoring and alerts",color: "from-green-500 to-emerald-500"
+    };
     {
-      icon: Search,
-      title: "Knowledge Base",
-      description: "Self-service portal with intelligent search",
-      color: "from-orange-500 to-red-500"
-    },
+      icon: Search,title: "Knowledge Base",description: "Self-service portal with intelligent search",color: "from-orange-500 to-red-500"
+    };
     {
-      icon: BarChart3,
-      title: "Analytics & Reporting",
-      description: "Performance metrics and customer satisfaction tracking",
-      color: "from-indigo-500 to-blue-500"
-    },
+      icon: BarChart3,title: "Analytics & Reporting",description: "Performance metrics and customer satisfaction tracking",color: "from-indigo-500 to-blue-500"
+    };
     {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security and data protection",
-      color: "from-red-500 to-pink-500"
+      icon: Shield,title: "Security & Compliance",description: "Enterprise-grade security and data protection",color: "from-red-500 to-pink-500"
     }
   ];
-
   const capabilities = [
     {
-      title: "Multi-Channel Support",
-      description: "Handle support requests across email, chat, phone, and social media",
-      icon: Globe,
-      benefits: ["Unified inbox", "Channel routing", "Response templates"]
+      title: "Multi-Channel Support",description: "Handle support requests across email, chat, phone, and social media",
+      icon: Globe,benefits: ["Unified inbox", "Channel routing", "Response templates"]
     },
     {
-      title: "AI-Powered Automation",
-      description: "Intelligent ticket routing and automated responses",
-      icon: Cpu,
-      benefits: ["Smart categorization", "Auto-assignment", "Predictive analytics"]
+      title: "AI-Powered Automation",description: "Intelligent ticket routing and automated responses",icon: Cpu,benefits: ["Smart categorization", "Auto-assignment", "Predictive analytics"]
     },
     {
-      title: "Customer Self-Service",
-      description: "Empower customers with knowledge base and FAQ systems",
-      icon: Users,
-      benefits: ["Knowledge management", "Community forums", "Video tutorials"]
+      title: "Customer Self-Service",description: "Empower customers with knowledge base and FAQ systems",icon: Users,benefits: ["Knowledge management", "Community forums", "Video tutorials"]
     },
     {
-      title: "Performance Analytics",
-      description: "Monitor team performance and customer satisfaction metrics",
-      icon: TrendingUp,
-      benefits: ["Response time tracking", "Resolution rates", "CSAT scores"]
+      title: "Performance Analytics",description: "Monitor team performance and customer satisfaction metrics",icon: TrendingUp,benefits: ["Response time tracking", "Resolution rates", "CSAT scores"]
     }
-  ];
+  ],
 
   const integrations = [
     "Slack", "Microsoft Teams", "Zendesk", "Salesforce", "Jira", 
     "ServiceNow", "HubSpot", "Intercom", "Freshdesk", "Help Scout"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -291,10 +260,10 @@ export default function Helpdesk() {
               Ready to Transform Your Support?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join the customer support revolution with Zion Tech Group. Our helpdesk platform is designed to drive efficiency, 
+              Join the customer support revolution with Zion Tech Group. Our helpdesk platform is designed to drive efficiency;
               improve customer satisfaction, and scale your support operations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
@@ -314,5 +283,5 @@ export default function Helpdesk() {
         </div>
       </section>
     </div>
-  );
+  )
 }

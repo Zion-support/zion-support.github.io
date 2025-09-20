@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const DeveloperAPITester: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -39,7 +38,7 @@ const DeveloperAPITester: React.FC = () => {
             <div className="rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
-                <li><a className="hover:underline" href="https://www.openapis.org/" target="_blank" rel="noreferrer">OpenAPI Initiative</a></li>
+                <li><a className="hover: underline" href="https://www.openapis.org/" target="_blank" rel="noreferrer">OpenAPI Initiative</a></li>
                 <li><a className="hover:underline" href="https://insomnia.rest/plugins" target="_blank" rel="noreferrer">Insomnia Plugins</a></li>
                 <li><a className="hover:underline" href="https://github.com/postmanlabs/newman" target="_blank" rel="noreferrer">Newman CLI</a></li>
               </ul>
@@ -55,8 +54,7 @@ const DeveloperAPITester: React.FC = () => {
         </section>
       </div>
     </div>
-  );
+  )
 }
 
 export default DeveloperAPITester;
-

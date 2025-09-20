@@ -4,15 +4,15 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle
-} from "@/components/ui/dialog";
-import { JobApplication } from "@/types/jobs";
-import { ApplicationScoreCard } from "../ApplicationScoreCard";
+} from "@/components/ui/dialog",
+import { JobApplication } from "@/types/jobs",
+import { ApplicationScoreCard } from "../ApplicationScoreCard",
 
 interface ScoreDialogProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  application: JobApplication | null;
-  onScoreUpdated: (updatedApplication: JobApplication) => void;
+  open: boolean,
+  onOpenChange: (open: boolean) => void,
+  application: JobApplication | null,
+  onScoreUpdated: (updatedApplication: JobApplication) => void
 }
 
 export function ScoreDialog({
@@ -35,5 +35,5 @@ export function ScoreDialog({
         )}
       </DialogContent>
     </Dialog>
-  );
+  ),
 }

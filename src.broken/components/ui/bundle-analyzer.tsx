@@ -1,42 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import React, { useState, useEffect } from 'react',
+import { useAuth } from '@/hooks/useAuth',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Progress } from '@/components/ui/progress',
 import { AlertTriangle, Package, Zap } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 interface BundleInfo {
-  totalSize: number;
-  gzippedSize: number;
-  chunkCount: number;
-  loadTime: number;
-  cacheHitRate: number;
+  totalSize: number,
+  gzippedSize: number,
+  chunkCount: number,
+  loadTime: number,
+  cacheHitRate: number
 }
 
 interface ChunkInfo {
-  name: string;
-  size: number;
-  loadTime: number;
-  cached: boolean;
+  name: string,
+  size: number,
+  loadTime: number,
+  cached: boolean
 }
 
 export function BundleAnalyzer() {
-  const { user } = useAuth(); // Hook
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null); // Moved up
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]); // Moved up
-  const [isVisible, setIsVisible] = useState(false); // Moved up
-  const [isCollecting, setIsCollecting] = useState(false); // Moved up
-  const [shouldShow, setShouldShow] = useState(false); // Moved up
+  const { user } = useAuth(), // Hook
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null), // Moved up
+  const [chunks, setChunks] = useState<ChunkInfo[]>([]), // Moved up
+  const [isVisible, setIsVisible] = useState(false), // Moved up
+  const [isCollecting, setIsCollecting] = useState(false), // Moved up
+  const [shouldShow, setShouldShow] = useState(false), // Moved up
 
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
 
   // All hooks are above this line
   if (!isAllowed) {
-    return null;
+    return null,
   }
 
   useEffect(() => {
@@ -47,93 +47,93 @@ export function BundleAnalyzer() {
     // Only show in development or when explicitly enabled
     const show =
       process.env.NODE_ENV === 'development' ||
-      localStorage.getItem('bundle-analyzer') === 'true';
+      localStorage.getItem('bundle-analyzer') === 'true',
 
-    setShouldShow(show);
+    setShouldShow(show),
 
-    if (!show) return;
+    if (!show) return,
 
-    setIsVisible(true);
-    collectBundleInfo();
-  }, [collectBundleInfo]); // Added collectBundleInfo
+    setIsVisible(true),
+    collectBundleInfo(),
+  }, [collectBundleInfo]), // Added collectBundleInfo
 
   // Wrap functions defined in component scope with useCallback if they are used in useEffect or as props
   const collectBundleInfo = React.useCallback(async () => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return,
 
-    setIsCollecting(true);
+    setIsCollecting(true),
 
     try {
-      const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+      const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[],
       const scriptEntries = resourceEntries.filter(entry => 
         entry.name.includes('/_next/static/') && 
         (entry.name.endsWith('.js') || entry.name.endsWith('.css'))
-      );
+      ),
 
-      let totalSize = 0;
-      let totalLoadTime = 0;
-      const chunkData: ChunkInfo[] = [];
+      let totalSize = 0,
+      let totalLoadTime = 0,
+      const chunkData: ChunkInfo[] = [],
 
       scriptEntries.forEach(entry => {
-        const size = entry.transferSize || entry.encodedBodySize || 0;
-        const loadTime = entry.responseEnd - entry.requestStart;
-        const cached = entry.transferSize === 0;
+        const size = entry.transferSize || entry.encodedBodySize || 0,
+        const loadTime = entry.responseEnd - entry.requestStart,
+        const cached = entry.transferSize === 0,
         
-        totalSize += size;
-        totalLoadTime += loadTime;
+        totalSize += size,
+        totalLoadTime += loadTime,
 
         chunkData.push({
           name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
           size,
           loadTime,
-          cached,
-        });
-      });
+          cached
+        }),
+      }),
 
-      const gzippedSize = totalSize * 0.7;
-      const cacheHitRate = chunkData.length > 0 ? chunkData.filter(chunk => chunk.cached).length / chunkData.length : 0;
+      const gzippedSize = totalSize * 0.7,
+      const cacheHitRate = chunkData.length > 0 ? chunkData.filter(chunk => chunk.cached).length / chunkData.length : 0,
 
       setBundleInfo({
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,
         loadTime: chunkData.length > 0 ? totalLoadTime / chunkData.length : 0,
-        cacheHitRate: cacheHitRate * 100,
-      });
+        cacheHitRate: cacheHitRate * 100
+      }),
 
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5));
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)),
     } catch (error) {
-      logError('Failed to collect bundle info:', { data: error });
+      logError('Failed to collect bundle info:', { data: error }),
     } finally {
-      setIsCollecting(false);
+      setIsCollecting(false),
     }
-  }, [setIsCollecting, setBundleInfo, setChunks]); // Dependencies for collectBundleInfo
+  }, [setIsCollecting, setBundleInfo, setChunks]), // Dependencies for collectBundleInfo
 
   const formatSize = (bytes: number): string => {
-    if (bytes === 0) return '0 B';
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-  };
+    if (bytes === 0) return '0 B',
+    const k = 1024,
+    const sizes = ['BKB', 'MBGB'],
+    const i = Math.floor(Math.log(bytes) / Math.log(k)),
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i],
+  },
 
   const getSizeColor = (size: number) => {
-    if (size < 100000) return 'bg-green-500'; // < 100KB
-    if (size < 500000) return 'bg-yellow-500'; // < 500KB
-    return 'bg-red-500'; // > 500KB
-  };
+    if (size < 100000) return 'bg-green-500', // < 100KB
+    if (size < 500000) return 'bg-yellow-500', // < 500KB
+    return 'bg-red-500', // > 500KB
+  },
 
   const toggleAnalyzer = () => {
-    const current = localStorage.getItem('bundle-analyzer') === 'true';
-    localStorage.setItem('bundle-analyzer', (!current).toString());
-    setIsVisible(!current);
+    const current = localStorage.getItem('bundle-analyzer') === 'true',
+    localStorage.setItem('bundle-analyzer', (!current).toString()),
+    setIsVisible(!current),
     if (!current) {
-      collectBundleInfo();
+      collectBundleInfo(),
     }
-  };
+  },
 
   if (!shouldShow) {
-    return null;
+    return null,
   }
 
   if (!isVisible) {
@@ -149,7 +149,7 @@ export function BundleAnalyzer() {
           Bundle Analyzer
         </Button>
       </div>
-    );
+    ),
   }
 
   return (
@@ -257,5 +257,5 @@ export function BundleAnalyzer() {
         </CardContent>
       </Card>
     </div>
-  );
+  ),
 } 

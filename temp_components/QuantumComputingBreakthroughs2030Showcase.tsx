@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Atom
   Zap
@@ -23,11 +23,11 @@ import {
   Activity,
   Lock,
   Infinity
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumComputingBreakthroughs2030Showcase = () => {
-  const [activeTabsetActiveTab] = useState('overview');
-  const [currentBreakthroughsetCurrentBreakthrough] = useState(0);
+  const [activeTabsetActiveTab] = useState('overview'),
+  const [currentBreakthroughsetCurrentBreakthrough] = useState(0),
 
   const breakthroughs = [
     {
@@ -35,10 +35,8 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
       title: 'Quantum Supremacy 2030',
       description: 'Achieving true quantum supremacy with 1000+ qubit systems that can solve problems impossible for classical computers.',
       features: [
-        '1000+ logical qubits',
-        '99.9% error correction',
-        'Real-time quantum algorithms',
-        'Exponential speedup'
+        '1000+ logical qubits99.9% error correction',
+        'Real-time quantum algorithmsExponential speedup'
       ],
       impact: 'Solve optimization problems in seconds that would take classical computers millennia',
       icon: Atom,
@@ -50,10 +48,8 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
       title: 'Quantum Internet Infrastructure',
       description: 'Global quantum communication network enabling ultra-secureinstant data transmission across the planet.',
       features: [
-        'Quantum entanglement networks',
-        'Unbreakable encryption',
-        'Instant global communication',
-        'Quantum teleportation protocols'
+        'Quantum entanglement networksUnbreakable encryption',
+        'Instant global communicationQuantum teleportation protocols'
       ],
       impact: 'Revolutionize global communication with quantum-secure networks',
       icon: Globe,
@@ -65,10 +61,8 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
       title: 'Quantum-AI Fusion Platform',
       description: 'Revolutionary integration of quantum computing with artificial intelligence for unprecedented problem-solving capabilities.',
       features: [
-        'Quantum neural networks',
-        'Quantum machine learning',
-        'Hybrid classical-quantum algorithms',
-        'Quantum optimization engines'
+        'Quantum neural networksQuantum machine learning',
+        'Hybrid classical-quantum algorithmsQuantum optimization engines'
       ],
       impact: 'Enable AI systems with quantum-enhanced intelligence and processing power',
       icon: Brain,
@@ -80,24 +74,22 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
       title: 'Universal Quantum Simulator',
       description: 'Quantum computers that can simulate any physical system with perfect accuracyrevolutionizing scientific discovery.',
       features: [
-        'Molecular simulation',
-        'Material design',
-        'Drug discovery',
-        'Climate modeling'
+        'Molecular simulationMaterial design',
+        'Drug discoveryClimate modeling'
       ],
       impact: 'Accelerate scientific breakthroughs across all fields',
       icon: Activity,
       color: 'from-orange-500 to-red-500',
       timeline: 'Q1 2030'
     }
-  ];
+  ],
 
   const quantumStats = [
     { label: 'Qubit Count'value: '1,000+'icon: Cpudescription: 'Logical qubits' },
     { label: 'Error Rate'value: '0.01%'icon: Shieldescription: 'Quantum error correction' },
     { label: 'Speed Increase'value: '10^15x'icon: Zapdescription: 'vs classical computers' },
     { label: 'Global Coverage'value: '100%'icon: Globedescription: 'Quantum internet reach' }
-  ];
+  ],
 
   const applications = [
     {
@@ -128,21 +120,21 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
       benefits: ['Portfolio optimization'Risk assessment'Fraud detection'Market prediction'],
       icon: TrendingUp
     }
-  ];
+  ],
 
   const timeline = [
     { quarter: 'Q1 2030'milestone: 'Universal Quantum Simulator Launch'status: 'completed' },
     { quarter: 'Q2 2030'milestone: 'Quantum Supremacy Achievement'status: 'in-progress' },
     { quarter: 'Q3 2030'milestone: 'Quantum-AI Fusion Platform'status: 'upcoming' },
     { quarter: 'Q4 2030'milestone: 'Global Quantum Internet'status: 'upcoming' }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBreakthrough((prev) => (prev + 1) % breakthroughs.length);
-    }6000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentBreakthrough((prev) => (prev + 1) % breakthroughs.length),
+    }6000),
+    return () => clearInterval(interval),
+  }[]),
 
 const QuantumComputingBreakthroughs2030Showcase: React.FC = () => {
   return (
@@ -150,7 +142,7 @@ const QuantumComputingBreakthroughs2030Showcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">QuantumComputingBreakthroughs2030Showcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default QuantumComputingBreakthroughs2030Showcase;
+export default QuantumComputingBreakthroughs2030Showcase,

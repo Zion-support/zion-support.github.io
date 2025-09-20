@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Trust Grid for Autonomous Agents';
+  title: 'AI 2026: Trust Grid for Autonomous Agents',
   description:,
-    'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.',
-};
+    'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.'
+},
 export default function TrustGridForAgentsPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -39,6 +39,5 @@ export default function TrustGridForAgentsPage() {,
         <Link href="/content/ai-2026-evidence-driven-ai-governance" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">Next: Evidence-Driven Governance</Link>,
         <Link href="/blog" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">More Articles</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

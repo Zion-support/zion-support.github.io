@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: LLM Evals Maturity Model';
-  description: 'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.',
-};
+  title: 'AI 2026: LLM Evals Maturity Model',
+  description: 'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.'
+},
 export default function LlmEvalsMaturityModel2026() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -22,7 +22,6 @@ export default function LlmEvalsMaturityModel2026() {,
           Establish baseline metrics, automate evals in CI, and adopt policy-driven release gating to continuously improve quality and trust.,
         </p>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

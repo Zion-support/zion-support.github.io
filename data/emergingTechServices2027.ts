@@ -1,44 +1,44 @@
 export interface EmergingTechService2027 {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
   pricing: {
-    monthly: number;
-    yearly: number;
-    custom: string;
-    currency: string;
-    pricingModel: string;
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  technologies: string[];
-  integrations: string[];
-  support: string[];
-  link: string;
-  badge: string;
-  icon: string;
-  image: string;
-  innovationLevel: string;
-  marketSize: string;
-  competitors: string[];
+    monthly: number,
+    yearly: number,
+    custom: string,
+    currency: string,
+    pricingModel: string
+  },
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  technologies: string[],
+  integrations: string[],
+  support: string[],
+  link: string,
+  badge: string,
+  icon: string,
+  image: string,
+  innovationLevel: string,
+  marketSize: string,
+  competitors: string[],
   technicalSpecs: {
-    performance: string;
-    scalability: string;
-    security: string;
-    compliance: string[];
-  };
-  roi: string;
-  estimatedDelivery: string;
+    performance: string,
+    scalability: string,
+    security: string,
+    compliance: string[]
+  },
+  roi: string,
+  estimatedDelivery: string,
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
+    phone: string,
+    email: string,
+    website: string,
+    address: string
+  },
 }
 
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
@@ -466,4 +466,4 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+],

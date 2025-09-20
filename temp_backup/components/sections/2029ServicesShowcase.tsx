@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Dna, Globe2, CheckCircle, TrendingUp } from 'lucide-react';
-import { futuristicAIServices2029 } from '../../data/2029-futuristic-ai-services';
-import { quantumInnovationServices2029 } from '../../data/2029-quantum-innovation-services';
-import { spaceInnovationServices2029 } from '../../data/2029-space-innovation-services';
-import { biotechInnovationServices2029 } from '../../data/2029-biotech-innovation-services';
-import { metaverseInnovationServices2029 } from '../../data/2029-metaverse-innovation-services';
+import React from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
+import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Dna, Globe2, CheckCircle, TrendingUp } from 'lucide-react',
+import { futuristicAIServices2029 } from '../../data/2029-futuristic-ai-services',
+import { quantumInnovationServices2029 } from '../../data/2029-quantum-innovation-services',
+import { spaceInnovationServices2029 } from '../../data/2029-space-innovation-services',
+import { biotechInnovationServices2029 } from '../../data/2029-biotech-innovation-services',
+import { metaverseInnovationServices2029 } from '../../data/2029-metaverse-innovation-services',
 
 export default function ServicesShowcase2029() {
   const categories = [
@@ -45,13 +45,13 @@ export default function ServicesShowcase2029() {
       services: metaverseInnovationServices2029,
       description: 'Next-generation digital reality with holographic communication and virtual economies'
     }
-  ];
+  ],
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">2029ServicesShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default 2029ServicesShowcase;
+  ),
+},
+export default 2029ServicesShowcase,

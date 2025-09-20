@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
   {
@@ -7,7 +7,7 @@ export default function Page() {
     answer:
       'Our cloud services include cloud migration, infrastructure as code, container orchestration, serverless computing, multi - cloud strategy, and cloud security implementation.',
     category: 'Cloud',
-    icon: Cloud,
+    icon: Cloud
   },
   {
     id: 'pricing',
@@ -15,7 +15,7 @@ export default function Page() {
     answer:
       'We offer flexible pricing models including project - based pricing, subscription plans, and custom enterprise solutions.Contact us for a personalized quote based on your specific needs.',
     category: 'General',
-    icon: Zap,
+    icon: Zap
   },
   {
     id: 'support',
@@ -23,7 +23,7 @@ export default function Page() {
     answer:
       'We offer 24 / 7 technical support, dedicated account managers, comprehensive documentation, training programs, and ongoing maintenance and updates.',
     category: 'Support',
-    icon: HelpCircle,
+    icon: HelpCircle
   },
   {
     id: 'implementation',
@@ -31,7 +31,7 @@ export default function Page() {
     answer:
       'Implementation timelines vary based on project complexity.Simple solutions can be deployed in weeks, while complex enterprise systems may take several months.We provide detailed project timelines during planning.',
     category: 'General',
-    icon: Zap,
+    icon: Zap
   },
   {
     id: 'customization',
@@ -39,7 +39,7 @@ export default function Page() {
     answer:
       'Absolutely ! We specialize in custom development and can tailor any solution to meet your unique business requirements, industry standards, and compliance needs.',
     category: 'General',
-    icon: Zap,
+    icon: Zap
   },
   {
     id: 'maintenance',
@@ -47,7 +47,7 @@ export default function Page() {
     answer:
       'Yes, we offer comprehensive maintenance packages including regular updates, security patches, performance monitoring, and continuous improvement of your solutions.',
     category: 'Support',
-    icon: HelpCircle,
+    icon: HelpCircle
   },
   {
     id: 'quantum - computing',
@@ -55,7 +55,7 @@ export default function Page() {
     answer:
       'Our quantum computing services include quantum algorithm development, quantum machine learning, quantum cryptography, quantum simulation, and quantum optimization solutions for complex problems.',
     category: 'AI Services',
-    icon: Brain,
+    icon: Brain
   },
   {
     id: 'compliance',
@@ -63,7 +63,7 @@ export default function Page() {
     answer:
       'We ensure compliance with industry standards including HIPAA, SOC 2, GDPR, and other regulatory frameworks.Our solutions are built with compliance in mind from the ground up.',
     category: 'Security',
-    icon: Shield,
+    icon: Shield
   },
   {
     id: 'scalability',
@@ -71,32 +71,29 @@ export default function Page() {
     answer:
       'All our solutions are designed with scalability in mind.We use cloud - native architectures, microservices, and containerization to ensure your systems can grow with your business needs.',
     category: 'Cloud',
-    icon: Cloud,
-  },
-];
+    icon: Cloud
+  }
+],
 
-const categories = ['All',
-  'AI Services',
-  'Security',
-  'Cloud',
-  'Support',
-  'General',
-];
+const categories = ['AllAI Services',
+  'SecurityCloud',
+  'SupportGeneral'
+],
 
-  const [activeItem, setActiveItem] = useState < string | null> (null) ;
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeItem, setActiveItem] = useState < string | null> (null) ,
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   const filteredFAQs = faqData.filter(faq => {
-    const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory,
     const matchesSearch = faq.question.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-      faq.answer.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
+      faq.answer.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+    return matchesCategory && matchesSearch,
+  }) ,
 
   const toggleItem = (id: string) => {
-    setActiveItem(activeItem === id ? null : id) ;
-  };
+    setActiveItem(activeItem === id ? null : id) 
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - indigo -900">
       <div  className="container mx - auto px-4 py-24">
@@ -219,7 +216,7 @@ const categories = ['All',
               Can't find the answer you're looking for? Our team is here to
               help.Get in touch with us for personalized assistance.</p>
 
-            <div  className="grid md:grid - cols - 3 gap-6 mb-8 max - w-2xl mx -auto">
+            <div  className="grid md: grid - cols - 3 gap-6 mb-8 max - w-2xl mx -auto">
               <div  className="flex items - center justify - center space - x-3 text-gray -300">
                 <Phone className="w-5 h-5 text-cyan -400" />
                 <span>+1 302 464 0950</span>
@@ -251,5 +248,5 @@ const categories = ['All',
           </div>
         </motion.div>
       </div>
-    </div>) ;
+    </div>) 
 }

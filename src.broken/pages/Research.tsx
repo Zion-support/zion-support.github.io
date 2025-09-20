@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-export default Research;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default Research,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 6 },
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 10 },
     { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 7 },
     { id: 'quantum', name: 'Quantum Computing', icon: Cpu, count: 4 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 5 },
-  ];
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 5 }
+  ],
 
   const statuses = [{ id: 'all', name: 'All Statuses', count: 0 },
     { id: 'active', name: 'Active', count: 0 },
     { id: 'completed', name: 'Completed', count: 0 },
     { id: 'planning', name: 'Planning', count: 0 },
-    { id: 'published', name: 'Published', count: 0 },
-  ];
+    { id: 'published', name: 'Published', count: 0 }
+  ],
 
   const types = [{ id: 'all', name: 'All Types', count: 0 },
     { id: 'research', name: 'Research Papers', count: 0 },
     { id: 'patents', name: 'Patents', count: 0 },
     { id: 'prototypes', name: 'Prototypes', count: 0 },
-    { id: 'collaborations', name: 'Collaborations', count: 0 },
-  ];
+    { id: 'collaborations', name: 'Collaborations', count: 0 }
+  ],
 
   const researchProjects = [{
       id: 1,
@@ -36,10 +36,8 @@ export default function Page() {
       endDate: '2025 - 12 - 31',
       leadResearcher: 'Dr.Elena Vasquez',
       team: [
-        'Dr.Elena Vasquez',
-        'Dr.Michael Chen',
-        'Sarah Johnson',
-        'Alex Rodriguez',
+        'Dr.Elena VasquezDr.Michael Chen',
+        'Sarah JohnsonAlex Rodriguez'
       ],
       funding: 2500000,
       institution: 'MIT',
@@ -47,27 +45,24 @@ export default function Page() {
         'This research investigates the potential of quantum machine learning algorithms to solve complex financial optimization problems that are computationally intractable for classical computers.',
       methodology:
         'Hybrid quantum - classical approach using variational quantum algorithms',
-      expectedOutcomes: ['Quantum advantage demonstration',
-        'Financial model improvements',
-        'Patent applications',
+      expectedOutcomes: ['Quantum advantage demonstrationFinancial model improvements',
+        'Patent applications'
       ],
       publications: [{
           title: 'Quantum Algorithms for Portfolio Optimization',
           journal: 'Nature Quantum Information',
           year: 2024,
           doi: '10.1038 / s41534 - 024 - 00800 - 5',
-          citations: 23,
-        },
+          citations: 23
+        }
       ],
-      tags: ['Quantum Computing',
-        'Machine Learning',
-        'Finance',
-        'Optimization',
-        'Risk Assessment',
+      tags: ['Quantum ComputingMachine Learning',
+        'FinanceOptimization',
+        'Risk Assessment'
       ],
       featured: true,
       progress: 65,
-      impact: 'high',
+      impact: 'high'
     },
     {
       id: 2,
@@ -80,10 +75,8 @@ export default function Page() {
       startDate: '2023 - 06 - 01',
       endDate: '2024 - 11 - 30',
       leadResearcher: 'Dr.Sarah Chen',
-      team: ['Dr.Sarah Chen',
-        'Dr.James Wilson',
-        'Lisa Anderson',
-        'David Kim',
+      team: ['Dr.Sarah ChenDr.James Wilson',
+        'Lisa AndersonDavid Kim'
       ],
       funding: 1800000,
       institution: 'Stanford University',
@@ -91,34 +84,31 @@ export default function Page() {
         'This project addresses the critical need for privacy - preserving machine learning in healthcare by developing novel federated learning approaches.',
       methodology:
         'Differential privacy, secure multi - party computation, federated averaging',
-      expectedOutcomes: ['Privacy - preserving framework',
-        'Healthcare AI models',
-        'Open - source toolkit',
+      expectedOutcomes: ['Privacy - preserving frameworkHealthcare AI models',
+        'Open - source toolkit'
       ],
       publications: [{
           title: 'Privacy - Preserving Federated Learning in Healthcare',
           journal: 'Nature Machine Intelligence',
           year: 2024,
           doi: '10.1038 / s42256 - 024 - 00789 - 8',
-          citations: 45,
+          citations: 45
         },
         {
           title: 'Secure Multi - Party Computation for Medical Data',
           journal: 'IEEE Transactions on Medical Imaging',
           year: 2024,
           doi: '10.1109 / TMI.2024.001234',
-          citations: 18,
-        },
+          citations: 18
+        }
       ],
-      tags: ['Federated Learning',
-        'Healthcare',
-        'Privacy',
-        'AI Ethics',
-        'Medical Imaging',
+      tags: ['Federated LearningHealthcare',
+        'PrivacyAI Ethics',
+        'Medical Imaging'
       ],
       featured: true,
       progress: 100,
-      impact: 'very - high',
+      impact: 'very - high'
     },
     {
       id: 3,
@@ -131,10 +121,8 @@ export default function Page() {
       startDate: '2024 - 03 - 01',
       endDate: '2025 - 08 - 31',
       leadResearcher: 'Michael Rodriguez',
-      team: ['Michael Rodriguez',
-        'Dr.Jennifer Park',
-        'Robert Kim',
-        'Emily Watson',
+      team: ['Michael RodriguezDr.Jennifer Park',
+        'Robert KimEmily Watson'
       ],
       funding: 1200000,
       institution: 'Carnegie Mellon University',
@@ -142,27 +130,24 @@ export default function Page() {
         'This project develops and validates zero - trust security architectures for critical infrastructure and industrial IoT systems.',
       methodology:
         'Threat modeling, security architecture design, prototype development, penetration testing',
-      expectedOutcomes: ['Zero - trust framework',
-        'Security prototypes',
-        'Best practices guide',
+      expectedOutcomes: ['Zero - trust frameworkSecurity prototypes',
+        'Best practices guide'
       ],
       publications: [{
           title: 'Zero - Trust Security for Industrial IoT',
           journal: 'IEEE Security & Privacy',
           year: 2024,
           doi: '10.1109 / MSEC.2024.001234',
-          citations: 12,
-        },
+          citations: 12
+        }
       ],
-      tags: ['Zero - Trust',
-        'Industrial IoT',
-        'Cybersecurity',
-        'Critical Infrastructure',
-        'Security Architecture',
+      tags: ['Zero - TrustIndustrial IoT',
+        'CybersecurityCritical Infrastructure',
+        'Security Architecture'
       ],
       featured: false,
       progress: 40,
-      impact: 'high',
+      impact: 'high'
     },
     {
       id: 4,
@@ -175,10 +160,8 @@ export default function Page() {
       startDate: '2025 - 01 - 01',
       endDate: '2026 - 12 - 31',
       leadResearcher: 'Dr.David Thompson',
-      team: ['Dr.David Thompson',
-        'Dr.Lisa Chen',
-        'Marcus Rodriguez',
-        'Jennifer Kim',
+      team: ['Dr.David ThompsonDr.Lisa Chen',
+        'Marcus RodriguezJennifer Kim'
       ],
       funding: 3000000,
       institution: 'UC Berkeley',
@@ -186,97 +169,94 @@ export default function Page() {
         'This research focuses on creating efficient AI models that can run on edge devices in autonomous vehicles while maintaining high accuracy and reliability.',
       methodology:
         'Model compression, knowledge distillation, edge computing optimization, real - time inference',
-      expectedOutcomes: ['Edge AI framework',
-        'Autonomous vehicle models',
-        'Performance benchmarks',
+      expectedOutcomes: ['Edge AI frameworkAutonomous vehicle models',
+        'Performance benchmarks'
       ],
       publications: [],
-      tags: ['Edge Computing',
-        'Autonomous Vehicles',
-        'AI Optimization',
-        'Real - time Systems',
-        'Computer Vision',
+      tags: ['Edge ComputingAutonomous Vehicles',
+        'AI OptimizationReal - time Systems',
+        'Computer Vision'
       ],
       featured: false,
       progress: 15,
-      impact: 'medium',
-    },
-  ];
+      impact: 'medium'
+    }
+  ],
 
   const getStatusColor = (status: string) => {
     switch(status) {
       case 'active':
-        return 'bg-green - 500 / 20 text-green - 400';
+        return 'bg-green - 500 / 20 text-green - 400',
       case 'completed':
-        return 'bg-blue - 500 / 20 text-blue - 400';
+        return 'bg-blue - 500 / 20 text-blue - 400',
       case 'planning':
-        return 'bg-yellow-500 / 20 text-yellow-400';
+        return 'bg-yellow-500 / 20 text-yellow-400',
       case 'published':
-        return 'bg-purple - 500 / 20 text-purple - 400';
+        return 'bg-purple - 500 / 20 text-purple - 400',
       default:
-        return 'bg-gray - 500 / 20 text-gray - 400';
+        return 'bg-gray - 500 / 20 text-gray - 400'
     }
-  };
+  },
 
   const getImpactColor = (impact: string) => {
     switch(impact) {
       case 'very - high':
-        return 'bg-red - 500 / 20 text-red - 400';
+        return 'bg-red - 500 / 20 text-red - 400',
       case 'high':
-        return 'bg-orange - 500 / 20 text-orange - 400';
+        return 'bg-orange - 500 / 20 text-orange - 400',
       case 'medium':
-        return 'bg-yellow-500 / 20 text-yellow-400';
+        return 'bg-yellow-500 / 20 text-yellow-400',
       case 'low':
-        return 'bg-green - 500 / 20 text-green - 400';
+        return 'bg-green - 500 / 20 text-green - 400',
       default:
-        return 'bg-gray - 500 / 20 text-gray - 400';
+        return 'bg-gray - 500 / 20 text-gray - 400'
     }
-  };
+  },
 
   const getProgressColor = (progress: number) => {
-    if(progress >= 80) return 'bg-green - 500';
-    if(progress >= 60) return 'bg-blue - 500';
-    if(progress >= 40) return 'bg-yellow-500';
-    return 'bg-red - 500';
-  };
+    if(progress >= 80) return 'bg-green - 500',
+    if(progress >= 60) return 'bg-blue - 500',
+    if(progress >= 40) return 'bg-yellow-500',
+    return 'bg-red - 500'
+  },
 
   const filteredProjects = researchProjects.filter(project => {
     const matchesSearch = project.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       project.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       project.tags.some(tag =>
-        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
+        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
 
-    const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
-    const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
-    const matchesType = activeType === 'all' || project.type === activeType;
+    const matchesCategory = activeCategory === 'all' || project.category === activeCategory,
+    const matchesStatus = activeStatus === 'all' || project.status === activeStatus,
+    const matchesType = activeType === 'all' || project.type === activeType,
 
-    return matchesSearch && matchesCategory && matchesStatus && matchesType;
-  }) ;
+    return matchesSearch && matchesCategory && matchesStatus && matchesType,
+  }) ,
 
   // Update counts
   categories.forEach(cat => {
     if (cat.id === 'all') {
-      cat.count = researchProjects.length;
+      cat.count = researchProjects.length,
     } else {
-      cat.count = researchProjects.filter(project => project.category === cat.id) .length;
+      cat.count = researchProjects.filter(project => project.category === cat.id) .length,
     }
-  }) ;
+  }) ,
 
   statuses.forEach(status => {
     if (status.id === 'all') {
-      status.count = researchProjects.length;
+      status.count = researchProjects.length,
     } else {
-      status.count = researchProjects.filter(project => project.status === status.id) .length;
+      status.count = researchProjects.filter(project => project.status === status.id) .length,
     }
-  }) ;
+  }) ,
 
   types.forEach(type => {
     if (type.id === 'all') {
-      type.count = researchProjects.length;
+      type.count = researchProjects.length,
     } else {
-      type.count = researchProjects.filter(project => project.type === type.id) .length;
+      type.count = researchProjects.filter(project => project.type === type.id) .length,
     }
-  }) ;
+  }) ,
 
   return (<>
       <SEO
@@ -432,7 +412,7 @@ export default function Page() {
                       <span
                         className={`px-2 py-1 rounded-full text-xs font - medium ${getImpactColor(project.impact) }`}
                       >
-                        {project.impact.replace('-', ' ') .toUpperCase () }
+                        {project.impact.replace('- ') .toUpperCase () }
                       </span>
                     </div>
                     <div  className="flex items - center gap-2">
@@ -510,6 +490,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) ,
+},
 

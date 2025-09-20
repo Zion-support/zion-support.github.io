@@ -1,69 +1,69 @@
 <<<<<<< HEAD
-import { useNavigate  } from 'react-router-dom';
-import { useNavigate  } from 'react-router-dom';
- from 'react';
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { useDebounce } from '@/hooks / useDebounce';
- from 'framer-motion';
-import { motion, AnimatePresence  } from 'framer-motion';
+import { useNavigate  } from 'react-router-dom',
+import { useNavigate  } from 'react-router-dom',
+ from 'react',
+import React, { useState, useEffect, useRef, useCallback } from 'react',
+import { useDebounce } from '@/hooks / useDebounce',
+ from 'framer-motion',
+import { motion, AnimatePresence  } from 'framer-motion',
 
   icon?: React.ComponentType < any>}
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false),
+  const [query, setQuery] = useState(''),
 
-  const searchRef = useRef < HTMLDivElement> (null) ;
-  const inputRef = useRef < HTMLInputElement> (null) ;
-  const navigate = useNavigate () ;
+  const searchRef = useRef < HTMLDivElement> (null) ,
+  const inputRef = useRef < HTMLInputElement> (null) ,
+  const navigate = useNavigate () ,
 
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: anyKeyboardEvent) => {
       if(event.key === 'Escape') {
-        setIsOpen(false) ;
-        setSelectedIndex(-1) ;
+        setIsOpen(false) ,
+        setSelectedIndex(-1) 
       } else if(event.key === 'ArrowDown') {
-        event.preventDefault () ;
+        event.preventDefault () ,
         setSelectedIndex(prev =>
-          prev < results.length-1 ? prev + 1 : prev) ;
+          prev < results.length-1 ? prev + 1 : prev) ,
       } else if(event.key === 'ArrowUp') {
-        event.preventDefault () ;
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
+        event.preventDefault () ,
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ,
       } else if(event.key === 'Enter' && selectedIndex >= 0) {
-        event.preventDefault () ;
+        event.preventDefault () ,
     const searchResults = searchData
       .filter(item => {
-        const matchesQuery = item.title.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
-                           item.description.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
-                           item.tags.some(tag => tag.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ) ;
+        const matchesQuery = item.title.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||,
+                           item.description.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||,
+                           item.tags.some(tag => tag.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ) ,
 
-        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
-                              filters.category.length === 0 || filters.category.includes(item.category) &&;
-                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;
+        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&,
+                              filters.category.length === 0 || filters.category.includes(item.category) &&,
+                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ,
 
       }
-    };
+    },
 
-    document.addEventListener('mousedown', handleClickOutside);
-      setRecentSearches(updated);
-      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
+    document.addEventListener('mousedown', handleClickOutside),
+      setRecentSearches(updated),
+      localStorage.setItem('zion-recent-searches', JSON.stringify(updated)),
 =======
 interface SearchFilter {
-  type: string[];
-  category: string[];
+  type: string[],
+  category: string[],
   tags: string[]}
 
 interface SearchSuggestion {
-  text: string;
+  text: string,
   type: 'recent' | 'trending' | 'ai'}
 interface EnhancedSearchProps {
   // Add your props here
 
-  className?: string;
-  placeholder?: string;
-  onSearch?: (query: string) => void;
+  className?: string,
+  placeholder?: string,
+  onSearch?: (query: string) => void,
   variant?: 'default' | 'futuristic' | 'minimal'}
-;
+,
 const searchData: SearchResult[] = [// Services
   {
 
@@ -133,38 +133,38 @@ const searchData: SearchResult[] = [// Services
     tags: ['AI',Trends',2025',Business'],
     relevance: 75
 
-];
+],
 
-  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;
-  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
-  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;
-  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
+  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },
+  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },
+  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },
+  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' },
 =======
-  { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },;'
-  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;'
-  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;'
-  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;'  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
-];
+  { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },'
+  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },'
+  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },'
+  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },'  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' },
+],
 
 export function EnhancedSearch({
 
-  className = '',;
-  placeholder = 'Search for AI services, quantum solutions...',;
-  onSearch,;
-  variant = 'default'}: EnhancedSearchProps) {;
-  const [isOpen, setIsOpen] = useState(false);'  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  className = '',
+  placeholder = 'Search for AI services, quantum solutions...',
+  onSearch,
+  variant = 'default'}: EnhancedSearchProps) {,
+  const [isOpen, setIsOpen] = useState(false),'  const [query, setQuery] = useState(''),
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]),
+  const [isLoading, setIsLoading] = useState(false),
+  const [selectedIndex, setSelectedIndex] = useState(-1),
   const [filters, setFilters] = useState<SearchFilter>({
 
     type: [],
     category: [],
     tags: []
-  }) ;
-  const [showFilters, setShowFilters] = useState(false);
-  const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
+  }) ,
+  const [showFilters, setShowFilters] = useState(false),
+  const [recentSearches, setRecentSearches] = useState < string[]> ([]) ,
 
 // Mock suggestions
 const mockSuggestions: SearchSuggestion[] = ['
@@ -172,7 +172,7 @@ const mockSuggestions: SearchSuggestion[] = ['
   { text: 'Quantum machine learning', type: 'trending' },
   { text: 'Digital transformation consulting', type: 'ai' },
   { text: 'Cloud DevOps automation', type: 'trending' }
-];
+],
 
 export function EnhancedSearch({
 
@@ -182,60 +182,60 @@ export function EnhancedSearch({
   variant = 'default'
 }: EnhancedSearchProps) {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isOpen, setIsOpen] = useState(false),
+  const [query, setQuery] = useState(''),
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]),
+  const [isLoading, setIsLoading] = useState(false),
+  const [selectedIndex, setSelectedIndex] = useState(-1),
   const [filters, setFilters] = useState<SearchFilter>({
 
     type: [],
     category: [],
     tags: []
-  }) ;
+  }) ,
 
   // Handle keyboard navigation
   useEffect(() => {
     
         setSelectedIndex(-1)} else if(event.key === 'ArrowDown') {
 
-        event.preventDefault();
+        event.preventDefault(),
         setSelectedIndex(prev => 
           prev < results.length-1 ? prev + 1 : prev
         )} else if(event.key === 'ArrowUp') {
 
-        event.preventDefault();
+        event.preventDefault(),
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if(event.key === 'Enter' && selectedIndex >= 0) {
 
-        event.preventDefault();
+        event.preventDefault(),
         if(results[selectedIndex]) {
 
           handleResultClick(results[selectedIndex])}      }
-    };
+    },
 
     if(isOpen) {
 
       document.addEventListener('keydown', handleKeyDown)}
-    return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]),
   // Search functionality
   useEffect(() => {
     if(debouncedQuery.trim().length < 2) {
 
-      setResults([]);
+      setResults([]),
       return}
 
     
       .filter(item => {
 
-                           item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
-                           item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
+                           item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||,
+                           item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase())),
 
-                              filters.category.length === 0 || filters.category.includes(item.category) &&;
-                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;        
-        return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ;
+                              filters.category.length === 0 || filters.category.includes(item.category) &&,
+                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ,        
+        return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ,
 
-    setResults(searchResults) }, [debouncedQuery, filters]) ;
+    setResults(searchResults) }, [debouncedQuery, filters]) ,
 
   // Handle click outside
   useEffect(() => {
@@ -243,118 +243,118 @@ export function EnhancedSearch({
         setRecentSearches(JSON.parse (saved) ) } catch(error) {
 
         // console.error('Failed to parse recent searches:', error)}    }
-  }, []) ;
+  }, []) ,
 
   // Handle click outside
   useEffect(() => {
     
-      if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
-        setIsOpen(false) ;
-        setSelectedIndex(-1) ;
-      }    };
+      if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {,
+        setIsOpen(false) ,
+        setSelectedIndex(-1) ,
+      }    },
 '
-    document.addEventListener('mousedown', handleClickOutside);'
-    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+    document.addEventListener('mousedown', handleClickOutside),'
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
 
   // Handle keyboard navigation
   useEffect(() => {
         inputRef.current?.focus () }
-    };
+    },
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []),
 
-      // Add to recent searches;
+      // Add to recent searches,
       
-      setRecentSearches(updated);'      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
+      setRecentSearches(updated),'      localStorage.setItem('zion-recent-searches', JSON.stringify(updated)),
 
       // Navigate to search results or close search
-      setIsOpen(false);
+      setIsOpen(false),
       setQuery('')}
-  }, [recentSearches]);
+  }, [recentSearches]),
 
-    handleSearch(result.title) ;
-    router(result.url) ;
-    const handleKeyDown = (event: KeyboardEvent) => {;      if(!isOpen) return;
+    handleSearch(result.title) ,
+    router(result.url) ,
+    const handleKeyDown = (event: KeyboardEvent) => {,      if(!isOpen) return,
 
       switch(event.key) {
 
         case 'ArrowDown':
-          event.preventDefault();
-          setSelectedIndex(prev = > ;
-            prev < results.length-1 ? prev + 1 : prev;
-          );
-          break;
-        case 'ArrowUp':;
-          event.preventDefault();
-          setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-          break;
-        case 'Enter':;
-          event.preventDefault () ;
+          event.preventDefault(),
+          setSelectedIndex(prev = > ,
+            prev < results.length-1 ? prev + 1 : prev,
+          ),
+          break,
+        case 'ArrowUp':,
+          event.preventDefault(),
+          setSelectedIndex(prev => prev > 0 ? prev - 1 : -1),
+          break,
+        case 'Enter':,
+          event.preventDefault () ,
           if(selectedIndex >= 0 && results[selectedIndex]) {
 
             handleResultClick(results[selectedIndex])} else if(query.trim()) {
 
             handleSearch()}
-          break;
-        case 'Escape':;
-          setIsOpen(false) ;
-          setSelectedIndex(-1) ;
+          break,
+        case 'Escape':,
+          setIsOpen(false) ,
+          setSelectedIndex(-1) ,
           break}
-    };
+    },
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]);
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]),
 
-    if(!query.trim () ) return;
-    setIsLoading(true) ;
+    if(!query.trim () ) return,
+    setIsLoading(true) ,
 
     // Simulate API call delay
-    await new Promise(resolve => setTimeout (resolve, 300) ) ;
+    await new Promise(resolve => setTimeout (resolve, 300) ) ,
 
     // Filter search results based on query and filters
 
-                          result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
-                          result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
+                          result.description.toLowerCase () .includes(query.toLowerCase () ) ||,
+                          result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ,
 
-      const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
+      const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&, (filters.category.length === 0 || filters.category.includes(result.category) ) &&, (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ,
 
-      return matchesQuery && matchesFilters}) ;
+      return matchesQuery && matchesFilters}) ,
 
-    setIsOpen(false);
-    setQuery('')};
+    setIsOpen(false),
+    setQuery('')},
 
-    onSearch?.(suggestion.text)};
+    onSearch?.(suggestion.text)},
 
-    setFilters({ type[], category[], tags[] }) };
+    setFilters({ type[], category[], tags[] }) },
 
-setFilters(prev: > ({;
-      ...prev,;
-      [filterType]: prev[filterType].includes (value) ;
-        ? prev[filterType].filter(v => v !== value) ;
-        : [...prev[filterType], value]}) ) };
+setFilters(prev: > ({,
+      ...prev,
+      [filterType]: prev[filterType].includes (value) ,
+        ? prev[filterType].filter(v => v !== value) ,
+        : [...prev[filterType], value]}) ) },
 
-    setFilters({ type: [], category: [], tags: [] }) };
+    setFilters({ type: [], category: [], tags: [] }) },
 
-    switch(type) {;
-      case 'service': return <Code className="h-4 w-4"  />;'"
-      case 'page': return <Globe className="h-4 w-4"  />;'"
-      case 'blog': return <TrendingUp className="h-4 w-4"  />;'"
+    switch(type) {,
+      case 'service': return <Code className="h-4 w-4"  />,'"
+      case 'page': return <Globe className="h-4 w-4"  />,'"
+      case 'blog': return <TrendingUp className="h-4 w-4"  />,'"
       case 'case-study': return <Building className="h-4 w-4"  />}
-  };
+  },
 
-    setResults([]);
+    setResults([]),
 =======
 '
-    setQuery('');    setResults([]);
-    setIsOpen(false);
-    setSelectedIndex(-1)};
+    setQuery(''),    setResults([]),
+    setIsOpen(false),
+    setSelectedIndex(-1)},
 
       case 'minimal':'
-        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
+        return 'bg-white dark: bg-gray-800 border border-gray-200 dark:border-gray-700',
       default:'
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg'}
-  };
+  },
 
   return ()
     <div ref = {searchRef} className={`relative ${className}`}>`
@@ -377,16 +377,16 @@ setFilters(prev: > ({;
               <X className="w-4 h-4 text-gray-400"  />
             </button>
           )}
-        </div>;"
-      default: return <Search className="h-4 w-4"  />};
+        </div>,"
+      default: return <Search className="h-4 w-4"  />},
 
-    switch(variant) {;
-      case 'futuristic':;
-        return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover:border-purple-500/40 focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20';
+    switch(variant) {,
+      case 'futuristic':,
+        return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover: border-purple-500/40 focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20',
       case 'minimal':'
-        return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
+        return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20',
       default:'
-        return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  };
+        return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  },
 
   return ()`
     <div ref = {searchRef} className={`relative ${className}`}>
@@ -530,32 +530,32 @@ setFilters(prev: > ({;
                   {recentSearches.length > 0 && (
                     <div>"
                       <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">"
-                        <Clock className="h-4 w-4"  />                        Recent Searches;
-                      </h4>;"
-                      <div className="space-y-2">;
-                        {recentSearches.map((search, index) => (;
-                          <button;
-                            key={index};
-                            onClick={() => {;
-                              setQuery(search);
+                        <Clock className="h-4 w-4"  />                        Recent Searches,
+                      </h4>,"
+                      <div className="space-y-2">,
+                        {recentSearches.map((search, index) => (,
+                          <button,
+                            key={index},
+                            onClick={() => {,
+                              setQuery(search),
                               handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
                           >
                             {search}
                           </button>) ) }
                       </div>
-                    </div>;) }
+                    </div>,) }
 
                   {/* Popular Searches */}
                   <div>"
                     <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">"
-                      <TrendingUp className="h-4 w-4"  />                      Popular Searches;
-                    </h4>;"
-                    <div className="flex flex-wrap gap-2">;
-                      {popularSearches.map((search, index) => (;
-                        <button;
-                          key={index};
-                          onClick={() => {;
-                            setQuery(search);
+                      <TrendingUp className="h-4 w-4"  />                      Popular Searches,
+                    </h4>,"
+                    <div className="flex flex-wrap gap-2">,
+                      {popularSearches.map((search, index) => (,
+                        <button,
+                          key={index},
+                          onClick={() => {,
+                            setQuery(search),
                             handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
                         >
                           {search}
@@ -563,7 +563,7 @@ setFilters(prev: > ({;
                     </div>
                   </div>
                 </div>
-              ) : isLoading ? (;"
+              ) : isLoading ? (,"
                 <div className="p-8 text-center">"
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>"
                   <p className="text-gray-600 mt-2">Searching...</p>
@@ -610,9 +610,9 @@ setFilters(prev: > ({;
                     Try adjusting your search terms or filters
                   </p>
                 </div>) }
-            </div>;
-          </motion.div>;) };
-      </AnimatePresence>;
-    </div>;) }
+            </div>,
+          </motion.div>,) },
+      </AnimatePresence>,
+    </div>,) }
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

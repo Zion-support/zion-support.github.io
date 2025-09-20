@@ -1,53 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import { SEO } from '@/components / SEO';
+import React, { useState, useEffect } from 'react',
+import { SEO } from '@/components / SEO',
 export default function Page() {
 }}
-import { import { motion, AnimatePresence  } from 'framer-motion';
+import { import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-, [selectedCategory, searchQuery]) ;
+, [selectedCategory, searchQuery]) ,
 
   const getCategoryIcon = (category: string) => {
     switch(category) {
-      case 'Cybersecurity':;
-      pricing = pricing.filter(p => ;
-        p.serviceName.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
-        p.category.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
-        p.subcategory.toLowerCase () .includes(searchQuery.toLowerCase () ) ;) ;
+      case 'Cybersecurity':,
+      pricing = pricing.filter(p => ,
+        p.serviceName.toLowerCase () .includes(searchQuery.toLowerCase () ) ||,
+        p.category.toLowerCase () .includes(searchQuery.toLowerCase () ) ||,
+        p.subcategory.toLowerCase () .includes(searchQuery.toLowerCase () ) ,) ,
 
-    setFilteredPricing(pricing) ;
-  }, [selectedCategory, searchQuery]) ;
+    setFilteredPricing(pricing) 
+  }, [selectedCategory, searchQuery]) ,
 
-  const getCategoryIcon = (category: string) => {;
-    switch(category) {;
-      case 'Cybersecurity':;
-        return Shield;
-      case 'Data Analytics':;
-        return BarChart3;
-      case 'Cloud & DevOps':;
-        return Cloud;
-      case 'IoT & Edge Computing':;
-        return IoT;
-      case 'Financial Technology':;
-        return FinTech;
-      case 'Healthcare Technology':;
-        return Healthcare;
-      default:;
+  const getCategoryIcon = (category: string) => {,
+    switch(category) {,
+      case 'Cybersecurity':,
+        return Shield,
+      case 'Data Analytics':,
+        return BarChart3,
+      case 'Cloud & DevOps':,
+        return Cloud,
+      case 'IoT & Edge Computing':,
+        return IoT,
+      case 'Financial Technology':,
+        return FinTech,
+      case 'Healthcare Technology':,
+        return Healthcare,
+      default:,
         return Rocket}
-  };
+  },
 
         return 'from - gray - 500 to - slate - 600'}
-  };
+  },
 
         return 'bg-gray - 100 text-gray - 800'}
-  };
+  },
 
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </motion.div>;) ;
-  };
+              </a>,
+            </div>,
+          </div>,
+        </div>,
+      </motion.div>,) ,
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo - 100 dark:from - slate - 900 dark:via - slate - 800 dark:to - slate -900">
       <SEO
@@ -115,7 +115,7 @@ export default function Page() {
   delay: 0.4
 
 }}
-              className="bg-white dark:bg-slate - 800 rounded-2xl shadow-xl p - 6 inline -block"
+              className="bg-white dark: bg-slate - 800 rounded-2xl shadow-xl p - 6 inline -block"
 
               <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">
                 <div className="flex items - center space - x-3">
@@ -144,12 +144,12 @@ export default function Page() {
             </motion.div>
           </div>
         </div>
-      </div>;
+      </div>,
 
       {/* Pricing Section */}
-      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">;
+      <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-16">,
         {/* Filters and Search */}
-        <div className="bg-white dark:bg-slate - 800 rounded-2xl shadow-lg p - 6 mb-8">;
+        <div className="bg-white dark: bg-slate - 800 rounded-2xl shadow-lg p - 6 mb-8">,
           <div className="flex flex - col lg:flex - row lg:items - center lg:justify - between space - y-4 lg:space - y-0">
             {/* Search */}
             <div className="flex - 1 max - w-md">
@@ -181,7 +181,7 @@ export default function Page() {
         </div>
 
         {/* Pricing Count */}
-        <div className="mb-8">;
+        <div className="mb-8">,
           <p className="text-gray - 600 dark:text-gray -300">
             Showing {filteredPricing.length} of {ALL_EXPANDED_SERVICES_PRICING.length} pricing plans
           </p>
@@ -202,8 +202,8 @@ export default function Page() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient - to - r from - blue - 600 to - purple - 600 py-16">;
-        <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="bg-gradient - to - r from - blue - 600 to - purple - 600 py-16">,
+        <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Ready to Get Started?
           </h2>
@@ -223,9 +223,9 @@ export default function Page() {
 
               <Phone className="w-5 h-5" />
               <span > Call Sales Team</span>
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
-};
+            </a>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) 
+},

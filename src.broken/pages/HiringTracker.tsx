@@ -1,17 +1,17 @@
 
-import { useState } from "react";
-import { useRouter } from "next/router";
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useState } from "react",
+import { useRouter } from "next/router",
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Briefcase } from 'lucide-react'
 
 function HiringTrackerContent() {
-  const router = useRouter();
-  const jobId = router.query.jobId as string;
-  const [activeTab, setActiveTab] = useState<string>("kanban");
+  const router = useRouter(),
+  const jobId = router.query.jobId as string,
+  const [activeTab, setActiveTab] = useState<string>("kanban"),
 
   return (
     <>
@@ -48,7 +48,7 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
     </>
-  );
+  ),
 }
 
 export default function HiringTracker() {
@@ -56,5 +56,5 @@ export default function HiringTracker() {
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
-  );
+  ),
 }

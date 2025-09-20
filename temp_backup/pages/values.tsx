@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Target, Shield, Users, Globe, 
   Star, CheckCircle, TrendingUp, Infinity, 
   Eye, Sparkles, Clock, Zap, Heart,
   Lightbulb, Award, Lock, Rocket
-} from 'lucide-react';
+} from 'lucide-react',
 
 const ValuesPage: React.FC = () => {
   const coreValues = [
@@ -62,7 +62,7 @@ const ValuesPage: React.FC = () => {
         "Environmental impact reduction"
       ]
     }
-  ];
+  ],
 
   const additionalPrinciples = [
     {
@@ -85,14 +85,14 @@ const ValuesPage: React.FC = () => {
       title: "Creative Problem Solving",
       description: "We approach challenges with creativity and innovation, finding unique solutions to complex problems."
     }
-  ];
+  ],
 
   const impactMetrics = [
     { number: "1000+", label: "Innovations Delivered", icon: Zap },
     { number: "99.99%", label: "Client Satisfaction", icon: Star },
     { number: "200+", label: "Countries Impacted", icon: Globe },
     { number: "24/7", label: "Global Support", icon: Clock }
-  ];
+  ],
 
 const values: React.FC = () => {
   return (
@@ -109,7 +109,7 @@ const values: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default values;
+export default values,

@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -16,24 +16,24 @@ export default function Page() {
             description: "More recent touchpoints receive higher credit",
             useCase: "Long sales cycles"
 
-    ];
+    ],
     const platformFeatures = [{
             category: "Affiliate Management",
-            features["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"];
-        },;
+            features["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"],
+        },
         {
             category: "Analytics & Reporting",
-            features["Real - time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"];
-        },;
+            features["Real - time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"],
+        },
         {
             category: "Fraud Prevention",
-            features["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"];
-        },;
+            features["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"],
+        },
         {
             category: "Integration & APIs",
-            features["CRM integration", "E - commerce platforms", "Marketing tools", "Custom webhooks"];
+            features["CRM integration", "E - commerce platforms", "Marketing tools", "Custom webhooks"],
         }
-    ];
+    ],
     const benefits = [{
             title: "Increased Revenue",
             description: "Optimize affiliate performance and maximize conversions"
@@ -50,7 +50,7 @@ export default function Page() {
             title: "Data Insights",
             description: "Deep understanding of customer journey and attribution patterns"
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max - w-7xl mx -auto">
@@ -201,5 +201,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}}

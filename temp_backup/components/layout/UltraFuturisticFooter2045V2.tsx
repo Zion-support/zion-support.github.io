@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, ExternalLink,
   Brain, Atom, Shield, Rocket, Cpu, Target, Sparkles,
@@ -10,7 +10,7 @@ import {
   Cloud, Network, Settings, Users, Handshake, HelpCircle,
   Building, Briefcase, BookOpen, FileText, Video, GraduationCap,
   MessageCircle, Users as UsersIcon, Briefcase as BriefcaseIcon, Package, Search
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltraFuturisticFooter2045V2: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const UltraFuturisticFooter2045V2: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2045V2</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2045V2;
+export default UltraFuturisticFooter2045V2,

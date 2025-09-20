@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function CaseStudyPage() {
   return (
@@ -196,7 +196,7 @@ export default function CaseStudyPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['Machine Learning', 'Computer Vision', 'IoT Sensors', 'Predictive Analytics'].map((tech) => (
+                  {['Machine LearningComputer Vision', 'IoT SensorsPredictive Analytics'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-cyan-400 font-semibold">{tech}</span>
                     </div>
@@ -251,9 +251,9 @@ export default function CaseStudyPage() {
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Manufacturing?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                   This case study demonstrates the real impact of AI automation in manufacturing. 
-                  Let&apos;s discuss how we can help you achieve similar results.
+                  Let&apos,s discuss how we can help you achieve similar results.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -273,5 +273,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

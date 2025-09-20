@@ -8,7 +8,6 @@ export default function Page() {,
       <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4">,
         <p className="text-sm text-blue-200">Release Notes · 2025-09-01</p>,
       </div>,
-    </div>,
-  ),
+    </div>)
 }
 ,

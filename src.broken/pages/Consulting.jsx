@@ -1,5 +1,5 @@
-import React from 'react';
-export default Consulting;
+import React from 'react',
+export default Consulting,
 import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase const Consulting = () => {
 
     const consultingServices = [{
@@ -38,7 +38,7 @@ import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database
             description: "Emerging technology consulting and innovation acceleration",
             features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
         }
-    ];
+    ],
     const industries = [{
             title: "Financial Services",
             description: "Banking, insurance, and fintech consulting",
@@ -69,14 +69,14 @@ import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database
             description: "Public sector digital transformation consulting",
             icon: Briefcase
 
-    ];
+    ],
     const benefits = ["Expert guidance from industry professionals",
         "Proven methodologies and best practices",
         "Customized solutions for your specific needs",
         "Long - term strategic partnerships",
         "Measurable results and ROI",
         "Access to cutting - edge technology insights"
-    ];
+    ],
     const process = [{
             phase: "Discovery",
             description: "Understanding your business needs and objectives",
@@ -97,7 +97,7 @@ import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database
             description: "Executing the strategy with ongoing support and guidance",
             duration: "8 - 24 weeks"
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
       <section className="relative pt - 24 pb - 16 px-4 sm:px-6 lg:px-8">
@@ -257,5 +257,5 @@ import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}}

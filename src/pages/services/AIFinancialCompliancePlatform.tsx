@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Shield, 
+  Shield,
   FileText, 
   TrendingUp, 
   CheckCircle, 
@@ -320,159 +320,108 @@ import {
   CloudHail10,
   CloudSnow10,
   CloudSleet10
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIFinancialCompliancePlatform = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Risk Assessment',
-      description: 'Advanced machine learning algorithms identify compliance risks with 98% accuracy'
-    },
+      icon: Brain,title: 'AI-Powered Risk Assessment',description: 'Advanced machine learning algorithms identify compliance risks with 98% accuracy'
+    };
     {
-      icon: Shield,
-      title: 'Automated Compliance Monitoring',
-      description: 'Real-time monitoring of regulatory changes and automated compliance updates'
-    },
+      icon: Shield,title: 'Automated Compliance Monitoring',description: 'Real-time monitoring of regulatory changes and automated compliance updates'
+    };
     {
-      icon: FileText,
-      title: 'Intelligent Document Analysis',
-      description: 'AI-driven analysis of financial documents for compliance verification'
-    },
+      icon: FileText,title: 'Intelligent Document Analysis',description: 'AI-driven analysis of financial documents for compliance verification'
+    };
     {
-      icon: TrendingUp,
-      title: 'Predictive Compliance Analytics',
-      description: 'Forecast potential compliance issues before they become violations'
-    },
+      icon: TrendingUp,title: 'Predictive Compliance Analytics',description: 'Forecast potential compliance issues before they become violations'
+    };
     {
-      icon: Activity,
-      title: 'Real-time Audit Trails',
-      description: 'Comprehensive tracking of all compliance activities and decisions'
-    },
+      icon: Activity,title: 'Real-time Audit Trails',description: 'Comprehensive tracking of all compliance activities and decisions'
+    };
     {
-      icon: AlertTriangle,
-      title: 'Proactive Risk Alerts',
-      description: 'Instant notifications of compliance risks and regulatory changes'
+      icon: AlertTriangle,title: 'Proactive Risk Alerts',description: 'Instant notifications of compliance risks and regulatory changes'
     }
   ];
-
   const benefits = [
-    'Reduce compliance costs by 40-60%',
-    'Improve compliance accuracy by 95%',
-    'Automate 80% of routine compliance tasks',
-    'Reduce audit preparation time by 70%',
-    'Minimize regulatory fines and penalties',
-    'Ensure 24/7 regulatory compliance monitoring'
-  ];
+    'Reduce compliance costs by 40-60%Improve compliance accuracy by 95%',
+    'Automate 80% of routine compliance tasksReduce audit preparation time by 70%',
+    'Minimize regulatory fines and penaltiesEnsure 24/7 regulatory compliance monitoring'
+  ],
 
   const useCases = [
     {
-      industry: 'Banking & Financial Services',
-      description: 'Comply with Basel III, Dodd-Frank, AML/KYC, and other financial regulations'
+      industry: 'Banking & Financial Services',description: 'Comply with Basel III, Dodd-Frank, AML/KYC, and other financial regulations'
     },
     {
-      industry: 'Insurance Companies',
-      description: 'Meet Solvency II, NAIC, and state-specific insurance compliance requirements'
+      industry: 'Insurance Companies',description: 'Meet Solvency II, NAIC, and state-specific insurance compliance requirements'
     },
     {
-      industry: 'Investment Firms',
-      description: 'Ensure SEC, FINRA, and other investment advisory compliance standards'
+      industry: 'Investment Firms',description: 'Ensure SEC, FINRA, and other investment advisory compliance standards'
     },
     {
-      industry: 'Fintech Startups',
-      description: 'Navigate complex regulatory landscapes and maintain compliance as you scale'
+      industry: 'Fintech Startups',description: 'Navigate complex regulatory landscapes and maintain compliance as you scale'
     }
   ];
-
   const pricing = [
     {
-      plan: 'Starter',
-      price: '$2,200/month',
+      plan: 'Starter',price: '$2,200/month',
       features: [
-        'Up to 100 users',
-        'Basic AI risk assessment',
-        'Core compliance monitoring',
-        'Document analysis',
-        'Basic reporting',
-        'Email support'
+        'Up to 100 usersBasic AI risk assessment';
+        'Core compliance monitoringDocument analysis',
+        'Basic reportingEmail support'
       ]
     },
     {
-      plan: 'Professional',
-      price: '$4,500/month',
+      plan: 'Professional',price: '$4,500/month',
       features: [
-        'Up to 500 users',
-        'Advanced AI analytics',
-        'Multi-regulation support',
-        'Custom compliance workflows',
-        'Advanced reporting',
-        'Priority support',
+        'Up to 500 usersAdvanced AI analytics';
+        'Multi-regulation supportCustom compliance workflows',
+        'Advanced reportingPriority support',
         'API access'
       ]
     },
     {
-      plan: 'Enterprise',
-      price: '$9,000/month',
+      plan: 'Enterprise',price: '$9,000/month',
       features: [
-        'Unlimited users',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated compliance manager',
-        '24/7 phone support',
+        'Unlimited usersFull AI capabilities';
+        'Custom integrationsWhite-label options',
+        'Dedicated compliance manager24/7 phone support',
         'Custom training'
       ]
     }
-  ];
+  ],
 
   const integrations = [
-    'SAP Financials',
-    'Oracle Financials',
-    'QuickBooks Enterprise',
-    'Xero',
-    'Sage Intacct',
-    'NetSuite',
-    'Microsoft Dynamics',
-    'Salesforce',
-    'Workday',
-    'ADP',
-    'Paychex',
-    'Webhook APIs'
-  ];
+    'SAP FinancialsOracle Financials',
+    'QuickBooks EnterpriseXero',
+    'Sage IntacctNetSuite',
+    'Microsoft DynamicsSalesforce',
+    'WorkdayADP',
+    'PaychexWebhook APIs'
+  ],
 
   const keyMetrics = [
     {
-      metric: '98%',
-      label: 'Compliance Accuracy'
-    },
+      metric: '98%',label: 'Compliance Accuracy'
+    };
     {
-      metric: '60%',
-      label: 'Cost Reduction'
-    },
+      metric: '60%',label: 'Cost Reduction'
+    };
     {
-      metric: '80%',
-      label: 'Task Automation'
-    },
+      metric: '80%',label: 'Task Automation'
+    };
     {
-      metric: '70%',
-      label: 'Time Savings'
+      metric: '70%',label: 'Time Savings'
     }
   ];
-
   const regulations = [
-    'Basel III',
-    'Dodd-Frank Act',
-    'Sarbanes-Oxley (SOX)',
-    'GDPR',
-    'CCPA',
-    'PCI DSS',
-    'SOC 2',
-    'ISO 27001',
-    'FINRA Rules',
-    'SEC Regulations',
-    'AML/KYC',
-    'Anti-Money Laundering'
-  ];
+    'Basel IIIDodd-Frank Act',
+    'Sarbanes-Oxley (SOX)GDPR',
+    'CCPAPCI DSS',
+    'SOC 2ISO 27001',
+    'FINRA RulesSEC Regulations',
+    'AML/KYCAnti-Money Laundering'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -812,7 +761,7 @@ const AIFinancialCompliancePlatform = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Get in Touch
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
@@ -852,7 +801,6 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIFinancialCompliancePlatform;

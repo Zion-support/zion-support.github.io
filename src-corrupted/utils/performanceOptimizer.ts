@@ -1,6 +1,6 @@
-// performanceOptimizer utility;
+// performanceOptimizer utility,
 export const performanceOptimizer = {,
-  // Placeholder utility functions;
+  // Placeholder utility functions,
 init: () => {}
 }
-export default performanceOptimizer;
+export default performanceOptimizer,

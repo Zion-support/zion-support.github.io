@@ -1,16 +1,16 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, ShareIcon, BookmarkIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, ShareIcon, BookmarkIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'Quantum AI Revolution 2025: Enterprise Breakthrough Guide | Zion Tech Group';
-  description: 'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.';
-  keywords: ['Quantum ComputingAI Revolution', 'Enterprise TechnologyQuantum AI', 'Future Computing'];
+  title: 'Quantum AI Revolution 2025: Enterprise Breakthrough Guide | Zion Tech Group',
+  description: 'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.',
+  keywords: ['Quantum ComputingAI RevolutionEnterprise TechnologyQuantum AI', 'Future Computing'],
   openGraph: {,
-    title: 'Quantum AI Revolution 2025: Enterprise Breakthrough Guide';
-    description: 'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.';
-    images: ['/images/quantum-ai-revolution-2025.jpg'],}
-};
+    title: 'Quantum AI Revolution 2025: Enterprise Breakthrough Guide',
+    description: 'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.',
+    images: ['/images/quantum-ai-revolution-2025.jpg']}
+},
 export default function QuantumAIRevolution2025Guide() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -322,4 +322,4 @@ export default function QuantumAIRevolution2025Guide() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

@@ -1,10 +1,10 @@
 
 describe('ServicesOverview', () => {
   it('renders without crashing', () => {
-    render(<ServicesOverview  />) ;
-    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
+    render(<ServicesOverview  />) ,
+    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ,
 
   it('displays expected content', () => {
-    render(<ServicesOverview  />) ;
+    render(<ServicesOverview  />) ,
     // Add specific test assertions based on component content
-  }) }) ;
+  }) }) ,

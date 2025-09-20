@@ -9,40 +9,40 @@
             <span > FCP:</span>
             <span className={metrics.fcp <= 1800 ? 'text-green - 400' : 'text-yellow-400'}>
 =======
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
       // CLS scoring(0-100)
       if(metrics.cls !== null) {
 
-        validMetrics++;
-        if(metrics.cls <= 0.1) totalScore += 100;
-        else if(metrics.cls <= 0.25) totalScore += 50;
+        validMetrics++,
+        if(metrics.cls <= 0.1) totalScore += 100,
+        else if(metrics.cls <= 0.25) totalScore += 50,
         else totalScore += 0}
 
       // TTFB scoring(0-100)
       if(metrics.ttfb !== null) {
 
-        validMetrics++;
-        if(metrics.ttfb <= 800) totalScore += 100;
-        else if(metrics.ttfb <= 1800) totalScore += 50;
+        validMetrics++,
+        if(metrics.ttfb <= 800) totalScore += 100,
+        else if(metrics.ttfb <= 1800) totalScore += 50,
         else totalScore += 0}
 
-      return validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0};
+      return validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0},
 
-    const newScore = calculateScore () ;
-    setScore(newScore) ;
+    const newScore = calculateScore () ,
+    setScore(newScore) ,
 
     // Show component after score calculation
     if(newScore > 0) {
 
       setTimeout(() => setIsVisible(true), 1000)}
-  }, [metrics]);
+  }, [metrics]),
 
   useEffect(() => {
     // Only run in browser environment'
-    if(typeof window === 'null') return;
+    if(typeof window === 'null') return,
 
     // Performance Observer for Core Web Vitals'
     if('PerformanceObserver' in window) {
@@ -50,22 +50,22 @@ export default function Page() {
       // First Contentful Paint
       try {
 
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint'),
           if(fcpEntry) {
 
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
-        });
+        }),
         fcpObserver.observe({ entryTypes['paint'] })} catch(e) {
 
         // console.warn('FCP observer failed:', e)}
 
       // Largest Contentful Paint
       try {
-        const lastEntry = entries[entries.length-1];
+        const lastEntry = entries[entries.length-1],
           if(lastEntry) {
 
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
-        });
+        }),
         lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch(e) {
 
         // console.warn('LCP observer failed:', e)}
@@ -74,54 +74,54 @@ export default function Page() {
       try {
         const fidObserver = new PerformanceObserver((list) => {
 
-          const entries = list.getEntries();
+          const entries = list.getEntries(),
           entries.forEach((entry) => {
 
             if(entry.processingStart && entry.processingStart > 0) {
 
-              const fid = entry.processingStart - entry.startTime;
+              const fid = entry.processingStart - entry.startTime,
               setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
-          })});
+          })}),
         fidObserver.observe({ entryTypes['first-input'] })} catch(e) {
 
         // console.warn('FID observer failed:', e)}
 
       // Cumulative Layout Shift
       try {
-        const clsValue = 0;
+        const clsValue = 0,
           list.getEntries().forEach((entry) => {
 
             if(!entry.hadRecentInput) {
 
               clsValue += entry.value}
-          });
-          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
+          }),
+          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))}),
         clsObserver.observe({ entryTypes['layout-shift'] })} catch(e) {
 
         // console.warn('CLS observer failed:', e)}
     }
 
     // Time to First Byte(from navigation timing)
-    const navigationEntry = performance.getEntriesByType('navigation')[0];
+    const navigationEntry = performance.getEntriesByType('navigation')[0],
     if(navigationEntry) {
 
-      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart,
       setMetrics(prev => ({ ...prev, ttfb: Math.round (ttfb) }) ) }
-  }, []) ;
+  }, []) ,
 
-  if(!isVisible) return null;
+  if(!isVisible) return null,
 
   const getScoreColor = (score) => {
 
-    if(score >= 90) return 'text-green-400';
-    if(score >= 50) return 'text-yellow-400';
-    return 'text-red-400'};
+    if(score >= 90) return 'text-green-400',
+    if(score >= 50) return 'text-yellow-400',
+    return 'text-red-400'},
 
   const getScoreLabel = (score) => {
 
-    if(score >= 90) return 'Excellent';
-    if(score >= 50) return 'Good';
-    return 'Poor'};
+    if(score >= 90) return 'Excellent',
+    if(score >= 50) return 'Good',
+    return 'Poor'},
 
   return ()
     <motion.div
@@ -192,5 +192,5 @@ export default function Page() {
           </div>) }
       </div>
     </motion.div>
-  )};'"`
+  )},'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

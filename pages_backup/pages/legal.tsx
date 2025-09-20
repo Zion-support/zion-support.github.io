@@ -1,7 +1,7 @@
 
 ,
-import SEO from '../components/SEO';
-import Link from 'next/link';
+import SEO from '../components/SEO',
+import Link from 'next/link',
 export default function LegalPage() {,
 	return (,
 		<>,
@@ -14,12 +14,11 @@ export default function LegalPage() {,
 					<li><Link href="/cookies" className="text-cyan-400">Cookie Policy</Link></li>,
 				</ul>,
 			</div>,
-		</>,
-	),
-};
+		</>)
+},
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
 ,

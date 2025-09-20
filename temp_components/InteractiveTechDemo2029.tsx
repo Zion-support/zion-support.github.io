@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Cpu
   Brain
@@ -24,13 +24,13 @@ import {
   CheckCircle,
   AlertCircle,
   Info
-} from 'lucide-react';
+} from 'lucide-react',
 
 const InteractiveTechDemo2029 = () => {
-  const [activeDemosetActiveDemo] = useState('quantum-ai');
-  const [isRunningsetIsRunning] = useState(false);
-  const [progressetProgress] = useState(0);
-  const [demoDatasetDemoData] = useState({});
+  const [activeDemosetActiveDemo] = useState('quantum-ai'),
+  const [isRunningsetIsRunning] = useState(false),
+  const [progressetProgress] = useState(0),
+  const [demoDatasetDemoData] = useState({}),
 
   const demos = {
     'quantum-ai': {
@@ -39,16 +39,11 @@ const InteractiveTechDemo2029 = () => {
       icon: Brain,
       color: 'from-purple-600 to-blue-600',
       features: [
-        'Quantum Superposition Processing',
-        'Neural Network Optimization',
-        'Real-time Pattern Recognition',
-        'Quantum Error Correction'
+        'Quantum Superposition ProcessingNeural Network Optimization',
+        'Real-time Pattern RecognitionQuantum Error Correction'
       ],
       metrics: {
-        'Processing Speed': '99.7% faster',
-        'Accuracy': '99.9%',
-        'Energy Efficiency': '85% reduction',
-        'Scalability': 'Unlimited'
+        'Processing Speed': '99.7% fasterAccuracy': '99.9%Energy Efficiency': '85% reductionScalability': 'Unlimited'
       }
     },
     'neural-interface': {
@@ -57,16 +52,11 @@ const InteractiveTechDemo2029 = () => {
       icon: Cpu,
       color: 'from-green-600 to-emerald-600',
       features: [
-        'Thought-to-Text Conversion',
-        'Mental Command Processing',
-        'Emotional State Detection',
-        'Memory Enhancement'
+        'Thought-to-Text ConversionMental Command Processing',
+        'Emotional State DetectionMemory Enhancement'
       ],
       metrics: {
-        'Response Time': '< 50ms',
-        'Accuracy': '98.5%',
-        'Safety Rating': '99.9%',
-        'User Satisfaction': '97%'
+        'Response Time': '< 50msAccuracy': '98.5%Safety Rating': '99.9%User Satisfaction': '97%'
       }
     },
     'quantum-internet': {
@@ -75,16 +65,11 @@ const InteractiveTechDemo2029 = () => {
       icon: Globe,
       color: 'from-orange-600 to-red-600',
       features: [
-        'Quantum Key Distribution',
-        'Instantaneous Communication',
-        'Unbreakable Encryption',
-        'Global Quantum Network'
+        'Quantum Key DistributionInstantaneous Communication',
+        'Unbreakable EncryptionGlobal Quantum Network'
       ],
       metrics: {
-        'Security Level': 'Unbreakable',
-        'Speed': 'Instantaneous',
-        'Coverage': 'Global',
-        'Reliability': '99.99%'
+        'Security Level': 'UnbreakableSpeed': 'InstantaneousCoverage': 'GlobalReliability': '99.99%'
       }
     },
     'ai-automation': {
@@ -93,19 +78,14 @@ const InteractiveTechDemo2029 = () => {
       icon: Settings,
       color: 'from-blue-600 to-cyan-600',
       features: [
-        'Autonomous Decision Making',
-        'Process Optimization',
-        'Predictive Analytics',
-        'Self-Healing Systems'
+        'Autonomous Decision MakingProcess Optimization',
+        'Predictive AnalyticsSelf-Healing Systems'
       ],
       metrics: {
-        'Efficiency Gain': '300%',
-        'Cost Reduction': '75%',
-        'Error Rate': '0.1%',
-        'ROI': '500%'
+        'Efficiency Gain': '300%Cost Reduction': '75%Error Rate': '0.1%ROI': '500%'
       }
     }
-  };
+  },
 
   const demoComponents = {
     'quantum-ai': {
@@ -160,41 +140,41 @@ const InteractiveTechDemo2029 = () => {
         { from: 'process'to: 'result' }
       ]
     }
-  };
+  },
 
   useEffect(() => {
-    let interval;
+    let interval,
     if (isRunning) {
       interval = setInterval(() => {
         setProgress(prev => {
           if (prev >= 100) {
-            setIsRunning(false);
-            return 0;
+            setIsRunning(false),
+            return 0,
           }
-          return prev + 2;
-        });
-      }100);
+          return prev + 2,
+        }),
+      }100),
     }
-    return () => clearInterval(interval);
-  }[isRunning]);
+    return () => clearInterval(interval),
+  }[isRunning]),
 
   const startDemo = () => {
-    setIsRunning(true);
-    setProgress(0);
-  };
+    setIsRunning(true),
+    setProgress(0),
+  },
 
   const stopDemo = () => {
-    setIsRunning(false);
-    setProgress(0);
-  };
+    setIsRunning(false),
+    setProgress(0),
+  },
 
   const resetDemo = () => {
-    setIsRunning(false);
-    setProgress(0);
-  };
+    setIsRunning(false),
+    setProgress(0),
+  },
 
-  const currentDemo = demos[activeDemo];
-  const currentComponents = demoComponents[activeDemo];
+  const currentDemo = demos[activeDemo],
+  const currentComponents = demoComponents[activeDemo],
 
 const InteractiveTechDemo2029: React.FC = () => {
   return (
@@ -202,7 +182,7 @@ const InteractiveTechDemo2029: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">InteractiveTechDemo2029</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default InteractiveTechDemo2029;
+export default InteractiveTechDemo2029,

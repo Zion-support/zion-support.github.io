@@ -57,12 +57,9 @@ export default function Index() {
 	]
 
 	const benefits = [
-		'Cutting-edge AI and machine learning solutions',
-		'Enterprise-grade security and compliance',
-		'Scalable cloud infrastructure and DevOps',
-		'Real-time data analytics and insights',
-		'Quantum computing and emerging technologies',
-		'24/7 expert support and consultation'
+		'Cutting-edge AI and machine learning solutionsEnterprise-grade security and compliance',
+		'Scalable cloud infrastructure and DevOpsReal-time data analytics and insights',
+		'Quantum computing and emerging technologies24/7 expert support and consultation'
 	]
 
 	return (

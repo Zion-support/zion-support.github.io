@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { CheckCircle, ArrowRight, Star, Atom, Zap, Shield, Users, TrendingUp, Phone, Mail, MapPin, Rocket, Cpu, Database, Globe, Lock, Brain } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { CheckCircle, ArrowRight, Star, Atom, Zap, Shield, Users, TrendingUp, Phone, Mail, MapPin, Rocket, Cpu, Database, Globe, Lock, Brain } from 'lucide-react',
+import Button from '../components/ui/Button',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
+import { motion } from 'framer-motion',
 
 export default function QuantumAIHybridComputing() {
   const contactInfo = {
@@ -13,46 +13,33 @@ export default function QuantumAIHybridComputing() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
-    'Quantum-AI hybrid algorithms',
-    'Real-time quantum state manipulation',
-    'AI-powered quantum error correction',
-    'Multi-qubit entanglement management',
-    'Quantum machine learning models',
-    'Hybrid classical-quantum workflows',
-    'Quantum advantage optimization',
-    'Real-time quantum simulation',
-    'AI-driven quantum circuit design',
-    'Quantum cloud integration'
-  ];
+    'Quantum-AI hybrid algorithmsReal-time quantum state manipulation',
+    'AI-powered quantum error correctionMulti-qubit entanglement management',
+    'Quantum machine learning modelsHybrid classical-quantum workflows',
+    'Quantum advantage optimizationReal-time quantum simulation',
+    'AI-driven quantum circuit designQuantum cloud integration'
+  ],
 
   const useCases = [
-    'Drug discovery',
-    'Climate modeling',
-    'Financial optimization',
-    'Material science',
-    'Cryptography',
-    'Logistics optimization'
-  ];
+    'Drug discoveryClimate modeling',
+    'Financial optimizationMaterial science',
+    'CryptographyLogistics optimization'
+  ],
 
   const technology = [
-    'Quantum Computing',
-    'AI/ML',
-    'Python',
-    'Qiskit',
-    'TensorFlow',
-    'Quantum Algorithms'
-  ];
+    'Quantum ComputingAI/ML',
+    'PythonQiskit',
+    'TensorFlowQuantum Algorithms'
+  ],
 
   const integrations = [
-    'IBM Quantum',
-    'Google Quantum',
-    'Microsoft Azure Quantum',
-    'AWS Braket',
+    'IBM QuantumGoogle Quantum',
+    'Microsoft Azure QuantumAWS Braket',
     'Research platforms'
-  ];
+  ],
 
 const quantum-ai-hybrid-computing: React.FC = () => {
   return (
@@ -69,7 +56,7 @@ const quantum-ai-hybrid-computing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default quantum-ai-hybrid-computing;
+export default quantum-ai-hybrid-computing,

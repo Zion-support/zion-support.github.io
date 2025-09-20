@@ -1,16 +1,14 @@
 interface PerformanceMetric {
-  name: string;
-  startTime: number;
-  endTime?: number;
-  duration?: number;
+  name: string,startTime: number;
+  endTime?: number,
+  duration?: number
 }
 
 class PerformanceMonitor {
-  private metrics: Map<string, PerformanceMetric> = new Map();
+  private metrics: Map<string, PerformanceMetric> = new Map(),
   private observers: PerformanceObserver[] = [];
-
   constructor() {
-    this.initializeObservers();
+    this.initializeObservers()
   }
 
   private initializeObservers() {
@@ -19,46 +17,46 @@ class PerformanceMonitor {
       // Largest Contentful Paint
       try {
         const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          this.logMetric('LCP', lastEntry.startTime);
-        });
+          const entries = list.getEntries(),
+          const lastEntry = entries[entries.length - 1],
+          this.logMetric('LCP', lastEntry.startTime),
+        }),
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        this.observers.push(lcpObserver);
+        this.observers.push(lcpObserver),
       } catch (e) {
-        console.warn('LCP observer not supported');
+        console.warn('LCP observer not supported'),
       }
 
       // First Input Delay
       try {
         const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
+          const entries = list.getEntries(),
           entries.forEach((entry: any) => {
-            this.logMetric('FID', entry.processingStart - entry.startTime);
-          });
-        });
+            this.logMetric('FID', entry.processingStart - entry.startTime),
+          }),
+        }),
         fidObserver.observe({ entryTypes: ['first-input'] });
-        this.observers.push(fidObserver);
+        this.observers.push(fidObserver),
       } catch (e) {
-        console.warn('FID observer not supported');
+        console.warn('FID observer not supported'),
       }
 
       // Cumulative Layout Shift
       try {
         const clsObserver = new PerformanceObserver((list) => {
-          let clsValue = 0;
-          const entries = list.getEntries();
+          let clsValue = 0,
+          const entries = list.getEntries(),
           entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+              clsValue += entry.value
             }
           });
-          this.logMetric('CLS', clsValue);
-        });
+          this.logMetric('CLS', clsValue),
+        }),
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-        this.observers.push(clsObserver);
+        this.observers.push(clsObserver),
       } catch (e) {
-        console.warn('CLS observer not supported');
+        console.warn('CLS observer not supported'),
       }
     }
   }
@@ -74,40 +72,40 @@ class PerformanceMonitor {
     const metric = this.metrics.get(name);
     if (!metric) {
       console.warn(`No timing found for metric: ${name}`);
-      return null;
+      return null,
     }
 
-    const endTime = performance.now();
-    const duration = endTime - metric.startTime;
+    const endTime = performance.now(),
+    const duration = endTime - metric.startTime,
     
-    metric.endTime = endTime;
-    metric.duration = duration;
+    metric.endTime = endTime,
+    metric.duration = duration,
 
-    this.logMetric(name, duration);
-    return duration;
+    this.logMetric(name, duration),
+    return duration,
   }
 
   measureFunction<T>(name: string, fn: () => T): T {
     this.startTiming(name);
     try {
-      const result = fn();
-      this.endTiming(name);
-      return result;
+      const result = fn(),
+      this.endTiming(name),
+      return result
     } catch (error) {
-      this.endTiming(name);
-      throw error;
+      this.endTiming(name),
+      throw error,
     }
   }
 
   async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
     this.startTiming(name);
     try {
-      const result = await fn();
-      this.endTiming(name);
-      return result;
+      const result = await fn(),
+      this.endTiming(name),
+      return result
     } catch (error) {
-      this.endTiming(name);
-      throw error;
+      this.endTiming(name),
+      throw error,
     }
   }
 
@@ -118,7 +116,7 @@ class PerformanceMonitor {
 
     // Send to analytics service in production
     if (process.env.NODE_ENV === 'production') {
-      this.sendToAnalytics(name, value);
+      this.sendToAnalytics(name, value),
     }
   }
 
@@ -126,10 +124,8 @@ class PerformanceMonitor {
     // Implement analytics integration here
     // Example: Google Analytics, Mixpanel, etc.
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metric', {
-        metric_name: name,
-        metric_value: Math.round(value),
-        custom_map: {
+      (window as any).gtag('eventperformance_metric', {
+        metric_name: name,metric_value: Math.round(value),custom_map: {
           metric_category: 'performance'
         }
       });
@@ -137,34 +133,30 @@ class PerformanceMonitor {
   }
 
   getMetrics(): Record<string, PerformanceMetric> {
-    const result: Record<string, PerformanceMetric> = {};
+    const result: Record<string, PerformanceMetric> = {},
     this.metrics.forEach((metric, name) => {
-      result[name] = { ...metric };
-    });
-    return result;
+      result[name] = { ...metric },
+    }),
+    return result,
   }
 
   clearMetrics(): void {
-    this.metrics.clear();
+    this.metrics.clear(),
   }
 
   disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+    this.observers.forEach(observer => observer.disconnect()),
+    this.observers = [],
   }
 }
 
 // Create singleton instance
 export const performanceMonitor = new PerformanceMonitor();
-
 // React hook for performance monitoring
 export const usePerformanceMonitor = () => {
   return {
-    startTiming: performanceMonitor.startTiming.bind(performanceMonitor),
-    endTiming: performanceMonitor.endTiming.bind(performanceMonitor),
-    measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),
-    measureAsync: performanceMonitor.measureAsync.bind(performanceMonitor)
+    startTiming: performanceMonitor.startTiming.bind(performanceMonitor),endTiming: performanceMonitor.endTiming.bind(performanceMonitor),measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),measureAsync: performanceMonitor.measureAsync.bind(performanceMonitor)
   };
-};
+},
 
 export default performanceMonitor;

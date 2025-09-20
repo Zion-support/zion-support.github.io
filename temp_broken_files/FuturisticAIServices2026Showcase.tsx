@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
@@ -8,74 +8,74 @@ import {,
   Cpu,
   Database,
   Shield,
-  Rocket;
-  Star;
-  ArrowRight;
-  CheckCircle;
-  TrendingUp,
-} from 'lucide-react';
+  Rocket,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp
+} from 'lucide-react',
 const FuturisticAIServices2026Showcase = () => {,
-  const [currentServicesetCurrentService] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [currentServicesetCurrentService] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   const services = [,
     {,
-      id: 1;
-      title: "Quantum-Enhanced AI Processing";
-      description: "Revolutionary quantum computing integration for unprecedented AI performance";
-      icon: <Cpu className="w-8 h-8" />;
-      features: ["10,000x faster processing"Quantum error correction"Real-time optimization"];
-      color: "from-purple-600 to-pink-600";
-      stats: "99.99% accuracy",};
+      id: 1,
+      title: "Quantum-Enhanced AI Processing",
+      description: "Revolutionary quantum computing integration for unprecedented AI performance",
+      icon: <Cpu className="w-8 h-8" />,
+      features: ["10,000x faster processing"Quantum error correction"Real-time optimization"],
+      color: "from-purple-600 to-pink-600",
+      stats: "99.99% accuracy"},
     {,
-      id: 2;
-      title: "Neural Interface Technology";
-      description: "Direct brain-computer interfaces for seamless human-AI collaboration";
-      icon: <Brain className="w-8 h-8" />;
-      features: ["Thought-to-action processing"Cognitive enhancement"Memory augmentation"];
-      color: "from-blue-600 to-cyan-600";
-      stats: "1ms response time",};
+      id: 2,
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interfaces for seamless human-AI collaboration",
+      icon: <Brain className="w-8 h-8" />,
+      features: ["Thought-to-action processing"Cognitive enhancement"Memory augmentation"],
+      color: "from-blue-600 to-cyan-600",
+      stats: "1ms response time"},
     {,
-      id: 3;
-      title: "Autonomous Business Operations";
-      description: "Fully automated business processes with self-learning capabilities";
-      icon: <Rocket className="w-8 h-8" />;
-      features: ["Self-optimizing workflows"Predictive decision making"24/7 operations"];
-      color: "from-green-600 to-emerald-600";
-      stats: "500% ROI increase",};
+      id: 3,
+      title: "Autonomous Business Operations",
+      description: "Fully automated business processes with self-learning capabilities",
+      icon: <Rocket className="w-8 h-8" />,
+      features: ["Self-optimizing workflows"Predictive decision making"24/7 operations"],
+      color: "from-green-600 to-emerald-600",
+      stats: "500% ROI increase"},
     {,
-      id: 4;
-      title: "Global AI Network Mesh";
-      description: "Interconnected AI systems spanning multiple continents";
-      icon: <Globe className="w-8 h-8" />;
-      features: ["Edge computing nodes"Real-time synchronization"Global intelligence"];
-      color: "from-orange-600 to-red-600";
-      stats: "1B+ data points",}
-  ];
+      id: 4,
+      title: "Global AI Network Mesh",
+      description: "Interconnected AI systems spanning multiple continents",
+      icon: <Globe className="w-8 h-8" />,
+      features: ["Edge computing nodes"Real-time synchronization"Global intelligence"],
+      color: "from-orange-600 to-red-600",
+      stats: "1B+ data points"}
+  ],
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentService((prev) => (prev + 1) % services.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[services.length]);
+      setCurrentService((prev) => (prev + 1) % services.length),
+    }4000),
+    return () => clearInterval(interval),
+  }[services.length]),
   const containerVariants = {,
-    hidden: { opacity: 0, y: 50 ,};
+    hidden: { opacity: 0, y: 50 },
     visible: {,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.2,}
+        duration: 0.8,
+        staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { opacity: 0, y: 20 ,};
+    hidden: { opacity: 0, y: 20 },
     visible: {,
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.6 ,}
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
-  };
+  },
   return (,
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">,
       {/* Animated Background */}
@@ -97,13 +97,13 @@ const FuturisticAIServices2026Showcase = () => {,
             Powered by quantum computingneural interfacesand autonomous systems.,
           </divp>,
         </div>,
-        {/* Main Service Showcase */,}
+        {/* Main Service Showcase */}
         <div className="grid lg: grid-cols-2 gap-12 items-center mb-16">,
           <div,
             className="space-y-8",
           >,
               <div,
-                key={currentService,}
+                key={currentService}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${services[currentService].color} shadow-2xl`}
               >,
                 <div className="flex items-center mb-6">,
@@ -127,8 +127,7 @@ const FuturisticAIServices2026Showcase = () => {,
                     >,
                       <CheckCircle className="w-5 h-5 mr-3 text-green-300" />,
                       {feature}
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <div className="flex items-center justify-between">,
                   <div className="flex items-center text-white">,
@@ -144,7 +143,7 @@ const FuturisticAIServices2026Showcase = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Service Navigation */,}
+            {/* Service Navigation */}
             <div className="flex justify-center space-x-4">,
               {services.map((_index) => (,
                 <button,
@@ -153,7 +152,7 @@ const FuturisticAIServices2026Showcase = () => {,
                   className={`w-4 h-4 rounded-full transition-all duration-300 ${,
                     currentService === index,
                       ? 'bg-white scale-125',
-                      : 'bg-white/50 hover: bg-white/70',}`}
+                      : 'bg-white/50 hover: bg-white/70'}`}
                 />,
               ))}
             </div>,
@@ -163,20 +162,19 @@ const FuturisticAIServices2026Showcase = () => {,
             className="grid grid-cols-2 gap-6",
           >,
             {[,
-              { icon: <Database className="w-8 h-8" />value: "10PB+"label: "Data Processed Daily" ,};
-              { icon: <Shield className="w-8 h-8" />value: "99.99%"label: "Security Rating" ,};
-              { icon: <Star className="w-8 h-8" />value: "1M+"label: "Active Users" ,};
-              { icon: <Zap className="w-8 h-8" />value: "0.1ms"label: "Latency" ,}
+              { icon: <Database className="w-8 h-8" />value: "10PB+"label: "Data Processed Daily" },
+              { icon: <Shield className="w-8 h-8" />value: "99.99%"label: "Security Rating" },
+              { icon: <Star className="w-8 h-8" />value: "1M+"label: "Active Users" },
+              { icon: <Zap className="w-8 h-8" />value: "0.1ms"label: "Latency" }
             ].map((statindex) => (,
               <div,
                 key={index}
                 className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover: bg-white/20 transition-colors duration-300",
               >,
-                <div className="text-blue-400 mb-3">{stat.icon,}</div>,
+                <div className="text-blue-400 mb-3">{stat.icon}</div>,
                 <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
                 <div className="text-gray-300 text-sm">{stat.label}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Call to Action */}
@@ -192,6 +190,6 @@ const FuturisticAIServices2026Showcase = () => {,
         </div>,
       </div>,
     </section>,
-  ),};
-export default FuturisticAIServices2026Showcase;
+  )},
+export default FuturisticAIServices2026Showcase,
 </div></div></div></div>,

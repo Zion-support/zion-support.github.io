@@ -1,40 +1,39 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
 import {,
-  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe;
-  Rocket, Lock, Palette, Factory, Database, Cloud;
-  Cpu, Eye, Target, Users, BarChart3,
-} from 'lucide-react';
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
+  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe,
+  Rocket, Lock, Palette, Factory, Database, Cloud,
+  Cpu, Eye, Target, Users, BarChart3
+} from 'lucide-react',
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
   const categories = [,
-    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' ,};
-    { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' ,};
-    { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' ,};
-    { name: 'Metaverse & AI', icon: Globe, color: 'from-green-500 to-teal-500' ,};
-    { name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' ,};
-    { name: 'Supply Chain & AI', icon: Factory, color: 'from-yellow-500 to-orange-500' ,};
-    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' ,};
-    { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' ,};
-    { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' ,}
-  ];
+    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' },
+    { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
+    { name: 'Metaverse & AI', icon: Globe, color: 'from-green-500 to-teal-500' },
+    { name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
+    { name: 'Supply Chain & AI', icon: Factory, color: 'from-yellow-500 to-orange-500' },
+    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
+    { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
+    { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
+  ],
   const getCategoryIcon = (category: string) => {,
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.icon : Star,
-  };
+    const cat = categories.find(c => c.name === category),
+    return cat ? cat.icon : Star
+  },
   const getCategoryColor = (category: string) => {,
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.color : 'from-gray-500 to-gray-600',
-  };
+    const cat = categories.find(c => c.name === category),
+    return cat ? cat.color : 'from-gray-500 to-gray-600'
+  },
   return (,
     <Layout>,
       <SEO,
         title="2025 Innovative Services Showcase | Zion Tech Group",
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.",
         keywords={[,
-          'innovative services 2025micro SAAS';
-          'quantum computingspace technology';
-          'AI platformsautonomous systems',
+          'innovative services 2025micro SAASquantum computingspace technology',
+          'AI platformsautonomous systems'
         ]}
       />,
       {/* Hero Section */}
@@ -88,13 +87,13 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Services Categories */,}
+      {/* Services Categories */}
       <section className="py-20 px-4 bg-black/30 relative">,
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>,
         <div className="max-w-7xl mx-auto relative z-10">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">,
@@ -106,15 +105,15 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {categories.map((category, index) => {,
-              const IconComponent = category.icon;
+              const IconComponent = category.icon,
               return (,
                 <div,
                   key={category.name}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  viewport={{ once: true ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   className="group relative",
                 >,
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`,}>,
+                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>,
                     <div className="text-center">,
                       <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>,
                         <IconComponent className="w-8 h-8 text-white" />,
@@ -126,7 +125,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
                     </div>,
                   </div>,
                 </div>,
-              );
+              ),
             })}
           </div>,
         </div>,
@@ -135,8 +134,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
       <section className="py-20 px-4">,
         <div className="max-w-7xl mx-auto">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">,
@@ -148,21 +147,20 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {,
-              const IconComponent = getCategoryIcon(service.category);
+              const IconComponent = getCategoryIcon(service.category),
               return (,
                 <div,
                   key={service.id}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  viewport={{ once: true ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   className="group relative",
                 >,
                   <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm">,
-                    {/* Popular Badge */,}
+                    {/* Popular Badge */}
                     {service.popular && (,
                       <div className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">,
                         Popular,
-                      </div>,
-                    )}
+                      </div>)}
                     <div className="text-center mb-6">,
                       <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-4xl`}>,
                         {service.icon}
@@ -178,21 +176,20 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">,
                           <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>,
                           <span>{feature}</span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                     {/* Market Info */}
                     <div className="border-t border-white/10 pt-4 space-y-2">,
                       <div className="text-xs text-gray-400">,
-                        Market Price: <span className="text-green-400">{service.marketPrice,}</span>,
+                        Market Price: <span className="text-green-400">{service.marketPrice}</span>,
                       </div>,
                       <div className="text-xs text-gray-400">,
-                        Category: <span className="text-cyan-400">{service.category,}</span>,
+                        Category: <span className="text-cyan-400">{service.category}</span>,
                       </div>,
                     </div>,
                   </div>,
                 </div>,
-              );
+              ),
             })}
           </div>,
         </div>,
@@ -202,8 +199,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>,
         <div className="max-w-7xl mx-auto relative z-10">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">,
@@ -215,17 +212,17 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {innovative2025MicroSaasBatch.map((service, index) => {,
-              const IconComponent = getCategoryIcon(service.category);
+              const IconComponent = getCategoryIcon(service.category),
               return (,
                 <div,
                   key={service.id}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  viewport={{ once: true ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   className="group relative",
                 >,
                   <div className="p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm">,
                     <div className="flex items-start space-x-4">,
-                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category),} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>,
+                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>,
                         {service.icon}
                       </div>,
                       <div className="flex-1 min-w-0">,
@@ -241,7 +238,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
                     </div>,
                   </div>,
                 </div>,
-              );
+              ),
             })}
           </div>,
         </div>,
@@ -250,8 +247,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
       <section className="py-20 px-4">,
         <div className="max-w-4xl mx-auto text-center">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="space-y-8",
           >,
             <h2 className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">,
@@ -283,6 +280,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {,
         </div>,
       </section>,
     </Layout>,
-  );
-export default Comprehensive2025InnovativeServicesShowcase;
+  ),
+export default Comprehensive2025InnovativeServicesShowcase,
 }

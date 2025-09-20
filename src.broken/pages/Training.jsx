@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 import {
   BookOpen,
   GraduationCap,
@@ -49,8 +49,8 @@ import {
   Twitter,
   Github,
   Facebook,
-  Instagram,
-} from 'lucide-react';
+  Instagram
+} from 'lucide-react',
 
 export default function Training() {
   const trainingPrograms = [
@@ -62,16 +62,13 @@ export default function Training() {
       price: '$2,999',
       description: 'Master the basics of artificial intelligence and machine learning with hands-on projects.',
       topics: [
-        'Introduction to AI and ML',
-        'Python for Data Science',
-        'Supervised Learning Algorithms',
-        'Neural Networks Basics',
-        'Model Evaluation & Deployment',
-        'Real-world AI Applications'
+        'Introduction to AI and MLPython for Data Science',
+        'Supervised Learning AlgorithmsNeural Networks Basics',
+        'Model Evaluation & DeploymentReal-world AI Applications'
       ],
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      featured: true,
+      featured: true
     },
     {
       id: 'cybersecurity',
@@ -81,16 +78,13 @@ export default function Training() {
       price: '$2,499',
       description: 'Learn essential cybersecurity concepts and practical defense strategies.',
       topics: [
-        'Threat Landscape Analysis',
-        'Network Security Fundamentals',
-        'Identity & Access Management',
-        'Incident Response',
-        'Security Tools & Technologies',
-        'Compliance & Best Practices'
+        'Threat Landscape AnalysisNetwork Security Fundamentals',
+        'Identity & Access ManagementIncident Response',
+        'Security Tools & TechnologiesCompliance & Best Practices'
       ],
       icon: Shield,
       color: 'from-red-500 to-orange-500',
-      featured: false,
+      featured: false
     },
     {
       id: 'cloud-architecture',
@@ -100,16 +94,13 @@ export default function Training() {
       price: '$3,499',
       description: 'Design and implement scalable cloud solutions with modern DevOps practices.',
       topics: [
-        'Cloud Service Models (IaaS, PaaS, SaaS)',
-        'AWS/Azure/GCP Fundamentals',
-        'Containerization with Docker',
-        'Kubernetes Orchestration',
-        'CI/CD Pipeline Design',
-        'Infrastructure as Code'
+        'Cloud Service Models (IaaS, PaaS, SaaS)AWS/Azure/GCP Fundamentals',
+        'Containerization with DockerKubernetes Orchestration',
+        'CI/CD Pipeline DesignInfrastructure as Code'
       ],
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
-      featured: false,
+      featured: false
     },
     {
       id: 'data-analytics',
@@ -119,16 +110,13 @@ export default function Training() {
       price: '$2,999',
       description: 'Transform raw data into actionable insights with advanced analytics techniques.',
       topics: [
-        'Data Wrangling & Cleaning',
-        'Statistical Analysis',
-        'Data Visualization',
-        'Predictive Modeling',
-        'Big Data Technologies',
-        'Business Intelligence Tools'
+        'Data Wrangling & CleaningStatistical Analysis',
+        'Data VisualizationPredictive Modeling',
+        'Big Data TechnologiesBusiness Intelligence Tools'
       ],
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
-      featured: false,
+      featured: false
     },
     {
       id: 'quantum-computing',
@@ -138,16 +126,13 @@ export default function Training() {
       price: '$4,999',
       description: 'Explore the fascinating world of quantum computing and quantum algorithms.',
       topics: [
-        'Quantum Mechanics Fundamentals',
-        'Qubits & Quantum Gates',
-        'Quantum Algorithms',
-        'Quantum Error Correction',
-        'Quantum Machine Learning',
-        'Future of Quantum Computing'
+        'Quantum Mechanics FundamentalsQubits & Quantum Gates',
+        'Quantum AlgorithmsQuantum Error Correction',
+        'Quantum Machine LearningFuture of Quantum Computing'
       ],
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
-      featured: true,
+      featured: true
     },
     {
       id: 'digital-transformation',
@@ -157,57 +142,54 @@ export default function Training() {
       price: '$3,999',
       description: 'Lead your organization through successful digital transformation initiatives.',
       topics: [
-        'Digital Strategy Development',
-        'Change Management',
-        'Technology Assessment',
-        'ROI Measurement',
-        'Risk Management',
-        'Implementation Planning'
+        'Digital Strategy DevelopmentChange Management',
+        'Technology AssessmentROI Measurement',
+        'Risk ManagementImplementation Planning'
       ],
       icon: Rocket,
       color: 'from-orange-500 to-red-500',
-      featured: false,
-    },
-  ];
+      featured: false
+    }
+  ],
 
   const trainingFeatures = [
     {
       title: 'Expert Instructors',
       description: 'Learn from industry professionals with real-world experience',
       icon: Users,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Hands-on Projects',
       description: 'Apply your knowledge through practical, real-world projects',
       icon: Code,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Flexible Learning',
       description: 'Study at your own pace with 24/7 access to course materials',
       icon: Clock,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Certification',
               description: 'Earn industry-recognized certificates upon completion',
         icon: Award,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-orange-500 to-red-500'
     },
     {
       title: 'Community Support',
       description: 'Connect with peers and instructors in our learning community',
       icon: MessageSquare,
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       title: 'Career Guidance',
       description: 'Get personalized career advice and job placement support',
       icon: Target,
-      color: 'from-yellow-500 to-orange-500',
-    },
-  ];
+      color: 'from-yellow-500 to-orange-500'
+    }
+  ],
 
   const testimonials = [
     {
@@ -216,7 +198,7 @@ export default function Training() {
       company: 'TechCorp Inc.',
       content: 'The AI Fundamentals course completely transformed my understanding of machine learning. The hands-on projects were invaluable.',
       rating: 5,
-      avatar: '/images/testimonials/sarah-johnson.jpg',
+      avatar: '/images/testimonials/sarah-johnson.jpg'
     },
     {
       name: 'Michael Chen',
@@ -224,7 +206,7 @@ export default function Training() {
       company: 'SecureNet Solutions',
       content: 'The cybersecurity training was comprehensive and practical. I immediately applied what I learned to improve our security posture.',
       rating: 5,
-      avatar: '/images/testimonials/michael-chen.jpg',
+      avatar: '/images/testimonials/michael-chen.jpg'
     },
     {
       name: 'Emily Rodriguez',
@@ -232,9 +214,9 @@ export default function Training() {
       company: 'CloudScale Systems',
       content: 'Excellent cloud architecture course with real-world scenarios. The instructors were knowledgeable and supportive.',
       rating: 5,
-      avatar: '/images/testimonials/emily-rodriguez.jpg',
-    },
-  ];
+      avatar: '/images/testimonials/emily-rodriguez.jpg'
+    }
+  ],
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -412,7 +394,7 @@ export default function Training() {
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Advance Your Career?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals who have transformed their careers with our 
@@ -438,5 +420,5 @@ export default function Training() {
         </div>
       </div>
     </div>
-  );
+  )
 }

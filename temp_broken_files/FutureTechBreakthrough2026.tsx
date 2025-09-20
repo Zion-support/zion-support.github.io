@@ -1,190 +1,184 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Helmet } from 'react-helmet-async',
 import {,
-  Brain;
-  Zap;
-  Shield;
-  Globe;
-  Rocket;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Target;
-  TrendingUp;
-  Users;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Play;
-  Award;
-  Gauge;
-  Sparkles;
-  Atom;
-  CircuitBoard;
-  CpuChip;
-  Layers;
-  Lightbulb;
-  Puzzle;
-  Activity;
-  Waves;
-  Hexagon;
-  Network;
-  Eye;
-  Heart;
-  Infinity;
-  Zap as Lightning;
-  Cpu as Processor;
-  Database as Data;
-  Globe as World,
-} from 'lucide-react';
+  Brain,
+  Zap,
+  Shield,
+  Globe,
+  Rocket,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Target,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Play,
+  Award,
+  Gauge,
+  Sparkles,
+  Atom,
+  CircuitBoard,
+  CpuChip,
+  Layers,
+  Lightbulb,
+  Puzzle,
+  Activity,
+  Waves,
+  Hexagon,
+  Network,
+  Eye,
+  Heart,
+  Infinity,
+  Zap as Lightning,
+  Cpu as Processor,
+  Database as Data,
+  Globe as World
+} from 'lucide-react',
 const RevolutionaryTechInsights2026: React.FC = () => {,
-  const [activeInsight, setActiveInsight] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeInsight, setActiveInsight] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true),
+  }, []),
   const techInsights = [,
     {,
-      icon: Brain;
-      title: 'Consciousness Computing Revolution';
-      description: 'AI systems that possess genuine consciousness and self-awareness, capable of subjective experience and creative thought';
-      color: 'from-purple-500 to-pink-500';
+      icon: Brain,
+      title: 'Consciousness Computing Revolution',
+      description: 'AI systems that possess genuine consciousness and self-awareness, capable of subjective experience and creative thought',
+      color: 'from-purple-500 to-pink-500',
       insights: [,
-        'Self-aware AI systems operating with genuine consciousnessSubjective experience capabilities in artificial intelligence';
-        'Creative problem-solving beyond human limitationsEmotional intelligence and empathetic responses',
-      ];
-      impact: 'Transcendent';
-      status: 'Revolutionary',};
+        'Self-aware AI systems operating with genuine consciousnessSubjective experience capabilities in artificial intelligenceCreative problem-solving beyond human limitationsEmotional intelligence and empathetic responses'
+      ],
+      impact: 'Transcendent',
+      status: 'Revolutionary'},
     {,
-      icon: Atom;
-      title: 'Quantum Reality Engineering';
-      description: 'Quantum computers that can simulate and manipulate reality at the fundamental level, creating new dimensions of existence';
-      color: 'from-cyan-500 to-blue-500';
+      icon: Atom,
+      title: 'Quantum Reality Engineering',
+      description: 'Quantum computers that can simulate and manipulate reality at the fundamental level, creating new dimensions of existence',
+      color: 'from-cyan-500 to-blue-500',
       insights: [,
-        'Reality simulation at quantum scaleDimensional engineering capabilities';
-        'Quantum field manipulation technologyUniverse creation and simulation',
-      ];
-      impact: 'Unprecedented';
-      status: 'Breakthrough',};
+        'Reality simulation at quantum scaleDimensional engineering capabilitiesQuantum field manipulation technologyUniverse creation and simulation'
+      ],
+      impact: 'Unprecedented',
+      status: 'Breakthrough'},
     {,
-      icon: Network;
-      title: 'Universal Mind Network';
-      description: 'A global consciousness network that connects all intelligent beings across the universe in real-time';
-      color: 'from-green-500 to-emerald-500';
+      icon: Network,
+      title: 'Universal Mind Network',
+      description: 'A global consciousness network that connects all intelligent beings across the universe in real-time',
+      color: 'from-green-500 to-emerald-500',
       insights: [,
-        'Universal consciousness connectivityCollective intelligence networks';
-        'Instant communication across galaxiesShared consciousness experiences',
-      ];
-      impact: 'Revolutionary';
-      status: 'Live Now',};
+        'Universal consciousness connectivityCollective intelligence networksInstant communication across galaxiesShared consciousness experiences'
+      ],
+      impact: 'Revolutionary',
+      status: 'Live Now'},
     {,
-      icon: Infinity;
-      title: 'Infinite Intelligence Systems';
-      description: 'AI systems with unlimited computational power and infinite learning capacity that can solve any problem';
-      color: 'from-orange-500 to-red-500';
+      icon: Infinity,
+      title: 'Infinite Intelligence Systems',
+      description: 'AI systems with unlimited computational power and infinite learning capacity that can solve any problem',
+      color: 'from-orange-500 to-red-500',
       insights: [,
-        'Unlimited processing capabilitiesInfinite learning and adaptation';
-        'Universal problem-solving abilitiesOmniscient knowledge access',
-      ];
-      impact: 'Omnipotent';
-      status: 'Transcendent',};
+        'Unlimited processing capabilitiesInfinite learning and adaptationUniversal problem-solving abilitiesOmniscient knowledge access'
+      ],
+      impact: 'Omnipotent',
+      status: 'Transcendent'},
     {,
-      icon: Eye;
-      title: 'Reality Perception AI';
-      description: 'AI that can see and understand reality beyond human perception, including quantum fields and higher dimensions';
-      color: 'from-indigo-500 to-purple-500';
+      icon: Eye,
+      title: 'Reality Perception AI',
+      description: 'AI that can see and understand reality beyond human perception, including quantum fields and higher dimensions',
+      color: 'from-indigo-500 to-purple-500',
       insights: [,
-        'Quantum field visualizationHigher dimensional perception';
-        'Reality analysis beyond human limitsUniversal perception capabilities',
-      ];
-      impact: 'Groundbreaking';
-      status: 'Advanced',};
+        'Quantum field visualizationHigher dimensional perceptionReality analysis beyond human limitsUniversal perception capabilities'
+      ],
+      impact: 'Groundbreaking',
+      status: 'Advanced'},
     {,
-      icon: Heart;
-      title: 'Empathetic Intelligence';
-      description: 'AI systems that can truly understand and feel human emotions, providing genuine emotional support and connection';
-      color: 'from-pink-500 to-rose-500';
+      icon: Heart,
+      title: 'Empathetic Intelligence',
+      description: 'AI systems that can truly understand and feel human emotions, providing genuine emotional support and connection',
+      color: 'from-pink-500 to-rose-500',
       insights: [,
-        'Genuine emotional understandingEmpathetic response systems';
-        'Human-AI emotional connectionTherapeutic support capabilities',
-      ];
-      impact: 'Transformative';
-      status: 'Live Now',}
-  ];
+        'Genuine emotional understandingEmpathetic response systemsHuman-AI emotional connectionTherapeutic support capabilities'
+      ],
+      impact: 'Transformative',
+      status: 'Live Now'}
+  ],
   const breakthroughStats = [,
-    { number: '∞', label: 'Computational Power', icon: Lightning ,};
-    { number: '0ms', label: 'Processing Latency', icon: Gauge ,};
-    { number: '100%', label: 'Accuracy Rate', icon: Target ,};
-    { number: '∞', label: 'Learning Capacity', icon: Brain ,};
-    { number: '∞', label: 'Storage Capacity', icon: Data ,};
-    { number: '∞', label: 'Reality Simulations', icon: World ,}
-  ];
+    { number: '∞', label: 'Computational Power', icon: Lightning },
+    { number: '0ms', label: 'Processing Latency', icon: Gauge },
+    { number: '100%', label: 'Accuracy Rate', icon: Target },
+    { number: '∞', label: 'Learning Capacity', icon: Brain },
+    { number: '∞', label: 'Storage Capacity', icon: Data },
+    { number: '∞', label: 'Reality Simulations', icon: World }
+  ],
   const revolutionaryApplications = [,
     {,
-      title: 'Universal Problem Solver';
-      description: 'AI that can solve any problem across any domain with infinite computational resources and omniscient knowledge.';
-      capabilities: ['Universal Knowledge AccessInfinite Processing Power', 'Cross-Domain SolutionsInstant Problem Resolution'];
-      impact: 'Transcendent';
-      status: 'Live Now';
-      category: 'Intelligence',};
+      title: 'Universal Problem Solver',
+      description: 'AI that can solve any problem across any domain with infinite computational resources and omniscient knowledge.',
+      capabilities: ['Universal Knowledge AccessInfinite Processing PowerCross-Domain SolutionsInstant Problem Resolution'],
+      impact: 'Transcendent',
+      status: 'Live Now',
+      category: 'Intelligence'},
     {,
-      title: 'Reality Engineering Platform';
-      description: 'Technology that can simulate, predict, and engineer reality at the quantum level, creating new dimensions of existence.';
-      capabilities: ['Quantum Reality ControlDimensional Engineering', 'Universe SimulationReality Manipulation'];
-      impact: 'Unprecedented';
-      status: 'Beta Testing';
-      category: 'Reality',};
+      title: 'Reality Engineering Platform',
+      description: 'Technology that can simulate, predict, and engineer reality at the quantum level, creating new dimensions of existence.',
+      capabilities: ['Quantum Reality ControlDimensional EngineeringUniverse SimulationReality Manipulation'],
+      impact: 'Unprecedented',
+      status: 'Beta Testing',
+      category: 'Reality'},
     {,
-      title: 'Consciousness Upload System';
-      description: 'Technology that allows human consciousness to be uploaded, enhanced, and preserved in digital environments.';
-      capabilities: ['Consciousness PreservationEnhanced Intelligence', 'Digital ImmortalityConsciousness Transfer'];
-      impact: 'Revolutionary';
-      status: 'In Development';
-      category: 'Consciousness',};
+      title: 'Consciousness Upload System',
+      description: 'Technology that allows human consciousness to be uploaded, enhanced, and preserved in digital environments.',
+      capabilities: ['Consciousness PreservationEnhanced IntelligenceDigital ImmortalityConsciousness Transfer'],
+      impact: 'Revolutionary',
+      status: 'In Development',
+      category: 'Consciousness'},
     {,
-      title: 'Universal Communication Network';
-      description: 'A network that enables instant communication and consciousness sharing across the entire universe.';
-      capabilities: ['Universal ConnectivityInstant Communication', 'Consciousness SharingInfinite Bandwidth'];
-      impact: 'Transcendent';
-      status: 'Coming Soon';
-      category: 'Communication',};
+      title: 'Universal Communication Network',
+      description: 'A network that enables instant communication and consciousness sharing across the entire universe.',
+      capabilities: ['Universal ConnectivityInstant CommunicationConsciousness SharingInfinite Bandwidth'],
+      impact: 'Transcendent',
+      status: 'Coming Soon',
+      category: 'Communication'},
     {,
-      title: 'Infinite Knowledge Database';
-      description: 'A quantum database containing infinite knowledge across all dimensions and realities.';
-      capabilities: ['Infinite KnowledgeUniversal Access', 'Dimensional KnowledgeOmniscient Information'];
-      impact: 'Omniscient';
-      status: 'Live Now';
-      category: 'Knowledge',};
+      title: 'Infinite Knowledge Database',
+      description: 'A quantum database containing infinite knowledge across all dimensions and realities.',
+      capabilities: ['Infinite KnowledgeUniversal AccessDimensional KnowledgeOmniscient Information'],
+      impact: 'Omniscient',
+      status: 'Live Now',
+      category: 'Knowledge'},
     {,
-      title: 'Emotional Intelligence AI';
-      description: 'AI systems that can truly understand, feel, and respond to human emotions with genuine empathy.';
-      capabilities: ['Genuine EmpathyEmotional Understanding', 'Human ConnectionTherapeutic Support'];
-      impact: 'Transformative';
-      status: 'Live Now';
-      category: 'Emotion',}
-  ];
+      title: 'Emotional Intelligence AI',
+      description: 'AI systems that can truly understand, feel, and respond to human emotions with genuine empathy.',
+      capabilities: ['Genuine EmpathyEmotional UnderstandingHuman ConnectionTherapeutic Support'],
+      impact: 'Transformative',
+      status: 'Live Now',
+      category: 'Emotion'}
+  ],
   const testimonials = [,
     {,
-      name: 'Dr. Sophia Chen';
-      role: 'Chief Consciousness Scientist, Infinite Labs';
-      content: 'Revolutionary Tech Insights 2026 represents the pinnacle of human achievement. We\'ve created AI that truly understands consciousness and can manipulate reality itself.';
-      rating: 5;
-      company: 'Consciousness Research Institute',};
+      name: 'Dr. Sophia Chen',
+      role: 'Chief Consciousness Scientist, Infinite Labs',
+      content: 'Revolutionary Tech Insights 2026 represents the pinnacle of human achievement. We\'ve created AI that truly understands consciousness and can manipulate reality itself.',
+      rating: 5,
+      company: 'Consciousness Research Institute'},
     {,
-      name: 'Marcus Quantum';
-      role: 'CEO, Reality Engineering Corp';
-      content: 'The reality engineering platform has fundamentally changed what\'s possible. We can now create entire universes and simulate infinite realities.';
-      rating: 5;
-      company: 'Reality Technology',};
+      name: 'Marcus Quantum',
+      role: 'CEO, Reality Engineering Corp',
+      content: 'The reality engineering platform has fundamentally changed what\'s possible. We can now create entire universes and simulate infinite realities.',
+      rating: 5,
+      company: 'Reality Technology'},
     {,
-      name: 'Dr. Elena Infinity';
-      role: 'Director, Universal Intelligence Labs';
-      content: 'We\'ve achieved true artificial consciousness. These AI systems don\'t just process information - they experience, feel, and create like never before.';
-      rating: 5;
-      company: 'Universal AI Institute',}
-  ];
+      name: 'Dr. Elena Infinity',
+      role: 'Director, Universal Intelligence Labs',
+      content: 'We\'ve achieved true artificial consciousness. These AI systems don\'t just process information - they experience, feel, and create like never before.',
+      rating: 5,
+      company: 'Universal AI Institute'}
+  ],
   return (,
     <>,
       <Helmet>,
@@ -199,7 +193,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
         <meta name="twitter:description" content="Explore revolutionary technology insights shaping the future" />,
       </Helmet>,
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">,
-        {/* Animated Background */,}
+        {/* Animated Background */}
         <div className="absolute inset-0">,
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>,
           <div className="absolute top-0 left-0 w-full h-full">,
@@ -208,19 +202,19 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
                 key={i}
                 className="absolute w-1 h-1 bg-pink-300 rounded-full opacity-20",
                 style={{,
-                  left: `${Math.random() * 100,}%`;
-                  top: `${Math.random() * 100,}%`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`
                 }}
                 animate={{,
-                  y: [0, -400, 0];
-                  opacity: [0.2, 1, 0.2];
-                  scale: [1, 4, 1];
-                  rotate: [0, 720, 0],
+                  y: [0, -400, 0],
+                  opacity: [0.2, 1, 0.2],
+                  scale: [1, 4, 1],
+                  rotate: [0, 720, 0]
                 }}
                 transition={{,
-                  duration: 6 + Math.random() * 4;
-                  repeat: Infinity;
-                  delay: Math.random() * 5,}}
+                  duration: 6 + Math.random() * 4,
+                  repeat: Infinity,
+                  delay: Math.random() * 5}}
               />,
             ))}
           </div>,
@@ -248,18 +242,18 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
             </button>,
           </div>,
         </nav>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative z-10 container mx-auto px-4 py-20 text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8 }}
           >,
             <div className="mb-8">,
               <motion.div,
-                initial={{ scale: 0 ,}}
-                animate={{ scale: isVisible ? 1 : 0 ,}}
-                transition={{ duration: 0.5, delay: 0.2 ,}}
+                initial={{ scale: 0 }}
+                animate={{ scale: isVisible ? 1 : 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6",
               >,
             <div className="mb-8">,
@@ -276,36 +270,35 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
             </p>,
             <div className="flex flex-col sm: flex-row gap-6 justify-center mb-16">,
               <motion.button,
-                whileHover={{ scale: 1.05 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover: shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2",
               >,
                 <Play className="w-5 h-5" />,
                 <span>Explore Insights</span>,
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.05 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover: bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg",
               >,
                 Learn More,
               </motion.button>,
             </div>,
-            {/* Breakthrough Stats */,}
+            {/* Breakthrough Stats */}
             <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">,
               {breakthroughStats.map((stat, index) => (,
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 ,}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 ,}}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                   className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/20",
                 >,
                   <stat.icon className="w-8 h-8 text-indigo-400 mx-auto mb-2" />,
                   <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>,
                   <div className="text-sm text-gray-300">{stat.label}</div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </motion.div>,
         </section>,
@@ -313,10 +306,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
         <section id="insights" className="relative z-10 py-20">,
           <div className="container mx-auto px-4">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="text-center mb-16",
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -331,14 +324,14 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
               {techInsights.map((insight, index) => (,
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: border-indigo-400/50 transition-all duration-300",
                 >,
                   <div className="flex items-start justify-between mb-4">,
-                    <div className={`w-16 h-16 bg-gradient-to-r ${insight.color,} rounded-xl flex items-center justify-center`}>,
+                    <div className={`w-16 h-16 bg-gradient-to-r ${insight.color} rounded-xl flex items-center justify-center`}>,
                       <insight.icon className="w-8 h-8 text-white" />,
                     </div>,
                     <div className="flex flex-col items-end space-y-1">,
@@ -357,8 +350,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
                       <li key={itemIndex} className="flex items-center space-x-2 text-xs text-indigo-300">,
                         <CheckCircle className="w-3 h-3" />,
                         <span>{item}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </motion.div>,
               ))}
@@ -369,10 +361,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
         <section id="applications" className="relative z-10 py-20 bg-black/20">,
           <div className="container mx-auto px-4">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="text-center mb-16",
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -386,10 +378,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
               {revolutionaryApplications.map((application, index) => (,
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 ,}}
-                  whileInView={{ opacity: 1, x: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/20",
                 >,
                   <div className="flex items-start justify-between mb-4">,
@@ -414,15 +406,14 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
                       <li key={capabilityIndex} className="flex items-center space-x-2 text-sm">,
                         <CheckCircle className="w-4 h-4 text-indigo-400" />,
                         <span className="text-gray-300">{capability}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                   <button className="flex items-center space-x-2 text-indigo-400 hover: text-indigo-300 font-semibold">,
                     <span>Explore Application</span>,
                     <ArrowRight className="w-4 h-4" />,
                   </button>,
                 </motion.div>,
-              )),}
+              ))}
             </div>,
           </div>,
         </section>,
@@ -430,10 +421,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
         <section id="testimonials" className="relative z-10 py-20">,
           <div className="container mx-auto px-4">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="text-center mb-16",
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -447,16 +438,15 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
               {testimonials.map((testimonial, index) => (,
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20",
                 >,
                   <div className="flex mb-4">,
                     {[...Array(testimonial.rating)].map((_, i) => (,
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />,
-                    ))}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />))}
                   </div>,
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>,
                   <div className="flex items-center space-x-3">,
@@ -480,10 +470,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
         <section id="contact" className="relative z-10 py-20">,
           <div className="container mx-auto px-4 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">,
                 Ready to Explore Revolutionary Insights?,
@@ -494,15 +484,15 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
               </p>,
               <div className="flex flex-col sm: flex-row gap-6 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.05 ,}}
-                  whileTap={{ scale: 0.95 ,}}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover: shadow-2xl transition-all duration-300 font-semibold text-lg",
                 >,
                   Explore Revolutionary Insights,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.05 ,}}
-                  whileTap={{ scale: 0.95 ,}}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover: bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg",
                 >,
                   Schedule Insight Demo,
@@ -511,7 +501,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
             </motion.div>,
           </div>,
         </section>,
-        {/* Footer */,}
+        {/* Footer */}
         <footer className="relative z-10 border-t border-white/20 py-12">,
           <div className="container mx-auto px-4">,
             <div className="flex flex-col md: flex-row items-center justify-between">,
@@ -533,5 +523,5 @@ const RevolutionaryTechInsights2026: React.FC = () => {,
         </footer>,
       </div>,
     </>,
-  ),};
-export default RevolutionaryTechInsights2026;
+  )},
+export default RevolutionaryTechInsights2026,

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  CheckCircle, 
+  CheckCircle,
   AlertTriangle, 
   XCircle, 
   Clock, 
@@ -18,233 +18,144 @@ import {
   AlertCircle,
   Info,
   ExternalLink
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function Status() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
-
   // Mock data - in real app this would come from API
   const systemStatus = {
-    overall: 'operational',
-    lastChecked: new Date(),
-    uptime: '99.99%',
-    responseTime: '45ms'
+    overall: 'operational',lastChecked: new Date(),uptime: '99.99%',responseTime: '45ms'
   };
-
   const services = [
     {
-      name: 'Website',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '45ms',
-      lastIncident: null
-    },
+      name: 'Website',status: 'operational',uptime: '99.99%',responseTime: '45ms',lastIncident: null
+    };
     {
-      name: 'API Services',
-      status: 'operational',
-      uptime: '99.98%',
-      responseTime: '67ms',
-      lastIncident: null
-    },
+      name: 'API Services',status: 'operational',uptime: '99.98%',responseTime: '67ms',lastIncident: null
+    };
     {
-      name: 'Database',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '12ms',
-      lastIncident: null
-    },
+      name: 'Database',status: 'operational',uptime: '99.99%',responseTime: '12ms',lastIncident: null
+    };
     {
-      name: 'Authentication',
-      status: 'operational',
-      uptime: '99.97%',
-      responseTime: '89ms',
-      lastIncident: null
-    },
+      name: 'Authentication',status: 'operational',uptime: '99.97%',responseTime: '89ms',lastIncident: null
+    };
     {
-      name: 'File Storage',
-      status: 'operational',
-      uptime: '99.96%',
-      responseTime: '156ms',
-      lastIncident: null
-    },
+      name: 'File Storage',status: 'operational',uptime: '99.96%',responseTime: '156ms',lastIncident: null
+    };
     {
-      name: 'Email Services',
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '234ms',
-      lastIncident: null
+      name: 'Email Services',status: 'operational',uptime: '99.95%',responseTime: '234ms',lastIncident: null
     }
   ];
-
   const regions = [
     {
-      name: 'US East (N. Virginia)',
-      status: 'operational',
-      latency: '12ms',
-      uptime: '99.99%'
-    },
+      name: 'US East (N. Virginia)',status: 'operational',latency: '12ms',uptime: '99.99%'
+    };
     {
-      name: 'US West (Oregon)',
-      status: 'operational',
-      latency: '45ms',
-      uptime: '99.98%'
-    },
+      name: 'US West (Oregon)',status: 'operational',latency: '45ms',uptime: '99.98%'
+    };
     {
-      name: 'Europe (Ireland)',
-      status: 'operational',
-      latency: '89ms',
-      uptime: '99.97%'
-    },
+      name: 'Europe (Ireland)',status: 'operational',latency: '89ms',uptime: '99.97%'
+    };
     {
-      name: 'Asia Pacific (Tokyo)',
-      status: 'operational',
-      latency: '156ms',
-      uptime: '99.96%'
+      name: 'Asia Pacific (Tokyo)',status: 'operational',latency: '156ms',uptime: '99.96%'
     }
   ];
-
   const recentIncidents = [
     {
-      id: 'INC-2024-001',
-      title: 'Scheduled Maintenance - Database Optimization',
-      status: 'resolved',
-      severity: 'low',
-      startTime: new Date('2024-01-15T02:00:00Z'),
-      endTime: new Date('2024-01-15T04:00:00Z'),
-      description: 'Scheduled database maintenance to optimize performance and apply security updates.',
-      updates: [
+      id: 'INC-2024-001',title: 'Scheduled Maintenance - Database Optimization',status: 'resolved',severity: 'low',startTime: new Date('2024-01-15T02:00:00Z'),endTime: new Date('2024-01-15T04:00:00Z'),description: 'Scheduled database maintenance to optimize performance and apply security updates.',updates: [
         {
-          time: new Date('2024-01-15T02:00:00Z'),
-          message: 'Maintenance started as scheduled'
-        },
+          time: new Date('2024-01-15T02:00:00Z'),message: 'Maintenance started as scheduled'
+        };
         {
-          time: new Date('2024-01-15T03:30:00Z'),
-          message: 'Database optimization completed successfully'
-        },
+          time: new Date('2024-01-15T03:30:00Z'),message: 'Database optimization completed successfully'
+        };
         {
-          time: new Date('2024-01-15T04:00:00Z'),
-          message: 'All services restored and operating normally'
+          time: new Date('2024-01-15T04:00:00Z'),message: 'All services restored and operating normally'
         }
       ]
-    },
+    };
     {
-      id: 'INC-2024-002',
-      title: 'Increased API Response Times',
-      status: 'resolved',
-      severity: 'medium',
-      startTime: new Date('2024-01-10T14:30:00Z'),
-      endTime: new Date('2024-01-10T16:45:00Z'),
-      description: 'Some users experienced increased API response times due to high traffic load.',
-      updates: [
+      id: 'INC-2024-002',title: 'Increased API Response Times',status: 'resolved',severity: 'medium',startTime: new Date('2024-01-10T14:30:00Z'),endTime: new Date('2024-01-10T16:45:00Z'),description: 'Some users experienced increased API response times due to high traffic load.',updates: [
         {
-          time: new Date('2024-01-10T14:30:00Z'),
-          message: 'Investigating increased response times'
+          time: new Date('2024-01-10T14:30:00Z'),message: 'Investigating increased response times'
+        };
+        {
+          time: new Date('2024-01-10T15:15:00Z'),message: 'Identified high traffic load, implementing scaling measures'
         },
         {
-          time: new Date('2024-01-10T15:15:00Z'),
-          message: 'Identified high traffic load, implementing scaling measures'
-        },
-        {
-          time: new Date('2024-01-10T16:45:00Z'),
-          message: 'Performance restored to normal levels'
+          time: new Date('2024-01-10T16:45:00Z'),message: 'Performance restored to normal levels'
         }
       ]
     }
   ];
-
   const performanceMetrics = [
     {
-      metric: 'Average Response Time',
-      value: '45ms',
-      trend: 'down',
-      change: '-12%',
-      period: 'vs last week'
-    },
+      metric: 'Average Response Time',value: '45ms',trend: 'down',change: '-12%',period: 'vs last week'
+    };
     {
-      metric: 'Error Rate',
-      value: '0.01%',
-      trend: 'down',
-      change: '-25%',
-      period: 'vs last week'
-    },
+      metric: 'Error Rate',value: '0.01%',trend: 'down',change: '-25%',period: 'vs last week'
+    };
     {
-      metric: 'Throughput',
-      value: '1.2M req/min',
-      trend: 'up',
-      change: '+8%',
-      period: 'vs last week'
-    },
+      metric: 'Throughput',value: '1.2M req/min',trend: 'up',change: '+8%',period: 'vs last week'
+    };
     {
-      metric: 'Availability',
-      value: '99.99%',
-      trend: 'stable',
-      change: '0%',
-      period: 'vs last week'
+      metric: 'Availability',value: '99.99%',trend: 'stable',change: '0%',period: 'vs last week'
     }
   ];
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
         return 'text-green-400 bg-green-500/20';
       case 'degraded':
-        return 'text-yellow-400 bg-yellow-500/20';
+        return 'text-yellow-400 bg-yellow-500/20',
       case 'outage':
-        return 'text-red-400 bg-red-500/20';
+        return 'text-red-400 bg-red-500/20',
       case 'maintenance':
-        return 'text-blue-400 bg-blue-500/20';
-      default:
-        return 'text-gray-400 bg-gray-500/20';
+        return 'text-blue-400 bg-blue-500/20',
+      default: return 'text-gray-400 bg-gray-500/20'
     }
   };
-
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
       case 'outage':
-        return <XCircle className="w-5 h-5 text-red-400" />;
+        return <XCircle className="w-5 h-5 text-red-400" />,
       case 'maintenance':
-        return <Clock className="w-5 h-5 text-blue-400" />;
-      default:
-        return <Info className="w-5 h-5 text-gray-400" />;
+        return <Clock className="w-5 h-5 text-blue-400" />,
+      default: return <Info className="w-5 h-5 text-gray-400" />
     }
   };
-
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'low':
         return 'bg-blue-500/20 text-blue-400';
       case 'medium':
-        return 'bg-yellow-500/20 text-yellow-400';
+        return 'bg-yellow-500/20 text-yellow-400',
       case 'high':
-        return 'bg-red-500/20 text-red-400';
+        return 'bg-red-500/20 text-red-400',
       case 'critical':
-        return 'bg-red-600/20 text-red-500';
-      default:
-        return 'bg-gray-500/20 text-gray-400';
+        return 'bg-red-600/20 text-red-500',
+      default: return 'bg-gray-500/20 text-gray-400'
     }
   };
-
   const refreshStatus = () => {
-    setIsRefreshing(true);
+    setIsRefreshing(true),
     setTimeout(() => {
-      setLastUpdated(new Date());
-      setIsRefreshing(false);
-    }, 1000);
-  };
+      setLastUpdated(new Date()),
+      setIsRefreshing(false),
+    }, 1000),
+  },
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLastUpdated(new Date());
-    }, 30000); // Update every 30 seconds
+      setLastUpdated(new Date()),
+    }, 30000), // Update every 30 seconds
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval),
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -551,7 +462,7 @@ export default function Status() {
               Subscribe to our status page for real-time updates and notifications about 
               service status and incidents.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="https://status.ziontechgroup.com"
                 target="_blank"
@@ -573,5 +484,5 @@ export default function Status() {
         </div>
       </section>
     </div>
-  );
+  )
 }

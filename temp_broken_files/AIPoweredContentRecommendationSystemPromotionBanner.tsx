@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Sparkles,
@@ -8,82 +8,81 @@ import {,
   Target,
   Users,
   Clock,
-  Star;
-  ArrowRight;
-  BookOpen;
-  Play;
-  Download;
-  Share2;
-  Heart;
-  Eye;
-  Tag;
-  Calendar;
-  User;
-  Zap;
-  Cpu;
-  Globe;
-  Database;
-  Cloud;
-  Shield;
-  CheckCircle;
-  AlertCircle;
-  RefreshCw;
-  Filter;
-  Search;
-  Settings;
-  BarChart3;
-  Activity;
-  Lightbulb;
-  Rocket;
-  Award;
-  ThumbsUp,
-} from 'lucide-react';
+  Star,
+  ArrowRight,
+  BookOpen,
+  Play,
+  Download,
+  Share2,
+  Heart,
+  Eye,
+  Tag,
+  Calendar,
+  User,
+  Zap,
+  Cpu,
+  Globe,
+  Database,
+  Cloud,
+  Shield,
+  CheckCircle,
+  AlertCircle,
+  RefreshCw,
+  Filter,
+  Search,
+  Settings,
+  BarChart3,
+  Activity,
+  Lightbulb,
+  Rocket,
+  Award,
+  ThumbsUp
+} from 'lucide-react',
 const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const features = [,
-    'AI-Powered PersonalizationReal-Time Content Analysis';
-    'Smart Recommendation EngineBehavioral Pattern Recognition';
-    'Engagement OptimizationCross-Platform Content Discovery',
-  ];
+    'AI-Powered PersonalizationReal-Time Content AnalysisSmart Recommendation EngineBehavioral Pattern Recognition',
+    'Engagement OptimizationCross-Platform Content Discovery'
+  ],
   const stats = [,
-    { value: '94.2%'label: 'AI 'Accuracyicon: Target ,};
-    { value: '98.7%'label: ''Personalizationicon: Users ,};
-    { value: '+67%'label: 'Engagement 'Boosticon: TrendingUp ,};
-    { value: '1,247'label: 'Content 'Matchedicon: Database ,}
-  ];
+    { value: '94.2%'label: 'AI 'Accuracyicon: Target },
+    { value: '98.7%'label: ''Personalizationicon: Users },
+    { value: '+67%'label: 'Engagement 'Boosticon: TrendingUp },
+    { value: '1,247'label: 'Content 'Matchedicon: Database }
+  ],
   const recommendationTypes = [,
-    { icon: BookOpenlabel: 'Blog 'Postscount: '342'color: 'blue' ,};
-    { icon: Targetlabel: 'Case 'Studiescount: '156'color: 'purple' ,};
-    { icon: Playlabel: ''Tutorialscount: '289'color: 'green' ,};
-    { icon: Cpulabel: ''Researchcount: '123'color: 'orange' ,};
-    { icon: Activitylabel: ''Videoscount: '89'color: 'red' ,};
-    { icon: Shieldlabel: ''Whitepaperscount: '78'color: 'indigo' ,}
-  ];
+    { icon: BookOpenlabel: 'Blog 'Postscount: '342'color: 'blue' },
+    { icon: Targetlabel: 'Case 'Studiescount: '156'color: 'purple' },
+    { icon: Playlabel: ''Tutorialscount: '289'color: 'green' },
+    { icon: Cpulabel: ''Researchcount: '123'color: 'orange' },
+    { icon: Activitylabel: ''Videoscount: '89'color: 'red' },
+    { icon: Shieldlabel: ''Whitepaperscount: '78'color: 'indigo' }
+  ],
   const aiCapabilities = [,
     {,
-      title: 'Neural Pattern Recognition';
-      description: 'Advanced AI algorithms analyze your reading patterns and preferences';
-      icon: Brain;
-      accuracy: '94.2%',};
+      title: 'Neural Pattern Recognition',
+      description: 'Advanced AI algorithms analyze your reading patterns and preferences',
+      icon: Brain,
+      accuracy: '94.2%'},
     {,
-      title: 'Behavioral Analysis';
-      description: 'Machine learning models understand your content consumption habits';
-      icon: Users;
-      accuracy: '98.7%',};
+      title: 'Behavioral Analysis',
+      description: 'Machine learning models understand your content consumption habits',
+      icon: Users,
+      accuracy: '98.7%'},
     {,
-      title: 'Content Optimization';
-      description: 'AI continuously optimizes recommendations based on engagement data';
-      icon: TrendingUp;
-      accuracy: '+67%',};
+      title: 'Content Optimization',
+      description: 'AI continuously optimizes recommendations based on engagement data',
+      icon: TrendingUp,
+      accuracy: '+67%'},
     {,
-      title: 'Real-Time Processing';
-      description: 'Instant content analysis and recommendation generation';
-      icon: Zap;
-      accuracy: '<100ms',}
-  ];
+      title: 'Real-Time Processing',
+      description: 'Instant content analysis and recommendation generation',
+      icon: Zap,
+      accuracy: '<100ms'}
+  ],
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">,
       {/* Background Pattern */}
@@ -127,26 +126,25 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
             </button>,
           </div>,
         </div>,
-        {/* AI Stats */,}
+        {/* AI Stats */}
         <div,
           className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12",
         >,
           {stats.map((statindex) => (,
-            <div key={index,} className="text-center">,
+            <div key={index} className="text-center">,
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4">,
                 <stat.icon className="w-8 h-8 text-white" />,
               </div>,
               <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
               <div className="text-blue-100 text-sm">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* AI Capabilities */}
         <div,
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12",
         >,
           {aiCapabilities.map((capabilityindex) => (,
-            <div key={index,} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
               <div className="flex items-center mb-4">,
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">,
                   <capability.icon className="w-6 h-6 text-white" />,
@@ -157,15 +155,14 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
                 </div>,
               </div>,
               <p className="text-blue-100 text-sm">{capability.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Features Grid */}
         <div,
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12",
         >,
           {features.map((featureindex) => (,
-            <div key={index,} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
               <div className="flex items-center mb-3">,
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3">,
                   <CheckCircle className="w-5 h-5 text-white" />,
@@ -175,8 +172,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
               <p className="text-blue-100 text-sm">,
                 Advanced AI capabilities that revolutionize how you discover and engage with content.,
               </p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Content Types Showcase */}
         <div,
@@ -188,14 +184,13 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
           </div>,
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">,
             {recommendationTypes.map((typeindex) => (,
-              <div key={index,} className="text-center group">,
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-500/20 rounded-2xl mb-3 group-hover: scale-110 transition-transform duration-300`,}>,
+              <div key={index} className="text-center group">,
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-500/20 rounded-2xl mb-3 group-hover: scale-110 transition-transform duration-300`}>,
                   <type.icon className="w-8 h-8 text-white" />,
                 </div>,
                 <div className="text-white font-semibold text-sm mb-1">{type.label}</div>,
                 <div className="text-blue-200 text-xs">{type.count} items</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* AI Demo Section */}
@@ -244,21 +239,21 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
                   <span className="text-white font-bold">98.7%</span>,
                 </div>,
                 <div className="w-full bg-white/20 rounded-full h-2">,
-                  <div className="bg-gradient-to-r from-green-400 to-blue-400 h-2 rounded-full" style={{width: '98.7%',}}></div>,
+                  <div className="bg-gradient-to-r from-green-400 to-blue-400 h-2 rounded-full" style={{width: '98.7%'}}></div>,
                 </div>,
                 <div className="flex justify-between items-center">,
                   <span className="text-blue-100">Content Match Rate</span>,
                   <span className="text-white font-bold">94.2%</span>,
                 </div>,
                 <div className="w-full bg-white/20 rounded-full h-2">,
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-400 h-2 rounded-full" style={{width: '94.2%',}}></div>,
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-400 h-2 rounded-full" style={{width: '94.2%'}}></div>,
                 </div>,
                 <div className="flex justify-between items-center">,
                   <span className="text-blue-100">Engagement Boost</span>,
                   <span className="text-white font-bold">+67%</span>,
                 </div>,
                 <div className="w-full bg-white/20 rounded-full h-2">,
-                  <div className="bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full" style={{width: '67%',}}></div>,
+                  <div className="bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full" style={{width: '67%'}}></div>,
                 </div>,
               </div>,
             </div>,
@@ -292,5 +287,5 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default AIPoweredContentRecommendationSystemPromotionBanner;
+  )},
+export default AIPoweredContentRecommendationSystemPromotionBanner,

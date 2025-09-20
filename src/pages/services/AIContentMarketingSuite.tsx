@@ -1,57 +1,37 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar } from "lucide-react";
 const AIContentMarketingSuite: React.FC = () => {
   const features = [
     {
-      title: "AI Content Generator",
-      description: "Create high-quality, SEO-optimized content in seconds",
-      icon: PenTool,
-      benefits: ["Multiple content types", "SEO optimization", "Brand voice consistency"]
+      title: "AI Content Generator",description: "Create high-quality, SEO-optimized content in seconds",
+      icon: PenTool,benefits: ["Multiple content types", "SEO optimization", "Brand voice consistency"]
     },
     {
-      title: "Content Calendar & Planning",
-      description: "Intelligent content scheduling and topic ideation",
-      icon: Calendar,
-      benefits: ["AI-powered topic suggestions", "Optimal publishing times", "Content gap analysis"]
+      title: "Content Calendar & Planning",description: "Intelligent content scheduling and topic ideation",icon: Calendar,benefits: ["AI-powered topic suggestions", "Optimal publishing times", "Content gap analysis"]
     },
     {
-      title: "Social Media Automation",
-      description: "Auto-generate and schedule posts across all platforms",
-      icon: Share2,
-      benefits: ["Multi-platform support", "Trend-based content", "Engagement optimization"]
+      title: "Social Media Automation",description: "Auto-generate and schedule posts across all platforms",icon: Share2,benefits: ["Multi-platform support", "Trend-based content", "Engagement optimization"]
     },
     {
-      title: "Performance Analytics",
-      description: "AI-driven insights and optimization recommendations",
-      icon: BarChart3,
-      benefits: ["Real-time tracking", "Predictive analytics", "ROI measurement"]
+      title: "Performance Analytics",description: "AI-driven insights and optimization recommendations",icon: BarChart3,benefits: ["Real-time tracking", "Predictive analytics", "ROI measurement"]
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 10 articles/month",
+      name: "Starter",price: "$199",period: "/month",description: "Perfect for small businesses",features: [
+        "Up to 10 articles/month";
         "Basic SEO optimization",
         "Social media templates",
         "Email support",
         "Basic analytics"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$499",
-      period: "/month",
-      description: "Ideal for growing companies",
-      features: [
-        "Up to 50 articles/month",
+      name: "Professional",price: "$499",period: "/month",description: "Ideal for growing companies",features: [
+        "Up to 50 articles/month";
         "Advanced SEO tools",
         "Custom content templates",
         "Priority support",
@@ -60,14 +40,11 @@ const AIContentMarketingSuite: React.FC = () => {
         "White-label options"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$1,299",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited content",
+      name: "Enterprise",price: "$1,299",
+      period: "/month",description: "For large organizations",features: [
+        "Unlimited content";
         "Custom AI models",
         "Dedicated account manager",
         "24/7 support",
@@ -78,33 +55,20 @@ const AIContentMarketingSuite: React.FC = () => {
       popular: false
     }
   ];
-
   const contentTypes = [
     {
-      type: "Blog Posts",
-      description: "SEO-optimized articles with AI research",
-      icon: FileText,
-      features: ["Keyword research", "Outline generation", "SEO optimization"]
+      type: "Blog Posts",description: "SEO-optimized articles with AI research",icon: FileText,features: ["Keyword research", "Outline generation", "SEO optimization"]
     },
     {
-      type: "Social Media",
-      description: "Engaging posts for all platforms",
-      icon: Share2,
-      features: ["Platform-specific content", "Trend integration", "Hashtag optimization"]
+      type: "Social Media",description: "Engaging posts for all platforms",icon: Share2,features: ["Platform-specific content", "Trend integration", "Hashtag optimization"]
     },
     {
-      type: "Email Campaigns",
-      description: "Personalized email sequences",
-      icon: MessageSquare,
-      features: ["Segmentation", "A/B testing", "Performance tracking"]
+      type: "Email Campaigns",description: "Personalized email sequences",icon: MessageSquare,features: ["Segmentation", "A/B testing", "Performance tracking"]
     },
     {
-      type: "Video Scripts",
-      description: "Compelling video content scripts",
-      icon: Eye,
-      features: ["Story structure", "Hook optimization", "Call-to-action"]
+      type: "Video Scripts",description: "Compelling video content scripts",icon: Eye,features: ["Story structure", "Hook optimization", "Call-to-action"]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-purple-dark">
@@ -117,12 +81,10 @@ const AIContentMarketingSuite: React.FC = () => {
             className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
-              opacity: [0.1, 0.3, 0.1],
+              opacity: [0.1, 0.3, 0.1]
             }}
             transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
+              duration: 4,repeat: Infinity,ease: "easeInOut"
             }}
           />
         </div>
@@ -340,7 +302,7 @@ const AIContentMarketingSuite: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-sm rounded-3xl p-12 border border-zion-cyan/20 text-center"
           >
-            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h3 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Marketing?
             </h3>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -369,7 +331,6 @@ const AIContentMarketingSuite: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default AIContentMarketingSuite;

@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
 import { 
-  Users, 
+  Users,
   TrendingUp, 
   Target, 
   Zap, 
@@ -24,41 +24,28 @@ import {
   CheckCircle,
   Shield,
   FileText
-} from 'lucide-react';
-
+} from "lucide-react";
 const AISalesCopilot = () => {
   const features = [
     {
-      icon: Users,
-      title: "Lead Scoring & Qualification",
-      description: "AI-powered lead analysis and prioritization to focus on high-value prospects."
-    },
+      icon: Users,title: "Lead Scoring & Qualification",description: "AI-powered lead analysis and prioritization to focus on high-value prospects."
+    };
     {
-      icon: MessageCircle,
-      title: "Intelligent Conversation AI",
-      description: "Natural language processing for personalized customer interactions and support."
-    },
+      icon: MessageCircle,title: "Intelligent Conversation AI",description: "Natural language processing for personalized customer interactions and support."
+    };
     {
-      icon: TrendingUp,
-      title: "Sales Forecasting",
-      description: "Predictive analytics for accurate revenue forecasting and pipeline management."
-    },
+      icon: TrendingUp,title: "Sales Forecasting",description: "Predictive analytics for accurate revenue forecasting and pipeline management."
+    };
     {
-      icon: Target,
-      title: "Opportunity Management",
-      description: "Smart tracking and optimization of sales opportunities throughout the funnel."
-    },
+      icon: Target,title: "Opportunity Management",description: "Smart tracking and optimization of sales opportunities throughout the funnel."
+    };
     {
-      icon: Zap,
-      title: "Automated Follow-ups",
-      description: "Intelligent scheduling and automated follow-up sequences for better conversion."
-    },
+      icon: Zap,title: "Automated Follow-ups",description: "Intelligent scheduling and automated follow-up sequences for better conversion."
+    };
     {
-      icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into sales performance, trends, and optimization opportunities."
+      icon: BarChart3,title: "Performance Analytics",description: "Comprehensive insights into sales performance, trends, and optimization opportunities."
     }
-  ];
+  ],
 
   const benefits = [
     "Increase sales revenue by 25-40% with AI-powered insights",
@@ -67,63 +54,45 @@ const AISalesCopilot = () => {
     "Enhance customer engagement and satisfaction by 45%",
     "Reduce manual sales tasks by 70%",
     "Optimize pricing strategies with AI-driven recommendations"
-  ];
+  ],
 
   const salesProcess = [
     {
-      stage: "Lead Generation",
-      description: "AI-powered prospecting and lead identification",
-      icon: Search
-    },
+      stage: "Lead Generation",description: "AI-powered prospecting and lead identification",icon: Search
+    };
     {
-      stage: "Qualification",
-      description: "Intelligent lead scoring and prioritization",
-      icon: Target
-    },
+      stage: "Qualification",description: "Intelligent lead scoring and prioritization",icon: Target
+    };
     {
-      stage: "Engagement",
-      description: "Personalized communication and relationship building",
-      icon: MessageCircle
-    },
+      stage: "Engagement",description: "Personalized communication and relationship building",icon: MessageCircle
+    };
     {
-      stage: "Proposal",
-      description: "AI-generated proposals and pricing optimization",
-      icon: FileText
-    },
+      stage: "Proposal",description: "AI-generated proposals and pricing optimization",icon: FileText
+    };
     {
-      stage: "Closing",
-      description: "Smart negotiation support and deal acceleration",
-      icon: CheckCircle
-    },
+      stage: "Closing",description: "Smart negotiation support and deal acceleration",icon: CheckCircle
+    };
     {
-      stage: "Retention",
-      description: "Customer success and expansion opportunities",
-      icon: Users
+      stage: "Retention",description: "Customer success and expansion opportunities",icon: Users
     }
   ];
-
   const useCases = [
     {
-      industry: "B2B Software",
-      description: "Enterprise sales automation, lead qualification, and customer success management"
+      industry: "B2B Software",description: "Enterprise sales automation, lead qualification, and customer success management"
     },
     {
-      industry: "Financial Services",
-      description: "Investment advisory, loan processing, and financial product sales optimization"
+      industry: "Financial Services",description: "Investment advisory, loan processing, and financial product sales optimization"
     },
     {
-      industry: "Healthcare",
-      description: "Medical device sales, pharmaceutical marketing, and healthcare service optimization"
+      industry: "Healthcare",description: "Medical device sales, pharmaceutical marketing, and healthcare service optimization"
     },
     {
-      industry: "Manufacturing",
-      description: "Industrial equipment sales, supply chain optimization, and B2B relationship management"
+      industry: "Manufacturing",description: "Industrial equipment sales, supply chain optimization, and B2B relationship management"
     },
     {
-      industry: "Real Estate",
-      description: "Property sales automation, lead management, and client relationship optimization"
+      industry: "Real Estate",description: "Property sales automation, lead management, and client relationship optimization"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -390,7 +359,7 @@ const AISalesCopilot = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-300"
+                className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover: bg-blue-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -399,8 +368,6 @@ const AISalesCopilot = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AISalesCopilot;
-

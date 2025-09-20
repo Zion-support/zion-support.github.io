@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Autonomous Operations - Zion Tech Group';
-  description: 'Transform your business with autonomous AI operations that deliver 890% ROI and $12.8B in annual savings. Fortune 100 proven solutions.';
-  keywords: ['autonomous operationsAI automation', 'business transformationROI', 'enterprise AI'],
-};
+  title: 'Autonomous Operations - Zion Tech Group',
+  description: 'Transform your business with autonomous AI operations that deliver 890% ROI and $12.8B in annual savings. Fortune 100 proven solutions.',
+  keywords: ['autonomous operationsAI automationbusiness transformationROI', 'enterprise AI']
+},
 export default function AutonomousOperationsPage() {,
   return (,
     <div>,
@@ -47,7 +47,7 @@ export default function AutonomousOperationsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-12">,
@@ -78,7 +78,7 @@ export default function AutonomousOperationsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* What Are Autonomous Operations */,}
+        {/* What Are Autonomous Operations */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
@@ -86,7 +86,7 @@ export default function AutonomousOperationsPage() {,
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">What Are Autonomous Operations?</h2>,
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">,
                   Autonomous operations represent the next evolution in enterprise automation, where AI systems,
-                  operate independently with minimal human intervention. These systems make real-time decisions;
+                  operate independently with minimal human intervention. These systems make real-time decisions,
                   adapt to changing conditions, and continuously optimize performance.,
                 </p>,
                 <div className="space-y-4">,
@@ -226,7 +226,7 @@ export default function AutonomousOperationsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Process */,}
+        {/* Implementation Process */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-12">,
@@ -269,7 +269,7 @@ export default function AutonomousOperationsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>,
@@ -294,5 +294,4 @@ export default function AutonomousOperationsPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

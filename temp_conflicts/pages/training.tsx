@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   GraduationCap, Users, Clock, Award, BookOpen, Video, 
   Headphones, Code, Brain, Atom, Rocket, Shield, Zap,
   Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp,
   Play, Download, ExternalLink, Calendar, MapPin, DollarSign,
   TrendingUp, Target, Lightbulb, Building, Globe, Server
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function TrainingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedProgram, setExpandedProgram] = useState<number | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [expandedProgram, setExpandedProgram] = useState<number | null>(null),
 
   const trainingCategories = [
     { id: 'all', name: 'All Programs', count: 24 },
@@ -20,7 +20,7 @@ export default function TrainingPage() {
     { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
     { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },
     { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
-  ];
+  ],
 
   const featuredPrograms = [
     {
@@ -36,10 +36,8 @@ export default function TrainingPage() {
       featured: true,
       icon: <Brain className="w-12 h-12" />,
       highlights: [
-        'Hands-on AI consciousness platform development',
-        'Real-world project implementation',
-        'Expert mentorship and support',
-        'Industry-recognized certification',
+        'Hands-on AI consciousness platform developmentReal-world project implementation',
+        'Expert mentorship and supportIndustry-recognized certification',
         'Lifetime access to course materials'
       ]
     },
@@ -56,10 +54,8 @@ export default function TrainingPage() {
       featured: true,
       icon: <Atom className="w-12 h-12" />,
       highlights: [
-        'Quantum algorithm development',
-        'Enterprise integration strategies',
-        'Performance optimization techniques',
-        'Security and compliance considerations',
+        'Quantum algorithm developmentEnterprise integration strategies',
+        'Performance optimization techniquesSecurity and compliance considerations',
         'Hands-on quantum simulator access'
       ]
     },
@@ -76,14 +72,12 @@ export default function TrainingPage() {
       featured: true,
       icon: <Rocket className="w-12 h-12" />,
       highlights: [
-        'Business process automation design',
-        'AI-powered decision making systems',
-        'Change management strategies',
-        'ROI measurement and optimization',
+        'Business process automation designAI-powered decision making systems',
+        'Change management strategiesROI measurement and optimization',
         'Industry best practices and case studies'
       ]
     }
-  ];
+  ],
 
   const allPrograms = [
     // AI Consciousness Programs
@@ -237,11 +231,11 @@ export default function TrainingPage() {
       students: '756',
       icon: <Zap className="w-8 h-8" />
     }
-  ];
+  ],
 
   const filteredPrograms = allPrograms.filter(program => 
     selectedCategory === 'all' || program.category === selectedCategory
-  );
+  ),
 
   const getCategoryIcon = (category: string) => {
     const icons = {
@@ -249,23 +243,20 @@ export default function TrainingPage() {
       'quantum-computing': <Atom className="w-6 h-6" />,
       'autonomous-ops': <Rocket className="w-6 h-6" />,
       'enterprise-it': <Building className="w-6 h-6" />
-    };
-    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />;
-  };
+    },
+    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />,
+  },
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      'ai-consciousness': 'cyan',
-      'quantum-computing': 'purple',
-      'autonomous-ops': 'green',
-      'enterprise-it': 'blue'
-    };
-    return colors[category as keyof typeof colors] || 'gray';
-  };
+      'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
+    },
+    return colors[category as keyof typeof colors] || 'gray',
+  },
 
   const toggleProgram = (id: number) => {
-    setExpandedProgram(expandedProgram === id ? null : id);
-  };
+    setExpandedProgram(expandedProgram === id ? null : id)
+  },
 
   return (
     <Layout>
@@ -363,7 +354,7 @@ export default function TrainingPage() {
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <span className={`px-3 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded-full text-sm border border-${getCategoryColor(program.category)}-500/30`}>
-                        {program.category.replace('-', ' ')}
+                        {program.category.replace('- ')}
                       </span>
                       <span className="text-gray-400 text-sm">
                         {program.level}
@@ -455,7 +446,7 @@ export default function TrainingPage() {
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
                           <span className={`px-2 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded text-xs border border-${getCategoryColor(program.category)}-500/30`}>
-                            {program.category.replace('-', ' ')}
+                            {program.category.replace('- ')}
                           </span>
                           <span className="text-gray-400 text-xs">
                             {program.level}
@@ -609,14 +600,10 @@ export default function TrainingPage() {
                   icon: <Brain className="w-12 h-12" />,
                   color: 'cyan',
                   path: [
-                    'AI Consciousness Fundamentals',
-                    'Consciousness Architecture Design',
-                    'Advanced Implementation',
-                    'Ethics and Governance',
-                    'API Development',
-                    'System Optimization',
-                    'Real-world Applications',
-                    'Expert Certification'
+                    'AI Consciousness FundamentalsConsciousness Architecture Design',
+                    'Advanced ImplementationEthics and Governance',
+                    'API DevelopmentSystem Optimization',
+                    'Real-world ApplicationsExpert Certification'
                   ]
                 },
                 {
@@ -628,12 +615,9 @@ export default function TrainingPage() {
                   icon: <Atom className="w-12 h-12" />,
                   color: 'purple',
                   path: [
-                    'Quantum Computing Basics',
-                    'Quantum Algorithms',
-                    'Machine Learning Integration',
-                    'Security Implementation',
-                    'Enterprise Solutions',
-                    'Advanced Applications'
+                    'Quantum Computing BasicsQuantum Algorithms',
+                    'Machine Learning IntegrationSecurity Implementation',
+                    'Enterprise SolutionsAdvanced Applications'
                   ]
                 },
                 {
@@ -645,10 +629,8 @@ export default function TrainingPage() {
                   icon: <Rocket className="w-12 h-12" />,
                   color: 'green',
                   path: [
-                    'Business Process Analysis',
-                    'Automation Strategy',
-                    'System Implementation',
-                    'Change Management',
+                    'Business Process AnalysisAutomation Strategy',
+                    'System ImplementationChange Management',
                     'Performance Optimization'
                   ]
                 }
@@ -722,7 +704,7 @@ export default function TrainingPage() {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
@@ -741,5 +723,5 @@ export default function TrainingPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import { TalentProfile } from '@/types/talent';
-import { Button } from '@/components/ui/button';
+import React from 'react',
+import { TalentProfile } from '@/types/talent',
+import { Button } from '@/components/ui/button',
 
 interface TalentDetailsProps {
-  talent: TalentProfile;
+  talent: TalentProfile
 }
 
 const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => (
@@ -30,6 +30,6 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => (
       <Button className="bg-zion-purple text-white">Hire</Button>
     </div>
   </main>
-);
+),
 
-export default TalentDetails;
+export default TalentDetails,

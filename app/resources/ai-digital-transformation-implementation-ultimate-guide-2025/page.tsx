@@ -1,19 +1,19 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI Digital Transformation Implementation Ultimate Guide 2025: Complete Roadmap to 30,000% ROI';
-  description: 'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results. Complete roadmap to 30,000% ROI.';
-  keywords: ['Implementation GuideDigital Transformation', 'ROIStrategy', 'Framework30,000% ROI'];
+  title: 'AI Digital Transformation Implementation Ultimate Guide 2025: Complete Roadmap to 30,000% ROI',
+  description: 'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results. Complete roadmap to 30,000% ROI.',
+  keywords: ['Implementation GuideDigital TransformationROIStrategy', 'Framework30,000% ROI'],
   openGraph: {,
-    title: 'AI Digital Transformation Implementation Ultimate Guide 2025: Complete Roadmap to 30,000% ROI';
-    description: 'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Implementation GuideDigital Transformation', 'ROIStrategy'],
+    title: 'AI Digital Transformation Implementation Ultimate Guide 2025: Complete Roadmap to 30,000% ROI',
+    description: 'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Implementation GuideDigital TransformationROIStrategy']
   }
-};
+},
 export default function AIDigitalTransformationImplementationGuidePage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -47,7 +47,7 @@ export default function AIDigitalTransformationImplementationGuidePage() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -100,7 +100,7 @@ export default function AIDigitalTransformationImplementationGuidePage() {,
           </div>,
         </div>,
       </section>,
-      {/* Guide Content */,}
+      {/* Guide Content */}
       <section className="py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="prose prose-lg max-w-none">,
@@ -395,4 +395,4 @@ export default function AIDigitalTransformationImplementationGuidePage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

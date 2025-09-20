@@ -1,30 +1,21 @@
-import React from 'react';
-import { Filter, X } from 'lucide-react';
-
+import React from "react";
+import { Filter, X } from "lucide-react";
 interface FilterOption {
-  value: string;
-  label: string;
-  count?: number;
+  value: string,label: string;
+  count?: number
 }
 
 interface FilterGroup {
-  title: string;
-  key: string;
-  options: FilterOption[];
-  type: 'checkbox' | 'radio' | 'range';
+  title: string,key: string,options: FilterOption[],type: 'checkbox' | 'radio' | 'range'
 }
 
 interface FilterSidebarProps {
-  filters: FilterGroup[];
-  selectedFilters: Record<string, string[]>;
-  onFilterChange: (key: string, value: string, checked: boolean) => void;
-  onClearFilters: () => void;
-  isOpen: boolean;
-  onClose: () => void;
+  filters: FilterGroup[],selectedFilters: Record<string, string[]>,
+  onFilterChange: (key: string, value: string, checked: boolean) => void,onClearFilters: () => void,isOpen: boolean,onClose: () => void
 }
 
 export function FilterSidebar({
-  filters,
+  filters;
   selectedFilters,
   onFilterChange,
   onClearFilters,
@@ -36,7 +27,7 @@ export function FilterSidebar({
       {/* Mobile overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
@@ -79,7 +70,6 @@ export function FilterSidebar({
               <div className="space-y-2">
                 {group.options.map((option) => {
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
-
                   return (
                     <label key={option.value} className="flex items-center gap-3 cursor-pointer">
                       <input
@@ -88,7 +78,7 @@ export function FilterSidebar({
                         value={option.value}
                         checked={isSelected}
                         onChange={(e) => onFilterChange(group.key, option.value, e.target.checked)}
-                        className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
+                        className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: ring-zion-cyan focus:ring-2"
                       />
                       <span className="text-sm text-zion-slate-light">
                         {option.label}

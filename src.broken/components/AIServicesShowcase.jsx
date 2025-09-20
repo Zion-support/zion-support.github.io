@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
- from 'framer-motion';
-import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link  } from 'react-router-dom';
+ from 'framer-motion',
+import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link  } from 'react-router-dom',
 ,
     {
 
@@ -88,23 +88,23 @@ import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { 
         color: 'from-emerald-500 to-teal-600',
         status: 'beta'
 
-];
-const categories = ['All',Conversational AI',Computer Vision',Data Analytics',Infrastructure',Developer AI'];
+],
+const categories = ['All',Conversational AI',Computer Vision',Data Analytics',Infrastructure',Developer AI'],
 export function AIServicesShowcase() {
 
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [selectedService, setSelectedService] = useState(null);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [selectedCategory, setSelectedCategory] = useState('All'),
+    const [selectedService, setSelectedService] = useState(null),
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true),
     const filteredServices = selectedCategory === 'All'
         ? aiServices
-        : aiServices.filter(service => service.category === selectedCategory) ;
+        : aiServices.filter(service => service.category === selectedCategory) ,
     const getStatusBadge = (status) => {
 
         const statusConfig = {
   active: { color: 'bg-green - 500',
   text: 'Active'
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 
   active: { color: 'bg-green-500',
   text: 'Active' 
@@ -112,11 +112,11 @@ import React, { useState } from 'react';
 },
             beta: { color: 'bg-yellow-500', text: 'Beta' },
             new: { color: 'bg-blue-500', text: 'New' }
-        };
-        const config = statusConfig[status];
+        },
+        const config = statusConfig[status],
         return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font - medium`}>
         {config.text}
-      </span>) };
+      </span>) },
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -128,7 +128,7 @@ import React, { useState } from 'react';
                 staggerChildren: 0.1,
                 delayChildren: 0.2
 
-    };
+    },
     const itemVariants = {
 
   hidden: { opacity: 0, y: 20,
@@ -145,7 +145,7 @@ import React, { useState } from 'react';
                 duration: 0.5,
                 ease: "easeOut"
 
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated gradients */}"
       <div className="absolute inset-0">"

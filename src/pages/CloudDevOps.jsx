@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  Cloud, 
+  Cloud,
   Server, 
   GitFork, 
   Zap, 
@@ -23,205 +23,122 @@ import {
   FileText,
   Truck,
   Wrench
-} from 'lucide-react';
-
+} from "lucide-react";
 const cloudDevOpsSolutions = [
   {
-    id: 1,
-    title: "Cloud Infrastructure Setup",
-    description: "Complete cloud infrastructure design and implementation for scalable applications.",
-    icon: Cloud,
-    features: [
-      "Multi-cloud strategy",
+    id: 1,title: "Cloud Infrastructure Setup",description: "Complete cloud infrastructure design and implementation for scalable applications.",icon: Cloud,features: [
+      "Multi-cloud strategy";
       "Auto-scaling setup",
       "Load balancing",
       "High availability"
     ],
     price: "From $15,000",
-    timeline: "8-16 weeks",
-    category: "Cloud Infrastructure",
-    platforms: ["AWS", "Azure", "Google Cloud", "Kubernetes"]
+    timeline: "8-16 weeks",category: "Cloud Infrastructure",platforms: ["AWS", "Azure", "Google Cloud", "Kubernetes"]
   },
   {
-    id: 2,
-    title: "CI/CD Pipeline Development",
-    description: "Automated continuous integration and deployment pipelines for rapid software delivery.",
-    icon: GitFork,
-    features: [
-      "Automated testing",
+    id: 2,title: "CI/CD Pipeline Development",description: "Automated continuous integration and deployment pipelines for rapid software delivery.",icon: GitFork,features: [
+      "Automated testing";
       "Build automation",
       "Deployment automation",
       "Rollback capabilities"
     ],
     price: "From $12,000",
-    timeline: "6-12 weeks",
-    category: "DevOps",
-    platforms: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
+    timeline: "6-12 weeks",category: "DevOps",platforms: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
   },
   {
-    id: 3,
-    title: "Container Orchestration",
-    description: "Kubernetes and Docker implementation for scalable containerized applications.",
-    icon: Server,
-    features: [
-      "Container orchestration",
+    id: 3,title: "Container Orchestration",description: "Kubernetes and Docker implementation for scalable containerized applications.",icon: Server,features: [
+      "Container orchestration";
       "Service mesh setup",
       "Auto-scaling",
       "Monitoring & logging"
     ],
     price: "From $20,000",
-    timeline: "10-18 weeks",
-    category: "Containerization",
-    platforms: ["Kubernetes", "Docker", "Helm", "Istio"]
+    timeline: "10-18 weeks",category: "Containerization",platforms: ["Kubernetes", "Docker", "Helm", "Istio"]
   },
   {
-    id: 4,
-    title: "Infrastructure as Code",
-    description: "Automated infrastructure provisioning and management using code.",
-    icon: Code,
-    features: [
-      "Terraform implementation",
+    id: 4,title: "Infrastructure as Code",description: "Automated infrastructure provisioning and management using code.",icon: Code,features: [
+      "Terraform implementation";
       "Ansible automation",
       "Version control",
       "Environment management"
     ],
     price: "From $18,000",
-    timeline: "8-14 weeks",
-    category: "IaC",
-    platforms: ["Terraform", "Ansible", "CloudFormation", "ARM Templates"]
+    timeline: "8-14 weeks",category: "IaC",platforms: ["Terraform", "Ansible", "CloudFormation", "ARM Templates"]
   },
   {
-    id: 5,
-    title: "Monitoring & Observability",
-    description: "Comprehensive monitoring and logging solutions for cloud applications.",
-    icon: Activity,
-    features: [
-      "Real-time monitoring",
+    id: 5,title: "Monitoring & Observability",description: "Comprehensive monitoring and logging solutions for cloud applications.",icon: Activity,features: [
+      "Real-time monitoring";
       "Alert systems",
       "Log aggregation",
       "Performance metrics"
     ],
     price: "From $10,000",
-    timeline: "6-10 weeks",
-    category: "Monitoring",
-    platforms: ["Prometheus", "Grafana", "ELK Stack", "Datadog"]
+    timeline: "6-10 weeks",category: "Monitoring",platforms: ["Prometheus", "Grafana", "ELK Stack", "Datadog"]
   },
   {
-    id: 6,
-    title: "Security & Compliance",
-    description: "Cloud security implementation and compliance management for enterprise applications.",
-    icon: Shield,
-    features: [
-      "Identity management",
+    id: 6,title: "Security & Compliance",description: "Cloud security implementation and compliance management for enterprise applications.",icon: Shield,features: [
+      "Identity management";
       "Access controls",
       "Security scanning",
       "Compliance reporting"
     ],
     price: "From $25,000",
-    timeline: "12-20 weeks",
-    category: "Security",
-    platforms: ["IAM", "VPC", "Security Groups", "WAF"]
+    timeline: "12-20 weeks",category: "Security",platforms: ["IAM", "VPC", "Security Groups", "WAF"]
   }
-];
+],
 
 const cloudPlatforms = [
   {
-    name: "Amazon Web Services",
-    description: "Leading cloud platform with comprehensive services",
-    icon: Cloud,
-    features: ["EC2", "S3", "Lambda", "RDS", "ECS"]
+    name: "Amazon Web Services",description: "Leading cloud platform with comprehensive services",icon: Cloud,features: ["EC2", "S3", "Lambda", "RDS", "ECS"]
   },
   {
-    name: "Microsoft Azure",
-    description: "Enterprise cloud platform with strong integration",
-    icon: Server,
-    features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"]
+    name: "Microsoft Azure",description: "Enterprise cloud platform with strong integration",icon: Server,features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"]
   },
   {
-    name: "Google Cloud Platform",
-    description: "Innovative cloud platform with AI/ML focus",
-    icon: Globe,
-    features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"]
+    name: "Google Cloud Platform",description: "Innovative cloud platform with AI/ML focus",icon: Globe,features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"]
   },
   {
-    name: "Kubernetes",
-    description: "Open-source container orchestration platform",
-          icon: GitFork,
-    features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
+    name: "Kubernetes",description: "Open-source container orchestration platform",icon: GitFork,features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
   }
-];
+],
 
 const successStories = [
   {
-    id: 1,
-    company: "Tech Startup",
-    industry: "SaaS",
-    challenge: "Needed scalable cloud infrastructure for rapid growth",
-    solution: "Built auto-scaling cloud platform with CI/CD pipelines",
-    results: "10x faster deployments, 99.9% uptime, 60% cost reduction",
+    id: 1,company: "Tech Startup",industry: "SaaS",challenge: "Needed scalable cloud infrastructure for rapid growth",solution: "Built auto-scaling cloud platform with CI/CD pipelines",results: "10x faster deployments, 99.9% uptime, 60% cost reduction",
     logo: "TS"
-  },
+  };
   {
-    id: 2,
-    company: "E-commerce Platform",
-    industry: "Retail",
-    challenge: "Required containerized microservices architecture",
-    solution: "Implemented Kubernetes with automated CI/CD",
-    results: "5x faster development cycles, improved scalability, better performance",
+    id: 2,company: "E-commerce Platform",industry: "Retail",challenge: "Required containerized microservices architecture",solution: "Implemented Kubernetes with automated CI/CD",results: "5x faster development cycles, improved scalability, better performance",
     logo: "EP"
-  },
+  };
   {
-    id: 3,
-    company: "Financial Services",
-    industry: "Finance",
-    challenge: "Needed secure, compliant cloud infrastructure",
-    solution: "Built secure cloud platform with automated compliance",
-    results: "Full compliance, enhanced security, 40% faster time-to-market",
+    id: 3,company: "Financial Services",industry: "Finance",challenge: "Needed secure, compliant cloud infrastructure",
+    solution: "Built secure cloud platform with automated compliance",results: "Full compliance, enhanced security, 40% faster time-to-market",
     logo: "FS"
   }
 ];
-
 const processSteps = [
   {
-    step: 1,
-    title: "Assessment & Planning",
-    description: "Evaluate current infrastructure and plan cloud migration strategy",
-    icon: FileText,
-    duration: "1-2 weeks"
-  },
+    step: 1,title: "Assessment & Planning",description: "Evaluate current infrastructure and plan cloud migration strategy",icon: FileText,duration: "1-2 weeks"
+  };
   {
-    step: 2,
-    title: "Architecture Design",
-    description: "Design scalable cloud architecture and DevOps processes",
-    icon: Code,
-    duration: "2-3 weeks"
-  },
+    step: 2,title: "Architecture Design",description: "Design scalable cloud architecture and DevOps processes",icon: Code,duration: "2-3 weeks"
+  };
   {
-    step: 3,
-    title: "Implementation",
-    description: "Build and deploy cloud infrastructure with automation",
-    icon: Wrench,
-    duration: "6-20 weeks"
-  },
+    step: 3,title: "Implementation",description: "Build and deploy cloud infrastructure with automation",icon: Wrench,duration: "6-20 weeks"
+  };
   {
-    step: 4,
-    title: "Optimization",
-    description: "Monitor, optimize, and continuously improve the system",
-    icon: Zap,
-    duration: "Ongoing"
+    step: 4,title: "Optimization",description: "Monitor, optimize, and continuously improve the system",
+    icon: Zap,duration: "Ongoing"
   }
 ];
-
 export default function CloudDevOps() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
   const [selectedSolution, setSelectedSolution] = useState(null);
-
-  const categories = ['All', 'Cloud Infrastructure', 'DevOps', 'Containerization', 'IaC', 'Monitoring', 'Security'];
-  
+  const categories = ['AllCloud Infrastructure', 'DevOpsContainerization', 'IaCMonitoring', 'Security'];
   const filteredSolutions = selectedCategory === 'All' 
     ? cloudDevOpsSolutions 
     : cloudDevOpsSolutions.filter(solution => solution.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -526,11 +443,11 @@ export default function CloudDevOps() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Infrastructure?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how our cloud and DevOps solutions can modernize your infrastructure, 
+              Let's discuss how our cloud and DevOps solutions can modernize your infrastructure;
               automate your processes, and scale your applications.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
@@ -548,5 +465,5 @@ export default function CloudDevOps() {
         </div>
       </section>
     </div>
-  );
+  )
 }

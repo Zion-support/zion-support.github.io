@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 export default function SolutionsPage() {,
 	return (,
 		<>,
@@ -11,7 +11,7 @@ export default function SolutionsPage() {,
 			</Head>,
 			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">,
 				<div className="container mx-auto px-6 py-16">,
-					{/* Hero Section */,}
+					{/* Hero Section */}
 					<section className="text-center mb-16">,
 						<h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">,
 							Industry Solutions,
@@ -28,7 +28,7 @@ export default function SolutionsPage() {,
 							</Link>,
 						</div>,
 					</section>,
-					{/* Featured Solutions */,}
+					{/* Featured Solutions */}
 					<section className="mb-16">,
 						<h2 className="text-3xl font-bold mb-8 text-center text-white">Featured Industry Solutions</h2>,
 						<div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
@@ -78,7 +78,7 @@ export default function SolutionsPage() {,
 							</div>,
 						</div>,
 					</section>,
-					{/* Industry Solutions Grid */,}
+					{/* Industry Solutions Grid */}
 					<section className="mb-16">,
 						<h2 className="text-3xl font-bold mb-8 text-center text-white">Industry Solutions</h2>,
 						<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -337,5 +337,4 @@ export default function SolutionsPage() {,
 					</section>,
 				</div>,
 			</main>,
-		</>,
-	),}
+		</>)}

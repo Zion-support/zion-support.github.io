@@ -1,2 +1,2 @@
 
-export default performance-monitor;
+export default performance-monitor,

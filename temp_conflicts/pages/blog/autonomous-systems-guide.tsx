@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function AutonomousSystemsGuide() {
   return (
@@ -170,7 +170,7 @@ export default function AutonomousSystemsGuide() {
               <p className="text-white/80 mb-6">
                 Ready to build your own autonomous systems? Zion Tech Group offers comprehensive consulting, development, and deployment services to help you harness the power of autonomous technology.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">1</div>
                   <div className="text-sm text-white/70">Assessment & Planning</div>
@@ -197,5 +197,5 @@ export default function AutonomousSystemsGuide() {
         </main>
       </div>
     </>
-  );
+  )
 }

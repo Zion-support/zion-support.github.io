@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, 
   Brain, Cpu, Rocket, Shield, 
@@ -16,17 +16,17 @@ import {
   Sparkles as SparklesIcon, Zap as ZapIcon, Brain as BrainIcon, Play,
   Heart, BookOpen as BookOpenIcon, Microscope as MicroscopeIcon,
   Rocket as RocketIcon, Atom as AtomIcon, Shield as ShieldIcon2
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  color?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  color?: string
 }
 
 const contactInfo = {
@@ -34,5 +34,5 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
-export default UltraAdvancedNavigation2035;
+},
+export default UltraAdvancedNavigation2035,

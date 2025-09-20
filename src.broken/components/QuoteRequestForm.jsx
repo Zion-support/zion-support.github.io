@@ -5,8 +5,8 @@ export default function Page() {
     { value: 'equipment', label: 'Equipment & Hardware' },
     { value: 'consulting', label: 'IT Consulting & Strategy' },
     { value: 'custom-development', label: 'Custom Software Development' },
-    { value: 'other', label: 'Other Services' },
-  ];
+    { value: 'other', label: 'Other Services' }
+  ],
 
   const timelineOptions = ['
     { value: 'asap', label: 'ASAP(Within 1 week)},
@@ -14,8 +14,8 @@ export default function Page() {
     { value: '1-month', label: '1 month' },
     { value: '2-3-months', label: '2-3 months' },
     { value: '3-6-months', label: '3-6 months' },
-    { value: '6-months-plus', label: '6+ months' },
-  ];
+    { value: '6-months-plus', label: '6+ months' }
+  ],
 
   const budgetRanges = ['
     { value: 'under-5k', label: 'Under $5,000' },
@@ -24,22 +24,22 @@ export default function Page() {
     { value: '25k-50k', label: '$25,000 - $50,000' },
     { value: '50k-100k', label: '$50,000 - $100,000' },
     { value: '100k-plus', label: '$100,000+' },
-    { value: 'to-be-discussed', label: 'To be discussed' },
-  ];
+    { value: 'to-be-discussed', label: 'To be discussed' }
+  ],
 
   const urgencyLevels = ['
     { value: 'low', label: 'Low-Planning phase' },
     { value: 'medium', label: 'Medium - Ready to start soon' },
     { value: 'high', label: 'High-Need to start immediately' },
-    { value: 'critical', label: 'Critical - Emergency situation' },
-  ];
+    { value: 'critical', label: 'Critical - Emergency situation' }
+  ],
 
   const handleChange = (field, value) => {
 
     setFormData(prev => ({
 
       ...prev,
-      [field]: value}));
+      [field]: value})),
 
     // Clear error when user starts typing
     if(errors[field]) {
@@ -47,46 +47,46 @@ export default function Page() {
       setErrors(prev => ({
 
         ...prev,
-        [field]: ''}));
+        [field]: ''})),
     }
-  };
+  },
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors = {},
 
     if(!formData.firstName.trim())
-      newErrors.firstName = 'First name is required';
-    if(!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-    if(!formData.email.trim()) newErrors.email = 'Email is required';
+      newErrors.firstName = 'First name is required',
+    if(!formData.lastName.trim()) newErrors.lastName = 'Last name is required',
+    if(!formData.email.trim()) newErrors.email = 'Email is required',
     if(!formData.company.trim())
-      newErrors.company = 'Company name is required';
+      newErrors.company = 'Company name is required',
     if(!formData.serviceType)
-      newErrors.serviceType = 'Service type is required';
+      newErrors.serviceType = 'Service type is required',
     if(!formData.projectDescription.trim())
-      newErrors.projectDescription = 'Project description is required';
+      newErrors.projectDescription = 'Project description is required',
     if(!formData.agreeToTerms)
-      newErrors.agreeToTerms = 'You must agree to the terms and conditions';
+      newErrors.agreeToTerms = 'You must agree to the terms and conditions',
 
-    setErrors(newErrors) ;
-    return Object.keys(newErrors) .length === 0;
-  };
+    setErrors(newErrors) ,
+    return Object.keys(newErrors) .length === 0,
+  },
 
   const handleSubmit = async e => {
 
-    e.preventDefault();
+    e.preventDefault(),
 
     if(!validateForm()) {
 
-      return;
+      return,
     }
 
-    setIsSubmitting(true) ;
+    setIsSubmitting(true) ,
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000)),
 
-      setIsSubmitted(true);
+      setIsSubmitted(true),
       // Reset form
       setFormData({
 
@@ -102,15 +102,15 @@ export default function Page() {
         urgency: 'medium',
         contactMethod: 'email',
         agreeToTerms: false,
-        agreeToMarketing: false});
+        agreeToMarketing: false}),
     } catch(error) {
 
-      // console.error('Error submitting form:', error);
+      // console.error('Error submitting form:', error),
     } finally {
 
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   if(isSubmitted) {
 
@@ -128,7 +128,7 @@ export default function Page() {
             Submit Another Request
           </Button>
         </CardContent>
-      </Card>) ;
+      </Card>) ,
   }
 
   return ("
@@ -411,9 +411,9 @@ export default function Page() {
           </div>
         </form>
       </CardContent>
-    </Card>) ;
-};
+    </Card>) ,
+},
 '"
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

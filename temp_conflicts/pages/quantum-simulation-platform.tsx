@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Atom, Brain, Zap, Target, Shield, Clock, 
   CheckCircle, ArrowRight, Users, Award,
   TrendingUp, Globe, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumSimulationPlatform: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumSimulationPlatform: React.FC = () => {
       title: 'Scalable Platform',
       description: 'Handles simulations from small molecules to complex systems'
     }
-  ];
+  ],
 
   const simulationCapabilities = [
     {
       area: 'Quantum Chemistry',
-      capabilities: ['Molecular dynamics', 'Electronic structure', 'Reaction pathways', 'Spectroscopy'],
+      capabilities: ['Molecular dynamicsElectronic structure', 'Reaction pathwaysSpectroscopy'],
       improvement: '1000x faster',
       accuracy: 'Chemical accuracy'
     },
     {
       area: 'Quantum Materials',
-      capabilities: ['Crystal structure', 'Electronic properties', 'Magnetic properties', 'Thermal properties'],
+      capabilities: ['Crystal structureElectronic properties', 'Magnetic propertiesThermal properties'],
       improvement: '500x faster',
       accuracy: 'First principles'
     },
     {
       area: 'Quantum Physics',
-      capabilities: ['Quantum systems', 'Entanglement dynamics', 'Quantum phase transitions', 'Many-body physics'],
+      capabilities: ['Quantum systemsEntanglement dynamics', 'Quantum phase transitionsMany-body physics'],
       improvement: '100x faster',
       accuracy: 'Exact solutions'
     },
     {
       area: 'Quantum Biology',
-      capabilities: ['Protein folding', 'Enzyme catalysis', 'Photosynthesis', 'Quantum coherence'],
+      capabilities: ['Protein foldingEnzyme catalysis', 'PhotosynthesisQuantum coherence'],
       improvement: '200x faster',
       accuracy: 'Biological accuracy'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Drug Discovery',
       description: 'Quantum simulation for pharmaceutical research and drug development',
-      benefits: ['Accelerated discovery', 'Improved accuracy', 'Cost reduction']
+      benefits: ['Accelerated discoveryImproved accuracy', 'Cost reduction']
     },
     {
       title: 'Materials Science',
       description: 'Quantum simulation for new materials discovery and optimization',
-      benefits: ['Faster development', 'Better properties', 'Innovation acceleration']
+      benefits: ['Faster developmentBetter properties', 'Innovation acceleration']
     },
     {
       title: 'Energy Research',
       description: 'Quantum simulation for renewable energy and battery technology',
-      benefits: ['Efficient design', 'Performance optimization', 'Sustainability improvement']
+      benefits: ['Efficient designPerformance optimization', 'Sustainability improvement']
     },
     {
       title: 'Climate Modeling',
       description: 'Quantum simulation for climate science and environmental research',
-      benefits: ['Accurate predictions', 'Complex modeling', 'Policy support']
+      benefits: ['Accurate predictionsComplex modeling', 'Policy support']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumSimulationPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for research institutions and small simulation projects',
       features: [
-        'Up to 100 simulations/month',
-        'Basic quantum algorithms',
-        'Standard simulation types',
-        'Email support',
+        'Up to 100 simulations/monthBasic quantum algorithms',
+        'Standard simulation typesEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumSimulationPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing research teams and industrial applications',
       features: [
-        'Up to 500 simulations/month',
-        'Advanced quantum algorithms',
-        'Custom simulation types',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 500 simulations/monthAdvanced quantum algorithms',
+        'Custom simulation typesPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumSimulationPlatform: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations and government agencies',
       features: [
-        'Unlimited simulations',
-        'Custom quantum algorithm development',
-        'Dedicated quantum hardware',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited simulationsCustom quantum algorithm development',
+        'Dedicated quantum hardwareDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumSimulationPlatform: React.FC = () => {
       position: "Energy Research Lead",
       company: "Clean Energy Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -491,7 +483,7 @@ const QuantumSimulationPlatform: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Simulate with Quantum Power?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -513,7 +505,7 @@ const QuantumSimulationPlatform: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumSimulationPlatform;
+export default QuantumSimulationPlatform,

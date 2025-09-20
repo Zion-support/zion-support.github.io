@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function AI2026ZeroDowntimeAgentRollouts() {,
   return (,
     <>,
@@ -23,7 +23,7 @@ export default function AI2026ZeroDowntimeAgentRollouts() {,
       <article className="prose max-w-3xl mx-auto px-4 py-12">,
         <h1>AI 2026: Zero‑Downtime Agent Rollouts</h1>,
         <p className="lead">,
-          Ship autonomously with no customer‑visible downtime by combining evaluation gates;
+          Ship autonomously with no customer‑visible downtime by combining evaluation gates,
           progressive delivery, and pre‑agreed rollback contracts.,
         </p>,
         <h2>Key Practices</h2>,
@@ -44,7 +44,6 @@ export default function AI2026ZeroDowntimeAgentRollouts() {,
           implementation details and templates.,
         </p>,
       </article>,
-    </>,
-  );
+    </>),
 }
 ,

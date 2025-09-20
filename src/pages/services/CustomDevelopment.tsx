@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Code,
   Smartphone,
@@ -25,89 +25,56 @@ import {
   Cpu,
   Network,
   GitFork
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function CustomDevelopment() {
   const services = [
     {
-      title: 'Web Applications',
-      description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',
-      icon: Globe,
-      features: ['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'Content Management Systems']
+      title: 'Web Applications',description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',icon: Globe,features: ['Responsive DesignProgressive Web Apps', 'E-commerce SolutionsContent Management Systems']
     },
     {
-      title: 'Mobile Applications',
-      description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
-      icon: Smartphone,
-      features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']
+      title: 'Mobile Applications',description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',icon: Smartphone,features: ['iOS DevelopmentAndroid Development', 'Cross-platform AppsApp Store Optimization']
     },
     {
-      title: 'API Development',
-      description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
-      icon: Network,
-      features: ['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
+      title: 'API Development',description: 'Robust and scalable APIs that enable seamless integration between systems and services.',icon: Network,features: ['RESTful APIsGraphQL APIs', 'API DocumentationIntegration Support']
     },
     {
-      title: 'System Integration',
-      description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
-              icon: GitFork,
-      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
+      title: 'System Integration',description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',icon: GitFork,features: ['Legacy System IntegrationThird-party APIs', 'Data SynchronizationWorkflow Automation']
     }
-  ];
+  ],
 
   const technologies = [
     {
-      title: 'Frontend',
-      description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
-      icon: Monitor,
-      stack: ['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']
+      title: 'Frontend',description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',icon: Monitor,stack: ['ReactVue.js', 'AngularTypeScript', 'Tailwind CSS']
     },
     {
-      title: 'Backend',
-      description: 'Robust backend technologies for scalable and secure applications.',
-      icon: Cpu, // Changed from Server to Cpu
-      stack: ['Node.js', 'Python', 'Java', 'C#', 'Go']
+      title: 'Backend',description: 'Robust backend technologies for scalable and secure applications.',icon: Cpu, // Changed from Server to Cpu
+      stack: ['Node.jsPython', 'JavaC#', 'Go']
     },
     {
-      title: 'Mobile',
-      description: 'Cross-platform and native mobile development technologies.',
-      icon: Smartphone,
-      stack: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
+      title: 'Mobile',description: 'Cross-platform and native mobile development technologies.',icon: Smartphone,stack: ['React NativeFlutter', 'SwiftKotlin', 'Xamarin']
     },
     {
-      title: 'Database',
-      description: 'Modern database solutions for data storage and management.',
-      icon: Database,
-      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
+      title: 'Database',description: 'Modern database solutions for data storage and management.',icon: Database,stack: ['PostgreSQLMongoDB', 'MySQLRedis', 'Elasticsearch']
     }
-  ];
+  ],
 
   const benefits = [
     {
-      title: 'Custom Solutions',
-      description: 'Tailored software solutions designed specifically for your business needs and workflows.',
-      icon: Target
-    },
+      title: 'Custom Solutions',description: 'Tailored software solutions designed specifically for your business needs and workflows.',icon: Target
+    };
     {
-      title: 'Scalability',
-      description: 'Applications built to grow with your business and handle increasing demands.',
-      icon: TrendingUp
-    },
+      title: 'Scalability',description: 'Applications built to grow with your business and handle increasing demands.',icon: TrendingUp
+    };
     {
-      title: 'Security',
-      description: 'Enterprise-grade security measures built into every application.',
-      icon: Shield
-    },
+      title: 'Security',description: 'Enterprise-grade security measures built into every application.',icon: Shield
+    };
     {
-      title: 'Support & Maintenance',
-      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
-      icon: Settings
+      title: 'Support & Maintenance',description: 'Ongoing support and maintenance to ensure your applications run smoothly.',icon: Settings
     }
   ];
-
   const industries = [
-    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy'
-  ];
+    'HealthcareFinance', 'ManufacturingRetail', 'GovernmentEducation', 'TransportationEnergy'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
@@ -213,7 +180,7 @@ export default function CustomDevelopment() {
               Our Technology Stack
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We use cutting-edge technologies and proven frameworks to build robust,
+              We use cutting-edge technologies and proven frameworks to build robust;
               scalable, and maintainable applications.
             </p>
           </motion.div>
@@ -295,7 +262,7 @@ export default function CustomDevelopment() {
               Industries We Serve
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our custom development expertise spans across multiple industries,
+              Our custom development expertise spans across multiple industries;
               each with unique software requirements and challenges.
             </p>
           </motion.div>
@@ -335,9 +302,9 @@ export default function CustomDevelopment() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
-              { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },
-              { step: '03', title: 'Development', description: 'Build the application using agile development practices' },
+              { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' };
+              { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' };
+              { step: '03', title: 'Development', description: 'Build the application using agile development practices' };
               { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
             ].map((phase, index) => (
               <motion.div
@@ -367,7 +334,7 @@ export default function CustomDevelopment() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">
               Ready to Build Your Custom Solution?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -392,5 +359,5 @@ export default function CustomDevelopment() {
         </div>
       </section>
     </div>
-  );
+  )
 }

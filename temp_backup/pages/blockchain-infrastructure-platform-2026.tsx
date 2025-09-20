@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Link as LinkIcon, ArrowRight, CheckCircle, Star, TrendingUp, 
   Shield, Zap, Users, Globe, Database, 
   Phone, Mail, MapPin, Rocket, Sparkles
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
 
 export default function BlockchainInfrastructurePlatform2026() {
   const contactInfo = {
@@ -16,41 +16,31 @@ export default function BlockchainInfrastructurePlatform2026() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
-    'Multi-chain support (Ethereum, Polygon, Solana)',
-    'Smart contract development tools',
-    'Enterprise security & compliance',
-    'Scalable infrastructure',
-    'API access & SDKs',
-    'Real-time monitoring',
-    'Custom blockchain networks',
-    'Integration marketplace',
-    '24/7 support',
-    'Expert consultation'
-  ];
+    'Multi-chain support (Ethereum, Polygon, Solana)Smart contract development tools',
+    'Enterprise security & complianceScalable infrastructure',
+    'API access & SDKsReal-time monitoring',
+    'Custom blockchain networksIntegration marketplace',
+    '24/7 supportExpert consultation'
+  ],
 
   const useCases = [
-    'Supply chain tracking',
-    'Digital identity management',
-    'Financial transactions',
-    'Asset tokenization',
-    'Voting systems',
-    'Data integrity'
-  ];
+    'Supply chain trackingDigital identity management',
+    'Financial transactionsAsset tokenization',
+    'Voting systemsData integrity'
+  ],
 
   const integrations = [
-    'Salesforce', 'SAP', 'Oracle', 'Microsoft Dynamics', 
-    'Slack', 'Microsoft Teams', 'Zapier', 'Custom APIs'
-  ];
+    'SalesforceSAP', 'OracleMicrosoft Dynamics', 
+    'SlackMicrosoft Teams', 'ZapierCustom APIs'
+  ],
 
   const competitors = [
-    'Alchemy ($0-3000/month)',
-    'Infura ($0-1000/month)',
-    'QuickNode ($0-2000/month)',
-    'Chainstack', 'Blockdaemon', 'ConsenSys'
-  ];
+    'Alchemy ($0-3000/month)Infura ($0-1000/month)',
+    'QuickNode ($0-2000/month)Chainstack', 'BlockdaemonConsenSys'
+  ],
 
 const blockchain-infrastructure-platform-2026: React.FC = () => {
   return (
@@ -67,7 +57,7 @@ const blockchain-infrastructure-platform-2026: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default blockchain-infrastructure-platform-2026;
+export default blockchain-infrastructure-platform-2026,

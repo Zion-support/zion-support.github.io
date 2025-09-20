@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,27 +16,19 @@ const categoryIcons = {
     'HealthTech': Heart,
     'E-commerce': ShoppingCart,
     'EdTech': GraduationCap
-};
+},
 const benefits = [
     {
-        icon: <Zap className="h-6 w-6"/>,
-        title: "Immediate Deployment",
-        description: "All services are ready for immediate deployment with no setup delays"
-    },
+        icon: <Zap className="h-6 w-6"/>,title: "Immediate Deployment",description: "All services are ready for immediate deployment with no setup delays"
+    };
     {
-        icon: <Shield className="h-6 w-6"/>,
-        title: "Enterprise Security",
-        description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
-    },
+        icon: <Shield className="h-6 w-6"/>,title: "Enterprise Security",description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
+    };
     {
-        icon: <Users className="h-6 w-6"/>,
-        title: "Dedicated Support",
-        description: "24/7 technical support with dedicated account managers"
-    },
+        icon: <Users className="h-6 w-6"/>,title: "Dedicated Support",description: "24/7 technical support with dedicated account managers"
+    };
     {
-        icon: <TrendingUp className="h-6 w-6"/>,
-        title: "Proven ROI",
-        description: "Average 300% ROI within 6 months of implementation"
+        icon: <TrendingUp className="h-6 w-6"/>,title: "Proven ROI",description: "Average 300% ROI within 6 months of implementation"
     }
 ];
 const features = [
@@ -48,7 +40,7 @@ const features = [
     "Custom Integrations",
     "White-label Solutions",
     "Comprehensive Documentation"
-];
+],
 export default function MicroSaasServices() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
@@ -133,7 +125,7 @@ export default function MicroSaasServices() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-zion-blue mb-4">
               Flexible Pricing Plans
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
@@ -144,22 +136,13 @@ export default function MicroSaasServices() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
   {
-    key: 'starter',
-    name: 'Starter',
-    price: '$29',
-    features: ['Basic features', 'Email support', '1 user']
+    key: 'starter',name: 'Starter',price: '$29',features: ['Basic featuresEmail support', '1 user']
   },
   {
-    key: 'professional',
-    name: 'Professional',
-    price: '$99',
-    features: ['Advanced features', 'Priority support', '5 users']
+    key: 'professional',name: 'Professional',price: '$99',features: ['Advanced featuresPriority support', '5 users']
   },
   {
-    key: 'enterprise',
-    name: 'Enterprise',
-    price: '$299',
-    features: ['Custom features', '24/7 support', 'Unlimited users']
+    key: 'enterprise',name: 'Enterprise',price: '$299',features: ['Custom features24/7 support', 'Unlimited users']
   }
 ].map((tier) => (<Card key={tier.key} className={`relative ${tier.key === 'professional' ? 'border-zion-purple border-2 scale-105' : ''}`}>
                 {tier.key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -197,7 +180,7 @@ export default function MicroSaasServices() {
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Services by Category
             </h2>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -213,7 +196,7 @@ export default function MicroSaasServices() {
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
                     {category.label.split(' ')[0]}
-                  </TabsTrigger>);
+                  </TabsTrigger>),
         })}
             </TabsList>
             

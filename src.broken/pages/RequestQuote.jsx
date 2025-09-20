@@ -1,4 +1,4 @@
-import { CheckCircle, Clock, Users, Zap  } from 'lucide-react';
+import { CheckCircle, Clock, Users, Zap  } from 'lucide-react',
 
 export default function Page() {
           <div className="max - w-4xl mx -auto">
@@ -21,8 +21,7 @@ export default function Page() {
             </h3>
             <p className="text-zion - slate - light mb-6">
               For urgent requests or to speak with our team directly, contact
-              us:
-            </p>
+              us: </p>
             <div className="flex flex - col sm:flex - row gap-4 justify -center">
               <a
                 href="mailto:commercial@ziontechgroup.com"
@@ -42,5 +41,5 @@ export default function Page() {
       </main>
 
       <Footer />
-    </div>) ;
+    </div>) 
 }

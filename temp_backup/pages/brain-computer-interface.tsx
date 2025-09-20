@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Cpu, Zap, Target, Users, Globe, ArrowRight, Activity } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Brain, Cpu, Zap, Target, Users, Globe, ArrowRight, Activity } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function BrainComputerInterface() {
   return (
@@ -18,6 +18,6 @@ export default function BrainComputerInterface() {
         </div>
       </div>
     </div>
-  );
-};
-export default QuantumRealityEngine2025;
+  ),
+},
+export default QuantumRealityEngine2025,

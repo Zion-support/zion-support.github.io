@@ -1,8 +1,8 @@
 
-import { GradientHeading } from "./GradientHeading";
-import { Button } from "./ui/button";
-import { CheckCircle2 } from "lucide-react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button",
+import { CheckCircle2 } from "lucide-react",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
 
 export function ComparisonSection() {
   return (
@@ -32,7 +32,7 @@ export function ComparisonSection() {
                   { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },
                   { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
                   { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" },
-                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" },
+                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }
                 ].map((item, index) => (
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
@@ -62,5 +62,5 @@ export function ComparisonSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

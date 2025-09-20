@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface SpaceTechInnovation2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
   // Space Technology AI Platform
@@ -49,16 +49,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     period: '/month',
     description: 'Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.',
     features: [
-      'AI-powered satellite operations',
-      'Autonomous space exploration',
-      'Space data analytics',
-      'Satellite constellation management',
-      'Space debris tracking',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Mission planning tools',
-      'API access',
-      'Expert consultation'
+      'AI-powered satellite operationsAutonomous space exploration',
+      'Space data analyticsSatellite constellation management',
+      'Space debris trackingReal-time monitoring',
+      'Predictive maintenanceMission planning tools',
+      'API accessExpert consultation'
     ],
     popular: false,
     icon: '🛰️',
@@ -71,11 +66,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     setupTime: '1 month',
     category: 'Space Technology & AI',
     realService: true,
-    technology: ['AI/ML algorithms', 'Satellite communication', 'Computer vision', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['NASA APIs', 'ESA APIs', 'Satellite ground stations', 'GIS systems', 'Slack', 'Microsoft Teams', 'Custom applications'],
-    useCases: ['Satellite operations', 'Space exploration', 'Earth observation', 'Space debris monitoring', 'Mission planning', 'Space research'],
+    technology: ['AI/ML algorithmsSatellite communication', 'Computer visionReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['NASA APIsESA APIs', 'Satellite ground stationsGIS systems', 'SlackMicrosoft Teams', 'Custom applications'],
+    useCases: ['Satellite operationsSpace exploration', 'Earth observationSpace debris monitoring', 'Mission planningSpace research'],
     roi: 'Space companies see 800% ROI within 24 months through improved operational efficiency and new capabilities.',
-    competitors: ['Maxar', 'Planet Labs', 'Airbus Defence', 'Lockheed Martin', 'Boeing', 'Northrop Grumman'],
+    competitors: ['MaxarPlanet Labs', 'Airbus DefenceLockheed Martin', 'BoeingNorthrop Grumman'],
     marketSize: '$447.5B market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -101,16 +96,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     period: '/month',
     description: 'Advanced platform that uses quantum computing and AI to identify, analyze, and plan extraction of valuable resources from asteroids, moons, and other celestial bodies.',
     features: [
-      'Quantum-powered resource analysis',
-      'Asteroid composition mapping',
-      'Mining feasibility assessment',
-      'Resource extraction planning',
-      'Risk assessment tools',
-      'ROI calculations',
-      'Regulatory compliance',
-      'Mission planning',
-      'Expert consultation',
-      'Investment analysis'
+      'Quantum-powered resource analysisAsteroid composition mapping',
+      'Mining feasibility assessmentResource extraction planning',
+      'Risk assessment toolsROI calculations',
+      'Regulatory complianceMission planning',
+      'Expert consultationInvestment analysis'
     ],
     popular: false,
     icon: '⛏️',
@@ -123,11 +113,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     setupTime: '2 weeks',
     category: 'Space Mining & Quantum',
     realService: true,
-    technology: ['Quantum computing', 'AI/ML algorithms', 'Space data analysis', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['NASA databases', 'ESA resources', 'Space telescopes', 'Satellite data', 'Financial platforms', 'Research tools'],
-    useCases: ['Asteroid mining', 'Lunar resource exploration', 'Space resource assessment', 'Investment analysis', 'Mission planning', 'Regulatory compliance'],
+    technology: ['Quantum computingAI/ML algorithms', 'Space data analysisReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['NASA databasesESA resources', 'Space telescopesSatellite data', 'Financial platformsResearch tools'],
+    useCases: ['Asteroid miningLunar resource exploration', 'Space resource assessmentInvestment analysis', 'Mission planningRegulatory compliance'],
     roi: 'Space mining companies see 1200% ROI within 36 months through successful resource extraction and commercialization.',
-    competitors: ['Planetary Resources', 'Deep Space Industries', 'AstroForge', 'TransAstra', 'Kleos Space', 'Asteroid Mining Corporation'],
+    competitors: ['Planetary ResourcesDeep Space Industries', 'AstroForgeTransAstra', 'Kleos SpaceAsteroid Mining Corporation'],
     marketSize: '$3.8B market',
     growthRate: '500% annual growth',
     variant: 'quantum-futuristic',
@@ -153,16 +143,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     period: '/month',
     description: 'AI-powered platform that automates satellite operations, monitoring, and maintenance, enabling efficient management of satellite constellations and individual satellites.',
     features: [
-      'Autonomous satellite operations',
-      'Predictive maintenance',
-      'Anomaly detection',
-      'Orbit optimization',
-      'Power management',
-      'Communication optimization',
-      'Real-time monitoring',
-      'Performance analytics',
-      'API access',
-      '24/7 support'
+      'Autonomous satellite operationsPredictive maintenance',
+      'Anomaly detectionOrbit optimization',
+      'Power managementCommunication optimization',
+      'Real-time monitoringPerformance analytics',
+      'API access24/7 support'
     ],
     popular: true,
     icon: '🛸',
@@ -175,11 +160,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     setupTime: '1 month',
     category: 'Satellite Operations & AI',
     realService: true,
-    technology: ['AI/ML algorithms', 'Satellite communication', 'Predictive analytics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Satellite ground stations', 'Communication networks', 'GIS systems', 'Slack', 'Microsoft Teams', 'Custom applications'],
-    useCases: ['Satellite operations', 'Constellation management', 'Earth observation', 'Communications', 'Navigation', 'Scientific research'],
+    technology: ['AI/ML algorithmsSatellite communication', 'Predictive analyticsReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Satellite ground stationsCommunication networks', 'GIS systemsSlack', 'Microsoft TeamsCustom applications'],
+    useCases: ['Satellite operationsConstellation management', 'Earth observationCommunications', 'NavigationScientific research'],
     roi: 'Satellite operators see 600% ROI within 18 months through improved operational efficiency and reduced costs.',
-    competitors: ['Maxar', 'Planet Labs', 'Spire', 'ICEYE', 'Capella Space', 'Umbra'],
+    competitors: ['MaxarPlanet Labs', 'SpireICEYE', 'Capella SpaceUmbra'],
     marketSize: '$279.8B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -205,16 +190,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     period: '/month',
     description: 'Comprehensive space debris tracking system that monitors orbital debris, predicts potential collisions, and provides collision avoidance recommendations for satellites and spacecraft.',
     features: [
-      'Real-time debris tracking',
-      'Collision prediction',
-      'Avoidance recommendations',
-      'Orbital analysis',
-      'Risk assessment',
-      'Historical data analysis',
-      'API access',
-      'Mobile app',
-      'Expert consultation',
-      '24/7 monitoring'
+      'Real-time debris trackingCollision prediction',
+      'Avoidance recommendationsOrbital analysis',
+      'Risk assessmentHistorical data analysis',
+      'API accessMobile app',
+      'Expert consultation24/7 monitoring'
     ],
     popular: false,
     icon: '🚨',
@@ -227,11 +207,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     setupTime: '2 weeks',
     category: 'Space Safety & Monitoring',
     realService: true,
-    technology: ['AI/ML algorithms', 'Radar systems', 'Optical tracking', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Satellite systems', 'Ground stations', 'Communication networks', 'Slack', 'Microsoft Teams', 'Custom applications'],
-    useCases: ['Collision avoidance', 'Satellite safety', 'Insurance assessment', 'Regulatory compliance', 'Research & development', 'Space traffic management'],
+    technology: ['AI/ML algorithmsRadar systems', 'Optical trackingReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Satellite systemsGround stations', 'Communication networksSlack', 'Microsoft TeamsCustom applications'],
+    useCases: ['Collision avoidanceSatellite safety', 'Insurance assessmentRegulatory compliance', 'Research & developmentSpace traffic management'],
     roi: 'Satellite operators see 800% ROI within 12 months through prevented collisions and insurance savings.',
-    competitors: ['LeoLabs', 'Space-Track', 'ESA DISCOS', 'NORAD', 'Astroscale', 'ClearSpace'],
+    competitors: ['LeoLabsSpace-Track', 'ESA DISCOSNORAD', 'AstroscaleClearSpace'],
     marketSize: '$1.2B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -257,16 +237,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     period: '/month',
     description: 'Advanced platform that monitors space weather conditions, predicts solar storms, and provides early warning systems to protect satellites, power grids, and communication systems.',
     features: [
-      'Real-time space weather monitoring',
-      'Solar storm prediction',
-      'Geomagnetic storm alerts',
-      'Satellite protection recommendations',
-      'Power grid protection',
-      'Communication system alerts',
-      'Historical data analysis',
-      'API access',
-      'Mobile app',
-      'Expert consultation'
+      'Real-time space weather monitoringSolar storm prediction',
+      'Geomagnetic storm alertsSatellite protection recommendations',
+      'Power grid protectionCommunication system alerts',
+      'Historical data analysisAPI access',
+      'Mobile appExpert consultation'
     ],
     popular: false,
     icon: '☀️',
@@ -279,11 +254,11 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     setupTime: '1 week',
     category: 'Space Weather & Protection',
     realService: true,
-    technology: ['AI/ML algorithms', 'Solar monitoring', 'Geomagnetic sensors', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Power grid systems', 'Communication networks', 'Satellite systems', 'Slack', 'Microsoft Teams', 'Custom applications'],
-    useCases: ['Power grid protection', 'Satellite safety', 'Communication protection', 'Aviation safety', 'Research & development', 'Emergency preparedness'],
+    technology: ['AI/ML algorithmsSolar monitoring', 'Geomagnetic sensorsReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Power grid systemsCommunication networks', 'Satellite systemsSlack', 'Microsoft TeamsCustom applications'],
+    useCases: ['Power grid protectionSatellite safety', 'Communication protectionAviation safety', 'Research & developmentEmergency preparedness'],
     roi: 'Power utilities see 1000% ROI within 6 months through prevented blackouts and equipment damage.',
-    competitors: ['NOAA Space Weather', 'ESA Space Weather', 'NASA Space Weather', 'Space Weather Prediction Center', 'Met Office', 'Bureau of Meteorology'],
+    competitors: ['NOAA Space WeatherESA Space Weather', 'NASA Space WeatherSpace Weather Prediction Center', 'Met OfficeBureau of Meteorology'],
     marketSize: '$2.8B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -300,4 +275,4 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 85
   }
-];
+],

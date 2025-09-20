@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Edge Agents On-Device';
+  title: 'AI 2026: Edge Agents On-Device',
   description:,
-    'Private, low-latency agents with hybrid on-device/offload compute, secure updates, and telemetry for enterprises.';
-  keywords: ['edge agentson-device AI', 'privacylow latency', 'hybrid compute'],
-};
+    'Private, low-latency agents with hybrid on-device/offload compute, secure updates, and telemetry for enterprises.',
+  keywords: ['edge agentson-device AIprivacylow latency', 'hybrid compute']
+},
 export default function EdgeAgentsOnDevicePage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -43,6 +43,5 @@ export default function EdgeAgentsOnDevicePage() {,
           <Link href="/content/edge-ai-agents-2026" className="text-purple-600 font-semibold hover:text-purple-800">Edge AI Agents Guide →</Link>,
         </div>,
       </main>,
-    </div>,
-  ),}
+    </div>)}
 ,

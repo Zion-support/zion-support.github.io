@@ -1,30 +1,30 @@
 
 class Script {,
   constructor() {,
-    this.isRunning = false;
+    this.isRunning = false,
   }
 ,
   async start() {,
-    this.isRunning = true;
-    console.log('Starting Script...');
+    this.isRunning = true,
+    console.log('Starting Script...'),
     try {,
-      const winston = require('winston');
+      const winston = require('winston'),
 const logger = winston.createLogger({,
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(,
-    winston.format.timestamp();
-    winston.format.errors({ stack: true ,});
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
     winston.format.json(),
-  );
-  defaultMeta: { service: 'automation-script' ,};
+  ),
+  defaultMeta: { service: 'automation-script' },
   transports: [,
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' ,});
-    new winston.transports.File({ filename: 'logs/combined.log' ,}),
-  ],
-});
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' })
+  ]
+}),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple(),}));
+    format: winston.format.simple()})),
 }
 ,
 const { execSync, spawn } = require('child_process'),
@@ -34,55 +34,55 @@ const DEV_CMD = npm run dev,
 const AUTOMATION_CMD = npm run netlify: start,
 const CURSOR_CHAT_CMD = npm run cursor:chat,
 const CHECK_INTERVAL = 10000, // 10 seconds,
-let cursorChatProcess = null;
+let cursorChatProcess = null,
 let cursorChatActive = false,
 function isPortInUse(port)  {,
   try {,
-    const output = execSync(`lsof -i :${port} | grep LISTEN || true`).toString();
-    return output.trim().length > 0;
+    const output = execSync(`lsof -i :${port} | grep LISTEN || true`).toString(),
+    return output.trim().length > 0,
   } catch {,
-    return false;
+    return false,
   }
 }
 ,
 function killPort(port)  {,
   try {,
-    execSync(`lsof -ti :${port} | xargs kill -9 || true`);
-    logger.info(`[Watchdog] Killed processes on port ${port}`);
+    execSync(`lsof -ti :${port} | xargs kill -9 || true`),
+    logger.info(`[Watchdog] Killed processes on port ${port}`),
   } catch (e) {,
-    // Ignore,
+    // Ignore
   }
 }
 ,
 function isProcessRunning(cmd)  {,
   try {,
-    const output = execSync(`ps aux | grep ${cmd} | grep -v grep || true`).toString();
-    return output.trim().length > 0;
+    const output = execSync(`ps aux | grep ${cmd} | grep -v grep || true`).toString(),
+    return output.trim().length > 0,
   } catch {,
-    return false;
+    return false,
   }
 }
 ,
 const proc = spawn(cmd, {,
-    shell: true;
-    cwd;
-    stdio: 'ignore';
-    detached: true,});
+    shell: true,
+    cwd,
+    stdio: 'ignore',
+    detached: true}),
   if (onExit) {,
-    proc.on('exit', onExit);
+    proc.on('exit', onExit),
   }
-  return proc;
+  return proc,
 }
 ,
 function startCursorChat()  {,
-  if (cursorChatActive) return;
-  cursorChatActive = true;
+  if (cursorChatActive) return,
+  cursorChatActive = true,
   cursorChatProcess = startProcess(,
-    CURSOR_CHAT_CMD;
-    path.join(__dirname, ..');
+    CURSOR_CHAT_CMD,
+    path.join(__dirname, ..'),
     () => {,
-      logger.info([Watchdog] Cursor chat process exited. Starting new session...');
-      cursorChatActive = false;
+      logger.info([Watchdog] Cursor chat process exited. Starting new session...'),
+      cursorChatActive = false,
 const timeoutId =,
 const timeoutId =,
 const timeoutId =,
@@ -144,141 +144,141 @@ const timeoutId =,
 const timeoutId =,
 const timeoutId =,
 const timeoutId =,
-const timeoutId = setTimeout(startCursorChat,                                                               1000);
+const timeoutId = setTimeout(startCursorChat,                                                               1000),
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
-// Store timeoutId for cleanup if needed, // Start new chat after 1s,
-    };
-  );
-  logger.info('[Watchdog] Cursor chat session started.');
+,
+// Store timeoutId for cleanup if needed, // Start new chat after 1s
+    },
+  ),
+  logger.info('[Watchdog] Cursor chat session started.'),
 }
 ,
 function killAllCursorChats()  {,
   try {,
-    execSync(`ps aux | grep cursor-multi-computer-communication.cjs chat' | grep -v grep | awk {print $2} | xargs kill -9 || true`);
-    logger.info('[Watchdog] Killed all completed Cursor chat processes.');
+    execSync(`ps aux | grep cursor-multi-computer-communication.cjs chat' | grep -v grep | awk {print $2} | xargs kill -9 || true`),
+    logger.info('[Watchdog] Killed all completed Cursor chat processes.'),
   } catch (e) {,
-    // Ignore,
+    // Ignore
   }
 }
 ,
@@ -286,60 +286,60 @@ function watchdogLoop()  {,
   setInterval(() => {,
     // Ensure port is not blocked,
     if (isPortInUse(PORT)) {,
-      killPort(PORT);
+      killPort(PORT),
     }
 ,
     // Ensure dev server is running,
     if (!isProcessRunning('next dev')) {,
-      startProcess(DEV_CMD, path.join(__dirname, ..'));
+      startProcess(DEV_CMD, path.join(__dirname, ..')),
     }
 ,
     // Ensure automation is running,
     if (!isProcessRunning('netlify-build-automation.js')) {,
-      startProcess(AUTOMATION_CMD, path.join(__dirname, ..'));
+      startProcess(AUTOMATION_CMD, path.join(__dirname, ..')),
     }
 ,
     // Kill any completed Cursor chat processes,
-    killAllCursorChats();
+    killAllCursorChats(),
     // Ensure Cursor chat is running and always create a new one if the previous is done,
     if (!cursorChatActive) {,
-      startCursorChat();
+      startCursorChat(),
     }
-  }, CHECK_INTERVAL);
+  }, CHECK_INTERVAL),
 }
 ,
-logger.info([Watchdog] Starting watchdog for dev server, automation, and Cursor chat lifecycle...');
-watchdogLoop();
+logger.info([Watchdog] Starting watchdog for dev server, automation, and Cursor chat lifecycle...'),
+watchdogLoop(),
     } catch (error) {,
-      console.error('Error in Script:', error);
-      throw error;
+      console.error('Error in Script:', error),
+      throw error,
     }
   }
 ,
   stop() {,
-    this.isRunning = false;
-    console.log('Stopping Script...');
+    this.isRunning = false,
+    console.log('Stopping Script...'),
   }
 }
 ,
 // Start the script,
 if (require.main === module) {,
-  const script = new Script();
+  const script = new Script(),
   script.start().catch(error => {,
-    console.error('Failed to start Script:', error);
-    process.exit(1);
-  });
+    console.error('Failed to start Script:', error),
+    process.exit(1),
+  }),
 }
 ,
-module.exports = Script;
+module.exports = Script,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {,
-  console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+  console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0);
-});
+  process.exit(0),
+}),
 process.on('SIGTERM', () => {,
-  console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+  console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0);
-});
+  process.exit(0),
+}),

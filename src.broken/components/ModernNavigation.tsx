@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,
         { id: 'cybersecurity', label: 'Cybersecurity', href: '#cybersecurity' },
@@ -41,20 +41,20 @@ export default function Page() {
         { id: 'documentation', label: 'Documentation', href: '#docs' }
       ]
     }
-  ];
+  ],
 
   const toggleDropdown = (id: string) => {
-    setActiveDropdown(activeDropdown === id ? null : id);
-  };
+    setActiveDropdown(activeDropdown === id ? null : id)
+  },
 
   const closeDropdown = () => {
-    setActiveDropdown(null);
-  };
+    setActiveDropdown(null),
+  },
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode(!isDarkMode),
     // Here you would typically update the global theme context
-  };
+  },
 
   return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700' 
@@ -234,7 +234,7 @@ export default function Page() {
         )}
       </AnimatePresence>
     </nav>
-  );
-};
+  ),
+},
 
-export default ModernNavigation;
+export default ModernNavigation,

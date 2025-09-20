@@ -1,4 +1,5 @@
-import i18n from '../index'; // Adjust path if necessary, imports from src/i18n/index.ts
+import i18n from '../index', // Adjust path if necessary,
+imports from src/i18n/index.ts
 
 describe('i18n Initialization', () => {
   it('should be initialized', (done) => {
@@ -10,29 +11,29 @@ describe('i18n Initialization', () => {
     // A better way would be to export the init promise from i18n/index.ts and await it here.
 
     setTimeout(() => { // Give a little time for async init if any part of it is not immediate
-      expect(i18n.isInitialized).toBe(true);
-      done();
-    }, 100); // Adjust timeout if needed, or use i18n.whenReady if available/configured
-  });
+      expect(i18n.isInitialized).toBe(true),
+      done(),
+    }, 100), // Adjust timeout if needed, or use i18n.whenReady if available/configured
+  }),
 
   it('should have fallback language configured', (done) => {
     setTimeout(() => {
-      expect(i18n.options.fallbackLng).toEqual(['en']); // Or just 'en' depending on how it's stored
-      done();
-    }, 100);
-  });
+      expect(i18n.options.fallbackLng).toEqual(['en']), // Or just 'en' depending on how it's stored
+      done(),
+    }, 100),
+  }),
 
   it('should have English resources loaded', (done) => {
     setTimeout(() => {
-      expect(i18n.hasResourceBundle('en', 'translation')).toBe(true);
-      done();
-    }, 100);
-  });
+      expect(i18n.hasResourceBundle('entranslation')).toBe(true),
+      done(),
+    }, 100),
+  }),
 
   it('should have Spanish resources loaded', (done) => {
     setTimeout(() => {
-      expect(i18n.hasResourceBundle('es', 'translation')).toBe(true);
-      done();
-    }, 100);
-  });
-});
+      expect(i18n.hasResourceBundle('estranslation')).toBe(true),
+      done(),
+    }, 100),
+  }),
+}),

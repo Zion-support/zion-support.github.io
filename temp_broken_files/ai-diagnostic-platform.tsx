@@ -1,39 +1,37 @@
-import Head from 'next/head';
+import Head from 'next/head',
 import {,
-  Brain, Shield, Zap, Target, Stethoscope;
-  BarChart3, Cpu, Globe, Users, Award;
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin,
-} from 'lucide-react';
+  Brain, Shield, Zap, Target, Stethoscope,
+  BarChart3, Cpu, Globe, Users, Award,
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+} from 'lucide-react',
 const contactInfo = {,
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const features = [,
-  'AI-powered medical image analysisSymptom assessment algorithms';
-  'Treatment recommendation enginePatient history integration';
-  'Real-time diagnostic updatesMulti-specialty coverage';
-  'Mobile app integrationHIPAA-compliant platform',
-];
+  'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integration',
+  'Real-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
+],
 const pricingPlans = [,
   {,
-    name: 'Starter';
-    price: 299;
-    period: 'month';
-    features: ['Basic diagnostic tools3 medical specialties', 'Standard reportingStandard support'];
-    popular: false,};
+    name: 'Starter',
+    price: 299,
+    period: 'month',
+    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'],
+    popular: false},
   {,
-    name: 'Professional';
-    price: 799;
-    period: 'month';
-    features: ['Advanced AI diagnosticsAll specialties', 'Custom reportingAPI access', 'Priority support'];
-    popular: true,};
+    name: 'Professional',
+    price: 799,
+    period: 'month',
+    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI access', 'Priority support'],
+    popular: true},
   {,
-    name: 'Enterprise';
-    price: 1999;
-    period: 'month';
-    features: ['Custom AI modelsWhite-label solution', 'Dedicated supportCustom integrations', 'Training included'];
-    popular: false,};
+    name: 'Enterprise',
+    price: 1999,
+    period: 'month',
+    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrations', 'Training included'],
+    popular: false},
 export default function AIDiagnosticPlatform() {,
   return (,
     <Layout>,
@@ -44,7 +42,7 @@ export default function AIDiagnosticPlatform() {,
         <meta property="og: title" content="AI Diagnostic Pro Platform - Zion Tech Group" />,
         <meta property="og:description" content="Advanced medical diagnostic platform with AI integration." />,
         <meta property="og:url" content="https://ziontechgroup.com/ai-diagnostic-platform" />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>,
         {/* Background Elements */}
@@ -68,7 +66,7 @@ export default function AIDiagnosticPlatform() {,
               Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.,
             </p>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div,
             className="flex flex-col sm: flex-row gap-4 justify-center items-center",
           >,
@@ -88,12 +86,12 @@ export default function AIDiagnosticPlatform() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">,
@@ -106,21 +104,20 @@ export default function AIDiagnosticPlatform() {,
             {features.map((feature, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-6 hover: border-blue-500/40 transition-all duration-300",
               >,
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">,
                   <CheckCircle className="w-6 h-6 text-white" />,
-                <h3 className="text-lg font-semibold text-white mb-2">{feature,}</h3>,
-              </div>,
-            ))}
+                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>,
+              </div>))}
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">,
@@ -133,19 +130,18 @@ export default function AIDiagnosticPlatform() {,
             {pricingPlans.map((plan, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border rounded-2xl p-8 ${,
                   plan.popular,
                     ? 'border-blue-500/50 scale-105',
-                    : 'border-blue-500/20',
+                    : 'border-blue-500/20'
                 }`}
               >,
                 {plan.popular && (,
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
                     <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">,
-                      Most Popular,
-                )}
+                      Most Popular)}
                 <div className="text-center mb-8">,
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>,
                   <div className="text-4xl font-bold text-white mb-2">,
@@ -161,13 +157,13 @@ export default function AIDiagnosticPlatform() {,
                   Get Started,
                 </button>,
               </div>,
-            )),}
+            ))}
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">,
@@ -178,8 +174,8 @@ export default function AIDiagnosticPlatform() {,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-center",
             >,
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">,
@@ -188,8 +184,8 @@ export default function AIDiagnosticPlatform() {,
               <p className="text-gray-300">{contactInfo.mobile}</p>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-center",
             >,
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">,
@@ -198,8 +194,8 @@ export default function AIDiagnosticPlatform() {,
               <p className="text-gray-300">{contactInfo.email}</p>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-center",
             >,
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">,
@@ -211,9 +207,9 @@ export default function AIDiagnosticPlatform() {,
         </div>,
       </section>,
     </Layout>,
-  );
+  ),
 }
-import React from "react";
+import React from "react",
 const function AIDiagnosticPlatform() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -224,7 +220,7 @@ const function AIDiagnosticPlatform() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function AIDiagnosticPlatform() {;
+  ),
+},
+export default function AIDiagnosticPlatform() {,
 }}}]

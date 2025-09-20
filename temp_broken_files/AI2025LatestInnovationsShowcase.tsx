@@ -1,61 +1,61 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe,
 const AI2025LatestInnovationsShowcase = () => {,
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % innovations.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentSlide((prev) => (prev + 1) % innovations.length),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
   const innovations = [,
     {,
-      id: 1;
-      title: "Quantum-Neural AI Fusion";
-      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.";
-      icon: Brain;
-      stats: "10,000x faster processing";
-      color: "from-purple-600 to-blue-600",};
+      id: 1,
+      title: "Quantum-Neural AI Fusion",
+      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.",
+      icon: Brain,
+      stats: "10,000x faster processing",
+      color: "from-purple-600 to-blue-600"},
     {,
-      id: 2;
-      title: "Autonomous Business Orchestration";
-      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.";
-      icon: Target;
-      stats: "95% efficiency increase";
-      color: "from-green-600 to-teal-600",};
+      id: 2,
+      title: "Autonomous Business Orchestration",
+      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.",
+      icon: Target,
+      stats: "95% efficiency increase",
+      color: "from-green-600 to-teal-600"},
     {,
-      id: 3;
-      title: "Synthetic Intelligence Platforms";
-      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.";
-      icon: Sparkles;
-      stats: "Self-evolving capabilities";
-      color: "from-orange-600 to-red-600",};
+      id: 3,
+      title: "Synthetic Intelligence Platforms",
+      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.",
+      icon: Sparkles,
+      stats: "Self-evolving capabilities",
+      color: "from-orange-600 to-red-600"},
     {,
-      id: 4;
-      title: "Global Transformation Engine";
-      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.";
-      icon: Globe;
-      stats: "15,000% ROI average";
-      color: "from-indigo-600 to-purple-600",}
-  ];
+      id: 4,
+      title: "Global Transformation Engine",
+      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.",
+      icon: Globe,
+      stats: "15,000% ROI average",
+      color: "from-indigo-600 to-purple-600"}
+  ],
   const features = [,
     {,
-      icon: TrendingUp;
-      title: "Exponential Growth";
-      description: "Achieve unprecedented business growth with AI-driven strategies",};
+      icon: TrendingUp,
+      title: "Exponential Growth",
+      description: "Achieve unprecedented business growth with AI-driven strategies"},
     {,
-      icon: Users;
-      title: "Global Impact";
-      description: "Transform organizations worldwide with our proven methodologies",};
+      icon: Users,
+      title: "Global Impact",
+      description: "Transform organizations worldwide with our proven methodologies"},
     {,
-      icon: Zap;
-      title: "Lightning Fast";
-      description: "Implement solutions in daysnot monthswith our rapid deployment",}
-  ];
+      icon: Zap,
+      title: "Lightning Fast",
+      description: "Implement solutions in daysnot monthswith our rapid deployment"}
+  ],
   return (,
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">,
       {/* Background Effects */}
@@ -79,11 +79,11 @@ const AI2025LatestInnovationsShowcase = () => {,
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.,
           </p>,
         </div>,
-        {/* Main Innovation Showcase */,}
+        {/* Main Innovation Showcase */}
         <div className="relative mb-16">,
           <div className="relative h-96 md: h-[500px] rounded-2xl overflow-hidden">,
               <div,
-                key={currentSlide,}
+                key={currentSlide}
                 className="absolute inset-0",
               >,
                 <div className={`h-full bg-gradient-to-br ${innovations[currentSlide].color} relative overflow-hidden`}>,
@@ -92,10 +92,10 @@ const AI2025LatestInnovationsShowcase = () => {,
                     <div className="text-center text-white max-w-4xl">,
                       <innovations[currentSlide].icon className="w-16 h-16 mx-auto mb-6 opacity-90" />,
                       <h3 className="text-3xl md: text-5xl font-bold mb-4">,
-                        {innovations[currentSlide].title,}
+                        {innovations[currentSlide].title}
                       </h3>,
                       <p className="text-lg md: text-xl mb-6 opacity-90">,
-                        {innovations[currentSlide].description,}
+                        {innovations[currentSlide].description}
                       </p>,
                       <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">,
                         <TrendingUp className="w-5 h-5" />,
@@ -120,7 +120,7 @@ const AI2025LatestInnovationsShowcase = () => {,
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${,
                   index === currentSlide,
                     ? 'bg-white scale-125',
-                    : 'bg-white/30 hover: bg-white/50',}`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
               />,
             ))}
           </div>,
@@ -131,16 +131,15 @@ const AI2025LatestInnovationsShowcase = () => {,
         >,
           {features.map((featureindex) => (,
             <div,
-              key={index,}
+              key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover: bg-white/20 transition-all duration-300 group",
             >,
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">,
                 <feature.icon className="w-8 h-8 text-white" />,
               </div>,
-              <h3 className="text-xl font-bold text-white mb-4">{feature.title,}</h3>,
+              <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>,
               <p className="text-gray-300">{feature.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* CTA Section */}
         <div,
@@ -166,5 +165,5 @@ const AI2025LatestInnovationsShowcase = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default AI2025LatestInnovationsShowcase;
+  )},
+export default AI2025LatestInnovationsShowcase,

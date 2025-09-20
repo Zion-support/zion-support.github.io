@@ -1,54 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, Leaf, Zap, Globe, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Heart, Leaf, Zap, Globe, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu } from "lucide-react";
 export default function Sustainability() {
   const features = [
     {
-      icon: Heart,
-      title: 'Eco-Friendly Solutions',
-      description: 'Reduce environmental impact with green technology'
+      icon: Heart,title: 'Eco-Friendly Solutions',description: 'Reduce environmental impact with green technology'
+    };
+    {
+      icon: Leaf,title: 'Energy Efficiency',description: 'Optimize power consumption and reduce carbon footprint'
+    };
+    {
+      icon: Zap,title: 'Renewable Energy',description: 'Integrate solar, wind, and sustainable power sources'
     },
     {
-      icon: Leaf,
-      title: 'Energy Efficiency',
-      description: 'Optimize power consumption and reduce carbon footprint'
-    },
-    {
-      icon: Zap,
-      title: 'Renewable Energy',
-      description: 'Integrate solar, wind, and sustainable power sources'
-    },
-    {
-      icon: Globe,
-      title: 'Carbon Neutral',
-      description: 'Achieve net-zero emissions through smart technology'
+      icon: Globe,title: 'Carbon Neutral',description: 'Achieve net-zero emissions through smart technology'
     }
   ];
-
   const services = [
     {
-      title: 'Green IT Infrastructure',
-      description: 'Energy-efficient data centers and computing systems',
-      icon: Cpu
-    },
+      title: 'Green IT Infrastructure',description: 'Energy-efficient data centers and computing systems',icon: Cpu
+    };
     {
-      title: 'Sustainable Software',
-      description: 'Eco-friendly application development and optimization',
-      icon: Database
-    },
+      title: 'Sustainable Software',description: 'Eco-friendly application development and optimization',icon: Database
+    };
     {
-      title: 'Energy Monitoring',
-      description: 'Real-time tracking and optimization of power usage',
-      icon: BarChart3
-    },
+      title: 'Energy Monitoring',description: 'Real-time tracking and optimization of power usage',icon: BarChart3
+    };
     {
-      title: 'Carbon Footprint Analysis',
-      description: 'Comprehensive environmental impact assessment',
-      icon: Globe
+      title: 'Carbon Footprint Analysis',description: 'Comprehensive environmental impact assessment',icon: Globe
     }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -189,7 +170,7 @@ export default function Sustainability() {
               <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
                 Make a positive impact on the environment while advancing your technology capabilities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
                   Go Green with Tech
                 </button>
@@ -202,5 +183,5 @@ export default function Sustainability() {
         </div>
       </section>
     </div>
-  );
+  )
 }

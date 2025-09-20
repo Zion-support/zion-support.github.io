@@ -1,47 +1,47 @@
-import { useState } from 'react';
-import type { WizardStep } from '@/context/RequestQuoteWizard';
-import { useQuery } from '@tanstack/react-query';
-import { Loader2 } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import Skeleton from '@/components/ui/skeleton';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react',
+import type { WizardStep } from '@/context/RequestQuoteWizard',
+import { useQuery } from '@tanstack/react-query',
+import { Loader2 } from 'lucide-react',
+import { Card } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import { Textarea } from '@/components/ui/textarea',
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert',
+import Skeleton from '@/components/ui/skeleton',
+import { useToast } from '@/hooks/use-toast',
 
-const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
+const WIZARD_STEPS: WizardStep[] = ['ServicesDetails', 'Success'],
 
 function StepIndicator({ step }: { step: WizardStep }) {
-  const index = WIZARD_STEPS.indexOf(step);
+  const index = WIZARD_STEPS.indexOf(step),
   return (
     <div data-testid="step-indicator" className="text-sm text-muted-foreground">
       Step {index + 1} of {WIZARD_STEPS.length}
     </div>
-  );
+  ),
 }
 
 export function QuoteWizard() {
-  const { step, selectService, submitQuote } = useRequestQuoteWizard();
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);
-  const [message, setMessage] = useState('');
+  const { step, selectService, submitQuote } = useRequestQuoteWizard(),
+  const [selectedItem, setSelectedItem] = useState<string | null>(null),
+  const [message, setMessage] = useState(''),
   const query = useQuery({
     queryKey: ['services'],
     queryFn: () => fetchServices(),
-    retry: 2,
-  });
+    retry: 2
+  }),
 
   const {
     data = [],
     isPending,
-    error,
+    error
   } = query as {
-    data: ServiceItem[] | undefined;
-    isPending: boolean;
-    error: unknown;
-  };
+    data: ServiceItem[] | undefined,
+    isPending: boolean,
+    error: unknown
+  },
 
   if (step === 'Services') {
-    const loading = isPending;
+    const loading = isPending,
 
     return (
       <div className="space-y-6">
@@ -85,7 +85,7 @@ export function QuoteWizard() {
     )}
 
   if (step === 'Details') {
-    return <div data-testid="details-step">Step 2 Form</div>;
+    return <div data-testid="details-step">Step 2 Form</div>,
   }
 
   if (step === 'Details') {
@@ -100,7 +100,7 @@ export function QuoteWizard() {
         />
         <Button onClick={() => submitQuote(message)}>Submit</Button>
       </div>
-    );
+    ),
   }
 
   if (step === 'Success') {
@@ -109,8 +109,8 @@ export function QuoteWizard() {
         <StepIndicator step={step} />
         <div>Quote Submitted</div>
       </div>
-    );
+    ),
   }
 
-  return null;
+  return null,
 }

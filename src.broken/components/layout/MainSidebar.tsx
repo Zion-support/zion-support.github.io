@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link, useLocation  } from 'react-router-dom',
 export default function Page() {
 ,
         { name: 'Services', href: '/services', icon: Briefcase },
@@ -11,9 +11,9 @@ export default function Page() {
         { name: 'Events', href: '/events', icon: Video },
         { name: 'News', href: '/news', icon: Newspaper },
         { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'Blog', href: '/blog', icon: FileText }
       ]
-    },;
+    },
     {
 
       name: 'Core Services',
@@ -230,7 +230,7 @@ export default function Page() {
       href: '/contact',
       icon: Phone
     }
-  ];
+  ],
 
     return ()      <div key={item.name} className="mb-1">
         {hasChildren ? (
@@ -286,7 +286,7 @@ export default function Page() {
           </Link>
         )}
       </div>
-    )};
+    )},
 
   return ()
     <>
@@ -346,11 +346,11 @@ export default function Page() {
         />
       )}
     </>
-  )};
-            </div>;
-          </div>;
-        </div>;
-      </div>;
+  )},
+            </div>,
+          </div>,
+        </div>,
+      </div>,
     </>
   )}
 '"`

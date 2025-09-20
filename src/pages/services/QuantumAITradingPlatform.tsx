@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Atom, 
+  Atom,
   TrendingUp, 
   Zap, 
   Shield, 
@@ -38,15 +38,14 @@ import {
   BarChart,
   LineChart,
   PieChart
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function QuantumAITradingPlatform() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview'),
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true),
+  }, []),
 
   const features = [
     "Quantum-powered market analysis",
@@ -59,7 +58,7 @@ export default function QuantumAITradingPlatform() {
     "Advanced security protocols",
     "Performance analytics",
     "Custom trading strategies"
-  ];
+  ],
 
   const benefits = [
     "1000x faster market analysis",
@@ -67,7 +66,7 @@ export default function QuantumAITradingPlatform() {
     "Real-time risk management",
     "Automated portfolio rebalancing",
     "Quantum advantage in trading"
-  ];
+  ],
 
   const useCases = [
     "Algorithmic trading",
@@ -76,27 +75,23 @@ export default function QuantumAITradingPlatform() {
     "Market analysis",
     "High-frequency trading"
   ];
-
   const technicalSpecs = {
-    technology: ["IBM Qiskit", "Google Cirq", "Python", "TensorFlow", "React", "Node.js"],
-    integrations: ["Bloomberg", "Reuters", "NYSE", "NASDAQ", "LSE"],
-    apiEndpoints: 500,
-    uptime: "99.999%",
-    security: ["SOC 2", "PCI DSS", "FINRA compliance", "Quantum encryption"]
-  };
+    technology: ["IBM Qiskit", "Google Cirq", "Python", "TensorFlow", "React", "Node.js"];
+    integrations: ["Bloomberg", "Reuters", "NYSE", "NASDAQ", "LSE"];
+    apiEndpoints: 500,uptime: "99.999%",security: ["SOC 2", "PCI DSS", "FINRA compliance", "Quantum encryption"]
+  },
 
   const pricing = {
     monthly: "$9,999",
     yearly: "$99,999",
-    enterprise: "Custom",
-    features: [
-      "Full quantum trading capabilities",
+    enterprise: "Custom",features: [
+      "Full quantum trading capabilities";
       "Unlimited trading volume",
       "Priority support",
       "Custom integrations",
       "Advanced analytics"
     ]
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
@@ -115,17 +110,14 @@ export default function QuantumAITradingPlatform() {
                 x: [0, 120, 0],
                 y: [0, -120, 0],
                 opacity: [0.4, 1, 0.4],
-                scale: [0.5, 1.5, 0.5],
+                scale: [0.5, 1.5, 0.5]
               }}
               transition={{
-                duration: 3 + i * 0.2,
-                repeat: Infinity,
-                delay: i * 0.1,
-                ease: "easeInOut"
+                duration: 3 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
               }}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -136,12 +128,10 @@ export default function QuantumAITradingPlatform() {
           className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2],
+            opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
+            duration: 4,repeat: Infinity,ease: "easeInOut"
           }}
         />
         
@@ -149,13 +139,10 @@ export default function QuantumAITradingPlatform() {
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.2, 0.5],
+            opacity: [0.5, 0.2, 0.5]
           }}
           transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
+            duration: 5,repeat: Infinity,ease: "easeInOut",delay: 1
           }}
         />
       </div>
@@ -230,7 +217,7 @@ export default function QuantumAITradingPlatform() {
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab) => (
+            {['overviewfeatures', 'pricingtechnical', 'contact'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}

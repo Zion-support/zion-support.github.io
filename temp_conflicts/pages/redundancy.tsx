@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function RedundancyPage() {
   return (
@@ -42,7 +42,7 @@ export default function RedundancyPage() {
                 </ul>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover: bg-white/15 transition-all duration-300">
                 <div className="text-4xl mb-4">⚙️</div>
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">GitHub Actions Redundancy</h3>
                 <p className="text-white/70 mb-6">
@@ -87,7 +87,7 @@ export default function RedundancyPage() {
               </div>
               
               <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-xl rounded-2xl p-8 border border-green-400/30 text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">&lt;1s</div>
+                <div className="text-4xl font-bold text-green-400 mb-2">&lt,1s</div>
                 <div className="text-white/70">Failover Time</div>
               </div>
               
@@ -170,7 +170,7 @@ export default function RedundancyPage() {
                 Join the elite platforms that never go down. Our redundancy systems ensure your business runs 24/7 without interruption.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-600 hover:to-purple-700 border border-fuchsia-400/30 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-fuchsia-500/25">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-purple-600 hover: from-fuchsia-600 hover:to-purple-700 border border-fuchsia-400/30 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-fuchsia-500/25">
                   Get Started
                 </Link>
                 <Link href="/services" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:border-purple-400/50">
@@ -182,5 +182,5 @@ export default function RedundancyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

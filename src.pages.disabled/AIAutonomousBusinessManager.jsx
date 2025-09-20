@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface AIAutonomousBusinessManagerProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessManagerProps) {,
@@ -8,8 +8,7 @@ export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessMan
     <div>,
       <h1>AIAutonomousBusinessManager</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

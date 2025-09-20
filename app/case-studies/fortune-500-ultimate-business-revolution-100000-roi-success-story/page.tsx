@@ -1,20 +1,20 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon, BuildingOfficeIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon, BuildingOfficeIcon, ChartBarIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'Fortune 500 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 100,000% ROI Success Story';
-  description: 'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies, resulting in $2.5 trillion annual savings.';
-  keywords: ['Fortune 500Success Story', 'Manufacturing100,000% ROI', 'TechGlobal IndustriesAI Transformation'];
+  title: 'Fortune 500 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 100,000% ROI Success Story',
+  description: 'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies, resulting in $2.5 trillion annual savings.',
+  keywords: ['Fortune 500Success StoryManufacturing100,000% ROI', 'TechGlobal IndustriesAI Transformation'],
   openGraph: {,
-    title: 'Fortune 500 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 100,000% ROI Success Story';
-    description: 'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Fortune 500Success Story', 'ManufacturingAI Transformation'],
+    title: 'Fortune 500 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 100,000% ROI Success Story',
+    description: 'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Fortune 500Success StoryManufacturingAI Transformation']
   }
-};
+},
 export default function Fortune500SuccessStoryPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -34,7 +34,7 @@ export default function Fortune500SuccessStoryPage() {,
           </div>,
         </div>,
       </nav>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white py-20">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center">,
@@ -84,7 +84,7 @@ export default function Fortune500SuccessStoryPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Article Meta */,}
+      {/* Article Meta */}
       <section className="bg-gray-50 py-8">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-wrap items-center justify-between text-sm text-gray-600">,
@@ -347,4 +347,4 @@ export default function Fortune500SuccessStoryPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

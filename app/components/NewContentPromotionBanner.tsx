@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const NewContentPromotionBanner: React.FC = () => {,
   return (,
     <div className="py-16 bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50">,
@@ -20,6 +20,5 @@ const NewContentPromotionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default NewContentPromotionBanner;
+    </div>)},
+export default NewContentPromotionBanner,

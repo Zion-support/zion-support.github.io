@@ -1,6 +1,6 @@
 
-import React from "react";
-import { Progress } from "@/components/ui/progress";
+import React from "react",
+import { Progress } from "@/components/ui/progress",
 export function TeamStats() {,
   return (,
     <Card>,
@@ -43,6 +43,5 @@ export function TeamStats() {,
           </button>,
         </div>,
       </CardContent>,
-    </Card>,
-  ),}
+    </Card>)}
 ,

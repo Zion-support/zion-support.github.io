@@ -1,34 +1,34 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Brain,
   Zap,
   Globe,
-  ArrowRight;
-  X;
-  CheckCircle;
-  Star;
-  Lightbulb;
-  Rocket,
-} from 'lucide-react';
+  ArrowRight,
+  X,
+  CheckCircle,
+  Star,
+  Lightbulb,
+  Rocket
+} from 'lucide-react',
 const TechnologyTrendsShowcase2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentTrendsetCurrentTrend] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentTrendsetCurrentTrend] = useState(0),
   const trends = [,
-    { name: "AI-Powered Automation"icon: Brainadoption: "85%" ,};
-    { name: "Edge Computing"icon: Zapadoption: "70%" ,};
-    { name: "Quantum Security"icon: Globeadoption: "60%" ,};
-    { name: "Sustainable Tech"icon: TrendingUpadoption: "90%" ,}
-  ];
+    { name: "AI-Powered Automation"icon: Brainadoption: "85%" },
+    { name: "Edge Computing"icon: Zapadoption: "70%" },
+    { name: "Quantum Security"icon: Globeadoption: "60%" },
+    { name: "Sustainable Tech"icon: TrendingUpadoption: "90%" }
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentTrend((prev) => (prev + 1) % trends.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-  if (!isVisible) return null;
+      setCurrentTrend((prev) => (prev + 1) % trends.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
+  if (!isVisible) return null,
   return (,
     <div,
       className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden",
@@ -46,7 +46,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {,
       <div className="relative z-10">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div className="flex-1 text-center lg: text-left">,
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">,
                 <div,
@@ -64,7 +64,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {,
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">,
                 <span className="text-lg opacity-90">Trending:</span>,
                 <div,
-                  key={currentTrend,}
+                  key={currentTrend}
                   className="flex items-center gap-2",
                 >,
                   <trends[currentTrend].icon className="w-4 h-4" />,
@@ -88,22 +88,21 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Center - Rotating Trends */,}
+            {/* Center - Rotating Trends */}
             <div className="hidden md: flex items-center gap-8">,
               {trends.map((trendindex) => {,
-                const Icon = trend.icon;
+                const Icon = trend.icon,
                 return (,
                   <div,
                     key={index}
-                      scale: currentTrend === index ? 1.1 : 1;
-                      opacity: currentTrend === index ? 1 : 0.7,}}
+                      scale: currentTrend === index ? 1.1 : 1,
+                      opacity: currentTrend === index ? 1 : 0.7}}
                     className="text-center",
                   >,
                     <Icon className="w-8 h-8 mx-auto mb-2" />,
                     <div className="text-xs font-medium">{trend.name}</div>,
                     <div className="text-lg font-bold">{trend.adoption}</div>,
-                  </div>,
-                );
+                  </div>),
               })}
             </div>,
             {/* Right Content - CTA Buttons */}
@@ -122,7 +121,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {,
                 Future Ready,
               </button>,
             </div>,
-            {/* Close Button */,}
+            {/* Close Button */}
             <button,
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 p-2 hover: bg-white/20 rounded-full transition-colors duration-200",
@@ -131,7 +130,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {,
             </button>,
           </div>,
         </div>,
-        {/* Progress Bar */,}
+        {/* Progress Bar */}
         <div className="h-1 bg-white/20">,
           <div,
             className="h-full bg-white",
@@ -139,6 +138,6 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default TechnologyTrendsShowcase2025PromotionBanner;
+  ),
+export default TechnologyTrendsShowcase2025PromotionBanner,
 </div></div></div></div></div></div></div></div></div>,

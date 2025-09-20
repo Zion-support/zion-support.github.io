@@ -1,11 +1,11 @@
 
-import React from "react";
-import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
+import React from "react",
+import { AppHeader } from "./AppHeader",
+import { Footer } from "@/components/Footer",
 
 interface AppLayoutProps {
-  children: React.ReactNode;
-  hideFooter?: boolean;
+  children: React.ReactNode,
+  hideFooter?: boolean
 }
 
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
@@ -17,5 +17,5 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       </main>
       {!hideFooter && <Footer />}
     </div>
-  );
+  ),
 }

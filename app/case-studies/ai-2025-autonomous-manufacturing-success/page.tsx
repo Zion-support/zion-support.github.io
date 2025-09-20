@@ -1,12 +1,12 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
-import { CalendarIcon, ClockIcon, UserIcon, ChartBarIcon, CurrencyDollarIcon, CogIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import SEO from '../../../components/SEO',
+import Link from 'next/link',
+import { CalendarIcon, ClockIcon, UserIcon, ChartBarIcon, CurrencyDollarIcon, CogIcon } from '@heroicons/react/24/outline',
 export const metadata = {,
-  title: 'Autonomous Manufacturing Success: $200M Cost Savings Through AI Transformation';
-  description: 'Discover how a Fortune 500 manufacturer achieved $200M in cost savings and 95% efficiency improvements through comprehensive AI automation.';
-  keywords: 'AI manufacturing, autonomous systems, manufacturing automation, cost savings, efficiency improvement, industrial AI',
-};
+  title: 'Autonomous Manufacturing Success: $200M Cost Savings Through AI Transformation',
+  description: 'Discover how a Fortune 500 manufacturer achieved $200M in cost savings and 95% efficiency improvements through comprehensive AI automation.',
+  keywords: 'AI manufacturing, autonomous systems, manufacturing automation, cost savings, efficiency improvement, industrial AI'
+},
 export default function AutonomousManufacturingSuccess() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -38,7 +38,7 @@ export default function AutonomousManufacturingSuccess() {,
           </h1>,
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-6 rounded-lg mb-8">,
             <p className="text-xl leading-relaxed">,
-              A Fortune 500 manufacturing leader achieved unprecedented success through comprehensive AI automation;
+              A Fortune 500 manufacturing leader achieved unprecedented success through comprehensive AI automation,
               resulting in $200M in annual cost savings, 95% efficiency improvements, and zero safety incidents.,
             </p>,
           </div>,
@@ -61,7 +61,7 @@ export default function AutonomousManufacturingSuccess() {,
             </div>,
           </div>,
         </div>,
-        {/* Content */,}
+        {/* Content */}
         <div className="prose prose-lg max-w-none">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>,
           <p className="text-lg text-gray-700 mb-6">,
@@ -80,7 +80,7 @@ export default function AutonomousManufacturingSuccess() {,
           </div>,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solution: Comprehensive AI Transformation</h2>,
           <p className="text-lg text-gray-700 mb-6">,
-            We implemented a comprehensive AI-driven autonomous manufacturing system that integrated predictive analytics;
+            We implemented a comprehensive AI-driven autonomous manufacturing system that integrated predictive analytics,
             robotic process automation, and intelligent decision-making across all operational areas.,
           </p>,
           <div className="grid md: grid-cols-2 gap-8 mb-8">,
@@ -231,7 +231,7 @@ export default function AutonomousManufacturingSuccess() {,
           </div>,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Roadmap</h2>,
           <p className="text-lg text-gray-700 mb-6">,
-            The success of this initial transformation has paved the way for even more ambitious AI initiatives;
+            The success of this initial transformation has paved the way for even more ambitious AI initiatives,
             including quantum computing integration, advanced neural networks, and fully autonomous supply chain management.,
           </p>,
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-lg mb-8">,
@@ -256,7 +256,7 @@ export default function AutonomousManufacturingSuccess() {,
             </div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-lg mb-8">,
           <h3 className="text-2xl font-bold mb-4">Transform Your Manufacturing Operations</h3>,
           <p className="text-xl mb-6 opacity-90">,
@@ -278,7 +278,7 @@ export default function AutonomousManufacturingSuccess() {,
             </Link>,
           </div>,
         </div>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <div className="border-t pt-8">,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h3>,
           <div className="grid md: grid-cols-3 gap-6">,
@@ -316,4 +316,4 @@ export default function AutonomousManufacturingSuccess() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

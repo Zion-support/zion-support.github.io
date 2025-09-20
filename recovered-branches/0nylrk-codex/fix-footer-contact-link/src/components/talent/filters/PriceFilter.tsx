@@ -1,5 +1,5 @@
 
-  };
+  },
   return (,
     <div className="mb-6 border-b border-zion-blue-light pb-6">,
       <button,
@@ -8,10 +8,8 @@
       >,
         <span>Hourly Rate</span>,
         {expanded ? (,
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />,
-        ) : (,
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />,
-        )}
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />) : (,
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />)}
       </button>,
       {expanded && (,
         <div className="mt-6">,
@@ -26,9 +24,8 @@
             onValueChange={handleChange}
             className="mt-6",
           />,
-        </div>,
-      )}
+        </div>)}
     </div>,
-  );
+  ),
 }
 ,

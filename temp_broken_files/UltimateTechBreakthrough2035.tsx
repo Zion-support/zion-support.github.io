@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const UltimateTechBreakthrough2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-white">
@@ -149,7 +149,7 @@ const UltimateTechBreakthrough2035: React.FC = () => {
           <h2 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8">Join us in shaping the ultimate technological revolution</p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold">
               Explore More
             </button>
             <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors">
@@ -159,8 +159,8 @@ const UltimateTechBreakthrough2035: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default UltimateTechBreakthrough2035;
+export default UltimateTechBreakthrough2035,

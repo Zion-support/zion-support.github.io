@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function NewMultimodalAgents2025Banner(): JSX.Element {,
 	return (,
 		<section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-10">,
@@ -30,6 +30,5 @@ export default function NewMultimodalAgents2025Banner(): JSX.Element {,
 					</div>,
 				</div>,
 			</div>,
-		</section>,
-	),}
+		</section>)}
 ,

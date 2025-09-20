@@ -1,6 +1,6 @@
 
-import * as React from "react";
-import { Toaster as SonnerToaster } from "sonner";
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
 
 export function Toaster() {
   return (
@@ -11,11 +11,11 @@ export function Toaster() {
         style: {
           background: '#0a1429',
           color: '#fff',
-          border: '1px solid #1e3a6f',
+          border: '1px solid #1e3a6f'
         },
         duration: 4000,
-        descriptionClassName: "text-zion-slate-light",
+        descriptionClassName: "text-zion-slate-light"
       }}
     />
-  );
+  ),
 }

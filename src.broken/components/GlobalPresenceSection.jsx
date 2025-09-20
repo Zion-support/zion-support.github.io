@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 ,"
     { icon: <Star className="w-6 h-6"/>, value: "4.8/5", label: "Global Rating" },"
     { icon: <TrendingUp className="w-6 h-6"/>, value: "98%", label: "Client Satisfaction" }
-];
+],
 const partnerships = [{
 "
         name: "Microsoft","
@@ -66,7 +66,7 @@ const partnerships = [{
         projects: 12,"
         status: "Active"
 
-];
+],
 const industries = ["
     { name: "Financial Services", projects: 120, countries: 18, satisfaction: "99%" },"
     { name: "Healthcare", projects: 85, countries: 15, satisfaction: "98%" },"
@@ -74,10 +74,10 @@ const industries = ["
     { name: "Retail & E-commerce", projects: 110, countries: 20, satisfaction: "98%" },"
     { name: "Technology", projects: 150, countries: 25, satisfaction: "99%" },"
     { name: "Education", projects: 65, countries: 12, satisfaction: "96%" }
-];
-    const [selectedOffice, setSelectedOffice] = useState(null);
-    const [selectedPartnership, setSelectedPartnership] = useState(null);
-    const [hoveredIndustry, setHoveredIndustry] = useState(null);
+],
+    const [selectedOffice, setSelectedOffice] = useState(null),
+    const [selectedPartnership, setSelectedPartnership] = useState(null),
+    const [hoveredIndustry, setHoveredIndustry] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -89,7 +89,7 @@ const industries = ["
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -105,7 +105,7 @@ const industries = ["
                 duration: 0.6,"
                 ease: "easeOut"
 
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"
@@ -491,5 +491,5 @@ const industries = ["
     </section>)}
 '"
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

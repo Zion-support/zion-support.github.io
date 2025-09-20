@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   MessageCircle, Phone, Calendar, 
   FileText, X, Plus,
   Zap, Star, Globe, ArrowRight
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface Action {
-  id: string;
-  icon: React.ReactNode;
-  label: string;
-  description: string;
-  color: string;
-  action: () => void;
+  id: string,
+  icon: React.ReactNode,
+  label: string,
+  description: string,
+  color: string,
+  action: () => void
 }
 
 interface FloatingActionMenuProps {
-  className?: string;
+  className?: string,
 }
 
 const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeAction, setActiveAction] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeAction, setActiveAction] = useState<string | null>(null),
 
   const actions: Action[] = [
     {
@@ -56,22 +56,22 @@ const FloatingActionMenu: React.FC<FloatingActionMenuProps> = ({ className = '' 
       color: 'from-orange-500 to-red-600',
       action: () => window.location.href = '/support'
     }
-  ];
+  ],
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen),
     if (isOpen) {
-      setActiveAction(null);
+      setActiveAction(null),
     }
-  };
+  },
 
   const handleActionClick = (action: Action) => {
-    setActiveAction(action.id);
+    setActiveAction(action.id),
     setTimeout(() => {
-      action.action();
-      setActiveAction(null);
-    }, 300);
-  };
+      action.action(),
+      setActiveAction(null)
+    }, 300),
+  },
 
 const FloatingActionMenu: React.FC = () => {
   return (
@@ -79,7 +79,7 @@ const FloatingActionMenu: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">FloatingActionMenu</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default FloatingActionMenu;
+export default FloatingActionMenu,

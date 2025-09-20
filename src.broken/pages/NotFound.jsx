@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
           transition={{ duration: 0.8 }}
@@ -173,5 +173,5 @@ export default function Page() {
           </motion.div>
         </motion.div>
       </div>
-    </div>) ;
-};
+    </div>) ,
+},

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const UltimateContentPromotionalBanner2026: React.FC = () => {,
   return (,
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">,
@@ -117,7 +117,6 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default UltimateContentPromotionalBanner2026;
+    </div>)},
+export default UltimateContentPromotionalBanner2026,
 </div></div>,

@@ -1,26 +1,26 @@
 export interface MarketplaceItem {
-  id: string;
-  title: string;
-  category: 'products' | 'talent' | 'equipment' | 'services';
-  description: string;
-  price: string;
-  rating: number;
-  reviews: number;
-  views: number;
-  likes: number;
-  image: string;
-  tags: string[];
-  featured: boolean;
+  id: string,
+  title: string,
+  category: 'products' | 'talent' | 'equipment' | 'services',
+  description: string,
+  price: string,
+  rating: number,
+  reviews: number,
+  views: number,
+  likes: number,
+  image: string,
+  tags: string[],
+  featured: boolean,
 seller: {
 
-    name: string;
-    rating: number;
-    verified: boolean};
-  location: string;
-  availability: 'available' | 'limited' | 'out-of-stock';
-  deliveryTime: string;
+    name: string,
+    rating: number,
+    verified: boolean},
+  location: string,
+  availability: 'available' | 'limited' | 'out-of-stock',
+  deliveryTime: string,
   warranty: string}
-;
+,
 export const marketplaceItems: MarketplaceItem[] = [{
 
 // Mock marketplace listings with more realistic data
@@ -36,7 +36,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "AI Solutions Inc.",
       id: "ai-solutions",
-      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
     videoUrl: "https://example.com/demo.mp4",
@@ -72,7 +72,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     views: 1956,
     likes: 134,
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Security',Expert',Certified',Compliance'],;
+    tags['Security',Expert',Certified',Compliance'],
     featured: true,
     seller: {
 
@@ -97,7 +97,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     views: 3241,
     likes: 189,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Quantum',Research',Advanced',Experimental'],;
+    tags['Quantum',Research',Advanced',Experimental'],
     featured: false,
     seller: {
 
@@ -122,7 +122,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     views: 4567,
     likes: 278,
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Cloud',Migration',Enterprise',AWS'],;
+    tags['Cloud',Migration',Enterprise',AWS'],
     featured: true,
     seller: {
 
@@ -146,7 +146,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "BusinessAI Consultants",
       id: "businessai",
-      avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-01T11:00:00.000Z",
@@ -166,7 +166,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Research", "Academic", "Machine Learning"],
     author: {
       name: "AI Research Hub",
-      id: "airesearch",
+      id: "airesearch"
     },
     images: ["https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T15:30:00.000Z",
@@ -187,7 +187,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "RoboticsMind",
       id: "roboticsmind",
-      avatarUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-25T12:15:00.000Z",
@@ -210,7 +210,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "TechGear Solutions",
       id: "techgear",
-      avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2023-11-10T12:30:00.000Z",
@@ -230,7 +230,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Server", "Enterprise", "GPU Cluster"],
     author: {
       name: "ServerPro Systems",
-      id: "serverpro",
+      id: "serverpro"
     },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2023-12-15T09:45:00.000Z",
@@ -240,39 +240,39 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: "North America",
     availability: "2-4 Weeks"
   }
-];
-;
+],
+,
 export 
-    id: 'services',;
-    name: 'Services',;
-    description: 'Professional services and consulting',;
-    count: marketplaceItems.filter(item => item.category === 'services').length};
-];
-;
+    id: 'services',
+    name: 'Services',
+    description: 'Professional services and consulting',
+    count: marketplaceItems.filter(item => item.category === 'services').length},
+],
+,
 export 
       { value: '0-1000', label: 'Under $1,000' },
       { value: '1000-5000', label: '$1,000 - $5,000' },
       { value: '5000-10000', label: '$5,000 - $10,000' },
       { value: '10000+', label: 'Over $10,000' }
 =======
-    options[;'
+    options[,'
       { value: '0-1000', label: 'Under $1,000' },'
       { value: '1000-5000', label: '$1,000 - $5,000' },'
       { value: '5000-10000', label: '$5,000 - $10,000' },'      { value: '10000+', label: 'Over $10,000' }
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ]
-  },;
+  },
   {
 
     title: 'Rating',
     key: 'rating',
     type: 'checkbox' as const,
-    options[;
+    options[,
       { value: '4.5+', label: '4.5+ Stars' },
       { value: '4.0+', label: '4.0+ Stars' },
       { value: '3.5+', label: '3.5+ Stars' }
     ]
-  },;
+  },
   {
 
 // Generate filter options for sidebar
@@ -280,13 +280,13 @@ export const generateFilterOptions = (
   listings: ProductListing[] = MARKETPLACE_LISTINGS
 ): FilterOptions => {
   // Extract unique categories, locations, and availability options from the provided listings
-  const productTypes = [...new Set(listings.map(listing => listing.category))].sort();
-  const locations = [...new Set(listings.map(listing => listing.location).filter((loc): loc is string => typeof loc === 'string'))].sort();
-  const availability = [...new Set(listings.map(listing => listing.availability).filter((avail): avail is string => typeof avail === 'string'))].sort();
+  const productTypes = [...new Set(listings.map(listing => listing.category))].sort(),
+  const locations = [...new Set(listings.map(listing => listing.location).filter((loc): loc is string => typeof loc === 'string'))].sort(),
+  const availability = [...new Set(listings.map(listing => listing.availability).filter((avail): avail is string => typeof avail === 'string'))].sort(),
   
-  const prices = listings.map(listing => listing.price || 0);
-  const minPrice = Math.min(...prices);
-  const maxPrice = Math.max(...prices);
+  const prices = listings.map(listing => listing.price || 0),
+  const minPrice = Math.min(...prices),
+  const maxPrice = Math.max(...prices),
 
   return {
     productTypes: productTypes.map(type => ({
@@ -304,9 +304,9 @@ export const generateFilterOptions = (
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options
     minPrice,
     maxPrice
-  };
-};
+  },
+},
 
 // These constants are still useful if needed elsewhere, but filterOptions now also provides them.
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),

@@ -1,15 +1,16 @@
-import React, { useState, useMemo } from 'react';
-export default EnhancedComprehensiveServices2026;}}}}}}
-import { Brain, import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useMemo } from 'react',
+export default EnhancedComprehensiveServices2026,}}}}}}
+import { Brain,
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-        status: service.status,;
-        marketPrice: service.marketPrice,;
-        estimatedDelivery: service.estimatedDelivery,;
-        website: service.website,;
-        contactInfo: service.contactInfo;
-      }) ;
-    }) ;
+        status: service.status,
+        marketPrice: service.marketPrice,
+        estimatedDelivery: service.estimatedDelivery,
+        website: service.website,
+        contactInfo: service.contactInfo
+      }) ,
+    }) ,
 
     // Add services from zion2026ComprehensiveServices
     zion2026ComprehensiveServices.forEach(service = > {
@@ -30,62 +31,62 @@ export default function Page() {
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
-        status: service.status,;
-        marketPrice: service.marketPrice,;
-        estimatedDelivery: service.estimatedDelivery,;
-        website: service.website,;
-        contactInfo: service.contactInfo;
-      }) ;
-    }) ;
+        status: service.status,
+        marketPrice: service.marketPrice,
+        estimatedDelivery: service.estimatedDelivery,
+        website: service.website,
+        contactInfo: service.contactInfo
+      }) ,
+    }) ,
 
-    return services}, []) ;
+    return services}, []) ,
 
-  const cats = ['All', ...Array.from(new Set (allServices.map (s => s.category) ) ) ];
-    return cats.sort () ;
-  }, [allServices]) ;
+  const cats = ['All', ...Array.from(new Set (allServices.map (s => s.category) ) ) ],
+    return cats.sort () ,
+  }, [allServices]) ,
 
-  const filtered = allServices.filter(service => {;
-      const matchesSearch = service.name.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                          service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                          service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory}) ;
+  const filtered = allServices.filter(service => {,
+      const matchesSearch = service.name.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                          service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                          service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+      return matchesSearch && matchesCategory}) ,
 
     // Sort services
     switch(sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name) ) ;
-        break;
+        filtered.sort((a, b) => a.name.localeCompare(b.name) ) ,
+        break,
       case 'price':
-        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter) ;
-        break;
+        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter) ,
+        break,
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating) ;
-        break;
+        filtered.sort((a, b) => b.rating - a.rating) ,
+        break,
       case 'newest':
-        filtered.sort((a, b) => new Date(b.launchDate) .getTime () - new Date(a.launchDate) .getTime () ) ;
-        break;
+        filtered.sort((a, b) => new Date(b.launchDate) .getTime () - new Date(a.launchDate) .getTime () ) ,
+        break,
       case 'innovation':
         // Sort by innovation level if available, otherwise by rating
-        filtered.sort((a, b) => (b.innovationLevel || b.rating.toString () ) .localeCompare(a.innovationLevel || a.rating.toString () ) ) ;
+        filtered.sort((a, b) => (b.innovationLevel || b.rating.toString () ) .localeCompare(a.innovationLevel || a.rating.toString () ) ) ,
         break}
 
-    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]) ;
+    return filtered}, [allServices, searchTerm, selectedCategory, sortBy]) ,
 
-        return < Lightbulb className="w-6 h-6" />};
-  };
+        return < Lightbulb className="w-6 h-6" />},
+  },
 
         return 'bg-gray - 100 text-gray - 800'}
-  };
+  },
 
-  const getInnovationBadge = (service: Service) => {;
-    if(service.innovationLevel === 'Revolutionary') {;
-      return < span className="px-2 py-1 bg-gradient - to - r from - purple - 500 to - pink - 500 text-white text-xs font - bold rounded-full flex items - center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
-    } else if(service.innovationLevel = == 'Cutting - Edge') {;
-      return < span className="px-2 py-1 bg-gradient - to - r from - blue - 500 to - cyan - 500 text-white text-xs font - bold rounded-full flex items - center gap-1"><ZapIcon className="w-3 h-3" /> Cutting - Edge</span>;
+  const getInnovationBadge = (service: Service) => {,
+    if(service.innovationLevel === 'Revolutionary') {,
+      return < span className="px-2 py-1 bg-gradient - to - r from - purple - 500 to - pink - 500 text-white text-xs font - bold rounded-full flex items - center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>
+    } else if(service.innovationLevel = == 'Cutting - Edge') {,
+      return < span className="px-2 py-1 bg-gradient - to - r from - blue - 500 to - cyan - 500 text-white text-xs font - bold rounded-full flex items - center gap-1"><ZapIcon className="w-3 h-3" /> Cutting - Edge</span>,
 
-    return null;
-  };
+    return null,
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       {/* Header */}
@@ -130,11 +131,11 @@ export default function Page() {
               </motion.button>
             </div>
           </motion.div>
-        </div>;
+        </div>,
       </div>
 
       {/* Search and Filters */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-8">,
         <div  className="bg-white / 10 backdrop - blur - lg rounded-2xl p - 6 border border-white / 20">
           <div  className="flex flex - col lg:flex - row gap-6">
             {/* Search */}
@@ -199,8 +200,8 @@ export default function Page() {
       </div>
 
       {/* Services Grid / List */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">;
-        {viewMode === 'grid' ? (;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-8">,
+        {viewMode === 'grid' ? (,
           <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-6">
             <AnimatePresence>
               {filteredServices.map((service, index) => (<motion.div
@@ -246,7 +247,7 @@ export default function Page() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray - 300 text-sm mb-4 line - clamp -3">{service.description}</p>;
+                  <p className="text-gray - 300 text-sm mb-4 line - clamp -3">{service.description}</p>,
 
                   {/* Pricing */}
                   <div  className="mb-4">
@@ -341,14 +342,14 @@ export default function Page() {
                       </div>
                     </div>
                     <div  className="flex - shrink -0">
-                      <button     className="bg-gradient - to - r from - blue - 600 to - purple - 600 text-white px-6 py-2 rounded-lg font - medium hover:from - blue - 700 hover:to - purple - 700 transition - all duration -200">
+                      <button     className="bg-gradient - to - r from - blue - 600 to - purple - 600 text-white px-6 py-2 rounded-lg font - medium hover: from - blue - 700 hover:to - purple - 700 transition - all duration -200">
                         View Details
                       </button>
                     </div>
                   </div>
-                </motion.div>;) ) }
+                </motion.div>,) ) }
             </AnimatePresence>
-          </div>;) }
+          </div>,) }
 
         {/* No Results */}
         {filteredServices.length === 0 && (<motion.div
@@ -359,7 +360,7 @@ export default function Page() {
             <Search className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
             <h3 className="text-xl font - semibold text-gray - 300 mb-2">No services found</h3>
             <p className="text-gray -400">Try adjusting your search or filter criteria</p>
-          </motion.div>;) }
+          </motion.div>,) }
       </div>
 
       {/* Service Detail Modal */}
@@ -529,7 +530,7 @@ export default function Page() {
       </AnimatePresence>
 
       {/* Contact Section */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-16">,
         <div  className="bg-gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 rounded-2xl p - 8 border border-white / 20 text-center">
           <h2 className="text-3xl font - bold text-white mb-4">Ready to Experience Revolutionary Technology?</h2>
           <p className="text-xl text-gray - 300 mb-8 max - w-2xl mx -auto">
@@ -554,9 +555,9 @@ export default function Page() {
           </div>
           <div  className="mt-6 text-gray -400">
             <p > 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p > Visit us at: <a href="https://ziontechgroup.com" className="text-purple -400 hover:underline">https://ziontechgroup.com</a></p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
-};
+            <p > Visit us at: <a href="https://ziontechgroup.com" className="text-purple -400 hover:underline">https://ziontechgroup.com</a></p>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) 
+},

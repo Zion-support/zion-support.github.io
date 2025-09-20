@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import SEO from '../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import ErrorBoundary from '../components/ErrorBoundary',
+import SEO from '../components/SEO',
 export const metadata = {,
-  title: 'AI 2025-2026: Ultimate Business Transformation Guide';
-  description: 'Discover the revolutionary AI trends, technologies, and business transformation strategies that will reshape industries in 2025-2026. Expert insights on quantum AI, autonomous systems, and enterprise automation.';
-  keywords: ['AI trends 2025AI trends 2026', 'business transformationquantum AI', 'autonomous systemsenterprise automation', 'AI revolution'],
-};
+  title: 'AI 2025-2026: Ultimate Business Transformation Guide',
+  description: 'Discover the revolutionary AI trends, technologies, and business transformation strategies that will reshape industries in 2025-2026. Expert insights on quantum AI, autonomous systems, and enterprise automation.',
+  keywords: ['AI trends 2025AI trends 2026business transformationquantum AI', 'autonomous systemsenterprise automationAI revolution']
+},
 export default function AI20252026UltimateTransformation() {,
   return (,
     <ErrorBoundary>,
@@ -45,12 +45,12 @@ export default function AI20252026UltimateTransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Trends Section */,}
+        {/* Key Trends Section */}
         <section id="trends" className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-6xl mx-auto">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Revolutionary AI Trends 2025-2026</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {/* Quantum AI */,}
+              {/* Quantum AI */}
               <div className="bg-gradient-to-br from-purple-800 to-purple-900 p-8 rounded-xl shadow-2xl">,
                 <div className="text-4xl mb-4">⚛️</div>,
                 <h3 className="text-xl font-bold text-white mb-4">Quantum AI Revolution</h3>,
@@ -233,5 +233,4 @@ export default function AI20252026UltimateTransformation() {,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),}
+    </ErrorBoundary>)}

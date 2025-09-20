@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Cpu
   Brain
@@ -15,12 +15,12 @@ import {
   ChevronRight,
   Sparkles,
   BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 
 const InteractiveTechDemo2029PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [isRunningsetIsRunning] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [isRunningsetIsRunning] = useState(false),
+  const [currentDemosetCurrentDemo] = useState(0),
 
   const demos = [
     {
@@ -51,25 +51,25 @@ const InteractiveTechDemo2029PromotionBanner = () => {
       color: "from-blue-600 to-cyan-600",
       stats: "300% efficiency gain"
     }
-  ];
+  ],
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }3000);
+      setCurrentDemo((prev) => (prev + 1) % demos.length),
+    }3000),
 
-    return () => clearInterval(timer);
-  }[demos.length]);
+    return () => clearInterval(timer),
+  }[demos.length]),
 
   const startDemo = () => {
-    setIsRunning(true);
-  };
+    setIsRunning(true),
+  },
 
   const stopDemo = () => {
-    setIsRunning(false);
-  };
+    setIsRunning(false),
+  },
 
-  if (!isVisible) return null;
+  if (!isVisible) return null,
 
 const InteractiveTechDemo2029PromotionBanner: React.FC = () => {
   return (
@@ -77,7 +77,7 @@ const InteractiveTechDemo2029PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">InteractiveTechDemo2029PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default InteractiveTechDemo2029PromotionBanner;
+export default InteractiveTechDemo2029PromotionBanner,

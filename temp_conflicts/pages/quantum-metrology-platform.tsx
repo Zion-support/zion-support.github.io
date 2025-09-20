@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Target, Atom, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, TrendingUp,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumMetrologyPlatform: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumMetrologyPlatform: React.FC = () => {
       title: 'High-Speed Processing',
       description: 'Rapid quantum measurement and analysis capabilities'
     }
-  ];
+  ],
 
   const metrologyCapabilities = [
     {
       area: 'Time & Frequency',
-      capabilities: ['Atomic clocks', 'Optical clocks', 'Frequency standards', 'Time transfer'],
+      capabilities: ['Atomic clocksOptical clocks', 'Frequency standardsTime transfer'],
       improvement: '10^18 precision',
       accuracy: '1 part in 10^18'
     },
     {
       area: 'Length & Distance',
-      capabilities: ['Laser interferometry', 'Optical frequency combs', 'Quantum rulers', 'Nanometer precision'],
+      capabilities: ['Laser interferometryOptical frequency combs', 'Quantum rulersNanometer precision'],
       improvement: '1000x more precise',
       accuracy: 'Nanometer level'
     },
     {
       area: 'Mass & Weight',
-      capabilities: ['Quantum mass standards', 'Kibble balance', 'Atomic force microscopy', 'Single atom detection'],
+      capabilities: ['Quantum mass standardsKibble balance', 'Atomic force microscopySingle atom detection'],
       improvement: '100x more accurate',
       accuracy: 'Microgram level'
     },
     {
       area: 'Electrical Standards',
-      capabilities: ['Quantum Hall effect', 'Josephson junctions', 'Single electron pumps', 'Quantum resistance'],
+      capabilities: ['Quantum Hall effectJosephson junctions', 'Single electron pumpsQuantum resistance'],
       improvement: '10^9 precision',
       accuracy: '1 part in 10^9'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Scientific Research',
       description: 'Quantum metrology for fundamental physics research and discovery',
-      benefits: ['Unprecedented precision', 'New physics discovery', 'Advanced instrumentation']
+      benefits: ['Unprecedented precisionNew physics discovery', 'Advanced instrumentation']
     },
     {
       title: 'Manufacturing',
       description: 'Quantum metrology for precision manufacturing and quality control',
-      benefits: ['Ultra-precise measurements', 'Quality assurance', 'Process optimization']
+      benefits: ['Ultra-precise measurementsQuality assurance', 'Process optimization']
     },
     {
       title: 'Space & Aerospace',
       description: 'Quantum metrology for satellite navigation and space exploration',
-      benefits: ['GPS enhancement', 'Space navigation', 'Satellite positioning']
+      benefits: ['GPS enhancementSpace navigation', 'Satellite positioning']
     },
     {
       title: 'Healthcare & Medical',
       description: 'Quantum metrology for medical imaging and diagnostic equipment',
-      benefits: ['Improved diagnostics', 'Better imaging', 'Enhanced accuracy']
+      benefits: ['Improved diagnosticsBetter imaging', 'Enhanced accuracy']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumMetrologyPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for research institutions and small metrology projects',
       features: [
-        'Up to 100 measurements/month',
-        'Basic quantum standards',
-        'Standard calibration protocols',
-        'Email support',
+        'Up to 100 measurements/monthBasic quantum standards',
+        'Standard calibration protocolsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumMetrologyPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing metrology teams and industrial applications',
       features: [
-        'Up to 500 measurements/month',
-        'Advanced quantum standards',
-        'Custom calibration protocols',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 500 measurements/monthAdvanced quantum standards',
+        'Custom calibration protocolsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumMetrologyPlatform: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations and government agencies',
       features: [
-        'Unlimited measurements',
-        'Custom quantum standard development',
-        'Dedicated quantum infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited measurementsCustom quantum standard development',
+        'Dedicated quantum infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumMetrologyPlatform: React.FC = () => {
       position: "Navigation Systems Lead",
       company: "Space Technology Institute"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -491,7 +483,7 @@ const QuantumMetrologyPlatform: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Measure with Quantum Precision?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -513,7 +505,7 @@ const QuantumMetrologyPlatform: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumMetrologyPlatform;
+export default QuantumMetrologyPlatform,

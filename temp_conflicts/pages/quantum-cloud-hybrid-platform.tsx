@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star, Cloud, Atom, Zap, Lock, Globe, BarChart3, Users, TrendingUp, Cpu, Database } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star, Cloud, Atom, Zap, Lock, Globe, BarChart3, Users, TrendingUp, Cpu, Database } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button',
 
 export default function QuantumCloudHybridPlatformPage() {
   const service = {
@@ -12,14 +12,10 @@ export default function QuantumCloudHybridPlatformPage() {
     period: '/month',
     description: 'Advanced hybrid cloud platform that combines quantum computing capabilities with traditional cloud infrastructure, enabling organizations to leverage quantum algorithms for complex computational problems while maintaining classical computing workflows.',
     features: [
-      'Quantum-classical hybrid computing',
-      'Seamless workload distribution',
-      'Quantum algorithm optimization',
-      'Multi-cloud quantum access',
-      'Real-time quantum resource management',
-      'Advanced security and encryption',
-      'API for quantum applications',
-      'Performance monitoring and analytics',
+      'Quantum-classical hybrid computingSeamless workload distribution',
+      'Quantum algorithm optimizationMulti-cloud quantum access',
+      'Real-time quantum resource managementAdvanced security and encryption',
+      'API for quantum applicationsPerformance monitoring and analytics',
       'Enterprise-grade support and SLAs'
     ],
     rating: 4.9,
@@ -31,7 +27,7 @@ export default function QuantumCloudHybridPlatformPage() {
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
-  };
+  },
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -117,7 +113,7 @@ export default function QuantumCloudHybridPlatformPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-blue-400 mb-3">Quantum Technologies</h3>
                     <div className="space-y-2">
-                      {['Qiskit & Cirq', 'AWS Braket & Azure Quantum', 'Google Quantum AI', 'IBM Quantum', 'Custom Quantum Algorithms'].map((tech, i) => (
+                      {['Qiskit & CirqAWS Braket & Azure Quantum', 'Google Quantum AIIBM Quantum', 'Custom Quantum Algorithms'].map((tech, i) => (
                         <div key={i} className="flex items-center space-x-2">
                           <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                           <span className="text-slate-300 text-sm">{tech}</span>
@@ -128,7 +124,7 @@ export default function QuantumCloudHybridPlatformPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-blue-400 mb-3">Cloud Integrations</h3>
                     <div className="space-y-2">
-                      {['AWS, Azure, Google Cloud', 'IBM Cloud, Oracle Cloud', 'VMware, Kubernetes', 'Hybrid Cloud Management', 'Multi-cloud Orchestration'].map((integration, i) => (
+                      {['AWS, Azure, Google CloudIBM Cloud, Oracle Cloud', 'VMware, KubernetesHybrid Cloud Management', 'Multi-cloud Orchestration'].map((integration, i) => (
                         <div key={i} className="flex items-center space-x-2">
                           <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                           <span className="text-slate-300 text-sm">{integration}</span>
@@ -291,5 +287,5 @@ export default function QuantumCloudHybridPlatformPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }

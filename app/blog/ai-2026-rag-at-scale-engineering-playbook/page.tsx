@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../../components/SEO',
+import ErrorBoundary from '../../../components/ErrorBoundary',
 export const metadata = {,
-  title: 'AI 2026: RAG at Scale - Engineering Playbook';
-  description: 'A practical, engineering-first playbook to design, operate, and scale Retrieval-Augmented Generation (RAG) systems with reliability, observability, and ROI.';
-  keywords: ['RAGretrieval-augmented generation', 'vector databasesprompt engineering', 'observabilityRAG evaluation', 'scalability'],
-};
+  title: 'AI 2026: RAG at Scale - Engineering Playbook',
+  description: 'A practical, engineering-first playbook to design, operate, and scale Retrieval-Augmented Generation (RAG) systems with reliability, observability, and ROI.',
+  keywords: ['RAGretrieval-augmented generationvector databasesprompt engineering', 'observabilityRAG evaluationscalability']
+},
 export default function AI2026RAGAtScalePlaybook() {,
   return (,
     <ErrorBoundary>,
@@ -84,5 +84,5 @@ export default function AI2026RAGAtScalePlaybook() {,
         </article>,
       </div>,
     </ErrorBoundary>,
-  ),}
+  )}
 ,

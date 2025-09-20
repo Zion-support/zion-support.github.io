@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-export default Webinars;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default Webinars,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 3 },
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 5 },
     { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 2 },
-    { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 4 },
-  ];
+    { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 4 }
+  ],
 
   const filterTypes = [{ id: 'all', name: 'All Webinars', count: 0 },
     { id: 'upcoming', name: 'Upcoming', count: 0 },
     { id: 'on - demand', name: 'On - Demand', count: 0 },
-    { id: 'live', name: 'Live Now', count: 0 },
-  ];
+    { id: 'live', name: 'Live Now', count: 0 }
+  ],
 
   const upcomingWebinars = [{
       id: 1,
@@ -24,18 +24,16 @@ export default function Page() {
       type: 'upcoming',
       date: '2025 - 02 - 10T14:00:00Z',
       duration: '75 min',
-      speakers: ['Dr.Sarah Chen', 'Dr.Michael Rodriguez', 'AI Research Team'],
+      speakers: ['Dr.Sarah ChenDr.Michael Rodriguez', 'AI Research Team'],
       maxAttendees: 600,
       currentAttendees: 487,
       featured: true,
-      tags: ['AI Research',
-        'Autonomous Systems',
-        'Business Intelligence',
-        'Innovation',
+      tags: ['AI ResearchAutonomous Systems',
+        'Business IntelligenceInnovation'
       ],
       thumbnail: '/images / webinars / ai - autonomous - research-2025.jpg',
       registrationRequired: true,
-      recordingAvailable: false,
+      recordingAvailable: false
     },
     {
       id: 2,
@@ -46,21 +44,18 @@ export default function Page() {
       type: 'upcoming',
       date: '2025 - 02 - 12T15:00:00Z',
       duration: '60 min',
-      speakers: ['Michael Rodriguez',
-        'Supply Chain Experts',
-        'AI Implementation Team',
+      speakers: ['Michael RodriguezSupply Chain Experts',
+        'AI Implementation Team'
       ],
       maxAttendees: 400,
       currentAttendees: 298,
       featured: true,
-      tags: ['Supply Chain',
-        'AI Optimization',
-        'Cost Reduction',
-        'Predictive Analytics',
+      tags: ['Supply ChainAI Optimization',
+        'Cost ReductionPredictive Analytics'
       ],
       thumbnail: '/images / webinars / ai - supply - chain - 2025.jpg',
       registrationRequired: true,
-      recordingAvailable: false,
+      recordingAvailable: false
     },
     {
       id: 3,
@@ -71,20 +66,18 @@ export default function Page() {
       type: 'upcoming',
       date: '2025 - 02 - 15T16:00:00Z',
       duration: '90 min',
-      speakers: ['Security Experts', 'Cloud Architecture Team'],
+      speakers: ['Security ExpertsCloud Architecture Team'],
       maxAttendees: 350,
       currentAttendees: 245,
       featured: false,
-      tags: ['Cloud Security',
-        'Zero Trust',
-        'Application Security',
-        'DevSecOps',
+      tags: ['Cloud SecurityZero Trust',
+        'Application SecurityDevSecOps'
       ],
       thumbnail: '/images / webinars / cloud - security - 2025.jpg',
       registrationRequired: true,
-      recordingAvailable: false,
-    },
-  ];
+      recordingAvailable: false
+    }
+  ],
 
   const onDemandWebinars = [{
       id: 4,
@@ -95,17 +88,15 @@ export default function Page() {
       type: 'on - demand',
       date: '2024 - 12 - 15T10:00:00Z',
       duration: '60 min',
-      speakers: ['Data Science Team', 'Business Intelligence Experts'],
+      speakers: ['Data Science TeamBusiness Intelligence Experts'],
       views: 1247,
       featured: true,
-      tags: ['Data Analytics',
-        'Business Intelligence',
-        'Decision Making',
-        'Data Strategy',
+      tags: ['Data AnalyticsBusiness Intelligence',
+        'Decision MakingData Strategy'
       ],
       thumbnail: '/images / webinars / data - driven - decisions - 2024.jpg',
       recordingAvailable: true,
-      watchUrl: '/webinars / data - driven - decision - making',
+      watchUrl: '/webinars / data - driven - decision - making'
     },
     {
       id: 5,
@@ -116,24 +107,24 @@ export default function Page() {
       type: 'on - demand',
       date: '2024 - 11 - 20T14:00:00Z',
       duration: '75 min',
-      speakers: ['IoT Specialists', 'Manufacturing Experts'],
+      speakers: ['IoT SpecialistsManufacturing Experts'],
       views: 892,
       featured: false,
-      tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
+      tags: ['Digital TwinIoT', 'ROIDigital Transformation'],
       thumbnail: '/images / webinars / digital - twin - 2024.jpg',
       recordingAvailable: true,
-      watchUrl: '/webinars / digital - twin - technology - roi',
-    },
-  ];
+      watchUrl: '/webinars / digital - twin - technology - roi'
+    }
+  ],
 
   const filteredWebinars = [...upcomingWebinars, ...onDemandWebinars].filter(webinar => {
       const matchesSearch = webinar.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-        webinar.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-      const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
-      const matchesType = filterType === 'all' || webinar.type === filterType;
+        webinar.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+      const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory,
+      const matchesType = filterType === 'all' || webinar.type === filterType,
 
-      return matchesSearch && matchesCategory && matchesType;
-    }) ;
+      return matchesSearch && matchesCategory && matchesType,
+    }) ,
 
   return (<>
       <SEO
@@ -282,7 +273,7 @@ export default function Page() {
                     <div  className="flex items - center gap-2 mb-4">
                       <Users className="w-4 h-4 text-gray -400" />
                       <span className="text-gray - 400 text-sm">
-                        {Array.isArray(webinar.speakers) ? webinar.speakers.join(', ') : webinar.speakers}
+                        {Array.isArray(webinar.speakers) ? webinar.speakers.join() : webinar.speakers}
                       </span>
                     </div>
 
@@ -324,6 +315,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) ,
+},
 

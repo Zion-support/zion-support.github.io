@@ -1,68 +1,68 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { LogIn, User, Eye, EyeOff } from "lucide-react",
 
-import { useAuth } from "@/hooks/useAuth";
-import { loginUser } from "@/services/authService";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { useAuth } from "@/hooks/useAuth",
+import { loginUser } from "@/services/authService",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+  FormMessage
+} from "@/components/ui/form",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { Link, useNavigate, useSearchParams } from "react-router-dom",
 
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-});
+  password: z.string().min(6, "Password must be at least 6 characters")
+}),
 
-type LoginFormValues = z.infer<typeof loginSchema>;
+type LoginFormValues = z.infer<typeof loginSchema>,
 
 export function LoginForm() {
-  const { isLoading, login } = useAuth();
-  const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { isLoading, login } = useAuth(),
+  const navigate = useNavigate(),
+  const [searchParams] = useSearchParams(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
       email: "",
-      password: "",
-    },
-  });
+      password: ""
+    }
+  }),
 
   const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
+    if (isSubmitting) return,
 
     try {
-      setIsSubmitting(true);
-      const { res, data: resData } = await loginUser(data.email, data.password);
+      setIsSubmitting(true),
+      const { res, data: resData } = await loginUser(data.email, data.password),
       if (res.status !== 200) {
-        const message = resData?.error || "Invalid credentials";
-        form.setError("root", { message });
-        return;
+        const message = resData?.error || "Invalid credentials",
+        form.setError("root", { message }),
+        return,
       }
 
-      await login(data.email, data.password);
+      await login(data.email, data.password),
 
-      const next = searchParams.get('next') || '/';
-      navigate(next);
+      const next = searchParams.get('next') || '/',
+      navigate(next),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <Form {...form}>
@@ -73,9 +73,9 @@ export function LoginForm() {
       )}
       <form
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
+          const firstError = Object.keys(errors)[0] as keyof LoginFormValues,
           if (firstError) {
-            form.setFocus(firstError);
+            form.setFocus(firstError),
           }
         })}
         className="space-y-6"
@@ -163,5 +163,5 @@ export function LoginForm() {
         </Button>
       </form>
     </Form>
-  );
+  ),
 }

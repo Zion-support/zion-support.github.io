@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const UltimateContentBanner2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
@@ -116,7 +116,7 @@ const UltimateContentBanner2026: React.FC = () => {
             Join thousands of innovators already exploring our revolutionary technology content
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore All Content
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
@@ -129,7 +129,7 @@ const UltimateContentBanner2026: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default UltimateContentBanner2026;
+export default UltimateContentBanner2026,

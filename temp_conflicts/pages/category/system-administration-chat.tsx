@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const SystemAdministrationChat = () => {
   return (
@@ -16,7 +16,7 @@ const SystemAdministrationChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default SystemAdministrationChat;
+export default SystemAdministrationChat,

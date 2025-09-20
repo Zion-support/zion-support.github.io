@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Mail,
   Phone,
@@ -11,134 +11,102 @@ import {
   MessageSquare,
   Building,
   Globe
-} from 'lucide-react';
-
+} from "lucide-react";
 interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  service: string;
-  message: string;
+  name: string,email: string,phone: string,company: string,service: string,message: string
 }
 
 interface ContactFormErrors {
-  [key: string]: string;
+  [key: string]: string
 }
 
 export function EnhancedContact() {
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: 'general',
-    message: ''
+    name: '',email: '',phone: '',company: '',service: 'general',message: ''
   });
-
-  const [errors, setErrors] = useState<ContactFormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<ContactFormErrors>({}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
 
   const services = [
-    { value: 'general', label: 'General Inquiry' },
-    { value: 'ai-solutions', label: 'AI Solutions' },
-    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
-    { value: 'cybersecurity', label: 'Cybersecurity' },
-    { value: 'digital-transformation', label: 'Digital Transformation' },
-    { value: 'consulting', label: 'IT Consulting' },
-    { value: 'quantum-computing', label: 'Quantum Computing' },
+    { value: 'general', label: 'General Inquiry' };
+    { value: 'ai-solutions', label: 'AI Solutions' };
+    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' };
+    { value: 'cybersecurity', label: 'Cybersecurity' };
+    { value: 'digital-transformation', label: 'Digital Transformation' };
+    { value: 'consulting', label: 'IT Consulting' };
+    { value: 'quantum-computing', label: 'Quantum Computing' };
     { value: 'green-it', label: 'Green IT Solutions' }
   ];
-
   const validateForm = (): boolean => {
     const newErrors: ContactFormErrors = {};
-
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = 'Name is required',
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'Email is required',
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Please enter a valid email address',
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = 'Message is required',
     } else if (formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
+      newErrors.message = 'Message must be at least 10 characters long',
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    setErrors(newErrors),
+    return Object.keys(newErrors).length === 0,
+  },
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({ ...prev, [field]: value })),
 
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }));
+      setErrors(prev => ({ ...prev, [field]: '' })),
     }
-  };
+  },
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!validateForm()) {
-      return;
+      return
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000)),
 
-      setIsSubmitted(true);
+      setIsSubmitted(true),
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: 'general',
-        message: ''
+        name: '',email: '',phone: '',company: '',service: 'general',message: ''
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form:', error),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   const contactInfo = [
     {
-      icon: Mail,
-      title: 'Email',
-      value: 'kleber@ziontechgroup.com',
-      description: 'Get in touch via email'
-    },
+      icon: Mail,title: 'Email',value: 'kleber@ziontechgroup.com',description: 'Get in touch via email'
+    };
     {
-      icon: Phone,
-      title: 'Phone',
-      value: '+1 (302) 464-0950',
-      description: 'Call us directly'
-    },
+      icon: Phone,title: 'Phone',value: '+1 (302) 464-0950',description: 'Call us directly'
+    };
     {
-      icon: MapPin,
-      title: 'Address',
-      value: '364 E Main St STE 1008, Middletown, DE 19709',
+      icon: MapPin,title: 'Address',value: '364 E Main St STE 1008, Middletown, DE 19709',
       description: 'Visit our office'
-    },
+    };
     {
-      icon: Clock,
-      title: 'Business Hours',
-      value: 'Mon-Fri: 9AM-6PM EST',
-      description: 'Available during these hours'
+      icon: Clock,title: 'Business Hours',value: 'Mon-Fri: 9AM-6PM EST',description: 'Available during these hours'
     }
   ];
-
   if (isSubmitted) {
     return (
       <motion.div
@@ -179,13 +147,13 @@ export function EnhancedContact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             onClick={() => setIsSubmitted(false)}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover: from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
           >
             Send Another Message
           </motion.button>
         </div>
       </motion.div>
-    );
+    )
   }
 
   return (

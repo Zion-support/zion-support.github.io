@@ -14,9 +14,9 @@ import {
 	Shield,
 	Twitter,
 	Zap
-} from 'lucide-react';
-import Link from 'next/link';
-import React from 'react';
+} from 'lucide-react',
+import Link from 'next/link',
+import React from 'react',
 
 const footerNavigation = {
 	services: {
@@ -27,8 +27,8 @@ const footerNavigation = {
 			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
 			{ name: 'Data & Analytics', href: '/services/data' },
 			{ name: 'Micro SaaS', href: '/services/micro-saas' },
-			{ name: 'Digital Transformation', href: '/services/transformation' },
-		],
+			{ name: 'Digital Transformation', href: '/services/transformation' }
+		]
 	},
 	solutions: {
 		title: 'Solutions',
@@ -38,8 +38,8 @@ const footerNavigation = {
 			{ name: 'Startup', href: '/solutions/startup' },
 			{ name: 'Government', href: '/solutions/government' },
 			{ name: 'Healthcare', href: '/solutions/healthcare' },
-			{ name: 'Financial Services', href: '/solutions/financial' },
-		],
+			{ name: 'Financial Services', href: '/solutions/financial' }
+		]
 	},
 	company: {
 		title: 'Company',
@@ -49,8 +49,8 @@ const footerNavigation = {
 			{ name: 'Careers', href: '/careers' },
 			{ name: 'Blog', href: '/blog' },
 			{ name: 'News', href: '/news' },
-			{ name: 'Case Studies', href: '/case-studies' },
-		],
+			{ name: 'Case Studies', href: '/case-studies' }
+		]
 	},
 	support: {
 		title: 'Support & Resources',
@@ -60,30 +60,30 @@ const footerNavigation = {
 			{ name: 'Documentation', href: '/docs' },
 			{ name: 'API Reference', href: '/api' },
 			{ name: 'Terms of Service', href: '/terms' },
-			{ name: 'Privacy Policy', href: '/privacy' },
-		],
-	},
-};
+			{ name: 'Privacy Policy', href: '/privacy' }
+		]
+	}
+},
 
 const socialLinks = [
 	{ name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter },
 	{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin },
 	{ name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
 	{ name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-];
+	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+],
 
 const quickLinks = [
 	{ name: 'Request Quote', href: '/request-quote', icon: Zap },
 	{ name: 'Security', href: '/security', icon: Shield },
 	{ name: 'Compliance', href: '/compliance', icon: Award },
-	{ name: 'Status', href: '/status', icon: Cloud },
-];
+	{ name: 'Status', href: '/status', icon: Cloud }
+],
 
 const EnhancedFooter: React.FC = () => {
 	const scrollToTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
+		window.scrollTo({ top: 0, behavior: 'smooth' }),
+	},
 
 	return (
 		<footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
@@ -195,10 +195,10 @@ const EnhancedFooter: React.FC = () => {
 
 				{/* Bottom section */}
 				<div className="pt-8 border-t border-zion-blue-light">
-					<div className="flex flex-col md:flex-row justify-between items-center">
+					<div className="flex flex-col md: flex-row justify-between items-center">
 						<div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
 							<p className="text-zion-slate-light text-sm">
-								&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+								&copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
 							</p>
 							<div className="flex items-center gap-2 text-zion-slate-light/60">
 								<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
@@ -255,13 +255,13 @@ const EnhancedFooter: React.FC = () => {
 			{/* Scroll to top button */}
 			<button
 				onClick={scrollToTop}
-				className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40 hover:scale-110"
+				className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover: shadow-zion-cyan/25 transition-all duration-300 z-40 hover:scale-110"
 				aria-label="Scroll to top"
 			>
 				<ArrowUp className="w-5 h-5" />
 			</button>
 		</footer>
-	);
-};
+	)
+},
 
-export default EnhancedFooter;
+export default EnhancedFooter,

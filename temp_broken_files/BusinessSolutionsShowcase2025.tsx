@@ -1,144 +1,144 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Building2,
   TrendingUp,
   Users,
   DollarSign,
   Shield,
-  Zap;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Target;
-  BarChart3;
-  Clock;
-  Award;
-  Lightbulb;
-  Globe;
-  Smartphone,
-} from 'lucide-react';
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Target,
+  BarChart3,
+  Clock,
+  Award,
+  Lightbulb,
+  Globe,
+  Smartphone
+} from 'lucide-react',
 const BusinessSolutionsShowcase2025 = () => {,
-  const [activeCategorysetActiveCategory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const categories = [,
     {,
-      id: 'automation';
-      title: 'Business Automation';
-      icon: Zap;
-      color: 'from-blue-500 to-cyan-500';
+      id: 'automation',
+      title: 'Business Automation',
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500',
       solutions: [,
         {,
-          title: 'Workflow Automation';
-          description: 'Streamline your business processes with intelligent automation.';
-          features: ['Process 'OptimizationError 'Reduction', 'Time Savings'];
-          roi: '300%';
-          timeToValue: '30 days';
-          image: '/api/placeholder/400/300',};
+          title: 'Workflow Automation',
+          description: 'Streamline your business processes with intelligent automation.',
+          features: ['Process 'OptimizationError 'ReductionTime Savings'],
+          roi: '300%',
+          timeToValue: '30 days',
+          image: '/api/placeholder/400/300'},
         {,
-          title: 'Document Processing';
-          description: 'Automate document handling and data extraction.';
-          features: ['OCR 'TechnologySmart 'Classification', 'Data Validation'];
-          roi: '250%';
-          timeToValue: '14 days';
-          image: '/api/placeholder/400/300',};
+          title: 'Document Processing',
+          description: 'Automate document handling and data extraction.',
+          features: ['OCR 'TechnologySmart 'ClassificationData Validation'],
+          roi: '250%',
+          timeToValue: '14 days',
+          image: '/api/placeholder/400/300'},
         {,
-          title: 'Customer Service AI';
-          description: 'Enhance customer support with AI-powered chatbots.';
-          features: ['24/7 'SupportNatural 'Language', 'Multi-language'];
-          roi: '400%';
-          timeToValue: '21 days';
-          image: '/api/placeholder/400/300',}
-      ],
-    };
+          title: 'Customer Service AI',
+          description: 'Enhance customer support with AI-powered chatbots.',
+          features: ['24/7 'SupportNatural 'LanguageMulti-language'],
+          roi: '400%',
+          timeToValue: '21 days',
+          image: '/api/placeholder/400/300'}
+      ]
+    },
     {,
-      id: 'analytics';
-      title: 'Advanced Analytics';
-      icon: BarChart3;
-      color: 'from-purple-500 to-pink-500';
+      id: 'analytics',
+      title: 'Advanced Analytics',
+      icon: BarChart3,
+      color: 'from-purple-500 to-pink-500',
       solutions: [,
         {,
-          title: 'Predictive Analytics';
-          description: 'Forecast trends and make data-driven decisions.';
-          features: ['Machine 'LearningReal-time 'Insights', 'Custom Dashboards'];
-          roi: '500%';
-          timeToValue: '45 days';
-          image: '/api/placeholder/400/300',};
+          title: 'Predictive Analytics',
+          description: 'Forecast trends and make data-driven decisions.',
+          features: ['Machine 'LearningReal-time 'InsightsCustom Dashboards'],
+          roi: '500%',
+          timeToValue: '45 days',
+          image: '/api/placeholder/400/300'},
         {,
-          title: 'Business Intelligence';
-          description: 'Transform data into actionable business insights.';
-          features: ['Data 'VisualizationKPI 'Tracking', 'Automated Reports'];
-          roi: '350%';
-          timeToValue: '28 days';
-          image: '/api/placeholder/400/300',};
+          title: 'Business Intelligence',
+          description: 'Transform data into actionable business insights.',
+          features: ['Data 'VisualizationKPI 'TrackingAutomated Reports'],
+          roi: '350%',
+          timeToValue: '28 days',
+          image: '/api/placeholder/400/300'},
         {,
-          title: 'Customer Analytics';
-          description: 'Understand customer behavior and preferences.';
-          features: [Segmentation', 'Churn 'PredictionPersonalization'];
-          roi: '450%';
-          timeToValue: '35 days';
-          image: '/api/placeholder/400/300',}
-      ],
-    };
+          title: 'Customer Analytics',
+          description: 'Understand customer behavior and preferences.',
+          features: [SegmentationChurn 'PredictionPersonalization'],
+          roi: '450%',
+          timeToValue: '35 days',
+          image: '/api/placeholder/400/300'}
+      ]
+    },
     {,
-      id: 'security';
-      title: 'Security & Compliance';
-      icon: Shield;
-      color: 'from-green-500 to-emerald-500';
+      id: 'security',
+      title: 'Security & Compliance',
+      icon: Shield,
+      color: 'from-green-500 to-emerald-500',
       solutions: [,
         {,
-          title: 'Cybersecurity Suite';
-          description: 'Protect your business from cyber threats.';
-          features: ['Threat 'DetectionReal-time 'Monitoring', 'Incident Response'];
-          roi: '200%';
-          timeToValue: '7 days';
-          image: '/api/placeholder/400/300',};
+          title: 'Cybersecurity Suite',
+          description: 'Protect your business from cyber threats.',
+          features: ['Threat 'DetectionReal-time 'MonitoringIncident Response'],
+          roi: '200%',
+          timeToValue: '7 days',
+          image: '/api/placeholder/400/300'},
         {,
-          title: 'Compliance Management';
-          description: 'Ensure regulatory compliance across all operations.';
-          features: ['GDPR 'ComplianceAudit 'Trails', 'Risk Assessment'];
-          roi: '180%';
-          timeToValue: '14 days';
-          image: '/api/placeholder/400/300',};
+          title: 'Compliance Management',
+          description: 'Ensure regulatory compliance across all operations.',
+          features: ['GDPR 'ComplianceAudit 'TrailsRisk Assessment'],
+          roi: '180%',
+          timeToValue: '14 days',
+          image: '/api/placeholder/400/300'},
         {,
-          title: 'Data Protection';
-          description: 'Secure sensitive data with advanced encryption.';
-          features: ['End-to-End 'EncryptionAccess 'Control', 'Data Backup'];
-          roi: '220%';
-          timeToValue: '10 days';
-          image: '/api/placeholder/400/300',}
-      ],
+          title: 'Data Protection',
+          description: 'Secure sensitive data with advanced encryption.',
+          features: ['End-to-End 'EncryptionAccess 'ControlData Backup'],
+          roi: '220%',
+          timeToValue: '10 days',
+          image: '/api/placeholder/400/300'}
+      ]
     }
-  ];
+  ],
   const containerVariants = {,
-    hidden: { opacity: 0, y: 50 ,};
+    hidden: { opacity: 0, y: 50 },
     visible: {,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.2,}
+        duration: 0.8,
+        staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { opacity: 0, y: 30 ,};
+    hidden: { opacity: 0, y: 30 },
     visible: {,
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.6 ,}
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
-  };
-  const currentCategory = categories[activeCategory];
+  },
+  const currentCategory = categories[activeCategory],
   return (,
     <divsection,
       className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50",
     >,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
           <div,
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-4",
           >,
@@ -153,10 +153,10 @@ const BusinessSolutionsShowcase2025 = () => {,
             across every aspect of your organization.,
           </p>,
         </div>,
-        {/* Category Navigation */,}
+        {/* Category Navigation */}
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">,
             {categories.map((categoryindex) => {,
-              const Icon = category.icon;
+              const Icon = category.icon,
               return (,
                 <button,
                   key={category.id}
@@ -164,12 +164,12 @@ const BusinessSolutionsShowcase2025 = () => {,
                   className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-300 ${,
                     activeCategory === index,
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                      : 'text-gray-600 hover: text-gray-900 hover:bg-gray-100',}`}
+                      : 'text-gray-600 hover: text-gray-900 hover:bg-gray-100'}`}
                 >,
                   <Icon className="w-5 h-5 mr-2" />,
                   {category.title}
                 </button>,
-              );
+              ),
             })}
           </div>,
         </div>,
@@ -180,16 +180,16 @@ const BusinessSolutionsShowcase2025 = () => {,
           >,
             {currentCategory.solutions.map((solutionindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="bg-white rounded-2xl p-8 shadow-lg hover: shadow-xl transition-all duration-300 border border-gray-200 group",
               >,
-                {/* Header */,}
+                {/* Header */}
                 <div className="mb-6">,
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentCategory.color} flex items-center justify-center mb-4`}>,
                     <Target className="w-8 h-8 text-white" />,
                   </div>,
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover: text-indigo-600 transition-colors">,
-                    {solution.title,}
+                    {solution.title}
                   </h3>,
                   <p className="text-gray-600 leading-relaxed">,
                     {solution.description}
@@ -203,8 +203,7 @@ const BusinessSolutionsShowcase2025 = () => {,
                       <div key={featureIndex} className="flex items-center space-x-2">,
                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />,
                         <span className="text-sm text-gray-600">{feature}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
                 {/* Metrics */}
@@ -224,7 +223,7 @@ const BusinessSolutionsShowcase2025 = () => {,
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />,
                 </button>,
               </div>,
-            )),}
+            ))}
           </div>,
         </div>,
         {/* Success Stories */}
@@ -273,6 +272,6 @@ const BusinessSolutionsShowcase2025 = () => {,
         </div>,
       </div>,
     </divsection>,
-  );
-export default BusinessSolutionsShowcase2025;
+  ),
+export default BusinessSolutionsShowcase2025,
 }

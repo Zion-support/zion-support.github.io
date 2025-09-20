@@ -1,7 +1,7 @@
 
-import React from "react";
-import { SEO } from "@/components/SEO";
-import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
+import React from "react",
+import { SEO } from "@/components/SEO",
+import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 const AppMetadataManager: React.FC = () => {,
   return (,
     <>,
@@ -13,6 +13,5 @@ const AppMetadataManager: React.FC = () => {,
         <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>,
         <MetadataManager />,
       </div>,
-    </>,
-  ),};
-export default AppMetadataManager;
+    </>)},
+export default AppMetadataManager,

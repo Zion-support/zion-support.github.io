@@ -1,15 +1,15 @@
 
-import React from 'react';
+import React from 'react',
 interface VerifiedBadgeProps {,
-  verified: boolean;
-  size?: 'sm' | 'md' | 'lg',
+  verified: boolean,
+  size?: 'sm' | 'md' | 'lg'
 }
 ,
-  if (!verified) return null;
+  if (!verified) return null,
   const sizeClasses = {,
-    sm: 'h-3.5 w-3.5';
-    md: 'h-4 w-4';
-    lg: 'h-5 w-5',};
+    sm: 'h-3.5 w-3.5',
+    md: 'h-4 w-4',
+    lg: 'h-5 w-5'},
   return (,
     <TooltipProvider>,
       <Tooltip>,
@@ -22,7 +22,6 @@ interface VerifiedBadgeProps {,
           <p>Verified talent</p>,
         </TooltipContent>,
       </Tooltip>,
-    </TooltipProvider>,
-  );
+    </TooltipProvider>),
 }
 ,

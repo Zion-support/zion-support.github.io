@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Atom, 
+  Atom,
   Zap, 
   Brain, 
   Cpu, 
@@ -45,162 +45,99 @@ import {
   Wifi,
   Bluetooth,
   Radio
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function QuantumComputingSolutions() {
   const features = [
     {
-      icon: Atom,
-      title: 'Quantum Processing',
-      description: 'Harness quantum superposition and entanglement for exponential computational power.'
-    },
+      icon: Atom,title: 'Quantum Processing',description: 'Harness quantum superposition and entanglement for exponential computational power.'
+    };
     {
-      icon: Brain,
-      title: 'AI Integration',
-      description: 'Seamlessly integrate quantum computing with AI and machine learning workflows.'
-    },
+      icon: Brain,title: 'AI Integration',description: 'Seamlessly integrate quantum computing with AI and machine learning workflows.'
+    };
     {
-      icon: Zap,
-      title: 'Real-time Optimization',
-      description: 'Solve complex optimization problems in seconds instead of years.'
-    },
+      icon: Zap,title: 'Real-time Optimization',description: 'Solve complex optimization problems in seconds instead of years.'
+    };
     {
-      icon: TrendingUp,
-      title: 'Scalable Solutions',
-      description: 'From small quantum circuits to enterprise-scale quantum applications.'
+      icon: TrendingUp,title: 'Scalable Solutions',description: 'From small quantum circuits to enterprise-scale quantum applications.'
     }
   ];
-
   const capabilities = [
     {
-      title: 'Quantum Algorithms',
-      description: 'Custom quantum algorithms for specific business problems and use cases',
-      icon: Code,
-      benefits: ['Grover\'s algorithm', 'Shor\'s algorithm', 'Quantum annealing']
+      title: 'Quantum Algorithms',description: 'Custom quantum algorithms for specific business problems and use cases',icon: Code,benefits: ['Grover\'s algorithmShor\'s algorithm', 'Quantum annealing']
     },
     {
-      title: 'Hybrid Computing',
-      description: 'Combine classical and quantum computing for optimal performance',
-      icon: Cpu,
-      benefits: ['Quantum-classical integration', 'Hybrid algorithms', 'Performance optimization']
+      title: 'Hybrid Computing',description: 'Combine classical and quantum computing for optimal performance',icon: Cpu,benefits: ['Quantum-classical integrationHybrid algorithms', 'Performance optimization']
     },
     {
-      title: 'Quantum Simulation',
-      description: 'Simulate quantum systems for research and development',
-      icon: Monitor,
-      benefits: ['Molecular modeling', 'Material science', 'Drug discovery']
+      title: 'Quantum Simulation',description: 'Simulate quantum systems for research and development',icon: Monitor,benefits: ['Molecular modelingMaterial science', 'Drug discovery']
     },
     {
-      title: 'Quantum Security',
-      description: 'Quantum-resistant cryptography and secure communications',
-      icon: Shield,
-      benefits: ['Post-quantum crypto', 'Quantum key distribution', 'Secure networks']
+      title: 'Quantum Security',description: 'Quantum-resistant cryptography and secure communications',icon: Shield,benefits: ['Post-quantum cryptoQuantum key distribution', 'Secure networks']
     }
-  ];
+  ],
 
   const useCases = [
     {
-      industry: 'Financial Services',
-      description: 'Portfolio optimization, risk assessment, and algorithmic trading',
-      icon: BarChart3,
-      metrics: ['Portfolio Performance', 'Risk Reduction', 'Trading Speed']
+      industry: 'Financial Services',description: 'Portfolio optimization, risk assessment, and algorithmic trading',
+      icon: BarChart3,metrics: ['Portfolio PerformanceRisk Reduction', 'Trading Speed']
     },
     {
-      industry: 'Pharmaceuticals',
-      description: 'Drug discovery, molecular modeling, and protein folding',
-      icon: Activity,
-      metrics: ['Discovery Speed', 'Accuracy Rate', 'Cost Reduction']
+      industry: 'Pharmaceuticals',description: 'Drug discovery, molecular modeling, and protein folding',
+      icon: Activity,metrics: ['Discovery SpeedAccuracy Rate', 'Cost Reduction']
     },
     {
-      industry: 'Logistics',
-      description: 'Route optimization, supply chain management, and scheduling',
-      icon: Network,
-      metrics: ['Route Efficiency', 'Cost Savings', 'Delivery Time']
+      industry: 'Logistics',description: 'Route optimization, supply chain management, and scheduling',
+      icon: Network,metrics: ['Route EfficiencyCost Savings', 'Delivery Time']
     },
     {
-      industry: 'Energy',
-      description: 'Grid optimization, renewable energy forecasting, and storage',
-      icon: Zap,
-      metrics: ['Grid Efficiency', 'Energy Savings', 'Forecast Accuracy']
+      industry: 'Energy',description: 'Grid optimization, renewable energy forecasting, and storage',
+      icon: Zap,metrics: ['Grid EfficiencyEnergy Savings', 'Forecast Accuracy']
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for research and development teams',
-      features: [
-        'Up to 100 qubits',
-        'Basic quantum algorithms',
-        'Standard support',
-        'Documentation access',
+      name: 'Starter',price: '$299',period: '/month',description: 'Perfect for research and development teams',features: [
+        'Up to 100 qubitsBasic quantum algorithms';
+        'Standard supportDocumentation access',
         'Community forum'
       ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
+      cta: 'Start Free Trial',popular: false
+    };
     {
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for production quantum applications',
-      features: [
-        'Up to 1000 qubits',
-        'Advanced algorithms',
-        'Priority support',
-        'Custom development',
-        'API access',
-        'Performance monitoring',
+      name: 'Professional',price: '$799',period: '/month',description: 'Ideal for production quantum applications',features: [
+        'Up to 1000 qubitsAdvanced algorithms';
+        'Priority supportCustom development',
+        'API accessPerformance monitoring',
         'SLA guarantees'
       ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
+      cta: 'Start Free Trial',popular: true
+    };
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large-scale quantum computing needs',
-      features: [
-        'Unlimited qubits',
-        'Custom algorithms',
-        'Dedicated team',
-        'On-premise options',
-        'White-label solutions',
-        'Training programs',
+      name: 'Enterprise',price: 'Custom',period: '',description: 'For large-scale quantum computing needs',features: [
+        'Unlimited qubitsCustom algorithms';
+        'Dedicated teamOn-premise options',
+        'White-label solutionsTraining programs',
         '24/7 support'
       ],
-      cta: 'Contact Sales',
-      popular: false
+      cta: 'Contact Sales',popular: false
     }
   ];
-
   const benefits = [
     {
-      icon: Zap,
-      title: '1000x Faster Processing',
-      description: 'Solve complex problems in seconds that would take classical computers years.'
-    },
+      icon: Zap,title: '1000x Faster Processing',description: 'Solve complex problems in seconds that would take classical computers years.'
+    };
     {
-      icon: Brain,
-      title: 'AI Enhancement',
-      description: 'Supercharge machine learning with quantum computing capabilities.'
-    },
+      icon: Brain,title: 'AI Enhancement',description: 'Supercharge machine learning with quantum computing capabilities.'
+    };
     {
-      icon: Shield,
-      title: 'Future-Proof Security',
-      description: 'Implement quantum-resistant cryptography before it becomes critical.'
-    },
+      icon: Shield,title: 'Future-Proof Security',description: 'Implement quantum-resistant cryptography before it becomes critical.'
+    };
     {
-      icon: Users,
-      title: 'Competitive Advantage',
-      description: 'Stay ahead of the curve with cutting-edge quantum technology.'
+      icon: Users,title: 'Competitive Advantage',description: 'Stay ahead of the curve with cutting-edge quantum technology.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <SEO 
@@ -515,7 +452,7 @@ export default function QuantumComputingSolutions() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
@@ -527,5 +464,5 @@ export default function QuantumComputingSolutions() {
         </div>
       </section>
     </div>
-  );
+  )
 }

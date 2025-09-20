@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { useState, useEffect } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function ContentDiscovery() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('date');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('date'),
 
   const categories = [
     { id: 'all', name: 'All Content', icon: '📚' },
@@ -16,7 +16,7 @@ export default function ContentDiscovery() {
     { id: 'playbooks', name: 'Playbooks', icon: '🎯' },
     { id: 'patterns', name: 'Patterns', icon: '🔍' },
     { id: 'guides', name: 'Guides', icon: '🗺️' }
-  ];
+  ],
 
   const sampleContent = [
     {
@@ -26,7 +26,7 @@ export default function ContentDiscovery() {
       type: 'insight',
       date: '2025-08-15',
       excerpt: 'Comprehensive guide to implementing AI-driven content creation...',
-      tags: ['AI', 'Content Generation', 'Automation'],
+      tags: ['AIContent Generation', 'Automation'],
       readTime: '8 min read'
     },
     {
@@ -36,7 +36,7 @@ export default function ContentDiscovery() {
       type: 'blueprint',
       date: '2025-08-14',
       excerpt: 'Step-by-step blueprint for creating robust cloud solutions...',
-      tags: ['Cloud Computing', 'Architecture', 'Scalability'],
+      tags: ['Cloud ComputingArchitecture', 'Scalability'],
       readTime: '12 min read'
     },
     {
@@ -46,33 +46,32 @@ export default function ContentDiscovery() {
       type: 'playbook',
       date: '2025-08-13',
       excerpt: 'Strategic playbook for organizational digital evolution...',
-      tags: ['Digital Transformation', 'Strategy', 'Implementation'],
+      tags: ['Digital TransformationStrategy', 'Implementation'],
       readTime: '15 min read'
     }
-  ];
+  ],
 
   const filteredContent = sampleContent.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          item.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
     
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
     
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory,
+  }),
 
   const sortedContent = [...filteredContent].sort((a, b) => {
     switch (sortBy) {
       case 'date':
-        return new Date(b.date) - new Date(a.date);
+        return new Date(b.date) - new Date(a.date),
       case 'title':
-        return a.title.localeCompare(b.title);
+        return a.title.localeCompare(b.title),
       case 'readTime':
-        return parseInt(a.readTime) - parseInt(b.readTime);
-      default:
-        return 0;
+        return parseInt(a.readTime) - parseInt(b.readTime),
+      default: return 0
     }
-  });
+  }),
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -197,5 +196,5 @@ export default function ContentDiscovery() {
         )}
       </main>
     </div>
-  );
+  ),
 }

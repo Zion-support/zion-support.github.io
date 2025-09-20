@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Target, Atom, Zap, Brain, Shield, Clock, 
   CheckCircle, ArrowRight, Users, Award,
   TrendingUp, Globe, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumOptimizationEngine: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumOptimizationEngine: React.FC = () => {
       title: 'Scalable Solutions',
       description: 'Handles problems from small-scale to enterprise-level complexity'
     }
-  ];
+  ],
 
   const optimizationCapabilities = [
     {
       area: 'Combinatorial Optimization',
-      capabilities: ['Traveling salesman problem', 'Knapsack problem', 'Graph coloring', 'Scheduling optimization'],
+      capabilities: ['Traveling salesman problemKnapsack problem', 'Graph coloringScheduling optimization'],
       improvement: '1000x faster solution',
       processingTime: '< 1 second'
     },
     {
       area: 'Continuous Optimization',
-      capabilities: ['Function optimization', 'Parameter tuning', 'Gradient-free methods', 'Global optimization'],
+      capabilities: ['Function optimizationParameter tuning', 'Gradient-free methodsGlobal optimization'],
       improvement: '500x faster convergence',
       processingTime: '< 5 seconds'
     },
     {
       area: 'Constraint Optimization',
-      capabilities: ['Linear programming', 'Non-linear programming', 'Mixed-integer programming', 'Multi-constraint handling'],
+      capabilities: ['Linear programmingNon-linear programming', 'Mixed-integer programmingMulti-constraint handling'],
       improvement: '99.9% feasibility rate',
       processingTime: '< 10 seconds'
     },
     {
       area: 'Multi-Objective Optimization',
-      capabilities: ['Pareto frontier generation', 'Weighted optimization', 'Goal programming', 'Trade-off analysis'],
+      capabilities: ['Pareto frontier generationWeighted optimization', 'Goal programmingTrade-off analysis'],
       improvement: '90% better solutions',
       processingTime: '< 15 seconds'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Supply Chain Optimization',
       description: 'Quantum-powered logistics, routing, and resource allocation optimization',
-      benefits: ['Optimal route planning', 'Reduced costs by 30%', 'Real-time optimization']
+      benefits: ['Optimal route planningReduced costs by 30%', 'Real-time optimization']
     },
     {
       title: 'Manufacturing Optimization',
       description: 'Production scheduling, facility layout, and process optimization',
-      benefits: ['Increased efficiency by 40%', 'Reduced waste', 'Faster production cycles']
+      benefits: ['Increased efficiency by 40%Reduced waste', 'Faster production cycles']
     },
     {
       title: 'Financial Portfolio Optimization',
       description: 'Asset allocation, risk management, and investment strategy optimization',
-      benefits: ['Better risk-adjusted returns', 'Optimal diversification', 'Real-time rebalancing']
+      benefits: ['Better risk-adjusted returnsOptimal diversification', 'Real-time rebalancing']
     },
     {
       title: 'Energy Grid Optimization',
       description: 'Power distribution, load balancing, and renewable energy integration',
-      benefits: ['Reduced energy waste', 'Improved grid stability', 'Cost optimization']
+      benefits: ['Reduced energy wasteImproved grid stability', 'Cost optimization']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumOptimizationEngine: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses and research teams',
       features: [
-        'Up to 100 optimizations/month',
-        'Basic quantum algorithms',
-        'Standard problem types',
-        'Email support',
+        'Up to 100 optimizations/monthBasic quantum algorithms',
+        'Standard problem typesEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumOptimizationEngine: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing companies and optimization specialists',
       features: [
-        'Up to 500 optimizations/month',
-        'Advanced quantum algorithms',
-        'Custom problem types',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 500 optimizations/monthAdvanced quantum algorithms',
+        'Custom problem typesPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumOptimizationEngine: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations',
       features: [
-        'Unlimited optimizations',
-        'Custom quantum algorithm development',
-        'Dedicated quantum hardware',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited optimizationsCustom quantum algorithm development',
+        'Dedicated quantum hardwareDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumOptimizationEngine: React.FC = () => {
       position: "Investment Strategist",
       company: "Capital Management Group"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -491,7 +483,7 @@ const QuantumOptimizationEngine: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Optimize with Quantum Power?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -513,7 +505,7 @@ const QuantumOptimizationEngine: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumOptimizationEngine;
+export default QuantumOptimizationEngine,

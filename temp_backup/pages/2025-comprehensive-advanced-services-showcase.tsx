@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List, Filter,
   Shield, Rocket, Brain, Cpu, 
   Database, DollarSign, Heart, 
   ArrowRight, Star, Users, TrendingUp
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new advanced services
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
-import { advancedDevOpsInfrastructure2025 } from '../data/2025-advanced-devops-infrastructure';
-import { advancedDataAnalyticsBI2025 } from '../data/2025-advanced-data-analytics-bi';
-import { advancedFintechBlockchain2025 } from '../data/2025-advanced-fintech-blockchain';
-import { advancedHealthcareBiotech2025 } from '../data/2025-advanced-healthcare-biotech';
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services',
+import { advancedDevOpsInfrastructure2025 } from '../data/2025-advanced-devops-infrastructure',
+import { advancedDataAnalyticsBI2025 } from '../data/2025-advanced-data-analytics-bi',
+import { advancedFintechBlockchain2025 } from '../data/2025-advanced-fintech-blockchain',
+import { advancedHealthcareBiotech2025 } from '../data/2025-advanced-healthcare-biotech',
 
 // Combine all services
 const allAdvancedServices = [
@@ -22,33 +22,30 @@ const allAdvancedServices = [
   ...advancedDataAnalyticsBI2025,
   ...advancedFintechBlockchain2025,
   ...advancedHealthcareBiotech2025
-];
+],
 
 // Service categories
 const serviceCategories = [
-  'All Services',
-  'Advanced Cybersecurity',
-  'Advanced DevOps & Infrastructure',
-  'Advanced Data Analytics & BI',
-  'Advanced Fintech & Blockchain',
-  'Advanced Healthcare & Biotech'
-];
+  'All ServicesAdvanced Cybersecurity',
+  'Advanced DevOps & InfrastructureAdvanced Data Analytics & BI',
+  'Advanced Fintech & BlockchainAdvanced Healthcare & Biotech'
+],
 
 export default function ComprehensiveAdvancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All Services'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   // Filter services based on search and category
   const filteredServices = allAdvancedServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory,
     
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory,
+  }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -58,7 +55,7 @@ export default function ComprehensiveAdvancedServicesShowcase2025() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -69,7 +66,7 @@ export default function ComprehensiveAdvancedServicesShowcase2025() {
         duration: 0.5
       }
     }
-  };
+  },
 
 const 2025-comprehensive-advanced-services-showcase: React.FC = () => {
   return (
@@ -86,7 +83,7 @@ const 2025-comprehensive-advanced-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2025-comprehensive-advanced-services-showcase;
+export default 2025-comprehensive-advanced-services-showcase,

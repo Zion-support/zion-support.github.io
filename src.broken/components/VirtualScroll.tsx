@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react',
 export default function ServiceVirtualScroll() {
 
 export function VirtualScroll < T> ({
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
-  const visibleRange = useMemo(() => {;
-    const start = Math.floor(scrollTop / itemHeight) ;
-    const visibleCount = Math.ceil(height / itemHeight) ;
-    const end = start + visibleCount + overscan;
+  const visibleRange = useMemo(() => {,
+    const start = Math.floor(scrollTop / itemHeight) ,
+    const visibleCount = Math.ceil(height / itemHeight) ,
+    const end = start + visibleCount + overscan,
 
 =======
 export function VirtualScroll<T>({
@@ -17,10 +17,10 @@ export function VirtualScroll<T>({
   height,
   itemHeight,
   renderItem,
-  overscan = 5,;
-  className = '',;
-  onScroll}: VirtualScrollProps < T>) {;
-  const [scrollTop, setScrollTop] = useState(0);
+  overscan = 5,
+  className = '',
+  onScroll}: VirtualScrollProps < T>) {,
+  const [scrollTop, setScrollTop] = useState(0),
   
   // Calculate visible range
 
@@ -28,23 +28,23 @@ export function VirtualScroll<T>({
 
       start: Math.max(0, start - overscan),
       end: Math.min(items.length, end)
-    }}, [scrollTop, itemHeight, height, overscan, items.length]);
+    }}, [scrollTop, itemHeight, height, overscan, items.length]),
 
   // Calculate total height and transform
   
   // Handle scroll
 
-    setScrollTop(newScrollTop) ;
-    onScroll?.(newScrollTop) }, [onScroll]) ;
+    setScrollTop(newScrollTop) ,
+    onScroll?.(newScrollTop) }, [onScroll]) ,
 
   // Scroll to specific item
   
       containerRef.current.scrollTop = scrollTop}
-  }, [itemHeight]) ;
+  }, [itemHeight]) ,
 
   // Scroll to top
   
-    scrollToItem(0) }, [scrollToItem]) ;
+    scrollToItem(0) }, [scrollToItem]) ,
   // Auto - scroll to specific item on mount if needed
   useEffect(() => {
     if(items.length > 0 && containerRef.current) {
@@ -52,7 +52,7 @@ export function VirtualScroll<T>({
       // You can add logic here to scroll to a specific item on mount
       // For example, scroll to the last viewed item
     }
-  }, [items.length]) ;
+  }, [items.length]) ,
 
   return ()`
     <div className = {`relative ${className}`}>
@@ -128,25 +128,25 @@ export function VirtualScroll<T>({
             </AnimatePresence>
           </div>
         </div>
-      </div>;
-;
-      {/* Scroll position indicator */};"
-      <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
-        {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
-      </div>;
-    </div>;) }
+      </div>,
+,
+      {/* Scroll position indicator */},"
+      <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">,
+        {Math.round((scrollTop / (totalHeight - height)) * 100)}%,
+      </div>,
+    </div>,) }
 // Specialized virtual scroll for service cards
 interface ServiceCard {
-  id: anystring;
-  name: string;
-  description: string;
-  category: string;
+  id: anystring,
+  name: string,
+  description: string,
+  category: string,
   icon?: string}
 interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {
 
-  services: ServiceCard[];
-  height?: number;
-  onServiceClick?: (service: ServiceCard) => void;
+  services: ServiceCard[],
+  height?: number,
+  onServiceClick?: (service: ServiceCard) => void,
   className?: string}
 
 export default function ServiceVirtualScroll() {
@@ -172,19 +172,19 @@ export default function ServiceVirtualScroll() {
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               {service.description}
             </p>"
-            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;              {service.category};
-            </span>;
-          </div>;
-        </div>;
-      </motion.div>;
-    </div>;) , [onServiceClick]) ;
+            <span className="inline-block bg-blue-100 dark: bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">,              {service.category},
+            </span>,
+          </div>,
+        </div>,
+      </motion.div>,
+    </div>,) , [onServiceClick]) ,
 
   return ()
-    <VirtualScroll items = {services};      height={height};
-      itemHeight={120};
-      renderItem={renderServiceCard};
-      overscan={3};
-      className={className};
-     />;
+    <VirtualScroll items = {services},      height={height},
+      itemHeight={120},
+      renderItem={renderServiceCard},
+      overscan={3},
+      className={className},
+     />,
   )}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

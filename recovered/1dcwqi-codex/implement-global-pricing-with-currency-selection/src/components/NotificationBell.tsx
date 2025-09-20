@@ -1,5 +1,5 @@
-import { NotificationCenter } from './NotificationCenter';
+import { NotificationCenter } from './NotificationCenter',
 
 export function NotificationBell() {
-  return <NotificationCenter />;
+  return <NotificationCenter />,
 }

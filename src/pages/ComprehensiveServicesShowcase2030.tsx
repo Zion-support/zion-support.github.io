@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
+  Brain,
   Cloud, 
   Shield, 
   Rocket, 
@@ -50,79 +50,72 @@ import {
   TrendingUp as ChartIcon,
   PenTool,
   UserCheck
-} from 'lucide-react';
-import SEO from '../components/SEO';
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "../data/comprehensiveInnovativeServices2030";
 export default function ComprehensiveServicesShowcase2030() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
-
   // Enhanced categories with new services
   const categories = [
-    { id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
-    { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
-    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
-    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' },
-    { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' },
-    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
+    { id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' };
+    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' };
+    { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' };
+    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' };
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' };
+    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' };
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' };
+    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' };
+    { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' };
+    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' };
     { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' }
   ];
-
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'reviews':
-        return b.reviewCount - a.reviewCount;
+        return b.reviewCount - a.reviewCount,
       case 'name':
-        return a.title.localeCompare(b.title);
-      default:
-        return b.rating - a.rating;
+        return a.title.localeCompare(b.title),
+      default: return b.rating - a.rating
     }
   });
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Operations':
         return <Factory className="w-6 h-6" />;
       case 'AI & Green Tech':
-        return <Leaf className="w-6 h-6" />;
+        return <Leaf className="w-6 h-6" />,
       case 'Quantum Computing':
-        return <Atom className="w-6 h-6" />;
+        return <Atom className="w-6 h-6" />,
       case 'AI & Metaverse':
-        return <Globe2 className="w-6 h-6" />;
+        return <Globe2 className="w-6 h-6" />,
       case 'AI & Healthcare':
-        return <Stethoscope className="w-6 h-6" />;
+        return <Stethoscope className="w-6 h-6" />,
       case 'AI & Space Tech':
-        return <Satellite className="w-6 h-6" />;
+        return <Satellite className="w-6 h-6" />,
       case 'FinTech':
-        return <DollarSign className="w-6 h-6" />;
+        return <DollarSign className="w-6 h-6" />,
       case 'AI & Content':
-        return <PenTool className="w-6 h-6" />;
+        return <PenTool className="w-6 h-6" />,
       case 'AI & Customer Support':
-        return <UserCheck className="w-6 h-6" />;
-      default:
-        return <Brain className="w-6 h-6" />;
+        return <UserCheck className="w-6 h-6" />,
+      default: return <Brain className="w-6 h-6" />
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -353,7 +346,7 @@ export default function ComprehensiveServicesShowcase2030() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of companies already leveraging our AI-powered solutions to drive innovation, 
+              Join hundreds of companies already leveraging our AI-powered solutions to drive innovation;
               increase efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -396,24 +389,16 @@ export default function ComprehensiveServicesShowcase2030() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: <Award className="w-12 h-12 text-cyan-400" />,
-                title: "Proven Excellence",
-                description: "Over 95% client satisfaction rate with proven ROI across industries"
-              },
+                icon: <Award className="w-12 h-12 text-cyan-400" />,title: "Proven Excellence",description: "Over 95% client satisfaction rate with proven ROI across industries"
+              };
               {
-                icon: <Rocket className="w-12 h-12 text-cyan-400" />,
-                title: "Innovation First",
-                description: "Cutting-edge AI solutions that keep you ahead of the competition"
-              },
+                icon: <Rocket className="w-12 h-12 text-cyan-400" />,title: "Innovation First",description: "Cutting-edge AI solutions that keep you ahead of the competition"
+              };
               {
-                icon: <Shield className="w-12 h-12 text-cyan-400" />,
-                title: "Enterprise Security",
-                description: "Bank-level security with SOC 2 compliance and 99.99% uptime"
-              },
+                icon: <Shield className="w-12 h-12 text-cyan-400" />,title: "Enterprise Security",description: "Bank-level security with SOC 2 compliance and 99.99% uptime"
+              };
               {
-                icon: <Users className="w-12 h-12 text-cyan-400" />,
-                title: "Expert Support",
-                description: "24/7 dedicated support team with deep technical expertise"
+                icon: <Users className="w-12 h-12 text-cyan-400" />,title: "Expert Support",description: "24/7 dedicated support team with deep technical expertise"
               }
             ].map((feature, index) => (
               <motion.div

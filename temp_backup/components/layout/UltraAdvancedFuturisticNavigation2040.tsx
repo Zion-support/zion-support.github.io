@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Menu, 
+  Menu,
   X, 
   Search, 
   ChevronDown,
@@ -49,22 +49,22 @@ import {
   ShieldCheck,
   TrendingUp,
   Award
-} from 'lucide-react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+} from 'lucide-react',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
 // Define Node type for DOM event handling
-type Node = HTMLElement | null;
+type Node = HTMLElement | null,
 
 interface NavigationItem {
-  label: string;
-  href: string;
-  icon: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  featured?: boolean;
-  color?: string;
+  label: string,
+  href: string,
+  icon: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  featured?: boolean,
+  color?: string
 }
 
 const navigationItems: NavigationItem[] = [
@@ -286,7 +286,7 @@ const navigationItems: NavigationItem[] = [
     icon: <Phone className="w-4 h-4" />,
     description: 'Get in touch with us'
   }
-];
+],
 
 const UltraAdvancedFuturisticNavigation2040: React.FC = () => {
   return (
@@ -294,7 +294,7 @@ const UltraAdvancedFuturisticNavigation2040: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticNavigation2040</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedFuturisticNavigation2040;
+export default UltraAdvancedFuturisticNavigation2040,

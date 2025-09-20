@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Ultimate Content Revolution - Transform Your Business';
-  description: 'Discover the revolutionary AI content strategies that are transforming businesses in 2025. Learn how to leverage AI for content creation, automation, and customer engagement.';
-  keywords: ['AI content revolutioncontent automation', 'AI marketingbusiness transformation', '2025 trends'],
-};
+  title: 'AI 2025 Ultimate Content Revolution - Transform Your Business',
+  description: 'Discover the revolutionary AI content strategies that are transforming businesses in 2025. Learn how to leverage AI for content creation, automation, and customer engagement.',
+  keywords: ['AI content revolutioncontent automationAI marketingbusiness transformation', '2025 trends']
+},
 export default function AI2025UltimateContentRevolution() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -39,7 +39,7 @@ export default function AI2025UltimateContentRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Statistics */,}
+      {/* Key Statistics */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -62,7 +62,7 @@ export default function AI2025UltimateContentRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <section className="py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="prose prose-lg max-w-none">,
@@ -133,7 +133,7 @@ export default function AI2025UltimateContentRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -154,4 +154,4 @@ export default function AI2025UltimateContentRevolution() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

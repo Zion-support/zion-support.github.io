@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Rocket, Brain, Atom, Zap, Star } from 'lucide-react';
-import Button from '../ui/Button';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Sparkles, Rocket, Brain, Atom, Zap, Star } from 'lucide-react',
+import Button from '../ui/Button',
 
 const UltraFuturisticHero2030: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const UltraFuturisticHero2030: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticHero2030</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticHero2030;
+export default UltraFuturisticHero2030,

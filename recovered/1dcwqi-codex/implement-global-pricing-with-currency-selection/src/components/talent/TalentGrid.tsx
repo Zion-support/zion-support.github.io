@@ -1,19 +1,19 @@
 
-import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent";
+import { TalentCard } from "@/components/talent/TalentCard",
+import { TalentProfile } from "@/types/talent",
 
 export interface TalentGridProps {
-  talents: TalentProfile[];
-  isLoading: boolean;
-  onTalentClick: (id: string) => void;
-  isAuthenticated: boolean;
-  viewProfile?: (id: string) => void;
-  clearFilters?: () => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
+  talents: TalentProfile[],
+  isLoading: boolean,
+  onTalentClick: (id: string) => void,
+  isAuthenticated: boolean,
+  viewProfile?: (id: string) => void,
+  clearFilters?: () => void,
+  handleRequestHire?: (talent: TalentProfile) => void
 }
 
 export function TalentGrid({ 
-  talents, 
+  talents,
   isLoading, 
   onTalentClick, 
   isAuthenticated,
@@ -23,26 +23,26 @@ export function TalentGrid({
 }: TalentGridProps) {
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
-      handleRequestHire(talent);
+      handleRequestHire(talent)
     } else {
       // Default implementation
-      console.log("Request to hire:", talent.id);
+      console.log("Request to hire:", talent.id),
     }
-  };
+  },
 
   const handleViewProfile = (id: string) => {
     if (viewProfile) {
-      viewProfile(id);
+      viewProfile(id)
     } else {
-      onTalentClick(id);
+      onTalentClick(id),
     }
-  };
+  },
   
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
       <p className="text-zion-cyan">Loading talent profiles...</p>
-    </div>;
+    </div>,
   }
 
   if (!talents || talents.length === 0) {
@@ -56,7 +56,7 @@ export function TalentGrid({
           Clear Filters
         </button>
       )}
-    </div>;
+    </div>,
   }
 
   return (
@@ -71,5 +71,5 @@ export function TalentGrid({
         />
       ))}
     </div>
-  );
+  ),
 }

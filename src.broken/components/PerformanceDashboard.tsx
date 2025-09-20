@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import React, { useState } from 'react',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
 interface PerformanceMetrics {
-  buildSize: string;
-  pageCount: number;
-  loadTime: number;
-  healthStatus: 'healthy' | 'warning' | 'error';
+  buildSize: string,
+  pageCount: number,
+  loadTime: number,
+  healthStatus: 'healthy' | 'warning' | 'error'
 }
 
 interface Improvement {
-  id: string;
-  title: string;
-  description: string;
-  status: 'completed' | 'in-progress' | 'planned';
-  impact: 'high' | 'medium' | 'low';
-  category: 'performance' | 'security' | 'ux' | 'build';
+  id: string,
+  title: string,
+  description: string,
+  status: 'completed' | 'in-progress' | 'planned',
+  impact: 'high' | 'medium' | 'low',
+  category: 'performance' | 'security' | 'ux' | 'build'
 }
 
 const PerformanceDashboard: React.FC = () => {
@@ -26,7 +26,7 @@ const PerformanceDashboard: React.FC = () => {
     pageCount: 166,
     loadTime: 1.2,
     healthStatus: 'healthy'
-  });
+  }),
 
   const improvements: Improvement[] = [
     {
@@ -77,37 +77,37 @@ const PerformanceDashboard: React.FC = () => {
       impact: 'medium',
       category: 'security'
     }
-  ];
+  ],
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
-      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
-      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
     }
-  };
+  },
 
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case 'high': return 'bg-red-100 text-red-800';
-      case 'medium': return 'bg-yellow-100 text-yellow-800';
-      case 'low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'high': return 'bg-red-100 text-red-800',
+      case 'medium': return 'bg-yellow-100 text-yellow-800',
+      case 'low': return 'bg-green-100 text-green-800',
+      default: return 'bg-gray-100 text-gray-800'
     }
-  };
+  },
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'performance': return <Zap className="h-4 w-4" />;
-      case 'security': return <Shield className="h-4 w-4" />;
-      case 'ux': return <Search className="h-4 w-4" />;
-      case 'build': return <TrendingUp className="h-4 w-4" />;
-      default: return <CheckCircle className="h-4 w-4" />;
+      case 'performance': return <Zap className="h-4 w-4" />,
+      case 'security': return <Shield className="h-4 w-4" />,
+      case 'ux': return <Search className="h-4 w-4" />,
+      case 'build': return <TrendingUp className="h-4 w-4" />,
+      default: return <CheckCircle className="h-4 w-4" />
     }
-  };
+  },
 
-  const completedImprovements = improvements.filter(imp => imp.status === 'completed');
+  const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
   return (
     <div className="space-y-6 p-6">
@@ -205,7 +205,7 @@ const PerformanceDashboard: React.FC = () => {
 
       {/* Action Buttons */}
       <div className="flex space-x-4">
-        <Button onClick={() => window.open('/api/health/environment', '_blank')} variant="outline">
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
           Check Health Status
         </Button>
@@ -215,7 +215,7 @@ const PerformanceDashboard: React.FC = () => {
         </Button>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default PerformanceDashboard; 
+export default PerformanceDashboard, 

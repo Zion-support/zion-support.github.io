@@ -3,7 +3,6 @@
       <Header />,
       <LoginContent />,
       <Footer />,
-    </>,
-  );
+    </>),
 }
 ,

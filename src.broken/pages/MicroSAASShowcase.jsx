@@ -1,4 +1,4 @@
-import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText import Target from 'lucide - react / dist / esm / icons / target'; import { Link  } from 'react-router-dom';
+import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText import Target from 'lucide - react / dist / esm / icons / target', import { Link  } from 'react-router-dom',
 
 export default function Page() {
  className="h-full hover:shadow-xl transition - all duration - 300 hover:-translate - y-2 border-zion - blue -light">

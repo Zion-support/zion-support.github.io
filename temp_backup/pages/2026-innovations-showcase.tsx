@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Brain, Sparkles, Rocket, Shield, Globe, Cpu, Database, Phone, Mail, MapPin } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Brain, Sparkles, Rocket, Shield, Globe, Cpu, Database, Phone, Mail, MapPin } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',
 
 export default function Innovations2026Showcase() {
   const contactInfo = {
@@ -15,13 +15,13 @@ export default function Innovations2026Showcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const allNewServices = [
     ...innovative2026MicroSaasServicesV2,
     ...emergingTech2026ServicesV2,
     ...enterpriseIT2026ServicesV2
-  ];
+  ],
 
   const categories = [
     { name: 'AI & Business Intelligence', icon: Brain, color: 'from-purple-600 to-indigo-700' },
@@ -34,7 +34,7 @@ export default function Innovations2026Showcase() {
     { name: 'Biotech & AI', icon: Cpu, color: 'from-teal-600 to-cyan-700' },
     { name: 'Blockchain & Web3', icon: Database, color: 'from-orange-600 to-red-700' },
     { name: 'AI & Manufacturing', icon: Sparkles, color: 'from-slate-600 to-gray-700' }
-  ];
+  ],
 
 const 2026-innovations-showcase: React.FC = () => {
   return (
@@ -51,8 +51,8 @@ const 2026-innovations-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default NextGenTechRevolution2029;
+export default NextGenTechRevolution2029,

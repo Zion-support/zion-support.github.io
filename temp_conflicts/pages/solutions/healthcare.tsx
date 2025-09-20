@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import { 
   Heart, Brain, Shield, Zap, BarChart3, Cpu, 
   CheckCircle, ArrowRight, Star, TrendingUp, Award, Clock
-} from 'lucide-react';
-import UltraFuturisticBackground2045 from '../../components/backgrounds/UltraFuturisticBackground2045';
+} from 'lucide-react',
+import UltraFuturisticBackground2045 from '../../components/backgrounds/UltraFuturisticBackground2045',
 
 const HealthcareSolutionsPage: React.FC = () => {
   const solutions = [
@@ -33,7 +33,7 @@ const HealthcareSolutionsPage: React.FC = () => {
       title: 'Telemedicine Platform',
       description: 'Secure and scalable telemedicine infrastructure'
     }
-  ];
+  ],
 
   const features = [
     {
@@ -56,7 +56,7 @@ const HealthcareSolutionsPage: React.FC = () => {
       title: '24/7 Support',
       description: 'Round-the-clock technical support and monitoring'
     }
-  ];
+  ],
 
   return (
     <>
@@ -170,7 +170,7 @@ const HealthcareSolutionsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Transform Healthcare?
@@ -187,7 +187,7 @@ const HealthcareSolutionsPage: React.FC = () => {
         </div>
       </UltraFuturisticBackground>
     </>
-  );
-};
+  )
+},
 
-export default HealthcareSolutionsPage;
+export default HealthcareSolutionsPage,

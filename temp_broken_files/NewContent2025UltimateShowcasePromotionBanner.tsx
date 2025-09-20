@@ -1,63 +1,63 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   ArrowRight,
   Star,
   Zap,
-  Sparkles;
-  TrendingUp;
-  Users;
-  Globe;
-  X;
-  Play;
-  Download;
-  ExternalLink,
-} from 'lucide-react';
+  Sparkles,
+  TrendingUp,
+  Users,
+  Globe,
+  X,
+  Play,
+  Download,
+  ExternalLink
+} from 'lucide-react',
 const NewContent2025UltimateShowcasePromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentSlidesetCurrentSlide] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Auto-advance slides,
     const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentSlide((prev) => (prev + 1) % 3),
+    }4000),
+    return () => clearInterval(interval),
+  }[]),
   const slides = [,
     {,
-      title: "Revolutionary AI Solutions";
-      subtitle: "Transform your business with cutting-edge AI";
-      description: "Discover our latest AI technologies that are reshaping industries";
-      icon: Sparkles;
-      color: "from-purple-600 to-pink-600";
-      bgColor: "from-purple-900/20 to-pink-900/20",};
+      title: "Revolutionary AI Solutions",
+      subtitle: "Transform your business with cutting-edge AI",
+      description: "Discover our latest AI technologies that are reshaping industries",
+      icon: Sparkles,
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/20 to-pink-900/20"},
     {,
-      title: "Quantum Computing Breakthrough";
-      subtitle: "Next-generation quantum solutions";
-      description: "Experience the power of quantum computing for complex problems";
-      icon: Zap;
-      color: "from-blue-600 to-cyan-600";
-      bgColor: "from-blue-900/20 to-cyan-900/20",};
+      title: "Quantum Computing Breakthrough",
+      subtitle: "Next-generation quantum solutions",
+      description: "Experience the power of quantum computing for complex problems",
+      icon: Zap,
+      color: "from-blue-600 to-cyan-600",
+      bgColor: "from-blue-900/20 to-cyan-900/20"},
     {,
-      title: "Neural Interface Technology";
-      subtitle: "Brain-computer interface revolution";
-      description: "Connect directly with technology through neural interfaces";
-      icon: TrendingUp;
-      color: "from-green-600 to-emerald-600";
-      bgColor: "from-green-900/20 to-emerald-900/20",}
-  ];
+      title: "Neural Interface Technology",
+      subtitle: "Brain-computer interface revolution",
+      description: "Connect directly with technology through neural interfaces",
+      icon: TrendingUp,
+      color: "from-green-600 to-emerald-600",
+      bgColor: "from-green-900/20 to-emerald-900/20"}
+  ],
   const features = [,
-    "500+ Projects Completed";
-    "99% Client Satisfaction";
-    "50+ Countries Served";
-    "$50M+ Cost Savings",
-  ];
-  const currentSlideData = slides[currentSlide];
-  if (isDismissed) return null;
+    "500+ Projects Completed",
+    "99% Client Satisfaction",
+    "50+ Countries Served",
+    "$50M+ Cost Savings"
+  ],
+  const currentSlideData = slides[currentSlide],
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -77,21 +77,21 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
                 key={i}
                 className="absolute w-2 h-2 bg-white/30 rounded-full",
                 style={{,
-                  left: `${Math.random() * 100,}%`;
-                  top: `${Math.random() * 100,}%`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`
                 }}
-                  y: [0-30];
-                  opacity: [0.30.80.3];
-                  scale: [1.21],}}
-                  duration: 3 + Math.random() * 2;
-                  repeat: Infinity;
-                  delay: Math.random() * 2,}}
+                  y: [0-30],
+                  opacity: [0.30.80.3],
+                  scale: [1.21]}}
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2}}
               />,
             ))}
           </div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
             <div className="flex items-center justify-between">,
-              {/* Left side - Content */,}
+              {/* Left side - Content */}
               <div className="flex-1 pr-8">,
                 <div,
                   key={currentSlide}
@@ -112,7 +112,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
                       </span>,
                     </div>,
                     <h2 className="text-2xl md: text-3xl font-bold text-white mb-2">,
-                      {currentSlideData.title,}
+                      {currentSlideData.title}
                     </h2>,
                     <p className="text-lg text-white/90 mb-2">,
                       {currentSlideData.subtitle}
@@ -128,8 +128,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
                           className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20",
                         >,
                           {feature}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm: flex-row gap-3">,
@@ -151,10 +150,10 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
                   </div>,
                 </div>,
               </div>,
-              {/* Right side - Visual elements */,}
+              {/* Right side - Visual elements */}
               <div className="hidden lg: block flex-shrink-0">,
                 <div className="relative w-64 h-64">,
-                  {/* Rotating elements */,}
+                  {/* Rotating elements */}
                   <div,
                     className="absolute inset-0 rounded-full border-2 border-white/20",
                   />,
@@ -178,14 +177,14 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
                       key={i}
                       className="absolute w-3 h-3 bg-white/60 rounded-full",
                       style={{,
-                        left: `${20 + (i * 15),}%`;
-                        top: `${20 + (i * 10),}%`,
+                        left: `${20 + (i * 15)}%`,
+                        top: `${20 + (i * 10)}%`
                       }}
-                        y: [0-10];
-                        opacity: [0.610.6],}}
-                        duration: 2 + i * 0.5;
-                        repeat: Infinity;
-                        delay: i * 0.3,}}
+                        y: [0-10],
+                        opacity: [0.610.6]}}
+                        duration: 2 + i * 0.5,
+                        repeat: Infinity,
+                        delay: i * 0.3}}
                     />,
                   ))}
                 </div>,
@@ -198,7 +197,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
                 <X className="w-5 h-5" />,
               </button>,
             </div>,
-            {/* Slide indicators */,}
+            {/* Slide indicators */}
             <div className="flex justify-center mt-6 space-x-2">,
               {slides.map((_index) => (,
                 <button,
@@ -207,7 +206,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${,
                     index === currentSlide,
                       ? 'bg-white w-8',
-                      : 'bg-white/40 hover: bg-white/60',}`}
+                      : 'bg-white/40 hover: bg-white/60'}`}
                 />,
               ))}
             </div>,
@@ -215,7 +214,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  );
-};
-export default NewContent2025UltimateShowcasePromotionBanner;
+  ),
+},
+export default NewContent2025UltimateShowcasePromotionBanner,
 </div></div></div></div></div></div></div>,

@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react";
-import { ReactNode } from "react";
-import EnhancedNavigation from "./EnhancedNavigation";
-import EnhancedFooter from "./EnhancedFooter";
+import React, { ReactNode } from "react",
+import { ReactNode } from "react",
+import EnhancedNavigation from "./EnhancedNavigation",
+import EnhancedFooter from "./EnhancedFooter",
 interface EnhancedLayoutProps {,
-  \"children\": ReactNode,
+  \"children\": ReactNode
 }
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {,
   return (,
@@ -13,7 +13,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {,
         {children}
       </main>,
       <EnhancedFooter />,
-    </div>,
-  );
+    </div>),
 }
- import React,{ ReactNode } from "react",  import { ReactNode } from "react", import EnhancedNavigation from "./EnhancedNavigation", import EnhancedFooter from "./EnhancedFooter";
+ import React,{ ReactNode } from "react",  import { ReactNode } from "react",
+import EnhancedNavigation from "./EnhancedNavigation", import EnhancedFooter from "./EnhancedFooter",

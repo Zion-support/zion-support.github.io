@@ -1,12 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
 export const AIServicesShowcase = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -44,7 +43,6 @@ export const AIServicesShowcase = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
-
 export default AIServicesShowcase;

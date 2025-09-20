@@ -1,73 +1,50 @@
-import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield } from 'lucide-react';
-
+import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield } from "lucide-react";
 export default function AIFinancialAnalyticsPlatform() {
   const features = [
-    'AI-powered financial forecasting and modeling',
-    'Real-time market data analysis and insights',
-    'Predictive risk assessment and management',
-    'Portfolio optimization and rebalancing',
-    'Automated financial reporting and compliance',
-    'Cash flow prediction and optimization',
-    'Investment opportunity identification',
-    'Regulatory compliance monitoring',
-    'Multi-currency and multi-asset support',
-    'Executive dashboard with KPI tracking'
-  ];
+    'AI-powered financial forecasting and modelingReal-time market data analysis and insights',
+    'Predictive risk assessment and managementPortfolio optimization and rebalancing',
+    'Automated financial reporting and complianceCash flow prediction and optimization',
+    'Investment opportunity identificationRegulatory compliance monitoring',
+    'Multi-currency and multi-asset supportExecutive dashboard with KPI tracking'
+  ],
 
   const benefits = [
-    'Improve investment returns by 15-35%',
-    'Reduce financial risk by 40-60%',
-    'Automate 80% of financial analysis tasks',
-    'Real-time market insights and alerts',
-    'Data-driven investment decisions',
-    'Comprehensive compliance coverage'
-  ];
+    'Improve investment returns by 15-35%Reduce financial risk by 40-60%',
+    'Automate 80% of financial analysis tasksReal-time market insights and alerts',
+    'Data-driven investment decisionsComprehensive compliance coverage'
+  ],
 
   const useCases = [
-    'Investment portfolio management',
-    'Corporate financial planning',
-    'Risk management and compliance',
-    'Trading strategy optimization',
-    'Mergers and acquisitions analysis',
-    'Financial market research'
+    'Investment portfolio managementCorporate financial planning';
+    'Risk management and complianceTrading strategy optimization';
+    'Mergers and acquisitions analysisFinancial market research'
   ];
-
   const tiers = [
     { 
-      name: 'Professional', 
-      price: '$2,999/mo', 
-      details: ['Up to 10 portfolios', 'Basic AI insights', 'Email support', 'Standard market data'] 
+      name: 'Professional',price: '$2,999/mo', 
+      details: ['Up to 10 portfoliosBasic AI insights', 'Email supportStandard market data'] 
     },
     { 
-      name: 'Institutional', 
-      price: '$7,999/mo', 
-      details: ['Up to 100 portfolios', 'Advanced AI analytics', 'Priority support', 'Premium market data'] 
+      name: 'Institutional',price: '$7,999/mo', 
+      details: ['Up to 100 portfoliosAdvanced AI analytics', 'Priority supportPremium market data'] 
     },
     { 
-      name: 'Enterprise', 
-      price: '$19,999/mo', 
-      details: ['Unlimited portfolios', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
-    },
-  ];
+      name: 'Enterprise',price: '$19,999/mo', 
+      details: ['Unlimited portfoliosCustom AI models', 'Dedicated supportWhite-label solution'] 
+    }
+  ],
 
   const financialTools = [
-    'Portfolio Analytics',
-    'Risk Management',
-    'Performance Attribution',
-    'Asset Allocation',
-    'Scenario Analysis',
-    'Compliance Reporting'
-  ];
+    'Portfolio AnalyticsRisk Management',
+    'Performance AttributionAsset Allocation',
+    'Scenario AnalysisCompliance Reporting'
+  ],
 
   const aiCapabilities = [
-    'Predictive modeling',
-    'Risk assessment',
-    'Market analysis',
-    'Portfolio optimization',
-    'Anomaly detection',
-    'Trend forecasting'
+    'Predictive modelingRisk assessment',
+    'Market analysisPortfolio optimization',
+    'Anomaly detectionTrend forecasting'
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 py-20 text-center">
@@ -213,7 +190,7 @@ export default function AIFinancialAnalyticsPlatform() {
 
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to transform your financial analytics?</div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
             </a>
@@ -227,5 +204,5 @@ export default function AIFinancialAnalyticsPlatform() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -11,10 +11,10 @@
               <CardHeader>,
                 <div className="flex justify-between items-start">,
                   <div>,
-                    <CardTitle className="text-2xl mb-2">{job.title,}</CardTitle>,
+                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>,
                     <div className="flex items-center text-muted-foreground">,
                       <Calendar className="mr-2 h-4 w-4" />,
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true ,})}</span>,
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>,
                     </div>,
                   </div>,
                   <Badge>{job.category}</Badge>,
@@ -31,12 +31,11 @@
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>,
                   <div className="flex flex-wrap gap-2">,
                     {job.skills?.map((skill: string, i: number) => (,
-                      <Badge key={i,} variant="secondary">,
-                        {skill}
-                      </Badge>;
+                      <Badge key={i} variant="secondary">,
                         {skill}
                       </Badge>,
-                    ))}
+                        {skill}
+                      </Badge>))}
                   </div>,
                 </div>,
               </CardContent>,
@@ -71,8 +70,7 @@
                 {isOwnJob && (,
                   <div className="text-center p-2 bg-muted rounded-md mt-4">,
                     <p className="text-sm text-muted-foreground">This is your job posting</p>,
-                  </div>,
-                )}
+                  </div>)}
               </CardContent>,
             </Card>,
           </div>,
@@ -80,9 +78,9 @@
       </main>,
       <Footer />,
           job={{,
-            id: job.id;
-            title: job.title;
-            description: job.description;
-            company_name: job.company_name || "Company";
-            budget: job.budget;
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name || "Company",
+            budget: job.budget
 }}

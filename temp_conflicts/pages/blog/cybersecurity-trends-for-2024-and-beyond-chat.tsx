@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const CybersecurityTrendsFor2024AndBeyondChat = () => {
   return (
@@ -16,7 +16,7 @@ const CybersecurityTrendsFor2024AndBeyondChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default CybersecurityTrendsFor2024AndBeyondChat;
+export default CybersecurityTrendsFor2024AndBeyondChat,

@@ -1,51 +1,51 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Switch } from '@/components/ui/switch';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
+import React, { useState } from 'react',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Switch } from '@/components/ui/switch',
+import { Button } from '@/components/ui/button',
+import { Label } from '@/components/ui/label',
 import { ShieldAlert, Info } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
+  AccordionTrigger
+} from "@/components/ui/accordion",
+import { toast } from '@/hooks/use-toast',
+import { supabase } from '@/integrations/supabase/client',
+import { useAuth } from '@/hooks/useAuth',
 
 export function FraudDetectionSettings() {
-  const { user } = useAuth();
-  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
-  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
-  const [isSaving, setIsSaving] = useState(false);
+  const { user } = useAuth(),
+  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
+  const [isSaving, setIsSaving] = useState(false),
   
   const handleSavePreferences = async () => {
-    if (!user?.id) return;
+    if (!user?.id) return,
     
-    setIsSaving(true);
+    setIsSaving(true),
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000)),
       
       toast({
         title: "Settings saved",
-        description: "Your fraud detection preferences have been updated.",
-      });
+        description: "Your fraud detection preferences have been updated."
+      }),
     } catch (error) {
-      logErrorToProduction('Error saving preferences:', { data: error });
+      logErrorToProduction('Error saving preferences:', { data: error }),
       toast({
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     } finally {
-      setIsSaving(false);
+      setIsSaving(false),
     }
-  };
+  },
 
   return (
     <Card className="mb-8">
@@ -150,5 +150,5 @@ export function FraudDetectionSettings() {
         </div>
       </CardContent>
     </Card>
-  );
+  ),
 }

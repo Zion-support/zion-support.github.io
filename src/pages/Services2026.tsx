@@ -1,6 +1,6 @@
-import React, { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Search,
   ArrowRight,
@@ -28,70 +28,67 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
-
+} from "lucide-react";
+import SEO from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
 const Services2026: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('innovation');
+  const [query, setQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('innovation'),
 
-  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026];
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026],
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: GitFork, count: allServices.length },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s => s.category === 'AI & Analytics').length },
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s => s.category === 'IoT & Edge Computing').length },
-    { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length },
-    { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length },
-    { id: 'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s => s.category === 'AI & HR').length },
-    { id: 'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s => s.category === 'Sustainability').length },
+    { id: 'all', name: 'All Services', icon: GitFork, count: allServices.length };
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s => s.category === 'AI & Analytics').length };
+    { id: 'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s => s.category === 'Quantum Computing').length };
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length };
+    { id: 'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s => s.category === 'IoT & Edge Computing').length };
+    { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length };
+    { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length };
+    { id: 'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s => s.category === 'AI & HR').length };
+    { id: 'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s => s.category === 'Sustainability').length };
     { id: 'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category === 'AI & IoT').length }
   ];
-
   const filteredAndSorted = useMemo(() => {
-    let filtered = allServices;
+    let filtered = allServices,
 
     // Filter by search query
     if (query.trim()) {
-      const q = query.trim().toLowerCase();
+      const q = query.trim().toLowerCase(),
       filtered = filtered.filter(s =>
         s.title.toLowerCase().includes(q) ||
         s.description.toLowerCase().includes(q) ||
         s.category.toLowerCase().includes(q) ||
         s.tags?.some(t => t.toLowerCase().includes(q))
-      );
+      ),
     }
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(s => s.category === selectedCategory);
+      filtered = filtered.filter(s => s.category === selectedCategory),
     }
 
     // Sort services
     switch (sortBy) {
       case 'price':
-        return filtered.sort((a, b) => a.price - b.price);
+        return filtered.sort((a, b) => a.price - b.price),
       case 'innovation':
         return filtered.sort((a, b) => {
-          const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 };
-          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0);
-        });
+          const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 },
+          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0),
+        }),
       case 'roi':
         return filtered.sort((a, b) => {
-          const aROI = parseInt(a.roi.split('-')[0]);
-          const bROI = parseInt(b.roi.split('-')[0]);
-          return bROI - aROI;
-        });
-      default:
-        return filtered;
+          const aROI = parseInt(a.roi.split('-')[0]),
+          const bROI = parseInt(b.roi.split('-')[0]),
+          return bROI - aROI,
+        }),
+      default: return filtered
     }
-  }, [query, selectedCategory, sortBy, allServices]);
+  }, [query, selectedCategory, sortBy, allServices]),
 
-  const featuredServices = allServices.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);
+  const featuredServices = allServices.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -430,7 +427,7 @@ const Services2026: React.FC = () => {
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover: from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105"
                   >
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -453,7 +450,7 @@ const Services2026: React.FC = () => {
       <section className="py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="text-sm text-slate-400 mb-4">
-            Questions? Call <a className="text-cyan-300 hover:text-cyan-200" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-300 hover:text-cyan-200" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
+            Questions? Call <a className="text-cyan-300 hover: text-cyan-200" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-300 hover:text-cyan-200" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
           </div>
           <div className="text-sm text-slate-500">
             Visit our main site: <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>
@@ -461,7 +458,6 @@ const Services2026: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Services2026;

@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Truck, Package, Globe, Brain, BarChart3, Shield, 
   CheckCircle, ArrowRight, Zap, Target, Award,
   Users, Clock, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AISupplyChainOptimizer: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AISupplyChainOptimizer: React.FC = () => {
       title: 'Collaborative Platform',
       description: 'Connect suppliers, logistics partners, and stakeholders in one system'
     }
-  ];
+  ],
 
   const optimizationCapabilities = [
     {
       area: 'Demand Planning',
-      capabilities: ['AI demand forecasting', 'Seasonal pattern analysis', 'Market trend prediction'],
+      capabilities: ['AI demand forecastingSeasonal pattern analysis', 'Market trend prediction'],
       improvement: '35% reduction in forecast error',
       processingTime: 'Real-time updates'
     },
     {
       area: 'Inventory Management',
-      capabilities: ['Dynamic safety stock calculation', 'ABC analysis automation', 'Reorder point optimization'],
+      capabilities: ['Dynamic safety stock calculationABC analysis automation', 'Reorder point optimization'],
       improvement: '40% reduction in excess inventory',
       processingTime: '< 5 minutes'
     },
     {
       area: 'Route Optimization',
-      capabilities: ['Multi-stop route planning', 'Traffic pattern analysis', 'Fuel cost optimization'],
+      capabilities: ['Multi-stop route planningTraffic pattern analysis', 'Fuel cost optimization'],
       improvement: '25% reduction in logistics costs',
       processingTime: '< 2 minutes'
     },
     {
       area: 'Supplier Management',
-      capabilities: ['Performance scoring', 'Risk assessment', 'Cost-benefit analysis'],
+      capabilities: ['Performance scoringRisk assessment', 'Cost-benefit analysis'],
       improvement: '30% improvement in supplier performance',
       processingTime: 'Continuous monitoring'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Retail & E-commerce',
       description: 'Optimize inventory levels and delivery routes for omnichannel retail',
-      benefits: ['Reduced stockouts by 60%', 'Faster delivery times', 'Lower operational costs']
+      benefits: ['Reduced stockouts by 60%Faster delivery times', 'Lower operational costs']
     },
     {
       title: 'Manufacturing',
       description: 'Streamline production planning and raw material procurement',
-      benefits: ['Just-in-time inventory', 'Reduced lead times', 'Improved production efficiency']
+      benefits: ['Just-in-time inventoryReduced lead times', 'Improved production efficiency']
     },
     {
       title: 'Healthcare & Pharmaceuticals',
       description: 'Ensure critical supplies reach healthcare facilities on time',
-      benefits: ['99.9% delivery reliability', 'Temperature-controlled logistics', 'Emergency response optimization']
+      benefits: ['99.9% delivery reliabilityTemperature-controlled logistics', 'Emergency response optimization']
     },
     {
       title: 'Food & Beverage',
       description: 'Optimize perishable goods supply chains with freshness guarantees',
-      benefits: ['Extended shelf life', 'Reduced food waste', 'Fresher products to consumers']
+      benefits: ['Extended shelf lifeReduced food waste', 'Fresher products to consumers']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AISupplyChainOptimizer: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 5 locations',
-        'Basic AI forecasting',
-        'Standard reporting',
-        'Email support',
+        'Up to 5 locationsBasic AI forecasting',
+        'Standard reportingEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AISupplyChainOptimizer: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing companies and mid-market businesses',
       features: [
-        'Up to 25 locations',
-        'Advanced AI algorithms',
-        'Custom dashboards',
-        'Priority support',
-        'Advanced analytics',
-        'Multi-user access',
+        'Up to 25 locationsAdvanced AI algorithms',
+        'Custom dashboardsPriority support',
+        'Advanced analyticsMulti-user access',
         'API integration'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AISupplyChainOptimizer: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large multinational corporations',
       features: [
-        'Unlimited locations',
-        'Custom AI model training',
-        'White-label solutions',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited locationsCustom AI model training',
+        'White-label solutionsDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AISupplyChainOptimizer: React.FC = () => {
       position: "Logistics Director",
       company: "International Logistics Ltd"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -491,7 +483,7 @@ const AISupplyChainOptimizer: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Optimize Your Supply Chain?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -513,7 +505,7 @@ const AISupplyChainOptimizer: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AISupplyChainOptimizer;
+export default AISupplyChainOptimizer,

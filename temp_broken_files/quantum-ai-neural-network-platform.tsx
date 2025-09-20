@@ -1,30 +1,30 @@
-import React from 'react';
-import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
-import SEO from '../components/SEO';
+import React from 'react',
+import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',
+import SEO from '../components/SEO',
 const QuantumAINeuralNetworkPlatform: React.FC = () => {,
   const features = [,
-    "Quantum-enhanced neural network architecture";
-    "Superposition-based learning algorithms";
-    "Quantum entanglement optimization";
-    "Quantum-classical hybrid training";
-    "Quantum error correction protocols";
-    "Multi-dimensional quantum states";
-    "Quantum memory management";
-    "Quantum coherence preservation";
-    "Quantum measurement optimization";
-    "Cross-platform quantum synchronization",
-  ];
+    "Quantum-enhanced neural network architecture",
+    "Superposition-based learning algorithms",
+    "Quantum entanglement optimization",
+    "Quantum-classical hybrid training",
+    "Quantum error correction protocols",
+    "Multi-dimensional quantum states",
+    "Quantum memory management",
+    "Quantum coherence preservation",
+    "Quantum measurement optimization",
+    "Cross-platform quantum synchronization"
+  ],
   const benefits = [,
-    "Exponential computational power";
-    "Quantum advantage in AI training";
-    "Enhanced pattern recognition";
-    "Faster convergence rates";
-    "Quantum-secure AI operations",
-  ];
+    "Exponential computational power",
+    "Quantum advantage in AI training",
+    "Enhanced pattern recognition",
+    "Faster convergence rates",
+    "Quantum-secure AI operations"
+  ],
   const pricing = {,
-    starter: "$999/month";
-    professional: "$1,999/month";
-    enterprise: "Custom pricing",};
+    starter: "$999/month",
+    professional: "$1,999/month",
+    enterprise: "Custom pricing"},
   return (,
     <div className="min-h-screen bg-black text-white">,
       <SEO,
@@ -49,7 +49,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
               Quantum AI Neural Network Platform 2045,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
-              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power;
+              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power,
               quantum advantage, and unprecedented learning capabilities.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -67,12 +67,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className="py-20 bg-gray-900/50">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -86,16 +86,15 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
             {features.map((feature, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover: border-blue-500/40 transition-all duration-300",
               >,
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">,
                   <Check className="w-6 h-6 text-white" />,
                 </div>,
-                <h3 className="text-lg font-semibold mb-2">{feature,}</h3>,
-              </div>,
-            ))}
+                <h3 className="text-lg font-semibold mb-2">{feature}</h3>,
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -103,8 +102,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -115,16 +114,15 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
             {benefits.map((benefit, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="text-center",
               >,
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">,
                   <Star className="w-8 h-8 text-white" />,
                 </div>,
                 <h3 className="text-xl font-semibold mb-2">{benefit}</h3>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -132,8 +130,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
       <section className="py-20 bg-gray-900/50">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -147,12 +145,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
             {Object.entries(pricing).map(([plan, price], index) => (,
               <div,
                 key={plan}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className={`bg-gray-800/50 border rounded-xl p-8 ${,
                   plan === 'professional',
                     ? 'border-blue-500/50 bg-blue-900/20',
-                    : 'border-gray-600/50',
+                    : 'border-gray-600/50'
                 }`}
               >,
                 <h3 className="text-2xl font-bold mb-4 capitalize">{plan}</h3>,
@@ -162,8 +160,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
                 >,
                   Get Started,
                 </button>,
-              </div>,
-            )),}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -171,8 +168,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
           >,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
               Ready for Quantum AI Revolution?,
@@ -189,6 +186,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {,
         </div>,
       </section>,
     </div>,
-  ),};
-export default QuantumAINeuralNetworkPlatform;
+  )},
+export default QuantumAINeuralNetworkPlatform,
 </div></div></div></div>,

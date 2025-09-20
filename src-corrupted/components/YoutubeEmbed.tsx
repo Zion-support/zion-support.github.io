@@ -10,14 +10,14 @@
         title={title}
         loading='lazy',
         onLoad={() => setLoaded(true)}
-        src={src};
-        title={title};
-        loading='lazy';
-        onLoad={() => setLoaded(true)};
+        src={src},
+        title={title},
+        loading='lazy',
+        onLoad={() => setLoaded(true)},
         allow='accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture'        allowFullScreen,
       />,
     </div>,
-  ),
+  )
 }        loading="lazy",
         onLoad = {() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture",
@@ -35,5 +35,5 @@
         allowFullScreen,
       />,
     </div>,
-;
-;
+,
+,

@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Search,
   Grid,
@@ -8,98 +8,98 @@ import {,
   Bookmark,
   Share2,
   Download,
-  Eye;
-  Clock;
-  User;
-  Tag;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Cpu;
-  Database;
-  Globe;
-  Lock;
-  CheckCircle;
-  Play;
-  FileText;
-  Video;
-  Image;
-  Code;
-  BarChart3;
-  Lightbulb;
-  Rocket;
-  Shield;
-  Award;
-  Users;
-  Calendar;
-  MessageCircle;
-  Heart;
-  ThumbsUp;
-  BookOpen;
-  GraduationCap;
-  Briefcase;
-  X,
-} from 'lucide-react';
+  Eye,
+  Clock,
+  User,
+  Tag,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Cpu,
+  Database,
+  Globe,
+  Lock,
+  CheckCircle,
+  Play,
+  FileText,
+  Video,
+  Image,
+  Code,
+  BarChart3,
+  Lightbulb,
+  Rocket,
+  Shield,
+  Award,
+  Users,
+  Calendar,
+  MessageCircle,
+  Heart,
+  ThumbsUp,
+  BookOpen,
+  GraduationCap,
+  Briefcase,
+  X
+} from 'lucide-react',
 const UltimateContentHub2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [activePreviewsetActivePreview] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [activePreviewsetActivePreview] = useState(0),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)2000),
+    return () => clearTimeout(timer),
+  }[]),
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setActivePreview((prev) => (prev + 1) % 3);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setActivePreview((prev) => (prev + 1) % 3),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-  };
-  if (isDismissed) return null;
+    setIsDismissed(true),
+  },
+  if (isDismissed) return null,
   const contentPreviews = [,
     {,
-      title: 'Revolutionary AI Breakthroughs 2026';
-      type: 'article';
-      author: 'Dr. Sarah Chen';
-      views: '15.4K';
-      likes: 892;
-      tags: [AI', 'Machine 'LearningInnovation'],
-    };
+      title: 'Revolutionary AI Breakthroughs 2026',
+      type: 'article',
+      author: 'Dr. Sarah Chen',
+      views: '15.4K',
+      likes: 892,
+      tags: [AIMachine 'LearningInnovation']
+    },
     {,
-      title: 'Quantum Computing: The Future is Now';
-      type: 'video';
-      author: 'Prof. Michael Rodriguez';
-      views: '8.9K';
-      likes: 567;
-      tags: ['Quantum 'ComputingPhysics'Technology'],};
+      title: 'Quantum Computing: The Future is Now',
+      type: 'video',
+      author: 'Prof. Michael Rodriguez',
+      views: '8.9K',
+      likes: 567,
+      tags: ['Quantum 'ComputingPhysics'Technology']},
     {,
-      title: 'Smart Automation Implementation Guide';
-      type: 'tutorial';
-      author: 'Alex Thompson';
-      views: '6.8K';
-      likes: 423;
-      tags: [Automation', 'Implementation'Guide'],
+      title: 'Smart Automation Implementation Guide',
+      type: 'tutorial',
+      author: 'Alex Thompson',
+      views: '6.8K',
+      likes: 423,
+      tags: [AutomationImplementation'Guide']
     }
-  ];
+  ],
   const contentTypes = [,
-    { icon: FileTextlabel: ''Articlescount: '456'color: 'text-blue-400' ,};
-    { icon: Videolabel: ''Videoscount: '234'color: 'text-red-400' ,};
-    { icon: GraduationCaplabel: ''Tutorialscount: '189'color: 'text-green-400' ,};
-    { icon: Briefcaselabel: 'Case 'Studiescount: '156'color: 'text-purple-400' ,};
-    { icon: BookOpenlabel: ''Whitepaperscount: '98'color: 'text-orange-400' ,};
-    { icon: Calendarlabel: ''Webinarscount: '67'color: 'text-pink-400' ,}
-  ];
+    { icon: FileTextlabel: ''Articlescount: '456'color: 'text-blue-400' },
+    { icon: Videolabel: ''Videoscount: '234'color: 'text-red-400' },
+    { icon: GraduationCaplabel: ''Tutorialscount: '189'color: 'text-green-400' },
+    { icon: Briefcaselabel: 'Case 'Studiescount: '156'color: 'text-purple-400' },
+    { icon: BookOpenlabel: ''Whitepaperscount: '98'color: 'text-orange-400' },
+    { icon: Calendarlabel: ''Webinarscount: '67'color: 'text-pink-400' }
+  ],
   const getTypeIcon = (type) => {,
     const typeMap = {,
-      article: FileText;
-      video: Video;
-      tutorial: GraduationCap,};
-    return typeMap[type] || FileText;
-  };
+      article: FileText,
+      video: Video,
+      tutorial: GraduationCap},
+    return typeMap[type] || FileText,
+  },
   return (,
     <div>,
       {isVisible && (,
@@ -116,7 +116,7 @@ const UltimateContentHub2026PromotionBanner = () => {,
           <div className="absolute bottom-4 right-4 w-4 h-4 bg-green-400 rounded-full animate-ping" />,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
             <div className="grid lg:grid-cols-2 gap-12 items-center">,
-              {/* Content */,}
+              {/* Content */}
               <div>,
                 <div,
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-4",
@@ -140,7 +140,7 @@ const UltimateContentHub2026PromotionBanner = () => {,
                   className="grid grid-cols-2 md: grid-cols-3 gap-4 mb-6",
                 >,
                   {contentTypes.map((typeindex) => (,
-                    <div key={index,} className="flex items-center gap-2">,
+                    <div key={index} className="flex items-center gap-2">,
                       <type.icon className={`w-5 h-5 ${type.color}`} />,
                       <span className="text-sm font-medium">{type.label}</span>,
                       <span className="text-xs opacity-70">({type.count})</span>,
@@ -177,7 +177,7 @@ const UltimateContentHub2026PromotionBanner = () => {,
                   </button>,
                 </div>,
               </div>,
-              {/* Preview Section */,}
+              {/* Preview Section */}
               <div,
                 className="relative",
               >,
@@ -197,7 +197,7 @@ const UltimateContentHub2026PromotionBanner = () => {,
                     >,
                       <div className="flex items-center gap-2">,
                         {React.createElement(getTypeIcon(contentPreviews[activePreview].type){,
-                          className: "w-4 h-4 text-blue-400",})}
+                          className: "w-4 h-4 text-blue-400"})}
                         <span className="text-sm text-blue-300 capitalize">,
                           {contentPreviews[activePreview].type}
                         </span>,
@@ -212,8 +212,7 @@ const UltimateContentHub2026PromotionBanner = () => {,
                             className="px-2 py-1 bg-white/10 text-white text-xs rounded-full",
                           >,
                             {tag}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
                       <div className="flex items-center justify-between text-sm opacity-70">,
                         <div className="flex items-center gap-4">,
@@ -237,14 +236,14 @@ const UltimateContentHub2026PromotionBanner = () => {,
                       </div>,
                     </div>,
                   </div>,
-                  {/* Preview Indicators */,}
+                  {/* Preview Indicators */}
                   <div className="flex justify-center gap-2 mt-4">,
                     {contentPreviews.map((_index) => (,
                       <button,
                         key={index}
                         onClick={() => setActivePreview(index)}
                         className={`w-2 h-2 rounded-full transition-all duration-300 ${,
-                          index === activePreview ? 'bg-white' : 'bg-white/30',
+                          index === activePreview ? 'bg-white' : 'bg-white/30'
                         }`}
                       />,
                     ))}
@@ -279,7 +278,7 @@ const UltimateContentHub2026PromotionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Dismiss Button */,}
+          {/* Dismiss Button */}
           <button,
             onClick={handleDismiss}
             className="absolute top-4 right-4 p-2 hover: bg-white/20 rounded-full transition-colors duration-200",
@@ -288,9 +287,9 @@ const UltimateContentHub2026PromotionBanner = () => {,
             <X className="w-5 h-5" />,
           </button>,
         </div>,
-      ),}
+      )}
     </div>,
-  );
-};
-export default UltimateContentHub2026PromotionBanner;
+  ),
+},
+export default UltimateContentHub2026PromotionBanner,
 </div></div></div></div></div></div></div></div></div></div></div>,

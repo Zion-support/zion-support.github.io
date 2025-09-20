@@ -1,15 +1,15 @@
-// import { UserDetails } from "@/types/auth"; // Unused
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-// import { logError } from '@/utils/logError'; // Unused
-// import { suggestFix } from '@/utils/suggestFix'; // Unused
-import { useAuth } from '@/hooks/useAuth'; // To access user state
+// import { UserDetails } from "@/types/auth", // Unused
+import { useEffect, useState } from 'react',
+import { useRouter } from 'next/router',
+// import { logError } from '@/utils/logError', // Unused
+// import { suggestFix } from '@/utils/suggestFix', // Unused
+import { useAuth } from '@/hooks/useAuth', // To access user state
 const VerifyEmailPage = () => {
-  const router = useRouter();
-  const { user, isLoading: authLoading, setUser } = useAuth();
-  const [message, setMessage] = useState('Verifying your email...');
-  const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter(),
+  const { user, isLoading: authLoading, setUser } = useAuth(),
+  const [message, setMessage] = useState('Verifying your email...'),
+  const [error, setError] = useState<string | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
 
   useEffect(() => {
     // Supabase handles email verification by parsing the URL fragment when the user is redirected.
@@ -19,7 +19,7 @@ const VerifyEmailPage = () => {
     const handleVerification = async () => {
       // Wait for auth to finish loading and for user object to potentially be populated
       if (authLoading) {
-        return; // Wait for useAuth to initialize
+        return, // Wait for useAuth to initialize
       }
 
       // The user clicking the link from email and being redirected here with a valid token
@@ -28,42 +28,42 @@ const VerifyEmailPage = () => {
 
       // We need to check if the user object is available, indicating Supabase processed the link.
       // Supabase might also specific 'type' in URL like 'signup' or 'email_change'
-      // const params = new URLSearchParams(window.location.search);
+      // const params = new URLSearchParams(window.location.search),
       // Unused but available for future use
 
       // If there's a user session, it means Supabase has processed the verification link successfully.
       if (user && user.id) {
-        setMessage('Email recognized by authentication provider. Redirecting...');
+        setMessage('Email recognized by authentication provider. Redirecting...'),
         // Email verification is handled by Supabase.
         // We just need to redirect the user to the login page.
         setTimeout(() => {
-          router.push('/auth/login');
-        }, 3000);
+          router.push('/auth/login'),
+        }, 3000),
       } else if (!authLoading) {
         // This block runs if useAuth has loaded but there's no user.
         // This could mean the token is invalid, expired, or already used.
         // Supabase's client might have already handled and cleared such a session.
-        setError('Invalid, expired, or already used verification link. Please try logging in or request a new verification email.');
-        setMessage('');
-        setIsLoading(false);
+        setError('Invalid, expired, or already used verification link. Please try logging in or request a new verification email.'),
+        setMessage(''),
+        setIsLoading(false),
          // Optional: Redirect to login or a page to request new verification
          setTimeout(() => {
-            router.push('/auth/login');
-        }, 3000);
+            router.push('/auth/login')
+        }, 3000),
       }
-    };
+    },
 
     // Supabase often uses a hash fragment for verification tokens.
     // The `onAuthStateChange` in `useAuth` should handle this.
     // We add a listener for hash changes as well, just in case, or if not using Next.js router events for this.
     // However, onAuthStateChange in useAuth is the primary mechanism expected to handle session changes.
     // Initial call
-    handleVerification();
+    handleVerification(),
 
     return () => {
-    };
+    },
 
-  }, [user, authLoading, router, setUser]);
+  }, [user, authLoading, router, setUser]),
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: '20px' }}>
@@ -77,7 +77,7 @@ const VerifyEmailPage = () => {
         </button>
       )}
     </div>
-  );
-};
+  ),
+},
 
-export default VerifyEmailPage;
+export default VerifyEmailPage,

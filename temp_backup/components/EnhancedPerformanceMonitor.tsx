@@ -1,43 +1,43 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Activity, 
+  Activity,
   AlertTriangle, 
   CheckCircle,
   X,
   RefreshCw,
   BarChart3,
   Gauge
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  domLoad: number;
-  windowLoad: number;
+  fcp: number,
+  lcp: number,
+  fid: number,
+  cls: number,
+  ttfb: number,
+  domLoad: number,
+  windowLoad: number,
   memoryUsage?: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  };
+    usedJSHeapSize: number,
+    totalJSHeapSize: number,
+    jsHeapSizeLimit: number
+  },
   networkInfo?: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
-  };
+    effectiveType: string,
+    downlink: number,
+    rtt: number
+  },
 }
 
 interface PerformanceRecommendation {
-  id: string;
-  title: string;
-  description: string;
-  priority: 'high' | 'medium' | 'low';
-  impact: string;
-  solution: string;
-  category: 'performance' | 'accessibility' | 'seo' | 'user-experience';
+  id: string,
+  title: string,
+  description: string,
+  priority: 'high' | 'medium' | 'low',
+  impact: string,
+  solution: string,
+  category: 'performance' | 'accessibility' | 'seo' | 'user-experience'
 }
 
 const EnhancedPerformanceMonitor: React.FC = () => {
@@ -46,7 +46,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedPerformanceMonitor</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedPerformanceMonitor;
+export default EnhancedPerformanceMonitor,

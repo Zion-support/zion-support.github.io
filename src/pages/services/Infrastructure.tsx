@@ -1,51 +1,36 @@
-import React from 'react';
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 } from 'lucide-react';
-
+import React from "react";
+import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 } from "lucide-react";
 const InfrastructureServices = () => {
   const infrastructureServices = [
     {
-      title: "Network Design & Management",
-      description: "Scalable network architecture and optimization for enterprise needs.",
-      price: "From $5,000/month",
+      title: "Network Design & Management",description: "Scalable network architecture and optimization for enterprise needs.",price: "From $5,000/month",
       features: ["Network architecture design", "Performance optimization", "Security implementation", "24/7 monitoring"],
       icon: Network
-    },
+    };
     {
-      title: "System Administration",
-      description: "Comprehensive system management and maintenance services.",
-      price: "From $3,500/month",
+      title: "System Administration",description: "Comprehensive system management and maintenance services.",price: "From $3,500/month",
       features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"],
       icon: Server
-    },
+    };
     {
-      title: "Data Center Solutions",
-      description: "Reliable hosting, colocation, and data center management.",
+      title: "Data Center Solutions",description: "Reliable hosting, colocation, and data center management.",
       price: "From $8,000/month",
       features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],
       icon: Database
     }
   ];
-
   const technologies = [
     {
-      name: "Virtualization",
-      description: "VMware, Hyper-V, and container solutions",
-      icon: Cpu,
-      features: ["VMware vSphere", "Docker containers", "Kubernetes orchestration", "Resource optimization"]
+      name: "Virtualization",description: "VMware, Hyper-V, and container solutions",
+      icon: Cpu,features: ["VMware vSphere", "Docker containers", "Kubernetes orchestration", "Resource optimization"]
     },
     {
-      name: "Storage Solutions",
-      description: "Enterprise storage and backup systems",
-      icon: HardDrive,
-      features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
+      name: "Storage Solutions",description: "Enterprise storage and backup systems",icon: HardDrive,features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
     },
     {
-      name: "Network Security",
-      description: "Advanced network protection and monitoring",
-      icon: Shield,
-      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
+      name: "Network Security",description: "Advanced network protection and monitoring",icon: Shield,features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
     }
-  ];
+  ],
 
   const benefits = [
     "Improved system reliability and uptime",
@@ -54,7 +39,7 @@ const InfrastructureServices = () => {
     "Reduced operational costs and complexity",
     "Expert support and maintenance",
     "Future-proof technology solutions"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -123,14 +108,14 @@ const InfrastructureServices = () => {
       </section>
 
       {/* Technologies */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Technologies We Work With
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge technologies and platforms to build robust,
+              Cutting-edge technologies and platforms to build robust;
               scalable infrastructure solutions.
             </p>
           </div>
@@ -206,7 +191,7 @@ const InfrastructureServices = () => {
             Ready to build a robust, scalable infrastructure that supports
             your business growth and digital transformation?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
@@ -217,7 +202,6 @@ const InfrastructureServices = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default InfrastructureServices;

@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function MicroCRM() {,
   return (,
     <>,
@@ -40,6 +40,6 @@ export default function MicroCRM() {,
         </section>,
       </main>,
     </>,
-  ),
+  )
 }
 ,

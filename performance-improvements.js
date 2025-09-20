@@ -3,73 +3,72 @@
  * Performance Improvements Script,
  * This script implements various performance optimizations for the Zion App,
  */,
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-console.log('🚀 Starting performance improvements...');
+import fs from 'fs',
+import path from 'path',
+import { fileURLToPath } from 'url',
+const __filename = fileURLToPath(import.meta.url),
+const __dirname = path.dirname(__filename),
+console.log('🚀 Starting performance improvements...'),
 // 1. Create optimized App.tsx with lazy loading,
-const optimizedAppContent = `import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './index.css';
-import Header from './Header';
-import Footer from './Footer';
+const optimizedAppContent = `import React, { Suspense, lazy } from 'react',
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
+import './index.css',
+import Header from './Header',
+import Footer from './Footer',
 // Lazy load pages for better performance,
-const Blog = lazy(() => import('./pages/Blog'));
-const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
-const AIIncidentResponse2026 = lazy(() => import('./pages/AIIncidentResponse2026'));
-const AIRevolutionaryBreakthrough2026 = lazy(() => import('./pages/AIRevolutionaryBreakthrough2026'));
-const AdvancedAIConsciousness2027 = lazy(() => import('./pages/AdvancedAIConsciousness2027'));
-const AdvancedAISystems2026 = lazy(() => import('./pages/AdvancedAISystems2026'));
-const AdvancedAITransformation2025 = lazy(() => import('./pages/AdvancedAITransformation2025'));
-const AdvancedAISolutions2027 = lazy(() => import('./pages/AdvancedAISolutions2027'));
-const AdvancedAnalyticsInsights2025 = lazy(() => import('./pages/AdvancedAnalyticsInsights2025'));
-const AdvancedBiotechRevolution2026 = lazy(() => import('./pages/AdvancedBiotechRevolution2026'));
-const AdvancedQuantumComputing2026 = lazy(() => import('./pages/AdvancedQuantumComputing2026'));
-const AdvancedRobotics2026 = lazy(() => import('./pages/AdvancedRobotics2026'));
-const AdvancedTechBreakthrough2025 = lazy(() => import('./pages/AdvancedTechBreakthrough2025'));
-const AdvancedTechSolutions2026 = lazy(() => import('./pages/AdvancedTechSolutions2026'));
-const AgentOpsControlPlane2026 = lazy(() => import('./pages/AgentOpsControlPlane2026'));
-const AgenticOpsControls2026 = lazy(() => import('./pages/AgenticOpsControls2026'));
-const AutonomousOpsPlaybook2026 = lazy(() => import('./pages/AutonomousOpsPlaybook2026'));
-const BiotechRevolution2025 = lazy(() => import('./pages/BiotechRevolution2025'));
-const BlogPost_Sep2025_AIExecGuide = lazy(() => import('./pages/BlogPost_Sep2025_AIExecGuide'));
-const BlogPost_Sep2025_CaseStudy = lazy(() => import('./pages/BlogPost_Sep2025_CaseStudy'));
-const ComprehensiveTechInsights2026 = lazy(() => import('./pages/ComprehensiveTechInsights2026'));
-const EdgeAICompliance2026 = lazy(() => import('./pages/EdgeAICompliance2026'));
-const InnovationShowcase2025 = lazy(() => import('./pages/InnovationShowcase2025'));
-const InterdimensionalTech2027 = lazy(() => import('./pages/InterdimensionalTech2027'));
-const InterdimensionalTech2037Page = lazy(() => import('./pages/InterdimensionalTech2037'));
-const NeuralInterfaceRevolution2025 = lazy(() => import('./pages/NeuralInterfaceRevolution2025'));
-const NeuralInterfaceRevolution2026 = lazy(() => import('./pages/NeuralInterfaceRevolution2026'));
-const NextGenAIRevolution2026 = lazy(() => import('./pages/NextGenAIRevolution2026'));
-const NextGenTechShowcase2025 = lazy(() => import('./pages/NextGenTechShowcase2025'));
-const OperationalEvalGates2026 = lazy(() => import('./pages/OperationalEvalGates2026'));
-const QuantumComputingRevolution2025 = lazy(() => import('./pages/QuantumComputingRevolution2025'));
-const QuantumComputingRevolution2026 = lazy(() => import('./pages/QuantumComputingRevolution2026'));
-const QuantumConsciousnessRevolution2025 = lazy(() => import('./pages/QuantumConsciousnessRevolution2025'));
-const QuantumConsciousnessRevolution2026 = lazy(() => import('./pages/QuantumConsciousnessRevolution2026'));
-const QuantumNeuralFusion2026 = lazy(() => import('./pages/QuantumNeuralFusion2026'));
-const QuantumRealityEngine2027 = lazy(() => import('./pages/QuantumRealityEngine2027'));
-const ResponsibleAutonomyGuide2026 = lazy(() => import('./pages/ResponsibleAutonomyGuide2026'));
-const RevolutionaryInnovationHub2027 = lazy(() => import('./pages/RevolutionaryInnovationHub2027'));
-const RevolutionaryTechBlog2026 = lazy(() => import('./pages/RevolutionaryTechBlog2026'));
-const RevolutionaryTechBreakthrough2025 = lazy(() => import('./pages/RevolutionaryTechBreakthrough2025'));
-const RevolutionaryTechBreakthrough2027 = lazy(() => import('./pages/RevolutionaryTechBreakthrough2027'));
-const SpaceTechInnovation2026 = lazy(() => import('./pages/SpaceTechInnovation2026'));
-const SpaceTechRevolution2025 = lazy(() => import('./pages/SpaceTechRevolution2025'));
-const SyntheticBiologyRevolution2027 = lazy(() => import('./pages/SyntheticBiologyRevolution2027'));
-const SyntheticIntelligence2026 = lazy(() => import('./pages/SyntheticIntelligence2026'));
-const SyntheticIntelligenceRevolution2025 = lazy(() => import('./pages/SyntheticIntelligenceRevolution2025'));
-const TrustedRAGPlaybook2026 = lazy(() => import('./pages/TrustedRAGPlaybook2026'));
-const UltimateAIRevolution2027 = lazy(() => import('./pages/UltimateAIRevolution2027'));
+const Blog = lazy(() => import('./pages/Blog')),
+const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage')),
+const AIIncidentResponse2026 = lazy(() => import('./pages/AIIncidentResponse2026')),
+const AIRevolutionaryBreakthrough2026 = lazy(() => import('./pages/AIRevolutionaryBreakthrough2026')),
+const AdvancedAIConsciousness2027 = lazy(() => import('./pages/AdvancedAIConsciousness2027')),
+const AdvancedAISystems2026 = lazy(() => import('./pages/AdvancedAISystems2026')),
+const AdvancedAITransformation2025 = lazy(() => import('./pages/AdvancedAITransformation2025')),
+const AdvancedAISolutions2027 = lazy(() => import('./pages/AdvancedAISolutions2027')),
+const AdvancedAnalyticsInsights2025 = lazy(() => import('./pages/AdvancedAnalyticsInsights2025')),
+const AdvancedBiotechRevolution2026 = lazy(() => import('./pages/AdvancedBiotechRevolution2026')),
+const AdvancedQuantumComputing2026 = lazy(() => import('./pages/AdvancedQuantumComputing2026')),
+const AdvancedRobotics2026 = lazy(() => import('./pages/AdvancedRobotics2026')),
+const AdvancedTechBreakthrough2025 = lazy(() => import('./pages/AdvancedTechBreakthrough2025')),
+const AdvancedTechSolutions2026 = lazy(() => import('./pages/AdvancedTechSolutions2026')),
+const AgentOpsControlPlane2026 = lazy(() => import('./pages/AgentOpsControlPlane2026')),
+const AgenticOpsControls2026 = lazy(() => import('./pages/AgenticOpsControls2026')),
+const AutonomousOpsPlaybook2026 = lazy(() => import('./pages/AutonomousOpsPlaybook2026')),
+const BiotechRevolution2025 = lazy(() => import('./pages/BiotechRevolution2025')),
+const BlogPost_Sep2025_AIExecGuide = lazy(() => import('./pages/BlogPost_Sep2025_AIExecGuide')),
+const BlogPost_Sep2025_CaseStudy = lazy(() => import('./pages/BlogPost_Sep2025_CaseStudy')),
+const ComprehensiveTechInsights2026 = lazy(() => import('./pages/ComprehensiveTechInsights2026')),
+const EdgeAICompliance2026 = lazy(() => import('./pages/EdgeAICompliance2026')),
+const InnovationShowcase2025 = lazy(() => import('./pages/InnovationShowcase2025')),
+const InterdimensionalTech2027 = lazy(() => import('./pages/InterdimensionalTech2027')),
+const InterdimensionalTech2037Page = lazy(() => import('./pages/InterdimensionalTech2037')),
+const NeuralInterfaceRevolution2025 = lazy(() => import('./pages/NeuralInterfaceRevolution2025')),
+const NeuralInterfaceRevolution2026 = lazy(() => import('./pages/NeuralInterfaceRevolution2026')),
+const NextGenAIRevolution2026 = lazy(() => import('./pages/NextGenAIRevolution2026')),
+const NextGenTechShowcase2025 = lazy(() => import('./pages/NextGenTechShowcase2025')),
+const OperationalEvalGates2026 = lazy(() => import('./pages/OperationalEvalGates2026')),
+const QuantumComputingRevolution2025 = lazy(() => import('./pages/QuantumComputingRevolution2025')),
+const QuantumComputingRevolution2026 = lazy(() => import('./pages/QuantumComputingRevolution2026')),
+const QuantumConsciousnessRevolution2025 = lazy(() => import('./pages/QuantumConsciousnessRevolution2025')),
+const QuantumConsciousnessRevolution2026 = lazy(() => import('./pages/QuantumConsciousnessRevolution2026')),
+const QuantumNeuralFusion2026 = lazy(() => import('./pages/QuantumNeuralFusion2026')),
+const QuantumRealityEngine2027 = lazy(() => import('./pages/QuantumRealityEngine2027')),
+const ResponsibleAutonomyGuide2026 = lazy(() => import('./pages/ResponsibleAutonomyGuide2026')),
+const RevolutionaryInnovationHub2027 = lazy(() => import('./pages/RevolutionaryInnovationHub2027')),
+const RevolutionaryTechBlog2026 = lazy(() => import('./pages/RevolutionaryTechBlog2026')),
+const RevolutionaryTechBreakthrough2025 = lazy(() => import('./pages/RevolutionaryTechBreakthrough2025')),
+const RevolutionaryTechBreakthrough2027 = lazy(() => import('./pages/RevolutionaryTechBreakthrough2027')),
+const SpaceTechInnovation2026 = lazy(() => import('./pages/SpaceTechInnovation2026')),
+const SpaceTechRevolution2025 = lazy(() => import('./pages/SpaceTechRevolution2025')),
+const SyntheticBiologyRevolution2027 = lazy(() => import('./pages/SyntheticBiologyRevolution2027')),
+const SyntheticIntelligence2026 = lazy(() => import('./pages/SyntheticIntelligence2026')),
+const SyntheticIntelligenceRevolution2025 = lazy(() => import('./pages/SyntheticIntelligenceRevolution2025')),
+const TrustedRAGPlaybook2026 = lazy(() => import('./pages/TrustedRAGPlaybook2026')),
+const UltimateAIRevolution2027 = lazy(() => import('./pages/UltimateAIRevolution2027')),
 // Loading component,
 const LoadingSpinner = () => (,
   <div className="flex items-center justify-center min-h-screen">,
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>,
-  </div>,
-);
+  </div>),
 function App() {,
   return (,
     <Router>,
@@ -131,281 +130,280 @@ function App() {,
         </main>,
         <Footer />,
       </div>,
-    </Router>,
-  );
+    </Router>),
 }
 ,
-export default App,`;
+export default App,`,
 // 2. Create performance monitoring hook,
-const performanceHookContent = `import { useEffect, useState } from 'react';
+const performanceHookContent = `import { useEffect, useState } from 'react',
 export const usePerformanceMonitoring = () => {,
   const [metrics, setMetrics] = useState({,
-    loadTime: 0;
-    renderTime: 0;
-    memoryUsage: 0,});
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0}),
   useEffect(() => {,
     // Measure page load time,
-    const loadTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime }));
+    const loadTime = performance.now(),
+    setMetrics(prev => ({ ...prev, loadTime })),
     // Measure render time,
-    const renderStart = performance.now();
+    const renderStart = performance.now(),
     requestAnimationFrame(() => {,
-      const renderTime = performance.now() - renderStart;
-      setMetrics(prev => ({ ...prev, renderTime }));
-    });
+      const renderTime = performance.now() - renderStart,
+      setMetrics(prev => ({ ...prev, renderTime })),
+    }),
     // Monitor memory usage (if available),
     if ('memory' in performance) {,
       const memoryUsage = performance.memory.usedJSHeapSize / 1024 / 1024, // MB,
-      setMetrics(prev => ({ ...prev, memoryUsage }));
+      setMetrics(prev => ({ ...prev, memoryUsage })),
     }
 ,
     // Cleanup,
     return () => {,
-      // Cleanup logic if needed,
-    };
-  }, []);
-  return metrics;
-};
+      // Cleanup logic if needed
+    },
+  }, []),
+  return metrics,
+},
 export const useLazyLoading = (importFunction, deps = []) => {,
-  const [Component, setComponent] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [Component, setComponent] = useState(null),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState(null),
   useEffect(() => {,
-    let isMounted = true;
+    let isMounted = true,
     const loadComponent = async () => {,
       try {,
-        setLoading(true);
-        const module = await importFunction();
+        setLoading(true),
+        const module = await importFunction(),
         if (isMounted) {,
-          setComponent(() => module.default);
-          setError(null);
+          setComponent(() => module.default),
+          setError(null),
         }
       } catch (err) {,
         if (isMounted) {,
-          setError(err);
-          console.error('Failed to load component:', err);
+          setError(err),
+          console.error('Failed to load component:', err),
         }
       } finally {,
         if (isMounted) {,
-          setLoading(false);
+          setLoading(false),
         }
       }
-    };
-    loadComponent();
+    },
+    loadComponent(),
     return () => {,
-      isMounted = false;
-    };
-  }, deps);
-  return { Component, loading, error };
-},`;
+      isMounted = false,
+    },
+  }, deps),
+  return { Component, loading, error },
+},`,
 // 3. Create optimized CSS,
 const optimizedCSSContent = `/* Performance-optimized CSS */,
 * {,
-  box-sizing: border-box,}
+  box-sizing: border-box}
 ,
 html {,
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale,}
+  scroll-behavior: smooth,
+  -webkit-font-smoothing: antialiased,
+  -moz-osx-font-smoothing: grayscale}
 ,
 body {,
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UIRoboto', 'OxygenUbuntu', 'CantarellFira Sans', 'Droid SansHelvetica Neue';
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
-  min-height: 100vh;
-  overflow-x: hidden,}
+  margin: 0,
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UIRobotoOxygenUbuntu', 'CantarellFira SansDroid SansHelvetica Neue',
+    sans-serif,
+  -webkit-font-smoothing: antialiased,
+  -moz-osx-font-smoothing: grayscale,
+  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%),
+  min-height: 100vh,
+  overflow-x: hidden}
 ,
 /* Optimize animations for performance */,
 @keyframes spin {,
   to {,
-    transform: rotate(360deg),}
+    transform: rotate(360deg)}
 }
 ,
 @keyframes fadeIn {,
   from {,
-    opacity: 0;
-    transform: translateY(20px),}
+    opacity: 0,
+    transform: translateY(20px)}
   to {,
-    opacity: 1;
-    transform: translateY(0),}
+    opacity: 1,
+    transform: translateY(0)}
 }
 ,
 @keyframes slideIn {,
   from {,
-    transform: translateX(-100%),}
+    transform: translateX(-100%)}
   to {,
-    transform: translateX(0),}
+    transform: translateX(0)}
 }
 ,
 /* Use transform and opacity for better performance */,
 .animate-spin {,
-  animation: spin 1s linear infinite;
-  will-change: transform,}
+  animation: spin 1s linear infinite,
+  will-change: transform}
 ,
 .animate-fade-in {,
-  animation: fadeIn 0.5s ease-out;
-  will-change: opacity, transform;
+  animation: fadeIn 0.5s ease-out,
+  will-change: opacity, transform,
 }
 ,
 .animate-slide-in {,
-  animation: slideIn 0.3s ease-out;
-  will-change: transform,}
+  animation: slideIn 0.3s ease-out,
+  will-change: transform}
 ,
 /* Optimize for GPU acceleration */,
 .gpu-accelerated {,
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000px,}
+  transform: translateZ(0),
+  backface-visibility: hidden,
+  perspective: 1000px}
 ,
 /* Optimize images */,
 img {,
-  max-width: 100%;
-  height: auto;
-  loading: lazy,}
+  max-width: 100%,
+  height: auto,
+  loading: lazy}
 ,
 /* Optimize scroll performance */,
 .scroll-container {,
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth,}
+  overflow-y: auto,
+  overflow-x: hidden,
+  -webkit-overflow-scrolling: touch,
+  scroll-behavior: smooth}
 ,
 /* Optimize text rendering */,
 .text-optimized {,
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale,}
+  text-rendering: optimizeLegibility,
+  -webkit-font-smoothing: antialiased,
+  -moz-osx-font-smoothing: grayscale}
 ,
 /* Reduce layout thrashing */,
 .stable-layout {,
-  contain: layout style paint,}
+  contain: layout style paint}
 ,
 /* Optimize for mobile */,
 @media (max-width: 768px) {,
   .mobile-optimized {,
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation,}
-}`;
+    -webkit-tap-highlight-color: transparent,
+    touch-action: manipulation}
+}`,
 // Write the optimized files,
 try {,
   // Create backup of original App.tsx,
-  const originalAppPath = path.join(__dirname, 'srcApp.tsx');
-  const backupAppPath = path.join(__dirname, 'srcApp.tsx.backup.' + Date.now());
+  const originalAppPath = path.join(__dirname, 'srcApp.tsx'),
+  const backupAppPath = path.join(__dirname, 'srcApp.tsx.backup.' + Date.now()),
   if (fs.existsSync(originalAppPath)) {,
-    fs.copyFileSync(originalAppPath, backupAppPath);
-    console.log('✅ Created backup of App.tsx');
+    fs.copyFileSync(originalAppPath, backupAppPath),
+    console.log('✅ Created backup of App.tsx'),
   }
 ,
   // Write optimized App.tsx,
-  fs.writeFileSync(path.join(__dirname, 'srcApp.optimized.tsx'), optimizedAppContent);
-  console.log('✅ Created optimized App.tsx with lazy loading');
+  fs.writeFileSync(path.join(__dirname, 'srcApp.optimized.tsx'), optimizedAppContent),
+  console.log('✅ Created optimized App.tsx with lazy loading'),
   // Write performance monitoring hook,
-  fs.writeFileSync(path.join(__dirname, 'srchooks', 'usePerformanceMonitoring.ts'), performanceHookContent);
-  console.log('✅ Created performance monitoring hooks');
+  fs.writeFileSync(path.join(__dirname, 'srchooksusePerformanceMonitoring.ts'), performanceHookContent),
+  console.log('✅ Created performance monitoring hooks'),
   // Write optimized CSS,
-  fs.writeFileSync(path.join(__dirname, 'srcstyles', 'performance.css'), optimizedCSSContent);
-  console.log('✅ Created performance-optimized CSS');
+  fs.writeFileSync(path.join(__dirname, 'srcstylesperformance.css'), optimizedCSSContent),
+  console.log('✅ Created performance-optimized CSS'),
   // Create performance monitoring script,
   const monitoringScript = `// Performance monitoring script,
 (function() {,
-  'use strict';
+  'use strict',
   // Monitor Core Web Vitals,
   function getCLS(onPerfEntry) {,
-    let clsValue = 0;
-    let clsEntries = [];
-    let sessionValue = 0;
-    let sessionEntries = [];
+    let clsValue = 0,
+    let clsEntries = [],
+    let sessionValue = 0,
+    let sessionEntries = [],
     new PerformanceObserver((entryList) => {,
       for (const entry of entryList.getEntries()) {,
         if (!entry.hadRecentInput) {,
-          const firstSessionEntry = sessionEntries[0];
-          const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
+          const firstSessionEntry = sessionEntries[0],
+          const lastSessionEntry = sessionEntries[sessionEntries.length - 1],
           if (sessionValue && entry.startTime - lastSessionEntry.startTime < 1000 &&,
               entry.startTime - firstSessionEntry.startTime < 5000) {,
-            sessionValue += entry.value;
-            sessionEntries.push(entry);
+            sessionValue += entry.value,
+            sessionEntries.push(entry),
           } else {,
-            sessionValue = entry.value;
-            sessionEntries = [entry];
+            sessionValue = entry.value,
+            sessionEntries = [entry],
           }
 ,
           if (sessionValue > clsValue) {,
-            clsValue = sessionValue;
-            clsEntries = [...sessionEntries];
-            onPerfEntry({ name: 'CLS', value: clsValue, entries: clsEntries ,});
+            clsValue = sessionValue,
+            clsEntries = [...sessionEntries],
+            onPerfEntry({ name: 'CLS', value: clsValue, entries: clsEntries }),
           }
         }
       }
-    }).observe({ type: 'layout-shift', buffered: true ,});
+    }).observe({ type: 'layout-shift', buffered: true }),
   }
 ,
   function getFID(onPerfEntry) {,
     new PerformanceObserver((entryList) => {,
       for (const entry of entryList.getEntries()) {,
-        onPerfEntry({ name: 'FID', value: entry.processingStart - entry.startTime, entry });
+        onPerfEntry({ name: 'FID', value: entry.processingStart - entry.startTime, entry }),
       }
-    }).observe({ type: 'first-input', buffered: true ,});
+    }).observe({ type: 'first-input', buffered: true }),
   }
 ,
   function getFCP(onPerfEntry) {,
     new PerformanceObserver((entryList) => {,
       for (const entry of entryList.getEntries()) {,
         if (entry.name === 'first-contentful-paint') {,
-          onPerfEntry({ name: 'FCP', value: entry.startTime, entry });
+          onPerfEntry({ name: 'FCP', value: entry.startTime, entry }),
         }
       }
-    }).observe({ type: 'paint', buffered: true ,});
+    }).observe({ type: 'paint', buffered: true }),
   }
 ,
   function getLCP(onPerfEntry) {,
     new PerformanceObserver((entryList) => {,
-      const entries = entryList.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      onPerfEntry({ name: 'LCP', value: lastEntry.startTime, entry: lastEntry ,});
-    }).observe({ type: 'largest-contentful-paint', buffered: true ,});
+      const entries = entryList.getEntries(),
+      const lastEntry = entries[entries.length - 1],
+      onPerfEntry({ name: 'LCP', value: lastEntry.startTime, entry: lastEntry }),
+    }).observe({ type: 'largest-contentful-paint', buffered: true }),
   }
 ,
   function getTTFB(onPerfEntry) {,
     new PerformanceObserver((entryList) => {,
       for (const entry of entryList.getEntries()) {,
         if (entry.responseStart <= entry.requestStart) {,
-          onPerfEntry({ name: 'TTFB', value: entry.responseStart - entry.requestStart, entry });
+          onPerfEntry({ name: 'TTFB', value: entry.responseStart - entry.requestStart, entry }),
         }
       }
-    }).observe({ type: 'navigation', buffered: true ,});
+    }).observe({ type: 'navigation', buffered: true }),
   }
 ,
   // Initialize performance monitoring,
-  getCLS(console.log);
-  getFID(console.log);
-  getFCP(console.log);
-  getLCP(console.log);
-  getTTFB(console.log);
+  getCLS(console.log),
+  getFID(console.log),
+  getFCP(console.log),
+  getLCP(console.log),
+  getTTFB(console.log),
   // Monitor memory usage,
   if ('memory' in performance) {,
     setInterval(() => {,
-      const memory = performance.memory;
+      const memory = performance.memory,
       console.log('Memory Usage:', {,
-        used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB';
-        total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB';
-        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB',});
-    }, 5000);
+        used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+        total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'}),
+    }, 5000),
   }
-})(),`;
-  fs.writeFileSync(path.join(__dirname, 'publicperformance-monitor.js'), monitoringScript);
-  console.log('✅ Created performance monitoring script');
-  console.log('🎉 Performance improvements completed successfully!');
-  console.log('📋 Summary of improvements: ');
-  console.log('   • Lazy loading for all pages');
-  console.log('   • Performance monitoring hooks');
-  console.log('   • Optimized CSS with GPU acceleration');
-  console.log('   • Core Web Vitals monitoring');
-  console.log('   • Memory usage tracking');
-  console.log('   • Mobile optimization'),
+})(),`,
+  fs.writeFileSync(path.join(__dirname, 'publicperformance-monitor.js'), monitoringScript),
+  console.log('✅ Created performance monitoring script'),
+  console.log('🎉 Performance improvements completed successfully!'),
+  console.log('📋 Summary of improvements: '),
+  console.log('   • Lazy loading for all pages'),
+  console.log('   • Performance monitoring hooks'),
+  console.log('   • Optimized CSS with GPU acceleration'),
+  console.log('   • Core Web Vitals monitoring'),
+  console.log('   • Memory usage tracking'),
+  console.log('   • Mobile optimization')
 } catch (error) {,
-  console.error('❌ Error implementing performance improvements:', error);
-  process.exit(1);
+  console.error('❌ Error implementing performance improvements:', error),
+  process.exit(1),
 }

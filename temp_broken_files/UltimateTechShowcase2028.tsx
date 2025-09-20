@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react',
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const UltimateTechShowcase2028: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -8,7 +8,7 @@ const UltimateTechShowcase2028: React.FC = () => {,
         <title>UltimateTechShowcase2028 | Zion Tech Group</title>,
         <meta name="description" content="UltimateTechShowcase2028 - Revolutionary technology solutions" />,
       </Helmet>,
-        {/* Technology Stats */,}
+        {/* Technology Stats */}
         <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-2xl p-12 mb-16">,
           <div className="text-center mb-12">,
             <h2 className="text-4xl font-bold mb-6">📊 Revolutionary Impact Statistics</h2>,
@@ -33,7 +33,7 @@ const UltimateTechShowcase2028: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Future Vision */,}
+        {/* Future Vision */}
         <div className="text-center bg-gradient-to-r from-indigo-800/30 to-purple-800/30 backdrop-blur-sm rounded-2xl p-12">,
           <h2 className="text-4xl font-bold mb-6">🌟 The Future is Here</h2>,
           <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">,
@@ -53,6 +53,5 @@ const UltimateTechShowcase2028: React.FC = () => {,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default UltimateTechShowcase2028;
+    </div>)},
+export default UltimateTechShowcase2028,

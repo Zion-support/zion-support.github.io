@@ -1,9 +1,9 @@
 
-import { SkillCategoryProps } from './types';
-import { SkillItem } from './SkillItem';
+import { SkillCategoryProps } from './types',
+import { SkillItem } from './SkillItem',
 
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {
-  if (!skills || skills.length === 0) return null;
+  if (!skills || skills.length === 0) return null,
   
   return (
     <div className="space-y-2">
@@ -19,5 +19,5 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
         ))}
       </div>
     </div>
-  );
-};
+  ),
+},

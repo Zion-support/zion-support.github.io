@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface Revolutionary2026EmergingTechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTechService[] = [
   // Holographic Metaverse Development Platform
@@ -49,16 +49,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     period: '/month',
     description: 'Revolutionary platform for creating immersive 3D holographic metaverse experiences with AI-powered content generation and real-time collaboration.',
     features: [
-      '3D holographic rendering',
-      'AI content generation',
-      'Real-time collaboration',
-      'Multi-user environments',
-      'Holographic avatars',
-      'Spatial audio systems',
-      'Gesture recognition',
-      'Eye tracking integration',
-      'Haptic feedback',
-      'Cross-platform compatibility'
+      '3D holographic renderingAI content generation',
+      'Real-time collaborationMulti-user environments',
+      'Holographic avatarsSpatial audio systems',
+      'Gesture recognitionEye tracking integration',
+      'Haptic feedbackCross-platform compatibility'
     ],
     popular: true,
     icon: '🌐✨',
@@ -71,11 +66,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '2 weeks',
     category: 'Emerging Tech & Metaverse',
     realService: true,
-    technology: ['3D Graphics', 'Holographic Rendering', 'AI Content Generation', 'Unity', 'Unreal Engine', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['VR headsets', 'AR glasses', 'Holographic displays', 'Gaming engines', 'Social platforms', 'Payment systems'],
-    useCases: ['Gaming experiences', 'Virtual events', 'Educational content', 'Corporate training', 'Healthcare simulation', 'Virtual real estate'],
+    technology: ['3D GraphicsHolographic Rendering', 'AI Content GenerationUnity', 'Unreal EngineReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['VR headsetsAR glasses', 'Holographic displaysGaming engines', 'Social platformsPayment systems'],
+    useCases: ['Gaming experiencesVirtual events', 'Educational contentCorporate training', 'Healthcare simulationVirtual real estate'],
     roi: 'Average customer sees 700% ROI within 10 months through immersive experiences and AI content generation.',
-    competitors: ['Unity', 'Unreal Engine', 'Roblox', 'Minecraft', 'Second Life'],
+    competitors: ['UnityUnreal Engine', 'RobloxMinecraft', 'Second Life'],
     marketSize: '$74.4B market',
     growthRate: '38.2% annual growth',
     variant: 'quantum-futuristic',
@@ -101,16 +96,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     period: '/month',
     description: 'Advanced AI platform for tracking space debris, predicting collisions, and managing space traffic to ensure satellite safety and orbital sustainability.',
     features: [
-      'Real-time debris tracking',
-      'Collision prediction algorithms',
-      'Space traffic management',
-      'Satellite safety monitoring',
-      'Orbital optimization',
-      'Debris removal planning',
-      'Risk assessment tools',
-      'Regulatory compliance',
-      'International coordination',
-      'Emergency response systems'
+      'Real-time debris trackingCollision prediction algorithms',
+      'Space traffic managementSatellite safety monitoring',
+      'Orbital optimizationDebris removal planning',
+      'Risk assessment toolsRegulatory compliance',
+      'International coordinationEmergency response systems'
     ],
     popular: true,
     icon: '🛰️🤖',
@@ -123,11 +113,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '3 weeks',
     category: 'Space Tech & AI',
     realService: true,
-    technology: ['AI Algorithms', 'Satellite Tracking', 'Orbital Mechanics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Satellite systems', 'Ground stations', 'Tracking networks', 'Government databases', 'Insurance platforms', 'Defense systems'],
-    useCases: ['Satellite safety', 'Space traffic management', 'Collision prevention', 'Insurance risk assessment', 'Regulatory compliance', 'Emergency response'],
+    technology: ['AI AlgorithmsSatellite Tracking', 'Orbital MechanicsPython', 'TensorFlowReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Satellite systemsGround stations', 'Tracking networksGovernment databases', 'Insurance platformsDefense systems'],
+    useCases: ['Satellite safetySpace traffic management', 'Collision preventionInsurance risk assessment', 'Regulatory complianceEmergency response'],
     roi: 'Average customer sees 900% ROI within 8 months through satellite protection and collision prevention.',
-    competitors: ['LeoLabs', 'Space-Track', 'ESA', 'NASA', 'JAXA'],
+    competitors: ['LeoLabsSpace-Track', 'ESANASA', 'JAXA'],
     marketSize: '$23.8B market',
     growthRate: '45.7% annual growth',
     variant: 'quantum-futuristic',
@@ -153,16 +143,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     period: '/month',
     description: 'Revolutionary AI platform that predicts climate changes with unprecedented accuracy using advanced machine learning and global data analysis.',
     features: [
-      'Climate pattern recognition',
-      'Long-term predictions',
-      'Regional forecasting',
-      'Extreme weather alerts',
-      'Climate impact assessment',
-      'Policy recommendation engine',
-      'Data visualization tools',
-      'Historical analysis',
-      'Real-time monitoring',
-      'Global coverage'
+      'Climate pattern recognitionLong-term predictions',
+      'Regional forecastingExtreme weather alerts',
+      'Climate impact assessmentPolicy recommendation engine',
+      'Data visualization toolsHistorical analysis',
+      'Real-time monitoringGlobal coverage'
     ],
     popular: true,
     icon: '🌍🤖',
@@ -175,11 +160,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '2 weeks',
     category: 'Climate Tech & AI',
     realService: true,
-    technology: ['Machine Learning', 'Climate Modeling', 'Data Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Weather stations', 'Satellite data', 'Government databases', 'Insurance platforms', 'Agriculture systems', 'Energy grids'],
-    useCases: ['Climate planning', 'Risk assessment', 'Policy development', 'Agriculture optimization', 'Energy planning', 'Urban development'],
+    technology: ['Machine LearningClimate Modeling', 'Data AnalyticsPython', 'TensorFlowReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Weather stationsSatellite data', 'Government databasesInsurance platforms', 'Agriculture systemsEnergy grids'],
+    useCases: ['Climate planningRisk assessment', 'Policy developmentAgriculture optimization', 'Energy planningUrban development'],
     roi: 'Average customer sees 500% ROI within 12 months through accurate predictions and risk mitigation.',
-    competitors: ['ClimateAI', 'Jupiter Intelligence', 'The Climate Corporation', 'IBM Weather', 'AccuWeather'],
+    competitors: ['ClimateAIJupiter Intelligence', 'The Climate CorporationIBM Weather', 'AccuWeather'],
     marketSize: '$56.3B market',
     growthRate: '22.8% annual growth',
     variant: 'quantum-futuristic',
@@ -205,16 +190,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     period: '/month',
     description: 'Revolutionary AI platform that enables autonomous manufacturing with self-optimizing processes, predictive maintenance, and intelligent quality control.',
     features: [
-      'Self-optimizing production',
-      'Predictive maintenance',
-      'Intelligent quality control',
-      'Supply chain optimization',
-      'Energy efficiency management',
-      'Real-time monitoring',
-      'Automated decision making',
-      'Performance analytics',
-      'Customization engine',
-      'Sustainability tracking'
+      'Self-optimizing productionPredictive maintenance',
+      'Intelligent quality controlSupply chain optimization',
+      'Energy efficiency managementReal-time monitoring',
+      'Automated decision makingPerformance analytics',
+      'Customization engineSustainability tracking'
     ],
     popular: true,
     icon: '🏭🤖',
@@ -227,11 +207,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '3 weeks',
     category: 'Manufacturing & AI',
     realService: true,
-    technology: ['AI Algorithms', 'IoT Integration', 'Predictive Analytics', 'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Manufacturing equipment', 'IoT sensors', 'ERP systems', 'Quality control systems', 'Supply chain platforms', 'Energy management systems'],
-    useCases: ['Production optimization', 'Quality improvement', 'Cost reduction', 'Energy efficiency', 'Supply chain optimization', 'Customization'],
+    technology: ['AI AlgorithmsIoT Integration', 'Predictive AnalyticsPython', 'TensorFlowReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Manufacturing equipmentIoT sensors', 'ERP systemsQuality control systems', 'Supply chain platformsEnergy management systems'],
+    useCases: ['Production optimizationQuality improvement', 'Cost reductionEnergy efficiency', 'Supply chain optimizationCustomization'],
     roi: 'Average customer sees 600% ROI within 10 months through production optimization and cost reduction.',
-    competitors: ['Siemens', 'Rockwell Automation', 'GE Digital', 'ABB', 'Honeywell'],
+    competitors: ['SiemensRockwell Automation', 'GE DigitalABB', 'Honeywell'],
     marketSize: '$89.7B market',
     growthRate: '19.3% annual growth',
     variant: 'quantum-futuristic',
@@ -257,16 +237,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     period: '/month',
     description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, quantum cryptography, and quantum networking capabilities.',
     features: [
-      'Quantum entanglement networks',
-      'Quantum cryptography',
-      'Quantum repeaters',
-      'Quantum routers',
-      'Quantum memory systems',
-      'Quantum error correction',
-      'Quantum network security',
-      'Quantum teleportation',
-      'Quantum internet protocols',
-      'Quantum network management'
+      'Quantum entanglement networksQuantum cryptography',
+      'Quantum repeatersQuantum routers',
+      'Quantum memory systemsQuantum error correction',
+      'Quantum network securityQuantum teleportation',
+      'Quantum internet protocolsQuantum network management'
     ],
     popular: true,
     icon: '🌐⚛️',
@@ -279,11 +254,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     setupTime: '4 weeks',
     category: 'Quantum Tech & Internet',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Networks', 'Quantum Cryptography', 'Python', 'Qiskit', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Telecom networks', 'Government systems', 'Defense platforms', 'Research databases', 'Financial systems', 'Healthcare platforms'],
-    useCases: ['Secure communications', 'Government networks', 'Defense systems', 'Financial transactions', 'Healthcare data', 'Research collaboration'],
+    technology: ['Quantum ComputingQuantum Networks', 'Quantum CryptographyPython', 'QiskitReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Telecom networksGovernment systems', 'Defense platformsResearch databases', 'Financial systemsHealthcare platforms'],
+    useCases: ['Secure communicationsGovernment networks', 'Defense systemsFinancial transactions', 'Healthcare dataResearch collaboration'],
     roi: 'Average customer sees 1800% ROI within 18 months through quantum security and future-proof infrastructure.',
-    competitors: ['Cisco', 'Juniper', 'Huawei', 'Nokia', 'Ericsson'],
+    competitors: ['CiscoJuniper', 'HuaweiNokia', 'Ericsson'],
     marketSize: '$127.3B market',
     growthRate: '35.8% annual growth',
     variant: 'quantum-futuristic',
@@ -300,4 +275,4 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.9,
     reviews: 34
   }
-];
+],

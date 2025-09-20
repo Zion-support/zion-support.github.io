@@ -1,44 +1,36 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from 'lucide-react';
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from "lucide-react";
 const NewsletterSection: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState(''),
+  const [isSubscribed, setIsSubscribed] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email) return,
 
-    setIsLoading(true);
+    setIsLoading(true),
 
     // Simulate API call
     setTimeout(() => {
-      setIsSubscribed(true);
-      setIsLoading(false);
-      setEmail('');
-    }, 1500);
-  };
+      setIsSubscribed(true),
+      setIsLoading(false),
+      setEmail('')
+    }, 1500),
+  },
 
   const benefits = [
     {
-      icon: Bell,
-      title: "Latest Updates",
-      description: "Stay informed about new services and features"
-    },
+      icon: Bell,title: "Latest Updates",description: "Stay informed about new services and features"
+    };
     {
-      icon: TrendingUp,
-      title: "Industry Insights",
-      description: "Get exclusive access to tech trends and analysis"
-    },
+      icon: TrendingUp,title: "Industry Insights",description: "Get exclusive access to tech trends and analysis"
+    };
     {
-      icon: Zap,
-      title: "Early Access",
-      description: "Be the first to know about beta programs and launches"
+      icon: Zap,title: "Early Access",description: "Be the first to know about beta programs and launches"
     }
   ];
-
   if (isSubscribed) {
     return (
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
@@ -54,19 +46,19 @@ const NewsletterSection: React.FC = () => {
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>
             <p className="text-gray-300 text-lg mb-6">
-              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
+              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights;
               service announcements, and exclusive content.
             </p>
             <button
               onClick={() => setIsSubscribed(false)}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
               Subscribe Another Email
             </button>
           </motion.div>
         </div>
       </section>
-    );
+    )
   }
 
   return (
@@ -166,11 +158,11 @@ const NewsletterSection: React.FC = () => {
               <div className="mt-6 text-center">
                 <p className="text-xs text-gray-400">
                   By subscribing, you agree to our{' '}
-                  <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                  <a href="/privacy" className="text-cyan-400 hover: text-cyan-300 underline">
                     Privacy Policy
                   </a>{' '}
                   and{' '}
-                  <a href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                  <a href="/terms" className="text-cyan-400 hover: text-cyan-300 underline">
                     Terms of Service
                   </a>
                 </p>
@@ -180,7 +172,6 @@ const NewsletterSection: React.FC = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
-
 export default NewsletterSection;

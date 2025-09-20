@@ -1,36 +1,37 @@
-import React, { useState, useEffect } from 'react';
-export default EmergingTechShowcase2025;}}
-import { Brain, import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import React, { useState, useEffect } from 'react',
+export default EmergingTechShowcase2025,}}
+import { Brain,
+import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025',
 export default function Page() {
 ,
     { id: 'Brain - Computer Interfaces', name: 'BCI', icon: Eye, color: 'from - red - 500 to - orange - 600' },
     { id: 'Synthetic Biology', name: 'Synthetic Biology', icon: Dna, color: 'from - emerald - 500 to - teal - 600' },
     { id: 'Fusion Energy', name: 'Fusion Energy', icon: Zap, color: 'from - yellow-500 to - orange - 600' },
-    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from - indigo - 500 to - purple - 600' },;
-    { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from - cyan - 500 to - blue - 600' },;
-    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from - pink - 500 to - rose - 600' },;
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from - gray - 500 to - slate - 600' },;
-    { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from - lime - 500 to - green - 600' },;
-    { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from - amber - 500 to - yellow-600' },;
-    { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from - slate - 500 to - gray - 600' };
-  ];
+    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from - indigo - 500 to - purple - 600' },
+    { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from - cyan - 500 to - blue - 600' },
+    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from - pink - 500 to - rose - 600' },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from - gray - 500 to - slate - 600' },
+    { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from - lime - 500 to - green - 600' },
+    { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from - amber - 500 to - yellow-600' },
+    { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from - slate - 500 to - gray - 600' },
+  ],
 
-    const filteredServices = selectedCategory === 'all';
-    ? EMERGING_TECH_SERVICES_2025;
-    : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory) ;
+    const filteredServices = selectedCategory === 'all',
+    ? EMERGING_TECH_SERVICES_2025,
+    : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory) ,
 
   useEffect(() => {
     if(autoPlay) {
-      const interval = setInterval(() => {;
-        setCurrentSlide((prev) => (prev + 1) % filteredServices.length) ;
-      }, 5000) ;
-      return () => clearInterval(interval) ;
+      const interval = setInterval(() => {,
+        setCurrentSlide((prev) => (prev + 1) % filteredServices.length) ,
+      }, 5000) ,
+      return () => clearInterval(interval) ,
 
-  }, [autoPlay, filteredServices.length]) ;
+  }, [autoPlay, filteredServices.length]) ,
 
-  const getCategoryIcon = (category: string) => {;
-    const categoryData = categories.find(cat => cat.id === category) ;
-    return categoryData ? categoryData.icon : Globe};
+  const getCategoryIcon = (category: string) => {,
+    const categoryData = categories.find(cat => cat.id === category) ,
+    return categoryData ? categoryData.icon : Globe},
 
           <div  className="grid md: grid - cols - 2 lg:grid - cols - 3 gap-8">
             {filteredServices.map((service, index) => (<motion.div
@@ -90,14 +91,14 @@ export default function Page() {
                   className="w-full bg-gradient - to - r from - blue - 500 to - purple - 600 text-white py-3 rounded-xl font - semibold hover:shadow-lg transition -all"
 
                   {service.ctaLabel}
-                </motion.button>;
+                </motion.button>,
               </motion.div>) ) }
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-gradient - to - r from - blue - 600 / 20 to - purple -600 / 20">;
+      <section className="py-20 px-4 bg-gradient - to - r from - blue - 600 / 20 to - purple -600 / 20">,
         <div  className="max - w-4xl mx - auto text-center">
           <h2 className="text-4xl font - bold text-white mb-6">Ready to Explore the Future?</h2>
           <p className="text-xl text-gray - 300 mb-8">
@@ -169,16 +170,16 @@ export default function Page() {
   { scale: 0.9,
   opacity: 0
 
-;
-;
+,
 
-}};
-              className="bg-gradient - to - br from - slate - 800 to - slate - 900 rounded-3xl p - 8 max - w-4xl w-full max - h-[90vh] overflow-y-auto";
-              onClick={ (e) => e.stopPropagation () };
-            >;
-              { ( () => {;
-                const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService) ;
-                if(!service) return null;
+
+}},
+              className="bg-gradient - to - br from - slate - 800 to - slate - 900 rounded-3xl p - 8 max - w-4xl w-full max - h-[90vh] overflow-y-auto",
+              onClick={ (e) => e.stopPropagation () },
+            >,
+              { ( () => {,
+                const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService) ,
+                if(!service) return null,
 
                 return (<div>
                     <div  className="flex items - center justify - between mb-6">
@@ -254,14 +255,14 @@ export default function Page() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={ () => setSelectedService(null) }
-                        className="px-8 py-3 border border-white / 20 text-white rounded-xl hover:bg-white / 10 transition -all"
-                      >;
-                        Close;
-                      </motion.button>;
-                    </div>;
-                  </div>;) ;
+                        className="px-8 py-3 border border-white / 20 text-white rounded-xl hover: bg-white / 10 transition -all"
+                      >,
+                        Close,
+                      </motion.button>,
+                    </div>,
+                  </div>,) 
               }) () }
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </div>) };
+    </div>) },

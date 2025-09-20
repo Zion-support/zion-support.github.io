@@ -1,15 +1,15 @@
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react",
+import { Link } from "react-router-dom",
 import { 
-  ArrowRight, 
+  ArrowRight,
   Search, 
   Users, 
   Briefcase, 
   Settings, 
   MessageSquare, 
   Smartphone 
-} from "lucide-react";
+} from "lucide-react",
 
 export function QuickAccess() {
   const quickLinks = [
@@ -49,7 +49,7 @@ export function QuickAccess() {
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
     }
-  ];
+  ],
 
   return (
     <section className="py-12 bg-zion-blue-dark">
@@ -84,5 +84,5 @@ export function QuickAccess() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

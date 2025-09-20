@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Wifi, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredIoTPlatform: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredIoTPlatform: React.FC = () => {
       title: 'Multi-device Support',
       description: 'IoT platform support across various devices and protocols'
     }
-  ];
+  ],
 
   const iotCapabilities = [
     {
       area: 'Device Management',
-      capabilities: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Configuration management'],
+      capabilities: ['Device provisioningRemote monitoring', 'Firmware updatesConfiguration management'],
       improvement: '99.9% reliability',
       management: 'Advanced'
     },
     {
       area: 'Data Analytics',
-      capabilities: ['Real-time processing', 'Predictive analytics', 'Pattern recognition', 'Insight generation'],
+      capabilities: ['Real-time processingPredictive analytics', 'Pattern recognitionInsight generation'],
       improvement: 'Real-time analysis',
       analytics: 'Intelligent'
     },
     {
       area: 'Connectivity & Protocols',
-      capabilities: ['Multi-protocol support', 'Edge computing', 'Cloud integration', 'Network optimization'],
+      capabilities: ['Multi-protocol supportEdge computing', 'Cloud integrationNetwork optimization'],
       improvement: 'Seamless connectivity',
       connectivity: 'Comprehensive'
     },
     {
       area: 'Security & Compliance',
-      capabilities: ['Device authentication', 'Data encryption', 'Access control', 'Regulatory compliance'],
+      capabilities: ['Device authenticationData encryption', 'Access controlRegulatory compliance'],
       improvement: 'Enterprise security',
       security: 'Robust'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Smart Cities',
       description: 'AI-powered IoT platform for smart city infrastructure and management',
-      benefits: ['Infrastructure monitoring', 'Traffic optimization', 'Energy management', 'Public safety']
+      benefits: ['Infrastructure monitoringTraffic optimization', 'Energy managementPublic safety']
     },
     {
       title: 'Industrial IoT',
       description: 'IoT platform for manufacturing and industrial automation',
-      benefits: ['Predictive maintenance', 'Process optimization', 'Quality control', 'Efficiency improvement']
+      benefits: ['Predictive maintenanceProcess optimization', 'Quality controlEfficiency improvement']
     },
     {
       title: 'Smart Buildings',
       description: 'IoT platform for building automation and energy management',
-      benefits: ['Building automation', 'Energy optimization', 'Security monitoring', 'Comfort management']
+      benefits: ['Building automationEnergy optimization', 'Security monitoringComfort management']
     },
     {
       title: 'Connected Healthcare',
       description: 'IoT platform for healthcare monitoring and patient care',
-      benefits: ['Patient monitoring', 'Device management', 'Data analytics', 'Care optimization']
+      benefits: ['Patient monitoringDevice management', 'Data analyticsCare optimization']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredIoTPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with IoT platform development',
       features: [
-        'Basic IoT platform features',
-        'Single protocol support',
-        'Standard monitoring',
-        'Email support',
+        'Basic IoT platform featuresSingle protocol support',
+        'Standard monitoringEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredIoTPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced IoT platform needs',
       features: [
-        'Advanced IoT platform features',
-        'Multi-protocol support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced IoT platform featuresMulti-protocol support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time processing'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredIoTPlatform: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex IoT platform requirements',
       features: [
-        'Custom IoT platform development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom IoT platform developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredIoTPlatform: React.FC = () => {
       position: "Platform Director",
       company: "Advanced IoT Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredIoTPlatform: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Build with AI-Powered IoT Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredIoTPlatform: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredIoTPlatform;
+export default AIPoweredIoTPlatform,

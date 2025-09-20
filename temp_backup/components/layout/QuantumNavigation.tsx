@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, Home, Rocket, Brain, Globe, Shield, 
   Users, FileText, Phone, ChevronDown, Sparkles,
   Cpu, Database, Lock, Smartphone, Palette
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
+  name: string,
+  href: string,
+  icon: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[]
 }
 
 const navigationItems: NavigationItem[] = [
@@ -66,7 +66,7 @@ const navigationItems: NavigationItem[] = [
     icon: <Phone className="w-5 h-5" />,
     description: 'Get in touch'
   }
-];
+],
 
 const QuantumNavigation: React.FC = () => {
   return (
@@ -74,7 +74,7 @@ const QuantumNavigation: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">QuantumNavigation</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default QuantumNavigation;
+export default QuantumNavigation,

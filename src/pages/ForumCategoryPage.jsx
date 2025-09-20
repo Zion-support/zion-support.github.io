@@ -12,44 +12,21 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/c
 // Mock category data
 const categoriesInfo = {
     "getting-hired": {
-        id: "getting-hired",
-        name: "Getting Hired",
-        description: "Tips, strategies, and questions about getting hired on the platform.",
-        postCount: 45,
-        adminOnly: false,
-        icon: "Briefcase"
-    },
+        id: "getting-hired",name: "Getting Hired",description: "Tips, strategies, and questions about getting hired on the platform.",
+        postCount: 45,adminOnly: false,icon: "Briefcase"
+    };
     "project-help": {
-        id: "project-help",
-        name: "Project Help",
-        description: "Get help with your ongoing projects and collaboration.",
-        postCount: 67,
-        adminOnly: false,
-        icon: "MessageSquare"
-    },
+        id: "project-help",name: "Project Help",description: "Get help with your ongoing projects and collaboration.",postCount: 67,adminOnly: false,icon: "MessageSquare"
+    };
     "ai-tools": {
-        id: "ai-tools",
-        name: "AI Tools Discussion",
-        description: "Discuss AI tools, frameworks, and best practices.",
-        postCount: 89,
-        adminOnly: false,
-        icon: "Code"
-    },
+        id: "ai-tools",name: "AI Tools Discussion",description: "Discuss AI tools, frameworks, and best practices.",
+        postCount: 89,adminOnly: false,icon: "Code"
+    };
     "feedback": {
-        id: "feedback",
-        name: "Feedback & Feature Requests",
-        description: "Share your feedback and suggest new features.",
-        postCount: 23,
-        adminOnly: false,
-        icon: "FileText"
-    },
+        id: "feedback",name: "Feedback & Feature Requests",description: "Share your feedback and suggest new features.",postCount: 23,adminOnly: false,icon: "FileText"
+    };
     "announcements": {
-        id: "announcements",
-        name: "Announcements",
-        description: "Official announcements from the Zion team.",
-        postCount: 12,
-        adminOnly: true,
-        icon: "Megaphone"
+        id: "announcements",name: "Announcements",description: "Official announcements from the Zion team.",postCount: 12,adminOnly: true,icon: "Megaphone"
     }
 };
 const iconMap = {
@@ -58,20 +35,20 @@ const iconMap = {
     "Code": Code,
     "FileText": FileText,
     "Megaphone": Megaphone
-};
-function CategoryContent({ categoryId, category, IconComponent, user, }) {
-    const [searchQuery, setSearchQuery] = useState("");
-    const { posts = [], loading, } = usePostsByCategory(categoryId);
-    const errorMessage = null;
+},
+function CategoryContent({ categoryId, category, IconComponent, user }) {
+    const [searchQuery, setSearchQuery] = useState(""),
+    const { posts = [], loading } = usePostsByCategory(categoryId),
+    const errorMessage = null,
     const filteredPosts = searchQuery
         ? posts.filter((post) => post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-        : posts;
-    const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
+        : posts,
+    const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin"),
     return (<div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
-        <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
+        <Link to="/community" className="text-sm text-muted-foreground hover: text-foreground">
           Forum
         </Link>
         <span className="text-muted-foreground">/</span>
@@ -110,8 +87,8 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
     </div>);
 }
 export default function ForumCategoryPage() {
-    const { categoryId } = useParams();
-    const { user } = useAuth();
+    const { categoryId } = useParams(),
+    const { user } = useAuth(),
     if (!categoryId || !categoriesInfo[categoryId]) {
         return <NotFound />;
     }

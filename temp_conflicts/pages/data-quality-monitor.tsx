@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import { Database, Check, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { real2029Q3Additions } from '../data/real-2029-q3-additions';
+import React from 'react',
+import Head from 'next/head',
+import { Database, Check, Phone, Mail, MapPin, ArrowRight } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button',
+import { real2029Q3Additions } from '../data/real-2029-q3-additions',
 
 export default function DataQualityMonitorPage() {
-	const service = real2029Q3Additions.find(s => s.id === 'data-quality-monitor');
-	if (!service) return null;
+	const service = real2029Q3Additions.find(s => s.id === 'data-quality-monitor'),
+	if (!service) return null,
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -51,6 +51,6 @@ export default function DataQualityMonitorPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }
 

@@ -1,38 +1,38 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   BarChart3, Users, Eye, MousePointer, 
   Clock, TrendingUp, TrendingDown, 
   Activity, Zap, Target, Filter,
   Download, Share2, RefreshCw, X, AlertTriangle
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  topPages: Array<{ path: string; views: number; conversion: number }>;
-  userBehavior: Array<{ action: string; count: number; trend: 'up' | 'down' | 'stable' }>;
+  pageViews: number,
+  uniqueVisitors: number,
+  sessionDuration: number,
+  bounceRate: number,
+  conversionRate: number,
+  topPages: Array<{ path: string, views: number, conversion: number }>,
+  userBehavior: Array<{ action: string, count: number, trend: 'up' | 'down' | 'stable' }>,
   performance: {
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    cumulativeLayoutShift: number;
-  };
+    loadTime: number,
+    firstContentfulPaint: number,
+    largestContentfulPaint: number,
+    cumulativeLayoutShift: number
+  },
   deviceBreakdown: {
-    desktop: number;
-    mobile: number;
-    tablet: number;
-  };
-  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
+    desktop: number,
+    mobile: number,
+    tablet: number
+  },
+  geographicData: Array<{ country: string, visitors: number, percentage: number }>,
 }
 
 interface AnalyticsProps {
-  showUI?: boolean;
-  autoRefresh?: boolean;
-  refreshInterval?: number;
+  showUI?: boolean,
+  autoRefresh?: boolean,
+  refreshInterval?: number,
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({ 
@@ -40,14 +40,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
   autoRefresh = true, 
   refreshInterval = 30000 
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [data, setData] = useState<AnalyticsData | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [timeRange, setTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
+  const [isOpen, setIsOpen] = useState(false),
+  const [data, setData] = useState<AnalyticsData | null>(null),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [timeRange, setTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h'),
   
-  const refreshIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const lastRefreshRef = useRef<Date>(new Date());
+  const refreshIntervalRef = useRef<NodeJS.Timeout | null>(null),
+  const lastRefreshRef = useRef<Date>(new Date()),
 
   // Mock data for demonstration - replace with real analytics API
   const mockData: AnalyticsData = {
@@ -88,52 +88,52 @@ const Analytics: React.FC<AnalyticsProps> = ({
       { country: 'Germany', visitors: 567, percentage: 6.9 },
       { country: 'Australia', visitors: 456, percentage: 5.5 }
     ]
-  };
+  },
 
   // Initialize analytics tracking
   useEffect(() => {
-    initializeAnalytics();
-    return () => cleanupAnalytics();
-  }, []);
+    initializeAnalytics(),
+    return () => cleanupAnalytics(),
+  }, []),
 
   // Auto-refresh functionality
   useEffect(() => {
     if (autoRefresh && isOpen) {
       refreshIntervalRef.current = setInterval(() => {
-        refreshData();
-      }, refreshInterval);
+        refreshData(),
+      }, refreshInterval),
     }
 
     return () => {
       if (refreshIntervalRef.current) {
-        clearInterval(refreshIntervalRef.current);
+        clearInterval(refreshIntervalRef.current),
       }
-    };
-  }, [autoRefresh, isOpen, refreshInterval]);
+    },
+  }, [autoRefresh, isOpen, refreshInterval]),
 
   const initializeAnalytics = useCallback(() => {
     // Initialize real analytics service here
     // Example: Google Analytics, Mixpanel, etc.
-    console.log('Analytics initialized');
+    console.log('Analytics initialized'),
     
     // Track page view
-    trackPageView();
+    trackPageView(),
     
     // Track user session
-    trackUserSession();
+    trackUserSession(),
     
     // Set up performance monitoring
-    setupPerformanceMonitoring();
+    setupPerformanceMonitoring(),
     
     // Set up user behavior tracking
-    setupUserBehaviorTracking();
-  }, []);
+    setupUserBehaviorTracking(),
+  }, []),
 
   const cleanupAnalytics = useCallback(() => {
     if (refreshIntervalRef.current) {
-      clearInterval(refreshIntervalRef.current);
+      clearInterval(refreshIntervalRef.current),
     }
-  }, []);
+  }, []),
 
   const trackPageView = useCallback(() => {
     const pageData = {
@@ -144,19 +144,19 @@ const Analytics: React.FC<AnalyticsProps> = ({
       userAgent: navigator.userAgent,
       screenResolution: `${window.screen.width}x${window.screen.height}`,
       language: navigator.language
-    };
+    },
 
     // Send to analytics service
-    console.log('Page view tracked:', pageData);
+    console.log('Page view tracked:', pageData),
     
     // Store in localStorage for demo
-    const pageViews = JSON.parse(localStorage.getItem('analytics_pageViews') || '[]');
-    pageViews.push(pageData);
-    localStorage.setItem('analytics_pageViews', JSON.stringify(pageViews.slice(-100)));
-  }, []);
+    const pageViews = JSON.parse(localStorage.getItem('analytics_pageViews') || '[]'),
+    pageViews.push(pageData),
+    localStorage.setItem('analytics_pageViews', JSON.stringify(pageViews.slice(-100))),
+  }, []),
 
   const trackUserSession = useCallback(() => {
-    const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     const sessionData = {
       id: sessionId,
       startTime: new Date().toISOString(),
@@ -164,63 +164,63 @@ const Analytics: React.FC<AnalyticsProps> = ({
       screenResolution: `${window.screen.width}x${window.screen.height}`,
       language: navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-    };
+    },
 
-    localStorage.setItem('analytics_session', JSON.stringify(sessionData));
+    localStorage.setItem('analytics_session', JSON.stringify(sessionData)),
     
     // Track session end on page unload
     window.addEventListener('beforeunload', () => {
-      const session = JSON.parse(localStorage.getItem('analytics_session') || '{}');
-      session.endTime = new Date().toISOString();
-      session.duration = new Date(session.endTime).getTime() - new Date(session.startTime).getTime();
-      localStorage.setItem('analytics_session', JSON.stringify(session));
-    });
-  }, []);
+      const session = JSON.parse(localStorage.getItem('analytics_session') || '{}'),
+      session.endTime = new Date().toISOString(),
+      session.duration = new Date(session.endTime).getTime() - new Date(session.startTime).getTime(),
+      localStorage.setItem('analytics_session', JSON.stringify(session)),
+    }),
+  }, []),
 
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const entries = list.getEntries(),
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            console.log('FCP:', entry.startTime);
+            console.log('FCP:', entry.startTime),
           }
-        });
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+        }),
+      }),
+      fcpObserver.observe({ entryTypes: ['paint'] }),
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const entries = list.getEntries(),
         entries.forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            console.log('LCP:', entry.startTime),
           }
-        });
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        }),
+      }),
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        const entries = list.getEntries();
+        let clsValue = 0,
+        const entries = list.getEntries(),
         entries.forEach((entry: PerformanceEntry) => {
           if ('hadRecentInput' in entry && !(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += (entry as any).value
           }
-        });
-        console.log('CLS:', clsValue);
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+        }),
+        console.log('CLS:', clsValue),
+      }),
+      clsObserver.observe({ entryTypes: ['layout-shift'] }),
     }
-  }, []);
+  }, []),
 
   const setupUserBehaviorTracking = useCallback(() => {
     // Track clicks
     document.addEventListener('click', (e) => {
-      const target = e.target as HTMLElement;
+      const target = e.target as HTMLElement,
       const clickData = {
         element: target.tagName.toLowerCase(),
         text: target.textContent?.substring(0, 50),
@@ -228,49 +228,49 @@ const Analytics: React.FC<AnalyticsProps> = ({
         id: target.id,
         timestamp: new Date().toISOString(),
         path: window.location.pathname
-      };
+      },
       
-      console.log('Click tracked:', clickData);
+      console.log('Click tracked:', clickData),
       
       // Store clicks for analysis
-      const clicks = JSON.parse(localStorage.getItem('analytics_clicks') || '[]');
-      clicks.push(clickData);
-      localStorage.setItem('analytics_clicks', JSON.stringify(clicks.slice(-1000)));
-    });
+      const clicks = JSON.parse(localStorage.getItem('analytics_clicks') || '[]'),
+      clicks.push(clickData),
+      localStorage.setItem('analytics_clicks', JSON.stringify(clicks.slice(-1000))),
+    }),
 
     // Track scroll depth
-    let maxScrollDepth = 0;
+    let maxScrollDepth = 0,
     window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100),
       if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
-        console.log('Scroll depth:', maxScrollDepth + '%');
+        maxScrollDepth = scrollDepth,
+        console.log('Scroll depth:', maxScrollDepth + '%'),
       }
-    });
+    }),
 
     // Track form interactions
     document.addEventListener('submit', (e) => {
-      const form = e.target as HTMLFormElement;
+      const form = e.target as HTMLFormElement,
       const formData = {
         action: form.action,
         method: form.method,
         timestamp: new Date().toISOString(),
         path: window.location.pathname
-      };
+      },
       
-      console.log('Form submission tracked:', formData);
-    });
-  }, []);
+      console.log('Form submission tracked:', formData),
+    }),
+  }, []),
 
   const refreshData = useCallback(async () => {
-    if (loading) return;
+    if (loading) return,
     
-    setLoading(true);
-    setError(null);
+    setLoading(true),
+    setError(null),
     
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000)),
       
       // Update mock data with some variation
       const updatedData = {
@@ -278,65 +278,65 @@ const Analytics: React.FC<AnalyticsProps> = ({
         pageViews: mockData.pageViews + Math.floor(Math.random() * 100),
         uniqueVisitors: mockData.uniqueVisitors + Math.floor(Math.random() * 20),
         sessionDuration: mockData.sessionDuration + Math.floor(Math.random() * 10) - 5
-      };
+      },
       
-      setData(updatedData);
-      lastRefreshRef.current = new Date();
+      setData(updatedData),
+      lastRefreshRef.current = new Date(),
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to refresh data');
+      setError(err instanceof Error ? err.message : 'Failed to refresh data'),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  }, [loading]);
+  }, [loading]),
 
   const exportData = useCallback(() => {
-    if (!data) return;
+    if (!data) return,
     
-    const csvContent = generateCSV(data);
-    const blob = new window.Blob([csvContent], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `analytics_${new Date().toISOString().split('T')[0]}.csv`;
-    a.click();
-    window.URL.revokeObjectURL(url);
-  }, [data]);
+    const csvContent = generateCSV(data),
+    const blob = new window.Blob([csvContent], { type: 'text/csv' }),
+    const url = window.URL.createObjectURL(blob),
+    const a = document.createElement('a'),
+    a.href = url,
+    a.download = `analytics_${new Date().toISOString().split('T')[0]}.csv`,
+    a.click(),
+    window.URL.revokeObjectURL(url),
+  }, [data]),
 
   const generateCSV = (data: AnalyticsData): string => {
-    const headers = ['Metric', 'Value', 'Unit'];
+    const headers = ['MetricValue', 'Unit'],
     const rows = [
       ['Page Views', data.pageViews.toString(), ''],
       ['Unique Visitors', data.uniqueVisitors.toString(), ''],
       ['Session Duration', data.sessionDuration.toString(), 'seconds'],
       ['Bounce Rate', data.bounceRate.toString(), '%'],
       ['Conversion Rate', data.conversionRate.toString(), '%']
-    ];
+    ],
     
-    return [headers, ...rows].map(row => row.join(',')).join('\n');
-  };
+    return [headers, ...rows].map(row => row.join()).join('\n'),
+  },
 
   const shareData = useCallback(() => {
-    if (!data) return;
+    if (!data) return,
     
     const shareText = `Zion Tech Group Analytics - ${timeRange}\n` +
       `Page Views: ${data.pageViews.toLocaleString()}\n` +
       `Unique Visitors: ${data.uniqueVisitors.toLocaleString()}\n` +
-      `Conversion Rate: ${data.conversionRate}%`;
+      `Conversion Rate: ${data.conversionRate}%`,
     
     if (navigator.share) {
       navigator.share({
         title: 'Analytics Report',
         text: shareText,
         url: window.location.href
-      });
+      }),
     } else {
-      navigator.clipboard.writeText(shareText);
-      console.log('Analytics data copied to clipboard');
+      navigator.clipboard.writeText(shareText),
+      console.log('Analytics data copied to clipboard'),
     }
-  }, [data, timeRange]);
+  }, [data, timeRange]),
 
   // Don't render UI if not requested
-  if (!showUI) return null;
+  if (!showUI) return null,
 
 const Analytics: React.FC = () => {
   return (
@@ -344,7 +344,7 @@ const Analytics: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">Analytics</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default Analytics;
+export default Analytics,

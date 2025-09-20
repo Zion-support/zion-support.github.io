@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-export default ApiPlayground;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default ApiPlayground,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 7 },
-    { id: 'iot', name: 'IoT & Edge', icon: Network, count: 4 },
-  ];
+    { id: 'iot', name: 'IoT & Edge', icon: Network, count: 4 }
+  ],
 
   const methods = [{ id: 'all', name: 'All Methods', count: 0 },
     { id: 'GET', name: 'GET', count: 0, color: 'text-green - 400' },
     { id: 'POST', name: 'POST', count: 0, color: 'text-blue - 400' },
     { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },
-    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red - 400' },
-  ];
+    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red - 400' }
+  ],
 
   const apis = [{
       id: 1,
@@ -33,36 +33,36 @@ export default function Page() {
           name: 'text',
           type: 'string',
           required: true,
-          description: 'Text to analyze',
+          description: 'Text to analyze'
         },
         {
           name: 'language',
           type: 'string',
           required: false,
-          description: 'Language code(default: auto - detect) ',
+          description: 'Language code(default: auto - detect) '
         },
         {
           name: 'features',
           type: 'array',
           required: false,
-          description: 'Analysis features to enable',
-        },
+          description: 'Analysis features to enable'
+        }
       ],
       requestExample: {
         text: "I love this new AI technology ! It's amazing how it can understand context.",
         language: 'en',
-        features: ['sentiment', 'entities', 'keywords'],
+        features: ['sentimententities', 'keywords']
       },
       responseExample: {
         sentiment: { score: 0.9, label: 'positive' },
-        entities: [{ text: 'AI technology', type: 'technology', confidence: 0.95 },
+        entities: [{ text: 'AI technology', type: 'technology', confidence: 0.95 }
         ],
-        keywords: ['AI', 'technology', 'amazing', 'context'],
-        language: 'en',
+        keywords: ['AItechnology', 'amazingcontext'],
+        language: 'en'
       },
       documentation: 'https://docs.ziontechgroup.com / api / ai - text-analysis',
       sdk: 'https://github.com / ziontechgroup / ai - sdk',
-      featured: true,
+      featured: true
     },
     {
       id: 2,
@@ -81,25 +81,25 @@ export default function Page() {
           name: 'region',
           type: 'string',
           required: false,
-          description: 'Cloud region',
+          description: 'Cloud region'
         },
         {
           name: 'type',
           type: 'string',
           required: false,
-          description: 'Resource type',
+          description: 'Resource type'
         },
         {
           name: 'status',
           type: 'string',
           required: false,
-          description: 'Resource status',
-        },
+          description: 'Resource status'
+        }
       ],
       requestExample: {
         region: 'us - east - 1',
         type: 'compute',
-        status: 'running',
+        status: 'running'
       },
       responseExample: {
         resources: [{
@@ -107,14 +107,14 @@ export default function Page() {
             name: 'web - server - 01',
             type: 'compute',
             status: 'running',
-            region: 'us - east - 1',
-          },
+            region: 'us - east - 1'
+          }
         ],
-        total: 1,
+        total: 1
       },
       documentation: 'https://docs.ziontechgroup.com / api / cloud - resources',
       sdk: 'https://github.com / ziontechgroup / cloud - sdk',
-      featured: false,
+      featured: false
     },
     {
       id: 3,
@@ -132,85 +132,85 @@ export default function Page() {
           name: 'data',
           type: 'object',
           required: true,
-          description: 'Security event data',
+          description: 'Security event data'
         },
         {
           name: 'severity',
           type: 'string',
           required: false,
-          description: 'Threat severity level',
-        },
+          description: 'Threat severity level'
+        }
       ],
       requestExample: {
         data: {
           source_ip: '192.168.1.100',
           event_type: 'login_attempt',
-          timestamp: '2024 - 01 - 15T10:30:00Z',
+          timestamp: '2024 - 01 - 15T10:30:00Z'
         },
-        severity: 'high',
+        severity: 'high'
       },
       responseExample: {
         threat_detected: true,
         confidence: 0.95,
         threat_type: 'brute_force_attack',
-        recommendations: ['Enable 2FA', 'Block IP temporarily'],
+        recommendations: ['Enable 2FABlock IP temporarily']
       },
       documentation: 'https://docs.ziontechgroup.com / api / security - threats',
       sdk: 'https://github.com / ziontechgroup / security - sdk',
-      featured: true,
-    },
-  ];
+      featured: true
+    }
+  ],
 
   const getMethodColor = (method: string) => {
     switch(method) {
       case 'GET':
-        return 'text-green - 400';
+        return 'text-green - 400',
       case 'POST':
-        return 'text-blue - 400';
+        return 'text-blue - 400',
       case 'PUT':
-        return 'text-yellow-400';
+        return 'text-yellow-400',
       case 'DELETE':
-        return 'text-red - 400';
+        return 'text-red - 400',
       default:
-        return 'text-gray - 400';
+        return 'text-gray - 400'
     }
-  };
+  },
 
   const getStatusColor = (status: string) => {
     switch(status) {
       case 'stable':
-        return 'bg-green - 500 / 20 text-green - 400';
+        return 'bg-green - 500 / 20 text-green - 400',
       case 'beta':
-        return 'bg-yellow-500 / 20 text-yellow-400';
+        return 'bg-yellow-500 / 20 text-yellow-400',
       case 'deprecated':
-        return 'bg-red - 500 / 20 text-red - 400';
+        return 'bg-red - 500 / 20 text-red - 400',
       default:
-        return 'bg-gray - 500 / 20 text-gray - 400';
+        return 'bg-gray - 500 / 20 text-gray - 400'
     }
-  };
+  },
 
   const handleApiSelect = useCallback((api: any) => {
-    setSelectedApi(api) ;
-    setRequestBody(JSON.stringify (api.requestExample, null, 2) ) ;
-    setResponseData('') ;
-  };
+    setSelectedApi(api) ,
+    setRequestBody(JSON.stringify (api.requestExample, null, 2) ) ,
+    setResponseData('') ,
+  },
 
   const handleTestApi = async () => {
-    if(!selectedApi) return;
+    if(!selectedApi) return,
 
-    setIsLoading(true) ;
-    setResponseData('') ;
+    setIsLoading(true) ,
+    setResponseData('') ,
 
     // Simulate API call
     setTimeout(() => {
-      setResponseData(JSON.stringify (selectedApi.responseExample, null, 2) ) ;
-      setIsLoading(false) ;
-    }, 2000) ;
-  };
+      setResponseData(JSON.stringify (selectedApi.responseExample, null, 2) ) ,
+      setIsLoading(false) ,
+    }, 2000) ,
+  },
 
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text) ;
-  };
+    navigator.clipboard.writeText(text) 
+  },
 
   return (<>
       <SEO
@@ -494,6 +494,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) ,
+},
 

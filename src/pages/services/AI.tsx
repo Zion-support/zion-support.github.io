@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Cpu,
@@ -22,55 +22,42 @@ import {
   DollarSign,
   Factory,
   ShoppingCart
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIServices() {
   const aiServices = [
     {
-      name: "AI Strategy & Consulting",
-      description: "Strategic guidance on implementing AI solutions across your organization",
-      icon: Target,
-      features: [
-        "AI readiness assessment",
+      name: "AI Strategy & Consulting",description: "Strategic guidance on implementing AI solutions across your organization",icon: Target,features: [
+        "AI readiness assessment";
         "Technology roadmap planning",
         "ROI analysis and business case development",
         "Change management strategies"
       ],
       price: "From $2,500",
       duration: "2-4 weeks"
-    },
+    };
     {
-      name: "Machine Learning Development",
-      description: "Custom ML models and algorithms tailored to your specific business needs",
-      icon: Brain,
-      features: [
-        "Custom model development",
+      name: "Machine Learning Development",description: "Custom ML models and algorithms tailored to your specific business needs",icon: Brain,features: [
+        "Custom model development";
         "Data preprocessing and feature engineering",
         "Model training and optimization",
         "Performance monitoring and maintenance"
       ],
       price: "From $5,000",
       duration: "4-8 weeks"
-    },
+    };
     {
-      name: "AI-Powered Applications",
-      description: "Intelligent automation and insights through custom AI applications",
-      icon: Zap,
-      features: [
-        "Chatbot and virtual assistant development",
+      name: "AI-Powered Applications",description: "Intelligent automation and insights through custom AI applications",icon: Zap,features: [
+        "Chatbot and virtual assistant development";
         "Predictive analytics applications",
         "Computer vision solutions",
         "Natural language processing systems"
       ],
       price: "From $8,500",
       duration: "6-12 weeks"
-    },
+    };
     {
-      name: "AI Infrastructure & MLOps",
-      description: "Scalable AI infrastructure and machine learning operations",
-      icon: Cloud,
-      features: [
-        "ML pipeline automation",
+      name: "AI Infrastructure & MLOps",description: "Scalable AI infrastructure and machine learning operations",icon: Cloud,features: [
+        "ML pipeline automation";
         "Model versioning and deployment",
         "Scalable training infrastructure",
         "Monitoring and alerting systems"
@@ -79,39 +66,32 @@ export default function AIServices() {
       duration: "4-10 weeks"
     }
   ];
-
   const aiTechnologies = [
-    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },
-    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },
-    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },
-    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },
-    { name: "NLP", description: "Natural language processing", icon: MessageSquare },
+    { name: "TensorFlow", description: "Open-source ML framework", icon: Code };
+    { name: "PyTorch", description: "Deep learning research platform", icon: Brain };
+    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu };
+    { name: "Computer Vision", description: "Image and video analysis", icon: Eye };
+    { name: "NLP", description: "Natural language processing", icon: MessageSquare };
     { name: "AutoML", description: "Automated machine learning", icon: Zap }
   ];
-
   const useCases = [
     {
-      industry: "Healthcare",
-      applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],
+      industry: "Healthcare",applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],
       icon: Heart
-    },
+    };
     {
-      industry: "Finance",
-      applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],
+      industry: "Finance",applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],
       icon: DollarSign
-    },
+    };
     {
-      industry: "Manufacturing",
-      applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
+      industry: "Manufacturing",applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
-    },
+    };
     {
-      industry: "Retail",
-      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
+      industry: "Retail",applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
       icon: ShoppingCart
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -125,7 +105,7 @@ export default function AIServices() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence. From strategy to implementation,
+              Transform your business with cutting-edge artificial intelligence. From strategy to implementation;
               we deliver AI solutions that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -273,7 +253,7 @@ export default function AIServices() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -301,5 +281,5 @@ export default function AIServices() {
         </div>
       </section>
     </div>
-  );
+  )
 }

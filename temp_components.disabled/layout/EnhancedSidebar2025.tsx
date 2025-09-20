@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, ChevronRight,
   Home, Zap, Brain, Atom, Shield, Rocket,
@@ -11,13 +11,13 @@ import {
   Mail, Phone, MapPin, Search, ArrowRight,
   Heart, Palette, GraduationCap, Hospital, Coins, Leaf, Scale,
   BarChart3, Layers, Code, Terminal, Cloud, Server, Network, DollarSign
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
-};
+},
 
 const mainNavigation = [
   {
@@ -44,7 +44,7 @@ const mainNavigation = [
     icon: <Mail className="w-5 h-5" />,
     description: 'Get in touch with us'
   }
-];
+],
 
 const serviceCategories = [
   {
@@ -178,7 +178,7 @@ const serviceCategories = [
       { name: 'Privacy Policy', href: '/privacy' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
@@ -187,38 +187,38 @@ const quickLinks = [
   { name: 'Status', href: '/status', icon: <BarChart3 className="w-4 h-4" /> },
   { name: 'Training', href: '/training', icon: <GraduationCap className="w-4 h-4" /> },
   { name: 'Community', href: '/community', icon: <Users className="w-4 h-4" /> }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
   { name: 'Careers', href: '/careers', icon: <Award className="w-4 h-4" /> },
   { name: 'News', href: '/news', icon: <TrendingUp className="w-4 h-4" /> },
   { name: 'Case Studies', href: '/case-studies', icon: <CheckCircle className="w-4 h-4" /> }
-];
+],
 
 interface EnhancedSidebar2025Props {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void
 }
 
 export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   const toggleCategory = (categoryTitle: string) => {
     setExpandedCategories(prev => 
       prev.includes(categoryTitle) 
         ? prev.filter(cat => cat !== categoryTitle)
         : [...prev, categoryTitle]
-    );
-  };
+    ),
+  },
 
   // Search functionality can be implemented here if needed
   // const filteredServices = sidebarSections.flatMap(section =>
   //   section.items.filter(item =>
   //     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   //   )
-  // );
+  // ),
 
 const EnhancedSidebar2025: React.FC = () => {
   return (
@@ -226,8 +226,8 @@ const EnhancedSidebar2025: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedSidebar2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
 
-export default SuperPromotionalBanner;
+export default SuperPromotionalBanner,

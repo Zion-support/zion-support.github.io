@@ -1,4 +1,4 @@
-import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield  } from 'lucide-react';
+import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield  } from 'lucide-react',
 export default function Page() {
 ,
         {
@@ -19,7 +19,7 @@ export default function Page() {
             description: 'Connect with our experts to discuss implementation and get started with your chosen solution',
             icon: <Award className="w-8 h-8 text-zion -orange"/>
 
-    ];
+    ],
     return (<div className="min - h-screen bg-zion - blue -dark">
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan relative overflow-hidden">
@@ -49,8 +49,7 @@ export default function Page() {
               <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick={ () => document.getElementById('recommendation - engine') ?.scrollIntoView({ behavior: 'smooth' }) }>
                 Get Started < ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Service Recommendation Help',
-  '_blank') }>
+              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Service Recommendation Help_blank') }>
                 Learn More
               </Button>
             </div>
@@ -251,13 +250,11 @@ export default function Page() {
               Our AI - powered recommendation engine will help you find the perfect
               technology solutions to accelerate your business growth and success.</p>
             <div className="flex flex - col sm:flex - row gap-4 justify -center">
-              <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Business Transformation Consultation',
-  '_blank') }>
+              <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Business Transformation Consultation_blank') }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Start Your Transformation
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('tel:+13024640950',
-  '_blank') }>
+              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('tel:+13024640950_blank') }>
                 <Shield className="w-5 h-5 mr-2"/>
                 Speak with an Expert
               </Button>
@@ -265,5 +262,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

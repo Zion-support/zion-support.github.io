@@ -1,8 +1,8 @@
 
 // Content monitoring functionality
-import { FraudFlag, FraudSeverity } from '@/types/fraud';
-import { analyzeContent } from './analyzeContent';
-import { flagContent } from './flagContent';
+import { FraudFlag, FraudSeverity } from '@/types/fraud',
+import { analyzeContent } from './analyzeContent',
+import { flagContent } from './flagContent',
 
 /**
  * Create a monitoring system helper to easily monitor any content
@@ -14,10 +14,10 @@ export const monitorContent = async (
   contentId: string,
   content: string
 ): Promise<void> => {
-  const analysis = analyzeContent(content);
+  const analysis = analyzeContent(content),
   
   if (analysis.isSuspicious) {
-    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious';
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
     
     // If contains highly suspicious phrases, mark as dangerous
     if (analysis.reasons.some(r => 
@@ -25,7 +25,7 @@ export const monitorContent = async (
       r.includes('external') || 
       r.includes('bypass')
     )) {
-      severity = 'dangerous';
+      severity = 'dangerous',
     }
     
     await flagContent(
@@ -35,15 +35,15 @@ export const monitorContent = async (
       contentId,
       content,
       severity,
-      analysis.reasons.join('; '),
+      analysis.reasons.join(),
       undefined // IP address would be added in a real implementation
-    );
+    ),
     
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
-      console.log('Auto-hiding dangerous content:', contentId);
+      console.log('Auto-hiding dangerous content:', contentId),
       // Code to hide content would go here
     }
   }
-};
+},

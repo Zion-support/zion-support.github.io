@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import React from 'react',
 
 export default function AIAutomationTrends2025() {
   return (
@@ -45,12 +45,12 @@ export default function AIAutomationTrends2025() {
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Rise of Autonomous Decision-Making</h2>
                 <p className="text-white/90 mb-4">
-                  One of the most significant trends we&apos;re seeing in 2025 is the emergence of truly autonomous decision-making systems. 
-                  These aren&apos;t just rule-based automations anymore—they&apos;re intelligent systems that can analyze complex scenarios, 
+                  One of the most significant trends we&apos,re seeing in 2025 is the emergence of truly autonomous decision-making systems. 
+                  These aren&apos,t just rule-based automations anymore—they&apos,re intelligent systems that can analyze complex scenarios, 
                   learn from outcomes, and make decisions with minimal human intervention.
                 </p>
                 <p className="text-white/90 mb-4">
-                  At Zion Tech Group, we&apos;ve been at the forefront of this revolution, developing systems that can:
+                  At Zion Tech Group, we&apos,ve been at the forefront of this revolution, developing systems that can:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
                   <li>• Analyze market conditions and adjust strategies in real-time</li>
@@ -76,8 +76,8 @@ export default function AIAutomationTrends2025() {
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-green-400">Human-AI Collaboration</h2>
                 <p className="text-white/90 mb-4">
-                  Contrary to popular belief, the future isn&apos;t about AI replacing humans—it&apos;s about AI augmenting human capabilities. 
-                  We&apos;re seeing a new paradigm emerge where humans and AI systems work together as collaborative partners.
+                  Contrary to popular belief, the future isn&apos,t about AI replacing humans—it&apos,s about AI augmenting human capabilities. 
+                  We&apos,re seeing a new paradigm emerge where humans and AI systems work together as collaborative partners.
                 </p>
                 <p className="text-white/90 mb-4">
                   This collaboration takes many forms:
@@ -94,8 +94,7 @@ export default function AIAutomationTrends2025() {
                 <h2 className="text-2xl font-semibold mb-6 text-blue-400">Ethical AI and Responsible Automation</h2>
                 <p className="text-white/90 mb-4">
                   As AI systems become more autonomous, the importance of ethical considerations and responsible development 
-                  practices has never been greater. Organizations are increasingly prioritizing:
-                </p>
+                  practices has never been greater. Organizations are increasingly prioritizing: </p>
                 <ul className="space-y-2 text-white/80 mb-6">
                   <li>• Transparency in AI decision-making processes</li>
                   <li>• Fairness and bias detection in automated systems</li>
@@ -105,7 +104,7 @@ export default function AIAutomationTrends2025() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Looking Ahead: What&apos;s Next?</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Looking Ahead: What&apos,s Next?</h2>
                 <p className="text-white/90 mb-4">
                   As we look toward the latter half of 2025 and beyond, several emerging trends are worth watching:
                 </p>
@@ -136,9 +135,9 @@ export default function AIAutomationTrends2025() {
                   will find themselves at a competitive advantage.
                 </p>
                 <p className="text-white/90">
-                  At Zion Tech Group, we&apos;re committed to staying at the forefront of these developments, 
+                  At Zion Tech Group, we&apos,re committed to staying at the forefront of these developments, 
                   ensuring our clients have access to the most advanced autonomous systems available. 
-                  The future of AI automation is here, and it&apos;s more exciting than ever.
+                  The future of AI automation is here, and it&apos,s more exciting than ever.
                 </p>
               </section>
             </article>
@@ -228,7 +227,7 @@ export default function AIAutomationTrends2025() {
               </p>
 
               <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-lg font-semibold mb-2 text-white">Real-World Impact:</h3>
+                <h3 className="text-lg font-semibold mb-2 text-white">Real-World Impact: </h3>
                 <p className="text-white/80 text-sm">
                   "Companies implementing autonomous decision-making systems are seeing 40-60% faster response times to market 
                   changes and 25-35% improvement in decision quality." — Zion Tech Group Research
@@ -240,15 +239,15 @@ export default function AIAutomationTrends2025() {
                   The Rise of Autonomous Decision-Making
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  One of the most significant trends we&apos;re seeing in 2025
+                  One of the most significant trends we&apos,re seeing in 2025
                   is the emergence of truly autonomous decision-making systems.
-                  These aren&apos;t just rule-based automations
-                  anymore—they&apos;re intelligent systems that can analyze
+                  These aren&apos,t just rule-based automations
+                  anymore—they&apos,re intelligent systems that can analyze
                   complex scenarios, learn from outcomes, and make decisions
                   with minimal human intervention.
                 </p>
                 <p className='text-white/90 mb-4'>
-                  At Zion Tech Group, we&apos;ve been at the forefront of this
+                  At Zion Tech Group, we&apos,ve been at the forefront of this
                   revolution, developing systems that can:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
@@ -408,7 +407,7 @@ export default function AIAutomationTrends2025() {
             {/* Related Articles */}
             <section className="mt-16">
               <h2 className="text-2xl font-bold mb-6 text-white/90">Related Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                 <Link href="/blog/ai-ethics-automation" className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">AI Ethics in Automation</h3>
                   <p className="text-white/70 text-sm">Building responsible and ethical AI automation systems</p>
@@ -423,5 +422,5 @@ export default function AIAutomationTrends2025() {
         </main>
       </div>
     </>
-  );
+  )
 }

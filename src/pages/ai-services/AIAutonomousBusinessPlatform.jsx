@@ -1,32 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu } from 'lucide-react';
-import SEO from '@/components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu } from "lucide-react";
+import SEO from "@/components/SEO";
 const features = [
     {
-        title: "Cloud-Native Architecture",
-        description: "Built on modern cloud infrastructure for scalability, reliability, and global accessibility.",
-        icon: Cloud,
-        color: "from-blue-500 to-cyan-500"
-    },
+        title: "Cloud-Native Architecture",description: "Built on modern cloud infrastructure for scalability, reliability, and global accessibility.",
+        icon: Cloud,color: "from-blue-500 to-cyan-500"
+    };
     {
-        title: "AI-Powered Intelligence",
-        description: "Advanced machine learning algorithms that continuously learn and adapt to your business needs.",
-        icon: Brain,
-        color: "from-purple-500 to-pink-500"
-    },
+        title: "AI-Powered Intelligence",description: "Advanced machine learning algorithms that continuously learn and adapt to your business needs.",icon: Brain,color: "from-purple-500 to-pink-500"
+    };
     {
-        title: "Real-time Processing",
-        description: "Instant data processing and analysis for immediate business insights and decision-making.",
-        icon: Zap,
-        color: "from-green-500 to-emerald-500"
-    },
+        title: "Real-time Processing",description: "Instant data processing and analysis for immediate business insights and decision-making.",icon: Zap,color: "from-green-500 to-emerald-500"
+    };
     {
-        title: "Enterprise Security",
-        description: "Bank-level security with encryption, compliance, and advanced threat protection.",
-        icon: Shield,
-        color: "from-orange-500 to-red-500"
+        title: "Enterprise Security",description: "Bank-level security with encryption, compliance, and advanced threat protection.",
+        icon: Shield,color: "from-orange-500 to-red-500"
     }
 ];
 const benefits = [
@@ -36,40 +26,28 @@ const benefits = [
     "Advanced analytics and business intelligence",
     "Customizable workflows and automation",
     "Multi-tenant architecture for cost efficiency"
-];
+],
 const useCases = [
     {
-        title: "Multi-Location Operations",
-        description: "Manage business operations across multiple locations with centralized AI intelligence.",
-        icon: Globe
-    },
+        title: "Multi-Location Operations",description: "Manage business operations across multiple locations with centralized AI intelligence.",icon: Globe
+    };
     {
-        title: "Team Collaboration",
-        description: "Enable seamless collaboration between distributed teams with AI-powered insights.",
-        icon: Users
-    },
+        title: "Team Collaboration",description: "Enable seamless collaboration between distributed teams with AI-powered insights.",icon: Users
+    };
     {
-        title: "Data Analytics",
-        description: "Comprehensive business analytics with real-time dashboards and reporting.",
-        icon: BarChart3
-    },
+        title: "Data Analytics",description: "Comprehensive business analytics with real-time dashboards and reporting.",icon: BarChart3
+    };
     {
-        title: "Process Automation",
-        description: "Automate complex business processes with intelligent workflow management.",
-        icon: Cpu
+        title: "Process Automation",description: "Automate complex business processes with intelligent workflow management.",icon: Cpu
     }
 ];
 const testimonials = [
     {
-        content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from anywhere with real-time insights.",
-        name: "Jennifer Martinez",
-        role: "CTO, GlobalTech Solutions",
+        content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from anywhere with real-time insights.",name: "Jennifer Martinez",role: "CTO, GlobalTech Solutions",
         rating: 5
-    },
+    };
     {
-        content: "This platform is a game-changer. The AI capabilities and cloud architecture give us the flexibility we need to grow rapidly.",
-        name: "David Kim",
-        role: "VP Engineering, ScaleUp Inc",
+        content: "This platform is a game-changer. The AI capabilities and cloud architecture give us the flexibility we need to grow rapidly.",name: "David Kim",role: "VP Engineering, ScaleUp Inc",
         rating: 5
     }
 ];
@@ -174,7 +152,7 @@ export default function AIAutonomousBusinessPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon;
+            const IconComponent = useCase.icon,
             return (<motion.div key={useCase.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>
@@ -220,7 +198,7 @@ export default function AIAutonomousBusinessPlatform() {
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md: text-5xl font-bold mb-4 text-white">
               Ready to Scale Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -239,5 +217,5 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
         </div>
       </section>
-    </div>);
+    </div>)
 }

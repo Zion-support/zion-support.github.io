@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   ArrowRight
   Star
@@ -14,23 +14,23 @@ import {
   Users,
   Award,
   TrendingUp
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltimateContentShowcase2028PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentFeaturesetCurrentFeature] = useState(0),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-rotate features
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }3000),
 
-    return () => clearInterval(interval);
-  }[]);
+    return () => clearInterval(interval),
+  }[]),
 
   const features = [
     {
@@ -57,9 +57,9 @@ const UltimateContentShowcase2028PromotionBanner = () => {
       description: 'Breakthrough quantum technologies',
       color: 'from-cyan-600 to-teal-600'
     }
-  ];
+  ],
 
-  if (isDismissed) return null;
+  if (isDismissed) return null,
 
 const UltimateContentShowcase2028PromotionBanner: React.FC = () => {
   return (
@@ -67,7 +67,7 @@ const UltimateContentShowcase2028PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltimateContentShowcase2028PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltimateContentShowcase2028PromotionBanner;
+export default UltimateContentShowcase2028PromotionBanner,

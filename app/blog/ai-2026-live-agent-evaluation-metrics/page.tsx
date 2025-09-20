@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-	title: 'AI 2026: Live Agent Evaluation Metrics — Practical Guide';
-	description: 'Define, instrument, and operate production-grade evaluation metrics for autonomous agents with gates, SLIs/SLOs, and audit-ready evidence.';
-	keywords: ['AI 2026agent evaluations', 'live evalsSLIs', 'SLOsgatekeeping', 'autonomous agentsobservability'],
-};
+	title: 'AI 2026: Live Agent Evaluation Metrics — Practical Guide',
+	description: 'Define, instrument, and operate production-grade evaluation metrics for autonomous agents with gates, SLIs/SLOs, and audit-ready evidence.',
+	keywords: ['AI 2026agent evaluationslive evalsSLIs', 'SLOsgatekeepingautonomous agentsobservability']
+},
 export default function Page() {,
 	return (,
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -45,5 +45,5 @@ export default function Page() {,
 				</div>,
 			</article>,
 		</main>,
-	),}
+	)}
 ,

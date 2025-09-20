@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  Phone, 
+  Phone,
   Mail, 
   MapPin, 
   Globe, 
@@ -17,14 +17,14 @@ import {
   Shield,
   Users,
   Award
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function FuturisticFooter() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const footerSections = [
     {
@@ -71,7 +71,7 @@ export default function FuturisticFooter() {
         { name: 'Support Center', href: '/support' }
       ]
     }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -80,14 +80,14 @@ export default function FuturisticFooter() {
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
-  ];
+  ],
 
   const stats = [
     { icon: Zap, value: '48+', label: 'Micro SaaS Services' },
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Shield, value: '99.9%', label: 'Uptime SLA' },
     { icon: Award, value: '24/7', label: 'Support Available' }
-  ];
+  ],
 
 const FuturisticFooter: React.FC = () => {
   return (
@@ -95,7 +95,7 @@ const FuturisticFooter: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">FuturisticFooter</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default FuturisticFooter;
+export default FuturisticFooter,

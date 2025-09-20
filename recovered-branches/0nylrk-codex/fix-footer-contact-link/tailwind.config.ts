@@ -26,25 +26,25 @@
         card: {
           DEFAULT: "hsl (var (--card))",
           foreground: "hsl (var (--card - foreground))"}
-        // Custom Zion colors;
+        // Custom Zion colors,
         "zion - blue": {
-          DEFAULT: "#0a0f1f";
+          DEFAULT: "#0a0f1f",
           light: "#1e263b",
           dark: "#090c1a"}
         "zion - purple": {
-          DEFAULT: "#a855f7";
+          DEFAULT: "#a855f7",
           light: "#d8b4fe",
           dark: "#9333ea"}
         "zion - cyan": {
-          DEFAULT: "#00e5ff";
+          DEFAULT: "#00e5ff",
           light: "#7df9ff",
           dark: "#00c4cc"}
         "zion - slate": {
-          DEFAULT: "#94A3B8";
+          DEFAULT: "#94A3B8",
           light: "#CBD5E1",
           dark: "#64748B"}}
       border_radius: {
-        lg: "var (--radius)";
+        lg: "var (--radius)",
         md: "calc (var (--radius) - 2px)",
         sm: "calc (var (--radius) - 4px)"}
       font_family: {
@@ -59,7 +59,7 @@
       animation: {
         "accordion - down": "accordion - down 0.2s ease - out",
         "accordion - up": "accordion - up 0.2s ease - out"}}}
-  plugins: [;
+  plugins: [,
     animate_plugin,
     plugin (function ({ add_utilities }) {
       const new_utilities = {
@@ -74,97 +74,97 @@
     })]},
 
 export default config,
-import { Config } from "tailwindcss",;
-import { fontFamily } from "tailwindcss/defaultTheme",;
-import plugin from "tailwindcss/plugin",;
-import animatePlugin from "tailwindcss-animate",;
-const config: Config = {;
-  darkMode: ["class"],;
-  content: [;
-    "./pages/**/*.{ts,tsx}",;
-    "./components/**/*.{ts,tsx}",;
-    "./app/**/*.{ts,tsx}",;
-    "./src/**/*.{ts,tsx}"],;
-  safelist: ['border-border'],;
-  theme: {;
-    container: {;
-      center: true,;
-      padding: "2rem",;
-      screens: {;
-        "2xl": "1400px"}},;
-    extend: {;
-      colors: {;
-        border: "hsl(var(--border))",;
-        input: "hsl(var(--input))",;
-        ring: "hsl(var(--ring))",;
-        background: "hsl(var(--background))",;
-        foreground: "hsl(var(--foreground))",;
-        primary: {;
-          DEFAULT: "hsl(var(--primary))",;
-          foreground: "hsl(var(--primary-foreground))"},;
-        secondary: {;
-          DEFAULT: "hsl(var(--secondary))",;
-          foreground: "hsl(var(--secondary-foreground))"},;
-        destructive: {;
-          DEFAULT: "hsl(var(--destructive))",;
-          foreground: "hsl(var(--destructive-foreground))"},;
-        muted: {;
-          DEFAULT: "hsl(var(--muted))",;
-          foreground: "hsl(var(--muted-foreground))"},;
-        accent: {;
-          DEFAULT: "hsl(var(--accent))",;
-          foreground: "hsl(var(--accent-foreground))"},;
-        popover: {;
-          DEFAULT: "hsl(var(--popover))",;
-          foreground: "hsl(var(--popover-foreground))"},;
-        card: {;
-          DEFAULT: "hsl(var(--card))",;
-          foreground: "hsl(var(--card-foreground))"},;
-        // Custom Zion colors;
-        "zion-blue": {;
-          DEFAULT: "#0a0f1f",;
-          light: "#1e263b",;
-          dark: "#090c1a"},;
-        "zion-purple": {;
-          DEFAULT: "#a855f7",;
-          light: "#d8b4fe",;
-          dark: "#9333ea"},;
-        "zion-cyan": {;
-          DEFAULT: "#00e5ff",;
-          light: "#7df9ff",;
-          dark: "#00c4cc"},;
-        "zion-slate": {;
-          DEFAULT: "#94A3B8",;
-          light: "#CBD5E1",;
-          dark: "#64748B"}},;
-      borderRadius: {;
-        lg: "var(--radius)",;
-        md: "calc(var(--radius) - 2px)",;
-        sm: "calc(var(--radius) - 4px)"},;
-      fontFamily: {;
-        sans: ["var(--font-sans)", ...fontFamily.sans]},;
-      keyframes: {;
-        "accordion-down": {;
-          from: { height: "0" },;
-          to: { height: "var(--radix-accordion-content-height)" }},;
-        "accordion-up": {;
-          from: { height: "var(--radix-accordion-content-height)" },;
-          to: { height: "0" }}},;
-      animation: {;
-        "accordion-down": "accordion-down 0.2s ease-out",;
-        "accordion-up": "accordion-up 0.2s ease-out"}}},;
-  plugins: [;
-    animatePlugin,;
-    plugin(function({ addUtilities }) {;
-      const newUtilities = {;
-        '.rtl': {;
-          direction: 'rtl',;
-          textAlign: 'right'},;
-        '.ltr': {;
-          direction: 'ltr',;
-          textAlign: 'left'}},;
-      addUtilities(newUtilities);
-    })]},;
+import { Config } from "tailwindcss",
+import { fontFamily } from "tailwindcss/defaultTheme",
+import plugin from "tailwindcss/plugin",
+import animatePlugin from "tailwindcss-animate",
+const config: Config = {,
+  darkMode: ["class"],
+  content: [,
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}"],
+  safelist: ['border-border'],
+  theme: {,
+    container: {,
+      center: true,
+      padding: "2rem",
+      screens: {,
+        "2xl": "1400px"}},
+    extend: {,
+      colors: {,
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {,
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))"},
+        secondary: {,
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))"},
+        destructive: {,
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))"},
+        muted: {,
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))"},
+        accent: {,
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))"},
+        popover: {,
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))"},
+        card: {,
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))"},
+        // Custom Zion colors,
+        "zion-blue": {,
+          DEFAULT: "#0a0f1f",
+          light: "#1e263b",
+          dark: "#090c1a"},
+        "zion-purple": {,
+          DEFAULT: "#a855f7",
+          light: "#d8b4fe",
+          dark: "#9333ea"},
+        "zion-cyan": {,
+          DEFAULT: "#00e5ff",
+          light: "#7df9ff",
+          dark: "#00c4cc"},
+        "zion-slate": {,
+          DEFAULT: "#94A3B8",
+          light: "#CBD5E1",
+          dark: "#64748B"}},
+      borderRadius: {,
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)"},
+      fontFamily: {,
+        sans: ["var(--font-sans)", ...fontFamily.sans]},
+      keyframes: {,
+        "accordion-down": {,
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" }},
+        "accordion-up": {,
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" }}},
+      animation: {,
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out"}}},
+  plugins: [,
+    animatePlugin,
+    plugin(function({ addUtilities }) {,
+      const newUtilities = {,
+        '.rtl': {,
+          direction: 'rtl',
+          textAlign: 'right'},
+        '.ltr': {,
+          direction: 'ltr',
+          textAlign: 'left'}},
+      addUtilities(newUtilities),
+    })]},
           DEFAULT: "hsl (var (--primary))",
           foreground: "hsl (var (--primary - foreground))"}
         secondary: {
@@ -185,25 +185,25 @@ const config: Config = {;
         card: {
           DEFAULT: "hsl (var (--card))",
           foreground: "hsl (var (--card - foreground))"}
-        // Custom Zion colors;
+        // Custom Zion colors,
         "zion - blue": {
-          DEFAULT: "#0a0f1f";
+          DEFAULT: "#0a0f1f",
           light: "#1e263b",
           dark: "#090c1a"}
         "zion - purple": {
-          DEFAULT: "#a855f7";
+          DEFAULT: "#a855f7",
           light: "#d8b4fe",
           dark: "#9333ea"}
         "zion - cyan": {
-          DEFAULT: "#00e5ff";
+          DEFAULT: "#00e5ff",
           light: "#7df9ff",
           dark: "#00c4cc"}
         "zion - slate": {
-          DEFAULT: "#94A3B8";
+          DEFAULT: "#94A3B8",
           light: "#CBD5E1",
           dark: "#64748B"}}
       border_radius: {
-        lg: "var (--radius)";
+        lg: "var (--radius)",
         md: "calc (var (--radius) - 2px)",
         sm: "calc (var (--radius) - 4px)"}
       font_family: {
@@ -218,7 +218,7 @@ const config: Config = {;
       animation: {
         "accordion - down": "accordion - down 0.2s ease - out",
         "accordion - up": "accordion - up 0.2s ease - out"}}}
-  plugins: [;
+  plugins: [,
     animate_plugin,
     plugin (function ({ add_utilities }) {
       const new_utilities = {
@@ -239,37 +239,37 @@ const config: Config = {;
 =======
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
-import plugin from "tailwindcss/plugin";
-import animatePlugin from "tailwindcss-animate";
+import plugin from "tailwindcss/plugin",
+import animatePlugin from "tailwindcss-animate",
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
 const config: Config = {
   darkMode: ["class"]
   content: [
-    "./pages/**/*.{ts,tsx}";
-    "./components/**/*.{ts,tsx}";
-    "./app/**/*.{ts,tsx}";
-    "./src/**/*.{ts,tsx}"];
-  safelist: ['border-border'];
-import { Config } from './tailwindcss';
-import { font_family } from './tailwindcss / default_theme';
-import plugin from './tailwindcss / plugin';
-import animate_plugin from './tailwindcss - animate';
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}"],
+  safelist: ['border-border'],
+import { Config } from './tailwindcss',
+import { font_family } from './tailwindcss / default_theme',
+import plugin from './tailwindcss / plugin',
+import animate_plugin from './tailwindcss - animate',
 const config: Config = {
   dark_mode: ["class"],
-  content: [;
-    "./pages/**/*.{ts, tsx}";
-    "./components/**/*.{ts, tsx}";
-    "./app/**/*.{ts, tsx}";
-    "./src/**/*.{ts, tsx}"];
-  safelist: ['border - border'];
+  content: [,
+    "./pages/**/*.{ts, tsx}",
+    "./components/**/*.{ts, tsx}",
+    "./app/**/*.{ts, tsx}",
+    "./src/**/*.{ts, tsx}"],
+  safelist: ['border - border'],
   theme: {
     container: {
 
 
   theme: {
     container: {
-      center: true;
+      center: true,
       padding: "padding",
     screens: {
         "2xl": "1400px"}}
@@ -279,14 +279,14 @@ const config: Config = {
         "2xl": "1400px"}},
     extend: {
       colors: {
-        border: "hsl (var (--border))";
-        input: "hsl (var (--input))";
-        ring: "hsl (var (--ring))";
-        background: "hsl (var (--background))";
-        foreground: "hsl (var (--foreground))";
+        border: "hsl (var (--border))",
+        input: "hsl (var (--input))",
+        ring: "hsl (var (--ring))",
+        background: "hsl (var (--background))",
+        foreground: "hsl (var (--foreground))",
         primary: {
 
-        sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
+        sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]},
 
       keyframes: {
         "accordion-down": {
@@ -298,7 +298,7 @@ const config: Config = {
       animation: {
 
         "accordion-down": "accordion-down 0 && 0.2s ease-out",
-        "accordion-up": "accordion-up 0 && 0.2s ease-out"}}};
+        "accordion-up": "accordion-up 0 && 0.2s ease-out"}}},
 
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
@@ -359,13 +359,13 @@ const config: Config = {
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
-export default config;
-;
-export default config;
-export default config;
+export default config,
+,
+export default config,
+export default config,
           text_align: 'left'}}
-      add_utilities (new_utilities);
+      add_utilities (new_utilities),
     })]}
-;
-export default config;
+,
+export default config,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

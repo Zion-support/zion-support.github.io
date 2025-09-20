@@ -1,8 +1,8 @@
-import { GradientHeading } from './GradientHeading';
- from 'framer-motion';
- from 'react-router-dom';
-import { >>>>>>> main Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket  } from 'lucide-react';
-import { motion  } from 'framer-motion';
+import { GradientHeading } from './GradientHeading',
+ from 'framer-motion',
+ from 'react-router-dom',
+import { >>>>>>> main Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket  } from 'lucide-react',
+import { motion  } from 'framer-motion',
 
 ,
   {
@@ -34,9 +34,9 @@ import { motion  } from 'framer-motion';
     color: 'from-zion-purple-light to-zion-purple',
     gradient: 'from-zion-purple-light/20 to-zion-purple/20',
     features: ['Latest Tech',AI Solutions',Future-Ready'],
-    stats: '100+ Innovations'},
-];
-;
+    stats: '100+ Innovations'}
+],
+,
 const specialServices = [{
 
     title: 'Enhanced AI & IT Services',
@@ -64,8 +64,8 @@ const specialServices = [{
     title: 'Cloud Solutions',
     link: '/cloud-solutions',"
     icon: <Zap className="w-5 h-5" />,
-    description: 'Scalable cloud infrastructure'},
-];
+    description: 'Scalable cloud infrastructure'}
+],
 
 export function CategoriesSection({ showTitle = true }) {
 
@@ -78,7 +78,7 @@ export function CategoriesSection({ showTitle = true }) {
       transition: {
 
         staggerChildren: 0.2,
-        delayChildren: 0.1}}};
+        delayChildren: 0.1}}},
 
   const itemVariants = {
 
@@ -93,7 +93,7 @@ export function CategoriesSection({ showTitle = true }) {
       transition: {
 
         duration: 0.6,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
 
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -203,6 +203,6 @@ export function CategoriesSection({ showTitle = true }) {
         </motion.div>
       </div>
     </section>
-  );
+  ),
 }
 '"`

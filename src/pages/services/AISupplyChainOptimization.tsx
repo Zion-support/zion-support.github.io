@@ -1,10 +1,9 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { Button } from '../../components/ui/Button';
-import { Card } from '../../components/ui/Card';
-import { Badge } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone, Mail, BarChart3, Target, Users, Database } from 'lucide-react';
-
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { Button } from "../../components/ui/Button";
+import { Card } from "../../components/ui/Card";
+import { Badge } from "../../components/ui/Badge";
+import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone, Mail, BarChart3, Target, Users, Database } from "lucide-react";
 const AISupplyChainOptimization: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -323,7 +322,7 @@ const AISupplyChainOptimization: React.FC = () => {
                   Custom integrations
                 </li>
               </ul>
-              <Button className="w-full bg-purple-600 hover:bg-purple-700">
+              <Button className="w-full bg-purple-600 hover: bg-purple-700">
                 Contact Sales
               </Button>
             </Card>
@@ -363,7 +362,7 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Ready to Optimize Your Supply Chain?
@@ -398,7 +397,6 @@ const AISupplyChainOptimization: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AISupplyChainOptimization;

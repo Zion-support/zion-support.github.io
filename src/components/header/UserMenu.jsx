@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { User, LogOut, Settings, Bell } from 'lucide-react';
-
+import React, { useState } from "react";
+import { User, LogOut, Settings, Bell } from "lucide-react";
 export function UserMenu() {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="relative">
       <button

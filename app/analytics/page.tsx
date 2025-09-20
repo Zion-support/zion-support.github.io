@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group';
-  description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.';
-  keywords: ['analyticsdata analytics', 'business intelligencepredictive analytics', 'real-time analytics'],
-};
+  title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group',
+  description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.',
+  keywords: ['analyticsdata analyticsbusiness intelligencepredictive analytics', 'real-time analytics']
+},
 export default function AnalyticsPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -22,7 +22,7 @@ export default function AnalyticsPage() {,
             Analytics Revolution 2025,
           </h1>,
           <p className="text-xl md:text-2xl opacity-90 mb-8">,
-            Transform your data into powerful insights with AI-powered analytics, real-time processing;
+            Transform your data into powerful insights with AI-powered analytics, real-time processing,
             and predictive intelligence that drives business success.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -41,7 +41,7 @@ export default function AnalyticsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Solutions</h2>,
@@ -79,7 +79,7 @@ export default function AnalyticsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="bg-gray-50 py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold text-gray-900 mb-4">,
@@ -96,5 +96,4 @@ export default function AnalyticsPage() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

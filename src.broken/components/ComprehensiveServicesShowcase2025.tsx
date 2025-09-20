@@ -1,30 +1,30 @@
 <<<<<<< HEAD
 export default function Page() {
-,;
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
-  ];
+,
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' },
+  ],
 
-    { id: 'all', name: 'All Levels', icon: '🌟' },;
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
-  ];
+    { id: 'all', name: 'All Levels', icon: '🌟' },
+    { id: 'Advanced', name: 'Advanced', icon: '🚀' },
+    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },
+    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' },
+  ],
 
-    switch(sortBy) {;
-      case 'price':;
-        return a.price - b.price;
-};
-        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
-               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+    switch(sortBy) {,
+      case 'price':,
+        return a.price - b.price,
+},
+        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ,
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0),
+    visible: {,
+      opacity: 1,
+      transition: {,
+        staggerChildren: 0.1
+      },
+    },
+  },
 
   const itemVariants = {
   hidden: { y: 20,
@@ -34,67 +34,67 @@ export default function Page() {
                 type="text"
                 placeholder="Search services, categories, or features..."
 =======
-  ];
+  ],
 
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
     
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
+    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ,
 
-    switch(sortBy) {;'      case 'price':;
-        return a.price - b.price;'
-      case 'name':;
-        return a.title.localeCompare(b.title);
-      case 'innovation':;
+    switch(sortBy) {,'      case 'price':,
+        return a.price - b.price,'
+      case 'name':,
+        return a.title.localeCompare(b.title),
+      case 'innovation':,
         
-  ;
-  ;
+  ,
+  ,
 =======
 '
-  'Advanced': 1, 'Cutting-edge': 2,;  ;
-  ;
-  ;
-  ;
-  'Revolutionary': 3 ;
+  'Advanced': 1, 'Cutting-edge': 2,  ,
+  ,
+  ,
+  ,
+  'Revolutionary': 3 ,
 
-};        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
-               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
-      case 'category':;
-        return a.category.localeCompare(b.category) ;
-      default:;
-        return 0}) ;
+},        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ,
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0),'
+      case 'category':,
+        return a.category.localeCompare(b.category) ,
+      default:,
+        return 0}) ,
 
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1,;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1}}};
+        staggerChildren: 0.1}}},
 
-      opacity: 1,;
+      opacity: 1,
       transition: {
-        duration: 0.5,;"
-        ease: "easeOut"}}};
+        duration: 0.5,"
+        ease: "easeOut"}}},
 
-    switch(category) {;'"
-      case 'AI & Automation': return <Bot className="w-5 h-5"  />;'"
-      case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;'"
-      case 'AI & Research': return <Search className="w-5 h-5"  />;'"
-      case 'AI & Logistics': return <Truck className="w-5 h-5"  />;'"
-      case 'AI & Marketing': return <TrendingUp className="w-5 h-5"  />;'"
-      case 'AI & Healthcare': return <Heart className="w-5 h-5"  />;'"
-      case 'Quantum Computing': return <Atom className="w-5 h-5"  />;'"
-      case 'Blockchain': return <Link className="w-5 h-5"  />;'"
-      case 'Metaverse': return <Globe2 className="w-5 h-5" />;'"
-      case 'Edge Computing': return <Network className="w-5 h-5"  />;'"
-      case 'Cybersecurity': return <Shield className="w-5 h-5"  />;"
-      default: return <Zap className="w-5 h-5"  />};
+    switch(category) {,'"
+      case 'AI & Automation': return <Bot className="w-5 h-5"  />,'"
+      case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />,'"
+      case 'AI & Research': return <Search className="w-5 h-5"  />,'"
+      case 'AI & Logistics': return <Truck className="w-5 h-5"  />,'"
+      case 'AI & Marketing': return <TrendingUp className="w-5 h-5"  />,'"
+      case 'AI & Healthcare': return <Heart className="w-5 h-5"  />,'"
+      case 'Quantum Computing': return <Atom className="w-5 h-5"  />,'"
+      case 'Blockchain': return <Link className="w-5 h-5"  />,'"
+      case 'Metaverse': return <Globe2 className="w-5 h-5" />,'"
+      case 'Edge Computing': return <Network className="w-5 h-5"  />,'"
+      case 'Cybersecurity': return <Shield className="w-5 h-5"  />,"
+      default: return <Zap className="w-5 h-5"  />},
 
-    switch(level) {;'"
-      case 'Advanced': return <Star className="w-4 h-4 text-yellow-500"  />;'"
-      case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500"  />;'"
-      case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500"  />;"
-      default: return <Star className="w-4 h-4 text-gray-400"  />};
+    switch(level) {,'"
+      case 'Advanced': return <Star className="w-4 h-4 text-yellow-500"  />,'"
+      case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500"  />,'"
+      case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500"  />,"
+      default: return <Star className="w-4 h-4 text-gray-400"  />},
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Animated Background */}"
@@ -141,10 +141,10 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Search and Filters */}"
-      <section className="relative px-4 sm:px-6 lg:px-8 mb-12">;"
+      <section className="relative px-4 sm: px-6 lg:px-8 mb-12">,"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -185,9 +185,9 @@ export default function Page() {
                 <select
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}"
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {categories.map((category) => (;
+                  {categories.map((category) => (,
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
                     </option>
@@ -200,9 +200,9 @@ export default function Page() {
                 <select
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}"
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {innovationLevels.map((level) => (;
+                  {innovationLevels.map((level) => (,
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
                     </option>
@@ -225,7 +225,7 @@ export default function Page() {
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />              </div>
 
               {/* View Mode Toggle */}"
-              <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
+              <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">,
                 <button'
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid''
@@ -246,7 +246,7 @@ export default function Page() {
             </div>
 
             {/* Price Range Slider */}"
-            <div className="mt-6">;"
+            <div className="mt-6">,"
               <label className="block text-sm font-medium text-zion-slate-300 mb-2">
                 Price Range: ${priceRange[0]} - ${priceRange[1]}
               </label>"
@@ -284,7 +284,7 @@ export default function Page() {
       </section>
 
       {/* Services Grid */}"
-      <section className="relative px-4 sm:px-6 lg:px-8 pb-20">;"
+      <section className="relative px-4 sm: px-6 lg:px-8 pb-20">,"
         <div className="max-w-7xl mx-auto">
           {/* Results Count */}"
           <div className="mb-8">"
@@ -299,10 +299,10 @@ export default function Page() {
             initial="hidden"
             animate="visible"'
             className={viewMode === 'grid''
-              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6''
+              ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6''
               : 'space-y-4'
 
-            {sortedServices.map((service) => (;
+            {sortedServices.map((service) => (,
               <motion.div
                 key={service.id}
                 variants={itemVariants}`
@@ -310,7 +310,7 @@ export default function Page() {
                 }`}
                 onClick={() => handleServiceClick(service)}
 
-                {viewMode === 'grid' ? (;
+                {viewMode === 'grid' ? (,
                   // Grid View
                   <>
                     {/* Header */}"
@@ -363,10 +363,10 @@ export default function Page() {
                     </div>
 
                     {/* CTA Button */}"
-                    <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">
+                    <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover: from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">
                       Learn More"
                       <ArrowRight className="w-4 h-4"  />                    </button>
-                  </>) : (;
+                  </>) : (,
                   // List View
                   <>"
                     <div className="flex-1">"
@@ -422,19 +422,19 @@ export default function Page() {
               <p className="text-zion-slate-400 mb-6">
                 Try adjusting your search criteria or filters
               </p>
-              <button      onClick = {;
-  ;
-  ;
-  ;
-  ;
-  () => {;
-                  setSearchTerm('');
-                  setActiveCategory('all');
+              <button      onClick = {,
+  ,
+  ,
+  ,
+  ,
+  () => {,
+                  setSearchTerm(''),
+                  setActiveCategory('all'),
                   setPriceRange([0,
-  10000]);
-                  setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
+  10000]),
+                  setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover: bg-zion-cyan/90 transition-colors"
               >
-                Clear All Filters;
+                Clear All Filters,
               </button>
             </motion.div>) }
         </div>
@@ -610,7 +610,7 @@ export default function Page() {
                       </div>
                     </div>"
                     <div className="flex gap-3">"
-                      <button className="bg-zion-slate-700 text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-slate-600 transition-colors">
+                      <button className="bg-zion-slate-700 text-white px-6 py-3 rounded-xl font-medium hover: bg-zion-slate-600 transition-colors">
                         Request Demo
                       </button>"
                       <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-colors">
@@ -618,13 +618,13 @@ export default function Page() {
                       </button>
                     </div>
                   </div>
-                </div>;
-              </div>;
-            </motion.div>;
-          </motion.div>;) };
-      </AnimatePresence>;
-    </div>;) ;
-</div></div></div></div></div></div></div>};
+                </div>,
+              </div>,
+            </motion.div>,
+          </motion.div>,) },
+      </AnimatePresence>,
+    </div>,) ,
+</div></div></div></div></div></div></div>},
 
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

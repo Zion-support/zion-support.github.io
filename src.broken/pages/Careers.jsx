@@ -1,9 +1,9 @@
-import React from 'react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { GradientHeading } from '@/components / GradientHeading';
-import { SEO } from '@/components / SEO';
-import { export default function Careers () { Tabs, TabsContent, TabsList, TabsTrigger, } from '@/components / ui / tabs';
+import React from 'react',
+import { Button } from '@/components / ui / button',
+import { Card, CardContent } from '@/components / ui / card',
+import { GradientHeading } from '@/components / GradientHeading',
+import { SEO } from '@/components / SEO',
+import { export default function Careers () { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs',
 ,
       {
         title: 'AI Research Engineer',
@@ -11,7 +11,7 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
         type: 'Full - time',
         department: 'Engineering',
         description:
-          'Work on cutting - edge AI technologies to power our matching algorithms and recommendation systems.',
+          'Work on cutting - edge AI technologies to power our matching algorithms and recommendation systems.'
       },
       {
         title: 'Full Stack Developer',
@@ -19,8 +19,8 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
         type: 'Full - time',
         department: 'Engineering',
         description:
-          'Develop end - to - end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL.',
-      },
+          'Develop end - to - end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL.'
+      }
     ],
     product: [{
         title: 'Product Manager',
@@ -28,7 +28,7 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
         type: 'Full - time',
         department: 'Product',
         description:
-          'Lead product development initiatives to enhance our marketplace experience for both talent and clients.',
+          'Lead product development initiatives to enhance our marketplace experience for both talent and clients.'
       },
       {
         title: 'UX / UI Designer',
@@ -36,8 +36,8 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
         type: 'Full - time',
         department: 'Product',
         description:
-          'Create intuitive and engaging user experiences that make complex technology accessible to all users.',
-      },
+          'Create intuitive and engaging user experiences that make complex technology accessible to all users.'
+      }
     ],
     marketing: [{
         title: 'Growth Marketing Manager',
@@ -45,7 +45,7 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
         type: 'Full - time',
         department: 'Marketing',
         description:
-          'Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.',
+          'Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.'
       },
       {
         title: 'Content Strategist',
@@ -53,8 +53,8 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
         type: 'Full - time',
         department: 'Marketing',
         description:
-          'Develop compelling content that educates and inspires our audience about the future of AI and technology.',
-      },
+          'Develop compelling content that educates and inspires our audience about the future of AI and technology.'
+      }
     ],
     operations: [{
         title: 'Community Manager',
@@ -62,7 +62,7 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
         type: 'Full - time',
         department: 'Operations',
         description:
-          'Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.',
+          'Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.'
       },
       {
         title: 'Talent Acquisition Specialist',
@@ -70,10 +70,10 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
         type: 'Full - time',
         department: 'Operations',
         description:
-          'Help connect the right talent with the right opportunities on our platform through personalized matching.',
-      },
-    ],
-  };
+          'Help connect the right talent with the right opportunities on our platform through personalized matching.'
+      }
+    ]
+  },
 
   // Benefits list
   const benefits = [{
@@ -93,7 +93,7 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
             strokeWidth={2}
             d="M3 12l2 - 2m0 0l7 - 7 7 7M5 10v10a1 1 0 001 1h3m10 - 11l2 2m - 2-2v10a1 1 0 01 - 1 1h-3m - 6 0a1 1 0 001 - 1v - 4a1 1 0 011 - 1h2a1 1 0 011 1v4a1 1 0 001 1m - 6 0h6"
           />
-        </svg>) ,
+        </svg>) 
     },
     {
       title: 'Health & Wellness',
@@ -112,7 +112,7 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
             strokeWidth={2}
             d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682 - 7.682a4.5 4.5 0 00 - 6.364 - 6.364L12 7.636l - 1.318 - 1.318a4.5 4.5 0 00 - 6.364 0z"
           />
-        </svg>) ,
+        </svg>) 
     },
     {
       title: 'Competitive Compensation',
@@ -131,7 +131,7 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
             strokeWidth={2}
             d="M12 8c - 1.657 0 - 3 .895 - 3 2s1.343 2 3 2 3 .895 3 2 - 1.343 2 - 3 2m0 - 8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0 - 1c - 1.11 0 - 2.08-.402 - 2.599 - 1M21 12a9 9 0 11 - 18 0 9 9 0 0118 0z"
           />
-        </svg>) ,
+        </svg>) 
     },
     {
       title: 'Learning & Growth',
@@ -150,7 +150,7 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
             strokeWidth={2}
             d="M12 6.253v13m0 - 13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 5.477 5.754 5 7.5 5c1.747 0 3.332.477 4.5 1.253zm0 0C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C16.5 5 14.754 5 13.168 5.477L12 6.253z"
           />
-        </svg>) ,
+        </svg>) 
     },
     {
       title: 'Team & Culture',
@@ -169,9 +169,9 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
             strokeWidth={2}
             d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z"
           />
-        </svg>) ,
-    },
-  ];
+        </svg>) 
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -281,10 +281,10 @@ import { export default function Careers () { Tabs, TabsContent, TabsList, TabsT
             We're always looking for talented individuals to join our team.Send
             us your resume and let's discuss how you can contribute to our
             mission.</p>
-          <Button className="bg-zion - cyan hover:bg-zion - cyan - dark text-white text-lg px-8 py-3">
+          <Button className="bg-zion - cyan hover: bg-zion - cyan - dark text-white text-lg px-8 py-3">
             Send Resume
           </Button>
         </div>
       </div>
-    </div>) ;
+    </div>) 
 }

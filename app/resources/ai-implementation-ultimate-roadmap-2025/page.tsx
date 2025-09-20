@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI Implementation Ultimate Roadmap 2025: From Strategy to 800% ROI in 18 Months';
-  description: 'Complete step-by-step guide to achieving 800% ROI with AI implementation. Proven framework used by 500+ Fortune 500 companies.';
-  keywords: ['Implementation GuideAI Strategy', 'ROIBest Practices', '2025800% ROI'],
-};
+  title: 'AI Implementation Ultimate Roadmap 2025: From Strategy to 800% ROI in 18 Months',
+  description: 'Complete step-by-step guide to achieving 800% ROI with AI implementation. Proven framework used by 500+ Fortune 500 companies.',
+  keywords: ['Implementation GuideAI StrategyROIBest Practices', '2025800% ROI']
+},
 export default function AIImplementationRoadmapPage() {,
   return (,
     <div>,
@@ -46,7 +46,7 @@ export default function AIImplementationRoadmapPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
@@ -394,7 +394,7 @@ export default function AIImplementationRoadmapPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -431,4 +431,4 @@ export default function AIImplementationRoadmapPage() {,
         </section>,
       </div>,
     </div>,
-  ),}
+  )}

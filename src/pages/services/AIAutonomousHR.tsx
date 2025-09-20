@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Users, 
+  Users,
   Brain, 
   Target, 
   BarChart3, 
@@ -23,50 +23,33 @@ import {
   Zap,
   Shield,
   Briefcase
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousHR: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered HR Management',
-      description: 'Advanced machine learning for autonomous HR operations and optimization'
+      icon: Brain,title: 'AI-Powered HR Management',description: 'Advanced machine learning for autonomous HR operations and optimization'
+    };
+    {
+      icon: Users,title: 'Recruitment Automation',description: 'Intelligent candidate sourcing, screening, and hiring with AI-driven insights'
     },
     {
-      icon: Users,
-      title: 'Recruitment Automation',
-      description: 'Intelligent candidate sourcing, screening, and hiring with AI-driven insights'
-    },
+      icon: Target,title: 'Performance Management',description: 'AI-powered performance tracking and employee development strategies'
+    };
     {
-      icon: Target,
-      title: 'Performance Management',
-      description: 'AI-powered performance tracking and employee development strategies'
-    },
+      icon: BarChart3,title: 'HR Analytics',description: 'Real-time analytics and insights into HR performance and trends'
+    };
     {
-      icon: BarChart3,
-      title: 'HR Analytics',
-      description: 'Real-time analytics and insights into HR performance and trends'
-    },
+      icon: Briefcase,title: 'Employee Engagement',description: 'AI-driven employee engagement and retention strategies'
+    };
     {
-      icon: Briefcase,
-      title: 'Employee Engagement',
-      description: 'AI-driven employee engagement and retention strategies'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Workforce Optimization',
-      description: 'Continuous optimization of HR processes and workforce management'
+      icon: TrendingUp,title: 'Workforce Optimization',description: 'Continuous optimization of HR processes and workforce management'
     }
   ];
-
   const benefits = [
-    'Improve recruitment efficiency by 80%',
-    'Reduce hiring time by 70%',
-    'Enhance employee retention by 60%',
-    'Automate HR processes',
-    '24/7 autonomous operation',
-    'Real-time HR insights'
-  ];
+    'Improve recruitment efficiency by 80%Reduce hiring time by 70%',
+    'Enhance employee retention by 60%Automate HR processes',
+    '24/7 autonomous operationReal-time HR insights'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -208,7 +191,7 @@ const AIAutonomousHR: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize HR?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -226,7 +209,6 @@ const AIAutonomousHR: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousHR;

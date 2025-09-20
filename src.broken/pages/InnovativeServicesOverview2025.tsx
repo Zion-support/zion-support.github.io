@@ -1,6 +1,6 @@
-import React from 'react';
-export default InnovativeServicesOverview2025;
-import { motion  } from 'framer-motion';
+import React from 'react',
+export default InnovativeServicesOverview2025,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -11,43 +11,41 @@ export default function Page() {
       color: 'from - pink - 500 to - red - 600',
       description: 'Transform healthcare with AI - powered patient analytics',
       price: 'From $2,800 / month',
-      features: ['Patient analytics',
-        'Clinical decision support',
-        'HIPAA compliance',
+      features: ['Patient analyticsClinical decision support',
+        'HIPAA compliance'
       ],
       path: '/services / ai - healthcare - analytics - platform',
-      benefits: ['Improve outcomes by 35%',
-        'Reduce readmissions by 40%',
-        'Lower costs by 30%',
-      ],
-    },
-  ];
+      benefits: ['Improve outcomes by 35%Reduce readmissions by 40%',
+        'Lower costs by 30%'
+      ]
+    }
+  ],
 
   const additionalServices = [{
       name: 'AI - Powered SEO Platform',
       description: 'Advanced SEO optimization with machine learning',
       price: '$1,500 / month',
-      path: '/services / ai - powered - seo',
+      path: '/services / ai - powered - seo'
     },
     {
       name: 'AI Interview Assessment',
       description: 'Intelligent candidate evaluation and screening',
       price: '$800 / month',
-      path: '/services / interview-assessment - ai',
+      path: '/services / interview-assessment - ai'
     },
     {
       name: 'Zero Trust Network Access',
       description: 'Enterprise - grade security with zero trust principles',
       price: '$2,000 / month',
-      path: '/services / zero - trust - network - access',
+      path: '/services / zero - trust - network - access'
     },
     {
       name: 'AI Workflow Orchestrator',
       description: 'Intelligent business process automation',
       price: '$1,800 / month',
-      path: '/services / ai - workflow-orchestrator',
-    },
-  ];
+      path: '/services / ai - workflow-orchestrator'
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -234,7 +232,7 @@ export default function Page() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion - slate - light mb-8">
@@ -278,6 +276,6 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

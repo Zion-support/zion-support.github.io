@@ -1,19 +1,19 @@
-import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network  } from 'lucide-react';
+import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network  } from 'lucide-react',
 export default function Page() {
-,;
+,
         {
             icon: Network,
             title: "Digital Twin",
             description: "Virtual replicas of physical systems for simulation and optimization",
-            features["3D modeling", "Simulation", "Performance prediction"];
-        },;
+            features["3D modeling", "Simulation", "Performance prediction"],
+        },
         {
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined workflows and automated decision - making processes",
-            features["Workflow automation", "Decision support", "Process optimization"];
+            features["Workflow automation", "Decision support", "Process optimization"],
         }
-    ];
+    ],
     const useCases = [{
             title: "Predictive Maintenance",
             description: "AI - powered equipment monitoring to prevent costly breakdowns",
@@ -44,14 +44,14 @@ export default function Page() {
             description: "Intelligent production scheduling and resource allocation",
             icon: "📅"
 
-    ];
+    ],
     const benefits = ["Reduce downtime by 30 - 50%",
         "Improve product quality by 25%",
         "Increase production efficiency by 20 - 35%",
         "Reduce energy costs by 15 - 25%",
         "Enhance worker safety by 40%",
         "Optimize inventory management by 30%"
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue -900">
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 px-4 sm:px-6 lg:px-8">

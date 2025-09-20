@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 =======
-import { useState } from 'react';
+import { useState } from 'react',
 
 export default function Page() {
             alt={project.title}"
@@ -107,7 +107,7 @@ export default function Page() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  );
+  ),
 }
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

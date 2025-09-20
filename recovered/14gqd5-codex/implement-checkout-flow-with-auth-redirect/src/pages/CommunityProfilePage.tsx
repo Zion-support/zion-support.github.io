@@ -1,17 +1,17 @@
 
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { formatDistanceToNow } from "date-fns";
-import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community";
-import PostCard from "@/components/community/PostCard";
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
+import { useState, useEffect } from "react",
+import { useParams, Link } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { formatDistanceToNow } from "date-fns",
+import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",
+import PostCard from "@/components/community/PostCard",
+import UserBadges from "@/components/community/UserBadges",
+import ReputationDisplay from "@/components/community/ReputationDisplay",
 
 // Mock user data
 const mockUser: CommunityUser = {
@@ -47,7 +47,7 @@ const mockUser: CommunityUser = {
   ],
   isVerified: true,
   isModerator: false
-};
+},
 
 // Mock posts by this user
 const userPosts: ForumPost[] = [
@@ -101,21 +101,21 @@ const userPosts: ForumPost[] = [
     downvotes: 0,
     replyCount: 6
   }
-];
+],
 
 export default function CommunityProfilePage() {
-  const { userId } = useParams();
-  const [user, setUser] = useState<CommunityUser | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [posts, setPosts] = useState<ForumPost[]>([]);
+  const { userId } = useParams(),
+  const [user, setUser] = useState<CommunityUser | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [posts, setPosts] = useState<ForumPost[]>([]),
   
   useEffect(() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
-    setUser(mockUser);
-    setPosts(userPosts);
-    setIsLoading(false);
-  }, [userId]);
+    setUser(mockUser),
+    setPosts(userPosts),
+    setIsLoading(false),
+  }, [userId]),
   
   if (isLoading) {
     return (
@@ -124,7 +124,7 @@ export default function CommunityProfilePage() {
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
         </div>
       </div>
-    );
+    ),
   }
   
   if (!user) {
@@ -135,7 +135,7 @@ export default function CommunityProfilePage() {
           <Link to="/community">Back to Community</Link>
         </Button>
       </div>
-    );
+    ),
   }
 
   return (
@@ -288,7 +288,7 @@ export default function CommunityProfilePage() {
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
                         </div>
                         <div>
-                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>
+                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>
                         </div>
                       </li>
                     </ul>
@@ -300,5 +300,5 @@ export default function CommunityProfilePage() {
         </div>
       </div>
     </>
-  );
+  )
 }

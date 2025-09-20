@@ -1,21 +1,21 @@
 
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { MessageSquare } from "lucide-react",
+import { useTranslation } from "react-i18next",
 
 interface MainNavigationProps {
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
+  isAdmin?: boolean,
+  unreadCount?: number,
+  className?: string,
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const location = useLocation();
-  const { t } = useTranslation();
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const location = useLocation(),
+  const { t } = useTranslation(),
 
   const baseLinks = [
     {
@@ -58,9 +58,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     }
-  ];
+  ],
 
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
+  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),
   
   // Add authenticated-only links
   if (isAuthenticated) {
@@ -69,7 +69,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: t('nav.dashboard'),
       href: '/dashboard',
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
-    });
+    }),
   }
   
   // Add admin-only links
@@ -79,7 +79,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: t('nav.analytics'),
       href: '/analytics',
       matches: (path: string) => path.startsWith('/analytics')
-    });
+    }),
   }
   
   return (
@@ -125,5 +125,5 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         )}
       </ul>
     </nav>
-  );
+  ),
 }

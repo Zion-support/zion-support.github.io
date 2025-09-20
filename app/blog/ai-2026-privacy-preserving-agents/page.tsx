@@ -1,15 +1,14 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Privacy-Preserving Agents - Practical Techniques';
+  title: 'AI 2026: Privacy-Preserving Agents - Practical Techniques',
   description:,
-    'Techniques for private-by-default agents: scoped memory, redaction, local-first inference, and secure enclaves.';
+    'Techniques for private-by-default agents: scoped memory, redaction, local-first inference, and secure enclaves.',
   keywords: [,
-    'privacyprivacy-preserving';
-    'agentsconfidential computing';
-    'secure enclaveslocal-first',
-  ],
-};
+    'privacyprivacy-preservingagentsconfidential computing',
+    'secure enclaveslocal-first'
+  ]
+},
 export default function PrivacyPreservingAgentsPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -19,7 +18,7 @@ export default function PrivacyPreservingAgentsPage() {,
           AI 2026: Privacy-Preserving Agents,
         </h1>,
         <p className="text-gray-600 text-lg">,
-          Build private-by-default agents using scoped memory, redaction, selective grounding;
+          Build private-by-default agents using scoped memory, redaction, selective grounding,
           and confidential computing.,
         </p>,
       </header>,
@@ -74,6 +73,6 @@ export default function PrivacyPreservingAgentsPage() {,
         </Link>,
       </footer>,
     </main>,
-  );
+  ),
 }
 ,

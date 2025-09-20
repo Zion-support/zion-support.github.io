@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const function AdvancedHero({ = () => {,
   return (,
@@ -9,8 +9,7 @@ const function AdvancedHero({ = () => {,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  );
-};
-export default function AdvancedHero({;
+    </div>),
+},
+export default function AdvancedHero({,
 }}})))

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  DollarSign, 
+  DollarSign,
   TrendingDown, 
   CheckCircle, 
   Users, 
@@ -48,93 +48,62 @@ import {
   TrendingUp,
   Lightbulb,
   Rocket
-} from 'lucide-react';
-
+} from "lucide-react";
 const CloudFinOpsOptimizer = () => {
   const features = [
     {
-      icon: Cloud,
-      title: 'Multi-Cloud Optimization',
-      description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
+      icon: Cloud,title: 'Multi-Cloud Optimization',description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
     },
     {
-      icon: Zap2,
-      title: 'Automated Optimization',
-      description: 'AI-powered recommendations and automated cost reduction actions'
-    },
+      icon: Zap2,title: 'Automated Optimization',description: 'AI-powered recommendations and automated cost reduction actions'
+    };
     {
-      icon: Gauge,
-      title: 'Performance Monitoring',
-      description: 'Real-time performance metrics with cost correlation analysis'
-    },
+      icon: Gauge,title: 'Performance Monitoring',description: 'Real-time performance metrics with cost correlation analysis'
+    };
     {
-      icon: BarChart4,
-      title: 'Advanced Analytics',
-      description: 'Deep insights into spending patterns and optimization opportunities'
-    },
+      icon: BarChart4,title: 'Advanced Analytics',description: 'Deep insights into spending patterns and optimization opportunities'
+    };
     {
-      icon: TrendingUp2,
-      title: 'Predictive Modeling',
-      description: 'Forecast future costs and identify optimization trends'
-    },
+      icon: TrendingUp2,title: 'Predictive Modeling',description: 'Forecast future costs and identify optimization trends'
+    };
     {
-      icon: Lightbulb,
-      title: 'Smart Recommendations',
-      description: 'Intelligent suggestions for cost savings and efficiency improvements'
+      icon: Lightbulb,title: 'Smart Recommendations',description: 'Intelligent suggestions for cost savings and efficiency improvements'
     }
   ];
-
   const benefits = [
-    'Reduce cloud costs by 40-60%',
-    'Improve resource efficiency by 50%',
-    'Automate 80% of optimization tasks',
-    'Achieve 95% cost predictability',
-    'Enable real-time cost monitoring',
-    'Maximize cloud ROI and performance'
-  ];
+    'Reduce cloud costs by 40-60%Improve resource efficiency by 50%',
+    'Automate 80% of optimization tasksAchieve 95% cost predictability',
+    'Enable real-time cost monitoringMaximize cloud ROI and performance'
+  ],
 
   const services = [
     {
-      icon: Calculator,
-      title: 'Cost Analysis Engine',
-      description: 'Advanced algorithms for comprehensive cost analysis and optimization'
+      icon: Calculator,title: 'Cost Analysis Engine',description: 'Advanced algorithms for comprehensive cost analysis and optimization'
+    };
+    {
+      icon: Rocket,title: 'Automated Actions',description: 'Intelligent automation for rightsizing, scheduling, and optimization'
     },
     {
-      icon: Rocket,
-      title: 'Automated Actions',
-      description: 'Intelligent automation for rightsizing, scheduling, and optimization'
-    },
+      icon: BarChart3,title: 'Real-time Dashboards',description: 'Live monitoring and reporting of cloud costs and performance'
+    };
     {
-      icon: BarChart3,
-      title: 'Real-time Dashboards',
-      description: 'Live monitoring and reporting of cloud costs and performance'
-    },
-    {
-      icon: Target,
-      title: 'Goal Setting & Tracking',
-      description: 'Set cost targets and track progress with automated alerts'
+      icon: Target,title: 'Goal Setting & Tracking',description: 'Set cost targets and track progress with automated alerts'
     }
   ];
-
   const useCases = [
     {
-      industry: 'Enterprise',
-      description: 'Optimize large-scale multi-cloud environments'
-    },
+      industry: 'Enterprise',description: 'Optimize large-scale multi-cloud environments'
+    };
     {
-      industry: 'Startups',
-      description: 'Scale efficiently while controlling costs'
-    },
+      industry: 'Startups',description: 'Scale efficiently while controlling costs'
+    };
     {
-      industry: 'E-commerce',
-      description: 'Balance performance with cost optimization'
-    },
+      industry: 'E-commerce',description: 'Balance performance with cost optimization'
+    };
     {
-      industry: 'SaaS Platforms',
-      description: 'Optimize costs for multi-tenant applications'
+      industry: 'SaaS Platforms',description: 'Optimize costs for multi-tenant applications'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -359,7 +328,7 @@ const CloudFinOpsOptimizer = () => {
               Join organizations worldwide that use our optimization platform to 
               achieve maximum cloud efficiency and cost savings.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -372,8 +341,6 @@ const CloudFinOpsOptimizer = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default CloudFinOpsOptimizer;
-

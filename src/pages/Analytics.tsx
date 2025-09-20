@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  BarChart3, 
+  BarChart3,
   TrendingUp, 
   PieChart, 
   Activity, 
@@ -39,84 +39,56 @@ import {
   LineChart,
   AreaChart,
   ScatterPlot
-} from 'lucide-react';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import SEO from "../components/SEO";
 const Analytics: React.FC = () => {
   const analyticsFeatures = [
     {
-      title: "Real-time Monitoring",
-      description: "Monitor your business metrics and performance indicators in real-time",
-      icon: Activity,
-      color: "from-green-400 to-emerald-500"
-    },
+      title: "Real-time Monitoring",description: "Monitor your business metrics and performance indicators in real-time",icon: Activity,color: "from-green-400 to-emerald-500"
+    };
     {
-      title: "Advanced Visualizations",
-      description: "Interactive charts, graphs, and dashboards for better insights",
-      icon: BarChart3,
-      color: "from-blue-400 to-cyan-500"
-    },
+      title: "Advanced Visualizations",description: "Interactive charts, graphs, and dashboards for better insights",
+      icon: BarChart3,color: "from-blue-400 to-cyan-500"
+    };
     {
-      title: "Predictive Analytics",
-      description: "AI-powered forecasting and trend analysis for strategic planning",
-      icon: TrendingUp,
-      color: "from-purple-400 to-pink-500"
-    },
+      title: "Predictive Analytics",description: "AI-powered forecasting and trend analysis for strategic planning",icon: TrendingUp,color: "from-purple-400 to-pink-500"
+    };
     {
-      title: "Custom Dashboards",
-      description: "Build personalized dashboards tailored to your business needs",
-      icon: Target,
-      color: "from-orange-400 to-red-500"
+      title: "Custom Dashboards",description: "Build personalized dashboards tailored to your business needs",icon: Target,color: "from-orange-400 to-red-500"
     }
   ];
-
   const analyticsTypes = [
     {
-      name: "Business Intelligence",
-      description: "Comprehensive business analytics and reporting",
-      icon: BarChart3,
-      features: ["KPI tracking", "Performance metrics", "Business reports", "Executive dashboards"],
+      name: "Business Intelligence",description: "Comprehensive business analytics and reporting",icon: BarChart3,features: ["KPI tracking", "Performance metrics", "Business reports", "Executive dashboards"],
       path: "/services/ai-business-intelligence"
-    },
+    };
     {
-      name: "Website Analytics",
-      description: "Track website performance and user behavior",
-      icon: Globe,
-      features: ["Traffic analysis", "User engagement", "Conversion tracking", "SEO insights"],
+      name: "Website Analytics",description: "Track website performance and user behavior",icon: Globe,features: ["Traffic analysis", "User engagement", "Conversion tracking", "SEO insights"],
       path: "/services/website-analytics"
-    },
+    };
     {
-      name: "AI Data Analytics",
-      description: "Advanced AI-powered data analysis and insights",
-      icon: Zap,
-      features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"],
+      name: "AI Data Analytics",description: "Advanced AI-powered data analysis and insights",icon: Zap,features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"],
       path: "/services/ai-data-analytics"
-    },
+    };
     {
-      name: "Financial Analytics",
-      description: "Financial performance tracking and optimization",
-      icon: DollarSign,
-      features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],
+      name: "Financial Analytics",description: "Financial performance tracking and optimization",icon: DollarSign,features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],
       path: "/services/ai-financial-analytics"
     }
   ];
-
   const metrics = [
-    { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },
-    { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },
-    { icon: Globe, value: "25+", label: "Countries", description: "Global reach" },
+    { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" };
+    { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" };
+    { icon: Globe, value: "25+", label: "Countries", description: "Global reach" };
     { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" }
   ];
-
   const integrations = [
-    { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },
-    { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },
-    { name: "Stripe", icon: "💳", description: "Payment and revenue data" },
-    { name: "Slack", icon: "💬", description: "Team communication metrics" },
-    { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },
+    { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" };
+    { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" };
+    { name: "Stripe", icon: "💳", description: "Payment and revenue data" };
+    { name: "Slack", icon: "💬", description: "Team communication metrics" };
+    { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" };
     { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -344,7 +316,7 @@ const Analytics: React.FC = () => {
               Our analytics platform will help you make better decisions and drive growth.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
@@ -363,7 +335,6 @@ const Analytics: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Analytics;

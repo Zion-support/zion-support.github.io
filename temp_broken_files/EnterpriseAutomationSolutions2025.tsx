@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Building2,
   Zap,
@@ -9,65 +9,65 @@ import {,
   Clock,
   Shield,
   TrendingUp,
-  CheckCircle;
-  ArrowRight;
-  Play;
-  Star;
-  Target;
-  DollarSign;
-  Globe;
-  Settings;
-  Database;
-  Cloud;
-  Lock;
-  Smartphone;
-  Monitor;
-  Server;
-  Workflow;
-  Brain;
-  Bot;
-  FileText;
-  MessageSquare;
-  Calendar;
-  Mail;
-  CreditCard;
-  PieChart;
-  Activity;
-  AlertTriangle;
-  RefreshCw;
-  Download;
-  Upload;
-  Eye;
-  Edit;
-  Trash2;
-  Plus;
-  Minus;
-  Maximize;
-  Minimize,
-} from 'lucide-react';
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Target,
+  DollarSign,
+  Globe,
+  Settings,
+  Database,
+  Cloud,
+  Lock,
+  Smartphone,
+  Monitor,
+  Server,
+  Workflow,
+  Brain,
+  Bot,
+  FileText,
+  MessageSquare,
+  Calendar,
+  Mail,
+  CreditCard,
+  PieChart,
+  Activity,
+  AlertTriangle,
+  RefreshCw,
+  Download,
+  Upload,
+  Eye,
+  Edit,
+  Trash2,
+  Plus,
+  Minus,
+  Maximize,
+  Minimize
+} from 'lucide-react',
 interface AutomationSolution {,
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  icon: React.ReactNode;
-  features: string[];
-  benefits: string[];
+  id: string,
+  name: string,
+  description: string,
+  category: string,
+  icon: React.ReactNode,
+  features: string[],
+  benefits: string[],
   pricing: {,
-    starter: string;
-    professional: string;
-    enterprise: string,};
-  roi: string;
-  implementation: string;
-  isPopular?: boolean;
-  isNew?: boolean,
+    starter: string,
+    professional: string,
+    enterprise: string},
+  roi: string,
+  implementation: string,
+  isPopular?: boolean,
+  isNew?: boolean
 }
 ,
 const EnterpriseAutomationSolutions2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -82,7 +82,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
             Streamline processesreduce costsand accelerate growth.,
           </p>,
         </div>,
-        {/* Category Filter */,}
+        {/* Category Filter */}
         <div,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
@@ -93,23 +93,23 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                 activeCategory === category.id,
                   ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25',
-                  : 'bg-white/10 text-gray-300 hover: bg-white/20',}`}
+                  : 'bg-white/10 text-gray-300 hover: bg-white/20'}`}
             >,
               {category.name} ({category.count}),
             </button>,
           ))}
         </div>,
         <div className="grid lg: grid-cols-3 gap-8">,
-          {/* Solutions Grid */,}
+          {/* Solutions Grid */}
           <div className="lg: col-span-2">,
             <div,
               className="grid gap-6",
             >,
               {filteredSolutions.map((solutionindex) => (,
                 <div,
-                  key={solution.id,}
+                  key={solution.id}
                   className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: bg-white/10 transition-all duration-300 cursor-pointer group ${,
-                    selectedSolution === solution.id ? 'ring-2 ring-blue-500' : '',}`}
+                    selectedSolution === solution.id ? 'ring-2 ring-blue-500' : ''}`}
                   onClick={() => setSelectedSolution(solution.id)}
                 >,
                   <div className="flex items-start justify-between mb-4">,
@@ -120,18 +120,16 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                       <div>,
                         <div className="flex items-center space-x-2 mb-2">,
                           <h3 className="text-2xl font-semibold text-white group-hover: text-blue-400 transition-colors">,
-                            {solution.name,}
+                            {solution.name}
                           </h3>,
                           {solution.isNew && (,
                             <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">,
                               New,
-                            </span>,
-                          )}
+                            </span>)}
                           {solution.isPopular && (,
                             <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">,
                               Popular,
-                            </span>,
-                          )}
+                            </span>)}
                         </div>,
                         <p className="text-gray-300 mb-3">{solution.description}</p>,
                         <div className="flex items-center space-x-4 text-sm text-gray-400">,
@@ -152,16 +150,14 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                       <h4 className="text-white font-medium mb-3">Key Features</h4>,
                       <div className="space-y-2">,
                         {solution.features.slice(03).map((featureidx) => (,
-                          <div key={idx,} className="flex items-center space-x-2">,
+                          <div key={idx} className="flex items-center space-x-2">,
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />,
                             <span className="text-gray-300 text-sm">{feature}</span>,
-                          </div>,
-                        ))}
+                          </div>))}
                         {solution.features.length > 3 && (,
                           <div className="text-gray-400 text-sm">,
                             +{solution.features.length - 3} more features,
-                          </div>,
-                        )}
+                          </div>)}
                       </div>,
                     </div>,
                     <div>,
@@ -171,8 +167,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                           <div key={idx} className="flex items-center space-x-2">,
                             <Target className="w-4 h-4 text-blue-400 flex-shrink-0" />,
                             <span className="text-gray-300 text-sm">{benefit}</span>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                     </div>,
                   </div>,
@@ -183,8 +178,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                           <div key={tier} className="text-center">,
                             <div className="text-xs text-gray-400 capitalize">{tier}</div>,
                             <div className="text-white font-medium">{price}</div>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                       <button className="px-6 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg transition-colors flex items-center space-x-2">,
                         <Play className="w-4 h-4" />,
@@ -193,7 +187,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                     </div>,
                   </div>,
                 </div>,
-              )),}
+              ))}
             </div>,
           </div>,
           {/* Demo Panel */}
@@ -204,7 +198,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>,
                 {selectedSolutionData ? (,
                   <div,
-                    key={selectedSolutionData.id,}
+                    key={selectedSolutionData.id}
                   >,
                     <div className="text-center mb-6">,
                       <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">,
@@ -224,7 +218,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                             <div className="w-full h-full border-4 border-blue-500/20 rounded-full"></div>,
                             <div,
                               className="absolute top-0 left-0 w-full h-full border-4 border-blue-500 rounded-full border-t-transparent animate-spin",
-                              style={{ animationDuration: '1s' ,}}
+                              style={{ animationDuration: '1s' }}
                             ></div>,
                           </div>,
                           <p className="text-white font-medium">Running Demo...</p>,
@@ -234,20 +228,17 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                         </div>,
                         <div className="space-y-2">,
                           {[,
-                            'Initializing automation engine...Connecting to enterprise systems...';
-                            'Configuring workflow rules...Deploying AI models...';
-                            'Testing automation processes...Monitoring performance metrics...';
-                            'Demo completed successfully!',
+                            'Initializing automation engine...Connecting to enterprise systems...Configuring workflow rules...Deploying AI models...',
+                            'Testing automation processes...Monitoring performance metrics...Demo completed successfully!'
                           ].map((stepindex) => (,
                             <div key={index} className={`flex items-center space-x-2 text-sm ${,
-                              index <= demoStep ? 'text-green-400' : 'text-gray-500',
+                              index <= demoStep ? 'text-green-400' : 'text-gray-500'
                             }`}>,
                               <CheckCircle className={`w-4 h-4 ${,
-                                index <= demoStep ? 'text-green-400' : 'text-gray-500',
+                                index <= demoStep ? 'text-green-400' : 'text-gray-500'
                               }`} />,
                               <span>{step}</span>,
-                            </div>,
-                          ))}
+                            </div>))}
                         </div>,
                       </div>,
                     ) : (,
@@ -262,11 +253,10 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                         <div className="space-y-3">,
                           <h5 className="text-white font-medium">Key Benefits: </h5>,
                           {selectedSolutionData.benefits.map((benefitindex) => (,
-                            <div key={index,} className="flex items-center space-x-2">,
+                            <div key={index} className="flex items-center space-x-2">,
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />,
                               <span className="text-gray-300 text-sm">{benefit}</span>,
-                            </div>,
-                          ))}
+                            </div>))}
                         </div>,
                         <div className="pt-4 border-t border-white/10">,
                           <div className="flex items-center justify-between text-sm text-gray-400 mb-2">,
@@ -286,7 +276,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                           <span>Start Demo</span>,
                         </button>,
                       </div>,
-                    ),}
+                    )}
                   </div>,
                 ) : (,
                   <div,
@@ -299,8 +289,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
                     <p className="text-gray-400">,
                       Choose an automation solution to see it in action,
                     </p>,
-                  </div>,
-                )}
+                  </div>)}
               </div>,
             </div>,
           </div>,
@@ -310,10 +299,10 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
           className="mt-20 grid grid-cols-2 md: grid-cols-4 gap-8",
         >,
           {[,
-            { icon: <Building2 className="w-8 h-8" />label: 'Enterprise 'Clientsvalue: '500+' ,};
-            { icon: <TrendingUp className="w-8 h-8" />label: 'Average 'ROIvalue: '300%' ,};
-            { icon: <Clock className="w-8 h-8" />label: 'Time 'Savedvalue: '80%' ,};
-            { icon: <Shield className="w-8 h-8" />label: ''Uptimevalue: '99.9%' ,}
+            { icon: <Building2 className="w-8 h-8" />label: 'Enterprise 'Clientsvalue: '500+' },
+            { icon: <TrendingUp className="w-8 h-8" />label: 'Average 'ROIvalue: '300%' },
+            { icon: <Clock className="w-8 h-8" />label: 'Time 'Savedvalue: '80%' },
+            { icon: <Shield className="w-8 h-8" />label: ''Uptimevalue: '99.9%' }
           ].map((statindex) => (,
             <div key={index} className="text-center">,
               <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">,
@@ -321,11 +310,10 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {,
               </div>,
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
               <div className="text-gray-400">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
     </div>,
-  );
-};
-export default EnterpriseAutomationSolutions2025;
+  ),
+},
+export default EnterpriseAutomationSolutions2025,

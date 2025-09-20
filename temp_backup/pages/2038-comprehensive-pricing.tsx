@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, Phone, Mail, MapPin, Globe,
   Brain, Shield, Target, Rocket, Heart,
   Building, Grid
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new 2038 services
-import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services';
-import { innovative2038ITMicroSaasServices } from '../data/innovative-2038-it-micro-saas-services';
+import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services',
+import { innovative2038ITMicroSaasServices } from '../data/innovative-2038-it-micro-saas-services',
 
 // Create unified services array
 const all2038Services = [
   ...innovative2038CuttingEdgeServices,
   ...innovative2038ITMicroSaasServices
-];
+],
 
 
 
@@ -69,10 +69,10 @@ const categories = [
     color: 'from-teal-500 to-green-500',
     description: 'AI-powered climate prediction and analysis'
   }
-];
+],
 
 export default function Comprehensive2038Pricing() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const filteredServices = selectedCategory === 'all' 
     ? all2038Services 
@@ -80,7 +80,7 @@ export default function Comprehensive2038Pricing() {
         service.category.toLowerCase().includes(
           categories.find(cat => cat.id === selectedCategory)?.name.toLowerCase() || ''
         )
-      );
+      ),
 
 const 2038-comprehensive-pricing: React.FC = () => {
   return (
@@ -97,8 +97,8 @@ const 2038-comprehensive-pricing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default UltimateTechRevolution2027;
+export default UltimateTechRevolution2027,

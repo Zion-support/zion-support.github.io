@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable = () => {
 
-  const [billingCycle, setBillingCycle] = useState('monthly');
+  const [billingCycle, setBillingCycle] = useState('monthly'),
 
   const plans = [{
 
       name: 'Basic Support',
       description: 'Essential IT support for small businesses',
       price: billingCycle === 'monthly' ? 299 : 2990,
-      features[;
+      features[,
         '24/7 Help Desk Support',Remote Troubleshooting',Basic Network Monitoring',Email Support',Monthly Reports',Up to 25 Users'
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[,
         'On-site Visits',Hardware Installation',Advanced Security',Priority Support'
-      ],;
+      ],
       popular: false,
       icon: Users
     },
@@ -22,12 +22,12 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       name: 'Professional Support',
       description: 'Comprehensive IT support with on-site capabilities',
       price: billingCycle === 'monthly' ? 599 : 5990,
-      features[;
+      features[,
         'Everything in Basic',On-site Support(2 visits/month),Hardware Installation',Network Security Monitoring',Phone & Email Support',Weekly Reports',Up to 100 Users',Emergency Response(4hr)
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[,
         'Unlimited On-site Visits',Dedicated Technician',Advanced Analytics'
-      ],;
+      ],
       popular: true,
       icon: Shield
     },
@@ -36,16 +36,16 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       name: 'Enterprise Support',
       description: 'Full-service IT support for large organizations',
       price: billingCycle === 'monthly' ? 1299 : 12990,
-      features[;
+      features[,
         'Everything in Professional',Unlimited On-site Support',Dedicated IT Technician',Advanced Security Suite',Real-time Monitoring',Daily Reports',Unlimited Users',Emergency Response(2hr),Strategic IT Planning',Compliance Support'
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[,
         'Custom Development',Hardware Procurement'
-      ],;
+      ],
       popular: false,
       icon: Star
 
-  ];
+  ],
 
   const additionalServices = [{
 
@@ -71,7 +71,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       price: 200,
       description: 'Staff IT training(per session)
 
-  ];
+  ],
 
   return ()
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">"
@@ -115,7 +115,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                   : 'border-gray-200 hover:border-gray-300'`
               }`}
 
-              {plan.popular && (;"
+              {plan.popular && (,"
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                   <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
@@ -171,13 +171,13 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
                   Get Started
                 </button>
-              </div>;
+              </div>,
             </div>
           ))}
         </div>
 
         {/* Additional Services */}"
-        <div className="bg-white rounded-2xl shadow-xl p-8">;"
+        <div className="bg-white rounded-2xl shadow-xl p-8">,"
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Additional Services
           </h3>"
@@ -196,7 +196,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
         </div>
 
         {/* FAQ Section */}"
-        <div className="mt-20 text-center">;"
+        <div className="mt-20 text-center">,"
           <h3 className="text-3xl font-bold text-gray-900 mb-8">
             Frequently Asked Questions
           </h3>"
@@ -226,7 +226,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
         </div>
 
         {/* CTA */}"
-        <div className="text-center mt-20">;"
+        <div className="text-center mt-20">,"
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 max-w-3xl mx-auto">"
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -251,5 +251,5 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
         </div>
       </div>
     </section>
-  )};
+  )},
 '"`

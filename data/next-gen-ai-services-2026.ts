@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface NextGenAIService2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   // AI Creative Studio Platform
@@ -49,16 +49,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '',
     description: 'Revolutionary AI platform that generates unlimited creative content including images, videos, music, and text. Perfect for marketing agencies, content creators, and businesses.',
     features: [
-      'AI image generation (unlimited)',
-      'AI video creation & editing',
-      'AI music composition',
-      'AI copywriting & content',
-      'Brand voice customization',
-      'Multi-format export',
-      'Collaboration tools',
-      'API access',
-      'Custom AI model training',
-      'Enterprise security'
+      'AI image generation (unlimited)AI video creation & editing',
+      'AI music compositionAI copywriting & content',
+      'Brand voice customizationMulti-format export',
+      'Collaboration toolsAPI access',
+      'Custom AI model trainingEnterprise security'
     ],
     popular: true,
     icon: '🎨',
@@ -71,11 +66,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1 week',
     category: 'AI & Creative',
     realService: true,
-    technology: ['OpenAI DALL-E 3', 'Stable Diffusion', 'Midjourney API', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Adobe Creative Suite', 'Canva', 'Figma', 'Slack', 'Microsoft Teams', 'Zapier', 'Shopify', 'WordPress'],
-    useCases: ['Marketing content creation', 'Social media graphics', 'Product photography', 'Video production', 'Music composition', 'Copywriting'],
+    technology: ['OpenAI DALL-E 3Stable Diffusion', 'Midjourney APIReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['Adobe Creative SuiteCanva', 'FigmaSlack', 'Microsoft TeamsZapier', 'ShopifyWordPress'],
+    useCases: ['Marketing content creationSocial media graphics', 'Product photographyVideo production', 'Music compositionCopywriting'],
     roi: 'Marketing agencies see 600% ROI within 3 months through reduced content creation costs and faster delivery.',
-    competitors: ['Midjourney', 'DALL-E 2', 'Runway ML', 'Stable Diffusion', 'Canva AI', 'Adobe Firefly'],
+    competitors: ['MidjourneyDALL-E 2', 'Runway MLStable Diffusion', 'Canva AIAdobe Firefly'],
     marketSize: '$15.3B market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -101,16 +96,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '',
     description: 'Transform your business operations with autonomous AI systems that handle customer service, sales, marketing, operations, and decision-making without human intervention.',
     features: [
-      'Autonomous customer service',
-      'AI-powered sales automation',
-      'Intelligent marketing campaigns',
-      'Operational decision making',
-      'Financial management AI',
-      'Supply chain optimization',
-      'Predictive analytics',
-      'Real-time monitoring',
-      'Custom AI training',
-      '24/7 operations'
+      'Autonomous customer serviceAI-powered sales automation',
+      'Intelligent marketing campaignsOperational decision making',
+      'Financial management AISupply chain optimization',
+      'Predictive analyticsReal-time monitoring',
+      'Custom AI training24/7 operations'
     ],
     popular: true,
     icon: '🚀',
@@ -123,11 +113,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1 month',
     category: 'AI & Business Automation',
     realService: true,
-    technology: ['OpenAI GPT-4', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Machine Learning'],
-    integrations: ['Salesforce', 'HubSpot', 'Microsoft Dynamics', 'SAP', 'Oracle', 'Slack', 'Microsoft Teams', 'Zapier'],
-    useCases: ['Customer service automation', 'Sales process optimization', 'Marketing campaign management', 'Operational efficiency', 'Financial planning', 'Strategic decision making'],
+    technology: ['OpenAI GPT-4TensorFlow', 'ReactNode.js', 'PostgreSQLRedis', 'AWSMachine Learning'],
+    integrations: ['SalesforceHubSpot', 'Microsoft DynamicsSAP', 'OracleSlack', 'Microsoft TeamsZapier'],
+    useCases: ['Customer service automationSales process optimization', 'Marketing campaign managementOperational efficiency', 'Financial planningStrategic decision making'],
     roi: 'Enterprise customers see 800% ROI within 18 months through complete business automation and improved efficiency.',
-    competitors: ['Salesforce Einstein', 'HubSpot AI', 'Microsoft Dynamics 365', 'SAP Leonardo', 'Oracle AI', 'IBM Watson'],
+    competitors: ['Salesforce EinsteinHubSpot AI', 'Microsoft Dynamics 365SAP Leonardo', 'Oracle AIIBM Watson'],
     marketSize: '$67.8B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -153,16 +143,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes human emotions through voice, text, and facial expressions to provide emotionally intelligent responses and insights.',
     features: [
-      'Voice emotion analysis',
-      'Text sentiment analysis',
-      'Facial expression recognition',
-      'Emotional response generation',
-      'Mood tracking & analytics',
-      'Personalized interactions',
-      'Multi-language support',
-      'Real-time processing',
-      'API access',
-      'Privacy protection'
+      'Voice emotion analysisText sentiment analysis',
+      'Facial expression recognitionEmotional response generation',
+      'Mood tracking & analyticsPersonalized interactions',
+      'Multi-language supportReal-time processing',
+      'API accessPrivacy protection'
     ],
     popular: false,
     icon: '❤️',
@@ -175,11 +160,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2 weeks',
     category: 'AI & Psychology',
     realService: true,
-    technology: ['Computer vision', 'Natural language processing', 'Machine learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Zendesk', 'Intercom', 'Slack', 'Microsoft Teams', 'Zoom', 'WebRTC', 'Mobile apps', 'Web applications'],
-    useCases: ['Customer service enhancement', 'Mental health monitoring', 'Educational assessment', 'Marketing research', 'HR screening', 'Therapeutic support'],
+    technology: ['Computer visionNatural language processing', 'Machine learningReact', 'Node.jsPostgreSQL', 'RedisAWS'],
+    integrations: ['ZendeskIntercom', 'SlackMicrosoft Teams', 'ZoomWebRTC', 'Mobile appsWeb applications'],
+    useCases: ['Customer service enhancementMental health monitoring', 'Educational assessmentMarketing research', 'HR screeningTherapeutic support'],
     roi: 'Customer service companies see 400% ROI within 6 months through improved customer satisfaction and emotional intelligence.',
-    competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus', 'iMotions', 'Tobii'],
+    competitors: ['AffectivaRealeyes', 'EmotientNoldus', 'iMotionsTobii'],
     marketSize: '$3.2B market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -205,16 +190,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Advanced AI platform that processes and analyzes multiple data types simultaneously, providing comprehensive insights and intelligent responses across all modalities.',
     features: [
-      'Text, image, audio & video processing',
-      'Cross-modal understanding',
-      'Unified AI responses',
-      'Real-time multimodal analysis',
-      'Custom model training',
-      'API access for all modalities',
-      'Scalable infrastructure',
-      'Enterprise security',
-      'Multi-language support',
-      'Expert consultation'
+      'Text, image, audio & video processingCross-modal understanding',
+      'Unified AI responsesReal-time multimodal analysis',
+      'Custom model trainingAPI access for all modalities',
+      'Scalable infrastructureEnterprise security',
+      'Multi-language supportExpert consultation'
     ],
     popular: false,
     icon: '🔗',
@@ -227,11 +207,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1 week',
     category: 'AI & Research',
     realService: true,
-    technology: ['OpenAI GPT-4V', 'Google Gemini', 'Anthropic Claude', 'Custom multimodal models', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['TensorFlow', 'PyTorch', 'Jupyter', 'GitHub', 'Slack', 'Microsoft Teams', 'Research tools', 'Cloud platforms'],
-    useCases: ['Research & development', 'Autonomous systems', 'Robotics control', 'Content analysis', 'Security monitoring', 'Medical diagnosis'],
+    technology: ['OpenAI GPT-4VGoogle Gemini', 'Anthropic ClaudeCustom multimodal models', 'ReactNode.js', 'PostgreSQLRedis'],
+    integrations: ['TensorFlowPyTorch', 'JupyterGitHub', 'SlackMicrosoft Teams', 'Research toolsCloud platforms'],
+    useCases: ['Research & developmentAutonomous systems', 'Robotics controlContent analysis', 'Security monitoringMedical diagnosis'],
     roi: 'Research institutions see 600% ROI through accelerated research and breakthrough discoveries.',
-    competitors: ['OpenAI GPT-4V', 'Google Gemini', 'Anthropic Claude', 'Microsoft Azure AI', 'AWS AI services'],
+    competitors: ['OpenAI GPT-4VGoogle Gemini', 'Anthropic ClaudeMicrosoft Azure AI', 'AWS AI services'],
     marketSize: '$12.5B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -257,16 +237,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Revolutionary platform that combines artificial intelligence with quantum computing to solve complex problems that are impossible for classical computers alone.',
     features: [
-      'AI-quantum hybrid algorithms',
-      'Quantum machine learning',
-      'Hybrid optimization',
-      'Real-time quantum access',
-      'Custom algorithm development',
-      'Performance analytics',
-      'Expert consultation',
-      'Training & support',
-      'API access',
-      'Enterprise security'
+      'AI-quantum hybrid algorithmsQuantum machine learning',
+      'Hybrid optimizationReal-time quantum access',
+      'Custom algorithm developmentPerformance analytics',
+      'Expert consultationTraining & support',
+      'API accessEnterprise security'
     ],
     popular: false,
     icon: '⚛️',
@@ -279,11 +254,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2 weeks',
     category: 'AI & Quantum Computing',
     realService: true,
-    technology: ['IBM Quantum', 'Google Quantum AI', 'Amazon Braket', 'Custom hybrid algorithms', 'Python', 'Qiskit', 'Cirq', 'AWS'],
-    integrations: ['TensorFlow', 'PyTorch', 'Jupyter', 'GitHub', 'Slack', 'Microsoft Teams', 'Research tools', 'Cloud platforms'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Optimization problems', 'Cryptography', 'Machine learning', 'Scientific research'],
+    technology: ['IBM QuantumGoogle Quantum AI', 'Amazon BraketCustom hybrid algorithms', 'PythonQiskit', 'CirqAWS'],
+    integrations: ['TensorFlowPyTorch', 'JupyterGitHub', 'SlackMicrosoft Teams', 'Research toolsCloud platforms'],
+    useCases: ['Drug discoveryFinancial modeling', 'Optimization problemsCryptography', 'Machine learningScientific research'],
     roi: 'Research institutions see 1000% ROI through breakthrough discoveries and accelerated research.',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Amazon Braket', 'Microsoft Azure Quantum', 'Rigetti Computing'],
+    competitors: ['IBM QuantumGoogle Quantum AI', 'Amazon BraketMicrosoft Azure Quantum', 'Rigetti Computing'],
     marketSize: '$6.8B market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -300,4 +275,4 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.9,
     reviews: 80
   }
-];
+],

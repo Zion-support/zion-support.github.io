@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -14,18 +14,13 @@ export default function Page() {
     price: '$499',
     period: '/month',
     description: 'Advanced AI code generation platform that helps developers write, debug, and optimize code across multiple programming languages.',
-    features[;
-      'Multi - language code generation',
-      'Code completion and suggestions',
-      'Bug detection and fixing',
-      'Code optimization',
-      'Documentation generation',
-      'Testing automation',
-      'Code review assistance',
-      'Team collaboration',
-      'Version control integration',
-      'Performance analytics'
-    ],;
+    features[,
+      'Multi - language code generationCode completion and suggestions',
+      'Bug detection and fixingCode optimization',
+      'Documentation generationTesting automation',
+      'Code review assistanceTeam collaboration',
+      'Version control integrationPerformance analytics'
+    ],
     popular: true,
     icon: Code,
     color: 'from - green - 600 to - emerald - 700',
@@ -37,11 +32,11 @@ export default function Page() {
     setupTime: '2 - 3 days',
     category: 'AI Development & Coding',
     realService: true,
-    technology['Large language models', 'Code analysis', 'Machine learning', 'Static analysis', 'AI optimization'],;
-    integrations['Git repositories', 'IDEs', 'CI / CD platforms', 'Project management tools', 'Testing frameworks'],;
-    useCases['Code generation', 'Bug fixing', 'Code review', 'Documentation', 'Testing automation'],;
+    technology['Large language modelsCode analysis', 'Machine learningStatic analysis', 'AI optimization'],
+    integrations['Git repositoriesIDEs', 'CI / CD platformsProject management tools', 'Testing frameworks'],
+    useCases['Code generationBug fixing', 'Code reviewDocumentation', 'Testing automation'],
     roi: 'Development teams achieve 500% ROI through increased productivity and reduced development time.',
-    competitors['Open - source AI tools', 'Basic code editors', 'Traditional IDEs'],;
+    competitors['Open - source AI toolsBasic code editors', 'Traditional IDEs'],
     marketSize: '$6.8B AI development market',
     growthRate: '280% annual growth',
     rating: 4.8,
@@ -57,18 +52,13 @@ export default function Page() {
     price: '$249',
     period: '/month',
     description: 'Intelligent AI design platform that creates logos, graphics, layouts, and visual assets with brand consistency and professional quality.',
-    features[;
-      'Logo generation and design',
-      'Graphic design creation',
-      'Layout optimization',
-      'Brand consistency tools',
-      'Template library',
-      'Design collaboration',
-      'Export optimization',
-      'Brand guidelines',
-      'Design analytics',
-      'Team management'
-    ],;
+    features[,
+      'Logo generation and designGraphic design creation',
+      'Layout optimizationBrand consistency tools',
+      'Template libraryDesign collaboration',
+      'Export optimizationBrand guidelines',
+      'Design analyticsTeam management'
+    ],
     popular: false,
     icon: Palette,
     color: 'from - pink - 600 to - rose - 700',
@@ -80,11 +70,11 @@ export default function Page() {
     setupTime: '2 - 3 days',
     category: 'AI Design & Creative',
     realService: true,
-    technology['Computer vision', 'Design algorithms', 'Machine learning', 'Brand recognition', 'AI optimization'],;
-    integrations['Design tools', 'Brand platforms', 'Marketing tools', 'CMS systems', 'Social media'],;
-    useCases['Logo design', 'Brand graphics', 'Marketing materials', 'Website design', 'Social media assets'],;
+    technology['Computer visionDesign algorithms', 'Machine learningBrand recognition', 'AI optimization'],
+    integrations['Design toolsBrand platforms', 'Marketing toolsCMS systems', 'Social media'],
+    useCases['Logo designBrand graphics', 'Marketing materialsWebsite design', 'Social media assets'],
     roi: 'Design agencies achieve 300% ROI through faster design delivery and brand consistency.',
-    competitors['Traditional design tools', 'Basic design platforms', 'Logo generators'],;
+    competitors['Traditional design toolsBasic design platforms', 'Logo generators'],
     marketSize: '$3.2B AI design market',
     growthRate: '200% annual growth',
     rating: 4.6,
@@ -100,18 +90,13 @@ export default function Page() {
     price: '$349',
     period: '/month',
     description: 'Comprehensive AI e - commerce platform that optimizes product recommendations, pricing, inventory, and customer experience.',
-    features[;
-      'AI product recommendations',
-      'Dynamic pricing optimization',
-      'Inventory management',
-      'Customer behavior analysis',
-      'Personalization engine',
-      'A / B testing automation',
-      'Conversion optimization',
-      'Analytics dashboard',
-      'Multi - platform support',
-      'API integration'
-    ],;
+    features[,
+      'AI product recommendationsDynamic pricing optimization',
+      'Inventory managementCustomer behavior analysis',
+      'Personalization engineA / B testing automation',
+      'Conversion optimizationAnalytics dashboard',
+      'Multi - platform supportAPI integration'
+    ],
     popular: true,
     icon: ShoppingCart,
     color: 'from - orange - 600 to - red - 700',
@@ -123,11 +108,11 @@ export default function Page() {
     setupTime: '3 - 5 days',
     category: 'AI E - commerce & Retail',
     realService: true,
-    technology['Machine learning', 'Predictive analytics', 'Personalization algorithms', 'Optimization engines', 'Real - time processing'],;
-    integrations['Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Analytics platforms'],;
-    useCases['Product recommendations', 'Pricing optimization', 'Inventory management', 'Customer personalization', 'Conversion optimization'],;
+    technology['Machine learningPredictive analytics', 'Personalization algorithmsOptimization engines', 'Real - time processing'],
+    integrations['ShopifyWooCommerce', 'MagentoBigCommerce', 'Analytics platforms'],
+    useCases['Product recommendationsPricing optimization', 'Inventory managementCustomer personalization', 'Conversion optimization'],
     roi: 'E - commerce businesses achieve 400% ROI through increased sales and reduced operational costs.',
-    competitors['Traditional e - commerce tools', 'Basic analytics platforms', 'Manual optimization tools'],;
+    competitors['Traditional e - commerce toolsBasic analytics platforms', 'Manual optimization tools'],
     marketSize: '$8.9B AI e - commerce market',
     growthRate: '320% annual growth',
     rating: 4.8,
@@ -143,18 +128,13 @@ export default function Page() {
     price: '$199',
     period: '/month',
     description: 'Intelligent AI customer service platform that provides 24 / 7 support through chatbots, automated responses, and intelligent ticket routing.',
-    features[;
-      'AI chatbot creation',
-      'Natural language processing',
-      'Automated ticket routing',
-      'Knowledge base management',
-      'Multi - language support',
-      'Integration capabilities',
-      'Analytics dashboard',
-      'Team collaboration',
-      'Custom workflows',
-      'API access'
-    ],;
+    features[,
+      'AI chatbot creationNatural language processing',
+      'Automated ticket routingKnowledge base management',
+      'Multi - language supportIntegration capabilities',
+      'Analytics dashboardTeam collaboration',
+      'Custom workflowsAPI access'
+    ],
     popular: true,
     icon: MessageSquare,
     color: 'from - blue - 600 to - indigo - 700',
@@ -166,11 +146,11 @@ export default function Page() {
     setupTime: '2 - 3 days',
     category: 'AI Customer Service',
     realService: true,
-    technology['Natural language processing', 'Machine learning', 'Chatbot frameworks', 'Automation engines', 'AI routing'],;
-    integrations['CRM systems', 'Help desk platforms', 'E - commerce platforms', 'Social media', 'Messaging apps'],;
-    useCases['Customer support', 'FAQ automation', 'Ticket routing', 'Customer engagement', 'Support analytics'],;
+    technology['Natural language processingMachine learning', 'Chatbot frameworksAutomation engines', 'AI routing'],
+    integrations['CRM systemsHelp desk platforms', 'E - commerce platformsSocial media', 'Messaging apps'],
+    useCases['Customer supportFAQ automation', 'Ticket routingCustomer engagement', 'Support analytics'],
     roi: 'Customer service teams achieve 350% ROI through reduced response times and improved customer satisfaction.',
-    competitors['Traditional help desk tools', 'Basic chatbot platforms', 'Manual support systems'],;
+    competitors['Traditional help desk toolsBasic chatbot platforms', 'Manual support systems'],
     marketSize: '$5.6B AI customer service market',
     growthRate: '240% annual growth',
     rating: 4.7,
@@ -186,18 +166,13 @@ export default function Page() {
     price: '$299',
     period: '/month',
     description: 'Advanced AI analytics platform that provides intelligent insights, predictive analytics, and automated reporting for business decision - making.',
-    features[;
-      'AI - powered insights',
-      'Predictive analytics',
-      'Automated reporting',
-      'Data visualization',
-      'Real - time monitoring',
-      'Custom dashboards',
-      'Data integration',
-      'Collaboration tools',
-      'Mobile access',
-      'API integration'
-    ],;
+    features[,
+      'AI - powered insightsPredictive analytics',
+      'Automated reportingData visualization',
+      'Real - time monitoringCustom dashboards',
+      'Data integrationCollaboration tools',
+      'Mobile accessAPI integration'
+    ],
     popular: false,
     icon: BarChart3,
     color: 'from - emerald - 600 to - teal - 700',
@@ -209,21 +184,21 @@ export default function Page() {
     setupTime: '3 - 5 days',
     category: 'AI Analytics & BI',
     realService: true,
-    technology['Machine learning', 'Predictive analytics', 'Data processing', 'Visualization engines', 'AI insights'],;
-    integrations['Data sources', 'Business tools', 'CRM systems', 'Marketing platforms', 'Cloud services'],;
-    useCases['Business intelligence', 'Performance monitoring', 'Predictive insights', 'Data visualization', 'Automated reporting'],;
+    technology['Machine learningPredictive analytics', 'Data processingVisualization engines', 'AI insights'],
+    integrations['Data sourcesBusiness tools', 'CRM systemsMarketing platforms', 'Cloud services'],
+    useCases['Business intelligencePerformance monitoring', 'Predictive insightsData visualization', 'Automated reporting'],
     roi: 'Businesses achieve 400% ROI through improved decision - making and operational efficiency.',
-    competitors['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],;
-    marketSize: '$7.2B AI analytics market',;
-    growthRate: '260% annual growth',;
-    rating: 4.6,;
-    reviews: 234,;
-    customers: 123;
-  };
-];
+    competitors['Traditional BI toolsBasic analytics platforms', 'Manual reporting tools'],
+    marketSize: '$7.2B AI analytics market',
+    growthRate: '260% annual growth',
+    rating: 4.6,
+    reviews: 234,
+    customers: 123
+  },
+],
 
           return b.popular ? 1 : -1}
-    }) ;
+    }) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -262,11 +237,11 @@ export default function Page() {
               ⚡ Instant Setup
             </div>
           </motion.div>
-        </div>;
+        </div>,
       </section>
 
       {/* Filters and Search */}
-      <section className="py-12 bg-zion - slate -dark / 50">;
+      <section className="py-12 bg-zion - slate -dark / 50">,
         <div  className="container mx - auto px-6">
           <div  className="flex flex - col lg:flex - row gap-6 items - center justify -between">
             {/* Category Filter */}
@@ -283,7 +258,7 @@ export default function Page() {
 
                   <category.icon className="w-4 h-4" />
                   {category.name}
-                </motion.button>;) ) }
+                </motion.button>,) ) }
             </div>
 
             {/* Search and Sort */}
@@ -314,7 +289,7 @@ export default function Page() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="container mx - auto px-6">
           <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">
             {filteredServices.map((service, index) => (<motion.div
@@ -337,7 +312,7 @@ export default function Page() {
                 className="group relative bg-zion - slate / 30 backdrop - blur - sm border border-zion - slate / 40 rounded-2xl p - 6 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion -cyan / 20"
 
                 {/* Popular Badge */}
-                {service.popular && (;
+                {service.popular && (,
                   <div  className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - cyan to - zion - purple text-white px-3 py-1 rounded-full text-sm font - semibold shadow-lg">
                     Popular
                   </div>) }
@@ -348,9 +323,9 @@ export default function Page() {
                 </div>
 
                 {/* Service Content */}
-                <h3 className="text-2xl font - bold text-white mb-2 group - hover:text-zion - cyan transition - colors duration -300">;
+                <h3 className="text-2xl font - bold text-white mb-2 group - hover: text-zion - cyan transition - colors duration -300">,
                   {service.name}
-                </h3>;
+                </h3>,
                 <p className="text-zion - slate - light mb-4">
                   {service.tagline}
                 </p>
@@ -410,7 +385,7 @@ export default function Page() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-zion - slate -dark / 50">;
+      <section className="py-20 bg-zion - slate -dark / 50">,
         <div  className="container mx - auto px-6 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -432,7 +407,7 @@ export default function Page() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex - col sm:flex - row gap-4 justify -center"
+            className="flex flex - col sm: flex - row gap-4 justify -center"
 
             <a
               href="tel:+13024640950"
@@ -447,9 +422,9 @@ export default function Page() {
 
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-            </a>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </a>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

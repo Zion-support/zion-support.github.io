@@ -5,5 +5,5 @@ export const SAMPLE_SERVICES = [
   { id: 'talent-1', title: 'AI Engineer', category: 'talent', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format' },
   { id: 'talent-2', title: 'Data Scientist', category: 'talent', image: 'https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format' },
   { id: 'equipment-1', title: 'Workstation', category: 'equipment', image: 'https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format' },
-  { id: 'equipment-2', title: 'Server Rack', category: 'equipment', image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format' },
-];
+  { id: 'equipment-2', title: 'Server Rack', category: 'equipment', image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format' }
+],

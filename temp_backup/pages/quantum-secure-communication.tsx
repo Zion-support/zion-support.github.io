@@ -1,16 +1,16 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Lock,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
   Target, BarChart, PieChart, Activity, Eye, Key
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+} from 'lucide-react',
+import Button from '../components/ui/Button',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
 
 export default function QuantumSecureCommunication() {
   const contactInfo = {
@@ -18,38 +18,31 @@ export default function QuantumSecureCommunication() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
-    'Quantum key distribution (QKD) encryption',
-    'End-to-end encryption for all communications',
-    'Quantum-resistant algorithms and protocols',
-    'Secure file sharing and collaboration tools',
-    'Real-time encrypted messaging and video calls',
-    'Audit trails and compliance reporting',
-    'Multi-platform support (Web, Mobile, Desktop)',
-    'Integration with existing communication tools',
-    'Advanced threat detection and monitoring',
-    '24/7 security monitoring and support'
-  ];
+    'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communications',
+    'Quantum-resistant algorithms and protocolsSecure file sharing and collaboration tools',
+    'Real-time encrypted messaging and video callsAudit trails and compliance reporting',
+    'Multi-platform support (Web, Mobile, Desktop)Integration with existing communication tools',
+    'Advanced threat detection and monitoring24/7 security monitoring and support'
+  ],
 
   const useCases = [
-    'Secure executive communications',
-    'Confidential document sharing',
-    'Regulated industry compliance',
-    'Research collaboration',
+    'Secure executive communicationsConfidential document sharing',
+    'Regulated industry complianceResearch collaboration',
     'Government communications'
-  ];
+  ],
 
   const integrations = [
-    'Slack', 'Microsoft Teams', 'Zoom', 'Email systems', 
+    'SlackMicrosoft Teams', 'ZoomEmail systems', 
     'File storage platforms'
-  ];
+  ],
 
   const technology = [
-    'Quantum Computing', 'Post-Quantum Cryptography', 'React', 'Node.js', 
-    'WebRTC', 'WebAssembly', 'Docker', 'Kubernetes'
-  ];
+    'Quantum ComputingPost-Quantum Cryptography', 'ReactNode.js', 
+    'WebRTCWebAssembly', 'DockerKubernetes'
+  ],
 
 const quantum-secure-communication: React.FC = () => {
   return (
@@ -66,7 +59,7 @@ const quantum-secure-communication: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default quantum-secure-communication;
+export default quantum-secure-communication,

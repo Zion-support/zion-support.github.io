@@ -1,54 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap } from "lucide-react";
 export default function CustomerExperience() {
   const features = [
     {
-      icon: Heart,
-      title: 'Customer Satisfaction',
-      description: 'Build lasting relationships with exceptional experiences'
-    },
+      icon: Heart,title: 'Customer Satisfaction',description: 'Build lasting relationships with exceptional experiences'
+    };
     {
-      icon: MessageCircle,
-      title: 'Multi-channel Support',
-      description: 'Connect with customers across all platforms'
-    },
+      icon: MessageCircle,title: 'Multi-channel Support',description: 'Connect with customers across all platforms'
+    };
     {
-      icon: Users,
-      title: 'Personalization',
-      description: 'Tailored experiences for every customer'
-    },
+      icon: Users,title: 'Personalization',description: 'Tailored experiences for every customer'
+    };
     {
-      icon: Star,
-      title: 'Loyalty Programs',
-      description: 'Reward and retain your best customers'
+      icon: Star,title: 'Loyalty Programs',description: 'Reward and retain your best customers'
     }
   ];
-
   const capabilities = [
     {
-      title: 'Customer Journey Mapping',
-      description: 'Visualize and optimize every touchpoint',
-      icon: Target
-    },
+      title: 'Customer Journey Mapping',description: 'Visualize and optimize every touchpoint',icon: Target
+    };
     {
-      title: 'Sentiment Analysis',
-      description: 'Understand customer emotions and feedback',
-      icon: Heart
-    },
+      title: 'Sentiment Analysis',description: 'Understand customer emotions and feedback',icon: Heart
+    };
     {
-      title: 'Automated Engagement',
-      description: 'Smart workflows for customer interactions',
-      icon: Zap
-    },
+      title: 'Automated Engagement',description: 'Smart workflows for customer interactions',icon: Zap
+    };
     {
-      title: 'Performance Analytics',
-      description: 'Track and improve customer experience metrics',
-      icon: TrendingUp
+      title: 'Performance Analytics',description: 'Track and improve customer experience metrics',icon: TrendingUp
     }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -72,7 +53,7 @@ export default function CustomerExperience() {
             </h1>
 
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Create exceptional customer experiences that drive loyalty, satisfaction,
+              Create exceptional customer experiences that drive loyalty, satisfaction;
               and business growth with our comprehensive CX platform.
             </p>
 
@@ -189,7 +170,7 @@ export default function CustomerExperience() {
               <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
                 Start building exceptional customer relationships today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
                   Start Free Trial
                 </button>
@@ -202,5 +183,5 @@ export default function CustomerExperience() {
         </div>
       </section>
     </div>
-  );
+  )
 }

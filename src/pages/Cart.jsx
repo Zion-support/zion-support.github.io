@@ -1,23 +1,20 @@
-import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 export default function CartPage() {
-    const navigate = useNavigate();
-    const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [cartLoading, setCartLoading] = useState(true);
-    const [showEmpty, setShowEmpty] = useState(false);
+    const navigate = useNavigate(),
+    const [items, setItems] = useState([]),
+    const [loading, setLoading] = useState(false),
+    const [cartLoading, setCartLoading] = useState(true),
+    const [showEmpty, setShowEmpty] = useState(false),
 
     useEffect(() => {
         // Simulate loading cart data
         const timer = setTimeout(() => {
-            setCartLoading(false);
-            setShowEmpty(true);
+            setCartLoading(false),
+            setShowEmpty(true),
         }, 1000);
-        
         return () => clearTimeout(timer);
     }, []);
-
     if (cartLoading) {
         return (
             <div className="container py-10 space-y-4">
@@ -36,12 +33,12 @@ export default function CartPage() {
                 <p className="text-gray-600 mb-4">Your cart is empty</p>
                 <Link 
                     to="/services" 
-                    className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
                 >
                     Browse Services
                 </Link>
             </div>
-        );
+        )
     }
 
     return (
@@ -51,11 +48,11 @@ export default function CartPage() {
             <div className="mt-6">
                 <Link 
                     to="/services" 
-                    className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
                 >
                     Continue Shopping
                 </Link>
             </div>
         </div>
-    );
+    )
 }

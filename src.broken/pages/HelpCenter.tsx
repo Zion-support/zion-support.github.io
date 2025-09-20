@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
 const helpSections: HelpSection[] = [{
@@ -211,7 +211,7 @@ const helpSections: HelpSection[] = [{
       }
     ]
   }
-];
+],
 
 const faqData: FAQItem[] = [{
     question: 'What services does Zion Tech Group offer?',
@@ -243,30 +243,30 @@ const faqData: FAQItem[] = [{
     answer: 'Security is our top priority.We implement industry - leading security measures including encryption, regular security audits, and compliance with GDPR, CCPA, and other regulations.Our AI - powered security platforms provide real - time threat detection and response.',
     category: 'Security'
   }
-];
+],
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedSections, setExpandedSections] = useState < Set < string>> (new Set(['getting - started']) ) ;
-  const [selectedCategory, setSelectedCategory] = useState < string> ('All') ;
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [expandedSections, setExpandedSections] = useState < Set < string>> (new Set(['getting - started']) ) ,
+  const [selectedCategory, setSelectedCategory] = useState < string> ('All') ,
 
   const handleSearch = useCallback((query: string) => {
-    setSearchQuery(query) ;
+    setSearchQuery(query) ,
     if(query.trim () === '') {
-      setFilteredFAQs(faqData) ;
-      return;
+      setFilteredFAQs(faqData) ,
+      return,
 
     const filtered = faqData.filter(faq =>
       faq.question.toLowerCase () .includes(query.toLowerCase () ) ||
       faq.answer.toLowerCase () .includes(query.toLowerCase () ) ||
-      faq.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ) ;
-    setFilteredFAQs(filtered) ;
-  };
+      faq.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ) ,
+    setFilteredFAQs(filtered) 
+  },
 
   const filteredFAQ = selectedCategory === 'All'
     ? faqData
-    : faqData.filter(item => item.category === selectedCategory) ;
+    : faqData.filter(item => item.category === selectedCategory) ,
 
-  const categories = ['All', ...Array.from(new Set (faqData.map (item => item.category) ) ) ];
+  const categories = ['All', ...Array.from(new Set (faqData.map (item => item.category) ) ) ],
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light pt -24">
       <div  className="container -responsive">
@@ -327,9 +327,9 @@ const faqData: FAQItem[] = [{
                   <p className="text-zion - slate - light text-sm mb-4 text-center">{category.description}</p>
                   <div  className="flex items - center justify - center text-zion - cyan group - hover:text-zion - cyan - light transition -colors">
                     <span className="text-sm font -medium">{category.articleCount} articles</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group - hover:translate - x-1 transition - transform duration -300" />
+                    <ArrowRight className="h-4 w-4 ml-2 group - hover: translate - x-1 transition - transform duration -300" />
                   </div>
-                </Link>;
+                </Link>,
               </motion.div>) ) }
           </div>
         </motion.div>
@@ -361,7 +361,7 @@ const faqData: FAQItem[] = [{
                   <div  className="inline - flex items - center bg-gradient - to - r from - zion - cyan to - zion - purple text-white px-4 py-2 rounded-lg text-sm font - medium group - hover:from - zion - cyan - dark group - hover:to - zion - purple - dark transition - all duration -300">
                     {option.action}
                   </div>
-                </Link>;
+                </Link>,
               </motion.div>) ) }
           </div>
         </motion.div>
@@ -401,7 +401,7 @@ const faqData: FAQItem[] = [{
       </div>
 
       {/* Main Content */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-12">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-12">,
         <div  className="grid lg:grid - cols - 3 gap-8">
           {/* Help Sections */}
           <div  className="lg:col - span -2">
@@ -537,6 +537,6 @@ const faqData: FAQItem[] = [{
           </div>
         </motion.div>
       </div>
-    </div>) ;
+    </div>) ,
 }
 

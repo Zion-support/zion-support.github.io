@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const PerformancePage: React.FC = () => {
   const performanceMetrics = [
@@ -31,7 +31,7 @@ const PerformancePage: React.FC = () => {
         { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%' }
       ]
     }
-  ];
+  ],
 
   const recentReports = [
     {
@@ -55,21 +55,21 @@ const PerformancePage: React.FC = () => {
       summary: 'Stress testing results under high traffic conditions',
       status: 'completed'
     }
-  ];
+  ],
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'excellent': return 'text-green-400';
-      case 'good': return 'text-yellow-400';
-      case 'warning': return 'text-orange-400';
-      case 'critical': return 'text-red-400';
-      default: return 'text-gray-400';
+      case 'excellent': return 'text-green-400',
+      case 'good': return 'text-yellow-400',
+      case 'warning': return 'text-orange-400',
+      case 'critical': return 'text-red-400',
+      default: return 'text-gray-400'
     }
-  };
+  },
 
   const getTrendColor = (trend: string) => {
-    return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
-  };
+    return trend.startsWith('+') ? 'text-green-400' : 'text-red-400'
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
@@ -203,7 +203,7 @@ const PerformancePage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
             href="/reports"
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
+            className="px-6 py-3 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             All Reports
           </Link>
@@ -222,7 +222,7 @@ const PerformancePage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default PerformancePage;
+export default PerformancePage,

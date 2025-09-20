@@ -4,11 +4,11 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Quote } from "lucide-react";
+  CarouselPrevious
+} from "@/components/ui/carousel",
+import { Card, CardContent } from "@/components/ui/card",
+import { Avatar } from "@/components/ui/avatar",
+import { Quote } from "lucide-react",
 
 const testimonials = [
   {
@@ -16,30 +16,30 @@ const testimonials = [
     author: "Sarah Chen",
     role: "CTO, DataMind Solutions",
     avatar: "https://i.pravatar.cc/150?img=32",
-    company: "DataMind",
+    company: "DataMind"
   },
   {
     quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.",
     author: "Michael Rodriguez",
     role: "IT Director, GlobalTech",
     avatar: "https://i.pravatar.cc/150?img=12",
-    company: "GlobalTech",
+    company: "GlobalTech"
   },
   {
     quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.",
     author: "Aanya Patel",
     role: "Independent AI Consultant",
     avatar: "https://i.pravatar.cc/150?img=28",
-    company: "AI Systems",
+    company: "AI Systems"
   },
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",
     author: "Thomas Klein",
     role: "Operations Manager, EcoTech Systems",
     avatar: "https://i.pravatar.cc/150?img=67",
-    company: "EcoTech",
-  },
-];
+    company: "EcoTech"
+  }
+],
 
 export function TestimonialCarousel() {
   return (
@@ -56,7 +56,7 @@ export function TestimonialCarousel() {
           <Carousel
             opts={{
               align: "start",
-              loop: true,
+              loop: true
             }}
             className="w-full"
           >
@@ -84,12 +84,12 @@ export function TestimonialCarousel() {
               ))}
             </CarouselContent>
             <div className="flex justify-center mt-8 gap-2">
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
           </Carousel>
         </div>
       </div>
     </section>
-  );
+  )
 }

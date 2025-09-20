@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export default function LatestAI2026ContentShowcase() {,
   return (,
     <section className="py-16 bg-gray-50">,
@@ -111,5 +111,4 @@ export default function LatestAI2026ContentShowcase() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

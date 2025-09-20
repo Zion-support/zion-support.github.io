@@ -1,7 +1,7 @@
-import React from 'react';
-import SEO from '@/components/SEO';
+import React from "react";
+import { SEO } from "@/components/SEO";
 import { 
-  Heart, 
+  Heart,
   Brain, 
   Eye, 
   CheckCircle, 
@@ -22,47 +22,32 @@ import {
   FileText,
   Users,
   Zap
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIHealthcareDiagnostics() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Diagnosis",
-      description: "Advanced ML models analyze medical images with 96% accuracy, detecting diseases earlier than traditional methods."
+      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Diagnosis",description: "Advanced ML models analyze medical images with 96% accuracy, detecting diseases earlier than traditional methods."
     },
     {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Multi-Modal Imaging",
-      description: "Support for X-rays, CT scans, MRIs, and ultrasounds with unified AI analysis platform."
+      icon: <Eye className="w-6 h-6" />,title: "Multi-Modal Imaging",description: "Support for X-rays, CT scans, MRIs, and ultrasounds with unified AI analysis platform."
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "HIPAA Compliant",
-      description: "Enterprise-grade security with full HIPAA compliance and data encryption at rest and in transit."
-    },
+      icon: <Shield className="w-6 h-6" />,title: "HIPAA Compliant",description: "Enterprise-grade security with full HIPAA compliance and data encryption at rest and in transit."
+    };
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Clinical Analytics",
-      description: "Comprehensive reporting and analytics for clinical decision support and outcome tracking."
+      icon: <BarChart3 className="w-6 h-6" />,title: "Clinical Analytics",description: "Comprehensive reporting and analytics for clinical decision support and outcome tracking."
     }
   ];
-
   const pricingPlans = [
     {
-      name: "Clinical",
-      price: "$1,299",
-      period: "/month",
-      features: ["Up to 1,000 scans/month", "Basic AI diagnosis", "Email support", "Standard reporting"]
+      name: "Clinical",price: "$1,299",
+      period: "/month",features: ["Up to 1,000 scans/month", "Basic AI diagnosis", "Email support", "Standard reporting"]
     },
     {
-      name: "Enterprise",
-      price: "$2,999",
-      period: "/month",
-      features: ["Unlimited scans", "Advanced AI models", "Priority support", "Custom integrations", "API access"]
+      name: "Enterprise",price: "$2,999",
+      period: "/month",features: ["Unlimited scans", "Advanced AI models", "Priority support", "Custom integrations", "API access"]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -191,7 +176,7 @@ export default function AIHealthcareDiagnostics() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent">Healthcare</span>?
@@ -219,5 +204,5 @@ export default function AIHealthcareDiagnostics() {
         </div>
       </section>
     </div>
-  );
+  )
 }

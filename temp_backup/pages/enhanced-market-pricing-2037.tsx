@@ -1,23 +1,23 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import { motion } from 'framer-motion',
 import { 
   Zap, Brain, Globe, 
   TrendingUp, Award, CheckCircle, ExternalLink 
-} from 'lucide-react';
+} from 'lucide-react',
 export default function EnhancedMarketPricing2037Page() {,
   const fadeInUp = {,
-    initial: { opacity: 0, y: 60 ,};
-    animate: { opacity: 1, y: 0 ,};
-    transition: { duration: 0.6 ,}
-  };
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  },
   const staggerContainer = {,
     animate: {,
       transition: {,
-        staggerChildren: 0.1,}
+        staggerChildren: 0.1}
     }
-  };
+  },
   return (,
     <UltraAdvancedFuturisticBackground>,
       <SEO,
@@ -30,7 +30,7 @@ export default function EnhancedMarketPricing2037Page() {,
           className="max-w-7xl mx-auto space-y-12",
           initial="initial",
           animate="animate",
-          variants={staggerContainer,}
+          variants={staggerContainer}
         >,
           {/* Hero Section */}
           <motion.div variants={fadeInUp} className="text-center">,
@@ -76,7 +76,7 @@ export default function EnhancedMarketPricing2037Page() {,
               </div>,
             </div>,
           </motion.div>,
-          {/* Quantum Computing Services */,}
+          {/* Quantum Computing Services */}
           <motion.div variants={fadeInUp} className="space-y-6">,
             <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent mb-8">,
               Quantum Computing Services,
@@ -244,7 +244,7 @@ export default function EnhancedMarketPricing2037Page() {,
               </div>,
             </div>,
           </motion.div>,
-          {/* IT Infrastructure Services */,}
+          {/* IT Infrastructure Services */}
           <motion.div variants={fadeInUp} className="space-y-6">,
             <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-8">,
               IT Infrastructure Services,
@@ -412,7 +412,7 @@ export default function EnhancedMarketPricing2037Page() {,
               </div>,
             </div>,
           </motion.div>,
-          {/* Market Insights */,}
+          {/* Market Insights */}
           <motion.div variants={fadeInUp} className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-3xl border border-cyan-500/30 p-8">,
             <h2 className="text-3xl font-bold text-center text-cyan-400 mb-6">Market Insights & Trends</h2>,
             <div className="grid md: grid-cols-2 gap-8">,
@@ -460,7 +460,7 @@ export default function EnhancedMarketPricing2037Page() {,
               </div>,
             </div>,
           </motion.div>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <motion.div variants={fadeInUp} className="text-center">,
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl border border-cyan-500/30 p-8">,
               <h2 className="text-3xl font-bold text-cyan-400 mb-4">Ready to Transform Your Business?</h2>,
@@ -487,4 +487,4 @@ export default function EnhancedMarketPricing2037Page() {,
         </motion.div>,
       </div>,
     </UltraAdvancedFuturisticBackground>,
-  ),}
+  )}

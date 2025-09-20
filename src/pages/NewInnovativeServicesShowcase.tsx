@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Sparkles, 
+  Sparkles,
   ArrowRight, 
   CheckCircle, 
   TrendingUp, 
@@ -17,55 +17,38 @@ import {
   Users,
   Target,
   Rocket
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-import { NEW_INNOVATIVE_SERVICES_2025 } from '../data/newInnovativeServices2025';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { NEW_INNOVATIVE_SERVICES_2025 } from "../data/newInnovativeServices2025";
 export default function NewInnovativeServicesShowcase() {
   const serviceCategories = [
     {
-      title: "AI & Legal Tech",
-      description: "Revolutionary legal document automation and compliance solutions",
-      icon: Shield,
-      color: "from-blue-500 to-purple-600"
-    },
+      title: "AI & Legal Tech",description: "Revolutionary legal document automation and compliance solutions",icon: Shield,color: "from-blue-500 to-purple-600"
+    };
     {
-      title: "AI & Healthcare",
-      description: "Transformative healthcare analytics and clinical decision support",
-      icon: TrendingUp,
-      color: "from-green-500 to-blue-600"
-    },
+      title: "AI & Healthcare",description: "Transformative healthcare analytics and clinical decision support",icon: TrendingUp,color: "from-green-500 to-blue-600"
+    };
     {
-      title: "AI & FinTech",
-      description: "Advanced trading platforms with intelligent risk management",
-      icon: DollarSign,
-      color: "from-green-500 to-emerald-600"
+      title: "AI & FinTech",description: "Advanced trading platforms with intelligent risk management",icon: DollarSign,color: "from-green-500 to-emerald-600"
     }
   ];
-
   const keyBenefits = [
     {
-      title: "Cutting-Edge AI Technology",
-      description: "Leverage the latest advances in machine learning, natural language processing, and predictive analytics",
+      title: "Cutting-Edge AI Technology",description: "Leverage the latest advances in machine learning, natural language processing, and predictive analytics",
       icon: Sparkles
-    },
+    };
     {
-      title: "Industry-Specific Solutions",
-      description: "Tailored solutions designed for specific industry challenges and regulatory requirements",
-      icon: Target
-    },
+      title: "Industry-Specific Solutions",description: "Tailored solutions designed for specific industry challenges and regulatory requirements",icon: Target
+    };
     {
-      title: "Proven ROI & Results",
-      description: "Measurable improvements in efficiency, accuracy, and cost savings across all services",
+      title: "Proven ROI & Results",description: "Measurable improvements in efficiency, accuracy, and cost savings across all services",
       icon: TrendingUp
-    },
+    };
     {
-      title: "Enterprise-Grade Security",
-      description: "SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security",
+      title: "Enterprise-Grade Security",description: "SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security",
       icon: Shield
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -170,7 +153,7 @@ export default function NewInnovativeServicesShowcase() {
               Why Choose Our Innovative Services?
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Our services deliver exceptional value through cutting-edge technology, 
+              Our services deliver exceptional value through cutting-edge technology;
               industry expertise, and proven results.
             </p>
           </div>
@@ -203,7 +186,7 @@ export default function NewInnovativeServicesShowcase() {
               Service Details
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Explore each service in detail with comprehensive information about features, 
+              Explore each service in detail with comprehensive information about features;
               pricing, and implementation.
             </p>
           </div>
@@ -359,7 +342,7 @@ export default function NewInnovativeServicesShowcase() {
                 </div>
                 <div className="flex items-center justify-center">
                   <Globe className="h-4 w-4 mr-2 text-purple-400" />
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300">ziontechgroup.com</a>
+                  <a href="https: //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300">ziontechgroup.com</a>
                 </div>
               </div>
             </div>
@@ -367,5 +350,5 @@ export default function NewInnovativeServicesShowcase() {
         </div>
       </section>
     </div>
-  );
+  )
 }

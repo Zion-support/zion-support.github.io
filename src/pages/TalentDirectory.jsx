@@ -1,73 +1,37 @@
-import React from 'react';
+import React from "react";
 import SEO from "@/components/SEO";
-import { Search, MapPin, Briefcase, Star } from 'lucide-react';
+import { Search, MapPin, Briefcase, Star } from "lucide-react";
 const TalentDirectory = () => {
     const talents = [
         {
-            id: 1,
-            name: "Sarah Chen",
-            role: "Senior AI Engineer",
-            experience: "8+ years",
-            location: "San Francisco, CA",
+            id: 1,name: "Sarah Chen",role: "Senior AI Engineer",experience: "8+ years",location: "San Francisco, CA",
             skills: ["Machine Learning", "Python", "TensorFlow", "Computer Vision"],
-            rating: 4.9,
-            projects: 24,
-            avatar: "👩‍💻"
-        },
+            rating: 4.9,projects: 24,avatar: "👩‍💻"
+        };
         {
-            id: 2,
-            name: "Marcus Rodriguez",
-            role: "Cloud Architect",
-            experience: "10+ years",
-            location: "Austin, TX",
+            id: 2,name: "Marcus Rodriguez",role: "Cloud Architect",experience: "10+ years",location: "Austin, TX",
             skills: ["AWS", "Kubernetes", "Terraform", "DevOps"],
-            rating: 4.8,
-            projects: 31,
-            avatar: "👨‍💻"
-        },
+            rating: 4.8,projects: 31,avatar: "👨‍💻"
+        };
         {
-            id: 3,
-            name: "Priya Patel",
-            role: "Cybersecurity Specialist",
-            experience: "6+ years",
-            location: "New York, NY",
+            id: 3,name: "Priya Patel",role: "Cybersecurity Specialist",experience: "6+ years",location: "New York, NY",
             skills: ["Penetration Testing", "SOC", "Compliance", "Incident Response"],
-            rating: 4.9,
-            projects: 18,
-            avatar: "👩‍💻"
-        },
+            rating: 4.9,projects: 18,avatar: "👩‍💻"
+        };
         {
-            id: 4,
-            name: "David Kim",
-            role: "Data Scientist",
-            experience: "7+ years",
-            location: "Seattle, WA",
+            id: 4,name: "David Kim",role: "Data Scientist",experience: "7+ years",location: "Seattle, WA",
             skills: ["Data Analytics", "SQL", "R", "Tableau"],
-            rating: 4.7,
-            projects: 22,
-            avatar: "👨‍💻"
-        },
+            rating: 4.7,projects: 22,avatar: "👨‍💻"
+        };
         {
-            id: 5,
-            name: "Emily Watson",
-            role: "Full Stack Developer",
-            experience: "5+ years",
-            location: "Boston, MA",
+            id: 5,name: "Emily Watson",role: "Full Stack Developer",experience: "5+ years",location: "Boston, MA",
             skills: ["React", "Node.js", "Python", "MongoDB"],
-            rating: 4.8,
-            projects: 19,
-            avatar: "👩‍💻"
-        },
+            rating: 4.8,projects: 19,avatar: "👩‍💻"
+        };
         {
-            id: 6,
-            name: "Alex Thompson",
-            role: "DevOps Engineer",
-            experience: "9+ years",
-            location: "Denver, CO",
+            id: 6,name: "Alex Thompson",role: "DevOps Engineer",experience: "9+ years",location: "Denver, CO",
             skills: ["Docker", "Jenkins", "Ansible", "Linux"],
-            rating: 4.9,
-            projects: 28,
-            avatar: "👨‍💻"
+            rating: 4.9,projects: 28,avatar: "👨‍💻"
         }
     ];
     const categories = [
@@ -79,7 +43,7 @@ const TalentDirectory = () => {
         "Full Stack Development",
         "Mobile Development",
         "UI/UX Design"
-    ];
+    ],
     return (<div className="min-h-screen bg-background">
       <SEO title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com/talent-directory"/>
 
@@ -190,7 +154,7 @@ const TalentDirectory = () => {
             Whether you need a single expert or a complete team, we can connect you with the 
             perfect technology professionals for your project.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-white text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Post a Project
             </button>
@@ -200,6 +164,6 @@ const TalentDirectory = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 };
 export default TalentDirectory;

@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-	title: 'AI 2026: Secure Agentic Data Pipelines | Zion Tech Group';
+	title: 'AI 2026: Secure Agentic Data Pipelines | Zion Tech Group',
 	description:,
-		'Blueprint for secure, policy-driven data pipelines powering reliable autonomous agents in production.',
-};
+		'Blueprint for secure, policy-driven data pipelines powering reliable autonomous agents in production.'
+},
 export default function SecureAgenticDataPipelines2026Page() {,
 	return (,
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -26,5 +26,5 @@ export default function SecureAgenticDataPipelines2026Page() {,
 				<Link href="/content" className="border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Back to Content</Link>,
 			</div>,
 		</main>,
-	),}
+	)}
 ,

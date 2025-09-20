@@ -1,4 +1,4 @@
-import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap  } from 'lucide-react';
+import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap  } from 'lucide-react',
 
 export default function Page() {
         <motion.div
@@ -86,7 +86,7 @@ export default function Page() {
             </h2>
             <p className="text-slate - 300 mb-6 max - w-2xl mx -auto">
               Our experts are here to help you find the perfect service for your business requirements.Get personalized recommendations and pricing.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button     className="px-6 py-3 bg-cyan - 500 hover:bg-cyan - 600 text-white rounded-lg font - medium transition -colors">
                 Get Expert Consultation
               </button>
@@ -97,6 +97,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
+    </div>) 
 }
 >>>>>>> cursor / migrate - github - actions - to - pm2 - automations - f391

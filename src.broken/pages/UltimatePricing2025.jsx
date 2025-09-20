@@ -1,16 +1,16 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             name: "Advanced AI & Machine Learning",
             description: "Enterprise - grade artificial intelligence solutions for innovation and competitive advantage",
-            plans[;
+            plans[,
                 {
                     name: "AI - Powered Fraud Detection",
                     price: "$3,000",
                     period: "/month",
                     description: "Next - generation fraud prevention using machine learning",
-                    features[;
+                    features[,
                         "Real - time transaction monitoring",
                         "Behavioral pattern recognition",
                         "ML risk scoring",
@@ -18,10 +18,10 @@ export default function Page() {
                         "Comprehensive analytics",
                         "API integration",
                         "Dedicated support team"
-                    ],;
-                    benefits["99.9% detection accuracy", "Real - time prevention", "80% fewer false positives"],;
+                    ],
+                    benefits["99.9% detection accuracy", "Real - time prevention", "80% fewer false positives"],
                     marketPosition: "Leading AI fraud detection",
-                    competitors["Sift", "Signifyd", "Forter"],;
+                    competitors["Sift", "Signifyd", "Forter"],
                     competitiveAdvantage: "Advanced ML algorithms, real - time processing, industry - leading accuracy"
                 },
                 {
@@ -29,7 +29,7 @@ export default function Page() {
                     price: "$4,000",
                     period: "/month",
                     description: "Intelligent supply chain optimization and demand forecasting",
-                    features[;
+                    features[,
                         "Predictive demand forecasting",
                         "Route optimization algorithms",
                         "Supplier performance analytics",
@@ -37,10 +37,10 @@ export default function Page() {
                         "Risk assessment & mitigation",
                         "Custom integrations",
                         "Strategic consulting"
-                    ],;
-                    benefits["25% cost reduction", "Improved delivery", "Enhanced relationships"],;
+                    ],
+                    benefits["25% cost reduction", "Improved delivery", "Enhanced relationships"],
                     marketPosition: "Advanced supply chain optimization",
-                    competitors["Llamasoft", "AnyLogic", "FlexSim"],;
+                    competitors["Llamasoft", "AnyLogic", "FlexSim"],
                     competitiveAdvantage: "AI optimization, real - time visibility, comprehensive risk management"
                 },
                 {
@@ -48,7 +48,7 @@ export default function Page() {
                     price: "$8,000",
                     period: "/month",
                     description: "Healthcare AI for diagnosis, patient care, and operational efficiency",
-                    features[;
+                    features[,
                         "Medical imaging analysis",
                         "Diagnostic assistance",
                         "Patient monitoring systems",
@@ -56,24 +56,24 @@ export default function Page() {
                         "Healthcare analytics",
                         "HIPAA compliance",
                         "Medical team training"
-                    ],;
-                    benefits["30% diagnostic accuracy", "Enhanced care quality", "Cost reduction"],;
+                    ],
+                    benefits["30% diagnostic accuracy", "Enhanced care quality", "Cost reduction"],
                     marketPosition: "Leading healthcare AI",
-                    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],;
+                    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
                     competitiveAdvantage: "Advanced medical AI, healthcare integration, regulatory compliance"
 
-            ];
-        },;
+            ],
+        },
         {
             name: "Emerging Technology Solutions",
             description: "Cutting - edge technology services for future - ready businesses",
-            plans[;
+            plans[,
                 {
                     name: "Quantum Computing Consulting",
                     price: "$5,000",
                     period: "/month",
                     description: "Expert guidance on quantum computing strategy and implementation",
-                    features[;
+                    features[,
                         "Quantum strategy development",
                         "Use case identification",
                         "Vendor selection",
@@ -81,10 +81,10 @@ export default function Page() {
                         "Workforce development",
                         "Ongoing support",
                         "Executive briefings"
-                    ],;
-                    benefits["Future - ready strategy", "Competitive advantage", "Innovation leadership"],;
+                    ],
+                    benefits["Future - ready strategy", "Competitive advantage", "Innovation leadership"],
                     marketPosition: "Premier quantum consulting",
-                    competitors["McKinsey", "BCG", "Deloitte"],;
+                    competitors["McKinsey", "BCG", "Deloitte"],
                     competitiveAdvantage: "Deep quantum expertise, practical experience, strategic focus"
                 },
                 {
@@ -92,7 +92,7 @@ export default function Page() {
                     price: "$8,000",
                     period: "/month",
                     description: "Complete metaverse platform development and deployment",
-                    features[;
+                    features[,
                         "VR / AR platform development",
                         "3D modeling & design",
                         "Interactive experiences",
@@ -100,10 +100,10 @@ export default function Page() {
                         "Platform integration",
                         "Content creation",
                         "Ongoing maintenance"
-                    ],;
-                    benefits["Innovation leadership", "New revenue streams", "Enhanced engagement"],;
+                    ],
+                    benefits["Innovation leadership", "New revenue streams", "Enhanced engagement"],
                     marketPosition: "Leading metaverse development",
-                    competitors["Meta", "Microsoft", "Unity"],;
+                    competitors["Meta", "Microsoft", "Unity"],
                     competitiveAdvantage: "Custom development, rapid prototyping, comprehensive solutions"
                 },
                 {
@@ -111,7 +111,7 @@ export default function Page() {
                     price: "$6,000",
                     period: "/month",
                     description: "Complete Web3 development and blockchain integration services",
-                    features[;
+                    features[,
                         "DApp development",
                         "Smart contract development",
                         "DeFi platform creation",
@@ -119,24 +119,24 @@ export default function Page() {
                         "Blockchain integration",
                         "Security auditing",
                         "Ongoing support"
-                    ],;
-                    benefits["Decentralized models", "Financial innovation", "Technology leadership"],;
+                    ],
+                    benefits["Decentralized models", "Financial innovation", "Technology leadership"],
                     marketPosition: "Expert Web3 development",
-                    competitors["Consensys", "Chainlink Labs", "Alchemy"],;
+                    competitors["Consensys", "Chainlink Labs", "Alchemy"],
                     competitiveAdvantage: "Full - stack development, rapid deployment, blockchain expertise"
 
-            ];
-        },;
+            ],
+        },
         {
             name: "Advanced Cybersecurity",
             description: "Next - generation security solutions for evolving cyber threats",
-            plans[;
+            plans[,
                 {
                     name: "Zero Trust Architecture",
                     price: "$4,500",
                     period: "/month",
                     description: "Modern security architecture implementation and management",
-                    features[;
+                    features[,
                         "Identity verification",
                         "Continuous monitoring",
                         "Network segmentation",
@@ -144,10 +144,10 @@ export default function Page() {
                         "Compliance support",
                         "Custom implementation",
                         "24 / 7 security team"
-                    ],;
-                    benefits["Enhanced security", "Reduced attack surface", "Improved compliance"],;
+                    ],
+                    benefits["Enhanced security", "Reduced attack surface", "Improved compliance"],
                     marketPosition: "Leading zero trust implementation",
-                    competitors["Palo Alto Networks", "Cisco", "Microsoft"],;
+                    competitors["Palo Alto Networks", "Cisco", "Microsoft"],
                     competitiveAdvantage: "Comprehensive implementation, rapid deployment, ongoing optimization"
                 },
                 {
@@ -155,7 +155,7 @@ export default function Page() {
                     price: "$5,000",
                     period: "/month",
                     description: "Next - generation cybersecurity using artificial intelligence",
-                    features[;
+                    features[,
                         "AI threat detection",
                         "Behavioral analysis",
                         "Automated response",
@@ -163,10 +163,10 @@ export default function Page() {
                         "Continuous learning",
                         "Custom AI models",
                         "Dedicated security experts"
-                    ],;
-                    benefits["Proactive protection", "Zero - day prevention", "Automated response"],;
+                    ],
+                    benefits["Proactive protection", "Zero - day prevention", "Automated response"],
                     marketPosition: "Advanced AI cybersecurity",
-                    competitors["Darktrace", "CrowdStrike", "SentinelOne"],;
+                    competitors["Darktrace", "CrowdStrike", "SentinelOne"],
                     competitiveAdvantage: "Advanced AI algorithms, real - time protection, comprehensive intelligence"
                 },
                 {
@@ -174,7 +174,7 @@ export default function Page() {
                     price: "$4,000",
                     period: "/month",
                     description: "Post - quantum cryptography implementation and migration",
-                    features[;
+                    features[,
                         "Algorithm selection",
                         "Implementation",
                         "Testing & validation",
@@ -182,15 +182,15 @@ export default function Page() {
                         "Performance optimization",
                         "Compliance assurance",
                         "Expert consultation"
-                    ],;
-                    benefits["Future security", "Quantum resistance", "Compliance"],;
+                    ],
+                    benefits["Future security", "Quantum resistance", "Compliance"],
                     marketPosition: "Quantum - safe cryptography leader",
-                    competitors["Post - Quantum", "ISARA", "Cryptosense"],;
+                    competitors["Post - Quantum", "ISARA", "Cryptosense"],
                     competitiveAdvantage: "Quantum expertise, practical implementation, strategic planning"
 
-            ];
+            ],
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -358,5 +358,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}}}

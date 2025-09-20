@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2025 Trends & Predictions: The Future of Artificial Intelligence';
-  description: 'Discover the most important AI trends and predictions for 2025. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.';
-  keywords: ['AI 2025AI trends', 'AI predictionsartificial intelligence', 'quantum computingneural interfaces', 'machine learning'],
-};
+  title: 'AI 2025 Trends & Predictions: The Future of Artificial Intelligence',
+  description: 'Discover the most important AI trends and predictions for 2025. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.',
+  keywords: ['AI 2025AI trendsAI predictionsartificial intelligence', 'quantum computingneural interfacesmachine learning']
+},
 export default function AI2025TrendsPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -39,7 +39,7 @@ export default function AI2025TrendsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Statistics */,}
+      {/* Key Statistics */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -62,12 +62,12 @@ export default function AI2025TrendsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <section id="trends" className="py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Top AI Trends for 2025</h2>,
           <div className="space-y-12">,
-            {/* Trend 1 */,}
+            {/* Trend 1 */}
             <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-500">,
               <div className="flex items-center mb-4">,
                 <span className="text-4xl mr-4">🧠</span>,
@@ -87,7 +87,7 @@ export default function AI2025TrendsPage() {,
                 </ul>,
               </div>,
             </div>,
-            {/* Trend 2 */,}
+            {/* Trend 2 */}
             <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500">,
               <div className="flex items-center mb-4">,
                 <span className="text-4xl mr-4">⚛️</span>,
@@ -107,7 +107,7 @@ export default function AI2025TrendsPage() {,
                 </ul>,
               </div>,
             </div>,
-            {/* Trend 3 */,}
+            {/* Trend 3 */}
             <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">,
               <div className="flex items-center mb-4">,
                 <span className="text-4xl mr-4">🤖</span>,
@@ -127,7 +127,7 @@ export default function AI2025TrendsPage() {,
                 </ul>,
               </div>,
             </div>,
-            {/* Trend 4 */,}
+            {/* Trend 4 */}
             <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-orange-500">,
               <div className="flex items-center mb-4">,
                 <span className="text-4xl mr-4">🌐</span>,
@@ -150,7 +150,7 @@ export default function AI2025TrendsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Predictions Section */,}
+      {/* Predictions Section */}
       <section id="predictions" className="py-16 bg-gray-50">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Predictions for 2025</h2>,
@@ -200,7 +200,7 @@ export default function AI2025TrendsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold mb-4">Ready to Implement AI in Your Business?</h2>,
@@ -223,7 +223,7 @@ export default function AI2025TrendsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -265,4 +265,4 @@ export default function AI2025TrendsPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

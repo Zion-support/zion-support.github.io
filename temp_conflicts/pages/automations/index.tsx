@@ -1,11 +1,11 @@
-import type { NextPage } from 'next';
-import Link from 'next/link';
+import type { NextPage } from 'next',
+import Link from 'next/link',
 
 const AutomationsIndex: NextPage = () => {
   const items = [
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' },
-  ];
+    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }
+  ],
 
   return (
     <main className="space-y-6">
@@ -22,7 +22,7 @@ const AutomationsIndex: NextPage = () => {
         ))}
       </div>
     </main>
-  );
-};
+  ),
+},
 
-export default AutomationsIndex;
+export default AutomationsIndex,

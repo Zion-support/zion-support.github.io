@@ -1,24 +1,24 @@
-import React, { useState, useMemo } from 'react';
-export default Zion2026AIMarketplaceShowcase;
-import { motion  } from 'framer-motion';
+import React, { useState, useMemo } from 'react',
+export default Zion2026AIMarketplaceShowcase,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-  };
+  },
 
-  const getCategoryColor = (category: anystring) => {;
-    switch(category) {;
-      case 'AI Marketplace': return 'from - blue - 500 to - cyan - 500';
-      case 'AI Integration': return 'from - purple - 500 to - pink - 500';
-      case 'AI Automation': return 'from - green - 500 to - emerald - 500';
-      case 'AI Analytics': return 'from - orange - 500 to - red - 500';
-      case 'AI Development': return 'from - indigo - 500 to - blue - 500';
-      default: return 'from - gray - 500 to - slate - 500';
+  const getCategoryColor = (category: anystring) => {,
+    switch(category) {,
+      case 'AI Marketplace': return 'from - blue - 500 to - cyan - 500',
+      case 'AI Integration': return 'from - purple - 500 to - pink - 500',
+      case 'AI Automation': return 'from - green - 500 to - emerald - 500',
+      case 'AI Analytics': return 'from - orange - 500 to - red - 500',
+      case 'AI Development': return 'from - indigo - 500 to - blue - 500',
+      default: return 'from - gray - 500 to - slate - 500'
     }
-  };
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
-      <section className="relative pt - 32 pb - 20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt - 32 pb - 20 px-4 sm: px-6 lg:px-8 overflow-hidden">
         <div  className="max - w-7xl mx - auto text-center">
           <motion.div
             initial = {
@@ -270,7 +270,7 @@ export default function Page() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray - 600 text-gray - 300 font - semibold rounded-lg hover:border-gray - 500 hover:text-white transition - all duration - 300 flex items - center justify - center space - x-2"
+                className="px-8 py-4 border border-gray - 600 text-gray - 300 font - semibold rounded-lg hover: border-gray - 500 hover:text-white transition - all duration - 300 flex items - center justify - center space - x-2"
               >
                 <Mail className="w-5 h-5" />
                 <span > Email Us</span>
@@ -284,11 +284,11 @@ export default function Page() {
                 className="inline - flex items - center space - x-2 text-blue - 400 hover:text-blue - 300 transition - colors duration -300"
               >
                 <span > Visit our website</span>
-                <ExternalLink className="w-4 h-4" />;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+                <ExternalLink className="w-4 h-4" />,
+              </a>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

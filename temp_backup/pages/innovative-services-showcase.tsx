@@ -1,15 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight,
   Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-import { nextGenAIServices } from '../data/next-gen-ai-services';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
+import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services',
+import { nextGenAIServices } from '../data/next-gen-ai-services',
 
 export default function InnovativeServicesShowcase() {
   const contactInfo = {
@@ -17,7 +17,7 @@ export default function InnovativeServicesShowcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -28,7 +28,7 @@ export default function InnovativeServicesShowcase() {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -40,7 +40,7 @@ export default function InnovativeServicesShowcase() {
         ease: "easeOut"
       }
     }
-  };
+  },
 
   const featuredServices = [
     {
@@ -50,7 +50,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$150B cybersecurity market, 300% annual growth',
       competitors: 'Traditional cybersecurity solutions',
       savings: 'Quantum-level protection vs. traditional methods',
-      features: ['Quantum key distribution (QKD)', 'Post-quantum cryptography', 'Quantum-resistant VPN tunnels', 'Real-time threat detection', 'Zero-trust architecture'],
+      features: ['Quantum key distribution (QKD)Post-quantum cryptography', 'Quantum-resistant VPN tunnelsReal-time threat detection', 'Zero-trust architecture'],
       link: 'https://ziontechgroup.com/quantum-internet-security-platform',
       color: 'from-indigo-600 to-purple-700'
     },
@@ -61,7 +61,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$150B AI in healthcare, 400% annual growth',
       competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)',
       savings: '100x faster drug discovery vs. traditional methods',
-      features: ['Quantum molecular simulation', 'AI-powered drug screening', 'Protein folding prediction', 'Drug interaction modeling', 'Clinical trial optimization'],
+      features: ['Quantum molecular simulationAI-powered drug screening', 'Protein folding predictionDrug interaction modeling', 'Clinical trial optimization'],
       link: 'https://ziontechgroup.com/ai-quantum-drug-discovery',
       color: 'from-emerald-600 to-teal-700'
     },
@@ -72,7 +72,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$15T algorithmic trading, 200% annual growth',
       competitors: 'Renaissance Technologies, Two Sigma, Citadel',
       savings: 'Accessible quantum AI for smaller firms',
-      features: ['Quantum AI trading algorithms', 'Nanosecond execution', 'Real-time market analysis', 'Risk management', 'Portfolio optimization'],
+      features: ['Quantum AI trading algorithmsNanosecond execution', 'Real-time market analysisRisk management', 'Portfolio optimization'],
       link: 'https://ziontechgroup.com/autonomous-quantum-trading-system',
       color: 'from-yellow-600 to-orange-700'
     },
@@ -83,11 +83,11 @@ export default function InnovativeServicesShowcase() {
       marketData: '$5B neural interface market, 500% annual growth',
       competitors: 'Basic research tools, Traditional medical devices',
       savings: 'First comprehensive neural interface platform',
-      features: ['Neural signal processing', 'Brain activity monitoring', 'AI-powered interpretation', 'Real-time communication', 'Safety protocols'],
+      features: ['Neural signal processingBrain activity monitoring', 'AI-powered interpretationReal-time communication', 'Safety protocols'],
       link: 'https://ziontechgroup.com/neural-interface-development-platform',
       color: 'from-purple-600 to-indigo-700'
     }
-  ];
+  ],
 
 const innovative-services-showcase: React.FC = () => {
   return (
@@ -104,7 +104,7 @@ const innovative-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default innovative-services-showcase;
+export default innovative-services-showcase,

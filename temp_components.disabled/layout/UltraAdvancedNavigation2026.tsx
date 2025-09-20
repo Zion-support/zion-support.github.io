@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Menu, 
+  Menu,
   X, 
   ChevronDown, 
   Search, 
@@ -19,46 +19,46 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface UltraAdvancedNavigation2026Props {
-  className?: string;
+  className?: string,
 }
 
 const UltraAdvancedNavigation2026: React.FC<UltraAdvancedNavigation2026Props> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [showSearch, setShowSearch] = useState(false);
-  const navRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [showSearch, setShowSearch] = useState(false),
+  const navRef = useRef<HTMLDivElement>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
+        setActiveDropdown(null)
       }
-    };
+    },
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    document.addEventListener('mousedown', handleClickOutside),
+    return () => document.removeEventListener('mousedown', handleClickOutside),
+  }, []),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const navigationItems = [
     {
@@ -111,18 +111,18 @@ const UltraAdvancedNavigation2026: React.FC<UltraAdvancedNavigation2026Props> = 
         { name: 'News', href: '/news', icon: Globe, color: 'from-indigo-500 to-purple-600' }
       ]
     }
-  ];
+  ],
 
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)
+  },
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (searchQuery.trim()) {
-      window.location.href = `/services?search=${encodeURIComponent(searchQuery)}`;
+      window.location.href = `/services?search=${encodeURIComponent(searchQuery)}`,
     }
-  };
+  },
 
 const UltraAdvancedNavigation2026: React.FC = () => {
   return (
@@ -130,7 +130,7 @@ const UltraAdvancedNavigation2026: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedNavigation2026</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedNavigation2026;
+export default UltraAdvancedNavigation2026,

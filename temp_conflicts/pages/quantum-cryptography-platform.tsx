@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Shield, Lock, Key, Globe, Clock, Users, 
   CheckCircle, ArrowRight, Award, TrendingUp,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumCryptographyPlatform: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumCryptographyPlatform: React.FC = () => {
       title: 'Multi-User Support',
       description: 'Enterprise-grade security for organizations of any size'
     }
-  ];
+  ],
 
   const cryptographyCapabilities = [
     {
       area: 'Quantum Key Distribution',
-      capabilities: ['BB84 protocol', 'E91 protocol', 'B92 protocol', 'Continuous variable QKD'],
+      capabilities: ['BB84 protocolE91 protocol', 'B92 protocolContinuous variable QKD'],
       improvement: '100% secure',
       range: '1000+ km'
     },
     {
       area: 'Quantum Encryption',
-      capabilities: ['AES-256', 'RSA-4096', 'Elliptic curve', 'Lattice-based'],
+      capabilities: ['AES-256RSA-4096', 'Elliptic curveLattice-based'],
       improvement: 'Quantum-resistant',
       speed: 'Gbps rates'
     },
     {
       area: 'Quantum Signatures',
-      capabilities: ['Digital signatures', 'Multi-signatures', 'Threshold signatures', 'Blind signatures'],
+      capabilities: ['Digital signaturesMulti-signatures', 'Threshold signaturesBlind signatures'],
       improvement: 'Unforgeable',
       verification: 'Instant'
     },
     {
       area: 'Post-Quantum Cryptography',
-      capabilities: ['Lattice-based', 'Hash-based', 'Code-based', 'Multivariate'],
+      capabilities: ['Lattice-basedHash-based', 'Code-basedMultivariate'],
       improvement: 'Future-proof',
       security: 'Quantum-safe'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Government Security',
       description: 'Quantum-secured communications for national security and defense',
-      benefits: ['Unbreakable encryption', 'Real-time secure messaging', 'Global coverage']
+      benefits: ['Unbreakable encryptionReal-time secure messaging', 'Global coverage']
     },
     {
       title: 'Financial Services',
       description: 'Quantum-secured transactions and banking communications',
-      benefits: ['Fraud-proof transactions', 'Secure data transfer', 'Compliance assurance']
+      benefits: ['Fraud-proof transactionsSecure data transfer', 'Compliance assurance']
     },
     {
       title: 'Healthcare',
       description: 'Quantum-secured patient data and medical communications',
-      benefits: ['HIPAA compliance', 'Secure telemedicine', 'Protected health records']
+      benefits: ['HIPAA complianceSecure telemedicine', 'Protected health records']
     },
     {
       title: 'Enterprise Security',
       description: 'Quantum-secured corporate communications and data transfer',
-      benefits: ['Trade secret protection', 'Secure collaboration', 'Intellectual property security']
+      benefits: ['Trade secret protectionSecure collaboration', 'Intellectual property security']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumCryptographyPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations and research institutions',
       features: [
-        'Up to 100 secure connections/month',
-        'Basic quantum encryption',
-        'Standard QKD protocols',
-        'Email support',
+        'Up to 100 secure connections/monthBasic quantum encryption',
+        'Standard QKD protocolsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumCryptographyPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations and government agencies',
       features: [
-        'Up to 500 secure connections/month',
-        'Advanced quantum protocols',
-        'Custom encryption schemes',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 500 secure connections/monthAdvanced quantum protocols',
+        'Custom encryption schemesPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumCryptographyPlatform: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations and government networks',
       features: [
-        'Unlimited secure connections',
-        'Custom quantum protocol development',
-        'Dedicated quantum infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited secure connectionsCustom quantum protocol development',
+        'Dedicated quantum infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumCryptographyPlatform: React.FC = () => {
       position: "Chief Information Officer",
       company: "Advanced Healthcare Systems"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const QuantumCryptographyPlatform: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Secure with Quantum Cryptography?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const QuantumCryptographyPlatform: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumCryptographyPlatform;
+export default QuantumCryptographyPlatform,

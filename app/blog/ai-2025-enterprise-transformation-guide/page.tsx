@@ -1,11 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2025: The Complete Enterprise Transformation Guide | Zion Tech Group';
-  description: 'Discover how AI is revolutionizing enterprise operations in 2025. Learn about cutting-edge automation, neural interfaces, and quantum computing solutions.';
-  keywords: ['AI transformationenterprise AI', 'neural interfacesquantum computing', 'business automation2025'],
-};
+  title: 'AI 2025: The Complete Enterprise Transformation Guide | Zion Tech Group',
+  description: 'Discover how AI is revolutionizing enterprise operations in 2025. Learn about cutting-edge automation, neural interfaces, and quantum computing solutions.',
+  keywords: ['AI transformationenterprise AIneural interfacesquantum computing', 'business automation2025']
+},
 export default function AI2025EnterpriseTransformationGuide() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -20,7 +20,7 @@ export default function AI2025EnterpriseTransformationGuide() {,
               AI 2025: The Complete Enterprise Transformation Guide,
             </h1>,
             <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">,
-              Discover how AI is revolutionizing enterprise operations in 2025. Learn about cutting-edge automation;
+              Discover how AI is revolutionizing enterprise operations in 2025. Learn about cutting-edge automation,
               neural interfaces, and quantum computing solutions that are transforming businesses worldwide.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -40,7 +40,7 @@ export default function AI2025EnterpriseTransformationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Content Overview */,}
+      {/* Content Overview */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
@@ -71,7 +71,7 @@ export default function AI2025EnterpriseTransformationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Technologies Section */,}
+      {/* Key Technologies Section */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Key Technologies Driving Transformation</h2>,
@@ -113,7 +113,7 @@ export default function AI2025EnterpriseTransformationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Stories Section */,}
+      {/* Success Stories Section */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Real-World Success Stories</h2>,
@@ -180,5 +180,4 @@ export default function AI2025EnterpriseTransformationGuide() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

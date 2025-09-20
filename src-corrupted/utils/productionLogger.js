@@ -13,7 +13,7 @@
 export function logWarningToProduction(message, context = {}) {,
   if (process.env.NODE_ENV === 'development') {}
 ,
-  // TODO: Implement actual production logging service integration,}
+  // TODO: Implement actual production logging service integration}
 ,
 /**,
  * Log info to production monitoring service,
@@ -23,6 +23,6 @@ export function logWarningToProduction(message, context = {}) {,
 export function logInfoToProduction(message, context = {}) {,
   if (process.env.NODE_ENV === 'development') {}
 ,
-  // TODO: Implement actual production logging service integration,}
-,
+  // TODO: Implement actual production logging service integration}
+
 }

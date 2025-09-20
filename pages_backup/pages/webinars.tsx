@@ -1,7 +1,7 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import Head from 'next/head';
-import Layout from '../components/Layout';
+import React from 'react',
+import SEO from '../components/SEO',
+import Head from 'next/head',
+import Layout from '../components/Layout',
 
 export default function WebinarsPage() {,
 ursor/integrate-build-improve-and-re-verify-8f7d,
@@ -17,18 +17,17 @@ origin/automation-improvements-final,
 				<h1 className="text-4xl font-bold mb-4">Webinars</h1>,
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>,
 			</div>,
-		</>,
-	),
+		</>)
 }
-ursor/integrate-build-improve-and-re-verify-8f7d,
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
 origin/main,
-origin/automation-improvements-final,
+origin/automation-improvements-final
 }
-,
+
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-;
+,

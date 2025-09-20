@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agent Benchmark Suite';
-  description: 'Scenario-driven benchmarks to measure safety, quality, reliability, and efficiency of autonomous agents.',
-};
+  title: 'AI 2026: Agent Benchmark Suite',
+  description: 'Scenario-driven benchmarks to measure safety, quality, reliability, and efficiency of autonomous agents.'
+},
 export default function AgentBenchmarkSuitePage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -32,7 +32,7 @@ export default function AgentBenchmarkSuitePage() {,
         </div>,
         <div className="bg-purple-50 border border-purple-100 p-4 rounded-lg">,
           <p className="text-sm text-purple-800">,
-            Related guide: {' ',}
+            Related guide: {' '}
             <Link href="/content/ai-2026-trustworthy-model-routing" className="font-semibold underline">,
               Trustworthy Model Routing,
             </Link>,
@@ -40,7 +40,6 @@ export default function AgentBenchmarkSuitePage() {,
           </p>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

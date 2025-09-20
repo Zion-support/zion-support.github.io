@@ -1,2 +1,2 @@
-#!/usr / bin / env node;
-// Accessibility Implementation Script;
+#!/usr / bin / env node,
+// Accessibility Implementation Script,

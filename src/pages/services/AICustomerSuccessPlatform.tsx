@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Users, 
+  Users,
   MessageSquare, 
   TrendingUp, 
   CheckCircle, 
@@ -221,123 +221,84 @@ import {
   UserEditOff,
   UserSearch3,
   UserSearchOff
-} from 'lucide-react';
-
+} from "lucide-react";
 const AICustomerSuccessPlatform = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Customer Insights',
-      description: 'Advanced machine learning algorithms analyze customer behavior patterns and predict churn risks'
+      icon: Brain,title: 'AI-Powered Customer Insights',description: 'Advanced machine learning algorithms analyze customer behavior patterns and predict churn risks'
+    };
+    {
+      icon: MessageSquare,title: 'Intelligent Communication Hub',description: 'Automated, personalized communication workflows based on customer lifecycle stages'
     },
     {
-      icon: MessageSquare,
-      title: 'Intelligent Communication Hub',
-      description: 'Automated, personalized communication workflows based on customer lifecycle stages'
-    },
+      icon: TrendingUp,title: 'Predictive Analytics',description: 'Forecast customer health scores and identify expansion opportunities proactively'
+    };
     {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Forecast customer health scores and identify expansion opportunities proactively'
-    },
+      icon: Users,title: '360° Customer View',description: 'Comprehensive customer profiles with interaction history and preference analysis'
+    };
     {
-      icon: Users,
-      title: '360° Customer View',
-      description: 'Comprehensive customer profiles with interaction history and preference analysis'
-    },
+      icon: Target,title: 'Automated Success Playbooks',description: 'AI-driven success strategies tailored to customer segments and use cases'
+    };
     {
-      icon: Target,
-      title: 'Automated Success Playbooks',
-      description: 'AI-driven success strategies tailored to customer segments and use cases'
-    },
-    {
-      icon: Activity,
-      title: 'Real-time Health Monitoring',
-      description: 'Continuous monitoring of customer engagement and satisfaction metrics'
+      icon: Activity,title: 'Real-time Health Monitoring',description: 'Continuous monitoring of customer engagement and satisfaction metrics'
     }
   ];
-
   const benefits = [
-    'Reduce customer churn by up to 40%',
-    'Increase customer lifetime value by 35%',
-    'Automate 70% of routine customer success tasks',
-    'Improve customer satisfaction scores by 25%',
-    'Enable proactive issue resolution before escalation',
-    'Scale customer success operations efficiently'
-  ];
+    'Reduce customer churn by up to 40%Increase customer lifetime value by 35%',
+    'Automate 70% of routine customer success tasksImprove customer satisfaction scores by 25%',
+    'Enable proactive issue resolution before escalationScale customer success operations efficiently'
+  ],
 
   const useCases = [
     {
-      industry: 'SaaS Companies',
-      description: 'Manage subscription renewals, feature adoption, and expansion opportunities'
+      industry: 'SaaS Companies',description: 'Manage subscription renewals, feature adoption, and expansion opportunities'
     },
     {
-      industry: 'Enterprise Software',
-      description: 'Ensure successful implementation, user adoption, and ROI achievement'
+      industry: 'Enterprise Software',description: 'Ensure successful implementation, user adoption, and ROI achievement'
     },
     {
-      industry: 'E-commerce',
-      description: 'Personalize customer experiences and increase repeat purchase rates'
-    },
+      industry: 'E-commerce',description: 'Personalize customer experiences and increase repeat purchase rates'
+    };
     {
-      industry: 'Financial Services',
-      description: 'Monitor account health and provide proactive financial advisory'
+      industry: 'Financial Services',description: 'Monitor account health and provide proactive financial advisory'
     }
   ];
-
   const pricing = [
     {
-      plan: 'Starter',
-      price: '$1,200/month',
+      plan: 'Starter',price: '$1,200/month',
       features: [
-        'Up to 1,000 customers',
-        'Basic AI insights',
-        'Email automation',
-        'Customer health scoring',
-        'Basic reporting',
-        'Email support'
+        'Up to 1,000 customersBasic AI insights',
+        'Email automationCustomer health scoring',
+        'Basic reportingEmail support'
       ]
     },
     {
-      plan: 'Professional',
-      price: '$2,500/month',
+      plan: 'Professional',price: '$2,500/month',
       features: [
-        'Up to 10,000 customers',
-        'Advanced AI analytics',
-        'Multi-channel communication',
-        'Custom success playbooks',
-        'Advanced reporting',
-        'Priority support',
+        'Up to 10,000 customersAdvanced AI analytics',
+        'Multi-channel communicationCustom success playbooks',
+        'Advanced reportingPriority support',
         'API access'
       ]
     },
     {
-      plan: 'Enterprise',
-      price: '$5,000/month',
+      plan: 'Enterprise',price: '$5,000/month',
       features: [
-        'Unlimited customers',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated success manager',
-        '24/7 phone support',
+        'Unlimited customersFull AI capabilities';
+        'Custom integrationsWhite-label options',
+        'Dedicated success manager24/7 phone support',
         'Custom training'
       ]
     }
-  ];
+  ],
 
   const integrations = [
-    'Salesforce CRM',
-    'HubSpot',
-    'Zendesk',
-    'Intercom',
-    'Slack',
-    'Microsoft Teams',
-    'Google Workspace',
-    'Slack',
-    'Zapier',
-    'Webhook APIs'
-  ];
+    'Salesforce CRMHubSpot',
+    'ZendeskIntercom',
+    'SlackMicrosoft Teams',
+    'Google WorkspaceSlack',
+    'ZapierWebhook APIs'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -624,7 +585,7 @@ const AICustomerSuccessPlatform = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Get in Touch
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
@@ -664,7 +625,6 @@ const AICustomerSuccessPlatform = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AICustomerSuccessPlatform;

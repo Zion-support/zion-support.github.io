@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Brain,
   Cloud,
@@ -50,182 +50,124 @@ import {
   Gauge,
   ShieldCheck,
   X
-} from 'lucide-react';
-
+} from "lucide-react";
 // Import our existing service data
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
-import { comprehensiveServices } from '../data/comprehensiveServices';
-
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "../data/ultimateInnovativeServices2026";
+import { comprehensiveServices } from "../data/comprehensiveServices";
 interface Service {
-  id: string;
-  name: string;
-  category: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-    billingCycle: string;
+  id: string,name: string,category: string,description: string,features: string[],benefits: string[],pricing: {
+    starter: number,professional: number,enterprise: number,currency: string,billingCycle: string
   };
-  rating: number;
-  reviewCount: number;
-  launchDate: string;
-  status: string;
-  marketPrice: string;
-  estimatedDelivery: string;
-  website?: string;
+  rating: number,reviewCount: number,launchDate: string,status: string,marketPrice: string,estimatedDelivery: string;
+  website?: string,
   contactInfo?: {
-    phone: string;
-    email: string;
-    address: string;
+    phone: string,email: string,address: string
   };
 }
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name'),
+  const [selectedService, setSelectedService] = useState<Service | null>(null),
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
-
     // Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
       services.push({
-        id: service.id,
-        name: service.name,
-        category: service.category,
-        description: service.description,
-        features: service.features,
-        benefits: service.benefits,
-        pricing: {
-          starter: service.pricing.starter,
-          professional: service.pricing.professional,
-          enterprise: service.pricing.enterprise,
-          currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle
-        },
-        rating: service.rating,
-        reviewCount: service.reviewCount,
-        launchDate: service.launchDate,
-        status: service.status,
-        marketPrice: service.marketPrice,
-        estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
-        contactInfo: service.contactInfo
+        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {
+          starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
+        };
+        rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
       });
-    });
+    }),
 
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
       services.push({
-        id: service.id,
-        name: service.name,
-        category: service.category,
-        description: service.description,
-        features: service.features,
-        benefits: service.benefits,
-        pricing: {
-          starter: service.pricing.starter,
-          professional: service.pricing.professional,
-          enterprise: service.pricing.enterprise,
-          currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle
-        },
-        rating: service.rating,
-        reviewCount: service.reviewCount,
-        launchDate: service.launchDate,
-        status: service.status,
-        marketPrice: service.marketPrice,
-        estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
-        contactInfo: service.contactInfo
+        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {
+          starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
+        };
+        rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
       });
-    });
+    }),
 
-    return services;
-  }, []);
+    return services,
+  }, []),
 
   const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
-    return cats.sort();
-  }, [allServices]);
+    const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
+    return cats.sort(),
+  }, [allServices]),
 
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
+                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+      return matchesSearch && matchesCategory,
+    }),
 
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),
+        break,
       case 'price':
-        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter);
-        break;
+        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter),
+        break,
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
+        filtered.sort((a, b) => b.rating - a.rating),
+        break,
       case 'newest':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-        break;
+        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
+        break,
     }
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered,
+  }, [allServices, searchTerm, selectedCategory, sortBy]),
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Artificial Intelligence':
         return <Brain className="w-6 h-6" />;
       case 'Quantum Computing':
-        return <Atom className="w-6 h-6" />;
+        return <Atom className="w-6 h-6" />,
       case 'Neuromorphic Computing':
-        return <Cpu className="w-6 h-6" />;
+        return <Cpu className="w-6 h-6" />,
       case 'Synthetic Biology':
-        return <Heart className="w-6 h-6" />;
+        return <Heart className="w-6 h-6" />,
       case 'Blockchain':
-        return <Blockchain className="w-6 h-6" />;
+        return <Blockchain className="w-6 h-6" />,
       case 'Cybersecurity':
-        return <Shield className="w-6 h-6" />;
+        return <Shield className="w-6 h-6" />,
       case 'Internet of Things':
-        return <Network className="w-6 h-6" />;
+        return <Network className="w-6 h-6" />,
       case 'Metaverse':
-        return <Globe className="w-6 h-6" />;
+        return <Globe className="w-6 h-6" />,
       case 'Robotics':
-        return <Factory className="w-6 h-6" />;
+        return <Factory className="w-6 h-6" />,
       case 'Space Technology':
-        return <Satellite className="w-6 h-6" />;
-      default:
-        return <Lightbulb className="w-6 h-6" />;
+        return <Satellite className="w-6 h-6" />,
+      default: return <Lightbulb className="w-6 h-6" />
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
       case 'live':
         return 'bg-green-100 text-green-800';
       case 'beta':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-blue-800',
       case 'coming soon':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-100 text-yellow-800',
       case 'preview':
-        return 'bg-purple-100 text-purple-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-purple-100 text-purple-800',
+      default: return 'bg-gray-100 text-gray-800'
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
@@ -600,7 +542,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default ComprehensiveServicesShowcase2027;

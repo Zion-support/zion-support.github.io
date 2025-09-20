@@ -1,35 +1,33 @@
-import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
-import SEO from '@/components/SEO';
+import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building } from "lucide-react";
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/comprehensiveServices";
+import SEO from "@/components/SEO";
 export default function ComprehensiveServicesPage() {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPricingTier, setSelectedPricingTier] = useState('all');
+    const [searchTerm, setSearchTerm] = useState(''),
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedPricingTier, setSelectedPricingTier] = useState('all'),
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-            const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
-            return matchesSearch && matchesCategory && matchesPricing;
-        });
-    }, [searchTerm, selectedCategory, selectedPricingTier]);
+                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+            const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier,
+            return matchesSearch && matchesCategory && matchesPricing,
+        }),
+    }, [searchTerm, selectedCategory, selectedPricingTier]),
     const getCategoryIcon = (categoryName) => {
-        return '💼';
-    };
+        return '💼',
+    },
     const getServiceTypeColor = (type) => {
         const colorMap = {
-            'Micro SAAS': 'bg-blue-100 text-blue-800',
-            'IT Services': 'bg-green-100 text-green-800',
-            'AI Services': 'bg-purple-100 text-purple-800'
+            'Micro SAAS': 'bg-blue-100 text-blue-800IT Services': 'bg-green-100 text-green-800AI Services': 'bg-purple-100 text-purple-800'
         };
         return colorMap[type] || 'bg-gray-100 text-gray-800';
     };
@@ -162,7 +160,7 @@ export default function ComprehensiveServicesPage() {
 
                   {/* AI Score */}
                   {service.aiScore && (<div className="flex items-center justify-between text-sm">
-                      <span className="text-zion-slate-light">AI Score:</span>
+                      <span className="text-zion-slate-light">AI Score: </span>
                       <div className="flex items-center gap-2">
                         <div className="w-16 bg-zion-blue-light rounded-full h-2">
                           <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: `${service.aiScore}%` }}></div>
@@ -203,8 +201,8 @@ export default function ComprehensiveServicesPage() {
               </div>
               <Button onClick={() => {
                 setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedPricingTier('all');
+                setSelectedCategory('all'),
+                setSelectedPricingTier('all'),
             }} variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                 Clear Filters
               </Button>
@@ -224,27 +222,19 @@ export default function ComprehensiveServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             {
-                icon: <Zap className="w-8 h-8"/>,
-                title: "Innovation First",
-                description: "Cutting-edge AI and technology solutions that keep you ahead of the competition"
-            },
+                icon: <Zap className="w-8 h-8"/>,title: "Innovation First",description: "Cutting-edge AI and technology solutions that keep you ahead of the competition"
+            };
             {
-                icon: <Shield className="w-8 h-8"/>,
-                title: "Enterprise Security",
-                description: "Bank-level security and compliance for all our solutions and services"
-            },
+                icon: <Shield className="w-8 h-8"/>,title: "Enterprise Security",description: "Bank-level security and compliance for all our solutions and services"
+            };
             {
-                icon: <Building className="w-8 h-8"/>,
-                title: "Proven Results",
-                description: "Track record of successful implementations and measurable business outcomes"
-            },
+                icon: <Building className="w-8 h-8"/>,title: "Proven Results",description: "Track record of successful implementations and measurable business outcomes"
+            };
             {
-                icon: <Users className="w-8 h-8"/>,
-                title: "Expert Support",
-                description: "24/7 technical support and dedicated account management for enterprise clients"
+                icon: <Users className="w-8 h-8"/>,title: "Expert Support",description: "24/7 technical support and dedicated account management for enterprise clients"
             }
         ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
@@ -267,7 +257,7 @@ export default function ComprehensiveServicesPage() {
             Let's discuss how our micro SAAS solutions can drive innovation, efficiency, and growth for your organization
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light">
               <Phone className="w-5 h-5 mr-2"/>
               Schedule a Consultation
             </Button>
@@ -278,5 +268,5 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-    </div>);
+    </div>)
 }

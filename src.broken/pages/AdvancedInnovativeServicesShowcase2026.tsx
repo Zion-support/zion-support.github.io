@@ -1,48 +1,48 @@
-import React, { useState, useMemo } from 'react';
-export default AdvancedInnovativeServicesShowcase2026;}}}}}}}}
-import { ADVANCED_INNOVATIVE_SERVICES_2026 } from '../data/advancedInnovativeServices2026';
+import React, { useState, useMemo } from 'react',
+export default AdvancedInnovativeServicesShowcase2026,}}}}}}}}
+import { ADVANCED_INNOVATIVE_SERVICES_2026 } from '../data/advancedInnovativeServices2026',
 
 export default function Page() {
     // Sort services
     filtered.sort((a, b) => {
       switch(sortBy) {
         case 'innovation':
-          return b.innovationLevel.localeCompare(a.innovationLevel) ;
+          return b.innovationLevel.localeCompare(a.innovationLevel) ,
         case 'roi':
-          return parseFloat(b.roi.replace ('%', '') ) - parseFloat(a.roi.replace ('%', '') ) ;
+          return parseFloat(b.roi.replace ('%', '') ) - parseFloat(a.roi.replace ('%', '') ) ,
         case 'price':
-          return a.price - b.price;
+          return a.price - b.price,
         case 'delivery':
-          return a.estimatedDelivery.localeCompare(b.estimatedDelivery) ;
+          return a.estimatedDelivery.localeCompare(b.estimatedDelivery) ,
         default:
           return 0}
-    }) ;
+    }) ,
 
-    return filtered}, [searchTerm, selectedCategory, sortBy]) ;
+    return filtered}, [searchTerm, selectedCategory, sortBy]) ,
 
   const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,
+      transition: {,
+        staggerChildren: 0.1
+      },
+    },
+  },
 
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0
 
 },
-    visible: {;
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+    visible: {,
+      y: 0,
+      opacity: 1,
+      transition: {,
+        duration: 0.5
+      },
+    },
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Header Section */}
@@ -285,15 +285,15 @@ export default function Page() {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline - flex items - center gap-2 text-blue - 400 hover:text-blue - 300 text-sm font - medium group - hover:gap-3 transition - all duration -300"
+                  className="inline - flex items - center gap-2 text-blue - 400 hover: text-blue - 300 text-sm font - medium group - hover:gap-3 transition - all duration -300"
 
                   Learn More < ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-            </motion.div>;) ) }
+            </motion.div>,) ) }
         </div>
 
-        {filteredServices.length === 0 && (;
+        {filteredServices.length === 0 && (,
           <motion.div
             className="text-center py-20"
             initial={{ opacity: 0 }}
@@ -302,7 +302,7 @@ export default function Page() {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font - bold text-white mb-2">No services found</h3>
             <p className="text-slate -400">Try adjusting your search criteria or category filter.</p>
-          </motion.div>;) }
+          </motion.div>,) }
       </motion.div>
 
       {/* Contact Section */}
@@ -310,17 +310,17 @@ export default function Page() {
         className="bg-gradient - to - r from - blue - 900 / 20 via - purple - 900 / 20 to - indigo - 900 / 20 border-t border-slate -700 / 50"
         initial = {
   { opacity: 0,
-  y: 50 ;
+  y: 50 
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
         transition = {
   { duration: 0.8,
-  delay: 1 ;
+  delay: 1 
 
 }}
       >
@@ -365,15 +365,15 @@ export default function Page() {
 
           <div className="text-center mt-12">
             <a
-              href="https://ziontechgroup.com"
+              href="https: //ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline - flex items - center gap-3 px-8 py-4 bg-gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text-white font - bold rounded-xl transition - all duration - 300 hover:scale - 105 hover:shadow-2xl hover:shadow-blue -500 / 25"
 
               Visit Our Website < ArrowRight className="w-5 h-5" />
-            </a>;
-          </div>;
-        </div>;
-      </motion.div>;
-    </div>;) ;
-};
+            </a>,
+          </div>,
+        </div>,
+      </motion.div>,
+    </div>,) 
+},

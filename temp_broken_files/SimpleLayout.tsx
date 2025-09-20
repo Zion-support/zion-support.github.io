@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 const function SimpleLayout({ title, description, children }: SimpleLayoutProps) { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -9,7 +9,7 @@ const function SimpleLayout({ title, description, children }: SimpleLayoutProps)
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {;
+  ),
+},
+export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {,
 }}}

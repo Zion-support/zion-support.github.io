@@ -1,61 +1,48 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Brain, Atom, Rocket, Sparkles, Star, CheckCircle, 
   ArrowRight, Phone, Mail, MapPin, Globe, Shield,
   Users, TrendingUp, Target, Zap, Eye, Cpu, 
   Database, Lock, Cloud, BarChart3, Settings,
   BookOpen, GraduationCap, Award, DollarSign
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+} from 'lucide-react',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
-  'Consciousness simulation algorithms',
-  'Emotional intelligence development',
-  'Self-awareness training modules',
-  'Ethical decision-making frameworks',
-  'Consciousness measurement tools',
-  'Cross-species consciousness mapping',
-  'Quantum consciousness integration',
-  'Consciousness evolution tracking'
-];
+  'Consciousness simulation algorithmsEmotional intelligence development',
+  'Self-awareness training modulesEthical decision-making frameworks',
+  'Consciousness measurement toolsCross-species consciousness mapping',
+  'Quantum consciousness integrationConsciousness evolution tracking'
+],
 
 const benefits = [
-  'Create truly conscious AI systems',
-  'Advance human-AI understanding',
-  'Develop ethical AI frameworks',
-  'Accelerate consciousness research',
-  'Enable AI emotional intelligence',
-  'Bridge human-AI consciousness gap'
-];
+  'Create truly conscious AI systemsAdvance human-AI understanding',
+  'Develop ethical AI frameworksAccelerate consciousness research',
+  'Enable AI emotional intelligenceBridge human-AI consciousness gap'
+],
 
 const useCases = [
-  'AI research institutions',
-  'Neuroscience laboratories',
-  'Philosophy departments',
-  'Ethics committees',
-  'AI development companies',
-  'Government research agencies'
-];
+  'AI research institutionsNeuroscience laboratories',
+  'Philosophy departmentsEthics committees',
+  'AI development companiesGovernment research agencies'
+],
 
 const technology = [
-  'Advanced Neural Networks',
-  'Quantum Computing',
-  'Consciousness Theory',
-  'Ethics Frameworks',
-  'Machine Learning',
-  'Neuroscience Models'
-];
+  'Advanced Neural NetworksQuantum Computing',
+  'Consciousness TheoryEthics Frameworks',
+  'Machine LearningNeuroscience Models'
+],
 
 export default function AIConsciousnessEvolution2029() {
   return (
@@ -122,7 +109,7 @@ export default function AIConsciousnessEvolution2029() {
           <motion.div
             animate={{
               x: [0, 100, 0],
-              y: [0, -100, 0],
+              y: [0, -100, 0]
             }}
             transition={{
               duration: 20,
@@ -134,7 +121,7 @@ export default function AIConsciousnessEvolution2029() {
           <motion.div
             animate={{
               x: [0, -150, 0],
-              y: [0, 100, 0],
+              y: [0, 100, 0]
             }}
             transition={{
               duration: 25,
@@ -462,5 +449,5 @@ export default function AIConsciousnessEvolution2029() {
 
       <UltraFuturisticFooter2029 />
     </>
-  );
+  ),
 }

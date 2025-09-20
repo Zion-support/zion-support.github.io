@@ -1,36 +1,36 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, Search, ChevronDown, ChevronRight, 
   Home, Briefcase, Users, BookOpen, Phone, 
   Globe, Zap, Shield, Brain, Rocket, Sparkles, DollarSign
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Define Node type for DOM event handling
-type Node = HTMLElement | null;
+type Node = HTMLElement | null,
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-  color?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  category?: string,
+  color?: string
 }
 
 function normalizeHref(href: string): string {
-  if (!href) return href;
+  if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href;
+    return href
   }
-  if (!href.startsWith('/')) return href;
-  const hasQueryOrHash = href.includes('?') || href.includes('#');
-  if (hasQueryOrHash) return href;
-  return href.endsWith('/') ? href : href + '/';
+  if (!href.startsWith('/')) return href,
+  const hasQueryOrHash = href.includes('?') || href.includes('#'),
+  if (hasQueryOrHash) return href,
+  return href.endsWith('/') ? href : href + '/',
 }
 
 // Enhanced navigation items with better organization
@@ -234,7 +234,7 @@ const navigationItems: NavigationItem[] = [
     category: 'company',
     color: 'from-green-500 to-emerald-500'
   }
-];
+],
 
 const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
   return (
@@ -242,7 +242,7 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticNavigation2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedFuturisticNavigation2025;
+export default UltraAdvancedFuturisticNavigation2025,

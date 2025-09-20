@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Agents‑On‑Call Automation';
-  description: 'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.',
-};
+  title: 'AI 2026: Agents‑On‑Call Automation',
+  description: 'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.'
+},
 export default function AgentsOnCallAutomationPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -40,19 +40,17 @@ export default function AgentsOnCallAutomationPage() {,
           </li>,
         </ul>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,
 export const metadata = {,
-  title: 'AI 2026: Agents‑On‑Call Automation';
+  title: 'AI 2026: Agents‑On‑Call Automation',
   description:,
-    'Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks and deep observability.';
+    'Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks and deep observability.',
   keywords: [,
-    'agents on callautonomous incident response';
-    'ai opsobservability';
-    'evalsplaybooks',
-  ],
-};
+    'agents on callautonomous incident responseai opsobservability',
+    'evalsplaybooks'
+  ]
+},
 export default function AgentsOnCallAutomation2026() {,
   return (,
     <div>,
@@ -103,6 +101,5 @@ export default function AgentsOnCallAutomation2026() {,
           </div>,
         </div>,
       </article>,
-    </div>,
-  ),}
+    </div>)}
 ,

@@ -1,124 +1,124 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   Pause,
   RotateCcw,
   Settings,
   Code,
-  Database;
-  Cpu;
-  Network;
-  BarChart3;
-  Zap;
-  Brain;
-  Shield;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Users;
-  TrendingUp,
-} from 'lucide-react';
+  Database,
+  Cpu,
+  Network,
+  BarChart3,
+  Zap,
+  Brain,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Users,
+  TrendingUp
+} from 'lucide-react',
 const InteractiveAIToolsDemo2026 = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeDemosetActiveDemo] = useState(0);
-  const [isRunningsetIsRunning] = useState(false);
-  const [progressetProgress] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [activeDemosetActiveDemo] = useState(0),
+  const [isRunningsetIsRunning] = useState(false),
+  const [progressetProgress] = useState(0),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)200);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)200),
+    return () => clearTimeout(timer),
+  }[]),
   useEffect(() => {,
-    let interval: NodeJS.Timeout;
+    let interval: NodeJS.Timeout,
     if (isRunning) {,
       interval = setInterval(() => {,
         setProgress(prev => {,
           if (prev >= 100) {,
-            setIsRunning(false);
-            return 0,
+            setIsRunning(false),
+            return 0
           }
-          return prev + 2;
-        });
-      }100);
+          return prev + 2,
+        }),
+      }100),
     }
-    return () => clearInterval(interval);
-  }[isRunning]);
+    return () => clearInterval(interval),
+  }[isRunning]),
   const demos = [,
     {,
-      id: 'ai-code-review';
-      title: 'AI Code Review Assistant';
-      icon: Code;
-      color: 'from-blue-500 to-cyan-500';
-      description: 'Automated code analysis and optimization suggestions';
-      features: ['Security 'ScanningPerformance 'Optimization', 'Best 'PracticesBug Detection'];
-      metrics: { efficiency: '95%'accuracy: '98%'time: '3x faster' ,}
-    };
+      id: 'ai-code-review',
+      title: 'AI Code Review Assistant',
+      icon: Code,
+      color: 'from-blue-500 to-cyan-500',
+      description: 'Automated code analysis and optimization suggestions',
+      features: ['Security 'ScanningPerformance 'OptimizationBest 'PracticesBug Detection'],
+      metrics: { efficiency: '95%'accuracy: '98%'time: '3x faster' }
+    },
     {,
-      id: 'data-analytics';
-      title: 'Intelligent Data Analytics';
-      icon: BarChart3;
-      color: 'from-green-500 to-emerald-500';
-      description: 'Real-time data processing and predictive insights';
-      features: ['Real-time 'ProcessingPredictive 'Analytics', 'Data 'VisualizationTrend Analysis'];
-      metrics: { efficiency: '90%'accuracy: '96%'time: '5x faster' ,}
-    };
+      id: 'data-analytics',
+      title: 'Intelligent Data Analytics',
+      icon: BarChart3,
+      color: 'from-green-500 to-emerald-500',
+      description: 'Real-time data processing and predictive insights',
+      features: ['Real-time 'ProcessingPredictive 'AnalyticsData 'VisualizationTrend Analysis'],
+      metrics: { efficiency: '90%'accuracy: '96%'time: '5x faster' }
+    },
     {,
-      id: 'infrastructure-monitoring';
-      title: 'Infrastructure Monitoring';
-      icon: Network;
-      color: 'from-purple-500 to-pink-500';
-      description: 'Comprehensive system health and performance monitoring';
-      features: ['Health 'MonitoringPerformance 'Tracking', 'Alert 'SystemAuto-scaling'];
-      metrics: { efficiency: '99%'accuracy: '99%'time: 'Real-time' ,}
-    };
+      id: 'infrastructure-monitoring',
+      title: 'Infrastructure Monitoring',
+      icon: Network,
+      color: 'from-purple-500 to-pink-500',
+      description: 'Comprehensive system health and performance monitoring',
+      features: ['Health 'MonitoringPerformance 'TrackingAlert 'SystemAuto-scaling'],
+      metrics: { efficiency: '99%'accuracy: '99%'time: 'Real-time' }
+    },
     {,
-      id: 'security-scanning';
-      title: 'AI Security Scanner';
-      icon: Shield;
-      color: 'from-red-500 to-orange-500';
-      description: 'Advanced threat detection and vulnerability assessment';
-      features: ['Threat 'DetectionVulnerability 'Scanning', 'Risk 'AssessmentCompliance Check'];
-      metrics: { efficiency: '97%'accuracy: '99%'time: '2x faster' ,}
+      id: 'security-scanning',
+      title: 'AI Security Scanner',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      description: 'Advanced threat detection and vulnerability assessment',
+      features: ['Threat 'DetectionVulnerability 'ScanningRisk 'AssessmentCompliance Check'],
+      metrics: { efficiency: '97%'accuracy: '99%'time: '2x faster' }
     }
-  ];
+  ],
   const testimonials = [,
     {,
-      name: 'Alex Thompson';
-      role: 'Lead Developer';
-      company: 'TechFlow Inc.';
-      content: 'The AI code review tool caught 15 critical security issues we missed. Incredible accuracy!';
-      rating: 5,};
+      name: 'Alex Thompson',
+      role: 'Lead Developer',
+      company: 'TechFlow Inc.',
+      content: 'The AI code review tool caught 15 critical security issues we missed. Incredible accuracy!',
+      rating: 5},
     {,
-      name: 'Maria Garcia';
-      role: 'Data Scientist';
-      company: 'DataCorp';
-      content: 'Our data processing speed increased by 500% with their analytics platform.';
-      rating: 5,};
+      name: 'Maria Garcia',
+      role: 'Data Scientist',
+      company: 'DataCorp',
+      content: 'Our data processing speed increased by 500% with their analytics platform.',
+      rating: 5},
     {,
-      name: 'David Kim';
-      role: 'DevOps Engineer';
-      company: 'CloudScale';
-      content: 'Infrastructure monitoring has never been this comprehensive and reliable.';
-      rating: 5,}
-  ];
+      name: 'David Kim',
+      role: 'DevOps Engineer',
+      company: 'CloudScale',
+      content: 'Infrastructure monitoring has never been this comprehensive and reliable.',
+      rating: 5}
+  ],
   const handleStartDemo = () => {,
-    setIsRunning(true);
-    setProgress(0);
-  };
+    setIsRunning(true),
+    setProgress(0),
+  },
   const handleStopDemo = () => {,
-    setIsRunning(false);
-    setProgress(0);
-  };
+    setIsRunning(false),
+    setProgress(0),
+  },
   const handleResetDemo = () => {,
-    setIsRunning(false);
-    setProgress(0);
-  };
-  if (!isVisible) return null;
+    setIsRunning(false),
+    setProgress(0),
+  },
+  if (!isVisible) return null,
   return (,
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -130,18 +130,18 @@ const InteractiveAIToolsDemo2026 = () => {,
             See how our solutions can transform your workflow in real-time.,
           </p>,
         </div>,
-        {/* Demo Selector */,}
+        {/* Demo Selector */}
         <div,
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12",
         >,
           {demos.map((demoindex) => (,
             <button,
-              key={demo.id,}
+              key={demo.id}
               onClick={() => setActiveDemo(index)}
               className={`p-6 rounded-xl transition-all duration-300 ${,
                 activeDemo === index,
                   ? 'bg-white bg-opacity-20 scale-105 shadow-2xl',
-                  : 'bg-white bg-opacity-10 hover: bg-opacity-15',}`}
+                  : 'bg-white bg-opacity-10 hover: bg-opacity-15'}`}
             >,
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${demo.color} flex items-center justify-center mb-4 mx-auto`}>,
                 <demo.icon className="w-6 h-6 text-white" />,
@@ -174,21 +174,21 @@ const InteractiveAIToolsDemo2026 = () => {,
                 <Play className="w-5 h-5" />,
               </button>,
               <button,
-                onClick={handleStopDemo,}
+                onClick={handleStopDemo}
                 disabled={!isRunning}
                 className="p-3 bg-red-600 hover: bg-red-700 disabled:bg-gray-600 rounded-lg transition-colors duration-300",
               >,
                 <Pause className="w-5 h-5" />,
               </button>,
               <button,
-                onClick={handleResetDemo,}
+                onClick={handleResetDemo}
                 className="p-3 bg-gray-600 hover: bg-gray-700 rounded-lg transition-colors duration-300",
               >,
                 <RotateCcw className="w-5 h-5" />,
               </button>,
             </div>,
           </div>,
-          {/* Progress Bar */,}
+          {/* Progress Bar */}
           <div className="mb-6">,
             <div className="flex justify-between items-center mb-2">,
               <span className="text-sm font-medium">Demo Progress</span>,
@@ -197,13 +197,13 @@ const InteractiveAIToolsDemo2026 = () => {,
             <div className="w-full bg-gray-700 rounded-full h-2">,
               <div,
                 className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color}`}
-                style={{ width: `${progress,}%` }}
+                style={{ width: `${progress}%` }}
               />,
             </div>,
           </div>,
           {/* Demo Content */}
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-            {/* Features */,}
+            {/* Features */}
             <div>,
               <h4 className="text-lg font-semibold mb-4">Key Features</h4>,
               <div className="space-y-3">,
@@ -211,8 +211,7 @@ const InteractiveAIToolsDemo2026 = () => {,
                   <div key={index} className="flex items-center space-x-3">,
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                     <span className="text-blue-200">{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Metrics */}
@@ -244,11 +243,10 @@ const InteractiveAIToolsDemo2026 = () => {,
           </h3>,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
             {testimonials.map((testimonialindex) => (,
-              <div key={index,} className="bg-white bg-opacity-10 rounded-xl p-6">,
+              <div key={index} className="bg-white bg-opacity-10 rounded-xl p-6">,
                 <div className="flex items-center mb-4">,
                   {[...Array(testimonial.rating)].map((_i) => (,
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />,
-                  ))}
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />))}
                 </div>,
                 <p className="text-blue-200 mb-4 italic">"{testimonial.content}"</p>,
                 <div>,
@@ -285,5 +283,5 @@ const InteractiveAIToolsDemo2026 = () => {,
         </div>,
       </div>,
     </section>,
-  ),};
-export default InteractiveAIToolsDemo2026;
+  )},
+export default InteractiveAIToolsDemo2026,

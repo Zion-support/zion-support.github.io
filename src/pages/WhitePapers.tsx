@@ -1,96 +1,41 @@
 
 
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { FileText, Download, Calendar, User, ArrowRight, BookOpen, TrendingUp, Target, Brain, Cloud, Shield, Zap } from 'lucide-react';
-
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
+import { FileText, Download, Calendar, User, ArrowRight, BookOpen, TrendingUp, Target, Brain, Cloud, Shield, Zap } from "lucide-react";
 export const WhitePapers: React.FC = () => {
   const whitePapers = [
     {
-      id: 1,
-      title: 'AI-Powered Business Transformation: A Comprehensive Guide 2025',
-      description: 'Explore how artificial intelligence is revolutionizing business operations, from automation to decision-making processes.',
-      category: 'AI & Business',
-      author: 'Zion Tech Group Research Team',
-      date: '2025-01-15',
-      downloadCount: 1247,
-      featured: true,
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
+      id: 1,title: 'AI-Powered Business Transformation: A Comprehensive Guide 2025',description: 'Explore how artificial intelligence is revolutionizing business operations, from automation to decision-making processes.',
+      category: 'AI & Business',author: 'Zion Tech Group Research Team',date: '2025-01-15',downloadCount: 1247,featured: true,icon: Brain,color: 'from-purple-500 to-pink-500'
+    };
     {
-      id: 2,
-      title: 'Quantum Computing in Enterprise: Practical Applications and ROI',
-      description: 'A detailed analysis of quantum computing applications in enterprise environments and their measurable business impact.',
-      category: 'Quantum Computing',
-      author: 'Dr. Sarah Chen',
-      date: '2024-12-20',
-      downloadCount: 892,
-      featured: true,
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500'
-    },
+      id: 2,title: 'Quantum Computing in Enterprise: Practical Applications and ROI',description: 'A detailed analysis of quantum computing applications in enterprise environments and their measurable business impact.',category: 'Quantum Computing',author: 'Dr. Sarah Chen',date: '2024-12-20',downloadCount: 892,featured: true,icon: Zap,color: 'from-blue-500 to-cyan-500'
+    };
     {
-      id: 3,
-      title: 'Cybersecurity in the AI Era: Threats, Solutions, and Best Practices',
-      description: 'Comprehensive guide to protecting AI systems and data in an increasingly connected digital landscape.',
-      category: 'Cybersecurity',
-      author: 'Marcus Rodriguez',
-      date: '2024-11-30',
-      downloadCount: 1563,
-      featured: true,
-      icon: Shield,
-      color: 'from-green-500 to-emerald-500'
-    },
+      id: 3,title: 'Cybersecurity in the AI Era: Threats, Solutions, and Best Practices',
+      description: 'Comprehensive guide to protecting AI systems and data in an increasingly connected digital landscape.',category: 'Cybersecurity',author: 'Marcus Rodriguez',date: '2024-11-30',downloadCount: 1563,featured: true,icon: Shield,color: 'from-green-500 to-emerald-500'
+    };
     {
-      id: 4,
-      title: 'Cloud-Native Architecture: Building Scalable AI Applications',
-      description: 'Best practices for designing and deploying AI applications in cloud environments for optimal performance and scalability.',
-      category: 'Cloud & DevOps',
-      author: 'Alex Thompson',
-      date: '2024-10-25',
-      downloadCount: 734,
-      featured: false,
-      icon: Cloud,
-      color: 'from-blue-500 to-indigo-500'
-    },
+      id: 4,title: 'Cloud-Native Architecture: Building Scalable AI Applications',description: 'Best practices for designing and deploying AI applications in cloud environments for optimal performance and scalability.',category: 'Cloud & DevOps',author: 'Alex Thompson',date: '2024-10-25',downloadCount: 734,featured: false,icon: Cloud,color: 'from-blue-500 to-indigo-500'
+    };
     {
-      id: 5,
-      title: 'Data Analytics Revolution: From Insights to Actionable Intelligence',
-      description: 'How modern data analytics platforms are transforming raw data into strategic business intelligence.',
-      category: 'Data Analytics',
-      author: 'Dr. Emily Watson',
-      date: '2024-09-18',
-      downloadCount: 1102,
-      featured: false,
-      icon: TrendingUp,
-      color: 'from-orange-500 to-red-500'
-    },
+      id: 5,title: 'Data Analytics Revolution: From Insights to Actionable Intelligence',description: 'How modern data analytics platforms are transforming raw data into strategic business intelligence.',category: 'Data Analytics',author: 'Dr. Emily Watson',date: '2024-09-18',downloadCount: 1102,featured: false,icon: TrendingUp,color: 'from-orange-500 to-red-500'
+    };
     {
-      id: 6,
-      title: 'Digital Twin Technology: Bridging Physical and Digital Worlds',
-      description: 'Comprehensive overview of digital twin applications across industries and their implementation strategies.',
-      category: 'Digital Twin',
-      author: 'James Wilson',
-      date: '2024-08-12',
-      downloadCount: 645,
-      featured: false,
-      icon: Target,
-      color: 'from-purple-500 to-violet-500'
+      id: 6,title: 'Digital Twin Technology: Bridging Physical and Digital Worlds',description: 'Comprehensive overview of digital twin applications across industries and their implementation strategies.',category: 'Digital Twin',author: 'James Wilson',date: '2024-08-12',downloadCount: 645,featured: false,icon: Target,color: 'from-purple-500 to-violet-500'
     }
   ];
-
   const categories = [
-    { name: 'All', count: whitePapers.length, active: true },
-    { name: 'AI & Business', count: whitePapers.filter(wp => wp.category === 'AI & Business').length, active: false },
-    { name: 'Quantum Computing', count: whitePapers.filter(wp => wp.category === 'Quantum Computing').length, active: false },
-    { name: 'Cybersecurity', count: whitePapers.filter(wp => wp.category === 'Cybersecurity').length, active: false },
-    { name: 'Cloud & DevOps', count: whitePapers.filter(wp => wp.category === 'Cloud & DevOps').length, active: false },
-    { name: 'Data Analytics', count: whitePapers.filter(wp => wp.category === 'Data Analytics').length, active: false },
+    { name: 'All', count: whitePapers.length, active: true };
+    { name: 'AI & Business', count: whitePapers.filter(wp => wp.category === 'AI & Business').length, active: false };
+    { name: 'Quantum Computing', count: whitePapers.filter(wp => wp.category === 'Quantum Computing').length, active: false };
+    { name: 'Cybersecurity', count: whitePapers.filter(wp => wp.category === 'Cybersecurity').length, active: false };
+    { name: 'Cloud & DevOps', count: whitePapers.filter(wp => wp.category === 'Cloud & DevOps').length, active: false };
+    { name: 'Data Analytics', count: whitePapers.filter(wp => wp.category === 'Data Analytics').length, active: false };
     { name: 'Digital Twin', count: whitePapers.filter(wp => wp.category === 'Digital Twin').length, active: false }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -314,7 +259,7 @@ export const WhitePapers: React.FC = () => {
               Join thousands of professionals staying ahead of technology trends.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -332,7 +277,6 @@ export const WhitePapers: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default WhitePapers;

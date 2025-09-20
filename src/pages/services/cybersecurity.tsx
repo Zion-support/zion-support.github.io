@@ -1,7 +1,7 @@
-import React from 'react';
-import SEO from '../../components/SEO';
+import React from "react";
+import { SEO } from "../../components/SEO";
 import { 
-  Shield, 
+  Shield,
   Brain, 
   Zap, 
   Users, 
@@ -11,8 +11,7 @@ import {
   BarChart3,
   AlertTriangle,
   Eye
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function Cybersecurity() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -124,7 +123,7 @@ export default function Cybersecurity() {
 
       {/* CTA Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Ready to Secure Your Organization?
           </h2>
@@ -140,5 +139,5 @@ export default function Cybersecurity() {
         </div>
       </section>
     </div>
-  );
+  )
 }

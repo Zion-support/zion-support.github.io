@@ -1,4 +1,4 @@
-import { useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom',
 export default function Page() {
  = await supabase.functions.invoke('generate - content', {
                 body: {
@@ -8,28 +8,28 @@ export default function Page() {
                     autoPublish,
                     includeImage: contentType === 'blog' ? includeImage : false
 
-            }) ;
-            if(error) throw error;
-            setPreviewContent(data) ;
-            // // // // // // // console.error("Error generating content:", error) ;
-            toast.error("Failed to generate content.Please try again.") ;
+            }) ,
+            if(error) throw error,
+            setPreviewContent(data) ,
+            // // // // // // // console.error("Error generating content:", error) ,
+            toast.error("Failed to generate content.Please try again.") ,
 
         finally {
-            setIsGenerating(false) ;
+            setIsGenerating(false) ,
 
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`) }
         catch(error) {
-            console.error("Error generating content:", error) ;
+            console.error("Error generating content:", error) ,
             toast.error("Failed to generate content.Please try again.") }
         finally {
             setIsGenerating(false) }
-    };
+    },
     const sendTestNewsletter = async () => {
         if(!testEmail) {
-            toast.error("Please enter a test email address") ;
+            toast.error("Please enter a test email address") ,
             return}
         if(!previewContent) {
-            toast.error("Generate newsletter content first") ;
+            toast.error("Generate newsletter content first") ,
             return}
         try {
             const { data, error } = await supabase.functions.invoke('send - newsletter', {
@@ -40,16 +40,16 @@ export default function Page() {
                     testMode: true,
                     testEmail
 
-            }) ;
-            if(error) throw error;
-            // // // // // // // console.error("Error sending test newsletter:", error) ;
-            toast.error("Failed to send test newsletter.Please try again.") ;
+            }) ,
+            if(error) throw error,
+            // // // // // // // console.error("Error sending test newsletter:", error) ,
+            toast.error("Failed to send test newsletter.Please try again.") ,
 
             toast.success(`Test newsletter sent to ${testEmail}!`) }
         catch(error) {
-            console.error("Error sending test newsletter:", error) ;
+            console.error("Error sending test newsletter:", error) ,
             toast.error("Failed to send test newsletter.Please try again.") }
-    };
+    },
     // Check if user is still loading
     if(isLoading) {
         return (<>
@@ -91,7 +91,7 @@ export default function Page() {
                     <Label htmlFor="topic" className="text-white">Topic(Optional) </Label>
                     <Input id="topic" placeholder = {
   contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
-  May Platform Updates";
+  May Platform Updates",
 
 } className="bg-zion - blue border border-zion - blue - light text-white" value={topic} onChange={ (e) => setTopic(e.target.value) }/>
                   </div>
@@ -157,9 +157,9 @@ export default function Page() {
   {
                 __html: previewContent.body
                     .replace(/^#{1,
-  6;
+  6,
 
-}\s+ (.+) $/gm, "<h$1>$2</h$1>") ;
+}\s+ (.+) $/gm, "<h$1>$2</h$1>") ,
                     .replace(/\*\* (.+?) \*\*/g, "<strong>$1</strong>") .replace(/\* (.+?) \*/g, "<em>$1</em>") .replace(/^-\s+ (.+) $/gm, "<li>$1</li>") .replace(/\n\n / g, "<br><br>") }}/>
                               </div>
                             </ScrollArea>
@@ -256,7 +256,7 @@ export default function Page() {
                     </div>) }
                 </CardContent>
               </Card>
-            </div>;
+            </div>,
           </div>
         </div>
       </div>

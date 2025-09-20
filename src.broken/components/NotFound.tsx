@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function App() {
   return (
     <div>
@@ -6,6 +6,6 @@ export function App() {
       <p>Component placeholder</p>
     </div>
   </div>
-);
+),
 
-export default NotFound;
+export default NotFound,

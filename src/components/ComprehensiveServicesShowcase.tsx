@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import {
   Brain,
   Cpu,
@@ -26,72 +26,48 @@ import {
   Mail,
   ExternalLink,
   Search
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from '../data/expandedInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
+  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
+    phone: string,email: string,website: string
   };
   technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
+    technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[]
   };
 }
 const ComprehensiveServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all'),
+  const [searchTerm, setSearchTerm] = useState<string>(''),
   // Combine all services
   const allServices: Service[] = [
-    ...EXPANDED_INNOVATIVE_SERVICES_2025,
+    ...EXPANDED_INNOVATIVE_SERVICES_2025;
     ...EMERGING_TECH_SERVICES_2025
-  ];
+  ],
   // Get unique categories
   const categories = useMemo(() => {
-    const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-    return cats;
-  }, [allServices]);
+    const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
+    return cats,
+  }, [allServices]),
   // Get unique innovation levels
   const innovationLevels = useMemo(() => {
-    const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
-    return levels;
-  }, [allServices]);
+    const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))],
+    return levels,
+  }, [allServices]),
   // Filter services
   const filteredServices = useMemo(() => {
     return allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel,
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesInnovationLevel && matchesSearch;
-    });
-  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      return matchesCategory && matchesInnovationLevel && matchesSearch,
+    }),
+  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]),
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Analytics':
@@ -104,33 +80,32 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         return <Brain className="h-6 w-6" />;
       case 'Cybersecurity & AI':
       case 'Cybersecurity & Quantum':
-        return <Shield className="h-6 w-6" />;
+        return <Shield className="h-6 w-6" />,
       case 'Blockchain & Supply Chain':
-        return <Database className="h-6 w-6" />;
+        return <Database className="h-6 w-6" />,
       case 'IoT & Edge Computing':
-        return <Network className="h-6 w-6" />;
+        return <Network className="h-6 w-6" />,
       case 'Quantum Computing':
-        return <Cpu className="h-6 w-6" />;
+        return <Cpu className="h-6 w-6" />,
       case 'AR/VR & Immersive Tech':
-        return <Eye className="h-6 w-6" />;
+        return <Eye className="h-6 w-6" />,
       case '5G & Telecommunications':
-        return <Globe className="h-6 w-6" />;
+        return <Globe className="h-6 w-6" />,
       case 'Space Technology':
-        return <Rocket className="h-6 w-6" />;
+        return <Rocket className="h-6 w-6" />,
       case 'Neuromorphic Computing':
-        return <Brain className="h-6 w-6" />;
+        return <Brain className="h-6 w-6" />,
       case 'Digital Twin & Simulation':
-        return <Settings className="h-6 w-6" />;
+        return <Settings className="h-6 w-6" />,
       case 'Synthetic Biology':
-        return <Target className="h-6 w-6" />;
+        return <Target className="h-6 w-6" />,
       case 'Brain-Computer Interface':
-        return <Brain className="h-6 w-6" />;
+        return <Brain className="h-6 w-6" />,
       case 'Sustainability & Energy':
-        return <Zap className="h-6 w-6" />;
+        return <Zap className="h-6 w-6" />,
       case 'Autonomous Vehicles & Fleet Management':
-        return <Rocket className="h-6 w-6" />;
-      default:
-        return <Star className="h-6 w-6" />;
+        return <Rocket className="h-6 w-6" />,
+      default: return <Star className="h-6 w-6" />
     }
   };
   const getInnovationLevelColor = (level: string) => {
@@ -138,24 +113,23 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       case 'Cutting-edge':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
-        return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+        return 'bg-gradient-to-r from-blue-600 to-cyan-600',
       case 'Professional':
-        return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default:
-        return 'bg-gradient-to-r from-gray-600 to-slate-600';
+        return 'bg-gradient-to-r from-green-600 to-emerald-600',
+      default: return 'bg-gradient-to-r from-gray-600 to-slate-600'
     }
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Innovative Technology Solutions
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Discover our comprehensive portfolio of cutting-edge micro SAAS services,
+              Discover our comprehensive portfolio of cutting-edge micro SAAS services;
               AI solutions, and emerging technology platforms designed to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -365,7 +339,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                   <div className="flex gap-3">
                     <Link
                       to={`/contact?service=${service.id}`}
-                      className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover:bg-zion-cyan-light transition-colors font-medium"
+                      className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover: bg-zion-cyan-light transition-colors font-medium"
                     >
                       Get Started
                     </Link>
@@ -386,10 +360,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               <button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedInnovationLevel('all');
-                  setSearchTerm('');
+                  setSelectedInnovationLevel('all'),
+                  setSearchTerm(''),
                 }}
-                className="text-zion-cyan hover:text-zion-cyan-light font-medium"
+                className="text-zion-cyan hover: text-zion-cyan-light font-medium"
               >
                 Clear all filters
               </button>
@@ -400,7 +374,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       {/* Call to Action Section */}
       <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -426,6 +400,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
 export default ComprehensiveServicesShowcase;

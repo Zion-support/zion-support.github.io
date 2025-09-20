@@ -1,28 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles, DollarSign, Users, Clock, CheckCircle } from 'lucide-react';
-import Link from 'next/link';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles, DollarSign, Users, Clock, CheckCircle } from 'lucide-react',
+import Link from 'next/link',
 
 interface Service {
-  id: string;
-  name: string;
-  description: string;
-  category: string[];
-  price: string;
-  features: string[];
-  benefits: string[];
-  marketSize: string;
-  roi: string;
+  id: string,
+  name: string,
+  description: string,
+  category: string[],
+  price: string,
+  features: string[],
+  benefits: string[],
+  marketSize: string,
+  roi: string,
   contact: {
-    mobile: string;
-    email: string;
-    website: string;
-    address: string;
-  };
+    mobile: string,
+    email: string,
+    website: string,
+    address: string
+  },
 }
 
 interface UltraFuturisticServiceShowcase2029Props {
-  services: Service[];
+  services: Service[]
 }
 
 export default function UltraFuturisticServiceShowcase2029({ services }: UltraFuturisticServiceShowcase2029Props) {
@@ -33,13 +33,13 @@ export default function UltraFuturisticServiceShowcase2029({ services }: UltraFu
     { name: 'Enterprise IT', icon: Cpu, color: 'from-cyan-500 to-teal-600', services: services.filter(s => s.category.includes('IT')) },
     { name: 'Micro SAAS', icon: Target, color: 'from-orange-500 to-red-600', services: services.filter(s => s.category.includes('Micro')) },
     { name: 'Emerging Tech', icon: Globe, color: 'from-green-500 to-emerald-600', services: services.filter(s => s.category.includes('Emerging')) }
-  ];
+  ],
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">UltraFuturisticServiceShowcase2029</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default UltraFuturisticServiceShowcase2029;
+  ),
+},
+export default UltraFuturisticServiceShowcase2029,

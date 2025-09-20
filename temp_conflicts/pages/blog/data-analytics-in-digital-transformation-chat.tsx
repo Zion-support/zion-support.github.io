@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const DataAnalyticsInDigitalTransformationChat = () => {
   return (
@@ -16,7 +16,7 @@ const DataAnalyticsInDigitalTransformationChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default DataAnalyticsInDigitalTransformationChat;
+export default DataAnalyticsInDigitalTransformationChat,

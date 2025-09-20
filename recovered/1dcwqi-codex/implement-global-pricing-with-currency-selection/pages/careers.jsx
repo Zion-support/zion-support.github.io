@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { JobCard } from '@/components/jobs/JobCard';
-import { JOB_POSTS } from '@/data/jobsData';
+import React, { useEffect, useState } from 'react',
+import { JobCard } from '@/components/jobs/JobCard',
+import { JOB_POSTS } from '@/data/jobsData',
 
 export default function CareersPage() {
-  const [jobs, setJobs] = useState(JOB_POSTS);
+  const [jobs, setJobs] = useState(JOB_POSTS),
 
   useEffect(() => {
     fetch('/api/jobs')
@@ -11,9 +11,9 @@ export default function CareersPage() {
       .then(data => setJobs(data))
       .catch(() => {
         // fall back to static data
-        setJobs(JOB_POSTS);
-      });
-  }, []);
+        setJobs(JOB_POSTS),
+      }),
+  }, []),
 
   return (
     <main className="min-h-screen bg-zion-blue py-10">
@@ -24,5 +24,5 @@ export default function CareersPage() {
         ))}
       </div>
     </main>
-  );
+  ),
 }

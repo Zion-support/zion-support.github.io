@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function DevXPlatformEngineering() {,
   return (,
     <>,
@@ -38,7 +38,6 @@ export default function DevXPlatformEngineering() {,
           </div>,
         </section>,
       </main>,
-    </>,
-  ),
+    </>)
 }
 ,

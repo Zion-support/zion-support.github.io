@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -33,7 +33,7 @@ export default function Page() {
     category: "Emergency Support",
     coverage["Local", "Regional", "National"]
   }
-];
+],
 
 const successStories = [{
     id: 1,
@@ -62,7 +62,7 @@ const successStories = [{
     results: "2 - hour response time, minimal downtime, $500K saved",
     logo: "FS"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -92,16 +92,16 @@ const processSteps = [{
     icon: CheckCircle,
     duration: "1 - 2 days"
 
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedService, setSelectedService] = useState(null),
 
-  const categories = ['All', 'Infrastructure', 'Servers', 'Security', 'Data Centers', 'Workstations', 'Emergency Support'];
+  const categories = ['AllInfrastructure', 'ServersSecurity', 'Data CentersWorkstations', 'Emergency Support'],
 
   const filteredServices = selectedCategory === 'All'
     ? onsiteServices
-    : onsiteServices.filter(service => service.category === selectedCategory) ;
+    : onsiteServices.filter(service => service.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}

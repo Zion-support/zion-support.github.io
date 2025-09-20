@@ -1,45 +1,45 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   ArrowRight,
   Star,
   Zap,
   Rocket,
-  Shield;
-  TrendingUp;
-  Users;
-  Award;
-  ChevronRight;
-  CheckCircle;
-  BarChart3;
-  Globe;
-  Cpu,
-} from 'lucide-react';
+  Shield,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  BarChart3,
+  Globe,
+  Cpu
+} from 'lucide-react',
 const ComprehensiveAISolutions2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const solutions = [,
-    { icon: Braintitle: 'Enterprise 'AIcolor: 'from-blue-500 to-purple-500' ,};
-    { icon: Rocketitle: 'Quantum 'AIcolor: 'from-purple-500 to-pink-500' ,};
-    { icon: Zaptitle: ''Automationcolor: 'from-green-500 to-blue-500' ,};
-    { icon: Shieldtitle: 'Security 'AIcolor: 'from-red-500 to-orange-500' ,}
-  ];
+    { icon: Braintitle: 'Enterprise 'AIcolor: 'from-blue-500 to-purple-500' },
+    { icon: Rocketitle: 'Quantum 'AIcolor: 'from-purple-500 to-pink-500' },
+    { icon: Zaptitle: ''Automationcolor: 'from-green-500 to-blue-500' },
+    { icon: Shieldtitle: 'Security 'AIcolor: 'from-red-500 to-orange-500' }
+  ],
   const benefits = [,
-    { icon: TrendingUptext: '99.9% Uptime' ,};
-    { icon: Userstext: '1000+ Enterprises' ,};
-    { icon: Awardtext: 'Industry Leading' ,};
-    { icon: BarChart3text: '60% Cost Reduction' ,}
-  ];
+    { icon: TrendingUptext: '99.9% Uptime' },
+    { icon: Userstext: '1000+ Enterprises' },
+    { icon: Awardtext: 'Industry Leading' },
+    { icon: BarChart3text: '60% Cost Reduction' }
+  ],
   const stats = [,
-    { value: '10,000+'label: 'AI Models' ,};
-    { value: '500+'label: 'Solutions' ,};
-    { value: '1,000+'label: 'Enterprises' ,};
-    { value: '99.9%'label: 'Uptime' ,}
-  ];
+    { value: '10,000+'label: 'AI Models' },
+    { value: '500+'label: 'Solutions' },
+    { value: '1,000+'label: 'Enterprises' },
+    { value: '99.9%'label: 'Uptime' }
+  ],
   return (,
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">,
       {/* Animated Background */}
@@ -50,7 +50,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {,
       <div className="relative z-10 py-16 px-4">,
         <div className="container mx-auto">,
           <div className="grid lg: grid-cols-2 gap-12 items-center">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div,
               className="space-y-8",
             >,
@@ -61,13 +61,13 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {,
                 <Brain className="w-4 h-4" />,
                 NEW: COMPREHENSIVE AI SOLUTIONS 2026,
               </div>,
-              {/* Main Heading */,}
+              {/* Main Heading */}
               <divh2,
                 className="text-4xl md: text-6xl font-bold text-white leading-tight",
               >,
                 Complete AI,
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,
-                  {' ',}Ecosystem,
+                  {' '}Ecosystem,
                 </span>,
                 <br />,
                 for Modern Business,
@@ -89,8 +89,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {,
                       <solution.icon className="w-5 h-5 text-white" />,
                     </div>,
                     <span className="text-white font-semibold">{solution.title}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* Benefits */}
               <div,
@@ -100,8 +99,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {,
                   <div key={index} className="flex items-center gap-3">,
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                     <span className="text-gray-300">{benefit.text}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* CTA Buttons */}
               <div,
@@ -119,7 +117,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Right Content - Stats & Visual */,}
+            {/* Right Content - Stats & Visual */}
             <div,
               className="space-y-8",
             >,
@@ -130,10 +128,9 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {,
                     key={index}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover: border-blue-400/50 transition-all duration-300",
                   >,
-                    <div className="text-3xl font-bold text-white mb-2">{stat.value,}</div>,
+                    <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
                     <div className="text-gray-300 text-sm">{stat.label}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* Visual Element */}
               <div,
@@ -170,7 +167,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default ComprehensiveAISolutions2026PromotionBanner;
+  ),
+},
+export default ComprehensiveAISolutions2026PromotionBanner,
 </div></div>,

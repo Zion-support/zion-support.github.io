@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const MobileDevelopmentChat = () => {
   return (
@@ -16,7 +16,7 @@ const MobileDevelopmentChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default MobileDevelopmentChat;
+export default MobileDevelopmentChat,

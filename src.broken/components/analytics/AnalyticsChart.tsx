@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import React, { useState } from 'react',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
 // Define proper chart data interface
 interface ChartDataPoint {
-  name: string;
-  value: number;
-  fill?: string;
-  [key: string]: string | number | undefined;
+  name: string,
+  value: number,
+  fill?: string,
+  [key: string]: string | number | undefined
 }
 
 interface AnalyticsChartProps {
-  title: string;
-  description?: string;
-  data: ChartDataPoint[];
-  type?: 'line' | 'bar';
-  dataKeys: string[];
-  timeRange?: string;
-  onTimeRangeChange?: (range: string) => void;
-  height?: number;
+  title: string,
+  description?: string,
+  data: ChartDataPoint[],
+  type?: 'line' | 'bar',
+  dataKeys: string[],
+  timeRange?: string,
+  onTimeRangeChange?: (range: string) => void,
+  height?: number
 }
 
 export function AnalyticsChart({ 
@@ -32,12 +32,11 @@ export function AnalyticsChart({
   onTimeRangeChange,
   height = 300
 }: AnalyticsChartProps) {
-  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
+  const [chartType, setChartType] = useState<'line' | 'bar'>(type),
   
   const colors = [
-    '#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088fe', 
-    '#00C49F', '#FFBB28', '#FF8042', '#a4de6c', '#d0ed57'
-  ];
+    '#8884d8#82ca9d', '#ffc658#ff8042', '#0088fe#00C49F', '#FFBB28#FF8042', '#a4de6c#d0ed57'
+  ],
   
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
@@ -140,5 +139,5 @@ export function AnalyticsChart({
         </div>
       </CardContent>
     </Card>
-  );
+  ),
 }

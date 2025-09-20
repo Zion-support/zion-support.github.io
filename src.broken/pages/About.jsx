@@ -1,39 +1,39 @@
-import { Users, Target, Globe, Award, Shield, Lightbulb  } from 'lucide-react';
+import { Users, Target, Globe, Award, Shield, Lightbulb  } from 'lucide-react',
 export default function Page() {
-,
-  ];
+
+  ],
 
   const milestones = [{
       year: '2025',
       title: 'Global Expansion',
       description:
-        'Expanded operations to serve clients across North America, Europe, and Asia - Pacific regions.',
+        'Expanded operations to serve clients across North America, Europe, and Asia - Pacific regions.'
     },
     {
       year: '2024',
       title: 'AI Breakthrough',
       description:
-        'Launched revolutionary AI autonomous business platform, transforming how companies operate.',
+        'Launched revolutionary AI autonomous business platform, transforming how companies operate.'
     },
     {
       year: '2023',
       title: 'Quantum Innovation',
       description:
-        'Developed cutting - edge quantum computing solutions for enterprise applications.',
+        'Developed cutting - edge quantum computing solutions for enterprise applications.'
     },
     {
       year: '2022',
       title: 'Comp Founded',
       description:
-        'Zion Tech Group was established with a vision to revolutionize technology solutions.',
-    },
-  ];
+        'Zion Tech Group was established with a vision to revolutionize technology solutions.'
+    }
+  ],
 
   const stats = [{ number: '500+', label: 'Projects Completed', icon: Target },
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '25+', label: 'Countries Served', icon: Globe },
-    { number: '99%', label: 'Client Satisfaction', icon: Award },
-  ];
+    { number: '99%', label: 'Client Satisfaction', icon: Award }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
@@ -157,7 +157,7 @@ export default function Page() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max - w-4xl mx - auto text-center">
           <h2 className="text-3xl font - bold text-white mb-6">
             Ready to Transform Your Business?
@@ -181,5 +181,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},

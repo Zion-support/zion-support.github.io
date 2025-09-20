@@ -1,12 +1,12 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'Quantum Computing Business Applications 2025: The Ultimate Breakthrough Guide';
-  description: 'Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success.';
-  keywords: ['quantum computingbusiness applications', 'AIinnovation', 'technology2025'],
-};
+  title: 'Quantum Computing Business Applications 2025: The Ultimate Breakthrough Guide',
+  description: 'Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success.',
+  keywords: ['quantum computingbusiness applicationsAIinnovation', 'technology2025']
+},
 export default function QuantumComputingBusinessApplicationsPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -46,7 +46,7 @@ export default function QuantumComputingBusinessApplicationsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Content Preview */,}
+      {/* Content Preview */}
       <section className="py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="prose prose-lg max-w-none">,
@@ -174,4 +174,4 @@ export default function QuantumComputingBusinessApplicationsPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Shield,
@@ -14,53 +14,36 @@ import {
   Network,
   Code,
   Server
-} from 'lucide-react';
-
+} from "lucide-react";
 const techSolutions = [
   {
-    icon: "🤖",
-    title: "AI & Machine Learning",
-    description: "Intelligent automation, predictive analytics, and cognitive computing solutions",
+    icon: "🤖",title: "AI & Machine Learning",description: "Intelligent automation, predictive analytics, and cognitive computing solutions",
     benefits: ["Increase efficiency by 300%", "Reduce costs by 40%", "24/7 operation"],
     color: "from-purple-500 to-pink-500"
-  },
+  };
   {
-    icon: "☁️",
-    title: "Cloud Infrastructure",
-    description: "Scalable, secure, and high-performance cloud solutions for modern businesses",
+    icon: "☁️",title: "Cloud Infrastructure",description: "Scalable, secure, and high-performance cloud solutions for modern businesses",
     benefits: ["99.9% uptime guarantee", "Global scalability", "Advanced security"],
     color: "from-blue-500 to-cyan-500"
-  },
+  };
   {
-    icon: "🔒",
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions protecting your digital assets and data",
-    benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],
+    icon: "🔒",title: "Cybersecurity",description: "Comprehensive security solutions protecting your digital assets and data",benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],
     color: "from-red-500 to-orange-500"
-  },
+  };
   {
-    icon: "📱",
-    title: "Mobile Solutions",
-    description: "Cross-platform mobile applications and responsive web solutions",
-    benefits: ["Native performance", "Cross-platform", "Offline capability"],
+    icon: "📱",title: "Mobile Solutions",description: "Cross-platform mobile applications and responsive web solutions",benefits: ["Native performance", "Cross-platform", "Offline capability"],
     color: "from-green-500 to-emerald-500"
-  },
+  };
   {
-    icon: "🌐",
-    title: "Web Development",
-    description: "Modern, responsive web applications and e-commerce solutions",
+    icon: "🌐",title: "Web Development",description: "Modern, responsive web applications and e-commerce solutions",
     benefits: ["SEO optimized", "Fast loading", "Mobile-first design"],
     color: "from-indigo-500 to-purple-500"
-  },
+  };
   {
-    icon: "📊",
-    title: "Data Analytics",
-    description: "Business intelligence and data-driven insights for strategic decision making",
-    benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],
+    icon: "📊",title: "Data Analytics",description: "Business intelligence and data-driven insights for strategic decision making",benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],
     color: "from-yellow-500 to-orange-500"
   }
 ];
-
 export function TechSolutionsSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -76,7 +59,7 @@ export function TechSolutionsSection() {
             Technology Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to drive innovation,
+            Comprehensive technology solutions designed to drive innovation;
             enhance security, and accelerate your digital transformation journey.
           </p>
         </motion.div>
@@ -136,7 +119,7 @@ export function TechSolutionsSection() {
               Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -156,5 +139,5 @@ export function TechSolutionsSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

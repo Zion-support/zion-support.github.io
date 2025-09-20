@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Button } from '../ui/Button';
+import React, { useState } from 'react',
+import { Button } from '../ui/Button',
 
 export default function Page() {
-);
-    setIsFormOpen(false);
-  };
+),
+    setIsFormOpen(false),
+  },
   const handleChange = e => {
 
     setFormData(prev => ({
 
       ...prev,
-      [e.target.name]: e.target.value}));
-  };
+      [e.target.name]: e.target.value})),
+  },
   return ()
     <Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>"
@@ -135,6 +135,6 @@ export default function Page() {
         )}
       </CardContent>
     </Card>
-  );
+  ),
 }
 '"

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { 
-  Menu, 
+  Menu,
   X, 
   ChevronDown, 
   ChevronRight,
@@ -43,22 +43,18 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-
+} from "lucide-react";
 interface SidebarItem {
-  name: string;
-  href: string;
-  icon: React.ComponentType<any>;
-  children?: SidebarItem[];
-  featured?: boolean;
-  description?: string;
+  name: string,href: string,icon: React.ComponentType<any>;
+  children?: SidebarItem[],
+  featured?: boolean,
+  description?: string
 }
 
 export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+  const [isOpen, setIsOpen] = useState(false),
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services']),
   const location = useLocation();
-
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
@@ -66,222 +62,127 @@ export function MainSidebar() {
         : [...prev, section]
     );
   };
-
   const navigation: SidebarItem[] = [
     {
-      title: 'Main',
-      items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Building },
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
+      title: 'Main',items: [
+        { name: 'Home', href: '/', icon: Home };
+        { name: 'About', href: '/about', icon: Building };
+        { name: 'Services', href: '/services', icon: Briefcase };
+        { name: 'Solutions', href: '/solutions', icon: Target };
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain };
+        { name: 'Case Studies', href: '/case-studies', icon: FileText };
+        { name: 'Research', href: '/research-development', icon: TestTube };
+        { name: 'Events', href: '/events', icon: Video };
+        { name: 'News', href: '/news', icon: Newspaper };
+        { name: 'Contact', href: '/contact', icon: Mail };
+        { name: 'Blog', href: '/blog', icon: FileText }
       ]
-    },
+    };
     {
-      name: 'Core Services',
-      href: '#',
-      icon: Target,
-      children: [
+      name: 'Core Services',href: '#',icon: Target,children: [
         {
-          name: 'Cloud & DevOps',
-          href: '/services/cloud-devops',
-          icon: Cloud,
-          description: 'Infrastructure & Automation'
-        },
+          name: 'Cloud & DevOps',href: '/services/cloud-devops',icon: Cloud,description: 'Infrastructure & Automation'
+        };
         {
-          name: 'Digital Twin',
-          href: '/services/digital-twin',
-          icon: Globe,
-          description: 'Simulation & Monitoring'
-        },
+          name: 'Digital Twin',href: '/services/digital-twin',icon: Globe,description: 'Simulation & Monitoring'
+        };
         {
-          name: 'Data Analytics',
-          href: '/services/data-analytics',
-          icon: BarChart3,
-          description: 'Business Intelligence'
-        },
+          name: 'Data Analytics',href: '/services/data-analytics',icon: BarChart3,description: 'Business Intelligence'
+        };
         {
-          name: 'IT Infrastructure',
-          href: '/services/it-infrastructure',
-          icon: Server,
-          description: 'Hardware & Network'
+          name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Hardware & Network'
         }
       ]
-    },
+    };
     {
-      name: 'AI Products',
-      href: '#',
-      icon: Brain,
-      children: [
+      name: 'AI Products',href: '#',icon: Brain,children: [
         {
-          name: 'AI Sales Copilot',
-          href: '/services/ai-sales-copilot',
-          icon: Users,
-          description: 'Sales Intelligence'
-        },
+          name: 'AI Sales Copilot',href: '/services/ai-sales-copilot',icon: Users,description: 'Sales Intelligence'
+        };
         {
-          name: 'AI Compliance Assistant',
-          href: '/services/ai-compliance-assistant',
-          icon: Shield,
-          description: 'Regulatory Compliance'
-        },
+          name: 'AI Compliance Assistant',href: '/services/ai-compliance-assistant',icon: Shield,description: 'Regulatory Compliance'
+        };
         {
-          name: 'AI Auto Email Responder',
-          href: '/services/ai-auto-email-responder',
-          icon: MessageCircle,
-          description: 'Email Automation'
-        },
+          name: 'AI Auto Email Responder',href: '/services/ai-auto-email-responder',icon: MessageCircle,description: 'Email Automation'
+        };
         {
-          name: 'LLM Content Studio',
-          href: '/services/llm-content-studio',
-          icon: PenTool,
-          description: 'Content Creation'
+          name: 'LLM Content Studio',href: '/services/llm-content-studio',icon: PenTool,description: 'Content Creation'
         }
       ]
-    },
+    };
     {
-      name: 'Emerging Tech',
-      href: '#',
-      icon: Rocket,
-      children: [
+      name: 'Emerging Tech',href: '#',icon: Rocket,children: [
         {
-          name: 'Quantum Computing',
-          href: '/services/quantum-computing',
-          icon: Atom,
-          description: 'Next-gen Computing'
-        },
+          name: 'Quantum Computing',href: '/services/quantum-computing',icon: Atom,description: 'Next-gen Computing'
+        };
         {
-          name: 'AI Cybersecurity',
-          href: '/services/ai-cybersecurity',
-          icon: Lock,
-          description: 'Intelligent Security'
-        },
+          name: 'AI Cybersecurity',href: '/services/ai-cybersecurity',icon: Lock,description: 'Intelligent Security'
+        };
         {
-          name: 'IoT Edge Computing',
-          href: '/services/iot-edge-computing',
-          icon: Smartphone,
-          description: 'Connected Ecosystems'
-        },
+          name: 'IoT Edge Computing',href: '/services/iot-edge-computing',icon: Smartphone,description: 'Connected Ecosystems'
+        };
         {
-          name: 'AI Content Creation',
-          href: '/services/ai-content-creation',
-          icon: Video,
-          description: 'Creative AI'
+          name: 'AI Content Creation',href: '/services/ai-content-creation',icon: Video,description: 'Creative AI'
         }
       ]
-    },
+    };
     {
-      name: 'Business Solutions',
-      href: '#',
-      icon: Briefcase,
-      children: [
+      name: 'Business Solutions',href: '#',icon: Briefcase,children: [
         {
-          name: 'Marketplace',
-          href: '/marketplace',
-          icon: ShoppingCart,
-          description: 'Product & Service Hub'
-        },
+          name: 'Marketplace',href: '/marketplace',icon: ShoppingCart,description: 'Product & Service Hub'
+        };
         {
-          name: 'Talent Solutions',
-          href: '/talent',
-          icon: Users,
-          description: 'HR & Recruitment'
-        },
+          name: 'Talent Solutions',href: '/talent',icon: Users,description: 'HR & Recruitment'
+        };
         {
-          name: 'Equipment Services',
-          href: '/equipment',
-          icon: Server,
-          description: 'Hardware Solutions'
-        },
+          name: 'Equipment Services',href: '/equipment',icon: Server,description: 'Hardware Solutions'
+        };
         {
-          name: 'Request Quote',
-          href: '/request-quote',
-          icon: MessageCircle,
-          description: 'Get Pricing'
+          name: 'Request Quote',href: '/request-quote',icon: MessageCircle,description: 'Get Pricing'
         }
       ]
-    },
+    };
     {
-      name: 'Company',
-      href: '#',
-      icon: Info,
-      children: [
+      name: 'Company',href: '#',icon: Info,children: [
         {
-          name: 'About Us',
-          href: '/about',
-          icon: Info,
-          description: 'Our Story'
-        },
+          name: 'About Us',href: '/about',icon: Info,description: 'Our Story'
+        };
         {
-          name: 'Team',
-          href: '/team',
-          icon: Users,
-          description: 'Meet Our Team'
-        },
+          name: 'Team',href: '/team',icon: Users,description: 'Meet Our Team'
+        };
         {
-          name: 'Careers',
-          href: '/careers',
-          icon: Briefcase,
-          description: 'Join Us'
-        },
+          name: 'Careers',href: '/careers',icon: Briefcase,description: 'Join Us'
+        };
         {
-          name: 'Partners',
-          href: '/partners',
-          icon: Users,
-          description: 'Partnerships'
+          name: 'Partners',href: '/partners',icon: Users,description: 'Partnerships'
         }
       ]
-    },
+    };
     {
-      name: 'Resources',
-      href: '#',
-      icon: BookOpen,
-      children: [
+      name: 'Resources',href: '#',icon: BookOpen,children: [
         {
-          name: 'Blog',
-          href: '/blog',
-          icon: FileText,
-          description: 'Latest Insights'
-        },
+          name: 'Blog',href: '/blog',icon: FileText,description: 'Latest Insights'
+        };
         {
-          name: 'FAQ',
-          href: '/faq',
-          icon: HelpCircle,
-          description: 'Common Questions'
-        },
+          name: 'FAQ',href: '/faq',icon: HelpCircle,description: 'Common Questions'
+        };
         {
-          name: 'Help Center',
-          href: '/help',
-          icon: MessageCircle,
-          description: 'Support Resources'
-        },
+          name: 'Help Center',href: '/help',icon: MessageCircle,description: 'Support Resources'
+        };
         {
-          name: 'Documentation',
-          href: '/docs',
-          icon: BookOpen,
-          description: 'Technical Docs'
+          name: 'Documentation',href: '/docs',icon: BookOpen,description: 'Technical Docs'
         }
       ]
-    },
+    };
     {
-      name: 'Contact',
-      href: '/contact',
-      icon: Phone
+      name: 'Contact',href: '/contact',icon: Phone
     }
   ];
-
   const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const isFeatured = item.featured;
+    const hasChildren = item.children && item.children.length > 0,
+    const isExpanded = expandedSections.includes(item.name.toLowerCase()),
+    const isFeatured = item.featured,
 
     return (
       <div key={item.name} className="mb-1">
@@ -322,7 +223,7 @@ export function MainSidebar() {
               isActive
                 ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
                 : level === 0
-                ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+                ? 'text-slate-300 hover: text-white hover:bg-slate-700/50'
                 : 'text-slate-400 hover:text-slate-300'
             }`}
             onClick={() => setIsOpen(false)}
@@ -336,7 +237,7 @@ export function MainSidebar() {
         )}
       </div>
     );
-  };
+  },
 
   return (
     <>

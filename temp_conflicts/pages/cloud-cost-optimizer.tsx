@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Check, ArrowRight, Cloud, Star, TrendingDown, Shield, Zap, BarChart3, DollarSign, Clock, Users, Globe, Award } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Phone, Mail, MapPin, Check, ArrowRight, Cloud, Star, TrendingDown, Shield, Zap, BarChart3, DollarSign, Clock, Users, Globe, Award } from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 
 export default function CloudCostOptimizerPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cloud-cost-optimizer'));
-  if (!service) return null;
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cloud-cost-optimizer')),
+  if (!service) return null,
 
   const features = [
     {
@@ -34,16 +34,13 @@ export default function CloudCostOptimizerPage() {
       icon: <BarChart3 className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500'
     }
-  ];
+  ],
 
   const benefits = [
-    'Reduce cloud costs by 30-50%',
-    'Automated optimization recommendations',
-    'Real-time cost monitoring and alerts',
-    'Multi-cloud support (AWS, Azure, GCP)',
-    'FinOps dashboard and reporting',
-    'Compliance and governance features'
-  ];
+    'Reduce cloud costs by 30-50%Automated optimization recommendations',
+    'Real-time cost monitoring and alertsMulti-cloud support (AWS, Azure, GCP)',
+    'FinOps dashboard and reportingCompliance and governance features'
+  ],
 
   const pricing = [
     {
@@ -51,23 +48,23 @@ export default function CloudCostOptimizerPage() {
       price: '$99',
       period: '/month',
       description: 'Perfect for small teams and startups',
-      features: ['Basic cost optimization', 'Resource monitoring', 'Email alerts', 'Basic reporting']
+      features: ['Basic cost optimizationResource monitoring', 'Email alertsBasic reporting']
     },
     {
       name: 'Professional',
       price: '$299',
       period: '/month',
       description: 'Ideal for growing organizations',
-      features: ['Advanced optimization', 'AI-powered recommendations', 'Custom alerts', 'Detailed analytics', 'Multi-cloud support']
+      features: ['Advanced optimizationAI-powered recommendations', 'Custom alertsDetailed analytics', 'Multi-cloud support']
     },
     {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'For large enterprises with complex needs',
-      features: ['Custom optimization rules', 'Dedicated support', 'SLA guarantees', 'Advanced compliance', 'White-label options']
+      features: ['Custom optimization rulesDedicated support', 'SLA guaranteesAdvanced compliance', 'White-label options']
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -222,7 +219,7 @@ export default function CloudCostOptimizerPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/contact"
-                className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-semibold"
+                className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 font-semibold"
               >
                 Start Saving
                 <ArrowRight className="w-5 h-5" />
@@ -238,5 +235,5 @@ export default function CloudCostOptimizerPage() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 // Import promotional components,
-import RevolutionaryContent2026Banner from '../../components/RevolutionaryContent2026Banner';
-import UltimateContentShowcase2026 from '../../components/UltimateContentShowcase2026';
-import NewContent2026PromotionBanner from '../../components/NewContent2026PromotionBanner';
+import RevolutionaryContent2026Banner from '../../components/RevolutionaryContent2026Banner',
+import UltimateContentShowcase2026 from '../../components/UltimateContentShowcase2026',
+import NewContent2026PromotionBanner from '../../components/NewContent2026PromotionBanner',
 export const metadata = {,
-  title: 'AI 2026 Revolutionary Content - Zion Tech Group';
-  description: 'Discover the most advanced AI content and case studies for 2026. Quantum machine learning, generative AI, and enterprise transformation insights.';
-  keywords: ['AI 2026quantum machine learning', 'generative AIenterprise transformation', 'AI contentcase studies'],
-};
+  title: 'AI 2026 Revolutionary Content - Zion Tech Group',
+  description: 'Discover the most advanced AI content and case studies for 2026. Quantum machine learning, generative AI, and enterprise transformation insights.',
+  keywords: ['AI 2026quantum machine learninggenerative AIenterprise transformation', 'AI contentcase studies']
+},
 export default function AI2026RevolutionaryContentPage() {,
   return (,
     <div>,
@@ -51,7 +51,7 @@ export default function AI2026RevolutionaryContentPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Featured Content Section */,}
+        {/* Featured Content Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -59,7 +59,7 @@ export default function AI2026RevolutionaryContentPage() {,
                 Featured 2026 Content,
               </h2>,
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">,
-                Explore our most advanced AI content covering the latest trends;
+                Explore our most advanced AI content covering the latest trends,
                 technologies, and successful implementations.,
               </p>,
             </div>,
@@ -118,7 +118,7 @@ export default function AI2026RevolutionaryContentPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Categories */,}
+        {/* Content Categories */}
         <section className="py-20 bg-white">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -186,7 +186,7 @@ export default function AI2026RevolutionaryContentPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-4xl md:text-5xl font-bold mb-6">,
@@ -213,5 +213,4 @@ export default function AI2026RevolutionaryContentPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

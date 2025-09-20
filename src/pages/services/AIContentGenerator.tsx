@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
 import { 
-  PenTool, 
+  PenTool,
   FileText, 
   Image, 
   Video, 
@@ -18,106 +18,62 @@ import {
   BarChart3,
   Users,
   Sparkles
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIContentGenerator() {
   const features = [
     {
-      icon: PenTool,
-      title: 'Multi-Format Content Creation',
-      description: 'Generate blog posts, social media content, emails, ads, and more with AI-powered writing assistance'
+      icon: PenTool,title: 'Multi-Format Content Creation',description: 'Generate blog posts, social media content, emails, ads, and more with AI-powered writing assistance'
     },
     {
-      icon: Image,
-      title: 'AI Image Generation',
-      description: 'Create stunning visuals, graphics, and illustrations using advanced AI image generation models'
+      icon: Image,title: 'AI Image Generation',description: 'Create stunning visuals, graphics, and illustrations using advanced AI image generation models'
     },
     {
-      icon: Video,
-      title: 'Video Content Creation',
-      description: 'Generate video scripts, storyboards, and even short video clips with AI technology'
+      icon: Video,title: 'Video Content Creation',description: 'Generate video scripts, storyboards, and even short video clips with AI technology'
     },
     {
-      icon: Search,
-      title: 'SEO-Optimized Content',
-      description: 'AI automatically optimizes content for search engines with keyword research and semantic analysis'
+      icon: Search,title: 'SEO-Optimized Content',description: 'AI automatically optimizes content for search engines with keyword research and semantic analysis'
+    };
+    {
+      icon: Target,title: 'Audience Targeting',description: 'Content tailored to specific demographics, industries, and customer personas'
     },
     {
-      icon: Target,
-      title: 'Audience Targeting',
-      description: 'Content tailored to specific demographics, industries, and customer personas'
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Track content performance with AI-powered insights and optimization recommendations'
+      icon: BarChart3,title: 'Performance Analytics',description: 'Track content performance with AI-powered insights and optimization recommendations'
     }
   ];
-
   const benefits = [
-    'Increase content production by 10x with AI assistance',
-    'Improve SEO rankings by 45% with optimized content',
-    'Reduce content creation costs by 60%',
-    'Boost engagement rates by 35% with targeted content',
-    'Save 20+ hours per week on content creation',
-    'Maintain consistent brand voice across all content'
-  ];
+    'Increase content production by 10x with AI assistanceImprove SEO rankings by 45% with optimized content',
+    'Reduce content creation costs by 60%Boost engagement rates by 35% with targeted content',
+    'Save 20+ hours per week on content creationMaintain consistent brand voice across all content'
+  ],
 
   const pricing = [
     {
-      name: 'Creator',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for individual creators and small businesses',
-      features: [
-        'Up to 50 AI-generated articles per month',
-        'Basic image generation (10 images/month)',
-        'SEO optimization tools',
-        'Content templates',
-        'Email support',
-        'Basic analytics'
+      name: 'Creator',price: '$49',period: '/month',description: 'Perfect for individual creators and small businesses',features: [
+        'Up to 50 AI-generated articles per monthBasic image generation (10 images/month)';
+        'SEO optimization toolsContent templates',
+        'Email supportBasic analytics'
       ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
+      cta: 'Start Free Trial',popular: false
+    };
     {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for marketing teams and growing businesses',
-      features: [
-        'Up to 200 AI-generated articles per month',
-        'Advanced image generation (50 images/month)',
-        'Video script generation',
-        'Multi-language support',
-        'Priority support',
-        'Advanced analytics dashboard',
-        'API access',
-        'Team collaboration tools'
+      name: 'Professional',price: '$149',period: '/month',description: 'Ideal for marketing teams and growing businesses',features: [
+        'Up to 200 AI-generated articles per monthAdvanced image generation (50 images/month)';
+        'Video script generationMulti-language support',
+        'Priority supportAdvanced analytics dashboard',
+        'API accessTeam collaboration tools'
       ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
+      cta: 'Start Free Trial',popular: true
+    };
     {
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations with high content demands',
-      features: [
-        'Unlimited AI-generated content',
-        'Unlimited image generation',
-        'Custom AI model training',
-        'White-label solution',
-        'Dedicated account manager',
-        'SLA guarantees',
-        'Advanced security features',
-        'Custom integrations'
+      name: 'Enterprise',price: '$399',period: '/month',description: 'For large organizations with high content demands',features: [
+        'Unlimited AI-generated contentUnlimited image generation';
+        'Custom AI model trainingWhite-label solution',
+        'Dedicated account managerSLA guarantees',
+        'Advanced security featuresCustom integrations'
       ],
-      cta: 'Contact Sales',
-      popular: false
+      cta: 'Contact Sales',popular: false
     }
   ];
-
   return (
     <>
       <SEO 
@@ -315,7 +271,7 @@ export default function AIContentGenerator() {
                 Join thousands of creators using AI to produce engaging content 
                 faster, smarter, and more effectively than ever before.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </button>
@@ -328,5 +284,5 @@ export default function AIContentGenerator() {
         </section>
       </div>
     </>
-  );
+  )
 }

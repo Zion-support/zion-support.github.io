@@ -1,31 +1,31 @@
 <<<<<<< HEAD
 
- from 'lucide-react';
+ from 'lucide-react',
 
 interface ContentAnalysis {
-  id: string;
-  type: 'seo' | 'performance' | 'accessibility' | 'user-experience';
-  score: number;
-  suggestions: string[];
-  priority: 'high' | 'medium' | 'low';
-  impact: number;
+  id: string,
+  type: 'seo' | 'performance' | 'accessibility' | 'user-experience',
+  score: number,
+  suggestions: string[],
+  priority: 'high' | 'medium' | 'low',
+  impact: number,
   category: string}
 
 interface OptimizationSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  category: 'seo' | 'performance' | 'accessibility' | 'ux';
-  priority: 'high' | 'medium' | 'low';
-  effort: 'low' | 'medium' | 'high';
-  impact: number;
-  implementation: string;
+  id: string,
+  title: string,
+  description: string,
+  category: 'seo' | 'performance' | 'accessibility' | 'ux',
+  priority: 'high' | 'medium' | 'low',
+  effort: 'low' | 'medium' | 'high',
+  impact: number,
+  implementation: string,
   estimatedTime: string}
 
 interface AIContentOptimizerProps {
-  enabled?: boolean;
-  showRealTime?: boolean;
-  autoAnalyze?: boolean;
+  enabled?: boolean,
+  showRealTime?: boolean,
+  autoAnalyze?: boolean,
   onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void}
 
 export function AIContentOptimizer({
@@ -34,25 +34,25 @@ export function AIContentOptimizer({
   autoAnalyze = true,
   onOptimizationComplete
 }: AIContentOptimizerProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisComplete, setAnalysisComplete] = useState(false);
-  const [contentAnalysis, setContentAnalysis] = useState<ContentAnalysis[]>([]);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isFullscreen, setIsFullscreen] = useState(false),
+  const [isAnalyzing, setIsAnalyzing] = useState(false),
+  const [analysisComplete, setAnalysisComplete] = useState(false),
+  const [contentAnalysis, setContentAnalysis] = useState<ContentAnalysis[]>([]),
   const [optimizationSuggestions, setOptimizationSuggestions] = useState<
     OptimizationSuggestion[]
-  >([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [currentScore, setCurrentScore] = useState(0);
-  const [targetScore, setTargetScore] = useState(95);
+  >([]),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [showAdvanced, setShowAdvanced] = useState(false),
+  const [currentScore, setCurrentScore] = useState(0),
+  const [targetScore, setTargetScore] = useState(95),
 
   // Generate sample content analysis
   
-    const analysis: ContentAnalysis[] = [];
+    const analysis: ContentAnalysis[] = [],
 
     categories.forEach(category => {
-      const score = Math.floor(Math.random() * 40) + 60; // 60-100
+      const score = Math.floor(Math.random() * 40) + 60, // 60-100
       
       analysis.push({
         id: category,
@@ -62,65 +62,65 @@ export function AIContentOptimizer({
         priority: score < 70 ? 'high' : score < 85 ? 'medium' : 'low',
         impact: Math.floor(Math.random() * 30) + 10,
         category
-      })});
-    setContentAnalysis(analysis);
+      })}),
+    setContentAnalysis(analysis),
 
     // Calculate overall score
     
-    setCurrentScore(overallScore)}, []);
+    setCurrentScore(overallScore)}, []),
 
   // Generate optimization suggestions
   
-    setOptimizationSuggestions(suggestions)}, []);
+    setOptimizationSuggestions(suggestions)}, []),
 
   // Start content analysis
   
-    setAnalysisComplete(false);
+    setAnalysisComplete(false),
 
     // Simulate analysis process
     setTimeout(() => {
-      generateContentAnalysis();
-      generateOptimizationSuggestions();
-      setIsAnalyzing(false);
-      setAnalysisComplete(true);
+      generateContentAnalysis(),
+      generateOptimizationSuggestions(),
+      setIsAnalyzing(false),
+      setAnalysisComplete(true),
 
       if(onOptimizationComplete) {
         onOptimizationComplete(optimizationSuggestions)}
     }, 3000)}, [generateContentAnalysis,
     generateOptimizationSuggestions,
-    onOptimizationComplete,
-  ]);
+    onOptimizationComplete
+  ]),
   // Auto - analyze when component opens
   useEffect(() => {
     if(autoAnalyze && isOpen && !analysisComplete) {
 
       startAnalysis()}
-  }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]) ;
+  }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]) ,
   // Setup real - time updates
   useEffect(() => {
     if(showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {
-        generateContentAnalysis()}, 60000); // Update every minute
+        generateContentAnalysis()}, 60000), // Update every minute
 
       return () => {
         if(analysisIntervalRef.current) {
 
           clearInterval(analysisIntervalRef.current)}
       }}
-  }, [showRealTime, isOpen, analysisComplete, generateContentAnalysis]);
+  }, [showRealTime, isOpen, analysisComplete, generateContentAnalysis]),
 
   // Get priority color
   
-    return colors[priority as keyof typeof colors] || colors.low};
+    return colors[priority as keyof typeof colors] || colors.low},
 
   // Get category icon
   
-    return icons[category] || <Info className="w-5 h-5"  />};
+    return icons[category] || <Info className="w-5 h-5"  />},
 
   // Filter suggestions by category
   
-  if(!enabled) return null;
+  if(!enabled) return null,
 
   return (<>
       {/* Floating AI Content Optimizer Button */}
@@ -266,7 +266,7 @@ export function AIContentOptimizer({
                             </div>
                             <div>
                               <h4 className="font-medium text-gray-900 dark:text-white capitalize">
-                                {item.category.replace('-', ' ')}
+                                {item.category.replace('- ')}
                               </h4>
                               <p className="text-sm text-gray-500 dark:text-gray-400">
                                 {item.suggestions.length} suggestions

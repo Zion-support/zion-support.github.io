@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap  } from 'lucide-react';
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap  } from 'lucide-react',
 export default function Page() {
 ,
         {
@@ -6,9 +6,9 @@ export default function Page() {
             description: "Understanding API errors and rate limiting",
             icon: AlertCircle,
             path: "/developers / docs / errors",
-            color: "from - red - 500 to - rose - 500",
-        },
-    ];
+            color: "from - red - 500 to - rose - 500"
+        }
+    ],
     return (<ApiDocsLayout>
       <div className="max - w-4xl">
         <h1 className="text-4xl font - bold text-white mb-6">Zion AI Marketplace API</h1>

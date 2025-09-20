@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTechInnovation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
   // Neuromorphic Computing
@@ -49,16 +49,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     period: '/month',
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure and processing capabilities. Enable ultra-efficient AI processing, real-time learning, and cognitive computing applications that traditional computers cannot handle.',
     features: [
-      'Brain-inspired neural architecture',
-      'Real-time learning capabilities',
-      'Ultra-low power consumption',
-      'Cognitive computing algorithms',
-      'Adaptive neural networks',
-      'Pattern recognition systems',
-      'Memory consolidation',
-      'Synaptic plasticity simulation',
-      'Multi-modal processing',
-      'Scalable neural architecture'
+      'Brain-inspired neural architectureReal-time learning capabilities',
+      'Ultra-low power consumptionCognitive computing algorithms',
+      'Adaptive neural networksPattern recognition systems',
+      'Memory consolidationSynaptic plasticity simulation',
+      'Multi-modal processingScalable neural architecture'
     ],
     popular: true,
     icon: '🧠',
@@ -71,11 +66,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     setupTime: '4-6 weeks',
     category: 'Neuromorphic Computing',
     realService: true,
-    technology: ['Neuromorphic Chips', 'Neural Networks', 'Cognitive Computing', 'Brain-inspired Algorithms', 'Adaptive Learning', 'Pattern Recognition'],
-    integrations: ['AI Platforms', 'Research Tools', 'Robotics Systems', 'Healthcare Systems', 'Data Analysis Platforms', 'Cloud Services'],
-    useCases: ['AI research', 'Robotics development', 'Healthcare AI', 'Cognitive computing', 'Pattern recognition', 'Real-time learning'],
+    technology: ['Neuromorphic ChipsNeural Networks', 'Cognitive ComputingBrain-inspired Algorithms', 'Adaptive LearningPattern Recognition'],
+    integrations: ['AI PlatformsResearch Tools', 'Robotics SystemsHealthcare Systems', 'Data Analysis PlatformsCloud Services'],
+    useCases: ['AI researchRobotics development', 'Healthcare AICognitive computing', 'Pattern recognitionReal-time learning'],
     roi: 'AI companies report 800% ROI through energy efficiency. Research institutions see 600% ROI in processing capabilities.',
-    competitors: ['Traditional AI computing: $25,000+/month', 'Neuromorphic research: $50,000+/month', 'Cognitive platforms: $30,000+/month'],
+    competitors: ['Traditional AI computing: $25,000+/monthNeuromorphic research: $50,000+/month', 'Cognitive platforms: $30,000+/month'],
     marketSize: '$6.8B neuromorphic computing market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -101,16 +96,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     period: '/month',
     description: 'Breakthrough DNA computing platform that leverages molecular biology for solving complex computational problems. Use DNA molecules as computational units to tackle problems that are impossible for traditional computers, from cryptography to optimization.',
     features: [
-      'Molecular computation units',
-      'DNA-based algorithms',
-      'Parallel processing capabilities',
-      'Complex problem solving',
-      'Cryptographic applications',
-      'Optimization algorithms',
-      'Molecular memory systems',
-      'Biological computation',
-      'Scalable molecular architecture',
-      'Custom DNA programming'
+      'Molecular computation unitsDNA-based algorithms',
+      'Parallel processing capabilitiesComplex problem solving',
+      'Cryptographic applicationsOptimization algorithms',
+      'Molecular memory systemsBiological computation',
+      'Scalable molecular architectureCustom DNA programming'
     ],
     popular: true,
     icon: '🧬',
@@ -123,11 +113,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     setupTime: '6-8 weeks',
     category: 'DNA Computing',
     realService: true,
-    technology: ['DNA Computing', 'Molecular Biology', 'Biological Algorithms', 'Molecular Memory', 'Parallel Processing', 'Cryptography'],
-    integrations: ['Research Platforms', 'Laboratory Systems', 'Data Analysis Tools', 'Cryptographic Systems', 'Optimization Tools', 'Healthcare Systems'],
-    useCases: ['Complex optimization', 'Cryptography', 'Drug discovery', 'Molecular research', 'Data encryption', 'Pattern matching'],
+    technology: ['DNA ComputingMolecular Biology', 'Biological AlgorithmsMolecular Memory', 'Parallel ProcessingCryptography'],
+    integrations: ['Research PlatformsLaboratory Systems', 'Data Analysis ToolsCryptographic Systems', 'Optimization ToolsHealthcare Systems'],
+    useCases: ['Complex optimizationCryptography', 'Drug discoveryMolecular research', 'Data encryptionPattern matching'],
     roi: 'Pharmaceutical companies report 1500% ROI through faster drug discovery. Research institutions see 1000% ROI in computational capabilities.',
-    competitors: ['Research DNA computing: $100,000+/month', 'Molecular platforms: $50,000+/month', 'Biological computing: $75,000+/month'],
+    competitors: ['Research DNA computing: $100,000+/monthMolecular platforms: $50,000+/month', 'Biological computing: $75,000+/month'],
     marketSize: '$2.8B DNA computing market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -153,16 +143,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     period: '/month',
     description: 'Revolutionary photonic computing platform that uses light instead of electricity for ultra-fast data processing. Achieve light-speed computation for applications requiring massive parallel processing, from AI training to scientific simulations.',
     features: [
-      'Light-speed processing',
-      'Photonic processors',
-      'Massive parallel computing',
-      'Optical memory systems',
-      'Quantum photonic integration',
-      'Ultra-fast data transfer',
-      'Energy-efficient computing',
-      'Scalable photonic architecture',
-      'Optical neural networks',
-      'Custom photonic design'
+      'Light-speed processingPhotonic processors',
+      'Massive parallel computingOptical memory systems',
+      'Quantum photonic integrationUltra-fast data transfer',
+      'Energy-efficient computingScalable photonic architecture',
+      'Optical neural networksCustom photonic design'
     ],
     popular: true,
     icon: '💡',
@@ -175,11 +160,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     setupTime: '4-6 weeks',
     category: 'Photonic Computing',
     realService: true,
-    technology: ['Photonic Computing', 'Optical Processing', 'Light-based Memory', 'Quantum Photonics', 'Optical Neural Networks', 'Parallel Computing'],
-    integrations: ['AI Platforms', 'Research Tools', 'Data Centers', 'Supercomputing Systems', 'Cloud Services', 'Scientific Computing Tools'],
-    useCases: ['AI training', 'Scientific simulations', 'Data processing', 'Pattern recognition', 'Real-time analysis', 'High-performance computing'],
+    technology: ['Photonic ComputingOptical Processing', 'Light-based MemoryQuantum Photonics', 'Optical Neural NetworksParallel Computing'],
+    integrations: ['AI PlatformsResearch Tools', 'Data CentersSupercomputing Systems', 'Cloud ServicesScientific Computing Tools'],
+    useCases: ['AI trainingScientific simulations', 'Data processingPattern recognition', 'Real-time analysisHigh-performance computing'],
     roi: 'AI companies report 1000% ROI through faster training. Research institutions see 800% ROI in simulation capabilities.',
-    competitors: ['Traditional supercomputing: $50,000+/month', 'Photonic research: $75,000+/month', 'High-performance computing: $30,000+/month'],
+    competitors: ['Traditional supercomputing: $50,000+/monthPhotonic research: $75,000+/month', 'High-performance computing: $30,000+/month'],
     marketSize: '$4.2B photonic computing market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -205,16 +190,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     period: '/month',
     description: 'Advanced holographic display platform that creates immersive 3D visualizations for entertainment, education, business, and research. Transform how people interact with digital content through lifelike holographic experiences.',
     features: [
-      'True 3D holographic displays',
-      'Interactive holographic content',
-      'Real-time holographic rendering',
-      'Multi-user holographic experiences',
-      'Holographic collaboration tools',
-      'Content creation platform',
-      'Holographic streaming',
-      'Mobile holographic support',
-      'Custom holographic solutions',
-      'API for developers'
+      'True 3D holographic displaysInteractive holographic content',
+      'Real-time holographic renderingMulti-user holographic experiences',
+      'Holographic collaboration toolsContent creation platform',
+      'Holographic streamingMobile holographic support',
+      'Custom holographic solutionsAPI for developers'
     ],
     popular: true,
     icon: '🎭',
@@ -227,11 +207,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     setupTime: '2-3 weeks',
     category: 'Holographic Technology',
     realService: true,
-    technology: ['Holographic Displays', '3D Rendering', 'Computer Vision', 'Augmented Reality', 'Spatial Computing', 'Interactive Systems'],
-    integrations: ['Content Management Systems', 'Streaming Platforms', 'Collaboration Tools', 'Mobile Devices', 'VR/AR Systems', 'Display Hardware'],
-    useCases: ['Entertainment', 'Education', 'Business presentations', 'Research visualization', 'Healthcare training', 'Virtual collaboration'],
+    technology: ['Holographic Displays3D Rendering', 'Computer VisionAugmented Reality', 'Spatial ComputingInteractive Systems'],
+    integrations: ['Content Management SystemsStreaming Platforms', 'Collaboration ToolsMobile Devices', 'VR/AR SystemsDisplay Hardware'],
+    useCases: ['EntertainmentEducation', 'Business presentationsResearch visualization', 'Healthcare trainingVirtual collaboration'],
     roi: 'Entertainment companies report 600% ROI through immersive experiences. Educational institutions see 500% ROI in learning engagement.',
-    competitors: ['Traditional 3D displays: $15,000+/month', 'Holographic research: $25,000+/month', 'AR/VR platforms: $8,000+/month'],
+    competitors: ['Traditional 3D displays: $15,000+/monthHolographic research: $25,000+/month', 'AR/VR platforms: $8,000+/month'],
     marketSize: '$8.5B holographic display market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -257,16 +237,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     period: '/month',
     description: 'Revolutionary quantum internet platform that provides unbreakable security and instant communication through quantum entanglement. Build the foundation for the next generation of secure, high-speed internet infrastructure.',
     features: [
-      'Quantum entanglement networks',
-      'Unbreakable quantum encryption',
-      'Instant quantum communication',
-      'Quantum key distribution',
-      'Quantum internet protocols',
-      'Secure quantum routing',
-      'Quantum network management',
-      'Quantum internet security',
-      'Scalable quantum infrastructure',
-      'Custom quantum protocols'
+      'Quantum entanglement networksUnbreakable quantum encryption',
+      'Instant quantum communicationQuantum key distribution',
+      'Quantum internet protocolsSecure quantum routing',
+      'Quantum network managementQuantum internet security',
+      'Scalable quantum infrastructureCustom quantum protocols'
     ],
     popular: true,
     icon: '🌐',
@@ -279,11 +254,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     setupTime: '6-8 weeks',
     category: 'Quantum Internet',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Communication', 'Quantum Networks', 'Quantum Encryption', 'Quantum Key Distribution', 'Network Infrastructure'],
-    integrations: ['Telecommunications Networks', 'Security Systems', 'Financial Platforms', 'Government Systems', 'Research Networks', 'Cloud Services'],
-    useCases: ['Secure communications', 'Financial transactions', 'Government communications', 'Research collaboration', 'Data protection', 'Network security'],
+    technology: ['Quantum ComputingQuantum Communication', 'Quantum NetworksQuantum Encryption', 'Quantum Key DistributionNetwork Infrastructure'],
+    integrations: ['Telecommunications NetworksSecurity Systems', 'Financial PlatformsGovernment Systems', 'Research NetworksCloud Services'],
+    useCases: ['Secure communicationsFinancial transactions', 'Government communicationsResearch collaboration', 'Data protectionNetwork security'],
     roi: 'Telecommunications companies report 800% ROI through quantum security. Financial institutions see 600% ROI in transaction security.',
-    competitors: ['Traditional secure networks: $40,000+/month', 'Quantum research: $75,000+/month', 'Security platforms: $25,000+/month'],
+    competitors: ['Traditional secure networks: $40,000+/monthQuantum research: $75,000+/month', 'Security platforms: $25,000+/month'],
     marketSize: '$15B quantum internet market',
     growthRate: '350% annual growth',
     variant: 'quantum-futuristic',
@@ -300,4 +275,4 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     rating: 4.8,
     reviews: 24
   }
-];
+],

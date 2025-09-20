@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import Head from 'next/link';
-import Pagination from '../components/Pagination';
-import Form from '../components/Form';
-import Modal from '../components/Modal';
-import Button from '../components/Button';
-import Card from '../components/Card';
+import { useState } from 'react',
+import Head from 'next/link',
+import Pagination from '../components/Pagination',
+import Form from '../components/Form',
+import Modal from '../components/Modal',
+import Button from '../components/Button',
+import Card from '../components/Card',
 
 export default function ComponentPlayground() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({});
+  const [currentPage, setCurrentPage] = useState(1),
+  const [isModalOpen, setIsModalOpen] = useState(false),
+  const [formData, setFormData] = useState({}),
 
   const handleFormSubmit = (data) => {
-    setFormData(data);
-    alert('Form submitted! Check console for data.');
-    console.log('Form data:', data);
-  };
+    setFormData(data),
+    alert('Form submitted! Check console for data.'),
+    console.log('Form data:', data),
+  },
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -124,5 +124,5 @@ export default function ComponentPlayground() {
         </div>
       </main>
     </div>
-  );
+  ),
 }

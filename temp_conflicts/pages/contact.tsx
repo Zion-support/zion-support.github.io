@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { Mail, Phone, MapPin, Clock } from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function ContactPage() {
   const [formData, setFormData] = React.useState({
@@ -11,22 +11,22 @@ export default function ContactPage() {
     email: '',
     company: '',
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+    console.log('Form submitted:', formData),
+  },
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    }),
+  },
 
   return (
     <>
@@ -46,11 +46,11 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Get In Touch
             </h1>
                           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Ready to transform your business? Let&apos;s discuss how our cutting-edge technology solutions can help you achieve your goals.
+                Ready to transform your business? Let&apos,s discuss how our cutting-edge technology solutions can help you achieve your goals.
               </p>
           </motion.div>
         </div>
@@ -151,7 +151,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p className="text-white/70 text-lg leading-relaxed mb-8">
-                  We&apos;re here to help you succeed. Reach out to us through any of the channels below, and we&apos;ll get back to you within 24 hours.
+                  We&apos,re here to help you succeed. Reach out to us through any of the channels below, and we&apos,ll get back to you within 24 hours.
                 </p>
               </div>
 
@@ -163,7 +163,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <p className="text-white/70">contact@ziontechgroup.com</p>
-                    <p className="text-white/50 text-sm">We&apos;ll respond within 24 hours</p>
+                    <p className="text-white/50 text-sm">We&apos,ll respond within 24 hours</p>
                   </div>
                 </div>
 
@@ -550,5 +550,5 @@ export default function ContactPage() {
 
       <EnhancedFooter />
     </>
-  );
+  ),
 }

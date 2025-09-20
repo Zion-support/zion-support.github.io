@@ -1,60 +1,60 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { supabase } from "../../utils/supabase/client";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useMemo, useState } from "react",
+import { supabase } from "../../utils/supabase/client",
+import { AnimatePresence, motion } from "framer-motion",
 
 type JobSuggestion = {
-  id: string;
-  match_type?: "job_for_talent" | string;
-  job_id: string;
-  job_title: string;
-  client_name?: string;
-  client_id?: string;
-  talent_id: string;
-  summary?: string;
-  skills?: string[];
-  budget_min?: number | null;
-  budget_max?: number | null;
-  duration?: string | null;
-  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null;
-  score?: number;
-  created_at?: string;
-  updated_at?: string;
-};
+  id: string,
+  match_type?: "job_for_talent" | string,
+  job_id: string,
+  job_title: string,
+  client_name?: string,
+  client_id?: string,
+  talent_id: string,
+  summary?: string,
+  skills?: string[],
+  budget_min?: number | null,
+  budget_max?: number | null,
+  duration?: string | null,
+  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null,
+  score?: number,
+  created_at?: string,
+  updated_at?: string
+},
 
 const SUGGESTION_TABLE_ENV =
-  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches";
+  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches",
 
 export default function TalentDashboardSuggestedJobs() {
-  const [userId, setUserId] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [userId, setUserId] = useState<string | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+  const [expandedId, setExpandedId] = useState<string | null>(null),
 
   useEffect(() => {
     async function load() {
       try {
-        setLoading(true);
+        setLoading(true),
         const res = await fetch("/api/marketplace/offers", {
           headers: {
             "x-demo-user-role": "talent",
             // Demo: set current talent slug to match a profile in data/talent.ts
-            "x-demo-talent-slug": "ava-chen",
-          },
-        });
-        const json = await res.json();
-        if (!json.ok) throw new Error(json.error || "Failed to load offers");
-        setOffers(json.offers || []);
+            "x-demo-talent-slug": "ava-chen"
+          }
+        }),
+        const json = await res.json(),
+        if (!json.ok) throw new Error(json.error || "Failed to load offers"),
+        setOffers(json.offers || []),
       } catch (e: any) {
-        setError(e.message);
+        setError(e.message)
       } finally {
-        setLoading(false);
+        setLoading(false),
       }
     }
-    load();
-  }, []);
+    load(),
+  }, []),
 
-  const [showFeedback, setShowFeedback] = useState(false);
-  const [lastContext, setLastContext] = useState<any>(null);
+  const [showFeedback, setShowFeedback] = useState(false),
+  const [lastContext, setLastContext] = useState<any>(null),
 
   async function act(id: string, action: string) {
     const res = await fetch("/api/marketplace/offers", {
@@ -62,19 +62,19 @@ export default function TalentDashboardSuggestedJobs() {
       headers: {
         "Content-Type": "application/json",
         "x-demo-user-role": "talent",
-        "x-demo-talent-slug": "ava-chen",
+        "x-demo-talent-slug": "ava-chen"
       },
-      body: JSON.stringify({ id, action }),
-    });
-    const json = await res.json();
+      body: JSON.stringify({ id, action })
+    }),
+    const json = await res.json(),
     if (!json.ok) {
-      alert(json.error || "Action failed");
+      alert(json.error || "Action failed"),
     } else {
       if (action === 'accept') {
-        setLastContext({ actionType: 'talent_contact', metadata: { offerId: id, projectId: json.project?.id } });
-        setShowFeedback(true);
+        setLastContext({ actionType: 'talent_contact', metadata: { offerId: id, projectId: json.project?.id } }),
+        setShowFeedback(true),
       }
-      setTimeout(()=>location.reload(), 400);
+      setTimeout(()=>location.reload(), 400),
     }
   }
 
@@ -132,5 +132,5 @@ export default function TalentDashboardSuggestedJobs() {
         ))}
       </div>
     </div>
-  );
+  ),
 }

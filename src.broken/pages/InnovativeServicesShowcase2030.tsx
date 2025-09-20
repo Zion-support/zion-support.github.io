@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-export default InnovativeServicesShowcase2030;}}
-import { Brain, import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
+import React, { useState, useEffect } from 'react',
+export default InnovativeServicesShowcase2030,}}
+import { Brain,
+import { innovativeAIServices2030 } from '../data/innovativeAIServices2030',
 export default function Page() {
-,;
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
-  ];
+,
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length },
+  ],
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate -900">
       {/* Hero Section */}
@@ -46,10 +47,10 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Contact Banner */}
-      <section className="bg-gradient - to - r from - purple - 600 to - blue - 600 py-8 px-4">;
+      <section className="bg-gradient - to - r from - purple - 600 to - blue - 600 py-8 px-4">,
         <div  className="max - w-7xl mx - auto text-center">
           <div  className="flex flex - col md:flex - row items - center justify - center gap-6 text-white">
             <div  className="flex items - center gap-2">
@@ -69,7 +70,7 @@ export default function Page() {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;
+      <section className="py-12 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-7xl mx -auto">
           <div  className="flex flex - col lg:flex - row gap-6 mb-8">
             <div  className="flex -1">
@@ -97,14 +98,14 @@ export default function Page() {
                   <span className="bg-white / 20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>
-                </button>;) ) }
+                </button>,) ) }
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;
+      <section className="py-12 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-7xl mx -auto">
           <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">
             {filteredServices.map((service, index) => (<motion.div
@@ -143,7 +144,7 @@ export default function Page() {
                 </div>
 
                 {/* Pricing */}
-                <div  className="mb-4 p - 4 bg-purple - 600 / 20 rounded-lg border border-purple -500 / 30">;
+                <div  className="mb-4 p - 4 bg-purple - 600 / 20 rounded-lg border border-purple -500 / 30">,
                   <div  className="flex items - center justify - between mb-2">
                     <span className="text-purple - 200 text-sm">Starting at</span>
                     <span className="text-white font -bold">${service.pricing.monthly}/month</span>
@@ -151,7 +152,7 @@ export default function Page() {
                   <div  className="text-purple - 200 text-xs">
                     Market price: {service.pricing.marketPrice}
                   </div>
-                </div>;
+                </div>,
 
                 {/* Features */}
                 <div  className="mb-4">
@@ -233,15 +234,15 @@ export default function Page() {
                   </a>
                 </div>
               </motion.div>) ) }
-          </div>;
-;
-          {filteredServices.length === 0 && (;
-            <div  className="text-center py-12">;
-              <div  className="text-gray - 400 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={ () => {;
-                  setSearchTerm('') ;
-                  setActiveCategory('all') ;
+          </div>,
+,
+          {filteredServices.length === 0 && (,
+            <div  className="text-center py-12">,
+              <div  className="text-gray - 400 text-lg mb-4">No services found matching your criteria</div>,
+              <button,
+                onClick={ () => {,
+                  setSearchTerm('') ,
+                  setActiveCategory('all') ,
                 }}
                 className="bg-purple - 600 hover:bg-purple - 700 text-white px-6 py-2 rounded-lg transition -colors"
               >
@@ -252,7 +253,7 @@ export default function Page() {
       </section>
 
       {/* Why Choose Zion Tech Group */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white / 5">;
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white / 5">,
         <div  className="max - w-7xl mx -auto">
           <motion.div
             initial = {
@@ -323,13 +324,13 @@ export default function Page() {
                 </div>
                 <h3 className="text-xl font - bold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray -300">{feature.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
             initial = {
@@ -372,7 +373,7 @@ export default function Page() {
       </section>
 
       {/* Footer Contact */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - purple - 900 to - blue -900">;
+      <section className="py-12 px-4 sm: px-6 lg:px-8 bg-gradient - to - r from - purple - 900 to - blue -900">,
         <div  className="max - w-7xl mx -auto">
           <div  className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
             <div>
@@ -395,7 +396,7 @@ export default function Page() {
             <div>
               <h3 className="text-white font - bold text-lg mb-4">Quick Links</h3>
               <div  className="space - y-2">
-                <a href="https://ziontechgroup.com" className="block text-gray - 300 hover:text-white transition -colors">
+                <a href="https: //ziontechgroup.com" className="block text-gray - 300 hover:text-white transition -colors">
                   Visit Website
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="block text-gray - 300 hover:text-white transition -colors">
@@ -414,9 +415,9 @@ export default function Page() {
                 <div  className="text-gray -300">Cloud & DevOps</div>
                 <div  className="text-gray -300">IT Infrastructure</div>
               </div>
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

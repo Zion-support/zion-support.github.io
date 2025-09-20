@@ -1,6 +1,6 @@
 
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
 export function EmptyState() {,
   return (,
     <Card className="bg-muted/30">,
@@ -13,7 +13,6 @@ export function EmptyState() {,
           <Link to="/jobs">Browse Jobs</Link>,
         </Button>,
       </CardContent>,
-    </Card>,
-  );
+    </Card>),
 }
 ,

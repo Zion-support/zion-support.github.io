@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 }
 =======
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from 'next/link',
+import Image from 'next/image',
 
 export default function HomePage() {
   const services = [
@@ -11,51 +11,51 @@ export default function HomePage() {
       description: 'Transform your business operations with intelligent automation powered by cutting-edge AI technology.',
       href: '/ai-automation-services',
       icon: '🤖',
-      features: ['Process Automation', 'Intelligent Workflows', 'Predictive Analytics']
+      features: ['Process AutomationIntelligent Workflows', 'Predictive Analytics']
     },
     {
       title: 'Autonomous Business Operations',
       description: 'Build self-managing business systems that operate independently and optimize performance continuously.',
       href: '/ai-autonomous-business-operations',
       icon: '🚀',
-      features: ['Self-Optimizing Systems', 'Real-time Decision Making', 'Scalable Operations']
+      features: ['Self-Optimizing SystemsReal-time Decision Making', 'Scalable Operations']
     },
     {
       title: 'Advanced Cybersecurity Suite',
       description: 'Protect your digital assets with next-generation security solutions and threat intelligence.',
       href: '/advanced-cybersecurity-suite',
       icon: '🛡️',
-      features: ['Threat Detection', 'Zero Trust Security', 'Compliance Automation']
+      features: ['Threat DetectionZero Trust Security', 'Compliance Automation']
     },
     {
       title: 'Quantum Computing Services',
       description: 'Harness the power of quantum computing for complex problem-solving and optimization.',
       href: '/quantum-services',
       icon: '⚛️',
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Research & Development']
+      features: ['Quantum AlgorithmsOptimization Problems', 'Research & Development']
     },
     {
       title: 'Space Technology Solutions',
       description: 'Pioneering space technology innovations for the next generation of exploration and discovery.',
       href: '/space-tech',
       icon: '🚀',
-      features: ['Satellite Technology', 'Space Infrastructure', 'Innovation Research']
+      features: ['Satellite TechnologySpace Infrastructure', 'Innovation Research']
     },
     {
       title: 'IT Infrastructure Services',
       description: 'Build robust, scalable, and secure IT infrastructure for modern enterprises.',
       href: '/advanced-it-infrastructure-services',
       icon: '🏗️',
-      features: ['Cloud Architecture', 'DevOps Automation', 'Performance Optimization']
+      features: ['Cloud ArchitectureDevOps Automation', 'Performance Optimization']
     }
-  ];
+  ],
 
   const stats = [
     { number: '500+', label: 'AI Models Deployed' },
     { number: '50+', label: 'Enterprise Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
-  ];
+  ],
 
   return (
     <div className="min-h-screen">
@@ -143,7 +143,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join hundreds of enterprises already leveraging our AI-powered solutions to achieve unprecedented growth and efficiency.
@@ -165,6 +165,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,130 +1,130 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Users,
   DollarSign,
   Clock,
   Award,
-  Star;
-  ArrowRight;
-  Quote;
-  CheckCircle;
-  BarChart3;
-  Target;
-  Zap,
-} from 'lucide-react';
+  Star,
+  ArrowRight,
+  Quote,
+  CheckCircle,
+  BarChart3,
+  Target,
+  Zap
+} from 'lucide-react',
 const RevolutionarySuccessStories2026 = () => {,
-  const [activeStorysetActiveStory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const successStories = [,
     {,
-      id: 'techcorp';
-      company: 'TechCorp Global';
-      industry: 'Technology';
-      logo: '🚀';
-      challenge: 'Manual processes causing 40% efficiency loss';
-      solution: 'Complete AI automation suite implementation';
+      id: 'techcorp',
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      logo: '🚀',
+      challenge: 'Manual processes causing 40% efficiency loss',
+      solution: 'Complete AI automation suite implementation',
       results: {,
-        efficiency: '+300%';
-        costReduction: '-75%';
-        timeSaved: '2,000 hours/month';
-        roi: '500%',};
+        efficiency: '+300%',
+        costReduction: '-75%',
+        timeSaved: '2,000 hours/month',
+        roi: '500%'},
       testimonial: {,
-        text: "Zion Tech 'Groups AI solutions transformed our entire operation. We achieved 300% efficiency gains in just 3 months.";
-        author: "Sarah Chen";
-        position: "CEOTechCorp Global";
-        avatar: "👩‍💼",};
+        text: "Zion Tech 'Groups AI solutions transformed our entire operation. We achieved 300% efficiency gains in just 3 months.",
+        author: "Sarah Chen",
+        position: "CEOTechCorp Global",
+        avatar: "👩‍💼"},
       timeline: [,
-        { month: 'Month 1'achievement: 'AI system 'deploymentstatus: 'completed' ,};
-        { month: 'Month 2'achievement: '300% efficiency 'gainstatus: 'completed' ,};
-        { month: 'Month 3'achievement: '500% ROI 'achievedstatus: 'completed' ,};
-        { month: 'Month 6'achievement: 'Global 'expansionstatus: 'in-progress' ,}
-      ],
-    };
+        { month: 'Month 1'achievement: 'AI system 'deploymentstatus: 'completed' },
+        { month: 'Month 2'achievement: '300% efficiency 'gainstatus: 'completed' },
+        { month: 'Month 3'achievement: '500% ROI 'achievedstatus: 'completed' },
+        { month: 'Month 6'achievement: 'Global 'expansionstatus: 'in-progress' }
+      ]
+    },
     {,
-      id: 'healthplus';
-      company: 'HealthPlus Medical';
-      industry: 'Healthcare';
-      logo: '🏥';
-      challenge: 'Patient data processing taking 8 hours daily';
-      solution: 'AI-powered medical data analysis system';
+      id: 'healthplus',
+      company: 'HealthPlus Medical',
+      industry: 'Healthcare',
+      logo: '🏥',
+      challenge: 'Patient data processing taking 8 hours daily',
+      solution: 'AI-powered medical data analysis system',
       results: {,
-        efficiency: '+400%';
-        costReduction: '-60%';
-        timeSaved: '6 hours/day';
-        roi: '350%',};
+        efficiency: '+400%',
+        costReduction: '-60%',
+        timeSaved: '6 hours/day',
+        roi: '350%'},
       testimonial: {,
-        text: "The AI diagnostic system has revolutionized our patient care. We can now process complex cases in minutes instead of hours.";
-        author: "Dr. Michael Rodriguez";
-        position: "Chief Medical OfficerHealthPlus";
-        avatar: "👨‍⚕️",};
+        text: "The AI diagnostic system has revolutionized our patient care. We can now process complex cases in minutes instead of hours.",
+        author: "Dr. Michael Rodriguez",
+        position: "Chief Medical OfficerHealthPlus",
+        avatar: "👨‍⚕️"},
       timeline: [,
-        { month: 'Week 1'achievement: 'System 'integrationstatus: 'completed' ,};
-        { month: 'Week 2'achievement: 'Staff 'trainingstatus: 'completed' ,};
-        { month: 'Month 1'achievement: '400% efficiency 'gainstatus: 'completed' ,};
-        { month: 'Month 2'achievement: 'FDA 'approvalstatus: 'completed' ,}
-      ],
-    };
+        { month: 'Week 1'achievement: 'System 'integrationstatus: 'completed' },
+        { month: 'Week 2'achievement: 'Staff 'trainingstatus: 'completed' },
+        { month: 'Month 1'achievement: '400% efficiency 'gainstatus: 'completed' },
+        { month: 'Month 2'achievement: 'FDA 'approvalstatus: 'completed' }
+      ]
+    },
     {,
-      id: 'financepro';
-      company: 'FinancePro Solutions';
-      industry: 'Financial Services';
-      logo: '💰';
-      challenge: 'Manual risk assessment causing delays';
-      solution: 'AI-powered risk analysis and fraud detection';
+      id: 'financepro',
+      company: 'FinancePro Solutions',
+      industry: 'Financial Services',
+      logo: '💰',
+      challenge: 'Manual risk assessment causing delays',
+      solution: 'AI-powered risk analysis and fraud detection',
       results: {,
-        efficiency: '+250%';
-        costReduction: '-80%';
-        timeSaved: '1,500 hours/month';
-        roi: '600%',};
+        efficiency: '+250%',
+        costReduction: '-80%',
+        timeSaved: '1,500 hours/month',
+        roi: '600%'},
       testimonial: {,
-        text: "Our fraud detection accuracy increased to 99.9% while reducing processing time by 80%. Incredible results!";
-        author: "Jennifer Walsh";
-        position: "CTOFinancePro Solutions";
-        avatar: "👩‍💻",};
+        text: "Our fraud detection accuracy increased to 99.9% while reducing processing time by 80%. Incredible results!",
+        author: "Jennifer Walsh",
+        position: "CTOFinancePro Solutions",
+        avatar: "👩‍💻"},
       timeline: [,
-        { month: 'Week 1'achievement: 'AI model 'trainingstatus: 'completed' ,};
-        { month: 'Week 3'achievement: 'System 'deploymentstatus: 'completed' ,};
-        { month: 'Month 1'achievement: '99.9% 'accuracystatus: 'completed' ,};
-        { month: 'Month 3'achievement: '600% 'ROIstatus: 'completed' ,}
-      ],
-    };
+        { month: 'Week 1'achievement: 'AI model 'trainingstatus: 'completed' },
+        { month: 'Week 3'achievement: 'System 'deploymentstatus: 'completed' },
+        { month: 'Month 1'achievement: '99.9% 'accuracystatus: 'completed' },
+        { month: 'Month 3'achievement: '600% 'ROIstatus: 'completed' }
+      ]
+    },
     {,
-      id: 'retailmax';
-      company: 'RetailMax Chain';
-      industry: 'Retail';
-      logo: '🛍️';
-      challenge: 'Inventory management inefficiencies';
-      solution: 'AI-powered demand forecasting and automation';
+      id: 'retailmax',
+      company: 'RetailMax Chain',
+      industry: 'Retail',
+      logo: '🛍️',
+      challenge: 'Inventory management inefficiencies',
+      solution: 'AI-powered demand forecasting and automation',
       results: {,
-        efficiency: '+200%';
-        costReduction: '-65%';
-        timeSaved: '3,000 hours/month';
-        roi: '450%',};
+        efficiency: '+200%',
+        costReduction: '-65%',
+        timeSaved: '3,000 hours/month',
+        roi: '450%'},
       testimonial: {,
-        text: "Our inventory accuracy improved to 99.5% and we reduced waste by 65%. The AI predictions are incredibly accurate.";
-        author: "David Kim";
-        position: "Operations DirectorRetailMax";
-        avatar: "👨‍💼",};
+        text: "Our inventory accuracy improved to 99.5% and we reduced waste by 65%. The AI predictions are incredibly accurate.",
+        author: "David Kim",
+        position: "Operations DirectorRetailMax",
+        avatar: "👨‍💼"},
       timeline: [,
-        { month: 'Week 1'achievement: 'Data 'integrationstatus: 'completed' ,};
-        { month: 'Week 2'achievement: 'AI model 'trainingstatus: 'completed' ,};
-        { month: 'Month 1'achievement: '99.5% 'accuracystatus: 'completed' ,};
-        { month: 'Month 2'achievement: '450% 'ROIstatus: 'completed' ,}
-      ],
+        { month: 'Week 1'achievement: 'Data 'integrationstatus: 'completed' },
+        { month: 'Week 2'achievement: 'AI model 'trainingstatus: 'completed' },
+        { month: 'Month 1'achievement: '99.5% 'accuracystatus: 'completed' },
+        { month: 'Month 2'achievement: '450% 'ROIstatus: 'completed' }
+      ]
     }
-  ];
+  ],
   const overallStats = [,
-    { label: 'Companies 'Transformedvalue: '500+'icon: Users ,};
-    { label: 'Average 'ROIvalue: '475%'icon: TrendingUp ,};
-    { label: 'Time 'Savedvalue: '50K+ 'hoursicon: Clock ,};
-    { label: 'Cost 'Reductionvalue: '70%'icon: DollarSign ,}
-  ];
+    { label: 'Companies 'Transformedvalue: '500+'icon: Users },
+    { label: 'Average 'ROIvalue: '475%'icon: TrendingUp },
+    { label: 'Time 'Savedvalue: '50K+ 'hoursicon: Clock },
+    { label: 'Cost 'Reductionvalue: '70%'icon: DollarSign }
+  ],
   return (,
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">,
       {/* Background Pattern */}
@@ -132,7 +132,7 @@ const RevolutionarySuccessStories2026 = () => {,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%25234F46E5%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -142,7 +142,7 @@ const RevolutionarySuccessStories2026 = () => {,
           </div>,
           <h1 className="text-5xl md: text-7xl font-bold mb-6">,
             <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">,
-              Real Results;
+              Real Results,
             </span>,
             <br />,
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,
@@ -151,7 +151,7 @@ const RevolutionarySuccessStories2026 = () => {,
           </h1>,
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">,
             See how industry leaders are achieving unprecedented success with our AI and automation solutions.,
-            These 'arent just promises—'they', 're proven results.,
+            These 'arent just promises—'theyre proven results.,
           </p>,
         </div>,
         {/* Overall Stats */}
@@ -159,14 +159,13 @@ const RevolutionarySuccessStories2026 = () => {,
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16",
         >,
           {overallStats.map((statindex) => (,
-            <div key={index,} className="text-center">,
+            <div key={index} className="text-center">,
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-4">,
                 <stat.icon className="w-8 h-8 text-blue-400" />,
               </div>,
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
               <div className="text-gray-400">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Success Stories Navigation */}
         <div,
@@ -180,7 +179,7 @@ const RevolutionarySuccessStories2026 = () => {,
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                   activeStory === index,
                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25',
-                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
               >,
                 <div className="flex items-center space-x-2">,
                   <span className="text-xl">{story.logo}</span>,
@@ -195,7 +194,7 @@ const RevolutionarySuccessStories2026 = () => {,
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10",
             >,
               <div className="grid lg: grid-cols-2 gap-8">,
-                {/* Left Column - Story Details */,}
+                {/* Left Column - Story Details */}
                 <div>,
                   <div className="flex items-center space-x-4 mb-6">,
                     <div className="text-4xl">{successStories[activeStory].logo}</div>,
@@ -264,15 +263,14 @@ const RevolutionarySuccessStories2026 = () => {,
                       {successStories[activeStory].timeline.map((itemindex) => (,
                         <div key={index} className="flex items-center space-x-3">,
                           <div className={`w-3 h-3 rounded-full ${,
-                            item.status === 'completed' ? 'bg-green-400' : 'bg-yellow-400',
+                            item.status === 'completed' ? 'bg-green-400' : 'bg-yellow-400'
                           }`}></div>,
                           <div className="flex-1">,
                             <div className="text-white font-medium">{item.achievement}</div>,
                             <div className="text-gray-400 text-sm">{item.month}</div>,
                           </div>,
                           {item.status === 'completed' && (,
-                            <CheckCircle className="w-5 h-5 text-green-400" />,
-                          )}
+                            <CheckCircle className="w-5 h-5 text-green-400" />)}
                         </div>,
                       ))}
                     </div>,
@@ -312,5 +310,5 @@ const RevolutionarySuccessStories2026 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default RevolutionarySuccessStories2026;
+  )},
+export default RevolutionarySuccessStories2026,

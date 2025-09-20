@@ -1,7 +1,7 @@
 export const metadata = {,
-  title: 'AI 2026: Operational Excellence Handbook — Running Agent Platforms';
+  title: 'AI 2026: Operational Excellence Handbook — Running Agent Platforms',
   description:,
-    'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.',
+    'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.'
 }
 ,
 export default function Page() {,
@@ -33,18 +33,17 @@ export default function Page() {,
           </ul>,
         </div>,
       </section>,
-    </main>,
-  ),
+    </main>)
 }
 ,
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Operational Excellence Handbook | Zion Tech Group';
+  title: 'AI 2026: Operational Excellence Handbook | Zion Tech Group',
   description:,
-    'Practical handbook to run safe, reliable, and cost‑efficient autonomous agent platforms at scale.';
-  keywords: ['operational excellenceagents', 'reliabilitycost optimization', 'governance'],
-};
+    'Practical handbook to run safe, reliable, and cost‑efficient autonomous agent platforms at scale.',
+  keywords: ['operational excellenceagentsreliabilitycost optimization', 'governance']
+},
 export default function OperationalExcellenceHandbookPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -83,6 +82,5 @@ export default function OperationalExcellenceHandbookPage() {,
           <Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Content</Link>,
         </div>,
       </main>,
-    </div>,
-  ),}
+    </div>)}
 ,

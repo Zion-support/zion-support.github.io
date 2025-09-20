@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Zap, Brain, Shield, Clock, Users, TrendingUp, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredEnergyManagement: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredEnergyManagement: React.FC = () => {
       title: 'Multi-sector Support',
       description: 'Energy management across various sectors and industries'
     }
-  ];
+  ],
 
   const energyCapabilities = [
     {
       area: 'Load Forecasting',
-      capabilities: ['Demand prediction', 'Weather integration', 'Pattern analysis', 'Peak load management'],
+      capabilities: ['Demand predictionWeather integration', 'Pattern analysisPeak load management'],
       improvement: '95% accuracy',
       forecasting: 'Advanced'
     },
     {
       area: 'Grid Optimization',
-      capabilities: ['Load balancing', 'Voltage optimization', 'Power flow management', 'Grid stability'],
+      capabilities: ['Load balancingVoltage optimization', 'Power flow managementGrid stability'],
       improvement: '30% efficiency',
       optimization: 'Intelligent'
     },
     {
       area: 'Renewable Integration',
-      capabilities: ['Solar integration', 'Wind integration', 'Storage optimization', 'Grid synchronization'],
+      capabilities: ['Solar integrationWind integration', 'Storage optimizationGrid synchronization'],
       improvement: 'Seamless integration',
       integration: 'Comprehensive'
     },
     {
       area: 'Energy Analytics',
-      capabilities: ['Performance monitoring', 'Efficiency analysis', 'Cost optimization', 'Sustainability metrics'],
+      capabilities: ['Performance monitoringEfficiency analysis', 'Cost optimizationSustainability metrics'],
       improvement: 'Actionable insights',
       analytics: 'Real-time'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Utility Companies',
       description: 'AI-powered energy management for utility operations and grid optimization',
-      benefits: ['Grid optimization', 'Load balancing', 'Cost reduction', 'Customer satisfaction']
+      benefits: ['Grid optimizationLoad balancing', 'Cost reductionCustomer satisfaction']
     },
     {
       title: 'Industrial Facilities',
       description: 'Energy management for manufacturing and industrial operations',
-      benefits: ['Energy optimization', 'Cost reduction', 'Efficiency improvement', 'Sustainability']
+      benefits: ['Energy optimizationCost reduction', 'Efficiency improvementSustainability']
     },
     {
       title: 'Commercial Buildings',
       description: 'Smart building energy management and optimization',
-      benefits: ['Building optimization', 'Energy efficiency', 'Cost reduction', 'Comfort improvement']
+      benefits: ['Building optimizationEnergy efficiency', 'Cost reductionComfort improvement']
     },
     {
       title: 'Data Centers',
       description: 'Energy management for data center operations and cooling systems',
-      benefits: ['Cooling optimization', 'Energy efficiency', 'Cost reduction', 'Performance improvement']
+      benefits: ['Cooling optimizationEnergy efficiency', 'Cost reductionPerformance improvement']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredEnergyManagement: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with energy management',
       features: [
-        'Basic energy management features',
-        'Single facility support',
-        'Standard monitoring',
-        'Email support',
+        'Basic energy management featuresSingle facility support',
+        'Standard monitoringEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredEnergyManagement: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced energy management needs',
       features: [
-        'Advanced energy management features',
-        'Multi-facility support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced energy management featuresMulti-facility support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time optimization'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredEnergyManagement: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex energy management requirements',
       features: [
-        'Custom energy management development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom energy management developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredEnergyManagement: React.FC = () => {
       position: "Grid Director",
       company: "Advanced Energy Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredEnergyManagement: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Manage with AI-Powered Energy Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredEnergyManagement: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredEnergyManagement;
+export default AIPoweredEnergyManagement,

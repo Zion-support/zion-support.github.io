@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 
 export default function RealEstateTechnologySolutions() {
 	return (
@@ -15,5 +15,5 @@ export default function RealEstateTechnologySolutions() {
 				<p className="text-gray-300 max-w-3xl">Enhance portfolio performance with AI valuation, energy optimization, and tenant experience platforms.</p>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	),
 }

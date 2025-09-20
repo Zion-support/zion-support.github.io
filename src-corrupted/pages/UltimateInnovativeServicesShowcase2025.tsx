@@ -1,5 +1,4 @@
 import React from 'react',
-
 const UltimateInnovativeServicesShowcase2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -13,6 +12,5 @@ const UltimateInnovativeServicesShowcase2025: React.FC = () => {,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default UltimateInnovativeServicesShowcase2025;
+    </div>)},
+export default UltimateInnovativeServicesShowcase2025,

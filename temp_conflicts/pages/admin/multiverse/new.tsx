@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from 'react',
+import { useRouter } from 'next/router',
 
 export default function NewVertical() {
-  const router = useRouter();
-  const [form, setForm] = useState({ name: '', subdomain: '', logoUrl: '', accentColorHex: '#3b82f6', brandColorHex: '#111827', whiteLabel: false, categories: '', defaultAiTerms: 'NONE' });
-  const [saving, setSaving] = useState(false);
+  const router = useRouter(),
+  const [form, setForm] = useState({ name: '', subdomain: '', logoUrl: '', accentColorHex: '#3b82f6', brandColorHex: '#111827', whiteLabel: false, categories: '', defaultAiTerms: 'NONE' }),
+  const [saving, setSaving] = useState(false),
 
   async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSaving(true);
+    e.preventDefault(),
+    setSaving(true),
     const res = await fetch('/api/multiverse/tenants', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
       ...form,
-      categories: form.categories.split(',').map((s) => s.trim()).filter(Boolean),
-    }) });
-    setSaving(false);
-    if (res.ok) router.push('/admin/multiverse');
+      categories: form.categories.split().map((s) => s.trim()).filter(Boolean)
+    }) }),
+    setSaving(false),
+    if (res.ok) router.push('/admin/multiverse'),
   }
 
   return (
@@ -62,5 +62,5 @@ export default function NewVertical() {
         <button type="submit" disabled={saving} className="px-4 py-2 rounded-md text-white" style={{ backgroundColor: 'var(--accent, #3b82f6)' }}>{saving ? 'Creating...' : 'Create Vertical'}</button>
       </form>
     </div>
-  );
+  ),
 }

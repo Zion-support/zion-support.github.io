@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Operational Resilience Blueprint';
+  title: 'AI 2026: Operational Resilience Blueprint',
   description:,
-    'Design resilient AI and agent systems with eval-gated rollouts, chaos drills, and safe-mode fallbacks.',
-};
+    'Design resilient AI and agent systems with eval-gated rollouts, chaos drills, and safe-mode fallbacks.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -13,7 +13,7 @@ export default function Page() {,
           AI 2026: Operational Resilience Blueprint,
         </h1>,
         <p className="text-gray-600 mt-3">,
-          Practices and patterns to withstand incidents without customer impact: progressive delivery, eval gates;
+          Practices and patterns to withstand incidents without customer impact: progressive delivery, eval gates,
           blast-radius controls, and graceful degradation.,
         </p>,
       </header>,
@@ -40,6 +40,5 @@ export default function Page() {,
         <Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">Evaluation Harness Blueprint</Link>,
         <Link href="/blog/ai-2026-production-guardrails-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Production Guardrails</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

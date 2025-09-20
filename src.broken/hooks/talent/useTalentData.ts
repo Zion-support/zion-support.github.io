@@ -1,22 +1,22 @@
 
-import { useQuery } from '@tanstack/react-query';
-import { TALENT_PROFILES } from '@/data/talentData';
-import { TalentProfile } from '@/types/talent';
+import { useQuery } from '@tanstack/react-query',
+import { TALENT_PROFILES } from '@/data/talentData',
+import { TalentProfile } from '@/types/talent',
 
 async function fetchTalentProfiles(): Promise<TalentProfile[]> {
   // In a real app this would fetch from a GraphQL endpoint
-  return TALENT_PROFILES;
+  return TALENT_PROFILES,
 }
 
 export function useTalentData(page = 1, limit = 12) {
   const { data, isLoading, error } = useQuery<TalentListResponse, Error>({
     queryKey: ['talent-profiles', page, limit],
-    queryFn: () => fetchTalentProfiles(page, limit),
-  });
+    queryFn: () => fetchTalentProfiles(page, limit)
+  }),
 
   return {
     talents: data ?? [],
     isLoading,
-    error,
-  };
+    error
+  },
 }

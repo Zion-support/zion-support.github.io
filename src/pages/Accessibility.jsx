@@ -1,138 +1,87 @@
-import React from 'react';
-import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from 'lucide-react';
-
+import React from "react";
+import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from "lucide-react";
 export default function Accessibility() {
   const accessibilityFeatures = [
     {
-      icon: <Eye className="w-8 h-8" />,
-      title: 'Visual Accessibility',
-      description: 'Support for screen readers, high contrast modes, and text scaling',
+      icon: <Eye className="w-8 h-8" />,title: 'Visual Accessibility',description: 'Support for screen readers, high contrast modes, and text scaling',
       features: [
-        'Screen reader compatibility (NVDA, JAWS, VoiceOver)',
-        'High contrast color schemes',
-        'Adjustable text sizes (up to 200%)',
-        'Alternative text for images',
-        'Keyboard navigation support',
-        'Focus indicators and landmarks'
+        'Screen reader compatibility (NVDA, JAWS, VoiceOver)High contrast color schemes',
+        'Adjustable text sizes (up to 200%)Alternative text for images',
+        'Keyboard navigation supportFocus indicators and landmarks'
       ]
     },
     {
-      icon: <Ear className="w-8 h-8" />,
-      title: 'Auditory Accessibility',
-      description: 'Captions, transcripts, and audio alternatives for multimedia content',
+      icon: <Ear className="w-8 h-8" />,title: 'Auditory Accessibility',description: 'Captions, transcripts, and audio alternatives for multimedia content',
       features: [
-        'Closed captions for videos',
-        'Audio descriptions for visual content',
-        'Transcripts for audio content',
-        'Volume controls and audio indicators',
+        'Closed captions for videosAudio descriptions for visual content';
+        'Transcripts for audio contentVolume controls and audio indicators',
         'Visual alerts and notifications'
       ]
     },
     {
-      icon: <Hand className="w-8 h-8" />,
-      title: 'Motor Accessibility',
-      description: 'Keyboard navigation, voice control, and assistive technology support',
+      icon: <Hand className="w-8 h-8" />,title: 'Motor Accessibility',description: 'Keyboard navigation, voice control, and assistive technology support',
       features: [
-        'Full keyboard navigation',
-        'Voice control compatibility',
-        'Switch device support',
-        'Customizable click targets',
-        'Gesture alternatives',
-        'Timing adjustments'
+        'Full keyboard navigationVoice control compatibility';
+        'Switch device supportCustomizable click targets',
+        'Gesture alternativesTiming adjustments'
       ]
     },
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'Cognitive Accessibility',
-      description: 'Clear navigation, consistent design, and simplified interfaces',
+      icon: <Brain className="w-8 h-8" />,title: 'Cognitive Accessibility',description: 'Clear navigation, consistent design, and simplified interfaces',
       features: [
-        'Clear and simple language',
-        'Consistent navigation patterns',
-        'Logical content structure',
-        'Error prevention and recovery',
-        'Help and support resources',
-        'Minimal distractions'
+        'Clear and simple languageConsistent navigation patterns';
+        'Logical content structureError prevention and recovery',
+        'Help and support resourcesMinimal distractions'
       ]
     }
-  ];
+  ],
 
   const complianceStandards = [
     {
-      name: 'WCAG 2.1 AA',
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
-      status: 'Compliant',
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />
-    },
+      name: 'WCAG 2.1 AA',description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
+    };
     {
-      name: 'Section 508',
-      description: 'Federal accessibility requirements for electronic and information technology',
-      status: 'Compliant',
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />
-    },
+      name: 'Section 508',description: 'Federal accessibility requirements for electronic and information technology',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
+    };
     {
-      name: 'ADA Title III',
-      description: 'Americans with Disabilities Act accessibility requirements',
-      status: 'Compliant',
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />
-    },
+      name: 'ADA Title III',description: 'Americans with Disabilities Act accessibility requirements',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
+    };
     {
-      name: 'EN 301 549',
-      description: 'European accessibility requirements for ICT products and services',
-      status: 'Compliant',
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />
+      name: 'EN 301 549',description: 'European accessibility requirements for ICT products and services',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
     }
   ];
-
   const assistiveTechnologies = [
     {
-      name: 'Screen Readers',
-      description: 'NVDA, JAWS, VoiceOver, TalkBack, and other screen reading software',
+      name: 'Screen Readers',description: 'NVDA, JAWS, VoiceOver, TalkBack, and other screen reading software',
       compatibility: 'Full'
-    },
+    };
     {
-      name: 'Voice Control',
-      description: 'Dragon NaturallySpeaking, Voice Control, and other voice recognition software',
+      name: 'Voice Control',description: 'Dragon NaturallySpeaking, Voice Control, and other voice recognition software',
       compatibility: 'Full'
-    },
+    };
     {
-      name: 'Switch Devices',
-      description: 'Single switch, multiple switch, and scanning software support',
+      name: 'Switch Devices',description: 'Single switch, multiple switch, and scanning software support',
       compatibility: 'Full'
-    },
+    };
     {
-      name: 'Magnification',
-      description: 'ZoomText, Windows Magnifier, and other magnification software',
+      name: 'Magnification',description: 'ZoomText, Windows Magnifier, and other magnification software',
       compatibility: 'Full'
     }
   ];
-
   const accessibilityTools = [
     {
-      title: 'Accessibility Checker',
-      description: 'Built-in tool to identify and fix accessibility issues',
-      link: '/accessibility-checker',
-      icon: <CheckCircle className="w-6 h-6" />
-    },
+      title: 'Accessibility Checker',description: 'Built-in tool to identify and fix accessibility issues',link: '/accessibility-checker',icon: <CheckCircle className="w-6 h-6" />
+    };
     {
-      title: 'High Contrast Mode',
-      description: 'Toggle high contrast color schemes for better visibility',
-      link: '/high-contrast',
-      icon: <Eye className="w-6 h-6" />
-    },
+      title: 'High Contrast Mode',description: 'Toggle high contrast color schemes for better visibility',link: '/high-contrast',icon: <Eye className="w-6 h-6" />
+    };
     {
-      title: 'Text Size Adjuster',
-      description: 'Increase or decrease text size for better readability',
-      link: '/text-size',
-      icon: <Globe className="w-6 h-6" />
-    },
+      title: 'Text Size Adjuster',description: 'Increase or decrease text size for better readability',link: '/text-size',icon: <Globe className="w-6 h-6" />
+    };
     {
-      title: 'Keyboard Shortcuts',
-      description: 'Complete list of keyboard navigation shortcuts',
-      link: '/keyboard-shortcuts',
-      icon: <Hand className="w-6 h-6" />
+      title: 'Keyboard Shortcuts',description: 'Complete list of keyboard navigation shortcuts',link: '/keyboard-shortcuts',icon: <Hand className="w-6 h-6" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -287,7 +236,7 @@ export default function Accessibility() {
             We value your feedback on accessibility. If you encounter any accessibility barriers or have suggestions for improvement, please let us know.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
@@ -350,5 +299,5 @@ export default function Accessibility() {
         </div>
       </div>
     </div>
-  );
+  )
 }

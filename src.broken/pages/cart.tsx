@@ -1,17 +1,17 @@
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { selectCartItems, selectCartSubtotal, updateQuantity } from '@/store/cartSlice';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Link } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '@/store/hooks',
+import { selectCartItems, selectCartSubtotal, updateQuantity } from '@/store/cartSlice',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Link } from 'react-router-dom',
 
 export default function CartPage() {
-  const items = useAppSelector(selectCartItems);
-  const subtotal = useAppSelector(selectCartSubtotal);
-  const dispatch = useAppDispatch();
+  const items = useAppSelector(selectCartItems),
+  const subtotal = useAppSelector(selectCartSubtotal),
+  const dispatch = useAppDispatch(),
 
   const handleQtyChange = (id: string, value: number) => {
-    dispatch(updateQuantity({ id, quantity: value }));
-  };
+    dispatch(updateQuantity({ id, quantity: value })),
+  },
 
   return (
     <div className="min-h-screen bg-zion-blue p-6">
@@ -45,5 +45,5 @@ export default function CartPage() {
         </Button>
       </div>
     </div>
-  );
+  ),
 }

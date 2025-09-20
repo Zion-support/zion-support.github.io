@@ -1,1 +1,1 @@
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary,

@@ -1,24 +1,24 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import ProtectedRoute from '@/components/ProtectedRoute';
-import { useAuth } from '@/hooks/useAuth';
-import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-import { vi, describe, it, expect, beforeEach, type MockInstance } from 'vitest';
+import React from 'react',
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter, Routes, Route } from 'react-router-dom',
+import ProtectedRoute from '@/components/ProtectedRoute',
+import { useAuth } from '@/hooks/useAuth',
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',
+import { useWhitelabel } from '@/context/WhitelabelContext',
+import { vi, describe, it, expect, beforeEach, type MockInstance } from 'vitest',
 
-vi.mock('@/hooks/useAuth');
-vi.mock('@/hooks/useWhitelabelTenant');
-vi.mock('@/context/WhitelabelContext');
+vi.mock('@/hooks/useAuth'),
+vi.mock('@/hooks/useWhitelabelTenant'),
+vi.mock('@/context/WhitelabelContext'),
 
-const mockUseAuth = useAuth as MockInstance<any,any>;
-const mockUseTenantAdminStatus = useTenantAdminStatus as MockInstance<any,any>;
-const mockUseWhitelabel = useWhitelabel as MockInstance<any,any>;
+const mockUseAuth = useAuth as MockInstance<any,any>,
+const mockUseTenantAdminStatus = useTenantAdminStatus as MockInstance<any,any>,
+const mockUseWhitelabel = useWhitelabel as MockInstance<any,any>,
 
 beforeEach(() => {
-  mockUseTenantAdminStatus.mockReturnValue({ isAdmin: false, isLoading: false });
-  mockUseWhitelabel.mockReturnValue({ tenant: null });
-});
+  mockUseTenantAdminStatus.mockReturnValue({ isAdmin: false, isLoading: false }),
+  mockUseWhitelabel.mockReturnValue({ tenant: null }),
+}),
 
 function renderWithRouter(ui: React.ReactElement, initialEntries: string[]) {
   return render(
@@ -29,40 +29,40 @@ function renderWithRouter(ui: React.ReactElement, initialEntries: string[]) {
         <Route path="/protected" element={ui} />
       </Routes>
     </MemoryRouter>
-  );
+  ),
 }
 
 describe('ProtectedRoute', () => {
   it('renders children when user is authenticated', () => {
-    mockUseAuth.mockReturnValue({ user: { id: '1', userType: 'creator' }, isLoading: false });
+    mockUseAuth.mockReturnValue({ user: { id: '1', userType: 'creator' }, isLoading: false }),
     renderWithRouter(
       <ProtectedRoute>
         <div data-testid="child" />
       </ProtectedRoute>,
       ['/protected']
-    );
-    expect(screen.getByTestId('child')).toBeInTheDocument();
-  });
+    ),
+    expect(screen.getByTestId('child')).toBeInTheDocument(),
+  }),
 
   it('redirects to login when not authenticated', () => {
-    mockUseAuth.mockReturnValue({ user: null, isLoading: false });
+    mockUseAuth.mockReturnValue({ user: null, isLoading: false }),
     renderWithRouter(
       <ProtectedRoute>
         <div data-testid="child" />
       </ProtectedRoute>,
       ['/protected']
-    );
-    expect(screen.getByTestId('login-page')).toBeInTheDocument();
-  });
+    ),
+    expect(screen.getByTestId('login-page')).toBeInTheDocument(),
+  }),
 
   it('redirects to unauthorized when adminOnly and user lacks permissions', () => {
-    mockUseAuth.mockReturnValue({ user: { id: '1', userType: 'creator' }, isLoading: false });
+    mockUseAuth.mockReturnValue({ user: { id: '1', userType: 'creator' }, isLoading: false }),
     renderWithRouter(
       <ProtectedRoute adminOnly>
         <div data-testid="admin" />
       </ProtectedRoute>,
       ['/protected']
-    );
-    expect(screen.getByTestId('unauthorized-page')).toBeInTheDocument();
-  });
-});
+    ),
+    expect(screen.getByTestId('unauthorized-page')).toBeInTheDocument(),
+  }),
+}),

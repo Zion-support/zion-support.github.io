@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   TrendingUp, 
   DollarSign, 
   CheckCircle, 
@@ -32,64 +32,37 @@ import {
   DollarSign as DollarIcon,
   BarChart,
   PieChart as PieChartIcon
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIFinancialTrading() {
   const features = [
     {
-      icon: Brain,
-      title: "AI Trading Algorithms",
-      description: "Advanced machine learning algorithms that adapt to market conditions in real-time"
-    },
+      icon: Brain,title: "AI Trading Algorithms",description: "Advanced machine learning algorithms that adapt to market conditions in real-time"
+    };
     {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast market movements with high accuracy using historical data and AI models"
-    },
+      icon: TrendingUp,title: "Predictive Analytics",description: "Forecast market movements with high accuracy using historical data and AI models"
+    };
     {
-      icon: Shield,
-      title: "Risk Management",
-      description: "Intelligent risk assessment and automated stop-loss mechanisms"
-    },
+      icon: Shield,title: "Risk Management",description: "Intelligent risk assessment and automated stop-loss mechanisms"
+    };
     {
-      icon: Zap,
-      title: "High-Frequency Trading",
-      description: "Ultra-fast execution with microsecond precision for optimal trade timing"
+      icon: Zap,title: "High-Frequency Trading",description: "Ultra-fast execution with microsecond precision for optimal trade timing"
     }
   ];
-
   const tradingStrategies = [
     {
-      name: "Momentum Trading",
-      description: "AI-powered momentum detection and trend following strategies",
-      successRate: "87.3%",
-      avgReturn: "12.5%",
-      icon: TrendingUp
-    },
+      name: "Momentum Trading",description: "AI-powered momentum detection and trend following strategies",successRate: "87.3%",avgReturn: "12.5%",icon: TrendingUp
+    };
     {
-      name: "Arbitrage Trading",
-      description: "Real-time price difference detection across multiple exchanges",
-      successRate: "94.1%",
-      avgReturn: "8.2%",
-      icon: DollarSign
-    },
+      name: "Arbitrage Trading",description: "Real-time price difference detection across multiple exchanges",successRate: "94.1%",avgReturn: "8.2%",icon: DollarSign
+    };
     {
-      name: "Mean Reversion",
-      description: "Statistical analysis for price correction opportunities",
-      successRate: "82.7%",
-      avgReturn: "15.8%",
-      icon: BarChart
-    },
+      name: "Mean Reversion",description: "Statistical analysis for price correction opportunities",successRate: "82.7%",avgReturn: "15.8%",icon: BarChart
+    };
     {
-      name: "Sentiment Analysis",
-      description: "Social media and news sentiment-driven trading decisions",
-      successRate: "79.5%",
-      avgReturn: "18.3%",
-      icon: BrainCircuit
+      name: "Sentiment Analysis",description: "Social media and news sentiment-driven trading decisions",successRate: "79.5%",avgReturn: "18.3%",icon: BrainCircuit
     }
   ];
-
   const benefits = [
     "Increase trading profits by up to 300%",
     "Reduce trading risks by 65%",
@@ -97,15 +70,13 @@ export default function AIFinancialTrading() {
     "Real-time market analysis and alerts",
     "Multi-asset portfolio management",
     "Advanced backtesting and optimization"
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$4,500",
-      period: "/month",
-      features: [
-        "Up to $100K portfolio",
+      name: "Starter",price: "$4,500",
+      period: "/month",features: [
+        "Up to $100K portfolio";
         "5 trading strategies",
         "Basic risk management",
         "Email support",
@@ -113,11 +84,9 @@ export default function AIFinancialTrading() {
       ]
     },
     {
-      name: "Professional",
-      price: "$9,500",
-      period: "/month",
-      features: [
-        "Up to $1M portfolio",
+      name: "Professional",price: "$9,500",
+      period: "/month",features: [
+        "Up to $1M portfolio";
         "15 trading strategies",
         "Advanced risk management",
         "Priority support",
@@ -126,11 +95,9 @@ export default function AIFinancialTrading() {
       ]
     },
     {
-      name: "Enterprise",
-      price: "$25,000",
-      period: "/month",
-      features: [
-        "Unlimited portfolio size",
+      name: "Enterprise",price: "$25,000",
+      period: "/month",features: [
+        "Unlimited portfolio size";
         "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
@@ -138,7 +105,7 @@ export default function AIFinancialTrading() {
         "Custom development"
       ]
     }
-  ];
+  ],
 
   const supportedAssets = [
     "Stocks & ETFs",
@@ -147,7 +114,7 @@ export default function AIFinancialTrading() {
     "Commodities",
     "Options & Futures",
     "Bonds & Fixed Income"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -172,7 +139,7 @@ export default function AIFinancialTrading() {
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your trading with AI-powered algorithms, predictive analytics, 
+              Revolutionize your trading with AI-powered algorithms, predictive analytics;
               and automated risk management for maximum returns and minimal risks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -452,7 +419,7 @@ export default function AIFinancialTrading() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -461,5 +428,5 @@ export default function AIFinancialTrading() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Shield, Brain, Zap, Lock, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredCybersecurity: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredCybersecurity: React.FC = () => {
       title: 'Multi-platform Support',
       description: 'Cybersecurity across various platforms and devices'
     }
-  ];
+  ],
 
   const securityCapabilities = [
     {
       area: 'Threat Detection',
-      capabilities: ['AI-powered analysis', 'Behavioral monitoring', 'Anomaly detection', 'Pattern recognition'],
+      capabilities: ['AI-powered analysisBehavioral monitoring', 'Anomaly detectionPattern recognition'],
       improvement: '99.9% accuracy',
       detection: 'Advanced'
     },
     {
       area: 'Incident Response',
-      capabilities: ['Automated response', 'Threat containment', 'Recovery procedures', 'Forensic analysis'],
+      capabilities: ['Automated responseThreat containment', 'Recovery proceduresForensic analysis'],
       improvement: 'Real-time response',
       response: 'Instant'
     },
     {
       area: 'Vulnerability Management',
-      capabilities: ['Automated scanning', 'Risk assessment', 'Patch management', 'Compliance monitoring'],
+      capabilities: ['Automated scanningRisk assessment', 'Patch managementCompliance monitoring'],
       improvement: '100% coverage',
       management: 'Comprehensive'
     },
     {
       area: 'Security Analytics',
-      capabilities: ['Threat intelligence', 'Risk scoring', 'Security metrics', 'Compliance reporting'],
+      capabilities: ['Threat intelligenceRisk scoring', 'Security metricsCompliance reporting'],
       improvement: 'Actionable insights',
       analytics: 'Intelligent'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Enterprise Security',
       description: 'AI-powered cybersecurity for enterprise networks and corporate environments',
-      benefits: ['Network protection', 'Endpoint security', 'Data protection', 'Compliance management']
+      benefits: ['Network protectionEndpoint security', 'Data protectionCompliance management']
     },
     {
       title: 'Cloud Security',
       description: 'Cybersecurity solutions for cloud infrastructure and applications',
-      benefits: ['Cloud protection', 'API security', 'Data encryption', 'Access control']
+      benefits: ['Cloud protectionAPI security', 'Data encryptionAccess control']
     },
     {
       title: 'IoT Security',
       description: 'Security solutions for Internet of Things devices and networks',
-      benefits: ['Device protection', 'Network security', 'Data privacy', 'Threat prevention']
+      benefits: ['Device protectionNetwork security', 'Data privacyThreat prevention']
     },
     {
       title: 'Financial Services',
       description: 'Cybersecurity for banking, fintech, and financial institutions',
-      benefits: ['Fraud prevention', 'Transaction security', 'Compliance', 'Risk management']
+      benefits: ['Fraud preventionTransaction security', 'ComplianceRisk management']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredCybersecurity: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with cybersecurity',
       features: [
-        'Basic cybersecurity features',
-        'Single platform support',
-        'Standard protection',
-        'Email support',
+        'Basic cybersecurity featuresSingle platform support',
+        'Standard protectionEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredCybersecurity: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced cybersecurity needs',
       features: [
-        'Advanced cybersecurity features',
-        'Multi-platform support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced cybersecurity featuresMulti-platform support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Threat intelligence'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredCybersecurity: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex cybersecurity requirements',
       features: [
-        'Custom cybersecurity development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom cybersecurity developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredCybersecurity: React.FC = () => {
       position: "Security Director",
       company: "Advanced Security Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredCybersecurity: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Protect with AI-Powered Cybersecurity Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredCybersecurity: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredCybersecurity;
+export default AIPoweredCybersecurity,

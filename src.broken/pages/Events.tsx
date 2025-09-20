@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
   {
@@ -61,19 +61,19 @@ export default function Page() {
     ],
     image: "/images / digital - transformation - summit.jpg"
   }
-];
+],
 
-const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
-const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
-const statuses = ['All', 'upcoming', 'past'];
+const eventTypes = ['AllConference', 'WorkshopWebinar', 'Symposium'],
+const categories = ['AllAI & ML', 'CybersecurityCloud & DevOps', 'Data AnalyticsIoT & Edge', 'Digital Transformation'],
+const statuses = ['Allupcoming', 'past'],
 
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
+  const [selectedType, setSelectedType] = useState('All'),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedStatus, setSelectedStatus] = useState('All'),
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedType, setSelectedType] = useState('all'),
 
   const categories = [{ id: 'all', name: 'All Categories', icon: Calendar, count: 0 },
     { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
@@ -85,7 +85,7 @@ const statuses = ['All', 'upcoming', 'past'];
     { id: 'data - analytics', name: 'Data & Analytics', icon: BarChart, count: 6 },
     { id: 'digital - transformation', name: 'Digital Transformation', icon: TrendingUp, count: 9 },
     { id: 'startup - tech', name: 'Startup Technology', icon: Rocket, count: 3 }
-  ];
+  ],
 
   const eventTypes = [{ id: 'all', name: 'All Types', icon: Calendar },
     { id: 'webinar', name: 'Webinar', icon: Video },
@@ -94,7 +94,7 @@ const statuses = ['All', 'upcoming', 'past'];
     { id: 'hackathon', name: 'Hackathon', icon: Code },
     { id: 'meetup', name: 'Meetup', icon: Users },
     { id: 'summit', name: 'Summit', icon: Star }
-  ];
+  ],
 
   const events = [{
       id: 1,
@@ -113,14 +113,11 @@ const statuses = ['All', 'upcoming', 'past'];
       isFree: false,
       featured: true,
       speakers: [
-        'Dr.Sarah Chen - Chief Security Officer, Zion Tech Group',
-        'Michael Rodriguez - Director of AI Security, Microsoft',
+        'Dr.Sarah Chen - Chief Security Officer, Zion Tech GroupMichael Rodriguez - Director of AI Security, Microsoft',
         'Lisa Park - Cybersecurity Researcher, MIT'
       ],
-      agenda: ['Keynote: The Future of AI in Cybersecurity',
-        'Panel: AI vs.AI - The Arms Race in Security',
-        'Workshop: Implementing AI Security Solutions',
-        'Networking & Demo Showcase'
+      agenda: ['Keynote: The Future of AI in CybersecurityPanel: AI vs.AI - The Arms Race in Security',
+        'Workshop: Implementing AI Security SolutionsNetworking & Demo Showcase'
       ],
       registrationUrl: '#',
       image: '/events / ai - cybersecurity - summit.jpg'
@@ -141,13 +138,10 @@ const statuses = ['All', 'upcoming', 'past'];
       price: 'Free',
       isFree: true,
       featured: true,
-      speakers: ['Dr.Emily Watson - Quantum Computing Lead, Zion Tech Group',
-        'Alex Thompson - Quantum Algorithm Specialist'
+      speakers: ['Dr.Emily Watson - Quantum Computing Lead, Zion Tech GroupAlex Thompson - Quantum Algorithm Specialist'
       ],
-      agenda: ['Introduction to Quantum Computing',
-        'Quantum Algorithms Deep Dive',
-        'Hands - on Quantum Programming',
-        'Real - world Applications Discussion'
+      agenda: ['Introduction to Quantum ComputingQuantum Algorithms Deep Dive',
+        'Hands - on Quantum ProgrammingReal - world Applications Discussion'
       ],
       registrationUrl: '#',
       image: '/events / quantum - computing - workshop.jpg'
@@ -168,13 +162,10 @@ const statuses = ['All', 'upcoming', 'past'];
       price: 'Free',
       isFree: true,
       featured: false,
-      speakers: ['David Kim - Cloud Architecture Lead, Zion Tech Group',
-        'Sarah Johnson - MLOps Engineer, Google Cloud'
+      speakers: ['David Kim - Cloud Architecture Lead, Zion Tech GroupSarah Johnson - MLOps Engineer, Google Cloud'
       ],
-      agenda: ['Cloud - Native AI Architecture Patterns',
-        'MLOps Best Practices',
-        'Scaling AI Workloads in the Cloud',
-        'Q & A Session'
+      agenda: ['Cloud - Native AI Architecture PatternsMLOps Best Practices',
+        'Scaling AI Workloads in the CloudQ & A Session'
       ],
       registrationUrl: '#',
       image: '/events / cloud - native - ai - webinar.jpg'
@@ -195,14 +186,11 @@ const statuses = ['All', 'upcoming', 'past'];
       price: 'Free',
       isFree: true,
       featured: false,
-      speakers: ['Local Blockchain Developers',
-        'Startup Founders',
+      speakers: ['Local Blockchain DevelopersStartup Founders',
         'Industry Experts'
       ],
-      agenda: ['Networking & Refreshments',
-        'Lightning Talks',
-        'Open Discussion',
-        'Future Meetup Planning'
+      agenda: ['Networking & RefreshmentsLightning Talks',
+        'Open DiscussionFuture Meetup Planning'
       ],
       registrationUrl: '#',
       image: '/events / blockchain - meetup.jpg'
@@ -223,14 +211,11 @@ const statuses = ['All', 'upcoming', 'past'];
       price: '$499',
       isFree: false,
       featured: true,
-      speakers: ['Dr.Lisa Park - Chief Data Scientist, Zion Tech Group',
-        'Dr.Robert Chen - VP of Analytics, Netflix',
+      speakers: ['Dr.Lisa Park - Chief Data Scientist, Zion Tech GroupDr.Robert Chen - VP of Analytics, Netflix',
         'Maria Garcia - Data Science Director, Uber'
       ],
-      agenda: ['Keynote: The Future of Data - Driven Decision Making',
-        'Track Sessions: ML, Analytics, Visualization',
-        'Industry Case Studies',
-        'Networking & Career Fair'
+      agenda: ['Keynote: The Future of Data - Driven Decision MakingTrack Sessions: ML, Analytics, Visualization',
+        'Industry Case StudiesNetworking & Career Fair'
       ],
       registrationUrl: '#',
       image: '/events / data - science - conference.jpg'
@@ -251,62 +236,59 @@ const statuses = ['All', 'upcoming', 'past'];
       price: 'Free',
       isFree: true,
       featured: false,
-      speakers: ['IoT Experts from Zion Tech Group',
-        'Industry Mentors',
+      speakers: ['IoT Experts from Zion Tech GroupIndustry Mentors',
         'Judges Panel'
       ],
-      agenda: ['Opening Ceremony & Team Formation',
-        '24 - Hour Hacking Session',
-        'Mentorship & Workshops',
-        'Project Presentations & Judging'
+      agenda: ['Opening Ceremony & Team Formation24 - Hour Hacking Session',
+        'Mentorship & WorkshopsProject Presentations & Judging'
       ],
       registrationUrl: '#',
       image: '/events / iot - hackathon.jpg'
     }
-  ];
+  ],
 
   const filteredEvents = events.filter(event => {
     const matchesSearch = event.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
-                         event.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
-    const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
-    const matchesType = selectedType === 'all' || event.type === selectedType;
+                         event.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
+    const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory,
+    const matchesType = selectedType === 'all' || event.type === selectedType,
 
-    return matchesSearch && matchesCategory && matchesType;
-  }) ;
+    return matchesSearch && matchesCategory && matchesType,
+  }) ,
 
-  const upcomingEvents = events.filter(event => new Date (event.date) >= new Date () ) .slice(0, 3) ;
-  const featuredEvents = events.filter(event => event.featured) ;
+  const upcomingEvents = events.filter(event => new Date (event.date) >= new Date () ) .slice(0, 3) ,
+  const featuredEvents = events.filter(event => event.featured) ,
 
   const formatDate = (dateString: anystring) => {
-    const date = new Date(dateString) ;
+    const date = new Date(dateString) ,
     return date.toLocaleDateString('en - US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    }) ;
-  };
+    }) ,
+  },
 
   const getCategoryIcon = (category: anystring) => {
     switch(category) {
-      case 'AI & ML': return Brain;
-      case 'Cybersecurity': return Shield;
-      case 'Cloud & DevOps': return Cloud;
-      case 'Data Analytics': return TrendingUp;
-      case 'IoT & Edge': return Zap;
-      case 'Digital Transformation': return Globe;
-      default: return BookOpen;
+      case 'AI & ML': return Brain,
+      case 'Cybersecurity': return Shield,
+      case 'Cloud & DevOps': return Cloud,
+      case 'Data Analytics': return TrendingUp,
+      case 'IoT & Edge': return Zap,
+      case 'Digital Transformation': return Globe,
+      default: return BookOpen
     }
-  };
+  },
 
   const getStatusBadge = (status: anystring) => {
     if(status === 'upcoming') {
-      return < span className="px-3 py-1 bg-green - 500 / 20 text-green - 400 text-xs rounded-full border border-green -500 / 30">Upcoming</span>;
+      return < span className="px-3 py-1 bg-green - 500 / 20 text-green - 400 text-xs rounded-full border border-green -500 / 30">Upcoming</span>
     } else {
-      return < span className="px-3 py-1 bg-gray - 500 / 20 text-gray - 400 text-xs rounded-full border border-gray -500 / 30">Past</span>;
+      return < span className="px-3 py-1 bg-gray - 500 / 20 text-gray - 400 text-xs rounded-full border border-gray -500 / 30">Past</span>,
     }
 
-  };
+  },
 
   return (<div  className="min - h-screen bg-zion -blue">
       {/* Hero Section */}
@@ -441,7 +423,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
             <div  className="grid grid - cols - 1 lg: anygrid - cols - 2 gap-8">
               {upcomingEvents.map((event, index) => {
-                const CategoryIcon = getCategoryIcon(event.category) ;
+                const CategoryIcon = getCategoryIcon(event.category) ,
                 return (<motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -514,15 +496,15 @@ const statuses = ['All', 'upcoming', 'past'];
                         {event.isFree ? 'Free' : event.price}
                       </div>
 
-                      <button     className="bg-gradient - to - r from - zion - cyan to - zion - purple text-white px-4 py-2 rounded-lg font - medium hover:shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1 flex items - center gap-2">
+                      <button     className="bg-gradient - to - r from - zion - cyan to - zion - purple text-white px-4 py-2 rounded-lg font - medium hover: shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1 flex items - center gap-2">
                         Register Now < ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
-                </motion.div>;) ) }
+                </motion.div>,) ) }
             </div>
           </div>
-        </section>;) }
+        </section>,) }
 
       {/* Main Content */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -556,7 +538,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
             <div  className="grid grid - cols - 1 lg: anygrid - cols - 2 gap-8">
               {pastEvents.map((event, index) => {
-                const CategoryIcon = getCategoryIcon(event.category) ;
+                const CategoryIcon = getCategoryIcon(event.category) ,
                 return (<motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -568,7 +550,7 @@ const statuses = ['All', 'upcoming', 'past'];
                   >
                     Clear all filters
                   </button>
-                </div>;) }
+                </div>,) }
 
               {/* Load More Button */}
               {filteredEvents.length > 6 && (<div  className="text-center mt-12">
@@ -596,7 +578,7 @@ const statuses = ['All', 'upcoming', 'past'];
             <p className="text-zion - slate - light text-lg mb-8 max - w-2xl mx -auto">
               Have an idea for an event, webinar, or workshop? We'd love to collaborate ! Let's create amazing learning experiences together.</p>
 
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <button     className="bg-gradient - to - r from - zion - cyan to - zion - purple text-white px-8 py-4 rounded-lg font - semibold hover:shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 hover:-translate - y-1">
                 Propose an Event
               </button>
@@ -607,5 +589,5 @@ const statuses = ['All', 'upcoming', 'past'];
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

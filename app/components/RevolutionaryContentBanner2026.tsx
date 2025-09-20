@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export default function RevolutionaryContentBanner2026() {,
   return (,
     <section className="py-12 bg-gradient-to-r from-indigo-50 to-purple-50">,
@@ -65,5 +65,4 @@ export default function RevolutionaryContentBanner2026() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

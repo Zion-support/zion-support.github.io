@@ -1,16 +1,11 @@
-import React from 'react';
-import { X } from 'lucide-react';
-
+import React from "react";
+import { X } from "lucide-react";
 interface Filter {
-  key: string;
-  value: string;
-  label: string;
+  key: string,value: string,label: string
 }
 
 interface ActiveFiltersBarProps {
-  filters: Filter[];
-  onRemoveFilter: (key: string) => void;
-  onClearAll: () => void;
+  filters: Filter[],onRemoveFilter: (key: string) => void,onClearAll: () => void
 }
 
 export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {
@@ -39,10 +34,10 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
 
       <button
         onClick={onClearAll}
-        className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline"
+        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
       </button>
     </div>
-  );
+  )
 }

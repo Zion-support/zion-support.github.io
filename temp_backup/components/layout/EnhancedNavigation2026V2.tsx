@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import Link from 'next/link',
 import { 
   Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
   Brain, Cpu, Shield, Zap, Star, Users, TrendingUp,
@@ -9,14 +9,14 @@ import {
   Search, Bell, User, Settings, LogOut, SparklesIcon,
   Eye, Code, Server, Network, Globe2,
   Smartphone, Monitor, Laptop, Watch, Camera, Headphones
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -124,7 +124,7 @@ const serviceCategories = [
       { name: 'Incident Automation Suite', href: '/incident-automation-suite', description: 'Automated incident response', price: '$299/month', popular: false }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -134,32 +134,32 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog', icon: Globe },
   { name: 'Careers', href: '/careers', icon: Target },
   { name: 'Contact', href: '/contact', icon: Mail }
-];
+],
 
 const EnhancedNavigation2026V2 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category);
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)
+  },
 
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  );
+  ),
 
 const EnhancedNavigation2026V2: React.FC = () => {
   return (
@@ -167,7 +167,7 @@ const EnhancedNavigation2026V2: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedNavigation2026V2</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedNavigation2026V2;
+export default EnhancedNavigation2026V2,

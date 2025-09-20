@@ -1,29 +1,29 @@
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { TrendingUp, Award, Clock, ArrowRight, Zap, Star, Users, DollarSign, ArrowRight } from 'lucide-react';
+'use client',
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { TrendingUp, Award, Clock, ArrowRight, Zap, Star, Users, DollarSign, ArrowRight } from 'lucide-react',
 interface ContentItem {,
-  id: string;
-  title: string;
-  type: 'blog' | 'case-study' | 'resource';
-  url: string;
-  roi: string;
-  savings: string;
-  readingTime: string;
-  featured: boolean;
-  description: string;
+  id: string,
+  title: string,
+  type: 'blog' | 'case-study' | 'resource',
+  url: string,
+  roi: string,
+  savings: string,
+  readingTime: string,
+  featured: boolean,
+  description: string,
   metrics: {,
-    roi: string;
-    savings: string;
-    efficiency: string;
-    accuracy: string,};
+    roi: string,
+    savings: string,
+    efficiency: string,
+    accuracy: string},
 }
 ,
 const UltimateContent2025Showcase: React.FC = () => {,
-  const [activeFilter, setActiveFilter] = useState<'all' | 'blog' | 'case-study' | 'resource'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'blog' | 'case-study' | 'resource'>('all'),
   const featuredContent = [,
     {}
-  }, []);
+  }, []),
         {/* Header */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">,
@@ -48,7 +48,7 @@ const UltimateContent2025Showcase: React.FC = () => {,
             <div className="text-3xl font-bold text-gray-900 mb-2">99.7%</div>,
             <div className="text-gray-600">Success Rate</div>,
           </div>,
-        </div>,
+        </div>
               }`}
             >,
               {filter.label} ({filter.count}),
@@ -62,7 +62,7 @@ const UltimateContent2025Showcase: React.FC = () => {,
               key={item.id}
               className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover: shadow-xl transition-all duration-300 group",
             >,
-              {/* Header */,}
+              {/* Header */}
               <div className="p-6 border-b border-gray-100">,
                 <div className="flex items-center justify-between mb-4">,
                   <div className={`flex items-center space-x-2 px-3 py-1 rounded-full text-sm font-medium border ${getTypeColor(item.type)}`}>,
@@ -75,7 +75,7 @@ const UltimateContent2025Showcase: React.FC = () => {,
                   </div>,
                 </div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover: text-purple-600 transition-colors">,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 <p className="text-gray-600 leading-relaxed">,
                   {item.description}
@@ -103,14 +103,14 @@ const UltimateContent2025Showcase: React.FC = () => {,
                 </div>,
                 <Link,
                   href={item.url}
-                  className={`w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r ${getTypeGradient(item.type)} text-white px-6 py-3 rounded-lg font-semibold hover: shadow-lg transition-all duration-200 group`,}
+                  className={`w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r ${getTypeGradient(item.type)} text-white px-6 py-3 rounded-lg font-semibold hover: shadow-lg transition-all duration-200 group`}
                 >,
                   <span>Read {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'}</span>,
                   <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />,
                 </Link>,
               </div>,
             </div>,
-          )),}
+          ))}
         </div>,
         {/* Additional Content Grid */}
         <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
@@ -118,7 +118,7 @@ const UltimateContent2025Showcase: React.FC = () => {,
             <div,
               key={content.id}
               className={`bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 cursor-pointer transition-all duration-300 hover: bg-opacity-20 ${,
-                index === currentSlide ? 'ring-2 ring-yellow-400' : '',}`}
+                index === currentSlide ? 'ring-2 ring-yellow-400' : ''}`}
               onClick={() => setCurrentSlide(index)}
             >,
               <div className="flex items-center gap-2 mb-3">,
@@ -152,5 +152,5 @@ const UltimateContent2025Showcase: React.FC = () => {,
         </div>,
       </div>,
     </section>,
-  ),};
-export default UltimateContent2025Showcase;]
+  )},
+export default UltimateContent2025Showcase,]

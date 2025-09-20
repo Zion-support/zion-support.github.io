@@ -15,12 +15,11 @@
                       <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">,
                         <category.icon className="h-5 w-5 text-white" />,
                       <div>,
-                        <div className="text-white font-medium">{category.name,}</div>,
+                        <div className="text-white font-medium">{category.name}</div>,
                         <div className="text-gray-400 text-sm">{category.count} services</div>,
                       </div>,
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Key Benefits */}
@@ -30,15 +29,14 @@
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Services</h3>,
               <div className="space-y-2">,
                 {[,
-                  "Expert AI professionals with 10+ years experience";
-                  "Proven track record with 100% success rate";
-                  "Custom solutions tailored to your business needs";
-                  "24/7 support and ongoing maintenance",
+                  "Expert AI professionals with 10+ years experience",
+                  "Proven track record with 100% success rate",
+                  "Custom solutions tailored to your business needs",
+                  "24/7 support and ongoing maintenance"
                 ].map((benefitindex) => (,
                   <div key={index} className="flex items-center space-x-3">,
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />,
-                    <span className="text-gray-300">{benefit}</span>,
-                ))}
+                    <span className="text-gray-300">{benefit}</span>))}
               </div>,
             </div>,
             {/* CTA Buttons */}
@@ -57,7 +55,7 @@
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Service Showcase */,}
+          {/* Right Content - Service Showcase */}
           <div,
             className="relative",
           >,
@@ -90,7 +88,7 @@
                   <div,
                     key={index}
                     className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover: border-white/20 transition-all duration-300 ${,
-                      currentService === index ? 'ring-2 ring-purple-500' : '',}`}
+                      currentService === index ? 'ring-2 ring-purple-500' : ''}`}
                     onClick={() => setCurrentService(index)}
                   >,
                     <div className={`inline-flex p-2 rounded-lg bg-gradient-to-r ${service.color} mb-3`}>,
@@ -113,8 +111,7 @@
                     <stat.icon className="h-6 w-6 text-purple-400 mx-auto mb-2" />,
                     <div className="text-white text-xl font-bold">{stat.value}</div>,
                     <div className="text-gray-400 text-sm">{stat.label}</div>,
-                  </div>,
-                ))}
+                  </div>))}
             {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-400 rounded-full animate-bounce" />,
             <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-pulse" />,
@@ -125,9 +122,9 @@
         </svg>,
       </div>,
     </div>,
-  );
-export default ComprehensiveServiceShowcase2025PromotionBanner;
-import React from "react";
+  ),
+export default ComprehensiveServiceShowcase2025PromotionBanner,
+import React from "react",
 const function ComprehensiveServiceShowcase2025PromotionBanner() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -138,7 +135,7 @@ const function ComprehensiveServiceShowcase2025PromotionBanner() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function ComprehensiveServiceShowcase2025PromotionBanner() {;
+  ),
+},
+export default function ComprehensiveServiceShowcase2025PromotionBanner() {,
 }}}

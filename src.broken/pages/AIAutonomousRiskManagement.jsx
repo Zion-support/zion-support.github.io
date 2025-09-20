@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="mb-16">
@@ -65,15 +65,11 @@ export default function Page() {
             <h2 className="text-4xl font - bold text-white text-center mb-12">
               Risk Management Solutions
             </h2>
-            <div className="grid md:grid - cols - 4 gap-6">
-              {['Security Risk Management',
-                'Financial Risk Management',
-                'Operational Risk Management',
-                'Strategic Risk Management',
-                'Compliance Risk Management',
-                'Technology Risk Management',
-                'Environmental Risk Management',
-                'Reputational Risk Management',
+            <div className="grid md: grid - cols - 4 gap-6">
+              {['Security Risk ManagementFinancial Risk Management',
+                'Operational Risk ManagementStrategic Risk Management',
+                'Compliance Risk ManagementTechnology Risk Management',
+                'Environmental Risk ManagementReputational Risk Management'
               ].map (type => (<div
                   key={type}
                   className="bg-white / 5 rounded-lg p - 4 text-center border border-white / 10"
@@ -121,7 +117,7 @@ export default function Page() {
               Transform your risk management with AI that continuously
               identifies and mitigates threats
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-red - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Start Managing Risks
               </button>
@@ -132,5 +128,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

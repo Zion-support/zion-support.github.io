@@ -106,7 +106,7 @@ class PerformanceMonitor {
   public sendToAnalytics() {
     // Send metrics to analytics service
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'performance_metrics', {
+      window.gtag('eventperformance_metrics', {
         custom_map: {
           load_time: this.metrics.loadTime,
           fcp: this.metrics.firstContentfulPaint,

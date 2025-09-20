@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Layout from './layout/Layout',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Eye, Target, Sparkles
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 // Import our new innovative services
-import { innovative2025AdvancedServices } from '../data/innovative-2025-advanced-services';
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
+import { innovative2025AdvancedServices } from '../data/innovative-2025-advanced-services',
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services',
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -29,7 +29,7 @@ const LoadingFallback = () => (
       <p className="text-sm text-gray-500">Preparing your futuristic digital transformation journey</p>
     </motion.div>
   </div>
-);
+),
 
 const EnhancedHomepage2025: React.FC = () => {
   return (
@@ -37,7 +37,7 @@ const EnhancedHomepage2025: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedHomepage2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedHomepage2025;
+export default EnhancedHomepage2025,

@@ -1,10 +1,10 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Quantum Neural Network Platform - Zion Tech Group",
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.",
-  keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group",
-};
+  keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"
+},
 
 export default function QuantumNeuralNetworkPlatformPage() {
   return (
@@ -320,7 +320,7 @@ export default function QuantumNeuralNetworkPlatformPage() {
             <p className="text-xl text-gray-300 mb-8">
               Join the quantum revolution and unlock computational power that was previously impossible.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
                 Get Platform Access
               </Link>
@@ -332,5 +332,5 @@ export default function QuantumNeuralNetworkPlatformPage() {
         </section>
       </div>
     </div>
-  );
+  )
 }

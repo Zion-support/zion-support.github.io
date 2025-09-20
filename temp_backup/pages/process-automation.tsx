@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Zap, Cog, Brain, Rocket, Target, BarChart3, Globe, Shield } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Zap, Cog, Brain, Rocket, Target, BarChart3, Globe, Shield } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function ProcessAutomation() {
   const services = [
@@ -41,7 +41,7 @@ export default function ProcessAutomation() {
       description: "Intelligent HR analytics and workforce optimization",
       href: "/intelligent-hr-analytics-platform"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -57,6 +57,6 @@ export default function ProcessAutomation() {
         </div>
       </div>
     </div>
-  );
-};
-export default process-automation;
+  ),
+},
+export default process-automation,

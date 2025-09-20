@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useState } from 'react',
+import Link from 'next/link',
 
 export default function UserPortal() {
-  const [tenants, setTenants] = useState<any[]>([]);
+  const [tenants, setTenants] = useState<any[]>([]),
 
   useEffect(() => {
-    let mounted = true;
+    let mounted = true,
     fetch('/api/multiverse/tenants')
       .then((r) => r.json())
-      .then((d) => { if (mounted) setTenants(d?.tenants ?? []); })
-      .catch(() => {});
-    return () => { mounted = false; };
-  }, []);
+      .then((d) => { if (mounted) setTenants(d?.tenants ?? []), })
+      .catch(() => {}),
+    return () => { mounted = false, },
+  }, []),
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
@@ -30,5 +30,5 @@ export default function UserPortal() {
         ))}
       </div>
     </div>
-  );
+  ),
 }

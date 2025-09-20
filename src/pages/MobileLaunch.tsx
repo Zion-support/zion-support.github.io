@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Smartphone, 
+  Smartphone,
   Download, 
   Zap, 
   Shield, 
@@ -38,96 +38,56 @@ import {
   Wifi as WifiIcon,
   Battery as BatteryIcon,
   Signal
-} from 'lucide-react';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import SEO from "../components/SEO";
 const MobileLaunch: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Insights",
-      description: "Get intelligent recommendations and insights powered by our advanced AI algorithms",
-      icon: Zap,
-      color: "from-cyan-400 to-blue-500"
-    },
+      title: "AI-Powered Insights",description: "Get intelligent recommendations and insights powered by our advanced AI algorithms",icon: Zap,color: "from-cyan-400 to-blue-500"
+    };
     {
-      title: "Real-time Sync",
-      description: "Seamlessly sync data across all your devices with cloud-based synchronization",
-      icon: Cloud,
-      color: "from-blue-400 to-purple-500"
-    },
+      title: "Real-time Sync",description: "Seamlessly sync data across all your devices with cloud-based synchronization",icon: Cloud,color: "from-blue-400 to-purple-500"
+    };
     {
-      title: "Secure & Private",
-      description: "Enterprise-grade security with end-to-end encryption and privacy controls",
-      icon: Shield,
-      color: "from-green-400 to-emerald-500"
-    },
+      title: "Secure & Private",description: "Enterprise-grade security with end-to-end encryption and privacy controls",icon: Shield,color: "from-green-400 to-emerald-500"
+    };
     {
-      title: "Smart Notifications",
-      description: "Intelligent alerts that adapt to your preferences and schedule",
-      icon: Bell,
-      color: "from-orange-400 to-red-500"
+      title: "Smart Notifications",description: "Intelligent alerts that adapt to your preferences and schedule",icon: Bell,color: "from-orange-400 to-red-500"
     }
   ];
-
   const appScreens = [
     {
-      name: "Dashboard",
-      description: "Overview of your business metrics and key performance indicators",
-      icon: Home,
-      features: ["Real-time metrics", "Customizable widgets", "Quick actions"]
+      name: "Dashboard",description: "Overview of your business metrics and key performance indicators",icon: Home,features: ["Real-time metrics", "Customizable widgets", "Quick actions"]
     },
     {
-      name: "AI Assistant",
-      description: "Your personal AI companion for business insights and automation",
-      icon: Zap,
-      features: ["Natural language queries", "Smart recommendations", "Automated tasks"]
+      name: "AI Assistant",description: "Your personal AI companion for business insights and automation",icon: Zap,features: ["Natural language queries", "Smart recommendations", "Automated tasks"]
     },
     {
-      name: "Analytics",
-      description: "Comprehensive data visualization and business intelligence tools",
-      icon: BarChart3,
-      features: ["Interactive charts", "Custom reports", "Data export"]
+      name: "Analytics",description: "Comprehensive data visualization and business intelligence tools",icon: BarChart3,features: ["Interactive charts", "Custom reports", "Data export"]
     },
     {
-      name: "Services",
-      description: "Access to all Zion Tech Group services and solutions",
-      icon: Settings,
-      features: ["Service catalog", "Quick setup", "Support access"]
+      name: "Services",description: "Access to all Zion Tech Group services and solutions",icon: Settings,features: ["Service catalog", "Quick setup", "Support access"]
     }
-  ];
+  ],
 
   const downloadOptions = [
     {
-      platform: "iOS App Store",
-      icon: "🍎",
-      description: "Download for iPhone and iPad",
-      link: "#",
-      featured: true
-    },
+      platform: "iOS App Store",icon: "🍎",description: "Download for iPhone and iPad",link: "#",featured: true
+    };
     {
-      platform: "Google Play Store",
-      icon: "🤖",
-      description: "Download for Android devices",
-      link: "#",
-      featured: true
-    },
+      platform: "Google Play Store",icon: "🤖",description: "Download for Android devices",link: "#",featured: true
+    };
     {
-      platform: "Web App",
-      icon: "🌐",
-      description: "Access via browser",
-      link: "/",
-      featured: false
+      platform: "Web App",icon: "🌐",description: "Access via browser",link: "/",featured: false
     }
   ];
-
   const systemRequirements = [
-    { requirement: "iOS 14.0+", icon: "🍎" },
-    { requirement: "Android 8.0+", icon: "🤖" },
-    { requirement: "2GB RAM", icon: "💾" },
-    { requirement: "100MB Storage", icon: "💿" },
+    { requirement: "iOS 14.0+", icon: "🍎" };
+    { requirement: "Android 8.0+", icon: "🤖" };
+    { requirement: "2GB RAM", icon: "💾" };
+    { requirement: "100MB Storage", icon: "💿" };
     { requirement: "Internet Connection", icon: "🌐" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -434,7 +394,7 @@ const MobileLaunch: React.FC = () => {
               with you wherever you go.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="#download"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
@@ -454,7 +414,6 @@ const MobileLaunch: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default MobileLaunch;

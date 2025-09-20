@@ -1,50 +1,50 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface AdvancedInnovativeService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   {
     id: 'metaverse-development-platform',
@@ -54,14 +54,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive 3D virtual worlds, games, and social experiences with built-in AI and blockchain integration.',
     features: [
-      '3D world building tools',
-      'AI-powered NPCs and interactions',
-      'Blockchain integration for digital assets',
-      'Multi-user collaboration',
-      'VR/AR device support',
-      'Monetization and marketplace',
-      'Analytics and user insights',
-      'Cross-platform deployment',
+      '3D world building toolsAI-powered NPCs and interactions',
+      'Blockchain integration for digital assetsMulti-user collaboration',
+      'VR/AR device supportMonetization and marketplace',
+      'Analytics and user insightsCross-platform deployment',
       'Custom branding and themes'
     ],
     popular: true,
@@ -69,7 +65,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/metaverse-development-platform',
-    marketPosition: 'Comprehensive metaverse platform; competes with Roblox, Unity, Unreal Engine.',
+    marketPosition: 'Comprehensive metaverse platform, competes with Roblox, Unity, Unreal Engine.',
     targetAudience: 'Game developers, Brands, Educational institutions',
     trialDays: 21,
     setupTime: '1-2 weeks',
@@ -99,14 +95,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced quantum computing platform specifically designed for biological simulations, protein folding, drug discovery, and molecular modeling, leveraging quantum algorithms for unprecedented accuracy.',
     features: [
-      'Protein folding simulations',
-      'Drug molecule optimization',
-      'Biological pathway modeling',
-      'Quantum molecular dynamics',
-      'Drug-target interaction analysis',
-      'Clinical trial optimization',
-      'Biomarker discovery',
-      'Personalized medicine modeling',
+      'Protein folding simulationsDrug molecule optimization',
+      'Biological pathway modelingQuantum molecular dynamics',
+      'Drug-target interaction analysisClinical trial optimization',
+      'Biomarker discoveryPersonalized medicine modeling',
       'Integration with research databases'
     ],
     popular: false,
@@ -114,7 +106,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-bio-computing-platform',
-    marketPosition: 'Specialized quantum bio-computing; addresses pharmaceutical research needs.',
+    marketPosition: 'Specialized quantum bio-computing, addresses pharmaceutical research needs.',
     targetAudience: 'Pharmaceutical companies, Research institutions, Biotech firms',
     trialDays: 45,
     setupTime: '1 month',
@@ -144,14 +136,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Comprehensive legal automation platform that uses AI to analyze contracts, conduct legal research, automate compliance checks, and streamline legal workflows for law firms and corporate legal departments.',
     features: [
-      'AI contract analysis and review',
-      'Legal research automation',
-      'Compliance monitoring',
-      'Document generation and templates',
-      'Risk assessment and scoring',
-      'Case law analysis',
-      'Regulatory updates tracking',
-      'Client portal and collaboration',
+      'AI contract analysis and reviewLegal research automation',
+      'Compliance monitoringDocument generation and templates',
+      'Risk assessment and scoringCase law analysis',
+      'Regulatory updates trackingClient portal and collaboration',
       'Performance analytics and reporting'
     ],
     popular: true,
@@ -159,7 +147,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-legal-automation-suite',
-    marketPosition: 'AI-enhanced legal automation; competes with LexisNexis, Westlaw, ContractPodAi.',
+    marketPosition: 'AI-enhanced legal automation, competes with LexisNexis, Westlaw, ContractPodAi.',
     targetAudience: 'Law firms, Corporate legal departments, Legal professionals',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -189,14 +177,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and resource allocation problems in real-time for global supply chains.',
     features: [
-      'Quantum route optimization',
-      'Real-time scheduling algorithms',
-      'Resource allocation optimization',
-      'Multi-modal transportation planning',
-      'Dynamic pricing optimization',
-      'Risk assessment and mitigation',
-      'Sustainability optimization',
-      'Performance analytics',
+      'Quantum route optimizationReal-time scheduling algorithms',
+      'Resource allocation optimizationMulti-modal transportation planning',
+      'Dynamic pricing optimizationRisk assessment and mitigation',
+      'Sustainability optimizationPerformance analytics',
       'Integration with logistics systems'
     ],
     popular: false,
@@ -204,7 +188,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-logistics-optimization',
-    marketPosition: 'Quantum-powered logistics; specialized for complex optimization problems.',
+    marketPosition: 'Quantum-powered logistics, specialized for complex optimization problems.',
     targetAudience: 'Logistics companies, E-commerce, Manufacturing',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -234,14 +218,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Intelligent research assistant that autonomously conducts research, analyzes data, generates hypotheses, and discovers insights across scientific, business, and academic domains.',
     features: [
-      'Autonomous research planning',
-      'Multi-source data analysis',
-      'Hypothesis generation',
-      'Literature review automation',
-      'Data visualization and reporting',
-      'Cross-domain knowledge synthesis',
-      'Research trend analysis',
-      'Collaboration and sharing',
+      'Autonomous research planningMulti-source data analysis',
+      'Hypothesis generationLiterature review automation',
+      'Data visualization and reportingCross-domain knowledge synthesis',
+      'Research trend analysisCollaboration and sharing',
       'Integration with research tools'
     ],
     popular: true,
@@ -249,7 +229,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/autonomous-ai-research-assistant',
-    marketPosition: 'Autonomous research AI; specialized for research and discovery.',
+    marketPosition: 'Autonomous research AI, specialized for research and discovery.',
     targetAudience: 'Researchers, Scientists, Business analysts, Students',
     trialDays: 14,
     setupTime: '1 week',
@@ -279,14 +259,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced energy optimization platform that uses quantum computing to optimize energy grids, manage renewable energy sources, and improve energy efficiency across complex energy systems.',
     features: [
-      'Grid optimization algorithms',
-      'Renewable energy forecasting',
-      'Demand response optimization',
-      'Energy storage optimization',
-      'Carbon footprint reduction',
-      'Real-time grid monitoring',
-      'Predictive maintenance',
-      'Energy trading optimization',
+      'Grid optimization algorithmsRenewable energy forecasting',
+      'Demand response optimizationEnergy storage optimization',
+      'Carbon footprint reductionReal-time grid monitoring',
+      'Predictive maintenanceEnergy trading optimization',
       'Sustainability analytics'
     ],
     popular: false,
@@ -294,7 +270,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-energy-optimization',
-    marketPosition: 'Quantum-powered energy optimization; specialized for complex energy systems.',
+    marketPosition: 'Quantum-powered energy optimization, specialized for complex energy systems.',
     targetAudience: 'Utility companies, Energy providers, Smart cities',
     trialDays: 45,
     setupTime: '1 month',
@@ -324,14 +300,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Comprehensive creative design platform that uses AI to generate designs, automate creative workflows, and facilitate collaboration between designers and stakeholders.',
     features: [
-      'AI design generation',
-      'Brand consistency automation',
-      'Design collaboration tools',
-      'Template library and customization',
-      'Performance analytics',
-      'Multi-format export',
-      'Version control and history',
-      'Integration with design tools',
+      'AI design generationBrand consistency automation',
+      'Design collaboration toolsTemplate library and customization',
+      'Performance analyticsMulti-format export',
+      'Version control and historyIntegration with design tools',
       'Client feedback management'
     ],
     popular: true,
@@ -339,7 +311,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-pink-600 to-purple-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-creative-design-platform',
-    marketPosition: 'AI-enhanced design platform; competes with Canva, Figma, Adobe Creative Suite.',
+    marketPosition: 'AI-enhanced design platform, competes with Canva, Figma, Adobe Creative Suite.',
     targetAudience: 'Designers, Marketing teams, Small businesses',
     trialDays: 7,
     setupTime: '1 day',
@@ -369,14 +341,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced quantum neural network platform that leverages quantum computing to train and optimize neural networks, enabling breakthroughs in machine learning and AI applications.',
     features: [
-      'Quantum neural network training',
-      'Hybrid quantum-classical ML',
-      'Quantum feature selection',
-      'Neural architecture optimization',
-      'Quantum data encoding',
-      'Performance benchmarking',
-      'Integration with ML frameworks',
-      'Real-time optimization',
+      'Quantum neural network trainingHybrid quantum-classical ML',
+      'Quantum feature selectionNeural architecture optimization',
+      'Quantum data encodingPerformance benchmarking',
+      'Integration with ML frameworksReal-time optimization',
       'Scalable quantum computing'
     ],
     popular: false,
@@ -384,7 +352,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-neural-network-platform',
-    marketPosition: 'Cutting-edge quantum neural networks; specialized for advanced ML applications.',
+    marketPosition: 'Cutting-edge quantum neural networks, specialized for advanced ML applications.',
     targetAudience: 'AI researchers, ML engineers, Research institutions',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -393,7 +361,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     technology: ['Quantum Computing, Neural Networks, Machine Learning'],
     integrations: ['TensorFlow, PyTorch, Scikit-learn, Jupyter'],
     useCases: ['Advanced ML training, Research breakthroughs, Performance optimization'],
-    roi: 'Solve previously intractable ML problems; accelerate AI research and development.',
+    roi: 'Solve previously intractable ML problems, accelerate AI research and development.',
     competitors: ['IBM Quantum, Google Quantum, Rigetti, D-Wave'],
     marketSize: '$4B quantum ML',
     growthRate: '62% YoY',
@@ -414,14 +382,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Comprehensive financial planning platform that uses AI to provide personalized financial advice, optimize investment portfolios, and help users achieve their financial goals.',
     features: [
-      'AI financial planning',
-      'Investment portfolio optimization',
-      'Risk assessment and management',
-      'Retirement planning tools',
-      'Tax optimization strategies',
-      'Real-time market analysis',
-      'Goal tracking and monitoring',
-      'Financial education resources',
+      'AI financial planningInvestment portfolio optimization',
+      'Risk assessment and managementRetirement planning tools',
+      'Tax optimization strategiesReal-time market analysis',
+      'Goal tracking and monitoringFinancial education resources',
       'Integration with financial accounts'
     ],
     popular: true,
@@ -429,7 +393,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/intelligent-financial-planning',
-    marketPosition: 'AI-enhanced financial planning; competes with Betterment, Wealthfront, Personal Capital.',
+    marketPosition: 'AI-enhanced financial planning, competes with Betterment, Wealthfront, Personal Capital.',
     targetAudience: 'Individual investors, Financial advisors, Wealth management firms',
     trialDays: 14,
     setupTime: '1 week',
@@ -459,14 +423,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced IoT security platform that implements quantum-resistant cryptography and quantum key distribution to protect IoT devices and networks from current and future threats.',
     features: [
-      'Quantum-resistant encryption',
-      'IoT device authentication',
-      'Network security monitoring',
-      'Threat detection and response',
-      'Secure firmware updates',
-      'Compliance monitoring',
-      'Performance optimization',
-      'Integration with IoT platforms',
+      'Quantum-resistant encryptionIoT device authentication',
+      'Network security monitoringThreat detection and response',
+      'Secure firmware updatesCompliance monitoring',
+      'Performance optimizationIntegration with IoT platforms',
       'Security analytics dashboard'
     ],
     popular: false,
@@ -474,7 +434,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-iot-security-platform',
-    marketPosition: 'Future-proof IoT security; specialized for quantum-resistant protection.',
+    marketPosition: 'Future-proof IoT security, specialized for quantum-resistant protection.',
     targetAudience: 'IoT manufacturers, Smart cities, Industrial IoT',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -483,7 +443,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     technology: ['Quantum Computing, IoT Security, Post-Quantum Cryptography'],
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT'],
     useCases: ['Device security, Network protection, Compliance'],
-    roi: 'Future-proof IoT security investment; avoid costly migrations later.',
+    roi: 'Future-proof IoT security investment, avoid costly migrations later.',
     competitors: ['Armis, Palo Alto Networks, Check Point, Fortinet'],
     marketSize: '$12B IoT security',
     growthRate: '38% YoY',
@@ -504,14 +464,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Comprehensive AI-powered education platform that provides personalized learning experiences, adaptive curriculum, and intelligent tutoring to improve student outcomes and engagement.',
     features: [
-      'Personalized learning paths',
-      'Adaptive curriculum generation',
-      'Intelligent tutoring system',
-      'Progress tracking and analytics',
-      'Content recommendation engine',
-      'Assessment and evaluation',
-      'Collaborative learning tools',
-      'Integration with LMS systems',
+      'Personalized learning pathsAdaptive curriculum generation',
+      'Intelligent tutoring systemProgress tracking and analytics',
+      'Content recommendation engineAssessment and evaluation',
+      'Collaborative learning toolsIntegration with LMS systems',
       'Performance insights dashboard'
     ],
     popular: true,
@@ -519,7 +475,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-education-platform',
-    marketPosition: 'AI-enhanced education; competes with Coursera, Udemy, Khan Academy.',
+    marketPosition: 'AI-enhanced education, competes with Coursera, Udemy, Khan Academy.',
     targetAudience: 'Educational institutions, Corporate training, Online learning platforms',
     trialDays: 14,
     setupTime: '1-2 weeks',
@@ -549,14 +505,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced quantum computing platform designed for space applications, including satellite constellation optimization, space mission planning, and astronomical data analysis.',
     features: [
-      'Satellite constellation optimization',
-      'Space mission planning',
-      'Astronomical data analysis',
-      'Orbital mechanics optimization',
-      'Space debris tracking',
-      'Satellite communication optimization',
-      'Launch window optimization',
-      'Space weather prediction',
+      'Satellite constellation optimizationSpace mission planning',
+      'Astronomical data analysisOrbital mechanics optimization',
+      'Space debris trackingSatellite communication optimization',
+      'Launch window optimizationSpace weather prediction',
       'Integration with space systems'
     ],
     popular: false,
@@ -564,7 +516,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-space-technology',
-    marketPosition: 'Cutting-edge quantum space technology; specialized for space applications.',
+    marketPosition: 'Cutting-edge quantum space technology, specialized for space applications.',
     targetAudience: 'Space agencies, Satellite companies, Aerospace firms',
     trialDays: 45,
     setupTime: '1 month',
@@ -594,14 +546,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced healthcare diagnostics platform that uses AI to analyze medical images, assist in diagnosis, and provide clinical decision support to healthcare professionals.',
     features: [
-      'Medical image analysis',
-      'Diagnostic assistance',
-      'Clinical decision support',
-      'Patient risk assessment',
-      'Treatment recommendation',
-      'Medical report generation',
-      'Integration with EHR systems',
-      'Compliance and security',
+      'Medical image analysisDiagnostic assistance',
+      'Clinical decision supportPatient risk assessment',
+      'Treatment recommendationMedical report generation',
+      'Integration with EHR systemsCompliance and security',
       'Performance analytics'
     ],
     popular: true,
@@ -609,7 +557,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
-    marketPosition: 'AI-enhanced healthcare diagnostics; competes with IBM Watson Health, Google Health.',
+    marketPosition: 'AI-enhanced healthcare diagnostics, competes with IBM Watson Health, Google Health.',
     targetAudience: 'Hospitals, Medical clinics, Healthcare professionals',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -639,14 +587,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced materials discovery platform that leverages quantum computing to simulate and discover new materials with specific properties for applications in electronics, energy, and manufacturing.',
     features: [
-      'Quantum materials simulation',
-      'Property prediction algorithms',
-      'Materials database integration',
-      'Synthesis pathway optimization',
-      'Performance benchmarking',
-      'Patent analysis and research',
-      'Collaboration tools',
-      'Integration with research tools',
+      'Quantum materials simulationProperty prediction algorithms',
+      'Materials database integrationSynthesis pathway optimization',
+      'Performance benchmarkingPatent analysis and research',
+      'Collaboration toolsIntegration with research tools',
       'Analytics and reporting'
     ],
     popular: false,
@@ -654,7 +598,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-materials-discovery',
-    marketPosition: 'Quantum-powered materials discovery; specialized for advanced materials research.',
+    marketPosition: 'Quantum-powered materials discovery, specialized for advanced materials research.',
     targetAudience: 'Materials scientists, Research institutions, Manufacturing companies',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -684,14 +628,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Comprehensive automotive platform that uses AI to provide vehicle diagnostics, predictive maintenance, fleet management, and driver safety monitoring for automotive companies and fleet operators.',
     features: [
-      'Vehicle diagnostics and monitoring',
-      'Predictive maintenance alerts',
-      'Fleet management optimization',
-      'Driver safety monitoring',
-      'Fuel efficiency optimization',
-      'Route optimization',
-      'Integration with vehicle systems',
-      'Real-time analytics dashboard',
+      'Vehicle diagnostics and monitoringPredictive maintenance alerts',
+      'Fleet management optimizationDriver safety monitoring',
+      'Fuel efficiency optimizationRoute optimization',
+      'Integration with vehicle systemsReal-time analytics dashboard',
       'Mobile app and notifications'
     ],
     popular: true,
@@ -699,7 +639,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/intelligent-automotive-platform',
-    marketPosition: 'AI-enhanced automotive platform; competes with Geotab, Fleet Complete, Samsara.',
+    marketPosition: 'AI-enhanced automotive platform, competes with Geotab, Fleet Complete, Samsara.',
     targetAudience: 'Fleet operators, Automotive companies, Transportation companies',
     trialDays: 14,
     setupTime: '1-2 weeks',
@@ -729,14 +669,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description: 'Advanced climate modeling platform that leverages quantum computing to create more accurate climate models, predict environmental changes, and optimize sustainability strategies.',
     features: [
-      'Quantum climate modeling',
-      'Environmental impact analysis',
-      'Sustainability optimization',
-      'Carbon footprint tracking',
-      'Climate prediction algorithms',
-      'Policy impact assessment',
-      'Integration with climate data',
-      'Performance benchmarking',
+      'Quantum climate modelingEnvironmental impact analysis',
+      'Sustainability optimizationCarbon footprint tracking',
+      'Climate prediction algorithmsPolicy impact assessment',
+      'Integration with climate dataPerformance benchmarking',
       'Analytics and reporting'
     ],
     popular: false,
@@ -744,7 +680,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-climate-modeling',
-    marketPosition: 'Quantum-powered climate modeling; specialized for environmental analysis.',
+    marketPosition: 'Quantum-powered climate modeling, specialized for environmental analysis.',
     targetAudience: 'Environmental agencies, Research institutions, Sustainability companies',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -766,4 +702,4 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.8,
     reviews: 26
   }
-];
+],

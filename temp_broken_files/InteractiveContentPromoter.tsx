@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 const InteractiveContentPromoter: React.FC = () => {,
   return (,
     <div>,
@@ -6,7 +6,7 @@ const InteractiveContentPromoter: React.FC = () => {,
         className="fixed bottom-6 right-6 z-50 max-w-sm",
       >,
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">,
-          {/* Header */,}
+          {/* Header */}
           <div className={`bg-gradient-to-r ${promotions[activePromotion].gradient} p-4 text-white relative`}>,
             <div className="flex items-center justify-between">,
               <div className="flex items-center space-x-2">,
@@ -28,7 +28,7 @@ const InteractiveContentPromoter: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Content */,}
+          {/* Content */}
           <div className="p-4">,
             <p className="text-gray-600 text-sm mb-4">,
               {promotions[activePromotion].description}
@@ -36,7 +36,7 @@ const InteractiveContentPromoter: React.FC = () => {,
             <div className="flex space-x-2">,
               <a,
                 href={promotions[activePromotion].link}
-                className={`flex-1 bg-gradient-to-r ${promotions[activePromotion].gradient} text-white px-4 py-2 rounded-lg text-sm font-semibold text-center hover: shadow-lg transition-all duration-300`,}
+                className={`flex-1 bg-gradient-to-r ${promotions[activePromotion].gradient} text-white px-4 py-2 rounded-lg text-sm font-semibold text-center hover: shadow-lg transition-all duration-300`}
               >,
                 {promotions[activePromotion].cta} →,
               </a>,
@@ -44,7 +44,7 @@ const InteractiveContentPromoter: React.FC = () => {,
                 Later,
               </button>,
             </div>,
-            {/* Progress Indicators */,}
+            {/* Progress Indicators */}
             <div className="flex justify-center space-x-1 mt-3">,
               {promotions.map((_, index) => (,
                 <button,
@@ -53,7 +53,7 @@ const InteractiveContentPromoter: React.FC = () => {,
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${,
                     index === activePromotion,
                       ? 'bg-purple-500 scale-125',
-                      : 'bg-gray-300 hover: bg-gray-400',}`}
+                      : 'bg-gray-300 hover: bg-gray-400'}`}
                 />,
               ))}
             </div>,
@@ -61,6 +61,6 @@ const InteractiveContentPromoter: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default InteractiveContentPromoter;
+  ),
+},
+export default InteractiveContentPromoter,

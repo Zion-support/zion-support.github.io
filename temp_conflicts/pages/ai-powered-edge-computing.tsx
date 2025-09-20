@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Cpu, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredEdgeComputing: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredEdgeComputing: React.FC = () => {
       title: 'Multi-location Support',
       description: 'Edge computing across various locations and environments'
     }
-  ];
+  ],
 
   const edgeCapabilities = [
     {
       area: 'Local Processing',
-      capabilities: ['Data processing', 'AI inference', 'Real-time analytics', 'Local decision making'],
+      capabilities: ['Data processingAI inference', 'Real-time analyticsLocal decision making'],
       improvement: '100x faster',
       latency: 'Milliseconds'
     },
     {
       area: 'Distributed Intelligence',
-      capabilities: ['Edge AI models', 'Federated learning', 'Model optimization', 'Intelligent routing'],
+      capabilities: ['Edge AI modelsFederated learning', 'Model optimizationIntelligent routing'],
       improvement: '95% efficiency',
       intelligence: 'Distributed'
     },
     {
       area: 'Bandwidth Optimization',
-      capabilities: ['Data filtering', 'Compression', 'Selective transmission', 'Local storage'],
+      capabilities: ['Data filteringCompression', 'Selective transmissionLocal storage'],
       improvement: '90% reduction',
       optimization: 'Maximum'
     },
     {
       area: 'Edge Security',
-      capabilities: ['Local encryption', 'Access control', 'Threat detection', 'Privacy protection'],
+      capabilities: ['Local encryptionAccess control', 'Threat detectionPrivacy protection'],
       improvement: 'Zero breaches',
       security: 'Enhanced'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'IoT & Smart Devices',
       description: 'Edge computing for IoT devices, sensors, and smart home systems',
-      benefits: ['Real-time processing', 'Reduced latency', 'Lower bandwidth', 'Enhanced privacy']
+      benefits: ['Real-time processingReduced latency', 'Lower bandwidthEnhanced privacy']
     },
     {
       title: 'Autonomous Vehicles',
       description: 'Edge computing for self-driving cars and autonomous transportation',
-      benefits: ['Instant decisions', 'Safety enhancement', 'Reduced latency', 'Offline operation']
+      benefits: ['Instant decisionsSafety enhancement', 'Reduced latencyOffline operation']
     },
     {
       title: 'Industrial IoT',
       description: 'Edge computing for manufacturing, logistics, and industrial automation',
-      benefits: ['Process optimization', 'Predictive maintenance', 'Real-time control', 'Cost reduction']
+      benefits: ['Process optimizationPredictive maintenance', 'Real-time controlCost reduction']
     },
     {
       title: 'Healthcare & Medical',
       description: 'Edge computing for medical devices and healthcare monitoring',
-      benefits: ['Patient safety', 'Real-time monitoring', 'Data privacy', 'Regulatory compliance']
+      benefits: ['Patient safetyReal-time monitoring', 'Data privacyRegulatory compliance']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredEdgeComputing: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with edge computing',
       features: [
-        'Up to 10 edge nodes',
-        'Basic edge processing',
-        'Standard analytics',
-        'Email support',
+        'Up to 10 edge nodesBasic edge processing',
+        'Standard analyticsEmail support',
         'Basic security'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredEdgeComputing: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced edge computing needs',
       features: [
-        'Up to 100 edge nodes',
-        'Advanced edge processing',
-        'Custom AI models',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 100 edge nodesAdvanced edge processing',
+        'Custom AI modelsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-location support'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredEdgeComputing: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex edge computing requirements',
       features: [
-        'Unlimited edge nodes',
-        'Custom edge development',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited edge nodesCustom edge development',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredEdgeComputing: React.FC = () => {
       position: "Manufacturing Director",
       company: "Advanced Manufacturing Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredEdgeComputing: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Compute with AI-Powered Edge Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredEdgeComputing: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredEdgeComputing;
+export default AIPoweredEdgeComputing,

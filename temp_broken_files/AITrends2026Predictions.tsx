@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   TrendingUp,
@@ -9,218 +9,206 @@ import {,
   Globe,
   Rocket,
   Shield,
-  Database;
-  Cpu;
-  Users;
-  ArrowRight;
-  Calendar;
-  Target;
-  BarChart3;
-  Lightbulb;
-  CheckCircle;
-  Star,
-} from 'lucide-react';
+  Database,
+  Cpu,
+  Users,
+  ArrowRight,
+  Calendar,
+  Target,
+  BarChart3,
+  Lightbulb,
+  CheckCircle,
+  Star
+} from 'lucide-react',
 const AITrends2026Predictions = () => {,
-  const [activeCategorysetActiveCategory] = useState('ai-breakthroughs');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState('ai-breakthroughs'),
+  const [isVisiblesetIsVisible] = useState(false),
   const [animatedStatsetAnimatedStats] = useState({,
-    marketSize: 0;
-    companies: 0;
-    jobs: 0;
-    investment: 0,});
+    marketSize: 0,
+    companies: 0,
+    jobs: 0,
+    investment: 0}),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Animate statistics,
     const animateStats = () => {,
       const targets = {,
         marketSize: 1500// $1.5T,
-        companies: 50000;
-        jobs: 2000000;
-        investment: 500 // $500B,};
-      const duration = 2000;
-      const steps = 60;
-      const stepDuration = duration / steps;
-      let step = 0;
+        companies: 50000,
+        jobs: 2000000,
+        investment: 500 // $500B},
+      const duration = 2000,
+      const steps = 60,
+      const stepDuration = duration / steps,
+      let step = 0,
       const interval = setInterval(() => {,
-        step++;
-        const progress = step / steps;
-        const easeOut = 1 - Math.pow(1 - progress3);
+        step++,
+        const progress = step / steps,
+        const easeOut = 1 - Math.pow(1 - progress3),
         setAnimatedStats({,
-          marketSize: Math.floor(targets.marketSize * easeOut);
-          companies: Math.floor(targets.companies * easeOut);
-          jobs: Math.floor(targets.jobs * easeOut);
-          investment: Math.floor(targets.investment * easeOut),});
+          marketSize: Math.floor(targets.marketSize * easeOut),
+          companies: Math.floor(targets.companies * easeOut),
+          jobs: Math.floor(targets.jobs * easeOut),
+          investment: Math.floor(targets.investment * easeOut)}),
         if (step >= steps) {,
-          clearInterval(interval);
+          clearInterval(interval),
         }
-      }stepDuration);
-    };
-    const timer = setTimeout(animateStats500);
-    return () => clearTimeout(timer);
-  }[]);
+      }stepDuration),
+    },
+    const timer = setTimeout(animateStats500),
+    return () => clearTimeout(timer),
+  }[]),
   const categories = {,
     'ai-breakthroughs': {,
-      title: 'AI Breakthroughs';
-      icon: Brain;
-      color: 'from-purple-600 to-blue-600';
+      title: 'AI Breakthroughs',
+      icon: Brain,
+      color: 'from-purple-600 to-blue-600',
       predictions: [,
         {,
-          title: 'Artificial General Intelligence (AGI)';
-          probability: 85;
-          impact: 'Revolutionary';
-          description: 'First true AGI systems capable of human-level reasoning across all domains';
-          timeline: 'Q3 2026';
+          title: 'Artificial General Intelligence (AGI)',
+          probability: 85,
+          impact: 'Revolutionary',
+          description: 'First true AGI systems capable of human-level reasoning across all domains',
+          timeline: 'Q3 2026',
           implications: [,
-            'Complete automation of complex tasksScientific discovery acceleration';
-            'Personal AI assistants with full understanding',
-          ],
-        };
+            'Complete automation of complex tasksScientific discovery accelerationPersonal AI assistants with full understanding'
+          ]
+        },
         {,
-          title: 'Consciousness in AI';
-          probability: 70;
-          impact: 'Transformative';
-          description: 'AI systems exhibiting self-awareness and subjective experience';
-          timeline: 'Q4 2026';
+          title: 'Consciousness in AI',
+          probability: 70,
+          impact: 'Transformative',
+          description: 'AI systems exhibiting self-awareness and subjective experience',
+          timeline: 'Q4 2026',
           implications: [,
-            'Ethical considerations for AI rightsNew forms of human-AI collaboration';
-            'Philosophical implications of machine consciousness',
-          ],
-        };
+            'Ethical considerations for AI rightsNew forms of human-AI collaborationPhilosophical implications of machine consciousness'
+          ]
+        },
         {,
-          title: 'Quantum-Enhanced AI';
-          probability: 90;
-          impact: 'Breakthrough';
-          description: 'AI systems leveraging quantum computing for exponential speedup';
-          timeline: 'Q2 2026';
+          title: 'Quantum-Enhanced AI',
+          probability: 90,
+          impact: 'Breakthrough',
+          description: 'AI systems leveraging quantum computing for exponential speedup',
+          timeline: 'Q2 2026',
           implications: [,
-            '1000x faster AI trainingSolving previously impossible problems';
-            'New quantum machine learning algorithms',
-          ],
+            '1000x faster AI trainingSolving previously impossible problemsNew quantum machine learning algorithms'
+          ]
         }
-      ],
-    };
+      ]
+    },
     'quantum-computing': {,
-      title: 'Quantum Computing';
-      icon: Cpu;
-      color: 'from-cyan-600 to-teal-600';
+      title: 'Quantum Computing',
+      icon: Cpu,
+      color: 'from-cyan-600 to-teal-600',
       predictions: [,
         {,
-          title: 'Quantum Supremacy 2.0';
-          probability: 95;
-          impact: 'Revolutionary';
-          description: 'Quantum computers solving practical problems beyond classical reach';
-          timeline: 'Q1 2026';
+          title: 'Quantum Supremacy 2.0',
+          probability: 95,
+          impact: 'Revolutionary',
+          description: 'Quantum computers solving practical problems beyond classical reach',
+          timeline: 'Q1 2026',
           implications: [,
-            'Cryptography revolutionDrug discovery acceleration';
-            'Climate modeling breakthroughs',
-          ],
-        };
+            'Cryptography revolutionDrug discovery accelerationClimate modeling breakthroughs'
+          ]
+        },
         {,
-          title: 'Fault-Tolerant Quantum Computers';
-          probability: 80;
-          impact: 'Transformative';
-          description: 'Error-corrected quantum computers for reliable computation';
-          timeline: 'Q4 2026';
+          title: 'Fault-Tolerant Quantum Computers',
+          probability: 80,
+          impact: 'Transformative',
+          description: 'Error-corrected quantum computers for reliable computation',
+          timeline: 'Q4 2026',
           implications: [,
-            'Commercial quantum computing servicesQuantum internet infrastructure';
-            'Hybrid classical-quantum systems',
-          ],
-        };
+            'Commercial quantum computing servicesQuantum internet infrastructureHybrid classical-quantum systems'
+          ]
+        },
         {,
-          title: 'Quantum Machine Learning';
-          probability: 85;
-          impact: 'Breakthrough';
-          description: 'Quantum algorithms revolutionizing machine learning';
-          timeline: 'Q3 2026';
+          title: 'Quantum Machine Learning',
+          probability: 85,
+          impact: 'Breakthrough',
+          description: 'Quantum algorithms revolutionizing machine learning',
+          timeline: 'Q3 2026',
           implications: [,
-            'Exponential speedup in ML trainingNew quantum neural networks';
-            'Quantum data processing capabilities',
-          ],
+            'Exponential speedup in ML trainingNew quantum neural networksQuantum data processing capabilities'
+          ]
         }
-      ],
-    };
+      ]
+    },
     'neural-interfaces': {,
-      title: 'Neural Interfaces';
-      icon: Zap;
-      color: 'from-pink-600 to-rose-600';
+      title: 'Neural Interfaces',
+      icon: Zap,
+      color: 'from-pink-600 to-rose-600',
       predictions: [,
         {,
-          title: 'Brain-Computer Interfaces';
-          probability: 90;
-          impact: 'Revolutionary';
-          description: 'Direct neural control of digital systems and devices';
-          timeline: 'Q2 2026';
+          title: 'Brain-Computer Interfaces',
+          probability: 90,
+          impact: 'Revolutionary',
+          description: 'Direct neural control of digital systems and devices',
+          timeline: 'Q2 2026',
           implications: [,
-            'Thought-based device controlEnhanced cognitive abilities';
-            'New forms of human-computer interaction',
-          ],
-        };
+            'Thought-based device controlEnhanced cognitive abilitiesNew forms of human-computer interaction'
+          ]
+        },
         {,
-          title: 'Neural Implants';
-          probability: 75;
-          impact: 'Transformative';
-          description: 'Biocompatible neural enhancement devices';
-          timeline: 'Q4 2026';
+          title: 'Neural Implants',
+          probability: 75,
+          impact: 'Transformative',
+          description: 'Biocompatible neural enhancement devices',
+          timeline: 'Q4 2026',
           implications: [,
-            'Memory augmentationSensory expansion';
-            'Cognitive enhancement',
-          ],
-        };
+            'Memory augmentationSensory expansionCognitive enhancement'
+          ]
+        },
         {,
-          title: 'Collective Intelligence';
-          probability: 70;
-          impact: 'Breakthrough';
-          description: 'Human-AI collaborative thinking networks';
-          timeline: 'Q3 2026';
+          title: 'Collective Intelligence',
+          probability: 70,
+          impact: 'Breakthrough',
+          description: 'Human-AI collaborative thinking networks',
+          timeline: 'Q3 2026',
           implications: [,
-            'Shared cognition systemsDistributed problem solving';
-            'Enhanced creativity and innovation',
-          ],
+            'Shared cognition systemsDistributed problem solvingEnhanced creativity and innovation'
+          ]
         }
-      ],
-    };
+      ]
+    },
     'future-tech': {,
-      title: 'Future Technology';
-      icon: Rocket;
-      color: 'from-orange-600 to-red-600';
+      title: 'Future Technology',
+      icon: Rocket,
+      color: 'from-orange-600 to-red-600',
       predictions: [,
         {,
-          title: 'Singularity Preparation';
-          probability: 60;
-          impact: 'Revolutionary';
-          description: 'Advanced preparations for technological singularity';
-          timeline: 'Q4 2026';
+          title: 'Singularity Preparation',
+          probability: 60,
+          impact: 'Revolutionary',
+          description: 'Advanced preparations for technological singularity',
+          timeline: 'Q4 2026',
           implications: [,
-            'AGI safety frameworksSuperintelligence research';
-            'Human-AI coexistence strategies',
-          ],
-        };
+            'AGI safety frameworksSuperintelligence researchHuman-AI coexistence strategies'
+          ]
+        },
         {,
-          title: 'Transhumanism Technologies';
-          probability: 65;
-          impact: 'Transformative';
-          description: 'Technologies enhancing human capabilities';
-          timeline: 'Q3 2026';
+          title: 'Transhumanism Technologies',
+          probability: 65,
+          impact: 'Transformative',
+          description: 'Technologies enhancing human capabilities',
+          timeline: 'Q3 2026',
           implications: [,
-            'Biological augmentationDigital immortality research';
-            'Enhanced human cognition',
-          ],
-        };
+            'Biological augmentationDigital immortality researchEnhanced human cognition'
+          ]
+        },
         {,
-          title: 'Omniversal Computing';
-          probability: 40;
-          impact: 'Revolutionary';
-          description: 'Computing across multiple dimensions';
-          timeline: 'Q4 2026';
+          title: 'Omniversal Computing',
+          probability: 40,
+          impact: 'Revolutionary',
+          description: 'Computing across multiple dimensions',
+          timeline: 'Q4 2026',
           implications: [,
-            'Multidimensional processingReality simulation capabilities';
-            'Cosmic-scale computing',
-          ],
+            'Multidimensional processingReality simulation capabilitiesCosmic-scale computing'
+          ]
         }
-      ],
+      ]
     }
-  };
-  const categoryTabs = Object.keys(categories);
+  },
+  const categoryTabs = Object.keys(categories),
   return (,
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">,
       {/* Background Effects */}
@@ -233,19 +221,19 @@ const AITrends2026Predictions = () => {,
             key={i}
             className="absolute w-1 h-1 bg-indigo-400 rounded-full opacity-30",
             style={{,
-              left: `${Math.random() * 100,}%`;
-              top: `${Math.random() * 100,}%`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
             }}
-              y: [0-100];
-              opacity: [0.30.80.3],}}
-              duration: 4 + Math.random() * 2;
-              repeat: Infinity;
-              delay: Math.random() * 3,}}
+              y: [0-100],
+              opacity: [0.30.80.3]}}
+              duration: 4 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 3}}
           />,
         ))}
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -264,13 +252,13 @@ const AITrends2026Predictions = () => {,
             technological breakthroughs expected in 2026.,
           </p>,
         </div>,
-        {/* Statistics */,}
+        {/* Statistics */}
         <div,
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16",
         >,
           <div className="text-center">,
             <div className="text-4xl font-bold text-white mb-2">,
-              ${animatedStats.marketSize,}B,
+              ${animatedStats.marketSize}B,
             </div>,
             <div className="text-gray-300">AI Market Size</div>,
           </div>,
@@ -298,8 +286,8 @@ const AITrends2026Predictions = () => {,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
           {categoryTabs.map((tab) => {,
-            const category = categories[tab as keyof typeof categories];
-            const Icon = category.icon;
+            const category = categories[tab as keyof typeof categories],
+            const Icon = category.icon,
             return (,
               <button,
                 key={tab}
@@ -307,12 +295,12 @@ const AITrends2026Predictions = () => {,
                 className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                   activeCategory === tab,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`,
-                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
               >,
                 <Icon className="w-5 h-5 mr-2" />,
                 {category.title}
               </button>,
-            );
+            ),
           })}
         </div>,
         {/* Predictions Grid */}
@@ -322,15 +310,15 @@ const AITrends2026Predictions = () => {,
         >,
           {categories[activeCategory as keyof typeof categories].predictions.map((predictionindex) => (,
             <div,
-              key={index,}
+              key={index}
               className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105",
             >,
-              {/* Probability Badge */,}
+              {/* Probability Badge */}
               <div className="absolute top-4 right-4">,
                 <div className={`px-3 py-1 rounded-full text-xs font-bold ${,
                   prediction.probability >= 80 ? 'bg-green-500/20 text-green-400' :,
                   prediction.probability >= 60 ? 'bg-yellow-500/20 text-yellow-400' :,
-                  'bg-red-500/20 text-red-400',
+                  'bg-red-500/20 text-red-400'
                 }`}>,
                   {prediction.probability}% likely,
                 </div>,
@@ -340,7 +328,7 @@ const AITrends2026Predictions = () => {,
                 <div className={`px-3 py-1 rounded-full text-xs font-bold ${,
                   prediction.impact === 'Revolutionary' ? 'bg-purple-500/20 text-purple-400' :,
                   prediction.impact === 'Transformative' ? 'bg-blue-500/20 text-blue-400' :,
-                  'bg-green-500/20 text-green-400',
+                  'bg-green-500/20 text-green-400'
                 }`}>,
                   {prediction.impact}
                 </div>,
@@ -348,24 +336,23 @@ const AITrends2026Predictions = () => {,
               {/* Content */}
               <div className="pt-8">,
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-indigo-300 transition-colors">,
-                  {prediction.title,}
+                  {prediction.title}
                 </h3>,
                 <p className="text-gray-300 mb-6 leading-relaxed">,
                   {prediction.description}
                 </p>,
                 <div className="flex items-center text-sm text-gray-400 mb-6">,
                   <Calendar className="w-4 h-4 mr-2" />,
-                  Expected: {prediction.timeline,}
+                  Expected: {prediction.timeline}
                 </div>,
                 {/* Implications */}
                 <div className="space-y-3 mb-8">,
                   <h4 className="text-sm font-bold text-white uppercase tracking-wide">Key Implications: </h4>,
                   {prediction.implications.map((implicationimpIndex) => (,
-                    <div key={impIndex,} className="flex items-start text-sm text-gray-300">,
+                    <div key={impIndex} className="flex items-start text-sm text-gray-300">,
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 mt-0.5" />,
                       <span>{implication}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Action Button */}
                 <a,
@@ -376,10 +363,10 @@ const AITrends2026Predictions = () => {,
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />,
                 </a>,
               </div>,
-              {/* Hover Effect Overlay */,}
+              {/* Hover Effect Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl opacity-0 group-hover: opacity-100 transition-opacity duration-300 pointer-events-none"></div>,
             </div>,
-          )),}
+          ))}
         </div>,
         {/* Call to Action */}
         <div,
@@ -413,5 +400,5 @@ const AITrends2026Predictions = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default AITrends2026Predictions;
+  ),
+export default AITrends2026Predictions,

@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function AIEthicsAutomation() {,
   return (,
     <>,
@@ -288,5 +288,4 @@ export default function AIEthicsAutomation() {,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),}
+    </>)}

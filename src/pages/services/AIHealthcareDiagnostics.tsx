@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Heart, 
   Eye, 
   Stethoscope, 
@@ -29,60 +29,41 @@ import {
   Syringe,
   Thermometer,
   BrainCircuit
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIHealthcareDiagnostics() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Diagnosis",
-      description: "Advanced machine learning algorithms for accurate disease detection and diagnosis"
+      icon: Brain,title: "AI-Powered Diagnosis",description: "Advanced machine learning algorithms for accurate disease detection and diagnosis"
+    };
+    {
+      icon: Eye,title: "Medical Imaging AI",description: "Computer vision for X-rays, MRIs, CT scans, and ultrasound analysis"
     },
     {
-      icon: Eye,
-      title: "Medical Imaging AI",
-      description: "Computer vision for X-rays, MRIs, CT scans, and ultrasound analysis"
-    },
+      icon: Heart,title: "Predictive Analytics",description: "Early disease prediction and risk assessment using patient data"
+    };
     {
-      icon: Heart,
-      title: "Predictive Analytics",
-      description: "Early disease prediction and risk assessment using patient data"
-    },
-    {
-      icon: Stethoscope,
-      title: "Clinical Decision Support",
-      description: "AI-powered recommendations for treatment plans and medication"
+      icon: Stethoscope,title: "Clinical Decision Support",description: "AI-powered recommendations for treatment plans and medication"
     }
   ];
-
   const diagnosticCapabilities = [
     {
-      category: "Radiology",
-      services: ["X-ray Analysis", "MRI Interpretation", "CT Scan Review", "Ultrasound Assessment"],
-      accuracy: "98.5%",
-      icon: Eye
-    },
+      category: "Radiology",services: ["X-ray Analysis", "MRI Interpretation", "CT Scan Review", "Ultrasound Assessment"],
+      accuracy: "98.5%",icon: Eye
+    };
     {
-      category: "Cardiology",
-      services: ["ECG Analysis", "Heart Disease Detection", "Arrhythmia Detection", "Risk Assessment"],
-      accuracy: "97.8%",
-      icon: Heart
-    },
+      category: "Cardiology",services: ["ECG Analysis", "Heart Disease Detection", "Arrhythmia Detection", "Risk Assessment"],
+      accuracy: "97.8%",icon: Heart
+    };
     {
-      category: "Oncology",
-      services: ["Tumor Detection", "Cancer Screening", "Treatment Response", "Prognosis Analysis"],
-      accuracy: "96.9%",
-      icon: Microscope
-    },
+      category: "Oncology",services: ["Tumor Detection", "Cancer Screening", "Treatment Response", "Prognosis Analysis"],
+      accuracy: "96.9%",icon: Microscope
+    };
     {
-      category: "Neurology",
-      services: ["Brain Scan Analysis", "Stroke Detection", "Alzheimer's Screening", "Seizure Detection"],
-      accuracy: "97.2%",
-      icon: BrainCircuit
+      category: "Neurology",services: ["Brain Scan Analysis", "Stroke Detection", "Alzheimer's Screening", "Seizure Detection"],
+      accuracy: "97.2%",icon: BrainCircuit
     }
   ];
-
   const benefits = [
     "Reduce diagnostic errors by up to 85%",
     "Improve early detection rates by 60%",
@@ -90,14 +71,12 @@ export default function AIHealthcareDiagnostics() {
     "Enhance treatment accuracy by 75%",
     "Reduce healthcare costs by 40%",
     "Enable remote diagnostics and telemedicine"
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Basic",
-      price: "$3,500",
-      period: "/month",
-      features: [
+      name: "Basic",price: "$3,500",
+      period: "/month",features: [
         "Up to 1,000 scans/month",
         "Basic AI diagnosis",
         "Standard reporting",
@@ -106,10 +85,8 @@ export default function AIHealthcareDiagnostics() {
       ]
     },
     {
-      name: "Professional",
-      price: "$7,500",
-      period: "/month",
-      features: [
+      name: "Professional",price: "$7,500",
+      period: "/month",features: [
         "Up to 10,000 scans/month",
         "Advanced AI algorithms",
         "Custom reporting",
@@ -119,11 +96,9 @@ export default function AIHealthcareDiagnostics() {
       ]
     },
     {
-      name: "Enterprise",
-      price: "$18,000",
-      period: "/month",
-      features: [
-        "Unlimited scans",
+      name: "Enterprise",price: "$18,000",
+      period: "/month",features: [
+        "Unlimited scans";
         "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
@@ -131,7 +106,7 @@ export default function AIHealthcareDiagnostics() {
         "Custom development"
       ]
     }
-  ];
+  ],
 
   const complianceFeatures = [
     "HIPAA Compliant",
@@ -140,7 +115,7 @@ export default function AIHealthcareDiagnostics() {
     "GDPR Compliant",
     "ISO 27001 Certified",
     "End-to-end Encryption"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -293,7 +268,7 @@ export default function AIHealthcareDiagnostics() {
               Transform Healthcare Delivery
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI diagnostics platform delivers measurable improvements in healthcare outcomes, 
+              Our AI diagnostics platform delivers measurable improvements in healthcare outcomes;
               efficiency, and cost reduction.
             </p>
           </motion.div>
@@ -449,7 +424,7 @@ export default function AIHealthcareDiagnostics() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -458,5 +433,5 @@ export default function AIHealthcareDiagnostics() {
         </div>
       </section>
     </div>
-  );
+  )
 }

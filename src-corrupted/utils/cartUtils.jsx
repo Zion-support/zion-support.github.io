@@ -1,6 +1,6 @@
-// cartUtils utility;
+// cartUtils utility,
 export const cartUtils = {,
-  // Placeholder utility functions;
+  // Placeholder utility functions,
 init: function() {}
 }
-export default cartUtils;
+export default cartUtils,

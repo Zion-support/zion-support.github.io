@@ -1,24 +1,24 @@
-import React from 'react';
+import React from 'react',
 export default React.memo(function MicroSAASSolutions (...args[]) :  {
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO',
 
 export default function Page() {
-,;
+,
     {
       title: "API Development & Integration",
       description: "Robust APIs that enable seamless integration with existing systems and third - party applications.",
       icon: Cpu,
-      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"];
-    },;
+      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"],
+    },
     {
-      features["Real - time metrics", "Custom reports", "Data visualization", "Export capabilities"];
-    };
-      title: "Analytics & Reporting",;
-      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
-      icon: TrendingUp,;
-      features: ["Real - time metrics", "Custom reports", "Data visualization", "Export capabilities"];
-    };
-  ];
+      features["Real - time metrics", "Custom reports", "Data visualization", "Export capabilities"],
+    },
+      title: "Analytics & Reporting",
+      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
+      icon: TrendingUp,
+      features: ["Real - time metrics", "Custom reports", "Data visualization", "Export capabilities"],
+    },
+  ],
 
   const benefits = [{
       title: "Rapid Deployment",
@@ -33,14 +33,14 @@ export default function Page() {
     {
       title: "Cost Efficiency",
       description: "Reduced infrastructure costs with cloud - native solutions",
-      icon: BarChart3;
-    },;
-    {;
-      title: "Security",;
-      description: "Enterprise - grade security and compliance standards",;
-      icon: Shield;
-    };
-  ];
+      icon: BarChart3
+    },
+    {,
+      title: "Security",
+      description: "Enterprise - grade security and compliance standards",
+      icon: Shield
+    },
+  ],
 
   const industries = [{
       name: "Healthcare",
@@ -65,14 +65,14 @@ export default function Page() {
     {
       name: "Retail",
       description: "E - commerce and point - of - sale solutions",
-      icon: Building;
-    },;
-    {;
-      name: "Real Estate",;
-      description: "Property management and client portals",;
-      icon: Building;
-    };
-  ];
+      icon: Building
+    },
+    {,
+      name: "Real Estate",
+      description: "Property management and client portals",
+      icon: Building
+    },
+  ],
 
   const processSteps = [{
       step: 1,
@@ -95,14 +95,14 @@ export default function Page() {
       icon: Cpu,
       duration: "8 - 16 weeks"
     },
-    {;
-      step: 4,;
-      title: "Testing & Deployment",;
-      description: "Comprehensive testing and production deployment",;
-      icon: Rocket,;
-      duration: "2 - 4 weeks";
-    };
-  ];
+    {,
+      step: 4,
+      title: "Testing & Deployment",
+      description: "Comprehensive testing and production deployment",
+      icon: Rocket,
+      duration: "2 - 4 weeks"
+    },
+  ],
 
   return (<>
       <SEO
@@ -180,13 +180,13 @@ export default function Page() {
                         <span className="text-zion - slate - light text-sm">{feature}</span>
                       </div>) ) }
                   </div>
-                </div>;) ) }
+                </div>,) ) }
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">;
+        <section className="py-20">,
           <div className="container -responsive">
             <div className="text-center mb-16">
               <h2 className="text-4xl font - bold text-white mb-4">Why Choose Our Micro SAAS Solutions?</h2>
@@ -206,13 +206,13 @@ export default function Page() {
 
                   <h3 className="text-2xl font - bold text-white mb-4 text-center">{benefit.title}</h3>
                   <p className="text-zion - slate - light leading - relaxed text-center">{benefit.description}</p>
-                </div>;) ) }
+                </div>,) ) }
             </div>
           </div>
         </section>
 
         {/* Industries Section */}
-        <section className="py-20 bg-zion - blue -dark / 50">;
+        <section className="py-20 bg-zion - blue -dark / 50">,
           <div className="container -responsive">
             <div className="text-center mb-16">
               <h2 className="text-4xl font - bold text-white mb-4">Industries We Serve</h2>
@@ -232,13 +232,13 @@ export default function Page() {
 
                   <h3 className="text-xl font - bold text-white mb-3">{industry.name}</h3>
                   <p className="text-zion - slate - light leading -relaxed">{industry.description}</p>
-                </div>;) ) }
+                </div>,) ) }
             </div>
           </div>
         </section>
 
         {/* Process Section */}
-        <section className="py-20">;
+        <section className="py-20">,
           <div className="container -responsive">
             <div className="text-center mb-16">
               <h2 className="text-4xl font - bold text-white mb-4">Our Development Process</h2>
@@ -269,7 +269,7 @@ export default function Page() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+        <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
           <div className="container -responsive">
             <div className="text-center max - w-4xl mx -auto">
               <h2 className="text-4xl font - bold text-white mb-6">Ready to Build Your Micro SAAS?</h2>
@@ -277,7 +277,7 @@ export default function Page() {
                 Let's discuss how custom Micro SAAS solutions can transform your business
                 and accelerate your growth in the digital marketplace.</p>
 
-              <div className="flex flex - col sm:flex - row gap-4 justify -center">
+              <div className="flex flex - col sm: flex - row gap-4 justify -center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient - to - r from - zion - cyan to - zion - purple text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 transform hover:scale -105"
@@ -291,9 +291,9 @@ export default function Page() {
                   Get Consultation
                 </a>
               </div>
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;) ;
+            </div>,
+          </div>,
+        </section>,
+      </div>,
+    </>,) 
 }

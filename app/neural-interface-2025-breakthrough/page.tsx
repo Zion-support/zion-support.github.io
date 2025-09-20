@@ -1,11 +1,11 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'Neural Interface 2025 Breakthrough - Direct Brain-Computer Connection';
-  description: 'Experience the revolutionary neural interface technology of 2025. Direct brain-computer communication, enhanced cognition, and seamless AI integration.';
-  keywords: ['neural interface 2025brain-computer interface', 'BCI technologyneural enhancement', 'AI integration'],
-};
+  title: 'Neural Interface 2025 Breakthrough - Direct Brain-Computer Connection',
+  description: 'Experience the revolutionary neural interface technology of 2025. Direct brain-computer communication, enhanced cognition, and seamless AI integration.',
+  keywords: ['neural interface 2025brain-computer interfaceBCI technologyneural enhancement', 'AI integration']
+},
 export default function NeuralInterface2025BreakthroughPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900">,
@@ -45,7 +45,7 @@ export default function NeuralInterface2025BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Features */,}
+      {/* Key Features */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -64,7 +64,7 @@ export default function NeuralInterface2025BreakthroughPage() {,
               <div className="text-4xl mb-4">⚡</div>,
               <h3 className="text-2xl font-bold text-white mb-4">Enhanced Cognition</h3>,
               <p className="text-gray-300">,
-                Boost your mental capabilities with AI-assisted thinking;
+                Boost your mental capabilities with AI-assisted thinking,
                 memory enhancement, and accelerated learning.,
               </p>,
             </div>,
@@ -72,7 +72,7 @@ export default function NeuralInterface2025BreakthroughPage() {,
               <div className="text-4xl mb-4">🤖</div>,
               <h3 className="text-2xl font-bold text-white mb-4">AI Integration</h3>,
               <p className="text-gray-300">,
-                Seamlessly integrate with AI systems for enhanced decision-making;
+                Seamlessly integrate with AI systems for enhanced decision-making,
                 creativity, and problem-solving capabilities.,
               </p>,
             </div>,
@@ -131,7 +131,7 @@ export default function NeuralInterface2025BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Specifications */,}
+      {/* Technology Specifications */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -156,7 +156,7 @@ export default function NeuralInterface2025BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Safety & Privacy */,}
+      {/* Safety & Privacy */}
       <section className="py-16 px-4">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -184,7 +184,7 @@ export default function NeuralInterface2025BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 px-4">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold text-white mb-6">,
@@ -202,5 +202,4 @@ export default function NeuralInterface2025BreakthroughPage() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

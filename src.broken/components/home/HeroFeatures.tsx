@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 
 interface HeroFeature {
-icon: React.ComponentType<{ className?: string}>;
-  title: string;
-  description: string;
+icon: React.ComponentType<{ className?: string}>,
+  title: string,
+  description: string,
   gradient: string}
 
 interface HeroFeaturesProps extends React.PropsWithChildren<{}> {
@@ -19,7 +19,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
 
-      {features.map((feature, index (;
+      {features.map((feature, index (,
         <motion.div
           key={feature.title}"
           className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
@@ -72,15 +72,15 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
           {/* Hover indicator */}"
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
         </motion.div>
-      ))};
-    </motion.div>;
-  )};
-          {/* Hover indicator */};"
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />;
-        </motion.div>;
-      ))};
-    </motion.div>;
-  )};
+      ))},
+    </motion.div>,
+  )},
+          {/* Hover indicator */},"
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover: w-1/2 transition-all duration-500" />,
+        </motion.div>,
+      ))},
+    </motion.div>,
+  )},
 
 export default HeroFeatures}}'"`
 =======

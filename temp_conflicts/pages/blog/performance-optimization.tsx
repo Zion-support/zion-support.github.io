@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import React from 'react',
 
 export default function PerformanceOptimization() {
   return (
@@ -61,7 +61,7 @@ export default function PerformanceOptimization() {
                   Understanding Performance Metrics
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  Before diving into optimization strategies, it&apos;s crucial
+                  Before diving into optimization strategies, it&apos,s crucial
                   to understand what performance means in the context of
                   autonomous systems. Key metrics include:
                 </p>
@@ -467,8 +467,7 @@ export default function PerformanceOptimization() {
                   exploring new optimization techniques and technologies.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Emerging trends in performance optimization include:
-                </p>
+                  Emerging trends in performance optimization include: </p>
                 <ul className="space-y-2 text-white/80 mb-6">
                   <li>• Quantum computing for complex optimization problems</li>
                   <li>• Neuromorphic computing for brain-inspired AI processing</li>
@@ -501,5 +500,5 @@ export default function PerformanceOptimization() {
         </main>
       </div>
     </>
-  );
+  )
 }

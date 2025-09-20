@@ -9,7 +9,7 @@ export default function Page() {
     description: 'Next-generation quantum computing solutions for complex problem solving',
     icon: Rocket,
     category: 'Emerging Tech',
-    features['Quantum algorithms',Hybrid classical-quantum',Scientific computing',Optimization'],;
+    features['Quantum algorithms',Hybrid classical-quantum',Scientific computing',Optimization'],
     pricing: '$5,000/month',
     rating: 4.8,
     reviews: 89,
@@ -23,7 +23,7 @@ export default function Page() {
     description: 'Intelligent threat detection and response with zero-trust architecture',
     icon: Shield,
     category: 'Cybersecurity',
-    features['AI threat detection',Zero-trust architecture',Compliance automation',24/7 monitoring'],;
+    features['AI threat detection',Zero-trust architecture',Compliance automation',24/7 monitoring'],
     pricing: '$2,500/month',
     rating: 4.9,
     reviews: 234,
@@ -38,7 +38,7 @@ export default function Page() {
     description: 'Scalable cloud infrastructure with intelligent automation',
     icon: Cloud,
     category: 'Cloud & DevOps',
-    features['Multi-cloud management',CI/CD automation',Infrastructure as code',Cost optimization'],;
+    features['Multi-cloud management',CI/CD automation',Infrastructure as code',Cost optimization'],
     pricing: '$1,500/month',
     rating: 4.7,
     reviews: 189,
@@ -52,7 +52,7 @@ export default function Page() {
     description: 'Decentralized finance solutions with advanced blockchain technology',
     icon: Globe,
     category: 'Blockchain & Web3',
-    features['DeFi protocols',Smart contracts',Yield optimization',Cross-chain support'],;
+    features['DeFi protocols',Smart contracts',Yield optimization',Cross-chain support'],
     pricing: '$1,800/month',
     rating: 4.6,
     reviews: 123,
@@ -66,7 +66,7 @@ export default function Page() {
     description: 'End-to-end business transformation with cutting-edge technology',
     icon: TrendingUp,
     category: 'Digital Transformation',
-    features['Strategy consulting',Process optimization',Change management',ROI tracking'],;
+    features['Strategy consulting',Process optimization',Change management',ROI tracking'],
     pricing: '$3,500/month',
     rating: 4.8,
     reviews: 167,
@@ -80,7 +80,7 @@ export default function Page() {
     description: 'Rapid development and deployment of SaaS applications',
     icon: Code,
     category: 'Micro SAAS',
-    features['Rapid prototyping',Scalable architecture',Multi-tenancy',Analytics dashboard'],;
+    features['Rapid prototyping',Scalable architecture',Multi-tenancy',Analytics dashboard'],
     pricing: '$899/month',
     rating: 4.7,
     reviews: 98,
@@ -94,45 +94,42 @@ export default function Page() {
     description: 'AI-powered diagnostic and patient care optimization',
     icon: Users,
     category: 'Healthcare AI',
-    features['Medical imaging AI',Predictive diagnostics',Patient monitoring',HIPAA compliant'],;
+    features['Medical imaging AI',Predictive diagnostics',Patient monitoring',HIPAA compliant'],
     pricing: '$4,500/month',
     rating: 4.9,
     reviews: 78,
     color: 'from-emerald-500 to-teal-500',
     link: '/ai-services/healthcare'
 
-];
+],
 
-  'Cybersecurity',;
-  'Cloud & DevOps',;
-  'Blockchain & Web3',;
-  'Digital Transformation',;
-  'Micro SAAS',;
-  'Healthcare AI';
+  'CybersecurityCloud & DevOps',
+  'Blockchain & Web3Digital Transformation',
+  'Micro SAASHealthcare AI',
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 ]}
       },
       { threshold: 0.1 }
-    );
+    ),
 <<<<<<< HEAD
 
     if(element) {
 =======
 '
-    const element = document.getElementById('service-showcase');    if(element) {
+    const element = document.getElementById('service-showcase'),    if(element) {
 
       observer.observe(element)}
 
-    return () => observer.disconnect()}, []);
+    return () => observer.disconnect()}, []),
 
-      />;
-    ))};
-          i < Math.floor(rating) ;
-            ? 'text-yellow-400 fill-current' ;
-            : 'text-gray-400';`
-        }`};
-      />;) ) };
+      />,
+    ))},
+          i < Math.floor(rating) ,
+            ? 'text-yellow-400 fill-current' ,
+            : 'text-gray-400',`
+        }`},
+      />,) ) },
   return ()
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <div className="max-w-7xl mx-auto px-6">
@@ -238,7 +235,7 @@ export default function Page() {
                       </div>) }
 
                     {/* Service Icon */}`
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;"
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>,"
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
 
@@ -320,7 +317,7 @@ export default function Page() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Let our expert team help you implement cutting-edge technology solutions
               that drive real business results and competitive advantage.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link"
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
@@ -334,10 +331,10 @@ export default function Page() {
 
                 View All Services"
                 <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) };
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

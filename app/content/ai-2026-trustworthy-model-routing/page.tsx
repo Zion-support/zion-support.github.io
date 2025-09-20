@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Trustworthy Model Routing';
-  description: 'Risk-aware, evaluation-gated model routing for safety, quality, reliability, and cost.',
-};
+  title: 'AI 2026: Trustworthy Model Routing',
+  description: 'Risk-aware, evaluation-gated model routing for safety, quality, reliability, and cost.'
+},
 export default function TrustworthyModelRoutingPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -33,7 +33,7 @@ export default function TrustworthyModelRoutingPage() {,
         </div>,
         <div className="bg-purple-50 border border-purple-100 p-4 rounded-lg">,
           <p className="text-sm text-purple-800">,
-            See also: {' ',}
+            See also: {' '}
             <Link href="/blog/ai-2026-agent-benchmark-suite" className="font-semibold underline">,
               Agent Benchmark Suite,
             </Link>,
@@ -41,7 +41,6 @@ export default function TrustworthyModelRoutingPage() {,
           </p>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

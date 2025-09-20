@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Cloud,
@@ -20,142 +20,68 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-
+} from "lucide-react";
 // Import the new services
-import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';
-import { enterpriseITInfrastructureServices2025 } from '../../data/2025-enterprise-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../../data/2025-innovative-micro-saas-solutions';
-
+import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion";
+import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
+import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+  id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {
+    mobile: string,email: string,address: string,website: string
   };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
-  marketDisruption: string;
+  realImplementation: boolean,implementationDetails: string,launchDate: string,customers: number,rating: number,reviews: number,innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',aiCapabilities: string[],marketDisruption: string
 }
 
 const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
 };
-
 const categories = [
   {
-    id: 'ai-services',
-    name: 'AI & Autonomous Systems',
-    description: 'Revolutionary AI solutions that transform business operations',
-    icon: <Brain className="w-8 h-8" />,
-    color: 'from-purple-600 to-pink-700',
-    services: ultimateInnovativeServices2025.filter(s => s.category.includes('AI'))
-  },
+    id: 'ai-services',name: 'AI & Autonomous Systems',description: 'Revolutionary AI solutions that transform business operations',icon: <Brain className="w-8 h-8" />,color: 'from-purple-600 to-pink-700',services: ultimateInnovativeServices2025.filter(s => s.category.includes('AI'))
+  };
   {
-    id: 'it-infrastructure',
-    name: 'IT Infrastructure & Enterprise',
-    description: 'Cutting-edge infrastructure solutions for modern businesses',
-    icon: <Cloud className="w-8 h-8" />,
-    color: 'from-blue-600 to-cyan-700',
-    services: enterpriseITInfrastructureServices2025
-  },
+    id: 'it-infrastructure',name: 'IT Infrastructure & Enterprise',description: 'Cutting-edge infrastructure solutions for modern businesses',icon: <Cloud className="w-8 h-8" />,color: 'from-blue-600 to-cyan-700',services: enterpriseITInfrastructureServices2025
+  };
   {
-    id: 'micro-saas',
-    name: 'Micro SAAS Solutions',
-    description: 'Innovative software solutions for small businesses',
-    icon: <Code className="w-8 h-8" />,
-    color: 'from-green-600 to-emerald-700',
-    services: innovativeMicroSaasSolutions2025
+    id: 'micro-saas',name: 'Micro SAAS Solutions',description: 'Innovative software solutions for small businesses',icon: <Code className="w-8 h-8" />,color: 'from-green-600 to-emerald-700',services: innovativeMicroSaasSolutions2025
   }
 ];
-
 const innovationLevelColors = {
-  'Revolutionary': 'from-red-600 to-pink-700',
-  'Breakthrough': 'from-purple-600 to-violet-700',
-  'Advanced': 'from-blue-600 to-cyan-700',
-  'Emerging': 'from-green-600 to-emerald-700'
-};
+  'Revolutionary': 'from-red-600 to-pink-700Breakthrough': 'from-purple-600 to-violet-700Advanced': 'from-blue-600 to-cyan-700Emerging': 'from-green-600 to-emerald-700'
+},
 
 const patentStatusColors = {
-  'Patented': 'from-green-600 to-emerald-700',
-  'Patent Pending': 'from-yellow-600 to-orange-700',
-  'Trade Secret': 'from-blue-600 to-indigo-700',
-  'Open Source': 'from-purple-600 to-violet-700'
-};
+  'Patented': 'from-green-600 to-emerald-700Patent Pending': 'from-yellow-600 to-orange-700Trade Secret': 'from-blue-600 to-indigo-700Open Source': 'from-purple-600 to-violet-700'
+},
 
 export function UltimateServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedService, setSelectedService] = useState<Service | null>(null),
 
   const allServices = [
     ...ultimateInnovativeServices2025,
-    ...enterpriseITInfrastructureServices2025,
+    ...enterpriseITInfrastructureServices2025;
     ...innovativeMicroSaasSolutions2025
   ];
-
   const filteredServices = selectedCategory === 'all'
     ? allServices
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
+      opacity: 1,transition: {
+        staggerChildren: 0.1,delayChildren: 0.2
       }
     }
   };
-
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 };
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
+      opacity: 1,y: 0,transition: {
+        duration: 0.6,ease: "easeOut"
       }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -483,7 +409,7 @@ export function UltimateServicesShowcase() {
                       href={`tel:${contact.mobile}`
                         .replace(/\s/g, '')
                         .replace(/[^\d+]/g, '')}
-                      className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
+                      className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover: bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
                     >
                       <Phone className="w-5 h-5" />
                     </a>

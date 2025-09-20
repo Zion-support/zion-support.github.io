@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   X, ChevronRight, Home, Star, Users, 
   Settings, HelpCircle, Mail, Phone, MapPin,
@@ -10,17 +10,17 @@ import {
   ArrowRight, Search, Menu, X as CloseIcon,
   Target, BookOpen, Truck, BarChart3,
   Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface SidebarItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  isNew?: boolean;
-  isHot?: boolean;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: SidebarItem[],
+  badge?: string,
+  isNew?: boolean,
+  isHot?: boolean
 }
 
 const contactInfo = {
@@ -28,7 +28,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const sidebarItems: SidebarItem[] = [
   {
@@ -215,7 +215,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-];
+],
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
@@ -224,26 +224,26 @@ const resources = [
   { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-];
+],
 
 
 
   const toggleSection = (title: string) => {
-    const newExpanded = new Set(expandedSections);
+    const newExpanded = new Set(expandedSections),
     if (newExpanded.has(title)) {
-      newExpanded.delete(title);
+      newExpanded.delete(title)
     } else {
-      newExpanded.add(title);
+      newExpanded.add(title),
     }
-    setExpandedSections(newExpanded);
-  };
+    setExpandedSections(newExpanded),
+  },
 
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
-  );
+  ),
 
 const EnhancedSidebar2025: React.FC = () => {
   return (
@@ -251,7 +251,7 @@ const EnhancedSidebar2025: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedSidebar2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedSidebar2025;
+export default EnhancedSidebar2025,

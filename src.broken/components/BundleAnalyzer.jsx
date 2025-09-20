@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,
                     {
@@ -40,12 +40,12 @@ export default function Page() {
                 ],
                 score: 78,
                 lastUpdated: new Date()
-            };
-            // // // // // // // // console.error('Bundle analysis failed:', error);
+            },
+            // // // // // // // // console.error('Bundle analysis failed:', error),
         }
         finally {
 
-            setIsAnalyzing(false);
+            setIsAnalyzing(false),
 
             setAnalysis(mockAnalysis) }
         catch(error) {
@@ -54,50 +54,50 @@ export default function Page() {
         finally {
 
             setIsAnalyzing(false)}
-    }, []);
+    }, []),
     useEffect(() => {
-        analyzeBundle()}, [analyzeBundle]);
+        analyzeBundle()}, [analyzeBundle]),
     const formatBytes = (bytes) => {
 
         if(bytes === 0)
-            return '0 B';
-        const k = 1024;
-        const sizes = ['B',KB',MB',GB'];
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
+            return '0 B',
+        const k = 1024,
+        const sizes = ['B',KB',MB',GB'],
+        const i = Math.floor(Math.log(bytes) / Math.log(k)),
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]},
     const getScoreColor = (score) => {
 
         if(score >= 80)
-            return 'text-green-500';
+            return 'text-green-500',
         if(score >= 60)
-            return 'text-yellow-500';
-        return 'text-red-500'};
+            return 'text-yellow-500',
+        return 'text-red-500'},
     const getScoreIcon = (score) => {
 
         if(score >= 80)
-            return <CheckCircle className="w-5 h-5"/>;
+            return <CheckCircle className="w-5 h-5"/>,
         if(score >= 60)"
-            return <AlertTriangle className="w-5 h-5"/>;"
-        return <AlertTriangle className="w-5 h-5"/>};
+            return <AlertTriangle className="w-5 h-5"/>,"
+        return <AlertTriangle className="w-5 h-5"/>},
     const getOptimizationColor = (optimization) => {
 
         switch(optimization) {
 
-            case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
-            case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
+            case 'good': return 'text-green-500 bg-green-100 dark: bg-green-900/20',
+            case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20',
+            case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20',
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
-    };
+    },
     const getOptimizationIcon = (optimization) => {
 
         switch(optimization) {
 '"
-            case 'good': return <CheckCircle className="w-4 h-4"/>;'"
-            case 'warning': return <AlertTriangle className="w-4 h-4"/>;'"
-            case 'critical': return <AlertTriangle className="w-4 h-4"/>;"
+            case 'good': return <CheckCircle className="w-4 h-4"/>,'"
+            case 'warning': return <AlertTriangle className="w-4 h-4"/>,'"
+            case 'critical': return <AlertTriangle className="w-4 h-4"/>,"
             default: return <Info className="w-4 h-4"/>}
-    };
-    if(!analysis) return null;
+    },
+    if(!analysis) return null,
     return (<>
       {/* Bundle Analyzer Button */}"
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}  aria-expanded={isOpen}>"
@@ -282,5 +282,5 @@ export default function Page() {
             </div>
           </motion.div>) }
       </AnimatePresence>
-    </>)};
+    </>)},
 '"`

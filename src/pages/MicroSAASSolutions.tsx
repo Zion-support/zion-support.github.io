@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from "react";
+import { SEO } from "../components/SEO";
 import {
   Code,
   Zap,
@@ -22,129 +22,75 @@ import {
   Star,
   ArrowRight,
   Brain
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function MicroSAASSolutions() {
   const services = [
     {
-      title: "Custom SAAS Development",
-      description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
-      icon: Code,
-      features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
+      title: "Custom SAAS Development",description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",icon: Code,features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
     },
     {
-      title: "Multi-tenant Architecture",
-      description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
-      icon: Users,
-      features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
+      title: "Multi-tenant Architecture",description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",icon: Users,features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
     },
     {
-      title: "Subscription Management",
-      description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
-      icon: BarChart3,
-      features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
+      title: "Subscription Management",description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",icon: BarChart3,features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
     },
     {
-      title: "API Development & Integration",
-      description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
-      icon: Cpu,
-      features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
+      title: "API Development & Integration",description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",icon: Cpu,features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
     {
-      title: "Analytics & Reporting",
-      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
-      icon: TrendingUp,
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
+      title: "Analytics & Reporting",description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
+      icon: TrendingUp,features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
     }
-  ];
+  ],
 
   const benefits = [
     {
-      title: "Rapid Deployment",
-      description: "Quick time-to-market with agile development methodologies",
-      icon: Zap
-    },
+      title: "Rapid Deployment",description: "Quick time-to-market with agile development methodologies",icon: Zap
+    };
     {
-      title: "Scalability",
-      description: "Built to grow with your business from day one",
-      icon: TrendingUp
-    },
+      title: "Scalability",description: "Built to grow with your business from day one",icon: TrendingUp
+    };
     {
-      title: "Cost Efficiency",
-      description: "Reduced infrastructure costs with cloud-native solutions",
-      icon: BarChart3
-    },
+      title: "Cost Efficiency",description: "Reduced infrastructure costs with cloud-native solutions",icon: BarChart3
+    };
     {
-      title: "Security",
-      description: "Enterprise-grade security and compliance standards",
-      icon: Shield
+      title: "Security",description: "Enterprise-grade security and compliance standards",icon: Shield
     }
   ];
-
   const industries = [
     {
-      name: "Healthcare",
-      description: "HIPAA-compliant patient management systems",
-      icon: Building
-    },
+      name: "Healthcare",description: "HIPAA-compliant patient management systems",icon: Building
+    };
     {
-      name: "Finance",
-      description: "Regulatory-compliant financial tools",
-      icon: Building
-    },
+      name: "Finance",description: "Regulatory-compliant financial tools",icon: Building
+    };
     {
-      name: "Education",
-      description: "Learning management and student tracking",
-      icon: Building
-    },
+      name: "Education",description: "Learning management and student tracking",icon: Building
+    };
     {
-      name: "Manufacturing",
-      description: "Production planning and inventory management",
-      icon: Building
-    },
+      name: "Manufacturing",description: "Production planning and inventory management",icon: Building
+    };
     {
-      name: "Retail",
-      description: "E-commerce and point-of-sale solutions",
-      icon: Building
-    },
+      name: "Retail",description: "E-commerce and point-of-sale solutions",icon: Building
+    };
     {
-      name: "Real Estate",
-      description: "Property management and client portals",
-      icon: Building
+      name: "Real Estate",description: "Property management and client portals",icon: Building
     }
   ];
-
   const processSteps = [
     {
-      step: 1,
-      title: "Discovery & Planning",
-      description: "Understanding your business requirements and creating a comprehensive project plan",
-      icon: Target,
-      duration: "1-2 weeks"
-    },
+      step: 1,title: "Discovery & Planning",description: "Understanding your business requirements and creating a comprehensive project plan",icon: Target,duration: "1-2 weeks"
+    };
     {
-      step: 2,
-      title: "Design & Architecture",
-      description: "Creating the system architecture and user interface designs",
-      icon: Code,
-      duration: "2-4 weeks"
-    },
+      step: 2,title: "Design & Architecture",description: "Creating the system architecture and user interface designs",icon: Code,duration: "2-4 weeks"
+    };
     {
-      step: 3,
-      title: "Development",
-      description: "Building the core application with iterative development cycles",
-      icon: Cpu,
-      duration: "8-16 weeks"
-    },
+      step: 3,title: "Development",description: "Building the core application with iterative development cycles",icon: Cpu,duration: "8-16 weeks"
+    };
     {
-      step: 4,
-      title: "Testing & Deployment",
-      description: "Comprehensive testing and production deployment",
-      icon: Rocket,
-      duration: "2-4 weeks"
+      step: 4,title: "Testing & Deployment",description: "Comprehensive testing and production deployment",icon: Rocket,duration: "2-4 weeks"
     }
   ];
-
   return (
     <>
       <SEO
@@ -174,7 +120,7 @@ export default function MicroSAASSolutions() {
               </h1>
 
               <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-                Transform your business with custom Micro SAAS solutions. From development to deployment,
+                Transform your business with custom Micro SAAS solutions. From development to deployment;
                 we deliver scalable, secure, and efficient software-as-a-service applications.
               </p>
 
@@ -332,7 +278,7 @@ export default function MicroSAASSolutions() {
                 and accelerate your growth in the digital marketplace.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
@@ -351,5 +297,5 @@ export default function MicroSAASSolutions() {
         </section>
       </div>
     </>
-  );
+  )
 }

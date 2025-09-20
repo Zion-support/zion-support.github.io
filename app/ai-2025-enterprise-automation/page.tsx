@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Enterprise Automation - Zion Tech Group';
-  description: 'Transform your enterprise with intelligent automation solutions. Streamline operations, reduce costs, and boost productivity with AI-powered automation.';
-  keywords: ['enterprise automationAI automation', 'business process automationworkflow automation', 'intelligent automation'],
-};
+  title: 'AI 2025 Enterprise Automation - Zion Tech Group',
+  description: 'Transform your enterprise with intelligent automation solutions. Streamline operations, reduce costs, and boost productivity with AI-powered automation.',
+  keywords: ['enterprise automationAI automationbusiness process automationworkflow automation', 'intelligent automation']
+},
 export default function AI2025EnterpriseAutomationPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white">,
@@ -40,7 +40,7 @@ export default function AI2025EnterpriseAutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Automation Solutions Section */,}
+      {/* Automation Solutions Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Intelligent Automation Solutions</h2>,
@@ -62,7 +62,7 @@ export default function AI2025EnterpriseAutomationPage() {,
               <div className="text-4xl mb-4">🤖</div>,
               <h3 className="text-2xl font-bold mb-4">Intelligent Workflows</h3>,
               <p className="text-gray-200 mb-4">,
-                Create smart workflows that learn from patterns, predict bottlenecks;
+                Create smart workflows that learn from patterns, predict bottlenecks,
                 and automatically adjust to maximize efficiency and minimize errors.,
               </p>,
               <ul className="text-sm text-gray-300 space-y-2">,
@@ -138,7 +138,7 @@ export default function AI2025EnterpriseAutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Industry Applications Section */,}
+      {/* Industry Applications Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Industry Applications</h2>,
@@ -166,7 +166,7 @@ export default function AI2025EnterpriseAutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Enterprise?</h2>,
@@ -190,5 +190,4 @@ export default function AI2025EnterpriseAutomationPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

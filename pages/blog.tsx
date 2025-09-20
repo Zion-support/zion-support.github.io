@@ -12,7 +12,7 @@ export default function Blog() {
       date: '2025-01-15',
       readTime: '8 min read',
       category: 'AI & Automation',
-      tags: ['AI', 'Automation', 'Trends', '2025'],
+      tags: ['AIAutomation', 'Trends2025'],
       featured: true,
       image: '/blog/ai-automation-trends.jpg'
     },
@@ -24,7 +24,7 @@ export default function Blog() {
       date: '2025-01-10',
       readTime: '12 min read',
       category: 'Cybersecurity',
-      tags: ['Cloud', 'Security', 'DevOps', 'Best Practices'],
+      tags: ['CloudSecurity', 'DevOpsBest Practices'],
       featured: false,
       image: '/blog/cloud-security.jpg'
     },
@@ -36,7 +36,7 @@ export default function Blog() {
       date: '2025-01-08',
       readTime: '10 min read',
       category: 'Emerging Tech',
-      tags: ['Quantum', 'Computing', 'Enterprise', 'Future'],
+      tags: ['QuantumComputing', 'EnterpriseFuture'],
       featured: false,
       image: '/blog/quantum-computing.jpg'
     },
@@ -48,7 +48,7 @@ export default function Blog() {
       date: '2025-01-05',
       readTime: '15 min read',
       category: 'DevOps',
-      tags: ['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
+      tags: ['DevOpsAutomation', 'CI/CDBest Practices'],
       featured: false,
       image: '/blog/devops-automation.jpg'
     },
@@ -60,7 +60,7 @@ export default function Blog() {
       date: '2025-01-03',
       readTime: '11 min read',
       category: 'AI & Ethics',
-      tags: ['AI Ethics', 'Governance', 'Compliance', 'Business'],
+      tags: ['AI EthicsGovernance', 'ComplianceBusiness'],
       featured: false,
       image: '/blog/ai-ethics.jpg'
     },
@@ -72,7 +72,7 @@ export default function Blog() {
       date: '2024-12-28',
       readTime: '14 min read',
       category: 'Cybersecurity',
-      tags: ['Cybersecurity', 'Threats', 'Analysis', '2025'],
+      tags: ['CybersecurityThreats', 'Analysis2025'],
       featured: false,
       image: '/blog/cyber-threats.jpg'
     }

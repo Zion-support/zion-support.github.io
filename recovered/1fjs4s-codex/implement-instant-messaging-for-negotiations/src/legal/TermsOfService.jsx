@@ -1,34 +1,34 @@
-import React, { useEffect, useRef, useState } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
-import { TERMS_SECTIONS } from "./termsContent";
+import React, { useEffect, useRef, useState } from "react",
+import { ScrollArea } from "@/components/ui/scroll-area",
+import { cn } from "@/lib/utils",
+import { TERMS_SECTIONS } from "./termsContent",
 
 export default function TermsOfService() {
-  const [active, setActive] = useState(TERMS_SECTIONS[0].id);
-  const headingRefs = useRef({});
+  const [active, setActive] = useState(TERMS_SECTIONS[0].id),
+  const headingRefs = useRef({}),
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActive(entry.target.id);
+            setActive(entry.target.id),
           }
-        });
+        }),
       },
       {
         rootMargin: "0px 0px -70% 0px",
-        threshold: 0.1,
+        threshold: 0.1
       }
-    );
+    ),
 
     TERMS_SECTIONS.forEach((section) => {
-      const el = headingRefs.current[section.id];
-      if (el) observer.observe(el);
-    });
+      const el = headingRefs.current[section.id],
+      if (el) observer.observe(el),
+    }),
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect(),
+  }, []),
 
   return (
     <div className="md:flex gap-8">
@@ -71,5 +71,5 @@ export default function TermsOfService() {
         ))}
       </div>
     </div>
-  );
+  ),
 }

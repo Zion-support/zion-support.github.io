@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 export default React.memo(function RequestQuote () {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange - 400' },
     { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red - 400' }
-  ];
+  ],
 
   const contactMethods = [{ value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' },
     { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' },
     { value: 'video', label: 'Video Call', icon: Users, description: 'Best for complex discussions' }
-  ];
+  ],
 
   const services = [{
       id: 'ai - ml',
@@ -18,12 +18,9 @@ export default function Page() {
       icon: Bot,
       description: 'Custom AI solutions, ML models, and intelligent automation',
       features: [
-        'Custom AI model development',
-        'Machine learning pipelines',
-        'Natural language processing',
-        'Computer vision solutions',
-        'Predictive analytics',
-        'AI - powered automation'
+        'Custom AI model developmentMachine learning pipelines',
+        'Natural language processingComputer vision solutions',
+        'Predictive analyticsAI - powered automation'
       ],
       pricing: 'Starting from $25,000',
       timeline: '4 - 12 weeks',
@@ -34,12 +31,9 @@ export default function Page() {
       name: 'Cloud & DevOps',
       icon: Cloud,
       description: 'Cloud infrastructure, CI / CD pipelines, and infrastructure automation',
-      features: ['AWS / Azure / GCP setup',
-        'Kubernetes orchestration',
-        'CI / CD pipeline development',
-        'Infrastructure as Code',
-        'Monitoring & logging',
-        'Security & compliance'
+      features: ['AWS / Azure / GCP setupKubernetes orchestration',
+        'CI / CD pipeline developmentInfrastructure as Code',
+        'Monitoring & loggingSecurity & compliance'
       ],
       pricing: 'Starting from $15,000',
       timeline: '2 - 8 weeks',
@@ -50,12 +44,9 @@ export default function Page() {
       name: 'Web Development',
       icon: Monitor,
       description: 'Modern web applications, e - commerce, and custom web solutions',
-      features: ['React / Next.js applications',
-        'E - commerce platforms',
-        'Custom web portals',
-        'API development',
-        'Performance optimization',
-        'SEO & accessibility'
+      features: ['React / Next.js applicationsE - commerce platforms',
+        'Custom web portalsAPI development',
+        'Performance optimizationSEO & accessibility'
       ],
       pricing: 'Starting from $10,000',
       timeline: '3 - 10 weeks',
@@ -66,12 +57,9 @@ export default function Page() {
       name: 'Mobile Applications',
       icon: Smartphone,
       description: 'iOS and Android apps with cross - platform solutions',
-      features: ['Native iOS development',
-        'Native Android development',
-        'React Native apps',
-        'Flutter applications',
-        'App store optimization',
-        'Push notifications'
+      features: ['Native iOS developmentNative Android development',
+        'React Native appsFlutter applications',
+        'App store optimizationPush notifications'
       ],
       pricing: 'Starting from $20,000',
       timeline: '6 - 16 weeks',
@@ -82,12 +70,9 @@ export default function Page() {
       name: 'Data & Analytics',
       icon: BarChart3,
       description: 'Data warehousing, business intelligence, and advanced analytics',
-      features: ['Data warehouse design',
-        'ETL pipeline development',
-        'Business intelligence dashboards',
-        'Advanced analytics',
-        'Data visualization',
-        'Predictive modeling'
+      features: ['Data warehouse designETL pipeline development',
+        'Business intelligence dashboardsAdvanced analytics',
+        'Data visualizationPredictive modeling'
       ],
       pricing: 'Starting from $18,000',
       timeline: '4 - 12 weeks',
@@ -98,12 +83,9 @@ export default function Page() {
       name: 'Cybersecurity',
       icon: Shield,
       description: 'Security audits, compliance, and threat protection',
-      features: ['Security assessments',
-        'Penetration testing',
-        'Compliance frameworks',
-        'Threat detection',
-        'Incident response',
-        'Security training'
+      features: ['Security assessmentsPenetration testing',
+        'Compliance frameworksThreat detection',
+        'Incident responseSecurity training'
       ],
       pricing: 'Starting from $12,000',
       timeline: '2 - 6 weeks',
@@ -114,12 +96,9 @@ export default function Page() {
       name: 'Micro SaaS Solutions',
       icon: Package,
       description: 'Custom SaaS applications and business automation tools',
-      features: ['Custom SaaS platforms',
-        'Business process automation',
-        'Workflow management',
-        'User management systems',
-        'Subscription billing',
-        'Analytics & reporting'
+      features: ['Custom SaaS platformsBusiness process automation',
+        'Workflow managementUser management systems',
+        'Subscription billingAnalytics & reporting'
       ],
       pricing: 'Starting from $30,000',
       timeline: '8 - 20 weeks',
@@ -130,18 +109,15 @@ export default function Page() {
       name: 'System Integration',
       icon: Settings,
       description: 'API development, third - party integrations, and data synchronization',
-      features: ['API development',
-        'Third - party integrations',
-        'Data synchronization',
-        'Webhook implementation',
-        'Custom connectors',
-        'Integration testing'
+      features: ['API developmentThird - party integrations',
+        'Data synchronizationWebhook implementation',
+        'Custom connectorsIntegration testing'
       ],
       pricing: 'Starting from $15,000',
       timeline: '3 - 8 weeks',
       category: 'IT Services'
     }
-  ];
+  ],
 
   const benefits = [{
       icon: Calculator,
@@ -163,48 +139,48 @@ export default function Page() {
       title: 'Quality Guarantee',
       description: 'We stand behind our work with satisfaction guarantees'
     }
-  ];
+  ],
 
   const handleInputChange = useCallback((field: string, value: string | string[]) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
-    }) ) ;
-  };
+    }) ) ,
+  },
 
   const toggleService = (serviceId: string) => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes (serviceId) ? prev.services.filter(id => id !== serviceId) : [...prev.services, serviceId]
-    }) ) ;
-  };
+    }) ) ,
+  },
 
   const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId) ;
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId) 
+  },
 
   const nextStep = () => {
     if(formStep < 3) {
-      setFormStep(formStep + 1) ;
+      setFormStep(formStep + 1) ,
     }
-  };
+  },
 
   const prevStep = () => {
     if(formStep > 1) {
-      setFormStep(formStep - 1) ;
+      setFormStep(formStep - 1) ,
     }
-  };
+  },
 
-  const handleSubmit = async(e: React.FormEvent) => {;
-    e.preventDefault () ;
-    setSubmitting(true) ;
+  const handleSubmit = async(e: React.FormEvent) => {,
+    e.preventDefault () ,
+    setSubmitting(true) ,
 
     // Simulate API call
-    await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+    await new Promise(resolve => setTimeout (resolve, 2000) ) ,
 
-    setSubmitting(false) ;
-    setSubmitted(true) ;
-  };
+    setSubmitting(false) ,
+    setSubmitted(true) ,
+  },
 
   const resetForm = () => {
     setFormData({
@@ -221,10 +197,10 @@ export default function Page() {
       services: [],
       urgency: 'medium',
       preferredContact: 'email'
-    }) ;
-    setFormStep(1) ;
-    setSubmitted(false) ;
-  };
+    }) ,
+    setFormStep(1) ,
+    setSubmitted(false) ,
+  },
 
   if(submitted) {
     return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify -center">
@@ -281,7 +257,7 @@ export default function Page() {
 
           <div  className="flex flex - col sm:flex - row gap-4 justify -center">
             <button     onClick={resetForm}
-              className="px-8 py-3 bg-gradient - to - r from - green - 400 to - blue - 500 text-white font - semibold rounded-lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale -105"
+              className="px-8 py-3 bg-gradient - to - r from - green - 400 to - blue - 500 text-white font - semibold rounded-lg hover: from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale -105"
             >
               Request Another Quote
             </button>
@@ -293,7 +269,7 @@ export default function Page() {
             </a>
           </div>
         </motion.div>
-      </div>) ;
+      </div>) 
   }
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
@@ -782,10 +758,10 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) };
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) ;
+    </div>) },
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </div>,) ,
 }

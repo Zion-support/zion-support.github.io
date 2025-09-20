@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitest/config';
-import path from 'node:path';
+import { defineConfig } from 'vitest/config',
+import path from 'node: path',
 
 export default defineConfig({
   resolve: {
@@ -16,19 +16,13 @@ export default defineConfig({
       '@/integrations': path.resolve(__dirname, './src/integrations'),
       '@/types': path.resolve(__dirname, './src/types'),
       // Use lightweight React Router stubs to avoid Router context errors in tests
-      'react-router-dom': path.resolve(
-        __dirname,
-        './src/stubs/react-router-dom.ts',
-      )
+      'react-router-dom': path.resolve(__dirname,
+        './src/stubs/react-router-dom.ts')
     }
   },
   define: {
-    'import.meta.env.NEXT_PUBLIC_SUPABASE_URL': JSON.stringify(
-      'http://localhost:54321',
-    ),
-    'import.meta.env.NEXT_PUBLIC_SUPABASE_ANON_KEY': JSON.stringify(
-      'test-anon-key-placeholder',
-    )
+    'import.meta.env.NEXT_PUBLIC_SUPABASE_URL': JSON.stringify('http://localhost:54321'),
+    'import.meta.env.NEXT_PUBLIC_SUPABASE_ANON_KEY': JSON.stringify('test-anon-key-placeholder')
   },
   test: {
     environment: 'jsdom',
@@ -36,15 +30,12 @@ export default defineConfig({
     globals: true,
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'html']
+      reporter: ['texthtml']
     },
     exclude: [
-      '**/node_modules/**',
-      '**/dist/**',
-      '**/cypress/**',
-      '**/.{idea,git,cache,output,temp}/**',
-      '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,eslint,prettier}.config.*',
-      'tests/e2e/**'
+      '**/node_modules/****/dist/**',
+      '**/cypress/****/.{idea,git,cache,output,temp}/**',
+      '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,eslint,prettier}.config.*tests/e2e/**'
     ]
   }
-});
+}),

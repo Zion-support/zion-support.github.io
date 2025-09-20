@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   ArrowRight,
@@ -9,144 +9,144 @@ import {,
   Users,
   Zap,
   Shield,
-  Globe;
-  Brain;
-  Database;
-  Cloud;
-  Lock;
-  Award;
-  ChevronRight;
-  Play;
-  Download;
-  ExternalLink;
-  BarChart3;
-  Settings;
-  Code;
-  Layers;
-  Network;
-  Bot;
-  Eye;
-  MessageSquare;
-  FileText;
-  Image;
-  Video;
-  Mic;
-  Search;
-  Filter;
-  Calendar;
-  Clock;
-  MapPin;
-  Phone;
-  Mail;
-  Share2;
-  Heart;
-  Bookmark;
-  Flag;
-  AlertCircle;
-  Info;
-  HelpCircle;
-  X;
-  Plus;
-  Edit;
-  Trash2;
-  Copy;
-  Save;
-  Upload;
-  RefreshCw;
-  RotateCcw;
-  ChevronLeft;
-  ChevronDown;
-  ChevronUp;
-  Menu;
-  XCircle;
-  CheckCircle2;
-  AlertTriangle,
-} from 'lucide-react';
+  Globe,
+  Brain,
+  Database,
+  Cloud,
+  Lock,
+  Award,
+  ChevronRight,
+  Play,
+  Download,
+  ExternalLink,
+  BarChart3,
+  Settings,
+  Code,
+  Layers,
+  Network,
+  Bot,
+  Eye,
+  MessageSquare,
+  FileText,
+  Image,
+  Video,
+  Mic,
+  Search,
+  Filter,
+  Calendar,
+  Clock,
+  MapPin,
+  Phone,
+  Mail,
+  Share2,
+  Heart,
+  Bookmark,
+  Flag,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  X,
+  Plus,
+  Edit,
+  Trash2,
+  Copy,
+  Save,
+  Upload,
+  RefreshCw,
+  RotateCcw,
+  ChevronLeft,
+  ChevronDown,
+  ChevronUp,
+  Menu,
+  XCircle,
+  CheckCircle2,
+  AlertTriangle
+} from 'lucide-react',
 const FeaturedBlogPost2026 = () => {,
-  const [currentPostsetCurrentPost] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [currentPostsetCurrentPost] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentPost((prev) => (prev + 1) % 3);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentPost((prev) => (prev + 1) % 3),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
   const blogPosts = [,
     {,
-      id: 1;
-      title: 'The Future of AI: 2026 Predictions and Breakthrough Technologies';
-      excerpt: 'Explore the revolutionary AI technologies that will reshape industries in 2026from quantum neural networks to synthetic intelligence platforms.';
-      content: 'Artificial Intelligence is evolving at an unprecedented paceand 2026 promises to be a landmark year for breakthrough technologies. From quantum-enhanced machine learning to synthetic intelligence platformswe\'re witnessing the dawn of a new era in computing...';
-      author: 'Dr. Sarah Chen';
-      authorRole: 'Chief AI Scientist';
-      authorImage: '/api/placeholder/60/60';
-      publishDate: '2026-01-15';
-      readTime: '8 min read';
-      category: 'AI Research';
-      tags: [AI', 'Machine 'LearningQuantum 'Computing', 'Future Tech'];
-      image: '/api/placeholder/800/400';
-      views: 12500;
-      likes: 890;
-      comments: 156;
-      featured: true;
-      trending: true,};
+      id: 1,
+      title: 'The Future of AI: 2026 Predictions and Breakthrough Technologies',
+      excerpt: 'Explore the revolutionary AI technologies that will reshape industries in 2026from quantum neural networks to synthetic intelligence platforms.',
+      content: 'Artificial Intelligence is evolving at an unprecedented paceand 2026 promises to be a landmark year for breakthrough technologies. From quantum-enhanced machine learning to synthetic intelligence platformswe\'re witnessing the dawn of a new era in computing...',
+      author: 'Dr. Sarah Chen',
+      authorRole: 'Chief AI Scientist',
+      authorImage: '/api/placeholder/60/60',
+      publishDate: '2026-01-15',
+      readTime: '8 min read',
+      category: 'AI Research',
+      tags: [AIMachine 'LearningQuantum 'ComputingFuture Tech'],
+      image: '/api/placeholder/800/400',
+      views: 12500,
+      likes: 890,
+      comments: 156,
+      featured: true,
+      trending: true},
     {,
-      id: 2;
-      title: 'Building Scalable AI Infrastructure: A Complete Guide for 2026';
-      excerpt: 'Learn how to design and implement robust AI infrastructure that can handle enterprise-scale workloads and future growth.';
-      content: 'Building scalable AI infrastructure requires careful planning and consideration of multiple factors. In this comprehensive guidewe\'ll explore the key componentsbest practicesand emerging technologies that will shape AI infrastructure in 2026...';
-      author: 'Michael Rodriguez';
-      authorRole: 'Senior Cloud Architect';
-      authorImage: '/api/placeholder/60/60';
-      publishDate: '2026-01-12';
-      readTime: '12 min read';
-      category: 'Infrastructure';
-      tags: ['Cloud 'ComputingAI 'Infrastructure', 'Scalability'DevOps'];
-      image: '/api/placeholder/800/400';
-      views: 8900;
-      likes: 567;
-      comments: 89;
-      featured: true;
-      trending: false,};
+      id: 2,
+      title: 'Building Scalable AI Infrastructure: A Complete Guide for 2026',
+      excerpt: 'Learn how to design and implement robust AI infrastructure that can handle enterprise-scale workloads and future growth.',
+      content: 'Building scalable AI infrastructure requires careful planning and consideration of multiple factors. In this comprehensive guidewe\'ll explore the key componentsbest practicesand emerging technologies that will shape AI infrastructure in 2026...',
+      author: 'Michael Rodriguez',
+      authorRole: 'Senior Cloud Architect',
+      authorImage: '/api/placeholder/60/60',
+      publishDate: '2026-01-12',
+      readTime: '12 min read',
+      category: 'Infrastructure',
+      tags: ['Cloud 'ComputingAI 'InfrastructureScalability'DevOps'],
+      image: '/api/placeholder/800/400',
+      views: 8900,
+      likes: 567,
+      comments: 89,
+      featured: true,
+      trending: false},
     {,
-      id: 3;
-      title: 'Quantum Computing Meets AI: The Next Frontier in Technology';
-      excerpt: 'Discover how quantum computing is revolutionizing artificial intelligence and what this means for the future of technology.';
-      content: 'The intersection of quantum computing and artificial intelligence represents one of the most exciting frontiers in technology today. As quantum computers become more accessiblewe\'re seeing unprecedented opportunities for AI advancement...';
-      author: 'Dr. Alex Thompson';
-      authorRole: 'Quantum Computing Researcher';
-      authorImage: '/api/placeholder/60/60';
-      publishDate: '2026-01-10';
-      readTime: '10 min read';
-      category: 'Quantum Computing';
-      tags: ['Quantum 'ComputingAI', 'ResearchInnovation'];
-      image: '/api/placeholder/800/400';
-      views: 15600;
-      likes: 1200;
-      comments: 234;
-      featured: true;
-      trending: true,}
-  ];
+      id: 3,
+      title: 'Quantum Computing Meets AI: The Next Frontier in Technology',
+      excerpt: 'Discover how quantum computing is revolutionizing artificial intelligence and what this means for the future of technology.',
+      content: 'The intersection of quantum computing and artificial intelligence represents one of the most exciting frontiers in technology today. As quantum computers become more accessiblewe\'re seeing unprecedented opportunities for AI advancement...',
+      author: 'Dr. Alex Thompson',
+      authorRole: 'Quantum Computing Researcher',
+      authorImage: '/api/placeholder/60/60',
+      publishDate: '2026-01-10',
+      readTime: '10 min read',
+      category: 'Quantum Computing',
+      tags: ['Quantum 'ComputingAIResearchInnovation'],
+      image: '/api/placeholder/800/400',
+      views: 15600,
+      likes: 1200,
+      comments: 234,
+      featured: true,
+      trending: true}
+  ],
   const categories = [,
-    { name: 'AI 'Researchcount: 24color: 'from-blue-600 to-purple-600' ,};
-    { name: ''Infrastructurecount: 18color: 'from-green-600 to-teal-600' ,};
-    { name: 'Quantum 'Computingcount: 12color: 'from-orange-600 to-red-600' ,};
-    { name: 'Machine 'Learningcount: 31color: 'from-purple-600 to-pink-600' ,};
-    { name: ''Automationcount: 15color: 'from-cyan-600 to-blue-600' ,};
-    { name: 'Cloud 'Computingcount: 22color: 'from-indigo-600 to-purple-600' ,}
-  ];
+    { name: 'AI 'Researchcount: 24color: 'from-blue-600 to-purple-600' },
+    { name: ''Infrastructurecount: 18color: 'from-green-600 to-teal-600' },
+    { name: 'Quantum 'Computingcount: 12color: 'from-orange-600 to-red-600' },
+    { name: 'Machine 'Learningcount: 31color: 'from-purple-600 to-pink-600' },
+    { name: ''Automationcount: 15color: 'from-cyan-600 to-blue-600' },
+    { name: 'Cloud 'Computingcount: 22color: 'from-indigo-600 to-purple-600' }
+  ],
   const formatDate = (dateString: string) => {,
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US'{,
       year: 'numeric',
       month: 'long',
-      day: 'numeric',});
-  };
+      day: 'numeric'}),
+  },
   return (,
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -165,15 +165,15 @@ const FeaturedBlogPost2026 = () => {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
-          {/* Featured Post */,}
+          {/* Featured Post */}
           <div className="lg: col-span-2">,
             <div,
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300",
             >,
-              {/* Post Image */,}
+              {/* Post Image */}
               <div className="relative h-64 md: h-80 overflow-hidden">,
                 <img,
-                  src={blogPosts[currentPost].image,}
+                  src={blogPosts[currentPost].image}
                   alt={blogPosts[currentPost].title}
                   className="w-full h-full object-cover",
                 />,
@@ -191,8 +191,7 @@ const FeaturedBlogPost2026 = () => {,
                       <TrendingUp className="w-3 h-3 mr-1" />,
                       Trending,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
               </div>,
               {/* Post Content */}
               <div className="p-8">,
@@ -204,7 +203,7 @@ const FeaturedBlogPost2026 = () => {,
                 </div>,
                 {/* Title */}
                 <h3 className="text-2xl md: text-3xl font-bold text-gray-900 mb-4 leading-tight">,
-                  {blogPosts[currentPost].title,}
+                  {blogPosts[currentPost].title}
                 </h3>,
                 {/* Excerpt */}
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">,
@@ -256,8 +255,7 @@ const FeaturedBlogPost2026 = () => {,
                       className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full",
                     >,
                       #{tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* CTA Button */}
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">,
@@ -267,7 +265,7 @@ const FeaturedBlogPost2026 = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Sidebar */,}
+          {/* Sidebar */}
           <div className="space-y-8">,
             {/* Categories */}
             <div,
@@ -281,16 +279,15 @@ const FeaturedBlogPost2026 = () => {,
                     className="w-full flex items-center justify-between p-3 rounded-lg hover: bg-gray-50 transition-colors group",
                   >,
                     <div className="flex items-center">,
-                      <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${category.color,} mr-3`} />,
+                      <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${category.color} mr-3`} />,
                       <span className="font-medium text-gray-900 group-hover: text-blue-600">,
-                        {category.name,}
+                        {category.name}
                       </span>,
                     </div>,
                     <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">,
                       {category.count}
                     </span>,
-                  </button>,
-                ))}
+                  </button>))}
               </div>,
             </div>,
             {/* Popular Posts */}
@@ -308,7 +305,7 @@ const FeaturedBlogPost2026 = () => {,
                     />,
                     <div className="flex-1 min-w-0">,
                       <h4 className="font-semibold text-gray-900 text-sm leading-tight group-hover: text-blue-600 transition-colors line-clamp-2">,
-                        {post.title,}
+                        {post.title}
                       </h4>,
                       <div className="flex items-center mt-2 text-xs text-gray-500">,
                         <span>{formatDate(post.publishDate)}</span>,
@@ -341,7 +338,7 @@ const FeaturedBlogPost2026 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* View All Posts CTA */,}
+        {/* View All Posts CTA */}
         <div,
           className="text-center mt-16",
         >,
@@ -352,6 +349,6 @@ const FeaturedBlogPost2026 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default FeaturedBlogPost2026;
+  )},
+export default FeaturedBlogPost2026,
 </div></div>,

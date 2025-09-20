@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 
 export default function Reports() {
   return (
@@ -220,7 +220,7 @@ export default function Reports() {
               <p className="text-xl text-gray-300 mb-8">
                 Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"
@@ -240,5 +240,5 @@ export default function Reports() {
         </section>
       </div>
     </div>
-  );
+  )
 }

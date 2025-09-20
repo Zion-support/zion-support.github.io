@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image"; // Import Image
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
+import React from "react",
+import Image from "next/image", // Import Image
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
 
 export function EnterpriseHero() {
   return (
@@ -51,5 +51,5 @@ export function EnterpriseHero() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

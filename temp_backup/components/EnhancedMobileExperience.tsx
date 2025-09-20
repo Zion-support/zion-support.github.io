@@ -1,19 +1,19 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion';
+import React, { useEffect, useState, useRef } from 'react',
+import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion',
 import { 
   Smartphone, Tablet, Monitor, Wifi, Battery,
   Hand, Settings
-} from 'lucide-react';
+} from 'lucide-react',
 
 
 
 interface DeviceInfo {
-  type: 'mobile' | 'tablet' | 'desktop';
-  orientation: 'portrait' | 'landscape';
-  screenSize: { width: number; height: number };
-  touchSupport: boolean;
-  batteryLevel?: number;
-  connectionType?: string;
+  type: 'mobile' | 'tablet' | 'desktop',
+  orientation: 'portrait' | 'landscape',
+  screenSize: { width: number, height: number },
+  touchSupport: boolean,
+  batteryLevel?: number,
+  connectionType?: string
 }
 
 const EnhancedMobileExperience: React.FC = () => {
@@ -22,7 +22,7 @@ const EnhancedMobileExperience: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedMobileExperience</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedMobileExperience;
+export default EnhancedMobileExperience,

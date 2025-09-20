@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import SEO from "../components/SEOHead";
-import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
+import { INNOVATIVE_SERVICES_2027 } from "@/data/innovativeServices2027";
 import {
   Brain,
   Shield,
@@ -24,61 +24,52 @@ import {
   Lock,
   Cloud,
   Rocket
-} from 'lucide-react';
-
+} from "lucide-react";
 const AllServices2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
 
   const categories = [
-    { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },
-    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },
-    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },
-    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },
+    { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' };
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' };
+    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' };
+    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' };
     { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' }
   ];
-
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
     selectedCategory === 'All' || service.category === selectedCategory
-  );
+  ),
 
   const getCategoryStats = (categoryId: string) => {
     if (categoryId === 'All') {
       return {
-        count: INNOVATIVE_SERVICES_2027.length,
-        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),
+        count: INNOVATIVE_SERVICES_2027.length,avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),
         avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10
-      };
+      },
     }
-    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
+    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId),
     return {
-      count: services.length,
-      avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length),
+      count: services.length,avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length),
       avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
-    };
-  };
+    },
+  },
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
+      y: 0,opacity: 1,transition: {
         duration: 0.5
       }
     }
   };
-
   return (
     <>
       <SEOHead
@@ -154,16 +145,16 @@ const AllServices2027: React.FC = () => {
               specific business challenges and drive innovation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => {
               const stats = getCategoryStats(category.id);
-              const IconComponent = category.icon;
+              const IconComponent = category.icon,
 
               return (
                 <motion.div
                   key={category.id}
                   variants={itemVariants}
-                  className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 cursor-pointer ${
+                  className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover: border-cyan-500 transition-all duration-300 cursor-pointer ${
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''
                   }`}
                   onClick={() => setSelectedCategory(category.id)}
@@ -197,7 +188,7 @@ const AllServices2027: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md: text-4xl font-bold text-white">
               {selectedCategory === 'All' ? 'All Services' : `${selectedCategory} Services`}
             </h2>
             <div className="text-gray-400">
@@ -233,7 +224,7 @@ const AllServices2027: React.FC = () => {
               Why Choose Our Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Each service category is designed with specific business needs in mind,
+              Each service category is designed with specific business needs in mind;
               providing targeted solutions that deliver measurable results.
             </p>
           </div>
@@ -379,7 +370,7 @@ const AllServices2027: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
@@ -404,9 +395,8 @@ const AllServices2027: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 };
-
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
   const getCategoryIcon = (category: string) => {
@@ -414,18 +404,16 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
       case 'AI Services':
         return <Brain className="w-5 h-5" />;
       case 'Cybersecurity':
-        return <Shield className="w-5 h-5" />;
+        return <Shield className="w-5 h-5" />,
       case 'Emerging Technology':
-        return <Zap className="w-5 h-5" />;
+        return <Zap className="w-5 h-5" />,
       case 'IT Services':
-        return <Code className="w-5 h-5" />;
+        return <Code className="w-5 h-5" />,
       case 'Telecommunications':
-        return <Signal className="w-5 h-5" />;
-      default:
-        return <Users className="w-5 h-5" />;
+        return <Signal className="w-5 h-5" />,
+      default: return <Users className="w-5 h-5" />
     }
   };
-
   return (
     <motion.div
       variants={itemVariants}
@@ -487,7 +475,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         <div className="flex space-x-3">
           <Link
             to={service.website}
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <span>Learn More</span>
             <ArrowRight className="w-4 h-4" />
@@ -501,6 +489,6 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         </div>
       </div>
     </motion.div>
-  );
+  )
 };
 export default AllServices2027;

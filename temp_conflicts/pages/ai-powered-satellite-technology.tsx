@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Satellite, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredSatelliteTechnology: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredSatelliteTechnology: React.FC = () => {
       title: 'Multi-satellite Support',
       description: 'Satellite management across various constellations and missions'
     }
-  ];
+  ],
 
   const satelliteCapabilities = [
     {
       area: 'Satellite Operations',
-      capabilities: ['Mission planning', 'Orbital control', 'Payload management', 'Communication systems'],
+      capabilities: ['Mission planningOrbital control', 'Payload managementCommunication systems'],
       improvement: '95% efficiency',
       operations: 'Automated'
     },
     {
       area: 'Data Processing',
-      capabilities: ['Image analysis', 'Signal processing', 'Data compression', 'Real-time analytics'],
+      capabilities: ['Image analysisSignal processing', 'Data compressionReal-time analytics'],
       improvement: '100x faster',
       processing: 'Real-time'
     },
     {
       area: 'Constellation Management',
-      capabilities: ['Fleet coordination', 'Collision avoidance', 'Optimal positioning', 'Mission optimization'],
+      capabilities: ['Fleet coordinationCollision avoidance', 'Optimal positioningMission optimization'],
       improvement: '99.9% safety',
       safety: 'Maximum'
     },
     {
       area: 'Ground Station Operations',
-      capabilities: ['Antenna control', 'Signal tracking', 'Data reception', 'Network management'],
+      capabilities: ['Antenna controlSignal tracking', 'Data receptionNetwork management'],
       improvement: '90% reliability',
       reliability: 'Enhanced'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Earth Observation',
       description: 'AI-powered satellite technology for environmental monitoring and Earth observation',
-      benefits: ['Climate monitoring', 'Disaster response', 'Agriculture insights', 'Urban planning']
+      benefits: ['Climate monitoringDisaster response', 'Agriculture insightsUrban planning']
     },
     {
       title: 'Communications',
       description: 'Satellite communications for global connectivity and broadband services',
-      benefits: ['Global coverage', 'High-speed internet', 'Emergency communications', 'Remote connectivity']
+      benefits: ['Global coverageHigh-speed internet', 'Emergency communicationsRemote connectivity']
     },
     {
       title: 'Navigation & GPS',
       description: 'Satellite navigation systems for precise positioning and timing',
-      benefits: ['Precise navigation', 'Time synchronization', 'Location services', 'Autonomous systems']
+      benefits: ['Precise navigationTime synchronization', 'Location servicesAutonomous systems']
     },
     {
       title: 'Space Exploration',
       description: 'Satellite technology for deep space exploration and scientific missions',
-      benefits: ['Planetary exploration', 'Scientific research', 'Technology demonstration', 'Space discovery']
+      benefits: ['Planetary explorationScientific research', 'Technology demonstrationSpace discovery']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredSatelliteTechnology: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with satellite technology',
       features: [
-        'Basic satellite operations',
-        'Single satellite support',
-        'Standard monitoring',
-        'Email support',
+        'Basic satellite operationsSingle satellite support',
+        'Standard monitoringEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredSatelliteTechnology: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced satellite technology needs',
       features: [
-        'Advanced satellite operations',
-        'Multi-satellite support',
-        'Custom mission planning',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced satellite operationsMulti-satellite support',
+        'Custom mission planningPriority support',
+        'Advanced analyticsAPI access',
         'Constellation management'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredSatelliteTechnology: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex satellite technology requirements',
       features: [
-        'Custom satellite development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom satellite developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredSatelliteTechnology: React.FC = () => {
       position: "Mission Director",
       company: "Advanced Space Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredSatelliteTechnology: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Explore with AI-Powered Satellite Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredSatelliteTechnology: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredSatelliteTechnology;
+export default AIPoweredSatelliteTechnology,

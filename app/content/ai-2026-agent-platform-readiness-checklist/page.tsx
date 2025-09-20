@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Agent Platform Readiness Checklist';
-  description: 'A pragmatic, eval-first checklist to prepare your agent platform for safe, reliable, cost-aware operations in production.',
-};
+  title: 'AI 2026: Agent Platform Readiness Checklist',
+  description: 'A pragmatic, eval-first checklist to prepare your agent platform for safe, reliable, cost-aware operations in production.'
+},
 export default function AgentPlatformReadinessChecklist() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -67,6 +67,5 @@ export default function AgentPlatformReadinessChecklist() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

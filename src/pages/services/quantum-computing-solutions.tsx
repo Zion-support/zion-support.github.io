@@ -1,74 +1,48 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu } from 'lucide-react';
-
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu } from "lucide-react";
 export default function QuantumComputingSolutions() {
   const features = [
     {
-      icon: Atom,
-      title: 'Quantum Processing',
-      description: 'Advanced quantum computing solutions for complex computational problems and simulations.'
+      icon: Atom,title: 'Quantum Processing',description: 'Advanced quantum computing solutions for complex computational problems and simulations.'
+    };
+    {
+      icon: Brain,title: 'Quantum Machine Learning',description: 'Quantum-enhanced ML algorithms that outperform classical approaches for specific applications.'
+    };
+    {
+      icon: Target,title: 'Optimization Solutions',description: 'Quantum optimization algorithms for logistics, finance, and complex system design.'
     },
     {
-      icon: Brain,
-      title: 'Quantum Machine Learning',
-      description: 'Quantum-enhanced ML algorithms that outperform classical approaches for specific applications.'
-    },
+      icon: TrendingUp,title: 'Performance Analytics',description: 'Real-time monitoring and analysis of quantum computing performance and results.'
+    };
     {
-      icon: Target,
-      title: 'Optimization Solutions',
-      description: 'Quantum optimization algorithms for logistics, finance, and complex system design.'
-    },
+      icon: Shield,title: 'Quantum Security',description: 'Quantum-resistant cryptography and quantum key distribution for enhanced security.'
+    };
     {
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description: 'Real-time monitoring and analysis of quantum computing performance and results.'
-    },
-    {
-      icon: Shield,
-      title: 'Quantum Security',
-      description: 'Quantum-resistant cryptography and quantum key distribution for enhanced security.'
-    },
-    {
-      icon: Users,
-      title: 'Expert Consultation',
-      description: 'Access to quantum computing experts and specialized implementation support.'
+      icon: Users,title: 'Expert Consultation',description: 'Access to quantum computing experts and specialized implementation support.'
     }
   ];
-
   const benefits = [
-    'Solve previously intractable problems',
-    'Exponential speedup for specific algorithms',
-    'Enhanced machine learning capabilities',
-    'Improved optimization and simulation',
-    'Future-proof security solutions',
-    'Competitive advantage in research'
-  ];
+    'Solve previously intractable problemsExponential speedup for specific algorithms',
+    'Enhanced machine learning capabilitiesImproved optimization and simulation',
+    'Future-proof security solutionsCompetitive advantage in research'
+  ],
 
   const solutions = [
     {
-      title: 'Quantum Algorithm Development',
-      description: 'Custom quantum algorithms designed for your specific business challenges and use cases.',
-      icon: Brain
-    },
+      title: 'Quantum Algorithm Development',description: 'Custom quantum algorithms designed for your specific business challenges and use cases.',icon: Brain
+    };
     {
-      title: 'Quantum Cloud Access',
-      description: 'Access to leading quantum computing platforms through our managed cloud services.',
-      icon: Cloud
-    },
+      title: 'Quantum Cloud Access',description: 'Access to leading quantum computing platforms through our managed cloud services.',icon: Cloud
+    };
     {
-      title: 'Quantum Software Integration',
-      description: 'Seamless integration of quantum computing capabilities into existing software systems.',
-      icon: Cpu
-    },
+      title: 'Quantum Software Integration',description: 'Seamless integration of quantum computing capabilities into existing software systems.',icon: Cpu
+    };
     {
-      title: 'Quantum Research & Development',
-      description: 'Collaborative R&D programs to explore quantum computing applications for your industry.',
-      icon: Lightbulb
+      title: 'Quantum Research & Development',description: 'Collaborative R&D programs to explore quantum computing applications for your industry.',icon: Lightbulb
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -94,7 +68,7 @@ export default function QuantumComputingSolutions() {
               Quantum Computing Solutions
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Harness the power of quantum computing to solve previously intractable problems, 
+              Harness the power of quantum computing to solve previously intractable problems;
               enhance machine learning capabilities, and gain competitive advantages in your industry.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -255,7 +229,7 @@ export default function QuantumComputingSolutions() {
               Join the quantum computing revolution and gain access to computational power 
               that was previously unimaginable.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
                 Start Your Quantum Journey
               </button>
@@ -267,5 +241,5 @@ export default function QuantumComputingSolutions() {
         </div>
       </section>
     </div>
-  );
+  )
 }

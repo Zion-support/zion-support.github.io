@@ -1,16 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Globe, Phone, Mail, MapPin, Brain, Atom, Shield, Rocket, Target, Star, Twitter, Linkedin, Youtube, Github, ArrowUp, ArrowRight, ExternalLink, Sparkles, Infinity, Zap, Cpu, Database, Cloud, Lock, Network, Server, CpuIcon, ZapIcon, Truck, BookOpen, FileText, Handshake, Newspaper, Grid, BarChart3, Palette, PaletteIcon, GraduationCap, HeartIcon, DollarSign, TrendingUp, Monitor, Building, Users, Briefcase, Code, MessageCircle, Calendar, Clock, ShieldCheck, Globe2, Satellite, Telescope, Microscope, FlaskConical, TargetIcon, Wifi, Bluetooth, Radio, SatelliteDish, Orbit
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface FooterLink {
-  name: string;
-  href: string;
-  featured?: boolean;
-  price?: string;
-  rating?: number;
+  name: string,
+  href: string,
+  featured?: boolean,
+  price?: string,
+  rating?: number
 }
 
 const footerSections = [
@@ -112,7 +112,7 @@ const footerSections = [
       { name: 'Support', href: '/support' }
     ] as FooterLink[]
   }
-];
+],
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -125,5 +125,5 @@ const contactInfo = {
   employees: '50+',
   countries: '25+',
   customers: '1000+'
-};
-export default UltraAdvancedFuturisticFooter2041;
+},
+export default UltraAdvancedFuturisticFooter2041,

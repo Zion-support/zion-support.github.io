@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026 Future Predictions - Revolutionary Technology Forecasts';
-  description: 'Explore groundbreaking AI predictions for 2026, including quantum neural interfaces, synthetic intelligence, and autonomous business ecosystems that will reshape our world.';
-  keywords: ['AI 2026future predictions', 'quantum AIneural interfaces', 'synthetic intelligencetechnology forecasts'],
-};
+  title: 'AI 2026 Future Predictions - Revolutionary Technology Forecasts',
+  description: 'Explore groundbreaking AI predictions for 2026, including quantum neural interfaces, synthetic intelligence, and autonomous business ecosystems that will reshape our world.',
+  keywords: ['AI 2026future predictionsquantum AIneural interfaces', 'synthetic intelligencetechnology forecasts']
+},
 export default function AI2026FuturePredictionsRevolutionary() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,
@@ -16,7 +16,7 @@ export default function AI2026FuturePredictionsRevolutionary() {,
         url="/ai-2026-future-predictions-revolutionary",
       />,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full px-6 py-2 mb-6">,
             <span className="text-sm font-medium">🔮 FUTURE PREDICTIONS 2026</span>,
@@ -25,7 +25,7 @@ export default function AI2026FuturePredictionsRevolutionary() {,
             AI 2026 Future Predictions,
           </h1>,
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">,
-            Discover the revolutionary AI technologies and breakthroughs that will define 2026;
+            Discover the revolutionary AI technologies and breakthroughs that will define 2026,
             transforming industries and creating new possibilities for human advancement.,
           </p>,
         </div>,
@@ -57,7 +57,7 @@ export default function AI2026FuturePredictionsRevolutionary() {,
             <div className="text-4xl mb-4">🌍</div>,
             <h3 className="text-2xl font-bold mb-4">Autonomous Global Systems</h3>,
             <p className="text-gray-300 mb-6">,
-              Self-managing global infrastructure systems that optimize resource allocation;
+              Self-managing global infrastructure systems that optimize resource allocation,
               environmental management, and economic systems autonomously.,
             </p>,
             <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">,
@@ -97,7 +97,7 @@ export default function AI2026FuturePredictionsRevolutionary() {,
             </div>,
           </div>,
         </div>,
-        {/* Technology Timeline */,}
+        {/* Technology Timeline */}
         <div className="bg-white bg-opacity-5 backdrop-blur-lg rounded-2xl p-8 mb-16">,
           <h2 className="text-3xl font-bold text-center mb-8">2026 Technology Timeline</h2>,
           <div className="space-y-6">,
@@ -150,5 +150,4 @@ export default function AI2026FuturePredictionsRevolutionary() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

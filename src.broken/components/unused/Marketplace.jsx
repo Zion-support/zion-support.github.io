@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link  } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, count: 3 },
         { id: 'iot-platforms', name: 'IoT Platforms', icon: Smartphone, count: 2 }
-    ];
+    ],
     const priceRanges = ['
         { id: 'all', name: 'All Prices' },
         { id: 'free', name: 'Free' },
@@ -12,7 +12,7 @@ export default function Page() {
         { id: '100-500', name: '$100 - $500' },
         { id: '500-1000', name: '$500 - $1,000' },
         { id: 'over-1000', name: 'Over $1,000' }
-    ];
+    ],
     const sortOptions = ['
         { id: 'featured', name: 'Featured' },
         { id: 'price-low', name: 'Price: Low to High' },
@@ -20,7 +20,7 @@ export default function Page() {
         { id: 'newest', name: 'Newest' },
         { id: 'popular', name: 'Most Popular' },
         { id: 'rating', name: 'Highest Rated' }
-    ];
+    ],
     const marketplaceProducts = [{
 
             id: 1,
@@ -33,10 +33,10 @@ export default function Page() {
             rating: 4.9,
             reviewCount: 127,
             image: '/images/marketplace/ai-business-manager.jpg',
-            features[;
+            features[,
                 'Autonomous decision making',Business process automation',Real-time analytics',Multi-tenant support',API integration'
-            ],;
-            tags['AI',Business Automation',Enterprise',Cloud'],;
+            ],
+            tags['AI',Business Automation',Enterprise',Cloud'],
             featured: true,
             new: false,
             discount: 25,
@@ -54,10 +54,10 @@ export default function Page() {
             rating: 4.8,
             reviewCount: 89,
             image: '/images/marketplace/quantum-framework.jpg',
-            features[;
+            features[,
                 'Quantum algorithm optimization',Neural network training',GPU acceleration',Python SDK',Documentation & examples'
-            ],;
-            tags['Quantum Computing',AI',Research',Python'],;
+            ],
+            tags['Quantum Computing',AI',Research',Python'],
             featured: true,
             new: true,
             discount: 25,
@@ -75,10 +75,10 @@ export default function Page() {
             rating: 4.7,
             reviewCount: 156,
             image: '/images/marketplace/soc2-suite.jpg',
-            features[;
+            features[,
                 'Automated compliance checks',Security assessment tools',Audit trail management',Risk assessment',Reporting dashboard'
-            ],;
-            tags['Cybersecurity',Compliance',SOC2',Enterprise'],;
+            ],
+            tags['Cybersecurity',Compliance',SOC2',Enterprise'],
             featured: false,
             new: false,
             discount: 25,
@@ -96,10 +96,10 @@ export default function Page() {
             rating: 4.6,
             reviewCount: 73,
             image: '/images/marketplace/5g-kit.jpg',
-            features[;
+            features[,
                 '5G network infrastructure',Enterprise security',Load balancing',Monitoring tools',24/7 support'
-            ],;
-            tags['5G',Networking',Enterprise',Infrastructure'],;
+            ],
+            tags['5G',Networking',Enterprise',Infrastructure'],
             featured: false,
             new: false,
             discount: 17,
@@ -117,10 +117,10 @@ export default function Page() {
             rating: 4.5,
             reviewCount: 234,
             image: '/images/marketplace/workflow-templates.jpg',
-            features[;
+            features[,
                 '50+ workflow templates',Customizable designs',Integration guides',Best practices',Community support'
-            ],;
-            tags['AI',Workflows',Templates',Business'],;
+            ],
+            tags['AI',Workflows',Templates',Business'],
             featured: false,
             new: false,
             discount: 33,
@@ -138,10 +138,10 @@ export default function Page() {
             rating: 4.4,
             reviewCount: 98,
             image: '/images/marketplace/blockchain-defi.jpg',
-            features[;
+            features[,
                 'Smart contract templates',DeFi protocol examples',Security best practices',Testing framework',Deployment guides'
-            ],;
-            tags['Blockchain',DeFi',Smart Contracts',Development'],;
+            ],
+            tags['Blockchain',DeFi',Smart Contracts',Development'],
             featured: false,
             new: true,
             discount: 25,
@@ -159,10 +159,10 @@ export default function Page() {
             rating: 4.3,
             reviewCount: 67,
             image: '/images/marketplace/iot-platform.jpg',
-            features[;
+            features[,
                 'IoT device management',Real-time analytics',ML-powered insights',Scalable architecture',Multi-cloud support'
-            ],;
-            tags['IoT',Analytics',Machine Learning',Enterprise'],;
+            ],
+            tags['IoT',Analytics',Machine Learning',Enterprise'],
             featured: false,
             new: false,
             discount: 22,
@@ -180,19 +180,19 @@ export default function Page() {
             rating: 4.8,
             reviewCount: 189,
             image: '/images/marketplace/threat-intelligence.jpg',
-            features[;
+            features[,
                 'Real-time threat feeds',Security alerts',Vulnerability scanning',Incident response',Expert support'
-            ],;
-            tags['Cybersecurity',Threat Intelligence',Monitoring',Security'],;
+            ],
+            tags['Cybersecurity',Threat Intelligence',Monitoring',Security'],
             featured: false,
             new: false,
             discount: 33,
             type: 'service'
 
-    ];
+    ],
     const filteredProducts = marketplaceProducts.filter(product => {
 
-        const matchesPrice = true;
+        const matchesPrice = true,
         if (selectedPriceRange === 'free') {
 
             matchesPrice = product.price === 0}
@@ -208,37 +208,37 @@ export default function Page() {
         else if(selectedPriceRange === 'over-1000') {
 
             matchesPrice = product.price > 1000}
-        return matchesSearch && matchesCategory && matchesPrice});
+        return matchesSearch && matchesCategory && matchesPrice}),
     const sortedProducts = [...filteredProducts].sort((a, b) => {
 
         switch(sortBy) {
 
             case 'price-low':
-                return a.price - b.price;
+                return a.price - b.price,
             case 'price-high':
-                return b.price - a.price;
+                return b.price - a.price,
             case 'newest':
-                return b.new ? 1 : -1;
+                return b.new ? 1 : -1,
             case 'popular':
-                return b.reviewCount - a.reviewCount;
+                return b.reviewCount - a.reviewCount,
             case 'rating':
-                return b.rating - a.rating;
+                return b.rating - a.rating,
             default:
                 return b.featured ? 1 : -1}
-    });
+    }),
     const formatPrice = (price, currency) => {
 
         if(price === 0)
-            return 'Free';
-        return `${currency} ${price.toLocaleString()}`};
+            return 'Free',
+        return `${currency} ${price.toLocaleString()}`},
     const getCategoryIcon = (categoryId) => {
 
-        const category = categories.find(cat => cat.id === categoryId);
-        return category ? category.icon : Globe};
+        const category = categories.find(cat => cat.id === categoryId),
+        return category ? category.icon : Globe},
     const getCategoryName = (categoryId) => {
 
-        const category = categories.find(cat => cat.id === categoryId);
-        return category ? category.name : 'Unknown'};
+        const category = categories.find(cat => cat.id === categoryId),
+        return category ? category.name : 'Unknown'},
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Header */}"
       <div className="bg-white/5 backdrop-blur-sm border-b border-white/10">"

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export default function UltimateContentShowcase2026() {,
   return (,
     <section className="py-16 bg-white">,
@@ -90,5 +90,4 @@ export default function UltimateContentShowcase2026() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

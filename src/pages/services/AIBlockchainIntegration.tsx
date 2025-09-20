@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Shield, 
   Zap, 
   TrendingUp, 
@@ -21,33 +21,23 @@ import {
   Eye,
   Target,
   Rocket
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIBlockchainIntegration() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Smart Contracts",
-      description: "Intelligent contracts that automatically execute based on AI analysis and market conditions"
-    },
+      icon: Brain,title: "AI-Powered Smart Contracts",description: "Intelligent contracts that automatically execute based on AI analysis and market conditions"
+    };
     {
-      icon: Shield,
-      title: "Enhanced Security",
-      description: "Multi-layered security with AI threat detection and blockchain immutability"
-    },
+      icon: Shield,title: "Enhanced Security",description: "Multi-layered security with AI threat detection and blockchain immutability"
+    };
     {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Lightning-fast transaction processing with AI optimization"
-    },
+      icon: Zap,title: "Real-time Processing",description: "Lightning-fast transaction processing with AI optimization"
+    };
     {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "AI-driven insights for blockchain performance and market trends"
+      icon: TrendingUp,title: "Predictive Analytics",description: "AI-driven insights for blockchain performance and market trends"
     }
   ];
-
   const benefits = [
     "Reduce transaction costs by up to 60%",
     "Improve security with AI threat detection",
@@ -55,26 +45,22 @@ export default function AIBlockchainIntegration() {
     "Real-time fraud prevention and detection",
     "Scalable infrastructure for enterprise needs",
     "Compliance automation for regulatory requirements"
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,500",
-      period: "/month",
-      features: [
-        "AI Smart Contract Templates",
+      name: "Starter",price: "$2,500",
+      period: "/month",features: [
+        "AI Smart Contract Templates";
         "Basic Security Monitoring",
         "Standard Support",
         "Up to 10,000 transactions/month"
       ]
     },
     {
-      name: "Professional",
-      price: "$5,000",
-      period: "/month",
-      features: [
-        "Custom AI Smart Contracts",
+      name: "Professional",price: "$5,000",
+      period: "/month",features: [
+        "Custom AI Smart Contracts";
         "Advanced Security Suite",
         "Priority Support",
         "Up to 100,000 transactions/month",
@@ -82,11 +68,9 @@ export default function AIBlockchainIntegration() {
       ]
     },
     {
-      name: "Enterprise",
-      price: "$12,000",
-      period: "/month",
-      features: [
-        "Full AI Blockchain Platform",
+      name: "Enterprise",price: "$12,000",
+      period: "/month",features: [
+        "Full AI Blockchain Platform";
         "Enterprise Security",
         "24/7 Dedicated Support",
         "Unlimited transactions",
@@ -94,7 +78,7 @@ export default function AIBlockchainIntegration() {
         "On-premise Deployment"
       ]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -119,7 +103,7 @@ export default function AIBlockchainIntegration() {
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your blockchain operations with AI-powered intelligence, 
+              Revolutionize your blockchain operations with AI-powered intelligence;
               automated smart contracts, and enhanced security protocols.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -311,7 +295,7 @@ export default function AIBlockchainIntegration() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -320,5 +304,5 @@ export default function AIBlockchainIntegration() {
         </div>
       </section>
     </div>
-  );
+  )
 }

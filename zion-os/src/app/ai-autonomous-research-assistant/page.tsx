@@ -7,7 +7,6 @@ export default function AIAutonomousResearchAssistantPage() {,
           <p className="text-lg text-gray-700">Accelerate research with agents for discovery, synthesis, and reporting.</p>,
         </div>,
       </section>,
-    </div>,
-  );
+    </div>),
 }
 ,

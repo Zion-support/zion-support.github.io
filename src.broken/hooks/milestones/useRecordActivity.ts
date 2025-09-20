@@ -1,5 +1,5 @@
-// Hook for useRecordActivity;
+// Hook for useRecordActivity,
 export const useUseRecordActivity: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

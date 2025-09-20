@@ -1,14 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
-import wishlistReducer from './wishlistSlice';
-<<<<<<< HEAD:src.broken/store/store.js
+import { configureStore } from '@reduxjs/toolkit',
+import wishlistReducer from './wishlistSlice',
+<<<<<<< HEAD: src.broken/store/store.js
 export const store = configureStore({,
     reducer: {,
-        wishlist: wishlistReducer,}
-});
+        wishlist: wishlistReducer}
+}),
 =======
 export const store = configureStore({
     reducer: {
-        wishlist: wishlistReducer,
-    },
-});
+        wishlist: wishlistReducer
+    }
+}),
 >>>>>>> origin/zion-enhancements-v6:src/store/store.js

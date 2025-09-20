@@ -1,5 +1,5 @@
-import React from 'react';
-import { Users, Globe, TrendingUp, Award const stats = [;
+import React from 'react',
+import { Users, Globe, TrendingUp, Award const stats = [,
 
     {
 
@@ -29,7 +29,7 @@ import { Users, Globe, TrendingUp, Award const stats = [;
         label: "Support","
         description: "Always here when you need us"
 
-];
+],
 export function StatisticsSection() {
 "
     return (<section className="py-20 bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-blue-dark">"

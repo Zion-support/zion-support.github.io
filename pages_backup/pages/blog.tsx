@@ -11,13 +11,12 @@ export default function BlogPage() {,
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Blog & News</h1>,
 				<p className="text-gray-300">Insights, guides, and announcements. New content coming soon.</p>,
 			</section>,
-		</Layout>,
-	),
+		</Layout>)
 }
-,
+
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-;
+,

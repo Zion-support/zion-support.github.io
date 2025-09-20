@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import { Settings, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Zap, BarChart3, Award } from 'lucide-react';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import { Settings, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Zap, BarChart3, Award } from 'lucide-react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: The Ultimate Enterprise Automation Revolution Transforming $100B+ in Business Operations';
-  description: 'Discover how AI-powered automation is achieving 99.8% process accuracy, 500% efficiency improvements, and $2.3 trillion in value creation across enterprise operations.';
-  keywords: ['enterprise automationAI automation', 'business process automationAI transformation', 'automation ROIintelligent automation'],
-};
+  title: 'AI 2026: The Ultimate Enterprise Automation Revolution Transforming $100B+ in Business Operations',
+  description: 'Discover how AI-powered automation is achieving 99.8% process accuracy, 500% efficiency improvements, and $2.3 trillion in value creation across enterprise operations.',
+  keywords: ['enterprise automationAI automationbusiness process automationAI transformation', 'automation ROIintelligent automation']
+},
 export default function EnterpriseAutomationRevolutionPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -47,7 +47,7 @@ export default function EnterpriseAutomationRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Statistics */,}
+      {/* Key Statistics */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -70,7 +70,7 @@ export default function EnterpriseAutomationRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <section className="py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="prose prose-lg max-w-none">,
@@ -337,4 +337,4 @@ export default function EnterpriseAutomationRevolutionPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

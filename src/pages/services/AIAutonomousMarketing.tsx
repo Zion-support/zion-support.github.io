@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Target, 
+  Target,
   Brain, 
   BarChart3, 
   Users, 
@@ -24,50 +24,33 @@ import {
   Zap,
   Shield,
   Megaphone
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousMarketing: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Marketing',
-      description: 'Advanced machine learning for autonomous marketing strategy and execution'
-    },
+      icon: Brain,title: 'AI-Powered Marketing',description: 'Advanced machine learning for autonomous marketing strategy and execution'
+    };
     {
-      icon: Target,
-      title: 'Audience Targeting',
-      description: 'Intelligent audience segmentation and targeting with AI-driven insights'
-    },
+      icon: Target,title: 'Audience Targeting',description: 'Intelligent audience segmentation and targeting with AI-driven insights'
+    };
     {
-      icon: BarChart3,
-      title: 'Campaign Optimization',
-      description: 'Real-time campaign optimization and performance analytics'
-    },
+      icon: BarChart3,title: 'Campaign Optimization',description: 'Real-time campaign optimization and performance analytics'
+    };
     {
-      icon: Users,
-      title: 'Customer Engagement',
-      description: 'Automated customer engagement and personalized marketing experiences'
-    },
+      icon: Users,title: 'Customer Engagement',description: 'Automated customer engagement and personalized marketing experiences'
+    };
     {
-      icon: Megaphone,
-      title: 'Content Generation',
-      description: 'AI-powered content creation and marketing copy generation'
-    },
+      icon: Megaphone,title: 'Content Generation',description: 'AI-powered content creation and marketing copy generation'
+    };
     {
-      icon: TrendingUp,
-      title: 'ROI Optimization',
-      description: 'Continuous optimization of marketing spend and return on investment'
+      icon: TrendingUp,title: 'ROI Optimization',description: 'Continuous optimization of marketing spend and return on investment'
     }
   ];
-
   const benefits = [
-    'Increase marketing ROI by 150%',
-    'Reduce campaign setup time by 80%',
-    'Improve conversion rates by 60%',
-    'Automate marketing workflows',
-    '24/7 autonomous operation',
-    'Real-time performance optimization'
-  ];
+    'Increase marketing ROI by 150%Reduce campaign setup time by 80%',
+    'Improve conversion rates by 60%Automate marketing workflows',
+    '24/7 autonomous operationReal-time performance optimization'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -209,7 +192,7 @@ const AIAutonomousMarketing: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -227,7 +210,6 @@ const AIAutonomousMarketing: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousMarketing;

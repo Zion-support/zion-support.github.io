@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Activity, 
+  Activity,
   Heart, 
   Brain, 
   Zap, 
@@ -23,49 +23,33 @@ import {
   Pill,
   Microscope,
   Database
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIHealthcareAnalytics() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Predictive Patient Analytics",
-      description: "AI algorithms predict patient outcomes, readmission risks, and treatment effectiveness with 96% accuracy"
+      icon: <Brain className="w-6 h-6" />,title: "Predictive Patient Analytics",description: "AI algorithms predict patient outcomes, readmission risks, and treatment effectiveness with 96% accuracy"
     },
     {
-      icon: <Activity className="w-6 h-6" />,
-      title: "Real-time Health Monitoring",
-      description: "Continuous monitoring of patient vitals with early warning systems and automated alerts for critical changes"
+      icon: <Activity className="w-6 h-6" />,title: "Real-time Health Monitoring",description: "Continuous monitoring of patient vitals with early warning systems and automated alerts for critical changes"
+    };
+    {
+      icon: <Database className="w-6 h-6" />,title: "Clinical Data Integration",description: "Seamless integration with EHR systems, medical devices, and wearable technology for comprehensive data analysis"
     },
     {
-      icon: <Database className="w-6 h-6" />,
-      title: "Clinical Data Integration",
-      description: "Seamless integration with EHR systems, medical devices, and wearable technology for comprehensive data analysis"
+      icon: <Microscope className="w-6 h-6" />,title: "Medical Image Analysis",description: "Advanced AI-powered analysis of X-rays, MRIs, and CT scans for faster and more accurate diagnoses"
     },
     {
-      icon: <Microscope className="w-6 h-6" />,
-      title: "Medical Image Analysis",
-      description: "Advanced AI-powered analysis of X-rays, MRIs, and CT scans for faster and more accurate diagnoses"
-    },
+      icon: <Shield className="w-6 h-6" />,title: "HIPAA-Compliant Security",description: "Enterprise-grade security with end-to-end encryption and full HIPAA compliance for patient data protection"
+    };
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "HIPAA-Compliant Security",
-      description: "Enterprise-grade security with end-to-end encryption and full HIPAA compliance for patient data protection"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Population Health Insights",
-      description: "Comprehensive analytics for population health management, disease trends, and preventive care strategies"
+      icon: <BarChart3 className="w-6 h-6" />,title: "Population Health Insights",description: "Comprehensive analytics for population health management, disease trends, and preventive care strategies"
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Clinic",
-      price: "$399",
-      period: "/month",
-      features: [
+      name: "Clinic",price: "$399",period: "/month",features: [
         "Up to 1,000 patients",
         "Basic predictive analytics",
         "Standard reporting",
@@ -73,12 +57,10 @@ export default function AIHealthcareAnalytics() {
         "HIPAA compliance"
       ],
       popular: false
-    },
+    };
     {
-      name: "Hospital",
-      price: "$1,199",
-      period: "/month",
-      features: [
+      name: "Hospital",price: "$1,199",
+      period: "/month",features: [
         "Up to 10,000 patients",
         "Advanced AI analytics",
         "Real-time monitoring",
@@ -88,13 +70,11 @@ export default function AIHealthcareAnalytics() {
         "Integration support"
       ],
       popular: true
-    },
+    };
     {
-      name: "Health System",
-      price: "$2,999",
-      period: "/month",
-      features: [
-        "Unlimited patients",
+      name: "Health System",price: "$2,999",
+      period: "/month",features: [
+        "Unlimited patients";
         "Custom AI models",
         "Advanced analytics",
         "Dedicated support",
@@ -105,7 +85,6 @@ export default function AIHealthcareAnalytics() {
       popular: false
     }
   ];
-
   const benefits = [
     "Reduce readmission rates by 30%",
     "Improve diagnostic accuracy by 25%",
@@ -113,31 +92,26 @@ export default function AIHealthcareAnalytics() {
     "Enhance patient outcomes and satisfaction",
     "Streamline clinical workflows",
     "Enable proactive patient care"
-  ];
+  ],
 
   const useCases = [
     {
-      specialty: "Cardiology",
-      description: "Predict heart failure risks, monitor cardiac function, and optimize treatment plans",
+      specialty: "Cardiology",description: "Predict heart failure risks, monitor cardiac function, and optimize treatment plans",
       improvement: "40% risk reduction"
-    },
+    };
     {
-      specialty: "Oncology",
-      description: "Personalized treatment recommendations, drug response prediction, and survival analysis",
+      specialty: "Oncology",description: "Personalized treatment recommendations, drug response prediction, and survival analysis",
       improvement: "35% treatment efficacy"
-    },
+    };
     {
-      specialty: "Emergency Medicine",
-      description: "Triage optimization, resource allocation, and patient flow management",
+      specialty: "Emergency Medicine",description: "Triage optimization, resource allocation, and patient flow management",
       improvement: "50% efficiency gain"
-    },
+    };
     {
-      specialty: "Primary Care",
-      description: "Preventive care planning, chronic disease management, and population health insights",
+      specialty: "Primary Care",description: "Preventive care planning, chronic disease management, and population health insights",
       improvement: "45% preventive care"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -449,7 +423,7 @@ export default function AIHealthcareAnalytics() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -488,5 +462,5 @@ export default function AIHealthcareAnalytics() {
         </div>
       </section>
     </div>
-  );
+  )
 }

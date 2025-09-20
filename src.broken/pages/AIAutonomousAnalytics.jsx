@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="mb-16">
@@ -73,15 +73,11 @@ export default function Page() {
             <h2 className="text-4xl font - bold text-white text-center mb-12">
               Analytics Solutions
             </h2>
-            <div className="grid md:grid - cols - 4 gap-6">
-              {['Business Intelligence',
-                'Predictive Analytics',
-                'Descriptive Analytics',
-                'Prescriptive Analytics',
-                'Real - time Analytics',
-                'Big Data Analytics',
-                'Customer Analytics',
-                'Performance Analytics',
+            <div className="grid md: grid - cols - 4 gap-6">
+              {['Business IntelligencePredictive Analytics',
+                'Descriptive AnalyticsPrescriptive Analytics',
+                'Real - time AnalyticsBig Data Analytics',
+                'Customer AnalyticsPerformance Analytics'
               ].map (type => (<div
                   key={type}
                   className="bg-white / 5 rounded-lg p - 4 text-center border border-white / 10"
@@ -133,7 +129,7 @@ export default function Page() {
               Transform your data into insights with AI that never stops
               analyzing
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-teal - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Start Analyzing
               </button>
@@ -144,5 +140,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

@@ -1,24 +1,22 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 front-index-orchestrator function triggered');
+  console.log('🤖 front-index-orchestrator function triggered'),
   
   try {
     // Front index orchestration logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate index operations
     const indexOperations = [
-      'build-search-index',
-      'update-page-index',
-      'optimize-content-index',
-      'sync-metadata-index'
-    ];
+      'build-search-indexupdate-page-index',
+      'optimize-content-indexsync-metadata-index'
+    ],
     
     // Simulate operation execution with potential failures
-    const operationResults = {};
+    const operationResults = {},
     for (const op of indexOperations) {
-      await new Promise(resolve => setTimeout(resolve, 30)); // Simulate operation time
+      await new Promise(resolve => setTimeout(resolve, 30)), // Simulate operation time
       // Simulate 95% success rate with some operations potentially failing
-      operationResults[op] = Math.random() > 0.05 ? 'success' : 'partial-failure';
+      operationResults[op] = Math.random() > 0.05 ? 'success' : 'partial-failure',
     }
     
     // Simulate index statistics
@@ -27,7 +25,7 @@ exports.handler = async function(event, context) {
       indexedPages: Math.floor(Math.random() * 950) + 450,
       searchableContent: Math.floor(Math.random() * 5000) + 2000,
       indexSize: Math.floor(Math.random() * 100) + 50
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -42,13 +40,13 @@ exports.handler = async function(event, context) {
         overallHealth: Object.values(operationResults).every(r => r === 'success') ? 'excellent' : 'good',
         nextRun: new Date(Date.now() + 5 * 60 * 1000).toISOString() // 5 minutes from now
       })
-    };
+    },
     
-    console.log('✅ front-index-orchestrator completed successfully');
-    return result;
+    console.log('✅ front-index-orchestrator completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ front-index-orchestrator failed:', error);
+    console.error('❌ front-index-orchestrator failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -57,6 +55,6 @@ exports.handler = async function(event, context) {
         function: 'front-index-orchestrator',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

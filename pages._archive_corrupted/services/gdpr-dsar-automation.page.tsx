@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function GDPRDSARAutomation() {,
   return (,
     <>,
@@ -40,6 +40,6 @@ export default function GDPRDSARAutomation() {,
         </section>,
       </main>,
     </>,
-  ),
+  )
 }
 ,

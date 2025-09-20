@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function UpdatesIndexPage() {
   const updates = [
@@ -28,7 +28,7 @@ export default function UpdatesIndexPage() {
       slug: 'update-2025-08-15-0111',
       title: 'Autonomous Update — 2025: 08: 15: 0111'
     }
-  ];
+  ],
 
   return (
     <>
@@ -59,11 +59,11 @@ export default function UpdatesIndexPage() {
           </div>
 
           <div className="mt-10">
-            <Link href="/" className="text-cyan-400 hover:text-cyan-300 font-semibold">← Back to Home</Link>
+            <Link href="/" className="text-cyan-400 hover: text-cyan-300 font-semibold">← Back to Home</Link>
           </div>
         </main>
       </div>
     </>
-  );
+  )
 }
 

@@ -23,7 +23,6 @@ import OrdersPage from "@/pages/Orders";
 import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
 import Projects from "@/pages/Projects";
-
 const DashboardRoutes = () => {
   return (
     <Routes>
@@ -221,7 +220,7 @@ const DashboardRoutes = () => {
         }
       />
     </Routes>
-  );
-};
+  ),
+},
 
 export default DashboardRoutes;

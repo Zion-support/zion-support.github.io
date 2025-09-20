@@ -1,10 +1,10 @@
 
 ,
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' ,}
-:backup-problematic-files/netlify/functions/automation-guardian-runner.js,
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+:backup-problematic-files/netlify/functions/automation-guardian-runner.js
 }
 exports.config = {,
-  schedule: '*/10 * * * *',}
+  schedule: '*/10 * * * *'}
 exports.handler = async () => {,
   const logs = [],
   function logStep(name, fn) {,
@@ -13,15 +13,15 @@ exports.handler = async () => {,
     if (stdout) logs.push(stdout),
     if (stderr) logs.push(stderr),
     logs.push(`exit=${status}`),
-    return status,
+    return status
   }
   // Generate sitemap for crawling,
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js')),
   // Build search index if available,
   try {,
-    logStep('search:index', () => runNode('scripts/generate-search-index.js')),
+    logStep('search:index', () => runNode('scripts/generate-search-index.js'))
   } catch (error) {,
-    logs.push(`Search index generation skipped: ${String(error),}`),
+    logs.push(`Search index generation skipped: ${String(error)}`)
   }
   // Commit and push,
   logStep('git:sync', () => runNode('automation/git-sync.cjs')),
@@ -29,43 +29,43 @@ exports.handler = async () => {,
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs')),
   // Attempt to push any changes,
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
-  return { statusCode: 200, body: logs.join('\n') ,}
-,
-};
-const { spawnSync } = require('child_process');
+  return { statusCode: 200, body: logs.join('\n') }
+
+},
+const { spawnSync } = require('child_process'),
 function runNode(relPath, args = []) {,
-  const abs = path.resolve(__dirname, '....', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true ,});
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' ,}
+  const abs = path.resolve(__dirname, '....', relPath),
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
 ,
 exports.config = {,
-  schedule: '*/10 * * * *',};
+  schedule: '*/10 * * * *'},
 exports.handler = async () => {,
-  const logs = [];
+  const logs = [],
   function logStep(name, fn) {,
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status,
+    logs.push(`\n=== ${name} ===`),
+    const { status, stdout, stderr } = fn(),
+    if (stdout) logs.push(stdout),
+    if (stderr) logs.push(stderr),
+    logs.push(`exit=${status}`),
+    return status
   }
 ,
   // Generate sitemap for crawling,
-  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
+  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js')),
   // Build search index if available,
   try {,
-    logStep('search:index', () => runNode('scripts/generate-search-index.js')),
+    logStep('search:index', () => runNode('scripts/generate-search-index.js'))
   } catch (error) {,
-    logs.push(`Search index generation skipped: ${String(error),}`),
+    logs.push(`Search index generation skipped: ${String(error)}`)
   }
 ,
   // Commit and push,
-  logStep('git:sync', () => runNode('automation/git-sync.cjs'));
+  logStep('git:sync', () => runNode('automation/git-sync.cjs')),
 =  // Run the automation guardian,
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs')),
   // Attempt to push any changes,
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-  return { statusCode: 200, body: logs.join('\n') ,}
-};
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
+  return { statusCode: 200, body: logs.join('\n') }
+},

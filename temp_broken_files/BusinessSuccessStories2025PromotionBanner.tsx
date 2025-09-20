@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   ArrowRight,
@@ -9,65 +9,65 @@ import {,
   Users,
   Zap,
   Shield,
-  Brain;
-  Globe;
-  Target;
-  Award;
-  CheckCircle;
-  PlayCircle;
-  BookOpen;
-  Lightbulb;
-  DollarSign;
-  BarChart3;
-  Clock;
-  Building2;
-  Sparkles;
-  Rocket;
-  Quote,
-} from 'lucide-react';
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  DollarSign,
+  BarChart3,
+  Clock,
+  Building2,
+  Sparkles,
+  Rocket,
+  Quote
+} from 'lucide-react',
 const BusinessSuccessStories2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentTestimonialsetCurrentTestimonial] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [currentTestimonialsetCurrentTestimonial] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Rotate testimonials every 4 seconds,
     const interval = setInterval(() => {,
-      setCurrentTestimonial((prev) => (prev + 1) % 3);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentTestimonial((prev) => (prev + 1) % 3),
+    }4000),
+    return () => clearInterval(interval),
+  }[]),
   const testimonials = [,
     {,
-      quote: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.';
-      author: 'Sarah Johnson';
-      role: 'CEOTechCorp Solutions';
-      company: 'TC';
-      results: '+300% Efficiency',};
+      quote: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.',
+      author: 'Sarah Johnson',
+      role: 'CEOTechCorp Solutions',
+      company: 'TC',
+      results: '+300% Efficiency'},
     {,
-      quote: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.';
-      author: 'Michael Chen';
-      role: 'CTOGlobal Finance Inc';
-      company: 'GF';
-      results: '99.9% Security',};
+      quote: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.',
+      author: 'Michael Chen',
+      role: 'CTOGlobal Finance Inc',
+      company: 'GF',
+      results: '99.9% Security'},
     {,
-      quote: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.';
-      author: 'Emily Rodriguez';
-      role: 'Operations DirectorManufacturing Plus';
-      company: 'MP';
-      results: '+250% Efficiency',}
-  ];
+      quote: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.',
+      author: 'Emily Rodriguez',
+      role: 'Operations DirectorManufacturing Plus',
+      company: 'MP',
+      results: '+250% Efficiency'}
+  ],
   const stats = [,
-    { label: 'Success 'Storiesvalue: '1,200+'icon: BookOpen ,};
-    { label: 'Average 'ROIvalue: '300%'icon: TrendingUp ,};
-    { label: 'Client 'Satisfactionvalue: '99.8%'icon: Star ,};
-    { label: 'Cost 'Savingsvalue: '$50M+'icon: DollarSign ,}
-  ];
+    { label: 'Success 'Storiesvalue: '1,200+'icon: BookOpen },
+    { label: 'Average 'ROIvalue: '300%'icon: TrendingUp },
+    { label: 'Client 'Satisfactionvalue: '99.8%'icon: Star },
+    { label: 'Cost 'Savingsvalue: '$50M+'icon: DollarSign }
+  ],
   const industries = [,
-    { name: ''Technologyprojects: 45icon: Brain ,};
-    { name: ''Financeprojects: 32icon: DollarSign ,};
-    { name: ''Healthcareprojects: 28icon: Shield ,};
-    { name: ''Manufacturingprojects: 25icon: Building2 ,}
-  ];
+    { name: ''Technologyprojects: 45icon: Brain },
+    { name: ''Financeprojects: 32icon: DollarSign },
+    { name: ''Healthcareprojects: 28icon: Shield },
+    { name: ''Manufacturingprojects: 25icon: Building2 }
+  ],
   return (,
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">,
       {/* Animated Background */}
@@ -78,7 +78,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
             className="text-white",
           >,
@@ -93,7 +93,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
             <divh2,
               className="text-4xl md: text-5xl font-bold mb-6",
             >,
-              Real Success{' ',}
+              Real Success{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">,
                 Stories,
               </span>,
@@ -113,8 +113,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
                 <div key={index} className="text-center">,
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-sm text-gray-300">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* Industries */}
             <div,
@@ -123,7 +122,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
               <h4 className="text-lg font-semibold text-white mb-4">Industries We Serve: </h4>,
               <div className="flex flex-wrap gap-3">,
                 {industries.map((industryindex) => (,
-                  <div key={index,} className="flex items-center space-x-2 px-3 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">,
+                  <div key={index} className="flex items-center space-x-2 px-3 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">,
                     <industry.icon className="w-4 h-4 text-green-400" />,
                     <span className="text-sm text-white">{industry.name}</span>,
                     <span className="text-xs text-gray-300">({industry.projects}+)</span>,
@@ -152,7 +151,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
               </a>,
             </div>,
           </div>,
-          {/* Right Content - Testimonial Carousel */,}
+          {/* Right Content - Testimonial Carousel */}
           <div,
             className="relative",
           >,
@@ -179,8 +178,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
                   <div className="flex-1">,
                     <div className="flex items-center space-x-1 mb-2">,
                       {[...Array(5)].map((_i) => (,
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />,
-                      ))}
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />))}
                     </div>,
                     <p className="text-gray-300 italic mb-4">,
                       "{testimonials[currentTestimonial].quote}",
@@ -206,7 +204,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${,
-                      index === currentTestimonial ? 'bg-green-400 w-8' : 'bg-white/30',
+                      index === currentTestimonial ? 'bg-green-400 w-8' : 'bg-white/30'
                     }`}
                   />,
                 ))}
@@ -231,7 +229,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default BusinessSuccessStories2025PromotionBanner;
+  ),
+},
+export default BusinessSuccessStories2025PromotionBanner,
 </div></div></div></div></div>,

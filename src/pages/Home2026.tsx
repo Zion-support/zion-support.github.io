@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowRight,
   Brain,
@@ -127,76 +127,49 @@ import {
   Chi,
   Psi,
   Omega
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
-
+} from "lucide-react";
+import SEO from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
 const Home2026: React.FC = () => {
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const { scrollYProgress } = useScroll(),
+  const y = useTransform(scrollYProgress, [0, 1], ['0%50%']),
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]),
 
-  const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 6);
+  const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 6),
 
   const serviceCategories = [
     {
-      title: "AI & Analytics",
-      icon: Brain,
-      description: "Revolutionary AI-powered business intelligence and analytics platforms",
-      color: "from-cyan-500 to-blue-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'AI & Analytics').length
-    },
+      title: "AI & Analytics",icon: Brain,description: "Revolutionary AI-powered business intelligence and analytics platforms",color: "from-cyan-500 to-blue-600",services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'AI & Analytics').length
+    };
     {
-      title: "Quantum Computing",
-      icon: Zap,
-      description: "Next-generation quantum computing solutions for complex problems",
-      color: "from-purple-500 to-pink-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Quantum Computing').length
-    },
+      title: "Quantum Computing",icon: Zap,description: "Next-generation quantum computing solutions for complex problems",color: "from-purple-500 to-pink-600",services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Quantum Computing').length
+    };
     {
-      title: "Cybersecurity",
-      icon: Shield,
-      description: "AI-powered cybersecurity with zero false positives",
-      color: "from-red-500 to-orange-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Cybersecurity').length
-    },
+      title: "Cybersecurity",icon: Shield,description: "AI-powered cybersecurity with zero false positives",color: "from-red-500 to-orange-600",services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Cybersecurity').length
+    };
     {
-      title: "IoT & Edge",
-      icon: Cpu,
-      description: "Real-time edge computing and IoT solutions",
-      color: "from-green-500 to-emerald-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'IoT & Edge Computing').length
-    },
+      title: "IoT & Edge",icon: Cpu,description: "Real-time edge computing and IoT solutions",color: "from-green-500 to-emerald-600",services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'IoT & Edge Computing').length
+    };
     {
-      title: "Digital Twin",
-      icon: Rocket,
-      description: "3D digital twin platforms for asset optimization",
-      color: "from-yellow-500 to-amber-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length
-    },
+      title: "Digital Twin",icon: Rocket,description: "3D digital twin platforms for asset optimization",color: "from-yellow-500 to-amber-600",services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length
+    };
     {
-      title: "Sustainability",
-      icon: Heart,
-      description: "Green technology and ESG compliance solutions",
-      color: "from-teal-500 to-cyan-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length
+      title: "Sustainability",icon: Heart,description: "Green technology and ESG compliance solutions",color: "from-teal-500 to-cyan-600",services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length
     }
   ];
-
   const stats = [
-    { label: "Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 },
-    { label: "Innovation Level", value: "Revolutionary", icon: Star },
-    { label: "Success Rate", value: "99.9%", icon: CheckCircle },
+    { label: "Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 };
+    { label: "Innovation Level", value: "Revolutionary", icon: Star };
+    { label: "Success Rate", value: "99.9%", icon: CheckCircle };
     { label: "Client Satisfaction", value: "98%", icon: Heart }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [featuredServices.length]);
+      setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length),
+    }, 5000),
+    return () => clearInterval(interval),
+  }, [featuredServices.length]),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -222,9 +195,9 @@ const Home2026: React.FC = () => {
               key={i}
               className="absolute text-cyan-400/20"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
+                left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`;
+                animationDelay: `${Math.random() * 5}s`;
                 animationDuration: `${3 + Math.random() * 4}s`
               }}
               animate={{
@@ -233,9 +206,7 @@ const Home2026: React.FC = () => {
                 rotate: [0, 360]
               }}
               transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
+                duration: 4,repeat: Infinity,ease: "easeInOut"
               }}
             >
               {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] &&
@@ -523,40 +494,25 @@ const Home2026: React.FC = () => {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                icon: Star,
-                title: "Revolutionary Innovation",
-                description: "Leading the charge with cutting-edge AI, quantum computing, and next-generation technologies that don't exist anywhere else.",
+                icon: Star,title: "Revolutionary Innovation",description: "Leading the charge with cutting-edge AI, quantum computing, and next-generation technologies that don't exist anywhere else.",
                 color: "from-yellow-500 to-orange-600"
-              },
+              };
               {
-                icon: Award,
-                title: "Proven Excellence",
-                description: "Track record of delivering transformative solutions with 99.9% success rate and 98% client satisfaction.",
-                color: "from-blue-500 to-cyan-600"
-              },
+                icon: Award,title: "Proven Excellence",description: "Track record of delivering transformative solutions with 99.9% success rate and 98% client satisfaction.",color: "from-blue-500 to-cyan-600"
+              };
               {
-                icon: Target,
-                title: "Future-Focused",
-                description: "We don't just solve today's problems – we anticipate tomorrow's challenges and build solutions for the future.",
-                color: "from-green-500 to-emerald-600"
-              },
+                icon: Target,title: "Future-Focused",description: "We don't just solve today's problems – we anticipate tomorrow's challenges and build solutions for the future.",color: "from-green-500 to-emerald-600"
+              };
               {
-                icon: Users,
-                title: "Expert Team",
-                description: "World-class engineers, scientists, and innovators with deep expertise in AI, quantum computing, and emerging technologies.",
+                icon: Users,title: "Expert Team",description: "World-class engineers, scientists, and innovators with deep expertise in AI, quantum computing, and emerging technologies.",
                 color: "from-purple-500 to-pink-600"
-              },
+              };
               {
-                icon: Globe,
-                title: "Global Impact",
-                description: "Our solutions are transforming industries worldwide, from healthcare to finance, manufacturing to sustainability.",
+                icon: Globe,title: "Global Impact",description: "Our solutions are transforming industries worldwide, from healthcare to finance, manufacturing to sustainability.",
                 color: "from-indigo-500 to-purple-600"
-              },
+              };
               {
-                icon: TrendingUp,
-                title: "Continuous Growth",
-                description: "We never stop innovating. Our R&D team is constantly pushing the boundaries of what's possible.",
-                color: "from-red-500 to-pink-600"
+                icon: TrendingUp,title: "Continuous Growth",description: "We never stop innovating. Our R&D team is constantly pushing the boundaries of what's possible.",color: "from-red-500 to-pink-600"
               }
             ].map((feature, index) => (
               <motion.div
@@ -592,7 +548,7 @@ const Home2026: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl sm: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
@@ -655,7 +611,6 @@ const Home2026: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Home2026;

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-export default EnhancedInnovativeServicesShowcase2027;
+import React, { useState, useEffect } from 'react',
+export default EnhancedInnovativeServicesShowcase2027,
 export default React.memo(function EnhancedInnovativeServicesShowcase2027 (...args[]) :  {
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
+import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027',
 export default function Page() {
-) ;
+) ,
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch(sortBy) {
       case 'price':
@@ -30,85 +30,85 @@ export default function Page() {
   ChevronLeft,
   Play,
   Eye,
-  X,;
-  Beaker;
-} from 'lucide - react';
+  X,
+  Beaker,
+} from 'lucide - react',
 
-const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
-  const [services, setServices] = useState < EnhancedInnovativeService2027[]> (ENHANCED_INNOVATIVE_SERVICES_2027) ;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
-  const [sortBy, setSortBy] = useState('title');
-  const [selectedService, setSelectedService] = useState < EnhancedInnovativeService2027 | null> (null) ;
-  const [currentSlide, setCurrentSlide] = useState(0);
+const EnhancedInnovativeServicesShowcase2027: React.FC = () => {,
+  const [services, setServices] = useState < EnhancedInnovativeService2027[]> (ENHANCED_INNOVATIVE_SERVICES_2027) ,
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all'),
+  const [sortBy, setSortBy] = useState('title'),
+  const [selectedService, setSelectedService] = useState < EnhancedInnovativeService2027 | null> (null) ,
+  const [currentSlide, setCurrentSlide] = useState(0),
 
-  const categories = ['all', ...Array.from(new Set (services.map (s => s.category) ) ) ];
-  const innovationLevels = ['all', ...Array.from(new Set (services.map (s => s.innovationLevel) ) ) ];
+  const categories = ['all', ...Array.from(new Set (services.map (s => s.category) ) ) ],
+  const innovationLevels = ['all', ...Array.from(new Set (services.map (s => s.innovationLevel) ) ) ],
 
-  const filteredServices = services.filter(service => {;
-    const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                         service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                         service.tags.some(tag => tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ;
-    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
+  const filteredServices = services.filter(service => {,
+    const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                         service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                         service.tags.some(tag => tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ,
+    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel,
 
-    return matchesSearch && matchesCategory && matchesInnovation;
-  }) ;
+    return matchesSearch && matchesCategory && matchesInnovation,
+  }) ,
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch(sortBy) {;
-      case 'price':;
-        return a.price - b.price;
-      case 'innovation':;
-        const innovationOrder = { 'Breakthrough': 3, 'Cutting - edge': 2, 'Advanced': 1, 'Innovative': 0 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) ;
-      case 'roi':;
-        return parseInt(b.roi.replace ('%', '') ) - parseInt(a.roi.replace ('%', '') ) ;
-      default:;
+  const sortedServices = [...filteredServices].sort((a, b) => {,
+    switch(sortBy) {,
+      case 'price':,
+        return a.price - b.price,
+      case 'innovation':,
+        const innovationOrder = { 'Breakthrough': 3, 'Cutting - edge': 2, 'Advanced': 1, 'Innovative': 0 },
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) ,
+      case 'roi':,
+        return parseInt(b.roi.replace ('%', '') ) - parseInt(a.roi.replace ('%', '') ) ,
+      default:,
         return 0}
-  }) ;
+  }) ,
 
-  const getCategoryIcon = (category: string) => {;
-    switch(category) {;
-      case 'AI & Financial Technology': return < DollarSign className="w-5 h-5" />;
-      case 'Quantum & Cloud Computing': return < Cpu className="w-5 h-5" />;
-      case 'AI & Supply Chain': return < Network className="w-5 h-5" />;
-      case 'Neurotechnology & AI': return < Brain className="w-5 h-5" />;
-      case 'AI & Energy Management': return < Zap className="w-5 h-5" />;
-      case 'Quantum & Networking': return < Globe className="w-5 h-5" />;
-      case 'AI & Education Technology': return < Users className="w-5 h-5" />;
-      case 'Quantum & Materials Science': return < Flask className="w-5 h-5" />;
-      case 'AI & Space Technology': return < Rocket className="w-5 h-5" />;
-      case 'Quantum & Biology': return < Stethoscope className="w-5 h-5" />;
-      default: return < Zap className="w-5 h-5" />;
+  const getCategoryIcon = (category: string) => {,
+    switch(category) {,
+      case 'AI & Financial Technology': return < DollarSign className="w-5 h-5" />,
+      case 'Quantum & Cloud Computing': return < Cpu className="w-5 h-5" />,
+      case 'AI & Supply Chain': return < Network className="w-5 h-5" />,
+      case 'Neurotechnology & AI': return < Brain className="w-5 h-5" />,
+      case 'AI & Energy Management': return < Zap className="w-5 h-5" />,
+      case 'Quantum & Networking': return < Globe className="w-5 h-5" />,
+      case 'AI & Education Technology': return < Users className="w-5 h-5" />,
+      case 'Quantum & Materials Science': return < Flask className="w-5 h-5" />,
+      case 'AI & Space Technology': return < Rocket className="w-5 h-5" />,
+      case 'Quantum & Biology': return < Stethoscope className="w-5 h-5" />,
+      default: return < Zap className="w-5 h-5" />
     }
-  };
+  },
 
-  const getInnovationLevelColor = (level: string) => {;
-    switch(level) {;
-      case 'Breakthrough': return 'bg-gradient - to - r from - purple - 600 to - pink - 600';
-      case 'Advanced': return 'bg-gradient - to - r from - blue - 600 to - cyan - 600';
-      case 'Innovative': return 'bg-gradient - to - r from - green - 600 to - emerald - 600';
-      default: return 'bg-gray - 600';
+  const getInnovationLevelColor = (level: string) => {,
+    switch(level) {,
+      case 'Breakthrough': return 'bg-gradient - to - r from - purple - 600 to - pink - 600',
+      case 'Advanced': return 'bg-gradient - to - r from - blue - 600 to - cyan - 600',
+      case 'Innovative': return 'bg-gradient - to - r from - green - 600 to - emerald - 600',
+      default: return 'bg-gray - 600'
     }
-  };
+  },
 
-  const handleServiceClick = useCallback((service: EnhancedInnovativeService2027) => {;
-    setSelectedService(service) ;
-    setCurrentSlide(0) ;
-  };
+  const handleServiceClick = useCallback((service: EnhancedInnovativeService2027) => {,
+    setSelectedService(service) ,
+    setCurrentSlide(0) 
+  },
 
-  const nextSlide = () => {;
-    if(selectedService) {;
-      setCurrentSlide((prev) => (prev + 1) % 4) ;
+  const nextSlide = () => {,
+    if(selectedService) {,
+      setCurrentSlide((prev) => (prev + 1) % 4) ,
     }
-  };
+  },
 
-  const prevSlide = () => {;
-    if(selectedService) {;
-      setCurrentSlide((prev) => (prev - 1 + 4) % 4) ;
+  const prevSlide = () => {,
+    if(selectedService) {,
+      setCurrentSlide((prev) => (prev - 1 + 4) % 4) ,
     }
-  };
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Header Section */}
@@ -214,18 +214,18 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               <select
                 value={sortBy}
                 onChange={ (e) => setSortBy(e.target.value as) }
-                className="bg-zion - slate - dark / 50 border border-zion - cyan / 20 rounded-lg px-3 py-2 text-white focus:outline - none focus:ring - 2 focus:ring - zion -cyan"
+                className="bg-zion - slate - dark / 50 border border-zion - cyan / 20 rounded-lg px-3 py-2 text-white focus: outline - none focus:ring - 2 focus:ring - zion -cyan"
 
                 <option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
                 <option value="innovation">Sort by Innovation</option>
               </select>
-            </div>;
+            </div>,
           </div>
         </div>
-      </div > className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8";
+      </div > className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8",
           >
-            {sortedServices.map((service) => (;
+            {sortedServices.map((service) => (,
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -296,7 +296,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   </div>
 
       {/* Services Grid */}
-      <div  id="services - grid" className="container mx - auto px-4 py-8">;
+      <div  id="services - grid" className="container mx - auto px-4 py-8">,
         <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
           {sortedServices.map((service, index) => (<motion.div
               key={service.id}
@@ -367,10 +367,10 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               </div>
             </motion.div>) ) }
         </div>
-      </div>;
+      </div>,
 
       {/* Service Detail Modal */}
-      {selectedService && (;
+      {selectedService && (,
         <div  className="fixed inset - 0 bg-black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p -4">
           <motion.div
             initial = {
@@ -409,7 +409,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
               {/* Navigation Tabs */}
               <div  className="flex space - x-4 mb-6 border-b border-zion - gray -dark">
-                {['Overview', 'Features', 'Technical Specs', 'Contact'].map((tab, index) => (<button     key={tab}
+                {['OverviewFeatures', 'Technical SpecsContact'].map((tab, index) => (<button     key={tab}
                     onClick={ () => setCurrentSlide(index) }
                     className={`pb - 2 px-4 transition - colors ${currentSlide === index
                         ? 'text-zion - cyan border-b-2 border-zion - cyan'
@@ -757,14 +757,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient - to - r from - zion - cyan to - zion - purple text-white px-8 py-4 rounded-lg font - semibold text-lg flex items - center space - x-2 mx -auto"
-            onClick = { () => window.open('https://ziontechgroup.com',
-  '_blank') }
+            onClick = { () => window.open('https://ziontechgroup.com_blank') }
           >
             <ExternalLink className="w-5 h-5" />
-            <span > Visit Zion Tech Group</span>;
-          </motion.button>;
-        </div>;
-      </div>;
-    </div>;) ;
-};
+            <span > Visit Zion Tech Group</span>,
+          </motion.button>,
+        </div>,
+      </div>,
+    </div>,) ,
+},
 

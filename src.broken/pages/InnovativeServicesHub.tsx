@@ -1,6 +1,6 @@
-import React from 'react';
-export default InnovativeServicesHub;}}}}}}}
-import { motion  } from 'framer-motion';
+import React from 'react',
+export default InnovativeServicesHub,}}}}}}}
+import { motion  } from 'framer-motion',
 
 export default function Page() {
     },
@@ -11,21 +11,21 @@ export default function Page() {
       icon: Server,
       color: 'from - green - 600 to - teal - 600',
       route: '/services',
-      features['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],;
+      features['Cloud ServicesCybersecurity', 'IT InfrastructureDigital Transformation'],
       stats: { services: 15, avgROI: '300%', innovation: 'Enterprise' }
     },
     {
       id: 'green - tech',
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco - friendly technology solutions for a better future',
-      icon: Globe,
-    };
-      color: 'from - emerald - 600 to - green - 600',;
-      route: '/green - it',;
-      features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],;
-      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' };
-    };
-  ];
+      icon: Globe
+    },
+      color: 'from - emerald - 600 to - green - 600',
+      route: '/green - it',
+      features: ['Renewable EnergyCarbon Reduction', 'Sustainable ComputingGreen AI'],
+      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' },
+    },
+  ],
 
   const featuredServices = [{
       title: 'Quantum AI Neural Networks',
@@ -44,38 +44,38 @@ export default function Page() {
       delivery: '12 months'
     },
     {
-      title: 'Autonomous Space Mining System',;
-      description: 'AI - powered space exploration and resource extraction',;
-      category: 'Space Tech',;
-      price: '$500,000',;
-      roi: '2000%',;
-      delivery: '18 months';
-    };
-  ];
+      title: 'Autonomous Space Mining System',
+      description: 'AI - powered space exploration and resource extraction',
+      category: 'Space Tech',
+      price: '$500,000',
+      roi: '2000%',
+      delivery: '18 months'
+    },
+  ],
 
   const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,
+      transition: {,
+        staggerChildren: 0.1
+      },
+    },
+  },
 
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0
 
 },
-    visible: {;
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+    visible: {,
+      y: 0,
+      opacity: 1,
+      transition: {,
+        duration: 0.5
+      },
+    },
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
@@ -213,12 +213,12 @@ export default function Page() {
           </h2>
           <p className="text-xl text-slate - 300 max - w-3xl mx -auto">
             From revolutionary AI to sustainable green technology, discover the perfect solution for your business
-          </p>;
-        </div>;
-;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">;
-          {serviceCategories.map ( (category) => {;
-            const IconComponent = category.icon;
+          </p>,
+        </div>,
+,
+        <div className="grid grid - cols - 1 md: grid - cols - 2 gap-8">,
+          {serviceCategories.map ( (category) => {,
+            const IconComponent = category.icon,
             return (<motion.div
                 key = {category.id}
                 className="group bg-slate - 800 / 50 backdrop - blur - sm rounded-2xl p - 8 border border-slate - 700 / 50 hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-blue -500 / 20"
@@ -272,12 +272,12 @@ export default function Page() {
                 {/* CTA */}
                 <a
                   href={category.route}
-                  className="inline - flex items - center gap-2 w-full justify - center px-6 py-3 bg-gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text-white font - bold rounded-xl transition - all duration - 300 hover:scale - 105 group - hover:gap-3"
-                >;
-                  Explore {category.title};
-                  <ArrowRight className="w-5 h-5" />;
-                </a>;
-              </motion.div>;) ;
+                  className="inline - flex items - center gap-2 w-full justify - center px-6 py-3 bg-gradient - to - r from - blue - 600 to - purple - 600 hover: from - blue - 700 hover:to - purple - 700 text-white font - bold rounded-xl transition - all duration - 300 hover:scale - 105 group - hover:gap-3"
+                >,
+                  Explore {category.title},
+                  <ArrowRight className="w-5 h-5" />,
+                </a>,
+              </motion.div>,) ,
           }) }
         </div>
       </motion.div>
@@ -362,17 +362,17 @@ export default function Page() {
         className="bg-gradient - to - r from - indigo - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20 border-t border-slate -700 / 50"
         initial = {
   { opacity: 0,
-  y: 50 ;
+  y: 50 
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
         transition = {
   { duration: 0.8,
-  delay: 1.6 ;
+  delay: 1.6 
 
 }}
       >
@@ -417,15 +417,15 @@ export default function Page() {
 
           <div className="text-center mt-12">
             <a
-              href="https://ziontechgroup.com"
+              href="https: //ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline - flex items - center gap-3 px-8 py-4 bg-gradient - to - r from - indigo - 600 to - purple - 600 hover:from - indigo - 700 hover:to - purple - 700 text-white font - bold rounded-xl transition - all duration - 300 hover:scale - 105 hover:shadow-2xl hover:shadow-indigo -500 / 25"
 
               Visit Our Website < ExternalLink className="w-5 h-5" />
-            </a>;
-          </div>;
-        </div>;
-      </motion.div>;
-    </div>;) ;
-};
+            </a>,
+          </div>,
+        </div>,
+      </motion.div>,
+    </div>,) 
+},

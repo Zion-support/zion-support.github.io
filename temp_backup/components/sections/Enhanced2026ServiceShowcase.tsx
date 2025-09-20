@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 ArrowRightStarTrendingUpZapShieldBrainGlobeRocket
-import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
-import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
-import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
+import { innovative2026AIServices } from '../../data/innovative-2026-ai-services',
+import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure',
+import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas',
 
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {
@@ -15,7 +15,7 @@ export default function Enhanced2026ServiceShowcase() {
         delayChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { 
@@ -32,7 +32,7 @@ export default function Enhanced2026ServiceShowcase() {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const cardVariants = {
     hover: {
@@ -43,7 +43,7 @@ export default function Enhanced2026ServiceShowcase() {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const renderServiceCard = (service: anyindex: number) => (
     <motion.div
@@ -123,16 +123,16 @@ export default function Enhanced2026ServiceShowcase() {
         </div>
 
         {/* Hover glow effect */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
       </motion.div>
     </motion.div>
-  );
+  ),
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">Enhanced2026ServiceShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default Enhanced2026ServiceShowcase;
+  )
+},
+export default Enhanced2026ServiceShowcase,

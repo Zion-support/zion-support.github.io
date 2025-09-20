@@ -41,11 +41,11 @@ function TechSolutionsSection () {
   Network,
   Code,
   Server'
-} from 'lucide-react';
+} from 'lucide-react',
 
       features['Emerging Tech',Prototype Development',Technology Consulting',Innovation Strategy'],
-      color: 'from-indigo-500 to-purple-500'};
-  ];
+      color: 'from-indigo-500 to-purple-500'},
+  ],
 const techSolutions = [{
 
     icon: "🤖","
@@ -86,13 +86,13 @@ const techSolutions = [{
     benefits: ["SEO optimized", "Fast loading", "Mobile-first design"],"
     color: "from-indigo-500 to-purple-500"
   },
-  {;"
-    icon: "📊",;"
-    title: "Data Analytics",;"
-    description: "Business intelligence and data-driven insights for strategic decision making",;"
-    benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],;"
-    color: "from-yellow-500 to-orange-500"};
-];
+  {,"
+    icon: "📊","
+    title: "Data Analytics","
+    description: "Business intelligence and data-driven insights for strategic decision making","
+    benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],"
+    color: "from-yellow-500 to-orange-500"},
+],
 =======
 
 export function TechSolutionsSection() {
@@ -225,7 +225,7 @@ export function TechSolutionsSection() {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link"
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
@@ -241,17 +241,17 @@ export function TechSolutionsSection() {
                 <Code className="ml-2 h-5 w-5"  />              </Link>
             </div>
           </div>
-        </motion.div>;
-      </div>;
-    </section>;) };
+        </motion.div>,
+      </div>,
+    </section>,) },
 
-export default TechSolutionsSection;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default TechSolutionsSection;
-export default TechSolutionsSection;
+export default TechSolutionsSection,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default TechSolutionsSection,
+export default TechSolutionsSection,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import { DynamicListingPage } from '@/components/DynamicListingPage';
-import { ProductListing } from '@/types/listings';
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter } from 'react-router-dom',
+import { DynamicListingPage } from '@/components/DynamicListingPage',
+import { ProductListing } from '@/types/listings',
 
 test('slider min is 0', () => {
   const listings: ProductListing[] = [
@@ -17,7 +17,7 @@ test('slider min is 0', () => {
       images: [],
       createdAt: '2020-01-01'
     }
-  ];
+  ],
 
   render(
     <MemoryRouter>
@@ -29,11 +29,11 @@ test('slider min is 0', () => {
         categoryFilters={[]}
       />
     </MemoryRouter>
-  );
+  ),
 
-  const slider = screen.getByLabelText(/price range/i);
-  expect(slider).toHaveAttribute('min', '0');
-});
+  const slider = screen.getByLabelText(/price range/i),
+  expect(slider).toHaveAttribute('min0'),
+}),
 
 test('shows only 10 listings per page when itemsPerPage is 10', () => {
   const listings: ProductListing[] = Array.from({ length: 15 }, (_, i) => ({
@@ -47,7 +47,7 @@ test('shows only 10 listings per page when itemsPerPage is 10', () => {
     author: { name: 'Author', id: 'a' },
     images: [],
     createdAt: '2020-01-01'
-  }));
+  })),
 
   const { container } = render(
     <MemoryRouter>
@@ -60,11 +60,11 @@ test('shows only 10 listings per page when itemsPerPage is 10', () => {
         itemsPerPage={10}
       />
     </MemoryRouter>
-  );
+  ),
 
-  const buyButtons = container.querySelectorAll('button');
+  const buyButtons = container.querySelectorAll('button'),
   // expect one "Buy Now" per listing, plus other buttons (view toggles etc.)
   // Filter to buy now buttons by text
-  const listingButtons = Array.from(buyButtons).filter(b => b.textContent === 'Buy Now');
-  expect(listingButtons).toHaveLength(10);
-});
+  const listingButtons = Array.from(buyButtons).filter(b => b.textContent === 'Buy Now'),
+  expect(listingButtons).toHaveLength(10),
+}),

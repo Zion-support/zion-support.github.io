@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '@/components / ui / button';
+import React from 'react',
+import { Button } from '@/components / ui / button',
 export default function Page() {
 ,
         {
@@ -12,38 +12,38 @@ export default function Page() {
             title: "Dedicated Support",
             description: "Priority support with dedicated account managers and 24 / 7 technical assistance."
 
-    ];
+    ],
     const plans = [{
             name: "Starter",
             price: "$999",
             period: "/month",
             description: "Perfect for growing teams",
-            features[;
+            features[,
                 "Up to 25 team members",
                 "Basic analytics",
                 "Email support",
                 "Standard integrations"
             ]
-        },;
+        },
         {
             name: "Professional",
             price: "$2,499",
             period: "/month",
             description: "Ideal for established companies",
-            features[;
+            features[,
                 "Up to 100 team members",
                 "Advanced analytics",
                 "Priority support",
                 "Custom integrations",
                 "SSO authentication"
             ]
-        },;
+        },
         {
             name: "Enterprise",
             price: "Custom",
             period: "",
             description: "For large organizations",
-            features[;
+            features[,
                 "Unlimited team members",
                 "Custom analytics",
                 "Dedicated support",
@@ -52,7 +52,7 @@ export default function Page() {
                 "On - premise options"
             ]
 
-    ];
+    ],
     return (<div className="min - h-screen bg-background">
       <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise - grade AI and tech solutions for large organizations.Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com / enterprise"/>
 

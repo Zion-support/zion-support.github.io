@@ -1,10 +1,10 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Link from "next/link";
-import { CAREER_JOBS } from "@/data/careersJobs";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import Link from "next/link",
+import { CAREER_JOBS } from "@/data/careersJobs",
 
 export default function Page() {
 ,
@@ -14,8 +14,8 @@ export default function Page() {
     { id: 'design', name: 'Design & UX', icon: Palette },
     { id: 'data', name: 'Data Science', icon: BarChart3 },
     { id: 'security', name: 'Cybersecurity', icon: Shield },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom },
-  ];
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom }
+  ],
 
   const locations = [{ id: 'all', name: 'All Locations', icon: Globe },
     { id: 'remote', name: 'Remote', icon: Wifi },
@@ -23,14 +23,14 @@ export default function Page() {
     { id: 'new-york', name: 'New York, NY', icon: MapPin },
     { id: 'san - francisco', name: 'San Francisco, CA', icon: MapPin },
     { id: 'london', name: 'London, UK', icon: MapPin },
-    { id: 'singapore', name: 'Singapore', icon: MapPin },
-  ];
+    { id: 'singapore', name: 'Singapore', icon: MapPin }
+  ],
 
   const locationFilters = [{ id: 'all', name: 'All Locations', count: 12 },
     { id: 'remote', name: 'Remote', count: 8 },
     { id: 'middletown', name: 'Middletown, DE', count: 3 },
-    { id: 'san - francisco', name: 'San Francisco, CA', count: 1 },
-  ];
+    { id: 'san - francisco', name: 'San Francisco, CA', count: 1 }
+  ],
 
   const jobListings = [{
       id: 'senior - ai - engineer',
@@ -43,20 +43,16 @@ export default function Page() {
       description:
         'Join our AI team to develop cutting - edge machine learning solutions and autonomous systems.',
       requirements: [
-        'Strong background in machine learning and deep learning',
-        'Experience with Python, TensorFlow, PyTorch',
-        'Knowledge of computer vision and NLP',
-        'Experience with cloud platforms(AWS, Azure, GCP) ',
-        'PhD in Computer Science or related field preferred',
+        'Strong background in machine learning and deep learningExperience with Python, TensorFlow, PyTorch',
+        'Knowledge of computer vision and NLPExperience with cloud platforms(AWS, Azure, GCP) ',
+        'PhD in Computer Science or related field preferred'
       ],
-      benefits: ['Competitive salary and equity',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Health, dental, and vision insurance',
-        '401(k) with company match',
+      benefits: ['Competitive salary and equityFlexible work arrangements',
+        'Professional development budgetHealth, dental, and vision insurance',
+        '401(k) with company match'
       ],
       icon: Brain,
-      color: 'from - purple - 500 to - pink - 500',
+      color: 'from - purple - 500 to - pink - 500'
     },
     {
       id: 'quantum - computing - researcher',
@@ -68,20 +64,16 @@ export default function Page() {
       experience: '3 + years',
       description:
         'Research and develop quantum algorithms and quantum machine learning solutions.',
-      requirements: ['PhD in Physics, Computer Science, or related field',
-        'Experience with quantum computing frameworks',
-        'Knowledge of quantum algorithms and quantum ML',
-        'Strong mathematical and analytical skills',
-        'Experience with Qiskit, Cirq, or similar platforms',
+      requirements: ['PhD in Physics, Computer Science, or related fieldExperience with quantum computing frameworks',
+        'Knowledge of quantum algorithms and quantum MLStrong mathematical and analytical skills',
+        'Experience with Qiskit, Cirq, or similar platforms'
       ],
-      benefits: ['Competitive salary and equity',
-        'Research publication support',
-        'Conference attendance funding',
-        'Collaboration with leading quantum research institutions',
-        'Comprehensive benefits package',
+      benefits: ['Competitive salary and equityResearch publication support',
+        'Conference attendance fundingCollaboration with leading quantum research institutions',
+        'Comprehensive benefits package'
       ],
       icon: Zap,
-      color: 'from - blue - 500 to - cyan - 500',
+      color: 'from - blue - 500 to - cyan - 500'
     },
     {
       id: 'cybersecurity - architect',
@@ -93,20 +85,16 @@ export default function Page() {
       experience: '7 + years',
       description:
         'Design and implement enterprise - grade security solutions for our clients.',
-      requirements: ['Expertise in security architecture and design',
-        'Experience with zero - trust security models',
-        'Knowledge of compliance frameworks(SOC 2, ISO 27001) ',
-        'Experience with cloud security and DevSecOps',
-        'CISSP, CISM, or similar certifications preferred',
+      requirements: ['Expertise in security architecture and designExperience with zero - trust security models',
+        'Knowledge of compliance frameworks(SOC 2, ISO 27001) Experience with cloud security and DevSecOps',
+        'CISSP, CISM, or similar certifications preferred'
       ],
-      benefits: ['Competitive salary and equity',
-        'Security certification support',
-        'Professional development opportunities',
-        'Health and wellness benefits',
-        'Flexible work arrangements',
+      benefits: ['Competitive salary and equitySecurity certification support',
+        'Professional development opportunitiesHealth and wellness benefits',
+        'Flexible work arrangements'
       ],
       icon: Shield,
-      color: 'from - red - 500 to - orange - 500',
+      color: 'from - red - 500 to - orange - 500'
     },
     {
       id: 'cloud - infrastructure - engineer',
@@ -118,20 +106,16 @@ export default function Page() {
       experience: '4 + years',
       description:
         'Build and maintain scalable cloud infrastructure solutions.',
-      requirements: ['Experience with AWS, Azure, or Google Cloud',
-        'Knowledge of infrastructure as code(Terraform, CloudFormation) ',
-        'Experience with containerization and Kubernetes',
-        'Understanding of DevOps practices and CI / CD',
-        'Experience with monitoring and logging tools',
+      requirements: ['Experience with AWS, Azure, or Google CloudKnowledge of infrastructure as code(Terraform, CloudFormation) ',
+        'Experience with containerization and KubernetesUnderstanding of DevOps practices and CI / CD',
+        'Experience with monitoring and logging tools'
       ],
-      benefits: ['Competitive salary and equity',
-        'Cloud certification support',
-        'Professional development budget',
-        'Health and dental insurance',
-        'Remote work flexibility',
+      benefits: ['Competitive salary and equityCloud certification support',
+        'Professional development budgetHealth and dental insurance',
+        'Remote work flexibility'
       ],
       icon: Cloud,
-      color: 'from - green - 500 to - emerald - 500',
+      color: 'from - green - 500 to - emerald - 500'
     },
     {
       id: 'senior - software - engineer',
@@ -143,20 +127,16 @@ export default function Page() {
       experience: '5 + years',
       description:
         'Develop high-quality software solutions using modern technologies and best practices.',
-      requirements: ['Strong programming skills in multiple languages',
-        'Experience with modern web frameworks and APIs',
-        'Knowledge of software design patterns and architecture',
-        'Experience with testing and quality assurance',
-        'Understanding of agile development methodologies',
+      requirements: ['Strong programming skills in multiple languagesExperience with modern web frameworks and APIs',
+        'Knowledge of software design patterns and architectureExperience with testing and quality assurance',
+        'Understanding of agile development methodologies'
       ],
-      benefits: ['Competitive salary and equity',
-        'Professional development opportunities',
-        'Health and wellness benefits',
-        'Flexible work arrangements',
-        'Collaborative team environment',
+      benefits: ['Competitive salary and equityProfessional development opportunities',
+        'Health and wellness benefitsFlexible work arrangements',
+        'Collaborative team environment'
       ],
       icon: Code,
-      color: 'from - indigo - 500 to - purple - 500',
+      color: 'from - indigo - 500 to - purple - 500'
     },
     {
       id: 'business - development - manager',
@@ -168,37 +148,33 @@ export default function Page() {
       experience: '3 + years',
       description:
         'Drive business growth by identifying and developing strategic partnerships.',
-      requirements: ['Experience in B2B sales and business development',
-        'Knowledge of technology industry and trends',
-        'Strong communication and negotiation skills',
-        'Experience with CRM systems and sales processes',
-        'Ability to build and maintain client relationships',
+      requirements: ['Experience in B2B sales and business developmentKnowledge of technology industry and trends',
+        'Strong communication and negotiation skillsExperience with CRM systems and sales processes',
+        'Ability to build and maintain client relationships'
       ],
-      benefits: ['Competitive base salary plus commission',
-        'Performance - based bonuses',
-        'Professional development support',
-        'Health and dental insurance',
-        'Flexible work arrangements',
+      benefits: ['Competitive base salary plus commissionPerformance - based bonuses',
+        'Professional development supportHealth and dental insurance',
+        'Flexible work arrangements'
       ],
       icon: Users,
-      color: 'from - blue - 500 to - indigo - 500',
-    },
-  ];
+      color: 'from - blue - 500 to - indigo - 500'
+    }
+  ],
 
   const filteredJobs = jobListings.filter(job => {
     const matchesSearch = job.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
-      job.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
-    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
+      job.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
+    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment,
     const matchesLocation = selectedLocation === 'all' || (selectedLocation === 'remote' && job.location.includes('Remote') ) || (selectedLocation === 'middletown' &&
         job.location.includes('Middletown') ) || (selectedLocation === 'san - francisco' &&
-        job.location.includes('San Francisco') ) ;
+        job.location.includes('San Francisco') ) ,
 
-    return matchesSearch && matchesDepartment && matchesLocation;
-  }) ;
+    return matchesSearch && matchesDepartment && matchesLocation,
+  }) ,
 
   const toggleJob = (jobId: string) => {
-    setExpandedJob(expandedJob === jobId ? null : jobId) ;
-  };
+    setExpandedJob(expandedJob === jobId ? null : jobId) 
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - indigo -900">
       <div  className="container mx - auto px-4 py-24">
@@ -535,7 +511,7 @@ export default function Page() {
               We're always looking for talented individuals to join our team.Send us your resume and let's discuss how you can contribute to
               our mission.</p>
 
-            <div  className="grid md:grid - cols - 2 gap-6 mb-8 max - w-2xl mx -auto">
+            <div  className="grid md: grid - cols - 2 gap-6 mb-8 max - w-2xl mx -auto">
               <div  className="flex items - center justify - center space - x-3 text-gray -300">
                 <Mail className="w-5 h-5 text-cyan -400" />
                 <span > careers@ziontechgroup.com</span>
@@ -552,7 +528,7 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
+    </div>) 
 }
 
 // Missing Search component
@@ -568,7 +544,7 @@ const Search = ({ className }: { className?: string }) => (<svg
       strokeWidth={2}
       d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z"
     />
-  </svg>) ;
+  </svg>) ,
 
 // Missing ChevronDown component
 const ChevronDown = ({ className }: { className?: string }) => (<svg
@@ -583,7 +559,7 @@ const ChevronDown = ({ className }: { className?: string }) => (<svg
       strokeWidth={2}
       d="M19 9l - 7 7 - 7-7"
     />
-  </svg>) ;
+  </svg>) ,
 
 // Missing ChevronUp component
 const ChevronUp = ({ className }: { className?: string }) => (<svg
@@ -598,4 +574,4 @@ const ChevronUp = ({ className }: { className?: string }) => (<svg
       strokeWidth={2}
       d="M5 15l7 - 7 7 7"
     />
-  </svg>) ;
+  </svg>) ,

@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -130,7 +130,7 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max - w-4xl mx - auto text-center">
           <h2 className="text-4xl font - bold mb-6 bg-gradient - to - r from - purple - 400 to - pink - 400 bg-clip - text text-transparent">
             Experience the Future of Business
@@ -152,5 +152,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},

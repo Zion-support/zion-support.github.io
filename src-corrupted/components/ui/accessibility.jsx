@@ -1,21 +1,21 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X} from 'lucide-react';
-import {Button} from "button.tsx";
+import React, {useState, useEffect, useCallback} from 'react',
+import {motion, AnimatePresence} from 'framer-motion',
+import {Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X} from 'lucide-react',
+import {Button} from "button.tsx",
 export function AccessibilityPanel(props: any) {,
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false),
     const [settings, setSettings] = useState({,
-        highContrast: false;
-        largeText: false;
-        reducedMotion: false;
-        screenReader: false;
-        fontSize: 16;
-        colorBlindMode: 'normal',});
+        highContrast: false,
+        largeText: false,
+        reducedMotion: false,
+        screenReader: false,
+        fontSize: 16,
+        colorBlindMode: 'normal'}),
     // Apply accessibility settings to document,
     useEffect(() => {,
         if (!enabled),
-            return;
-        const root = document.documentElement;
+            return,
+        const root = document.documentElement,
         // High contrast,
         if (settings.highContrast) {,
             root.classList.add('high-contrast')}
@@ -27,22 +27,22 @@ export function AccessibilityPanel(props: any) {,
         if (settings.reducedMotion) {root.style.setProperty('--reduced-motionreduce')}
         else {root.style.setProperty('--reduced-motionno-preference')}
         // Font size,
-        root.style.setProperty('--font-size', `${settings.fontSize}px`);
+        root.style.setProperty('--font-size', `${settings.fontSize}px`),
         // Color blind mode,
-        root.setAttribute('data-color-blind', settings.colorBlindMode);
+        root.setAttribute('data-color-blind', settings.colorBlindMode),
         // Notify parent component,
-        onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]);
+        onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]),
     // Load saved settings from localStorage,
     useEffect(() => {,
-        const saved = localStorage.getItem('accessibility-settings');
+        const saved = localStorage.getItem('accessibility-settings'),
         if (saved) {,
             try {,
-                const parsed = JSON.parse(saved);
+                const parsed = JSON.parse(saved),
                 setSettings(prev => ({ ...prev, ...parsed }))}
-            catch {// Silently handle parsing errors}, []);
+            catch {// Silently handle parsing errors}, []),
     // Save settings to localStorage,
-    const saveSettings = useCallback((newSettings) => {setSettings(newSettings);
-        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
+    const saveSettings = useCallback((newSettings) => {setSettings(newSettings),
+        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []),
     // Toggle settings,
     const toggleSetting = useCallback((key, value) => {,
         const newSettings = {}}}}})

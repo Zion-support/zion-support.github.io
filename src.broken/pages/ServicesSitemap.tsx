@@ -1,124 +1,124 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
       ]
-    },;
+    },
     {
       category: "Cloud & Infrastructure Services",
       description: "Scalable cloud solutions and enterprise infrastructure",
-      services[;
+      services[,
         {
           title: "Cloud DevOps",
           url: "/services / cloud - devops",
           description: "Streamlined cloud deployment and management",
           pricing: "Custom pricing",
-          features["Multi - cloud deployment", "Infrastructure as Code", "Automated scaling", "Cost optimization"];
-        },;
+          features["Multi - cloud deployment", "Infrastructure as Code", "Automated scaling", "Cost optimization"],
+        },
         {
           title: "IT Infrastructure",
           url: "/services / it - infrastructure",
           description: "Enterprise - grade infrastructure solutions",
           pricing: "Custom pricing",
-          features["Network design", "Server management", "Storage solutions", "Backup & recovery"];
-        },;
+          features["Network design", "Server management", "Storage solutions", "Backup & recovery"],
+        },
         {
           title: "Digital Twin",
           url: "/services / digital - twin",
           description: "Virtual representation of physical systems",
           pricing: "Custom pricing",
-          features["Real - time monitoring", "Predictive maintenance", "Performance optimization", "Simulation modeling"];
+          features["Real - time monitoring", "Predictive maintenance", "Performance optimization", "Simulation modeling"],
         }
       ]
-    },;
+    },
     {
       category: "Data & Analytics Services",
       description: "Transform data into actionable business intelligence",
-      services[;
+      services[,
         {
           title: "Data Analytics",
           url: "/services / data - analytics",
           description: "Comprehensive data analysis and visualization",
           pricing: "Custom pricing",
-          features["Data visualization", "Statistical analysis", "Trend identification", "Reporting dashboards"];
-        },;
+          features["Data visualization", "Statistical analysis", "Trend identification", "Reporting dashboards"],
+        },
         {
           title: "AI Business Intelligence",
           url: "/services / ai - business - intelligence",
           description: "AI - powered business insights and reporting",
           pricing: "Custom pricing",
-          features["Predictive analytics", "Natural language queries", "Automated insights", "Real - time reporting"];
-        },;
+          features["Predictive analytics", "Natural language queries", "Automated insights", "Real - time reporting"],
+        },
         {
           title: "IoT Edge Computing",
           url: "/services / iot - edge",
           description: "Real - time edge data processing",
           pricing: "Custom pricing",
-          features["Edge processing", "Real - time analytics", "Data filtering", "Local decision making"];
+          features["Edge processing", "Real - time analytics", "Data filtering", "Local decision making"],
         }
       ]
-    },;
+    },
     {
       category: "Security & Compliance Services",
       description: "Enterprise - grade security and regulatory compliance",
-      services[;
+      services[,
         {
           title: "Zero Trust Network Architecture",
           url: "/services / zero - trust - network - architecture",
           description: "Modern security framework for enterprise",
           pricing: "Custom pricing",
-          features["Identity verification", "Micro - segmentation", "Continuous monitoring", "Least privilege access"];
-        },;
+          features["Identity verification", "Micro - segmentation", "Continuous monitoring", "Least privilege access"],
+        },
         {
           title: "AI Cybersecurity Suite",
           url: "/services / ai - cybersecurity - suite",
           description: "Comprehensive security solutions",
           pricing: "Custom pricing",
-          features["Threat detection", "Vulnerability assessment", "Incident response", "Security automation"];
-        },;
+          features["Threat detection", "Vulnerability assessment", "Incident response", "Security automation"],
+        },
         {
           title: "AI Compliance Assistant",
           url: "/services / ai - compliance - assistant",
           description: "AI - powered compliance management",
           pricing: "Custom pricing",
-          features["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit preparation"];
+          features["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit preparation"],
         }
       ]
-    },;
+    },
     {
       category: "Additional Specialized Services",
       description: "Industry - specific and specialized solutions",
-      services[;
+      services[,
         {
           title: "Healthcare Technology",
           url: "/services / healthcare - tech",
           description: "Technology solutions for healthcare industry",
           pricing: "Custom pricing",
-          features["HIPAA compliance", "Patient data management", "Telemedicine platforms", "Healthcare analytics"];
-        },;
+          features["HIPAA compliance", "Patient data management", "Telemedicine platforms", "Healthcare analytics"],
+        },
         {
           title: "Blockchain Enterprise Solutions",
           url: "/services / blockchain - enterprise - solutions",
           description: "Enterprise blockchain implementation",
           pricing: "Custom pricing",
-          features["Smart contracts", "Supply chain tracking", "Digital identity", "Decentralized applications"];
-        },;
+          features["Smart contracts", "Supply chain tracking", "Digital identity", "Decentralized applications"],
+        },
         {
           title: "Sustainability Technology",
           url: "/services / sustainability",
           description: "Green technology solutions",
           pricing: "Custom pricing",
-          features["Carbon tracking", "Energy optimization", "Waste reduction", "Environmental monitoring"];
+          features["Carbon tracking", "Energy optimization", "Waste reduction", "Environmental monitoring"],
         }
-      ];
-    };
-  ];
+      ],
+    },
+  ],
 
   const quickAccessLinks = [{ title: "AI Services Showcase", url: "/ai - services - showcase", description: "Explore our AI solutions" },
     { title: "Comprehensive Services", url: "/comprehensive - services", description: "View all services" },
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },
-    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;
-    { title: "Request Quote", url: "/request - quote", description: "Get custom pricing" };
-  ];
+    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },
+    { title: "Request Quote", url: "/request - quote", description: "Get custom pricing" },
+  ],
 
   return (<>
       <SEO
@@ -378,7 +378,7 @@ export default function Page() {
                 <div className="bg-white / 10 backdrop - blur - sm rounded-lg p - 6 border border-white / 20">
                   <h3 className="text-xl font - semibold text-white mb-3">Quick Actions</h3>
                   <div className="space - y-3">
-                    <Link to="/contact" className="block w-full bg-blue - 600 hover:bg-blue - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
+                    <Link to="/contact" className="block w-full bg-blue - 600 hover: bg-blue - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
                       Schedule Consultation
                     </Link>
                     <Link to="/request - quote" className="block w-full bg-green - 600 hover:bg-green - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
@@ -397,5 +397,5 @@ export default function Page() {
             </motion.div>
           </div>
         </section>
-      </div>;
-    </>;) };
+      </div>,
+    </>,) },

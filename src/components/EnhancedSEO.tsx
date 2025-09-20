@@ -1,18 +1,16 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from "react";
+import { Helmet } from "react-helmet-async";
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
+  title: string,description: string;
+  keywords?: string,
+  ogImage?: string,
+  ogUrl?: string,
+  canonicalUrl?: string,
+  structuredData?: object
 }
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
-  title,
+  title;
   description,
   keywords,
   ogImage,
@@ -20,8 +18,8 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   canonicalUrl,
   structuredData
 }) => {
-  const defaultOgImage = '/images/zion-tech-group-og.jpg';
-  const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformation, Zion Tech Group';
+  const defaultOgImage = '/images/zion-tech-group-og.jpg',
+  const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformation, Zion Tech Group',
   
   return (
     <Helmet>
@@ -60,8 +58,8 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
-  );
+  )
 };

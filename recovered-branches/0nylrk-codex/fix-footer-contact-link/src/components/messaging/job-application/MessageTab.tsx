@@ -1,8 +1,8 @@
 
-  message: string;
-  setMessage: (message: string) => void;
-  proposalLink: string;
-  setProposalLink: (link: string) => void;
+  message: string,
+  setMessage: (message: string) => void,
+  proposalLink: string,
+  setProposalLink: (link: string) => void,
         <Textarea,
           id="message",
           value={message}
@@ -20,6 +20,6 @@
         />,
       </div>,
     </div>,
-  );
+  ),
 }
 ,

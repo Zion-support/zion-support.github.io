@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  Search, 
+  Search,
   Filter, 
   Star, 
   ShoppingCart, 
@@ -54,327 +54,177 @@ import {
   Infinity,
   Zap as ZapIcon,
   MessageCircle
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function MarketplaceProducts() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
   const [sortBy, setSortBy] = useState('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
-
   const categories = [
-    { id: 'all', name: 'All Products', icon: Package, count: 156 },
-    { id: 'ai-tools', name: 'AI Tools & Software', icon: Brain, count: 45 },
-    { id: 'cybersecurity', name: 'Cybersecurity Solutions', icon: Shield, count: 32 },
-    { id: 'cloud-services', name: 'Cloud Services', icon: Cloud, count: 28 },
-    { id: 'data-analytics', name: 'Data Analytics', icon: BarChart3, count: 25 },
-    { id: 'development', name: 'Development Tools', icon: Code, count: 18 },
+    { id: 'all', name: 'All Products', icon: Package, count: 156 };
+    { id: 'ai-tools', name: 'AI Tools & Software', icon: Brain, count: 45 };
+    { id: 'cybersecurity', name: 'Cybersecurity Solutions', icon: Shield, count: 32 };
+    { id: 'cloud-services', name: 'Cloud Services', icon: Cloud, count: 28 };
+    { id: 'data-analytics', name: 'Data Analytics', icon: BarChart3, count: 25 };
+    { id: 'development', name: 'Development Tools', icon: Code, count: 18 };
     { id: 'iot', name: 'IoT Solutions', icon: Network, count: 8 }
   ];
-
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'free', name: 'Free', range: 'Free' },
-    { id: 'under-50', name: 'Under $50', range: '$0 - $50' },
-    { id: '50-200', name: '$50 - $200', range: '$50 - $200' },
-    { id: '200-500', name: '$200 - $500', range: '$200 - $500' },
+    { id: 'all', name: 'All Prices', range: 'All' };
+    { id: 'free', name: 'Free', range: 'Free' };
+    { id: 'under-50', name: 'Under $50', range: '$0 - $50' };
+    { id: '50-200', name: '$50 - $200', range: '$50 - $200' };
+    { id: '200-500', name: '$200 - $500', range: '$200 - $500' };
     { id: 'over-500', name: 'Over $500', range: '$500+' }
   ];
-
   const sortOptions = [
-    { id: 'featured', name: 'Featured' },
-    { id: 'newest', name: 'Newest' },
-    { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' },
-    { id: 'rating', name: 'Highest Rated' },
+    { id: 'featured', name: 'Featured' };
+    { id: 'newest', name: 'Newest' };
+    { id: 'price-low', name: 'Price: Low to High' };
+    { id: 'price-high', name: 'Price: High to Low' };
+    { id: 'rating', name: 'Highest Rated' };
     { id: 'popular', name: 'Most Popular' }
   ];
-
   const products = [
     {
-      id: 1,
-      name: "AI Content Generator Pro",
-      description: "Advanced AI-powered content creation tool that generates high-quality articles, blog posts, and marketing copy.",
+      id: 1,name: "AI Content Generator Pro",description: "Advanced AI-powered content creation tool that generates high-quality articles, blog posts, and marketing copy.",
       longDescription: "Transform your content creation process with our AI Content Generator Pro. This powerful tool uses advanced language models to create engaging, SEO-optimized content in seconds. Perfect for marketers, content creators, and businesses looking to scale their content production.",
-      category: "ai-tools",
-      price: 99.99,
-      originalPrice: 149.99,
-      currency: "USD",
-      rating: 4.8,
-      reviewCount: 1247,
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",
-      images: [
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600"
-      ],
-      features: [
-        "AI-powered content generation",
+      category: "ai-tools",price: 99.99,originalPrice: 149.99,currency: "USD",rating: 4.8,reviewCount: 1247,image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",images: [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600";
+        "https: //images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600";
+        "https: //images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600"
+      ],features: [
+        "AI-powered content generation";
         "SEO optimization",
         "Multiple content types",
         "Plagiarism-free content",
         "24/7 support"
       ],
       tags: ["AI", "Content Creation", "Marketing", "SEO", "Automation"],
-      vendor: "Zion Tech Group",
-      vendorRating: 4.9,
-      vendorVerified: true,
-      inStock: true,
-      stockCount: 500,
-      featured: true,
-      new: false,
-      discount: 33,
-      deliveryTime: "Instant",
-      deliveryType: "Digital Download",
-      warranty: "30-day money-back guarantee",
-      compatibility: ["Windows", "Mac", "Linux", "Web"],
-      fileSize: "2.5 MB",
-      version: "2.1.0",
-      lastUpdated: "2025-01-15"
-    },
+      vendor: "Zion Tech Group",vendorRating: 4.9,vendorVerified: true,inStock: true,stockCount: 500,featured: true,new: false,discount: 33,deliveryTime: "Instant",deliveryType: "Digital Download",warranty: "30-day money-back guarantee",compatibility: ["Windows", "Mac", "Linux", "Web"],
+      fileSize: "2.5 MB",version: "2.1.0",lastUpdated: "2025-01-15"
+    };
     {
-      id: 2,
-      name: "Quantum Security Suite",
-      description: "Next-generation cybersecurity solution powered by quantum-resistant algorithms and AI threat detection.",
-      longDescription: "Protect your digital assets with our Quantum Security Suite, featuring quantum-resistant encryption, AI-powered threat detection, and real-time monitoring. This comprehensive security solution is designed to protect against both current and future cyber threats.",
-      category: "cybersecurity",
-      price: 299.99,
-      originalPrice: 399.99,
-      currency: "USD",
-      rating: 4.9,
-      reviewCount: 892,
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600",
-      images: [
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600",
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=600"
-      ],
-      features: [
-        "Quantum-resistant encryption",
+      id: 2,name: "Quantum Security Suite",description: "Next-generation cybersecurity solution powered by quantum-resistant algorithms and AI threat detection.",longDescription: "Protect your digital assets with our Quantum Security Suite, featuring quantum-resistant encryption, AI-powered threat detection, and real-time monitoring. This comprehensive security solution is designed to protect against both current and future cyber threats.",
+      category: "cybersecurity",price: 299.99,originalPrice: 399.99,currency: "USD",rating: 4.9,reviewCount: 892,image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600",images: [
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600";
+        "https: //images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=600"
+      ],features: [
+        "Quantum-resistant encryption";
         "AI threat detection",
         "Real-time monitoring",
         "Automated response",
         "Compliance reporting"
       ],
       tags: ["Cybersecurity", "Quantum", "AI", "Encryption", "Monitoring"],
-      vendor: "Zion Tech Group",
-      vendorRating: 4.9,
-      vendorVerified: true,
-      inStock: true,
-      stockCount: 200,
-      featured: true,
-      new: true,
-      discount: 25,
-      deliveryTime: "1-2 business days",
-      deliveryType: "Digital Download + Physical",
-      warranty: "1-year warranty",
-      compatibility: ["Windows", "Mac", "Linux", "Enterprise"],
-      fileSize: "45.2 MB",
-      version: "1.0.0",
-      lastUpdated: "2025-01-10"
-    },
+      vendor: "Zion Tech Group",vendorRating: 4.9,vendorVerified: true,inStock: true,stockCount: 200,featured: true,new: true,discount: 25,deliveryTime: "1-2 business days",deliveryType: "Digital Download + Physical",warranty: "1-year warranty",compatibility: ["Windows", "Mac", "Linux", "Enterprise"],
+      fileSize: "45.2 MB",version: "1.0.0",lastUpdated: "2025-01-10"
+    };
     {
-      id: 3,
-      name: "Cloud Infrastructure Manager",
-      description: "Comprehensive cloud infrastructure management platform with automated scaling and cost optimization.",
-      longDescription: "Streamline your cloud operations with our Cloud Infrastructure Manager. This platform provides automated scaling, cost optimization, monitoring, and management tools for multi-cloud environments. Perfect for DevOps teams and cloud architects.",
-      category: "cloud-services",
-      price: 199.99,
-      originalPrice: 249.99,
-      currency: "USD",
-      rating: 4.7,
-      reviewCount: 567,
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600",
-      images: [
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600"
-      ],
-      features: [
-        "Multi-cloud management",
+      id: 3,name: "Cloud Infrastructure Manager",description: "Comprehensive cloud infrastructure management platform with automated scaling and cost optimization.",longDescription: "Streamline your cloud operations with our Cloud Infrastructure Manager. This platform provides automated scaling, cost optimization, monitoring, and management tools for multi-cloud environments. Perfect for DevOps teams and cloud architects.",
+      category: "cloud-services",price: 199.99,originalPrice: 249.99,currency: "USD",rating: 4.7,reviewCount: 567,image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600",images: [
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600";
+        "https: //images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600"
+      ],features: [
+        "Multi-cloud management";
         "Automated scaling",
         "Cost optimization",
         "Real-time monitoring",
         "DevOps integration"
       ],
       tags: ["Cloud", "DevOps", "Infrastructure", "Automation", "Monitoring"],
-      vendor: "Zion Tech Group",
-      vendorRating: 4.9,
-      vendorVerified: true,
-      inStock: true,
-      stockCount: 150,
-      featured: false,
-      new: false,
-      discount: 20,
-      deliveryTime: "Instant",
-      deliveryType: "Digital Download",
-      warranty: "90-day money-back guarantee",
-      compatibility: ["AWS", "Azure", "GCP", "Kubernetes"],
-      fileSize: "15.8 MB",
-      version: "3.2.1",
-      lastUpdated: "2025-01-08"
-    },
+      vendor: "Zion Tech Group",vendorRating: 4.9,vendorVerified: true,inStock: true,stockCount: 150,featured: false,new: false,discount: 20,deliveryTime: "Instant",deliveryType: "Digital Download",warranty: "90-day money-back guarantee",compatibility: ["AWS", "Azure", "GCP", "Kubernetes"],
+      fileSize: "15.8 MB",version: "3.2.1",lastUpdated: "2025-01-08"
+    };
     {
-      id: 4,
-      name: "Data Analytics Dashboard Pro",
-      description: "Advanced business intelligence platform with real-time analytics, custom dashboards, and predictive insights.",
+      id: 4,name: "Data Analytics Dashboard Pro",description: "Advanced business intelligence platform with real-time analytics, custom dashboards, and predictive insights.",
       longDescription: "Transform your data into actionable insights with our Data Analytics Dashboard Pro. This comprehensive BI platform offers real-time analytics, custom dashboards, predictive modeling, and advanced reporting capabilities for data-driven decision making.",
-      category: "data-analytics",
-      price: 149.99,
-      originalPrice: 199.99,
-      currency: "USD",
-      rating: 4.6,
-      reviewCount: 423,
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",
-      images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600"
-      ],
-      features: [
-        "Real-time analytics",
+      category: "data-analytics",price: 149.99,originalPrice: 199.99,currency: "USD",rating: 4.6,reviewCount: 423,image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",images: [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600";
+        "https: //images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600"
+      ],features: [
+        "Real-time analytics";
         "Custom dashboards",
         "Predictive modeling",
         "Advanced reporting",
         "Data visualization"
       ],
       tags: ["Analytics", "BI", "Dashboard", "Predictive", "Visualization"],
-      vendor: "Zion Tech Group",
-      vendorRating: 4.9,
-      vendorVerified: true,
-      inStock: true,
-      stockCount: 300,
-      featured: false,
-      new: false,
-      discount: 25,
-      deliveryTime: "Instant",
-      deliveryType: "Digital Download",
-      warranty: "60-day money-back guarantee",
-      compatibility: ["Windows", "Mac", "Linux", "Web"],
-      fileSize: "28.4 MB",
-      version: "2.5.3",
-      lastUpdated: "2025-01-05"
-    },
+      vendor: "Zion Tech Group",vendorRating: 4.9,vendorVerified: true,inStock: true,stockCount: 300,featured: false,new: false,discount: 25,deliveryTime: "Instant",deliveryType: "Digital Download",warranty: "60-day money-back guarantee",compatibility: ["Windows", "Mac", "Linux", "Web"],
+      fileSize: "28.4 MB",version: "2.5.3",lastUpdated: "2025-01-05"
+    };
     {
-      id: 5,
-      name: "IoT Edge Computing Platform",
-      description: "Complete IoT solution with edge computing capabilities, real-time processing, and cloud integration.",
+      id: 5,name: "IoT Edge Computing Platform",description: "Complete IoT solution with edge computing capabilities, real-time processing, and cloud integration.",
       longDescription: "Build and deploy IoT solutions with our Edge Computing Platform. This comprehensive platform provides edge computing capabilities, real-time data processing, cloud integration, and device management for industrial and commercial IoT applications.",
-      category: "iot",
-      price: 399.99,
-      originalPrice: 499.99,
-      currency: "USD",
-      rating: 4.8,
-      reviewCount: 234,
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",
-      images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600"
-      ],
-      features: [
-        "Edge computing",
+      category: "iot",price: 399.99,originalPrice: 499.99,currency: "USD",rating: 4.8,reviewCount: 234,image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600",images: [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600";
+        "https: //images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600"
+      ],features: [
+        "Edge computing";
         "Real-time processing",
         "Cloud integration",
         "Device management",
         "Security protocols"
       ],
       tags: ["IoT", "Edge Computing", "Real-time", "Cloud", "Security"],
-      vendor: "Zion Tech Group",
-      vendorRating: 4.9,
-      vendorVerified: true,
-      inStock: true,
-      stockCount: 100,
-      featured: false,
-      new: true,
-      discount: 20,
-      deliveryTime: "3-5 business days",
-      deliveryType: "Digital Download + Hardware",
-      warranty: "2-year warranty",
-      compatibility: ["Linux", "ARM", "x86", "Custom Hardware"],
-      fileSize: "156.7 MB",
-      version: "1.0.0",
-      lastUpdated: "2025-01-12"
-    },
+      vendor: "Zion Tech Group",vendorRating: 4.9,vendorVerified: true,inStock: true,stockCount: 100,featured: false,new: true,discount: 20,deliveryTime: "3-5 business days",deliveryType: "Digital Download + Hardware",warranty: "2-year warranty",compatibility: ["Linux", "ARM", "x86", "Custom Hardware"],
+      fileSize: "156.7 MB",version: "1.0.0",lastUpdated: "2025-01-12"
+    };
     {
-      id: 6,
-      name: "AI Development Toolkit",
-      description: "Comprehensive toolkit for AI and machine learning development with pre-trained models and frameworks.",
-      longDescription: "Accelerate your AI development with our comprehensive toolkit. This package includes pre-trained models, development frameworks, documentation, and tools for building, training, and deploying machine learning models across various domains.",
-      category: "development",
-      price: 79.99,
-      originalPrice: 99.99,
-      currency: "USD",
-      rating: 4.5,
-      reviewCount: 678,
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",
-      images: [
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600"
-      ],
-      features: [
-        "Pre-trained models",
+      id: 6,name: "AI Development Toolkit",description: "Comprehensive toolkit for AI and machine learning development with pre-trained models and frameworks.",longDescription: "Accelerate your AI development with our comprehensive toolkit. This package includes pre-trained models, development frameworks, documentation, and tools for building, training, and deploying machine learning models across various domains.",
+      category: "development",price: 79.99,originalPrice: 99.99,currency: "USD",rating: 4.5,reviewCount: 678,image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600",images: [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600";
+        "https: //images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600"
+      ],features: [
+        "Pre-trained models";
         "Development frameworks",
         "Documentation",
         "Example projects",
         "Community support"
       ],
       tags: ["AI", "Machine Learning", "Development", "Frameworks", "Models"],
-      vendor: "Zion Tech Group",
-      vendorRating: 4.9,
-      vendorVerified: true,
-      inStock: true,
-      stockCount: 1000,
-      featured: false,
-      new: false,
-      discount: 20,
-      deliveryTime: "Instant",
-      deliveryType: "Digital Download",
-      warranty: "30-day money-back guarantee",
-      compatibility: ["Python", "TensorFlow", "PyTorch", "Jupyter"],
-      fileSize: "2.1 GB",
-      version: "4.1.2",
-      lastUpdated: "2025-01-03"
+      vendor: "Zion Tech Group",vendorRating: 4.9,vendorVerified: true,inStock: true,stockCount: 1000,featured: false,new: false,discount: 20,deliveryTime: "Instant",deliveryType: "Digital Download",warranty: "30-day money-back guarantee",compatibility: ["Python", "TensorFlow", "PyTorch", "Jupyter"],
+      fileSize: "2.1 GB",version: "4.1.2",lastUpdated: "2025-01-03"
     }
   ];
-
   const filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         product.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+                         product.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory,
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'free' && product.price === 0) ||
                         (selectedPriceRange === 'under-50' && product.price < 50) ||
                         (selectedPriceRange === '50-200' && product.price >= 50 && product.price <= 200) ||
                         (selectedPriceRange === '200-500' && product.price > 200 && product.price <= 500) ||
-                        (selectedPriceRange === 'over-500' && product.price > 500);
+                        (selectedPriceRange === 'over-500' && product.price > 500),
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice,
+  }),
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
       case 'newest':
-        return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
+        return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime(),
       case 'price-low':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'price-high':
-        return b.price - a.price;
+        return b.price - a.price,
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'popular':
-        return b.reviewCount - a.reviewCount;
-      default:
-        return b.featured ? 1 : -1;
+        return b.reviewCount - a.reviewCount,
+      default: return b.featured ? 1 : -1
     }
   });
-
   const formatPrice = (price: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: currency
+      style: 'currency',currency: currency
     }).format(price);
-  };
+  },
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -388,8 +238,8 @@ export default function MarketplaceProducts() {
               : 'text-gray-400'
         }`}
       />
-    ));
-  };
+    )),
+  },
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -535,7 +385,7 @@ export default function MarketplaceProducts() {
                   <button
                     onClick={() => {
                       setSelectedCategory('all');
-                      setSelectedPriceRange('all');
+                      setSelectedPriceRange('all'),
                       setSearchQuery('');
                     }}
                     className="w-full px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover:bg-zion-slate-light/30 hover:text-white transition-all duration-200"
@@ -729,7 +579,7 @@ export default function MarketplaceProducts() {
               We're constantly adding new products and solutions. Contact us to discuss 
               custom solutions or request specific products for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105"
@@ -749,5 +599,5 @@ export default function MarketplaceProducts() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,50 +1,50 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface InnovativeAgricultureService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
     id: 'ai-powered-precision-agriculture',
@@ -54,14 +54,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',
     features: [
-      'AI-powered crop monitoring',
-      'Irrigation optimization',
-      'Yield prediction',
-      'Real-time monitoring',
-      'Performance analytics',
-      'Integration capabilities',
-      'Custom monitoring models',
-      'Multi-field support',
+      'AI-powered crop monitoringIrrigation optimization',
+      'Yield predictionReal-time monitoring',
+      'Performance analyticsIntegration capabilities',
+      'Custom monitoring modelsMulti-field support',
       'Compliance management'
     ],
     popular: true,
@@ -99,14 +95,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
     features: [
-      'Quantum optimization algorithms',
-      'Crop planning optimization',
-      'Resource allocation',
-      'Real-time adaptation',
-      'Performance analytics',
-      'Cost optimization',
-      'Efficiency analysis',
-      'Regulatory compliance',
+      'Quantum optimization algorithmsCrop planning optimization',
+      'Resource allocationReal-time adaptation',
+      'Performance analyticsCost optimization',
+      'Efficiency analysisRegulatory compliance',
       'Multi-crop support'
     ],
     popular: false,
@@ -144,14 +136,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Advanced food safety monitoring platform that uses AI to detect contamination, monitor quality, and ensure food safety compliance for food producers and processors.',
     features: [
-      'AI-powered contamination detection',
-      'Quality monitoring',
-      'Safety compliance',
-      'Real-time alerts',
-      'Performance analytics',
-      'Integration capabilities',
-      'Custom monitoring rules',
-      'Multi-facility support',
+      'AI-powered contamination detectionQuality monitoring',
+      'Safety complianceReal-time alerts',
+      'Performance analyticsIntegration capabilities',
+      'Custom monitoring rulesMulti-facility support',
       'Compliance management'
     ],
     popular: true,
@@ -189,14 +177,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Advanced food traceability platform that uses blockchain technology to provide transparent, secure, and immutable tracking of food products throughout the supply chain.',
     features: [
-      'Blockchain-based tracking',
-      'Supply chain transparency',
-      'Product authentication',
-      'Real-time monitoring',
-      'Compliance verification',
-      'Performance analytics',
-      'Multi-party collaboration',
-      'API integration',
+      'Blockchain-based trackingSupply chain transparency',
+      'Product authenticationReal-time monitoring',
+      'Compliance verificationPerformance analytics',
+      'Multi-party collaborationAPI integration',
       'Mobile app support'
     ],
     popular: false,
@@ -234,14 +218,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description: 'Advanced vertical farming platform that uses AI to optimize climate control, monitor crop growth, and maximize yields in controlled environment agriculture.',
     features: [
-      'AI-powered climate control',
-      'Crop growth monitoring',
-      'Environmental optimization',
-      'Real-time control',
-      'Performance analytics',
-      'Integration capabilities',
-      'Custom growing protocols',
-      'Multi-tier support',
+      'AI-powered climate controlCrop growth monitoring',
+      'Environmental optimizationReal-time control',
+      'Performance analyticsIntegration capabilities',
+      'Custom growing protocolsMulti-tier support',
       'Compliance management'
     ],
     popular: true,
@@ -271,4 +251,4 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4.6,
     reviews: 89
   }
-];
+],

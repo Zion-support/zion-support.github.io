@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Secure Agent Architecture | Zion Tech Group';
-  description: 'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 2026.',
-};
+  title: 'AI 2026: Secure Agent Architecture | Zion Tech Group',
+  description: 'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 2026.'
+},
 export default function SecureAgentArchitecture2026Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -38,7 +38,6 @@ export default function SecureAgentArchitecture2026Page() {,
           </p>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

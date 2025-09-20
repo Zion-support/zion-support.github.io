@@ -1,19 +1,19 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2025: The Ultimate Digital Transformation Revolution - 30,000% ROI Guide';
-  description: 'Discover how Fortune 500 companies are achieving unprecedented 30,000% ROI through strategic AI implementation. Complete guide to digital transformation success.';
-  keywords: ['AI RevolutionDigital Transformation', 'ROIFortune 500', 'Strategy30,000% ROI'];
+  title: 'AI 2025: The Ultimate Digital Transformation Revolution - 30,000% ROI Guide',
+  description: 'Discover how Fortune 500 companies are achieving unprecedented 30,000% ROI through strategic AI implementation. Complete guide to digital transformation success.',
+  keywords: ['AI RevolutionDigital TransformationROIFortune 500', 'Strategy30,000% ROI'],
   openGraph: {,
-    title: 'AI 2025: The Ultimate Digital Transformation Revolution - 30,000% ROI Guide';
-    description: 'Discover how Fortune 500 companies are achieving unprecedented 30,000% ROI through strategic AI implementation.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI RevolutionDigital Transformation', 'ROIFortune 500'],
+    title: 'AI 2025: The Ultimate Digital Transformation Revolution - 30,000% ROI Guide',
+    description: 'Discover how Fortune 500 companies are achieving unprecedented 30,000% ROI through strategic AI implementation.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI RevolutionDigital TransformationROIFortune 500']
   }
-};
+},
 export default function UltimateDigitalTransformationRevolutionPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -47,7 +47,7 @@ export default function UltimateDigitalTransformationRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -194,4 +194,4 @@ export default function UltimateDigitalTransformationRevolutionPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

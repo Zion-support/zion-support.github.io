@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { SEO } from '@/components / SEO';
+import React, { useState, useEffect } from 'react',
+import { SEO } from '@/components / SEO',
 export default function Page() {
 }
-import { import { motion, AnimatePresence  } from 'framer-motion';
+import { import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-  };
+  },
 
         return 'from - gray - 500 to - slate - 600'}
-  };
+  },
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
-    if(pricing.model === 'Transaction Fees + Governance') {;
-      return 'Free + Transaction Fees';
+  const formatPrice = (pricing: ExpandedService2027['pricing']) => {,
+    if(pricing.model === 'Transaction Fees + Governance') {,
+      return 'Free + Transaction Fees',
 
-    return `$${pricing.basePrice.toLocaleString () }/month`;
-  };
+    return `$${pricing.basePrice.toLocaleString () }/month`,
+  },
 
-  const renderServiceCard = (service: ExpandedService2027) => {;
-    const CategoryIcon = getCategoryIcon(service.category) ;
-    const categoryColor = getCategoryColor(service.category) ;
+  const renderServiceCard = (service: ExpandedService2027) => {,
+    const CategoryIcon = getCategoryIcon(service.category) ,
+    const categoryColor = getCategoryColor(service.category) ,
 
     return (<motion.div
         key = {service.id}
@@ -121,11 +121,11 @@ export default function Page() {
                       <span className="text-sm text-gray - 600 dark:text-gray -300">{feature}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) }
+              </motion.div>,) }
           </AnimatePresence>
 
           {/* Benefits */}
-          <div  className="mb-4">;
+          <div  className="mb-4">,
             <h4 className="font - semibold text-gray - 900 dark:text-white mb-2">Benefits</h4>
             <div  className="grid grid - cols - 2 gap-2">
               {service.benefits.slice(0, 4) .map((benefit, index) => (<div  key={index} className="flex items - center space - x-2">
@@ -138,7 +138,7 @@ export default function Page() {
           </div>
 
           {/* Technical Specs */}
-          <div  className="mb-4">;
+          <div  className="mb-4">,
             <h4 className="font - semibold text-gray - 900 dark:text-white mb-2">Technical Specs</h4>
             <div  className="grid grid - cols - 2 gap-4 text-sm">
               <div>
@@ -153,7 +153,7 @@ export default function Page() {
           </div>
 
           {/* ROI and Setup */}
-          <div  className="grid grid - cols - 2 gap-4 mb-4 text-sm">;
+          <div  className="grid grid - cols - 2 gap-4 mb-4 text-sm">,
             <div>
               <p className="text-gray - 500 dark:text-gray -400">ROI</p>
               <p className="font - semibold text-green -600">{service.roi}</p>
@@ -165,7 +165,7 @@ export default function Page() {
           </div>
 
           {/* Contact and Actions */}
-          <div  className="border-t border-gray - 200 dark:border-slate - 700 pt -4">;
+          <div  className="border-t border-gray - 200 dark: border-slate - 700 pt -4">,
             <div  className="flex items - center justify - between mb-3">
               <div  className="flex items - center space - x-2 text-sm text-gray - 500 dark:text-gray -400">
                 <Phone className="w-4 h-4" />
@@ -191,20 +191,20 @@ export default function Page() {
                 href={service.contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex - 1 bg-gray - 100 hover:bg-gray - 200 dark:bg-slate - 700 dark:hover:bg-slate - 600 text-gray - 700 dark:text-gray - 300 text-center py-2 px-4 rounded-lg transition - colors duration - 200 flex items - center justify - center space - x-2"
+                className="flex - 1 bg-gray - 100 hover: bg-gray - 200 dark:bg-slate - 700 dark:hover:bg-slate - 600 text-gray - 700 dark:text-gray - 300 text-center py-2 px-4 rounded-lg transition - colors duration - 200 flex items - center justify - center space - x-2"
 
                 <ExternalLink className="w-4 h-4" />
                 <span > Learn More</span>
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </motion.div>;) ;
-  };
+              </a>,
+            </div>,
+          </div>,
+        </div>,
+      </motion.div>,) 
+  },
 
-  const renderServiceList = (service: ExpandedService2027) => {;
-    const CategoryIcon = getCategoryIcon(service.category) ;
-    const categoryColor = getCategoryColor(service.category) ;
+  const renderServiceList = (service: ExpandedService2027) => {,
+    const CategoryIcon = getCategoryIcon(service.category) ,
+    const categoryColor = getCategoryColor(service.category) ,
 
     return (<motion.div
         key = {service.id}
@@ -283,16 +283,16 @@ export default function Page() {
                 href={service.contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray - 100 hover:bg-gray - 200 dark:bg-slate - 700 dark:hover:bg-slate - 600 text-gray - 700 dark:text-gray - 300 px-4 py-2 rounded-lg transition - colors duration - 200 flex items - center space - x-2"
+                className="bg-gray - 100 hover: bg-gray - 200 dark:bg-slate - 700 dark:hover:bg-slate - 600 text-gray - 700 dark:text-gray - 300 px-4 py-2 rounded-lg transition - colors duration - 200 flex items - center space - x-2"
 
                 <ExternalLink className="w-4 h-4" />
                 <span > Learn More</span>
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </motion.div>;) ;
-  };
+              </a>,
+            </div>,
+          </div>,
+        </div>,
+      </motion.div>,) 
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo - 100 dark:from - slate - 900 dark:via - slate - 800 dark:to - slate -900">
       <SEO
@@ -360,7 +360,7 @@ export default function Page() {
   delay: 0.4
 
 }}
-              className="bg-white dark:bg-slate - 800 rounded-2xl shadow-xl p - 6 inline -block"
+              className="bg-white dark: bg-slate - 800 rounded-2xl shadow-xl p - 6 inline -block"
 
               <div  className="grid grid - cols - 1 md:grid - cols - 3 gap-6">
                 <div  className="flex items - center space - x-3">
@@ -389,12 +389,12 @@ export default function Page() {
             </motion.div>
           </div>
         </div>
-      </div>;
+      </div>,
 
       {/* Services Section */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-16">,
         {/* Filters and Search */}
-        <div  className="bg-white dark:bg-slate - 800 rounded-2xl shadow-lg p - 6 mb-8">;
+        <div  className="bg-white dark: bg-slate - 800 rounded-2xl shadow-lg p - 6 mb-8">,
           <div  className="flex flex - col lg:flex - row lg:items - center lg:justify - between space - y-4 lg:space - y-0">
             {/* Search */}
             <div  className="flex - 1 max - w-md">
@@ -446,7 +446,7 @@ export default function Page() {
         </div>
 
         {/* Services Count */}
-        <div  className="mb-8">;
+        <div  className="mb-8">,
           <p className="text-gray - 600 dark:text-gray -300">
             Showing {filteredServices.length} of {ALL_EXPANDED_SERVICES_2027.length} services
           </p>
@@ -468,14 +468,14 @@ export default function Page() {
       </div>
 
       {/* CTA Section */}
-      <div  className="bg-gradient - to - r from - blue - 600 to - purple - 600 py-16">;
+      <div  className="bg-gradient - to - r from - blue - 600 to - purple - 600 py-16">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue - 100 mb-8 max - w-2xl mx -auto">
             Our innovative services are designed to drive growth, efficiency, and competitive advantage.Contact us today to discuss how we can help you achieve your goals.</p>
-          <div  className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4">
+          <div  className="flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4">
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition - colors duration - 200 flex items - center space - x-2"
@@ -489,9 +489,9 @@ export default function Page() {
 
               <Phone className="w-5 h-5" />
               <span > Call Now</span>
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
-};
+            </a>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) 
+},

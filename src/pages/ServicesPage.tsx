@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Cloud,
@@ -43,119 +43,108 @@ import {
   Truck,
   Scale,
   Building
-} from 'lucide-react';
+} from "lucide-react";
 import SEO from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
 import { EXPANDED_MICRO_SAAS_SERVICES_2025 } from "@/data/expandedMicroSaasServices2025";
 import { SPECIALIZED_SERVICES_2025 } from "@/data/specializedServices2025";
-
 export default function ServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
-  const [activeTab, setActiveTab] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
+  const [sortBy, setSortBy] = useState('featured'),
+  const [activeTab, setActiveTab] = useState('all'),
 
   // Combine all services
   const allServices = [
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...EXPANDED_MICRO_SAAS_SERVICES_2025,
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+    ...EXPANDED_MICRO_SAAS_SERVICES_2025;
     ...SPECIALIZED_SERVICES_2025
   ];
-
   const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
-    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
-    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
-    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-cyan' },
-    { id: 'healthcare', name: 'Healthcare', icon: Shield, color: 'from-zion-blue to-zion-purple' },
-    { id: 'logistics', name: 'Logistics', icon: Truck, color: 'from-zion-orange to-zion-blue' },
-    { id: 'legal', name: 'Legal Tech', icon: Scale, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'education', name: 'Education', icon: BookOpen, color: 'from-zion-cyan to-zion-green' },
-    { id: 'manufacturing', name: 'Manufacturing', icon: CpuIcon, color: 'from-zion-blue to-zion-orange' },
+    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-zion-cyan to-zion-blue' };
+    { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' };
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' };
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' };
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' };
+    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' };
+    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' };
+    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' };
+    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' };
+    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' };
+    { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-cyan' };
+    { id: 'healthcare', name: 'Healthcare', icon: Shield, color: 'from-zion-blue to-zion-purple' };
+    { id: 'logistics', name: 'Logistics', icon: Truck, color: 'from-zion-orange to-zion-blue' };
+    { id: 'legal', name: 'Legal Tech', icon: Scale, color: 'from-zion-purple to-zion-cyan' };
+    { id: 'education', name: 'Education', icon: BookOpen, color: 'from-zion-cyan to-zion-green' };
+    { id: 'manufacturing', name: 'Manufacturing', icon: CpuIcon, color: 'from-zion-blue to-zion-orange' };
     { id: 'real-estate', name: 'Real Estate', icon: Building, color: 'from-zion-purple to-zion-green' }
   ];
-
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'all', name: 'All Prices', range: 'All' };
     { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
     { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
     { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
-  ];
+  ],
 
   const sortOptions = [
-    { id: 'featured', name: 'Featured' },
-    { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' },
-    { id: 'newest', name: 'Newest' },
+    { id: 'featured', name: 'Featured' };
+    { id: 'price-low', name: 'Price: Low to High' };
+    { id: 'price-high', name: 'Price: High to Low' };
+    { id: 'newest', name: 'Newest' };
     { id: 'popular', name: 'Most Popular' }
   ];
-
   const tabs = [
-    { id: 'all', name: 'All Services', count: allServices.length },
-    { id: 'micro-saas', name: 'Micro SAAS', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
-    { id: 'expanded', name: 'Expanded Services', count: EXPANDED_MICRO_SAAS_SERVICES_2025.length },
+    { id: 'all', name: 'All Services', count: allServices.length };
+    { id: 'micro-saas', name: 'Micro SAAS', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length };
+    { id: 'expanded', name: 'Expanded Services', count: EXPANDED_MICRO_SAAS_SERVICES_2025.length };
     { id: 'specialized', name: 'Specialized', count: SPECIALIZED_SERVICES_2025.length }
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
     const matchesCategory = selectedCategory === 'all' ||
-                           service.category.toLowerCase().includes(selectedCategory);
+                           service.category.toLowerCase().includes(selectedCategory),
 
     const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === 'budget' && service.price <= 1000) ||
                         (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
-                        (selectedPriceRange === 'enterprise' && service.price > 5000);
+                        (selectedPriceRange === 'enterprise' && service.price > 5000),
 
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice,
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'price-high':
-        return b.price - a.price;
+        return b.price - a.price,
       case 'newest':
-        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
-      default:
-        return 0;
+        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime(),
+      default: return 0
     }
   });
-
   const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.icon : Sparkles;
-  };
+    const cat = categories.find(c => c.id === category.toLowerCase().replace(' -'));
+    return cat ? cat.icon : Sparkles},
 
   const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
+    const cat = categories.find(c => c.id === category.toLowerCase().replace(' -'));
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue'},
 
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'Cutting-edge':
         return 'bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30';
       case 'Advanced':
-        return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30';
-      default:
-        return 'bg-zion-blue/20 text-zion-blue border-zion-blue/30';
+        return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30',
+      default: return 'bg-zion-blue/20 text-zion-blue border-zion-blue/30'
     }
   };
-
   return (
     <>
       <SEO
@@ -203,7 +192,7 @@ export default function ServicesPage() {
               <span className="text-white">Micro SAAS Platform</span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing,
+              Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing;
               discover the future of business technology with our comprehensive micro SAAS platform.
             </p>
 
@@ -380,7 +369,7 @@ export default function ServicesPage() {
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
                           {(() => {
                             const IconComponent = getCategoryIcon(service.category);
-                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null;
+                            return IconComponent ? <IconComponent className="w-6 h-6 text-white" /> : null,
                           })()}
                         </div>
                         <div className="text-right">
@@ -481,7 +470,7 @@ export default function ServicesPage() {
                 <button
                   onClick={() => {
                     setSearchQuery('');
-                    setSelectedCategory('all');
+                    setSelectedCategory('all'),
                     setSelectedPriceRange('all');
                   }}
                   className="btn-futuristic px-6 py-3"
@@ -582,12 +571,12 @@ export default function ServicesPage() {
 
             <div className="mt-8 text-zion-slate-light">
               <p className="mb-2">📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>📧 <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>
+              <p>📧 <a href="mailto: kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>
               <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a></p>
             </div>
           </motion.div>
         </div>
       </section>
     </>
-  );
+  )
 }

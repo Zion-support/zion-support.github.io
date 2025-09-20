@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Search, 
+  Search,
   Star, 
   TrendingUp, 
   Zap,
@@ -25,58 +25,52 @@ import {
   ArrowRight,
   Clock,
   Target
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from '../data/advancedMicroSaasServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025";
+import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 export default function InnovativeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(''),
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
-
   const allServices = [
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025,
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025;
     ...EMERGING_TECH_SERVICES_2025
   ];
-
   const innovationLevels = [
-    { value: 'all', label: 'All Innovation Levels', color: 'bg-gray-500' },
-    { value: 'Advanced', label: 'Advanced', color: 'bg-blue-500' },
-    { value: 'Cutting-edge', label: 'Cutting-edge', color: 'bg-purple-500' },
+    { value: 'all', label: 'All Innovation Levels', color: 'bg-gray-500' };
+    { value: 'Advanced', label: 'Advanced', color: 'bg-blue-500' };
+    { value: 'Cutting-edge', label: 'Cutting-edge', color: 'bg-purple-500' };
     { value: 'Revolutionary', label: 'Revolutionary', color: 'bg-red-500' }
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
     
-    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
+    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel,
     
-    return matchesSearch && matchesInnovation;
-  });
+    return matchesSearch && matchesInnovation,
+  }),
 
   const getInnovationColor = (level: string) => {
     switch (level) {
       case 'Advanced': return 'bg-blue-500/20 text-blue-300 border-blue-500/30';
-      case 'Cutting-edge': return 'bg-purple-500/20 text-purple-300 border-purple-500/30';
-      case 'Revolutionary': return 'bg-red-500/20 text-red-300 border-red-500/30';
-      default: return 'bg-gray-500/20 text-gray-300 border-gray-500/30';
+      case 'Cutting-edge': return 'bg-purple-500/20 text-purple-300 border-purple-500/30',
+      case 'Revolutionary': return 'bg-red-500/20 text-red-300 border-red-500/30',
+      default: return 'bg-gray-500/20 text-gray-300 border-gray-500/30'
     }
   };
-
   const getInnovationIcon = (level: string) => {
     switch (level) {
       case 'Advanced': return <Zap className="w-5 h-5" />;
-      case 'Cutting-edge': return <Brain className="w-5 h-5" />;
-      case 'Revolutionary': return <Rocket className="w-5 h-5" />;
-      default: return <Star className="w-5 h-5" />;
+      case 'Cutting-edge': return <Brain className="w-5 h-5" />,
+      case 'Revolutionary': return <Rocket className="w-5 h-5" />,
+      default: return <Star className="w-5 h-5" />
     }
   };
-
   const featuredServices = filteredServices.filter(service => 
     service.innovationLevel === 'Revolutionary' || service.innovationLevel === 'Cutting-edge'
-  );
+  ),
 
   return (
     <>
@@ -316,7 +310,7 @@ export default function InnovativeServicesShowcase2025() {
                   <h4 className="text-sm font-semibold text-white mb-2">Technical Highlights</h4>
                   <div className="grid grid-cols-2 gap-2 text-xs text-gray-300">
                     <div>
-                      <span className="text-gray-400">Uptime:</span> {service.technicalSpecs.uptime}
+                      <span className="text-gray-400">Uptime: </span> {service.technicalSpecs.uptime}
                     </div>
                     <div>
                       <span className="text-gray-400">APIs:</span> {service.technicalSpecs.apiEndpoints}
@@ -414,7 +408,7 @@ export default function InnovativeServicesShowcase2025() {
       </div>
 
       {/* Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-white/20">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -465,5 +459,5 @@ export default function InnovativeServicesShowcase2025() {
         </div>
       </div>
     </>
-  );
+  )
 }

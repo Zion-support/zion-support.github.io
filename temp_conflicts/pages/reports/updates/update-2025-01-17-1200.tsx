@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function Update202501171200() {
   return (
@@ -69,7 +69,7 @@ export default function Update202501171200() {
 
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8">
               <h2 className="text-2xl font-bold mb-4 text-green-400">Content Metrics</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">8</div>
                   <div className="text-sm text-white/70">Blog Posts</div>
@@ -115,5 +115,5 @@ export default function Update202501171200() {
         </main>
       </div>
     </>
-  );
+  )
 }

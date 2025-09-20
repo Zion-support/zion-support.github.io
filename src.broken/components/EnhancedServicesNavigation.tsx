@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 
-const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<any> (null) ;
+const EnhancedServicesNavigation: React.FC = () : JSX.Element => {,
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeCategory, setActiveCategory] = useState<any> (null) ,
 
         {
 
@@ -37,14 +37,14 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "From $299/month"
         }
       ]
-    },;
+    },
     {
 "
       name: "Cloud & Infrastructure","
       description: "Enterprise solutions","
       icon: "☁️","
       color: "from-green-600 to-blue-600",
-      services[;
+      services[,
         {
 "
           title: "Cloud DevOps","
@@ -67,14 +67,14 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         }
       ]
-    },;
+    },
     {
 "
       name: "Data & Analytics","
       description: "Business intelligence","
       icon: "📊","
       color: "from-purple-600 to-pink-600",
-      services[;
+      services[,
         {
 "
           title: "Data Analytics","
@@ -97,14 +97,14 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         }
       ]
-    },;
+    },
     {
 "
       name: "Security & Compliance","
       description: "Enterprise security","
       icon: "🔒","
       color: "from-red-600 to-orange-600",
-      services[;
+      services[,
         {
 "
           title: "Zero Trust Architecture","
@@ -126,8 +126,8 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           description: "AI-powered compliance","
           pricing: "Custom pricing"
         }
-      ]};
-  ]};  ];
+      ]},
+  ]},  ],
 
   return ("
     <div className = "relative">
@@ -331,9 +331,9 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           className="fixed inset-0 bg-black/20 z-40"
           onClick={() => setIsOpen(false)}
         />
-      )};
-    </div>;
-  )};
+      )},
+    </div>,
+  )},
 
-export default EnhancedServicesNavigation;'"`
+export default EnhancedServicesNavigation,'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

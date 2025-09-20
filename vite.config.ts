@@ -9,7 +9,7 @@ export default defineConfig({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Optimize JSX runtime
-      jsxRuntime: 'automatic',
+      jsxRuntime: 'automatic'
     }),
     VitePWA({
       registerType: 'autoUpdate',
@@ -47,12 +47,9 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB limit
         globIgnores: [
-          '**/reports.backup/**',
-          '**/*.backup.*',
-          '**/node_modules/**',
-          '**/dist/**',
-          '**/build/**',
-          '**/.git/**'
+          '**/reports.backup/****/*.backup.*',
+          '**/node_modules/****/dist/**',
+          '**/build/****/.git/**'
         ],
         runtimeCaching: [
           {
@@ -101,8 +98,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+      '@': path.resolve(__dirname, './src')
+    }
   },
   build: {
     target: 'esnext',
@@ -118,28 +115,28 @@ export default defineConfig({
           // Simplified chunking for better build performance
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
+              return 'react-vendor'
             }
             return 'vendor';
           }
-        },
-      },
+        }
+      }
     },
     // Source maps for production debugging
-    sourcemap: false,
+    sourcemap: false
   },
   server: {
     port: 3000,
     host: true,
     // Enable HMR
-    hmr: true,
+    hmr: true
   },
   // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'axios', 'js-cookie'],
+    include: ['react', 'react-dom', 'axios', 'js-cookie']
   },
   // CSS optimizations
   css: {
-    devSourcemap: true,
-  },
+    devSourcemap: true
+  }
 });

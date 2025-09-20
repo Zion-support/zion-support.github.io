@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { innovativeServices2025 } from '../data/innovativeServices2025';
+import React, { useState } from 'react',
+import { innovativeServices2025 } from '../data/innovativeServices2025',
 export default function Page() {
-);
+),
 
   const serviceCategories = [{
 
@@ -62,17 +62,17 @@ export default function Page() {
       id: 'Digital Transformation',
       name: 'Digital Transformation',
       count: transformedServices.filter(s => s.category.includes('Digital'))
-        .length},
-  ];
+        .length}
+  ],
 
   const handleServiceClick = service => {
 
-    setSelectedService(service);
-  };
+    setSelectedService(service),
+  },
 
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null),
+  },
 
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -448,8 +448,8 @@ export default function Page() {
         </div>
       )}
     </div>
-  );
-};
+  ),
+},
 
-export default EnhancedComprehensiveServicesShowcase;
+export default EnhancedComprehensiveServicesShowcase,
 '"`

@@ -1,13 +1,13 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
-    {;
-      method: 'PUT',;
-      path: '/api / v1 / user / profile',;
-      description: 'Update user profile',;
-      auth: 'Required';
-    };
-  ];
+,
+    {,
+      method: 'PUT',
+      path: '/api / v1 / user / profile',
+      description: 'Update user profile',
+      auth: 'Required'
+    },
+  ],
 
   const features = [{
       icon: Shield,
@@ -22,14 +22,14 @@ export default function Page() {
     {
       icon: Globe,
       title: 'Global CDN',
-      description: 'Worldwide edge locations for fast access';
-    },;
-    {;
-      icon: Database,;
-      title: 'Real - time Data',;
-      description: 'Live data synchronization across all endpoints';
-    };
-  ];
+      description: 'Worldwide edge locations for fast access'
+    },
+    {,
+      icon: Database,
+      title: 'Real - time Data',
+      description: 'Live data synchronization across all endpoints'
+    },
+  ],
 
 url = "https://api.ziontechgroup.com / v1 / ai / text / analyze"
 headers = {"Authorization": "Bearer YOUR_API_KEY"}
@@ -44,30 +44,30 @@ response = requests.post(url, json={
     title: 'Cloud Resource Management',
     language: 'JavaScript',
     description: 'Example of managing cloud resources through our infrastructure API.',
-    code: `const axios = require('axios') ;
+    code: `const axios = require('axios') ,
 
 const api = axios.create({
     baseURL: 'https://api.ziontechgroup.com / v1 / cloud',
     headers: {'Authorization': 'Bearer YOUR_API_KEY'}
-}) ;
+}) ,
 
 const createInstance = async () => {
     const response = await api.post('/instances', {
         type: 'compute',
         size: 'medium',
         region: 'us - east - 1'
-    }) ;
-    return response.data;
-};`,
+    }) ,
+    return response.data,
+},`,
     category: 'Cloud & DevOps'
   },
   {
     title: 'Security Threat Detection',
     language: 'Python',
     description: 'Implement real - time threat detection using our security API.',
-    code: `import requests;
+    code: `import requests,
 
-def check_threat(ip_address) :;
+def check_threat(ip_address) :,
     url = "https://api.ziontechgroup.com / v1 / security / threat - check"
     headers = {"Authorization": "Bearer YOUR_API_KEY"}
 
@@ -77,10 +77,10 @@ def check_threat(ip_address) :;
     }) return response.json () `,
     category: 'Security'
   }
-];
+],
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -340,17 +340,17 @@ def check_threat(ip_address) :;
             <p className="text-xl text-white / 90 mb-8">
               Get API access, explore our documentation, and start integrating
               Zion Tech Group services into your applications today.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button     className="px-8 py-4 bg-gradient - to - r from - blue - 500 to - cyan - 600 text-white font - semibold rounded-lg hover:from - blue - 400 hover:to - cyan - 500 transition - all duration - 200 hover:scale - 105 shadow-lg shadow-blue -500 / 20">
                 Get API Key
               </button>
               <button     className="px-8 py-4 border border-blue - 400 / 30 text-blue - 300 font - semibold rounded-lg hover:bg-blue - 400 / 10 transition - all duration -200">
                 View Full Documentation
               </button>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},
 

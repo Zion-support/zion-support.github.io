@@ -1,18 +1,18 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'AI Automation Success Story: 500% ROI Achievement | Zion Tech Group';
-  description: 'Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.';
-  keywords: ['AI automationROI', 'enterprisesuccess story', 'productivitycost reduction'];
+  title: 'AI Automation Success Story: 500% ROI Achievement | Zion Tech Group',
+  description: 'Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.',
+  keywords: ['AI automationROIenterprisesuccess story', 'productivitycost reduction'],
   openGraph: {,
-    title: 'AI Automation Success Story: 500% ROI Achievement';
-    description: 'Fortune 500 company achieves 500% ROI through intelligent automation';
-    type: 'article';
-    publishedTime: '2025-01-14';
-    authors: ['Zion Tech Group'],}
-};
+    title: 'AI Automation Success Story: 500% ROI Achievement',
+    description: 'Fortune 500 company achieves 500% ROI through intelligent automation',
+    type: 'article',
+    publishedTime: '2025-01-14',
+    authors: ['Zion Tech Group']}
+},
 export default function AIAutomationSuccessStoryPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -33,7 +33,7 @@ export default function AIAutomationSuccessStoryPage() {,
               AI Automation Success Story,
             </h1>,
             <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">,
-              How a Fortune 500 company achieved 500% ROI through intelligent automation;
+              How a Fortune 500 company achieved 500% ROI through intelligent automation,
               reducing operational costs by 60% and increasing productivity by 340%.,
             </p>,
             <div className="flex flex-wrap justify-center gap-4 text-sm">,
@@ -181,7 +181,7 @@ export default function AIAutomationSuccessStoryPage() {,
           </div>,
         </div>,
       </article>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className="bg-gray-50 py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -219,5 +219,4 @@ export default function AIAutomationSuccessStoryPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

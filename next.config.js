@@ -2,16 +2,16 @@
 const nextConfig = {
   // Environment configuration
   env: {
-    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
   },
 
   images: {
     domains: ["localhost"],
-    unoptimized: true,
+    unoptimized: true
   },
 
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
+    removeConsole: process.env.NODE_ENV === "production"
   },
 
   webpack: (config, { dev, isServer }) => {
@@ -22,10 +22,10 @@ const nextConfig = {
       use: {
         loader: 'ts-loader',
         options: {
-          transpileOnly: true,
-        },
-      },
-    });
+          transpileOnly: true
+        }
+      }
+    }),
 
     // Basic webpack configuration
     if (!isServer) {
@@ -47,12 +47,12 @@ const nextConfig = {
         stream: false,
         util: false,
         zlib: false,
-        url: false,
-      };
+        url: false
+      },
     }
 
-    return config;
-  },
-};
+    return config,
+  }
+},
 
-module.exports = nextConfig;
+module.exports = nextConfig,

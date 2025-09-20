@@ -1,20 +1,20 @@
-import { Link  } from 'react-router-dom';
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { motion, AnimatePresence  } from 'framer-motion';
- from 'react';
+import { Link  } from 'react-router-dom',
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
+import { motion, AnimatePresence  } from 'framer-motion',
+ from 'react',
 export /**,
  params - Function parameters,
  * @returns {*} Function return value,
  */,
 function FeaturedListingsSection(props: any) {          initial = {,
-  { opacity: 0;
-  y: 2 0,}}
+  { opacity: 0,
+  y: 2 0}}
           whileInView = {,
-  { opacity: 1;
-  y: 0,}}
-          viewport={{ once: tru e ,}}
-          transition={{ duration: 0.6 ,}}
+  { opacity: 1,
+  y: 0}}
+          viewport={{ once: tru e }}
+          transition={{ duration: 0.6 }}
         >",
           <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">,
             Featured Services,
@@ -29,10 +29,10 @@ function FeaturedListingsSection(props: any) {          initial = {,
             <motion.div,
               key={listing.id}",
               className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover: borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25",
-              initial={{ opacity: 0, y: 3 0 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: tru e ,}}
-              transition={{ duration: 0.6, delay: inde x * 0.1 ,}}
+              initial={{ opacity: 0, y: 3 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: tru e }}
+              transition={{ duration: 0.6, delay: inde x * 0.1 }}
             >",
               <div className="relative">,
                 <img src={listing.image}
@@ -45,11 +45,11 @@ function FeaturedListingsSection(props: any) {          initial = {,
                 </div>,
 ",
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover: scal e-110 transition-transform duration-300">,
-                  {service.image,}
+                  {service.image}
                 </div>,
 ",
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover: tex t-blue-600 transition-colors">,
-                  {service.title,}
+                  {service.title}
                 </h3>,
 ",
                 <p className="text-gray-600 mb-4 leading-relaxed">,
@@ -79,33 +79,33 @@ function FeaturedListingsSection(props: any) {          initial = {,
 ",
               <div className="px-6 pb-6">,
                 <Link,
-                  to={service.link,}",
+                  to={service.link}",
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover: b g-blue-700 transition-colors duration-300 text-center block group-hover: shado w-lg",
                   Get Started,
                 </Link>,
-              </div>;
+              </div>,
             </motion.div>) ) }
         </div>,
         <motion.div,
           className="mt-16 text-center"          initial = {,
-  { opacity: 0;
-  y: 2 0,}}
+  { opacity: 0,
+  y: 2 0}}
           whileInView = {,
-  { opacity: 1;
-  y: 0,}}
-          viewport={{ once: tru e ,}}
+  { opacity: 1,
+  y: 0}}
+          viewport={{ once: tru e }}
           transition = {,
-  { duration: 0.6;
-  delay: 0.4,}}
+  { duration: 0.6,
+  delay: 0.4}}
         >,
           <Link            to="/services",
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-200 hover: scal e-105",
           >,
             View All Services",
-            <span className="text-xl">→</span>;
-          </Link>;
-        </motion.div>;
-      </div>;
+            <span className="text-xl">→</span>,
+          </Link>,
+        </motion.div>,
+      </div>,
     </section>,) }
 '",
 </motion>,

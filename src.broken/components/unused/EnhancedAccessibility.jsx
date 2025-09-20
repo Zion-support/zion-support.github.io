@@ -13,8 +13,8 @@
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>
 =======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 )}
@@ -23,14 +23,14 @@ export default function Page() {
                 // console.warn('Failed to load accessibility settings:', error)}
         }
         // Check for user preferences'
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches,
         if(prefersReducedMotion) {
 
             setSettings(prev => ({ ...prev, reducedMotion: true }))}
-    }, []);
+    }, []),
     const applySettings = (newSettings) => {
 
-        const root = document.documentElement;
+        const root = document.documentElement,
         // High contrast mode
         if(newSettings.highContrast) {
 
@@ -39,7 +39,7 @@ export default function Page() {
 
             root.classList.remove('high-contrast')}
         // Font size'
-        root.style.setProperty('--font-size-multiplier', (newSettings.fontSize / 16).toString());
+        root.style.setProperty('--font-size-multiplier', (newSettings.fontSize / 16).toString()),
         // Reduced motion
         if(newSettings.reducedMotion) {
 
@@ -48,7 +48,7 @@ export default function Page() {
 
             root.classList.remove('reduced-motion')}
         // Color blindness filters'
-        root.classList.remove('protanopia',deuteranopia',tritanopia');
+        root.classList.remove('protanopia',deuteranopia',tritanopia'),
         if(newSettings.colorBlindness !== 'none') {
 
             root.classList.add(newSettings.colorBlindness)}
@@ -60,7 +60,7 @@ export default function Page() {
 
             root.classList.remove('show-focus-indicator')}
         // Save to localStorage'
-        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))};
+        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))},
     const updateSetting = (key, value) => {
 
         const newSettings = {
@@ -68,18 +68,18 @@ export default function Page() {
   ...settings,
   [key]: value
 
-};
-        setSettings(newSettings);
-        applySettings(newSettings)};
+},
+        setSettings(newSettings),
+        applySettings(newSettings)},
     const toggleHighContrast = () => {
 
-        updateSetting('highContrast', !settings.highContrast)};
+        updateSetting('highContrast', !settings.highContrast)},
     const increaseFontSize = () => {
-        const newSize = Math.min(settings.fontSize + 2, 24);
-        updateSetting('fontSize', newSize)};
+        const newSize = Math.min(settings.fontSize + 2, 24),
+        updateSetting('fontSize', newSize)},
     const decreaseFontSize = () => {
-        const newSize = Math.max(settings.fontSize - 2, 12);
-        updateSetting('fontSize', newSize)};
+        const newSize = Math.max(settings.fontSize - 2, 12),
+        updateSetting('fontSize', newSize)},
     const resetSettings = () => {
         const defaultSettings = {
 
@@ -91,21 +91,21 @@ export default function Page() {
             focusIndicator: true,
   colorBlindness: 'none'
 
-};
-        setSettings(defaultSettings);
-        applySettings(defaultSettings)};
+},
+        setSettings(defaultSettings),
+        applySettings(defaultSettings)},
     const speakText = (text) => {
 
         if('speechSynthesis' in window) {
 
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.rate = 0.9;
-            utterance.pitch = 1;
+            const utterance = new SpeechSynthesisUtterance(text),
+            utterance.rate = 0.9,
+            utterance.pitch = 1,
             speechSynthesis.speak(utterance)}
-    };
+    },
     const announcePageChange = (pageName) => {
 
-        speakText(`Navigated to ${pageName}`)};
+        speakText(`Navigated to ${pageName}`)},
     return (<>
       {/* Accessibility Toggle Button */}
       <button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50"  aria-expanded={isOpen} aria-controls="accessibility-panel">"
@@ -312,8 +312,8 @@ export default function Page() {
 
       {/* Backdrop */}"
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
-    </>)};
-export { EnhancedAccessibility };
-export default EnhancedAccessibility;
+    </>)},
+export { EnhancedAccessibility },
+export default EnhancedAccessibility,
 }}}}}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

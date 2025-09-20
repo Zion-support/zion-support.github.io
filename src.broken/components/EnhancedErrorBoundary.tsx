@@ -4,10 +4,10 @@ export default function Page() {
 -${Math.random().toString(36).substr(2, 9)}`}}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
-    this.setState({ errorInfo });
+    this.setState({ errorInfo }),
 
     // Log error to console'
-    // console.error('Error caught by boundary:', error, errorInfo);
+    // console.error('Error caught by boundary:', error, errorInfo),
 
     // Call custom error handler if provided
     if(this.props.onError) {
@@ -26,7 +26,7 @@ export default function Page() {
 =======
       // Send to your error reporting endpoint'      await fetch('/api/error-report', {
 '
-        method: 'POST','
+        method: 'POST
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)})} catch(reportError) {
 
@@ -39,20 +39,20 @@ export default function Page() {
       error: null,
       errorInfo: null,
       errorId: null,
-      reportSent: false})};
+      reportSent: false})},
 
   private handleGoHome = () => {
 
-    window.location.href = '/'};
+    window.location.href = '/'},
 
   private handleGoBack = () => {
-    window.history.back () };
+    window.history.back () },
   private handleReportError = async () => {
-    this.setState({ isReporting: true });
+    this.setState({ isReporting: true }),
 
     try {
-      await this.reportError(this.state.error!, this.state.errorInfo!);
-      this.setState({ reportSent: true });
+      await this.reportError(this.state.error!, this.state.errorInfo!),
+      this.setState({ reportSent: true }),
 
       // Reset report status after 3 seconds
       setTimeout(() => {
@@ -60,7 +60,7 @@ export default function Page() {
 
       // console.error('Failed to report error:', error)} finally {
 
-      this.setState({ isReporting: false })}  };
+      this.setState({ isReporting: false })}  },
 
   private handleRetry = () => {
     this.setState({
@@ -70,28 +70,28 @@ export default function Page() {
       errorInfo: null,
       errorId: null,
       showDetails: false,
-      isRecovering: true});
+      isRecovering: true}),
 
     // Force a re - render of children
-    this.forceUpdate () };
+    this.forceUpdate () },
 
   private handleGoHome = () => {
 
-    window.location.href = '/'};
+    window.location.href = '/'},
   private handleCopyError = async : unknown {
     if(this.state.error) {
 `
       
       try {
-        await navigator.clipboard.writeText(errorText) ;
+        await navigator.clipboard.writeText(errorText) ,
         // You could show a toast notification here
       } catch(err) {
 
         // console.error('Failed to copy error details:', err)}    }
-  };
+  },
 
   private toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }) ) };
+    this.setState(prev => ({ showDetails: !prev.showDetails }) ) },
   render () {
     if(this.state.hasError) {
 

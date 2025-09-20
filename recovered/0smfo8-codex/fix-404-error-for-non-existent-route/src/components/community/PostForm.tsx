@@ -1,13 +1,13 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useState } from "react",
+import { useForm } from "react-hook-form",
 import { 
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle
-} from "@/components/ui/card";
+} from "@/components/ui/card",
 import {
   Form,
   FormControl,
@@ -15,23 +15,23 @@ import {
   FormItem,
   FormLabel,
   FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { ForumCategory } from "@/types/community";
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",
 
 interface PostFormValues {
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-  tags: string;
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
+  tags: string
 }
 
 interface PostFormProps {
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void;
-  isEditing?: boolean;
+  initialValues?: Partial<PostFormValues>,
+  onSubmit: (values: PostFormValues) => void,
+  isEditing?: boolean
 }
 
 export const PostForm = ({
@@ -46,18 +46,18 @@ export const PostForm = ({
       categoryId: initialValues?.categoryId || "project-help",
       tags: initialValues?.tags || ""
     }
-  });
+  }),
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false),
 
   const handleSubmit = async (values: PostFormValues) => {
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
-      await onSubmit(values);
+      await onSubmit(values)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <Card>
@@ -145,7 +145,7 @@ export const PostForm = ({
         </Form>
       </CardContent>
     </Card>
-  );
-};
+  ),
+},
 
-export default PostForm;
+export default PostForm,

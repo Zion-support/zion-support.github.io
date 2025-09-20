@@ -1,10 +1,10 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
   {
     id: 'ai-customer-success-platform',
@@ -14,12 +14,9 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Customer health scoring, churn prediction, playbooks, and automated lifecycle campaigns with CRM and CS integrations.',
     features: [
-      'Health scores with leading/lagging indicators',
-      'Churn prediction and expansion likelihood',
-      'Playbooks and success workflows',
-      '360° customer view with product analytics',
-      'CRM and ticketing integrations',
-      'Slack and email signals with alerts',
+      'Health scores with leading/lagging indicatorsChurn prediction and expansion likelihood',
+      'Playbooks and success workflows360° customer view with product analytics',
+      'CRM and ticketing integrationsSlack and email signals with alerts',
       'Cohort analysis and NPS tracking'
     ],
     popular: true,
@@ -33,11 +30,11 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     setupTime: '1-2 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['Node.js', 'PostgreSQL', 'OpenAI', 'React', 'Airbyte/Fivetran connectors'],
-    integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Intercom', 'Slack'],
-    useCases: ['Churn reduction', 'NRR growth', 'Lifecycle automation', 'CSAT/NPS insights'],
+    technology: ['Node.jsPostgreSQL', 'OpenAIReact', 'Airbyte/Fivetran connectors'],
+    integrations: ['SalesforceHubSpot', 'ZendeskIntercom', 'Slack'],
+    useCases: ['Churn reductionNRR growth', 'Lifecycle automationCSAT/NPS insights'],
     roi: '10-20% churn reduction, 5-12% NRR lift in 90 days',
-    competitors: ['Gainsight', 'Totango', 'Planhat'],
+    competitors: ['GainsightTotango', 'Planhat'],
     marketSize: '$3B+ CS platforms',
     growthRate: '25% CAGR',
     variant: 'ai-futuristic',
@@ -57,10 +54,8 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Prospect enrichment, lead scoring, AI-written outreach with A/B testing, and pipeline analytics.',
     features: [
-      'Company/person enrichment and signals',
-      'ICP and buying committee detection',
-      'AI sequences with tone and persona',
-      'Intent and risk scoring',
+      'Company/person enrichment and signalsICP and buying committee detection',
+      'AI sequences with tone and personaIntent and risk scoring',
       'Multichannel orchestration (email/LinkedIn)'
     ],
     popular: true,
@@ -74,11 +69,11 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'AI & Data',
     realService: true,
-    technology: ['TypeScript', 'Pinecone', 'OpenAI', 'PostgreSQL'],
-    integrations: ['Salesforce', 'HubSpot', 'Gmail/Microsoft 365'],
-    useCases: ['Pipeline generation', 'Outbound personalization', 'Lead scoring'],
+    technology: ['TypeScriptPinecone', 'OpenAIPostgreSQL'],
+    integrations: ['SalesforceHubSpot', 'Gmail/Microsoft 365'],
+    useCases: ['Pipeline generationOutbound personalization', 'Lead scoring'],
     roi: '30-60% lift in reply rates and 2-4x pipeline increase',
-    competitors: ['Apollo.io', 'ZoomInfo', 'Outreach'],
+    competitors: ['Apollo.ioZoomInfo', 'Outreach'],
     marketSize: '$20B+ sales tech',
     growthRate: '18% CAGR',
     variant: 'quantum-cyberpunk',
@@ -98,10 +93,8 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'FP&A with live ERP connectors, assumptions library, and what-if simulations.',
     features: [
-      'Driver-based models',
-      'Scenario planning and stress tests',
-      'Rolling forecast and variances',
-      'Excel/Sheets bi-directional sync',
+      'Driver-based modelsScenario planning and stress tests',
+      'Rolling forecast and variancesExcel/Sheets bi-directional sync',
       'ERP/CRM connectors'
     ],
     popular: true,
@@ -115,11 +108,11 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     setupTime: '2-5 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['Python', 'DuckDB', 'React', 'dbt'],
-    integrations: ['NetSuite', 'QuickBooks', 'HubSpot', 'Snowflake'],
-    useCases: ['Budgeting and planning', 'Forecasting', 'Board reporting'],
+    technology: ['PythonDuckDB', 'Reactdbt'],
+    integrations: ['NetSuiteQuickBooks', 'HubSpotSnowflake'],
+    useCases: ['Budgeting and planningForecasting', 'Board reporting'],
     roi: '50-80% time saved on planning cycles',
-    competitors: ['Anaplan', 'Pigment', 'Cube'],
+    competitors: ['AnaplanPigment', 'Cube'],
     marketSize: '$6B planning software',
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
@@ -139,10 +132,8 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'HR analytics with attrition risk, skill gap analysis, and recruiting pipeline metrics.',
     features: [
-      'Attrition risk scoring',
-      'Workforce planning and skills mapping',
-      'DEI dashboards',
-      'ATS and HRIS connectors'
+      'Attrition risk scoringWorkforce planning and skills mapping',
+      'DEI dashboardsATS and HRIS connectors'
     ],
     popular: false,
     icon: '👥',
@@ -155,11 +146,11 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     setupTime: '3-5 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['Node.js', 'DuckDB', 'React'],
-    integrations: ['Greenhouse', 'Lever', 'Workday', 'BambooHR'],
-    useCases: ['Retention', 'Hiring', 'Diversity'],
-    roi: '5-10% attrition reduction; 20% faster hiring',
-    competitors: ['Visier', 'ChartHop', 'Eightfold'],
+    technology: ['Node.jsDuckDB', 'React'],
+    integrations: ['GreenhouseLever', 'WorkdayBambooHR'],
+    useCases: ['RetentionHiring', 'Diversity'],
+    roi: '5-10% attrition reduction, 20% faster hiring',
+    competitors: ['VisierChartHop', 'Eightfold'],
     marketSize: '$7B HR analytics',
     growthRate: '14% CAGR',
     variant: 'ai-futuristic',
@@ -171,4 +162,4 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 28
   }
-];
+],

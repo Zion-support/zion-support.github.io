@@ -4,118 +4,98 @@ export async function GET(): Promise<Response> {,
   const updates = getLatestUpdates(100) // Get more updates for sitemap,
   const sitemap: MetadataRoute.Sitemap = [,
     {,
-      url: 'https://zion.app';
-      lastModified: new Date();
-      changeFrequency: 'daily';
-      priority: 1,};
+      url: 'https://zion.app',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1},
     {,
-      url: 'https://zion.app/about';
-      lastModified: new Date();
-      changeFrequency: 'monthly';
-      priority: 0.8,};
+      url: 'https://zion.app/about',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8},
     {,
-      url: 'https://zion.app/services';
-      lastModified: new Date();
-      changeFrequency: 'weekly';
-      priority: 0.9,};
+      url: 'https://zion.app/services',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9},
     {,
-      url: 'https://zion.app/solutions';
-      lastModified: new Date();
-      changeFrequency: 'weekly';
-      priority: 0.9,};
+      url: 'https://zion.app/solutions',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9},
     {,
-      url: 'https://zion.app/research';
-      lastModified: new Date();
-      changeFrequency: 'weekly';
-      priority: 0.8,};
+      url: 'https://zion.app/research',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8},
     {,
-      url: 'https://zion.app/contact';
-      lastModified: new Date();
-      changeFrequency: 'monthly';
-      priority: 0.7,};
+      url: 'https://zion.app/contact',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7},
     {,
-      url: 'https://zion.app/blog';
-      lastModified: new Date();
-      changeFrequency: 'daily';
-      priority: 0.8,};
+      url: 'https://zion.app/blog',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.8},
     {,
-      url: 'https://zion.app/updates';
-      lastModified: new Date();
-      changeFrequency: 'daily';
-      priority: 0.8,};
+      url: 'https://zion.app/updates',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.8},
     {,
-      url: 'https://zion.app/insights';
-      lastModified: new Date();
-      changeFrequency: 'weekly';
-      priority: 0.7,};
+      url: 'https://zion.app/insights',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7},
     {,
-      url: 'https://zion.app/news';
-      lastModified: new Date();
-      changeFrequency: 'daily';
-      priority: 0.7,};
+      url: 'https://zion.app/news',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.7},
     {,
-      url: 'https://zion.app/case-studies';
-      lastModified: new Date();
-      changeFrequency: 'monthly';
-      priority: 0.6,}
+      url: 'https://zion.app/case-studies',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6}
   ],
   // Add all update pages,
   updates.forEach((update) => {,
     sitemap.push({,
-      url: `https://zion.app${update.href,}`;
-      lastModified: update.date ? new Date(update.date) : new Date();
-      changeFrequency: 'weekly';
-      priority: 0.6,}),
+      url: `https://zion.app${update.href}`,
+      lastModified: update.date ? new Date(update.date) : new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6})
   }),
   // Add blog pages,
   const blogPosts = [,
-    'ai-2025-ai-governance-maturity-modelai-2025-enterprise-ai-security-blueprint';
-    'ai-2025-multimodal-agents-in-the-enterpriseai-2025-production-agent-telemetry-deep-dive';
-    'ai-2026-agent-cost-optimizationai-2026-agent-evidence-bundles-blueprint';
-    'ai-2026-agent-finops-blueprintai-2026-agent-observability-blueprint';
-    'ai-2026-agent-orchestration-enterprise-guideai-2026-agent-orchestration-patterns';
-    'ai-2026-agent-posture-scorecards-blueprintai-2026-agent-red-teaming-field-guide';
-    'ai-2026-agent-reliability-blueprintai-2026-agent-risk-metrics';
-    'ai-2026-agent-safety-evidence-bundlesai-2026-agentic-evals-blueprint';
-    'ai-2026-agentic-slo-dashboards-blueprintai-2026-autonomous-change-approvals-blueprint';
-    'ai-2026-autonomous-experimentation-playbookai-2026-autonomous-finance-operating-system';
-    'ai-2026-autonomous-ops-sre-for-agentsai-2026-autonomous-procurement-blueprint';
-    'ai-2026-autonomous-workflow-architectureai-2026-batch-vs-streaming-rag-tradeoffs';
-    'ai-2026-continuous-agent-evidence-bundlesai-2026-cost-aware-agent-routing';
-    'ai-2026-cost-transparency-for-agentsai-2026-enterprise-agent-architecture';
-    'ai-2026-enterprise-agent-observability-deep-diveai-2026-enterprise-agent-observability-guide';
-    'ai-2026-enterprise-agent-risk-scorecardsai-2026-enterprise-rag-observability';
-    'ai-2026-enterprise-retrieval-observabilityai-2026-eval-ready-ai-pipelines-blueprint';
-    'ai-2026-eval-ready-pipelinesai-2026-evaluating-real-world-rag-latency';
-    'ai-2026-evidence-driven-evals-blueprintai-2026-evidence-driven-operations';
-    'ai-2026-evidence-driven-routing-case-studies-2026ai-2026-evidence-led-governance-blueprint';
-    'ai-2026-evidence-led-operations-blueprintai-2026-generative-ai-risk-register';
-    'ai-2026-governed-tool-use-blueprintai-2026-grounded-generation-blueprint';
-    'ai-2026-grounded-generation-guardrails-2026ai-2026-guardrails-for-multimodal-agents';
-    'ai-2026-llm-evals-maturity-modelai-2026-multimodal-agent-systems';
-    'ai-2026-multimodal-agents-enterprise-blueprintai-2026-multimodal-guardrails-blueprint';
-    'ai-2026-operational-evals-blueprintai-2026-operational-risk-metrics-for-agents';
-    'ai-2026-operationalizing-agent-slo-gatesai-2026-platform-readiness-blueprint';
-    'ai-2026-policy-as-code-governance-blueprintai-2026-production-agent-postmortems';
-    'ai-2026-production-evals-blueprintai-2026-production-evals-control-plane';
-    'ai-2026-production-evidence-hub-blueprintai-2026-production-guardrails-toolbox';
-    'ai-2026-production-rag-latency-budgetsai-2026-production-safety-checklist';
-    'ai-2026-real-time-agent-benchmark-suite-1-0ai-2026-real-time-agent-cost-optimizer-deep-dive';
-    'ai-2026-real-time-model-routing-playbookai-2026-real-time-rag-blueprint';
-    'ai-2026-real-time-retrieval-architecturesai-2026-reliable-autonomy-ops-blueprint';
-    'ai-2026-retrieval-latency-patternsai-2026-risk-and-guardrails-operating-model';
-    'ai-2026-runtime-policy-enforcement-blueprintai-2026-safe-agent-actions-blueprint';
-    'ai-2026-safe-tool-use-blueprintai-2026-secure-agent-operations';
-    'ai-2026-secure-tooling-permissions-blueprintai-2026-sovereign-ai-commerce';
-    'ai-2026-trusted-evidence-pipelineai-2026-trustworthy-model-routing';
-    'ai-2026-zero-downtime-agent-rollouts',
+    'ai-2025-ai-governance-maturity-modelai-2025-enterprise-ai-security-blueprintai-2025-multimodal-agents-in-the-enterpriseai-2025-production-agent-telemetry-deep-dive',
+    'ai-2026-agent-cost-optimizationai-2026-agent-evidence-bundles-blueprintai-2026-agent-finops-blueprintai-2026-agent-observability-blueprint',
+    'ai-2026-agent-orchestration-enterprise-guideai-2026-agent-orchestration-patternsai-2026-agent-posture-scorecards-blueprintai-2026-agent-red-teaming-field-guide',
+    'ai-2026-agent-reliability-blueprintai-2026-agent-risk-metricsai-2026-agent-safety-evidence-bundlesai-2026-agentic-evals-blueprint',
+    'ai-2026-agentic-slo-dashboards-blueprintai-2026-autonomous-change-approvals-blueprintai-2026-autonomous-experimentation-playbookai-2026-autonomous-finance-operating-system',
+    'ai-2026-autonomous-ops-sre-for-agentsai-2026-autonomous-procurement-blueprintai-2026-autonomous-workflow-architectureai-2026-batch-vs-streaming-rag-tradeoffs',
+    'ai-2026-continuous-agent-evidence-bundlesai-2026-cost-aware-agent-routingai-2026-cost-transparency-for-agentsai-2026-enterprise-agent-architecture',
+    'ai-2026-enterprise-agent-observability-deep-diveai-2026-enterprise-agent-observability-guideai-2026-enterprise-agent-risk-scorecardsai-2026-enterprise-rag-observability',
+    'ai-2026-enterprise-retrieval-observabilityai-2026-eval-ready-ai-pipelines-blueprintai-2026-eval-ready-pipelinesai-2026-evaluating-real-world-rag-latency',
+    'ai-2026-evidence-driven-evals-blueprintai-2026-evidence-driven-operationsai-2026-evidence-driven-routing-case-studies-2026ai-2026-evidence-led-governance-blueprint',
+    'ai-2026-evidence-led-operations-blueprintai-2026-generative-ai-risk-registerai-2026-governed-tool-use-blueprintai-2026-grounded-generation-blueprint',
+    'ai-2026-grounded-generation-guardrails-2026ai-2026-guardrails-for-multimodal-agentsai-2026-llm-evals-maturity-modelai-2026-multimodal-agent-systems',
+    'ai-2026-multimodal-agents-enterprise-blueprintai-2026-multimodal-guardrails-blueprintai-2026-operational-evals-blueprintai-2026-operational-risk-metrics-for-agents',
+    'ai-2026-operationalizing-agent-slo-gatesai-2026-platform-readiness-blueprintai-2026-policy-as-code-governance-blueprintai-2026-production-agent-postmortems',
+    'ai-2026-production-evals-blueprintai-2026-production-evals-control-planeai-2026-production-evidence-hub-blueprintai-2026-production-guardrails-toolbox',
+    'ai-2026-production-rag-latency-budgetsai-2026-production-safety-checklistai-2026-real-time-agent-benchmark-suite-1-0ai-2026-real-time-agent-cost-optimizer-deep-dive',
+    'ai-2026-real-time-model-routing-playbookai-2026-real-time-rag-blueprintai-2026-real-time-retrieval-architecturesai-2026-reliable-autonomy-ops-blueprint',
+    'ai-2026-retrieval-latency-patternsai-2026-risk-and-guardrails-operating-modelai-2026-runtime-policy-enforcement-blueprintai-2026-safe-agent-actions-blueprint',
+    'ai-2026-safe-tool-use-blueprintai-2026-secure-agent-operationsai-2026-secure-tooling-permissions-blueprintai-2026-sovereign-ai-commerce',
+    'ai-2026-trusted-evidence-pipelineai-2026-trustworthy-model-routingai-2026-zero-downtime-agent-rollouts'
   ],
   blogPosts.forEach((slug) => {,
     sitemap.push({,
-      url: `https://zion.app/blog/${slug,}`;
-      lastModified: new Date();
-      changeFrequency: 'monthly';
-      priority: 0.5,}),
+      url: `https://zion.app/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5})
   }),
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>,
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
@@ -129,15 +109,15 @@ export async function GET(): Promise<Response> {,
     const priority = item.priority ?? 0.5,
     return `,
   <url>,
-    <loc>${item.url,}</loc>,
+    <loc>${item.url}</loc>,
     <lastmod>${lastMod}</lastmod>,
     <changefreq>${changeFreq}</changefreq>,
     <priority>${priority}</priority>,
-  </url>`,
+  </url>`
   }).join('')}
 </urlset>`,
   return new Response(sitemapXml, {,
     headers: {,
-      'Content-Type': 'application/xml',}
-  }),
+      'Content-Type': 'application/xml'}
+  })
 }

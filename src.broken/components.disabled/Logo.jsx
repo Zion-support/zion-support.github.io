@@ -1,4 +1,4 @@
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 }
@@ -11,6 +11,6 @@ export default function Page() {
         Zion Tech Group
       </span>
     </motion.div>
-  );
+  ),
 }
 '"`

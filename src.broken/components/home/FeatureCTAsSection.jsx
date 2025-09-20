@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection = () => {
   const ctaItems = [{
 "
@@ -36,7 +36,7 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
       color: "from-orange-600 to-red-600","
       hoverColor: "from-orange-700 to-red-700"
 
-  ];
+  ],
 
   return ("
     <section className="py-16 bg-slate-900">"
@@ -73,7 +73,7 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
                 Get Started"
                 <ArrowRight className="w-4 h-4 ml-2"/>
               </div>
-            </a>;
+            </a>,
           ))}
         </div>
 "
@@ -82,13 +82,13 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
             Need help choosing? Our experts are here to guide you.</p>
           <a"
             href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover: from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
 
             Talk to an Expert"
             <ArrowRight className="w-5 h-5 ml-2"/>
           </a>
         </div>
-      </div>;
+      </div>,
     </section>
-  )};
+  )},
 "`

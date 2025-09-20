@@ -1,10 +1,10 @@
-import React from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
- from 'swr';
+import React from 'react',
+import { ErrorBoundary } from 'react-error-boundary',
+ from 'swr',
 ) {
 =======
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Button } from '@/components/ui/button',
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
 ) {
 >>>>>>> main
 
@@ -12,17 +12,17 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
         try {
 
             // Re-call SWR mutate('*') to refresh all cached data
-            await mutate(() => true, null, { revalidate: true });
-            resetErrorBoundary();
-            // // // // // // // // console.error('Error during retry:', retryError);
-            Sentry.captureException(retryError);
+            await mutate(() => true, null, { revalidate: true }),
+            resetErrorBoundary(),
+            // // // // // // // // console.error('Error during retry:', retryError),
+            Sentry.captureException(retryError),
 
         }
         catch(retryError) {
 
-            // console.error('Error during retry:', retryError);
+            // console.error('Error during retry:', retryError),
             Sentry.captureException(retryError)}
-    };
+    },
     return (<div className="flex items-center justify-center min-h-[400px] p-6">"
       <div className="max-w-md w-full space-y-4">"
         <Alert variant="destructive">"
@@ -57,15 +57,15 @@ export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
 
         // Log boundary errors to Sentry'
-        // // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
+        // // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo),
         Sentry.withScope((scope) => {
 
-            scope.setTag('errorBoundary',marketplace');
+            scope.setTag('errorBoundary',marketplace'),
             scope.setContext('errorInfo', {
 
-                componentStack: errorInfo.componentStack || null});
-            scope.setLevel('error');
-            Sentry.captureException(error)})};
+                componentStack: errorInfo.componentStack || null}),
+            scope.setLevel('error'),
+            Sentry.captureException(error)})},
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>
       {children}
     </ErrorBoundary>)}

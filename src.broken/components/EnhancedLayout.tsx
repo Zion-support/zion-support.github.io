@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 
-  children: ReactNode;
+  children: ReactNode,
   showSidebar?: boolean}
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
@@ -25,11 +25,11 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         <main className={`flex-1 ${showSidebar ? 'lg:ml-80' : ''}`}>
           {children}
         </main>
-      </div>;
-      ;
-      {/* Footer */};
-      <FuturisticFooter  />;
-    </div>;) };
+      </div>,
+      ,
+      {/* Footer */},
+      <FuturisticFooter  />,
+    </div>,) },
 '"`
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

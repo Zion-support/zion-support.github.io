@@ -1,2 +1,2 @@
 
-export default ContentQualityAnalyzer;
+export default ContentQualityAnalyzer,

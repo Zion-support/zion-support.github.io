@@ -4,7 +4,7 @@ export function ServiceProcessSteps() {
     <div className="my-20">
       <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">1</div>
           <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>
@@ -30,5 +30,5 @@ export function ServiceProcessSteps() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function InteractiveContentDiscoveryWidget2026() {,
   return (,
     <section className="py-16 bg-white">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,
             Discover Your Perfect AI 2026 Content,
@@ -16,7 +16,7 @@ export default function InteractiveContentDiscoveryWidget2026() {,
         </div>,
         {/* Interactive Content Categories */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
-          {/* Autonomous Systems */,}
+          {/* Autonomous Systems */}
           <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-100">,
             <div className="text-3xl mb-4">🤖</div>,
             <h3 className="text-lg font-bold text-gray-900 mb-3">Autonomous Systems</h3>,
@@ -30,7 +30,7 @@ export default function InteractiveContentDiscoveryWidget2026() {,
               Explore Content →,
             </Link>,
           </div>,
-          {/* Quantum AI */,}
+          {/* Quantum AI */}
           <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">,
             <div className="text-3xl mb-4">⚛️</div>,
             <h3 className="text-lg font-bold text-gray-900 mb-3">Quantum AI</h3>,
@@ -44,7 +44,7 @@ export default function InteractiveContentDiscoveryWidget2026() {,
               Explore Content →,
             </Link>,
           </div>,
-          {/* Enterprise Automation */,}
+          {/* Enterprise Automation */}
           <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-100">,
             <div className="text-3xl mb-4">🏢</div>,
             <h3 className="text-lg font-bold text-gray-900 mb-3">Enterprise Automation</h3>,
@@ -58,7 +58,7 @@ export default function InteractiveContentDiscoveryWidget2026() {,
               Explore Content →,
             </Link>,
           </div>,
-          {/* AI Tools & Assessments */,}
+          {/* AI Tools & Assessments */}
           <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-100">,
             <div className="text-3xl mb-4">🔧</div>,
             <h3 className="text-lg font-bold text-gray-900 mb-3">AI Tools & Assessments</h3>,
@@ -73,7 +73,7 @@ export default function InteractiveContentDiscoveryWidget2026() {,
             </Link>,
           </div>,
         </div>,
-        {/* Featured Content Carousel */,}
+        {/* Featured Content Carousel */}
         <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 mb-12">,
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Latest AI 2026 Breakthroughs</h3>,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
@@ -133,7 +133,7 @@ export default function InteractiveContentDiscoveryWidget2026() {,
             </div>,
           </div>,
         </div>,
-        {/* Quick Actions */,}
+        {/* Quick Actions */}
         <div className="text-center">,
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">,
             <h3 className="text-2xl font-bold mb-4">Ready to Start Your AI Journey?</h3>,
@@ -157,5 +157,4 @@ export default function InteractiveContentDiscoveryWidget2026() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   Eye,
   Shield,
@@ -18,134 +18,86 @@ import {
   Phone,
   Mail,
   MessageCircle
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AccessibilityPage() {
   const currentYear = new Date().getFullYear();
-
   const accessibilityFeatures = [
     {
-      category: 'Visual Accessibility',
-      icon: Eye,
-      features: [
-        'High contrast mode support',
-        'Adjustable font sizes',
-        'Color-blind friendly design',
-        'Clear typography and spacing',
-        'Alternative text for images',
-        'Focus indicators for navigation'
+      category: 'Visual Accessibility',icon: Eye,features: [
+        'High contrast mode supportAdjustable font sizes';
+        'Color-blind friendly designClear typography and spacing',
+        'Alternative text for imagesFocus indicators for navigation'
       ]
     },
     {
-      category: 'Auditory Accessibility',
-      icon: Ear,
-      features: [
-        'Closed captions for videos',
-        'Audio descriptions',
-        'Volume controls',
-        'Visual alerts and notifications',
+      category: 'Auditory Accessibility',icon: Ear,features: [
+        'Closed captions for videosAudio descriptions';
+        'Volume controlsVisual alerts and notifications',
         'Transcripts for audio content'
       ]
     },
     {
-      category: 'Motor Accessibility',
-      icon: Hand,
-      features: [
-        'Keyboard navigation support',
-        'Voice control compatibility',
-        'Large click targets',
-        'Customizable timing',
+      category: 'Motor Accessibility',icon: Hand,features: [
+        'Keyboard navigation supportVoice control compatibility';
+        'Large click targetsCustomizable timing',
         'Alternative input methods'
       ]
     },
     {
-      category: 'Cognitive Accessibility',
-      icon: Brain,
-      features: [
-        'Clear and simple language',
-        'Consistent navigation structure',
-        'Logical content organization',
-        'Reduced distractions',
+      category: 'Cognitive Accessibility',icon: Brain,features: [
+        'Clear and simple languageConsistent navigation structure';
+        'Logical content organizationReduced distractions',
         'Step-by-step instructions'
       ]
     }
-  ];
+  ],
 
   const complianceStandards = [
     {
-      standard: 'WCAG 2.1 AA',
-      status: 'Compliant',
-      icon: CheckCircle,
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
-      color: 'text-green-500'
-    },
+      standard: 'WCAG 2.1 AA',status: 'Compliant',icon: CheckCircle,description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',color: 'text-green-500'
+    };
     {
-      standard: 'Section 508',
-      status: 'Compliant',
-      icon: CheckCircle,
-      description: 'Federal accessibility requirements for electronic and information technology',
-      color: 'text-green-500'
-    },
+      standard: 'Section 508',status: 'Compliant',icon: CheckCircle,description: 'Federal accessibility requirements for electronic and information technology',color: 'text-green-500'
+    };
     {
-      standard: 'ADA Title III',
-      status: 'Compliant',
-      icon: CheckCircle,
-      description: 'Americans with Disabilities Act requirements for public accommodations',
-      color: 'text-green-500'
-    },
+      standard: 'ADA Title III',status: 'Compliant',icon: CheckCircle,description: 'Americans with Disabilities Act requirements for public accommodations',color: 'text-green-500'
+    };
     {
-      standard: 'EN 301 549',
-      status: 'Compliant',
-      icon: CheckCircle,
-      description: 'European accessibility requirements for ICT products and services',
-      color: 'text-green-500'
+      standard: 'EN 301 549',status: 'Compliant',icon: CheckCircle,description: 'European accessibility requirements for ICT products and services',color: 'text-green-500'
     }
   ];
-
   const accessibilityTools = [
     {
-      name: 'Screen Reader Support',
-      description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver',
+      name: 'Screen Reader Support',description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver',
       icon: Monitor
-    },
+    };
     {
-      name: 'Mobile Accessibility',
-      description: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',
-      icon: Smartphone
-    },
+      name: 'Mobile Accessibility',description: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',icon: Smartphone
+    };
     {
-      name: 'Voice Navigation',
-      description: 'Voice control support for hands-free navigation and interaction',
-      icon: Globe
-    },
+      name: 'Voice Navigation',description: 'Voice control support for hands-free navigation and interaction',icon: Globe
+    };
     {
-      name: 'Customizable Interface',
-      description: 'Personalizable themes, fonts, and layout options to meet individual needs',
+      name: 'Customizable Interface',description: 'Personalizable themes, fonts, and layout options to meet individual needs',
       icon: Zap
     }
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 };
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
+      opacity: 1,y: 0,transition: {
         duration: 0.5
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -308,7 +260,7 @@ export default function AccessibilityPage() {
                 Get a comprehensive accessibility audit and ensure your products are
                 inclusive for all users. Contact us today to get started.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
@@ -327,5 +279,5 @@ export default function AccessibilityPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

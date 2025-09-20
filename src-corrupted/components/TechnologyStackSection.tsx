@@ -1,2 +1,2 @@
 
-export default TechnologyStackSection;
+export default TechnologyStackSection,

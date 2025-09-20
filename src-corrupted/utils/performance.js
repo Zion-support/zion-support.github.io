@@ -1,6 +1,6 @@
-// performance utility;
+// performance utility,
 export const performance = {,
-  // Placeholder utility functions;
+  // Placeholder utility functions,
 init: function() {}
 }
-export default performance;
+export default performance,

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { innovativeMicroSAASServices2029 } from '../../data / innovative - micro - saas -2029';
+import React, { useState, useEffect } from 'react',
+import { innovativeMicroSAASServices2029 } from '../../data / innovative - micro - saas -2029',
 
 export default function Page() {
         <div  className="absolute inset -0">
@@ -9,16 +9,16 @@ export default function Page() {
               animate={{
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
+                opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
                 duration: Math.random () * 10 + 10,
                 repeat: Infinity,
-                delay: Math.random () * 5,
+                delay: Math.random () * 5
               }}
               style={{
                 left: `${Math.random () * 100}%`,
-                top: `${Math.random () * 100}%`,
+                top: `${Math.random () * 100}%`
               }}
             />) ) }
         </div>
@@ -310,7 +310,7 @@ export default function Page() {
             <p className="text-gray - 300 mb-8 text-lg">
               Get in touch with our team to discuss how these innovative
               solutions can drive your business forward.</p>
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <a
                 href="/contact"
                 className="bg-gradient - to - r from - cyan - 500 to - purple - 500 hover:from - cyan - 600 hover:to - purple - 600 text-white font - medium py-4 px-8 rounded-xl transition - all duration - 300 transform hover:scale -105"
@@ -332,5 +332,5 @@ export default function Page() {
           </motion.div>
         </div>
       </div>
-    </div>) ;
+    </div>) 
 }

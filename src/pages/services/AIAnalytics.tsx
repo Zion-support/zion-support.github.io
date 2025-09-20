@@ -1,54 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users } from "lucide-react";
 export default function AIAnalytics() {
   const features = [
     {
-      icon: Brain,
-      title: 'Machine Learning',
-      description: 'Advanced AI algorithms for intelligent decision making'
-    },
+      icon: Brain,title: 'Machine Learning',description: 'Advanced AI algorithms for intelligent decision making'
+    };
     {
-      icon: BarChart3,
-      title: 'Predictive Analytics',
-      description: 'Forecast trends and identify opportunities'
-    },
+      icon: BarChart3,title: 'Predictive Analytics',description: 'Forecast trends and identify opportunities'
+    };
     {
-      icon: Zap,
-      title: 'Real-time Insights',
-      description: 'Instant data analysis and actionable intelligence'
-    },
+      icon: Zap,title: 'Real-time Insights',description: 'Instant data analysis and actionable intelligence'
+    };
     {
-      icon: Eye,
-      title: 'Data Visualization',
-      description: 'Clear and intuitive data presentation'
+      icon: Eye,title: 'Data Visualization',description: 'Clear and intuitive data presentation'
     }
   ];
-
   const services = [
     {
-      title: 'AI Strategy Consulting',
-      description: 'Strategic planning and implementation of AI solutions',
-      icon: Brain
-    },
+      title: 'AI Strategy Consulting',description: 'Strategic planning and implementation of AI solutions',icon: Brain
+    };
     {
-      title: 'Predictive Modeling',
-      description: 'Build models to forecast business outcomes',
-      icon: BarChart3
-    },
+      title: 'Predictive Modeling',description: 'Build models to forecast business outcomes',icon: BarChart3
+    };
     {
-      title: 'Natural Language Processing',
-      description: 'Text analysis and language understanding systems',
-      icon: Database
-    },
+      title: 'Natural Language Processing',description: 'Text analysis and language understanding systems',icon: Database
+    };
     {
-      title: 'Computer Vision',
-      description: 'Image and video analysis with AI',
-      icon: Eye
+      title: 'Computer Vision',description: 'Image and video analysis with AI',icon: Eye
     }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -189,7 +170,7 @@ export default function AIAnalytics() {
               <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
                 Transform your business with the power of artificial intelligence and advanced analytics.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
                   Start AI Project
                 </button>
@@ -202,5 +183,5 @@ export default function AIAnalytics() {
         </div>
       </section>
     </div>
-  );
+  )
 }

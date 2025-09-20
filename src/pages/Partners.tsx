@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Handshake, 
+  Handshake,
   Users, 
   Star, 
   ArrowRight,
@@ -32,243 +33,131 @@ import {
   Users2,
   Award as AwardIcon,
   TrendingUp as TrendingUpIcon
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 export default function Partners() {
   const partnershipTypes = [
     {
-      title: 'Technology Partners',
-      description: 'Integrate with leading technology platforms and tools',
-      icon: Cpu,
-      color: 'from-blue-500 to-cyan-500',
-      benefits: [
-        'Access to cutting-edge technologies',
-        'Joint go-to-market strategies',
-        'Technical integration support',
-        'Co-marketing opportunities'
+      title: 'Technology Partners',description: 'Integrate with leading technology platforms and tools',icon: Cpu,color: 'from-blue-500 to-cyan-500',benefits: [
+        'Access to cutting-edge technologiesJoint go-to-market strategies';
+        'Technical integration supportCo-marketing opportunities'
       ],
-      examples: ['Microsoft Azure', 'AWS', 'Google Cloud', 'Salesforce']
+      examples: ['Microsoft AzureAWS', 'Google CloudSalesforce']
     },
     {
-      title: 'Solution Partners',
-      description: 'Collaborate on comprehensive business solutions',
-      icon: Target,
-      color: 'from-green-500 to-emerald-500',
-      benefits: [
-        'Joint solution development',
-        'Shared revenue opportunities',
-        'Market expansion support',
-        'Training and certification'
+      title: 'Solution Partners',description: 'Collaborate on comprehensive business solutions',icon: Target,color: 'from-green-500 to-emerald-500',benefits: [
+        'Joint solution developmentShared revenue opportunities';
+        'Market expansion supportTraining and certification'
       ],
-      examples: ['System Integrators', 'Consulting Firms', 'VARs', 'MSPs']
+      examples: ['System IntegratorsConsulting Firms', 'VARsMSPs']
     },
     {
-      title: 'Channel Partners',
-      description: 'Resell and distribute our solutions',
-      icon: Building,
-      color: 'from-purple-500 to-pink-500',
-      benefits: [
-        'Competitive pricing and margins',
-        'Sales and technical training',
-        'Marketing materials and support',
-        'Dedicated partner success manager'
+      title: 'Channel Partners',description: 'Resell and distribute our solutions',icon: Building,color: 'from-purple-500 to-pink-500',benefits: [
+        'Competitive pricing and marginsSales and technical training';
+        'Marketing materials and supportDedicated partner success manager'
       ],
-      examples: ['Resellers', 'Distributors', 'Agents', 'Brokers']
+      examples: ['ResellersDistributors', 'AgentsBrokers']
     },
     {
-      title: 'Strategic Partners',
-      description: 'Long-term strategic alliances and joint ventures',
-      icon: Star,
-      color: 'from-orange-500 to-red-500',
-      benefits: [
-        'Exclusive partnership agreements',
-        'Joint investment opportunities',
-        'Shared intellectual property',
-        'Board-level collaboration'
+      title: 'Strategic Partners',description: 'Long-term strategic alliances and joint ventures',icon: Star,color: 'from-orange-500 to-red-500',benefits: [
+        'Exclusive partnership agreementsJoint investment opportunities';
+        'Shared intellectual propertyBoard-level collaboration'
       ],
-      examples: ['Research Institutions', 'Universities', 'Government', 'Industry Leaders']
+      examples: ['Research InstitutionsUniversities', 'GovernmentIndustry Leaders']
     }
-  ];
+  ],
 
   const currentPartners = [
     {
-      name: 'Microsoft',
-      logo: '/partners/microsoft.svg',
-      type: 'Technology Partner',
-      description: 'Strategic partnership for Azure cloud solutions and enterprise software integration',
-      year: '2020',
-      achievements: ['Azure Gold Partner', 'Microsoft 365 Expert', 'Dynamics 365 Partner']
+      name: 'Microsoft',logo: '/partners/microsoft.svg',type: 'Technology Partner',description: 'Strategic partnership for Azure cloud solutions and enterprise software integration',year: '2020',achievements: ['Azure Gold PartnerMicrosoft 365 Expert', 'Dynamics 365 Partner']
     },
     {
-      name: 'AWS',
-      logo: '/partners/aws.svg',
-      type: 'Technology Partner',
-      description: 'Advanced consulting partner specializing in cloud migration and optimization',
-      year: '2019',
-      achievements: ['AWS Advanced Consulting Partner', 'Migration Competency', 'Well-Architected Partner']
+      name: 'AWS',logo: '/partners/aws.svg',type: 'Technology Partner',description: 'Advanced consulting partner specializing in cloud migration and optimization',year: '2019',achievements: ['AWS Advanced Consulting PartnerMigration Competency', 'Well-Architected Partner']
     },
     {
-      name: 'Google Cloud',
-      logo: '/partners/google-cloud.svg',
-      type: 'Technology Partner',
-      description: 'Partner for AI/ML solutions and data analytics on Google Cloud Platform',
-      year: '2021',
-      achievements: ['Google Cloud Partner', 'AI/ML Specialization', 'Data Analytics Partner']
+      name: 'Google Cloud',logo: '/partners/google-cloud.svg',type: 'Technology Partner',description: 'Partner for AI/ML solutions and data analytics on Google Cloud Platform',year: '2021',achievements: ['Google Cloud PartnerAI/ML Specialization', 'Data Analytics Partner']
     },
     {
-      name: 'Salesforce',
-      logo: '/partners/salesforce.svg',
-      type: 'Solution Partner',
-      description: 'Consulting partner for CRM implementation and custom development',
-      year: '2018',
-      achievements: ['Salesforce Consulting Partner', 'Platform Developer', 'Sales Cloud Expert']
+      name: 'Salesforce',logo: '/partners/salesforce.svg',type: 'Solution Partner',description: 'Consulting partner for CRM implementation and custom development',year: '2018',achievements: ['Salesforce Consulting PartnerPlatform Developer', 'Sales Cloud Expert']
     },
     {
-      name: 'Oracle',
-      logo: '/partners/oracle.svg',
-      type: 'Technology Partner',
-      description: 'Partner for database solutions and enterprise applications',
-      year: '2020',
-      achievements: ['Oracle Gold Partner', 'Database Specialization', 'Cloud Infrastructure Partner']
+      name: 'Oracle',logo: '/partners/oracle.svg',type: 'Technology Partner',description: 'Partner for database solutions and enterprise applications',year: '2020',achievements: ['Oracle Gold PartnerDatabase Specialization', 'Cloud Infrastructure Partner']
     },
     {
-      name: 'IBM',
-      logo: '/partners/ibm.svg',
-      type: 'Strategic Partner',
-      description: 'Strategic alliance for AI solutions and enterprise consulting',
-      year: '2019',
-      achievements: ['IBM Business Partner', 'AI Solutions Partner', 'Watson Platform Expert']
+      name: 'IBM',logo: '/partners/ibm.svg',type: 'Strategic Partner',description: 'Strategic alliance for AI solutions and enterprise consulting',year: '2019',achievements: ['IBM Business PartnerAI Solutions Partner', 'Watson Platform Expert']
     }
-  ];
+  ],
 
   const partnerBenefits = [
     {
-      title: 'Revenue Growth',
-      description: 'Access new markets and revenue streams through our partnership network',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500',
-      metric: '40%'
-    },
+      title: 'Revenue Growth',description: 'Access new markets and revenue streams through our partnership network',icon: TrendingUp,color: 'from-green-500 to-emerald-500',metric: '40%'
+    };
     {
-      title: 'Market Expansion',
-      description: 'Enter new geographic regions and industries',
-      icon: Globe,
-      color: 'from-purple-500 to-pink-500',
-      metric: '15+'
-    },
+      title: 'Market Expansion',description: 'Enter new geographic regions and industries',icon: Globe,color: 'from-purple-500 to-pink-500',metric: '15+'
+    };
     {
-      title: 'Technology Access',
-      description: 'Leverage cutting-edge AI and cloud solutions',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      metric: '100+'
-    },
+      title: 'Technology Access',description: 'Leverage cutting-edge AI and cloud solutions',icon: Brain,color: 'from-blue-500 to-cyan-500',metric: '100+'
+    };
     {
-      title: 'Support & Training',
-      description: 'Comprehensive partner enablement programs',
-      icon: Users,
-      color: 'from-orange-500 to-red-500',
-      metric: '24/7'
+      title: 'Support & Training',description: 'Comprehensive partner enablement programs',icon: Users,color: 'from-orange-500 to-red-500',metric: '24/7'
     }
   ];
-
   const successStories = [
     {
-      partner: 'TechCorp Solutions',
-      type: 'Solution Partner',
-      industry: 'Healthcare',
-      results: [
-        '200% revenue growth in first year',
-        '15 new enterprise clients',
-        '$2M+ in joint revenue',
-        'Market leader in healthcare AI'
+      partner: 'TechCorp Solutions',type: 'Solution Partner',industry: 'Healthcare',results: [
+        '200% revenue growth in first year15 new enterprise clients';
+        '$2M+ in joint revenueMarket leader in healthcare AI'
       ],
-      logo: '🏥',
-      color: 'from-red-500 to-pink-500'
-    },
+      logo: '🏥',color: 'from-red-500 to-pink-500'
+    };
     {
-      partner: 'CloudFirst Systems',
-      type: 'Technology Partner',
-      industry: 'Financial Services',
-      results: [
-        '300% increase in cloud adoption',
-        '50+ successful migrations',
-        '99.99% uptime achieved',
-        'Industry benchmark for security'
+      partner: 'CloudFirst Systems',type: 'Technology Partner',industry: 'Financial Services',results: [
+        '300% increase in cloud adoption50+ successful migrations';
+        '99.99% uptime achievedIndustry benchmark for security'
       ],
-      logo: '☁️',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      logo: '☁️',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      partner: 'InnovateLab Research',
-      type: 'Strategic Partner',
-      industry: 'Research & Development',
-      results: [
-        '5 breakthrough AI algorithms',
-        '10+ research publications',
-        '$5M in research funding',
-        'Patent portfolio expansion'
+      partner: 'InnovateLab Research',type: 'Strategic Partner',industry: 'Research & Development',results: [
+        '5 breakthrough AI algorithms10+ research publications';
+        '$5M in research fundingPatent portfolio expansion'
       ],
-      logo: '🔬',
-      color: 'from-purple-500 to-violet-500'
+      logo: '🔬',color: 'from-purple-500 to-violet-500'
     }
   ];
-
   const partnerPrograms = [
     {
-      level: 'Bronze',
-      requirements: 'Basic partnership agreement',
-      benefits: [
-        'Marketing materials access',
-        'Basic training resources',
-        'Email support',
-        'Partner portal access'
+      level: 'Bronze',requirements: 'Basic partnership agreement',benefits: [
+        'Marketing materials accessBasic training resources';
+        'Email supportPartner portal access'
       ],
-      revenue: '$0 - $50K',
-      color: 'from-amber-500 to-orange-500'
-    },
+      revenue: '$0 - $50K',color: 'from-amber-500 to-orange-500'
+    };
     {
-      level: 'Silver',
-      requirements: '$50K+ annual revenue',
-      benefits: [
-        'Everything in Bronze',
-        'Advanced training programs',
-        'Dedicated partner manager',
-        'Co-marketing campaigns',
+      level: 'Silver',requirements: '$50K+ annual revenue',benefits: [
+        'Everything in BronzeAdvanced training programs';
+        'Dedicated partner managerCo-marketing campaigns',
         'Technical support'
       ],
-      revenue: '$50K - $200K',
-      color: 'from-gray-400 to-gray-500'
-    },
+      revenue: '$50K - $200K',color: 'from-gray-400 to-gray-500'
+    };
     {
-      level: 'Gold',
-      requirements: '$200K+ annual revenue',
-      benefits: [
-        'Everything in Silver',
-        'Exclusive territory rights',
-        'Custom marketing materials',
-        'Priority technical support',
+      level: 'Gold',requirements: '$200K+ annual revenue',benefits: [
+        'Everything in SilverExclusive territory rights';
+        'Custom marketing materialsPriority technical support',
         'Revenue sharing programs'
       ],
-      revenue: '$200K - $1M',
-      color: 'from-yellow-400 to-amber-500'
-    },
+      revenue: '$200K - $1M',color: 'from-yellow-400 to-amber-500'
+    };
     {
-      level: 'Platinum',
-      requirements: '$1M+ annual revenue',
-      benefits: [
-        'Everything in Gold',
-        'Strategic planning sessions',
-        'Custom solution development',
-        'Executive sponsorship',
+      level: 'Platinum',requirements: '$1M+ annual revenue',benefits: [
+        'Everything in GoldStrategic planning sessions';
+        'Custom solution developmentExecutive sponsorship',
         'Exclusive market access'
       ],
-      revenue: '$1M+',
-      color: 'from-cyan-400 to-blue-500'
+      revenue: '$1M+',color: 'from-cyan-400 to-blue-500'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -553,7 +442,7 @@ export default function Partners() {
               viewport={{ once: true }}
               className="text-center max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
                 Ready to Join Our Partner Ecosystem?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -605,5 +494,5 @@ export default function Partners() {
         </div>
       </section>
     </div>
-  );
+  )
 }

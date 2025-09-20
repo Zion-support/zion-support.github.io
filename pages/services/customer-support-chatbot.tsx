@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function CustomerSupportChatbot() {
   return (
@@ -23,10 +23,10 @@ export default function CustomerSupportChatbot() {
           <li>Hand-off to humans with context</li>
         </ul>
         <div className="mt-8 flex gap-3">
-          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>
+          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10">Back to Services</a></Link>
           <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
         </div>
       </main>
     </div>
-  );
+  )
 }

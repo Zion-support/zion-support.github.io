@@ -1,63 +1,41 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp } from 'lucide-react';
-
+import React from "react";
+import SEO from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp } from "lucide-react";
 const AICybersecurity: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Threat Detection',
-      description: 'Advanced machine learning algorithms detect threats in real-time'
-    },
+      icon: Brain,title: 'AI-Powered Threat Detection',description: 'Advanced machine learning algorithms detect threats in real-time'
+    };
     {
-      icon: Shield,
-      title: 'Zero-Day Attack Prevention',
-      description: 'Identify and block unknown threats before they can cause damage'
-    },
+      icon: Shield,title: 'Zero-Day Attack Prevention',description: 'Identify and block unknown threats before they can cause damage'
+    };
     {
-      icon: Lock,
-      title: 'Intelligent Access Control',
-      description: 'AI-driven authentication and authorization systems'
-    },
+      icon: Lock,title: 'Intelligent Access Control',description: 'AI-driven authentication and authorization systems'
+    };
     {
-      icon: Eye,
-      title: 'Behavioral Analytics',
-      description: 'Monitor and analyze user behavior for suspicious activity'
+      icon: Eye,title: 'Behavioral Analytics',description: 'Monitor and analyze user behavior for suspicious activity'
     }
   ];
-
   const services = [
     {
-      title: 'Threat Intelligence',
-      description: 'Real-time threat intelligence and analysis',
-      icon: '🔍'
-    },
+      title: 'Threat Intelligence',description: 'Real-time threat intelligence and analysis',icon: '🔍'
+    };
     {
-      title: 'Incident Response',
-      description: 'Automated incident detection and response',
-      icon: '🚨'
-    },
+      title: 'Incident Response',description: 'Automated incident detection and response',icon: '🚨'
+    };
     {
-      title: 'Vulnerability Assessment',
-      description: 'AI-powered vulnerability scanning and assessment',
-      icon: '🛡️'
-    },
+      title: 'Vulnerability Assessment',description: 'AI-powered vulnerability scanning and assessment',icon: '🛡️'
+    };
     {
-      title: 'Security Automation',
-      description: 'Automate security operations and responses',
-      icon: '⚡'
+      title: 'Security Automation',description: 'Automate security operations and responses',icon: '⚡'
     }
   ];
-
   const benefits = [
-    'Real-time threat detection and response',
-    'Reduced false positives with AI accuracy',
-    '24/7 automated security monitoring',
-    'Predictive threat intelligence',
-    'Cost-effective security operations',
-    'Compliance and regulatory support'
-  ];
+    'Real-time threat detection and responseReduced false positives with AI accuracy',
+    '24/7 automated security monitoringPredictive threat intelligence',
+    'Cost-effective security operationsCompliance and regulatory support'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,7 +226,7 @@ const AICybersecurity: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Protect your digital assets with AI-powered cybersecurity that never sleeps
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
                 Start Security Assessment
               </button>
@@ -260,7 +238,6 @@ const AICybersecurity: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AICybersecurity;

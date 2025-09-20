@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
 
 interface FuturisticCardProps {
-  children: React.ReactNode;
-  className?: string;
-  variant?: 'default' | 'gradient' | 'glass' | 'neon' | 'holographic';
-  hoverEffect?: boolean;
-  onClick?: () => void;
+  children: React.ReactNode,
+  className?: string,
+  variant?: 'default' | 'gradient' | 'glass' | 'neon' | 'holographic',
+  hoverEffect?: boolean,
+  onClick?: () => void
 }
 
 export default function FuturisticCard({ 
-  children, 
+  children,
   className = '', 
   variant = 'default',
   hoverEffect = true,
   onClick 
 }: FuturisticCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false),
 
   const baseClasses = `
     relative overflow-hidden rounded-2xl border transition-all duration-500
     ${hoverEffect ? 'cursor-pointer transform-gpu' : ''}
     ${className}
-  `;
+  `,
 
   const variants = {
     default: `
@@ -47,12 +47,12 @@ export default function FuturisticCard({
       border-cyan-400/30 backdrop-blur-sm
       ${hoverEffect ? 'hover:from-cyan-400/20 hover:via-blue-400/20 hover:to-purple-400/20 hover:scale-105' : ''}
     `
-  };
+  },
 
   const glowVariants = {
     initial: { opacity: 0, scale: 0.8 },
     hover: { opacity: 1, scale: 1.2 }
-  };
+  },
 
 const FuturisticCard: React.FC = () => {
   return (
@@ -60,7 +60,7 @@ const FuturisticCard: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">FuturisticCard</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default FuturisticCard;
+export default FuturisticCard,

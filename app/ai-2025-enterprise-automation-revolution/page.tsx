@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025 Enterprise Automation Revolution: The Ultimate Guide';
-  description: 'Discover how AI-powered automation is revolutionizing enterprise operations in 2025. Learn about cutting-edge technologies, implementation strategies, and real-world success stories.';
-  keywords: ['AIEnterprise Automation', 'Digital Transformation2025 Trends', 'Business Intelligence'],
-};
+  title: 'AI 2025 Enterprise Automation Revolution: The Ultimate Guide',
+  description: 'Discover how AI-powered automation is revolutionizing enterprise operations in 2025. Learn about cutting-edge technologies, implementation strategies, and real-world success stories.',
+  keywords: ['AIEnterprise AutomationDigital Transformation2025 Trends', 'Business Intelligence']
+},
 export default function AIEnterpriseAutomation2025Page() {,
   return (,
     <>,
@@ -47,7 +47,7 @@ export default function AIEnterpriseAutomation2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -70,14 +70,14 @@ export default function AIEnterpriseAutomation2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <section id="content" className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
               <h2 className="text-3xl font-bold text-gray-900 mb-8">The Current State of Enterprise AI Automation</h2>,
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Revolutionary Breakthroughs in 2025</h3>,
               <p className="text-gray-600 mb-6">,
-                The enterprise automation landscape has undergone a dramatic transformation in 2025;
+                The enterprise automation landscape has undergone a dramatic transformation in 2025,
                 driven by several key technological breakthroughs that are reshaping how businesses operate.,
               </p>,
               <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">,
@@ -287,7 +287,7 @@ export default function AIEnterpriseAutomation2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Enterprise with AI Automation?</h2>,
@@ -313,4 +313,4 @@ export default function AIEnterpriseAutomation2025Page() {,
         </section>,
       </div>,
     </>,
-  ),}
+  )}

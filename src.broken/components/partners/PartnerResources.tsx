@@ -1,15 +1,15 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast",
 
 interface ResourceItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'image' | 'video' | 'document' | 'link';
-  icon: JSX.Element;
-  url: string;
+  id: string,
+  title: string,
+  description: string,
+  type: 'image' | 'video' | 'document' | 'link',
+  icon: JSX.Element,
+  url: string
 }
 
 export function PartnerResources() {
@@ -62,16 +62,16 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
     }
-  ];
+  ],
 
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
-      variant: "default",
-    });
-  };
+      variant: "default"
+    }),
+  },
 
   return (
     <div className="space-y-6">
@@ -152,11 +152,11 @@ export function PartnerResources() {
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.
             Feel free to reach out if you have questions about promotions, resources, or payment.
           </p>
-          <Button className="bg-zion-purple hover:bg-zion-purple-dark">
+          <Button className="bg-zion-purple hover: bg-zion-purple-dark">
             Contact Partner Support
           </Button>
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

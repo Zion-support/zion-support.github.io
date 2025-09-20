@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   Award, ExternalLink, Github, Globe, Zap, Star, CheckCircle,
   TrendingUp, BarChart3, Cloud, Network, Calendar, Clock, User,
   Search, Filter, ArrowRight, BookOpen, FileText
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function BlogPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const categories = [
     { id: 'all', name: 'All Articles', icon: Globe },
@@ -22,7 +22,7 @@ export default function BlogPage() {
     { id: 'space', name: 'Space Technology', icon: Rocket },
     { id: 'edge', name: 'Edge Computing', icon: Cpu },
     { id: 'insights', name: 'Industry Insights', icon: TrendingUp }
-  ];
+  ],
 
   const blogPosts = [
     {
@@ -36,7 +36,7 @@ export default function BlogPage() {
       readTime: '8 min read',
       image: '/api/placeholder/600/400',
       featured: true,
-      tags: ['AI', 'Autonomous Systems', 'Future of Work', 'Human-AI Collaboration']
+      tags: ['AIAutonomous Systems', 'Future of WorkHuman-AI Collaboration']
     },
     {
       id: 2,
@@ -49,7 +49,7 @@ export default function BlogPage() {
       readTime: '12 min read',
       image: '/api/placeholder/600/400',
       featured: true,
-      tags: ['Quantum Computing', 'Enterprise', 'Innovation', 'Technology Trends']
+      tags: ['Quantum ComputingEnterprise', 'InnovationTechnology Trends']
     },
     {
       id: 3,
@@ -62,7 +62,7 @@ export default function BlogPage() {
       readTime: '10 min read',
       image: '/api/placeholder/600/400',
       featured: false,
-      tags: ['Cybersecurity', 'Quantum Threats', 'Encryption', 'Security']
+      tags: ['CybersecurityQuantum Threats', 'EncryptionSecurity']
     },
     {
       id: 4,
@@ -75,7 +75,7 @@ export default function BlogPage() {
       readTime: '7 min read',
       image: '/api/placeholder/600/400',
       featured: false,
-      tags: ['Edge Computing', 'Digital Transformation', 'IoT', 'Real-time Processing']
+      tags: ['Edge ComputingDigital Transformation', 'IoTReal-time Processing']
     },
     {
       id: 5,
@@ -88,7 +88,7 @@ export default function BlogPage() {
       readTime: '9 min read',
       image: '/api/placeholder/600/400',
       featured: false,
-      tags: ['Space Technology', 'Satellites', 'Innovation', 'Space Exploration']
+      tags: ['Space TechnologySatellites', 'InnovationSpace Exploration']
     },
     {
       id: 6,
@@ -101,7 +101,7 @@ export default function BlogPage() {
       readTime: '11 min read',
       image: '/api/placeholder/600/400',
       featured: false,
-      tags: ['Neural Interfaces', 'BCI', 'Healthcare', 'Technology Innovation']
+      tags: ['Neural InterfacesBCI', 'HealthcareTechnology Innovation']
     },
     {
       id: 7,
@@ -114,7 +114,7 @@ export default function BlogPage() {
       readTime: '6 min read',
       image: '/api/placeholder/600/400',
       featured: false,
-      tags: ['AI Ethics', 'Responsible Innovation', 'Technology Policy', 'Future of AI']
+      tags: ['AI EthicsResponsible Innovation', 'Technology PolicyFuture of AI']
     },
     {
       id: 8,
@@ -127,29 +127,29 @@ export default function BlogPage() {
       readTime: '8 min read',
       image: '/api/placeholder/600/400',
       featured: false,
-      tags: ['Micro SaaS', 'Business Solutions', 'Entrepreneurship', 'Digital Business']
+      tags: ['Micro SaaSBusiness Solutions', 'EntrepreneurshipDigital Business']
     }
-  ];
+  ],
 
   const filteredPosts = blogPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory,
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    return matchesCategory && matchesSearch,
+  }),
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
+  const featuredPosts = blogPosts.filter(post => post.featured),
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
-  };
+    }),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -424,7 +424,7 @@ export default function BlogPage() {
               Get the latest insights on AI, quantum computing, and technology trends 
               delivered directly to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -440,5 +440,5 @@ export default function BlogPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

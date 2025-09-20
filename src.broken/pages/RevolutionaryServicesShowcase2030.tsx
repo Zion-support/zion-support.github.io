@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 export default React.memo(function RevolutionaryServicesShowcase2030 (...args[]) :  {
-import { ArrowRight, import { motion  } from 'framer-motion';
+import { ArrowRight,
+import { motion  } from 'framer-motion',
 export default function Page() {
-) ;
+) ,
 
-  const totalPages = Math.ceil(sortedServices.length / itemsPerPage) ;
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentServices = sortedServices.slice(startIndex, endIndex) ;
+  const totalPages = Math.ceil(sortedServices.length / itemsPerPage) ,
+  const startIndex = (currentPage - 1) * itemsPerPage,
+  const endIndex = startIndex + itemsPerPage,
+  const currentServices = sortedServices.slice(startIndex, endIndex) ,
 
-  const handleServiceSelect = useCallback((service: any) => {;
-    setSelectedService(service) ;
-  };
+  const handleServiceSelect = useCallback((service: any) => {,
+    setSelectedService(service) 
+  },
 
-  const closeModal = () => {;
-    setSelectedService(null) ;
-  };
+  const closeModal = () => {,
+    setSelectedService(null) ,
+  },
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -41,52 +42,24 @@ export default function Page() {
       'Cybersecurity': <Shield className="w-6 h-6" />,
       'Cloud & DevOps': <Cloud className="w-6 h-6" />,
       'Quantum Computing': <Zap className="w-6 h-6" />,
-      'IoT & Edge Computing': <Wifi className="w-6 h-6" />,;
-      'Blockchain & Web3': <Network className="w-6 h-6" />,;
-      'Digital Twin': <Eye className="w-6 h-6" />,;
-      'Space Technology': <Satellite className="w-6 h-6" />,;
-      'Sustainable Technology': <Leaf className="w-6 h-6" />,;
-      'IT Infrastructure': <Server className="w-6 h-6" />,;
-      'Emerging Technology': <Lightbulb className="w-6 h-6" />;
-    };
-    return iconMap[category] || <Rocket className="w-6 h-6" />};
+      'IoT & Edge Computing': <Wifi className="w-6 h-6" />,
+      'Blockchain & Web3': <Network className="w-6 h-6" />,
+      'Digital Twin': <Eye className="w-6 h-6" />,
+      'Space Technology': <Satellite className="w-6 h-6" />,
+      'Sustainable Technology': <Leaf className="w-6 h-6" />,
+      'IT Infrastructure': <Server className="w-6 h-6" />,
+      'Emerging Technology': <Lightbulb className="w-6 h-6" />,
+    },
+    return iconMap[category] || <Rocket className="w-6 h-6" />},
 
   const getCategoryColor = (category: string) => {
     const colorMap: { [key: string]: string } = {
-      'AI & Autonomous Systems': 'from - cyan - 500 to - blue - 500',
-      'AI & Business Intelligence': 'from - purple - 500 to - pink - 500',
-      'AI & Marketing': 'from - green - 500 to - emerald - 500',
-      'AI & Healthcare': 'from - pink - 500 to - red - 500',
-      'AI & Legal Tech': 'from - blue - 500 to - indigo - 500',
-      'AI & Real Estate': 'from - yellow-500 to - orange - 500',
-      'AI & Operations': 'from - gray - 500 to - slate - 500',
-      'AI & Green Tech': 'from - green - 500 to - emerald - 500',
-      'AI & FinTech': 'from - emerald - 500 to - green - 500',
-      'AI & Environmental Tech': 'from - teal - 500 to - green - 500',
-      'AI & Content': 'from - orange - 500 to - red - 500',
-      'AI & Customer Support': 'from - blue - 500 to - purple - 500',
-      'AI & HR': 'from - indigo - 500 to - blue - 500',
-      'AI & Research': 'from - purple - 500 to - violet - 500',
-      'AI & Metaverse': 'from - purple - 500 to - indigo - 500',
-      'AI & Space Tech': 'from - indigo - 500 to - purple - 500',
-      'AI & Development': 'from - cyan - 500 to - blue - 500',
-      'AI & Education': 'from - blue - 500 to - indigo - 500',
-      'AI & Entertainment': 'from - purple - 500 to - pink - 500',
-      'Cybersecurity': 'from - red - 500 to - orange - 500',
-      'Cloud & DevOps': 'from - blue - 500 to - cyan - 500',
-      'Quantum Computing': 'from - indigo - 500 to - purple - 500',
-      'IoT & Edge Computing': 'from - teal - 500 to - cyan - 500',;
-      'Blockchain & Web3': 'from - yellow-500 to - orange - 500',;
-      'Digital Twin': 'from - blue - 500 to - indigo - 500',;
-      'Space Technology': 'from - purple - 500 to - pink - 500',;
-      'Sustainable Technology': 'from - green - 500 to - teal - 500',;
-      'IT Infrastructure': 'from - slate - 500 to - gray - 500',;
-      'Emerging Technology': 'from - violet - 500 to - purple - 500';
-    };
-    return colorMap[category] || 'from - gray - 500 to - slate - 500'};
+      'AI & Autonomous Systems': 'from - cyan - 500 to - blue - 500AI & Business Intelligence': 'from - purple - 500 to - pink - 500AI & Marketing': 'from - green - 500 to - emerald - 500AI & Healthcare': 'from - pink - 500 to - red - 500AI & Legal Tech': 'from - blue - 500 to - indigo - 500AI & Real Estate': 'from - yellow-500 to - orange - 500AI & Operations': 'from - gray - 500 to - slate - 500AI & Green Tech': 'from - green - 500 to - emerald - 500AI & FinTech': 'from - emerald - 500 to - green - 500AI & Environmental Tech': 'from - teal - 500 to - green - 500AI & Content': 'from - orange - 500 to - red - 500AI & Customer Support': 'from - blue - 500 to - purple - 500AI & HR': 'from - indigo - 500 to - blue - 500AI & Research': 'from - purple - 500 to - violet - 500AI & Metaverse': 'from - purple - 500 to - indigo - 500AI & Space Tech': 'from - indigo - 500 to - purple - 500AI & Development': 'from - cyan - 500 to - blue - 500AI & Education': 'from - blue - 500 to - indigo - 500AI & Entertainment': 'from - purple - 500 to - pink - 500Cybersecurity': 'from - red - 500 to - orange - 500Cloud & DevOps': 'from - blue - 500 to - cyan - 500Quantum Computing': 'from - indigo - 500 to - purple - 500IoT & Edge Computing': 'from - teal - 500 to - cyan - 500Blockchain & Web3': 'from - yellow-500 to - orange - 500Digital Twin': 'from - blue - 500 to - indigo - 500Space Technology': 'from - purple - 500 to - pink - 500Sustainable Technology': 'from - green - 500 to - teal - 500IT Infrastructure': 'from - slate - 500 to - gray - 500Emerging Technology': 'from - violet - 500 to - purple - 500',
+    },
+    return colorMap[category] || 'from - gray - 500 to - slate - 500'},
 
       return sum + roiNumber}
-    return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
+    return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length,
 
   return (<>
       <SEO
@@ -142,7 +115,7 @@ export default function Page() {
         </section>
 
         {/* Contact Information Banner */}
-        <section className="bg-gradient - to - r from - purple - 600 to - blue - 600 py-8">;
+        <section className="bg-gradient - to - r from - purple - 600 to - blue - 600 py-8">,
           <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
             <div  className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-center text-white">
               <div  className="flex items - center justify - center space - x-3">
@@ -162,7 +135,7 @@ export default function Page() {
         </section>
 
         {/* Services Showcase Section */}
-        <section className="py-20">;
+        <section className="py-20">,
           <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
             {/* Filters and Search */}
             <div  className="mb-12">
@@ -219,8 +192,8 @@ export default function Page() {
               </div>
 
               {/* Category Filters */}
-              <div  className="flex flex - wrap gap-4 mb-8">;
-                {categories.map((category) => (;
+              <div  className="flex flex - wrap gap-4 mb-8">,
+                {categories.map((category) => (,
                   <button     key={category}
                     onClick={ () => setActiveCategory(category) }
                     className={`px-6 py-3 rounded-full transition - all duration - 300 ${activeCategory === category
@@ -233,7 +206,7 @@ export default function Page() {
               </div>
 
               {/* Results Summary */}
-              <div  className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-lg p -4">;
+              <div  className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-lg p -4">,
                 <div  className="flex flex - wrap items - center justify - between gap-4 text-white">
                   <div  className="flex items - center space - x-4">
                     <span className="text-sm text-gray -300">Showing {filteredServices.length} of {REVOLUTIONARY_SERVICES_2030.length} revolutionary services</span>
@@ -246,12 +219,12 @@ export default function Page() {
                     <span className="text-green - 400 font -semibold">${filteredServices.reduce((sum, service) => sum + service.price, 0) .toLocaleString () }</span>
                   </div>
                 </div>
-              </div>;
+              </div>,
             </div>
 
             {/* Services Grid */}
-            <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">;
-              {currentServices.map((service, index) => (;
+            <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">,
+              {currentServices.map((service, index) => (,
                 <motion.div
                   key={service.id}
                   initial = {
@@ -330,9 +303,9 @@ export default function Page() {
                       <span className="text-purple - 400 text-sm font -semibold">
                         {service.category}
                       </span>
-                      <ArrowUpRight className="w-5 h-5 text-purple - 400 group - hover:translate - x-1 group - hover:-translate - y-1 transition -transform" />
+                      <ArrowUpRight className="w-5 h-5 text-purple - 400 group - hover: translate - x-1 group - hover:-translate - y-1 transition -transform" />
                     </div>
-                  </div>;
+                  </div>,
                 </motion.div>) ) }
             </div>
 
@@ -368,7 +341,7 @@ export default function Page() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-gradient - to - r from - purple - 900 / 50 to - blue -900 / 50">;
+        <section className="py-20 bg-gradient - to - r from - purple - 900 / 50 to - blue -900 / 50">,
           <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial = {
@@ -453,18 +426,18 @@ export default function Page() {
               <motion.div
                 initial = {
   { opacity: 0,
-  x: 20 ;
+  x: 20 
 
 }}
                 whileInView = {
   { opacity: 1,
-  x: 0 ;
+  x: 0 
 
 }}
                 transition={{ duration: 0.8 }}
                 className="space - y-8"
 
-                <div  className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-2xl p -8">;
+                <div  className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-2xl p -8">,
                   <h3 className="text-2xl font - bold text-white mb-6">Contact Information</h3>
                   <div  className="space - y-4">
                     <div  className="flex items - center space - x-4">
@@ -630,7 +603,7 @@ export default function Page() {
                       {competitor}
                   </span>) ) }
                 </div>
-              </div>;
+              </div>,
 
               <div  className="flex flex - col sm:flex - row gap-4">
                 <a
@@ -641,13 +614,13 @@ export default function Page() {
                 </a>
                 <a
                   href={`tel:${selectedService.contactInfo.phone}`}
-                  className="flex - 1 border-2 border-white / 30 text-white py-4 px-6 rounded-lg font - semibold text-center hover:bg-white / 10 transition - all duration -300"
+                  className="flex - 1 border-2 border-white / 30 text-white py-4 px-6 rounded-lg font - semibold text-center hover: bg-white / 10 transition - all duration -300"
 
                   Call Now
                 </a>
               </div>
-            </div>;
-          </motion.div>;
-        </div>;) };
-    </>;) ;
+            </div>,
+          </motion.div>,
+        </div>,) },
+    </>,) ,
 }

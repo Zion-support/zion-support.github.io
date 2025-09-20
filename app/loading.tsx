@@ -7,5 +7,5 @@ export default function Loading() {
         <p className="text-gray-400">Preparing the future...</p>
       </div>
     </div>
-  );
+  ),
 }

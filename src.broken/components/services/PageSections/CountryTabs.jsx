@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { const [activeCountry, setActiveCountry] = useState('us'); const currentCountry = countries.find(c => c.id === activeCountry); return (<section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Header */ }"
+import React, { useState } from 'react',
+import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { const [activeCountry, setActiveCountry] = useState('us'), const currentCountry = countries.find(c => c.id === activeCountry), return (<section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Header */ }"
         <div className="text-center mb-16">"
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Global Service Coverage
@@ -21,7 +21,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { co
 "
               <span className="text-2xl">{country.flag}</span>
               <span>{country.name}</span>
-            </button>;
+            </button>,
           ))}
         </div>
 
@@ -74,7 +74,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { co
                     </div>
 
                     {/* Contact Information */}"
-                    <div className="space-y-3">;"
+                    <div className="space-y-3">,"
                       <div className="flex items-center space-x-3">"
                         <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">"
                           <Phone className="w-4 h-4 text-blue-600" />
@@ -104,7 +104,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { co
                           <p className="font-semibold text-gray-900">{region.contact.hours}</p>
                         </div>
                       </div>
-                    </div>;
+                    </div>,
 
                     {/* CTA Button */}"
                     <div className="mt-6">"
@@ -115,7 +115,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { co
                   </div>
                 ))}
               </div>
-            </div>;
+            </div>,
 
             {/* Global Benefits */}"
             <div className="bg-gray-50 border-t border-gray-200 p-8">"
@@ -181,5 +181,5 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => { co
         </div>
       </div>
     </section>
-  )};
+  )},
 '"`

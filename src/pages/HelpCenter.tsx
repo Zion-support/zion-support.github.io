@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Search, 
+  Search,
   MessageCircle, 
   BookOpen, 
   Settings, 
@@ -12,157 +12,108 @@ import {
   ChevronRight,
   ChevronDown,
   ExternalLink
-} from 'lucide-react';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 const helpCategories = [
-  { id: 'getting-started', title: 'Getting Started' },
-  { id: 'account', title: 'Account & Billing' },
-  { id: 'services', title: 'Services & Features' },
-  { id: 'technical', title: 'Technical Support' },
+  { id: 'getting-started', title: 'Getting Started' };
+  { id: 'account', title: 'Account & Billing' };
+  { id: 'services', title: 'Services & Features' };
+  { id: 'technical', title: 'Technical Support' };
   { id: 'security', title: 'Security & Privacy' }
 ];
-
 const helpSections = [
   {
-    id: 'getting-started',
-    title: 'Getting Started',
-    description: 'Learn the basics and get up and running quickly',
-    icon: BookOpen,
-    articles: [
+    id: 'getting-started',title: 'Getting Started',description: 'Learn the basics and get up and running quickly',icon: BookOpen,articles: [
       {
-        title: 'Welcome to Zion Tech Group',
-        description: 'Your complete guide to getting started with our services',
-        url: '/help/getting-started/welcome'
-      },
+        title: 'Welcome to Zion Tech Group',description: 'Your complete guide to getting started with our services',url: '/help/getting-started/welcome'
+      };
       {
-        title: 'First Steps Setup',
-        description: 'Quick setup guide for new users',
-        url: '/help/getting-started/first-steps'
-      },
+        title: 'First Steps Setup',description: 'Quick setup guide for new users',url: '/help/getting-started/first-steps'
+      };
       {
-        title: 'Account Configuration',
-        description: 'Configure your account settings and preferences',
-        url: '/help/getting-started/account-config'
+        title: 'Account Configuration',description: 'Configure your account settings and preferences',url: '/help/getting-started/account-config'
       }
     ]
-  },
+  };
   {
-    id: 'services',
-    title: 'Services & Features',
-    description: 'Explore our comprehensive range of services',
-    icon: Cloud,
-    articles: [
+    id: 'services',title: 'Services & Features',description: 'Explore our comprehensive range of services',icon: Cloud,articles: [
       {
-        title: 'AI Services Overview',
-        description: 'Understanding our AI-powered solutions',
-        url: '/help/services/ai-overview'
-      },
+        title: 'AI Services Overview',description: 'Understanding our AI-powered solutions',url: '/help/services/ai-overview'
+      };
       {
-        title: 'Cloud Infrastructure',
-        description: 'Cloud deployment and management guides',
-        url: '/help/services/cloud-infrastructure'
-      },
+        title: 'Cloud Infrastructure',description: 'Cloud deployment and management guides',url: '/help/services/cloud-infrastructure'
+      };
       {
-        title: 'Cybersecurity Solutions',
-        description: 'Security features and best practices',
-        url: '/help/services/cybersecurity'
+        title: 'Cybersecurity Solutions',description: 'Security features and best practices',url: '/help/services/cybersecurity'
       }
     ]
-  },
+  };
   {
-    id: 'technical',
-    title: 'Technical Support',
-    description: 'Technical documentation and troubleshooting',
-    icon: Settings,
-    articles: [
+    id: 'technical',title: 'Technical Support',description: 'Technical documentation and troubleshooting',icon: Settings,articles: [
       {
-        title: 'API Documentation',
-        description: 'Complete API reference and examples',
-        url: '/help/technical/api-docs'
-      },
+        title: 'API Documentation',description: 'Complete API reference and examples',url: '/help/technical/api-docs'
+      };
       {
-        title: 'Integration Guides',
-        description: 'Step-by-step integration tutorials',
-        url: '/help/technical/integrations'
-      },
+        title: 'Integration Guides',description: 'Step-by-step integration tutorials',url: '/help/technical/integrations'
+      };
       {
-        title: 'Troubleshooting',
-        description: 'Common issues and solutions',
-        url: '/help/technical/troubleshooting'
+        title: 'Troubleshooting',description: 'Common issues and solutions',url: '/help/technical/troubleshooting'
       }
     ]
-  },
+  };
   {
-    id: 'security',
-    title: 'Security & Privacy',
-    description: 'Security features and privacy information',
-    icon: Shield,
-    articles: [
+    id: 'security',title: 'Security & Privacy',description: 'Security features and privacy information',icon: Shield,articles: [
       {
-        title: 'Security Best Practices',
-        description: 'How to keep your account secure',
-        url: '/help/security/best-practices'
-      },
+        title: 'Security Best Practices',description: 'How to keep your account secure',url: '/help/security/best-practices'
+      };
       {
-        title: 'Privacy Policy',
-        description: 'Understanding your data privacy',
-        url: '/help/security/privacy-policy'
-      },
+        title: 'Privacy Policy',description: 'Understanding your data privacy',url: '/help/security/privacy-policy'
+      };
       {
-        title: 'Compliance Information',
-        description: 'Security certifications and compliance',
-        url: '/help/security/compliance'
+        title: 'Compliance Information',description: 'Security certifications and compliance',url: '/help/security/compliance'
       }
     ]
   }
 ];
-
 const popularQuestions = [
   {
-    question: 'How do I get started with Zion Tech Group services?',
-    answer: 'Getting started is easy! Simply create an account, choose your service plan, and follow our step-by-step setup guide. Our team is also available for personalized onboarding assistance.',
+    question: 'How do I get started with Zion Tech Group services?',answer: 'Getting started is easy! Simply create an account, choose your service plan, and follow our step-by-step setup guide. Our team is also available for personalized onboarding assistance.',
     category: 'getting-started'
-  },
+  };
   {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit cards, PayPal, and bank transfers for enterprise clients. All payments are processed securely through our payment partners.',
+    question: 'What payment methods do you accept?',answer: 'We accept all major credit cards, PayPal, and bank transfers for enterprise clients. All payments are processed securely through our payment partners.',
     category: 'account'
-  },
+  };
   {
-    question: 'How secure are my data and applications?',
-    answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, multi-factor authentication, and regular security audits to protect your data.',
+    question: 'How secure are my data and applications?',answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, multi-factor authentication, and regular security audits to protect your data.',
     category: 'security'
-  },
+  };
   {
-    question: 'Do you provide 24/7 support?',
-    answer: 'Yes! Our technical support team is available 24/7 to help you with any questions or issues. We offer multiple support channels including live chat, email, and phone support.',
+    question: 'Do you provide 24/7 support?',answer: 'Yes! Our technical support team is available 24/7 to help you with any questions or issues. We offer multiple support channels including live chat, email, and phone support.',
     category: 'technical'
   }
 ];
-
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedSections, setExpandedSections] = useState(new Set(['getting-started']));
-
   const toggleSection = (sectionId: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionId)) {
-      newExpanded.delete(sectionId);
+      newExpanded.delete(sectionId)
     } else {
-      newExpanded.add(sectionId);
+      newExpanded.add(sectionId),
     }
-    setExpandedSections(newExpanded);
-  };
+    setExpandedSections(newExpanded),
+  },
 
   const filteredQuestions = popularQuestions.filter(q => 
     selectedCategory === 'all' || q.category === selectedCategory
-  );
+  ),
 
   const filteredSections = helpSections.filter(section =>
     selectedCategory === 'all' || section.id === selectedCategory
-  );
+  ),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -232,28 +183,16 @@ export default function HelpCenter() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
               {
-                icon: MessageCircle,
-                title: 'Live Chat',
-                description: 'Get instant help from our support team',
-                color: 'from-blue-500 to-cyan-500'
-              },
+                icon: MessageCircle,title: 'Live Chat',description: 'Get instant help from our support team',color: 'from-blue-500 to-cyan-500'
+              };
               {
-                icon: BookOpen,
-                title: 'Documentation',
-                description: 'Comprehensive guides and tutorials',
-                color: 'from-purple-500 to-pink-500'
-              },
+                icon: BookOpen,title: 'Documentation',description: 'Comprehensive guides and tutorials',color: 'from-purple-500 to-pink-500'
+              };
               {
-                icon: Users,
-                title: 'Community',
-                description: 'Connect with other users and experts',
-                color: 'from-green-500 to-emerald-500'
-              },
+                icon: Users,title: 'Community',description: 'Connect with other users and experts',color: 'from-green-500 to-emerald-500'
+              };
               {
-                icon: Zap,
-                title: 'Quick Start',
-                description: 'Fast setup guides for new users',
-                color: 'from-orange-500 to-red-500'
+                icon: Zap,title: 'Quick Start',description: 'Fast setup guides for new users',color: 'from-orange-500 to-red-500'
               }
             ].map((option, index) => (
               <motion.div
@@ -439,9 +378,9 @@ export default function HelpCenter() {
                   <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
                   <div className="space-y-3">
                     {[
-                      { title: 'API Documentation', url: '/docs/api' },
-                      { title: 'Status Page', url: '/status' },
-                      { title: 'Release Notes', url: '/releases' },
+                      { title: 'API Documentation', url: '/docs/api' };
+                      { title: 'Status Page', url: '/status' };
+                      { title: 'Release Notes', url: '/releases' };
                       { title: 'Security', url: '/security' }
                     ].map((link, index) => (
                       <a

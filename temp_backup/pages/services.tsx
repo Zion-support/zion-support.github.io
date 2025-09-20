@@ -1,46 +1,46 @@
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { newRealServices } from '../data/new-real-services';
-import { industryRealServices } from '../data/industry-real-services';
-import { professionalServices } from '../data/professional-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { emergingTechnologyServices } from '../data/emerging-technology-services';
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
-import { curatedMarketServices } from '../data/curated-market-services';
-import { realMarketServices } from '../data/real-market-services';
-import { new2025Services } from '../data/new-2025-services';
-import { newRealInnovations } from '../data/new-real-innovations';
-import { serviceExpansions2025 } from '../data/service-expansions-2025';
-import { newOperationalServices2025 } from '../data/new-operational-services-2025';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
-import { extraServices } from '../data/extra-services';
-import { newlyAddedServices } from '../data/newly-added-services';
-import { moreRealServices2025 } from '../data/more-real-services-2025';
-import { verified2025Additions } from '../data/verified-2025-additions';
-import { realServicesQ12025 } from '../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { quantumSpaceServices } from '../data/quantum-space-services',
+import { enterpriseITServices } from '../data/enterprise-it-services',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { additionalEnhancedServices } from '../data/additional-real-services',
+import { newRealServices } from '../data/new-real-services',
+import { industryRealServices } from '../data/industry-real-services',
+import { professionalServices } from '../data/professional-services',
+import { nextGenerationAIServices } from '../data/next-generation-ai-services',
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',
+import { marketValidatedServices } from '../data/market-validated-services',
+import { emergingTechnologyServices } from '../data/emerging-technology-services',
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions',
+import { curatedMarketServices } from '../data/curated-market-services',
+import { realMarketServices } from '../data/real-market-services',
+import { new2025Services } from '../data/new-2025-services',
+import { newRealInnovations } from '../data/new-real-innovations',
+import { serviceExpansions2025 } from '../data/service-expansions-2025',
+import { newOperationalServices2025 } from '../data/new-operational-services-2025',
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2',
+import { innovative2025Services } from '../data/innovative-2025-services',
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services',
+import { extraServices } from '../data/extra-services',
+import { newlyAddedServices } from '../data/newly-added-services',
+import { moreRealServices2025 } from '../data/more-real-services-2025',
+import { verified2025Additions } from '../data/verified-2025-additions',
+import { realServicesQ12025 } from '../data/real-services-q1-2025',
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025',
+import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025',
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',
+import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services',
+import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services',
+import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services',
+import { ultimate2026Services } from '../data/ultimate-2026-services',
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',
+import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4',
+import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4',
+import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4',
+import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4',
 
 export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(''),
 
   // Combine all services
   const allServices = [
@@ -94,7 +94,7 @@ export default function ServicesPage() {
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV4,
     ...innovative2026AIServicesV4
-  ];
+  ],
 
   // Categories for filtering
   const categories = [
@@ -109,27 +109,27 @@ export default function ServicesPage() {
     { id: 'biotech', name: 'Biotech & Healthcare', icon: <Dna className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Biotech') || s.category.includes('Healthcare')).length },
     { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
-  ];
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+  ],
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Search, Filter, Grid, List, Star, 
   TrendingUp, Zap, Brain, Shield, Globe,
   ArrowRight, ExternalLink, Check, Cpu
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-import { advancedAIServices } from '../data/advanced-ai-services';
-import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services';
+} from 'lucide-react',
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { extraServices } from '../data/extra-services',
+import { additionalEnhancedServices } from '../data/additional-real-services',
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
+import { advancedAIServices } from '../data/advanced-ai-services',
+import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services',
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
 
   // Combine all services
   const allServices = useMemo(() => [
@@ -139,7 +139,7 @@ import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech
     ...innovativeMicroSaasServices,
     ...advancedAIServices,
     ...blockchainEmergingTechServices
-  ], []);
+  ], []),
 
     }
 
@@ -147,29 +147,28 @@ import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare(b.name),
         case 'price': {
-          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
-          return priceA - priceB;
+          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')),
+          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          return priceA - priceB,
         }
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0),
         case 'popularity':
-        default:
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        default: return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       }
-    });
+    }),
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+    return filtered,
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
 const services: React.FC = () => {
   return (
@@ -186,7 +185,7 @@ const services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default services;
+export default services,

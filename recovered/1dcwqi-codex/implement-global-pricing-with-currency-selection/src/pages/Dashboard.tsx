@@ -1,36 +1,36 @@
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CommunityDiscussion } from "@/components/CommunityDiscussion";
-import { Badge } from "@/components/ui/badge";
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications";
-import { NotificationBell } from "@/components/NotificationBell";
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CommunityDiscussion } from "@/components/CommunityDiscussion",
+import { Badge } from "@/components/ui/badge",
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
+import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
+import { NotificationBell } from "@/components/NotificationBell",
+import { useToast } from "@/hooks/use-toast",
+import { Link } from "react-router-dom",
 
 export default function Dashboard() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
 
-  if (!user) return null;
+  if (!user) return null,
 
   const handleTestNotification = async () => {
-    const result = await createTestNotification(user.id);
+    const result = await createTestNotification(user.id),
     if (result.success) {
       toast({
         title: "Test notification created",
-        description: "Check your notification center",
-      });
+        description: "Check your notification center"
+      }),
     } else {
       toast({
         title: "Error creating test notification",
         description: "Something went wrong",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     }
-  };
+  },
 
   return (
     <>
@@ -111,11 +111,11 @@ export default function Dashboard() {
                           userId: user.id,
                           missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
-                        });
+                        }),
                         toast({
                           title: "Onboarding notification sent",
                           description: "Check your notification center"
-                        });
+                        }),
                       }}
                     >
                       <Settings size={16} className="text-zion-purple" />
@@ -132,11 +132,11 @@ export default function Dashboard() {
                           message: "We've added a new notification center to help you stay updated with important information.",
                           actionUrl: "/notifications",
                           actionText: "Explore Now"
-                        });
+                        }),
                         toast({
                           title: "System notification sent",
                           description: "Check your notification center"
-                        });
+                        }),
                       }}
                     >
                       <Bell size={16} className="text-yellow-500" />
@@ -235,5 +235,5 @@ export default function Dashboard() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

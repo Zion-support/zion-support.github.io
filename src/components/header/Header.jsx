@@ -1,62 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Logo } from '../Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
-import { MainNavigation } from '@/layout/MainNavigation';
-import { MobileMenu } from './MobileMenu';
-import { useAuth } from '@/hooks/useAuth';
-import { useWhitelabel } from '@/context/WhitelabelContext';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Logo } from "../Logo";
+import { UserMenu } from "./UserMenu";
+import { LanguageSelector } from "./LanguageSelector";
+import { MainNavigation } from "@/layout/MainNavigation";
+import { MobileMenu } from "./MobileMenu";
+import { useAuth } from "@/hooks/useAuth";
+import { useWhitelabel } from "@/context/WhitelabelContext";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
-
 export function Header({ hideLogin = false, customLogo, customTheme }) {
-  const { user } = useAuth();
-  const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();
-  const [query, setQuery] = useState("");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const searchSuggestions = generateSearchSuggestions();
+  const { user } = useAuth(),
+  const { isWhitelabel, primaryColor } = useWhitelabel(),
+  const navigate = useNavigate(),
+  const [query, setQuery] = useState(""),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const searchSuggestions = generateSearchSuggestions(),
 
-  // If we have a white-label tenant and no specific customTheme is provided,
+  // If we have a white-label tenant and no specific customTheme is provided;
   // use the tenant's primary color
   const effectiveTheme = customTheme || (isWhitelabel ? {
-    primaryColor,
+    primaryColor;
     backgroundColor: '#000000', // Default dark background
     textColor: '#ffffff', // Default light text
   } : undefined);
-
   const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor,
-    color: effectiveTheme.textColor,
-    borderColor: `${effectiveTheme.primaryColor}20`
+    backgroundColor: effectiveTheme.backgroundColor,color: effectiveTheme.textColor,borderColor: `${effectiveTheme.primaryColor}20`
   } : {};
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (query.trim()) {
-      navigate(`/search?q=${encodeURIComponent(query)}`);
-      setQuery("");
+      navigate(`/search?q=${encodeURIComponent(query)}`),
+      setQuery(""),
     }
-  };
+  },
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    setIsMobileMenuOpen(!isMobileMenuOpen),
+  },
 
   return (
     <header 
@@ -68,12 +63,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       style={headerStyle}
     >
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
+      <div className="absolute inset-0 bg-[url('data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
       
       {/* Glowing border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50"/>
       
-      <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
+      <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}/>
 
         {/* Desktop Navigation */}
@@ -90,7 +85,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
                 navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery("");
+                setQuery(""),
               }} 
               searchSuggestions={searchSuggestions}
             />
@@ -103,7 +98,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         {/* Right Side Actions */}
         <div className="flex items-center gap-3">
           {/* AI Assistant Button */}
-          <button className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
+          <button className="hidden sm: flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
             <Sparkles className="h-4 w-4 group-hover:animate-pulse"/>
             <span className="text-sm font-medium">AI Assistant</span>
           </button>
@@ -130,7 +125,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
                 navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery("");
+                setQuery(""),
               }} 
               searchSuggestions={searchSuggestions} 
               placeholder="Search services, talent, equipment..."

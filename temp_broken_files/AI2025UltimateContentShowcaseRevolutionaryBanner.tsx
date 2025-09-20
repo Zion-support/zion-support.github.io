@@ -1,71 +1,71 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
-  SparklesIcon;
-  RocketLaunchIcon;
-  ChartBarIcon;
-  CheckCircleIcon;
-  ArrowRightIcon;
-  StarIcon;
-  FireIcon;
-  BoltIcon,
-} from '@heroicons/react/24/outline';
+  SparklesIcon,
+  RocketLaunchIcon,
+  ChartBarIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  StarIcon,
+  FireIcon,
+  BoltIcon
+} from '@heroicons/react/24/outline',
 const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {,
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
   const features = [,
     {,
-      icon: <SparklesIcon className="w-8 h-8" />;
-      title: "Revolutionary Content Generation";
-      description: "50000% ROI with neural content architecture";
-      metric: "50000%";
-      metricLabel: "ROI Increase",};
+      icon: <SparklesIcon className="w-8 h-8" />,
+      title: "Revolutionary Content Generation",
+      description: "50000% ROI with neural content architecture",
+      metric: "50000%",
+      metricLabel: "ROI Increase"},
     {,
-      icon: <BoltIcon className="w-8 h-8" />;
-      title: "Quantum-Enhanced Processing";
-      description: "1000x faster content generation";
-      metric: "1000x";
-      metricLabel: "Speed Boost",};
+      icon: <BoltIcon className="w-8 h-8" />,
+      title: "Quantum-Enhanced Processing",
+      description: "1000x faster content generation",
+      metric: "1000x",
+      metricLabel: "Speed Boost"},
     {,
-      icon: <ChartBarIcon className="w-8 h-8" />;
-      title: "Enterprise Intelligence";
-      description: "98% accuracy with autonomous optimization";
-      metric: "98%";
-      metricLabel: "Accuracy Rate",};
+      icon: <ChartBarIcon className="w-8 h-8" />,
+      title: "Enterprise Intelligence",
+      description: "98% accuracy with autonomous optimization",
+      metric: "98%",
+      metricLabel: "Accuracy Rate"},
     {,
-      icon: <FireIcon className="w-8 h-8" />;
-      title: "Revolutionary Breakthrough";
-      description: "Transform your content strategy today";
-      metric: "340%";
-      metricLabel: "Efficiency Gain",}
-  ];
+      icon: <FireIcon className="w-8 h-8" />,
+      title: "Revolutionary Breakthrough",
+      description: "Transform your content strategy today",
+      metric: "340%",
+      metricLabel: "Efficiency Gain"}
+  ],
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }, 4000),
+    return () => clearInterval(interval),
+  }, []),
   const containerVariants = {,
-    hidden: { opacity: 0, y: 50 ,};
+    hidden: { opacity: 0, y: 50 },
     visible: {,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.2,}
+        duration: 0.8,
+        staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { opacity: 0, y: 30 ,};
+    hidden: { opacity: 0, y: 30 },
     visible: {,
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.6 ,}
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
-  };
+  },
   return (,
     <div>,
       {isVisible && (,
@@ -94,7 +94,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {,
                 neural architectures and quantum-enhanced processing.,
               </p>,
             </div>,
-            {/* Interactive Feature Showcase */,}
+            {/* Interactive Feature Showcase */}
               <div className="space-y-8">,
                 <h2 className="text-3xl md: text-4xl font-bold mb-8">,
                   Revolutionary Features,
@@ -106,12 +106,12 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {,
                       className={`p-6 rounded-2xl border-2 transition-all duration-500 cursor-pointer ${,
                         currentFeature === index,
                           ? 'border-yellow-400 bg-yellow-400/10 shadow-2xl scale-105',
-                          : 'border-white/20 bg-white/5 hover: border-white/40',}`}
+                          : 'border-white/20 bg-white/5 hover: border-white/40'}`}
                       onClick={() => setCurrentFeature(index)}
                     >,
                       <div className="flex items-start space-x-4">,
                         <div className={`p-3 rounded-xl ${,
-                          currentFeature === index ? 'bg-yellow-400 text-black' : 'bg-white/10',
+                          currentFeature === index ? 'bg-yellow-400 text-black' : 'bg-white/10'
                         }`}>,
                           {feature.icon}
                         </div>,
@@ -159,7 +159,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Success Metrics */,}
+            {/* Success Metrics */}
               <div className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20">,
                 <div className="text-4xl font-bold text-yellow-400 mb-2">50000%</div>,
                 <div className="text-gray-300">Average ROI</div>,
@@ -209,14 +209,14 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Floating Elements */,}
+          {/* Floating Elements */}
           <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400 rounded-full animate-ping" />,
           <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />,
           <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce" />,
         </divsection>,
       )}
     </div>,
-  );
-};
-export default AI2025UltimateContentShowcaseRevolutionaryBanner;
+  ),
+},
+export default AI2025UltimateContentShowcaseRevolutionaryBanner,
 </div></div></div></div>,

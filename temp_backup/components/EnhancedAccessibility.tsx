@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Eye, EyeOff, Keyboard, MousePointer, 
   Contrast, Type, ZoomIn, ZoomOut, RotateCcw
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  zoomLevel: number;
+  highContrast: boolean,
+  largeText: boolean,
+  reducedMotion: boolean,
+  screenReader: boolean,
+  keyboardNavigation: boolean,
+  zoomLevel: number
 }
 
 const EnhancedAccessibility: React.FC = () => {
@@ -20,7 +20,7 @@ const EnhancedAccessibility: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedAccessibility</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedAccessibility;
+export default EnhancedAccessibility,

@@ -1,23 +1,23 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, 
   Sparkles, Atom, Dna, Cpu, Target, Microscope,
   Users, Briefcase, BookOpen, MessageCircle, Globe,
   ExternalLink, Award, TrendingDown, Eye, Lock
-} from 'lucide-react';
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2032 from '../components/layout/UltraFuturisticFooter2032';
+} from 'lucide-react',
+import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032',
+import UltraFuturisticFooter2032 from '../components/layout/UltraFuturisticFooter2032',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const pricingCategories = [
   {
@@ -30,16 +30,16 @@ const pricingCategories = [
         name: 'AI Consciousness Evolution Platform',
         ourPrice: '$19,999/month',
         marketRange: '$15,000 - $50,000/month',
-        competitors: ['OpenAI (Research only)', 'Anthropic (Research only)', 'No commercial platforms'],
-        advantages: ['5-year technology advantage', 'Commercial deployment', 'Validated consciousness algorithms'],
+        competitors: ['OpenAI (Research only)Anthropic (Research only)', 'No commercial platforms'],
+        advantages: ['5-year technology advantageCommercial deployment', 'Validated consciousness algorithms'],
         link: '/ai-consciousness-evolution-platform'
       },
       {
         name: 'AI Emotional Intelligence Platform',
         ourPrice: '$3,999/month',
         marketRange: '$2,000 - $8,000/month',
-        competitors: ['Affectiva', 'Emotient', 'Limited emotion AI'],
-        advantages: ['Real-time emotion analysis', 'Advanced psychology integration', 'Commercial applications'],
+        competitors: ['AffectivaEmotient', 'Limited emotion AI'],
+        advantages: ['Real-time emotion analysisAdvanced psychology integration', 'Commercial applications'],
         link: '/ai-emotional-intelligence-platform'
       }
     ]
@@ -54,16 +54,16 @@ const pricingCategories = [
         name: 'Quantum DNA Computing Platform',
         ourPrice: '$25,999/month',
         marketRange: '$20,000 - $100,000/month',
-        competitors: ['IBM Quantum', 'Google Quantum', 'No DNA integration'],
-        advantages: ['7-year technology advantage', 'Molecular computing', 'Biotech integration'],
+        competitors: ['IBM QuantumGoogle Quantum', 'No DNA integration'],
+        advantages: ['7-year technology advantageMolecular computing', 'Biotech integration'],
         link: '/quantum-dna-computing-platform'
       },
       {
         name: 'Quantum Internet Security Gateway',
         ourPrice: '$15,999/month',
         marketRange: '$10,000 - $30,000/month',
-        competitors: ['Traditional encryption', 'Limited quantum security'],
-        advantages: ['Unbreakable encryption', 'Quantum key distribution', 'Future-proof security'],
+        competitors: ['Traditional encryptionLimited quantum security'],
+        advantages: ['Unbreakable encryptionQuantum key distribution', 'Future-proof security'],
         link: '/quantum-internet-security-gateway'
       }
     ]
@@ -78,16 +78,16 @@ const pricingCategories = [
         name: 'Autonomous DevOps Platform',
         ourPrice: '$799/month',
         marketRange: '$500 - $2,000/month',
-        competitors: ['Jenkins', 'GitLab CI', 'Limited automation'],
-        advantages: ['Fully autonomous operations', 'Self-healing systems', '4-year technology advantage'],
+        competitors: ['JenkinsGitLab CI', 'Limited automation'],
+        advantages: ['Fully autonomous operationsSelf-healing systems', '4-year technology advantage'],
         link: '/autonomous-devops-platform'
       },
       {
         name: 'Zero Trust Network Architecture',
         ourPrice: '$599/month',
         marketRange: '$400 - $1,500/month',
-        competitors: ['Palo Alto Networks', 'Cisco', 'Traditional security'],
-        advantages: ['Advanced zero-trust', 'Adaptive security', 'Compliance automation'],
+        competitors: ['Palo Alto NetworksCisco', 'Traditional security'],
+        advantages: ['Advanced zero-trustAdaptive security', 'Compliance automation'],
         link: '/zero-trust-network-architecture'
       }
     ]
@@ -102,16 +102,16 @@ const pricingCategories = [
         name: 'Space Mining Automation Platform',
         ourPrice: '$45,999/month',
         marketRange: '$30,000 - $200,000/month',
-        competitors: ['Manual operations', 'No automated platforms'],
-        advantages: ['10-year technology advantage', 'Autonomous mining', 'Commercial space applications'],
+        competitors: ['Manual operationsNo automated platforms'],
+        advantages: ['10-year technology advantageAutonomous mining', 'Commercial space applications'],
         link: '/space-mining-automation-platform'
       },
       {
         name: 'Metaverse Development Platform',
         ourPrice: '$499/month',
         marketRange: '$200 - $1,000/month',
-        competitors: ['Unity', 'Unreal Engine', 'Limited metaverse tools'],
-        advantages: ['Metaverse-specific features', 'AI integration', 'Advanced collaboration'],
+        competitors: ['UnityUnreal Engine', 'Limited metaverse tools'],
+        advantages: ['Metaverse-specific featuresAI integration', 'Advanced collaboration'],
         link: '/metaverse-development-platform'
       }
     ]
@@ -126,21 +126,21 @@ const pricingCategories = [
         name: 'AI Business Intelligence Suite',
         ourPrice: '$299/month',
         marketRange: '$200 - $800/month',
-        competitors: ['Tableau', 'Power BI', 'Limited AI integration'],
-        advantages: ['AI-powered analytics', 'Predictive insights', '3-year technology advantage'],
+        competitors: ['TableauPower BI', 'Limited AI integration'],
+        advantages: ['AI-powered analyticsPredictive insights', '3-year technology advantage'],
         link: '/ai-business-intelligence-suite'
       },
       {
         name: 'Quantum-Secure Communication Platform',
         ourPrice: '$599/month',
         marketRange: '$300 - $1,200/month',
-        competitors: ['Traditional encryption', 'No quantum security'],
-        advantages: ['Quantum encryption', 'Unbreakable security', '6-year technology advantage'],
+        competitors: ['Traditional encryptionNo quantum security'],
+        advantages: ['Quantum encryptionUnbreakable security', '6-year technology advantage'],
         link: '/quantum-secure-communication-platform'
       }
     ]
   }
-];
+],
 
 const marketReferences = [
   {
@@ -197,7 +197,7 @@ const marketReferences = [
       { name: 'DigitalOcean', url: 'https://www.digitalocean.com/pricing', price: '$4 - $960/month' }
     ]
   }
-];
+],
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -207,12 +207,12 @@ const containerVariants = {
       staggerChildren: 0.1
     }
   }
-};
+},
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
-};
+},
 
 export default function EnhancedMarketPricing2032() {
   return (
@@ -229,6 +229,6 @@ export default function EnhancedMarketPricing2032() {
         </div>
       </div>
     </div>
-  );
-};
-export default AdvancedAITransformation2026;
+  ),
+},
+export default AdvancedAITransformation2026,

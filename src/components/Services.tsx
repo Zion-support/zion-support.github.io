@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const Services: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -27,7 +26,6 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default Services;

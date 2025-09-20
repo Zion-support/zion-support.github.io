@@ -1,63 +1,41 @@
-import React from 'react';
-import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building } from 'lucide-react';
-import SEO from '../../components/SEO';
-
+import React from "react";
+import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building } from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function MicroCRM() {
   const features = [
     {
-      icon: Users,
-      title: 'Contact Management',
-      description: 'Centralized database for all customer contacts with detailed profiles and interaction history.'
+      icon: Users,title: 'Contact Management',description: 'Centralized database for all customer contacts with detailed profiles and interaction history.'
+    };
+    {
+      icon: Target,title: 'Lead Tracking',description: 'Track leads through the sales funnel with automated scoring and qualification processes.'
+    };
+    {
+      icon: Calendar,title: 'Task Management',description: 'Schedule follow-ups, meetings, and reminders with integrated calendar functionality.'
     },
     {
-      icon: Target,
-      title: 'Lead Tracking',
-      description: 'Track leads through the sales funnel with automated scoring and qualification processes.'
-    },
-    {
-      icon: Calendar,
-      title: 'Task Management',
-      description: 'Schedule follow-ups, meetings, and reminders with integrated calendar functionality.'
-    },
-    {
-      icon: BarChart3,
-      title: 'Sales Analytics',
-      description: 'Comprehensive reporting and analytics to track performance and identify opportunities.'
+      icon: BarChart3,title: 'Sales Analytics',description: 'Comprehensive reporting and analytics to track performance and identify opportunities.'
     }
   ];
-
   const benefits = [
-    'Streamline customer relationship management',
-    'Improve sales team productivity',
-    'Enhance customer communication',
-    'Track sales performance metrics',
-    'Automate repetitive tasks',
-    'Centralize customer data'
-  ];
+    'Streamline customer relationship managementImprove sales team productivity',
+    'Enhance customer communicationTrack sales performance metrics',
+    'Automate repetitive tasksCentralize customer data'
+  ],
 
   const useCases = [
     {
-      title: 'Small Business CRM',
-      description: 'Perfect for small businesses looking to manage customer relationships efficiently.',
-      icon: Building
-    },
+      title: 'Small Business CRM',description: 'Perfect for small businesses looking to manage customer relationships efficiently.',icon: Building
+    };
     {
-      title: 'Sales Team Management',
-      description: 'Empower sales teams with tools to track leads and manage customer interactions.',
-      icon: Users
-    },
+      title: 'Sales Team Management',description: 'Empower sales teams with tools to track leads and manage customer interactions.',icon: Users
+    };
     {
-      title: 'Customer Support',
-      description: 'Track customer issues and provide timely support with integrated ticketing.',
-      icon: Phone
-    },
+      title: 'Customer Support',description: 'Track customer issues and provide timely support with integrated ticketing.',icon: Phone
+    };
     {
-      title: 'Marketing Campaigns',
-      description: 'Manage marketing campaigns and track customer engagement and responses.',
-      icon: Target
+      title: 'Marketing Campaigns',description: 'Manage marketing campaigns and track customer engagement and responses.',icon: Target
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -75,12 +53,12 @@ export default function MicroCRM() {
               <span className="text-cyan-300 text-sm font-medium">Customer Relationship Management</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               Micro CRM
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Streamline your customer relationships with our lightweight, 
+              Streamline your customer relationships with our lightweight;
               powerful CRM solution designed for small businesses and growing teams.
             </p>
             
@@ -155,7 +133,7 @@ export default function MicroCRM() {
               Perfect For Your Business
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Whether you're a small business owner or managing a growing sales team, 
+              Whether you're a small business owner or managing a growing sales team;
               our Micro CRM adapts to your needs.
             </p>
           </div>
@@ -184,7 +162,7 @@ export default function MicroCRM() {
             Join thousands of businesses that have improved their customer management 
             with our Micro CRM solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25">
               Start Free Trial
             </button>
@@ -195,5 +173,5 @@ export default function MicroCRM() {
         </div>
       </section>
     </div>
-  );
+  )
 }

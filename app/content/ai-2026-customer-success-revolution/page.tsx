@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2026: Customer Success Revolution - Zion Tech Group';
-  description: 'Transform your customer success with AI-powered predictive analytics, proactive support, and personalized experiences that drive retention and growth.';
-  keywords: ['AI customer successpredictive analytics', 'customer retentionAI support', 'customer experience'],
-};
+  title: 'AI 2026: Customer Success Revolution - Zion Tech Group',
+  description: 'Transform your customer success with AI-powered predictive analytics, proactive support, and personalized experiences that drive retention and growth.',
+  keywords: ['AI customer successpredictive analyticscustomer retentionAI support', 'customer experience']
+},
 export default function AI2026CustomerSuccessRevolution() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -29,7 +29,7 @@ export default function AI2026CustomerSuccessRevolution() {,
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl mb-8">,
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Revolutionary Customer Success</h2>,
             <p className="text-lg text-gray-700 leading-relaxed">,
-              The future of customer success is here. AI-powered systems now predict customer needs, prevent churn;
+              The future of customer success is here. AI-powered systems now predict customer needs, prevent churn,
               and drive growth with unprecedented precision. Discover how leading companies are achieving 95%+,
               retention rates with intelligent customer success platforms.,
             </p>,
@@ -201,5 +201,4 @@ export default function AI2026CustomerSuccessRevolution() {,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

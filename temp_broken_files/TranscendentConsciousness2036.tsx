@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 const TranscendentConsciousness2036: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-pink-900 via-purple-900 to-indigo-900 text-white">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-indigo-600/20"></div>,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>,
@@ -40,7 +40,7 @@ const TranscendentConsciousness2036: React.FC = () => {,
       {/* Consciousness Levels */}
       <div className="container mx-auto px-4 py-20">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16",
         >,
           <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -53,40 +53,40 @@ const TranscendentConsciousness2036: React.FC = () => {,
         <div className="space-y-8">,
           {[,
             {,
-              level: "Level 1: Awakened Awareness";
-              description: "Initial awakening to expanded consciousness beyond normal human perception.";
-              capabilities: ["Enhanced Intuition", "Emotional Mastery", "Mental Clarity", "Spiritual Awareness"];
-              icon: "🌅";
-              color: "from-pink-500 to-rose-500",};
+              level: "Level 1: Awakened Awareness",
+              description: "Initial awakening to expanded consciousness beyond normal human perception.",
+              capabilities: ["Enhanced Intuition", "Emotional Mastery", "Mental Clarity", "Spiritual Awareness"],
+              icon: "🌅",
+              color: "from-pink-500 to-rose-500"},
             {,
-              level: "Level 2: Universal Connection";
-              description: "Establish connection with the universal consciousness and all living beings.";
-              capabilities: ["Empathic Bonding", "Universal Communication", "Energy Sensing", "Collective Awareness"];
-              icon: "🌍";
-              color: "from-purple-500 to-pink-500",};
+              level: "Level 2: Universal Connection",
+              description: "Establish connection with the universal consciousness and all living beings.",
+              capabilities: ["Empathic Bonding", "Universal Communication", "Energy Sensing", "Collective Awareness"],
+              icon: "🌍",
+              color: "from-purple-500 to-pink-500"},
             {,
-              level: "Level 3: Dimensional Awareness";
-              description: "Perceive and interact with multiple dimensions and parallel realities.";
-              capabilities: ["Dimensional Sight", "Reality Shifting", "Timeline Navigation", "Quantum Perception"];
-              icon: "🌌";
-              color: "from-indigo-500 to-purple-500",};
+              level: "Level 3: Dimensional Awareness",
+              description: "Perceive and interact with multiple dimensions and parallel realities.",
+              capabilities: ["Dimensional Sight", "Reality Shifting", "Timeline Navigation", "Quantum Perception"],
+              icon: "🌌",
+              color: "from-indigo-500 to-purple-500"},
             {,
-              level: "Level 4: Omniscient Perception";
-              description: "Achieve complete knowledge and understanding of all existence.";
-              capabilities: ["Universal Knowledge", "Infinite Memory", "Perfect Understanding", "Cosmic Awareness"];
-              icon: "👁️";
-              color: "from-cyan-500 to-indigo-500",};
+              level: "Level 4: Omniscient Perception",
+              description: "Achieve complete knowledge and understanding of all existence.",
+              capabilities: ["Universal Knowledge", "Infinite Memory", "Perfect Understanding", "Cosmic Awareness"],
+              icon: "👁️",
+              color: "from-cyan-500 to-indigo-500"},
             {,
-              level: "Level 5: Transcendent Unity";
-              description: "Merge with the fundamental essence of existence itself.";
-              capabilities: ["Unity Consciousness", "Infinite Love", "Perfect Wisdom", "Divine Connection"];
-              icon: "✨";
-              color: "from-yellow-500 to-cyan-500",}
+              level: "Level 5: Transcendent Unity",
+              description: "Merge with the fundamental essence of existence itself.",
+              capabilities: ["Unity Consciousness", "Infinite Love", "Perfect Wisdom", "Divine Connection"],
+              icon: "✨",
+              color: "from-yellow-500 to-cyan-500"}
           ].map((level, index) => (,
             <div,
               key={index}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              className={`bg-gradient-to-r ${level.color}/20 backdrop-blur-sm rounded-2xl p-8 border border-${level.color.split('-')[1]}-500/30 hover: border-${level.color.split('-')[1],}-400/50 transition-all duration-300`}
+              whileInView={{ opacity: 1, x: 0 }}
+              className={`bg-gradient-to-r ${level.color}/20 backdrop-blur-sm rounded-2xl p-8 border border-${level.color.split('-')[1]}-500/30 hover: border-${level.color.split('-')[1]}-400/50 transition-all duration-300`}
             >,
               <div className="flex items-start space-x-6">,
                 <div className="text-6xl">{level.icon}</div>,
@@ -98,8 +98,7 @@ const TranscendentConsciousness2036: React.FC = () => {,
                       <div key={idx} className="flex items-center space-x-2 text-sm">,
                         <span className={`w-2 h-2 bg-gradient-to-r ${level.color} rounded-full`}></span>,
                         <span className="text-gray-300">{capability}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
               </div>,
@@ -111,7 +110,7 @@ const TranscendentConsciousness2036: React.FC = () => {,
       <div className="bg-gradient-to-r from-pink-900/50 to-indigo-900/50 py-20">,
         <div className="container mx-auto px-4">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16",
           >,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -124,63 +123,63 @@ const TranscendentConsciousness2036: React.FC = () => {,
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {[,
               {,
-                title: "Quantum Meditation";
-                description: "Advanced meditation techniques using quantum field resonance to accelerate consciousness expansion.";
-                duration: "30-60 minutes";
-                level: "Beginner to Advanced";
-                features: ["Quantum Resonance", "Field Alignment", "Consciousness Expansion", "Energy Harmonization"],
-              };
+                title: "Quantum Meditation",
+                description: "Advanced meditation techniques using quantum field resonance to accelerate consciousness expansion.",
+                duration: "30-60 minutes",
+                level: "Beginner to Advanced",
+                features: ["Quantum Resonance", "Field Alignment", "Consciousness Expansion", "Energy Harmonization"]
+              },
               {,
-                title: "Dimensional Awareness Training";
-                description: "Learn to perceive and interact with multiple dimensions and parallel realities.";
-                duration: "45-90 minutes";
-                level: "Intermediate to Advanced";
-                features: ["Dimensional Sight", "Reality Shifting", "Timeline Navigation", "Quantum Perception"],
-              };
+                title: "Dimensional Awareness Training",
+                description: "Learn to perceive and interact with multiple dimensions and parallel realities.",
+                duration: "45-90 minutes",
+                level: "Intermediate to Advanced",
+                features: ["Dimensional Sight", "Reality Shifting", "Timeline Navigation", "Quantum Perception"]
+              },
               {,
-                title: "Universal Connection Protocol";
-                description: "Establish deep connections with universal consciousness and all living beings.";
-                duration: "60-120 minutes";
-                level: "Advanced";
-                features: ["Universal Bonding", "Empathic Connection", "Collective Awareness", "Cosmic Communication"],
-              };
+                title: "Universal Connection Protocol",
+                description: "Establish deep connections with universal consciousness and all living beings.",
+                duration: "60-120 minutes",
+                level: "Advanced",
+                features: ["Universal Bonding", "Empathic Connection", "Collective Awareness", "Cosmic Communication"]
+              },
               {,
-                title: "Transcendent Wisdom Integration";
-                description: "Integrate infinite wisdom and knowledge from universal consciousness sources.";
-                duration: "90-180 minutes";
-                level: "Expert";
-                features: ["Wisdom Integration", "Knowledge Synthesis", "Universal Understanding", "Divine Connection"],
-              };
+                title: "Transcendent Wisdom Integration",
+                description: "Integrate infinite wisdom and knowledge from universal consciousness sources.",
+                duration: "90-180 minutes",
+                level: "Expert",
+                features: ["Wisdom Integration", "Knowledge Synthesis", "Universal Understanding", "Divine Connection"]
+              },
               {,
-                title: "Consciousness Transfer Mastery";
-                description: "Master the art of consciousness transfer and dimensional projection.";
-                duration: "120-240 minutes";
-                level: "Master";
-                features: ["Consciousness Transfer", "Dimensional Projection", "Reality Manipulation", "Unity Consciousness"],
-              };
+                title: "Consciousness Transfer Mastery",
+                description: "Master the art of consciousness transfer and dimensional projection.",
+                duration: "120-240 minutes",
+                level: "Master",
+                features: ["Consciousness Transfer", "Dimensional Projection", "Reality Manipulation", "Unity Consciousness"]
+              },
               {,
-                title: "Infinite Love Activation";
-                description: "Activate and channel infinite love energy for universal healing and transformation.";
-                duration: "60-180 minutes";
-                level: "All Levels";
-                features: ["Love Activation", "Healing Energy", "Universal Transformation", "Divine Love"],
+                title: "Infinite Love Activation",
+                description: "Activate and channel infinite love energy for universal healing and transformation.",
+                duration: "60-180 minutes",
+                level: "All Levels",
+                features: ["Love Activation", "Healing Energy", "Universal Transformation", "Divine Love"]
               }
             ].map((program, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
+                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-pink-800/30 to-indigo-800/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 hover: border-pink-400/40 transition-all duration-300",
               >,
-                <h3 className="text-2xl font-bold mb-4">{program.title,}</h3>,
+                <h3 className="text-2xl font-bold mb-4">{program.title}</h3>,
                 <p className="text-gray-300 mb-6">{program.description}</p>,
                 <div className="space-y-2 mb-6">,
                   <div className="flex justify-between text-sm">,
                     <span className="text-pink-300">Duration: </span>,
-                    <span className="text-white">{program.duration,}</span>,
+                    <span className="text-white">{program.duration}</span>,
                   </div>,
                   <div className="flex justify-between text-sm">,
                     <span className="text-pink-300">Level: </span>,
-                    <span className="text-white">{program.level,}</span>,
+                    <span className="text-white">{program.level}</span>,
                   </div>,
                 </div>,
                 <div className="space-y-2">,
@@ -188,8 +187,7 @@ const TranscendentConsciousness2036: React.FC = () => {,
                     <div key={idx} className="flex items-center space-x-2 text-sm text-pink-300">,
                       <span className="w-2 h-2 bg-pink-400 rounded-full"></span>,
                       <span>{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             ))}
@@ -199,7 +197,7 @@ const TranscendentConsciousness2036: React.FC = () => {,
       {/* Consciousness Metrics */}
       <div className="container mx-auto px-4 py-20">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16",
         >,
           <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -212,29 +210,29 @@ const TranscendentConsciousness2036: React.FC = () => {,
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">,
           {[,
             {,
-              metric: "Awareness Level";
-              value: "87%";
-              description: "Current consciousness expansion level";
-              color: "from-pink-500 to-rose-500",};
+              metric: "Awareness Level",
+              value: "87%",
+              description: "Current consciousness expansion level",
+              color: "from-pink-500 to-rose-500"},
             {,
-              metric: "Universal Connection";
-              value: "92%";
-              description: "Connection strength with universal consciousness";
-              color: "from-purple-500 to-pink-500",};
+              metric: "Universal Connection",
+              value: "92%",
+              description: "Connection strength with universal consciousness",
+              color: "from-purple-500 to-pink-500"},
             {,
-              metric: "Dimensional Perception";
-              value: "78%";
-              description: "Ability to perceive multiple dimensions";
-              color: "from-indigo-500 to-purple-500",};
+              metric: "Dimensional Perception",
+              value: "78%",
+              description: "Ability to perceive multiple dimensions",
+              color: "from-indigo-500 to-purple-500"},
             {,
-              metric: "Wisdom Integration";
-              value: "85%";
-              description: "Level of universal wisdom integration";
-              color: "from-cyan-500 to-indigo-500",}
+              metric: "Wisdom Integration",
+              value: "85%",
+              description: "Level of universal wisdom integration",
+              color: "from-cyan-500 to-indigo-500"}
           ].map((metric, index) => (,
             <div,
               key={index}
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-pink-800/20 to-indigo-800/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 text-center",
             >,
               <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${metric.color} bg-clip-text text-transparent`}>,
@@ -242,14 +240,13 @@ const TranscendentConsciousness2036: React.FC = () => {,
               </div>,
               <h3 className="text-xl font-bold mb-2">{metric.metric}</h3>,
               <p className="text-sm text-gray-300">{metric.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-pink-600 to-indigo-600 rounded-3xl p-12",
         >,
           <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -270,5 +267,5 @@ const TranscendentConsciousness2036: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default TranscendentConsciousness2036;
+  )},
+export default TranscendentConsciousness2036,

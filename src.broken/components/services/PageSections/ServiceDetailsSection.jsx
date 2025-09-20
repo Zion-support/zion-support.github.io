@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {
 
-  const [expandedService, setExpandedService] = useState(null);
+  const [expandedService, setExpandedService] = useState(null),
 
-  const displayServices = services.length > 0 ? services : defaultServices;
+  const displayServices = services.length > 0 ? services : defaultServices,
 
   const toggleService = (serviceId) => {
 
-    setExpandedService(expandedService === serviceId ? null : serviceId)};
+    setExpandedService(expandedService === serviceId ? null : serviceId)},
 
   const getComplexityColor = (complexity) => {
 
     switch(complexity.toLowerCase()) {
 
       case 'low':'
-        return 'text-green-600 bg-green-100';
+        return 'text-green-600 bg-green-100',
       case 'medium':'
-        return 'text-yellow-600 bg-yellow-100';
+        return 'text-yellow-600 bg-yellow-100',
       case 'high':'
-        return 'text-red-600 bg-red-100';
+        return 'text-red-600 bg-red-100',
       default:'
         return 'text-gray-600 bg-gray-100'}
-  };
+  },
 
   return ()
     <section className="py-20 bg-white">"
@@ -77,16 +77,16 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
 
                   <button
                     onClick={() => toggleService(service.id)}"
-                    className="ml-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                    className="ml-4 p-2 text-gray-400 hover: text-gray-600 transition-colors"
 
-                    {expandedService === service.id ? (;"
+                    {expandedService === service.id ? (,"
                       <ChevronUp className="w-6 h-6" />
                     ) : ("
                       <ChevronDown className="w-6 h-6" />
                     )}
                   </button>
                 </div>
-              </div>;
+              </div>,
 
               {/* Expanded Content */}
               {expandedService === service.id && ("
@@ -193,5 +193,5 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
         </div>
       </div>
     </section>
-  )};
+  )},
 '"`

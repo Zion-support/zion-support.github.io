@@ -1,6 +1,6 @@
 
-import { ProductListing } from "@/types/listings";
-import { SearchSuggestion, FilterOptions } from "@/types/search";
+import { ProductListing } from "@/types/listings",
+import { SearchSuggestion, FilterOptions } from "@/types/search",
 
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
@@ -15,7 +15,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "AI Solutions Inc.",
       id: "ai-solutions",
-      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T12:30:00.000Z",
@@ -37,7 +37,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "DataMinds",
       id: "dataminds",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-15T10:45:00.000Z",
@@ -57,7 +57,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Hardware", "Deep Learning", "GPU"],
     author: {
       name: "TechGear Pro",
-      id: "techgear",
+      id: "techgear"
     },
     images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-05T09:15:00.000Z",
@@ -79,7 +79,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "ContentGenius",
       id: "contentgenius",
-      avatarUrl: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-28T14:20:00.000Z",
@@ -99,7 +99,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Analytics", "Business Intelligence", "Dashboard"],
     author: {
       name: "InsightAnalytica",
-      id: "insightanalytica",
+      id: "insightanalytica"
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-02T11:30:00.000Z",
@@ -120,7 +120,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "VisionTech AI",
       id: "visiontech",
-      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2023-12-10T16:45:00.000Z",
@@ -141,7 +141,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Chatbot", "Voice Assistant", "Conversational AI"],
     author: {
       name: "AssistantCraft",
-      id: "assistantcraft",
+      id: "assistantcraft"
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-12T13:10:00.000Z",
@@ -162,7 +162,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "VoiceIntelligence",
       id: "voiceintelligence",
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1590742084231-a778c92b8842?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-05T10:20:00.000Z",
@@ -182,7 +182,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Code Generation", "Developer Tools", "Automation"],
     author: {
       name: "CodeGenius",
-      id: "codegenius",
+      id: "codegenius"
     },
     images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-20T09:45:00.000Z",
@@ -204,7 +204,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "BusinessAI Consultants",
       id: "businessai",
-      avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-01T11:00:00.000Z",
@@ -224,7 +224,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Research", "Academic", "Machine Learning"],
     author: {
       name: "AI Research Hub",
-      id: "airesearch",
+      id: "airesearch"
     },
     images: ["https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T15:30:00.000Z",
@@ -245,7 +245,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "RoboticsMind",
       id: "roboticsmind",
-      avatarUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-25T12:15:00.000Z",
@@ -268,7 +268,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "TechGear Solutions",
       id: "techgear",
-      avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2023-11-10T12:30:00.000Z",
@@ -288,7 +288,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Server", "Enterprise", "GPU Cluster"],
     author: {
       name: "ServerPro Systems",
-      id: "serverpro",
+      id: "serverpro"
     },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2023-12-15T09:45:00.000Z",
@@ -298,7 +298,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: "North America",
     availability: "2-4 Weeks"
   }
-];
+],
 
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
@@ -321,23 +321,23 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "GPU cluster",
     "Edge computing",
     "High performance storage"
-  ];
+  ],
   
   // Convert strings to SearchSuggestion objects
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
-  }));
-};
+  })),
+},
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (
   listings: ProductListing[] = MARKETPLACE_LISTINGS
 ): FilterOptions => {
   // Extract unique categories, locations, and availability options from the provided listings
-  const productTypes = [...new Set(listings.map(listing => listing.category))].sort();
-  const locations = [...new Set(listings.map(listing => listing.location).filter(Boolean))].sort();
-  const availability = [...new Set(listings.map(listing => listing.availability).filter(Boolean))].sort();
+  const productTypes = [...new Set(listings.map(listing => listing.category))].sort(),
+  const locations = [...new Set(listings.map(listing => listing.location).filter(Boolean))].sort(),
+  const availability = [...new Set(listings.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
     productTypes: productTypes.map(type => ({
@@ -353,8 +353,8 @@ export const generateFilterOptions = (
       value: item
     })),
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
-  };
-};
+  },
+},
 
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),

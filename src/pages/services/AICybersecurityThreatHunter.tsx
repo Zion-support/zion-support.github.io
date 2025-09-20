@@ -1,64 +1,44 @@
-import { Shield, Eye, AlertTriangle, Check, ExternalLink, Phone, Mail, Lock, Zap, Brain, Target, BarChart3 } from 'lucide-react';
-
+import { Shield, Eye, AlertTriangle, Check, ExternalLink, Phone, Mail, Lock, Zap, Brain, Target, BarChart3 } from "lucide-react";
 export default function AICybersecurityThreatHunter() {
   const features = [
-    'AI-powered threat detection and hunting',
-    'Real-time security monitoring 24/7',
-    'Advanced behavioral analytics',
-    'Automated incident response',
-    'Threat intelligence integration',
-    'Zero-day vulnerability detection',
-    'Cloud security posture management',
-    'Compliance reporting (SOC 2, ISO 27001)',
-    'Penetration testing automation',
-    'Security awareness training platform'
-  ];
+    'AI-powered threat detection and huntingReal-time security monitoring 24/7',
+    'Advanced behavioral analyticsAutomated incident response',
+    'Threat intelligence integrationZero-day vulnerability detection',
+    'Cloud security posture managementCompliance reporting (SOC 2, ISO 27001)',
+    'Penetration testing automationSecurity awareness training platform'
+  ],
 
   const benefits = [
-    'Detect threats 10x faster than traditional methods',
-    'Reduce false positives by 80%',
-    'Automated response reduces incident time by 60%',
-    '24/7 security monitoring without human fatigue',
-    'Predictive threat intelligence',
-    'Comprehensive compliance coverage'
-  ];
+    'Detect threats 10x faster than traditional methodsReduce false positives by 80%',
+    'Automated response reduces incident time by 60%24/7 security monitoring without human fatigue',
+    'Predictive threat intelligenceComprehensive compliance coverage'
+  ],
 
   const useCases = [
-    'Enterprise cybersecurity operations',
-    'Financial services security',
-    'Healthcare data protection',
-    'Government security compliance',
-    'E-commerce fraud prevention',
-    'Critical infrastructure protection'
+    'Enterprise cybersecurity operationsFinancial services security';
+    'Healthcare data protectionGovernment security compliance';
+    'E-commerce fraud preventionCritical infrastructure protection'
   ];
-
   const tiers = [
     { 
-      name: 'Essential', 
-      price: '$2,499/mo', 
-      details: ['Up to 100 endpoints', 'Basic threat detection', 'Email support', 'Standard compliance'] 
+      name: 'Essential',price: '$2,499/mo', 
+      details: ['Up to 100 endpointsBasic threat detection', 'Email supportStandard compliance'] 
     },
     { 
-      name: 'Professional', 
-      price: '$5,999/mo', 
-      details: ['Up to 1000 endpoints', 'Advanced threat hunting', '24/7 support', 'Full compliance suite'] 
+      name: 'Professional',price: '$5,999/mo', 
+      details: ['Up to 1000 endpointsAdvanced threat hunting', '24/7 supportFull compliance suite'] 
     },
     { 
-      name: 'Enterprise', 
-      price: '$15,999/mo', 
-      details: ['Unlimited endpoints', 'Custom AI models', 'Dedicated team', 'White-label solution'] 
-    },
-  ];
+      name: 'Enterprise',price: '$15,999/mo', 
+      details: ['Unlimited endpointsCustom AI models', 'Dedicated teamWhite-label solution'] 
+    }
+  ],
 
   const securityFeatures = [
-    'Machine learning threat detection',
-    'Behavioral analysis engine',
-    'Threat intelligence feeds',
-    'Automated incident response',
-    'Security orchestration',
-    'Compliance automation'
+    'Machine learning threat detectionBehavioral analysis engine',
+    'Threat intelligence feedsAutomated incident response',
+    'Security orchestrationCompliance automation'
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-700 py-20 text-center">
@@ -166,7 +146,7 @@ export default function AICybersecurityThreatHunter() {
 
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to secure your digital assets?</div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-red-600 text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
             </a>
@@ -180,5 +160,5 @@ export default function AICybersecurityThreatHunter() {
         </div>
       </section>
     </div>
-  );
+  )
 }

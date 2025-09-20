@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Grid, List, Filter,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Star, Phone, Mail, MapPin,
   Building, Cpu, Zap, Globe, Lock, BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new service data
-import { innovativeMicroSaasExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
-import { innovativeITInfrastructureExpansion } from '../data/2025-innovative-it-infrastructure-expansion';
-import { innovativeAIServicesExpansion } from '../data/2025-innovative-ai-services-expansion';
+import { innovativeMicroSaasExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2',
+import { innovativeITInfrastructureExpansion } from '../data/2025-innovative-it-infrastructure-expansion',
+import { innovativeAIServicesExpansion } from '../data/2025-innovative-ai-services-expansion',
 
 // Create unified services array
 const allNewServices = [
   ...innovativeMicroSaasExpansionV2,
   ...innovativeITInfrastructureExpansion,
   ...innovativeAIServicesExpansion
-];
+],
 
 const categories = [
   {
@@ -49,7 +49,7 @@ const categories = [
     color: 'from-purple-500 to-pink-500',
     description: 'Cutting-edge AI and machine learning services'
   }
-];
+],
 
 const sortOptions = [
   { value: 'name', label: 'Name A-Z' },
@@ -58,75 +58,74 @@ const sortOptions = [
   { value: 'popular', label: 'Most Popular' },
   { value: 'newest', label: 'Newest First' },
   { value: 'rating', label: 'Highest Rated' }
-];
+],
 
 export default function ComprehensiveServicesExpansion2025() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const pageSize = 12;
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [currentPage, setCurrentPage] = useState(1),
+  const [isLoading, setIsLoading] = useState(true),
+  const [isVisible, setIsVisible] = useState(false),
+  const pageSize = 12,
 
   // Simulate loading state for better UX
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
+      setIsLoading(false),
+      setIsVisible(true),
+    }, 800),
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer),
+  }, []),
 
   // Filter services based on search and category
   const filteredServices = allNewServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
     
-    if (selectedCategory === 'all') return matchesSearch;
+    if (selectedCategory === 'all') return matchesSearch,
     
-    const serviceCategory = service.category.toLowerCase();
-    return matchesSearch && serviceCategory.includes(selectedCategory.toLowerCase());
-  });
+    const serviceCategory = service.category.toLowerCase(),
+    return matchesSearch && serviceCategory.includes(selectedCategory.toLowerCase()),
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price-low':
-        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
       case 'price-high':
-        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
+        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', '')),
       case 'popular':
-        return b.popular ? 1 : -1;
+        return b.popular ? 1 : -1,
       case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
       case 'rating':
-        return b.rating - a.rating;
-      default:
-        return 0;
+        return b.rating - a.rating,
+      default: return 0
     }
-  });
+  }),
 
   // Pagination
-  const totalPages = Math.ceil(sortedServices.length / pageSize);
+  const totalPages = Math.ceil(sortedServices.length / pageSize),
   const paginatedServices = sortedServices.slice(
     (currentPage - 1) * pageSize,
     currentPage * pageSize
-  );
+  ),
 
   const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    setCurrentPage(page),
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
   const getServiceCategory = (service: any) => {
-    if (service.category) return service.category;
-    return 'Other';
-  };
+    if (service.category) return service.category,
+    return 'Other'
+  },
 
 const 2025-comprehensive-services-expansion: React.FC = () => {
   return (
@@ -143,7 +142,7 @@ const 2025-comprehensive-services-expansion: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2025-comprehensive-services-expansion;
+export default 2025-comprehensive-services-expansion,

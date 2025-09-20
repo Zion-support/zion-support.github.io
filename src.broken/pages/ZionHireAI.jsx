@@ -1,8 +1,8 @@
-import React from 'react';
-import { Phone, Mail, MapPin, ArrowRight import { Footer } from '@/components / Footer';
+import React from 'react',
+import { Phone, Mail, MapPin, ArrowRight import { Footer } from '@/components / Footer',
 
 export default function Page() {
-  ];
+  ],
 
   return (<>
       <main className="flex -1">
@@ -97,6 +97,6 @@ export default function Page() {
         </div>
       </main>
       <Footer />
-    </>) };
+    </>) },
 
 }

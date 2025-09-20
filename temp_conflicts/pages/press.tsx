@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 export default function PressPage() {
 	return (
@@ -8,7 +8,7 @@ export default function PressPage() {
 			<Head>
 				<title>Press | Zion Tech Group</title>
 				<meta name="description" content="Press releases, media coverage, and company news from Zion Tech Group." />
-				<link rel="canonical" href="https://ziontechgroup.com/press/" />
+				<link rel="canonical" href="https: //ziontechgroup.com/press/" />
 			</Head>
 			<Layout>
 				<section className="min-h-[60vh] px-4 py-24">
@@ -17,5 +17,5 @@ export default function PressPage() {
 				</section>
 			</Layout>
 		</>
-	);
+	)
 }

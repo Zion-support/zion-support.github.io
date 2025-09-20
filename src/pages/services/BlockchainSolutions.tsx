@@ -1,8 +1,8 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Link, 
+  Link,
   Shield, 
   Zap, 
   CheckCircle,
@@ -65,136 +65,86 @@ import {
   Truck,
   Plane,
   Ship
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function BlockchainSolutions() {
   const features = [
     {
-      icon: Shield,
-      title: 'Smart Contracts',
-      description: 'Automated, self-executing contracts with blockchain security',
+      icon: Shield,title: 'Smart Contracts',description: 'Automated, self-executing contracts with blockchain security',
       color: 'from-blue-500 to-cyan-500'
-    },
+    };
     {
-      icon: Database,
-      title: 'Distributed Ledger',
-      description: 'Immutable, transparent record-keeping across networks',
+      icon: Database,title: 'Distributed Ledger',description: 'Immutable, transparent record-keeping across networks',
       color: 'from-purple-500 to-pink-500'
-    },
+    };
     {
-      icon: Lock,
-      title: 'Cryptographic Security',
-      description: 'Advanced encryption and digital signature verification',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Lock,title: 'Cryptographic Security',description: 'Advanced encryption and digital signature verification',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: Network,
-      title: 'Decentralized Networks',
-      description: 'Peer-to-peer systems without central authority',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Network,title: 'Decentralized Networks',description: 'Peer-to-peer systems without central authority',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Zap,
-      title: 'Instant Settlements',
-      description: 'Real-time transactions and immediate confirmations',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: Zap,title: 'Instant Settlements',description: 'Real-time transactions and immediate confirmations',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: Globe,
-      title: 'Cross-Border Solutions',
-      description: 'Global transactions without traditional banking delays',
-      color: 'from-indigo-500 to-blue-500'
+      icon: Globe,title: 'Cross-Border Solutions',description: 'Global transactions without traditional banking delays',color: 'from-indigo-500 to-blue-500'
     }
   ];
-
   const benefits = [
-    'Eliminate intermediaries and reduce transaction costs by 90%',
-    'Ensure data integrity with immutable blockchain records',
-    'Enable 24/7 automated operations with smart contracts',
-    'Provide transparent, auditable transaction history',
-    'Reduce fraud and increase trust in digital transactions',
-    'Enable new business models and revenue streams'
-  ];
+    'Eliminate intermediaries and reduce transaction costs by 90%Ensure data integrity with immutable blockchain records',
+    'Enable 24/7 automated operations with smart contractsProvide transparent, auditable transaction history',
+    'Reduce fraud and increase trust in digital transactionsEnable new business models and revenue streams'
+  ],
 
   const useCases = [
     {
-      title: 'Financial Services',
-      description: 'Cryptocurrency, DeFi, and cross-border payments',
+      title: 'Financial Services',description: 'Cryptocurrency, DeFi, and cross-border payments',
       icon: CreditCard
-    },
+    };
     {
-      title: 'Supply Chain',
-      description: 'Transparent tracking and verification of goods',
-      icon: Truck
-    },
+      title: 'Supply Chain',description: 'Transparent tracking and verification of goods',icon: Truck
+    };
     {
-      title: 'Healthcare',
-      description: 'Secure patient records and medical data sharing',
-      icon: HeartPulse
-    },
+      title: 'Healthcare',description: 'Secure patient records and medical data sharing',icon: HeartPulse
+    };
     {
-      title: 'Real Estate',
-      description: 'Property tokenization and smart contract automation',
-      icon: Building2
+      title: 'Real Estate',description: 'Property tokenization and smart contract automation',icon: Building2
     }
   ];
-
   const blockchainCapabilities = [
     {
-      name: 'Smart Contract Development',
-      description: 'Custom smart contracts for business automation',
-      examples: ['Ethereum', 'Solana', 'Polygon', 'Custom chains']
+      name: 'Smart Contract Development',description: 'Custom smart contracts for business automation',examples: ['EthereumSolana', 'PolygonCustom chains']
     },
     {
-      name: 'DeFi Solutions',
-      description: 'Decentralized finance applications and protocols',
-      examples: ['Lending platforms', 'DEX exchanges', 'Yield farming']
+      name: 'DeFi Solutions',description: 'Decentralized finance applications and protocols',examples: ['Lending platformsDEX exchanges', 'Yield farming']
     },
     {
-      name: 'NFT Development',
-      description: 'Non-fungible token creation and marketplace',
-      examples: ['Digital art', 'Gaming assets', 'Collectibles']
+      name: 'NFT Development',description: 'Non-fungible token creation and marketplace',examples: ['Digital artGaming assets', 'Collectibles']
     },
     {
-      name: 'Enterprise Blockchain',
-      description: 'Private and consortium blockchain networks',
-      examples: ['Hyperledger', 'Corda', 'Quorum', 'Custom solutions']
+      name: 'Enterprise Blockchain',description: 'Private and consortium blockchain networks',examples: ['HyperledgerCorda', 'QuorumCustom solutions']
     }
-  ];
+  ],
 
   const industries = [
     {
-      name: 'Finance & Banking',
-      icon: CreditCard,
-      description: 'Cryptocurrency, payments, and DeFi solutions'
+      name: 'Finance & Banking',icon: CreditCard,description: 'Cryptocurrency, payments, and DeFi solutions'
     },
     {
-      name: 'Supply Chain',
-      icon: Truck,
-      description: 'Transparent tracking and verification systems'
-    },
+      name: 'Supply Chain',icon: Truck,description: 'Transparent tracking and verification systems'
+    };
     {
-      name: 'Healthcare',
-      icon: HeartPulse,
-      description: 'Secure medical records and data sharing'
-    },
+      name: 'Healthcare',icon: HeartPulse,description: 'Secure medical records and data sharing'
+    };
     {
-      name: 'Real Estate',
-      icon: Building2,
-      description: 'Property tokenization and smart contracts'
-    },
+      name: 'Real Estate',icon: Building2,description: 'Property tokenization and smart contracts'
+    };
     {
-      name: 'Gaming',
-      icon: Play,
-      description: 'NFT assets and blockchain gaming platforms'
-    },
+      name: 'Gaming',icon: Play,description: 'NFT assets and blockchain gaming platforms'
+    };
     {
-      name: 'Energy',
-      icon: Zap,
-      description: 'Renewable energy trading and carbon credits'
+      name: 'Energy',icon: Zap,description: 'Renewable energy trading and carbon credits'
     }
   ];
-
   return (
     <>
       <SEO 
@@ -318,7 +268,7 @@ export default function BlockchainSolutions() {
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our blockchain solutions deliver measurable improvements in cost reduction, 
+                  Our blockchain solutions deliver measurable improvements in cost reduction;
                   operational efficiency, and trust while enabling new business models 
                   and revenue streams.
                 </p>
@@ -496,7 +446,7 @@ export default function BlockchainSolutions() {
                 Blockchain Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our blockchain platform adapts to various business needs and industries, 
+                Our blockchain platform adapts to various business needs and industries;
                 providing tailored solutions for different requirements.
               </p>
             </motion.div>
@@ -561,7 +511,7 @@ export default function BlockchainSolutions() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -571,5 +521,5 @@ export default function BlockchainSolutions() {
         </section>
       </div>
     </>
-  );
+  )
 }

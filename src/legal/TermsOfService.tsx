@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 export default function TermsOfService() {
   return (
     <div className="max-w-4xl mx-auto">
@@ -76,7 +75,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold text-white mb-4">Contact Information</h2>
             <p className="text-lg leading-relaxed">
               If you have any questions about these Terms of Service, please contact us at{' '}
-              <a href="mailto:legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
+              <a href="mailto: legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
                 legal@ziontechgroup.com
               </a>
             </p>
@@ -84,5 +83,5 @@ export default function TermsOfService() {
         </div>
       </div>
     </div>
-  );
+  )
 }

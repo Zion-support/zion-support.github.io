@@ -1,30 +1,30 @@
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { Button } from '@/components/ui/button',
 
 export default function PrivacyPage() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false),
 
   const requestExport = async () => {
-    setLoading(true);
+    setLoading(true),
     try {
-      await fetch('/api/privacy/export', { method: 'POST' });
-      alert('If data is available you will receive an email link.');
+      await fetch('/api/privacy/export', { method: 'POST' }),
+      alert('If data is available you will receive an email link.'),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   const requestDeletion = async () => {
-    setLoading(true);
+    setLoading(true),
     try {
-      await fetch('/api/privacy/delete', { method: 'POST' });
-      alert('Account deletion requested.');
+      await fetch('/api/privacy/delete', { method: 'POST' }),
+      alert('Account deletion requested.'),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   return (
     <>
@@ -42,5 +42,5 @@ export default function PrivacyPage() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }

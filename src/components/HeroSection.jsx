@@ -5,76 +5,58 @@ import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
 import { useRef } from "react";
-
 export function HeroSection() {
     const { t } = useTranslation();
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end start"]
-    });
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+        target: containerRef,offset: ["start start", "end start"]
+    }),
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]),
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]),
     
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0 };
         visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
+            opacity: 1,transition: {
+                staggerChildren: 0.2,delayChildren: 0.1
             }
         }
     };
-    
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+        hidden: { y: 30, opacity: 0 };
         visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut"
+            opacity: 1,y: 0,transition: {
+                duration: 0.8,ease: "easeOut"
             }
         }
     };
-    
     const floatingVariants = {
         animate: {
             y: [-15, 15, -15],
             rotate: [0, 5, 0],
             transition: {
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
+                duration: 4,repeat: Infinity,ease: "easeInOut"
             }
         }
     };
-    
     const pulseVariants = {
         animate: {
             scale: [1, 1.1, 1],
             opacity: [0.5, 0.8, 0.5],
             transition: {
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
+                duration: 2,repeat: Infinity,ease: "easeInOut"
             }
         }
     };
-    
     const particleVariants = {
         animate: {
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.7, 0.3],
             transition: {
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
+                duration: 3,repeat: Infinity,ease: "easeInOut"
             }
         }
     };
-
     return (
         <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
             {/* Enhanced background with parallax effect */}
@@ -289,7 +271,7 @@ export function HeroSection() {
                         whileHover={{ y: -5 }} 
                         transition={{ type: "spring", stiffness: 400 }}
                     >
-                        <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover:text-zion-cyan transition-colors">
+                        <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover: text-zion-cyan transition-colors">
                             99.9%
                         </div>
                         <div className="text-zion-slate-light">Uptime</div>
@@ -297,5 +279,5 @@ export function HeroSection() {
                 </motion.div>
             </motion.div>
         </section>
-    );
+    )
 }

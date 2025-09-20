@@ -19,17 +19,15 @@ export default function Page() {
         status: Math.random() > 0.7 ? 'good' : 'warning',
         icon: Zap
 
-    ];
+    ],
 
-      'High memory usage detected on server-01',;
-      'Network latency increased by 15%',;
-      'Error rate spike detected in last 5 minutes';
-    ];
+      'High memory usage detected on server-01Network latency increased by 15%',
+      'Error rate spike detected in last 5 minutes',
+    ],
 
     
-      'Consider implementing lazy loading for images',;
-      'Optimize database queries for better performance',;
-      'Enable CDN for static assets delivery';
+      'Consider implementing lazy loading for imagesOptimize database queries for better performance',
+      'Enable CDN for static assets delivery',
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
         >
@@ -39,10 +37,10 @@ export default function Page() {
             {isMonitoring
               ? 'Real - time performance data is being collected and analyzed...'
 =======
-    const recommendations = [;'
-      'Consider implementing lazy loading for images',;'
-      'Optimize database queries for better performance',;'      'Enable CDN for static assets delivery';
-    ];
+    const recommendations = [,'
+      'Consider implementing lazy loading for images
+      'Optimize database queries for better performance','      'Enable CDN for static assets delivery',
+    ],
 
     return {
 
@@ -50,36 +48,36 @@ export default function Page() {
       metrics,
       alerts,
       recommendations
-    }}, []) ;
+    }}, []) ,
   useEffect(() => {
     if(isMonitoring) {
 
-        setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds
+        setPerformanceData(generateMockData())}, 5000), // Update every 5 seconds
 
       return () => clearInterval(interval) }
-  }, [isMonitoring, generateMockData]) ;
+  }, [isMonitoring, generateMockData]) ,
 
-    switch(status) {;
-      case 'good': return 'text-green-400';
-      case 'warning': return 'text-yellow-400';
-      case 'critical': return 'text-red-400';
-      default: return 'text-gray-400'};
+    switch(status) {,
+      case 'good': return 'text-green-400',
+      case 'warning': return 'text-yellow-400',
+      case 'critical': return 'text-red-400',
+      default: return 'text-gray-400'},
 
-    switch(status) {;
-      case 'good': return 'bg-green-500/20';
-      case 'warning': return 'bg-yellow-500/20';
-      case 'critical': return 'bg-red-500/20';
-      default: return 'bg-gray-500/20'};
+    switch(status) {,
+      case 'good': return 'bg-green-500/20',
+      case 'warning': return 'bg-yellow-500/20',
+      case 'critical': return 'bg-red-500/20',
+      default: return 'bg-gray-500/20'},
 
-    switch(trend) {;
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;'"
-      case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;"
-      default: return <Activity className="w-4 h-4 text-blue-400"  />};
+    switch(trend) {,
+      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />,'"
+      case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />,"
+      default: return <Activity className="w-4 h-4 text-blue-400"  />},
 
-    setIsMonitoring(true) ;
-    setPerformanceData(generateMockData () ) };
+    setIsMonitoring(true) ,
+    setPerformanceData(generateMockData () ) },
 
-    setIsMonitoring(false) };
+    setIsMonitoring(false) },
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">"
       <div className="max-w-7xl mx-auto">
@@ -314,13 +312,13 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">"
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>"
               <span className="text-sm text-gray-300">
-                Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()};
-              </span>;
-            </div>;
-          </motion.div>;) };
-      </div>;
-    </div>;) ;
-</div>};
+                Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()},
+              </span>,
+            </div>,
+          </motion.div>,) },
+      </div>,
+    </div>,) ,
+</div>},
 
 export default PerformanceAnalytics}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

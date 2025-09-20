@@ -1,11 +1,11 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2025 Enterprise Transformation - Complete Business Revolution';
-  description: 'Transform your enterprise with AI 2025 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.';
-  keywords: ['AI enterprise transformation 2025digital transformation', 'enterprise AIbusiness automation', 'AI consulting'],
-};
+  title: 'AI 2025 Enterprise Transformation - Complete Business Revolution',
+  description: 'Transform your enterprise with AI 2025 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.',
+  keywords: ['AI enterprise transformation 2025digital transformationenterprise AIbusiness automation', 'AI consulting']
+},
 export default function AI2025EnterpriseTransformationPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">,
@@ -25,7 +25,7 @@ export default function AI2025EnterpriseTransformationPage() {,
             AI 2025 Enterprise Transformation,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
-            Revolutionize your enterprise with AI 2025 technologies. Complete digital transformation;
+            Revolutionize your enterprise with AI 2025 technologies. Complete digital transformation,
             intelligent automation, and data-driven decision making that delivers unprecedented results.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -44,7 +44,7 @@ export default function AI2025EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Transformation Pillars */,}
+      {/* Transformation Pillars */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -82,7 +82,7 @@ export default function AI2025EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* ROI Metrics */,}
+      {/* ROI Metrics */}
       <section className="py-16 px-4">,
         <div className="max-w-6xl mx-auto text-center">,
           <h2 className="text-4xl font-bold text-white mb-12">,
@@ -108,7 +108,7 @@ export default function AI2025EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Framework */,}
+      {/* Implementation Framework */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -139,7 +139,7 @@ export default function AI2025EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 px-4">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold text-white mb-6">,
@@ -157,5 +157,4 @@ export default function AI2025EnterpriseTransformationPage() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

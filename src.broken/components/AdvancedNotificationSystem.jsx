@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff const mockNotifications = [;
+import React, { useState, useEffect, useRef } from 'react',
+import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff const mockNotifications = [,
 
     {
 
@@ -73,81 +73,81 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
             { label: 'Schedule', action: () => // console.log('Schedule'), variant: 'secondary' }
         ]
 
-];
+],
 export function AdvancedNotificationSystem() {
-    const [notifications, setNotifications] = useState(mockNotifications);
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [filterType, setFilterType] = useState('all');
-    const [filterPriority, setFilterPriority] = useState('all');
-    const [filterCategory, setFilterCategory] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [showRead, setShowRead] = useState(true);
-    const [groupByCategory, setGroupByCategory] = useState(false);
-    const [unreadCount, setUnreadCount] = useState(0);
-    const containerRef = useRef(null);
+    const [notifications, setNotifications] = useState(mockNotifications),
+    const [isOpen, setIsOpen] = useState(false),
+    const [isMinimized, setIsMinimized] = useState(false),
+    const [filterType, setFilterType] = useState('all'),
+    const [filterPriority, setFilterPriority] = useState('all'),
+    const [filterCategory, setFilterCategory] = useState('all'),
+    const [searchQuery, setSearchQuery] = useState(''),
+    const [showRead, setShowRead] = useState(true),
+    const [groupByCategory, setGroupByCategory] = useState(false),
+    const [unreadCount, setUnreadCount] = useState(0),
+    const containerRef = useRef(null),
     useEffect(() => {
-        setUnreadCount(notifications.filter(n => !n.isRead).length)}, [notifications]);
+        setUnreadCount(notifications.filter(n => !n.isRead).length)}, [notifications]),
     const filteredNotifications = notifications.filter(notification => {
 
-        const typeMatch = filterType === 'all' || notification.type === filterType;
-        const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;
-        const categoryMatch = filterCategory === 'all' || notification.category === filterCategory;
+        const typeMatch = filterType === 'all' || notification.type === filterType,
+        const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority,
+        const categoryMatch = filterCategory === 'all' || notification.category === filterCategory,
         const searchMatch = notification.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-            notification.message.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-        const readMatch = showRead || !notification.isRead;
-        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch}) ;
+            notification.message.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+        const readMatch = showRead || !notification.isRead,
+        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch}) ,
     const markAllAsRead = () => {
-        setNotifications(prev => prev.map (n => ({ ...n, isRead: true }) ) ) };
+        setNotifications(prev => prev.map (n => ({ ...n, isRead: true }) ) ) },
     const archiveNotification = (id) => {
 
-        setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n))};
+        setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n))},
     const deleteNotification = (id) => {
 
-        setNotifications(prev => prev.filter(n => n.id !== id))};
+        setNotifications(prev => prev.filter(n => n.id !== id))},
     const getTypeIcon = (type) => {
 
         switch(type) {
 
-            case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald"/>;'"
-            case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold"/>;'"
-            case 'error': return <XCircle className="w-5 h-5 text-red-500"/>;'"
-            case 'info': return <Info className="w-5 h-5 text-zion-cyan"/>;"
+            case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald"/>,'"
+            case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold"/>,'"
+            case 'error': return <XCircle className="w-5 h-5 text-red-500"/>,'"
+            case 'info': return <Info className="w-5 h-5 text-zion-cyan"/>,"
             default: return <Info className="w-5 h-5 text-zion-slate"/>}
-    };
+    },
     const getPriorityColor = (priority) => {
 
         switch(priority) {
 
-            case 'low': return 'border-l-zion-emerald';
-            case 'medium': return 'border-l-zion-cyan';
-            case 'high': return 'border-l-zion-gold';
-            case 'critical': return 'border-l-red-500';
+            case 'low': return 'border-l-zion-emerald',
+            case 'medium': return 'border-l-zion-cyan',
+            case 'high': return 'border-l-zion-gold',
+            case 'critical': return 'border-l-red-500',
             default: return 'border-l-zion-slate'}
-    };
+    },
     const getTimeAgo = (timestamp) => {
 
-        const now = new Date();
-        const diff = now.getTime() - timestamp.getTime();
-        const minutes = Math.floor(diff / (1000 * 60));
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const now = new Date(),
+        const diff = now.getTime() - timestamp.getTime(),
+        const minutes = Math.floor(diff / (1000 * 60)),
+        const hours = Math.floor(diff / (1000 * 60 * 60)),
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24)),
         if(minutes < 1)
-            return 'Just now';
+            return 'Just now',
         if(minutes < 60)
-            return `${minutes}m ago`;
+            return `${minutes}m ago`,
         if(hours < 24)`
-            return `${hours}h ago`;`
-        return `${days}d ago`};
-    const groupedNotifications = groupByCategory;
+            return `${hours}h ago`,`
+        return `${days}d ago`},
+    const groupedNotifications = groupByCategory,
         ? filteredNotifications.reduce((groups, notification) => {
 
-            const category = notification.category;
+            const category = notification.category,
             if(!groups[category])
-                groups[category] = [];
-            groups[category].push(notification);
+                groups[category] = [],
+            groups[category].push(notification),
             return groups}, {})
-        : { 'All': filteredNotifications };
+        : { 'All': filteredNotifications },
     if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-36 p-3 bg-zion-emerald hover:bg-zion-emerald-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 relative" title="Notifications">"

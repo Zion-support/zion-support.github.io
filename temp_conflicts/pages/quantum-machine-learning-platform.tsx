@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Brain, Atom, Zap, Target, Shield, Clock, 
   CheckCircle, ArrowRight, Users, Award,
   TrendingUp, Globe, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumMachineLearningPlatform: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumMachineLearningPlatform: React.FC = () => {
       title: 'Scalable Architecture',
       description: 'Handles datasets from small-scale to enterprise-level complexity'
     }
-  ];
+  ],
 
   const mlCapabilities = [
     {
       area: 'Supervised Learning',
-      capabilities: ['Quantum classification', 'Quantum regression', 'Quantum support vector machines', 'Quantum decision trees'],
+      capabilities: ['Quantum classificationQuantum regression', 'Quantum support vector machinesQuantum decision trees'],
       improvement: '99.8% accuracy',
       processingTime: '< 2 seconds'
     },
     {
       area: 'Unsupervised Learning',
-      capabilities: ['Quantum clustering', 'Quantum dimensionality reduction', 'Quantum anomaly detection', 'Quantum pattern recognition'],
+      capabilities: ['Quantum clusteringQuantum dimensionality reduction', 'Quantum anomaly detectionQuantum pattern recognition'],
       improvement: '95% better clustering',
       processingTime: '< 5 seconds'
     },
     {
       area: 'Reinforcement Learning',
-      capabilities: ['Quantum Q-learning', 'Quantum policy optimization', 'Quantum multi-agent systems', 'Quantum game theory'],
+      capabilities: ['Quantum Q-learningQuantum policy optimization', 'Quantum multi-agent systemsQuantum game theory'],
       improvement: '1000x faster convergence',
       processingTime: '< 10 seconds'
     },
     {
       area: 'Deep Learning',
-      capabilities: ['Quantum CNNs', 'Quantum RNNs', 'Quantum transformers', 'Quantum autoencoders'],
+      capabilities: ['Quantum CNNsQuantum RNNs', 'Quantum transformersQuantum autoencoders'],
       improvement: '500x faster training',
       processingTime: '< 30 seconds'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Financial Risk Assessment',
       description: 'Quantum ML for fraud detection, credit scoring, and market prediction',
-      benefits: ['99.9% fraud detection rate', 'Real-time risk assessment', 'Improved prediction accuracy']
+      benefits: ['99.9% fraud detection rateReal-time risk assessment', 'Improved prediction accuracy']
     },
     {
       title: 'Healthcare Diagnostics',
       description: 'Quantum ML for medical image analysis and disease prediction',
-      benefits: ['95% diagnostic accuracy', 'Faster diagnosis', 'Early disease detection']
+      benefits: ['95% diagnostic accuracyFaster diagnosis', 'Early disease detection']
     },
     {
       title: 'Cybersecurity',
       description: 'Quantum ML for threat detection and anomaly identification',
-      benefits: ['Real-time threat detection', 'Zero false positives', 'Adaptive security']
+      benefits: ['Real-time threat detectionZero false positives', 'Adaptive security']
     },
     {
       title: 'Climate Modeling',
       description: 'Quantum ML for weather prediction and climate change analysis',
-      benefits: ['90% prediction accuracy', 'Complex pattern recognition', 'Long-term forecasting']
+      benefits: ['90% prediction accuracyComplex pattern recognition', 'Long-term forecasting']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumMachineLearningPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for research teams and small ML projects',
       features: [
-        'Up to 100 ML models/month',
-        'Basic quantum algorithms',
-        'Standard ML tasks',
-        'Email support',
+        'Up to 100 ML models/monthBasic quantum algorithms',
+        'Standard ML tasksEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumMachineLearningPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing ML teams and research organizations',
       features: [
-        'Up to 500 ML models/month',
-        'Advanced quantum algorithms',
-        'Custom ML architectures',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 500 ML models/monthAdvanced quantum algorithms',
+        'Custom ML architecturesPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumMachineLearningPlatform: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large ML organizations',
       features: [
-        'Unlimited ML models',
-        'Custom quantum algorithm development',
-        'Dedicated quantum hardware',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited ML modelsCustom quantum algorithm development',
+        'Dedicated quantum hardwareDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumMachineLearningPlatform: React.FC = () => {
       position: "CISO",
       company: "Tech Security Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -491,7 +483,7 @@ const QuantumMachineLearningPlatform: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Learn with Quantum Power?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -513,7 +505,7 @@ const QuantumMachineLearningPlatform: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumMachineLearningPlatform;
+export default QuantumMachineLearningPlatform,

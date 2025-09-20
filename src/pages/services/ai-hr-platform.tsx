@@ -1,63 +1,41 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus } from 'lucide-react';
-
+import React from "react";
+import SEO from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus } from "lucide-react";
 const AIHRPlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Recruitment',
-      description: 'Intelligent candidate screening and matching'
-    },
+      icon: Brain,title: 'AI Recruitment',description: 'Intelligent candidate screening and matching'
+    };
     {
-      icon: Users,
-      title: 'Talent Management',
-      description: 'Comprehensive employee lifecycle management'
-    },
+      icon: Users,title: 'Talent Management',description: 'Comprehensive employee lifecycle management'
+    };
     {
-      icon: Target,
-      title: 'Performance Analytics',
-      description: 'Data-driven insights for better decisions'
-    },
+      icon: Target,title: 'Performance Analytics',description: 'Data-driven insights for better decisions'
+    };
     {
-      icon: Shield,
-      title: 'Compliance Automation',
-      description: 'Automated HR compliance and reporting'
+      icon: Shield,title: 'Compliance Automation',description: 'Automated HR compliance and reporting'
     }
   ];
-
   const modules = [
     {
-      title: 'Recruitment & Onboarding',
-      description: 'Streamlined hiring process with AI assistance',
-      icon: '🎯'
-    },
+      title: 'Recruitment & Onboarding',description: 'Streamlined hiring process with AI assistance',icon: '🎯'
+    };
     {
-      title: 'Performance Management',
-      description: '360-degree feedback and goal tracking',
-      icon: '📊'
-    },
+      title: 'Performance Management',description: '360-degree feedback and goal tracking',icon: '📊'
+    };
     {
-      title: 'Learning & Development',
-      description: 'Personalized training and skill development',
-      icon: '🎓'
-    },
+      title: 'Learning & Development',description: 'Personalized training and skill development',icon: '🎓'
+    };
     {
-      title: 'Employee Engagement',
-      description: 'Monitor and improve workplace satisfaction',
-      icon: '❤️'
+      title: 'Employee Engagement',description: 'Monitor and improve workplace satisfaction',icon: '❤️'
     }
   ];
-
   const benefits = [
-    'Reduce time-to-hire by 50% with AI screening',
-    'Improve candidate quality and retention rates',
-    'Automate routine HR tasks and workflows',
-    'Data-driven insights for better decisions',
-    'Enhanced employee experience and engagement',
-    'Compliance automation and risk reduction'
-  ];
+    'Reduce time-to-hire by 50% with AI screeningImprove candidate quality and retention rates',
+    'Automate routine HR tasks and workflowsData-driven insights for better decisions',
+    'Enhanced employee experience and engagementCompliance automation and risk reduction'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,7 +226,7 @@ const AIHRPlatform: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join the AI revolution in human resources management
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Start HR Transformation
               </button>
@@ -260,7 +238,6 @@ const AIHRPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIHRPlatform;

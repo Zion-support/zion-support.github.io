@@ -1,28 +1,28 @@
-import { useEffect, useState } from 'react';
-import Head from 'next/head';
+import { useEffect, useState } from 'react',
+import Head from 'next/head',
 
 interface UnusedAsset {
-  path: string;
-  size?: string | null;
-  sizeBytes?: number | null;
-  modifiedAt?: string | null;
+  path: string,
+  size?: string | null,
+  sizeBytes?: number | null,
+  modifiedAt?: string | null
 }
 
 interface Report {
-  generatedAt: string;
-  totalAssets: number;
-  totalUnused: number;
-  unused: UnusedAsset[];
+  generatedAt: string,
+  totalAssets: number,
+  totalUnused: number,
+  unused: UnusedAsset[]
 }
 
 export default function UnusedAssetsReport() {
-  const [data, setData] = useState<Report | null>(null);
+  const [data, setData] = useState<Report | null>(null),
   useEffect(() => {
     fetch('/reports/unused-assets.json')
       .then((r) => r.json())
       .then(setData)
-      .catch(() => setData(null));
-  }, []);
+      .catch(() => setData(null)),
+  }, []),
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -52,5 +52,5 @@ export default function UnusedAssetsReport() {
         )}
       </main>
     </div>
-  );
+  ),
 }

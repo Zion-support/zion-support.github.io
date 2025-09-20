@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-];
+],
 const complianceFrameworks = [{
 "
         name: "NIST Cybersecurity Framework","
@@ -43,11 +43,11 @@ const complianceFrameworks = [{
         controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],"
         benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
     }
-];"
+],"
         features["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],"
         benefits["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
     }
-];
+],
 const securityStats = ["
     { icon: <Shield className="w-6 h-6"/>, value: "99.99%", label: "Uptime" },"
     { icon: <Lock className="w-6 h-6"/>, value: "256-bit", label: "Encryption" },"
@@ -55,10 +55,10 @@ const securityStats = ["
     { icon: <CheckCircle className="w-6 h-6"/>, value: "15+", label: "Certifications" },"
     { icon: <Users className="w-6 h-6"/>, value: "0", label: "Security Breaches" },"
     { icon: <Award className="w-6 h-6"/>, value: "100%", label: "Compliance" }
-];
-    const [selectedStandard, setSelectedStandard] = useState(null);
-    const [selectedFramework, setSelectedFramework] = useState(null);
-    const [selectedFeature, setSelectedFeature] = useState(null);
+],
+    const [selectedStandard, setSelectedStandard] = useState(null),
+    const [selectedFramework, setSelectedFramework] = useState(null),
+    const [selectedFeature, setSelectedFeature] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -70,7 +70,7 @@ const securityStats = ["
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -86,7 +86,7 @@ const securityStats = ["
                 duration: 0.6,"
                 ease: "easeOut"
 
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

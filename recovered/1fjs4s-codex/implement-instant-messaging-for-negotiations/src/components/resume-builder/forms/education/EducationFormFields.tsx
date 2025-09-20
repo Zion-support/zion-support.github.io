@@ -1,25 +1,25 @@
 
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { useForm } from 'react-hook-form',
+import { zodResolver } from '@hookform/resolvers/zod',
+import { z } from 'zod',
+import { format } from 'date-fns',
+import { Loader2 } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { Textarea } from '@/components/ui/textarea',
+import { Input } from '@/components/ui/input',
+import { Checkbox } from '@/components/ui/checkbox',
+import { Alert, AlertDescription } from '@/components/ui/alert',
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { useState } from 'react';
-import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types/resume';
+  FormMessage
+} from '@/components/ui/form',
+import { useState } from 'react',
+import { EducationFormFieldsProps } from './types',
+import { Education } from '@/types/resume',
 
 // Define schema for form validation
 const educationSchema = z.object({
@@ -30,18 +30,18 @@ const educationSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional(),
-});
+  location: z.string().optional()
+}),
 
-type EducationFormValues = z.infer<typeof educationSchema>;
+type EducationFormValues = z.infer<typeof educationSchema>,
 
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
   const form = useForm<EducationFormValues>({
     resolver: zodResolver(educationSchema),
@@ -52,21 +52,21 @@ export function EducationFormFields({
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
-      location: '',
-    },
-  });
+      location: ''
+    }
+  }),
 
   const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
     try {
-      await onSubmit(data);
+      await onSubmit(data)
     } catch (err: any) {
-      setError(err.message || 'An error occurred');
+      setError(err.message || 'An error occurred')
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   return (
     <Form {...form}>
@@ -225,5 +225,5 @@ export function EducationFormFields({
         </div>
       </form>
     </Form>
-  );
+  ),
 }

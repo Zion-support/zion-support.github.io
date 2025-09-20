@@ -1,32 +1,32 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   ArrowRight,
   Star,
   Zap,
   Brain,
-  TrendingUp;
-  X;
-  CheckCircle,
-} from 'lucide-react';
+  TrendingUp,
+  X,
+  CheckCircle
+} from 'lucide-react',
 const InteractiveContentShowcase2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentFeaturesetCurrentFeature] = useState(0),
   const features = [,
-    "Interactive AI Demos";
-    "Real-time Analytics";
-    "Smart Automation";
-    "Live Performance Metrics",
-  ];
+    "Interactive AI Demos",
+    "Real-time Analytics",
+    "Smart Automation",
+    "Live Performance Metrics"
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }2000);
-    return () => clearInterval(interval);
-  }[]);
-  if (!isVisible) return null;
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }2000),
+    return () => clearInterval(interval),
+  }[]),
+  if (!isVisible) return null,
   return (,
     <div,
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden",
@@ -44,7 +44,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {,
       <div className="relative z-10">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div className="flex-1 text-center lg: text-left">,
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">,
                 <div,
@@ -62,7 +62,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {,
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">,
                 <span className="text-lg opacity-90">Featuring:</span>,
                 <divspan,
-                  key={currentFeature,}
+                  key={currentFeature}
                   className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full",
                 >,
                   {features[currentFeature]}
@@ -83,7 +83,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Right Content - CTA Buttons */,}
+            {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm: flex-row items-center gap-3">,
               <button,
                 className="flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300",
@@ -99,7 +99,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {,
                 Explore Features,
               </button>,
             </div>,
-            {/* Close Button */,}
+            {/* Close Button */}
             <button,
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 p-2 hover: bg-white/20 rounded-full transition-colors duration-200",
@@ -108,7 +108,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {,
             </button>,
           </div>,
         </div>,
-        {/* Progress Bar */,}
+        {/* Progress Bar */}
         <div className="h-1 bg-white/20">,
           <div,
             className="h-full bg-white",
@@ -116,7 +116,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default InteractiveContentShowcase2025PromotionBanner;
+  ),
+},
+export default InteractiveContentShowcase2025PromotionBanner,
 </div></div></div></div></div></div></div></div></div></div>,

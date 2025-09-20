@@ -1,24 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 
 interface NeonEffect2036Props {
-  children: React.ReactNode;
-  variant?: 'cyberpunk' | 'holographic' | 'quantum' | 'neon' | 'glitch' | 'energy' | 'data' | 'space';
-  intensity?: 'low' | 'medium' | 'high';
-  interactive?: boolean;
-  animated?: boolean;
-  className?: string;
-  glowColor?: string;
-  pulseSpeed?: number;
+  children: React.ReactNode,
+  variant?: 'cyberpunk' | 'holographic' | 'quantum' | 'neon' | 'glitch' | 'energy' | 'data' | 'space',
+  intensity?: 'low' | 'medium' | 'high',
+  interactive?: boolean,
+  animated?: boolean,
+  className?: string,
+  glowColor?: string,
+  pulseSpeed?: number
 }
 
 interface NeonGlow2036Props {
-  children: React.ReactNode;
-  color: string;
-  intensity: number;
-  spread?: number;
-  className?: string;
-  animated?: boolean;
+  children: React.ReactNode,
+  color: string,
+  intensity: number,
+  spread?: number,
+  className?: string,
+  animated?: boolean
 }
 
 // Enhanced Neon Glow Component
@@ -30,23 +30,23 @@ const NeonGlow2036: React.FC<NeonGlow2036Props> = ({
   className = '',
   animated = false
 }) => {
-  const baseColor = color;
-  const glowColor = color + '80';
-  const shadowColor = color + '40';
-  const [pulse, setPulse] = useState(0);
+  const baseColor = color,
+  const glowColor = color + '80',
+  const shadowColor = color + '40',
+  const [pulse, setPulse] = useState(0),
 
   useEffect(() => {
-    if (!animated) return;
+    if (!animated) return,
     
     const interval = setInterval(() => {
-      setPulse(prev => (prev + 1) % 360);
-    }, 50);
+      setPulse(prev => (prev + 1) % 360),
+    }, 50),
 
-    return () => clearInterval(interval);
-  }, [animated]);
+    return () => clearInterval(interval),
+  }, [animated]),
 
-  const pulseIntensity = animated ? Math.sin(pulse * Math.PI / 180) * 0.3 + 0.7 : 1;
-  const currentSpread = spread * pulseIntensity;
+  const pulseIntensity = animated ? Math.sin(pulse * Math.PI / 180) * 0.3 + 0.7 : 1,
+  const currentSpread = spread * pulseIntensity,
 
 const UltraAdvancedNeonEffects2036: React.FC = () => {
   return (
@@ -54,7 +54,7 @@ const UltraAdvancedNeonEffects2036: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedNeonEffects2036</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedNeonEffects2036;
+export default UltraAdvancedNeonEffects2036,

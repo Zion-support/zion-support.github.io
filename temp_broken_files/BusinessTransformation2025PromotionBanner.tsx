@@ -1,40 +1,40 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Building2,
   DollarSign,
-  Star;
-  ChevronRight;
-  X;
-  Users;
-  Award;
-  Clock;
-  Sparkles;
-  CheckCircle;
-  BarChart3,
-} from 'lucide-react';
+  Star,
+  ChevronRight,
+  X,
+  Users,
+  Award,
+  Clock,
+  Sparkles,
+  CheckCircle,
+  BarChart3
+} from 'lucide-react',
 const BusinessTransformation2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentMetricsetCurrentMetric] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentMetricsetCurrentMetric] = useState(0),
   const metrics = [,
-    { icon: DollarSignvalue: '340%'label: 'Revenue 'Increasecolor: 'text-green-400' ,};
-    { icon: TrendingUpvalue: '65%'label: 'Cost 'Reductioncolor: 'text-blue-400' ,};
-    { icon: BarChart3value: '280%'label: 'Efficiency 'Gaincolor: 'text-yellow-400' ,};
-    { icon: Starvalue: '98%'label: 'Customer 'Satisfactioncolor: 'text-purple-400' ,}
-  ];
+    { icon: DollarSignvalue: '340%'label: 'Revenue 'Increasecolor: 'text-green-400' },
+    { icon: TrendingUpvalue: '65%'label: 'Cost 'Reductioncolor: 'text-blue-400' },
+    { icon: BarChart3value: '280%'label: 'Efficiency 'Gaincolor: 'text-yellow-400' },
+    { icon: Starvalue: '98%'label: 'Customer 'Satisfactioncolor: 'text-purple-400' }
+  ],
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Rotate through metrics,
     const interval = setInterval(() => {,
-      setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
-  const currentMetricData = metrics[currentMetric];
-  if (isDismissed || !isVisible) return null;
+      setCurrentMetric((prev) => (prev + 1) % metrics.length),
+    }2500),
+    return () => clearInterval(interval),
+  }[]),
+  const currentMetricData = metrics[currentMetric],
+  if (isDismissed || !isVisible) return null,
   return (,
     <div>,
       <div,
@@ -48,7 +48,7 @@ const BusinessTransformation2025PromotionBanner = () => {,
         </div>,
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">,
-            {/* Left side - Main content */,}
+            {/* Left side - Main content */}
             <div className="flex-1 text-center lg: text-left">,
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">,
                 <div,
@@ -70,10 +70,10 @@ const BusinessTransformation2025PromotionBanner = () => {,
               <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-2xl">,
                 Real results from real businesses. See how companies achieve 340% revenue growth with AI and automation.,
               </p>,
-              {/* Rotating metrics showcase */,}
+              {/* Rotating metrics showcase */}
               <div className="flex items-center justify-center lg: justify-start gap-4 mb-4">,
                 <div,
-                  key={currentMetric,}
+                  key={currentMetric}
                   className="flex items-center px-4 py-2 rounded-full bg-white/10 text-white",
                 >,
                   <currentMetricData.icon className="w-5 h-5 mr-2" />,
@@ -99,7 +99,7 @@ const BusinessTransformation2025PromotionBanner = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Right side - CTA buttons */,}
+            {/* Right side - CTA buttons */}
             <div className="flex flex-col sm: flex-row gap-3">,
               <button,
                 className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg",
@@ -115,7 +115,7 @@ const BusinessTransformation2025PromotionBanner = () => {,
                 Calculate ROI,
               </button>,
             </div>,
-            {/* Close button */,}
+            {/* Close button */}
             <button,
               onClick={() => setIsDismissed(true)}
               className="absolute top-4 right-4 text-gray-400 hover: text-white transition-colors duration-200",
@@ -123,16 +123,15 @@ const BusinessTransformation2025PromotionBanner = () => {,
               <X className="w-6 h-6" />,
             </button>,
           </div>,
-          {/* Metric indicators */,}
+          {/* Metric indicators */}
           <div className="flex justify-center lg: justify-start mt-4 space-x-2">,
             {metrics.map((_index) => (,
               <div,
-                key={index,}
+                key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${,
-                  index === currentMetric ? 'bg-green-400 w-8' : 'bg-white/30',
+                  index === currentMetric ? 'bg-green-400 w-8' : 'bg-white/30'
                 }`}
-              />,
-            ))}
+              />))}
           </div>,
         </div>,
         {/* Floating elements */}
@@ -141,7 +140,7 @@ const BusinessTransformation2025PromotionBanner = () => {,
         <div className="absolute bottom-4 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" />,
       </div>,
     </div>,
-  );
-};
-export default BusinessTransformation2025PromotionBanner;
+  ),
+},
+export default BusinessTransformation2025PromotionBanner,
 </div></div></div></div></div></div></div></div></div></div>,

@@ -1,46 +1,46 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       id: 'energy',
       name: 'Energy & Utilities',
       icon: '⚡',
-      description: 'Renewable energy management and grid optimization',
+      description: 'Renewable energy management and grid optimization'
     },
     {
       id: 'logistics',
       name: 'Logistics & Transportation',
       icon: '🚚',
-      description: 'Autonomous logistics and route optimization',
+      description: 'Autonomous logistics and route optimization'
     },
     {
       id: 'legal',
       name: 'Legal Services',
       icon: '⚖️',
-      description: 'AI - powered research and document analysis',
+      description: 'AI - powered research and document analysis'
     },
     {
       id: 'marketing',
       name: 'Marketing & Advertising',
       icon: '📢',
-      description: 'Autonomous campaigns and AI content generation',
-    },
-  ];
+      description: 'Autonomous campaigns and AI content generation'
+    }
+  ],
   const getServicesByIndustry = industry => {
-    if(industry === 'all') return innovativeMicroSaasServices2025;
+    if(industry === 'all') return innovativeMicroSaasServices2025,
     const industryMap = {
-      finance: ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
+      finance: ['FinTech & AICybersecurity & Quantum Computing'],
       healthcare: ['Healthcare & AI'],
-      manufacturing: ['IoT & Edge Computing', 'Blockchain & Supply Chain'],
+      manufacturing: ['IoT & Edge ComputingBlockchain & Supply Chain'],
       energy: ['Energy & Sustainability'],
       logistics: ['Logistics & Transportation'],
       legal: ['Legal Tech & AI'],
-      marketing: ['Marketing & AI'],
-    };
+      marketing: ['Marketing & AI']
+    },
     return innovativeMicroSaasServices2025.filter(service =>
-      industryMap[industry]?.includes (service.category) ) ;
-  };
-  const filteredServices = getServicesByIndustry(selectedIndustry) ;
+      industryMap[industry]?.includes (service.category) ) ,
+  },
+  const filteredServices = getServicesByIndustry(selectedIndustry) ,
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -503,7 +503,7 @@ export default function Page() {
       </section>
 
       {/* Final CTA */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20">
+      <section className="px-4 sm: px-6 lg:px-8 py-20">
         <div className="max - w-4xl mx - auto text-center">
           <h2 className="text-3xl md:text-4xl font - bold mb-6">
             Ready to Transform Your Business?
@@ -542,5 +542,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-    ];"
+    ],"
     return (<section className="py-20 relative">
       {/* Background accent */}"
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>

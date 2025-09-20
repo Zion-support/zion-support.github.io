@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
       <div  className="relative overflow-hidden">
@@ -16,7 +16,7 @@ export default function Page() {
             </h1>
             <p className="text-xl md:text-2xl text-gray - 300 mb-12 max - w-4xl mx -auto">
               Revolutionary AI - powered, quantum - secure, and autonomous business solutions that transform industries and drive unprecedented growth.</p>
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="/contact"
                 className="inline - flex items - center px-8 py-4 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white font - semibold rounded-lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale -105"
@@ -34,10 +34,10 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </div>;
+      </div>,
 
       {/* Contact Information Banner */}
-      <div  className="bg-gradient - to - r from - blue - 900 / 50 to - purple - 900 / 50 border-y border-blue -400 / 30">;
+      <div  className="bg-gradient - to - r from - blue - 900 / 50 to - purple - 900 / 50 border-y border-blue -400 / 30">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-6">
           <div  className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-center">
             <div  className="flex items - center justify - center space - x-3">
@@ -72,7 +72,7 @@ export default function Page() {
       </div>
 
       {/* Search and Filter Section */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-12">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-12">,
         <div  className="bg-white / 10 backdrop - blur - lg rounded-2xl p - 8 border border-white / 20">
           <div  className="flex flex - col lg:flex - row gap-6">
             {/* Search */}
@@ -96,9 +96,9 @@ export default function Page() {
               <select
                 value={selectedCategory}
                 onChange={ (e) => setSelectedCategory(e.target.value) }
-                className="w-full px-4 py-3 bg-white / 20 border border-white / 30 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - blue - 400 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white / 20 border border-white / 30 rounded-lg text-white focus: outline - none focus:ring - 2 focus:ring - blue - 400 focus:border-transparent"
 
-                {categories.map(category => (;
+                {categories.map(category => (,
                   <option key={category} value={category} className="bg-slate - 800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
@@ -109,7 +109,7 @@ export default function Page() {
       </div>
 
       {/* Contact Information Banner */}
-      <div  className="bg-gradient - to - r from - blue - 900 / 50 to - purple - 900 / 50 border-y border-blue -400 / 30">;
+      <div  className="bg-gradient - to - r from - blue - 900 / 50 to - purple - 900 / 50 border-y border-blue -400 / 30">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-12">
           <div  className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
             <div  className="text-center">
@@ -138,7 +138,7 @@ export default function Page() {
       </div>
 
       {/* Service Guarantees */}
-      <div  className="bg-gradient - to - r from - slate - 800 / 50 to - slate -900 / 50">;
+      <div  className="bg-gradient - to - r from - slate - 800 / 50 to - slate -900 / 50">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">
           <div  className="text-center mb-12">
             <h2 className="text-4xl font - bold text-white mb-4">Our Service Guarantees</h2>
@@ -159,7 +159,7 @@ export default function Page() {
       </div>
 
       {/* Pricing Tiers */}
-      <div  className="bg-gradient - to - r from - purple - 900 / 50 to - blue -900 / 50">;
+      <div  className="bg-gradient - to - r from - purple - 900 / 50 to - blue -900 / 50">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">
           <div  className="text-center mb-12">
             <h2 className="text-4xl font - bold text-white mb-4">Pricing Tiers</h2>
@@ -178,17 +178,17 @@ export default function Page() {
                 </ul>
                 <Link
                   to="/contact"
-                  className="w-full inline - flex items - center justify - center px-6 py-3 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white font - semibold rounded-lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration -300"
+                  className="w-full inline - flex items - center justify - center px-6 py-3 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white font - semibold rounded-lg hover: from - blue - 700 hover:to - purple - 700 transition - all duration -300"
 
                   Get Started
                 </Link>
-              </div>;) ) }
+              </div>,) ) }
           </div>
         </div>
       </div>
 
       {/* Services Grid */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 pb -24">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 pb -24">,
         <div  className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8">
           {filteredServices.map((service) => (<div  key={service.id}
               className="bg-white / 10 backdrop - blur - lg rounded-2xl p - 8 border border-white / 20 hover:border-blue - 400 / 50 transition - all duration - 300 transform hover:scale -105 group"
@@ -212,9 +212,9 @@ export default function Page() {
               </div>
 
               {/* Description */}
-              <p className="text-gray - 300 mb-6 leading -relaxed">;
+              <p className="text-gray - 300 mb-6 leading -relaxed">,
                 {service.description}
-              </p>;
+              </p>,
 
               {/* Tags */}
               <div  className="mb-6">
@@ -229,7 +229,7 @@ export default function Page() {
               </div>
 
               {/* Pricing and ROI */}
-              <div  className="mb-6 p - 4 bg-white / 5 rounded-lg border border-white / 10">;
+              <div  className="mb-6 p - 4 bg-white / 5 rounded-lg border border-white / 10">,
                 <div  className="flex items - center justify - between mb-2">
                   <span className="text-2xl font - bold text-white">${service.price.toLocaleString () }</span>
                   <span className="text-gray -400">One - time</span>
@@ -246,7 +246,7 @@ export default function Page() {
               </div>
 
               {/* Integrations */}
-              <div  className="mb-6">;
+              <div  className="mb-6">,
                 <h4 className="text-white font - semibold mb-3">Integrations</h4>
                 <div  className="flex flex - wrap gap-2">
                   {service.integrations.slice(0, 4) .map((integration, index) => (<span
@@ -259,7 +259,7 @@ export default function Page() {
               </div>
 
               {/* Contact Information */}
-              <div  className="mb-6 p - 4 bg-white / 5 rounded-lg border border-white / 10">;
+              <div  className="mb-6 p - 4 bg-white / 5 rounded-lg border border-white / 10">,
                 <h4 className="text-white font - semibold mb-3">Contact Information</h4>
                 <div  className="space - y-2 text-sm text-gray -300">
                   <div  className="flex items - center space - x-2">
@@ -278,7 +278,7 @@ export default function Page() {
               </div>
 
               {/* Action Buttons */}
-              <div  className="flex flex - col sm:flex - row gap-3">;
+              <div  className="flex flex - col sm: flex - row gap-3">,
                 <Link
                   to={`/services/${service.id}`}
                   className="flex - 1 inline - flex items - center justify - center px-4 py-3 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white font - semibold rounded-lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration -300 group"
@@ -296,7 +296,7 @@ export default function Page() {
               </div>
 
               {/* Contact Information */}
-              <div  className="mt-6 pt - 6 border-t border-white / 10">;
+              <div  className="mt-6 pt - 6 border-t border-white / 10">,
                 <div  className="text-center">
                   <p className="text-sm text-gray - 400 mb-2">Ready to get started?</p>
                   <div  className="flex flex - col sm:flex - row gap-2 text-sm">
@@ -321,15 +321,15 @@ export default function Page() {
         </div>
 
         {/* No Results Message */}
-        {filteredServices.length === 0 && (;
-          <div  className="text-center py-16">;
-            <div  className="text-gray - 400 text-xl mb-4">;
-              No services found matching your criteria;
-            </div>;
-            <button;
-              onClick={ () => {;
-                setSearchTerm('') ;
-                setSelectedCategory('all') ;
+        {filteredServices.length === 0 && (,
+          <div  className="text-center py-16">,
+            <div  className="text-gray - 400 text-xl mb-4">,
+              No services found matching your criteria,
+            </div>,
+            <button,
+              onClick={ () => {,
+                setSearchTerm('') ,
+                setSelectedCategory('all') ,
               }}
               className="px-6 py-3 bg-blue - 600 text-white rounded-lg hover:bg-blue - 700 transition -colors"
             >
@@ -339,7 +339,7 @@ export default function Page() {
       </div>
 
       {/* Call to Action Section */}
-      <div  className="bg-gradient - to - r from - blue - 900 / 50 to - purple - 900 / 50 border-t border-blue -400 / 30">;
+      <div  className="bg-gradient - to - r from - blue - 900 / 50 to - purple - 900 / 50 border-t border-blue -400 / 30">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">
           <div  className="text-center">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -368,7 +368,7 @@ export default function Page() {
       </div>
 
       {/* Comprehensive Footer */}
-      <div  className="bg-gradient - to - r from - slate - 900 to - slate - 800 border-t border-blue -400 / 30">;
+      <div  className="bg-gradient - to - r from - slate - 900 to - slate - 800 border-t border-blue -400 / 30">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">
           <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
             {/* Comp Info */}
@@ -416,21 +416,21 @@ export default function Page() {
 
           {/* Bottom Bar */}
           <div  className="border-t border-gray - 700 mt-12 pt -8">
-            <div  className="flex flex - col md:flex - row justify - between items -center">
+            <div  className="flex flex - col md: flex - row justify - between items -center">
               <p className="text-gray - 400 text-sm">
                 © 2025 Zion Tech Group.All rights reserved.</p>
               <div  className="flex space - x-6 mt-4 md:mt-0">
                 <Link to="/privacy" className="text-gray - 400 hover:text-white text-sm transition -colors">Privacy Policy</Link>
-                <Link to="/terms" className="text-gray - 400 hover:text-white text-sm transition -colors">Terms of Service</Link>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
+                <Link to="/terms" className="text-gray - 400 hover:text-white text-sm transition -colors">Terms of Service</Link>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) ,
 
 // Search icon component
-const Search = ({ className }: { className?: string }) => (;
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;
-  </svg>;) ;
+const Search = ({ className }: { className?: string }) => (,
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />,
+  </svg>,) ,

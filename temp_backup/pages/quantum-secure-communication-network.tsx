@@ -1,19 +1,19 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
   Shield, Lock, Zap, Target, Globe, Users, Award, Check,
   Clock, DollarSign, ArrowUpRight, Play, BookOpen, Code,
   Network, Cpu, Server
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
-export default quantum-secure-communication-network;
+},
+export default quantum-secure-communication-network,

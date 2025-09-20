@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-      ],
+      ]
     },
     {
       id: 'micro - saas',
@@ -17,20 +17,16 @@ export default function Page() {
           price: '$150 / month',
           marketPrice: '$200 - 400 / month',
           features: [
-            'AI Resource Optimization',
-            'Risk Prediction',
-            'Automated Scheduling',
-            'Team Collaboration',
-            'Progress Analytics',
+            'AI Resource OptimizationRisk Prediction',
+            'Automated SchedulingTeam Collaboration',
+            'Progress Analytics'
           ],
-          benefits: ['30% faster project completion',
-            '20% resource optimization',
-            'Improved team productivity',
-            'Real - time insights',
+          benefits: ['30% faster project completion20% resource optimization',
+            'Improved team productivityReal - time insights'
           ],
           icon: Workflow,
           category: 'micro - saas',
-          badge: 'Best Value',
+          badge: 'Best Value'
         },
         {
           name: 'Smart Inventory Management System',
@@ -38,20 +34,16 @@ export default function Page() {
             'AI - driven inventory optimization with demand forecasting and automated reordering',
           price: '$200 / month',
           marketPrice: '$250 - 500 / month',
-          features: ['Demand Forecasting',
-            'Automated Reordering',
-            'Multi - location Support',
-            'Supplier Management',
-            'Cost Analytics',
+          features: ['Demand ForecastingAutomated Reordering',
+            'Multi - location SupportSupplier Management',
+            'Cost Analytics'
           ],
-          benefits: ['25% inventory cost reduction',
-            '99% stock availability',
-            'Automated procurement',
-            'Real - time tracking',
+          benefits: ['25% inventory cost reduction99% stock availability',
+            'Automated procurementReal - time tracking'
           ],
           icon: Truck,
           category: 'micro - saas',
-          badge: 'Popular',
+          badge: 'Popular'
         },
         {
           name: 'AI Content Creation Platform',
@@ -59,22 +51,18 @@ export default function Page() {
             'Automated content generation with SEO optimization and brand consistency',
           price: '$120 / month',
           marketPrice: '$150 - 300 / month',
-          features: ['Multi - format Content',
-            'SEO Optimization',
-            'Brand Consistency',
-            'Plagiarism Detection',
-            'Performance Analytics',
+          features: ['Multi - format ContentSEO Optimization',
+            'Brand ConsistencyPlagiarism Detection',
+            'Performance Analytics'
           ],
-          benefits: ['10x faster content creation',
-            'Improved SEO rankings',
-            'Consistent brand voice',
-            'Cost - effective marketing',
+          benefits: ['10x faster content creationImproved SEO rankings',
+            'Consistent brand voiceCost - effective marketing'
           ],
           icon: Brain, // Changed from PenTool to Brain for consistency with AI services
           category: 'micro - saas',
-          badge: 'New',
-        },
-      ],
+          badge: 'New'
+        }
+      ]
     },
     {
       id: 'it - services',
@@ -90,20 +78,16 @@ export default function Page() {
           price: '$5,000 / project',
           marketPrice: '$8,000 - 15,000 / project',
           features: [
-            'Multi - cloud Strategy',
-            'Cost Optimization',
-            'Performance Tuning',
-            'Security Implementation',
-            '24 / 7 Support',
+            'Multi - cloud StrategyCost Optimization',
+            'Performance TuningSecurity Implementation',
+            '24 / 7 Support'
           ],
-          benefits: ['40% cost reduction',
-            '99.9% uptime',
-            'Scalable infrastructure',
-            'Enhanced security',
+          benefits: ['40% cost reduction99.9% uptime',
+            'Scalable infrastructureEnhanced security'
           ],
           icon: Cloud,
           category: 'it - services',
-          badge: 'Featured',
+          badge: 'Featured'
         },
         {
           name: 'DevOps Automation Platform',
@@ -111,20 +95,16 @@ export default function Page() {
             'End - to - end DevOps automation with CI / CD pipelines and infrastructure as code',
           price: '$2,800 / month',
           marketPrice: '$3,500 - 6,000 / month',
-          features: ['CI / CD Pipelines',
-            'Infrastructure as Code',
-            'Automated Testing',
-            'Monitoring & Alerting',
-            'Security Scanning',
+          features: ['CI / CD PipelinesInfrastructure as Code',
+            'Automated TestingMonitoring & Alerting',
+            'Security Scanning'
           ],
-          benefits: ['80% faster deployments',
-            'Reduced human errors',
-            'Improved code quality',
-            'Faster time to market',
+          benefits: ['80% faster deploymentsReduced human errors',
+            'Improved code qualityFaster time to market'
           ],
           icon: Code,
           category: 'it - services',
-          badge: 'Popular',
+          badge: 'Popular'
         },
         {
           name: 'Cybersecurity Compliance Suite',
@@ -132,22 +112,18 @@ export default function Page() {
             'Comprehensive security compliance for GDPR, HIPAA, SOC2, and industry standards',
           price: '$4,500 / month',
           marketPrice: '$6,000 - 12,000 / month',
-          features: ['Compliance Automation',
-            'Risk Assessment',
-            'Audit Preparation',
-            'Security Training',
-            'Incident Response',
+          features: ['Compliance AutomationRisk Assessment',
+            'Audit PreparationSecurity Training',
+            'Incident Response'
           ],
-          benefits: ['100% compliance assurance',
-            'Reduced audit time',
-            'Risk mitigation',
-            'Legal protection',
+          benefits: ['100% compliance assuranceReduced audit time',
+            'Risk mitigationLegal protection'
           ],
           icon: Lock,
           category: 'it - services',
-          badge: 'Essential',
-        },
-      ],
+          badge: 'Essential'
+        }
+      ]
     },
     {
       id: 'quantum - tech',
@@ -162,20 +138,16 @@ export default function Page() {
           price: '$15,000 / month',
           marketPrice: '$20,000 - 50,000 / month',
           features: [
-            'Quantum Algorithms',
-            'Optimization Problems',
-            'Cryptography',
-            'Simulation',
-            'Research Support',
+            'Quantum AlgorithmsOptimization Problems',
+            'CryptographySimulation',
+            'Research Support'
           ],
-          benefits: ['Exponential speed improvements',
-            'Unbreakable encryption',
-            'Complex problem solving',
-            'Competitive advantage',
+          benefits: ['Exponential speed improvementsUnbreakable encryption',
+            'Complex problem solvingCompetitive advantage'
           ],
           icon: Atom,
           category: 'quantum - tech',
-          badge: 'Future Tech',
+          badge: 'Future Tech'
         },
         {
           name: 'Blockchain Enterprise Platform',
@@ -183,20 +155,16 @@ export default function Page() {
             'Secure blockchain solutions for supply chain, finance, and digital identity',
           price: '$3,500 / month',
           marketPrice: '$5,000 - 15,000 / month',
-          features: ['Smart Contracts',
-            'Supply Chain Tracking',
-            'Digital Identity',
-            'Tokenization',
-            'Interoperability',
+          features: ['Smart ContractsSupply Chain Tracking',
+            'Digital IdentityTokenization',
+            'Interoperability'
           ],
-          benefits: ['Enhanced transparency',
-            'Reduced fraud',
-            'Automated processes',
-            'Cost savings',
+          benefits: ['Enhanced transparencyReduced fraud',
+            'Automated processesCost savings'
           ],
           icon: LinkIcon,
           category: 'quantum - tech',
-          badge: 'Innovative',
+          badge: 'Innovative'
         },
         {
           name: 'IoT Edge Computing Platform',
@@ -204,22 +172,18 @@ export default function Page() {
             'Real - time data processing at the edge for industrial IoT applications',
           price: '$2,200 / month',
           marketPrice: '$3,000 - 8,000 / month',
-          features: ['Edge Analytics',
-            'Real - time Processing',
-            'Device Management',
-            'Data Streaming',
-            'Security',
+          features: ['Edge AnalyticsReal - time Processing',
+            'Device ManagementData Streaming',
+            'Security'
           ],
-          benefits: ['Ultra - low latency',
-            'Reduced bandwidth costs',
-            'Real - time insights',
-            'Offline operation',
+          benefits: ['Ultra - low latencyReduced bandwidth costs',
+            'Real - time insightsOffline operation'
           ],
           icon: Cpu,
           category: 'quantum - tech',
-          badge: 'Industrial',
-        },
-      ],
+          badge: 'Industrial'
+        }
+      ]
     },
     {
       id: 'green - tech',
@@ -235,20 +199,16 @@ export default function Page() {
           price: '$800 / month',
           marketPrice: '$1,000 - 2,500 / month',
           features: [
-            'Carbon Tracking',
-            'Sustainability Reporting',
-            'Goal Setting',
-            'Benchmarking',
-            'Compliance',
+            'Carbon TrackingSustainability Reporting',
+            'Goal SettingBenchmarking',
+            'Compliance'
           ],
-          benefits: ['Reduced carbon footprint',
-            'Cost savings',
-            'Regulatory compliance',
-            'Brand enhancement',
+          benefits: ['Reduced carbon footprintCost savings',
+            'Regulatory complianceBrand enhancement'
           ],
           icon: Leaf,
           category: 'green - tech',
-          badge: 'Eco - Friendly',
+          badge: 'Eco - Friendly'
         },
         {
           name: 'Smart Energy Management System',
@@ -256,22 +216,18 @@ export default function Page() {
             'Intelligent energy optimization using IoT sensors and AI analytics',
           price: '$1,500 / month',
           marketPrice: '$2,000 - 4,000 / month',
-          features: ['Energy Monitoring',
-            'AI Optimization',
-            'Predictive Maintenance',
-            'Cost Analysis',
-            'Integration',
+          features: ['Energy MonitoringAI Optimization',
+            'Predictive MaintenanceCost Analysis',
+            'Integration'
           ],
-          benefits: ['30% energy cost reduction',
-            'Predictive maintenance',
-            'Real - time monitoring',
-            'ROI optimization',
+          benefits: ['30% energy cost reductionPredictive maintenance',
+            'Real - time monitoringROI optimization'
           ],
           icon: Zap,
           category: 'green - tech',
-          badge: 'Cost - Effective',
-        },
-      ],
+          badge: 'Cost - Effective'
+        }
+      ]
     },
     {
       id: 'space - tech',
@@ -287,55 +243,51 @@ export default function Page() {
           price: '$2,800 / month',
           marketPrice: '$4,000 - 10,000 / month',
           features: [
-            'Satellite Imagery',
-            'AI Analysis',
-            'Real - time Monitoring',
-            'Custom Algorithms',
-            'API Access',
+            'Satellite ImageryAI Analysis',
+            'Real - time MonitoringCustom Algorithms',
+            'API Access'
           ],
-          benefits: ['Global coverage',
-            'Real - time insights',
-            'Cost - effective monitoring',
-            'Scalable solutions',
+          benefits: ['Global coverageReal - time insights',
+            'Cost - effective monitoringScalable solutions'
           ],
           icon: Satellite,
           category: 'space - tech',
-          badge: 'Global',
-        },
-      ],
-    },
-  ];
+          badge: 'Global'
+        }
+      ]
+    }
+  ],
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'
+  },
 
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter (service => (activeCategory === 'all' || service.category === activeCategory) && (searchQuery === '' ||
           service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ) ) ;
+          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ) ) ,
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+        staggerChildren: 0.1
+      }
+    }
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
+      transition: { duration: 0.6 }
+    }
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text-white">
       <SEO
@@ -669,26 +621,26 @@ export default function Page() {
                 icon: Award,
                 title: 'Proven Expertise',
                 description:
-                  '500 + successful projects across industries with measurable results',
+                  '500 + successful projects across industries with measurable results'
               },
               {
                 icon: Zap,
                 title: 'Innovation First',
                 description:
-                  'Cutting - edge technologies and methodologies for competitive advantage',
+                  'Cutting - edge technologies and methodologies for competitive advantage'
               },
               {
                 icon: Shield,
                 title: 'Enterprise Security',
                 description:
-                  'Bank - level security and compliance for enterprise - grade solutions',
+                  'Bank - level security and compliance for enterprise - grade solutions'
               },
               {
                 icon: Heart,
                 title: '24 / 7 Support',
                 description:
-                  'Round - the - clock technical support and maintenance services',
-              },
+                  'Round - the - clock technical support and maintenance services'
+              }
             ].map((item, index) => (<motion.div
                 key={index}
                 variants={itemVariants}
@@ -705,5 +657,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

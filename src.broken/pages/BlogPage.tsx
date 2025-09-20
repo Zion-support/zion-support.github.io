@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 
 export default function BlogPage() {
   return (
@@ -23,8 +23,8 @@ export default function BlogPage() {
             Get Started
           </Link>
 =======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link } from 'react-router-dom',
 import {
   Search,
   Filter,
@@ -60,12 +60,12 @@ import {
   Twitter,
   Github,
   Facebook,
-  Instagram,
-} from 'lucide-react';
+  Instagram
+} from 'lucide-react',
 
 export function BlogPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const categories = [
     { id: 'all', name: 'All Posts', icon: Zap, color: 'from-cyan-500 to-blue-500' },
@@ -73,8 +73,8 @@ export function BlogPage() {
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
     { id: 'data', name: 'Data Analytics', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
-    { id: 'innovation', name: 'Innovation', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
-  ];
+    { id: 'innovation', name: 'Innovation', icon: Rocket, color: 'from-indigo-500 to-purple-500' }
+  ],
 
   const blogPosts = [
     {
@@ -86,8 +86,8 @@ export function BlogPage() {
       date: '2025-01-27',
       readTime: '8 min read',
       image: '/images/blog/ai-future-business.jpg',
-      tags: ['AI', 'Business', 'Innovation', 'Technology'],
-      featured: true,
+      tags: ['AIBusiness', 'InnovationTechnology'],
+      featured: true
     },
     {
       id: 2,
@@ -98,8 +98,8 @@ export function BlogPage() {
       date: '2025-01-25',
       readTime: '6 min read',
       image: '/images/blog/cybersecurity-best-practices.jpg',
-      tags: ['Cybersecurity', 'Enterprise', 'Security', 'Best Practices'],
-      featured: false,
+      tags: ['CybersecurityEnterprise', 'SecurityBest Practices'],
+      featured: false
     },
     {
       id: 3,
@@ -110,8 +110,8 @@ export function BlogPage() {
       date: '2025-01-23',
       readTime: '10 min read',
       image: '/images/blog/cloud-migration-guide.jpg',
-      tags: ['Cloud', 'Migration', 'Infrastructure', 'DevOps'],
-      featured: false,
+      tags: ['CloudMigration', 'InfrastructureDevOps'],
+      featured: false
     },
     {
       id: 4,
@@ -122,8 +122,8 @@ export function BlogPage() {
       date: '2025-01-21',
       readTime: '7 min read',
       image: '/images/blog/data-driven-decisions.jpg',
-      tags: ['Data Analytics', 'Business Intelligence', 'Decision Making', 'Analytics'],
-      featured: false,
+      tags: ['Data AnalyticsBusiness Intelligence', 'Decision MakingAnalytics'],
+      featured: false
     },
     {
       id: 5,
@@ -134,8 +134,8 @@ export function BlogPage() {
       date: '2025-01-19',
       readTime: '9 min read',
       image: '/images/blog/quantum-computing-hype.jpg',
-      tags: ['Quantum Computing', 'Innovation', 'Technology', 'Research'],
-      featured: false,
+      tags: ['Quantum ComputingInnovation', 'TechnologyResearch'],
+      featured: false
     },
     {
       id: 6,
@@ -146,10 +146,10 @@ export function BlogPage() {
       date: '2025-01-17',
       readTime: '5 min read',
       image: '/images/blog/resilient-infrastructure.jpg',
-      tags: ['Infrastructure', 'Resilience', 'Cloud', 'Architecture'],
-      featured: false,
-    },
-  ];
+      tags: ['InfrastructureResilience', 'CloudArchitecture'],
+      featured: false
+    }
+  ],
 
   const filteredPosts = blogPosts.filter(post => 
     (selectedCategory === 'all' || post.category === selectedCategory) &&
@@ -157,26 +157,26 @@ export function BlogPage() {
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-  );
+  ),
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
-  };
+    }),
+  },
 
   const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Zap;
-  };
+    const category = categories.find(cat => cat.id === categoryId),
+    return category ? category.icon : Zap
+  },
 
   const getCategoryColor = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.color : 'from-gray-500 to-gray-600';
-  };
+    const category = categories.find(cat => cat.id === categoryId),
+    return category ? category.color : 'from-gray-500 to-gray-600'
+  },
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -365,8 +365,8 @@ export function BlogPage() {
               </p>
               <button
                 onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
+                  setSearchQuery(''),
+                  setSelectedCategory('all'),
                 }}
                 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-200"
               >
@@ -400,7 +400,7 @@ export function BlogPage() {
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Learn More?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Explore our comprehensive services and discover how we can help 
@@ -427,5 +427,5 @@ export function BlogPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

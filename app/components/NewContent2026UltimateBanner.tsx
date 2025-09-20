@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function NewContent2026UltimateBanner() {,
   return (,
     <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">,
@@ -17,7 +17,7 @@ export default function NewContent2026UltimateBanner() {,
           </p>,
         </div>,
         <div className="grid md: grid-cols-3 gap-8 mb-12">,
-          {/* Featured Content 1 */,}
+          {/* Featured Content 1 */}
           <div className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 rounded-2xl p-8 hover: bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">,
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mb-6">,
               <span className="text-2xl">📊</span>,
@@ -49,7 +49,7 @@ export default function NewContent2026UltimateBanner() {,
               <span>→</span>,
             </Link>,
           </div>,
-          {/* Featured Content 2 */,}
+          {/* Featured Content 2 */}
           <div className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 rounded-2xl p-8 hover: bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">,
             <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-6">,
               <span className="text-2xl">🏭</span>,
@@ -81,14 +81,14 @@ export default function NewContent2026UltimateBanner() {,
               <span>→</span>,
             </Link>,
           </div>,
-          {/* Featured Content 3 */,}
+          {/* Featured Content 3 */}
           <div className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 rounded-2xl p-8 hover: bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">,
             <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mb-6">,
               <span className="text-2xl">🔮</span>,
             </div>,
             <h3 className="text-2xl font-bold mb-4">AI 2026 Trends & Predictions</h3>,
             <p className="text-gray-200 mb-6 leading-relaxed">,
-              Comprehensive analysis of AI trends for 2026, including emerging technologies;
+              Comprehensive analysis of AI trends for 2026, including emerging technologies,
               market predictions, and strategic insights for business leaders.,
             </p>,
             <div className="space-y-3 mb-6">,
@@ -114,7 +114,7 @@ export default function NewContent2026UltimateBanner() {,
             </Link>,
           </div>,
         </div>,
-        {/* Additional Content Grid */,}
+        {/* Additional Content Grid */}
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
           <div className="bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-xl p-6">,
             <h4 className="font-bold text-lg mb-2">Quantum AI Revolution</h4>,
@@ -145,7 +145,7 @@ export default function NewContent2026UltimateBanner() {,
             </Link>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 rounded-2xl p-8 max-w-4xl mx-auto">,
             <h3 className="text-3xl font-bold mb-4">Transform Your Business with AI</h3>,
@@ -170,5 +170,4 @@ export default function NewContent2026UltimateBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

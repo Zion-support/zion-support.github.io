@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-const index = React.memo(function);
+const index = React.memo(function),
 export default index FrontIndexRedirect() {
   const router = useRouter()
   useEffect(() => { router.replace('/main/front') }, [router])
@@ -22,4 +22,4 @@ export default index FrontIndexRedirect() {
   )
 }
 
-// Markers intentionally omitted here; front content is managed at pages/main/front/index.tsx
+// Markers intentionally omitted here, front content is managed at pages/main/front/index.tsx

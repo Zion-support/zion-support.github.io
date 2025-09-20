@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function AI2030FutureVisionShowcasePromotionBanner() {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 text-white py-12">,
@@ -75,5 +75,4 @@ export default function AI2030FutureVisionShowcasePromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

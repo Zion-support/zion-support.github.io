@@ -1,9 +1,9 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-  ];
+,
+  ],
 
-  const categories = ['All', 'Security & Development', 'Analytics & Customer Success', 'DevOps & Infrastructure', 'IoT & Edge Computing'];
+  const categories = ['AllSecurity & Development', 'Analytics & Customer SuccessDevOps & Infrastructure', 'IoT & Edge Computing'],
 
   return (<>
       <SEO
@@ -278,7 +278,7 @@ export default function Page() {
                 <div className="bg-white / 10 backdrop - blur - sm rounded-lg p - 6 border border-white / 20">
                   <h3 className="text-xl font - semibold text-white mb-3">Quick Actions</h3>
                   <div className="space - y-3">
-                    <Link to="/contact" className="block w-full bg-blue - 600 hover:bg-blue - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
+                    <Link to="/contact" className="block w-full bg-blue - 600 hover: bg-blue - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
                       Schedule Demo
                     </Link>
                     <Link to="/contact" className="block w-full bg-green - 600 hover:bg-green - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
@@ -297,5 +297,5 @@ export default function Page() {
             </motion.div>
           </div>
         </section>
-      </div>;
-    </>;) };
+      </div>,
+    </>,) },

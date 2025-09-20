@@ -1,60 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 export default React.memo(function BlockchainEnterpriseSolutions (...args[]) :  {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-,;
+,
   {
     id: 4,
     title: "Identity Management Blockchain",
     description: "Decentralized identity management and verification systems.",
     icon: Shield,
-    features[;
+    features[,
       "Digital identity",
       "Verification",
       "Privacy protection",
       "Access control"
-    ],;
+    ],
     price: "From $250,000",
     timeline: "20 - 32 weeks",
     category: "Identity",
-    technologies["Blockchain", "Identity", "Security", "Privacy"];
-  },;
+    technologies["Blockchain", "Identity", "Security", "Privacy"],
+  },
   {
     id: 5,
     title: "Smart Contract Development",
     description: "Custom smart contract development for business automation.",
     icon: Code,
-    features[;
+    features[,
       "Smart contracts",
       "Business logic",
       "Automation",
       "Security audit"
-    ],;
+    ],
     price: "From $150,000",
     timeline: "16 - 28 weeks",
     category: "Smart Contracts",
-    technologies["Smart Contracts", "Blockchain", "Automation", "Security"];
-  },;
+    technologies["Smart Contracts", "Blockchain", "Automation", "Security"],
+  },
   {
     id: 6,
     title: "Blockchain Integration Services",
     description: "Integration services for existing enterprise systems with blockchain.",
     icon: Wrench,
-    features[;
+    features[,
       "System integration",
       "API development",
       "Data migration",
       "Legacy support"
-    ],;
-    technologies["Integration", "APIs", "Migration", "Legacy Systems"];
-  };
-    price: "From $200,000",;
-    timeline: "18 - 30 weeks",;
-    category: "Integration",;
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"];
-  };
-];
+    ],
+    technologies["Integration", "APIs", "Migration", "Legacy Systems"],
+  },
+    price: "From $200,000",
+    timeline: "18 - 30 weeks",
+    category: "Integration",
+    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"],
+  },
+],
 
 const blockchainTechnologies = [{
     name: "Blockchain Platforms",
@@ -77,14 +77,14 @@ const blockchainTechnologies = [{
     useCase: "Network Security",
     reliability: "High"
   },
-  {;
-    name: "Cryptography",;
-    description: "Advanced cryptographic security solutions",;
-    icon: Lock,;
-    useCase: "Security & Privacy",;
-    reliability: "High";
-  };
-];
+  {,
+    name: "Cryptography",
+    description: "Advanced cryptographic security solutions",
+    icon: Lock,
+    useCase: "Security & Privacy",
+    reliability: "High"
+  },
+],
 
 const successStories = [{
     id: 1,
@@ -106,14 +106,14 @@ const successStories = [{
   },
   {
     id: 3,
-    comp: "Healthcare Identity Solutions",;
-    industry: "Healthcare",;
-    challenge: "Needed secure patient identity management system",;
-    solution: "Built blockchain - based identity management platform",;
-    results: "100% data security, 90% faster verification, better privacy, improved compliance",;
-    logo: "HIS";
-  };
-];
+    comp: "Healthcare Identity Solutions",
+    industry: "Healthcare",
+    challenge: "Needed secure patient identity management system",
+    solution: "Built blockchain - based identity management platform",
+    results: "100% data security, 90% faster verification, better privacy, improved compliance",
+    logo: "HIS"
+  },
+],
 
 const processSteps = [{
     step: 1,
@@ -136,51 +136,51 @@ const processSteps = [{
     icon: Wrench,
     duration: "16 - 48 weeks"
   },
-  {;
-    step: 4,;
-    title: "Testing & Deployment",;
-    description: "Test blockchain systems and deploy to production",;
-    icon: Gauge,;
-    duration: "4 - 8 weeks";
-  };
-];
+  {,
+    step: 4,
+    title: "Testing & Deployment",
+    description: "Test blockchain systems and deploy to production",
+    icon: Gauge,
+    duration: "4 - 8 weeks"
+  },
+],
 
 const blockchainBenefits = [{
     title: "Transparency & Trust",
     description: "Blockchain provides immutable, transparent records that build trust",
     icon: Eye,
-    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"];
-  },;
+    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"],
+  },
   {
     title: "Security & Privacy",
     description: "Advanced cryptography ensures data security and privacy protection",
     icon: Shield,
-    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"];
-  },;
+    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"],
+  },
   {
     title: "Automation & Efficiency",
     description: "Smart contracts automate business processes and reduce manual effort",
     icon: Zap,
-    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"];
-  },;
+    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"],
+  },
   {
-    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
-  };
-    title: "Cost Reduction",;
-    description: "Blockchain eliminates intermediaries and reduces operational costs",;
-    icon: TrendingUp,;
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
-  };
-];
+    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"],
+  },
+    title: "Cost Reduction",
+    description: "Blockchain eliminates intermediaries and reduces operational costs",
+    icon: TrendingUp,
+    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"],
+  },
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Platform', 'Supply Chain', 'Financial', 'Identity', 'Smart Contracts', 'Integration'];
+  const categories = ['AllPlatform', 'Supply ChainFinancial', 'IdentitySmart Contracts', 'Integration'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? blockchainSolutions
-    : blockchainSolutions.filter(solution => solution.category === selectedCategory) ;
+    : blockchainSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div  className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -251,10 +251,10 @@ const blockchainBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Blockchain Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div  className="container -responsive">
           <motion.div
             initial = {
@@ -310,13 +310,13 @@ const blockchainBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Blockchain Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="container -responsive">
           <motion.div
             initial = {
@@ -374,13 +374,13 @@ const blockchainBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div  className="container -responsive">
           <motion.div
             initial = {
@@ -436,13 +436,13 @@ const blockchainBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="container -responsive">
           <motion.div
             initial = {
@@ -541,7 +541,7 @@ const blockchainBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div  className="container -responsive">
           <motion.div
             initial = {
@@ -612,13 +612,13 @@ const blockchainBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div  className="container -responsive">
           <motion.div
             initial = {
@@ -639,7 +639,7 @@ const blockchainBenefits = [{
               Let's discuss how blockchain enterprise solutions can revolutionize your operations,
               improve transparency, and create competitive advantages.</p>
 
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - zion - cyan to - zion - purple text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 transform hover:scale -105"
@@ -652,9 +652,9 @@ const blockchainBenefits = [{
 
                 Blockchain Consultation
               </a>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
 }

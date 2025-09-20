@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function SecurityPage() {
   return (
@@ -40,11 +40,11 @@ export default function SecurityPage() {
           </div>
 
           <div className="mt-10">
-            <Link href="/" className="text-white/80 hover:text-white">← Back to homepage</Link>
+            <Link href="/" className="text-white/80 hover: text-white">← Back to homepage</Link>
           </div>
         </main>
       </div>
     </>
-  );
+  )
 }
 

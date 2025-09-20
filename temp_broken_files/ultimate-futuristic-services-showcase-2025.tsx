@@ -1,135 +1,135 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react',
+import Head from 'next/head',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
-  Star, TrendingUp, Users, Award, Clock, Heart;
-  Brain, Atom, Shield, Rocket, Zap, Globe;
-  CheckCircle, ArrowRight, Search, Filter;
-  ChevronDown, ChevronUp, Eye, Play, Sparkles;
-  Target, Microscope, Lock, Cloud, BarChart3;
-  Settings, Cpu, Database, Network, Server;
-  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon;
-  UsersIcon, CheckCircleIcon, ArrowRightIcon;
-  CpuIcon, DollarSign, Phone, Mail, MapPin;
-  Dna, Target as TargetIcon, Shield as ShieldIcon;
-  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
-  Brain as BrainIcon, Play as PlayIcon,
-} from 'lucide-react';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
+  Star, TrendingUp, Users, Award, Clock, Heart,
+  Brain, Atom, Shield, Rocket, Zap, Globe,
+  CheckCircle, ArrowRight, Search, Filter,
+  ChevronDown, ChevronUp, Eye, Play, Sparkles,
+  Target, Microscope, Lock, Cloud, BarChart3,
+  Settings, Cpu, Database, Network, Server,
+  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon,
+  UsersIcon, CheckCircleIcon, ArrowRightIcon,
+  CpuIcon, DollarSign, Phone, Mail, MapPin,
+  Dna, Target as TargetIcon, Shield as ShieldIcon,
+  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon,
+  Brain as BrainIcon, Play as PlayIcon
+} from 'lucide-react',
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services',
 const contactInfo = {,
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [,
   {,
-    title: 'AI & Consciousness';
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
-    icon: Brain;
-    color: 'from-violet-500 to-purple-600';
-    count: 3,};
+    title: 'AI & Consciousness',
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    count: 3},
   {,
-    title: 'Quantum & Emerging Tech';
-    description: 'Breakthrough quantum computing and space technology solutions';
-    icon: Atom;
-    color: 'from-indigo-500 to-blue-600';
-    count: 4,};
+    title: 'Quantum & Emerging Tech',
+    description: 'Breakthrough quantum computing and space technology solutions',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+    count: 4},
   {,
-    title: 'Space Technology';
-    description: 'AI-powered space exploration and resource extraction';
-    icon: Rocket;
-    color: 'from-blue-500 to-cyan-600';
-    count: 1,};
+    title: 'Space Technology',
+    description: 'AI-powered space exploration and resource extraction',
+    icon: Rocket,
+    color: 'from-blue-500 to-cyan-600',
+    count: 1},
   {,
-    title: 'Financial Technology';
-    description: 'Quantum AI-powered financial trading and analytics';
-    icon: DollarSign;
-    color: 'from-green-500 to-emerald-600';
-    count: 1,};
+    title: 'Financial Technology',
+    description: 'Quantum AI-powered financial trading and analytics',
+    icon: DollarSign,
+    color: 'from-green-500 to-emerald-600',
+    count: 1},
   {,
-    title: 'Content Automation';
-    description: 'Autonomous AI content creation and management';
-    icon: BookOpen;
-    color: 'from-purple-500 to-pink-600';
-    count: 1,};
+    title: 'Content Automation',
+    description: 'Autonomous AI content creation and management',
+    icon: BookOpen,
+    color: 'from-purple-500 to-pink-600',
+    count: 1},
   {,
-    title: 'Cybersecurity';
-    description: 'Quantum encryption and advanced threat detection';
-    icon: Shield;
-    color: 'from-red-500 to-orange-600';
-    count: 1,};
+    title: 'Cybersecurity',
+    description: 'Quantum encryption and advanced threat detection',
+    icon: Shield,
+    color: 'from-red-500 to-orange-600',
+    count: 1},
   {,
-    title: 'Healthcare Technology';
-    description: 'AI-powered medical diagnostics and treatment';
-    icon: Heart;
-    color: 'from-teal-500 to-cyan-600';
-    count: 1,};
+    title: 'Healthcare Technology',
+    description: 'AI-powered medical diagnostics and treatment',
+    icon: Heart,
+    color: 'from-teal-500 to-cyan-600',
+    count: 1},
   {,
-    title: 'Energy Technology';
-    description: 'Quantum computing for fusion power and energy optimization';
-    icon: Zap;
-    color: 'from-yellow-500 to-orange-600';
-    count: 1,};
+    title: 'Energy Technology',
+    description: 'Quantum computing for fusion power and energy optimization',
+    icon: Zap,
+    color: 'from-yellow-500 to-orange-600',
+    count: 1},
   {,
-    title: 'Education Technology';
-    description: 'Personalized AI-powered learning platforms';
-    icon: BookOpen;
-    color: 'from-indigo-500 to-purple-600';
-    count: 1,};
+    title: 'Education Technology',
+    description: 'Personalized AI-powered learning platforms',
+    icon: BookOpen,
+    color: 'from-indigo-500 to-purple-600',
+    count: 1},
   {,
-    title: 'Materials Science';
-    description: 'AI-powered quantum materials research and discovery';
-    icon: Microscope;
-    color: 'from-cyan-500 to-blue-600';
-    count: 1,}
-];
+    title: 'Materials Science',
+    description: 'AI-powered quantum materials research and discovery',
+    icon: Microscope,
+    color: 'from-cyan-500 to-blue-600',
+    count: 1}
+],
 const stats = [,
-  { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' ,};
-  { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' ,};
-  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' ,};
-  { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' ,}
+  { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' },
+  { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' },
+  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
+  { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
 ,
 export default function UltimateFuturisticServicesShowcase2025() {,
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
-  const [viewMode, setViewMode] = useState('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('popular'),
+  const [viewMode, setViewMode] = useState('grid'),
   const filteredServices = ultimateFuturisticServices2025.filter(service => {,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
   const sortedServices = [...filteredServices].sort((a, b) => {,
     switch (sortBy) {,
       case 'price-low':,
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
       case 'price-high':,
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
       case 'rating':,
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'customers':,
-        return b.customers - a.customers;
-      default: return b.popular ? 1 : -1,}
-  });
+        return b.customers - a.customers,
+      default: return b.popular ? 1 : -1}
+  }),
   const containerVariants = {,
-    hidden: { opacity: 0 ,};
+    hidden: { opacity: 0 },
     visible: {,
-      opacity: 1;
+      opacity: 1,
       transition: {,
-        staggerChildren: 0.1,}
+        staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { y: 20, opacity: 0 ,};
+    hidden: { y: 20, opacity: 0 },
     visible: {,
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {,
-        duration: 0.5,}
+        duration: 0.5}
     }
-  };
+  },
   return (,
     <Layout>,
       <Head>,
@@ -141,7 +141,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
         <meta property="og: url" content="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />,
         <meta property="og:type" content="website" />,
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>,
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">,
@@ -154,7 +154,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">,
                 Services 2025,
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
-              Experience the future of technology with our revolutionary services that combine AI consciousness;
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
               quantum computing, space technology, and breakthrough innovations to transform your business.,
             <div className="flex flex-wrap justify-center gap-4 mb-12">,
               {stats.map((stat, index) => (,
@@ -167,8 +167,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
                     <div className="text-2xl font-bold text-white">{stat.number}</div>,
                     <div className="text-sm text-gray-300">{stat.label}</div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -177,7 +176,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
       <section className="py-12 bg-gradient-to-r from-black via-purple-900/10 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative flex-1 max-w-md">,
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />,
               <input,
@@ -187,7 +186,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent",
               />,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="flex flex-wrap gap-3">,
               <select,
                 value={selectedCategory}
@@ -196,7 +195,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
               >,
                 <option value="all">All Categories</option>,
                 {serviceCategories.map((category) => (,
-                  <option key={category.title,} value={category.title}>,
+                  <option key={category.title} value={category.title}>,
                     {category.title} ({category.count}),
                 ))}
               {/* Sort Options */}
@@ -210,7 +209,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
                 <option value="price-high">Price: High to Low</option>,
                 <option value="rating">Highest Rated</option>,
                 <option value="customers">Most Customers</option>,
-              {/* View Mode Toggle */,}
+              {/* View Mode Toggle */}
               <div className="flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1">,
                 <button,
                   onClick={() => setViewMode('grid')}
@@ -233,7 +232,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
       <section className="py-16">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div,
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6',}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >,
             {sortedServices.map((service, index) => (,
               <div,
@@ -241,13 +240,12 @@ export default function UltimateFuturisticServicesShowcase2025() {,
                 className={`group relative ${,
                   viewMode === 'grid',
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: border-purple-500/50 transition-all duration-300 hover:scale-105',
-                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300',}`}
+                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'}`}
               >,
                 {/* Popular Badge */}
                 {service.popular && (,
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full">,
-                    Popular,
-                )}
+                    Popular)}
                 {/* Service Header */}
                 <div className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}>,
                   <div className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}>,
@@ -255,7 +253,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
                       {service.icon}
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>,
                     <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors">,
-                      {service.name,}
+                      {service.name}
                     <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>,
                     {/* Price */}
                     <div className="flex items-center justify-center space-x-2 mb-4">,
@@ -276,8 +274,7 @@ export default function UltimateFuturisticServicesShowcase2025() {,
                     ))}
                     {service.features.length > 4 && (,
                       <div className="text-sm text-purple-400 mt-2">,
-                        +{service.features.length - 4} more features,
-                    )}
+                        +{service.features.length - 4} more features)}
                 {/* Service Details */}
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">,
                   <div className="text-gray-400">,
@@ -298,29 +295,29 @@ export default function UltimateFuturisticServicesShowcase2025() {,
                 <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">,
                   <div className="text-sm">,
                     <div className="text-gray-300 mb-2">,
-                      <span className="font-semibold text-white">ROI: </span> {service.roi,}
+                      <span className="font-semibold text-white">ROI: </span> {service.roi}
                     <div className="text-gray-300">,
-                      <span className="font-semibold text-white">Market Size: </span> {service.marketSize,}
+                      <span className="font-semibold text-white">Market Size: </span> {service.marketSize}
                 {/* Action Buttons */}
                 <div className="flex flex-col sm: flex-row gap-3">,
                   <a,
-                    href={service.link,}
+                    href={service.link}
                     className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover: from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105",
                   >,
                     Get Started,
                   <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors">,
                     <Eye className="w-5 h-5" />,
-                {/* Contact Info */,}
+                {/* Contact Info */}
                 <div className="mt-6 pt-6 border-t border-white/10">,
                   <div className="text-center text-sm text-gray-400">,
                     <p>Contact us for custom pricing and implementation</p>,
                     <div className="flex items-center justify-center space-x-4 mt-2">,
-                      <a href={`tel: ${contactInfo.mobile,}`} className="flex items-center text-purple-400 hover: text-purple-300">,
+                      <a href={`tel: ${contactInfo.mobile}`} className="flex items-center text-purple-400 hover: text-purple-300">,
                         <Phone className="w-4 h-4 mr-1" />,
-                        {contactInfo.mobile,}
-                      <a href={`mailto: ${contactInfo.email,}`} className="flex items-center text-purple-400 hover: text-purple-300">,
+                        {contactInfo.mobile}
+                      <a href={`mailto: ${contactInfo.email}`} className="flex items-center text-purple-400 hover: text-purple-300">,
                         <Mail className="w-4 h-4 mr-1" />,
-                        {contactInfo.email,}
+                        {contactInfo.email}
                       </a>,
                     </div>,
                   </div>,
@@ -336,19 +333,19 @@ export default function UltimateFuturisticServicesShowcase2025() {,
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>,
               <button,
                 onClick={() => {,
-                  setSearchTerm('');
-                  setSelectedCategory('all');
+                  setSearchTerm(''),
+                  setSelectedCategory('all'),
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all duration-300",
               >,
                 Clear Filters,
-          ),}
+          )}
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">,
         <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
           >,
             <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">,
               Ready to Experience the Future?,
@@ -372,8 +369,8 @@ export default function UltimateFuturisticServicesShowcase2025() {,
         </div>,
       </section>,
     </Layout>,
-  ),}
-import React from "react";
+  )}
+import React from "react",
 const function UltimateFuturisticServicesShowcase2025() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -384,7 +381,7 @@ const function UltimateFuturisticServicesShowcase2025() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function UltimateFuturisticServicesShowcase2025() {;
+  ),
+},
+export default function UltimateFuturisticServicesShowcase2025() {,
 }}}]

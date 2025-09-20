@@ -1,12 +1,12 @@
-import React from 'react';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Button } from '@/components/ui/button';
-import { ModerationLog } from '@/types/moderation';
+import React from 'react',
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table',
+import { Button } from '@/components/ui/button',
+import { ModerationLog } from '@/types/moderation',
 
 interface Props {
-  logs: ModerationLog[];
-  isLoading: boolean;
-  onAction: (id: string, action: 'approved' | 'rejected') => void;
+  logs: ModerationLog[],
+  isLoading: boolean,
+  onAction: (id: string, action: 'approved' | 'rejected') => void
 }
 
 export function FlaggedListingsTable({ logs, isLoading, onAction }: Props) {
@@ -15,7 +15,7 @@ export function FlaggedListingsTable({ logs, isLoading, onAction }: Props) {
       <div className="flex justify-center items-center h-32">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-purple"></div>
       </div>
-    );
+    ),
   }
 
   if (logs.length === 0) {
@@ -23,7 +23,7 @@ export function FlaggedListingsTable({ logs, isLoading, onAction }: Props) {
       <div className="py-10 text-center">
         <p className="text-muted-foreground">No flagged listings</p>
       </div>
-    );
+    ),
   }
 
   return (
@@ -52,5 +52,5 @@ export function FlaggedListingsTable({ logs, isLoading, onAction }: Props) {
         ))}
       </TableBody>
     </Table>
-  );
+  ),
 }

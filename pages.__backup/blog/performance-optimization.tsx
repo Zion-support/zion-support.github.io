@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function PerformanceOptimization() {,
   return (,
     <>,
@@ -311,4 +311,4 @@ export default function PerformanceOptimization() {,
         </main>,
       </div>,
     </>,
-  ),}
+  )}

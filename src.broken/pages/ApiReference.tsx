@@ -1,11 +1,11 @@
 
-import React, { useState } from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React, { useState } from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 
   // Sample endpoint data
   const endpoints = [
@@ -18,7 +18,7 @@ export function ApiReference() {
         { name: "status", type: "string", required: false, description: "Filter by job status (open, closed, draft)" },
         { name: "category", type: "string", required: false, description: "Filter by job category" },
         { name: "limit", type: "integer", required: false, description: "Number of results per page (default: 20, max: 100)" },
-        { name: "offset", type: "integer", required: false, description: "Pagination offset (default: 0)" },
+        { name: "offset", type: "integer", required: false, description: "Pagination offset (default: 0)" }
       ],
       responses: {
         "200": {
@@ -76,7 +76,7 @@ export function ApiReference() {
         { name: "category", type: "string", required: true, description: "Job category" },
         { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" },
         { name: "skills", type: "array", required: false, description: "Array of required skills" },
-        { name: "deadline", type: "string", required: false, description: "Application deadline (ISO date format)" },
+        { name: "deadline", type: "string", required: false, description: "Application deadline (ISO date format)" }
       ],
       responses: {
         "201": {
@@ -138,7 +138,7 @@ export function ApiReference() {
         { name: "rate_max", type: "integer", required: false, description: "Maximum hourly rate" },
         { name: "availability", type: "string", required: false, description: "Availability type (full-time, part-time)" },
         { name: "limit", type: "integer", required: false, description: "Number of results per page (default: 20, max: 100)" },
-        { name: "offset", type: "integer", required: false, description: "Pagination offset (default: 0)" },
+        { name: "offset", type: "integer", required: false, description: "Pagination offset (default: 0)" }
       ],
       responses: {
         "200": {
@@ -168,10 +168,10 @@ export function ApiReference() {
   https://api.ziontechgroup.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
-  ];
+  ],
 
   // Find the active endpoint data
-  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint);
+  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),
 
   return (
     <ApiDocsLayout>
@@ -309,7 +309,7 @@ export function ApiReference() {
         </div>
       </div>
     </ApiDocsLayout>
-  );
+  ),
 }
 
-export default ApiReference;
+export default ApiReference,

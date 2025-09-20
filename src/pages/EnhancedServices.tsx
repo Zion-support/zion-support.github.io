@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Search, 
+  Search,
   Filter, 
   Star, 
   ArrowRight, 
@@ -50,102 +50,89 @@ import {
   Zap as ZapIcon2,
   Lock as LockIcon,
   ShieldCheck as ShieldCheckIcon
-} from 'lucide-react';
-import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from '../data/enhancedMicroSaasServices2025';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from "../data/enhancedMicroSaasServices2025";
+import { SEO } from "../components/SEO";
 const EnhancedServices: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [activeCategory, setActiveCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [sortBy, setSortBy] = useState('rating'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   
-  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025;
+  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025,
   
   const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-zion-purple to-zion-pink' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-zion-purple to-zion-pink' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-zion-red to-zion-pink' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗', color: 'from-zion-green to-zion-emerald' },
-    { id: 'IoT & Smart Cities', name: 'IoT & Smart Cities', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' },
+    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' };
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' };
+    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-zion-purple to-zion-pink' };
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-zion-purple to-zion-pink' };
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-zion-red to-zion-pink' };
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗', color: 'from-zion-green to-zion-emerald' };
+    { id: 'IoT & Smart Cities', name: 'IoT & Smart Cities', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' };
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍', color: 'from-zion-purple to-zion-indigo' }
   ];
-
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'innovation':
-        return b.innovationLevel.localeCompare(a.innovationLevel);
+        return b.innovationLevel.localeCompare(a.innovationLevel),
       case 'roi':
-        return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''));
+        return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', '')),
       case 'name':
-        return a.title.localeCompare(b.title);
-      default:
-        return 0;
+        return a.title.localeCompare(b.title),
+      default: return 0
     }
   });
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
+      y: 0,opacity: 1,transition: {
+        duration: 0.5,ease: "easeOut"
       }
     }
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Analytics': return <BrainIcon className="w-6 h-6" />;
-      case 'AI & Legal Tech': return <ShieldIcon className="w-6 h-6" />;
-      case 'Quantum Computing': return <CpuIcon className="w-6 h-6" />;
-      case 'AI & Healthcare': return <UsersIcon className="w-6 h-6" />;
-      case 'Blockchain': return <DatabaseIcon className="w-6 h-6" />;
-      case 'IoT & Smart Cities': return <NetworkIcon className="w-6 h-6" />;
-      case 'Cybersecurity': return <ShieldCheckIcon className="w-6 h-6" />;
-      case 'Metaverse': return <GlobeIcon2 className="w-6 h-6" />;
-      default: return <RocketIcon className="w-6 h-6" />;
+      case 'AI & Legal Tech': return <ShieldIcon className="w-6 h-6" />,
+      case 'Quantum Computing': return <CpuIcon className="w-6 h-6" />,
+      case 'AI & Healthcare': return <UsersIcon className="w-6 h-6" />,
+      case 'Blockchain': return <DatabaseIcon className="w-6 h-6" />,
+      case 'IoT & Smart Cities': return <NetworkIcon className="w-6 h-6" />,
+      case 'Cybersecurity': return <ShieldCheckIcon className="w-6 h-6" />,
+      case 'Metaverse': return <GlobeIcon2 className="w-6 h-6" />,
+      default: return <RocketIcon className="w-6 h-6" />
     }
   };
-
   const getInnovationBadge = (level: string) => {
     const colors = {
-      'Advanced': 'bg-blue-500',
-      'Cutting-edge': 'bg-purple-500',
-      'Revolutionary': 'bg-red-500'
+      'Advanced': 'bg-blue-500Cutting-edge': 'bg-purple-500Revolutionary': 'bg-red-500'
     };
     return (
       <span className={`px-2 py-1 text-xs font-semibold text-white rounded-full ${colors[level as keyof typeof colors] || 'bg-gray-500'}`}>
         {level}
       </span>
-    );
-  };
+    ),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -372,7 +359,7 @@ const EnhancedServices: React.FC = () => {
               Our innovative micro SAAS services are designed to give you a competitive edge. 
               Contact us today to discuss how we can help you achieve your business goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
@@ -392,7 +379,6 @@ const EnhancedServices: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
+  )
 };
-
 export default EnhancedServices;

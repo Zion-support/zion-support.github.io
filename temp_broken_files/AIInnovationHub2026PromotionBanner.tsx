@@ -1,40 +1,40 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   ArrowRight,
   Star,
   Users,
   TrendingUp,
-  Zap;
-  Cpu;
-  Target;
-  Globe;
-  ChevronRight;
-  Play;
-  BookOpen;
-  Code;
-  Lightbulb;
-  Award;
-  X;
-  Sparkles;
-  Rocket;
-  Shield;
-  Database;
-  Network;
-  Microscope;
-  Atom;
-  Layers;
-  Search,
-} from 'lucide-react';
+  Zap,
+  Cpu,
+  Target,
+  Globe,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Award,
+  X,
+  Sparkles,
+  Rocket,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
+  Layers,
+  Search
+} from 'lucide-react',
 const AIInnovationHub2026PromotionBanner: React.FC = () => {,
   return (,
     <div>,
       <div,
         className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600",
       >,
-        {/* Background Pattern */,}
+        {/* Background Pattern */}
         <div className="absolute inset-0 bg-black/20"></div>,
         <div className="absolute inset-0">,
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>,
@@ -44,7 +44,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
         </div>,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div,
               className="text-white",
             >,
@@ -62,10 +62,10 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                 Explore the most groundbreaking AI innovationsbreakthrough technologiesand revolutionary,
                 developments that are reshaping the future of artificial intelligence.,
               </p>,
-              {/* Stats Grid */,}
+              {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8">,
                 {stats.map((statindex) => {,
-                  const Icon = stat.icon;
+                  const Icon = stat.icon,
                   return (,
                     <div,
                       key={stat.label}
@@ -76,8 +76,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                         <span className="text-sm text-gray-300">{stat.label}</span>,
                       </div>,
                       <div className="text-2xl font-bold text-white">{stat.value}</div>,
-                    </div>,
-                  );
+                    </div>),
                 })}
               </div>,
               {/* CTA Buttons */}
@@ -96,7 +95,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Right Content - Interactive Innovation Showcase */,}
+            {/* Right Content - Interactive Innovation Showcase */}
             <div,
               className="relative",
             >,
@@ -107,17 +106,16 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                 </h3>,
                 <div className="grid grid-cols-2 gap-4">,
                   {categories.map((categoryindex) => {,
-                    const Icon = category.icon;
+                    const Icon = category.icon,
                     return (,
                       <div,
                         key={category.name}
                         className="bg-white/5 rounded-xl p-4 text-center hover: bg-white/10 transition-colors cursor-pointer group",
                       >,
                         <Icon className="h-8 w-8 text-yellow-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />,
-                        <div className="text-white font-semibold">{category.name,}</div>,
+                        <div className="text-white font-semibold">{category.name}</div>,
                         <div className="text-gray-300 text-sm">{category.count} innovations</div>,
-                      </div>,
-                    );
+                      </div>),
                   })}
                 </div>,
               </div>,
@@ -130,7 +128,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                     <div className="text-center">,
                       <div className="flex items-center justify-center mb-2">,
                         {React.createElement(innovations[currentInnovation].icon{,
-                          className: "h-6 w-6 text-yellow-400 mr-2",})}
+                          className: "h-6 w-6 text-yellow-400 mr-2"})}
                         <span className="text-white font-bold text-lg">,
                           {innovations[currentInnovation].title}
                         </span>,
@@ -139,7 +137,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                         {innovations[currentInnovation].description}
                       </p>,
                       <p className="text-yellow-400 font-semibold text-sm">,
-                        Impact: {innovations[currentInnovation].impact,}
+                        Impact: {innovations[currentInnovation].impact}
                       </p>,
                     </div>,
                   </div>,
@@ -151,7 +149,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                       key={index}
                       onClick={() => setCurrentInnovation(index)}
                       className={`w-2 h-2 rounded-full transition-colors ${,
-                        index === currentInnovation ? 'bg-yellow-400' : 'bg-white/30',
+                        index === currentInnovation ? 'bg-yellow-400' : 'bg-white/30'
                       }`}
                     />,
                   ))}
@@ -159,22 +157,22 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
               </div>,
               {/* Floating Innovation Icons */}
               <div,
-                  y: [0-10];
-                  rotate: [050],}}
+                  y: [0-10],
+                  rotate: [050]}}
                 className="absolute -top-4 -right-4 bg-yellow-400 text-black p-3 rounded-full shadow-lg",
               >,
                 <Brain className="h-6 w-6" />,
               </div>,
               <div,
-                  y: [010];
-                  rotate: [0-50],}}
+                  y: [010],
+                  rotate: [0-50]}}
                 className="absolute -bottom-4 -left-4 bg-pink-400 text-white p-3 rounded-full shadow-lg",
               >,
                 <Atom className="h-6 w-6" />,
               </div>,
               <div,
-                  y: [0-150];
-                  x: [050],}}
+                  y: [0-150],
+                  x: [050]}}
                 className="absolute top-1/2 -right-8 bg-blue-400 text-white p-2 rounded-full shadow-lg",
               >,
                 <Network className="h-5 w-5" />,
@@ -189,9 +187,9 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
         >,
           <X className="h-5 w-5" />,
         </button>,
-        {/* Bottom Gradient */,}
+        {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400"></div>,
       </div>,
     </div>,
-  );
-export default AIInnovationHub2026PromotionBanner;
+  ),
+export default AIInnovationHub2026PromotionBanner,

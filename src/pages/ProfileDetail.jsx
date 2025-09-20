@@ -11,29 +11,29 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
     // useParams is typed as `any` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
-    const { profileId } = useParams();
-    const [profileData, setProfileData] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const { profileId } = useParams(),
+    const [profileData, setProfileData] = useState(null),
+    const [isLoading, setIsLoading] = useState(true),
+    const [error, setError] = useState(null),
     useEffect(() => {
         const fetchProfile = async () => {
-            setIsLoading(true);
-            setError(null);
+            setIsLoading(true),
+            setError(null),
             try {
                 if (!profileId) {
-                    setError("Profile ID is missing.");
-                    return;
+                    setError("Profile ID is missing."),
+                    return,
                 }
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
-                    .single();
+                    .single(),
                 if (error) {
-                    throw new Error(error.message);
+                    throw new Error(error.message),
                 }
                 if (!data) {
-                    setError("Profile not found.");
+                    setError("Profile not found."),
                     return;
                 }
                 setProfileData(data);
@@ -41,21 +41,19 @@ export default function ProfileDetail() {
             catch (err) {
                 setError(err.message || "Failed to fetch profile.");
                 toast({
-                    title: "Error",
-                    description: err.message || "Failed to fetch profile.",
-                    variant: "destructive",
+                    title: "Error",description: err.message || "Failed to fetch profile.",variant: "destructive"
                 });
             }
             finally {
-                setIsLoading(false);
+                setIsLoading(false),
             }
-        };
-        fetchProfile();
-    }, [profileId]);
+        },
+        fetchProfile(),
+    }, [profileId]),
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
-      </div>);
+      </div>),
     }
     if (error) {
         return (<div className="min-h-screen flex items-center justify-center">
@@ -65,7 +63,7 @@ export default function ProfileDetail() {
     if (!profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
-      </div>);
+      </div>),
     }
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
@@ -152,7 +150,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 {profileData.portfolio_links ? (<div className="flex flex-col gap-3">
-                    {profileData.portfolio_links.map((link, index) => (<a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white flex items-center gap-2">
+                    {profileData.portfolio_links.map((link, index) => (<a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover: text-white flex items-center gap-2">
                         <LinkIcon className="h-4 w-4"/>
                         {link.title || link.url}
                       </a>))}
@@ -164,10 +162,7 @@ export default function ProfileDetail() {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA talentProfile={{
-            id: profileData?.id || '',
-            full_name: profileData?.full_name || '',
-            professional_title: profileData?.professional_title || '',
-            hourly_rate: profileData?.hourly_rate || 0
+            id: profileData?.id || '',full_name: profileData?.full_name || '',professional_title: profileData?.professional_title || '',hourly_rate: profileData?.hourly_rate || 0
         }}/>
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">

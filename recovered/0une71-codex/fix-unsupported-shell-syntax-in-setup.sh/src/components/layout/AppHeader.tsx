@@ -1,25 +1,25 @@
 
-import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import { MainNavigation } from './MainNavigation';
-import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
-import { MenuIcon, X } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { useState } from 'react',
+import { useMessaging } from '@/context/MessagingContext',
+import { MainNavigation } from './MainNavigation',
+import { Logo } from '@/components/header/Logo',
+import { ModeToggle } from '@/components/ModeToggle',
+import { MenuIcon, X } from 'lucide-react',
+import { MobileMenu } from '@/components/header/MobileMenu',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',
 
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  const isMobile = useIsMobile(),
   
   // Try to access the messaging context, but provide a fallback value if it's not available
-  let unreadCount = 0;
+  let unreadCount = 0,
   try {
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
+    const { unreadCount: count } = useMessaging(),
+    unreadCount = count,
   } catch (error) {
-    console.warn('Messaging context not available');
+    console.warn('Messaging context not available'),
   }
   
   return (
@@ -72,5 +72,5 @@ export function AppHeader() {
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
-  );
+  ),
 }

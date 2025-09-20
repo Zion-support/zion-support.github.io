@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { LoginForm } from "./LoginForm";
-import { SocialLogin } from "./SocialLogin";
+import Link from "next/link",
+import { LoginForm } from "./LoginForm",
+import { SocialLogin } from "./SocialLogin",
 
 export function LoginCard() {
   return (
@@ -27,5 +27,5 @@ export function LoginCard() {
         <SocialLogin />
       </div>
     </div>
-  );
+  ),
 }

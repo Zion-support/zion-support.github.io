@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './src/ScrollToTop';
-import Header from './src/Header';
-import Footer from './src/Footer';
-import './src/index.css';
+import React from 'react',
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
+import ScrollToTop from './src/ScrollToTop',
+import Header from './src/Header',
+import Footer from './src/Footer',
+import './src/index.css',
 export default function App(): React.JSX.Element {,
   return (
     <Router>,
@@ -18,7 +18,7 @@ export default function App(): React.JSX.Element {,
                 <p className="text-lg text-center text-gray-600">,
                   Your trusted partner in AI and technology solutions.
                 </p>
-              </div>,
+              </div>
             } />,
             {/* Add more routes as needed */}
           </Routes>
@@ -26,5 +26,5 @@ export default function App(): React.JSX.Element {,
         <Footer />
       </div>
     </Router>
-  );
+  ),
 }

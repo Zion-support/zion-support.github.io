@@ -1,46 +1,46 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
 export const useSocialAuth = () => {,
   const loginWithGoogle = async () => {,
     try {,
       const { error } = await supabase.auth.signInWithOAuth({,
       if (error) {,
         toast({,
-          title: "Google login failed";
-          description: error.message,}
+          title: "Google login failed",
+          description: error.message}
     } catch (error: any) {,
-      console.error("Google login error:", error);
+      console.error("Google login error:", error),
       toast({,
-        title: "Google login failed";
-        description: error.message || "An unexpected error occurred",}
-  };
+        title: "Google login failed",
+        description: error.message || "An unexpected error occurred"}
+  },
   const loginWithFacebook = async () => {,
     try {,
       const { error } = await supabase.auth.signInWithOAuth({,
       if (error) {,
         toast({,
-          title: "Facebook login failed";
-          description: error.message,}
+          title: "Facebook login failed",
+          description: error.message}
     } catch (error: any) {,
-      console.error("Facebook login error:", error);
+      console.error("Facebook login error:", error),
       toast({,
-        title: "Facebook login failed";
-        description: error.message || "An unexpected error occurred",}
-  };
+        title: "Facebook login failed",
+        description: error.message || "An unexpected error occurred"}
+  },
   const loginWithTwitter = async () => {,
     try {,
       const { error } = await supabase.auth.signInWithOAuth({,
       if (error) {,
         toast({,
-          title: "Twitter login failed";
-          description: error.message,}
+          title: "Twitter login failed",
+          description: error.message}
     } catch (error: any) {,
-      console.error("Twitter login error:", error);
+      console.error("Twitter login error:", error),
       toast({,
-        title: "Twitter login failed";
-        description: error.message || "An unexpected error occurred",}
-  };
-  return { loginWithGoogle, loginWithFacebook, loginWithTwitter };
-};
+        title: "Twitter login failed",
+        description: error.message || "An unexpected error occurred"}
+  },
+  return { loginWithGoogle, loginWithFacebook, loginWithTwitter },
+},
 }}}}}}}}})))))))))

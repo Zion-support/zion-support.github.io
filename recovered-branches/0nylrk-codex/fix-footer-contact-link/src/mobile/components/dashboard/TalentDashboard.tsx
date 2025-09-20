@@ -1,6 +1,6 @@
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react",
+import { Link } from "react-router-dom",
 export function TalentDashboard() {,
   return (,
     <div className="space-y-6 px-4 pb-24">,
@@ -134,7 +134,6 @@ export function TalentDashboard() {,
           </CardContent>,
         </Card>,
       </section>,
-    </div>,
-  );
+    </div>),
 }
 ,

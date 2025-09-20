@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 cloud_orchestrator function triggered');
+  console.log('🤖 cloud_orchestrator function triggered'),
   
   try {
     // Simple cloud orchestration logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     const result = {
       statusCode: 200,
       body: JSON.stringify({
@@ -11,15 +11,15 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'cloud_orchestrator',
         status: 'success',
-        services: ['monitoring', 'deployment', 'scaling']
+        services: ['monitoringdeployment', 'scaling']
       })
-    };
+    },
     
-    console.log('✅ cloud_orchestrator completed successfully');
-    return result;
+    console.log('✅ cloud_orchestrator completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ cloud_orchestrator failed:', error);
+    console.error('❌ cloud_orchestrator failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -28,6 +28,6 @@ exports.handler = async function(event, context) {
         function: 'cloud_orchestrator',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

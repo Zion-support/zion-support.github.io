@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Link, Shield, BarChart3, Zap, Globe, Phone, Mail, MapPin, TrendingUp, Database, Lock } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { Link, Shield, BarChart3, Zap, Globe, Phone, Mail, MapPin, TrendingUp, Database, Lock } from 'lucide-react',
+import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 
 // Service data
 const serviceData = {
@@ -45,12 +45,9 @@ const serviceData = {
   ],
   marketPosition: 'Leading blockchain-powered supply chain management platform for enterprises seeking complete transparency, traceability, and automation across global supply networks.',
   useCases: [
-    'Food safety and traceability',
-    'Pharmaceutical supply chains',
-    'Luxury goods authentication',
-    'Automotive parts tracking',
-    'Agricultural supply chains',
-    'Retail inventory management'
+    'Food safety and traceabilityPharmaceutical supply chains',
+    'Luxury goods authenticationAutomotive parts tracking',
+    'Agricultural supply chainsRetail inventory management'
   ],
   roi: 'Average customer sees 450% ROI within 12 months through improved efficiency, reduced fraud, and enhanced compliance.',
   contactInfo: {
@@ -58,5 +55,5 @@ const serviceData = {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-};
-export default blockchain-supply-chain-management-2030;
+},
+export default blockchain-supply-chain-management-2030,

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default CuttingEdgeServicesShowcase;
-import { cuttingEdgeInnovations2025 } from '../data/2025 - cutting - edge -innovations';
+import React, { useState } from 'react',
+export default CuttingEdgeServicesShowcase,
+import { cuttingEdgeInnovations2025 } from '../data/2025 - cutting - edge -innovations',
 
 export default function Page() {
 /device / day`}
@@ -16,12 +16,12 @@ export default function Page() {
             return `$${price}/attorney / month`}
         else {
             return `$${price}/${model}`}
-    };
+    },
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 pt -32">
       <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header Section */}
         <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font - bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font - bold text-white mb-6">
             Cutting - Edge Innovation Services 2025
           </h1>
           <p className="text-xl text-gray - 300 max - w-4xl mx - auto leading - relaxed mb-8">
@@ -218,5 +218,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) };
+    </div>) },
 }}}}}}}}

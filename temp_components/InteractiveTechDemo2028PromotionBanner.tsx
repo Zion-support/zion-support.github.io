@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Play
   Pause
@@ -18,12 +18,12 @@ import {
   Code,
   Database,
   BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 
 const InteractiveTechDemo2028PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [isPlayingsetIsPlaying] = useState(false);
-  const [currentTechsetCurrentTech] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [isPlayingsetIsPlaying] = useState(false),
+  const [currentTechsetCurrentTech] = useState(0),
 
   const technologies = [
     {
@@ -50,23 +50,21 @@ const InteractiveTechDemo2028PromotionBanner = () => {
       description: 'Intelligent resource management',
       color: 'from-orange-500 to-red-500'
     }
-  ];
+  ],
 
   const features = [
-    'Real-time Processing',
-    'Interactive Controls',
-    'Live Metrics',
-    'Visual Analytics'
-  ];
+    'Real-time ProcessingInteractive Controls',
+    'Live MetricsVisual Analytics'
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTech((prev) => (prev + 1) % technologies.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentTech((prev) => (prev + 1) % technologies.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
 
-  if (!isVisible) return null;
+  if (!isVisible) return null,
 
 const InteractiveTechDemo2028PromotionBanner: React.FC = () => {
   return (
@@ -74,7 +72,7 @@ const InteractiveTechDemo2028PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">InteractiveTechDemo2028PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default InteractiveTechDemo2028PromotionBanner;
+export default InteractiveTechDemo2028PromotionBanner,

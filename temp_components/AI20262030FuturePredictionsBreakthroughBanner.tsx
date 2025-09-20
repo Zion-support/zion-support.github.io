@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function AI20262030FuturePredictionsBreakthroughBanner() {,
   return (,
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16 px-4">,
@@ -34,7 +34,7 @@ export default function AI20262030FuturePredictionsBreakthroughBanner() {,
               Get Implementation Guide,
             </Link>,
           </div>,
-          {/* Prediction Accuracy Metrics */,}
+          {/* Prediction Accuracy Metrics */}
           <div className="grid grid-cols-1 md: grid-cols-4 gap-6 max-w-4xl mx-auto">,
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">,
               <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>,
@@ -54,7 +54,7 @@ export default function AI20262030FuturePredictionsBreakthroughBanner() {,
             </div>,
           </div>,
         </div>,
-        {/* Key Predictions Timeline */,}
+        {/* Key Predictions Timeline */}
         <div className="grid grid-cols-1 md: grid-cols-5 gap-6 mt-16">,
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">,
             <div className="text-2xl font-bold text-cyan-400 mb-2">2026</div>,
@@ -98,6 +98,5 @@ export default function AI20262030FuturePredictionsBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  );
+    </div>),
 }

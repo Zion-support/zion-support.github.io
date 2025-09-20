@@ -1,15 +1,15 @@
 
-import React from "react";
-import { Heart } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
+import React from "react",
+import { Heart } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { useToast } from "@/hooks/use-toast",
 
 interface TalentCardSaveButtonProps {
-  profileId: string;
-  profileName: string;
-  isSaved: boolean;
-  onToggleSave?: (id: string, isSaved: boolean) => void;
-  isAuthenticated: boolean;
+  profileId: string,
+  profileName: string,
+  isSaved: boolean,
+  onToggleSave?: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
 }
 
 export function TalentCardSaveButton({ 
@@ -19,25 +19,25 @@ export function TalentCardSaveButton({
   onToggleSave,
   isAuthenticated 
 }: TalentCardSaveButtonProps) {
-  const { toast } = useToast();
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
+  const { toast } = useToast(),
+  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),
   
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation(),
     
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please log in to save talents to your favorites",
         variant: "destructive"
-      });
-      return;
+      }),
+      return,
     }
     
-    setLocalIsSaved(!localIsSaved);
+    setLocalIsSaved(!localIsSaved),
     if (onToggleSave) {
-      onToggleSave(profileId, !localIsSaved);
+      onToggleSave(profileId, !localIsSaved),
     }
     
     toast({
@@ -46,8 +46,8 @@ export function TalentCardSaveButton({
         ? `${profileName} has been removed from your favorites` 
         : `${profileName} has been added to your favorites`,
       variant: "default"
-    });
-  };
+    }),
+  },
 
   return (
     <button 
@@ -62,5 +62,5 @@ export function TalentCardSaveButton({
         )} 
       />
     </button>
-  );
+  ),
 }

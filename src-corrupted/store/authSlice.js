@@ -1,7 +1,7 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit',
 // Async thunk for login,
 export const loginUser = createAsyncThunk(,
-  'auth/loginUser';
+  'auth/loginUser',
   async (credentials, { rejectWithValue }) => {,
     try {,
       // Simulate API call,
@@ -9,22 +9,22 @@ export const loginUser = createAsyncThunk(,
         setTimeout(() => {,
           resolve({,
             user: {,
-              id: 1;
-              email: credentials.email;
-              name: 'John Doe';
-              role: 'user',};
-            token: 'mock-jwt-token',});
-        }, 1000);
-      });
-      return response;
+              id: 1,
+              email: credentials.email,
+              name: 'John Doe',
+              role: 'user'},
+            token: 'mock-jwt-token'}),
+        }, 1000),
+      }),
+      return response,
     } catch (error) {,
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.message),
     }
   }
-);
+),
 // Async thunk for signup,
 export const signupUser = createAsyncThunk(,
-  'auth/signupUser';
+  'auth/signupUser',
   async (userData, { rejectWithValue }) => {,
     try {,
       // Simulate API call,
@@ -33,156 +33,156 @@ export const signupUser = createAsyncThunk(,
           if (userData.email && userData.password && userData.name) {,
             resolve({,
               user: {,
-                id: Date.now();
-                email: userData.email;
-                name: userData.name;
-                role: 'user',};
-              token: 'mock-jwt-token',});
+                id: Date.now(),
+                email: userData.email,
+                name: userData.name,
+                role: 'user'},
+              token: 'mock-jwt-token'}),
           } else {,
-            rejectWithValue(new Error('Invalid user data'));
+            rejectWithValue(new Error('Invalid user data')),
           }
-        }, 1000);
-      });
+        }, 1000),
+      }),
       // Store token in localStorage,
-      localStorage.setItem('token', response.token);
-      localStorage.setItem('user', JSON.stringify(response.user));
-      return response;
+      localStorage.setItem('token', response.token),
+      localStorage.setItem('user', JSON.stringify(response.user)),
+      return response,
     } catch (error) {,
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.message),
     }
   }
-);
+),
 // Async thunk for logout,
 export const logoutUser = createAsyncThunk(,
-  'auth/logoutUser';
+  'auth/logoutUser',
   async (_, { rejectWithValue }) => {,
     try {,
       // Simulate API call,
       await new Promise((resolve) => {,
-        setTimeout(resolve, 500);
-      });
-      return null;
+        setTimeout(resolve, 500),
+      }),
+      return null,
     } catch (error) {,
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.message),
     }
   }
-);
+),
 // Async thunk for checking auth status,
 export const checkAuthStatus = createAsyncThunk(,
-  'auth/checkAuthStatus';
+  'auth/checkAuthStatus',
   async (_, { rejectWithValue }) => {,
     try {,
-      const token = localStorage.getItem('token');
-      const user = localStorage.getItem('user');
+      const token = localStorage.getItem('token'),
+      const user = localStorage.getItem('user'),
       if (token && user) {,
         return {,
-          user: JSON.parse(user);
-          token,
-        };
+          user: JSON.parse(user),
+          token
+        },
       } else {,
-        throw new Error('No auth data found');
+        throw new Error('No auth data found'),
       }
     } catch (error) {,
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.message),
     }
   }
-);
+),
 const initialState = {,
-  user: null;
-  token: null;
-  isAuthenticated: false;
-  isLoading: false;
-  error: null,};
+  user: null,
+  token: null,
+  isAuthenticated: false,
+  isLoading: false,
+  error: null},
 const authSlice = createSlice({,
-  name: 'auth';
-  initialState;
+  name: 'auth',
+  initialState,
   reducers: {,
     clearError: (state) => {,
-      state.error = null,};
+      state.error = null},
     setUser: (state, action) => {,
-      state.user = action.payload;
-      state.isAuthenticated = !!action.payload;
-    };
+      state.user = action.payload,
+      state.isAuthenticated = !!action.payload,
+    },
     setLoggedIn: (state, action) => {,
-      state.isAuthenticated = action.payload;
+      state.isAuthenticated = action.payload,
     }
-  };
+  },
   extraReducers: (builder) => {,
     // Login,
     builder,
       .addCase(loginUser.pending, (state) => {,
-        state.isLoading = true;
-        state.error = null;
+        state.isLoading = true,
+        state.error = null,
       }),
       .addCase(loginUser.fulfilled, (state, action) => {,
-        state.isLoading = false;
-        state.user = action.payload.user;
-        state.token = action.payload.token;
-        state.isAuthenticated = true;
-        state.error = null;
+        state.isLoading = false,
+        state.user = action.payload.user,
+        state.token = action.payload.token,
+        state.isAuthenticated = true,
+        state.error = null,
       }),
       .addCase(loginUser.rejected, (state, action) => {,
-        state.isLoading = false;
-        state.error = action.payload;
-      });
+        state.isLoading = false,
+        state.error = action.payload,
+      }),
     // Signup,
     builder,
       .addCase(signupUser.pending, (state) => {,
-        state.isLoading = true;
-        state.error = null;
+        state.isLoading = true,
+        state.error = null,
       }),
       .addCase(signupUser.fulfilled, (state, action) => {,
-        state.isLoading = false;
-        state.isAuthenticated = true;
-        state.user = action.payload.user;
-        state.token = action.payload.token;
-        state.error = null;
+        state.isLoading = false,
+        state.isAuthenticated = true,
+        state.user = action.payload.user,
+        state.token = action.payload.token,
+        state.error = null,
       }),
       .addCase(signupUser.rejected, (state, action) => {,
-        state.isLoading = false;
-        state.error = action.payload;
-      });
+        state.isLoading = false,
+        state.error = action.payload,
+      }),
     // Logout,
     builder,
       .addCase(logoutUser.pending, (state) => {,
-        state.isLoading = true;
+        state.isLoading = true,
       }),
       .addCase(logoutUser.fulfilled, (state) => {,
-        state.isLoading = false;
-        state.user = null;
-        state.token = null;
-        state.isAuthenticated = false;
-        state.error = null;
+        state.isLoading = false,
+        state.user = null,
+        state.token = null,
+        state.isAuthenticated = false,
+        state.error = null,
       }),
       .addCase(logoutUser.rejected, (state, action) => {,
-        state.isLoading = false;
-        state.error = action.payload;
-      });
+        state.isLoading = false,
+        state.error = action.payload,
+      }),
     // Check auth status,
     builder,
       .addCase(checkAuthStatus.pending, (state) => {,
-        state.isLoading = true;
+        state.isLoading = true,
       }),
       .addCase(checkAuthStatus.fulfilled, (state, action) => {,
-        state.isLoading = false;
-        state.isAuthenticated = true;
-        state.user = action.payload.user;
-        state.token = action.payload.token;
-        state.error = null;
+        state.isLoading = false,
+        state.isAuthenticated = true,
+        state.user = action.payload.user,
+        state.token = action.payload.token,
+        state.error = null,
       }),
       .addCase(checkAuthStatus.rejected, (state) => {,
-        state.isLoading = false;
-        state.isAuthenticated = false;
-        state.user = null;
-        state.token = null;
-      });
+        state.isLoading = false,
+        state.isAuthenticated = false,
+        state.user = null,
+        state.token = null,
+      }),
   }
-});
-export const { clearError, setUser, setLoggedIn } = authSlice.actions;
+}),
+export const { clearError, setUser, setLoggedIn } = authSlice.actions,
 // Selectors,
-export const selectUser = (state) => state.auth.user;
-export const selectToken = (state) => state.auth.token;
-export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
-export const selectIsLoading = (state) => state.auth.isLoading;
-export const selectError = (state) => state.auth.error;
-export default authSlice.reducer;
+export const selectUser = (state) => state.auth.user,
+export const selectToken = (state) => state.auth.token,
+export const selectIsAuthenticated = (state) => state.auth.isAuthenticated,
+export const selectIsLoading = (state) => state.auth.isLoading,
+export const selectError = (state) => state.auth.error,
+export default authSlice.reducer,

@@ -1,17 +1,17 @@
-import React, { useState, useMemo } from 'react';
-export default ComprehensiveServicesShowcase2027;
-import { comprehensiveServices } from '../data/comprehensiveServices';
+import React, { useState, useMemo } from 'react',
+export default ComprehensiveServicesShowcase2027,
+import { comprehensiveServices } from '../data/comprehensiveServices',
 
 export default function Page() {
 const ComprehensiveServicesShowcase2027: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState < string> ('All') ;
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'> ('name') ;
-  const [selectedService, setSelectedService] = useState < Service | null> (null) ;
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState < string> ('All') ,
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'> ('name') ,
+  const [selectedService, setSelectedService] = useState < Service | null> (null) ,
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
-    const services: Service[] = [];
+    const services: Service[] = [],
 
     // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
     ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
@@ -27,7 +27,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           professional: service.pricing.professional,
           enterprise: service.pricing.enterprise,
           currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle,
+          billingCycle: service.pricing.billingCycle
         },
         rating: service.rating,
         reviewCount: service.reviewCount,
@@ -36,9 +36,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
-        contactInfo: service.contactInfo,
-      }) ;
-    }) ;
+        contactInfo: service.contactInfo
+      }) ,
+    }) ,
 
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
@@ -54,7 +54,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           professional: service.pricing.professional,
           enterprise: service.pricing.enterprise,
           currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle,
+          billingCycle: service.pricing.billingCycle
         },
         rating: service.rating,
         reviewCount: service.reviewCount,
@@ -63,90 +63,90 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
         website: service.website,
-        contactInfo: service.contactInfo,
-      }) ;
-    }) ;
+        contactInfo: service.contactInfo
+      }) ,
+    }) ,
 
-    return services;
-  }, []) ;
+    return services,
+  }, []) ,
 
   const categories = useMemo(() => {
     const cats = ['All',
-      ...Array.from(new Set (allServices.map (s => s.category) ) ) ,
-    ];
-    return cats.sort () ;
-  }, [allServices]) ;
+      ...Array.from(new Set (allServices.map (s => s.category) ) ) 
+    ],
+    return cats.sort () ,
+  }, [allServices]) ,
 
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
-        service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    }) ;
+        service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+      return matchesSearch && matchesCategory,
+    }) ,
 
     // Sort services
     switch(sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name) ) ;
-        break;
+        filtered.sort((a, b) => a.name.localeCompare(b.name) ) ,
+        break,
       case 'price':
-        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter) ;
-        break;
+        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter) ,
+        break,
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating) ;
-        break;
+        filtered.sort((a, b) => b.rating - a.rating) ,
+        break,
       case 'newest':
         filtered.sort((a, b) =>
-            new Date(b.launchDate) .getTime () - new Date(a.launchDate) .getTime () ) ;
-        break;
+            new Date(b.launchDate) .getTime () - new Date(a.launchDate) .getTime () ) ,
+        break,
     }
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]) ;
+    return filtered,
+  }, [allServices, searchTerm, selectedCategory, sortBy]) ,
 
   const getCategoryIcon = (category: string) => {
     switch(category) {
       case 'Artificial Intelligence':
-        return < Brain className="w-6 h-6" />;
+        return < Brain className="w-6 h-6" />,
       case 'Quantum Computing':
-        return < Atom className="w-6 h-6" />;
+        return < Atom className="w-6 h-6" />,
       case 'Neuromorphic Computing':
-        return < Cpu className="w-6 h-6" />;
+        return < Cpu className="w-6 h-6" />,
       case 'Synthetic Biology':
-        return < Heart className="w-6 h-6" />;
+        return < Heart className="w-6 h-6" />,
       case 'Blockchain':
-        return < Blockchain className="w-6 h-6" />;
+        return < Blockchain className="w-6 h-6" />,
       case 'Cybersecurity':
-        return < Shield className="w-6 h-6" />;
+        return < Shield className="w-6 h-6" />,
       case 'Internet of Things':
-        return < Network className="w-6 h-6" />;
+        return < Network className="w-6 h-6" />,
       case 'Metaverse':
-        return < Globe className="w-6 h-6" />;
+        return < Globe className="w-6 h-6" />,
       case 'Robotics':
-        return < Factory className="w-6 h-6" />;
+        return < Factory className="w-6 h-6" />,
       case 'Space Technology':
-        return < Satellite className="w-6 h-6" />;
+        return < Satellite className="w-6 h-6" />,
       default:
-        return < Lightbulb className="w-6 h-6" />;
+        return < Lightbulb className="w-6 h-6" />
     }
-  };
+  },
 
   const getStatusColor = (status: string) => {
     switch(status.toLowerCase () ) {
       case 'live':
-        return 'bg-green - 100 text-green - 800';
+        return 'bg-green - 100 text-green - 800',
       case 'beta':
-        return 'bg-blue - 100 text-blue - 800';
+        return 'bg-blue - 100 text-blue - 800',
       case 'coming soon':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-100 text-yellow-800',
       case 'preview':
-        return 'bg-purple - 100 text-purple - 800';
+        return 'bg-purple - 100 text-purple - 800',
       default:
-        return 'bg-gray - 100 text-gray - 800';
+        return 'bg-gray - 100 text-gray - 800'
     }
-  };
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       {/* Header */}
@@ -563,7 +563,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             <p > 364 E Main St STE 1008, Middletown DE 19709</p>
             <p > Visit us at:{' '}
               <a
-                href="https://ziontechgroup.com"
+                href="https: //ziontechgroup.com"
                 className="text-purple -400 hover:underline"
               >
                 https://ziontechgroup.com
@@ -572,6 +572,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},
 

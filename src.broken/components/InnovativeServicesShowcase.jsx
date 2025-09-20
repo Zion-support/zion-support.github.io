@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-export default InnovativeServicesShowcase;
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+export default InnovativeServicesShowcase,
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025',
 
 export default function Page() {
-    };
+    },
     const handleServiceClick = (service) => {
 
-        setSelectedService(service)};
+        setSelectedService(service)},
     const closeModal = () => {
-        setSelectedService(null)};"
+        setSelectedService(null)},"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -260,9 +260,9 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>)};
-export default InnovativeServicesShowcase;
+    </div>)},
+export default InnovativeServicesShowcase,
 }'"`
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

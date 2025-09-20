@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import Head from 'next/head',
+import { useEffect, useState } from 'react',
 
 export default function RoadmapReport() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(null),
   useEffect(() => {
-    fetch('/reports/roadmap/latest.json').then(r => r.json()).then(setData).catch(()=>{});
-  }, []);
+    fetch('/reports/roadmap/latest.json').then(r => r.json()).then(setData).catch(()=>{}),
+  }, []),
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -41,5 +41,5 @@ export default function RoadmapReport() {
         </section>
       </main>
     </div>
-  );
+  ),
 }

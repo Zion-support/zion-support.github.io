@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Brain
   Zap
@@ -29,11 +29,11 @@ import {
   Eye,
   Heart,
   Sparkles
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AdvancedTechShowcase2029 = () => {
-  const [activeTabsetActiveTab] = useState('ai-conscience');
-  const [currentDemosetCurrentDemo] = useState(0);
+  const [activeTabsetActiveTab] = useState('ai-conscience'),
+  const [currentDemosetCurrentDemo] = useState(0),
 
   const techCategories = {
     'ai-conscience': {
@@ -135,7 +135,7 @@ const AdvancedTechShowcase2029 = () => {
         }
       ]
     }
-  };
+  },
 
   const demos = [
     {
@@ -159,21 +159,21 @@ const AdvancedTechShowcase2029 = () => {
       views: '3.1M',
       category: 'Omniversal Computing'
     }
-  ];
+  ],
 
   const stats = [
     { label: 'Conscious AI Systems'value: '50+'icon: Brain },
     { label: 'Quantum Qubits'value: '1M+'icon: Cpu },
     { label: 'Realities Simulated'value: '∞'icon: Globe },
     { label: 'Ethical Guidelines'value: '500+'icon: Shield }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentDemo((prev) => (prev + 1) % demos.length),
+    }4000),
+    return () => clearInterval(interval),
+  }[]),
 
 const AdvancedTechShowcase2029: React.FC = () => {
   return (
@@ -181,7 +181,7 @@ const AdvancedTechShowcase2029: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AdvancedTechShowcase2029</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default AdvancedTechShowcase2029;
+export default AdvancedTechShowcase2029,

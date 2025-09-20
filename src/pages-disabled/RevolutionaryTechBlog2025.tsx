@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const RevolutionaryTechBlog2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -15,7 +14,7 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </p>
         </div>
 
-        {/* Featured Articles */};
+        {/* Featured Articles */},
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Featured Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -124,7 +123,7 @@ const RevolutionaryTechBlog2025: React.FC = () => {
                   <p className="text-gray-300 mb-4">Understand the neuroscience and technology behind brain-computer interfaces and their potential applications.</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">12 min read</span>
-                    <button className="text-emerald-400 hover:text-emerald-300 font-semibold">Read Full Article →</button>
+                    <button className="text-emerald-400 hover: text-emerald-300 font-semibold">Read Full Article →</button>
                   </div>
                 </div>
               </div>
@@ -171,7 +170,7 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated with Latest Tech Insights</h2>
             <p className="text-xl mb-8 opacity-90">Get the latest articles, breakthroughs, and technology insights delivered to your inbox</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email" 
@@ -188,20 +187,20 @@ const RevolutionaryTechBlog2025: React.FC = () => {
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Popular Tags</h2>
           <div className="flex flex-wrap gap-4 justify-center">
-            {['AI', 'Quantum Computing', 'Neural Interfaces', 'Machine Learning', 'Blockchain', 'IoT', 'Edge Computing', '5G', 'AR/VR', 'Robotics', 'Cybersecurity', 'Cloud Computing'].map((tag) => (
-              <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold hover:bg-white/20 transition-all duration-300 cursor-pointer">
+            {['AIQuantum Computing', 'Neural InterfacesMachine Learning', 'BlockchainIoT', 'Edge Computing5G', 'AR/VRRobotics', 'CybersecurityCloud Computing'].map((tag) => (
+              <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold hover: bg-white/20 transition-all duration-300 cursor-pointer">
                 #{tag};
               </span>
             ))}
           </div>
         </div>
 
-        {/* Call to Action */};
+        {/* Call to Action */},
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h2>
             <p className="text-xl mb-8 opacity-90">Join our community of tech enthusiasts and stay ahead of the innovation curve</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-purple-50 transition-colors">
                 Browse All Articles
               </button>
@@ -213,6 +212,6 @@ const RevolutionaryTechBlog2025: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
   };
 export default RevolutionaryTechBlog2025;

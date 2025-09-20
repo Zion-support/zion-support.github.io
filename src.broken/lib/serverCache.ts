@@ -1,5 +1,5 @@
-import NodeCache from 'node-cache';
-import { logDev, logError } from '@/utils/productionLogger';
+import NodeCache from 'node-cache',
+import { logDev, logError } from '@/utils/productionLogger',
 
 // Cache categories with different TTL values
 export enum CacheCategory {
@@ -15,7 +15,7 @@ const cacheInstances = {
   [CacheCategory.MEDIUM]: new NodeCache({ stdTTL: 1800, checkperiod: 300 }),   // 30 min
   [CacheCategory.LONG]: new NodeCache({ stdTTL: 86400, checkperiod: 3600 }),   // 24 hours
   [CacheCategory.STATIC]: new NodeCache({ stdTTL: 604800, checkperiod: 7200 }) // 7 days
-};
+},
 
 // Cache keys for consistent naming
 export const cacheKeys = {
@@ -37,24 +37,24 @@ export const cacheKeys = {
     all: 'api:talent:all',
     filtered: (params: string) => `api:talent:filtered:${params}`
   }
-};
+},
 
 /**
  * Get data from cache
  */
 export function getCacheItem<T>(key: string, category: CacheCategory = CacheCategory.MEDIUM): T | undefined {
   try {
-    const cache = cacheInstances[category];
-    const value = cache.get<T>(key);
+    const cache = cacheInstances[category],
+    const value = cache.get<T>(key),
     if (value) {
-      logDev(`Cache HIT: ${key} (${category})`);
-      return value;
+      logDev(`Cache HIT: ${key} (${category})`),
+      return value,
     }
-    logDev(`Cache MISS: ${key} (${category})`);
-    return undefined;
+    logDev(`Cache MISS: ${key} (${category})`),
+    return undefined,
   } catch (error) {
-    logError(`Cache GET error for ${key}:`, error);
-    return undefined;
+    logError(`Cache GET error for ${key}:`, error),
+    return undefined,
   }
 }
 
@@ -68,18 +68,18 @@ export function setCacheItem<T>(
   customTTL?: number
 ): boolean {
   try {
-    const cache = cacheInstances[category];
+    const cache = cacheInstances[category],
     const success = customTTL 
       ? cache.set(key, value, customTTL)
-      : cache.set(key, value);
+      : cache.set(key, value),
     
       if (success) {
-        logDev(`Cache SET: ${key} (${category})`);
+        logDev(`Cache SET: ${key} (${category})`),
       }
-    return success;
+    return success,
   } catch (error) {
-    logError(`Cache SET error for ${key}:`, error);
-    return false;
+    logError(`Cache SET error for ${key}:`, error),
+    return false,
   }
 }
 
@@ -88,15 +88,15 @@ export function setCacheItem<T>(
  */
 export function deleteCacheItem(key: string, category: CacheCategory = CacheCategory.MEDIUM): boolean {
   try {
-    const cache = cacheInstances[category];
-    const success = cache.del(key) > 0;
+    const cache = cacheInstances[category],
+    const success = cache.del(key) > 0,
       if (success) {
-        logDev(`Cache DELETE: ${key} (${category})`);
+        logDev(`Cache DELETE: ${key} (${category})`),
       }
-    return success;
+    return success,
   } catch (error) {
-    logError(`Cache DELETE error for ${key}:`, error);
-    return false;
+    logError(`Cache DELETE error for ${key}:`, error),
+    return false,
   }
 }
 
@@ -106,15 +106,15 @@ export function deleteCacheItem(key: string, category: CacheCategory = CacheCate
 export function clearCache(category?: CacheCategory): void {
   try {
     if (category) {
-      cacheInstances[category].flushAll();
-      logDev(`Cache CLEARED: ${category}`);
+      cacheInstances[category].flushAll(),
+      logDev(`Cache CLEARED: ${category}`),
     } else {
       // Clear all caches
-      Object.values(cacheInstances).forEach(cache => cache.flushAll());
-      logDev('Cache CLEARED: all categories');
+      Object.values(cacheInstances).forEach(cache => cache.flushAll()),
+      logDev('Cache CLEARED: all categories')
     }
   } catch (error) {
-    logError('Cache CLEAR error:', error);
+    logError('Cache CLEAR error:', error),
   }
 }
 
@@ -123,8 +123,8 @@ export function clearCache(category?: CacheCategory): void {
  */
 export function getCacheStats(category: CacheCategory) {
   try {
-    const cache = cacheInstances[category];
-    const stats = cache.getStats();
+    const cache = cacheInstances[category],
+    const stats = cache.getStats(),
     return {
       keys: cache.keys().length,
       hits: stats.hits,
@@ -132,10 +132,10 @@ export function getCacheStats(category: CacheCategory) {
       hitRate: stats.hits / (stats.hits + stats.misses) || 0,
       vsize: stats.vsize,
       ksize: stats.ksize
-    };
+    },
   } catch (error) {
-    logError(`Cache STATS error for ${category}:`, error);
-    return null;
+    logError(`Cache STATS error for ${category}:`, error),
+    return null,
   }
 }
 
@@ -148,26 +148,26 @@ export function withCache<T>(
   customTTL?: number
 ) {
   return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-    const originalMethod = descriptor.value;
+    const originalMethod = descriptor.value,
 
     descriptor.value = async function(...args: any[]) {
       // Try to get from cache first
-      const cachedResult = getCacheItem<T>(cacheKey, category);
+      const cachedResult = getCacheItem<T>(cacheKey, category),
       if (cachedResult !== undefined) {
-        return cachedResult;
+        return cachedResult,
       }
 
       // Execute original method
-      const result = await originalMethod.apply(this, args);
+      const result = await originalMethod.apply(this, args),
       
       // Cache the result
-      setCacheItem(cacheKey, result, category, customTTL);
+      setCacheItem(cacheKey, result, category, customTTL),
       
-      return result;
-    };
+      return result,
+    },
 
-    return descriptor;
-  };
+    return descriptor,
+  },
 }
 
 /**
@@ -180,19 +180,19 @@ export async function cacheOrCompute<T>(
   customTTL?: number
 ): Promise<T> {
   // Try cache first
-  const cached = getCacheItem<T>(key, category);
+  const cached = getCacheItem<T>(key, category),
   if (cached !== undefined) {
-    return cached;
+    return cached,
   }
 
   // Compute and cache
   try {
-    const result = await computeFn();
-    setCacheItem(key, result, category, customTTL);
-    return result;
+    const result = await computeFn(),
+    setCacheItem(key, result, category, customTTL),
+    return result,
   } catch (error) {
-    logError(`Cache compute error for ${key}:`, error);
-    throw error;
+    logError(`Cache compute error for ${key}:`, error),
+    throw error,
   }
 }
 
@@ -200,35 +200,35 @@ export async function cacheOrCompute<T>(
  * HTTP cache headers helper
  */
 export function getCacheHeaders(category: CacheCategory): { [key: string]: string } {
-  const headers: { [key: string]: string } = {};
+  const headers: { [key: string]: string } = {},
 
   switch (category) {
     case CacheCategory.SHORT:
-      headers['Cache-Control'] = 'public, s-maxage=300, stale-while-revalidate=600';
-      break;
+      headers['Cache-Control'] = 'public, s-maxage=300, stale-while-revalidate=600',
+      break,
     case CacheCategory.MEDIUM:
-      headers['Cache-Control'] = 'public, s-maxage=1800, stale-while-revalidate=3600';
-      break;
+      headers['Cache-Control'] = 'public, s-maxage=1800, stale-while-revalidate=3600',
+      break,
     case CacheCategory.LONG:
-      headers['Cache-Control'] = 'public, s-maxage=86400, stale-while-revalidate=172800';
-      break;
+      headers['Cache-Control'] = 'public, s-maxage=86400, stale-while-revalidate=172800',
+      break,
     case CacheCategory.STATIC:
-      headers['Cache-Control'] = 'public, s-maxage=604800, stale-while-revalidate=1209600';
-      break;
+      headers['Cache-Control'] = 'public, s-maxage=604800, stale-while-revalidate=1209600',
+      break,
   }
 
-  headers['X-Cache-Strategy'] = category;
-  return headers;
+  headers['X-Cache-Strategy'] = category,
+  return headers,
 }
 
 /**
  * Apply cache headers to Next.js API response
  */
 export function applyCacheHeaders(res: any, category: CacheCategory): void {
-  const headers = getCacheHeaders(category);
+  const headers = getCacheHeaders(category),
   Object.entries(headers).forEach(([key, value]) => {
-    res.setHeader(key, value);
-  });
+    res.setHeader(key, value),
+  }),
 }
 
 export default {
@@ -242,4 +242,4 @@ export default {
   applyCacheHeaders,
   CacheCategory,
   cacheKeys
-}; 
+}, 

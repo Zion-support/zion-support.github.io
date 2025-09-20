@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface HRPlatformProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function HRPlatform({ }: HRPlatformProps) {,
@@ -8,8 +8,7 @@ export default function HRPlatform({ }: HRPlatformProps) {,
     <div>,
       <h1>HRPlatform</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

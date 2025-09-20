@@ -1,9 +1,9 @@
 export interface InnovativeService {
 
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
   category:
     | 'AI & Machine Learning''
     | 'Micro SaaS''
@@ -17,27 +17,27 @@ export interface InnovativeService {
     | 'Quantum Computing''
     | 'Blockchain & Web3''
     | 'Space Technology''
-    | 'Green Technology';
-  price: string;
-  billing: 'month' | 'project' | 'hour' | 'one-time';
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPrice: string;
-  roi: string;
-  innovationLevel: 'Emerging' | 'Established' | 'Cutting-edge' | 'Revolutionary';
+    | 'Green Technology',
+  price: string,
+  billing: 'month' | 'project' | 'hour' | 'one-time',
+  features: string[],
+  benefits: string[],
+  targetAudience: string[],
+  marketPrice: string,
+  roi: string,
+  innovationLevel: 'Emerging' | 'Established' | 'Cutting-edge' | 'Revolutionary',
   contactInfo: {
 
-    mobile: string;
-    email: string;
-    website: string};
+    mobile: string,
+    email: string,
+    website: string},
   technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
+    technology: string[],
+    integrations: string[],
+    apiEndpoints: number,
+    uptime: string,
     security: string[]}}
-;export const innovativeServices2025: InnovativeService[] = [// AI & Machine Learning Services
+,export const innovativeServices2025: InnovativeService[] = [// AI & Machine Learning Services
   {
 
     id: 'ai-autonomous-research-assistant',
@@ -50,13 +50,13 @@ export interface InnovativeService {
     price: '$3,499',
     billing: 'month',
     features: ['
-      'Autonomous research methodology selection',Multi-source data analysis and synthesis',Hypothesis generation and testing',Automated literature review',Real-time research progress tracking',Intelligent citation management',Cross-disciplinary insights generation',Automated report generation',
+      'Autonomous research methodology selection',Multi-source data analysis and synthesis',Hypothesis generation and testing',Automated literature review',Real-time research progress tracking',Intelligent citation management',Cross-disciplinary insights generation',Automated report generation'
     ],
     benefits: ['
-      'Accelerate research by 10x',Reduce research costs by 60%',24/7 autonomous operation',Unbiased data analysis',Cross-domain knowledge synthesis',Real-time research updates',
+      'Accelerate research by 10x',Reduce research costs by 60%',24/7 autonomous operation',Unbiased data analysis',Cross-domain knowledge synthesis',Real-time research updates'
     ],
     targetAudience: ['
-      'Research Institutions',Universities',Pharmaceutical Companies',Tech Companies',Consulting Firms',
+      'Research Institutions',Universities',Pharmaceutical Companies',Tech Companies',Consulting Firms'
     ],
     marketPosition:'
       'First truly autonomous research AI with proven breakthrough capabilities',
@@ -67,10 +67,10 @@ export interface InnovativeService {
     trialDays: 45,
     roi: '300% within 6 months',
     useCases: ['
-      'Drug discovery',Market research',Scientific research',Policy analysis',Technology forecasting',
+      'Drug discovery',Market research',Scientific research',Policy analysis',Technology forecasting'
     ],
     technicalSpecs: ['
-      'GPT-4 integration',Advanced NLP',Machine learning algorithms',Data visualization',API integration',
+      'GPT-4 integration',Advanced NLP',Machine learning algorithms',Data visualization',API integration'
     ],
     useCases: ['Sales forecasting and pipeline optimization',Customer churn prediction',Inventory demand forecasting',Market trend analysis',Risk assessment and mitigation'
     ],
@@ -103,18 +103,18 @@ export interface InnovativeService {
     price: '$5,999',
     billing: 'month',
     features: ['
-      'Quantum-AI algorithm optimization',Hybrid classical-quantum processing',Advanced cryptography solutions',Scientific research acceleration',Financial modeling enhancement',Drug discovery optimization',Climate modeling capabilities',Quantum machine learning',
+      'Quantum-AI algorithm optimization',Hybrid classical-quantum processing',Advanced cryptography solutions',Scientific research acceleration',Financial modeling enhancement',Drug discovery optimization',Climate modeling capabilities',Quantum machine learning'
     ],
     benefits: ['
-      '1000x faster computation for complex problems',Unbreakable encryption standards',Revolutionary scientific breakthroughs',Competitive advantage in research',Future-proof technology platform',
+      '1000x faster computation for complex problems',Unbreakable encryption standards',Revolutionary scientific breakthroughs',Competitive advantage in research',Future-proof technology platform'
     ],
     targetAudience: ['
-      'Research Institutions',Financial Services',Pharmaceutical Companies',Government Agencies',Tech Giants',
+      'Research Institutions',Financial Services',Pharmaceutical Companies',Government Agencies',Tech Giants'
     ],
     marketPosition:'
       'Leading quantum-AI integration platform with proven quantum advantage',
     competitors: ['
-      'IBM Quantum',Google Quantum AI',Microsoft Azure Quantum',
+      'IBM Quantum',Google Quantum AI',Microsoft Azure Quantum'
     ],
     marketSize: '$65B quantum computing market',
     growthRate: '35% CAGR',
@@ -122,10 +122,10 @@ export interface InnovativeService {
     trialDays: 30,
     roi: '500% within 12 months',
     useCases: ['
-      'Financial modeling',Drug discovery',Climate research',Cryptography',Optimization problems',
+      'Financial modeling',Drug discovery',Climate research',Cryptography',Optimization problems'
     ],
     technicalSpecs: ['
-      'Quantum processors',AI algorithms',Hybrid computing',Quantum error correction',Cloud integration',
+      'Quantum processors',AI algorithms',Hybrid computing',Quantum error correction',Cloud integration'
     ],
     useCases: ['E-commerce customer support',SaaS user onboarding',Financial services customer care',Healthcare patient engagement',Retail customer experience'
     ],
@@ -157,18 +157,18 @@ export interface InnovativeService {
     price: '$2,999',
     billing: 'month',
     features: ['
-      'Smart contract development and deployment',Decentralized application(dApp) creation',Digital asset management',Supply chain transparency',Identity verification systems',Cross-chain interoperability',Enterprise security protocols',Scalable blockchain infrastructure',
+      'Smart contract development and deployment',Decentralized application(dApp) creation',Digital asset management',Supply chain transparency',Identity verification systems',Cross-chain interoperability',Enterprise security protocols',Scalable blockchain infrastructure'
     ],
     benefits: ['
-      'Reduce operational costs by 30%',Enhance security and transparency',Automate complex business processes',Improve supply chain efficiency',Enable new business models',
+      'Reduce operational costs by 30%',Enhance security and transparency',Automate complex business processes',Improve supply chain efficiency',Enable new business models'
     ],
     targetAudience: ['
-      'Financial Services',Supply Chain Companies',Healthcare Organizations',Government Agencies',Manufacturing',
+      'Financial Services',Supply Chain Companies',Healthcare Organizations',Government Agencies',Manufacturing'
     ],
     marketPosition:'
       'Leading enterprise blockchain platform with proven scalability and security',
     competitors: ['
-      'IBM Blockchain',Microsoft Azure Blockchain',Amazon Managed Blockchain',
+      'IBM Blockchain',Microsoft Azure Blockchain',Amazon Managed Blockchain'
     ],
     marketSize: '$19B blockchain market',
     growthRate: '40% CAGR',
@@ -176,10 +176,10 @@ export interface InnovativeService {
     trialDays: 30,
     roi: '250% within 8 months',
     useCases: ['
-      'Supply chain management',Financial services',Healthcare records',Voting systems',Digital identity',
+      'Supply chain management',Financial services',Healthcare records',Voting systems',Digital identity'
     ],
     technicalSpecs: ['
-      'Ethereum compatibility',Smart contracts',Consensus algorithms',API integration',Cloud deployment',
+      'Ethereum compatibility',Smart contracts',Consensus algorithms',API integration',Cloud deployment'
     ],
     useCases: ['Manufacturing supply chains',Retail inventory management',Logistics optimization',E-commerce fulfillment',Healthcare supply chains'
     ],
@@ -210,13 +210,13 @@ export interface InnovativeService {
     price: '$4,499',
     billing: 'month',
     features: ['
-      'Satellite communication systems',Remote sensing and Earth observation',Space-derived materials and technologies',Navigation and positioning systems',Climate monitoring solutions',Space tourism technology',Satellite internet services',Space data analytics',
+      'Satellite communication systems',Remote sensing and Earth observation',Space-derived materials and technologies',Navigation and positioning systems',Climate monitoring solutions',Space tourism technology',Satellite internet services',Space data analytics'
     ],
     benefits: ['
-      'Access to space-grade technology',Global coverage and connectivity',Advanced monitoring capabilities',Innovative material solutions',Future-ready technology platform',
+      'Access to space-grade technology',Global coverage and connectivity',Advanced monitoring capabilities',Innovative material solutions',Future-ready technology platform'
     ],
     targetAudience: ['
-      'Telecommunications',Agriculture',Environmental Services',Logistics',Government Agencies',
+      'Telecommunications',Agriculture',Environmental Services',Logistics',Government Agencies'
     ],
     marketPosition:'
       'Leading terrestrial space technology applications provider',
@@ -227,10 +227,10 @@ export interface InnovativeService {
     trialDays: 30,
     roi: '400% within 18 months',
     useCases: ['
-      'Global communications',Precision agriculture',Environmental monitoring',Logistics tracking',Disaster response',
+      'Global communications',Precision agriculture',Environmental monitoring',Logistics tracking',Disaster response'
     ],
     technicalSpecs: ['
-      'Satellite technology',IoT integration',Data analytics',Cloud computing',AI algorithms',
+      'Satellite technology',IoT integration',Data analytics',Cloud computing',AI algorithms'
     ],
     useCases: ['Enterprise security',Financial services protection',Healthcare data security',Government cybersecurity',Critical infrastructure protection'
     ],
@@ -261,13 +261,13 @@ export interface InnovativeService {
     price: '$2,799',
     billing: 'month',
     features: ['
-      'Renewable energy optimization',Smart grid management',Electric vehicle infrastructure',Carbon footprint tracking',Sustainable building solutions',Waste management optimization',Water conservation systems',Environmental monitoring',
+      'Renewable energy optimization',Smart grid management',Electric vehicle infrastructure',Carbon footprint tracking',Sustainable building solutions',Waste management optimization',Water conservation systems',Environmental monitoring'
     ],
     benefits: ['
-      'Reduce carbon footprint by 50%',Lower energy costs by 40%',Meet sustainability goals',Enhance brand reputation',Future-proof operations',
+      'Reduce carbon footprint by 50%',Lower energy costs by 40%',Meet sustainability goals',Enhance brand reputation',Future-proof operations'
     ],
     targetAudience: ['
-      'Manufacturing',Real Estate',Transportation',Utilities',Government',
+      'Manufacturing',Real Estate',Transportation',Utilities',Government'
     ],
     marketPosition:'
       'Leading green technology platform with proven environmental impact',
@@ -278,10 +278,10 @@ export interface InnovativeService {
     trialDays: 30,
     roi: '300% within 10 months',
     useCases: ['
-      'Energy management',Building automation',Fleet management',Waste reduction',Water conservation',
+      'Energy management',Building automation',Fleet management',Waste reduction',Water conservation'
     ],
     technicalSpecs: ['
-      'IoT sensors',AI algorithms',Cloud platform',Mobile apps',Analytics dashboard',
+      'IoT sensors',AI algorithms',Cloud platform',Mobile apps',Analytics dashboard'
     ],
     useCases: ['Drug discovery and development',Financial modeling',Logistics optimization',Climate modeling',Cryptography and security'
     ],
@@ -312,13 +312,13 @@ export interface InnovativeService {
     price: '$3,299',
     billing: 'month',
     features: ['
-      'AI-powered threat detection',Behavioral analysis',Automated incident response',Zero-day threat prevention',Advanced malware protection',Network security monitoring',Vulnerability assessment',Compliance management',
+      'AI-powered threat detection',Behavioral analysis',Automated incident response',Zero-day threat prevention',Advanced malware protection',Network security monitoring',Vulnerability assessment',Compliance management'
     ],
     benefits: ['
-      'Detect threats 99.9% faster',Reduce false positives by 80%',Automate security responses',24/7 threat monitoring',Meet compliance requirements',
+      'Detect threats 99.9% faster',Reduce false positives by 80%',Automate security responses',24/7 threat monitoring',Meet compliance requirements'
     ],
     targetAudience: ['
-      'Financial Services',Healthcare',Government',Technology',Manufacturing',
+      'Financial Services',Healthcare',Government',Technology',Manufacturing'
     ],
     marketPosition:'
       'Leading AI cybersecurity platform with proven threat detection accuracy',
@@ -329,10 +329,10 @@ export interface InnovativeService {
     trialDays: 30,
     roi: '400% within 6 months',
     useCases: ['
-      'Threat detection',Incident response',Compliance',Risk assessment',Security monitoring',
+      'Threat detection',Incident response',Compliance',Risk assessment',Security monitoring'
     ],
     technicalSpecs: ['
-      'Machine learning',Behavioral analytics',Cloud security',API protection',Zero trust',
+      'Machine learning',Behavioral analytics',Cloud security',API protection',Zero trust'
     ],
     useCases: ['IoT applications',Autonomous vehicles',Smart cities',Industrial automation',Gaming and entertainment'
     ],
@@ -363,13 +363,13 @@ export interface InnovativeService {
     price: '$99',
     billing: 'month',
     features: ['
-      'Contact management',Lead tracking',Sales pipeline management',Email marketing integration',Task and appointment scheduling',Basic reporting and analytics',Mobile app access',API integration capabilities',
+      'Contact management',Lead tracking',Sales pipeline management',Email marketing integration',Task and appointment scheduling',Basic reporting and analytics',Mobile app access',API integration capabilities'
     ],
     benefits: ['
-      'Increase sales by 25%',Improve customer retention',Streamline sales processes',Affordable pricing',Easy to implement',
+      'Increase sales by 25%',Improve customer retention',Streamline sales processes',Affordable pricing',Easy to implement'
     ],
     targetAudience: ['
-      'Small Business',Startups',Sales Teams',Consultants',Real Estate',
+      'Small Business',Startups',Sales Teams',Consultants',Real Estate'
     ],
     marketPosition: 'Affordable CRM solution with enterprise-grade features',
     competitors: ['HubSpot',Salesforce',Pipedrive'],
@@ -379,10 +379,10 @@ export interface InnovativeService {
     trialDays: 14,
     roi: '200% within 3 months',
     useCases: ['
-      'Sales management',Customer tracking',Lead generation',Marketing campaigns',Customer service',
+      'Sales management',Customer tracking',Lead generation',Marketing campaigns',Customer service'
     ],
     technicalSpecs: ['
-      'Cloud-based',Mobile responsive',API integration',Data encryption',Backup systems',
+      'Cloud-based',Mobile responsive',API integration',Data encryption',Backup systems'
     ],
     useCases: ['Supply chain management',Digital identity verification',Asset tokenization',Cross-border payments',Voting systems'
     ],
@@ -412,13 +412,13 @@ export interface InnovativeService {
     price: '$1,999',
     billing: 'month',
     features: ['
-      'Real-time data processing',Advanced analytics and modeling',Interactive dashboards',Predictive analytics',Data visualization tools',Machine learning integration',Data quality management',Custom reporting',
+      'Real-time data processing',Advanced analytics and modeling',Interactive dashboards',Predictive analytics',Data visualization tools',Machine learning integration',Data quality management',Custom reporting'
     ],
     benefits: ['
-      'Improve decision making by 60%',Identify new business opportunities',Optimize operations',Reduce costs through insights',Competitive advantage',
+      'Improve decision making by 60%',Identify new business opportunities',Optimize operations',Reduce costs through insights',Competitive advantage'
     ],
     targetAudience: ['
-      'Enterprise',Financial Services',Healthcare',Retail',Manufacturing',
+      'Enterprise',Financial Services',Healthcare',Retail',Manufacturing'
     ],
     marketPosition: 'Leading data analytics platform with AI-powered insights',
     competitors: ['Tableau',Power BI',Qlik'],
@@ -428,10 +428,10 @@ export interface InnovativeService {
     trialDays: 30,
     roi: '350% within 8 months',
     useCases: ['
-      'Business intelligence',Performance monitoring',Customer analytics',Operational optimization',Risk assessment',
+      'Business intelligence',Performance monitoring',Customer analytics',Operational optimization',Risk assessment'
     ],
     technicalSpecs: ['
-      'Big data processing',Machine learning',Real-time analytics',Cloud deployment',API integration',
+      'Big data processing',Machine learning',Real-time analytics',Cloud deployment',API integration'
     ],
     useCases: ['Blog content creation',Social media posts',Marketing copy',Product descriptions',Email campaigns'
     ],
@@ -462,13 +462,13 @@ export interface InnovativeService {
     price: '$2,499',
     billing: 'month',
     features: ['
-      'Continuous integration/continuous deployment(CI/CD),Infrastructure as code(IaC),Automated testing and quality assurance',Container orchestration',Monitoring and alerting',Security scanning and compliance',Performance optimization',Multi-cloud management',
+      'Continuous integration/continuous deployment(CI/CD),Infrastructure as code(IaC),Automated testing and quality assurance',Container orchestration',Monitoring and alerting',Security scanning and compliance',Performance optimization',Multi-cloud management'
     ],
     benefits: ['
-      'Deploy 10x faster',Reduce deployment failures by 80%',Improve code quality',Lower operational costs',Enhanced security',
+      'Deploy 10x faster',Reduce deployment failures by 80%',Improve code quality',Lower operational costs',Enhanced security'
     ],
     targetAudience: ['
-      'Technology Companies',Financial Services',Healthcare',E-commerce',Startups',
+      'Technology Companies',Financial Services',Healthcare',E-commerce',Startups'
     ],
     marketPosition: 'Leading DevOps automation platform with proven ROI',
     competitors: ['GitLab',Jenkins',CircleCI'],
@@ -478,10 +478,10 @@ export interface InnovativeService {
     trialDays: 30,
     roi: '300% within 6 months',
     useCases: ['
-      'Software development',Application deployment',Infrastructure management',Quality assurance',Security compliance',
+      'Software development',Application deployment',Infrastructure management',Quality assurance',Security compliance'
     ],
     technicalSpecs: ['
-      'Docker support',Kubernetes integration',Cloud platforms',API management',Monitoring tools',
+      'Docker support',Kubernetes integration',Cloud platforms',API management',Monitoring tools'
     ],
     useCases: ['B2B sales teams',E-commerce businesses',Real estate agencies',Insurance companies',Financial services'
     ],
@@ -511,13 +511,13 @@ export interface InnovativeService {
     price: '$4,999',
     billing: 'month',
     features: ['
-      'Business process automation',Customer experience optimization',Legacy system modernization',Cloud migration services',Data strategy and governance',Change management support',Innovation consulting',Performance measurement',
+      'Business process automation',Customer experience optimization',Legacy system modernization',Cloud migration services',Data strategy and governance',Change management support',Innovation consulting',Performance measurement'
     ],
     benefits: ['
-      'Increase operational efficiency by 40%',Improve customer satisfaction',Reduce operational costs',Enable innovation',Competitive advantage',
+      'Increase operational efficiency by 40%',Improve customer satisfaction',Reduce operational costs',Enable innovation',Competitive advantage'
     ],
     targetAudience: ['
-      'Enterprise',Manufacturing',Healthcare',Financial Services',Retail',
+      'Enterprise',Manufacturing',Healthcare',Financial Services',Retail'
     ],
     marketPosition:'
       'Leading digital transformation platform with proven success',
@@ -528,10 +528,10 @@ export interface InnovativeService {
     trialDays: 30,
     roi: '400% within 18 months',
     useCases: ['
-      'Process automation',Customer experience',System modernization',Cloud adoption',Innovation management',
+      'Process automation',Customer experience',System modernization',Cloud adoption',Innovation management'
     ],
     technicalSpecs: ['
-      'AI integration',Cloud platforms',API management',Data analytics',Mobile solutions',
+      'AI integration',Cloud platforms',API management',Data analytics',Mobile solutions'
     ],
     useCases: ['DeFi protocols',NFT marketplaces',Token sales',Blockchain applications',Smart contract development'
     ],
@@ -547,8 +547,8 @@ export interface InnovativeService {
     link: 'https://ziontechgroup.com/services/digital-transformation-suite',
     icon: '🔄',
     color: 'from-orange-600 to-red-700',
-    featured: true},
-];
-;
-export { innovativeServices2025 };
-export default innovativeServices2025;
+    featured: true}
+],
+,
+export { innovativeServices2025 },
+export default innovativeServices2025,

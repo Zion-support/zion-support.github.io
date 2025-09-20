@@ -1,8 +1,8 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Atom, 
+  Atom,
   Brain, 
   Zap, 
   CheckCircle,
@@ -36,102 +36,62 @@ import {
   Rocket,
   Sparkles,
   Flask
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function QuantumComputing() {
   const features = [
     {
-      icon: Atom,
-      title: 'Quantum Processing',
-      description: 'Harness the power of quantum mechanics for unprecedented computational speed',
-      color: 'from-purple-500 to-pink-500'
-    },
+      icon: Atom,title: 'Quantum Processing',description: 'Harness the power of quantum mechanics for unprecedented computational speed',color: 'from-purple-500 to-pink-500'
+    };
     {
-      icon: Brain,
-      title: 'Quantum AI',
-      description: 'Combine quantum computing with artificial intelligence for breakthrough insights',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Brain,title: 'Quantum AI',description: 'Combine quantum computing with artificial intelligence for breakthrough insights',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Zap,
-      title: 'Quantum Speed',
-      description: 'Solve complex problems in seconds that would take classical computers years',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Zap,title: 'Quantum Speed',description: 'Solve complex problems in seconds that would take classical computers years',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Lock,
-      title: 'Quantum Security',
-      description: 'Unbreakable encryption using quantum key distribution and cryptography',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Lock,title: 'Quantum Security',description: 'Unbreakable encryption using quantum key distribution and cryptography',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: Network,
-      title: 'Quantum Networks',
-      description: 'Secure quantum communication networks for ultra-fast data transfer',
-      color: 'from-indigo-500 to-purple-500'
-    },
+      icon: Network,title: 'Quantum Networks',description: 'Secure quantum communication networks for ultra-fast data transfer',color: 'from-indigo-500 to-purple-500'
+    };
     {
-      icon: Database,
-      title: 'Quantum Databases',
-      description: 'Revolutionary database systems with quantum search algorithms',
-      color: 'from-red-500 to-pink-500'
+      icon: Database,title: 'Quantum Databases',description: 'Revolutionary database systems with quantum search algorithms',color: 'from-red-500 to-pink-500'
     }
   ];
-
   const benefits = [
-    'Solve problems 100x faster than classical computers',
-    'Breakthrough discoveries in drug development',
-    'Unbreakable quantum encryption',
-    'Revolutionary AI and machine learning',
-    'Optimize complex logistics and supply chains',
-    'Transform financial modeling and risk assessment'
-  ];
+    'Solve problems 100x faster than classical computersBreakthrough discoveries in drug development',
+    'Unbreakable quantum encryptionRevolutionary AI and machine learning',
+    'Optimize complex logistics and supply chainsTransform financial modeling and risk assessment'
+  ],
 
   const useCases = [
     {
-      title: 'Drug Discovery',
-      description: 'Accelerate pharmaceutical research and molecular modeling',
-      icon: Flask
-    },
+      title: 'Drug Discovery',description: 'Accelerate pharmaceutical research and molecular modeling',icon: Flask
+    };
     {
-      title: 'Financial Modeling',
-      description: 'Revolutionary risk assessment and portfolio optimization',
-      icon: TrendingUp
-    },
+      title: 'Financial Modeling',description: 'Revolutionary risk assessment and portfolio optimization',icon: TrendingUp
+    };
     {
-      title: 'Climate Research',
-      description: 'Advanced climate modeling and environmental simulations',
-      icon: Globe
-    },
+      title: 'Climate Research',description: 'Advanced climate modeling and environmental simulations',icon: Globe
+    };
     {
-      title: 'AI & Machine Learning',
-      description: 'Quantum-enhanced artificial intelligence algorithms',
-      icon: Brain
+      title: 'AI & Machine Learning',description: 'Quantum-enhanced artificial intelligence algorithms',icon: Brain
     }
   ];
-
   const quantumApplications = [
     {
-      name: 'Quantum Machine Learning',
-      description: 'Revolutionary AI algorithms powered by quantum computing',
-      examples: ['Pattern recognition', 'Optimization', 'Neural networks']
+      name: 'Quantum Machine Learning',description: 'Revolutionary AI algorithms powered by quantum computing',examples: ['Pattern recognitionOptimization', 'Neural networks']
     },
     {
-      name: 'Quantum Cryptography',
-      description: 'Unbreakable encryption using quantum principles',
-      examples: ['Key distribution', 'Secure communication', 'Digital signatures']
+      name: 'Quantum Cryptography',description: 'Unbreakable encryption using quantum principles',examples: ['Key distributionSecure communication', 'Digital signatures']
     },
     {
-      name: 'Quantum Simulation',
-      description: 'Accurate modeling of complex quantum systems',
-      examples: ['Chemical reactions', 'Material properties', 'Quantum physics']
+      name: 'Quantum Simulation',description: 'Accurate modeling of complex quantum systems',examples: ['Chemical reactionsMaterial properties', 'Quantum physics']
     },
     {
-      name: 'Quantum Optimization',
-      description: 'Solve complex optimization problems efficiently',
-      examples: ['Logistics', 'Scheduling', 'Resource allocation']
+      name: 'Quantum Optimization',description: 'Solve complex optimization problems efficiently',examples: ['LogisticsScheduling', 'Resource allocation']
     }
-  ];
+  ],
 
   return (
     <>
@@ -165,7 +125,7 @@ export default function QuantumComputing() {
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Experience the future of computing with our revolutionary quantum platform. 
-                Harness the power of quantum mechanics for breakthrough discoveries, 
+                Harness the power of quantum mechanics for breakthrough discoveries;
                 unbreakable security, and computational capabilities beyond imagination.
               </p>
               
@@ -385,7 +345,7 @@ export default function QuantumComputing() {
                 Quantum Computing Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our quantum platform adapts to various industries and research areas, 
+                Our quantum platform adapts to various industries and research areas;
                 providing tailored solutions for complex computational challenges.
               </p>
             </motion.div>
@@ -450,7 +410,7 @@ export default function QuantumComputing() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -460,5 +420,5 @@ export default function QuantumComputing() {
         </section>
       </div>
     </>
-  );
+  )
 }

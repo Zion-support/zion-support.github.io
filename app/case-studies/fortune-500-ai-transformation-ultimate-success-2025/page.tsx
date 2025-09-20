@@ -1,17 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months';
-  description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.';
-  keywords: ['Fortune 500AI transformation', 'case studyROI', 'manufacturingautomation'];
+  title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months',
+  description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
+  keywords: ['Fortune 500AI transformationcase studyROI', 'manufacturingautomation'],
   openGraph: {,
-    title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months';
-    description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.';
-    type: 'article';
-    publishedTime: '2025-01-15T00:00:00.000Z';
-    authors: ['Zion Tech Group'],}
-};
+    title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months',
+    description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group']}
+},
 export default function Fortune500AITransformation() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -27,7 +27,7 @@ export default function Fortune500AITransformation() {,
           </h1>,
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">,
             A comprehensive case study showing how a Fortune 500 manufacturing company achieved,
-            <strong className="text-green-600"> 567% ROI</strong> through strategic AI implementation;
+            <strong className="text-green-600"> 567% ROI</strong> through strategic AI implementation,
             transforming their entire supply chain and operational efficiency.,
           </p>,
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">,
@@ -58,7 +58,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
           <p className="text-lg text-gray-700 text-center max-w-4xl mx-auto">,
-            This Fortune 500 manufacturing company transformed their entire operation through strategic AI implementation;
+            This Fortune 500 manufacturing company transformed their entire operation through strategic AI implementation,
             achieving unprecedented efficiency gains and cost reductions while maintaining the highest quality standards.,
           </p>,
         </div>,
@@ -90,7 +90,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Timeline */,}
+        {/* Implementation Timeline */}
         <section className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">📅 Implementation Timeline</h2>,
           <div className="relative">,
@@ -187,7 +187,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Results */,}
+        {/* Key Results */}
         <section className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Key Results & Metrics</h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -223,7 +223,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Technology Implementation */,}
+        {/* Technology Implementation */}
         <section className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">⚙️ Technology Implementation</h2>,
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
@@ -287,7 +287,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* ROI Breakdown */,}
+        {/* ROI Breakdown */}
         <section className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">💰 ROI Breakdown & Financial Impact</h2>,
           <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8">,
@@ -351,7 +351,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Lessons Learned */,}
+        {/* Lessons Learned */}
         <section className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎓 Lessons Learned & Best Practices</h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
@@ -415,7 +415,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="mb-16">,
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 text-center">,
             <h2 className="text-3xl font-bold mb-4">Ready to Achieve Similar Results?</h2>,
@@ -439,7 +439,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Case Studies */,}
+        {/* Related Case Studies */}
         <section className="mb-16">,
           <h2 className="text-2xl font-bold text-gray-900 mb-8">📚 Related Success Stories</h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
@@ -465,5 +465,5 @@ export default function Fortune500AITransformation() {,
         </section>,
       </div>,
     </div>,
-  );
+  ),
 }

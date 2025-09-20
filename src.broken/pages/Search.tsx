@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-export default Search;
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+export default Search,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     { id: 'equipment', name: 'Equipment', count: 0 },
-    { id: 'companies', name: 'Companies', count: 0 },
-  ];
+    { id: 'companies', name: 'Companies', count: 0 }
+  ],
 
   const sortOptions = [{ id: 'relevance', name: 'Relevance' },
     { id: 'newest', name: 'Newest' },
     { id: 'rating', name: 'Highest Rated' },
     { id: 'price - low', name: 'Price: Low to High' },
-    { id: 'price - high', name: 'Price: High to Low' },
-  ];
+    { id: 'price - high', name: 'Price: High to Low' }
+  ],
 
   const mockResults = [{
       id: 1,
@@ -25,9 +25,9 @@ export default function Page() {
       reviews: 127,
       location: 'Remote',
       company: 'Zion Tech Group',
-      tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'],
+      tags: ['AIAnalytics', 'Business IntelligenceMachine Learning'],
       featured: true,
-      date: '2024 - 12 - 01',
+      date: '2024 - 12 - 01'
     },
     {
       id: 2,
@@ -40,9 +40,9 @@ export default function Page() {
       reviews: 89,
       location: 'Remote',
       company: 'Zion Tech Group',
-      tags: ['React', 'Node.js', 'Full - Stack', 'Cloud'],
+      tags: ['ReactNode.js', 'Full - StackCloud'],
       featured: false,
-      date: '2024 - 11 - 28',
+      date: '2024 - 11 - 28'
     },
     {
       id: 3,
@@ -55,9 +55,9 @@ export default function Page() {
       reviews: 203,
       location: 'On - site',
       company: 'Zion Tech Group',
-      tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'],
+      tags: ['CloudInfrastructure', 'AWSAzure'],
       featured: true,
-      date: '2024 - 11 - 25',
+      date: '2024 - 11 - 25'
     },
     {
       id: 4,
@@ -70,89 +70,88 @@ export default function Page() {
       reviews: 45,
       location: 'On - site',
       company: 'Zion Tech Group',
-      tags: ['HPC', 'Computing', 'Data Processing', 'ML'],
+      tags: ['HPCComputing', 'Data ProcessingML'],
       featured: false,
-      date: '2024 - 11 - 20',
-    },
-  ];
+      date: '2024 - 11 - 20'
+    }
+  ],
 
   useEffect(() => {
     if(searchQuery) {
-      performSearch () ;
+      performSearch () ,
     }
-  }, [searchQuery, activeCategory, sortBy]) ;
+  }, [searchQuery, activeCategory, sortBy]) ,
 
   const performSearch = async () => {
-    setLoading(true) ;
+    setLoading(true) ,
     // Simulate API call delay
-    await new Promise(resolve => setTimeout (resolve, 500) ) ;
+    await new Promise(resolve => setTimeout (resolve, 500) ) ,
 
     // Filter results based on search query and category
     let filteredResults = mockResults.filter(result => {
       const matchesQuery = result.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
         result.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
         result.tags.some((tag: string) =>
-          tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
+          tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
 
-      const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
+      const matchesCategory = activeCategory === 'all' || result.type === activeCategory,
 
-      return matchesQuery && matchesCategory;
-    }) ;
+      return matchesQuery && matchesCategory
+    }) ,
 
     // Sort results
     filteredResults.sort((a, b) => {
       switch(sortBy) {
         case 'newest':
-          return new Date(b.date) .getTime () - new Date(a.date) .getTime () ;
+          return new Date(b.date) .getTime () - new Date(a.date) .getTime () ,
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'price - low':
           return (parseFloat (a.price.replace (/[^0 - 9.]/g, '') ) -
-            parseFloat(b.price.replace (/[^0 - 9.]/g, '') ) ) ;
+            parseFloat(b.price.replace (/[^0 - 9.]/g, '') ) ) ,
         case 'price - high':
           return (parseFloat (b.price.replace (/[^0 - 9.]/g, '') ) -
-            parseFloat(a.price.replace (/[^0 - 9.]/g, '') ) ) ;
-        default:
-          return 0;
+            parseFloat(a.price.replace (/[^0 - 9.]/g, '') ) ) ,
+        default: return 0
       }
-    }) ;
+    }) ,
 
-    setResults(filteredResults) ;
-    setLoading(false) ;
-  };
+    setResults(filteredResults) ,
+    setLoading(false) ,
+  },
 
   const handleSearch = useCallback((e: React.FormEvent) => {
-    e.preventDefault () ;
+    e.preventDefault () ,
     if(searchQuery.trim () ) {
-      performSearch () ;
+      performSearch () 
     }
-  };
+  },
 
   const getTypeIcon = (type: string) => {
     switch(type) {
       case 'services':
-        return < Server className="w-5 h-5 text-blue -400" />;
+        return < Server className="w-5 h-5 text-blue -400" />,
       case 'talent':
-        return < Users className="w-5 h-5 text-purple -400" />;
+        return < Users className="w-5 h-5 text-purple -400" />,
       case 'equipment':
-        return < Building className="w-5 h-5 text-orange -400" />;
+        return < Building className="w-5 h-5 text-orange -400" />,
       default:
-        return < SearchIcon className="w-5 h-5 text-gray -400" />;
+        return < SearchIcon className="w-5 h-5 text-gray -400" />
     }
-  };
+  },
 
   const getTypeLabel = (type: string) => {
     switch(type) {
       case 'services':
-        return 'Service';
+        return 'Service',
       case 'talent':
-        return 'Talent';
+        return 'Talent',
       case 'equipment':
-        return 'Equipment';
+        return 'Equipment',
       default:
-        return 'Unknown';
+        return 'Unknown'
     }
-  };
+  },
 
   return (<>
       <SEO
@@ -347,6 +346,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) ,
+},
 

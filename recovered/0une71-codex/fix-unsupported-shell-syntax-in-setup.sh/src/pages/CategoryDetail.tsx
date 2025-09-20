@@ -1,25 +1,25 @@
 
-import { useParams, Link } from "react-router-dom";
-import { Header } from "@/components/header/Header";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { useState, useEffect } from "react";
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react";
-import { MARKETPLACE_LISTINGS } from "@/data/listingData";
-import { useNavigate } from "react-router-dom";
-import { toast } from "@/hooks/use-toast";
+import { useParams, Link } from "react-router-dom",
+import { Header } from "@/components/header/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { useState, useEffect } from "react",
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react",
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",
+import { useNavigate } from "react-router-dom",
+import { toast } from "@/hooks/use-toast",
 
 export default function CategoryDetail() {
-  const { slug } = useParams<{ slug: string }>();
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+  const { slug } = useParams<{ slug: string }>(),
+  const navigate = useNavigate(),
+  const [isLoading, setIsLoading] = useState(true),
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: "",
     description: "",
     icon: <Bot className="w-6 h-6" />
-  });
+  }),
 
   // Map of category slugs to their display data
   const categoryData = {
@@ -83,25 +83,25 @@ export default function CategoryDetail() {
       description: "Enterprise AI integrations and services",
       icon: <Briefcase className="w-6 h-6" />
     }
-  };
+  },
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true),
     
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] || {
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || "Category",
       description: "Explore our collection in this category",
       icon: <Bot className="w-6 h-6" />
-    };
+    },
     
-    setCategory(currentCategory);
+    setCategory(currentCategory),
 
     // Filter listings by category
-    const categoryTitle = currentCategory.title;
+    const categoryTitle = currentCategory.title,
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing => 
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
-    );
+    ),
     
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings : 
@@ -122,21 +122,21 @@ export default function CategoryDetail() {
         createdAt: new Date().toISOString(),
         rating: Math.floor(Math.random() * 5) + 1,
         reviewCount: Math.floor(Math.random() * 100)
-      }));
+      })),
 
-    setListings(listingsToShow);
-    setIsLoading(false);
-  }, [slug]);
+    setListings(listingsToShow),
+    setIsLoading(false),
+  }, [slug]),
 
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId);
+    const listing = listings.find(item => item.id === listingId),
     
     if (listing) {
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
-      });
+      }),
       
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
@@ -149,9 +149,9 @@ export default function CategoryDetail() {
             image: listing.images?.[0]
           }
         }
-      });
+      }),
     }
-  };
+  },
 
   return (
     <>
@@ -197,5 +197,5 @@ export default function CategoryDetail() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

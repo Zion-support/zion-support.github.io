@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -24,42 +24,42 @@ export default function Page() {
     icon: Gauge,
     duration: "4 - 8 weeks"
 
-];
+],
 
 const soc2Benefits = [{
     title: "Automated Compliance",
     description: "AI - powered automation reduces manual compliance effort",
     icon: Zap,
-    examples["Automated monitoring", "Policy enforcement", "Compliance checking", "Audit preparation"];
-  },;
+    examples["Automated monitoring", "Policy enforcement", "Compliance checking", "Audit preparation"],
+  },
   {
     title: "Improved Security",
     description: "Automated security controls enhance overall security posture",
     icon: Shield,
-    examples["Security automation", "Control monitoring", "Threat detection", "Incident response"];
-  },;
+    examples["Security automation", "Control monitoring", "Threat detection", "Incident response"],
+  },
   {
     title: "Cost Reduction",
     description: "Automation reduces compliance costs and resource requirements",
     icon: TrendingUp,
-    examples["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"];
-  },;
+    examples["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"],
+  },
   {
     title: "Audit Success",
     description: "Automated systems improve audit preparation and success rates",
     icon: CheckCircle,
-    examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"];
+    examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Monitoring', 'Policy Management', 'Risk Management', 'Audit Preparation', 'Security Controls', 'Reporting'];
+  const categories = ['AllMonitoring', 'Policy ManagementRisk Management', 'Audit PreparationSecurity Controls', 'Reporting'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? soc2Solutions
-    : soc2Solutions.filter(solution => solution.category === selectedCategory) ;
+    : soc2Solutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -131,10 +131,10 @@ const soc2Benefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* SOC2 Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -190,13 +190,13 @@ const soc2Benefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* SOC2 Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -254,13 +254,13 @@ const soc2Benefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -316,13 +316,13 @@ const soc2Benefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -422,7 +422,7 @@ const soc2Benefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -493,13 +493,13 @@ const soc2Benefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

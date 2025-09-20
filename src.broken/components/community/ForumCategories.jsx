@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function ForumCategories() {
 
     const categories = [{
@@ -30,7 +30,7 @@ export default function ForumCategories() {
                 author: 'Developer123',
                 date: '2024-01-14'
 
-    ];
+    ],
     return (<div className="space-y-4">"
       {categories.map((category) => (<div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">"
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>"

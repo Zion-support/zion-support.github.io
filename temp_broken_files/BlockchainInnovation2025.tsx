@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 const BlockchainInnovation2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative py-20 px-4">,
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>,
         <div className="relative z-10 container mx-auto text-center">,
@@ -28,7 +28,7 @@ const BlockchainInnovation2025: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Blockchain Technologies */,}
+      {/* Blockchain Technologies */}
       <section className="py-20 px-4">,
         <div className="container mx-auto">,
           <div className="text-center mb-16">,
@@ -38,47 +38,47 @@ const BlockchainInnovation2025: React.FC = () => {,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {[,
               {,
-                icon: "⚡";
-                title: "Layer 2 Solutions";
-                description: "High-performance scaling solutions that maintain security while dramatically increasing transaction throughput.";
-                features: ["10,000+ TPS", "Low gas fees", "Ethereum compatibility"],
-              };
+                icon: "⚡",
+                title: "Layer 2 Solutions",
+                description: "High-performance scaling solutions that maintain security while dramatically increasing transaction throughput.",
+                features: ["10,000+ TPS", "Low gas fees", "Ethereum compatibility"]
+              },
               {,
-                icon: "🔐";
-                title: "Zero-Knowledge Proofs";
-                description: "Privacy-preserving technology that enables verification without revealing sensitive information.";
-                features: ["Complete privacy", "Verifiable proofs", "Scalable verification"],
-              };
+                icon: "🔐",
+                title: "Zero-Knowledge Proofs",
+                description: "Privacy-preserving technology that enables verification without revealing sensitive information.",
+                features: ["Complete privacy", "Verifiable proofs", "Scalable verification"]
+              },
               {,
-                icon: "🌐";
-                title: "Cross-Chain Interoperability";
-                description: "Seamless communication and value transfer between different blockchain networks.";
-                features: ["Multi-chain support", "Atomic swaps", "Unified ecosystem"],
-              };
+                icon: "🌐",
+                title: "Cross-Chain Interoperability",
+                description: "Seamless communication and value transfer between different blockchain networks.",
+                features: ["Multi-chain support", "Atomic swaps", "Unified ecosystem"]
+              },
               {,
-                icon: "🏛️";
-                title: "Decentralized Autonomous Organizations";
-                description: "Self-governing organizations run by smart contracts and community consensus.";
-                features: ["Transparent governance", "Automated execution", "Community-driven"],
-              };
+                icon: "🏛️",
+                title: "Decentralized Autonomous Organizations",
+                description: "Self-governing organizations run by smart contracts and community consensus.",
+                features: ["Transparent governance", "Automated execution", "Community-driven"]
+              },
               {,
-                icon: "💎";
-                title: "Non-Fungible Tokens (NFTs)";
-                description: "Unique digital assets representing ownership of digital and physical items.";
-                features: ["Digital ownership", "Provenance tracking", "Royalty systems"],
-              };
+                icon: "💎",
+                title: "Non-Fungible Tokens (NFTs)",
+                description: "Unique digital assets representing ownership of digital and physical items.",
+                features: ["Digital ownership", "Provenance tracking", "Royalty systems"]
+              },
               {,
-                icon: "🏦";
-                title: "Decentralized Finance (DeFi)";
-                description: "Financial services built on blockchain without traditional intermediaries.";
-                features: ["Lending protocols", "DEX trading", "Yield farming"],
+                icon: "🏦",
+                title: "Decentralized Finance (DeFi)",
+                description: "Financial services built on blockchain without traditional intermediaries.",
+                features: ["Lending protocols", "DEX trading", "Yield farming"]
               }
             ].map((tech, index) => (,
               <div,
                 key={index}
                 className="bg-gradient-to-br from-emerald-800/50 to-cyan-800/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-500/30 hover: scale-105 transition-all duration-300",
               >,
-                <div className="text-5xl mb-4">{tech.icon,}</div>,
+                <div className="text-5xl mb-4">{tech.icon}</div>,
                 <h3 className="text-2xl font-bold text-white mb-4">{tech.title}</h3>,
                 <p className="text-gray-300 mb-6">{tech.description}</p>,
                 <ul className="space-y-2">,
@@ -86,8 +86,7 @@ const BlockchainInnovation2025: React.FC = () => {,
                     <li key={idx} className="text-emerald-300 text-sm flex items-center">,
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>,
                       {item}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
               </div>,
             ))}
@@ -104,69 +103,69 @@ const BlockchainInnovation2025: React.FC = () => {,
           <div className="grid md: grid-cols-2 gap-12">,
             {[,
               {,
-                industry: "Supply Chain & Logistics";
-                icon: "📦";
+                industry: "Supply Chain & Logistics",
+                icon: "📦",
                 applications: [,
-                  "End-to-end product traceability";
-                  "Automated compliance verification";
-                  "Smart contracts for payments";
-                  "Counterfeit prevention",
-                ];
-                benefits: "40% reduction in supply chain costs, 99% traceability accuracy",
-              };
+                  "End-to-end product traceability",
+                  "Automated compliance verification",
+                  "Smart contracts for payments",
+                  "Counterfeit prevention"
+                ],
+                benefits: "40% reduction in supply chain costs, 99% traceability accuracy"
+              },
               {,
-                industry: "Healthcare & Pharmaceuticals";
-                icon: "🏥";
+                industry: "Healthcare & Pharmaceuticals",
+                icon: "🏥",
                 applications: [,
-                  "Secure patient data management";
-                  "Drug authenticity verification";
-                  "Clinical trial data integrity";
-                  "Medical record interoperability",
-                ];
-                benefits: "100% data integrity, 60% faster clinical trials",
-              };
+                  "Secure patient data management",
+                  "Drug authenticity verification",
+                  "Clinical trial data integrity",
+                  "Medical record interoperability"
+                ],
+                benefits: "100% data integrity, 60% faster clinical trials"
+              },
               {,
-                industry: "Financial Services";
-                icon: "💰";
+                industry: "Financial Services",
+                icon: "💰",
                 applications: [,
-                  "Cross-border payments";
-                  "Trade finance automation";
-                  "Digital identity verification";
-                  "Regulatory compliance",
-                ];
-                benefits: "90% faster settlements, 80% cost reduction",
-              };
+                  "Cross-border payments",
+                  "Trade finance automation",
+                  "Digital identity verification",
+                  "Regulatory compliance"
+                ],
+                benefits: "90% faster settlements, 80% cost reduction"
+              },
               {,
-                industry: "Real Estate";
-                icon: "🏠";
+                industry: "Real Estate",
+                icon: "🏠",
                 applications: [,
-                  "Property ownership records";
-                  "Automated property transfers";
-                  "Fractional ownership";
-                  "Smart rental agreements",
-                ];
-                benefits: "50% faster transactions, 100% ownership transparency",
-              };
+                  "Property ownership records",
+                  "Automated property transfers",
+                  "Fractional ownership",
+                  "Smart rental agreements"
+                ],
+                benefits: "50% faster transactions, 100% ownership transparency"
+              },
               {,
-                industry: "Energy & Sustainability";
-                icon: "⚡";
+                industry: "Energy & Sustainability",
+                icon: "⚡",
                 applications: [,
-                  "Carbon credit trading";
-                  "Renewable energy certificates";
-                  "Grid management";
-                  "Energy trading platforms",
-                ];
-                benefits: "30% increase in renewable energy adoption",};
+                  "Carbon credit trading",
+                  "Renewable energy certificates",
+                  "Grid management",
+                  "Energy trading platforms"
+                ],
+                benefits: "30% increase in renewable energy adoption"},
               {,
-                industry: "Gaming & Entertainment";
-                icon: "🎮";
+                industry: "Gaming & Entertainment",
+                icon: "🎮",
                 applications: [,
-                  "In-game asset ownership";
-                  "Play-to-earn economies";
-                  "Digital collectibles";
-                  "Creator monetization",
-                ];
-                benefits: "New revenue streams, true digital ownership",
+                  "In-game asset ownership",
+                  "Play-to-earn economies",
+                  "Digital collectibles",
+                  "Creator monetization"
+                ],
+                benefits: "New revenue streams, true digital ownership"
               }
             ].map((industry, index) => (,
               <div,
@@ -182,11 +181,10 @@ const BlockchainInnovation2025: React.FC = () => {,
                     <li key={idx} className="text-emerald-300 flex items-start">,
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>,
                       {app}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 rounded-lg p-4">,
-                  <p className="text-white font-semibold">Benefits: {industry.benefits,}</p>,
+                  <p className="text-white font-semibold">Benefits: {industry.benefits}</p>,
                 </div>,
               </div>,
             ))}
@@ -203,21 +201,21 @@ const BlockchainInnovation2025: React.FC = () => {,
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {[,
               {,
-                number: "$2.3T";
-                label: "Total Market Value";
-                description: "Global blockchain market size by 2025",};
+                number: "$2.3T",
+                label: "Total Market Value",
+                description: "Global blockchain market size by 2025"},
               {,
-                number: "500M+";
-                label: "Active Users";
-                description: "Worldwide blockchain wallet users",};
+                number: "500M+",
+                label: "Active Users",
+                description: "Worldwide blockchain wallet users"},
               {,
-                number: "95%";
-                label: "Cost Reduction";
-                description: "Average reduction in transaction costs",};
+                number: "95%",
+                label: "Cost Reduction",
+                description: "Average reduction in transaction costs"},
               {,
-                number: "24/7";
-                label: "Global Operations";
-                description: "Continuous blockchain network operation",}
+                number: "24/7",
+                label: "Global Operations",
+                description: "Continuous blockchain network operation"}
             ].map((stat, index) => (,
               <div,
                 key={index}
@@ -226,8 +224,7 @@ const BlockchainInnovation2025: React.FC = () => {,
                 <div className="text-4xl font-bold text-emerald-400 mb-2">{stat.number}</div>,
                 <div className="text-xl font-semibold text-white mb-2">{stat.label}</div>,
                 <p className="text-gray-300 text-sm">{stat.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -241,17 +238,17 @@ const BlockchainInnovation2025: React.FC = () => {,
           <div className="grid md: grid-cols-3 gap-8">,
             {[,
               {,
-                title: "Web3 Integration";
-                description: "Seamless integration of blockchain with web technologies, creating a decentralized internet where users control their data and digital identity.";
-                timeline: "2025-2026",};
+                title: "Web3 Integration",
+                description: "Seamless integration of blockchain with web technologies, creating a decentralized internet where users control their data and digital identity.",
+                timeline: "2025-2026"},
               {,
-                title: "Central Bank Digital Currencies";
-                description: "Government-backed digital currencies built on blockchain technology, providing the benefits of digital payments with central bank backing.";
-                timeline: "2025-2027",};
+                title: "Central Bank Digital Currencies",
+                description: "Government-backed digital currencies built on blockchain technology, providing the benefits of digital payments with central bank backing.",
+                timeline: "2025-2027"},
               {,
-                title: "Quantum-Resistant Cryptography";
-                description: "Advanced cryptographic methods designed to withstand quantum computing attacks, ensuring long-term security of blockchain systems.";
-                timeline: "2026-2028",}
+                title: "Quantum-Resistant Cryptography",
+                description: "Advanced cryptographic methods designed to withstand quantum computing attacks, ensuring long-term security of blockchain systems.",
+                timeline: "2026-2028"}
             ].map((trend, index) => (,
               <div,
                 key={index}
@@ -261,10 +258,9 @@ const BlockchainInnovation2025: React.FC = () => {,
                 <h3 className="text-2xl font-bold text-white mb-4">{trend.title}</h3>,
                 <p className="text-gray-300 mb-4">{trend.description}</p>,
                 <div className="bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 rounded-lg p-3">,
-                  <p className="text-emerald-300 font-semibold">Timeline: {trend.timeline,}</p>,
+                  <p className="text-emerald-300 font-semibold">Timeline: {trend.timeline}</p>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -292,5 +288,5 @@ const BlockchainInnovation2025: React.FC = () => {,
         </div>,
       </section>,
     </div>,
-  ),};
-export default BlockchainInnovation2025;
+  )},
+export default BlockchainInnovation2025,

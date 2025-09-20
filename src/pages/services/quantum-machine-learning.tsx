@@ -1,63 +1,41 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, Globe, Users, Cpu, Network, BarChart3, Activity, Atom, Rocket } from 'lucide-react';
-
+import React from "react";
+import SEO from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, Globe, Users, Cpu, Network, BarChart3, Activity, Atom, Rocket } from "lucide-react";
 const QuantumMachineLearning: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'Quantum Neural Networks',
-      description: 'Advanced quantum computing for neural network optimization'
-    },
+      icon: Brain,title: 'Quantum Neural Networks',description: 'Advanced quantum computing for neural network optimization'
+    };
     {
-      icon: Zap,
-      title: 'Quantum Speedup',
-      description: 'Exponential acceleration for machine learning algorithms'
-    },
+      icon: Zap,title: 'Quantum Speedup',description: 'Exponential acceleration for machine learning algorithms'
+    };
     {
-      icon: Database,
-      title: 'Quantum Data Processing',
-      description: 'Process massive datasets with quantum efficiency'
-    },
+      icon: Database,title: 'Quantum Data Processing',description: 'Process massive datasets with quantum efficiency'
+    };
     {
-      icon: Target,
-      title: 'Quantum Optimization',
-      description: 'Solve complex optimization problems instantly'
+      icon: Target,title: 'Quantum Optimization',description: 'Solve complex optimization problems instantly'
     }
   ];
-
   const applications = [
     {
-      title: 'Drug Discovery',
-      description: 'Accelerate pharmaceutical research with quantum ML',
-      icon: '💊'
-    },
+      title: 'Drug Discovery',description: 'Accelerate pharmaceutical research with quantum ML',icon: '💊'
+    };
     {
-      title: 'Financial Modeling',
-      description: 'Advanced risk assessment and portfolio optimization',
-      icon: '💰'
-    },
+      title: 'Financial Modeling',description: 'Advanced risk assessment and portfolio optimization',icon: '💰'
+    };
     {
-      title: 'Climate Research',
-      description: 'Complex climate modeling and prediction',
-      icon: '🌍'
-    },
+      title: 'Climate Research',description: 'Complex climate modeling and prediction',icon: '🌍'
+    };
     {
-      title: 'AI Training',
-      description: 'Train large language models faster',
-      icon: '🤖'
+      title: 'AI Training',description: 'Train large language models faster',icon: '🤖'
     }
   ];
-
   const benefits = [
-    'Exponential speedup for ML algorithms',
-    'Process massive datasets in seconds',
-    'Solve previously intractable problems',
-    'Unlock new AI capabilities',
-    'Competitive advantage in innovation',
-    'Future-proof your ML infrastructure'
-  ];
+    'Exponential speedup for ML algorithmsProcess massive datasets in seconds',
+    'Solve previously intractable problemsUnlock new AI capabilities',
+    'Competitive advantage in innovationFuture-proof your ML infrastructure'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,7 +226,7 @@ const QuantumMachineLearning: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Transform your AI with quantum computing capabilities
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
                 Start Quantum ML Journey
               </button>
@@ -260,7 +238,6 @@ const QuantumMachineLearning: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default QuantumMachineLearning;

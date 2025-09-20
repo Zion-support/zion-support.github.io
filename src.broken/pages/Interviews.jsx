@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { InterviewCard } from '@/components / interviews / InterviewCard';
+import React, { useEffect, useState } from "react",
+import { InterviewCard } from '@/components / interviews / InterviewCard',
 export default function Page() {
-) .sort((a, b) => parseISO(a.scheduled_date) .getTime () - parseISO(b.scheduled_date) .getTime () ) ;
+) .sort((a, b) => parseISO(a.scheduled_date) .getTime () - parseISO(b.scheduled_date) .getTime () ) ,
     const pastInterviews = interviews.filter(interview => {
-        const interviewDate = parseISO (interview.scheduled_date) ;
+        const interviewDate = parseISO (interview.scheduled_date) ,
         return ! isAfter(interviewDate, now) ||
-            ['completed', 'declined', 'cancelled'].includes(interview.status) }) ;
+            ['completeddeclined', 'cancelled'].includes(interview.status) }) ,
     // Group interviews by date
-    const grouped = {};
+    const grouped = {},
         interviews.forEach((interview) => {
-            const dateKey = format(parseISO (interview.scheduled_date) , 'yyyy - MM - dd') ;
+            const dateKey = format(parseISO (interview.scheduled_date) , 'yyyy - MM - dd') ,
             if(!grouped[dateKey]) {
                 grouped[dateKey] = []}
-            grouped[dateKey].push(interview) }) ;
-        return grouped};
-    const upcomingGrouped = groupInterviewsByDate(upcomingInterviews) ;
-    const pastGrouped = groupInterviewsByDate(pastInterviews) ;
+            grouped[dateKey].push(interview) }) ,
+        return grouped},
+    const upcomingGrouped = groupInterviewsByDate(upcomingInterviews) ,
+    const pastGrouped = groupInterviewsByDate(pastInterviews) ,
     const renderInterviewGroups = (groupedInterviews) => {
         return Object.entries(groupedInterviews) .sort(([dateA], [dateB]) => parseISO(dateA) .getTime () - parseISO(dateB) .getTime () ) .map(([date, interviews]) => (<div key={date} className="mb-8">
           <h3 className="text-lg font - medium text-white mb-4 flex items -center">
@@ -26,7 +26,7 @@ export default function Page() {
             {interviews.map((interview) => (<InterviewCard key={interview.id} interview={interview} onRefresh={async () => {
                     await fetchInterviews () }}/>) ) }
           </div>
-        </div>) ) };
+        </div>) ) },
     return (<>
       <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
 

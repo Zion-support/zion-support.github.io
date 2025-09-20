@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function TechnologyPage() {
   return (
@@ -247,7 +247,7 @@ export default function TechnologyPage() {
                   Discover how our cutting-edge technology stack can transform your business and drive innovation.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/services" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
+                  <Link href="/services" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
                     Explore Services
                   </Link>
                   <Link href="/contact" className="border border-white/30 hover:border-cyan-400/50 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 backdrop-blur-xl">
@@ -260,5 +260,5 @@ export default function TechnologyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

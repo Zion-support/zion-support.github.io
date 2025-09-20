@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025 - Revolutionary AI Solutions | Zion Tech Group';
-  description: 'Discover the latest AI innovations and solutions for 2025. Advanced neural networks, automation, and cutting-edge technology.';
-  keywords: ['AI 2025artificial intelligence', 'neural networksautomation', 'machine learning'],
-};
+  title: 'AI 2025 - Revolutionary AI Solutions | Zion Tech Group',
+  description: 'Discover the latest AI innovations and solutions for 2025. Advanced neural networks, automation, and cutting-edge technology.',
+  keywords: ['AI 2025artificial intelligenceneural networksautomation', 'machine learning']
+},
 export default function AI2025Page() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -41,7 +41,7 @@ export default function AI2025Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI 2025 Features</h2>,
@@ -79,7 +79,7 @@ export default function AI2025Page() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="bg-gray-50 py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold text-gray-900 mb-4">,
@@ -96,5 +96,4 @@ export default function AI2025Page() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Atom, Dna, Zap, Target, Users, Globe, ArrowRight, Activity } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Atom, Dna, Zap, Target, Users, Globe, ArrowRight, Activity } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function QuantumBioComputing() {
   return (
@@ -18,6 +18,6 @@ export default function QuantumBioComputing() {
         </div>
       </div>
     </div>
-  );
-};
-export default quantum-bio-computing;
+  ),
+},
+export default quantum-bio-computing,

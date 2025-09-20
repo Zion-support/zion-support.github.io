@@ -1,30 +1,30 @@
-import { useEffect, useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { ListingScoreCard } from '@/components/ListingScoreCard';
-import Skeleton from '@/components/ui/skeleton';
-import { useDelayedError } from '@/hooks/useDelayedError';
+import { useEffect, useState } from 'react',
+import { useAuth } from '@/hooks/useAuth',
+import { ListingScoreCard } from '@/components/ListingScoreCard',
+import Skeleton from '@/components/ui/skeleton',
+import { useDelayedError } from '@/hooks/useDelayedError',
 
 export default function RecommendationsPage() {
-  const { user } = useAuth();
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const delayedError = useDelayedError(error);
+  const { user } = useAuth(),
+  const [items, setItems] = useState([]),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState(false),
+  const delayedError = useDelayedError(error),
 
   useEffect(() => {
-    if (!user) return;
-    setLoading(true);
+    if (!user) return,
+    setLoading(true),
     fetch(`/api/recommendations?userId=${encodeURIComponent(user.id)}`)
       .then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch recommendations');
-        return res.json();
+        if (!res.ok) throw new Error('Failed to fetch recommendations'),
+        return res.json(),
       })
       .then((data) => {
-        setItems(Array.isArray(data) ? data.slice(0, 5) : []);
+        setItems(Array.isArray(data) ? data.slice(0, 5) : []),
       })
       .catch(() => setError(true))
-      .finally(() => setLoading(false));
-  }, [user]);
+      .finally(() => setLoading(false)),
+  }, [user]),
 
   if (loading || (error && !delayedError)) {
     return (
@@ -42,13 +42,13 @@ export default function RecommendationsPage() {
           </div>
         ))}
       </div>
-    );
+    ),
   }
 
   if (delayedError) {
     return (
       <div className="py-12 text-center text-red-400">Failed to load recommendations.</div>
-    );
+    ),
   }
 
   return (
@@ -67,5 +67,5 @@ export default function RecommendationsPage() {
         ))}
       </div>
     </div>
-  );
+  ),
 }

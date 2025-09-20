@@ -1,7 +1,7 @@
-import data from '../../data/reports/seo-suggestions.json';
+import data from '../../data/reports/seo-suggestions.json',
 
 export default function SEOSuggestions(){
-  const d = data as any;
+  const d = data as any,
   return (
     <div className="py-10 space-y-4">
       <h1 className="text-2xl font-semibold">SEO Suggestions</h1>
@@ -23,5 +23,5 @@ export default function SEOSuggestions(){
         </table>
       </div>
     </div>
-  );
+  ),
 }

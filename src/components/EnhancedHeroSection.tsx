@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Play,
@@ -15,102 +15,68 @@ import {
   Rocket,
   Target,
   TrendingUp
-} from 'lucide-react';
-
+} from "lucide-react";
 interface HeroSlide {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  cta: string;
-  path: string;
-  features: string[];
-  gradient: string;
-  icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> }[];
 }
 
 export default function EnhancedHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const heroSlides: HeroSlide[] = [
     {
-      title: "AI-Powered Business Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
-      image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
-      path: "/services/ai-business-intelligence",
-      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
-      gradient: "from-zion-cyan via-zion-purple to-zion-blue",
-      icon: Brain,
-      stats: [
-        { label: "Accuracy Rate", value: "95%+", icon: Target },
-        { label: "ROI Increase", value: "450%", icon: TrendingUp },
+      title: "AI-Powered Business Solutions",subtitle: "Transform your business with cutting-edge artificial intelligence",description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
+      image: "/images/hero-ai-solutions.jpg",cta: "Explore AI Solutions",path: "/services/ai-business-intelligence",features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
+      gradient: "from-zion-cyan via-zion-purple to-zion-blue",icon: Brain,stats: [
+        { label: "Accuracy Rate", value: "95%+", icon: Target };
+        { label: "ROI Increase", value: "450%", icon: TrendingUp };
         { label: "Market Growth", value: "280%", icon: Rocket }
       ]
-    },
+    };
     {
-      title: "Comprehensive IT Services",
-      subtitle: "End-to-end technology solutions for modern businesses",
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-      image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
-      path: "/services",
-      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
-      gradient: "from-zion-blue via-zion-cyan to-zion-purple",
-      icon: Shield,
-      stats: [
-        { label: "Uptime", value: "99.99%", icon: Target },
-        { label: "Cost Savings", value: "700%", icon: TrendingUp },
+      title: "Comprehensive IT Services",subtitle: "End-to-end technology solutions for modern businesses",description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
+      image: "/images/hero-it-services.jpg",cta: "View Our Services",path: "/services",features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
+      gradient: "from-zion-blue via-zion-cyan to-zion-purple",icon: Shield,stats: [
+        { label: "Uptime", value: "99.99%", icon: Target };
+        { label: "Cost Savings", value: "700%", icon: TrendingUp };
         { label: "Response Time", value: "<5min", icon: Rocket }
       ]
-    },
+    };
     {
-      title: "Green IT Solutions",
-      subtitle: "Sustainable technology for a better future",
-      description: "Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.",
-      image: "/images/hero-green-it.jpg",
-      cta: "Learn More",
-      path: "/green-it",
-      features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
-      gradient: "from-zion-cyan via-zion-blue to-zion-purple",
-      icon: Globe,
-      stats: [
-        { label: "Energy Savings", value: "60%", icon: Target },
-        { label: "Carbon Reduction", value: "75%", icon: TrendingUp },
+      title: "Green IT Solutions",subtitle: "Sustainable technology for a better future",description: "Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.",image: "/images/hero-green-it.jpg",cta: "Learn More",path: "/green-it",features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
+      gradient: "from-zion-cyan via-zion-blue to-zion-purple",icon: Globe,stats: [
+        { label: "Energy Savings", value: "60%", icon: Target };
+        { label: "Carbon Reduction", value: "75%", icon: TrendingUp };
         { label: "Cost Reduction", value: "40%", icon: Rocket }
       ]
     }
   ];
-
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying) return,
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
+    }, 6000),
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, heroSlides.length]);
+    return () => clearInterval(interval),
+  }, [isAutoPlaying, heroSlides.length]),
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
+    setIsAutoPlaying(false),
+  },
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length),
+    setIsAutoPlaying(false),
+  },
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  };
+    setIsAutoPlaying(false)
+  },
 
-  const currentSlideData = heroSlides[currentSlide];
+  const currentSlideData = heroSlides[currentSlide],
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -148,17 +114,15 @@ export default function EnhancedHeroSection() {
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
             style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
+              left: `${20 + i * 15}%`;
+              top: `${30 + i * 10}%`
             }}
             animate={{
               y: [0, -20, 0],
-              opacity: [0.4, 1, 0.4],
+              opacity: [0.4, 1, 0.4]
             }}
             transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              delay: i * 0.3,
+              duration: 3 + i * 0.5,repeat: Infinity,delay: i * 0.3
             }}
           />
         ))}

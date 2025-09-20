@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Activity, 
+  Activity,
   Shield, 
   Zap, 
   CheckCircle, 
@@ -30,137 +30,92 @@ import {
   FileText,
   AlertTriangle,
   Building
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function AIHealthcareAnalytics() {
   const features = [
-    'Real-time patient data analytics and insights',
-    'Predictive disease modeling and risk assessment',
-    'Automated medical image analysis and diagnosis',
-    'Population health trend analysis and forecasting',
-    'Clinical decision support and treatment recommendations',
-    'Healthcare quality metrics and performance tracking',
-    'Drug interaction and adverse event prediction',
-    'Personalized medicine and treatment optimization'
-  ];
+    'Real-time patient data analytics and insightsPredictive disease modeling and risk assessment',
+    'Automated medical image analysis and diagnosisPopulation health trend analysis and forecasting',
+    'Clinical decision support and treatment recommendationsHealthcare quality metrics and performance tracking',
+    'Drug interaction and adverse event predictionPersonalized medicine and treatment optimization'
+  ],
 
   const benefits = [
-    'Improve diagnostic accuracy by 35-45%',
-    'Reduce healthcare costs by 20-30%',
-    'Enhance patient outcomes and satisfaction',
-    'Streamline clinical workflows and efficiency',
-    'Enable proactive and preventive healthcare',
-    'Support evidence-based medical decisions'
+    'Improve diagnostic accuracy by 35-45%Reduce healthcare costs by 20-30%';
+    'Enhance patient outcomes and satisfactionStreamline clinical workflows and efficiency';
+    'Enable proactive and preventive healthcareSupport evidence-based medical decisions'
   ];
-
   const useCases = [
     {
-      industry: 'Hospitals & Health Systems',
-      description: 'Comprehensive healthcare analytics for large medical facilities',
-      icon: Building,
-      applications: ['Patient monitoring', 'Resource optimization', 'Quality improvement', 'Cost management']
+      industry: 'Hospitals & Health Systems',description: 'Comprehensive healthcare analytics for large medical facilities',icon: Building,applications: ['Patient monitoringResource optimization', 'Quality improvementCost management']
     },
     {
-      industry: 'Primary Care Practices',
-      description: 'Data-driven insights for family medicine and general practice',
-      icon: Users,
-      applications: ['Preventive care', 'Chronic disease management', 'Patient engagement', 'Population health']
+      industry: 'Primary Care Practices',description: 'Data-driven insights for family medicine and general practice',icon: Users,applications: ['Preventive careChronic disease management', 'Patient engagementPopulation health']
     },
     {
-      industry: 'Specialty Clinics',
-      description: 'Specialized analytics for cardiology, oncology, and other specialties',
-      icon: Stethoscope,
-      applications: ['Treatment planning', 'Outcome tracking', 'Research support', 'Clinical trials']
+      industry: 'Specialty Clinics',description: 'Specialized analytics for cardiology, oncology, and other specialties',
+      icon: Stethoscope,applications: ['Treatment planningOutcome tracking', 'Research supportClinical trials']
     },
     {
-      industry: 'Pharmaceutical Companies',
-      description: 'Drug development and market analysis insights',
-      icon: Pill,
-      applications: ['Clinical research', 'Market analysis', 'Safety monitoring', 'Efficacy studies']
+      industry: 'Pharmaceutical Companies',description: 'Drug development and market analysis insights',icon: Pill,applications: ['Clinical researchMarket analysis', 'Safety monitoringEfficacy studies']
     }
-  ];
+  ],
 
   const pricing = [
     {
-      plan: 'Practice',
-      price: '$499',
-      period: '/month',
-      features: [
-        'Up to 1,000 patients',
-        'Basic analytics dashboard',
-        'Standard reporting tools',
-        'Email support',
+      plan: 'Practice',price: '$499',period: '/month',features: [
+        'Up to 1,000 patientsBasic analytics dashboard',
+        'Standard reporting toolsEmail support',
         'HIPAA compliance'
       ],
       recommended: false
-    },
+    };
     {
-      plan: 'Health System',
-      price: '$1,299',
-      period: '/month',
-      features: [
-        'Up to 10,000 patients',
-        'Advanced analytics platform',
-        'Custom dashboards',
-        'Priority support',
-        'API access',
-        'Integration support'
+      plan: 'Health System',price: '$1,299',
+      period: '/month',features: [
+        'Up to 10,000 patientsAdvanced analytics platform',
+        'Custom dashboardsPriority support',
+        'API accessIntegration support'
       ],
       recommended: true
-    },
+    };
     {
-      plan: 'Enterprise',
-      price: '$2,999',
-      period: '/month',
-      features: [
-        'Unlimited patients',
-        'Custom AI models',
-        'White-label solutions',
-        '24/7 dedicated support',
-        'On-site training',
-        'Custom development'
+      plan: 'Enterprise',price: '$2,999',
+      period: '/month',features: [
+        'Unlimited patientsCustom AI models';
+        'White-label solutions24/7 dedicated support',
+        'On-site trainingCustom development'
       ],
       recommended: false
     }
   ];
-
   const healthcareTechnologies = [
-    { name: 'Epic', url: 'https://www.epic.com/', category: 'EHR System' },
-    { name: 'Cerner', url: 'https://www.cerner.com/', category: 'Health IT' },
-    { name: 'Allscripts', url: 'https://www.allscripts.com/', category: 'Practice Management' },
-    { name: 'Meditech', url: 'https://www.meditech.com/', category: 'Hospital Information' },
+    { name: 'Epic', url: 'https://www.epic.com/', category: 'EHR System' };
+    { name: 'Cerner', url: 'https://www.cerner.com/', category: 'Health IT' };
+    { name: 'Allscripts', url: 'https://www.allscripts.com/', category: 'Practice Management' };
+    { name: 'Meditech', url: 'https://www.meditech.com/', category: 'Hospital Information' };
     { name: 'Athenahealth', url: 'https://www.athenahealth.com/', category: 'Cloud Healthcare' }
   ];
-
   const complianceStandards = [
-    'HIPAA (Health Information Privacy)',
-    'HITECH (Health Information Technology)',
-    'SOC 2 Type II (Security & Availability)',
-    'ISO 27001 (Information Security)',
-    'FDA 21 CFR Part 11 (Electronic Records)',
-    'GxP (Good Practice Guidelines)'
-  ];
+    'HIPAA (Health Information Privacy)HITECH (Health Information Technology)',
+    'SOC 2 Type II (Security & Availability)ISO 27001 (Information Security)',
+    'FDA 21 CFR Part 11 (Electronic Records)GxP (Good Practice Guidelines)'
+  ],
 
   const analyticsCapabilities = [
     {
-      category: 'Clinical Analytics',
-      features: ['Patient outcomes analysis', 'Treatment effectiveness', 'Clinical pathway optimization', 'Risk stratification']
+      category: 'Clinical Analytics',features: ['Patient outcomes analysisTreatment effectiveness', 'Clinical pathway optimizationRisk stratification']
     },
     {
-      category: 'Operational Analytics',
-      features: ['Resource utilization', 'Workflow efficiency', 'Capacity planning', 'Cost analysis']
+      category: 'Operational Analytics',features: ['Resource utilizationWorkflow efficiency', 'Capacity planningCost analysis']
     },
     {
-      category: 'Financial Analytics',
-      features: ['Revenue cycle management', 'Claims analysis', 'Reimbursement optimization', 'Budget forecasting']
+      category: 'Financial Analytics',features: ['Revenue cycle managementClaims analysis', 'Reimbursement optimizationBudget forecasting']
     },
     {
-      category: 'Population Health',
-      features: ['Disease prevalence tracking', 'Preventive care metrics', 'Social determinants analysis', 'Community health insights']
+      category: 'Population Health',features: ['Disease prevalence trackingPreventive care metrics', 'Social determinants analysisCommunity health insights']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -537,7 +492,7 @@ export default function AIHealthcareAnalytics() {
                 </div>
                 <div className="flex items-center justify-center">
                   <Globe className="h-4 w-4 mr-2 text-green-400" />
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-300">ziontechgroup.com</a>
+                  <a href="https: //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-300">ziontechgroup.com</a>
                 </div>
               </div>
             </div>
@@ -545,5 +500,5 @@ export default function AIHealthcareAnalytics() {
         </div>
       </section>
     </div>
-  );
+  )
 }

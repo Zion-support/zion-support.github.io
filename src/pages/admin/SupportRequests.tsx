@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/Input";
@@ -10,93 +9,35 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter } from "lucide-react";
 import SEO from "@/components/SEO";
-
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
-    id: "SR-1001",
-    user: "john.doe@example.com",
-    userId: "user-123",
-    issue: "Cannot access account after password reset",
-    status: "open",
-    priority: "high",
-    createdAt: "2023-12-15T14:30:00Z",
-    lastUpdated: "2023-12-15T15:45:00Z",
-    category: "authentication"
-  },
+    id: "SR-1001",user: "john.doe@example.com",userId: "user-123",issue: "Cannot access account after password reset",status: "open",priority: "high",createdAt: "2023-12-15T14:30:00Z",lastUpdated: "2023-12-15T15:45:00Z",category: "authentication"
+  };
   {
-    id: "SR-1002",
-    user: "sarah.smith@company.co",
-    userId: "user-456",
-    issue: "Payment failed but funds were deducted",
-    status: "in-progress",
-    priority: "high",
-    createdAt: "2023-12-14T09:15:00Z",
-    lastUpdated: "2023-12-15T13:20:00Z",
-    category: "billing"
-  },
+    id: "SR-1002",user: "sarah.smith@company.co",userId: "user-456",issue: "Payment failed but funds were deducted",status: "in-progress",priority: "high",createdAt: "2023-12-14T09:15:00Z",lastUpdated: "2023-12-15T13:20:00Z",category: "billing"
+  };
   {
-    id: "SR-1003",
-    user: "tech.guru@startup.io",
-    userId: "user-789",
-    issue: "Unable to download invoice PDF",
-    status: "open",
-    priority: "medium",
-    createdAt: "2023-12-15T11:00:00Z",
-    lastUpdated: "2023-12-15T11:00:00Z",
-    category: "billing"
-  },
+    id: "SR-1003",user: "tech.guru@startup.io",userId: "user-789",issue: "Unable to download invoice PDF",status: "open",priority: "medium",createdAt: "2023-12-15T11:00:00Z",lastUpdated: "2023-12-15T11:00:00Z",category: "billing"
+  };
   {
-    id: "SR-1004",
-    user: "developer@codelab.dev",
-    userId: "user-235",
-    issue: "API integration documentation is outdated",
-    status: "open",
-    priority: "low",
-    createdAt: "2023-12-13T16:45:00Z",
-    lastUpdated: "2023-12-13T16:45:00Z",
-    category: "api"
-  },
+    id: "SR-1004",user: "developer@codelab.dev",userId: "user-235",issue: "API integration documentation is outdated",status: "open",priority: "low",createdAt: "2023-12-13T16:45:00Z",lastUpdated: "2023-12-13T16:45:00Z",category: "api"
+  };
   {
-    id: "SR-1005",
-    user: "maria.rodriguez@design.co",
-    userId: "user-567",
-    issue: "Dispute with freelancer over delivered work quality",
-    status: "in-progress",
-    priority: "high",
-    createdAt: "2023-12-12T10:30:00Z",
-    lastUpdated: "2023-12-15T09:15:00Z",
-    category: "disputes"
-  },
+    id: "SR-1005",user: "maria.rodriguez@design.co",userId: "user-567",issue: "Dispute with freelancer over delivered work quality",status: "in-progress",priority: "high",createdAt: "2023-12-12T10:30:00Z",lastUpdated: "2023-12-15T09:15:00Z",category: "disputes"
+  };
   {
-    id: "SR-1006",
-    user: "alex.wong@datacompany.com",
-    userId: "user-890",
-    issue: "Profile verification pending for over 7 days",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-08T13:20:00Z",
-    lastUpdated: "2023-12-15T08:30:00Z",
-    category: "verification"
-  },
+    id: "SR-1006",user: "alex.wong@datacompany.com",userId: "user-890",issue: "Profile verification pending for over 7 days",status: "resolved",priority: "medium",createdAt: "2023-12-08T13:20:00Z",lastUpdated: "2023-12-15T08:30:00Z",category: "verification"
+  };
   {
-    id: "SR-1007",
-    user: "jamie.taylor@tech.org",
-    userId: "user-345",
-    issue: "Cannot upload portfolio images",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
-    category: "profile"
+    id: "SR-1007",user: "jamie.taylor@tech.org",userId: "user-345",issue: "Cannot upload portfolio images",status: "resolved",priority: "medium",createdAt: "2023-12-10T15:10:00Z",lastUpdated: "2023-12-13T11:25:00Z",category: "profile"
   }
 ];
-
 export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
 
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
@@ -105,40 +46,39 @@ export default function SupportRequests() {
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false;
+      return false,
     }
 
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
-      return false;
+      return false,
     }
 
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
-      return false;
+      return false,
     }
 
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
-      return false;
+      return false,
     }
 
-    return true;
-  });
+    return true,
+  }),
 
   // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
+  const totalCount = MOCK_SUPPORT_REQUESTS.length,
 
   const resetFilters = () => {
-    setSearchQuery("");
-    setStatusFilter(null);
+    setSearchQuery(""),
+    setStatusFilter(null),
     setPriorityFilter(null);
     setCategoryFilter(null);
   };
-
   return (
     <>
       <SEO

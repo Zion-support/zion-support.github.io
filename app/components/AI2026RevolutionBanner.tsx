@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { Sparkles, Rocket, Brain, Zap } from 'lucide-react';
+import Link from 'next/link',
+import { Sparkles, Rocket, Brain, Zap } from 'lucide-react',
 export default function AI2026RevolutionBanner() {,
   return (,
     <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">,
@@ -21,7 +21,7 @@ export default function AI2026RevolutionBanner() {,
           </h1>,
           <p className="text-2xl md:text-3xl opacity-90 max-w-5xl mx-auto leading-relaxed mb-12">,
             Discover the technologies that will define business success in 2026:,
-            <span className="text-purple-300 font-semibold">Autonomous Operations</span>;
+            <span className="text-purple-300 font-semibold">Autonomous Operations</span>,
             <span className="text-blue-300 font-semibold">Quantum Computing</span>, and,
             <span className="text-pink-300 font-semibold">Neural Interfaces</span>,
           </p>,
@@ -73,6 +73,5 @@ export default function AI2026RevolutionBanner() {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  );
+    </section>),
 }

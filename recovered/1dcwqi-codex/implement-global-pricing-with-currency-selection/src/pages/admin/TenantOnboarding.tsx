@@ -1,24 +1,24 @@
 
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
-import { Switch } from "@/components/ui/switch";
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+import { supabase } from "@/integrations/supabase/client",
+import { Switch } from "@/components/ui/switch",
 
 export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("company"),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
     brand_name: "",
     subdomain: "",
@@ -29,42 +29,42 @@ export default function TenantOnboarding() {
     industry: "",
     custom_domain: "",
     is_co_branded: true
-  });
+  }),
   
   // Check if user has admin role
-  const isAdmin = user?.role === "admin";
+  const isAdmin = user?.role === "admin",
   
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />;
+    return <Navigate to="/unauthorized" />,
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+  },
   
   const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+    setFormData(prev => ({ ...prev, [name]: value })),
+  },
   
   const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }));
-  };
+    setFormData(prev => ({ ...prev, [name]: checked })),
+  },
   
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     
     try {
       // Generate subdomain if not provided
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
       
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant",
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,
         cta: "Get Started"
-      };
+      },
       
       // Submit to Supabase
       const { data, error } = await supabase
@@ -83,13 +83,13 @@ export default function TenantOnboarding() {
           email_template_override: null
         })
         .select('id, brand_name, subdomain')
-        .single();
+        .single(),
       
-      if (error) throw error;
+      if (error) throw error,
       
       toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      });
+      }),
       
       // Reset form
       setFormData({
@@ -102,17 +102,17 @@ export default function TenantOnboarding() {
         industry: "",
         custom_domain: "",
         is_co_branded: true
-      });
+      }),
       
     } catch (error: any) {
-      console.error("Error creating tenant:", error);
+      console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", { 
         description: error.message 
-      });
+      }),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <>
@@ -326,5 +326,5 @@ export default function TenantOnboarding() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }

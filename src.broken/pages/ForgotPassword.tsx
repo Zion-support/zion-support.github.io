@@ -1,55 +1,56 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 }}}}}}}
-import { Mail, import { motion  } from 'framer-motion';
+import { Mail,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
  finally {
       setIsLoading(false) }
-  };
+  },
 
       return}
 
-    setIsLoading(true) ;
-    setError('') ;
+    setIsLoading(true) ,
+    setError('') ,
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout (resolve, 1500) ) ;
+      await new Promise(resolve => setTimeout (resolve, 1500) ) ,
 
-      setSuccess('Code verified ! Please set your new password.') ;
+      setSuccess('Code verified ! Please set your new password.') ,
       setStep('reset') } catch(err) {
       setError('Invalid verification code.Please try again.') } finally {
       setIsLoading(false) }
-  };
+  },
 
       return}
     if(newPassword !== confirmPassword) {
-      setError('Passwords do not match') ;
+      setError('Passwords do not match') ,
       return}
 
-    setIsLoading(true) ;
-    setError('') ;
+    setIsLoading(true) ,
+    setError('') ,
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 2000) ) ,
 
-      setSuccess('Password reset successfully ! Redirecting to login...') ;
+      setSuccess('Password reset successfully ! Redirecting to login...') ,
       setTimeout(() => {
         window.location.href = '/login'}, 2000) } catch(err) {
-      setError('Failed to reset password.Please try again.') } finally {;
-      setIsLoading(false) };
-  };
+      setError('Failed to reset password.Please try again.') } finally {,
+      setIsLoading(false) },
+  },
 
-      description: 'Enhanced security with verification codes';
-    },;
-    {;
-      icon: <RefreshCw className="w-6 h-6" />,;
-      title: 'Secure Reset Process',;
-      description: 'Time - limited verification codes for safety';
-    };
-  ];
+      description: 'Enhanced security with verification codes'
+    },
+    {,
+      icon: <RefreshCw className="w-6 h-6" />,
+      title: 'Secure Reset Process',
+      description: 'Time - limited verification codes for safety'
+    },
+  ],
 
   const benefits = [{
       icon: <Brain className="w-6 h-6" />,
@@ -59,14 +60,14 @@ export default function Page() {
     {
       icon: <Cloud className="w-6 h-6" />,
       title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for your business needs';
-    },;
-    {;
-      icon: <Rocket className="w-6 h-6" />,;
-      title: 'Digital Transformation',;
-      description: 'Transform your business with modern technology';
-    };
-  ];
+      description: 'Scalable cloud solutions for your business needs'
+    },
+    {,
+      icon: <Rocket className="w-6 h-6" />,
+      title: 'Digital Transformation',
+      description: 'Transform your business with modern technology'
+    },
+  ],
 
   const renderEmailStep = () => (<motion.div
       initial = {
@@ -112,18 +113,18 @@ export default function Page() {
 
         <button     type="submit"
           disabled={isLoading}
-          className="w-full py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - medium rounded-lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow-lg shadow-cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap-3"
+          className="w-full py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - medium rounded-lg hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow-lg shadow-cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap-3"
 
-          {isLoading ? (;
+          {isLoading ? (,
             <>
               <div  className="animate - spin rounded-full h-4 w-4 border-b-2 border-white"></div > Sending Code...
             </>) : (<>
-              Send Verification Code;
-              <ArrowRight className="w-5 h-5" />;
-            </>;) };
-        </button>;
-      </form>;
-    </motion.div>;) ;
+              Send Verification Code,
+              <ArrowRight className="w-5 h-5" />,
+            </>) },
+        </button>,
+      </form>,
+    </motion.div>,) ,
 
   const renderVerificationStep = () => (<motion.div
       initial = {
@@ -180,27 +181,27 @@ export default function Page() {
           </button>
           <button     type="submit"
             disabled={isLoading}
-            className="flex - 1 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - medium rounded-lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow-lg shadow-cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap-3"
+            className="flex - 1 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - medium rounded-lg hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow-lg shadow-cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap-3"
 
-            {isLoading ? (;
+            {isLoading ? (,
               <>
                 <div  className="animate - spin rounded-full h-4 w-4 border-b-2 border-white"></div > Verifying...
               </>) : (<>
                 Verify Code < ArrowRight className="w-5 h-5" />
               </>) }
           </button>
-        </div>;
+        </div>,
 
         <div  className="text-center">
           <button     type="button"
             onClick={handleEmailSubmit}
-            className="text-cyan - 400 hover:text-cyan - 300 text-sm transition - colors duration -200";
-          >;
-            Didn't receive the code? Resend;
-          </button>;
-        </div>;
-      </form>;
-    </motion.div>;) ;
+            className="text-cyan - 400 hover: text-cyan - 300 text-sm transition - colors duration -200",
+          >,
+            Didn't receive the code? Resend,
+          </button>,
+        </div>,
+      </form>,
+    </motion.div>,) ,
 
   const renderResetStep = () => (<motion.div
       initial = {
@@ -254,8 +255,7 @@ export default function Page() {
                 {[1, 2, 3, 4].map((level) => (<div  key={level}
                     className = {
   `h-1 flex - 1 rounded-full transition - all duration - 300 ${level <= passwordStrength.score
-                        ? passwordStrength.color.replace('text-',
-  'bg-') : 'bg-slate - 600 / 30'
+                        ? passwordStrength.color.replace('text-bg-') : 'bg-slate - 600 / 30'
 
 }`}
                   />) ) }
@@ -287,22 +287,22 @@ export default function Page() {
               {showConfirmPassword ? 'Hide' : 'Show'}
             </button>
           </div>
-        </div>;
+        </div>,
 
         <button     type="submit"
           disabled={isLoading}
-          className="w-full py-3 bg-gradient - to - r from - green - 500 to - emerald - 600 text-white font - medium rounded-lg hover:from - green - 600 hover:to - emerald - 700 transition - all duration - 300 shadow-lg shadow-green - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap-3"
+          className="w-full py-3 bg-gradient - to - r from - green - 500 to - emerald - 600 text-white font - medium rounded-lg hover: from - green - 600 hover:to - emerald - 700 transition - all duration - 300 shadow-lg shadow-green - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap-3"
 
-          {isLoading ? (;
+          {isLoading ? (,
             <>
               <div  className="animate - spin rounded-full h-4 w-4 border-b-2 border-white"></div > Resetting Password...
             </>) : (<>
-              Reset Password;
-              <ArrowRight className="w-5 h-5" />;
-            </>;) };
-        </button>;
-      </form>;
-    </motion.div>;) ;
+              Reset Password,
+              <ArrowRight className="w-5 h-5" />,
+            </>) },
+        </button>,
+      </form>,
+    </motion.div>,) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900 flex">
       {/* Left Side - Form */}
@@ -390,7 +390,7 @@ export default function Page() {
 }}
             className="mt-8 space - y-4"
 
-            {securityFeatures.map((feature, index) => (;
+            {securityFeatures.map((feature, index) => (,
               <motion.div
                 key={feature.title}
                 initial = {
@@ -417,13 +417,13 @@ export default function Page() {
                   <h4 className="text-sm font - medium text-white">{feature.title}</h4>
                   <p className="text-xs text-slate -400">{feature.description}</p>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </motion.div>
         </div>
       </div>
 
       {/* Right Side - Benefits */}
-      <div  className="hidden lg:flex flex - 1 bg-gradient - to - br from - cyan - 500 / 20 via - blue - 500 / 20 to - purple - 500 / 20 relative overflow-hidden">;
+      <div  className="hidden lg: flex flex - 1 bg-gradient - to - br from - cyan - 500 / 20 via - blue - 500 / 20 to - purple - 500 / 20 relative overflow-hidden">,
         <div  className="absolute inset - 0 bg-[url("data:image / svg + xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org / 2000 / svg%22%3E%3Cg%20fill%3D%22none%22%20fill - rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill - opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C / g%3E%3C / g%3E%3C / svg%3E') ] opacity - 50"></div>
 
         <div  className="relative z - 10 flex items - center justify - center p -12">
@@ -498,7 +498,7 @@ export default function Page() {
 }}
               className="space - y-6 mb-8"
 
-              {benefits.map((benefit, index) => (;
+              {benefits.map((benefit, index) => (,
                 <motion.div
                   key={benefit.title}
                   initial = {
@@ -529,7 +529,7 @@ export default function Page() {
                       {benefit.description}
                     </p>
                   </div>
-                </motion.div>;) ) }
+                </motion.div>,) ) }
             </motion.div>
 
             <motion.div
@@ -558,9 +558,9 @@ export default function Page() {
               </div>
               <p className="text-slate - 300 text-sm">
                 We use industry - standard security measures to protect your account and ensure your data remains safe and secure.</p>
-            </motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
-};
+            </motion.div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) ,
+},

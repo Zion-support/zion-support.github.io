@@ -1,26 +1,26 @@
 <<<<<<< HEAD
 
-import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react";
+import { useState } from "react",
+import { Link, Navigate } from "react-router-dom",
+import { useForm, type UseFormReturn } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+  FormMessage
+} from "@/components/ui/form",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
 
 // Form validation schema
 const signupSchema = z
@@ -34,21 +34,21 @@ const signupSchema = z
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
-      message: "You must accept the terms and conditions",
-    }),
+      message: "You must accept the terms and conditions"
+    })
   })
   .refine(data => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path: ["confirmPassword"],
-  });
+    path: ["confirmPassword"]
+  }),
 
-type SignupFormValues = z.infer<typeof signupSchema>;
+type SignupFormValues = z.infer<typeof signupSchema>,
 
 export default function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   
   // Initialize react-hook-form
   const form = useForm({
@@ -58,30 +58,30 @@ export default function Signup() {
       email: "",
       password: "",
       confirmPassword: "",
-      termsAccepted: false,
-    },
-  }) as UseFormReturn<SignupFormValues>;
+      termsAccepted: false
+    }
+  }) as UseFormReturn<SignupFormValues>,
 
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
-    if (isSubmitting) return; // Prevent multiple submissions
+    if (isSubmitting) return, // Prevent multiple submissions
     
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
-      await signup(data.email, data.password, data.displayName);
+      await signup(data.email, data.password, data.displayName),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />;
+    return <Navigate to="/" />,
   }
   
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
-    return <Navigate to="/onboarding" />;
+    return <Navigate to="/onboarding" />,
   }
 
   return (
@@ -336,13 +336,13 @@ export default function Signup() {
       <Footer />
     </>
 =======
-import React from 'react';
+import React from 'react',
 export function Signup() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
+  ),
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default React.memo(function ResearchDevelopment () {
 
   return (<div className="min - h-screen flex items - center justify - center bg-slate - 900 text-white p -8">
@@ -8,5 +8,5 @@ export default React.memo(function ResearchDevelopment () {
           Discover our R & D initiatives across AI, quantum computing, and
           emerging tech.</p>
       </div>
-    </div>) ;
+    </div>) ,
 }

@@ -1,185 +1,184 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       id: 'Cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from - red - 500 to - orange - 600',
+      color: 'from - red - 500 to - orange - 600'
     },
     {
       id: 'IoT & Edge Computing',
       name: 'IoT & Edge Computing',
       icon: Cpu,
-      color: 'from - green - 500 to - teal - 600',
+      color: 'from - green - 500 to - teal - 600'
     },
     {
       id: 'Blockchain & Web3',
       name: 'Blockchain & Web3',
       icon: Code,
-      color: 'from - yellow-500 to - orange - 600',
+      color: 'from - yellow-500 to - orange - 600'
     },
     {
       id: 'Marketing & Sales',
       name: 'Marketing & Sales',
       icon: TrendingUp,
-      color: 'from - indigo - 500 to - purple - 600',
+      color: 'from - indigo - 500 to - purple - 600'
     },
     {
       id: 'Cloud & DevOps',
       name: 'Cloud & DevOps',
       icon: Cloud,
-      color: 'from - blue - 500 to - indigo - 600',
+      color: 'from - blue - 500 to - indigo - 600'
     },
     {
       id: 'Customer Service',
       name: 'Customer Service',
       icon: Users,
-      color: 'from - green - 500 to - emerald - 600',
+      color: 'from - green - 500 to - emerald - 600'
     },
     {
       id: 'Compliance & Governance',
       name: 'Compliance & Governance',
       icon: Lock,
-      color: 'from - gray - 500 to - slate - 600',
+      color: 'from - gray - 500 to - slate - 600'
     },
     {
       id: 'Business Operations',
       name: 'Business Operations',
       icon: Briefcase,
-      color: 'from - amber - 500 to - yellow-600',
+      color: 'from - amber - 500 to - yellow-600'
     },
     {
       id: 'Financial Services',
       name: 'Financial Services',
       icon: DollarSign,
-      color: 'from - emerald - 500 to - green - 600',
-    },
-  ];
+      color: 'from - emerald - 500 to - green - 600'
+    }
+  ],
 
   const priceRanges = [{ id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $1,500', range: '< $1,500' },
     { id: 'medium', name: '$1,500 - $3,000', range: '$1,500 - $3,000' },
-    { id: 'high', name: 'Over $3,000', range: '> $3,000' },
-  ];
+    { id: 'high', name: 'Over $3,000', range: '> $3,000' }
+  ],
 
   const sortOptions = [{ id: 'name', name: 'Name A - Z' },
     { id: 'price - low', name: 'Price: Low to High' },
     { id: 'price - high', name: 'Price: High to Low' },
     { id: 'category', name: 'Category' },
-    { id: 'innovation', name: 'Innovation Level' },
-  ];
+    { id: 'innovation', name: 'Innovation Level' }
+  ],
 
   const filteredServices = REVOLUTIONARY_MICRO_SAAS_SERVICES_2025.filter(service => {
       const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
         service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
         service.tags.some(tag =>
-          tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ;
+          tag.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ,
 
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
 
-      let matchesPrice = true;
+      let matchesPrice = true,
       if(priceRange === 'low') {
-        matchesPrice = service.price < 1500;
+        matchesPrice = service.price < 1500,
       } else if(priceRange === 'medium') {
-        matchesPrice = service.price >= 1500 && service.price <= 3000;
+        matchesPrice = service.price >= 1500 && service.price <= 3000,
       } else if(priceRange === 'high') {
-        matchesPrice = service.price > 3000;
+        matchesPrice = service.price > 3000,
       }
 
-      return matchesSearch && matchesCategory && matchesPrice;
-    }) ;
+      return matchesSearch && matchesCategory && matchesPrice,
+    }) ,
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch(sortBy) {
       case 'name':
-        return a.title.localeCompare(b.title) ;
+        return a.title.localeCompare(b.title) ,
       case 'price - low':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'price - high':
-        return b.price - a.price;
+        return b.price - a.price,
       case 'category':
-        return a.category.localeCompare(b.category) ;
+        return a.category.localeCompare(b.category) ,
       case 'innovation':
-        const innovationOrder = { Revolutionary: 3, Advanced: 2, Standard: 1 };
+        const innovationOrder = { Revolutionary: 3, Advanced: 2, Standard: 1 },
         return ((innovationOrder[b.innovationLevel as keyof typeof innovationOrder] ||
             0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] ||
-            0) ) ;
-      default:
-        return 0;
+            0) ) ,
+      default: return 0
     }
-  }) ;
+  }) ,
 
   const getCategoryIcon = (category: anystring) => {
-    const categoryData = categories.find(cat => cat.id === category) ;
-    return categoryData ? categoryData.icon : Globe;
-  };
+    const categoryData = categories.find(cat => cat.id === category) ,
+    return categoryData ? categoryData.icon : Globe
+  },
 
   const getCategoryColor = (category: anystring) => {
-    const categoryData = categories.find(cat => cat.id === category) ;
-    return categoryData ? categoryData.color : 'from - gray - 500 to - slate - 600';
-  };
+    const categoryData = categories.find(cat => cat.id === category) ,
+    return categoryData ? categoryData.color : 'from - gray - 500 to - slate - 600'
+  },
 
   const getPriceRange = (price: anynumber) => {
-    if(price < 1500) return 'low';
-    if(price <= 3000) return 'medium';
-    return 'high';
-  };
+    if(price < 1500) return 'low',
+    if(price <= 3000) return 'medium',
+    return 'high'
+  },
 
   const getPriceColor = (price: anynumber) => {
-    const range = getPriceRange(price) ;
+    const range = getPriceRange(price) ,
     switch(range) {
       case 'low':
-        return 'text-green - 400';
+        return 'text-green - 400',
       case 'medium':
-        return 'text-yellow-400';
+        return 'text-yellow-400',
       case 'high':
-        return 'text-red - 400';
+        return 'text-red - 400',
       default:
-        return 'text-gray - 400';
+        return 'text-gray - 400'
     }
-  };
+  },
 
   const getPriceRangeColor = (price: anynumber) => {
-    const range = getPriceRange(price) ;
+    const range = getPriceRange(price) ,
     switch(range) {
       case 'low':
-        return 'bg-green - 500 / 20 text-green - 400';
+        return 'bg-green - 500 / 20 text-green - 400',
       case 'medium':
-        return 'bg-yellow-500 / 20 text-yellow-400';
+        return 'bg-yellow-500 / 20 text-yellow-400',
       case 'high':
-        return 'bg-red - 500 / 20 text-red - 400';
+        return 'bg-red - 500 / 20 text-red - 400',
       default:
-        return 'bg-gray - 500 / 20 text-gray - 400';
+        return 'bg-gray - 500 / 20 text-gray - 400'
     }
-  };
+  },
 
   const getInnovationColor = (level: anystring) => {
     switch(level) {
       case 'Revolutionary':
-        return 'text-purple - 400';
+        return 'text-purple - 400',
       case 'Advanced':
-        return 'text-blue - 400';
+        return 'text-blue - 400',
       case 'Standard':
-        return 'text-green - 400';
+        return 'text-green - 400',
       default:
-        return 'text-gray - 400';
+        return 'text-gray - 400'
     }
-  };
+  },
 
   const getInnovationBgColor = (level: anystring) => {
     switch(level) {
       case 'Revolutionary':
-        return 'bg-purple - 500 / 20';
+        return 'bg-purple - 500 / 20',
       case 'Advanced':
-        return 'bg-blue - 500 / 20';
+        return 'bg-blue - 500 / 20',
       case 'Standard':
-        return 'bg-green - 500 / 20';
+        return 'bg-green - 500 / 20',
       default:
-        return 'bg-gray - 500 / 20';
+        return 'bg-gray - 500 / 20'
     }
-  };
+  },
 
   return (<div className="min - h-screen py-8">
       <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
@@ -294,7 +293,7 @@ export default function Page() {
                 <div className="flex items - center justify - between mb-4">
                   <div className="w-16 h-16 bg-white / 20 rounded-xl flex items - center justify -center">
                     {React.createElement(getCategoryIcon (service.category) , {
-                      className: 'w-8 h-8 text-white',
+                      className: 'w-8 h-8 text-white'
                     }) }
                   </div>
                   <div className="text-right">
@@ -576,7 +575,7 @@ export default function Page() {
                 href={CONTACT_INFORMATION.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient - to - r from - purple - 500 to - pink - 500 hover:from - purple - 600 hover:to - pink - 600 text-white px-8 py-3 rounded-lg font - semibold transition - all duration - 300 hover:shadow-lg hover:shadow-purple -500 / 25"
+                className="bg-gradient - to - r from - purple - 500 to - pink - 500 hover: from - purple - 600 hover:to - pink - 600 text-white px-8 py-3 rounded-lg font - semibold transition - all duration - 300 hover:shadow-lg hover:shadow-purple -500 / 25"
               >
                 Visit Website
               </a>
@@ -584,5 +583,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>) 
 }

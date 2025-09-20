@@ -1,19 +1,19 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 interface SEOProps {
-  title: string;
-  description: string;
-  canonical?: string;
-  url?: string;
-  image?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
+  title: string,
+  description: string,
+  canonical?: string,
+  url?: string,
+  image?: string,
+  type?: 'website' | 'article' | 'product' | 'service',
+  publishedTime?: string,
+  modifiedTime?: string,
+  author?: string,
+  section?: string,
+  tags?: string[],
+  noindex?: boolean,
+  nofollow?: boolean
 }
 export function SEO({
   title,
@@ -30,23 +30,23 @@ export function SEO({
   noindex = false,
   nofollow = false
 }: SEOProps) {
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+  const siteUrl = 'https: //ziontechgroup.com',
+  const fullUrl = url ? `${siteUrl}${url}` : siteUrl,
+  const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`,
   
   // Default meta description if none provided
   const metaDescription = description || 
-    'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
+    'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.',
 
   // Default title if none provided
-  const fullTitle = title ? `${title} | Zion Tech Group` : 'Zion Tech Group - AI & Technology Solutions';
+  const fullTitle = title ? `${title} | Zion Tech Group` : 'Zion Tech Group - AI & Technology Solutions',
 
   // Robots meta tag
-  const robots = [];
-  if (noindex) robots.push('noindex');
-  if (nofollow) robots.push('nofollow');
-  if (robots.length === 0) robots.push('index', 'follow');
-  const robotsContent = robots.join(', ');
+  const robots = [],
+  if (noindex) robots.push('noindex'),
+  if (nofollow) robots.push('nofollow'),
+  if (robots.length === 0) robots.push('indexfollow'),
+  const robotsContent = robots.join(', '),
 
   // Structured data for organization
   const organizationSchema = {
@@ -116,7 +116,7 @@ export function SEO({
         }
       ]
     }
-  };
+  },
 
   // Structured data for the current page
   const pageSchema = {
@@ -146,9 +146,9 @@ export function SEO({
     },
     ...(type === 'article' && {
       "articleSection": section,
-      "keywords": tags.join(', ')
+      "keywords": tags.join()
     })
-  };
+  },
 
   return (
     <Helmet>
@@ -213,7 +213,7 @@ export function SEO({
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
       
       {/* Performance and UX */}
@@ -227,7 +227,7 @@ export function SEO({
       <meta name="geo.placename" content="Middletown, Delaware" />
       
       {/* Business Information */}
-      <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
+      <meta name="business: contact_data:street_address" content="364 E Main St STE 1008" />
       <meta name="business:contact_data:locality" content="Middletown" />
       <meta name="business:contact_data:region" content="DE" />
       <meta name="business:contact_data:postal_code" content="19709" />
@@ -235,5 +235,5 @@ export function SEO({
       <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />
       <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
     </Helmet>
-  );
+  )
 }

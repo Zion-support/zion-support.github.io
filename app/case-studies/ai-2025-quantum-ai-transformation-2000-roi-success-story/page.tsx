@@ -1,20 +1,20 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'AI 2025: Quantum AI Transformation - 2000% ROI Success Story';
-  description: 'Discover how a Fortune 500 company achieved 2000% ROI through quantum AI transformation. Complete case study with implementation details and results.';
-  keywords: ['Quantum AIROI Success', 'Fortune 500Business Transformation', 'Case Study'];
+  title: 'AI 2025: Quantum AI Transformation - 2000% ROI Success Story',
+  description: 'Discover how a Fortune 500 company achieved 2000% ROI through quantum AI transformation. Complete case study with implementation details and results.',
+  keywords: ['Quantum AIROI SuccessFortune 500Business Transformation', 'Case Study'],
   openGraph: {,
-    title: 'AI 2025: Quantum AI Transformation - 2000% ROI Success Story';
-    description: 'Discover how a Fortune 500 company achieved 2000% ROI through quantum AI transformation. Complete case study with implementation details and results.';
-    type: 'article';
-    publishedTime: '2025-01-15T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Quantum AIROI Success', 'Fortune 500Business Transformation', 'Case Study'],
+    title: 'AI 2025: Quantum AI Transformation - 2000% ROI Success Story',
+    description: 'Discover how a Fortune 500 company achieved 2000% ROI through quantum AI transformation. Complete case study with implementation details and results.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Quantum AIROI SuccessFortune 500Business Transformation', 'Case Study']
   }
-};
+},
 export default function QuantumAISuccessStoryPage() {,
   return (,
     <div>,
@@ -58,13 +58,13 @@ export default function QuantumAISuccessStoryPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Results */,}
+        {/* Key Results */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-12">,
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Unprecedented Results</h2>,
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
-                This Fortune 500 manufacturing company achieved remarkable success through strategic quantum AI implementation;
+                This Fortune 500 manufacturing company achieved remarkable success through strategic quantum AI implementation,
                 delivering extraordinary business value and competitive advantage.,
               </p>,
             </div>,
@@ -92,7 +92,7 @@ export default function QuantumAISuccessStoryPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Overview */,}
+        {/* Implementation Overview */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
@@ -176,7 +176,7 @@ export default function QuantumAISuccessStoryPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Ready to Achieve Similar Results?</h2>,
@@ -200,7 +200,7 @@ export default function QuantumAISuccessStoryPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Success Stories</h2>,
@@ -248,5 +248,4 @@ export default function QuantumAISuccessStoryPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

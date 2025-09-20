@@ -1,11 +1,11 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { useEffect, useMemo, useState } from 'react',
 
 const mockCourses: Record<string, {
-  title: string;
-  description: string;
-  lessons: { id: string; title: string; type: 'video' | 'quiz' | 'exercise'; }[];
+  title: string,
+  description: string,
+  lessons: { id: string, title: string, type: 'video' | 'quiz' | 'exercise' }[],
 }> = {
   'ai-engineering-foundations': {
     title: 'AI Engineering Foundations',
@@ -35,24 +35,24 @@ const mockCourses: Record<string, {
       { id: 'quiz-1', title: 'Marketplace Quiz', type: 'quiz' }
     ]
   }
-};
+},
 
 export default function CoursePage() {
-  const { query } = useRouter();
-  const slug = String(query.slug || '');
-  const course = mockCourses[slug];
-  const [activeTab, setActiveTab] = useState<'lessons' | 'discussion' | 'ai'>('lessons');
+  const { query } = useRouter(),
+  const slug = String(query.slug || ''),
+  const course = mockCourses[slug],
+  const [activeTab, setActiveTab] = useState<'lessons' | 'discussion' | 'ai'>('lessons'),
 
   useEffect(() => {
-    setActiveTab('lessons');
-  }, [slug]);
+    setActiveTab('lessons'),
+  }, [slug]),
 
   const progress = useMemo(() => {
-    if (!course) return 0;
-    return Math.round((1 / course.lessons.length) * 100);
-  }, [course]);
+    if (!course) return 0,
+    return Math.round((1 / course.lessons.length) * 100),
+  }, [course]),
 
-  if (!course) return <div className="py-10">Course not found.</div>;
+  if (!course) return <div className="py-10">Course not found.</div>,
 
   return (
     <div className="py-10 space-y-8">
@@ -90,9 +90,9 @@ export default function CoursePage() {
               <a className="block rounded-md bg-blue-600 text-white text-center py-2">Final Exam & Certification</a>
             </Link>
             <button className="block w-full rounded-md border border-gray-300 dark:border-gray-700 py-2" onClick={async () => {
-              const res = await fetch(`/api/academy/summarize?course=${encodeURIComponent(course.title)}`);
-              const data = await res.json();
-              alert(data.summary || 'Summary generated');
+              const res = await fetch(`/api/academy/summarize?course=${encodeURIComponent(course.title)}`),
+              const data = await res.json(),
+              alert(data.summary || 'Summary generated'),
             }}>Summarize with AI</button>
           </div>
         </div>
@@ -112,28 +112,28 @@ export default function CoursePage() {
         </div>
       )}
     </div>
-  );
+  ),
 }
 
 function AIChat({ lessonTitle }: { lessonTitle: string }) {
-  const [input, setInput] = useState('');
-  const [messages, setMessages] = useState<{ role: 'user' | 'assistant'; content: string }[]>([]);
+  const [input, setInput] = useState(''),
+  const [messages, setMessages] = useState<{ role: 'user' | 'assistant', content: string }[]>([]),
 
-  const operatorPrompt = `Act as an AI teaching assistant. When a user asks questions about this topic [${lessonTitle}], respond clearly with examples, links to related concepts, and follow-up questions.`;
+  const operatorPrompt = `Act as an AI teaching assistant. When a user asks questions about this topic [${lessonTitle}], respond clearly with examples, links to related concepts, and follow-up questions.`,
 
   const send = async () => {
-    if (!input.trim()) return;
-    const userMsg = { role: 'user' as const, content: input };
-    setMessages((m) => [...m, userMsg]);
-    setInput('');
+    if (!input.trim()) return,
+    const userMsg = { role: 'user' as const, content: input },
+    setMessages((m) => [...m, userMsg]),
+    setInput(''),
     const res = await fetch('/api/academy/ai', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ operatorPrompt, userMessage: userMsg.content })
-    });
-    const data = await res.json();
-    setMessages((m) => [...m, { role: 'assistant', content: data.answer || 'Sorry, I could not generate a response.' }]);
-  };
+    }),
+    const data = await res.json(),
+    setMessages((m) => [...m, { role: 'assistant', content: data.answer || 'Sorry, I could not generate a response.' }]),
+  },
 
   return (
     <div className="space-y-3">
@@ -154,5 +154,5 @@ function AIChat({ lessonTitle }: { lessonTitle: string }) {
         <button onClick={send} className="rounded-md bg-blue-600 text-white px-4">Send</button>
       </div>
     </div>
-  );
+  ),
 }

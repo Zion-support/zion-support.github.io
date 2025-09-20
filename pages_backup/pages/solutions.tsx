@@ -11,6 +11,5 @@ const solutions: React.FC = () => {,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default solutions;
+    </div>)},
+export default solutions,

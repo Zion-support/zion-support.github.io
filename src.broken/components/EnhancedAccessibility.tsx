@@ -4,22 +4,22 @@ export default function Page() {
 interface EnhancedAccessibilityProps {
   // Add your props here
 
-;  enabled?: boolean;
-  showControls?: boolean;
-  className?: string;
+,  enabled?: boolean,
+  showControls?: boolean,
+  className?: string,
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
-  enabled = true,;
-  showControls = true,;
-  className = ''}) => {;
-  const [isOpen, setIsOpen] = useState(false);
+  enabled = true,
+  showControls = true,
+  className = ''}) => {,
+  const [isOpen, setIsOpen] = useState(false),
   const [settings, setSettings] = useState<any>({
 
-  colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia',
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
 export const EnhancedAccessibility: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
     highContrast: false,
@@ -30,20 +30,20 @@ export const EnhancedAccessibility: React.FC = () => {
     focusIndicator: true,
     colorBlindness: 'normal',
     fontSize: 'medium'
-  }) ;
+  }) ,
 
   // Apply accessibility settings to document
   
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false),
   
   // Auto - hide accessibility panel
   useEffect(() => {    if(isOpen) {
 
-      setIsVisible(true);
+      setIsVisible(true),
       if(timeoutRef.current) clearTimeout(timeoutRef.current)} else {
 
       timeoutRef.current = setTimeout(() => setIsVisible(false), 300)}
-  }, [isOpen]) ;
+  }, [isOpen]) ,
 
   // Apply accessibility settings
   useEffect(() => {
@@ -55,25 +55,25 @@ export const EnhancedAccessibility: React.FC = () => {
 
       root.classList.remove('high-contrast')}
     // Large text'
-    root.style.fontSize = settings.largeText ? '1.2em' : '1em';
+    root.style.fontSize = settings.largeText ? '1.2em' : '1em',
 
     // Reduced motion
     if(settings.reducedMotion) {
 
       root.style.setProperty('--reduced-motion',reduce')} else {
 
-      root.style.removeProperty('--reduced-motion');
+      root.style.removeProperty('--reduced-motion'),
   
-    announcement.setAttribute('aria-live',polite');
-    announcement.setAttribute('aria-atomic',true');
-    announcement.className="sr-only";
-          }, 2000) ;
-          break;
+    announcement.setAttribute('aria-live',polite'),
+    announcement.setAttribute('aria-atomic',true'),
+    announcement.className="sr-only",
+          }, 2000) ,
+          break,
 
 
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
+    skipLink.href = '#main-content',
+    skipLink.textContent = 'Skip to main content',
+    skipLink.className="skip-link sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50",
     const settingNames = {
       highContrast: 'High contrast',
       largeText: 'Large text',
@@ -83,10 +83,10 @@ export const EnhancedAccessibility: React.FC = () => {
       focusIndicator: 'Focus indicator',
       colorBlindness: 'Color blindness',
       fontSize: 'Font size'
-    };
+    },
 
-    announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`) ;
-  };
+    announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`) ,
+  },
 
   return (<>
 
@@ -102,7 +102,7 @@ export const EnhancedAccessibility: React.FC = () => {
                 <label className="flex items - center space - x-3 cursor -pointer">
                   <input
 =======
-'      root.style.removeProperty('--reduced-motion');
+'      root.style.removeProperty('--reduced-motion'),
 
     // Focus indicator
     if(settings.focusIndicator) {
@@ -111,7 +111,7 @@ export const EnhancedAccessibility: React.FC = () => {
 
       root.style.setProperty('--focus-visible',none')}
     // Color blindness simulation'
-    root.style.setProperty('--color-blindness', settings.colorBlindness);
+    root.style.setProperty('--color-blindness', settings.colorBlindness),
 
     // Font size
     
@@ -129,69 +129,69 @@ export const EnhancedAccessibility: React.FC = () => {
       document.documentElement.classList.remove('large-text')}
 
     // Save settings to localStorage'
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]),
 
   useEffect(() => {
     // Load saved settings'
-    const saved = localStorage.getItem('accessibility-settings');    if(saved) {
+    const saved = localStorage.getItem('accessibility-settings'),    if(saved) {
 
       setSettings(JSON.parse(saved))}
-  }, []);
+  }, []),
 
-      [key]: !prev[key]}) ) };
+      [key]: !prev[key]}) ) },
 
   // Screen reader announcements'
-  const announcement = document.createElement('div');'
-    announcement.setAttribute('aria-live', 'polite');'
-    announcement.setAttribute('aria-atomic', 'true');'    announcement.className="sr-only";
-    announcement.textContent = message;
+  const announcement = document.createElement('div'),'
+    announcement.setAttribute('aria-livepolite'),'
+    announcement.setAttribute('aria-atomictrue'),'    announcement.className="sr-only",
+    announcement.textContent = message,
 
-    document.body.appendChild(announcement) ;
+    document.body.appendChild(announcement) ,
 
     // Remove after announcement
     setTimeout(() => {
-      document.body.removeChild(announcement) }, 1000) ;
+      document.body.removeChild(announcement) }, 1000) ,
 
-    setAnnouncements(prev => [...prev, message]) }, []) ;
+    setAnnouncements(prev => [...prev, message]) }, []) ,
   // Enhanced keyboard navigation
   useEffect(() => {
-    if(!settings.keyboardNavigation) return;
+    if(!settings.keyboardNavigation) return,
 
-      // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
+      // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return,
 
       switch(e.key) {
 
         case 'Tab':
           // Enhanced tab navigation with visual feedback
-          setCurrentFocus(target);
-          target.style.outline = '2px solid #3b82f6';
-          target.style.outlineOffset = '2px';
+          setCurrentFocus(target),
+          target.style.outline = '2px solid #3b82f6',
+          target.style.outlineOffset = '2px',
 
           setTimeout(() => {
 
-            target.style.outline = '';
-            target.style.outlineOffset = '';
-          }, 2000) ;          break;
+            target.style.outline = '',
+            target.style.outlineOffset = '',
+          }, 2000) ,          break,
 '
         case 'Enter':'
         case ' ':'
-          if(target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {;
-            e.preventDefault();
-            target.click();
-            announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
+          if(target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {,
+            e.preventDefault(),
+            target.click(),
+            announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`),
 
-          break;
+          break,
 
         case 'Escape':
           // Close modals, dropdowns, etc.'
           
-modals.forEach(modal:  > {;
-            if (modal.getAttribute('aria-hidden') === 'false') {;
-              (modal as HTMLElement).click()}) ;          break;
+modals.forEach(modal: > {,
+            if (modal.getAttribute('aria-hidden') === 'false') {,
+              (modal as HTMLElement).click()}) ,          break,
 
   // Keyboard navigation support
   useEffect(() => {
-    if(!settings.keyboardNavigation) return;
+    if(!settings.keyboardNavigation) return,
 
         if(mainContent) {
 
@@ -200,45 +200,45 @@ modals.forEach(modal:  > {;
       // Skip to navigation'
       if(e.key === 'Tab' && e.shiftKey && e.altKey) {
 
-        e.preventDefault();
+        e.preventDefault(),
         
         if(navigation) {
 
           (navigation as HTMLElement).focus()}
       }
-    };
+    },
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]),
 
-                     target.getAttribute('title') || ;
-                     target.textContent;`
-        if(label) announce(`Focused on ${label}`)};
+                     target.getAttribute('title') || ,
+                     target.textContent,`
+        if(label) announce(`Focused on ${label}`)},
 
-      target.style.outline = '';
-      target.style.outlineOffset = ''};
+      target.style.outline = '',
+      target.style.outlineOffset = ''},
 
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
+    document.addEventListener('focusin', handleFocusIn),
+    document.addEventListener('focusout', handleFocusOut),
 
     return () => {
 
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator, settings.screenReader, announce]) ;
+      document.removeEventListener('focusin', handleFocusIn),
+      document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator, settings.screenReader, announce]) ,
 
   // Skip to main content link
   useEffect(() => {
 '
-    const skipLink = document.createElement('a');'
-    skipLink.href = '#main-content';'
-    skipLink.textContent = 'Skip to main content';'    skipLink.className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
+    const skipLink = document.createElement('a'),'
+    skipLink.href = '#main-content
+    skipLink.textContent = 'Skip to main content','    skipLink.className="skip-link sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50",
 
-    document.body.insertBefore(skipLink, document.body.firstChild) ;
+    document.body.insertBefore(skipLink, document.body.firstChild) ,
 
     return : unknown {
       if(skipLink.parentNode) {
 
-        skipLink.parentNode.removeChild(skipLink)}}, []) ;
+        skipLink.parentNode.removeChild(skipLink)}}, []) ,
 
   // Quick accessibility actions
   const quickActions = [{
@@ -248,13 +248,13 @@ modals.forEach(modal:  > {;
       action: : unknown {
         const newSettings = {
 
-  ...settings,;  ;
-  ;
-  ;
-  ;
-  ;
-  highContrast: !settings.highContrast };
-        applySettings(newSettings);'`
+  ...settings,  ,
+  ,
+  ,
+  ,
+  ,
+  highContrast: !settings.highContrast },
+        applySettings(newSettings),'`
         announce(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`)},      active: settings.highContrast
     },
     {
@@ -264,13 +264,13 @@ modals.forEach(modal:  > {;
       action: : unknown {
         const newSettings = {
 
-  ...settings,;  ;
-  ;
-  ;
-  ;
-  ;
-  largeText: !settings.largeText };
-        applySettings(newSettings);'`
+  ...settings,  ,
+  ,
+  ,
+  ,
+  ,
+  largeText: !settings.largeText },
+        applySettings(newSettings),'`
         announce(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`)},      active: settings.largeText
     },
     {
@@ -279,8 +279,8 @@ modals.forEach(modal:  > {;
       label: 'Increase Zoom',
       action: () => {
         
-        const newZoom = Math.min(currentZoom + 0.1, 2.0);`
-        document.documentElement.style.fontSize = `${newZoom * 16}px`;`
+        const newZoom = Math.min(currentZoom + 0.1, 2.0),`
+        document.documentElement.style.fontSize = `${newZoom * 16}px`,`
         announce(`Zoom increased to ${Math.round(newZoom * 100)}%`)},      active: false // Zoom actions are not toggleable, so they are not active
     },
     {
@@ -289,8 +289,8 @@ modals.forEach(modal:  > {;
       label: 'Decrease Zoom',
       action: () => {
         
-        const newZoom = Math.max(currentZoom - 0.1, 0.5);`
-        document.documentElement.style.fontSize = `${newZoom * 16}px`;`
+        const newZoom = Math.max(currentZoom - 0.1, 0.5),`
+        document.documentElement.style.fontSize = `${newZoom * 16}px`,`
         announce(`Zoom decreased to ${Math.round(newZoom * 100)}%`)},      active: false // Zoom actions are not toggleable, so they are not active
     },
     {
@@ -299,35 +299,35 @@ modals.forEach(modal:  > {;
       label: 'Reset Zoom',
       action: () => {
 
-        document.documentElement.style.fontSize = '16px';
+        document.documentElement.style.fontSize = '16px',
         announce('Zoom reset to 100%')},      active: false // Zoom actions are not toggleable, so they are not active
 
-  ];
+  ],
 
-  if(!enabled) return null;
+  if(!enabled) return null,
   // Screen reader announcements
   
-      announcement.setAttribute('aria-live',polite');
-      announcement.setAttribute('aria-atomic',true');
-      announcement.className="sr-only";
+      announcement.setAttribute('aria-live',polite'),
+      announcement.setAttribute('aria-atomic',true'),
+      announcement.className="sr-only",
 =======
 '
-      const announcement = document.createElement('div');'
-      announcement.setAttribute('aria-live', 'polite');'
-      announcement.setAttribute('aria-atomic', 'true');'      announcement.className="sr-only";
-      announcement.textContent = message;
-      document.body.appendChild(announcement) ;
+      const announcement = document.createElement('div'),'
+      announcement.setAttribute('aria-livepolite'),'
+      announcement.setAttribute('aria-atomictrue'),'      announcement.className="sr-only",
+      announcement.textContent = message,
+      document.body.appendChild(announcement) ,
 
       setTimeout(() => {
         document.body.removeChild(announcement) }, 1000) }
-  };
+  },
 
-    setSettings(prev => ({ ...prev, [key]: newValue }) ) ;
+    setSettings(prev => ({ ...prev, [key]: newValue }) ) ,
 
     // Announce changes to screen readers
     
     '`
-    announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`)};
+    announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`)},
   return ()
     <>
       {/* Accessibility Toggle Button */}
@@ -345,20 +345,20 @@ modals.forEach(modal:  > {;
         {isVisible && (
           <motion.div
                 >"
-                  <X className="w-6 h-6"  />;                </button>;
-              </div>;
-;
-              {/* Settings Grid */};"
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">;
-                {Object.entries(settings).map(([key, value]) => {;
+                  <X className="w-6 h-6"  />,                </button>,
+              </div>,
+,
+              {/* Settings Grid */},"
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mb-6">,
+                {Object.entries(settings).map(([key, value]) => {,
 
-                              key === 'largeText' ? Type : ;
-                              key === 'reducedMotion' ? Eye : ;
-                              key === 'screenReader' ? Volume2 : ;
-                              key === 'keyboardNavigation' ? Keyboard : ;
-                              key === 'focusIndicator' ? MousePointer : ;
-                              key === 'colorBlind' ? Eye : ;
-                              key === 'dyslexia' ? Type : Settings;
+                              key === 'largeText' ? Type : ,
+                              key === 'reducedMotion' ? Eye : ,
+                              key === 'screenReader' ? Volume2 : ,
+                              key === 'keyboardNavigation' ? Keyboard : ,
+                              key === 'focusIndicator' ? MousePointer : ,
+                              key === 'colorBlind' ? Eye : ,
+                              key === 'dyslexia' ? Type : Settings,
 
                   return ("
                     <div key = {key} className="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">"
@@ -370,26 +370,26 @@ modals.forEach(modal:  > {;
 
   () => {
                           
-  ;
-  ;
-  ;
-  ;
-  ;
-  [key]: !value };
-                          applySettings(newSettings);'`
+  ,
+  ,
+  ,
+  ,
+  ,
+  [key]: !value },
+                          applySettings(newSettings),'`
                           announce(`${label} ${newSettings[key as keyof AccessibilitySettings] ? 'enabled' : 'disabled'}`)}}`
-                        className = {`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50 ${value ? 'bg-cyan-600' : 'bg-slate-600';`
+                        className = {`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus: outline-none focus:ring-2 focus:ring-cyan-500/50 ${value ? 'bg-cyan-600' : 'bg-slate-600',`
                         }`}"                        role="switch"
                         aria-checked={value}`
                         aria-label={`Toggle ${label}`}
                       >
-                        <span;`
-className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
-                            value ? 'translate-x-6' : 'translate-x-1';`
-                          }`};
-                        />;
-                      </button>;
-                    </div>;) }) }
+                        <span,`
+className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${,
+                            value ? 'translate-x-6' : 'translate-x-1',`
+                          }`},
+                        />,
+                      </button>,
+                    </div>,) }) }
               </div>
 
               {/* Quick Tips */}"
@@ -542,45 +542,45 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
 
       {/* Screen reader only content */}"
       <div className="sr-only" aria-live="polite" aria-atomic="true">
-        {announcements.map((announcement, index) => (;
-          <div key={index}>{announcement}</div>;
-        ))};
-      </div>;
+        {announcements.map((announcement, index) => (,
+          <div key={index}>{announcement}</div>,
+        ))},
+      </div>,
     </>
-  )};
+  )},
         Accessibility settings panel opened
       </div>
-    </>) };
+    </>) },
 
 // CSS for accessibility features`
 const accessibilityStyles = `
   .sr-only {
 
-    position: absolute;    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0) ;
-    white - space: nowrap;
+    position: absolute,    width: 1px,
+    height: 1px,
+    padding: 0,
+    margin: -1px,
+    overflow: hidden,
+    clip: rect(0, 0, 0, 0) ,
+    white - space: nowrap,
     border: 0}
   .high-contrast {
 
-    --zion-cyan: #00ffff;
-    --zion-slate: #000000;
-    --zion-slate-dark: #000000;
-    --zion-purple: #ff00ff;
-    --zion-cyber: #00ff00;
+    --zion-cyan: #00ffff,
+    --zion-slate: #000000,
+    --zion-slate-dark: #000000,
+    --zion-purple: #ff00ff,
+    --zion-cyber: #00ff00,
     --zion-matrix: #00ff00}
 
   .high-contrast * {
 
-    border-color: #ffffff !important;
-    background-color: #000000 !important;
+    border-color: #ffffff !important,
+    background-color: #000000 !important,
     color: #ffffff !important}
 
-  .high-contrast button,;
-  .high-contrast input,;
+  .high-contrast button,
+  .high-contrast input,
   .high-contrast select {
 
     border: 2px solid #ffffff !important}
@@ -588,13 +588,13 @@ const accessibilityStyles = `
   [style*="--reduced-motion: reduce"] *,"
   [style*="--reduced-motion: reduce"] *::before,"  [style*="--reduced-motion: reduce"] *::after {
 
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    animation-duration: 0.01ms !important,
+    animation-iteration-count: 1 !important,
     transition-duration: 0.01ms !important}
 
   :focus-visible {
 
-    outline: var(--focus-visible, 2px solid #22ddd2) !important;
+    outline: var(--focus-visible, 2px solid #22ddd2) !important,
     outline-offset: 2px !important}
 "
   [style*="--color-blindness: protanopia"] {
@@ -607,13 +607,13 @@ const accessibilityStyles = `
 "
   [style*="--color-blindness: tritanopia"] {
 
-    filter: url('#tritanopia')}``;
+    filter: url('#tritanopia')}``,
 
 // Inject styles'
 if(typeof document !== 'undefined') {
 
-  style.textContent = accessibilityStyles;
+  style.textContent = accessibilityStyles,
   document.head.appendChild(style) }
-export default EnhancedAccessibility;
+export default EnhancedAccessibility,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

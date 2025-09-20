@@ -1,27 +1,27 @@
 export interface AdditionalService {
 
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price: number;
-  currency?: string;
-  pricingModel?: string;
-  features?: string[];
-  benefits?: string[];
-  useCases?: string[];
-  tags?: string[];
-  estimatedDelivery?: string;
-  supportLevel?: string;
-  marketPrice: string;
-  roi?: string;
-  innovationLevel?: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  price: number,
+  currency?: string,
+  pricingModel?: string,
+  features?: string[],
+  benefits?: string[],
+  useCases?: string[],
+  tags?: string[],
+  estimatedDelivery?: string,
+  supportLevel?: string,
+  marketPrice: string,
+  roi?: string,
+  innovationLevel?: string,
   contactInfo?: {
 
-    phone: string;
-    email: string;
-    website: string};
-;export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
+    phone: string,
+    email: string,
+    website: string},
+,export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [,
   {
 
     id: "ai-sales-outreach-accelerator","

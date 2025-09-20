@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useState } from 'react',
+import Link from 'next/link',
 
 export default function MultiverseAdmin() {
-  const [tenants, setTenants] = useState<any[]>([]);
-  const [error, setError] = useState<string | null>(null);
+  const [tenants, setTenants] = useState<any[]>([]),
+  const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
-    let mounted = true;
+    let mounted = true,
     fetch('/api/multiverse/tenants')
       .then((r) => r.json())
-      .then((d) => { if (mounted) setTenants(d?.tenants ?? []); })
-      .catch((e) => { if (mounted) setError(String(e)); });
-    return () => { mounted = false; };
-  }, []);
+      .then((d) => { if (mounted) setTenants(d?.tenants ?? []), })
+      .catch((e) => { if (mounted) setError(String(e)), }),
+    return () => { mounted = false, },
+  }, []),
 
   return (
     <div className="space-y-6">
@@ -40,5 +40,5 @@ export default function MultiverseAdmin() {
         ))}
       </div>
     </div>
-  );
+  ),
 }

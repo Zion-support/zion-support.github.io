@@ -1,35 +1,35 @@
-import React from 'react';
-import { Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useFavorites } from '@/hooks/useFavorites';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/hooks/use-toast';
+import React from 'react',
+import { Heart } from 'lucide-react',
+import { cn } from '@/lib/utils',
+import { useFavorites } from '@/hooks/useFavorites',
+import { useAuth } from '@/hooks/useAuth',
+import { useToast } from '@/hooks/use-toast',
 
 interface FavoriteButtonProps {
-  itemId: string;
-  itemType: string;
-  className?: string;
+  itemId: string,
+  itemType: string,
+  className?: string
 }
 
 export function FavoriteButton({ itemId, itemType, className }: FavoriteButtonProps) {
-  const { isFavorite, toggleFavorite } = useFavorites();
-  const { user } = useAuth();
-  const { toast } = useToast();
+  const { isFavorite, toggleFavorite } = useFavorites(),
+  const { user } = useAuth(),
+  const { toast } = useToast(),
 
   const handleClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation(),
     if (!user) {
       toast({
         title: 'Authentication required',
         description: 'Please log in to save items to your favorites',
         variant: 'destructive'
-      });
-      return;
+      }),
+      return,
     }
-    toggleFavorite(itemType, itemId);
-  };
+    toggleFavorite(itemType, itemId),
+  },
 
-  const active = isFavorite(itemType, itemId);
+  const active = isFavorite(itemType, itemId),
 
   return (
     <button
@@ -42,5 +42,5 @@ export function FavoriteButton({ itemId, itemType, className }: FavoriteButtonPr
     >
       <Heart className={cn('h-4 w-4', active ? 'fill-red-500 text-red-500' : 'text-zion-slate')} />
     </button>
-  );
+  ),
 }

@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
   MapPin, Briefcase, GraduationCap, Heart, Zap as ZapIcon
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function CareersPage() {
   const openPositions = [
@@ -132,7 +132,7 @@ export default function CareersPage() {
       ],
       skills: ["Cybersecurity", "Python", "Network Security", "Encryption", "Compliance", "Threat Detection"]
     }
-  ];
+  ],
 
   const companyValues = [
     {
@@ -155,7 +155,7 @@ export default function CareersPage() {
       title: "Excellence",
       description: "We strive for excellence in everything we do, from code quality to customer experience."
     }
-  ];
+  ],
 
   const benefits = [
     "Competitive salary with equity options",
@@ -168,7 +168,7 @@ export default function CareersPage() {
     "Regular team events and activities",
     "Mental health and wellness support",
     "Parental leave and family support"
-  ];
+  ],
 
 const careers: React.FC = () => {
   return (
@@ -176,7 +176,7 @@ const careers: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">careers</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default careers;
+export default careers,

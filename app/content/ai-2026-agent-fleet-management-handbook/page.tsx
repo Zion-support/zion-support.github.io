@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import React from 'react';
-import SEO from '../../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import SEO from '../../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Agent Fleet Management Handbook | Zion Tech Group';
+  title: 'AI 2026: Agent Fleet Management Handbook | Zion Tech Group',
   description:,
-    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.',
-};
+    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.'
+},
 export default function AgentFleetManagementHandbook2026() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -19,7 +19,7 @@ export default function AgentFleetManagementHandbook2026() {,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Agent Fleet Management Handbook</h1>,
           <p className="text-lg opacity-90">,
-            A practical guide to scale from dozens to thousands of agents with safety, cost;
+            A practical guide to scale from dozens to thousands of agents with safety, cost,
             and reliability guardrails.,
           </p>,
         </div>,
@@ -52,6 +52,5 @@ export default function AgentFleetManagementHandbook2026() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

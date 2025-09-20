@@ -1,12 +1,12 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon, DocumentTextIcon, ChartBarIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon, DocumentTextIcon, ChartBarIcon, CheckCircleIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Implementation Ultimate Framework: Complete Roadmap to 1,200% ROI';
-  description: 'Comprehensive framework providing a complete roadmap for implementing AI solutions that deliver 1,200% ROI within 18 months. Based on analysis of 500+ successful implementations.';
-  keywords: 'AI implementation, framework, roadmap, ROI, AI strategy, implementation guide, best practices, 2025',
-};
+  title: 'AI 2025 Implementation Ultimate Framework: Complete Roadmap to 1,200% ROI',
+  description: 'Comprehensive framework providing a complete roadmap for implementing AI solutions that deliver 1,200% ROI within 18 months. Based on analysis of 500+ successful implementations.',
+  keywords: 'AI implementation, framework, roadmap, ROI, AI strategy, implementation guide, best practices, 2025'
+},
 export default function AI2025ImplementationFrameworkPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -483,4 +483,4 @@ export default function AI2025ImplementationFrameworkPage() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

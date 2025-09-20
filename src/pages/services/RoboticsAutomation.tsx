@@ -1,8 +1,8 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Robot, 
+  Robot,
   Zap, 
   CheckCircle,
   Star,
@@ -295,136 +295,84 @@ import {
   FileZoomOut,
   FileMaximize,
   FileMinim
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function RoboticsAutomation() {
   const features = [
     {
-      icon: Robot,
-      title: 'Industrial Robotics',
-      description: 'Advanced robotic systems for manufacturing and production',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Robot,title: 'Industrial Robotics',description: 'Advanced robotic systems for manufacturing and production',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Cog,
-      title: 'Process Automation',
-      description: 'Intelligent automation of complex business processes',
-      color: 'from-purple-500 to-pink-500'
-    },
+      icon: Cog,title: 'Process Automation',description: 'Intelligent automation of complex business processes',color: 'from-purple-500 to-pink-500'
+    };
     {
-      icon: Wrench,
-      title: 'Predictive Maintenance',
-      description: 'AI-powered maintenance scheduling and optimization',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Wrench,title: 'Predictive Maintenance',description: 'AI-powered maintenance scheduling and optimization',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: Gauge,
-      title: 'Quality Control',
-      description: 'Automated inspection and quality assurance systems',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Gauge,title: 'Quality Control',description: 'Automated inspection and quality assurance systems',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Palette,
-      title: 'Custom Solutions',
-      description: 'Tailored robotics and automation for specific needs',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: Palette,title: 'Custom Solutions',description: 'Tailored robotics and automation for specific needs',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: Network,
-      title: 'IoT Integration',
-      description: 'Connected devices and smart factory solutions',
-      color: 'from-indigo-500 to-blue-500'
+      icon: Network,title: 'IoT Integration',description: 'Connected devices and smart factory solutions',color: 'from-indigo-500 to-blue-500'
     }
   ];
-
   const benefits = [
-    'Increase production efficiency by 60% with robotic automation',
-    'Reduce operational costs by 40% through process optimization',
-    'Improve product quality with 99.9% accuracy in inspections',
-    'Enable 24/7 operation without human fatigue or errors',
-    'Scale operations rapidly without proportional cost increases',
-    'Enhance workplace safety by handling dangerous tasks'
-  ];
+    'Increase production efficiency by 60% with robotic automationReduce operational costs by 40% through process optimization',
+    'Improve product quality with 99.9% accuracy in inspectionsEnable 24/7 operation without human fatigue or errors',
+    'Scale operations rapidly without proportional cost increasesEnhance workplace safety by handling dangerous tasks'
+  ],
 
   const useCases = [
     {
-      title: 'Manufacturing',
-      description: 'Assembly lines, welding, and material handling',
+      title: 'Manufacturing',description: 'Assembly lines, welding, and material handling',
       icon: Factory
-    },
+    };
     {
-      title: 'Logistics',
-      description: 'Warehouse automation and supply chain optimization',
-      icon: Truck
-    },
+      title: 'Logistics',description: 'Warehouse automation and supply chain optimization',icon: Truck
+    };
     {
-      title: 'Healthcare',
-      description: 'Surgical robots and medical device automation',
-      icon: Heart
-    },
+      title: 'Healthcare',description: 'Surgical robots and medical device automation',icon: Heart
+    };
     {
-      title: 'Agriculture',
-      description: 'Precision farming and crop management robots',
-      icon: Globe
+      title: 'Agriculture',description: 'Precision farming and crop management robots',icon: Globe
     }
   ];
-
   const automationCapabilities = [
     {
-      name: 'Industrial Robotics',
-      description: 'Advanced robotic systems for manufacturing and production',
-      examples: ['Assembly robots', 'Welding robots', 'Material handling', 'Packaging']
+      name: 'Industrial Robotics',description: 'Advanced robotic systems for manufacturing and production',examples: ['Assembly robotsWelding robots', 'Material handlingPackaging']
     },
     {
-      name: 'Process Automation',
-      description: 'Intelligent automation of complex business processes',
-      examples: ['Workflow automation', 'Data processing', 'Report generation', 'Quality control']
+      name: 'Process Automation',description: 'Intelligent automation of complex business processes',examples: ['Workflow automationData processing', 'Report generationQuality control']
     },
     {
-      name: 'Predictive Maintenance',
-      description: 'AI-powered maintenance scheduling and optimization',
-      examples: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'Performance optimization']
+      name: 'Predictive Maintenance',description: 'AI-powered maintenance scheduling and optimization',examples: ['Equipment monitoringFailure prediction', 'Maintenance schedulingPerformance optimization']
     },
     {
-      name: 'Quality Assurance',
-      description: 'Automated inspection and quality control systems',
-      examples: ['Visual inspection', 'Measurement systems', 'Defect detection', 'Compliance checking']
+      name: 'Quality Assurance',description: 'Automated inspection and quality control systems',examples: ['Visual inspectionMeasurement systems', 'Defect detectionCompliance checking']
     }
-  ];
+  ],
 
   const industries = [
     {
-      name: 'Manufacturing',
-      icon: Factory,
-      description: 'Assembly lines, welding, and material handling automation'
+      name: 'Manufacturing',icon: Factory,description: 'Assembly lines, welding, and material handling automation'
     },
     {
-      name: 'Logistics',
-      icon: Truck,
-      description: 'Warehouse automation and supply chain optimization'
-    },
+      name: 'Logistics',icon: Truck,description: 'Warehouse automation and supply chain optimization'
+    };
     {
-      name: 'Healthcare',
-      icon: Heart,
-      description: 'Surgical robots and medical device automation'
-    },
+      name: 'Healthcare',icon: Heart,description: 'Surgical robots and medical device automation'
+    };
     {
-      name: 'Agriculture',
-      icon: Globe,
-      description: 'Precision farming and crop management robots'
-    },
+      name: 'Agriculture',icon: Globe,description: 'Precision farming and crop management robots'
+    };
     {
-      name: 'Construction',
-      icon: Building,
-      description: 'Automated construction and building maintenance'
-    },
+      name: 'Construction',icon: Building,description: 'Automated construction and building maintenance'
+    };
     {
-      name: 'Energy',
-      icon: Zap,
-      description: 'Power plant automation and renewable energy systems'
+      name: 'Energy',icon: Zap,description: 'Power plant automation and renewable energy systems'
     }
   ];
-
   return (
     <>
       <SEO 
@@ -726,7 +674,7 @@ export default function RoboticsAutomation() {
                 Robotics & Automation Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our automation platform adapts to various business needs and industries, 
+                Our automation platform adapts to various business needs and industries;
                 providing tailored solutions for different requirements.
               </p>
             </motion.div>
@@ -791,7 +739,7 @@ export default function RoboticsAutomation() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -801,5 +749,5 @@ export default function RoboticsAutomation() {
         </section>
       </div>
     </>
-  );
+  )
 }

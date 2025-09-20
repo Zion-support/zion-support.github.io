@@ -1,23 +1,23 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
   Zap, DollarSign, Shield, Mail, MapPin, Brain,
   Sparkles, Users, Clock, Award, Eye, Heart,
   MessageCircle, BarChart3, Globe, Smartphone
-} from 'lucide-react';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+} from 'lucide-react',
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
+import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
   {
@@ -50,7 +50,7 @@ const features = [
     title: 'Real-time Alerts',
     description: 'Get instant notifications for negative emotions requiring immediate attention'
   }
-];
+],
 
 const useCases = [
   {
@@ -73,7 +73,7 @@ const useCases = [
     description: 'Monitor employee emotional states to support mental health and productivity',
     icon: Heart
   }
-];
+],
 
 const pricing = [
   {
@@ -82,10 +82,8 @@ const pricing = [
     period: '/month',
     description: 'Perfect for small teams getting started with emotion AI',
     features: [
-      'Up to 1,000 emotion analyses per month',
-      'Basic emotion detection (7 core emotions)',
-      'Email support',
-      'Standard API access',
+      'Up to 1,000 emotion analyses per monthBasic emotion detection (7 core emotions)',
+      'Email supportStandard API access',
       'Basic analytics dashboard'
     ],
     popular: false,
@@ -97,14 +95,10 @@ const pricing = [
     period: '/month',
     description: 'Advanced emotion intelligence for growing businesses',
     features: [
-      'Up to 10,000 emotion analyses per month',
-      'Full emotion detection (27 emotions)',
-      'Priority support',
-      'Advanced API access',
-      'Custom emotion training',
-      'Real-time alerts',
-      'Advanced analytics',
-      'Multi-language support'
+      'Up to 10,000 emotion analyses per monthFull emotion detection (27 emotions)',
+      'Priority supportAdvanced API access',
+      'Custom emotion trainingReal-time alerts',
+      'Advanced analyticsMulti-language support'
     ],
     popular: true,
     cta: 'Start Free Trial'
@@ -115,19 +109,15 @@ const pricing = [
     period: '',
     description: 'Custom solutions for large organizations',
     features: [
-      'Unlimited emotion analyses',
-      'Custom emotion models',
-      'Dedicated support team',
-      'White-label solutions',
-      'Advanced integrations',
-      'Custom reporting',
-      'SLA guarantees',
-      'On-premise deployment'
+      'Unlimited emotion analysesCustom emotion models',
+      'Dedicated support teamWhite-label solutions',
+      'Advanced integrationsCustom reporting',
+      'SLA guaranteesOn-premise deployment'
     ],
     popular: false,
     cta: 'Contact Sales'
   }
-];
+],
 
 export default function AIEmotionIntelligencePlatform() {
   return (
@@ -226,7 +216,7 @@ export default function AIEmotionIntelligencePlatform() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+              className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
             >
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>
@@ -237,7 +227,7 @@ export default function AIEmotionIntelligencePlatform() {
                 <div className="text-gray-400 text-sm">Accuracy Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">&lt;100ms</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">&lt,100ms</div>
                 <div className="text-gray-400 text-sm">Response Time</div>
               </div>
               <div className="text-center">
@@ -469,5 +459,5 @@ export default function AIEmotionIntelligencePlatform() {
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
-  );
+  ),
 }

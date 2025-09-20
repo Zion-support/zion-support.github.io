@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import {
   Rocket, Satellite, Globe, Zap, Shield, Database,
   ArrowRight, CheckCircle, Star, TrendingUp, Users
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function SpaceTechnologyPage() {
   const features = [
@@ -46,7 +46,7 @@ export default function SpaceTechnologyPage() {
       description: "Support for satellite launches, deployment strategies, and mission planning optimization.",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const benefits = [
     "Access to real-time global data and insights",
@@ -55,7 +55,7 @@ export default function SpaceTechnologyPage() {
     "Improved navigation and positioning accuracy",
     "Advanced space debris tracking and collision avoidance",
     "Enable new space-based business opportunities"
-  ];
+  ],
 
   const useCases = [
     {
@@ -78,7 +78,7 @@ export default function SpaceTechnologyPage() {
       description: "Satellite communications optimization and network planning",
       results: "50% improvement in network coverage, 25% reduction in latency"
     }
-  ];
+  ],
 
   const pricing = [
     {
@@ -130,7 +130,7 @@ export default function SpaceTechnologyPage() {
       ],
       popular: false
     }
-  ];
+  ],
 
   return (
     <>
@@ -441,7 +441,7 @@ export default function SpaceTechnologyPage() {
             <p className="text-xl text-blue-100 mb-8">
               Transform your business with space technology. Access global data and insights that were once impossible to obtain.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -461,5 +461,5 @@ export default function SpaceTechnologyPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

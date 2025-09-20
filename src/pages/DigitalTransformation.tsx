@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Rocket,
   Zap,
@@ -25,64 +25,41 @@ import {
   Lock,
   Eye,
   Heart
-} from 'lucide-react';
-
+} from "lucide-react";
 const DigitalTransformation = () => {
-  const [selectedPhase, setSelectedPhase] = useState(0);
+  const [selectedPhase, setSelectedPhase] = useState(0),
 
   const transformationServices = [
     {
-      title: "Strategy & Planning",
-      description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
-      icon: Rocket,
-      features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
+      title: "Strategy & Planning",description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",icon: Rocket,features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
       color: "from-purple-500 to-pink-500"
-    },
+    };
     {
-      title: "Process Automation",
-      description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
-      icon: Zap,
-      features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
+      title: "Process Automation",description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",icon: Zap,features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
       color: "from-blue-500 to-cyan-500"
-    },
+    };
     {
-      title: "Technology Modernization",
-      description: "Legacy system modernization and cloud-native architecture implementation.",
-      icon: Cpu,
-      features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
+      title: "Technology Modernization",description: "Legacy system modernization and cloud-native architecture implementation.",icon: Cpu,features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
       color: "from-green-500 to-emerald-500"
-    },
+    };
     {
-      title: "Data & Analytics",
-      description: "Data-driven insights and business intelligence solutions for informed decision-making.",
-      icon: Database,
-      features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
+      title: "Data & Analytics",description: "Data-driven insights and business intelligence solutions for informed decision-making.",icon: Database,features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
       color: "from-orange-500 to-red-500"
-    },
+    };
     {
-      title: "Customer Experience",
-      description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
-      icon: Users,
-      features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
+      title: "Customer Experience",description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",icon: Users,features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
       color: "from-indigo-500 to-purple-500"
-    },
+    };
     {
-      title: "Security & Compliance",
-      description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
-      icon: Shield,
-      features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
+      title: "Security & Compliance",description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",icon: Shield,features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
       color: "from-yellow-500 to-orange-500"
     }
   ];
-
   const transformationPhases = [
     {
-      phase: "01",
-      title: "Discovery & Assessment",
-      description: "Evaluate current state, identify opportunities, and assess digital maturity",
-      duration: "2-4 weeks",
-      activities: [
-        "Current state analysis",
+      phase: "01",title: "Discovery & Assessment",description: "Evaluate current state, identify opportunities, and assess digital maturity",
+      duration: "2-4 weeks",activities: [
+        "Current state analysis";
         "Digital maturity assessment",
         "Stakeholder interviews",
         "Technology audit",
@@ -90,12 +67,8 @@ const DigitalTransformation = () => {
       ]
     },
     {
-      phase: "02",
-      title: "Strategy Development",
-      description: "Create comprehensive digital transformation roadmap and business case",
-      duration: "4-6 weeks",
-      activities: [
-        "Digital strategy formulation",
+      phase: "02",title: "Strategy Development",description: "Create comprehensive digital transformation roadmap and business case",duration: "4-6 weeks",activities: [
+        "Digital strategy formulation";
         "Technology roadmap creation",
         "Change management planning",
         "ROI analysis and business case",
@@ -103,12 +76,8 @@ const DigitalTransformation = () => {
       ]
     },
     {
-      phase: "03",
-      title: "Pilot & Validation",
-      description: "Implement proof-of-concept and validate approach with stakeholders",
-      duration: "6-8 weeks",
-      activities: [
-        "Proof-of-concept development",
+      phase: "03",title: "Pilot & Validation",description: "Implement proof-of-concept and validate approach with stakeholders",duration: "6-8 weeks",activities: [
+        "Proof-of-concept development";
         "Pilot implementation",
         "Stakeholder validation",
         "Performance measurement",
@@ -116,48 +85,37 @@ const DigitalTransformation = () => {
       ]
     },
     {
-      phase: "04",
-      title: "Full Implementation",
-      description: "Execute transformation plan with phased rollout and continuous optimization",
-      duration: "6-18 months",
-      activities: [
-        "Phased rollout execution",
+      phase: "04",title: "Full Implementation",description: "Execute transformation plan with phased rollout and continuous optimization",duration: "6-18 months",activities: [
+        "Phased rollout execution";
         "Change management implementation",
         "Performance monitoring",
         "Continuous optimization",
         "Training and support"
       ]
     }
-  ];
+  ],
 
   const testimonials = [
     {
-      content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
-      name: "Carlos Rodriguez",
-      role: "CEO, InnovateCorp",
+      content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",name: "Carlos Rodriguez",role: "CEO, InnovateCorp",
       rating: 5
-    },
+    };
     {
-      content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
-      name: "Lisa Chang",
-      role: "COO, TechFlow Solutions",
+      content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",name: "Lisa Chang",role: "COO, TechFlow Solutions",
       rating: 5
-    },
+    };
     {
       content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
-      name: "Marcus Johnson",
-      role: "CTO, DigitalFirst Inc",
+      name: "Marcus Johnson",role: "CTO, DigitalFirst Inc",
       rating: 5
     }
   ];
-
   const stats = [
-    { number: "85%", label: "Average efficiency improvement" },
-    { number: "3.2x", label: "Faster time to market" },
-    { number: "40%", label: "Cost reduction achieved" },
+    { number: "85%", label: "Average efficiency improvement" };
+    { number: "3.2x", label: "Faster time to market" };
+    { number: "40%", label: "Cost reduction achieved" };
     { number: "92%", label: "Customer satisfaction increase" }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -224,7 +182,7 @@ const DigitalTransformation = () => {
               Our Digital Transformation Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive solutions designed to modernize your business operations,
+              Comprehensive solutions designed to modernize your business operations;
               enhance customer experiences, and drive sustainable growth.
             </p>
           </div>
@@ -368,15 +326,15 @@ const DigitalTransformation = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Let's discuss how digital transformation can revolutionize your operations,
+            Let's discuss how digital transformation can revolutionize your operations;
             enhance customer experiences, and drive sustainable growth.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Start Your Journey
             </button>
@@ -387,7 +345,6 @@ const DigitalTransformation = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default DigitalTransformation;

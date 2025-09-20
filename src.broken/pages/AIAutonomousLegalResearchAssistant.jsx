@@ -1,12 +1,12 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             name: "Firm",
             price: "$1,999",
             period: "/month",
             description: "Ideal for law firms and legal departments",
-            features[;
+            features[,
                 "Up to 500 research queries / month",
                 "Advanced AI analysis",
                 "Premium legal databases",
@@ -14,7 +14,7 @@ export default function Page() {
                 "Advanced analytics & reporting",
                 "Multi - user access",
                 "Custom integration support"
-            ],;
+            ],
             popular: true
         },
         {
@@ -22,7 +22,7 @@ export default function Page() {
             price: "$3,999",
             period: "/month",
             description: "For large law firms and corporations",
-            features[;
+            features[,
                 "Unlimited research queries",
                 "Custom AI model training",
                 "Enterprise security features",
@@ -33,7 +33,7 @@ export default function Page() {
                 "SLA guarantees"
             ]
 
-    ];
+    ],
     const useCases = [{
             title: "Case Preparation",
             description: "Comprehensive legal research for case strategy and argument development",
@@ -54,7 +54,7 @@ export default function Page() {
             description: "Generate well - researched legal opinions with AI assistance",
             icon: BarChart3
 
-    ];
+    ],
     const industries = ["Corporate Law",
         "Criminal Defense",
         "Family Law",
@@ -63,7 +63,7 @@ export default function Page() {
         "Tax Law",
         "Employment Law",
         "Environmental Law"
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - gray - 900 via - black to - gray - 900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -262,5 +262,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}}

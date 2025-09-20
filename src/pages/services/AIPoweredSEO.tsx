@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
 import { 
-  Search, 
+  Search,
   TrendingUp, 
   Target, 
   Zap, 
@@ -22,42 +22,28 @@ import {
   MousePointer,
   Smartphone,
   Monitor
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIPoweredSEO = () => {
   const features = [
     {
-      icon: Search,
-      title: "AI Keyword Research",
-      description: "Intelligent keyword discovery and analysis using machine learning algorithms."
-    },
+      icon: Search,title: "AI Keyword Research",description: "Intelligent keyword discovery and analysis using machine learning algorithms."
+    };
     {
-      icon: TrendingUp,
-      title: "Content Optimization",
-      description: "AI-powered content analysis and optimization for better search rankings."
-    },
+      icon: TrendingUp,title: "Content Optimization",description: "AI-powered content analysis and optimization for better search rankings."
+    };
     {
-      icon: Target,
-      title: "Competitive Analysis",
-      description: "Advanced competitor research and gap analysis with AI insights."
-    },
+      icon: Target,title: "Competitive Analysis",description: "Advanced competitor research and gap analysis with AI insights."
+    };
     {
-      icon: Zap,
-      title: "Technical SEO",
-      description: "Automated technical SEO audits and optimization recommendations."
-    },
+      icon: Zap,title: "Technical SEO",description: "Automated technical SEO audits and optimization recommendations."
+    };
     {
-      icon: BarChart3,
-      title: "Performance Tracking",
-      description: "Real-time SEO performance monitoring and analytics dashboard."
-    },
+      icon: BarChart3,title: "Performance Tracking",description: "Real-time SEO performance monitoring and analytics dashboard."
+    };
     {
-      icon: Globe,
-      title: "Local SEO",
-      description: "AI-driven local search optimization and Google My Business management."
+      icon: Globe,title: "Local SEO",description: "AI-driven local search optimization and Google My Business management."
     }
   ];
-
   const benefits = [
     "Increase organic traffic by 40-80% with AI-optimized strategies",
     "Improve search rankings by 3-5 positions on average",
@@ -65,63 +51,47 @@ const AIPoweredSEO = () => {
     "Boost conversion rates by 25-45% through better targeting",
     "Enhance user experience and engagement metrics",
     "Achieve sustainable long-term SEO results"
-  ];
+  ],
 
   const seoProcess = [
     {
-      stage: "Research & Analysis",
-      description: "AI-powered keyword research, competitor analysis, and technical audits",
+      stage: "Research & Analysis",description: "AI-powered keyword research, competitor analysis, and technical audits",
       icon: Search
-    },
+    };
     {
-      stage: "Strategy Development",
-      description: "Data-driven SEO strategy and content planning",
-      icon: Target
-    },
+      stage: "Strategy Development",description: "Data-driven SEO strategy and content planning",icon: Target
+    };
     {
-      stage: "Implementation",
-      description: "Technical optimization, content creation, and on-page improvements",
+      stage: "Implementation",description: "Technical optimization, content creation, and on-page improvements",
       icon: Zap
-    },
+    };
     {
-      stage: "Monitoring",
-      description: "Real-time performance tracking and analytics",
-      icon: BarChart3
-    },
+      stage: "Monitoring",description: "Real-time performance tracking and analytics",icon: BarChart3
+    };
     {
-      stage: "Optimization",
-      description: "Continuous improvement based on AI insights and data",
-      icon: TrendingUp
-    },
+      stage: "Optimization",description: "Continuous improvement based on AI insights and data",icon: TrendingUp
+    };
     {
-      stage: "Reporting",
-      description: "Comprehensive reporting and ROI measurement",
-      icon: Eye
+      stage: "Reporting",description: "Comprehensive reporting and ROI measurement",icon: Eye
     }
   ];
-
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Product page optimization, category targeting, and local SEO for online stores"
+      industry: "E-commerce",description: "Product page optimization, category targeting, and local SEO for online stores"
     },
     {
-      industry: "B2B Services",
-      description: "Service page optimization, industry keyword targeting, and lead generation"
+      industry: "B2B Services",description: "Service page optimization, industry keyword targeting, and lead generation"
     },
     {
-      industry: "Healthcare",
-      description: "Medical service optimization, local search, and patient acquisition"
+      industry: "Healthcare",description: "Medical service optimization, local search, and patient acquisition"
     },
     {
-      industry: "Real Estate",
-      description: "Property listing optimization, local SEO, and agent visibility"
+      industry: "Real Estate",description: "Property listing optimization, local SEO, and agent visibility"
     },
     {
-      industry: "Technology",
-      description: "SaaS SEO, technical content optimization, and developer targeting"
+      industry: "Technology",description: "SaaS SEO, technical content optimization, and developer targeting"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -294,7 +264,7 @@ const AIPoweredSEO = () => {
               Comprehensive SEO Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO methodology covers every aspect of search engine optimization, 
+              Our AI-powered SEO methodology covers every aspect of search engine optimization;
               from initial research to ongoing optimization and reporting.
             </p>
           </motion.div>
@@ -388,7 +358,7 @@ const AIPoweredSEO = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
+                className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover: bg-purple-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -397,7 +367,6 @@ const AIPoweredSEO = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIPoweredSEO;

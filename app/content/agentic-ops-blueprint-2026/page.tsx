@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-	title: 'Agentic Ops Blueprint 2026';
+	title: 'Agentic Ops Blueprint 2026',
 	description:,
-		'A pragmatic blueprint to operationalize agentic workflows across the enterprise with safety, observability, and ROI.',
-};
+		'A pragmatic blueprint to operationalize agentic workflows across the enterprise with safety, observability, and ROI.'
+},
 export default function AgenticOpsBlueprint2026() {,
 	return (,
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -28,7 +28,6 @@ export default function AgenticOpsBlueprint2026() {,
 					observability and governance are in place.,
 				</p>,
 			</section>,
-		</main>,
-	);
+		</main>),
 }
 ,

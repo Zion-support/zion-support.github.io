@@ -1,12 +1,12 @@
 
-import { useState } from "react";
-import CreatePostButton from "@/components/community/CreatePostButton";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import ForumCategories from "@/components/community/ForumCategories";
-import PostCard from "@/components/community/PostCard";
-import { useAuth } from "@/hooks/useAuth";
-import { ForumPost } from "@/types/community";
+import { useState } from "react",
+import CreatePostButton from "@/components/community/CreatePostButton",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import ForumCategories from "@/components/community/ForumCategories",
+import PostCard from "@/components/community/PostCard",
+import { useAuth } from "@/hooks/useAuth",
+import { ForumPost } from "@/types/community",
 
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
@@ -45,7 +45,7 @@ const featuredPosts: ForumPost[] = [
     isPinned: true,
     isFeatured: true
   }
-];
+],
 
 // Mock data for recent posts
 const recentPosts: ForumPost[] = [
@@ -92,11 +92,11 @@ const recentPosts: ForumPost[] = [
     replyCount: 7,
     isAnswered: true
   }
-];
+],
 
 export default function CommunityPage() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("categories");
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("categories"),
   
   return (
     <>
@@ -148,5 +148,5 @@ export default function CommunityPage() {
         </Tabs>
       </div>
     </>
-  );
+  ),
 }

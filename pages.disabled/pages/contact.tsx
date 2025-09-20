@@ -10,6 +10,5 @@
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  );
-};
+    </div>),
+},

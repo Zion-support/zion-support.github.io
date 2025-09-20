@@ -1,1 +1,1 @@
-export { default } from '../src/pages/RequestQuote';
+export { default } from '../src/pages/RequestQuote',

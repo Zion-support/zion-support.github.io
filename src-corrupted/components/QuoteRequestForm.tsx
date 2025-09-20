@@ -18,9 +18,9 @@ import {z} from "zod",
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
 const serviceStepSchema = z.object({,
   serviceType: z.string().min(1),
-  specificItem: z.object({ id: z.string() ,})}),
-  serviceType: z.string().min(1);
-  specificItem: z.object({ id: z.string() ,})});
+  specificItem: z.object({ id: z.string() })}),
+  serviceType: z.string().min(1),
+  specificItem: z.object({ id: z.string() })}),
 export function QuoteRequestForm() {,
   const router = useRouter(),
   const { toast } = useToast(),
@@ -28,15 +28,15 @@ export function QuoteRequestForm() {,
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [autoFillLoading, setAutoFillLoading] = useState(false),
   const [autoFillOpen, setAutoFillOpen] = useState(false),
-  serviceType: z.string().min(1);
-  specificItem: z.object({ id: z.string() ,})});
+  serviceType: z.string().min(1),
+  specificItem: z.object({ id: z.string() })}),
 export function QuoteRequestForm() {,
-  const router = useRouter();
-  const { toast } = useToast();
-  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [autoFillLoading, setAutoFillLoading] = useState(false);
-  const [autoFillOpen, setAutoFillOpen] = useState(false);
+  const router = useRouter(),
+  const { toast } = useToast(),
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [autoFillLoading, setAutoFillLoading] = useState(false),
+  const [autoFillOpen, setAutoFillOpen] = useState(false),
   const [formData, setFormData] = useState<QuoteFormData>({,
     serviceType: "",
     serviceCategory: "",
@@ -48,19 +48,19 @@ export function QuoteRequestForm() {,
     timeline: "flexible",
     budget: {,
       amount: 0,
-      type: "fixed",}
-    };
+      type: "fixed"}
+    },
     contactInfo: {,
       name: "",
       email: "",
       phone: "",
-      company: "",}
+      company: ""}
   }),
   const updateFormData = (data: Partial<QuoteFormData>) => {,
     setFormData(prev => ({,
-      ...prev;
-};
-  );
-};
+      ...prev,
+},
+  ),
+},
 }
 ,

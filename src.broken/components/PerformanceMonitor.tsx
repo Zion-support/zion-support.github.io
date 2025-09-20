@@ -1,43 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 
 interface PerformanceMonitorProps {
-  show?: boolean;
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  show?: boolean,
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right',
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
   show = false, 
   position = 'bottom-right' 
 }) => {
-  const [isVisible, setIsVisible] = useState(show);
+  const [isVisible, setIsVisible] = useState(show),
   const [metrics, setMetrics] = useState({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0
-  });
+  }),
 
   const positionClasses = {
-    'top-left': 'top-4 left-4',
-    'top-right': 'top-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'bottom-right': 'bottom-4 right-4'
-  };
+    'top-left': 'top-4 left-4top-right': 'top-4 right-4bottom-left': 'bottom-4 left-4bottom-right': 'bottom-4 right-4'
+  },
 
   useEffect(() => {
     // Show performance monitor in development
     if (process.env.NODE_ENV === 'development') {
-      setIsVisible(true);
+      setIsVisible(true),
     }
 
     // Simple performance metrics
-    const startTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime: startTime }));
+    const startTime = performance.now(),
+    setMetrics(prev => ({ ...prev, loadTime: startTime })),
     
-    const endTime = performance.now();
-    setMetrics(prev => ({ ...prev, renderTime: endTime - startTime }));
-  }, []);
+    const endTime = performance.now(),
+    setMetrics(prev => ({ ...prev, renderTime: endTime - startTime })),
+  }, []),
 
-  if (!isVisible) return null;
+  if (!isVisible) return null,
 
   return (
     <div className={`fixed ${positionClasses[position]} z-50`}>
@@ -56,10 +53,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           {metrics.memoryUsage && (
             <div>Memory: {metrics.memoryUsage.toFixed(2)}MB
           )}
-  );
-};
+  ),
+},
 
-export default PerformanceMonitor;
+export default PerformanceMonitor,
   </div>
   </div>
   </div>

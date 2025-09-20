@@ -1,11 +1,11 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2025 Advanced Automation - Revolutionary Business Transformation';
-  description: 'Discover the future of AI automation in 2025. Advanced neural networks, autonomous systems, and intelligent business processes that deliver 1000% ROI.';
-  keywords: ['AI automation 2025advanced neural networks', 'autonomous business systemsAI transformation', 'intelligent automation'],
-};
+  title: 'AI 2025 Advanced Automation - Revolutionary Business Transformation',
+  description: 'Discover the future of AI automation in 2025. Advanced neural networks, autonomous systems, and intelligent business processes that deliver 1000% ROI.',
+  keywords: ['AI automation 2025advanced neural networksautonomous business systemsAI transformation', 'intelligent automation']
+},
 export default function AI2025AdvancedAutomationPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">,
@@ -44,7 +44,7 @@ export default function AI2025AdvancedAutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Features */,}
+      {/* Key Features */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -55,7 +55,7 @@ export default function AI2025AdvancedAutomationPage() {,
               <div className="text-4xl mb-4">🧠</div>,
               <h3 className="text-2xl font-bold text-white mb-4">Advanced Neural Networks</h3>,
               <p className="text-gray-300">,
-                Next-generation neural architectures that learn and adapt in real-time;
+                Next-generation neural architectures that learn and adapt in real-time,
                 delivering unprecedented automation capabilities.,
               </p>,
             </div>,
@@ -63,7 +63,7 @@ export default function AI2025AdvancedAutomationPage() {,
               <div className="text-4xl mb-4">🤖</div>,
               <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>,
               <p className="text-gray-300">,
-                Self-managing AI systems that operate independently;
+                Self-managing AI systems that operate independently,
                 making intelligent decisions without human intervention.,
               </p>,
             </div>,
@@ -104,7 +104,7 @@ export default function AI2025AdvancedAutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Process */,}
+      {/* Implementation Process */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -134,7 +134,7 @@ export default function AI2025AdvancedAutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 px-4">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold text-white mb-6">,
@@ -152,5 +152,4 @@ export default function AI2025AdvancedAutomationPage() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 ArrowRightZapBrainTrendingUpUsersAwardClock,
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const AI2025UltimateInnovationPromotionBanner: React.FC = () => {,
@@ -8,11 +8,11 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {,
     <div,
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12",
     >,
-      {/* Animated Background */,}
+      {/* Animated Background */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>,
       <div className="container mx-auto px-4 relative z-10">,
         <div className="flex flex-col lg: flex-row items-center justify-between gap-8">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="flex-1 text-center lg: text-left">,
             <div,
               className="mb-4",
@@ -29,7 +29,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {,
                 Experience the future of artificial intelligence today.,
               </p>,
             </div>,
-            {/* Features List */,}
+            {/* Features List */}
             <div,
               className="grid grid-cols-2 gap-2 mb-6",
             >,
@@ -37,8 +37,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {,
                 <div key={index} className="flex items-center gap-2 text-gray-300">,
                   <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>,
                   <span className="text-sm">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* CTA Buttons */}
             <div,
@@ -59,7 +58,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {,
               </a>,
             </div>,
           </div>,
-          {/* Right Stats */,}
+          {/* Right Stats */}
           <div,
             className="flex-shrink-0",
           >,
@@ -103,6 +102,6 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default AI2025UltimateInnovationPromotionBanner;
+  ),
+},
+export default AI2025UltimateInnovationPromotionBanner,

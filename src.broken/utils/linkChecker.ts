@@ -1,24 +1,24 @@
 <<<<<<< HEAD
 
-          link.status = 'missing';
+          link.status = 'missing',
           this.missingPages.push(link.url)}
 =======
 export interface LinkInfo {
-  url: string;
-  status: 'working' | 'broken' | 'missing' | 'external';
-  page: string;
-  anchor?: string;
+  url: string,
+  status: 'working' | 'broken' | 'missing' | 'external',
+  page: string,
+  anchor?: string,
   error?: string}
 export interface PageInfo {
-  path: string;
-  title: string;
-  links: LinkInfo[];
+  path: string,
+  title: string,
+  links: LinkInfo[],
   exists: boolean}
 export class LinkChecker {
-  private baseUrl: string;
-  private visitedUrls: Set<string> = new Set();
-  private brokenLinks: LinkInfo[] = [];
-  private missingPages: string[] = [];
+  private baseUrl: string,
+  private visitedUrls: Set<string> = new Set(),
+  private brokenLinks: LinkInfo[] = [],
+  private missingPages: string[] = [],
 
   constructor(baseUrl: string = 'https://ziontechgroup.com') {
 
@@ -53,10 +53,10 @@ export class LinkChecker {
   // Extract all links from a page
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
 
-    const links: LinkInfo[] = [];
+    const links: LinkInfo[] = [],
 
     // Extract href attributes from anchor tags'
-    const hrefRegex = /href=["']([^"']+)["']/g;    let match;
+    const hrefRegex = /href=["']([^"']+)["']/g,    let match,
 
     while((match = hrefRegex.exec(pageContent)) !== null) {
 
@@ -67,7 +67,7 @@ export class LinkChecker {
         !url.startsWith('tel:')
       ) {
 
-        const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
+        const normalizedUrl = this.normalizeUrl(url, pagePath),        links.push({
 
           url: normalizedUrl,
           status: 'working',
@@ -81,7 +81,7 @@ export class LinkChecker {
 
       if(url && !url.startsWith('data:') && !url.startsWith('blob:')) {
 
-        const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
+        const normalizedUrl = this.normalizeUrl(url, pagePath),        links.push({
 
           url: normalizedUrl,
           status: 'working',
@@ -102,21 +102,21 @@ export class LinkChecker {
   // Check all links on a page
   async checkPageLinks(pagePath: string, pageContent: string: any): Promise<any> {
 
-    const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInfo[] = [];
+    const links = this.extractLinks(pageContent, pagePath),    const checkedLinks: LinkInfo[] = [],
 
     for(const link of links) {
 
       if(this.visitedUrls.has(link.url)) {
 
         continue}
-      this.visitedUrls.add(link.url);
+      this.visitedUrls.add(link.url),
 
       if(this.isInternalLink(link.url)) {
 
         if(exists) {
 
           link.status = 'working'} else {
-'          link.status = 'missing';
+'          link.status = 'missing',
           this.missingPages.push(link.url)}
       } else {
 
@@ -155,6 +155,6 @@ export class LinkChecker {
 
     return this.missingPages}}
 
-export default LinkChecker;
+export default LinkChecker,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

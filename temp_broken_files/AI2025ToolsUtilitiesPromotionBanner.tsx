@@ -1,59 +1,59 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Wrench,
   Zap,
-  Star;
-  ArrowRight;
-  Play;
-  Download;
-  ExternalLink;
-  CheckCircle;
-  Cpu;
-  Shield;
-  Globe;
-  Target,
-} from 'lucide-react';
+  Star,
+  ArrowRight,
+  Play,
+  Download,
+  ExternalLink,
+  CheckCircle,
+  Cpu,
+  Shield,
+  Globe,
+  Target
+} from 'lucide-react',
 const AI2025ToolsUtilitiesPromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentToolsetCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [currentToolsetCurrentTool] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentTool((prev) => (prev + 1) % featuredTools.length);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentTool((prev) => (prev + 1) % featuredTools.length),
+    }2500),
+    return () => clearInterval(interval),
+  }[]),
   const featuredTools = [,
     {,
-      name: "AI Code Assistant";
-      description: "Intelligent code completion and debugging";
-      rating: 4.9;
-      users: "50K+";
-      icon: Cpu;
-      color: "from-blue-500 to-cyan-500",};
+      name: "AI Code Assistant",
+      description: "Intelligent code completion and debugging",
+      rating: 4.9,
+      users: "50K+",
+      icon: Cpu,
+      color: "from-blue-500 to-cyan-500"},
     {,
-      name: "Smart Analytics Dashboard";
-      description: "Real-time data visualization and insights";
-      rating: 4.8;
-      users: "25K+";
-      icon: Target;
-      color: "from-green-500 to-emerald-500",};
+      name: "Smart Analytics Dashboard",
+      description: "Real-time data visualization and insights",
+      rating: 4.8,
+      users: "25K+",
+      icon: Target,
+      color: "from-green-500 to-emerald-500"},
     {,
-      name: "AI Security Scanner";
-      description: "Automated vulnerability detection";
-      rating: 4.9;
-      users: "15K+";
-      icon: Shield;
-      color: "from-red-500 to-pink-500",}
-  ];
+      name: "AI Security Scanner",
+      description: "Automated vulnerability detection",
+      rating: 4.9,
+      users: "15K+",
+      icon: Shield,
+      color: "from-red-500 to-pink-500"}
+  ],
   const stats = [,
-    { icon: Zapvalue: "100+"label: "AI Tools Available" ,};
-    { icon: Starvalue: "4.8"label: "Average Rating" ,};
-    { icon: Globevalue: "200K+"label: "Active Users" ,};
-    { icon: CheckCirclevalue: "99.9%"label: "Uptime" ,}
-  ];
+    { icon: Zapvalue: "100+"label: "AI Tools Available" },
+    { icon: Starvalue: "4.8"label: "Average Rating" },
+    { icon: Globevalue: "200K+"label: "Active Users" },
+    { icon: CheckCirclevalue: "99.9%"label: "Uptime" }
+  ],
   return (,
     <section className="py-16 bg-gradient-to-r from-slate-900 via-indigo-900 to-blue-900 relative overflow-hidden">,
       {/* Animated Background */}
@@ -64,7 +64,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {,
       </div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
             className="space-y-8",
           >,
@@ -84,7 +84,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {,
                 boost productivityand drive innovation across all aspects of your business.,
               </p>,
             </div>,
-            {/* Key Benefits */,}
+            {/* Key Benefits */}
             <div className="space-y-4">,
               <div className="flex items-center space-x-3">,
                 <CheckCircle className="w-6 h-6 text-green-400" />,
@@ -119,7 +119,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Featured Tools */,}
+          {/* Right Content - Featured Tools */}
           <div,
             className="space-y-6",
           >,
@@ -157,16 +157,15 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {,
                   </button>,
                 </div>,
               </div>,
-              {/* Tool Indicators */,}
+              {/* Tool Indicators */}
               <div className="flex justify-center space-x-2 mt-6">,
                 {featuredTools.map((_index) => (,
                   <div,
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${,
-                      index === currentTool ? 'bg-indigo-400 w-8' : 'bg-white/30',
+                      index === currentTool ? 'bg-indigo-400 w-8' : 'bg-white/30'
                     }`}
-                  />,
-                ))}
+                  />))}
               </div>,
             </div>,
             {/* Stats Grid */}
@@ -181,8 +180,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {,
                   </div>,
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-sm text-gray-300">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -204,7 +202,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {,
         </div>,
       </div>,
     </section>,
-  );
-};
-export default AI2025ToolsUtilitiesPromotionBanner;
+  ),
+},
+export default AI2025ToolsUtilitiesPromotionBanner,
 </div></div></div>,

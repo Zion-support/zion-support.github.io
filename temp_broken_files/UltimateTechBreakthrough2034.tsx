@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const UltimateTechBreakthrough2034: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>,
         <div className="relative z-10 container mx-auto px-4 py-20">,
@@ -75,7 +75,7 @@ const UltimateTechBreakthrough2034: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Technology Showcase */,}
+          {/* Technology Showcase */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16">,
             <h2 className="text-5xl font-bold text-center mb-12">🌟 Revolutionary Technology Showcase</h2>,
             <div className="grid md: grid-cols-2 gap-12">,
@@ -123,7 +123,7 @@ const UltimateTechBreakthrough2034: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <div className="text-center">,
             <h2 className="text-4xl font-bold mb-8">Ready to Experience the Future?</h2>,
             <p className="text-xl mb-12 opacity-90 max-w-4xl mx-auto">,
@@ -140,6 +140,5 @@ const UltimateTechBreakthrough2034: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default UltimateTechBreakthrough2034;
+    </div>)},
+export default UltimateTechBreakthrough2034,

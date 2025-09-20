@@ -31,7 +31,7 @@ export const AccessibilityProvider = (props: any) => {}"}),"}),
             setHighContrast(settings.highContrast || false),"}),"}),
             setReducedMotion(settings.reducedMotion || false)',"}),"}),
             setFontSize(settings.fontSize || 'medium')',"}),"}),
-            setColorBlindMode(settings.colorBlindMode || 'none')}"}),"}),
+            setColorBlindMode(settings.colorBlindMode || 'none')}"}),"})
     }, []),"}),"}),
     // Save settings to localStorage,"}),"}),
     useEffect(() => {}"}),"}),

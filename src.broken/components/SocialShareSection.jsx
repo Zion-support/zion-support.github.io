@@ -10,8 +10,8 @@ export function SocialShareSection() {
 
       name: 'Instagram',
       icon: '📷',
-      url: 'https://instagram.com/ziontechgroup'},
-  ];
+      url: 'https://instagram.com/ziontechgroup'}
+  ],
   return ()
     <section className="py-16 bg-white/5">"
       <div className="container mx-auto px-4 text-center">"
@@ -35,6 +35,6 @@ export function SocialShareSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"

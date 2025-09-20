@@ -1,67 +1,54 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Database, Cloud, Lock, Target, BarChart3, Code, Palette, Truck, Car, Plane, Dna, Atom, Link, Box } from 'lucide-react';
-import SEO from '@/components/SEO';
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from '../../data/revolutionary-2029-cutting-edge-services';
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolutionary-2029-emerging-tech-services';
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Search, Filter, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Database, Cloud, Lock, Target, BarChart3, Code, Palette, Truck, Car, Plane, Dna, Atom, Link, Box } from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from "../../data/revolutionary-2029-cutting-edge-services";
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from "../../data/revolutionary-2029-emerging-tech-services";
 export default function RevolutionaryServicesShowcase2029() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('popularity'),
 
-  const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES];
+  const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES],
 
   const categories = [
-    'all',
-    'AI & Analytics',
-    'AI & Automation',
-    'AI & Cybersecurity',
-    'AI & Marketing',
-    'AI & Healthcare',
-    'AI & Development',
-    'AI & Supply Chain',
-    'AI & FinTech',
-    'AI & Legal Tech',
-    'AI & Customer Success',
-    'Space Technology & AI',
-    'Quantum Technology & Security',
-    'Neurotechnology & AI',
-    'AI & Autonomous Systems',
-    'AI & Biotechnology',
-    'Quantum Computing & AI',
-    'AI & Autonomous Vehicles',
-    'AI & Digital Twins',
-    'AI & Blockchain',
+    'allAI & Analytics',
+    'AI & AutomationAI & Cybersecurity',
+    'AI & MarketingAI & Healthcare',
+    'AI & DevelopmentAI & Supply Chain',
+    'AI & FinTechAI & Legal Tech',
+    'AI & Customer SuccessSpace Technology & AI',
+    'Quantum Technology & SecurityNeurotechnology & AI',
+    'AI & Autonomous SystemsAI & Biotechnology',
+    'Quantum Computing & AIAI & Autonomous Vehicles',
+    'AI & Digital TwinsAI & Blockchain',
     'AI & Metaverse'
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'price-high':
-        return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', ''));
+        return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''));
       case 'rating':
         return b.rating - a.rating;
       case 'customers':
         return b.customers - a.customers;
-      default:
-        return b.popular ? 1 : -1;
+      default: return b.popular ? 1 : -1
     }
   });
-
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-      'AI & Analytics': <BarChart3 className="w-5 h-5" />,
+      'AI & Analytics': <BarChart3 className="w-5 h-5" />;
       'AI & Automation': <Zap className="w-5 h-5" />,
       'AI & Cybersecurity': <Shield className="w-5 h-5" />,
       'AI & Marketing': <Target className="w-5 h-5" />,
@@ -81,10 +68,9 @@ export default function RevolutionaryServicesShowcase2029() {
       'AI & Digital Twins': <Box className="w-5 h-5" />,
       'AI & Blockchain': <Link className="w-5 h-5" />,
       'AI & Metaverse': <Globe className="w-5 h-5" />
-    };
-    return iconMap[category] || <Cpu className="w-5 h-5" />;
+    },
+    return iconMap[category] || <Cpu className="w-5 h-5" />,
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -363,7 +349,7 @@ export default function RevolutionaryServicesShowcase2029() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-300"
             >
               Contact Sales Team
             </motion.button>
@@ -375,5 +361,5 @@ export default function RevolutionaryServicesShowcase2029() {
         </div>
       </div>
     </div>
-  );
+  )
 }

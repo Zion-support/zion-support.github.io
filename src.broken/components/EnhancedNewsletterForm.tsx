@@ -1,33 +1,33 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState, useRef } from "react";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { useState, useRef } from "react",
 import { Mail } from 'lucide-react'
-import { useToast } from "@/hooks/use-toast";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useToast } from "@/hooks/use-toast",
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorMsg, setErrorMsg] = useState("");
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [errorMsg, setErrorMsg] = useState(""),
 
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setErrorMsg("Please enter a valid email address.");
+      setErrorMsg("Please enter a valid email address."),
       return}
 
-    setErrorMsg("");
-    setIsSubmitting(true);
+    setErrorMsg(""),
+    setIsSubmitting(true),
 
     try {
       
       if(res.ok) {
-        toast.success("Thanks for subscribing!");
+        toast.success("Thanks for subscribing!"),
         setEmail("")} else {
         
         toast.error(data.error || "Subscription failed")}
     } catch(err: any) {
       toast.error(err.message || "Subscription failed")} finally {
       setIsSubmitting(false)}
-  };
+  },
 
   return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">

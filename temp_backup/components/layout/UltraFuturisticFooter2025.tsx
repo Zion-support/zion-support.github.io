@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Zap, Globe, Lock, Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
   Brain, Atom, Rocket, Shield, Cpu, Database, Cloud, Palette, Heart, Target,
   Sparkles, Eye, TrendingUp, Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltraFuturisticFooter2025: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const UltraFuturisticFooter2025: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2025;
+export default UltraFuturisticFooter2025,

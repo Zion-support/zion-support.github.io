@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react',
 const UltimateAI2025ContentShowcase: React.FC = () => {,
   return (,
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
       <h3 className="text-xl font-bold mb-4">UltimateAI2025ContentShowcase</h3>,
       <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
-export default UltimateAI2025ContentShowcase;
+    </div>)},
+export default UltimateAI2025ContentShowcase,

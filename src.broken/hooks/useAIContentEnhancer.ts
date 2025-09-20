@@ -1,5 +1,5 @@
-// Hook for useAIContentEnhancer;
+// Hook for useAIContentEnhancer,
 export const useUseAIContentEnhancer: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

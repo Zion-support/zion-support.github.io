@@ -1,4 +1,4 @@
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building  } from 'lucide-react';
+import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building  } from 'lucide-react',
 
 export default function Page() {
       <div className="bg-gradient - to - br from - zion - blue to - zion - blue - dark py-20 px-4">

@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Star,
@@ -8,54 +8,54 @@ import {,
   TrendingUp,
   ArrowRight,
   Play,
-  CheckCircle;
-  Sparkles;
-  Rocket;
-  Brain;
-  Cpu;
-  Globe;
-  Shield,
-} from 'lucide-react';
+  CheckCircle,
+  Sparkles,
+  Rocket,
+  Brain,
+  Cpu,
+  Globe,
+  Shield
+} from 'lucide-react',
 const UltimateContentPromotionBanner2025_2026 = () => {,
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentSlide((prev) => (prev + 1) % slides.length),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
   const slides = [,
     {,
-      id: 'ai-2025-breakthrough';
-      title: 'AI 2025 Revolutionary Breakthroughs';
-      subtitle: 'Experience the Future of Artificial Intelligence';
-      description: 'Discover cutting-edge AI solutions that will transform your business operations and unlock unprecedented growth opportunities.';
-      features: ['Neural Consciousness 'AIQuantum-Neural 'Fusion', 'Autonomous Data Intelligence'];
-      cta: 'Explore AI 2025';
-      gradient: 'from-blue-600 via-purple-600 to-pink-600';
-      icon: Brain,};
+      id: 'ai-2025-breakthrough',
+      title: 'AI 2025 Revolutionary Breakthroughs',
+      subtitle: 'Experience the Future of Artificial Intelligence',
+      description: 'Discover cutting-edge AI solutions that will transform your business operations and unlock unprecedented growth opportunities.',
+      features: ['Neural Consciousness 'AIQuantum-Neural 'FusionAutonomous Data Intelligence'],
+      cta: 'Explore AI 2025',
+      gradient: 'from-blue-600 via-purple-600 to-pink-600',
+      icon: Brain},
     {,
-      id: 'ai-2026-vision';
-      title: 'AI 2026 Future Vision';
-      subtitle: 'Prepare for the Next Decade of Innovation';
-      description: 'Get ahead of the curve with our advanced AI technologies designed for the future of business and technology.';
-      features: ['Global AI 'EcosystemSpace-Age 'Computing', 'Conscious AI Beings'];
-      cta: 'Discover AI 2026';
-      gradient: 'from-emerald-600 via-cyan-600 to-blue-600';
-      icon: Globe,};
+      id: 'ai-2026-vision',
+      title: 'AI 2026 Future Vision',
+      subtitle: 'Prepare for the Next Decade of Innovation',
+      description: 'Get ahead of the curve with our advanced AI technologies designed for the future of business and technology.',
+      features: ['Global AI 'EcosystemSpace-Age 'ComputingConscious AI Beings'],
+      cta: 'Discover AI 2026',
+      gradient: 'from-emerald-600 via-cyan-600 to-blue-600',
+      icon: Globe},
     {,
-      id: 'quantum-computing';
-      title: 'Quantum Computing Revolution';
-      subtitle: 'Unlock Infinite Computational Power';
-      description: 'Harness the power of quantum computing to solve complex problems and accelerate your digital transformation.';
-      features: ['Quantum 'SupremacyExponential 'Speed', 'Unlimited Scalability'];
-      cta: 'Learn More';
-      gradient: 'from-purple-600 via-pink-600 to-red-600';
-      icon: Cpu,}
-  ];
-  const currentSlideData = slides[currentSlide];
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution',
+      subtitle: 'Unlock Infinite Computational Power',
+      description: 'Harness the power of quantum computing to solve complex problems and accelerate your digital transformation.',
+      features: ['Quantum 'SupremacyExponential 'SpeedUnlimited Scalability'],
+      cta: 'Learn More',
+      gradient: 'from-purple-600 via-pink-600 to-red-600',
+      icon: Cpu}
+  ],
+  const currentSlideData = slides[currentSlide],
   return (,
     <div className="relative w-full h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       {/* Animated Background */}
@@ -67,15 +67,15 @@ const UltimateContentPromotionBanner2025_2026 = () => {,
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full",
               style={{,
-                left: `${Math.random() * 100,}%`;
-                top: `${Math.random() * 100,}%`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
-                opacity: [010];
-                scale: [010];
-                y: [0-20],}}
-                duration: 4;
-                repeat: Infinity;
-                delay: Math.random() * 4,}}
+                opacity: [010],
+                scale: [010],
+                y: [0-20]}}
+                duration: 4,
+                repeat: Infinity,
+                delay: Math.random() * 4}}
             />,
           ))}
         </div>,
@@ -83,7 +83,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {,
       <div className="relative z-10 h-full flex items-center">,
         <div className="container mx-auto px-4">,
           <div className="grid lg: grid-cols-2 gap-12 items-center">,
-            {/* Content */,}
+            {/* Content */}
             <div,
               className="text-white",
             >,
@@ -99,13 +99,13 @@ const UltimateContentPromotionBanner2025_2026 = () => {,
                   </div>,
                   {/* Title */}
                   <h1 className="text-4xl md: text-6xl font-bold mb-4">,
-                    <span className={`bg-gradient-to-r ${currentSlideData.gradient,} bg-clip-text text-transparent`}>,
+                    <span className={`bg-gradient-to-r ${currentSlideData.gradient} bg-clip-text text-transparent`}>,
                       {currentSlideData.title}
                     </span>,
                   </h1>,
                   {/* Subtitle */}
                   <h2 className="text-2xl md: text-3xl font-semibold mb-6 text-gray-200">,
-                    {currentSlideData.subtitle,}
+                    {currentSlideData.subtitle}
                   </h2>,
                   {/* Description */}
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-lg">,
@@ -120,13 +120,12 @@ const UltimateContentPromotionBanner2025_2026 = () => {,
                       >,
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                         <span className="text-gray-200">{feature}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm: flex-row gap-4">,
                     <button,
-                      className={`bg-gradient-to-r ${currentSlideData.gradient,} text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover: shadow-2xl transition-all duration-300`,}
+                      className={`bg-gradient-to-r ${currentSlideData.gradient} text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover: shadow-2xl transition-all duration-300`}
                     >,
                       <Rocket className="w-5 h-5" />,
                       {currentSlideData.cta}
@@ -142,7 +141,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Visual */,}
+            {/* Visual */}
             <div,
               className="relative",
             >,
@@ -172,14 +171,14 @@ const UltimateContentPromotionBanner2025_2026 = () => {,
                     key={i}
                     className="absolute w-4 h-4 bg-white/20 rounded-full",
                     style={{,
-                      left: `${20 + (i * 15),}%`;
-                      top: `${30 + (i * 10),}%`,
+                      left: `${20 + (i * 15)}%`,
+                      top: `${30 + (i * 10)}%`
                     }}
-                      y: [0-20];
-                      opacity: [0.310.3],}}
-                      duration: 3;
-                      repeat: Infinity;
-                      delay: i * 0.5,}}
+                      y: [0-20],
+                      opacity: [0.310.3]}}
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: i * 0.5}}
                   />,
                 ))}
               </div>,
@@ -196,7 +195,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {,
             className={`w-3 h-3 rounded-full transition-all duration-300 ${,
               index === currentSlide,
                 ? 'bg-white scale-125',
-                : 'bg-white/30 hover: bg-white/50',}`}
+                : 'bg-white/30 hover: bg-white/50'}`}
           />,
         ))}
       </div>,
@@ -207,7 +206,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {,
         />,
       </div>,
     </div>,
-  );
-};
-export default UltimateContentPromotionBanner2025_2026;
+  ),
+},
+export default UltimateContentPromotionBanner2025_2026,
 </div></div></div></div></div>,

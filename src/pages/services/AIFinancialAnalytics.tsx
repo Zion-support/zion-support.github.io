@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  BarChart3, 
+  BarChart3,
   TrendingUp, 
   Brain, 
   Zap, 
@@ -33,51 +33,34 @@ import {
   TrendingDown,
   Percent,
   Clock
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 const AIFinancialAnalytics = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Forecasting",
-      description: "Advanced machine learning algorithms that predict market trends, revenue patterns, and financial outcomes with 95%+ accuracy"
+      icon: Brain,title: "AI-Powered Forecasting",description: "Advanced machine learning algorithms that predict market trends, revenue patterns, and financial outcomes with 95%+ accuracy"
     },
     {
-      icon: BarChart3,
-      title: "Real-time Financial Dashboards",
-      description: "Live financial metrics, KPIs, and performance indicators with instant updates from multiple data sources"
+      icon: BarChart3,title: "Real-time Financial Dashboards",description: "Live financial metrics, KPIs, and performance indicators with instant updates from multiple data sources"
     },
     {
-      icon: TrendingUp,
-      title: "Risk Assessment & Management",
-      description: "Intelligent risk scoring, portfolio analysis, and automated alerts for potential financial threats and opportunities"
+      icon: TrendingUp,title: "Risk Assessment & Management",description: "Intelligent risk scoring, portfolio analysis, and automated alerts for potential financial threats and opportunities"
     },
     {
-      icon: Zap,
-      title: "Automated Financial Reporting",
-      description: "AI-generated financial reports, compliance documentation, and regulatory filings that adapt to your business needs"
+      icon: Zap,title: "Automated Financial Reporting",description: "AI-generated financial reports, compliance documentation, and regulatory filings that adapt to your business needs"
     },
     {
-      icon: Shield,
-      title: "Enterprise Security & Compliance",
-      description: "Bank-grade security with SOC 2, GDPR, and financial industry compliance for sensitive financial data"
+      icon: Shield,title: "Enterprise Security & Compliance",description: "Bank-grade security with SOC 2, GDPR, and financial industry compliance for sensitive financial data"
     },
     {
-      icon: Globe,
-      title: "Multi-currency & Global Support",
-      description: "Handle international transactions, multi-currency accounting, and global financial regulations seamlessly"
+      icon: Globe,title: "Multi-currency & Global Support",description: "Handle international transactions, multi-currency accounting, and global financial regulations seamlessly"
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$399",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "Up to 10 financial accounts",
+      name: "Starter",price: "$399",period: "/month",description: "Perfect for small businesses and startups",features: [
+        "Up to 10 financial accounts";
         "Basic AI forecasting",
         "5 user licenses",
         "Standard reports",
@@ -86,14 +69,10 @@ const AIFinancialAnalytics = () => {
         "Monthly analytics"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$999",
-      period: "/month",
-      description: "Ideal for growing businesses and financial teams",
-      features: [
-        "Up to 50 financial accounts",
+      name: "Professional",price: "$999",period: "/month",description: "Ideal for growing businesses and financial teams",features: [
+        "Up to 50 financial accounts";
         "Advanced AI analytics",
         "25 user licenses",
         "Custom dashboards",
@@ -104,14 +83,11 @@ const AIFinancialAnalytics = () => {
         "Risk management"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$2,999",
-      period: "/month",
-      description: "For large organizations with complex financial needs",
-      features: [
-        "Unlimited accounts",
+      name: "Enterprise",price: "$2,999",
+      period: "/month",description: "For large organizations with complex financial needs",features: [
+        "Unlimited accounts";
         "Custom AI models",
         "Unlimited users",
         "Advanced security",
@@ -124,90 +100,57 @@ const AIFinancialAnalytics = () => {
       popular: false
     }
   ];
-
   const useCases = [
     {
-      title: "Investment Portfolio Management",
-      description: "AI-powered portfolio optimization, risk assessment, and performance tracking for investment professionals",
+      title: "Investment Portfolio Management",description: "AI-powered portfolio optimization, risk assessment, and performance tracking for investment professionals",
       icon: TrendingUp
-    },
+    };
     {
-      title: "Business Financial Planning",
-      description: "Budget forecasting, cash flow analysis, and financial planning with predictive AI insights",
+      title: "Business Financial Planning",description: "Budget forecasting, cash flow analysis, and financial planning with predictive AI insights",
       icon: Calculator
-    },
+    };
     {
-      title: "Risk Management & Compliance",
-      description: "Automated risk assessment, regulatory compliance monitoring, and audit trail management",
+      title: "Risk Management & Compliance",description: "Automated risk assessment, regulatory compliance monitoring, and audit trail management",
       icon: Shield
-    },
+    };
     {
-      title: "Trading & Market Analysis",
-      description: "Real-time market data analysis, trading signals, and algorithmic trading recommendations",
+      title: "Trading & Market Analysis",description: "Real-time market data analysis, trading signals, and algorithmic trading recommendations",
       icon: Activity
     }
   ];
-
   const benefits = [
     {
-      icon: TrendingUp,
-      title: "Better Returns",
-      value: "15-25%",
-      description: "Improve investment returns with AI insights"
-    },
+      icon: TrendingUp,title: "Better Returns",value: "15-25%",description: "Improve investment returns with AI insights"
+    };
     {
-      icon: Clock,
-      title: "Faster Analysis",
-      value: "90%",
-      description: "Reduce analysis time from hours to minutes"
-    },
+      icon: Clock,title: "Faster Analysis",value: "90%",description: "Reduce analysis time from hours to minutes"
+    };
     {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      value: "30-50%",
-      description: "Lower operational costs and improve efficiency"
-    },
+      icon: DollarSign,title: "Cost Reduction",value: "30-50%",description: "Lower operational costs and improve efficiency"
+    };
     {
-      icon: Target,
-      title: "Risk Reduction",
-      value: "40-60%",
-      description: "Better risk management and compliance"
+      icon: Target,title: "Risk Reduction",value: "40-60%",description: "Better risk management and compliance"
     }
   ];
-
   const testimonials = [
     {
-      name: "Robert Chen",
-      role: "CFO",
-      company: "TechGrowth Capital",
-      content: "The AI financial analytics have transformed our decision-making process. We've improved returns by 22% while reducing risk exposure.",
-      rating: 5
-    },
+      name: "Robert Chen",role: "CFO",company: "TechGrowth Capital",content: "The AI financial analytics have transformed our decision-making process. We've improved returns by 22% while reducing risk exposure.",rating: 5
+    };
     {
-      name: "Sarah Williams",
-      role: "Portfolio Manager",
-      company: "Global Investments Ltd",
-      content: "Real-time AI insights help us make better trading decisions. The risk assessment tools are incredibly accurate.",
-      rating: 5
-    },
+      name: "Sarah Williams",role: "Portfolio Manager",company: "Global Investments Ltd",content: "Real-time AI insights help us make better trading decisions. The risk assessment tools are incredibly accurate.",rating: 5
+    };
     {
-      name: "Michael Rodriguez",
-      role: "Financial Controller",
-      company: "InnovateCorp",
-      content: "Automated reporting saves us 20+ hours per week. The compliance features ensure we never miss regulatory deadlines.",
-      rating: 5
+      name: "Michael Rodriguez",role: "Financial Controller",company: "InnovateCorp",content: "Automated reporting saves us 20+ hours per week. The compliance features ensure we never miss regulatory deadlines.",rating: 5
     }
   ];
-
   const integrations = [
-    { name: "QuickBooks", icon: Calculator, description: "Accounting software integration" },
-    { name: "Salesforce", icon: Users, description: "CRM and sales data sync" },
-    { name: "Bloomberg", icon: TrendingUp, description: "Market data feeds" },
-    { name: "Excel", icon: FileText, description: "Spreadsheet automation" },
-    { name: "Tableau", icon: BarChart3, description: "Data visualization" },
+    { name: "QuickBooks", icon: Calculator, description: "Accounting software integration" };
+    { name: "Salesforce", icon: Users, description: "CRM and sales data sync" };
+    { name: "Bloomberg", icon: TrendingUp, description: "Market data feeds" };
+    { name: "Excel", icon: FileText, description: "Spreadsheet automation" };
+    { name: "Tableau", icon: BarChart3, description: "Data visualization" };
     { name: "Power BI", icon: Monitor, description: "Business intelligence" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -238,7 +181,7 @@ const AIFinancialAnalytics = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your financial decision-making with AI-powered analytics that provide real-time insights, 
+              Transform your financial decision-making with AI-powered analytics that provide real-time insights;
               predictive forecasting, and intelligent risk management for better returns and compliance.
             </p>
             
@@ -613,7 +556,7 @@ const AIFinancialAnalytics = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -643,7 +586,6 @@ const AIFinancialAnalytics = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIFinancialAnalytics;

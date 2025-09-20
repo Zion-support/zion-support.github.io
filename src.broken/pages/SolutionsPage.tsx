@@ -3,7 +3,7 @@
 export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
             Solutions Page
@@ -21,8 +21,8 @@ export default function SolutionsPage() {
             Get Started
           </Link>
 =======
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 import {
   Brain,
   Shield,
@@ -77,8 +77,8 @@ import {
   Twitter,
   Github,
   Facebook,
-  Instagram,
-} from 'lucide-react';
+  Instagram
+} from 'lucide-react',
 
 export function SolutionsPage() {
   const industrySolutions = [
@@ -89,19 +89,14 @@ export function SolutionsPage() {
       description: 'AI-powered healthcare solutions for improved patient care and operational efficiency',
       color: 'from-red-500 to-pink-500',
       solutions: [
-        'AI-powered diagnostic tools',
-        'Patient data management systems',
-        'Telemedicine platforms',
-        'Healthcare analytics',
-        'Compliance management',
-        'Supply chain optimization'
+        'AI-powered diagnostic toolsPatient data management systems',
+        'Telemedicine platformsHealthcare analytics',
+        'Compliance managementSupply chain optimization'
       ],
       benefits: [
-        'Improved patient outcomes',
-        'Reduced operational costs',
-        'Enhanced data security',
-        'Streamlined workflows'
-      ],
+        'Improved patient outcomesReduced operational costs',
+        'Enhanced data securityStreamlined workflows'
+      ]
     },
     {
       id: 'finance',
@@ -110,19 +105,14 @@ export function SolutionsPage() {
       description: 'Secure financial technology solutions for modern banking and fintech',
       color: 'from-green-500 to-emerald-500',
       solutions: [
-        'Digital banking platforms',
-        'Fraud detection systems',
-        'Risk management tools',
-        'Payment processing',
-        'Regulatory compliance',
-        'Investment analytics'
+        'Digital banking platformsFraud detection systems',
+        'Risk management toolsPayment processing',
+        'Regulatory complianceInvestment analytics'
       ],
       benefits: [
-        'Enhanced security',
-        'Improved customer experience',
-        'Regulatory compliance',
-        'Operational efficiency'
-      ],
+        'Enhanced securityImproved customer experience',
+        'Regulatory complianceOperational efficiency'
+      ]
     },
     {
       id: 'manufacturing',
@@ -131,19 +121,14 @@ export function SolutionsPage() {
       description: 'Smart manufacturing solutions for Industry 4.0 and operational excellence',
       color: 'from-blue-500 to-cyan-500',
       solutions: [
-        'IoT sensor networks',
-        'Predictive maintenance',
-        'Quality control systems',
-        'Supply chain optimization',
-        'Energy management',
-        'Production analytics'
+        'IoT sensor networksPredictive maintenance',
+        'Quality control systemsSupply chain optimization',
+        'Energy managementProduction analytics'
       ],
       benefits: [
-        'Reduced downtime',
-        'Improved quality',
-        'Cost optimization',
-        'Sustainability gains'
-      ],
+        'Reduced downtimeImproved quality',
+        'Cost optimizationSustainability gains'
+      ]
     },
     {
       id: 'retail',
@@ -152,19 +137,14 @@ export function SolutionsPage() {
       description: 'Digital retail solutions for enhanced customer experience and sales growth',
       color: 'from-purple-500 to-pink-500',
       solutions: [
-        'E-commerce platforms',
-        'Customer analytics',
-        'Inventory management',
-        'Omnichannel solutions',
-        'Personalization engines',
-        'Supply chain optimization'
+        'E-commerce platformsCustomer analytics',
+        'Inventory managementOmnichannel solutions',
+        'Personalization enginesSupply chain optimization'
       ],
       benefits: [
-        'Increased sales',
-        'Better customer retention',
-        'Operational efficiency',
-        'Data-driven insights'
-      ],
+        'Increased salesBetter customer retention',
+        'Operational efficiencyData-driven insights'
+      ]
     },
     {
       id: 'education',
@@ -173,19 +153,14 @@ export function SolutionsPage() {
       description: 'Technology solutions for modern education and learning management',
       color: 'from-orange-500 to-red-500',
       solutions: [
-        'Learning management systems',
-        'Virtual classrooms',
-        'Student analytics',
-        'Content management',
-        'Assessment tools',
-        'Collaboration platforms'
+        'Learning management systemsVirtual classrooms',
+        'Student analyticsContent management',
+        'Assessment toolsCollaboration platforms'
       ],
       benefits: [
-        'Improved learning outcomes',
-        'Accessibility',
-        'Cost efficiency',
-        'Scalability'
-      ],
+        'Improved learning outcomesAccessibility',
+        'Cost efficiencyScalability'
+      ]
     },
     {
       id: 'government',
@@ -194,21 +169,16 @@ export function SolutionsPage() {
       description: 'Secure government technology solutions for public service excellence',
       color: 'from-indigo-500 to-purple-500',
       solutions: [
-        'Digital service platforms',
-        'Data security systems',
-        'Process automation',
-        'Citizen engagement',
-        'Compliance management',
-        'Analytics dashboards'
+        'Digital service platformsData security systems',
+        'Process automationCitizen engagement',
+        'Compliance managementAnalytics dashboards'
       ],
       benefits: [
-        'Improved service delivery',
-        'Enhanced security',
-        'Cost savings',
-        'Transparency'
-      ],
-    },
-  ];
+        'Improved service deliveryEnhanced security',
+        'Cost savingsTransparency'
+      ]
+    }
+  ],
 
   const technologySolutions = [
     {
@@ -218,13 +188,10 @@ export function SolutionsPage() {
       description: 'Intelligent solutions that learn and adapt to your business needs',
       color: 'from-purple-500 to-pink-500',
       useCases: [
-        'Predictive analytics',
-        'Natural language processing',
-        'Computer vision',
-        'Recommendation systems',
-        'Process automation',
-        'Fraud detection'
-      ],
+        'Predictive analyticsNatural language processing',
+        'Computer visionRecommendation systems',
+        'Process automationFraud detection'
+      ]
     },
     {
       id: 'cybersecurity',
@@ -233,13 +200,10 @@ export function SolutionsPage() {
       description: 'Comprehensive security solutions to protect your digital assets',
       color: 'from-red-500 to-orange-500',
       useCases: [
-        'Threat detection',
-        'Access control',
-        'Data encryption',
-        'Incident response',
-        'Compliance management',
-        'Security training'
-      ],
+        'Threat detectionAccess control',
+        'Data encryptionIncident response',
+        'Compliance managementSecurity training'
+      ]
     },
     {
       id: 'cloud-infrastructure',
@@ -248,13 +212,10 @@ export function SolutionsPage() {
       description: 'Scalable cloud solutions for growing businesses',
       color: 'from-blue-500 to-cyan-500',
       useCases: [
-        'Cloud migration',
-        'Microservices architecture',
-        'DevOps automation',
-        'Scalable databases',
-        'Load balancing',
-        'Disaster recovery'
-      ],
+        'Cloud migrationMicroservices architecture',
+        'DevOps automationScalable databases',
+        'Load balancingDisaster recovery'
+      ]
     },
     {
       id: 'data-analytics',
@@ -263,13 +224,10 @@ export function SolutionsPage() {
       description: 'Transform raw data into actionable business intelligence',
       color: 'from-green-500 to-emerald-500',
       useCases: [
-        'Business intelligence',
-        'Data visualization',
-        'Predictive modeling',
-        'Real-time analytics',
-        'Data governance',
-        'Performance monitoring'
-      ],
+        'Business intelligenceData visualization',
+        'Predictive modelingReal-time analytics',
+        'Data governancePerformance monitoring'
+      ]
     },
     {
       id: 'iot-edge',
@@ -278,13 +236,10 @@ export function SolutionsPage() {
       description: 'Connected devices and edge processing solutions',
       color: 'from-indigo-500 to-purple-500',
       useCases: [
-        'Smart sensors',
-        'Edge analytics',
-        'Device management',
-        'Real-time monitoring',
-        'Predictive maintenance',
-        'Energy optimization'
-      ],
+        'Smart sensorsEdge analytics',
+        'Device managementReal-time monitoring',
+        'Predictive maintenanceEnergy optimization'
+      ]
     },
     {
       id: 'blockchain',
@@ -293,15 +248,12 @@ export function SolutionsPage() {
       description: 'Decentralized solutions for trust and transparency',
       color: 'from-yellow-500 to-orange-500',
       useCases: [
-        'Smart contracts',
-        'Supply chain tracking',
-        'Digital identity',
-        'Asset tokenization',
-        'Cross-border payments',
-        'Voting systems'
-      ],
-    },
-  ];
+        'Smart contractsSupply chain tracking',
+        'Digital identityAsset tokenization',
+        'Cross-border paymentsVoting systems'
+      ]
+    }
+  ],
 
   const successStories = [
     {
@@ -310,12 +262,11 @@ export function SolutionsPage() {
       challenge: 'Needed to improve patient diagnosis accuracy and reduce wait times',
       solution: 'AI-powered diagnostic platform with real-time analytics',
       results: [
-        '30% improvement in diagnosis accuracy',
-        '50% reduction in patient wait times',
+        '30% improvement in diagnosis accuracy50% reduction in patient wait times',
         '25% cost savings in diagnostic procedures'
       ],
       icon: Heart,
-      color: 'from-red-500 to-pink-500',
+      color: 'from-red-500 to-pink-500'
     },
     {
       company: 'FinSecure Bank',
@@ -323,12 +274,11 @@ export function SolutionsPage() {
       challenge: 'Required enhanced fraud detection and compliance management',
       solution: 'Advanced cybersecurity platform with AI-powered threat detection',
       results: [
-        '90% reduction in fraud incidents',
-        '100% regulatory compliance',
+        '90% reduction in fraud incidents100% regulatory compliance',
         '40% improvement in security response time'
       ],
       icon: Shield,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-emerald-500'
     },
     {
       company: 'SmartManufacturing Inc.',
@@ -336,14 +286,13 @@ export function SolutionsPage() {
       challenge: 'Sought to optimize production processes and reduce downtime',
       solution: 'IoT-based predictive maintenance and analytics platform',
       results: [
-        '60% reduction in unplanned downtime',
-        '35% improvement in production efficiency',
+        '60% reduction in unplanned downtime35% improvement in production efficiency',
         '20% reduction in maintenance costs'
       ],
       icon: Building,
-      color: 'from-blue-500 to-cyan-500',
-    },
-  ];
+      color: 'from-blue-500 to-cyan-500'
+    }
+  ],
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -543,7 +492,7 @@ export function SolutionsPage() {
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Industry?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Let's discuss how our industry-specific solutions can address your unique 
@@ -570,5 +519,5 @@ export function SolutionsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

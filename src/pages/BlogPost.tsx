@@ -1,9 +1,9 @@
 
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { 
-  Calendar, 
+  Calendar,
   User, 
   Clock, 
   Tag, 
@@ -22,18 +22,13 @@ import {
   Cpu,
   Network,
   BookOpen
-} from 'lucide-react';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 export default function BlogPost() {
   const { slug } = useParams();
-
   // Mock blog post data - in a real app, this would come from an API
   const blogPost = {
-    id: slug,
-    title: 'The Future of AI-Powered Business Intelligence in 2024',
-    excerpt: 'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes across industries.',
-    content: `
+    id: slug,title: 'The Future of AI-Powered Business Intelligence in 2024',excerpt: 'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes across industries.',content: `
       <p class="mb-6 text-lg text-gray-300 leading-relaxed">
         Artificial Intelligence has fundamentally transformed how businesses approach data analysis and decision-making. 
         In 2024, we're witnessing an unprecedented acceleration in AI-powered business intelligence capabilities that 
@@ -141,80 +136,39 @@ export default function BlogPost() {
         well-positioned to thrive in an increasingly data-driven business landscape.
       </p>
     `,
-    author: 'Kleber Santos',
-    authorRole: 'CEO & AI Strategist',
-    authorBio: 'Kleber Santos is the CEO and founder of Zion Tech Group, with over 15 years of experience in AI strategy and business transformation.',
-    date: '2024-01-15',
-    readTime: '8 min read',
-    category: 'ai',
-    tags: ['AI', 'Business Intelligence', 'Machine Learning', 'Data Analytics', 'Digital Transformation'],
-    image: '/api/placeholder/800/400',
-    featured: true,
-    views: 2847,
-    likes: 156,
-    comments: 23,
-    relatedPosts: [
+    author: 'Kleber Santos',authorRole: 'CEO & AI Strategist',authorBio: 'Kleber Santos is the CEO and founder of Zion Tech Group, with over 15 years of experience in AI strategy and business transformation.',
+    date: '2024-01-15',readTime: '8 min read',category: 'ai',tags: ['AIBusiness Intelligence', 'Machine LearningData Analytics', 'Digital Transformation'],
+    image: '/api/placeholder/800/400',featured: true,views: 2847,likes: 156,comments: 23,relatedPosts: [
       {
-        id: 'quantum-computing-business',
-        title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
-        excerpt: 'A comprehensive analysis of quantum computing\'s current state and its practical applications in business.',
-        category: 'quantum',
-        date: '2024-01-12',
-        readTime: '12 min read'
-      },
+        id: 'quantum-computing-business',title: 'Quantum Computing: Breaking Down the Hype vs. Reality',excerpt: 'A comprehensive analysis of quantum computing\'s current state and its practical applications in business.',category: 'quantum',date: '2024-01-12',readTime: '12 min read'
+      };
       {
-        id: 'zero-trust-security',
-        title: 'Zero Trust Security: The New Standard for Enterprise Protection',
-        excerpt: 'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',
-        category: 'security',
-        date: '2024-01-10',
-        readTime: '10 min read'
-      },
+        id: 'zero-trust-security',title: 'Zero Trust Security: The New Standard for Enterprise Protection',excerpt: 'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',category: 'security',date: '2024-01-10',readTime: '10 min read'
+      };
       {
-        id: 'micro-saas-future',
-        title: 'Micro SaaS: The Future of Niche Software Solutions',
-        excerpt: 'Exploring the rise of micro SaaS platforms and how they\'re changing the software industry landscape.',
-        category: 'business',
-        date: '2024-01-08',
-        readTime: '6 min read'
+        id: 'micro-saas-future',title: 'Micro SaaS: The Future of Niche Software Solutions',excerpt: 'Exploring the rise of micro SaaS platforms and how they\'re changing the software industry landscape.',category: 'business',date: '2024-01-08',readTime: '6 min read'
       }
     ]
   };
-
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+      year: 'numeric',month: 'long',day: 'numeric'
     });
-  };
+  },
 
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {
-      ai: Brain,
-      quantum: Cpu,
-      security: Shield,
-      cloud: Cloud,
-      business: TrendingUp,
-      iot: Network,
-      emerging: Zap
+      ai: Brain,quantum: Cpu,security: Shield,cloud: Cloud,business: TrendingUp,iot: Network,emerging: Zap
     };
-    return categoryIcons[category] || BookOpen;
-  };
+    return categoryIcons[category] || BookOpen,
+  },
 
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {
-      ai: 'Artificial Intelligence',
-      quantum: 'Quantum Computing',
-      security: 'Cybersecurity',
-      cloud: 'Cloud & DevOps',
-      business: 'Business Insights',
-      iot: 'IoT & Edge',
-      emerging: 'Emerging Tech'
+      ai: 'Artificial Intelligence',quantum: 'Quantum Computing',security: 'Cybersecurity',cloud: 'Cloud & DevOps',business: 'Business Insights',iot: 'IoT & Edge',emerging: 'Emerging Tech'
     };
-    return categoryNames[category] || 'Uncategorized';
+    return categoryNames[category] || 'Uncategorized',
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -456,7 +410,7 @@ export default function BlogPost() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300"
               >
                 Get Started Today
               </Link>
@@ -471,5 +425,5 @@ export default function BlogPost() {
         </div>
       </section>
     </div>
-  );
+  )
 }

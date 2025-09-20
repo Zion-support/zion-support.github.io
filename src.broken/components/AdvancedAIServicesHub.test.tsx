@@ -1,10 +1,10 @@
 
 describe('AdvancedAIServicesHub', () => {
   it('renders without crashing', () => {
-    render(<AdvancedAIServicesHub  />) ;
-    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
+    render(<AdvancedAIServicesHub  />) ,
+    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ,
 
   it('displays expected content', () => {
-    render(<AdvancedAIServicesHub  />) ;
+    render(<AdvancedAIServicesHub  />) ,
     // Add specific test assertions based on component content
-  }) }) ;
+  }) }) ,

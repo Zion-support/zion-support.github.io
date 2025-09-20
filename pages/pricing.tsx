@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function PricingPage() {
   const pricingTiers = [
     {
@@ -8,12 +8,9 @@ export default function PricingPage() {
       price: '$99',
       period: '/month',
       features: [
-        'AI-Powered Analytics Dashboard',
-        'Basic Cloud Infrastructure',
-        'Email Support',
-        'Standard Security Features',
-        'Monthly Reports',
-        'Up to 5 Users'
+        'AI-Powered Analytics DashboardBasic Cloud Infrastructure',
+        'Email SupportStandard Security Features',
+        'Monthly ReportsUp to 5 Users'
       ],
       cta: 'Get Started',
       ctaLink: '/contact',
@@ -25,14 +22,10 @@ export default function PricingPage() {
       price: '$299',
       period: '/month',
       features: [
-        'Everything in Starter',
-        'Advanced AI Decision Engine',
-        'Priority Support',
-        'Enhanced Security & Compliance',
-        'Custom Integrations',
-        'Up to 25 Users',
-        'Advanced Analytics',
-        'API Access'
+        'Everything in StarterAdvanced AI Decision Engine',
+        'Priority SupportEnhanced Security & Compliance',
+        'Custom IntegrationsUp to 25 Users',
+        'Advanced AnalyticsAPI Access'
       ],
       cta: 'Start Free Trial',
       ctaLink: '/contact',
@@ -44,48 +37,43 @@ export default function PricingPage() {
       price: 'Custom',
       period: '',
       features: [
-        'Everything in Professional',
-        'Custom AI Solutions',
-        '24/7 Dedicated Support',
-        'Enterprise Security',
-        'Custom Development',
-        'Unlimited Users',
-        'Advanced Compliance',
-        'Dedicated Account Manager',
-        'SLA Guarantees',
-        'On-Premise Options'
+        'Everything in ProfessionalCustom AI Solutions',
+        '24/7 Dedicated SupportEnterprise Security',
+        'Custom DevelopmentUnlimited Users',
+        'Advanced ComplianceDedicated Account Manager',
+        'SLA GuaranteesOn-Premise Options'
       ],
       cta: 'Contact Sales',
       ctaLink: '/contact',
       popular: false
     }
-  ];
+  ],
   const addOnServices = [
     {
       name: 'AI Model Training',
       description: 'Custom AI model development and training',
       price: 'From $2,500',
-      features: ['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
+      features: ['Custom Data ProcessingModel Optimization', 'Performance Tuning']
     },
     {
       name: 'Quantum Computing Access',
       description: 'Access to quantum computing resources',
       price: 'From $5,000',
-      features: ['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
+      features: ['Quantum Algorithm DevelopmentHardware Access', 'Expert Consultation']
     },
     {
       name: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment',
       price: 'From $1,500',
-      features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
+      features: ['Vulnerability AssessmentCompliance Review', 'Security Recommendations']
     },
     {
       name: 'Cloud Migration',
       description: 'Complete cloud infrastructure migration',
       price: 'From $10,000',
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
+      features: ['Architecture DesignData Migration', 'Performance Optimization']
     }
-  ];
+  ],
   const faqs = [
     {
       question: 'What payment methods do you accept?',
@@ -111,7 +99,7 @@ export default function PricingPage() {
       question: 'Can I cancel my subscription?',
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
     }
-  ];
+  ],
   return (
     <>
       <Head>
@@ -253,7 +241,7 @@ export default function PricingPage() {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Ready to Get Started?
@@ -279,5 +267,5 @@ export default function PricingPage() {
         </section>
       </main>
     </>
-  );
+  )
 }

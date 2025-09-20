@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Users, 
+  Users,
   Brain, 
   Target, 
   BarChart3, 
@@ -52,80 +52,47 @@ import {
   Rocket,
   Shield,
   TrendingUp
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function InterviewAssessmentAI() {
   const features = [
     {
-      icon: Users,
-      title: "AI Candidate Screening",
-      description: "Intelligent candidate evaluation and ranking using machine learning",
-      color: "from-purple-500 to-pink-500"
-    },
+      icon: Users,title: "AI Candidate Screening",description: "Intelligent candidate evaluation and ranking using machine learning",color: "from-purple-500 to-pink-500"
+    };
     {
-      icon: Brain,
-      title: "Behavioral Analysis",
-      description: "Deep analysis of candidate responses and communication patterns",
-      color: "from-blue-500 to-cyan-500"
-    },
+      icon: Brain,title: "Behavioral Analysis",description: "Deep analysis of candidate responses and communication patterns",color: "from-blue-500 to-cyan-500"
+    };
     {
-      icon: Target,
-      title: "Skills Assessment",
-      description: "Comprehensive technical and soft skills evaluation",
-      color: "from-green-500 to-emerald-500"
-    },
+      icon: Target,title: "Skills Assessment",description: "Comprehensive technical and soft skills evaluation",color: "from-green-500 to-emerald-500"
+    };
     {
-      icon: BarChart3,
-      title: "Performance Metrics",
-      description: "Detailed analytics and insights for hiring decisions",
-      color: "from-yellow-500 to-orange-500"
-    },
+      icon: BarChart3,title: "Performance Metrics",description: "Detailed analytics and insights for hiring decisions",color: "from-yellow-500 to-orange-500"
+    };
     {
-      icon: Zap,
-      title: "Automated Interviews",
-      description: "AI-powered interview scheduling and conduct",
-      color: "from-red-500 to-pink-500"
-    },
+      icon: Zap,title: "Automated Interviews",description: "AI-powered interview scheduling and conduct",color: "from-red-500 to-pink-500"
+    };
     {
-      icon: Shield,
-      title: "Bias Elimination",
-      description: "Fair and objective candidate evaluation",
-      color: "from-indigo-500 to-blue-500"
+      icon: Shield,title: "Bias Elimination",description: "Fair and objective candidate evaluation",color: "from-indigo-500 to-blue-500"
     }
   ];
-
   const services = [
     {
-      title: "Video Interview Analysis",
-      description: "AI-powered analysis of video interview responses",
-      icon: Video,
-      benefits: ["Facial expression analysis", "Tone analysis", "Response quality", "Engagement metrics"]
+      title: "Video Interview Analysis",description: "AI-powered analysis of video interview responses",icon: Video,benefits: ["Facial expression analysis", "Tone analysis", "Response quality", "Engagement metrics"]
     },
     {
-      title: "Technical Assessment",
-      description: "Comprehensive technical skills evaluation",
-      icon: Cpu,
-      benefits: ["Coding challenges", "Problem solving", "Technical knowledge", "Performance tracking"]
+      title: "Technical Assessment",description: "Comprehensive technical skills evaluation",icon: Cpu,benefits: ["Coding challenges", "Problem solving", "Technical knowledge", "Performance tracking"]
     },
     {
-      title: "Cultural Fit Analysis",
-      description: "Assessment of candidate alignment with company culture",
-      icon: Users,
-      benefits: ["Values assessment", "Team compatibility", "Communication style", "Work preferences"]
+      title: "Cultural Fit Analysis",description: "Assessment of candidate alignment with company culture",icon: Users,benefits: ["Values assessment", "Team compatibility", "Communication style", "Work preferences"]
     },
     {
-      title: "Predictive Hiring",
-      description: "AI-driven predictions of candidate success",
-      icon: TrendingUp,
-      benefits: ["Success probability", "Retention prediction", "Performance forecasting", "Risk assessment"]
+      title: "Predictive Hiring",description: "AI-driven predictions of candidate success",icon: TrendingUp,benefits: ["Success probability", "Retention prediction", "Performance forecasting", "Risk assessment"]
     }
-  ];
+  ],
 
   const technologies = [
     "Natural Language Processing", "Computer Vision", "Machine Learning", "Sentiment Analysis", 
     "Facial Recognition", "Voice Analysis", "Predictive Analytics", "Behavioral Science", "AI Algorithms", "Data Analytics"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -304,7 +271,7 @@ export default function InterviewAssessmentAI() {
               Join the AI hiring revolution with Zion Tech Group. Our intelligent assessment solutions 
               are designed to improve hiring quality, reduce bias, and accelerate your recruitment process.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center space-x-2"
@@ -324,5 +291,5 @@ export default function InterviewAssessmentAI() {
         </div>
       </section>
     </div>
-  );
+  )
 }

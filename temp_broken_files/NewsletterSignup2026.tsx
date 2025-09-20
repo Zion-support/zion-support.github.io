@@ -1,74 +1,74 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Mail,
   CheckCircle,
   X,
-  Sparkles;
-  Bell;
-  TrendingUp;
-  Users;
-  Star;
-  ArrowRight;
-  Shield;
-  Zap;
-  Brain;
-  Target;
-  Lightbulb;
-  Rocket,
-} from 'lucide-react';
+  Sparkles,
+  Bell,
+  TrendingUp,
+  Users,
+  Star,
+  ArrowRight,
+  Shield,
+  Zap,
+  Brain,
+  Target,
+  Lightbulb,
+  Rocket
+} from 'lucide-react',
 const NewsletterSignup2026 = () => {,
-  const [emailsetEmail] = useState('');
-  const [isSubscribedsetIsSubscribed] = useState(false);
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [isLoadingsetIsLoading] = useState(false);
-  const [errorsetError] = useState('');
+  const [emailsetEmail] = useState(''),
+  const [isSubscribedsetIsSubscribed] = useState(false),
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [isLoadingsetIsLoading] = useState(false),
+  const [errorsetError] = useState(''),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const handleSubmit = async (e: React.FormEvent) => {,
-    e.preventDefault();
-    setIsLoading(true);
-    setError();
+    e.preventDefault(),
+    setIsLoading(true),
+    setError(),
     try {,
       // Simulate API call,
-      await new Promise(resolve => setTimeout(resolve2000));
+      await new Promise(resolve => setTimeout(resolve2000)),
       // Simulate success,
-      setIsSubscribed(true);
-      setEmail(', ');
+      setIsSubscribed(true),
+      setEmail(),
     } catch (err) {,
-      setError('Something went wrong. Please try again.');
+      setError('Something went wrong. Please try again.'),
     } finally {,
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
   const benefits = [,
     {,
-      icon: Brain;
-      title: 'AI Breakthrough Alerts';
-      description: 'Get notified about the latest AI breakthroughs and research',};
+      icon: Brain,
+      title: 'AI Breakthrough Alerts',
+      description: 'Get notified about the latest AI breakthroughs and research'},
     {,
-      icon: TrendingUp;
-      title: 'Trending Content';
-      description: 'Weekly digest of the most popular and trending articles',};
+      icon: TrendingUp,
+      title: 'Trending Content',
+      description: 'Weekly digest of the most popular and trending articles'},
     {,
-      icon: Target;
-      title: 'Personalized Recommendations';
-      description: 'AI-powered content recommendations based on your interests',};
+      icon: Target,
+      title: 'Personalized Recommendations',
+      description: 'AI-powered content recommendations based on your interests'},
     {,
-      icon: Zap;
-      title: 'Exclusive Early Access';
-      description: 'Be the first to access new content and features',}
-  ];
+      icon: Zap,
+      title: 'Exclusive Early Access',
+      description: 'Be the first to access new content and features'}
+  ],
   const stats = [,
-    { number: '50K+'label: 'Subscribers' ,};
-    { number: '4.9/5'label: 'Rating' ,};
-    { number: '24/7'label: 'Updates' ,};
-    { number: '100%'label: 'Free' ,}
-  ];
-  if (!isVisible || isDismissed) return null;
+    { number: '50K+'label: 'Subscribers' },
+    { number: '4.9/5'label: 'Rating' },
+    { number: '24/7'label: 'Updates' },
+    { number: '100%'label: 'Free' }
+  ],
+  if (!isVisible || isDismissed) return null,
   return (,
     <div,
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20",
@@ -82,21 +82,21 @@ const NewsletterSignup2026 = () => {,
           <div,
             key={i}
             className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-30",
-              x: [0Math.random() * 200 - 100];
-              y: [0Math.random() * 200 - 100];
-              scale: [010],}}
-              duration: Math.random() * 8 + 6;
-              repeat: Infinity;
-              delay: Math.random() * 3,}}
+              x: [0Math.random() * 200 - 100],
+              y: [0Math.random() * 200 - 100],
+              scale: [010]}}
+              duration: Math.random() * 8 + 6,
+              repeat: Infinity,
+              delay: Math.random() * 3}}
             style={{,
-              left: `${Math.random() * 100,}%`;
-              top: `${Math.random() * 100,}%`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
             }}
           />,
         ))}
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
-        {/* Close Button */,}
+        {/* Close Button */}
         <button,
           onClick={() => setIsDismissed(true)}
           className="absolute top-4 right-4 text-gray-400 hover: text-white transition-colors z-10",
@@ -104,7 +104,7 @@ const NewsletterSignup2026 = () => {,
           <X className="w-5 h-5" />,
         </button>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
           >,
             {/* Badge */}
@@ -125,7 +125,7 @@ const NewsletterSignup2026 = () => {,
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 sm: grid-cols-2 gap-4 mb-8">,
               {benefits.map((benefitindex) => {,
-                const Icon = benefit.icon;
+                const Icon = benefit.icon,
                 return (,
                   <div,
                     key={benefit.title}
@@ -138,21 +138,19 @@ const NewsletterSignup2026 = () => {,
                       <h3 className="text-white font-medium mb-1">{benefit.title}</h3>,
                       <p className="text-gray-400 text-sm">{benefit.description}</p>,
                     </div>,
-                  </div>,
-                );
+                  </div>),
               })}
             </div>,
             {/* Stats */}
             <div className="grid grid-cols-2 sm: grid-cols-4 gap-6">,
               {stats.map((statindex) => (,
                 <div,
-                  key={stat.label,}
+                  key={stat.label}
                   className="text-center",
                 >,
                   <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>,
                   <div className="text-sm text-gray-400">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           {/* Right Content - Newsletter Form */}
@@ -193,9 +191,8 @@ const NewsletterSignup2026 = () => {,
                       <div,
                         className="text-red-400 text-sm",
                       >,
-                        {error,}
-                      </div>,
-                    )}
+                        {error}
+                      </div>)}
                     <button,
                       type="submit",
                       disabled={isLoading}
@@ -205,14 +202,12 @@ const NewsletterSignup2026 = () => {,
                         <>,
                           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />,
                           Subscribing...,
-                        </>,
-                      ) : (,
+                        </>) : (,
                         <>,
                           <Rocket className="w-5 h-5 mr-2" />,
                           Subscribe Now,
                           <ArrowRight className="w-4 h-4 ml-2" />,
-                        </>,
-                      ),}
+                        </>)}
                     </button>,
                     <div className="flex items-center text-sm text-gray-400">,
                       <Shield className="w-4 h-4 mr-2" />,
@@ -236,7 +231,7 @@ const NewsletterSignup2026 = () => {,
                     and get ready for amazing content delivered to your inbox.,
                   </p>,
                   <div className="bg-white/10 rounded-lg p-4 mb-6">,
-                    <h4 className="text-white font-medium mb-2">'What', 's Next?</h4>,
+                    <h4 className="text-white font-medium mb-2">'Whats Next?</h4>,
                     <ul className="text-sm text-gray-300 space-y-1">,
                       <li>• Confirmation email within 5 minutes</li>,
                       <li>• First newsletter tomorrow morning</li>,
@@ -251,7 +246,7 @@ const NewsletterSignup2026 = () => {,
                     Subscribe another email,
                   </button>,
                 </div>,
-              ),}
+              )}
             </div>,
           </div>,
         </div>,
@@ -285,6 +280,6 @@ const NewsletterSignup2026 = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default NewsletterSignup2026;
+  ),
+export default NewsletterSignup2026,
 </div></div></div>,

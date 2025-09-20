@@ -1,16 +1,16 @@
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { BlogPost } from "@/types/blog";
-import { Search } from "lucide-react";
+import { useState } from "react",
+import { Link } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { BlogPost } from "@/types/blog",
+import { Search } from "lucide-react",
 
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
@@ -207,7 +207,7 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
   }
-];
+],
 
 // Categories for filtering
 const CATEGORIES = [
@@ -218,26 +218,26 @@ const CATEGORIES = [
   "Ethics",
   "Recruitment",
   "Infrastructure"
-];
+],
 
 export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
   
   // Filter blog posts based on search and category
   const filteredPosts = BLOG_POSTS.filter(post => {
     const matchesSearch = 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
       
-    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
     
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory,
+  }),
   
   // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured);
+  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
   
   return (
     <>
@@ -394,8 +394,8 @@ export default function Blog() {
               <Button 
                 variant="outline" 
                 onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
+                  setSearchQuery(""),
+                  setSelectedCategory("All Categories"),
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -407,5 +407,5 @@ export default function Blog() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

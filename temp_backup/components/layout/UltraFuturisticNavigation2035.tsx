@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
@@ -9,18 +9,18 @@ import {
   User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, 
   Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
   Palette, Music, Film, BookOpenCheck, Building, Truck, DollarSign
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  category?: string
 }
 
 const contactInfo = {
@@ -28,5 +28,5 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
-export default UltraFuturisticNavigation2035;
+},
+export default UltraFuturisticNavigation2035,

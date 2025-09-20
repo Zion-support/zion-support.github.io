@@ -3,26 +3,26 @@
 export default function Page() {
       },
       { threshold: 0.1 }
-    );
+    ),
 
     if(element) {
 =======
       observer.observe(element)}
 
-    return () => observer.disconnect()}, []);
+    return () => observer.disconnect()}, []),
 
-    setExpandedService(expandedService === serviceId ? null : serviceId) };
+    setExpandedService(expandedService === serviceId ? null : serviceId) },
 
-  ;
+  ,
 =======
 '
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;  ;
-  ;
-  ;
-  ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  };
+  phone: '+1 302 464 0950
+    email: 'kleber@ziontechgroup.com',  ,
+  ,
+  ,
+  ,
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  },
   return ("
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background Elements */}"
@@ -94,12 +94,12 @@ export default function Page() {
               onClick={() => setSelectedCategory('All')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All''
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`
-              }`};
-            >;
-              All Categories;
-            </button>;
-            {serviceCategories2027.map((category) => {;
+                  : 'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white',`
+              }`},
+            >,
+              All Categories,
+            </button>,
+            {serviceCategories2027.map((category) => {,
               
               return ()                <button
                   key = {category}
@@ -107,11 +107,11 @@ export default function Page() {
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category'
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                       : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'`
-                  }`};
-                >;"
-                  {Icon && <Icon className="w-4 h-4"  />};
-                  {category};
-                </button>;) }) }          </div>
+                  }`},
+                >,"
+                  {Icon && <Icon className="w-4 h-4"  />},
+                  {category},
+                </button>,) }) }          </div>
         </motion.div>
 
         {/* Services Grid */}
@@ -121,13 +121,13 @@ export default function Page() {
   { opacity: 0,
   y: 30 }}          animate = {
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1,
   y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map((service, index) => (;
+          {filteredServices.map((service, index) => (,
             <motion.div
               key={service.id}
               initial = {
@@ -180,7 +180,7 @@ export default function Page() {
                 </div>
 
                 {/* Key Metrics */}"
-                <div className="grid grid-cols-2 gap-4 mb-4">;"
+                <div className="grid grid-cols-2 gap-4 mb-4">,"
                   <div className="text-center">"
                     <div className="text-zion-cyan font-bold text-lg">{service.marketSize}</div>"
                     <div className="text-gray-400 text-xs">Market Size</div>
@@ -189,10 +189,10 @@ export default function Page() {
                     <div className="text-zion-purple font-bold text-lg">{service.roi}</div>"
                     <div className="text-gray-400 text-xs">ROI</div>
                   </div>
-                </div>;
+                </div>,
 
                 {/* Price & CTA */}"
-                <div className="flex items-center justify-between mb-4">;"
+                <div className="flex items-center justify-between mb-4">,"
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <button
                     onClick={() => toggleServiceExpansion(service.id)}"
@@ -204,7 +204,7 @@ export default function Page() {
 
                 {/* Expanded Service Details */}
                 <AnimatePresence>
-                  {expandedService === service.id && ;
+                  {expandedService === service.id && ,
                     <motion.div
                       initial = {
 
@@ -274,7 +274,7 @@ export default function Page() {
                           {service.ctaLabel}"
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />"
                           {service.external && <ExternalLink className="w-4 h-4"  />}                        </a>
-                      </div>;
+                      </div>,
                     </motion.div>) }
                 </AnimatePresence>
               </div>
@@ -288,13 +288,13 @@ export default function Page() {
   { opacity: 0,
   y: 30 }}          animate = {
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1,
   y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
   delay: 0.6 }}"          className="text-center"
 "
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">,"
             <h3 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>"
@@ -315,7 +315,7 @@ export default function Page() {
               </div>
             </div>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
@@ -330,10 +330,10 @@ export default function Page() {
 
                 Visit Website"
                 <ExternalLink className="w-4 h-4"  />              </a>
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) };
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

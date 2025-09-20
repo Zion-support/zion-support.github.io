@@ -1,88 +1,88 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 XBrainZapTrendingUpArrowRightPlayUsersAward,
 interface NeuralInterfaceContent {,
-  id: string;
-  title: string;
-  type: string;
-  url: string;
+  id: string,
+  title: string,
+  type: string,
+  url: string,
   metrics: {,
-    roi: string;
-    savings: string;
-    timeframe: string;
-    accuracy: string,};
-  description: string;
-  featured: boolean,}
+    roi: string,
+    savings: string,
+    timeframe: string,
+    accuracy: string},
+  description: string,
+  featured: boolean}
 ,
 const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
-  const [currentIndexsetCurrentIndex] = useState(0);
-  const [isVisiblesetIsVisible] = useState(true);
-  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentIndexsetCurrentIndex] = useState(0),
+  const [isVisiblesetIsVisible] = useState(true),
+  const [isDismissedsetIsDismissed] = useState(false),
   const neuralInterfaceContent: NeuralInterfaceContent[] = [,
     {,
-      id: 'neural-interface-revolution';
-      title: 'AI 2025: The Neural Interface Revolution - Ultimate Guide to 1,500% ROI';
-      type: 'blog';
-      url: '/blog/ai-2025-neural-interface-revolution-ultimate-guide';
+      id: 'neural-interface-revolution',
+      title: 'AI 2025: The Neural Interface Revolution - Ultimate Guide to 1,500% ROI',
+      type: 'blog',
+      url: '/blog/ai-2025-neural-interface-revolution-ultimate-guide',
       metrics: {,
-        roi: '1,500%';
-        savings: '$180M';
-        timeframe: '24 months';
-        accuracy: '99.7%',};
-      description: 'Transform your business with brain-computer integration technology';
-      featured: true,};
+        roi: '1,500%',
+        savings: '$180M',
+        timeframe: '24 months',
+        accuracy: '99.7%'},
+      description: 'Transform your business with brain-computer integration technology',
+      featured: true},
     {,
-      id: 'neural-interface-case-study';
-      title: 'Neural Interface Fortune 500 Success: $4.8B Company Achieves 1,500% ROI';
-      type: 'case-study';
-      url: '/case-studies/neural-interface-fortune-500-transformation-1500-roi-success';
+      id: 'neural-interface-case-study',
+      title: 'Neural Interface Fortune 500 Success: $4.8B Company Achieves 1,500% ROI',
+      type: 'case-study',
+      url: '/case-studies/neural-interface-fortune-500-transformation-1500-roi-success',
       metrics: {,
-        roi: '1,500%';
-        savings: '$180M';
-        timeframe: '24 months';
-        accuracy: '99.7%',};
-      description: 'Real-world success story of neural interface implementation';
-      featured: true,};
+        roi: '1,500%',
+        savings: '$180M',
+        timeframe: '24 months',
+        accuracy: '99.7%'},
+      description: 'Real-world success story of neural interface implementation',
+      featured: true},
     {,
-      id: 'neural-interface-guide';
-      title: 'Neural Interface Implementation Master Guide 2025: From Strategy to 1,500% ROI';
-      type: 'resource';
-      url: '/resources/neural-interface-implementation-master-guide-2025';
+      id: 'neural-interface-guide',
+      title: 'Neural Interface Implementation Master Guide 2025: From Strategy to 1,500% ROI',
+      type: 'resource',
+      url: '/resources/neural-interface-implementation-master-guide-2025',
       metrics: {,
-        roi: '1,500%';
-        savings: '$180M';
-        timeframe: '24 months';
-        accuracy: '99.7%',};
-      description: 'Complete implementation framework for neural interface technology';
-      featured: true,}
-  ];
+        roi: '1,500%',
+        savings: '$180M',
+        timeframe: '24 months',
+        accuracy: '99.7%'},
+      description: 'Complete implementation framework for neural interface technology',
+      featured: true}
+  ],
   useEffect(() => {,
-    const savedState = localStorage.getItem('neural-interface-banner-dismissed');
+    const savedState = localStorage.getItem('neural-interface-banner-dismissed'),
     if (savedState === 'true') {,
-      setIsDismissed(true);
-      setIsVisible(false);
+      setIsDismissed(true),
+      setIsVisible(false),
     }
-  }[]);
+  }[]),
   useEffect(() => {,
     const interval = setInterval(() => {,
       setCurrentIndex((prevIndex) =>,
         prevIndex === neuralInterfaceContent.length - 1 ? 0 : prevIndex + 1,
-      );
-    }8000);
-    return () => clearInterval(interval);
-  }[]);
+      ),
+    }8000),
+    return () => clearInterval(interval),
+  }[]),
   const handleDismiss = () => {,
-    setIsVisible(false);
-    setIsDismissed(true);
-    localStorage.setItem('neural-interface-banner-'dismissedtrue');
-  };
+    setIsVisible(false),
+    setIsDismissed(true),
+    localStorage.setItem('neural-interface-banner-'dismissedtrue'),
+  },
   const handleUndismiss = () => {,
-    setIsVisible(true);
-    setIsDismissed(false);
-    localStorage.removeItem('neural-interface-banner-dismissed');
-  };
+    setIsVisible(true),
+    setIsDismissed(false),
+    localStorage.removeItem('neural-interface-banner-dismissed'),
+  },
   if (isDismissed) {,
     return (,
       <div,
@@ -98,9 +98,8 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
             Show Banner,
           </button>,
         </div>,
-      </div>,
-    ),}
-  const currentContent = neuralInterfaceContent[currentIndex];
+      </div>)}
+  const currentContent = neuralInterfaceContent[currentIndex],
   return (,
     <div>,
       {isVisible && (,
@@ -113,27 +112,27 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
             {/* Floating Neural Network Animation */}
             <div,
               className="absolute top-10 left-10 w-20 h-20 border border-purple-400/30 rounded-full",
-                scale: [1.21];
-                opacity: [0.30.60.3],}}
-                duration: 4;
-                repeat: Infinity;
-                ease: "easeInOut",}}
+                scale: [1.21],
+                opacity: [0.30.60.3]}}
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"}}
             />,
             <div,
               className="absolute top-20 right-20 w-16 h-16 border border-blue-400/30 rounded-full",
-                scale: [1.21.2];
-                opacity: [0.60.30.6],}}
-                duration: 5;
-                repeat: Infinity;
-                ease: "easeInOut",}}
+                scale: [1.21.2],
+                opacity: [0.60.30.6]}}
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut"}}
             />,
             <div,
               className="absolute bottom-20 left-1/4 w-12 h-12 border border-indigo-400/30 rounded-full",
-                scale: [1.31];
-                opacity: [0.40.70.4],}}
-                duration: 6;
-                repeat: Infinity;
-                ease: "easeInOut",}}
+                scale: [1.31],
+                opacity: [0.40.70.4]}}
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"}}
             />,
           </div>,
           <div className="relative z-10 bg-gradient-to-r from-purple-800/95 via-blue-800/95 to-indigo-800/95 backdrop-blur-sm">,
@@ -161,9 +160,9 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
                   <X className="h-5 w-5 text-white" />,
                 </button>,
               </div>,
-              {/* Main Content */,}
+              {/* Main Content */}
               <div className="grid lg: grid-cols-2 gap-8 items-center">,
-                {/* Content Showcase */,}
+                {/* Content Showcase */}
                 <div className="space-y-6">,
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
                     <div className="flex items-center space-x-3 mb-4">,
@@ -204,7 +203,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
                           href={currentContent.url}
                           className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105",
                         >,
-                          <span>Explore {currentContent.type,}</span>,
+                          <span>Explore {currentContent.type}</span>,
                           <ArrowRight className="h-4 w-4" />,
                         </a>,
                       </div>,
@@ -218,7 +217,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
                           className={`w-2 h-2 rounded-full transition-all duration-300 ${,
                             index === currentIndex,
                               ? 'bg-white w-8',
-                              : 'bg-white/30 hover: bg-white/50',}`}
+                              : 'bg-white/30 hover: bg-white/50'}`}
                         />,
                       ))}
                     </div>,
@@ -289,7 +288,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
                   </div>,
                 </div>,
               </div>,
-              {/* Footer Stats */,}
+              {/* Footer Stats */}
               <div className="mt-8 pt-6 border-t border-white/20">,
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-center">,
                   <div>,
@@ -315,6 +314,6 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
         </div>,
       )}
     </div>,
-  );
-export default NeuralInterfaceRevolutionBanner2025;
+  ),
+export default NeuralInterfaceRevolutionBanner2025,
 </div></div>,

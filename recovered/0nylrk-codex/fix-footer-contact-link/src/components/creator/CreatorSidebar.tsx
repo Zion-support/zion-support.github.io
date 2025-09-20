@@ -1,5 +1,5 @@
 
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
 import {
   Sidebar,
   SidebarContent,
@@ -8,8 +8,8 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroupLabel,
-  SidebarGroupContent,
-} from "@/components/ui/sidebar";
+  SidebarGroupContent
+} from "@/components/ui/sidebar",
 
 export function AppSidebar() {
   return (
@@ -96,5 +96,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  );
+  ),
 }

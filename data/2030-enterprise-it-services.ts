@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface EnterpriseITService2030 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const enterpriseITServices2030: EnterpriseITService2030[] = [
   // Autonomous DevOps Platform 2030
@@ -49,16 +49,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for fully autonomous DevOps operations, enabling self-optimizing, self-healing, and self-improving development and operations.',
     features: [
-      'Autonomous CI/CD',
-      'Self-optimizing deployments',
-      'Self-healing infrastructure',
-      'Autonomous monitoring',
-      'Self-improving processes',
-      'Autonomous security',
-      'Self-optimizing performance',
-      'Autonomous scaling',
-      'Self-healing systems',
-      'Autonomous innovation'
+      'Autonomous CI/CDSelf-optimizing deployments',
+      'Self-healing infrastructureAutonomous monitoring',
+      'Self-improving processesAutonomous security',
+      'Self-optimizing performanceAutonomous scaling',
+      'Self-healing systemsAutonomous innovation'
     ],
     popular: true,
     icon: '🚀',
@@ -101,16 +96,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for zero trust network architecture, providing comprehensive security with continuous verification and authentication.',
     features: [
-      'Continuous verification',
-      'Identity-based access',
-      'Micro-segmentation',
-      'Real-time monitoring',
-      'Advanced threat detection',
-      'Automated response',
-      'Zero trust APIs',
-      'Security automation',
-      'Threat intelligence',
-      'Advanced security protocols'
+      'Continuous verificationIdentity-based access',
+      'Micro-segmentationReal-time monitoring',
+      'Advanced threat detectionAutomated response',
+      'Zero trust APIsSecurity automation',
+      'Threat intelligenceAdvanced security protocols'
     ],
     popular: true,
     icon: '🔒',
@@ -153,16 +143,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for edge computing orchestration, enabling intelligent distributed computing and real-time processing at the edge.',
     features: [
-      'Edge intelligence',
-      'Distributed computing',
-      'Real-time processing',
-      'Edge optimization',
-      'Edge security',
-      'Edge monitoring',
-      'Edge automation',
-      'Edge scaling',
-      'Edge networking',
-      'Advanced edge computing'
+      'Edge intelligenceDistributed computing',
+      'Real-time processingEdge optimization',
+      'Edge securityEdge monitoring',
+      'Edge automationEdge scaling',
+      'Edge networkingAdvanced edge computing'
     ],
     popular: true,
     icon: '🌐',
@@ -205,16 +190,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered IT operations, enabling intelligent monitoring, automation, and optimization of IT infrastructure.',
     features: [
-      'AI-powered monitoring',
-      'Intelligent automation',
-      'Predictive maintenance',
-      'AI-driven insights',
-      'Autonomous operations',
-      'Intelligent optimization',
-      'AI operations APIs',
-      'Real-time intelligence',
-      'Autonomous decision making',
-      'Advanced IT intelligence'
+      'AI-powered monitoringIntelligent automation',
+      'Predictive maintenanceAI-driven insights',
+      'Autonomous operationsIntelligent optimization',
+      'AI operations APIsReal-time intelligence',
+      'Autonomous decision makingAdvanced IT intelligence'
     ],
     popular: true,
     icon: '🤖',
@@ -257,16 +237,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for quantum-secure infrastructure, providing quantum-proof security for critical infrastructure and systems.',
     features: [
-      'Quantum-proof security',
-      'Quantum encryption',
-      'Quantum key distribution',
-      'Quantum infrastructure',
-      'Quantum security APIs',
-      'Real-time quantum security',
-      'Quantum security validation',
-      'Quantum infrastructure networks',
-      'Quantum security protocols',
-      'Advanced quantum security'
+      'Quantum-proof securityQuantum encryption',
+      'Quantum key distributionQuantum infrastructure',
+      'Quantum security APIsReal-time quantum security',
+      'Quantum security validationQuantum infrastructure networks',
+      'Quantum security protocolsAdvanced quantum security'
     ],
     popular: true,
     icon: '⚛️',
@@ -300,4 +275,4 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     rating: 5.0,
     reviews: 8
   }
-];
+],

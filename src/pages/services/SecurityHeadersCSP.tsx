@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
 import { 
-  Shield, 
+  Shield,
   Lock, 
   Target, 
   Zap, 
@@ -24,42 +24,28 @@ import {
   Calendar,
   Server,
   FileText
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function SecurityHeadersCSP() {
   const features = [
     {
-      icon: Shield,
-      title: "Security Headers Implementation",
-      description: "Comprehensive implementation of OWASP-recommended security headers."
-    },
+      icon: Shield,title: "Security Headers Implementation",description: "Comprehensive implementation of OWASP-recommended security headers."
+    };
     {
-      icon: Lock,
-      title: "Content Security Policy",
-      description: "Advanced CSP configuration and monitoring for XSS protection."
-    },
+      icon: Lock,title: "Content Security Policy",description: "Advanced CSP configuration and monitoring for XSS protection."
+    };
     {
-      icon: Target,
-      title: "Threat Detection",
-      description: "Real-time monitoring and alerting for security violations."
-    },
+      icon: Target,title: "Threat Detection",description: "Real-time monitoring and alerting for security violations."
+    };
     {
-      icon: Zap,
-      title: "Automated Security",
-      description: "Intelligent automation of security header management and updates."
-    },
+      icon: Zap,title: "Automated Security",description: "Intelligent automation of security header management and updates."
+    };
     {
-      icon: BarChart3,
-      title: "Security Analytics",
-      description: "Comprehensive insights into security posture and threat landscape."
-    },
+      icon: BarChart3,title: "Security Analytics",description: "Comprehensive insights into security posture and threat landscape."
+    };
     {
-      icon: Server,
-      title: "Infrastructure Security",
-      description: "Server-level security hardening and configuration optimization."
+      icon: Server,title: "Infrastructure Security",description: "Server-level security hardening and configuration optimization."
     }
   ];
-
   const benefits = [
     "Reduce security vulnerabilities by 80-90% with proper headers",
     "Improve security score by 40-60% on security testing platforms",
@@ -67,64 +53,45 @@ export default function SecurityHeadersCSP() {
     "Enhance compliance with security standards and regulations",
     "Improve website security posture and trust indicators",
     "Reduce security incident response time by 70%"
-  ];
+  ],
 
   const securityHeaders = [
     {
-      header: "Content Security Policy (CSP)",
-      description: "Prevent XSS attacks by controlling resource loading",
-      icon: Shield
-    },
+      header: "Content Security Policy (CSP)",description: "Prevent XSS attacks by controlling resource loading",icon: Shield
+    };
     {
-      header: "X-Frame-Options",
-      description: "Protect against clickjacking attacks",
-      icon: Lock
-    },
+      header: "X-Frame-Options",description: "Protect against clickjacking attacks",icon: Lock
+    };
     {
-      header: "X-Content-Type-Options",
-      description: "Prevent MIME type sniffing attacks",
-      icon: FileText
-    },
+      header: "X-Content-Type-Options",description: "Prevent MIME type sniffing attacks",icon: FileText
+    };
     {
-      header: "Strict-Transport-Security (HSTS)",
-      description: "Enforce HTTPS connections and prevent downgrade attacks",
-      icon: Server
-    },
+      header: "Strict-Transport-Security (HSTS)",description: "Enforce HTTPS connections and prevent downgrade attacks",icon: Server
+    };
     {
-      header: "X-XSS-Protection",
-      description: "Enable browser XSS filtering",
-      icon: AlertTriangle
-    },
+      header: "X-XSS-Protection",description: "Enable browser XSS filtering",icon: AlertTriangle
+    };
     {
-      header: "Referrer-Policy",
-      description: "Control referrer information in HTTP requests",
-      icon: Eye
+      header: "Referrer-Policy",description: "Control referrer information in HTTP requests",icon: Eye
     }
   ];
-
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Secure payment processing, customer data protection, and transaction security"
+      industry: "E-commerce",description: "Secure payment processing, customer data protection, and transaction security"
     },
     {
-      industry: "Financial Services",
-      description: "Banking security, transaction protection, and regulatory compliance"
+      industry: "Financial Services",description: "Banking security, transaction protection, and regulatory compliance"
     },
     {
-      industry: "Healthcare",
-      description: "Patient data security, HIPAA compliance, and medical information protection"
+      industry: "Healthcare",description: "Patient data security, HIPAA compliance, and medical information protection"
     },
     {
-      industry: "Technology & SaaS",
-      description: "Application security, user data protection, and service security"
+      industry: "Technology & SaaS",description: "Application security, user data protection, and service security"
     },
     {
-      industry: "Government",
-      description: "Public data security, compliance requirements, and citizen information protection"
+      industry: "Government",description: "Public data security, compliance requirements, and citizen information protection"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -390,7 +357,7 @@ export default function SecurityHeadersCSP() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-300"
+                className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover: bg-red-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -399,5 +366,5 @@ export default function SecurityHeadersCSP() {
         </div>
       </section>
     </div>
-  );
+  )
 }

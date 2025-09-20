@@ -1,5 +1,5 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 const steps = [{
 
@@ -10,7 +10,7 @@ const steps = [{
     color: 'from-zion-cyan to-zion-cyan-dark',
     bgColor: 'from-zion-cyan/20 to-zion-cyan-dark/20',
     details: ['
-      'AI-powered search and filtering',Curated service categories',Industry-specific solutions',Real-time availability',
+      'AI-powered search and filtering',Curated service categories',Industry-specific solutions',Real-time availability'
     ],
     duration: 'Immediate',
     success: '95% match rate'},
@@ -23,7 +23,7 @@ const steps = [{
     color: 'from-zion-purple to-zion-purple-dark',
     bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
     details: ['
-      'Smart matching algorithm',Service verification',Portfolio review',Direct communication',
+      'Smart matching algorithm',Service verification',Portfolio review',Direct communication'
     ],
     duration: '2-4 hours',
     success: '98% satisfaction'},
@@ -36,7 +36,7 @@ const steps = [{
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'from-zion-blue/20 to-zion-blue-dark/20',
     details: ['
-      'Interactive planning',Timeline optimization',Resource allocation',Risk assessment',
+      'Interactive planning',Timeline optimization',Resource allocation',Risk assessment'
     ],
     duration: '4-8 hours',
     success: '90% on-time delivery'},
@@ -49,7 +49,7 @@ const steps = [{
     color: 'from-zion-cyan-light to-zion-cyan',
     bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
     details: ['
-      'Agile implementation',Regular progress updates',Quality assurance',Performance monitoring',
+      'Agile implementation',Regular progress updates',Quality assurance',Performance monitoring'
     ],
     duration: '1-4 weeks',
     success: '99% quality score'},
@@ -62,12 +62,12 @@ const steps = [{
     color: 'from-zion-purple-light to-zion-purple',
     bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
     details: ['
-      'Comprehensive testing',Documentation delivery',Training and handover',Post-launch support',
+      'Comprehensive testing',Documentation delivery',Training and handover',Post-launch support'
     ],
     duration: 'Ongoing',
-    success: '100% client retention'},
-];
-;
+    success: '100% client retention'}
+],
+,
 const stats = [{
 "
     icon: <Clock className="w-6 h-6" />,
@@ -87,12 +87,12 @@ const stats = [{
 "
     icon: <Award className="w-6 h-6" />,
     value: '1000+',
-    label: 'Services Delivered'},
-];
+    label: 'Services Delivered'}
+],
 
 export function HowItWorksSection() {
-  const [hoveredStep, setHoveredStep] = useState(null);
-  const [activeStep, setActiveStep] = useState(0);
+  const [hoveredStep, setHoveredStep] = useState(null),
+  const [activeStep, setActiveStep] = useState(0),
 
   const containerVariants = {
 
@@ -103,7 +103,7 @@ export function HowItWorksSection() {
       transition: {
 
         staggerChildren: 0.2,
-        delayChildren: 0.1}}};
+        delayChildren: 0.1}}},
 
   const itemVariants = {
 
@@ -115,7 +115,7 @@ export function HowItWorksSection() {
       transition: {
 
         duration: 0.8,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
 
   const statsVariants = {
 
@@ -127,7 +127,7 @@ export function HowItWorksSection() {
       transition: {
 
         duration: 0.6,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
 
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
@@ -331,7 +331,7 @@ export function HowItWorksSection() {
               <p className="text-white text-lg mb-4">
                 Ready to get started with your micro SAAS solution?
               </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
                 <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">"
                   <Shield className="w-5 h-5" />
                   Get Started Today
@@ -346,10 +346,10 @@ export function HowItWorksSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
 '"`
 =======
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

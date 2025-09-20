@@ -3,16 +3,16 @@ interface ProductActionsProps {
   onAddToCart: () => Promise<void> | void}
 
 export function ProductActions({ onAddToCart }: ProductActionsProps) {
-  const [loading, setLoading] = useState(false);
-  const [label, setLabel] = useState('Add to Cart');
+  const [loading, setLoading] = useState(false),
+  const [label, setLabel] = useState('Add to Cart'),
 
     try {
-      await onAddToCart();
-      toast('2U Rack Mount Server added to cart');
-      setLabel('Added!');
+      await onAddToCart(),
+      toast('2U Rack Mount Server added to cart'),
+      setLabel('Added!'),
       setTimeout(() => setLabel('Add to Cart'), 1500)} finally {
       setLoading(false)}
-  };
+  },
 
   return (<Button onClick={addToCart} disabled={loading}>
       {loading ? (

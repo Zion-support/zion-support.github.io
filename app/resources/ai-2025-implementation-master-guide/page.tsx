@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../../components/SEO',
+import Link from 'next/link',
 export default function AIImplementationMasterGuide2025() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -11,7 +11,7 @@ export default function AIImplementationMasterGuide2025() {,
         url="/resources/ai-2025-implementation-master-guide",
       />,
       <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-3 mb-6">,
             <Link href="/resources" className="text-blue-600 hover: text-blue-700 font-medium">,
@@ -93,12 +93,12 @@ export default function AIImplementationMasterGuide2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className="prose prose-lg max-w-none">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">What's Inside This Master Guide</h2>,
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">,
             This comprehensive guide is the result of years of experience implementing AI solutions,
-            across hundreds of organizations. It combines theoretical knowledge with practical;
+            across hundreds of organizations. It combines theoretical knowledge with practical,
             actionable advice that you can apply immediately to your AI initiatives.,
           </p>,
           <div className="grid md: grid-cols-2 gap-8 mb-12">,
@@ -190,7 +190,7 @@ export default function AIImplementationMasterGuide2025() {,
               <div className="text-4xl mb-4">🎯</div>,
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Industry-Specific Guides</h4>,
               <p className="text-gray-600 text-sm">,
-                Tailored implementation strategies for healthcare, finance, manufacturing, retail;
+                Tailored implementation strategies for healthcare, finance, manufacturing, retail,
                 and government sectors.,
               </p>,
             </div>,
@@ -228,7 +228,7 @@ export default function AIImplementationMasterGuide2025() {,
               <div>,
                 <h4 className="font-semibold text-gray-900 mb-1">Data Scientists & Engineers</h4>,
                 <p className="text-gray-700 text-sm">,
-                  Access best practices for model development, deployment, and monitoring;
+                  Access best practices for model development, deployment, and monitoring,
                   plus advanced techniques and tools.,
                 </p>,
               </div>,
@@ -289,7 +289,7 @@ export default function AIImplementationMasterGuide2025() {,
                 <div>,
                   <h4 className="font-semibold text-gray-900 mb-1">Fortune 500 Manufacturing Company</h4>,
                   <p className="text-gray-700 text-sm mb-2">,
-                    "This guide helped us implement AI across 15 manufacturing facilities;
+                    "This guide helped us implement AI across 15 manufacturing facilities,
                     resulting in $200M in annual savings and 40% efficiency improvements.",
                   </p>,
                   <p className="text-gray-500 text-xs">- CTO, Global Manufacturing Corp</p>,
@@ -387,7 +387,7 @@ export default function AIImplementationMasterGuide2025() {,
             No email required • Instant download • 200+ pages of expert content,
           </p>,
         </div>,
-        {/* Related Resources */,}
+        {/* Related Resources */}
         <div className="mt-16">,
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Resources</h3>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -428,4 +428,4 @@ export default function AIImplementationMasterGuide2025() {,
         </div>,
       </article>,
     </div>,
-  ),}
+  )}

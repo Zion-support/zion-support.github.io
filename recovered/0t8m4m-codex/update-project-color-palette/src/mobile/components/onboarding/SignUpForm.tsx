@@ -1,71 +1,71 @@
 
-import React, { useState } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { AlertCircle } from "lucide-react";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import React, { useState } from "react",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { AlertCircle } from "lucide-react",
+import { Alert, AlertDescription } from "@/components/ui/alert",
 
 export function SignUpForm() {
-  const navigate = useNavigate();
-  const { signup, login, loginWithGoogle } = useAuth();
+  const navigate = useNavigate(),
+  const { signup, login, loginWithGoogle } = useAuth(),
   
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    name: "",
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
+    name: ""
+  }),
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setError("");
-  };
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+    setError(""),
+  },
   
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    setIsLoading(true);
+    e.preventDefault(),
+    setError(""),
+    setIsLoading(true),
     
     try {
       if (signupMode) {
         const { error } = await signup(formData.email, formData.password, {
-          name: formData.name,
-        });
+          name: formData.name
+        }),
         
         if (error) {
-          throw new Error(error);
+          throw new Error(error),
         }
         
-        navigate("/mobile");
+        navigate("/mobile"),
       } else {
-        const { error } = await login(formData.email, formData.password);
+        const { error } = await login(formData.email, formData.password),
         
         if (error) {
-          throw new Error(error);
+          throw new Error(error),
         }
         
-        navigate("/mobile");
+        navigate("/mobile"),
       }
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message)
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
   
   const handleGoogleLogin = async () => {
     try {
-      await loginWithGoogle();
+      await loginWithGoogle(),
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message)
     }
-  };
+  },
   
   return (
     <div className="space-y-4 px-4">
@@ -181,5 +181,5 @@ export function SignUpForm() {
         </Button>
       </p>
     </div>
-  );
+  ),
 }

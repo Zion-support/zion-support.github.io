@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 
 export default function GptPlaygroundPage() {
-  const [prompt, setPrompt] = useState('Explain the DevNet simulator in Zion OS.');
-  const [model, setModel] = useState('gpt-4o-mini');
-  const [response, setResponse] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [prompt, setPrompt] = useState('Explain the DevNet simulator in Zion OS.'),
+  const [model, setModel] = useState('gpt-4o-mini'),
+  const [response, setResponse] = useState(''),
+  const [loading, setLoading] = useState(false),
 
   async function run() {
-    setLoading(true);
-    setResponse('');
+    setLoading(true),
+    setResponse(''),
     const res = await fetch('/api/devnet/gpt', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt, model }),
-    });
-    const data = await res.json();
-    setResponse(data.response || data.error || '');
-    setLoading(false);
+      body: JSON.stringify({ prompt, model })
+    }),
+    const data = await res.json(),
+    setResponse(data.response || data.error || ''),
+    setLoading(false),
   }
 
   return (
@@ -31,5 +31,5 @@ export default function GptPlaygroundPage() {
         <pre className="border p-3 whitespace-pre-wrap bg-gray-50">{response}</pre>
       )}
     </div>
-  );
+  ),
 }

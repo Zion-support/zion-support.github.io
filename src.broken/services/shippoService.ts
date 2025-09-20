@@ -1,17 +1,17 @@
 export interface ShippoShipment {
-  tracking_number: string;
-  tracking_status?: string;
-  tracking_history?: ShippoTrackingEvent[];
+  tracking_number: string,
+  tracking_status?: string,
+  tracking_history?: ShippoTrackingEvent[]
 }
 
 export interface ShippoTrackingEvent {
-  status: string;
-  location?: string;
-  status_details?: string;
-  timestamp: string;
+  status: string,
+  location?: string,
+  status_details?: string,
+  timestamp: string
 }
 
-const SHIPPO_TOKEN = process.env.SHIPPO_TOKEN || '';
+const SHIPPO_TOKEN = process.env.SHIPPO_TOKEN || '',
 const FROM_ADDRESS = {
   name: process.env.SHIPPO_FROM_NAME || 'Sender',
   street1: process.env.SHIPPO_FROM_STREET || '',
@@ -19,7 +19,7 @@ const FROM_ADDRESS = {
   state: process.env.SHIPPO_FROM_STATE || '',
   zip: process.env.SHIPPO_FROM_ZIP || '',
   country: process.env.SHIPPO_FROM_COUNTRY || 'US'
-};
+},
 
 export async function createShipment(addressTo: any, parcels: any[]): Promise<ShippoShipment> {
   const res = await fetch('https://api.goshippo.com/shipments/', {
@@ -33,19 +33,19 @@ export async function createShipment(addressTo: any, parcels: any[]): Promise<Sh
       address_to: addressTo,
       parcels
     })
-  });
+  }),
 
   if (!res.ok) {
-    const msg = await res.text();
-    throw new Error(`Shippo create shipment failed: ${msg}`);
+    const msg = await res.text(),
+    throw new Error(`Shippo create shipment failed: ${msg}`),
   }
 
-  return (await res.json()) as ShippoShipment;
+  return (await res.json()) as ShippoShipment,
 }
 
 export function parseShippoWebhook(payload: any) {
-  const trackingNumber = payload?.tracking_number;
-  const trackingStatus = payload?.tracking_status?.status;
-  const events = payload?.tracking_history as ShippoTrackingEvent[] | undefined;
-  return { trackingNumber, trackingStatus, events };
+  const trackingNumber = payload?.tracking_number,
+  const trackingStatus = payload?.tracking_status?.status,
+  const events = payload?.tracking_history as ShippoTrackingEvent[] | undefined,
+  return { trackingNumber, trackingStatus, events },
 }

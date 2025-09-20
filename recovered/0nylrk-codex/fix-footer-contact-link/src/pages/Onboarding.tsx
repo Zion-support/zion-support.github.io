@@ -1,64 +1,63 @@
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
-import { Steps, Step } from "@/components/ui/steps";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
+import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
+import { Steps, Step } from "@/components/ui/steps",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
 
 export default function Onboarding() {
-  const { user, updateProfile, isLoading } = useAuth();
-  const [currentStep, setCurrentStep] = useState(0);
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
-  const navigate = useNavigate();
+  const { user, updateProfile, isLoading } = useAuth(),
+  const [currentStep, setCurrentStep] = useState(0),
+  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
+  const navigate = useNavigate(),
 
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
-      case "serviceProvider":
-        return "creator";
+      case "serviceProvider": return "creator",
       case "talent":
-        return "jobSeeker";
+        return "jobSeeker",
       case "client":
-        return "employer";
+        return "employer",
       default:
-        return "buyer";
+        return "buyer"
     }
-  };
+  },
 
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
-    setUserType(type);
+    setUserType(type),
     
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
-      navigate('/service-onboarding');
-      return;
+      navigate('/service-onboarding'),
+      return
     } else if (type === "talent") {
-      navigate('/talent-onboarding');
-      return;
+      navigate('/talent-onboarding'),
+      return,
     }
     
     // Continue with the onboarding flow for clients
-    setCurrentStep(1);
-  };
+    setCurrentStep(1),
+  },
 
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user || !userType) {
       toast({
         title: "Authentication Error",
         description: "Your session may have expired. Please log in again.",
-        variant: "destructive",
-      });
-      navigate('/login');
-      return;
+        variant: "destructive"
+      }),
+      navigate('/login'),
+      return,
     }
     
-    const dbUserType = mapUserTypeToDatabase(userType);
+    const dbUserType = mapUserTypeToDatabase(userType),
     
     try {
       await updateProfile({ 
@@ -68,46 +67,46 @@ export default function Onboarding() {
         userType: dbUserType,
         headline: data.headline,
         profileComplete: true
-      });
+      }),
       
       // Update onboarding milestone
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id,
         _milestone: 'profile_completed',
         _status: true
-      });
+      }),
       
       toast({
         title: 'Profile completed!',
-        description: 'Your profile has been set up successfully.',
-      });
+        description: 'Your profile has been set up successfully.'
+      }),
       
       // Get the appropriate dashboard route based on user type
       const dashboardRoute = userType === "client" 
         ? "/client-dashboard" 
-        : "/talent-dashboard";
+        : "/talent-dashboard",
       
       // Redirect to dashboard
-      navigate(dashboardRoute);
+      navigate(dashboardRoute),
       
     } catch (error) {
-      console.error('Error updating profile:', error);
+      console.error('Error updating profile:', error),
       toast({
         title: 'Error',
         description: 'There was a problem updating your profile. Please try again.',
-        variant: 'destructive',
-      });
+        variant: 'destructive'
+      }),
     }
-  };
+  },
 
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" },
-    { label: "Create Profile", description: "Tell us about yourself" },
-  ];
+    { label: "Create Profile", description: "Tell us about yourself" }
+  ],
 
   if (!user) {
-    navigate('/login');
-    return null;
+    navigate('/login'),
+    return null,
   }
 
   return (
@@ -166,5 +165,5 @@ export default function Onboarding() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

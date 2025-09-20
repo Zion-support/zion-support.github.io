@@ -1,18 +1,18 @@
 export interface Revolutionary2026MicroSaasService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
+    mobile: string,
+    email: string,
+    address: string
+  },
 }
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
   {
@@ -37,4 +37,4 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+],

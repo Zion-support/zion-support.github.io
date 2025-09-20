@@ -1,85 +1,79 @@
-import React from 'react';
-export default Terms;
-import { motion  } from 'framer-motion';
+import React from 'react',
+export default Terms,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     {
       title: 'Intellectual Property',
       content:
         'All content, software, and materials provided by Zion Tech Group are protected by intellectual property rights.Users may not copy, modify, or distribute our proprietary materials without permission.',
-      icon: Lock,
+      icon: Lock
     },
     {
       title: 'Privacy and Data Protection',
       content:
         'Your privacy is important to us.Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms of Service.',
-      icon: Shield,
+      icon: Shield
     },
     {
       title: 'Limitation of Liability',
       content:
         'Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services, including but not limited to data loss or business interruption.',
-      icon: AlertTriangle,
-    },
-  ];
+      icon: AlertTriangle
+    }
+  ],
 
-  const prohibitedActivities = ['Attempting to gain unauthorized access to our systems',
-    'Using our services for illegal or harmful purposes',
-    'Interfering with the operation of our services',
-    'Attempting to reverse engineer our software',
-    'Sharing account credentials with unauthorized users',
-    'Violating any applicable laws or regulations',
-  ];
+  const prohibitedActivities = ['Attempting to gain unauthorized access to our systemsUsing our services for illegal or harmful purposes',
+    'Interfering with the operation of our servicesAttempting to reverse engineer our software',
+    'Sharing account credentials with unauthorized usersViolating any applicable laws or regulations'
+  ],
 
-  const terminationConditions = ['Violation of these Terms of Service',
-    'Non - payment of service fees',
-    'Engagement in prohibited activities',
-    'Breach of security or privacy policies',
-    'Failure to comply with legal requirements',
-    'Mutual agreement to terminate services',
-  ];
+  const terminationConditions = ['Violation of these Terms of ServiceNon - payment of service fees',
+    'Engagement in prohibited activitiesBreach of security or privacy policies',
+    'Failure to comply with legal requirementsMutual agreement to terminate services'
+  ],
 
   const userObligations = [{
       obligation: 'Compliance',
       description:
-        'Comply with all applicable laws and regulations when using our services.',
+        'Comply with all applicable laws and regulations when using our services.'
     },
     {
       obligation: 'Acceptable Use',
       description:
-        'Use our services only for lawful purposes and in accordance with these terms.',
+        'Use our services only for lawful purposes and in accordance with these terms.'
     },
     {
       obligation: 'Content Standards',
       description:
-        'Ensure all content submitted through our services meets our content standards.',
+        'Ensure all content submitted through our services meets our content standards.'
     },
     {
       obligation: 'Security',
       description:
-        'Maintain the security of your account credentials and report any suspicious activity.',
-    },
-  ];
+        'Maintain the security of your account credentials and report any suspicious activity.'
+    }
+  ],
 
   const contactInfo = [{
       icon: Mail,
       label: 'Email',
       value: 'legal@ziontechgroup.com',
-      href: 'mailto:legal@ziontechgroup.com',
+      href: 'mailto:legal@ziontechgroup.com'
     },
     {
       icon: Phone,
       label: 'Phone',
       value: '+1(302) 464 - 0950',
-      href: 'tel:+13024640950',
+      href: 'tel:+13024640950'
     },
     {
       icon: MapPin,
       label: 'Address',
       value: '364 E Main St STE 1008, Middletown DE 19709',
-      href: 'https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709',
-    },
-  ];
+      href: 'https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709'
+    }
+  ],
 
   return (<>
       <SEO
@@ -244,6 +238,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) ,
+},
 

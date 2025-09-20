@@ -1,2 +1,2 @@
 
-export default BrokenLinkFixer;
+export default BrokenLinkFixer,

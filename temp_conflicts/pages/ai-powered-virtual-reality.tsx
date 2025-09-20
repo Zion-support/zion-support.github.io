@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Glasses, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredVirtualReality: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredVirtualReality: React.FC = () => {
       title: 'Multi-platform Support',
       description: 'VR development across various devices and platforms'
     }
-  ];
+  ],
 
   const vrCapabilities = [
     {
       area: 'Immersive Experiences',
-      capabilities: ['360° environments', 'Spatial audio', 'Haptic feedback', 'Motion tracking'],
+      capabilities: ['360° environmentsSpatial audio', 'Haptic feedbackMotion tracking'],
       improvement: '99.9% immersion',
       experience: 'Realistic'
     },
     {
       area: '3D Rendering',
-      capabilities: ['High-fidelity graphics', 'Real-time rendering', 'Physics simulation', 'Lighting effects'],
+      capabilities: ['High-fidelity graphicsReal-time rendering', 'Physics simulationLighting effects'],
       improvement: '90fps performance',
       rendering: 'Smooth'
     },
     {
       area: 'Interactive Elements',
-      capabilities: ['Gesture control', 'Voice commands', 'Eye tracking', 'Hand tracking'],
+      capabilities: ['Gesture controlVoice commands', 'Eye trackingHand tracking'],
       improvement: '95% precision',
       interaction: 'Natural'
     },
     {
       area: 'Content Creation',
-      capabilities: ['3D world building', 'Character animation', 'Interactive storytelling', 'Asset management'],
+      capabilities: ['3D world buildingCharacter animation', 'Interactive storytellingAsset management'],
       improvement: '10x faster',
       creation: 'Efficient'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Gaming & Entertainment',
       description: 'AI-powered VR technology for immersive gaming and entertainment experiences',
-      benefits: ['Immersive gameplay', 'Realistic graphics', 'Interactive worlds', 'Enhanced engagement']
+      benefits: ['Immersive gameplayRealistic graphics', 'Interactive worldsEnhanced engagement']
     },
     {
       title: 'Training & Simulation',
       description: 'VR technology for professional training, military simulation, and skill development',
-      benefits: ['Safe training', 'Realistic scenarios', 'Skill development', 'Cost reduction']
+      benefits: ['Safe trainingRealistic scenarios', 'Skill developmentCost reduction']
     },
     {
       title: 'Healthcare & Therapy',
       description: 'VR applications for medical training, therapy, and patient rehabilitation',
-      benefits: ['Medical training', 'Therapy sessions', 'Patient rehabilitation', 'Pain management']
+      benefits: ['Medical trainingTherapy sessions', 'Patient rehabilitationPain management']
     },
     {
       title: 'Education & Learning',
       description: 'VR technology for immersive educational experiences and virtual field trips',
-      benefits: ['Immersive learning', 'Virtual field trips', 'Interactive education', 'Better retention']
+      benefits: ['Immersive learningVirtual field trips', 'Interactive educationBetter retention']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredVirtualReality: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with VR development',
       features: [
-        'Basic VR features',
-        'Single platform support',
-        'Standard rendering',
-        'Email support',
+        'Basic VR featuresSingle platform support',
+        'Standard renderingEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredVirtualReality: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced VR development needs',
       features: [
-        'Advanced VR features',
-        'Multi-platform support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced VR featuresMulti-platform support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         '3D asset library'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredVirtualReality: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex VR development requirements',
       features: [
-        'Custom VR development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom VR developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredVirtualReality: React.FC = () => {
       position: "Healthcare Director",
       company: "Advanced Medical Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredVirtualReality: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Create with AI-Powered VR Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredVirtualReality: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredVirtualReality;
+export default AIPoweredVirtualReality,

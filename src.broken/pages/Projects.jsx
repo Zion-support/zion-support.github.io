@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 </Badge>
                     <span className="flex items - center gap-1 text-xs text-muted -foreground">

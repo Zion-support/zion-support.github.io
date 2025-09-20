@@ -35,70 +35,70 @@ function SecurityEnhancer () {
   UserCheck,
   Activity,
   ChevronUp,
-  ChevronDown} from 'lucide-react';
+  ChevronDown} from 'lucide-react',
 
 interface SecurityStatus {
 
-  csp: boolean;
-  hsts: boolean;
-  xss: boolean;
-  frameOptions: boolean;
-  contentType: boolean;
-  referrerPolicy: boolean;
+  csp: boolean,
+  hsts: boolean,
+  xss: boolean,
+  frameOptions: boolean,
+  contentType: boolean,
+  referrerPolicy: boolean,
   permissionsPolicy: boolean}
 interface SecurityEvent {
-  id: string;
-  type: 'info' | 'warning' | 'error' | 'success';
-  message: string;
-  timestamp: Date;
-  source: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  id: string,
+  type: 'info' | 'warning' | 'error' | 'success',
+  message: string,
+  timestamp: Date,
+  source: string,
+  severity: 'low' | 'medium' | 'high' | 'critical',
   details?: string}
 interface SecurityMetrics {
 
-  totalRequests: number;
-  blockedRequests: number;
-  suspiciousActivity: number;
-  lastScan: Date;
-  vulnerabilities: number;
-  complianceScore: number;
+  totalRequests: number,
+  blockedRequests: number,
+  suspiciousActivity: number,
+  lastScan: Date,
+  vulnerabilities: number,
+  complianceScore: number,
 export function SecurityEnhancer() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false),
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus | null>(
     null
-  );
-  const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
+  ),
+  const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]),
   const [securityMetrics, setSecurityMetrics] =
-    useState<SecurityMetrics | null>(null);
-  const [isScanning, setIsScanning] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
-  const [searchTerm, setSearchTerm] = useState('');
+    useState<SecurityMetrics | null>(null),
+  const [isScanning, setIsScanning] = useState(false),
+  const [activeFilters, setActiveFilters] = useState<string[]>([]),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   // Initialize security monitoring
   useEffect(() => {
     if(isVisible) {
 
-      initializeSecurityMonitoring();
+      initializeSecurityMonitoring(),
       runSecurityScan()}
-  }, [isVisible]) ;
+  }, [isVisible]) ,
 
   // Initialize security monitoring
   
     // Initialize event listeners for security monitoring
-    setupSecurityEventListeners();
+    setupSecurityEventListeners(),
 
     // Start periodic security checks
     
-    }, 30000); // Check every 30 seconds
+    }, 30000), // Check every 30 seconds
 
-    return () => clearInterval(interval)}, []);
+    return () => clearInterval(interval)}, []),
 
   // Set security headers
   
-    cspMeta.httpEquiv = 'Content-Security-Policy';
+    cspMeta.httpEquiv = 'Content-Security-Policy',
 =======
-    const cspMeta = document.createElement('meta');'    cspMeta.httpEquiv = 'Content-Security-Policy';
+    const cspMeta = document.createElement('meta'),'    cspMeta.httpEquiv = 'Content-Security-Policy',
     cspMeta.content = ['
       "default-src 'self'","
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com","
@@ -110,33 +110,33 @@ export function SecurityEnhancer() {
       "object-src 'none'","
       "base-uri 'self'","
       "form-action 'self'","
-      "frame-ancestors 'none'",upgrade-insecure-requests',
-    ].join('; ');
+      "frame-ancestors 'none'",upgrade-insecure-requests'
+    ].join(),
 
     // Remove existing CSP meta tag if present
     
     if(existingCSP) {
 
       existingCSP.remove()}
-    document.head.appendChild(cspMeta);
+    document.head.appendChild(cspMeta),
 
     // Add security-related meta tags
     const securityMetaTags = ['
       { name: 'X-Content-Type-Options', content: 'nosniff' },
       { name: 'X-Frame-Options', content: 'DENY' },
-      { name: 'X-XSS-Protection', content: '1; mode=block' },
+      { name: 'X-XSS-Protection', content: '1, mode=block' },
       { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
       {
 
         name: 'Permissions-Policy',
-        content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()},
-    ];
+        content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()}
+    ],
 
     securityMetaTags.forEach(tag => {
 
-      metaTag.name = tag.name;
-      metaTag.content = tag.content;
-      document.head.appendChild (metaTag) }) }, []) ;
+      metaTag.name = tag.name,
+      metaTag.content = tag.content,
+      document.head.appendChild (metaTag) }) }, []) ,
 
   // Setup security event listeners
   
@@ -150,7 +150,7 @@ export function SecurityEnhancer() {
         logSecurityEvent('
           'warning',Potential XSS attempt detected',DOM Manipulation',medium'
         )}
-      return originalInnerHTML.call(this, value) };
+      return originalInnerHTML.call(this, value) },
 
     // Monitor for suspicious network requests
     
@@ -160,9 +160,9 @@ export function SecurityEnhancer() {
 
         logSecurityEvent('
           'error',Suspicious fetch request blocked',Network Request',high'
-        );
+        ),
         return Promise.reject(new Error('Suspicious request blocked'))}
-      return originalFetch.call(this, input, init) };
+      return originalFetch.call(this, input, init) },
 
     // Monitor for console access attempts
     
@@ -175,27 +175,27 @@ export function SecurityEnhancer() {
         logSecurityEvent('
           'warning',Potential sensitive data logging detected',Console Access',medium'
         )}
-      return originalConsoleLog.apply(this, args) }}, []) ;
+      return originalConsoleLog.apply(this, args) }}, []) ,
 
   // Log security events
   
-      setSecurityEvents(prev => [event, ...prev.slice(0, 99)]); // Keep last 100 events
+      setSecurityEvents(prev => [event, ...prev.slice(0, 99)]), // Keep last 100 events
     },
     []
-  );
+  ),
 
   // Check security status
   
       setSecurityStatus(status)} catch(error) {
 
       // console.error('Failed to check security status:', error)}
-  }, []) ;
+  }, []) ,
 
   // Run security scan
   
     try {
       // Simulate security scan
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000)),
 
       // Generate mock security metrics
       const metrics: SecurityMetrics = {
@@ -205,9 +205,9 @@ export function SecurityEnhancer() {
         suspiciousActivity: Math.floor(Math.random() * 20) + 5,
         lastScan: new Date(),
         vulnerabilities: Math.floor(Math.random() * 10) + 2,
-        complianceScore: Math.floor(Math.random() * 20) + 80};
+        complianceScore: Math.floor(Math.random() * 20) + 80},
 
-      setSecurityMetrics(metrics);
+      setSecurityMetrics(metrics),
 
       // Log scan completion
       logSecurityEvent('
@@ -218,38 +218,38 @@ export function SecurityEnhancer() {
       )} finally {
 
       setIsScanning(false)}
-  }, [logSecurityEvent]) ;
+  }, [logSecurityEvent]) ,
 
   // Filter events
 
-    return matchesSearch && matchesFilter}) ;
+    return matchesSearch && matchesFilter}) ,
 
   // Get status icon
   
-  };
+  },
 
   // Get event icon
   
       case 'warning':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />,
       case 'error':"
-        return <XCircle className="w-4 h-4 text-red-500"  />;
+        return <XCircle className="w-4 h-4 text-red-500"  />,
       case 'success':"
-        return <CheckCircle className="w-4 h-4 text-green-500"  />;
+        return <CheckCircle className="w-4 h-4 text-green-500"  />,
       default:"
         return <Info className="w-4 h-4 text-gray-500"  />}
-  };
+  },
 
   // Get severity color
   
       case 'high':'
-        return 'border-red-500 bg-red-50 dark:bg-red-900/20';
+        return 'border-red-500 bg-red-50 dark: bg-red-900/20',
       case 'medium':'
-        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
+        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20',
       case 'low':'
-        return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
+        return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20',
       default:'
-        return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}  };
+        return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}  },
 
   return ()
     <>
@@ -316,7 +316,7 @@ export function SecurityEnhancer() {
                       { key: 'frameOptions', label: 'Frame Options' },
                       { key: 'contentType', label: 'Content Type Options' },
                       { key: 'referrerPolicy', label: 'Referrer Policy' },
-                      { key: 'permissionsPolicy', label: 'Permissions Policy' },
+                      { key: 'permissionsPolicy', label: 'Permissions Policy' }
                     ].map(item => (
                       <div
                         key={item.key}"

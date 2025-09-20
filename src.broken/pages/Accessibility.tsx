@@ -1,6 +1,6 @@
-import React from 'react';
-export default Accessibility;
-import { motion  } from 'framer-motion';
+import React from 'react',
+export default Accessibility,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     {
@@ -9,117 +9,104 @@ export default function Page() {
         'European accessibility requirements for ICT products and services',
       status: 'Fully Compliant',
       icon: CheckCircle,
-      color: 'text-green - 400',
-    },
-  ];
+      color: 'text-green - 400'
+    }
+  ],
 
   const assistiveTechnologies = [{
       name: 'Screen Readers',
       description: 'Compatible with JAWS, NVDA, VoiceOver, and TalkBack',
       icon: Monitor,
-      examples: ['JAWS', 'NVDA', 'VoiceOver', 'TalkBack', 'Narrator'],
+      examples: ['JAWSNVDA', 'VoiceOverTalkBack', 'Narrator']
     },
     {
       name: 'Voice Control',
       description:
         'Voice recognition software support for hands - free navigation',
       icon: Volume2,
-      examples: ['Dragon NaturallySpeaking',
-        'Voice Control(macOS) ',
-        'Windows Speech Recognition',
-      ],
+      examples: ['Dragon NaturallySpeakingVoice Control(macOS) ',
+        'Windows Speech Recognition'
+      ]
     },
     {
       name: 'Switch Devices',
       description: 'Alternative input devices for users with limited mobility',
       icon: Mouse,
-      examples: ['Head switches',
-        'Eye tracking',
-        'Sip and puff devices',
-        'Foot pedals',
-      ],
+      examples: ['Head switchesEye tracking',
+        'Sip and puff devicesFoot pedals'
+      ]
     },
     {
       name: 'Mobile Accessibility',
       description: 'Optimized for mobile assistive technologies',
       icon: Smartphone,
-      examples: ['iOS VoiceOver',
-        'Android TalkBack',
-        'Switch Control',
-        'AssistiveTouch',
-      ],
-    },
-  ];
+      examples: ['iOS VoiceOverAndroid TalkBack',
+        'Switch ControlAssistiveTouch'
+      ]
+    }
+  ],
 
   const accessibilityTools = [{
       name: 'High Contrast Mode',
       icon: Contrast,
       description: 'Toggle high contrast color schemes for better visibility',
-      shortcut: 'Ctrl + Shift + H',
+      shortcut: 'Ctrl + Shift + H'
     },
     {
       name: 'Font Size Adjustment',
       icon: Type,
       description: 'Increase or decrease text size for better readability',
-      shortcut: 'Ctrl + Plus / Minus',
+      shortcut: 'Ctrl + Plus / Minus'
     },
     {
       name: 'Zoom Controls',
       icon: ZoomIn,
       description: 'Zoom in and out of content for better visibility',
-      shortcut: 'Ctrl + Mouse Wheel',
+      shortcut: 'Ctrl + Mouse Wheel'
     },
     {
       name: 'Color Blindness Support',
       icon: Palette,
       description:
         'Color schemes optimized for various types of color blindness',
-      shortcut: 'Ctrl + Shift + C',
-    },
-  ];
+      shortcut: 'Ctrl + Shift + C'
+    }
+  ],
 
   const accessibilityFeatures = [{
       category: 'Visual Accessibility',
       icon: Eye,
       features: [
-        'High contrast color schemes',
-        'Adjustable font sizes',
-        'Screen reader compatibility',
-        'Keyboard navigation support',
-        'Focus indicators and landmarks',
-      ],
+        'High contrast color schemesAdjustable font sizes',
+        'Screen reader compatibilityKeyboard navigation support',
+        'Focus indicators and landmarks'
+      ]
     },
     {
       category: 'Auditory Accessibility',
       icon: Ear,
-      features: ['Closed captions for videos',
-        'Audio descriptions',
-        'Visual alerts and notifications',
-        'Transcripts for audio content',
-        'Volume controls and audio alternatives',
-      ],
+      features: ['Closed captions for videosAudio descriptions',
+        'Visual alerts and notificationsTranscripts for audio content',
+        'Volume controls and audio alternatives'
+      ]
     },
     {
       category: 'Motor Accessibility',
       icon: Hand,
-      features: ['Keyboard - only navigation',
-        'Voice control support',
-        'Switch device compatibility',
-        'Extended time limits',
-        'Large click targets',
-      ],
+      features: ['Keyboard - only navigationVoice control support',
+        'Switch device compatibilityExtended time limits',
+        'Large click targets'
+      ]
     },
     {
       category: 'Cognitive Accessibility',
       icon: Brain,
-      features: ['Clear and simple language',
-        'Consistent navigation',
-        'Error prevention and recovery',
-        'Multiple ways to complete tasks',
-        'Reduced distractions and animations',
-      ],
-    },
-  ];
+      features: ['Clear and simple languageConsistent navigation',
+        'Error prevention and recoveryMultiple ways to complete tasks',
+        'Reduced distractions and animations'
+      ]
+    }
+  ],
 
   return (<>
       <SEO
@@ -340,7 +327,7 @@ export default function Page() {
                 If you encounter any accessibility barriers or have suggestions
                 for improvement, please contact us.We are committed to making
                 our services accessible to everyone.</p>
-              <div className="flex flex - col sm:flex - row gap-4 justify -center">
+              <div className="flex flex - col sm: flex - row gap-4 justify -center">
                 <a
                   href="mailto:accessibility@ziontechgroup.com"
                   className="px-6 py-3 bg-gradient - to - r from - blue - 500 to - purple - 500 text-white rounded-lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration -300"
@@ -358,6 +345,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) 
+},
 

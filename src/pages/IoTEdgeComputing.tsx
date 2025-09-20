@@ -1,8 +1,8 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Cpu, 
+  Cpu,
   Brain, 
   Zap, 
   CheckCircle,
@@ -38,102 +38,62 @@ import {
   Clock,
   BarChart,
   PieChart
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function IoTEdgeComputing() {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Real-time data processing at the edge for instant decision making',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Cpu,title: 'Edge Processing',description: 'Real-time data processing at the edge for instant decision making',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Wifi,
-      title: 'IoT Connectivity',
-      description: 'Seamless connection of devices across multiple protocols and networks',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Wifi,title: 'IoT Connectivity',description: 'Seamless connection of devices across multiple protocols and networks',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: Brain,
-      title: 'AI at the Edge',
-      description: 'Machine learning models running locally for privacy and speed',
-      color: 'from-purple-500 to-pink-500'
-    },
+      icon: Brain,title: 'AI at the Edge',description: 'Machine learning models running locally for privacy and speed',color: 'from-purple-500 to-pink-500'
+    };
     {
-      icon: Zap,
-      title: 'Real-Time Analytics',
-      description: 'Instant insights and monitoring with minimal latency',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Zap,title: 'Real-Time Analytics',description: 'Instant insights and monitoring with minimal latency',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: ShieldCheck,
-      title: 'Edge Security',
-      description: 'Advanced security protocols for distributed IoT networks',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: ShieldCheck,title: 'Edge Security',description: 'Advanced security protocols for distributed IoT networks',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: Cloud,
-      title: 'Hybrid Cloud',
-      description: 'Seamless integration between edge devices and cloud infrastructure',
-      color: 'from-indigo-500 to-blue-500'
+      icon: Cloud,title: 'Hybrid Cloud',description: 'Seamless integration between edge devices and cloud infrastructure',color: 'from-indigo-500 to-blue-500'
     }
   ];
-
   const benefits = [
-    'Reduce latency by 90% with edge processing',
-    'Lower bandwidth costs by 70%',
-    'Improve data privacy and security',
-    'Enable real-time decision making',
-    'Scale IoT deployments efficiently',
-    'Reduce cloud dependency and costs'
-  ];
+    'Reduce latency by 90% with edge processingLower bandwidth costs by 70%',
+    'Improve data privacy and securityEnable real-time decision making',
+    'Scale IoT deployments efficientlyReduce cloud dependency and costs'
+  ],
 
   const useCases = [
     {
-      title: 'Smart Cities',
-      description: 'Intelligent urban infrastructure with real-time monitoring',
-      icon: Building
-    },
+      title: 'Smart Cities',description: 'Intelligent urban infrastructure with real-time monitoring',icon: Building
+    };
     {
-      title: 'Industrial IoT',
-      description: 'Predictive maintenance and process optimization',
-      icon: Factory
-    },
+      title: 'Industrial IoT',description: 'Predictive maintenance and process optimization',icon: Factory
+    };
     {
-      title: 'Connected Vehicles',
-      description: 'Autonomous driving and traffic management',
-      icon: Car
-    },
+      title: 'Connected Vehicles',description: 'Autonomous driving and traffic management',icon: Car
+    };
     {
-      title: 'Healthcare IoT',
-      description: 'Remote patient monitoring and medical device management',
-      icon: Heart
+      title: 'Healthcare IoT',description: 'Remote patient monitoring and medical device management',icon: Heart
     }
   ];
-
   const edgeCapabilities = [
     {
-      name: 'Real-Time Processing',
-      description: 'Instant data analysis and decision making at the edge',
-      examples: ['Stream processing', 'Event detection', 'Instant alerts']
+      name: 'Real-Time Processing',description: 'Instant data analysis and decision making at the edge',examples: ['Stream processingEvent detection', 'Instant alerts']
     },
     {
-      name: 'Local AI Models',
-      description: 'Machine learning algorithms running on edge devices',
-      examples: ['Image recognition', 'Predictive analytics', 'Anomaly detection']
+      name: 'Local AI Models',description: 'Machine learning algorithms running on edge devices',examples: ['Image recognitionPredictive analytics', 'Anomaly detection']
     },
     {
-      name: 'Data Filtering',
-      description: 'Intelligent data selection and preprocessing',
-      examples: ['Noise reduction', 'Data compression', 'Quality filtering']
+      name: 'Data Filtering',description: 'Intelligent data selection and preprocessing',examples: ['Noise reductionData compression', 'Quality filtering']
     },
     {
-      name: 'Edge Analytics',
-      description: 'Advanced analytics and insights generation',
-      examples: ['Trend analysis', 'Pattern recognition', 'Performance metrics']
+      name: 'Edge Analytics',description: 'Advanced analytics and insights generation',examples: ['Trend analysisPattern recognition', 'Performance metrics']
     }
-  ];
+  ],
 
   return (
     <>
@@ -387,7 +347,7 @@ export default function IoTEdgeComputing() {
                 IoT Edge Computing Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our edge platform adapts to various industries and applications, 
+                Our edge platform adapts to various industries and applications;
                 providing tailored solutions for different IoT environments.
               </p>
             </motion.div>
@@ -452,7 +412,7 @@ export default function IoTEdgeComputing() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -462,5 +422,5 @@ export default function IoTEdgeComputing() {
         </section>
       </div>
     </>
-  );
+  )
 }

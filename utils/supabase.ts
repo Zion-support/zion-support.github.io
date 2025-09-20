@@ -1,1 +1,1 @@
-// Supabase utilities;
+// Supabase utilities,

@@ -1,19 +1,19 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2025: The Ultimate Autonomous Business Revolution | Zion Tech Group';
-  description: 'Discover how AI is revolutionizing business operations in 2025 with autonomous systems that deliver unprecedented efficiency and ROI.';
-  keywords: ['AIAutonomous Systems', 'Business Automation2025', 'RevolutionROI'];
+  title: 'AI 2025: The Ultimate Autonomous Business Revolution | Zion Tech Group',
+  description: 'Discover how AI is revolutionizing business operations in 2025 with autonomous systems that deliver unprecedented efficiency and ROI.',
+  keywords: ['AIAutonomous SystemsBusiness Automation2025', 'RevolutionROI'],
   openGraph: {,
-    title: 'AI 2025: The Ultimate Autonomous Business Revolution';
-    description: 'Discover how AI is revolutionizing business operations in 2025 with autonomous systems that deliver unprecedented efficiency and ROI.';
-    type: 'article';
-    publishedTime: '2025-01-15T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AIAutonomous Systems', 'Business Automation2025', 'Revolution'],
+    title: 'AI 2025: The Ultimate Autonomous Business Revolution',
+    description: 'Discover how AI is revolutionizing business operations in 2025 with autonomous systems that deliver unprecedented efficiency and ROI.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AIAutonomous SystemsBusiness Automation2025', 'Revolution']
   }
-};
+},
 export default function AI2025AutonomousBusinessRevolutionPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -218,5 +218,4 @@ export default function AI2025AutonomousBusinessRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

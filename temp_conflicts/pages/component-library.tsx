@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const ComponentLibrary = () => {
-  const [activeTab, setActiveTab] = useState('buttons');
-  const [modalOpen, setModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('buttons'),
+  const [modalOpen, setModalOpen] = useState(false),
 
   const components = {
     buttons: [
@@ -12,44 +12,44 @@ const ComponentLibrary = () => {
       { name: 'Secondary Button', variant: 'secondary', code: '<Button variant="secondary">Secondary</Button>' },
       { name: 'Success Button', variant: 'success', code: '<Button variant="success">Success</Button>' },
       { name: 'Danger Button', variant: 'danger', code: '<Button variant="danger">Danger</Button>' },
-      { name: 'Outline Button', variant: 'outline', code: '<Button variant="outline">Outline</Button>' },
+      { name: 'Outline Button', variant: 'outline', code: '<Button variant="outline">Outline</Button>' }
     ],
     forms: [
       { name: 'Text Input', code: '<input type="text" placeholder="Enter text..." />' },
       { name: 'Select Dropdown', code: '<select><option>Option 1</option></select>' },
       { name: 'Checkbox', code: '<input type="checkbox" />' },
       { name: 'Radio Button', code: '<input type="radio" />' },
-      { name: 'Textarea', code: '<textarea placeholder="Enter text..."></textarea>' },
+      { name: 'Textarea', code: '<textarea placeholder="Enter text..."></textarea>' }
     ],
     navigation: [
       { name: 'Breadcrumbs', code: '<nav aria-label="Breadcrumb"><ol><li>Home</li></ol></nav>' },
       { name: 'Pagination', code: '<nav><ul><li><a href="#">1</a></li></ul></nav>' },
-      { name: 'Tabs', code: '<div role="tablist"><button role="tab">Tab 1</button></div>' },
+      { name: 'Tabs', code: '<div role="tablist"><button role="tab">Tab 1</button></div>' }
     ],
     feedback: [
       { name: 'Alert', code: '<div role="alert">Alert message</div>' },
       { name: 'Modal', code: '<div role="dialog">Modal content</div>' },
       { name: 'Tooltip', code: '<div role="tooltip">Tooltip text</div>' },
-      { name: 'Progress Bar', code: '<progress value="70" max="100">70%</progress>' },
+      { name: 'Progress Bar', code: '<progress value="70" max="100">70%</progress>' }
     ]
-  };
+  },
 
   const Button = ({ variant, children, ...props }) => {
-    const baseClasses = 'px-4 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+    const baseClasses = 'px-4 py-2 rounded-md font-medium transition-colors duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2',
     const variantClasses = {
       primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
       secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
       success: 'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500',
       danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
       outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
-    };
+    },
     
     return (
       <button className={`${baseClasses} ${variantClasses[variant]}`} {...props}>
         {children}
       </button>
-    );
-  };
+    ),
+  },
 
   return (
     <>
@@ -263,7 +263,7 @@ const ComponentLibrary = () => {
         )}
       </div>
     </>
-  );
-};
+  ),
+},
 
-export default ComponentLibrary;
+export default ComponentLibrary,

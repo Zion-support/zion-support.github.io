@@ -1,23 +1,23 @@
-import { useEffect, useRef, useState } from "react";
-import { useRouter } from 'next/router';
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchResultCard } from "@/components/search/SearchResultCard";
-import { SearchBar } from "@/components/SearchBar";
+import { useEffect, useRef, useState } from "react",
+import { useRouter } from 'next/router',
+import { useInfiniteQuery } from "@tanstack/react-query",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchResultCard } from "@/components/search/SearchResultCard",
+import { SearchBar } from "@/components/SearchBar",
 
 interface SearchResult {
-  id: string;
-  type: 'product' | 'service' | 'talent';
-  title: string;
-  description: string;
+  id: string,
+  type: 'product' | 'service' | 'talent',
+  title: string,
+  description: string
 }
 
-const LIMIT = 20;
+const LIMIT = 20,
 
 export default function SearchResultsPage() {
-  const router = useRouter();
-  const initialQuery = (router.query.q as string) || "";
-  const [query, setQuery] = useState(initialQuery);
+  const router = useRouter(),
+  const initialQuery = (router.query.q as string) || "",
+  const [query, setQuery] = useState(initialQuery),
 
   const {
     data,
@@ -31,40 +31,40 @@ export default function SearchResultsPage() {
     queryFn: async ({ pageParam = 1 }) => {
       const res = await fetch(
         `/api/search?q=${encodeURIComponent(query)}&page=${pageParam}&limit=${LIMIT}`
-      );
-      if (!res.ok) throw new Error("Failed to fetch");
-      return (await res.json()) as SearchResult[];
+      ),
+      if (!res.ok) throw new Error("Failed to fetch"),
+      return (await res.json()) as SearchResult[],
     },
     enabled: !!query,
     initialPageParam: 1,
     getNextPageParam: (lastPage, pages) =>
       lastPage.length < LIMIT ? undefined : pages.length + 1
-  });
+  }),
 
   // Refetch when the URL param changes
   useEffect(() => {
     if (initialQuery !== query) {
-      setQuery(initialQuery);
-      refetch();
+      setQuery(initialQuery),
+      refetch(),
     }
-  }, [initialQuery]);
+  }, [initialQuery]),
 
-  const allResults = data?.pages.flat() ?? [];
-  const loader = useRef<HTMLDivElement>(null);
+  const allResults = data?.pages.flat() ?? [],
+  const loader = useRef<HTMLDivElement>(null),
 
   useEffect(() => {
-    const el = loader.current;
-    if (!el) return;
+    const el = loader.current,
+    if (!el) return,
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
-        fetchNextPage();
+        fetchNextPage(),
       }
-    });
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [loader.current, hasNextPage, isFetchingNextPage]);
+    }),
+    observer.observe(el),
+    return () => observer.disconnect(),
+  }, [loader.current, hasNextPage, isFetchingNextPage]),
 
-  const suggestions = generateSearchSuggestions().slice(0, 5);
+  const suggestions = generateSearchSuggestions().slice(0, 5),
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -95,5 +95,5 @@ export default function SearchResultsPage() {
       <div ref={loader} className="h-1" />
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
     </main>
-  );
+  ),
 }

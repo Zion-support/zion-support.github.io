@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface OnsitesupportProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Onsitesupport({ }: OnsitesupportProps) {,
@@ -8,7 +8,6 @@ export default function Onsitesupport({ }: OnsitesupportProps) {,
     <div>,
       <h1>Onsitesupport</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

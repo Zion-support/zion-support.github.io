@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default RevolutionaryServicesShowcase2025;
-import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data / emerging - tech-2025 - specialized -services';
+import React, { useState } from 'react',
+export default RevolutionaryServicesShowcase2025,
+import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data / emerging - tech-2025 - specialized -services',
 
 export default function Page() {
       <div className="bg-black / 20 backdrop - blur - sm border-b border-white / 10">
@@ -274,7 +274,7 @@ export default function Page() {
               Our revolutionary services are designed to give you a competitive
               edge in 2025 and beyond.Contact us today to discuss how we can
               help you achieve your goals.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <a
                 href="tel:+13024640950"
                 className="bg-green - 600 text-white px-8 py-4 rounded-lg font - semibold text-lg hover:bg-green - 700 transition - all duration -300"
@@ -291,5 +291,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},

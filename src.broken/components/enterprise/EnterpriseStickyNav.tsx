@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from "react",
 import { Menu } from 'lucide-react'
-import Link from "next/link";
+import Link from "next/link",
 
 export function EnterpriseStickyNav() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false),
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
@@ -18,7 +18,7 @@ export function EnterpriseStickyNav() {
           </button>
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
             <li>
-              <Link href="#features" className="text-sm font-medium hover:text-primary">Features</Link>
+              <Link href="#features" className="text-sm font-medium hover: text-primary">Features</Link>
             </li>
             <li>
               <Link href="#pricing" className="text-sm font-medium hover:text-primary">Pricing</Link>
@@ -33,5 +33,5 @@ export function EnterpriseStickyNav() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

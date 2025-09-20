@@ -1,10 +1,10 @@
 
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
-import { Link } from "react-router-dom";
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
+import { Link } from "react-router-dom",
 
 export function ClientDashboard() {
   return (
@@ -144,7 +144,7 @@ export function ClientDashboard() {
               </div>
               <div>
                 <p className="text-sm">
-                  <strong>Website Redesign:</strong> Sarah submitted Milestone 2 for review
+                  <strong>Website Redesign: </strong> Sarah submitted Milestone 2 for review
                 </p>
                 <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
@@ -167,5 +167,5 @@ export function ClientDashboard() {
         </Card>
       </section>
     </div>
-  );
+  )
 }

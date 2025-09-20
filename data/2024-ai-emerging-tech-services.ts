@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface AIEmergingTechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const aiEmergingTechServices: AIEmergingTechService[] = [
   // AI-Powered Video Generation Platform
@@ -49,16 +49,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     period: '/month',
     description: 'Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.',
     features: [
-      'Text-to-video generation',
-      'Image-to-video conversion',
-      'AI voice synthesis',
-      'Automatic scene generation',
-      'Professional templates library',
-      'Multi-language support',
-      '4K video export',
-      'Brand customization',
-      'Social media optimization',
-      'API access for developers'
+      'Text-to-video generationImage-to-video conversion',
+      'AI voice synthesisAutomatic scene generation',
+      'Professional templates libraryMulti-language support',
+      '4K video exportBrand customization',
+      'Social media optimizationAPI access for developers'
     ],
     popular: true,
     icon: '🎬',
@@ -101,16 +96,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     period: '/month',
     description: 'Cutting-edge quantum machine learning platform that leverages quantum computing principles to solve complex optimization problems and accelerate AI model training.',
     features: [
-      'Quantum neural networks',
-      'Quantum optimization algorithms',
-      'Hybrid classical-quantum models',
-      'Quantum feature selection',
-      'Quantum clustering algorithms',
-      'Real-time quantum simulation',
-      'API access to quantum computers',
-      'Performance benchmarking',
-      'Research collaboration tools',
-      'Educational resources'
+      'Quantum neural networksQuantum optimization algorithms',
+      'Hybrid classical-quantum modelsQuantum feature selection',
+      'Quantum clustering algorithmsReal-time quantum simulation',
+      'API access to quantum computersPerformance benchmarking',
+      'Research collaboration toolsEducational resources'
     ],
     popular: true,
     icon: '⚛️',
@@ -153,16 +143,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and predictive security analytics to protect your digital assets.',
     features: [
-      'AI-powered threat detection',
-      'Behavioral analysis',
-      'Automated incident response',
-      'Predictive threat intelligence',
-      'Zero-day vulnerability detection',
-      'Compliance reporting',
-      'Security orchestration',
-      'Threat hunting automation',
-      'Mobile security monitoring',
-      'Cloud security integration'
+      'AI-powered threat detectionBehavioral analysis',
+      'Automated incident responsePredictive threat intelligence',
+      'Zero-day vulnerability detectionCompliance reporting',
+      'Security orchestrationThreat hunting automation',
+      'Mobile security monitoringCloud security integration'
     ],
     popular: true,
     icon: '🛡️',
@@ -205,16 +190,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     period: '/month',
     description: 'Comprehensive autonomous robotics platform that enables businesses to develop, deploy, and manage intelligent robots for various industrial and commercial applications.',
     features: [
-      'Robot development framework',
-      'AI-powered navigation',
-      'Computer vision integration',
-      'Sensor fusion algorithms',
-      'Cloud robotics platform',
-      'Fleet management system',
-      'Safety monitoring',
-      'Performance analytics',
-      'Remote operation tools',
-      'Integration APIs'
+      'Robot development frameworkAI-powered navigation',
+      'Computer vision integrationSensor fusion algorithms',
+      'Cloud robotics platformFleet management system',
+      'Safety monitoringPerformance analytics',
+      'Remote operation toolsIntegration APIs'
     ],
     popular: true,
     icon: '🤖',
@@ -257,16 +237,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     period: '/month',
     description: 'Innovative blockchain AI platform that combines decentralized computing with artificial intelligence to create secure, transparent, and efficient AI solutions.',
     features: [
-      'Decentralized AI training',
-      'Smart contract AI execution',
-      'Federated learning networks',
-      'AI model marketplace',
-      'Blockchain-based data sharing',
-      'Privacy-preserving AI',
-      'Tokenized AI services',
-      'Cross-chain AI operations',
-      'Decentralized governance',
-      'AI audit trails'
+      'Decentralized AI trainingSmart contract AI execution',
+      'Federated learning networksAI model marketplace',
+      'Blockchain-based data sharingPrivacy-preserving AI',
+      'Tokenized AI servicesCross-chain AI operations',
+      'Decentralized governanceAI audit trails'
     ],
     popular: true,
     icon: '🔗',
@@ -309,16 +284,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     period: '/month',
     description: 'Advanced edge AI computing platform that brings artificial intelligence to edge devices, enabling real-time processing, reduced latency, and improved privacy for IoT applications.',
     features: [
-      'Edge AI model deployment',
-      'Real-time inference engine',
-      'Device optimization tools',
-      'Federated learning support',
-      'Edge device management',
-      'Performance monitoring',
-      'Security at the edge',
-      'Cloud-edge synchronization',
-      'Multi-device coordination',
-      'API for edge applications'
+      'Edge AI model deploymentReal-time inference engine',
+      'Device optimization toolsFederated learning support',
+      'Edge device managementPerformance monitoring',
+      'Security at the edgeCloud-edge synchronization',
+      'Multi-device coordinationAPI for edge applications'
     ],
     popular: true,
     icon: '🌐',
@@ -361,16 +331,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     period: '/month',
     description: 'Revolutionary AI-powered drug discovery platform that accelerates the development of new pharmaceuticals through machine learning, molecular modeling, and predictive analytics.',
     features: [
-      'AI molecular modeling',
-      'Drug target identification',
-      'Virtual screening',
-      'ADMET prediction',
-      'Clinical trial optimization',
-      'Drug repurposing',
-      'Collaborative research tools',
-      'Regulatory compliance',
-      'Patent analysis',
-      'Research collaboration network'
+      'AI molecular modelingDrug target identification',
+      'Virtual screeningADMET prediction',
+      'Clinical trial optimizationDrug repurposing',
+      'Collaborative research toolsRegulatory compliance',
+      'Patent analysisResearch collaboration network'
     ],
     popular: true,
     icon: '🧬',
@@ -413,16 +378,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     period: '/month',
     description: 'Advanced AI-powered climate modeling platform that provides accurate predictions, risk assessments, and adaptation strategies for climate change impacts.',
     features: [
-      'AI climate prediction models',
-      'Risk assessment algorithms',
-      'Adaptation strategy planning',
-      'Real-time monitoring',
-      'Historical data analysis',
-      'Scenario modeling',
-      'Impact assessment tools',
-      'Policy recommendation engine',
-      'Collaborative research platform',
-      'Public awareness tools'
+      'AI climate prediction modelsRisk assessment algorithms',
+      'Adaptation strategy planningReal-time monitoring',
+      'Historical data analysisScenario modeling',
+      'Impact assessment toolsPolicy recommendation engine',
+      'Collaborative research platformPublic awareness tools'
     ],
     popular: true,
     icon: '🌍',
@@ -456,4 +416,4 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.8,
     reviews: 280
   }
-];
+],

@@ -1,19 +1,19 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             icon: Database,
             title: "Data Management",
             description: "Comprehensive financial data integration and management",
-            features["Real - time data", "Multi - source integration", "Data quality"];
-        },;
+            features["Real - time data", "Multi - source integration", "Data quality"],
+        },
         {
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined financial operations and workflow automation",
-            features["Workflow automation", "Document processing", "Approval systems"];
+            features["Workflow automation", "Document processing", "Approval systems"],
         }
-    ];
+    ],
     const useCases = [{
             title: "Investment Management",
             description: "AI - powered portfolio management and investment strategies",
@@ -44,14 +44,14 @@ export default function Page() {
             description: "Automated treasury management and cash flow optimization",
             icon: "💰"
 
-    ];
+    ],
     const benefits = ["Reduce operational costs by 25 - 40%",
         "Improve compliance accuracy by 95%",
         "Enhance fraud detection by 80%",
         "Accelerate transaction processing by 60%",
         "Improve customer satisfaction by 35%",
         "Enable real - time decision making"
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue -900">
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 px-4 sm:px-6 lg:px-8">

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Revolutionary AI 2025 Automation - Zion Tech Group';
-  description: 'Transform your business with revolutionary AI 2025 automation. Achieve 2000% ROI with our breakthrough autonomous systems and quantum-enhanced AI solutions.';
-  keywords: ['AI 2025Revolutionary Automation', 'Autonomous SystemsQuantum AI', 'Business Transformation2000% ROI'],
-};
+  title: 'Revolutionary AI 2025 Automation - Zion Tech Group',
+  description: 'Transform your business with revolutionary AI 2025 automation. Achieve 2000% ROI with our breakthrough autonomous systems and quantum-enhanced AI solutions.',
+  keywords: ['AI 2025Revolutionary AutomationAutonomous SystemsQuantum AI', 'Business Transformation2000% ROI']
+},
 export default function RevolutionaryAI2025AutomationPage() {,
   return (,
     <div>,
@@ -52,7 +52,7 @@ export default function RevolutionaryAI2025AutomationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Revolutionary Results */,}
+        {/* Revolutionary Results */}
         <section className="py-20 bg-gray-50">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -87,7 +87,7 @@ export default function RevolutionaryAI2025AutomationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Revolutionary Features */,}
+        {/* Revolutionary Features */}
         <section className="py-20">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -294,7 +294,7 @@ export default function RevolutionaryAI2025AutomationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-4xl md:text-5xl font-bold mb-8">,
@@ -320,5 +320,4 @@ export default function RevolutionaryAI2025AutomationPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

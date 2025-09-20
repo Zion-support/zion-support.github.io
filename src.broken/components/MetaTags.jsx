@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com / og - image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {
 =======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 
 export default function Page() {
 </title>
@@ -64,7 +64,7 @@ export default function Page() {
                 "contactType": "customer service","
                 "email": "kleber@ziontechgroup.com"
             },"
-            "sameAs"[;"
+            "sameAs"[,"
                 "https://linkedin.com/company/ziontechgroup","
                 "https://twitter.com/ziontechgroup","
                 "https://github.com/Zion-Holdings"
@@ -74,6 +74,6 @@ export default function Page() {
             "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services"
         }) }
       </script>
-    </Helmet>)};
+    </Helmet>)},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

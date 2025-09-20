@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   MessageCircle, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredChatbotDevelopment: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredChatbotDevelopment: React.FC = () => {
       title: 'Multi-platform Support',
       description: 'Chatbot deployment across various platforms and channels'
     }
-  ];
+  ],
 
   const chatbotCapabilities = [
     {
       area: 'Conversation Intelligence',
-      capabilities: ['Intent recognition', 'Context understanding', 'Sentiment analysis', 'Multi-turn conversations'],
+      capabilities: ['Intent recognitionContext understanding', 'Sentiment analysisMulti-turn conversations'],
       improvement: '95% accuracy',
       intelligence: 'Advanced'
     },
     {
       area: 'Language Processing',
-      capabilities: ['NLP integration', 'Language detection', 'Translation support', 'Slang understanding'],
+      capabilities: ['NLP integrationLanguage detection', 'Translation supportSlang understanding'],
       improvement: 'Multi-language support',
       processing: 'Intelligent'
     },
     {
       area: 'Integration & APIs',
-      capabilities: ['CRM integration', 'Database connectivity', 'Third-party APIs', 'Webhook support'],
+      capabilities: ['CRM integrationDatabase connectivity', 'Third-party APIsWebhook support'],
       improvement: 'Seamless integration',
       integration: 'Comprehensive'
     },
     {
       area: 'Analytics & Insights',
-      capabilities: ['Conversation analytics', 'Performance metrics', 'User behavior analysis', 'Optimization insights'],
+      capabilities: ['Conversation analyticsPerformance metrics', 'User behavior analysisOptimization insights'],
       improvement: 'Actionable insights',
       analytics: 'Real-time'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Customer Service',
       description: 'AI-powered customer support chatbots for instant assistance and issue resolution',
-      benefits: ['24/7 support', 'Instant responses', 'Issue resolution', 'Customer satisfaction']
+      benefits: ['24/7 supportInstant responses', 'Issue resolutionCustomer satisfaction']
     },
     {
       title: 'E-commerce & Retail',
       description: 'Shopping assistants and product recommendation chatbots',
-      benefits: ['Product recommendations', 'Order tracking', 'Shopping assistance', 'Sales optimization']
+      benefits: ['Product recommendationsOrder tracking', 'Shopping assistanceSales optimization']
     },
     {
       title: 'Healthcare & Medical',
       description: 'Patient support and medical information chatbots',
-      benefits: ['Patient support', 'Appointment scheduling', 'Medical information', 'Health monitoring']
+      benefits: ['Patient supportAppointment scheduling', 'Medical informationHealth monitoring']
     },
     {
       title: 'Financial Services',
       description: 'Banking assistants and financial advisory chatbots',
-      benefits: ['Account information', 'Transaction support', 'Financial advice', 'Security assistance']
+      benefits: ['Account informationTransaction support', 'Financial adviceSecurity assistance']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredChatbotDevelopment: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with chatbot development',
       features: [
-        'Basic chatbot features',
-        'Single platform support',
-        'Standard NLP',
-        'Email support',
+        'Basic chatbot featuresSingle platform support',
+        'Standard NLPEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredChatbotDevelopment: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced chatbot needs',
       features: [
-        'Advanced chatbot features',
-        'Multi-platform support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced chatbot featuresMulti-platform support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Multi-language support'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredChatbotDevelopment: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex chatbot requirements',
       features: [
-        'Custom chatbot development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom chatbot developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredChatbotDevelopment: React.FC = () => {
       position: "Digital Director",
       company: "Advanced Digital Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredChatbotDevelopment: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Build with AI-Powered Chatbot Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredChatbotDevelopment: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredChatbotDevelopment;
+export default AIPoweredChatbotDevelopment,

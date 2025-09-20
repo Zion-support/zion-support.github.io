@@ -1,57 +1,41 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-) ;
+) ,
   const getCategoryIcon = category => {
     const icons = {
-      'Business Intelligence': '📊',
-      'Marketing Automation': '🎯',
-      'Customer Service': '🤖',
-      'Supply Chain Management': '📦',
-      'Financial Technology': '💰',
-      'Healthcare Technology': '🏥',
-      'Legal Technology': '⚖️',
-      'Workflow Automation': '⚡',
-      'Blockchain Technology': '🔗',
-      'Internet of Things': '🌐',
-      'Quantum Computing': '🔮',
-      Cybersecurity: '🛡️',
-      'Cloud Infrastructure': '☁️',
-      DevOps: '⚡',
-      'Data Center Management': '🏢',
-      'Network Security': '🌐',
-      'Storage Management': '💾',
-      Virtualization: '🖥️',
-      'IT Asset Management': '📱',
-      'Performance Monitoring': '📊',
-    };
-    return icons[category] || '🚀';
-  };
+      'Business Intelligence': '📊Marketing Automation': '🎯Customer Service': '🤖Supply Chain Management': '📦Financial Technology': '💰Healthcare Technology': '🏥Legal Technology': '⚖️Workflow Automation': '⚡Blockchain Technology': '🔗Internet of Things': '🌐Quantum Computing': '🔮',
+      Cybersecurity: '🛡️Cloud Infrastructure': '☁️',
+      DevOps: '⚡Data Center Management': '🏢Network Security': '🌐Storage Management': '💾',
+      Virtualization: '🖥️IT Asset Management': '📱Performance Monitoring': '📊'
+    },
+    return icons[category] || '🚀',
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+        staggerChildren: 0.1
+      }
+    }
+  },
 
   const itemVariants = {
     hidden: {
       y: 20,
-      opacity: 0,
+      opacity: 0
     },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
-      },
-    },
-  };
+        ease: 'easeOut'
+      }
+    }
+  },
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -429,5 +413,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) ,
+},

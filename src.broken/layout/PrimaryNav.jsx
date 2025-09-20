@@ -6,20 +6,20 @@
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
 =======
-import React, { useState } from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react',
+import { useState } from 'react',
 
 export default function Page() {
-`);
-            setQuery('');
+`),
+            setQuery(''),
 
-            // console.log('PrimaryNav search submit:', query);`
-            router(`/search/${slugify(query)}`);
-            // console.log('PrimaryNav search submit:', query);`
-            navigate(`/search/${slugify(query)}`);
-            setQuery('');
+            // console.log('PrimaryNav search submit:', query),`
+            router(`/search/${slugify(query)}`),
+            // console.log('PrimaryNav search submit:', query),`
+            navigate(`/search/${slugify(query)}`),
+            setQuery(''),
         }
-    };
+    },
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation"  data-testid="header">"
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
@@ -33,27 +33,27 @@ export default function Page() {
           {/* Actions container with responsive layout */}"
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+            // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg),
             // Handle different suggestion types with proper navigation
             if(sugg.id) {
 
                 // Product listings with IDs go to product detail page`
-                navigate(`/marketplace/listing/${sugg.id}`);
+                navigate(`/marketplace/listing/${sugg.id}`),
 
             else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                 // Documentation suggestions navigate directly to their path
-                navigate(sugg.slug);
+                navigate(sugg.slug),
 
             else if(sugg.type === 'blog' && sugg.slug) {
 
                 // Blog posts navigate to blog detail page`
-                navigate(`/blog/${sugg.slug}`);
+                navigate(`/blog/${sugg.slug}`),
 
             else {
 
                 // Default: search results page with slug`
-                navigate(`/search/${sugg.slug || slugify(sugg.text)}`);"
+                navigate(`/search/${sugg.slug || slugify(sugg.text)}`),"
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
 
   { width: 'clamp(12rem, 20vw,
@@ -66,7 +66,7 @@ export default function Page() {
   (sugg) => {
 
             // console.log('PrimaryNav search suggestion selected:',
-  sugg);
+  sugg),
             // Handle different suggestion types with proper navigation
             if(sugg.id) {
 
@@ -75,24 +75,24 @@ export default function Page() {
 
 
 `
-}`);
+}`),
             }
             else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                 // Documentation suggestions navigate directly to their path
-                router(sugg.slug);
+                router(sugg.slug),
             }
             else if(sugg.type === 'blog' && sugg.slug) {
 
                 // Blog posts navigate to blog detail page`
-                router(`/blog/${sugg.slug}`);
+                router(`/blog/${sugg.slug}`),
             }
             else {
 
                 // Default: search results page with slug`
-                router(`/search/${sugg.slug || slugify(sugg.text)}`);
+                router(`/search/${sugg.slug || slugify(sugg.text)}`),
             }
-            setQuery('');
+            setQuery(''),
             // Track analytics event'
             if(typeof window !== 'null' && window.gtag) {
 

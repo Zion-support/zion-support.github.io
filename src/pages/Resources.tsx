@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  BookOpen, 
+  BookOpen,
   Target, 
   FileText, 
   Users, 
@@ -52,234 +52,117 @@ import {
   Clock as ClockIcon,
   User as UserIcon,
   Tag as TagIcon
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 export default function Resources() {
   const resources = [
     {
-      name: 'Blog & Insights',
-      icon: BookOpen,
-      description: 'Latest industry trends and insights',
-      featured: true,
-      color: 'from-purple-500 to-pink-500',
-      items: [
+      name: 'Blog & Insights',icon: BookOpen,description: 'Latest industry trends and insights',featured: true,color: 'from-purple-500 to-pink-500',items: [
         {
-          title: 'AI in 2024: The Year of Enterprise Adoption',
-          excerpt: 'Discover how artificial intelligence is transforming enterprise operations and what to expect in the coming year.',
-          author: 'Dr. Sarah Chen',
-          date: '2024-01-15',
-          readTime: '5 min read',
-          tags: ['AI', 'Enterprise', 'Trends']
+          title: 'AI in 2024: The Year of Enterprise Adoption',excerpt: 'Discover how artificial intelligence is transforming enterprise operations and what to expect in the coming year.',author: 'Dr. Sarah Chen',date: '2024-01-15',readTime: '5 min read',tags: ['AIEnterprise', 'Trends']
         },
         {
-          title: 'Cybersecurity Best Practices for Remote Work',
-          excerpt: 'Essential security measures to protect your organization in the era of distributed teams.',
-          author: 'Mike Rodriguez',
-          date: '2024-01-10',
-          readTime: '7 min read',
-          tags: ['Security', 'Remote Work', 'Best Practices']
+          title: 'Cybersecurity Best Practices for Remote Work',excerpt: 'Essential security measures to protect your organization in the era of distributed teams.',author: 'Mike Rodriguez',date: '2024-01-10',readTime: '7 min read',tags: ['SecurityRemote Work', 'Best Practices']
         },
         {
-          title: 'The Future of Quantum Computing in Business',
-          excerpt: 'Exploring how quantum computing will revolutionize business processes and decision-making.',
-          author: 'Dr. Alex Thompson',
-          date: '2024-01-05',
-          readTime: '8 min read',
-          tags: ['Quantum Computing', 'Innovation', 'Technology']
+          title: 'The Future of Quantum Computing in Business',excerpt: 'Exploring how quantum computing will revolutionize business processes and decision-making.',author: 'Dr. Alex Thompson',date: '2024-01-05',readTime: '8 min read',tags: ['Quantum ComputingInnovation', 'Technology']
         }
       ]
     },
     {
-      name: 'Case Studies',
-      icon: Target,
-      description: 'Real-world success stories',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500',
-      items: [
+      name: 'Case Studies',icon: Target,description: 'Real-world success stories',featured: true,color: 'from-blue-500 to-cyan-500',items: [
         {
-          title: 'TechCorp: 50% Cost Reduction with AI Automation',
-          excerpt: 'How a Fortune 500 company achieved massive operational savings through intelligent process automation.',
-          industry: 'Manufacturing',
-          results: '50% cost reduction, 3x faster processes',
-          tags: ['AI Automation', 'Cost Reduction', 'Manufacturing']
+          title: 'TechCorp: 50% Cost Reduction with AI Automation',excerpt: 'How a Fortune 500 company achieved massive operational savings through intelligent process automation.',industry: 'Manufacturing',results: '50% cost reduction, 3x faster processes',
+          tags: ['AI AutomationCost Reduction', 'Manufacturing']
         },
         {
-          title: 'HealthPlus: 30% Improvement in Diagnostic Accuracy',
-          excerpt: 'Healthcare provider leverages AI to enhance patient care and diagnostic precision.',
-          industry: 'Healthcare',
-          results: '30% accuracy improvement, 40% faster diagnosis',
-          tags: ['AI Healthcare', 'Diagnostics', 'Patient Care']
+          title: 'HealthPlus: 30% Improvement in Diagnostic Accuracy',excerpt: 'Healthcare provider leverages AI to enhance patient care and diagnostic precision.',industry: 'Healthcare',results: '30% accuracy improvement, 40% faster diagnosis',
+          tags: ['AI HealthcareDiagnostics', 'Patient Care']
         },
         {
-          title: 'StartupXYZ: 10x Faster Market Validation',
-          excerpt: 'Early-stage startup accelerates growth with AI-powered analytics and automation.',
-          industry: 'SaaS',
-          results: '10x faster validation, 3x user engagement',
-          tags: ['Startup', 'AI Analytics', 'Growth']
+          title: 'StartupXYZ: 10x Faster Market Validation',excerpt: 'Early-stage startup accelerates growth with AI-powered analytics and automation.',industry: 'SaaS',results: '10x faster validation, 3x user engagement',
+          tags: ['StartupAI Analytics', 'Growth']
         }
       ]
     },
     {
-      name: 'White Papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
-      featured: false,
-      color: 'from-green-500 to-emerald-500',
-      items: [
+      name: 'White Papers',icon: FileText,description: 'In-depth research and analysis',featured: false,color: 'from-green-500 to-emerald-500',items: [
         {
-          title: 'The State of AI in Enterprise 2024',
-          excerpt: 'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments.',
-          author: 'Zion Tech Group Research Team',
-          date: '2024-01-20',
-          pages: '45 pages',
-          tags: ['AI', 'Enterprise', 'Research']
+          title: 'The State of AI in Enterprise 2024',excerpt: 'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments.',
+          author: 'Zion Tech Group Research Team',date: '2024-01-20',pages: '45 pages',tags: ['AIEnterprise', 'Research']
         },
         {
-          title: 'Cybersecurity Framework for Digital Transformation',
-          excerpt: 'A comprehensive guide to securing your organization during digital transformation initiatives.',
-          author: 'Security Experts Team',
-          date: '2024-01-15',
-          pages: '32 pages',
-          tags: ['Security', 'Digital Transformation', 'Framework']
+          title: 'Cybersecurity Framework for Digital Transformation',excerpt: 'A comprehensive guide to securing your organization during digital transformation initiatives.',author: 'Security Experts Team',date: '2024-01-15',pages: '32 pages',tags: ['SecurityDigital Transformation', 'Framework']
         }
       ]
     },
     {
-      name: 'Webinars',
-      icon: Users,
-      description: 'Expert-led learning sessions',
-      featured: false,
-      color: 'from-orange-500 to-red-500',
-      items: [
+      name: 'Webinars',icon: Users,description: 'Expert-led learning sessions',featured: false,color: 'from-orange-500 to-red-500',items: [
         {
-          title: 'AI Strategy Implementation',
-          excerpt: 'Step-by-step guide to implementing AI strategies in your organization.',
-          presenter: 'Dr. Sarah Chen',
-          date: '2024-01-25',
-          duration: '60 minutes',
-          tags: ['AI Strategy', 'Implementation', 'Leadership']
+          title: 'AI Strategy Implementation',excerpt: 'Step-by-step guide to implementing AI strategies in your organization.',presenter: 'Dr. Sarah Chen',date: '2024-01-25',duration: '60 minutes',tags: ['AI StrategyImplementation', 'Leadership']
         },
         {
-          title: 'Cloud Migration Best Practices',
-          excerpt: 'Learn the essential steps for successful cloud migration projects.',
-          presenter: 'Mike Rodriguez',
-          date: '2024-01-30',
-          duration: '45 minutes',
-          tags: ['Cloud Migration', 'Best Practices', 'Infrastructure']
+          title: 'Cloud Migration Best Practices',excerpt: 'Learn the essential steps for successful cloud migration projects.',presenter: 'Mike Rodriguez',date: '2024-01-30',duration: '45 minutes',tags: ['Cloud MigrationBest Practices', 'Infrastructure']
         }
       ]
     },
     {
-      name: 'Documentation',
-      icon: Code,
-      description: 'Technical guides and API references',
-      featured: false,
-      color: 'from-indigo-500 to-purple-500',
-      items: [
+      name: 'Documentation',icon: Code,description: 'Technical guides and API references',featured: false,color: 'from-indigo-500 to-purple-500',items: [
         {
-          title: 'API Integration Guide',
-          excerpt: 'Complete guide to integrating with our AI services and platforms.',
-          version: 'v2.1',
-          lastUpdated: '2024-01-20',
-          tags: ['API', 'Integration', 'Technical']
+          title: 'API Integration Guide',excerpt: 'Complete guide to integrating with our AI services and platforms.',version: 'v2.1',lastUpdated: '2024-01-20',tags: ['APIIntegration', 'Technical']
         },
         {
-          title: 'SDK Documentation',
-          excerpt: 'Comprehensive documentation for our software development kits.',
-          version: 'v1.5',
-          lastUpdated: '2024-01-18',
-          tags: ['SDK', 'Development', 'Technical']
+          title: 'SDK Documentation',excerpt: 'Comprehensive documentation for our software development kits.',version: 'v1.5',lastUpdated: '2024-01-18',tags: ['SDKDevelopment', 'Technical']
         }
       ]
     },
     {
-      name: 'Support & Help',
-      icon: HelpCircle,
-      description: 'Get help when you need it',
-      featured: false,
-      color: 'from-yellow-500 to-orange-500',
-      items: [
+      name: 'Support & Help',icon: HelpCircle,description: 'Get help when you need it',featured: false,color: 'from-yellow-500 to-orange-500',items: [
         {
-          title: 'Knowledge Base',
-          excerpt: 'Searchable database of common questions and solutions.',
-          articles: '500+ articles',
-          lastUpdated: '2024-01-22',
-          tags: ['Support', 'Help', 'Knowledge Base']
+          title: 'Knowledge Base',excerpt: 'Searchable database of common questions and solutions.',articles: '500+ articles',lastUpdated: '2024-01-22',tags: ['SupportHelp', 'Knowledge Base']
         },
         {
-          title: 'Contact Support Team',
-          excerpt: 'Get in touch with our expert support team for personalized assistance.',
-          responseTime: '< 2 hours',
-          availability: '24/7',
-          tags: ['Support', 'Contact', 'Help']
+          title: 'Contact Support Team',excerpt: 'Get in touch with our expert support team for personalized assistance.',responseTime: '< 2 hours',availability: '24/7',tags: ['SupportContact', 'Help']
         }
       ]
     }
-  ];
+  ],
 
   const featuredResources = [
     {
-      title: 'Pricing Guide 2030',
-      description: 'Comprehensive pricing for all our AI and technology services',
-      href: '/pricing-guide-2030',
-      type: 'Guide',
-      featured: true,
-      icon: TrendingUp
-    },
+      title: 'Pricing Guide 2030',description: 'Comprehensive pricing for all our AI and technology services',href: '/pricing-guide-2030',type: 'Guide',featured: true,icon: TrendingUp
+    };
     {
-      title: 'AI Services Overview',
-      description: 'Complete guide to our AI-powered technology solutions',
-      href: '/services',
-      type: 'Overview',
-      featured: true,
-      icon: Brain
-    },
+      title: 'AI Services Overview',description: 'Complete guide to our AI-powered technology solutions',href: '/services',type: 'Overview',featured: true,icon: Brain
+    };
     {
-      title: 'Security & Compliance',
-      description: 'Enterprise security standards and compliance frameworks',
-      href: '/security',
-      type: 'Framework',
-      featured: true,
-      icon: Shield
+      title: 'Security & Compliance',description: 'Enterprise security standards and compliance frameworks',href: '/security',type: 'Framework',featured: true,icon: Shield
     }
   ];
-
   const upcomingEvents = [
     {
-      title: 'AI Technology Summit 2024',
-      date: 'December 15, 2024',
-      time: '10:00 AM EST',
-      type: 'Virtual Event',
-      href: '/events/ai-summit-2024'
-    },
+      title: 'AI Technology Summit 2024',date: 'December 15, 2024',
+      time: '10:00 AM EST',type: 'Virtual Event',href: '/events/ai-summit-2024'
+    };
     {
-      title: 'Cybersecurity Workshop',
-      date: 'December 20, 2024',
-      time: '2:00 PM EST',
-      type: 'Workshop',
-      href: '/events/cybersecurity-workshop'
-    },
+      title: 'Cybersecurity Workshop',date: 'December 20, 2024',
+      time: '2:00 PM EST',type: 'Workshop',href: '/events/cybersecurity-workshop'
+    };
     {
-      title: 'Cloud Migration Webinar',
-      date: 'January 10, 2025',
-      time: '11:00 AM EST',
-      type: 'Webinar',
-      href: '/events/cloud-migration-webinar'
+      title: 'Cloud Migration Webinar',date: 'January 10, 2025',
+      time: '11:00 AM EST',type: 'Webinar',href: '/events/cloud-migration-webinar'
     }
   ];
-
   const quickLinks = [
-    { name: 'Documentation', href: '/docs', type: 'Resource' },
-    { name: 'FAQ', href: '/faq', type: 'Support' },
-    { name: 'Case Studies', href: '/case-studies', type: 'Resource' },
-    { name: 'White Papers', href: '/white-papers', type: 'Resource' },
-    { name: 'Webinars', href: '/webinars', type: 'Resource' },
-    { name: 'Blog', href: '/blog', type: 'Resource' },
-    { name: 'Contact Support Team', href: '/contact', type: 'Support' },
+    { name: 'Documentation', href: '/docs', type: 'Resource' };
+    { name: 'FAQ', href: '/faq', type: 'Support' };
+    { name: 'Case Studies', href: '/case-studies', type: 'Resource' };
+    { name: 'White Papers', href: '/white-papers', type: 'Resource' };
+    { name: 'Webinars', href: '/webinars', type: 'Resource' };
+    { name: 'Blog', href: '/blog', type: 'Resource' };
+    { name: 'Contact Support Team', href: '/contact', type: 'Support' };
     { name: 'Knowledge Base', href: '/knowledge-base', type: 'Resource' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -324,9 +207,9 @@ export default function Resources() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[
-                { label: 'Resources', value: '500+', icon: BookOpen },
-                { label: 'Case Studies', value: '50+', icon: Target },
-                { label: 'White Papers', value: '25+', icon: FileText },
+                { label: 'Resources', value: '500+', icon: BookOpen };
+                { label: 'Case Studies', value: '50+', icon: Target };
+                { label: 'White Papers', value: '25+', icon: FileText };
                 { label: 'Webinars', value: '100+', icon: Users }
               ].map((stat, index) => (
                 <motion.div
@@ -607,7 +490,7 @@ export default function Resources() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Need Help Finding Resources?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -633,5 +516,5 @@ export default function Resources() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-// cache utility;
+// cache utility,
 export const cache = {,
-  // Placeholder utility functions;
+  // Placeholder utility functions,
 init: function() {}
 }
-export default cache;
+export default cache,

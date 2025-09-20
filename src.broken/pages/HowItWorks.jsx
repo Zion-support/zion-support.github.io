@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -19,7 +19,7 @@ export default function Page() {
             description: "Complete projects successfully, build your reputation, and expand your client base through our platform.",
             color: "text-zion - purple"
 
-    ];
+    ],
     const platformFeatures = [{
             icon: Zap,
             title: "AI - Powered Matching",
@@ -44,22 +44,22 @@ export default function Page() {
             description: "Built - in tools for tracking progress, managing milestones, and ensuring smooth project delivery.",
             color: "text-zion - purple"
 
-    ];
+    ],
     const benefits = [{
             title: "For Clients",
             icon: Users,
-            benefits[;
+            benefits[,
                 "Access to verified, skilled professionals",
                 "AI - powered matching for better results",
                 "Secure payment protection",
                 "Transparent pricing and reviews",
                 "24 / 7 platform support"
             ]
-        },;
+        },
         {
             title: "For Talent",
             icon: Briefcase,
-            benefits[;
+            benefits[,
                 "Global client opportunities",
                 "Flexible work arrangements",
                 "Secure payment processing",
@@ -67,7 +67,7 @@ export default function Page() {
                 "Professional growth support"
             ]
 
-    ];
+    ],
     return (<>
       <SEO title="How It Works - Zion Tech Group Platform Guide" description="Learn how Zion's AI and tech marketplace works for both clients seeking services and talent offering their expertise." keywords="how it works, Zion platform, marketplace workflow, client guide, talent guide" canonical="https://ziontechgroup.com / how-it - works"/>
       <main className="min - h-screen bg-zion - blue pt - 24 pb -20">

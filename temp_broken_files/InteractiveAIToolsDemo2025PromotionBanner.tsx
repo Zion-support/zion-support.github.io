@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   Zap,
@@ -8,23 +8,23 @@ import {,
   Code,
   Image,
   FileText,
-  BarChart3;
-  Video;
-  Music;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
-  Sparkles;
-  TrendingUp,
-} from 'lucide-react';
+  BarChart3,
+  Video,
+  Music,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  Sparkles,
+  TrendingUp
+} from 'lucide-react',
 const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
   return (,
     <div,
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 py-20",
     >,
-      {/* Animated Background */,}
+      {/* Animated Background */}
       <div className="absolute inset-0">,
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-transparent to-purple-600/20 animate-pulse" />,
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-bounce" />,
@@ -32,7 +32,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="space-y-8">,
             {/* Badge */}
             <div,
@@ -45,7 +45,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
             <div,
             >,
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,
-                Try AI Tools{' ',}
+                Try AI Tools{' '}
                 <span className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">,
                   Live,
                 </span>,
@@ -64,7 +64,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
                 <span className="text-white font-semibold">Featured Tool: </span>,
               </div>,
               <div,
-                key={currentTool,}
+                key={currentTool}
                 className="flex items-center",
               >,
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${tools[currentTool].color} mr-4`}>,
@@ -88,8 +88,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
                 <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg">,
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />,
                   <span className="text-white font-medium text-sm">{benefit}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* CTA Buttons */}
             <div,
@@ -106,7 +105,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Interactive Preview */,}
+          {/* Right Content - Interactive Preview */}
           <div className="relative">,
             <div,
               className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/20 shadow-2xl",
@@ -131,14 +130,13 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
                         className={`p-3 rounded-lg text-center cursor-pointer transition-all duration-300 ${,
                           index === currentTool,
                             ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white',
-                            : 'bg-white/5 text-gray-300 hover: bg-white/10',}`}
+                            : 'bg-white/5 text-gray-300 hover: bg-white/10'}`}
                       >,
                         <div className="flex justify-center mb-1">,
                           {tool.icon}
                         </div>,
                         <div className="text-xs font-medium">{tool.name}</div>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
                 {/* Input/Output Preview */}
@@ -162,7 +160,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
                     </div>,
                   </div>,
                 </div>,
-                {/* Action Buttons */,}
+                {/* Action Buttons */}
                 <div className="flex gap-2">,
                   <button className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white py-2 px-4 rounded-lg text-sm font-semibold flex items-center justify-center">,
                     <Play className="w-4 h-4 mr-1" />,
@@ -172,7 +170,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
                     Reset,
                   </button>,
                 </div>,
-                {/* Stats */,}
+                {/* Stats */}
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">,
                   <div className="text-center">,
                     <div className="text-lg font-bold text-green-400">2.3s</div>,
@@ -190,21 +188,21 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
             {/* Floating Elements */}
             <div,
               className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg",
-                y: [0-10];
-                rotate: [050],}}
-                duration: 2;
-                repeat: Infinity;
-                ease: "easeInOut",}}
+                y: [0-10],
+                rotate: [050]}}
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"}}
             >,
               <Zap className="w-6 h-6 text-black" />,
             </div>,
             <div,
               className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg",
-                y: [010];
-                rotate: [0-50],}}
-                duration: 2.5;
-                repeat: Infinity;
-                ease: "easeInOut",}}
+                y: [010],
+                rotate: [0-50]}}
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut"}}
             >,
               <Sparkles className="w-5 h-5 text-white" />,
             </div>,
@@ -215,15 +213,14 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {,
           className="mt-16 grid grid-cols-2 md: grid-cols-4 gap-8 text-center",
         >,
           {stats.map((statindex) => (,
-            <div key={index,}>,
+            <div key={index}>,
               <div className="text-3xl font-bold text-yellow-400 mb-2">{stat.value}</div>,
               <div className="text-gray-300">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
     </div>,
-  );
-};
-export default InteractiveAIToolsDemo2025PromotionBanner;
+  ),
+},
+export default InteractiveAIToolsDemo2025PromotionBanner,
 </div></div></div></div></div></div></div></div>,

@@ -1,52 +1,46 @@
-import { motion, useInView } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
-
+import { motion, useInView } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 interface Stat {
-  number: string;
-  label: string;
-  description: string;
-  avatar: string;
-  icon: React.ComponentType<{ className?: string }>;
-  color: string;
+  number: string,label: string,description: string,avatar: string,icon: React.ComponentType<{ className?: string }>;
+  color: string
 }
 
 interface StatsSectionProps {
-  stats: Stat[];
+  stats: Stat[]
 }
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [counts, setCounts] = useState<{ [key: string]: number }>({});
-
   useEffect(() => {
     if (isInView) {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {
-          const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
-          const suffix = stat.number.replace(/[0-9]/g, '');
+          const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, '')),
+          const suffix = stat.number.replace(/[0-9]/g, ''),
 
-          let current = 0;
-          const increment = targetNumber / 50;
+          let current = 0,
+          const increment = targetNumber / 50,
 
           const countTimer = setInterval(() => {
-            current += increment;
+            current += increment,
             if (current >= targetNumber) {
-              current = targetNumber;
-              clearInterval(countTimer);
+              current = targetNumber,
+              clearInterval(countTimer),
             }
 
             setCounts(prev => ({
               ...prev,
               [stat.label]: Math.floor(current)
-            }));
-          }, 50);
-        });
-      }, 500);
+            })),
+          }, 50),
+        }),
+      }, 500),
 
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer),
     }
-  }, [isInView, stats]);
+  }, [isInView, stats]),
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">
@@ -76,8 +70,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{
-                y: -8,
-                transition: { duration: 0.3 }
+                y: -8,transition: { duration: 0.3 }
               }}
             >
               {/* Animated background */}
@@ -118,6 +111,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
       </div>
     </section>
   );
-};
+},
 
 export default StatsSection;

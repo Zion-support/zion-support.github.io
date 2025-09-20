@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Database, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredDataEngineering: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredDataEngineering: React.FC = () => {
       title: 'Multi-source Support',
       description: 'Data engineering across various sources and formats'
     }
-  ];
+  ],
 
   const dataCapabilities = [
     {
       area: 'Data Ingestion',
-      capabilities: ['Multi-source ingestion', 'Real-time streaming', 'Batch processing', 'Data validation'],
+      capabilities: ['Multi-source ingestionReal-time streaming', 'Batch processingData validation'],
       improvement: '100x faster',
       processing: 'Real-time'
     },
     {
       area: 'Data Transformation',
-      capabilities: ['ETL automation', 'Data cleansing', 'Schema evolution', 'Quality checks'],
+      capabilities: ['ETL automationData cleansing', 'Schema evolutionQuality checks'],
       improvement: '95% accuracy',
       quality: 'Enhanced'
     },
     {
       area: 'Data Storage',
-      capabilities: ['Data lake management', 'Warehouse optimization', 'Partitioning', 'Compression'],
+      capabilities: ['Data lake managementWarehouse optimization', 'PartitioningCompression'],
       improvement: '90% cost savings',
       storage: 'Optimized'
     },
     {
       area: 'Data Pipeline',
-      capabilities: ['Workflow automation', 'Monitoring', 'Error handling', 'Recovery'],
+      capabilities: ['Workflow automationMonitoring', 'Error handlingRecovery'],
       improvement: '99.9% reliability',
       reliability: 'Maximum'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Big Data Processing',
       description: 'AI-powered data engineering for large-scale data processing and analytics',
-      benefits: ['Massive scalability', 'Real-time processing', 'Cost optimization', 'Quality assurance']
+      benefits: ['Massive scalabilityReal-time processing', 'Cost optimizationQuality assurance']
     },
     {
       title: 'Real-time Analytics',
       description: 'Data engineering for real-time streaming analytics and insights',
-      benefits: ['Instant insights', 'Live monitoring', 'Proactive alerts', 'Real-time decisions']
+      benefits: ['Instant insightsLive monitoring', 'Proactive alertsReal-time decisions']
     },
     {
       title: 'Data Warehousing',
       description: 'Data engineering for data warehouse optimization and management',
-      benefits: ['Query optimization', 'Storage efficiency', 'Performance tuning', 'Cost reduction']
+      benefits: ['Query optimizationStorage efficiency', 'Performance tuningCost reduction']
     },
     {
       title: 'Machine Learning',
       description: 'Data engineering for ML model training and data preparation',
-      benefits: ['Feature engineering', 'Data preparation', 'Model training', 'Deployment automation']
+      benefits: ['Feature engineeringData preparation', 'Model trainingDeployment automation']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredDataEngineering: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with data engineering',
       features: [
-        'Up to 1 TB data',
-        'Basic data pipelines',
-        'Standard processing',
-        'Email support',
+        'Up to 1 TB dataBasic data pipelines',
+        'Standard processingEmail support',
         'Basic monitoring'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredDataEngineering: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced data engineering needs',
       features: [
-        'Up to 10 TB data',
-        'Advanced data pipelines',
-        'Custom transformations',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 10 TB dataAdvanced data pipelines',
+        'Custom transformationsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-source support'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredDataEngineering: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex data engineering requirements',
       features: [
-        'Unlimited data',
-        'Custom data engineering',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited dataCustom data engineering',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredDataEngineering: React.FC = () => {
       position: "Analytics Director",
       company: "Advanced Insights Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredDataEngineering: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Engineer with AI-Powered Data Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredDataEngineering: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredDataEngineering;
+export default AIPoweredDataEngineering,

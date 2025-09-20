@@ -1,104 +1,104 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-,;
+,
         {
             category: "Cloud & Infrastructure",
             icon: Cloud,
-            services[;
+            services[,
                 {
                     name: "Cloud & DevOps",
                     description: "Comprehensive cloud infrastructure and DevOps automation",
                     href: "/services / cloud",
-                    features["Multi - cloud Strategy", "CI / CD Pipelines", "Infrastructure as Code"];
-                },;
+                    features["Multi - cloud Strategy", "CI / CD Pipelines", "Infrastructure as Code"],
+                },
                 {
                     name: "IT Infrastructure",
                     description: "Enterprise - grade IT infrastructure solutions",
                     href: "/services / infrastructure",
-                    features["Network Design", "Security Implementation", "Scalability Planning"];
-                },;
+                    features["Network Design", "Security Implementation", "Scalability Planning"],
+                },
                 {
                     name: "Digital Transformation",
                     description: "End - to - end digital transformation consulting and implementation",
                     href: "/services / transformation",
-                    features["Strategy Development", "Technology Selection", "Change Management"];
+                    features["Strategy Development", "Technology Selection", "Change Management"],
                 }
             ]
-        },;
+        },
         {
             category: "Cybersecurity & Compliance",
             icon: Shield,
-            services[;
+            services[,
                 {
                     name: "Cybersecurity Services",
                     description: "Comprehensive cybersecurity solutions for modern threats",
                     href: "/services / cybersecurity",
-                    features["Threat Detection", "Vulnerability Assessment", "Incident Response"];
-                },;
+                    features["Threat Detection", "Vulnerability Assessment", "Incident Response"],
+                },
                 {
                     name: "SOC2 Compliance Automation",
                     description: "Automated SOC2 compliance and audit preparation",
                     href: "/soc2 - compliance - automation",
-                    features["Compliance Monitoring", "Audit Preparation", "Risk Management"];
-                },;
+                    features["Compliance Monitoring", "Audit Preparation", "Risk Management"],
+                },
                 {
                     name: "Zero Trust Architecture",
                     description: "Modern zero trust security implementation",
                     href: "/zero - trust - network - architecture",
-                    features["Identity Verification", "Access Control", "Continuous Monitoring"];
+                    features["Identity Verification", "Access Control", "Continuous Monitoring"],
                 }
             ]
-        },;
+        },
         {
             category: "Emerging Technologies",
             icon: Rocket,
-            services[;
+            services[,
                 {
                     name: "Quantum Technology",
                     description: "Next - generation quantum computing solutions",
                     href: "/quantum - technology",
-                    features["Quantum Algorithms", "Quantum Security", "Research & Development"];
-                },;
+                    features["Quantum Algorithms", "Quantum Security", "Research & Development"],
+                },
                 {
                     name: "Space Technology",
                     description: "Innovative space technology and satellite solutions",
                     href: "/space - tech",
-                    features["Satellite Systems", "Space Analytics", "Ground Station Solutions"];
-                },;
+                    features["Satellite Systems", "Space Analytics", "Ground Station Solutions"],
+                },
                 {
                     name: "5G Enterprise Solutions",
                     description: "Enterprise - grade 5G network optimization",
                     href: "/5g - enterprise - solutions",
-                    features["Network Optimization", "Edge Computing", "IoT Integration"];
+                    features["Network Optimization", "Edge Computing", "IoT Integration"],
                 }
             ]
-        },;
+        },
         {
             category: "Specialized Solutions",
             icon: Target,
-            services[;
+            services[,
                 {
                     name: "AI - Powered IT Asset Management",
                     description: "Intelligent IT asset lifecycle management",
                     href: "/ai - powered - it - asset - management",
-                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"];
-                },;
+                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"],
+                },
                 {
                     name: "Autonomous Business Operations",
                     description: "AI - driven business process automation platform",
                     href: "/autonomous - business - operations - platform",
-                    features["Process Automation", "Decision Support", "Performance Analytics"];
-                },;
+                    features["Process Automation", "Decision Support", "Performance Analytics"],
+                },
                 {
                     name: "Micro SAAS Services",
                     description: "Specialized software - as - a-service solutions",
                     href: "/micro - saas - services",
-                    features["Custom Development", "Scalable Architecture", "API Integration"];
+                    features["Custom Development", "Scalable Architecture", "API Integration"],
                 }
             ]
 
-    ];
+    ],
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -106,7 +106,7 @@ export default function Page() {
             transition: {
                 staggerChildren: 0.1
 
-    };
+    },
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0
@@ -118,10 +118,10 @@ export default function Page() {
             transition: {
                 duration: 0.5
 
-    };
-    return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
+    },
+    return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">,
       {/* Hero Section */}
-      <div className="relative overflow-hidden">;
+      <div className="relative overflow-hidden">,
         <div className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.1) _1px,transparent_1px) ,linear - gradient(90deg,rgba (34,221,210,0.1) _1px,transparent_1px) ] bg-[size:50px_50px]"/>
 
         <div className="relative max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 pt - 32 pb -20">
@@ -143,7 +143,7 @@ export default function Page() {
               Discover our comprehensive portfolio of cutting - edge technology solutions,
               from AI and cloud services to emerging technologies and specialized enterprise solutions.</p>
             <div className="flex flex - wrap justify - center gap-4">
-              <Link to="/contact" className="bg-gradient - to - r from - blue - 600 to - cyan - 600 text-white px-8 py-3 rounded-lg font - semibold hover:from - blue - 700 hover:to - cyan - 700 transition - all duration -300">
+              <Link to="/contact" className="bg-gradient - to - r from - blue - 600 to - cyan - 600 text-white px-8 py-3 rounded-lg font - semibold hover: from - blue - 700 hover:to - cyan - 700 transition - all duration -300">
                 Get Started
               </Link>
               <Link to="/comprehensive - pricing - 2025" className="border border-blue - 400 text-blue - 400 px-8 py-3 rounded-lg font - semibold hover:bg-blue - 400 hover:text-white transition - all duration -300">
@@ -152,10 +152,10 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </div>;
+      </div>,
 
       {/* Services Grid */}
-      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 pb -20">;
+      <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 pb -20">,
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space - y-16">
           {services.map((category, categoryIndex) => (<motion.div key={category.category} variants={itemVariants}>
               <div className="text-center mb-12">
@@ -199,7 +199,7 @@ export default function Page() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 border-t border-blue -500 / 20">;
+      <div className="bg-gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 border-t border-blue -500 / 20">,
         <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
   { opacity: 0,
@@ -227,5 +227,5 @@ export default function Page() {
           </motion.div>
         </div>
       </div>
-    </div>) };
+    </div>) },
 }}}}}}}}}}}

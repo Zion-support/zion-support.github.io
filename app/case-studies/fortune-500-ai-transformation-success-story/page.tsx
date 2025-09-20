@@ -1,16 +1,16 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, ShareIcon, BookmarkIcon, ChartBarIcon, CurrencyDollarIcon, TrophyIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, ShareIcon, BookmarkIcon, ChartBarIcon, CurrencyDollarIcon, TrophyIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'Fortune 500 AI Transformation Success Story: $500M ROI Achievement | Zion Tech Group';
-  description: 'Discover how a Fortune 500 manufacturing company achieved $500M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.';
-  keywords: ['Fortune 500AI Transformation', 'ROI SuccessManufacturing', 'Enterprise AI'];
+  title: 'Fortune 500 AI Transformation Success Story: $500M ROI Achievement | Zion Tech Group',
+  description: 'Discover how a Fortune 500 manufacturing company achieved $500M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.',
+  keywords: ['Fortune 500AI TransformationROI SuccessManufacturing', 'Enterprise AI'],
   openGraph: {,
-    title: 'Fortune 500 AI Transformation Success Story: $500M ROI Achievement';
-    description: 'Discover how a Fortune 500 manufacturing company achieved $500M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.';
-    images: ['/images/fortune-500-ai-success.jpg'],}
-};
+    title: 'Fortune 500 AI Transformation Success Story: $500M ROI Achievement',
+    description: 'Discover how a Fortune 500 manufacturing company achieved $500M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.',
+    images: ['/images/fortune-500-ai-success.jpg']}
+},
 export default function Fortune500AITransformationSuccessStory() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -330,4 +330,4 @@ export default function Fortune500AITransformationSuccessStory() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

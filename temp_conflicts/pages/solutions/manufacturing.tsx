@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import { 
   Cpu, Brain, Shield, Zap, BarChart3, Settings, 
   CheckCircle, ArrowRight, Star, TrendingUp, Award, Clock
-} from 'lucide-react';
-import UltraFuturisticBackground2045 from '../../components/backgrounds/UltraFuturisticBackground2045';
+} from 'lucide-react',
+import UltraFuturisticBackground2045 from '../../components/backgrounds/UltraFuturisticBackground2045',
 
 const ManufacturingSolutionsPage: React.FC = () => {
   const solutions = [
@@ -33,7 +33,7 @@ const ManufacturingSolutionsPage: React.FC = () => {
       title: 'Digital Twin Platform',
       description: 'Virtual replicas for simulation and optimization'
     }
-  ];
+  ],
 
   const features = [
     {
@@ -56,7 +56,7 @@ const ManufacturingSolutionsPage: React.FC = () => {
       title: 'Real-Time Monitoring',
       description: '24/7 visibility into manufacturing operations'
     }
-  ];
+  ],
 
   return (
     <>
@@ -170,7 +170,7 @@ const ManufacturingSolutionsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Transform Manufacturing?
@@ -187,7 +187,7 @@ const ManufacturingSolutionsPage: React.FC = () => {
         </div>
       </UltraFuturisticBackground>
     </>
-  );
-};
+  )
+},
 
-export default ManufacturingSolutionsPage;
+export default ManufacturingSolutionsPage,

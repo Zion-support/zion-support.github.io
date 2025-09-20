@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Head from 'next/head';
+import Link from 'next/link',
+import Head from 'next/head',
 
 export default function DigitalTransformation2025() {
   return (
@@ -266,7 +266,7 @@ export default function DigitalTransformation2025() {
                 <p className="text-lg text-gray-300 mb-6">
                   Let's discuss how we can help you navigate the digital transformation landscape and achieve sustainable competitive advantage.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 rounded-lg font-semibold transition-colors">
                     Get Started Today
                   </Link>
@@ -280,5 +280,5 @@ export default function DigitalTransformation2025() {
         </div>
       </div>
     </>
-  );
+  )
 }

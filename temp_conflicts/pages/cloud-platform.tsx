@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Cloud, 
+  Cloud,
   Server, 
   Database, 
   Network, 
@@ -34,15 +34,15 @@ import {
   Layers,
   Grid,
   Sparkles
-} from 'lucide-react';
-import SEO from '../components/SEO';
+} from 'lucide-react',
+import SEO from '../components/SEO',
 
 const CloudPlatformPage: React.FC = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  };
+  },
 
   const staggerContainer = {
     animate: {
@@ -50,71 +50,71 @@ const CloudPlatformPage: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const cloudServices = [
     {
       title: 'Quantum Cloud Infrastructure 2045',
       description: 'Next-generation quantum-powered cloud computing platform',
       icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      features: ['Quantum processing', 'Hybrid cloud', 'Auto-scaling', 'Global distribution'],
+      features: ['Quantum processingHybrid cloud', 'Auto-scalingGlobal distribution'],
       href: '/quantum-cloud-infrastructure-2045'
     },
     {
       title: 'Autonomous DevOps Platform',
       description: 'AI-powered DevOps automation and orchestration',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      features: ['CI/CD automation', 'Infrastructure as code', 'Monitoring', 'Auto-remediation'],
+      features: ['CI/CD automationInfrastructure as code', 'MonitoringAuto-remediation'],
       href: '/autonomous-devops-platform-2045'
     },
     {
       title: 'Quantum Data Center Management',
       description: 'Intelligent data center operations and optimization',
       icon: <Server className="w-8 h-8 text-green-400" />,
-      features: ['Resource optimization', 'Energy efficiency', 'Predictive maintenance', 'Capacity planning'],
+      features: ['Resource optimizationEnergy efficiency', 'Predictive maintenanceCapacity planning'],
       href: '/quantum-data-center-management-2045'
     },
     {
       title: 'Multi-Cloud Orchestration',
       description: 'Seamless management across multiple cloud providers',
       icon: <Globe className="w-8 h-8 text-purple-400" />,
-      features: ['Provider agnostic', 'Unified management', 'Cost optimization', 'Disaster recovery'],
+      features: ['Provider agnosticUnified management', 'Cost optimizationDisaster recovery'],
       href: '/multi-cloud-disaster-recovery'
     },
     {
       title: 'Edge Computing Orchestration',
       description: 'Distributed edge computing and IoT management',
       icon: <Cpu className="w-8 h-8 text-cyan-400" />,
-      features: ['Edge deployment', 'IoT integration', 'Low latency', 'Local processing'],
+      features: ['Edge deploymentIoT integration', 'Low latencyLocal processing'],
       href: '/edge-computing-orchestration'
     },
     {
       title: 'Cloud Security & Compliance',
       description: 'Comprehensive cloud security and governance',
       icon: <Shield className="w-8 h-8 text-red-400" />,
-      features: ['Identity management', 'Data encryption', 'Compliance monitoring', 'Threat detection'],
+      features: ['Identity managementData encryption', 'Compliance monitoringThreat detection'],
       href: '/cloud-security-compliance'
     }
-  ];
+  ],
 
   const cloudCapabilities = [
     {
       category: 'Infrastructure as Code',
-      capabilities: ['Terraform', 'CloudFormation', 'ARM Templates', 'Kubernetes']
+      capabilities: ['TerraformCloudFormation', 'ARM TemplatesKubernetes']
     },
     {
       category: 'Container Orchestration',
-      capabilities: ['Kubernetes', 'Docker Swarm', 'ECS/EKS', 'AKS/GKE']
+      capabilities: ['KubernetesDocker Swarm', 'ECS/EKSAKS/GKE']
     },
     {
       category: 'Serverless Computing',
-      capabilities: ['Lambda', 'Functions', 'Event-driven', 'Auto-scaling']
+      capabilities: ['LambdaFunctions', 'Event-drivenAuto-scaling']
     },
     {
       category: 'Data & Analytics',
-      capabilities: ['Data Lakes', 'Warehouses', 'Streaming', 'ML Pipelines']
+      capabilities: ['Data LakesWarehouses', 'StreamingML Pipelines']
     }
-  ];
+  ],
 
   const cloudBenefits = [
     {
@@ -137,7 +137,7 @@ const CloudPlatformPage: React.FC = () => {
       description: 'Enterprise-grade security with built-in compliance features',
       icon: <Shield className="w-6 h-6 text-red-400" />
     }
-  ];
+  ],
 
   const cloudProviders = [
     {
@@ -160,7 +160,7 @@ const CloudPlatformPage: React.FC = () => {
       description: 'Hybrid and multi-cloud strategies',
       icon: <Globe className="w-6 h-6 text-purple-400" />
     }
-  ];
+  ],
 
   return (
     <>
@@ -407,7 +407,7 @@ const CloudPlatformPage: React.FC = () => {
                 <p className="text-xl text-gray-300 mb-8">
                   Join the cloud revolution and unlock unprecedented scalability, efficiency, and innovation.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a 
                     href="/contact" 
                     className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300"
@@ -427,7 +427,7 @@ const CloudPlatformPage: React.FC = () => {
         </div>
       </Layout>
     </>
-  );
-};
+  )
+},
 
-export default CloudPlatformPage;
+export default CloudPlatformPage,

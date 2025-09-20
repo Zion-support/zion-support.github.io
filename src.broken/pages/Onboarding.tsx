@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function ChatWidget() {
   return (
     <>
@@ -56,5 +56,5 @@ export function ChatWidget() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

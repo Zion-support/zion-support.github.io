@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import {
   DollarSign,
   TrendingUp,
@@ -15,45 +15,42 @@ import {
   Shield,
   Cpu,
   Brain
-} from 'lucide-react';
-import SEO from '../components/SEO';
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
-
+} from "lucide-react";
+import SEO from "../components/SEO";
+import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
 const ComprehensivePricingGuide2026: React.FC = () => {
-  const [selectedService, setSelectedService] = useState<string>('all');
-  const [selectedTier, setSelectedTier] = useState<string>('all');
+  const [selectedService, setSelectedService] = useState<string>('all'),
+  const [selectedTier, setSelectedTier] = useState<string>('all'),
 
-  const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];
-  const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
+  const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)],
+  const tiers = ['allStarter', 'ProfessionalEnterprise'],
 
   const filteredPricing = useMemo(() => {
-    let filtered = ALL_PRICING_GUIDES_2026;
+    let filtered = ALL_PRICING_GUIDES_2026,
 
     if (selectedService !== 'all') {
-      filtered = filtered.filter(service => service.serviceName === selectedService);
+      filtered = filtered.filter(service => service.serviceName === selectedService),
     }
 
-    return filtered;
-  }, [selectedService]);
+    return filtered,
+  }, [selectedService]),
 
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName) {
       case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
-      case 'NeuroSync AI': return <Brain className="w-6 h-6" />;
-      case 'BlockchainForge': return <Shield className="w-6 h-6" />;
-      default: return <Zap className="w-6 h-6" />;
+      case 'NeuroSync AI': return <Brain className="w-6 h-6" />,
+      case 'BlockchainForge': return <Shield className="w-6 h-6" />,
+      default: return <Zap className="w-6 h-6" />
     }
   };
-
   const getTierColor = (tierName: string) => {
     switch (tierName) {
       case 'Starter': return 'from-green-500 to-emerald-500';
-      case 'Professional': return 'from-blue-500 to-cyan-500';
-      case 'Enterprise': return 'from-purple-500 to-pink-500';
-      default: return 'from-gray-500 to-gray-600';
+      case 'Professional': return 'from-blue-500 to-cyan-500',
+      case 'Enterprise': return 'from-purple-500 to-pink-500',
+      default: return 'from-gray-500 to-gray-600'
     }
   };
-
   return (
     <>
       <SEO
@@ -398,7 +395,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services
                 can transform your business with unprecedented ROI and performance improvements.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
@@ -423,7 +420,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )
 };
-
 export default ComprehensivePricingGuide2026;

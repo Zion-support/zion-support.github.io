@@ -6,7 +6,7 @@
           className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/10",
         >,
           <div className="flex flex-col lg: flex-row gap-4 items-center justify-between">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative flex-1 max-w-md">,
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />,
               <input,
@@ -16,7 +16,7 @@
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500",
               />,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="flex flex-wrap gap-2">,
               {categories.map((category) => (,
                 <button,
@@ -25,7 +25,7 @@
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${,
                     selectedCategory === category,
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white',
-                      : 'bg-white/10 text-gray-300 hover: bg-white/20',}`}
+                      : 'bg-white/10 text-gray-300 hover: bg-white/20'}`}
                 >,
                   {category}
               ))}
@@ -59,7 +59,7 @@
         <div,
           className={viewMode === 'grid',
             ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6',
-            : 'space-y-4',}
+            : 'space-y-4'}
         >,
           <div>,
             {filteredServices.map((serviceindex) => (,
@@ -68,7 +68,7 @@
                 className={`group cursor-pointer ${,
                   viewMode === 'grid',
                     ? 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover: border-white/20 transition-all duration-300 hover:transform hover:scale-105',
-                    : 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300',}`}
+                    : 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300'}`}
                 onClick={() => setSelectedService(service)}
               >,
                 {viewMode === 'grid' ? (,
@@ -84,7 +84,7 @@
                           <span className="text-white text-sm ml-1">{service.rating}</span>,
                     <div>,
                       <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-300 transition-colors">,
-                        {service.title,}
+                        {service.title}
                       <p className="text-gray-300 text-sm line-clamp-3 mb-4">,
                         {service.description}
                     <div className="space-y-3">,
@@ -109,12 +109,12 @@
                       <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />,
                 ) : (,
                   <div className="flex items-center space-x-6">,
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color,}`}>,
+                    <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color}`}>,
                       <service.icon className="h-8 w-8 text-white" />,
                     <div className="flex-1">,
                       <div className="flex items-start justify-between mb-2">,
                         <h3 className="text-xl font-bold text-white group-hover: text-purple-300 transition-colors">,
-                          {service.title,}
+                          {service.title}
                         <div className="flex items-center space-x-4">,
                           <div className="flex items-center">,
                             <Star className="h-4 w-4 text-yellow-400 fill-current" />,
@@ -127,11 +127,11 @@
                         <div className="flex items-center">,
                           <Clock className="h-4 w-4 text-gray-400 mr-2" />,
                           <span className="text-gray-400">Delivery: </span>,
-                          <span className="text-white ml-1">{service.deliveryTime,}</span>,
+                          <span className="text-white ml-1">{service.deliveryTime}</span>,
                         <div className="flex items-center">,
                           <Target className="h-4 w-4 text-gray-400 mr-2" />,
                           <span className="text-gray-400">Complexity: </span>,
-                          <span className={`ml-1 ${getComplexityColor(service.complexity),}`}>,
+                          <span className={`ml-1 ${getComplexityColor(service.complexity)}`}>,
                             {complexityLevels[service.complexity].label}
                         <div className="text-white font-bold">,
                           ${service.pricing.price.toLocaleString()}/{service.pricing.period}
@@ -160,11 +160,11 @@
                   className="text-gray-400 hover: text-white transition-colors",
                 >,
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">,
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12" />,
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />,
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
                 <div>,
                   <h2 className="text-3xl font-bold text-white mb-4">,
-                    {selectedService.title,}
+                    {selectedService.title}
                   <p className="text-gray-300 mb-6 text-lg leading-relaxed">,
                     {selectedService.description}
                   <div className="grid grid-cols-2 gap-4 mb-6">,
@@ -191,16 +191,14 @@
                       {selectedService.features.map((featureindex) => (,
                         <div key={index} className="flex items-center text-gray-300">,
                           <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />,
-                          <span>{feature}</span>,
-                      ))}
+                          <span>{feature}</span>))}
                   <div className="mb-6">,
                     <h3 className="text-xl font-semibold text-white mb-3">Benefits</h3>,
                     <div className="grid grid-cols-1 gap-2">,
                       {selectedService.benefits.map((benefitindex) => (,
                         <div key={index} className="flex items-center text-gray-300">,
                           <TrendingUp className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />,
-                          <span>{benefit}</span>,
-                      ))}
+                          <span>{benefit}</span>))}
                 <div>,
                   <div className="bg-white/5 rounded-lg p-6 mb-6">,
                     <h3 className="text-xl font-semibold text-white mb-4">Pricing Details</h3>,
@@ -229,7 +227,7 @@
                       Get Started Now,
                     <button className="w-full bg-white/10 text-white px-6 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300">,
                       Contact Sales,
-import React from "react";
+import React from "react",
 const function ComprehensiveServiceShowcase2025() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -247,7 +245,7 @@ const function ComprehensiveServiceShowcase2025() { = () => {,
         )}
       </div>,
     </div>,
-  );
-};
-export default function ComprehensiveServiceShowcase2025() {;
+  ),
+},
+export default function ComprehensiveServiceShowcase2025() {,
 }}}

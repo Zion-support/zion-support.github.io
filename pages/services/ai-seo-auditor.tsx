@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function AISEOAuditor() {
   return (
@@ -15,8 +15,8 @@ export default function AISEOAuditor() {
         <div className="absolute inset-0 beams opacity-[0.06]" />
       </div>
       <main className="relative z-10 mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">AI SEO Auditor</h1>
-        <p className="mt-4 text-white/80">Continuous crawls identify issues; autonomous edits propose safe fixes and metadata improvements.</p>
+        <h1 className="text-4xl md: text-5xl font-extrabold gradient-text">AI SEO Auditor</h1>
+        <p className="mt-4 text-white/80">Continuous crawls identify issues, autonomous edits propose safe fixes and metadata improvements.</p>
         <ul className="mt-6 space-y-2 text-white/80 list-disc pl-5">
           <li>Core Web Vitals and on-page checks</li>
           <li>Broken link prevention</li>
@@ -28,5 +28,5 @@ export default function AISEOAuditor() {
         </div>
       </main>
     </div>
-  );
+  )
 }

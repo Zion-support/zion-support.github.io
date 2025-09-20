@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
- from 'framer-motion';
-import { Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Terminal, Monitor, Server, Brain  } from 'lucide-react';
+ from 'framer-motion',
+import { Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Terminal, Monitor, Server, Brain  } from 'lucide-react',
 ,
     {
 "
@@ -43,7 +43,7 @@ import { Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Term
         features["Utility Classes", "Responsive Design", "Dark Mode", "Customization"],"
         alternatives["Bootstrap", "Material-UI", "Chakra UI"]
     }
-];
+],
 const backendTechnologies = [{
 "
         name: "Node.js","
@@ -96,7 +96,7 @@ const backendTechnologies = [{
         features["Caching", "Session Storage", "Real-time", "Pub/Sub"],"
         alternatives["Memcached", "Hazelcast", "Apache Ignite"]
     }
-];
+],
 const cloudTechnologies = [{
 "
         name: "AWS","
@@ -149,7 +149,7 @@ const cloudTechnologies = [{
         features["IaC", "Multi-cloud", "State Management", "Modules"],"
         alternatives["CloudFormation", "Pulumi", "Ansible", "Chef"]
     }
-];
+],
 const aiTechnologies = [{
 "
         name: "TensorFlow","
@@ -202,7 +202,7 @@ const aiTechnologies = [{
         features["Model Hub", "Transformers", "Datasets", "Spaces"],"
         alternatives["ModelScope", "Replicate", "Gradio", "Streamlit"]
     }
-];
+],
 const developmentTools = [{
 "
         name: "Git","
@@ -255,7 +255,7 @@ const developmentTools = [{
         features["Unit Testing", "Mocking", "Coverage", "Snapshot Testing"],"
         alternatives["Vitest", "Mocha", "Jasmine", "Cypress"]
     }
-];
+],
 const technologyStats = ["
     { icon: <Code className="w-6 h-6"/>, value: "50+", label: "Technologies" },"
     { icon: <Layers className="w-6 h-6"/>, value: "15+", label: "Categories" },"
@@ -263,10 +263,10 @@ const technologyStats = ["
     { icon: <TrendingUp className="w-6 h-6"/>, value: "1000+", label: "Projects Delivered" },"
     { icon: <GitBranch className="w-6 h-6"/>, value: "24/7", label: "Support Available" },"
     { icon: <Zap className="w-6 h-6"/>, value: "99.9%", label: "Uptime Guarantee" }
-];
+],
 export function TechnologyStackSection() {
-    const [selectedTech, setSelectedTech] = useState(null);"
-    const [selectedCategory, setSelectedCategory] = useState("frontend");
+    const [selectedTech, setSelectedTech] = useState(null),"
+    const [selectedCategory, setSelectedCategory] = useState("frontend"),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -279,7 +279,7 @@ export function TechnologyStackSection() {
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -296,7 +296,7 @@ export function TechnologyStackSection() {
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"
@@ -309,7 +309,7 @@ export function TechnologyStackSection() {
         {/* Header */}"
         <motion.div className="text-center mb-20" initial = {
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
             Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Stack</span>

@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Button from '../components/ui/Button';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import Button from '../components/ui/Button',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
 
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
@@ -12,38 +12,30 @@ export default function AIBusinessIntelligenceSuite() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
-    'Real-time data analysis and visualization',
-    'AI-powered trend prediction and forecasting',
-    'Automated report generation and scheduling',
-    'Custom dashboard builder with drag-and-drop',
-    'Multi-source data integration (CRM, ERP, Analytics)',
-    'Natural language query interface',
-    'Predictive analytics and machine learning models',
-    'Mobile-responsive dashboards',
-    'Role-based access control and security',
-    'API access for custom integrations'
-  ];
+    'Real-time data analysis and visualizationAI-powered trend prediction and forecasting',
+    'Automated report generation and schedulingCustom dashboard builder with drag-and-drop',
+    'Multi-source data integration (CRM, ERP, Analytics)Natural language query interface',
+    'Predictive analytics and machine learning modelsMobile-responsive dashboards',
+    'Role-based access control and securityAPI access for custom integrations'
+  ],
 
   const useCases = [
-    'Sales performance analysis',
-    'Customer behavior insights',
-    'Financial forecasting',
-    'Marketing ROI optimization',
+    'Sales performance analysisCustomer behavior insights',
+    'Financial forecastingMarketing ROI optimization',
     'Operational efficiency tracking'
-  ];
+  ],
 
   const integrations = [
-    'Salesforce', 'HubSpot', 'Google Analytics', 'Shopify', 
-    'QuickBooks', 'Slack', 'Microsoft Teams'
-  ];
+    'SalesforceHubSpot', 'Google AnalyticsShopify', 
+    'QuickBooksSlack', 'Microsoft Teams'
+  ],
 
   const technology = [
-    'Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 
-    'Redis', 'AWS', 'Docker'
-  ];
+    'PythonTensorFlow', 'ReactNode.js', 'PostgreSQLRedis', 'AWSDocker'
+  ],
 
 const ai-business-intelligence-suite: React.FC = () => {
   return (
@@ -60,7 +52,7 @@ const ai-business-intelligence-suite: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-business-intelligence-suite;
+export default ai-business-intelligence-suite,

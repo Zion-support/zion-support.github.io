@@ -7,9 +7,8 @@
           <p className="text-zion-slate-light mb-6">,
             Choose a country from the options above to see service details and pricing,
           </p>,
-        </div>,
-      )}
+        </div>)}
     </div>,
-  );
+  ),
 }
 ,

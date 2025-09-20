@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { GradientHeading } from "./GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "./ui/button";
-import { fireEvent } from '@/lib/analytics';
+import Link from "next/link",
+import { GradientHeading } from "./GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from "./ui/button",
+import { fireEvent } from '@/lib/analytics',
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
 
 export function FeaturesGuideSection() {
@@ -120,7 +120,7 @@ export function FeaturesGuideSection() {
       link: "/help",
       buttonText: "View Resources"
     }
-  ];
+  ],
 
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -196,7 +196,7 @@ export function FeaturesGuideSection() {
         <div className="mt-12 text-center">
           <Button 
             variant="outline" 
-            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+            className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
             asChild
           >
             <Link href="/marketplace">
@@ -207,5 +207,5 @@ export function FeaturesGuideSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       link: "/services",
       color: "from-green-500 to-green-600"
     }
-  ];
+  ],
 
   const featuredProducts = [
     {
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
       link: "/products",
       color: "from-yellow-500 to-yellow-600"
     }
-  ];
+  ],
 
   const industrySolutions = [
     {
@@ -67,31 +67,31 @@ const Home: NextPage = () => {
       icon: "🏭",
       link: "/solutions"
     }
-  ];
+  ],
 
 =======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import HeroSection from '../components/HeroSection';
-import FeaturesSection from '../components/FeaturesSection';
-import Footer from '../components/Footer';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import Navigation from '../components/Navigation',
+import HeroSection from '../components/HeroSection',
+import FeaturesSection from '../components/FeaturesSection',
+import Footer from '../components/Footer',
 
 export default function HomePage() {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-rotate features
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 6);
-    }, 5000);
+      setCurrentFeature((prev) => (prev + 1) % 6),
+    }, 5000),
     
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval),
+  }, []),
 
   const features = [
     {
@@ -130,7 +130,7 @@ export default function HomePage() {
       description: "Advanced edge computing optimization platform",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const services = [
     {
@@ -187,14 +187,14 @@ export default function HomePage() {
       price: "$1,299/month",
       features: ["Warehouse automation", "Route optimization", "Multi-robot coordination"]
     }
-  ];
+  ],
 
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: CheckCircle },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
     { number: "24/7", label: "Support Available", icon: Clock }
-  ];
+  ],
 
   const features = [
     {
@@ -217,7 +217,7 @@ export default function HomePage() {
       description: "24/7 technical support with dedicated account managers",
       icon: "💬"
     }
-  ];
+  ],
 
   return (
     <>
@@ -361,7 +361,7 @@ export default function HomePage() {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Let's discuss how our technology solutions can help you achieve your business goals and stay ahead of the competition.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
               Start Your Project
             </Link>
@@ -372,8 +372,8 @@ export default function HomePage() {
         </div>
       </section>
     </>
-  );
-};
+  )
+},
 =======
         <title>Zion Tech Group — Autonomous Innovation Hub</title>
         <meta name="description" content="Leading-edge technology solutions and autonomous innovation systems that drive digital transformation and innovation across industries." />
@@ -498,13 +498,13 @@ export default function HomePage() {
             </div>
 
             <div className="relative z-10 max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                   Ready to Innovate?
                 </span>
               </h2>
                                <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                   Join the future of technology with Zion Tech Group. Let&apos;s build something extraordinary together.
+                   Join the future of technology with Zion Tech Group. Let&apos,s build something extraordinary together.
                  </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                  <Link
@@ -528,6 +528,6 @@ export default function HomePage() {
         <Footer />
       </div>
     </>
-  );
+  ),
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

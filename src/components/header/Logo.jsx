@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Zap } from 'lucide-react';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { Zap } from "lucide-react";
 export function Logo({ customLogo, customColor, className = '' }) {
   if (customLogo) {
     return (
@@ -15,7 +14,7 @@ export function Logo({ customLogo, customColor, className = '' }) {
     );
   }
 
-  const logoColor = customColor || '#3b82f6'; // Default blue color
+  const logoColor = customColor || '#3b82f6', // Default blue color
 
   return (
     <Link to="/" className={`flex-shrink-0 group ${className}`}>

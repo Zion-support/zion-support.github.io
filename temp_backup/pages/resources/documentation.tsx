@@ -1,8 +1,8 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../../components/SEO',
+import { motion } from 'framer-motion',
 import { 
-  FileText, 
+  FileText,
   BookOpen, 
   Code, 
   Search, 
@@ -14,8 +14,8 @@ import {
   Clock,
   Globe,
   Zap
-} from 'lucide-react';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+} from 'lucide-react',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
 
 const DocumentationPage: React.FC = () => {
   const documentationCategories = [
@@ -23,7 +23,7 @@ const DocumentationPage: React.FC = () => {
       title: 'API Documentation',
       description: 'Comprehensive API reference and integration guides',
       icon: <Code className="w-8 h-8" />,
-      features: ['REST API Reference', 'SDK Documentation', 'Code Examples', 'Integration Guides'],
+      features: ['REST API ReferenceSDK Documentation', 'Code ExamplesIntegration Guides'],
       href: '/resources/api',
       color: 'from-blue-500 to-cyan-500'
     },
@@ -31,7 +31,7 @@ const DocumentationPage: React.FC = () => {
       title: 'Developer Guides',
       description: 'Step-by-step guides for developers and engineers',
       icon: <BookOpen className="w-8 h-8" />,
-      features: ['Getting Started', 'Best Practices', 'Tutorials', 'Sample Projects'],
+      features: ['Getting StartedBest Practices', 'TutorialsSample Projects'],
       href: '/resources/developer-guides',
       color: 'from-green-500 to-emerald-500'
     },
@@ -39,7 +39,7 @@ const DocumentationPage: React.FC = () => {
       title: 'User Manuals',
       description: 'User-friendly guides for end users and administrators',
       icon: <Users className="w-8 h-8" />,
-      features: ['User Interface Guide', 'Administration Guide', 'Troubleshooting', 'FAQ'],
+      features: ['User Interface GuideAdministration Guide', 'TroubleshootingFAQ'],
       href: '/resources/user-manuals',
       color: 'from-purple-500 to-pink-500'
     },
@@ -47,7 +47,7 @@ const DocumentationPage: React.FC = () => {
       title: 'Technical Specifications',
       description: 'Detailed technical specifications and architecture',
       icon: <FileText className="w-8 h-8" />,
-      features: ['System Architecture', 'Data Models', 'Security Specifications', 'Performance Metrics'],
+      features: ['System ArchitectureData Models', 'Security SpecificationsPerformance Metrics'],
       href: '/resources/technical-specs',
       color: 'from-yellow-500 to-orange-500'
     },
@@ -55,7 +55,7 @@ const DocumentationPage: React.FC = () => {
       title: 'Integration Guides',
       description: 'Guides for integrating with third-party systems',
       icon: <Zap className="w-8 h-8" />,
-      features: ['Third-party Integrations', 'Webhook Setup', 'Authentication', 'Data Mapping'],
+      features: ['Third-party IntegrationsWebhook Setup', 'AuthenticationData Mapping'],
       href: '/resources/integration-guides',
       color: 'from-indigo-500 to-purple-500'
     },
@@ -63,11 +63,11 @@ const DocumentationPage: React.FC = () => {
       title: 'Release Notes',
       description: 'Detailed information about product updates and releases',
       icon: <Clock className="w-8 h-8" />,
-      features: ['Version History', 'New Features', 'Bug Fixes', 'Migration Guides'],
+      features: ['Version HistoryNew Features', 'Bug FixesMigration Guides'],
       href: '/resources/release-notes',
       color: 'from-red-500 to-orange-500'
     }
-  ];
+  ],
 
   const documentationFeatures = [
     {
@@ -90,14 +90,14 @@ const DocumentationPage: React.FC = () => {
       description: 'Available in multiple formats for offline use',
       icon: <Download className="w-6 h-6" />
     }
-  ];
+  ],
 
   const stats = [
     { label: 'Documentation Pages', value: '1000+', icon: <FileText className="w-6 h-6" /> },
     { label: 'Code Examples', value: '500+', icon: <Code className="w-6 h-6" /> },
     { label: 'Languages', value: '10+', icon: <Globe className="w-6 h-6" /> },
     { label: 'Monthly Updates', value: '50+', icon: <Clock className="w-6 h-6" /> }
-  ];
+  ],
 
 const documentation: React.FC = () => {
   return (
@@ -114,7 +114,7 @@ const documentation: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default documentation;
+export default documentation,

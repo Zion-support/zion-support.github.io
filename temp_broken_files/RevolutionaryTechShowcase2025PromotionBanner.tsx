@@ -1,37 +1,36 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
   ArrowRight,
   Star,
-  Sparkles;
-  TrendingUp;
-  Award;
-  Rocket,
-} from 'lucide-react';
+  Sparkles,
+  TrendingUp,
+  Award,
+  Rocket
+} from 'lucide-react',
 const RevolutionaryTechShowcase2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [currentFeaturesetCurrentFeature] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Rotate features every 3 seconds,
     const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
   const features = [,
-    'AI Revolution 2025Quantum Computing';
-    'Blockchain InnovationIoT & Edge Computing',
-  ];
+    'AI Revolution 2025Quantum ComputingBlockchain InnovationIoT & Edge Computing'
+  ],
   const stats = [,
-    { label: ''Technologiesvalue: '50+' ,};
-    { label: 'Success 'Ratevalue: '99%' ,};
-    { label: 'Client 'Satisfactionvalue: '5.0' ,};
-    { label: 'ROI 'Improvementvalue: '300%' ,}
-  ];
+    { label: ''Technologiesvalue: '50+' },
+    { label: 'Success 'Ratevalue: '99%' },
+    { label: 'Client 'Satisfactionvalue: '5.0' },
+    { label: 'ROI 'Improvementvalue: '300%' }
+  ],
   return (,
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 overflow-hidden">,
       {/* Background Effects */}
@@ -43,7 +42,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {,
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
           >,
             {/* Badge */}
@@ -62,7 +61,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {,
                 Future of Technology,
               </span>,
             </divh1>,
-            {/* Subheading */,}
+            {/* Subheading */}
             <divp,
               className="text-xl text-gray-300 mb-8 leading-relaxed",
             >,
@@ -75,7 +74,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {,
               <div className="flex items-center text-lg text-gray-300">,
                 <span className="mr-3">Featured: </span>,
                   <divspan,
-                    key={currentFeature,}
+                    key={currentFeature}
                     className="text-purple-400 font-semibold",
                   >,
                     {features[currentFeature]}
@@ -97,7 +96,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Stats & Visual */,}
+          {/* Right Content - Stats & Visual */}
           <div,
             className="relative",
           >,
@@ -123,8 +122,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {,
                   >,
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
                     <div className="text-sm text-gray-300">{stat.label}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* Floating Elements */}
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-purple-400/30 rounded-full animate-pulse"></div>,
@@ -140,10 +138,10 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {,
           className="mt-16 grid grid-cols-2 md: grid-cols-4 gap-8",
         >,
           {[,
-            { icon: TrendingUplabel: ''Performancevalue: '10x Faster' ,};
-            { icon: Awardlabel: ''Awardsvalue: '25+ Won' ,};
-            { icon: Rocketlabel: ''Deploymentsvalue: '1000+' ,};
-            { icon: Starlabel: ''Ratingvalue: '5.0/5.0' ,}
+            { icon: TrendingUplabel: ''Performancevalue: '10x Faster' },
+            { icon: Awardlabel: ''Awardsvalue: '25+ Won' },
+            { icon: Rocketlabel: ''Deploymentsvalue: '1000+' },
+            { icon: Starlabel: ''Ratingvalue: '5.0/5.0' }
           ].map((itemindex) => (,
             <div,
               key={item.label}
@@ -154,12 +152,11 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {,
               </div>,
               <div className="text-2xl font-bold text-white mb-1">{item.value}</div>,
               <div className="text-sm text-gray-400">{item.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
     </div>,
-  );
-};
-export default RevolutionaryTechShowcase2025PromotionBanner;
+  ),
+},
+export default RevolutionaryTechShowcase2025PromotionBanner,
 </div></div>,

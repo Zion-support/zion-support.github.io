@@ -1,5 +1,5 @@
-// Hook for useMessagingOperations;
+// Hook for useMessagingOperations,
 export const useUseMessagingOperations: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

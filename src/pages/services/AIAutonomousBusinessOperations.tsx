@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Settings, 
+  Settings,
   Brain, 
   Target, 
   BarChart3, 
@@ -25,50 +25,33 @@ import {
   Shield,
   Users,
   Workflow
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousBusinessOperations: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Operations',
-      description: 'Advanced machine learning for autonomous business process optimization'
-    },
+      icon: Brain,title: 'AI-Powered Operations',description: 'Advanced machine learning for autonomous business process optimization'
+    };
     {
-      icon: Settings,
-      title: 'Process Automation',
-      description: 'Intelligent automation of business workflows and operational tasks'
-    },
+      icon: Settings,title: 'Process Automation',description: 'Intelligent automation of business workflows and operational tasks'
+    };
     {
-      icon: Target,
-      title: 'Performance Optimization',
-      description: 'Continuous optimization of business operations and efficiency metrics'
-    },
+      icon: Target,title: 'Performance Optimization',description: 'Continuous optimization of business operations and efficiency metrics'
+    };
     {
-      icon: BarChart3,
-      title: 'Operational Analytics',
-      description: 'Real-time analytics and insights into business operations performance'
-    },
+      icon: BarChart3,title: 'Operational Analytics',description: 'Real-time analytics and insights into business operations performance'
+    };
     {
-      icon: Workflow,
-      title: 'Workflow Management',
-      description: 'AI-driven workflow orchestration and task management'
-    },
+      icon: Workflow,title: 'Workflow Management',description: 'AI-driven workflow orchestration and task management'
+    };
     {
-      icon: TrendingUp,
-      title: 'Efficiency Monitoring',
-      description: 'Continuous monitoring and improvement of operational efficiency'
+      icon: TrendingUp,title: 'Efficiency Monitoring',description: 'Continuous monitoring and improvement of operational efficiency'
     }
   ];
-
   const benefits = [
-    'Increase operational efficiency by 40%',
-    'Reduce operational costs by 30%',
-    'Improve process accuracy by 85%',
-    'Automate routine operations',
-    '24/7 autonomous operation',
-    'Real-time performance monitoring'
-  ];
+    'Increase operational efficiency by 40%Reduce operational costs by 30%',
+    'Improve process accuracy by 85%Automate routine operations',
+    '24/7 autonomous operationReal-time performance monitoring'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -210,7 +193,7 @@ const AIAutonomousBusinessOperations: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Business Operations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -228,7 +211,6 @@ const AIAutonomousBusinessOperations: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousBusinessOperations;

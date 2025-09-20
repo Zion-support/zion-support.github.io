@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
 import { 
-  Users, 
+  Users,
   Brain, 
   Target, 
   Zap, 
@@ -22,42 +22,28 @@ import {
   UserCheck,
   Calendar,
   Video
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function InterviewAssessmentAI() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Assessment",
-      description: "Intelligent evaluation of candidate skills, personality, and cultural fit."
+      icon: Brain,title: "AI-Powered Assessment",description: "Intelligent evaluation of candidate skills, personality, and cultural fit."
     },
     {
-      icon: Video,
-      title: "Video Interview Analysis",
-      description: "Advanced video processing for facial expressions, tone, and communication skills."
+      icon: Video,title: "Video Interview Analysis",description: "Advanced video processing for facial expressions, tone, and communication skills."
     },
     {
-      icon: Target,
-      title: "Skill Gap Analysis",
-      description: "Comprehensive assessment of technical and soft skills with detailed reporting."
-    },
+      icon: Target,title: "Skill Gap Analysis",description: "Comprehensive assessment of technical and soft skills with detailed reporting."
+    };
     {
-      icon: Zap,
-      title: "Automated Scheduling",
-      description: "Intelligent interview scheduling and candidate communication automation."
-    },
+      icon: Zap,title: "Automated Scheduling",description: "Intelligent interview scheduling and candidate communication automation."
+    };
     {
-      icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Data-driven insights into hiring effectiveness and candidate performance."
-    },
+      icon: BarChart3,title: "Performance Analytics",description: "Data-driven insights into hiring effectiveness and candidate performance."
+    };
     {
-      icon: Shield,
-      title: "Bias-Free Evaluation",
-      description: "Objective assessment algorithms that eliminate unconscious bias in hiring."
+      icon: Shield,title: "Bias-Free Evaluation",description: "Objective assessment algorithms that eliminate unconscious bias in hiring."
     }
   ];
-
   const benefits = [
     "Reduce hiring time by 50-70% with automated assessments",
     "Improve hiring quality by 40-60% through AI insights",
@@ -65,64 +51,50 @@ export default function InterviewAssessmentAI() {
     "Enhance candidate experience with 24/7 availability",
     "Lower cost per hire by 30-50%",
     "Improve retention rates by 25-40%"
-  ];
+  ],
 
   const assessmentTypes = [
     {
-      type: "Technical Skills",
-      description: "Programming tests, problem-solving, and technical knowledge assessment",
+      type: "Technical Skills",description: "Programming tests, problem-solving, and technical knowledge assessment",
       icon: Cpu
-    },
+    };
     {
-      type: "Personality Assessment",
-      description: "Behavioral analysis, cultural fit, and work style evaluation",
+      type: "Personality Assessment",description: "Behavioral analysis, cultural fit, and work style evaluation",
       icon: Users
-    },
+    };
     {
-      type: "Communication Skills",
-      description: "Verbal and written communication, presentation, and interpersonal skills",
+      type: "Communication Skills",description: "Verbal and written communication, presentation, and interpersonal skills",
       icon: MessageCircle
-    },
+    };
     {
-      type: "Cognitive Ability",
-      description: "Problem-solving, critical thinking, and analytical reasoning tests",
+      type: "Cognitive Ability",description: "Problem-solving, critical thinking, and analytical reasoning tests",
       icon: Brain
-    },
+    };
     {
-      type: "Situational Judgment",
-      description: "Real-world scenarios and decision-making assessment",
-      icon: Target
-    },
+      type: "Situational Judgment",description: "Real-world scenarios and decision-making assessment",icon: Target
+    };
     {
-      type: "Cultural Fit",
-      description: "Values alignment, team dynamics, and organizational culture match",
+      type: "Cultural Fit",description: "Values alignment, team dynamics, and organizational culture match",
       icon: Globe
     }
   ];
-
   const useCases = [
     {
-      industry: "Technology",
-      description: "Software developer hiring, technical skills assessment, and coding challenges"
+      industry: "Technology",description: "Software developer hiring, technical skills assessment, and coding challenges"
     },
     {
-      industry: "Finance",
-      description: "Analyst recruitment, risk assessment, and financial modeling evaluation"
+      industry: "Finance",description: "Analyst recruitment, risk assessment, and financial modeling evaluation"
     },
     {
-      industry: "Healthcare",
-      description: "Medical staff hiring, patient care assessment, and clinical skills evaluation"
+      industry: "Healthcare",description: "Medical staff hiring, patient care assessment, and clinical skills evaluation"
     },
     {
-      industry: "Sales & Marketing",
-      description: "Sales representative hiring, communication skills, and performance potential"
+      industry: "Sales & Marketing",description: "Sales representative hiring, communication skills, and performance potential"
     },
     {
-      industry: "Manufacturing",
-      description: "Engineering recruitment, technical skills, and safety compliance assessment"
+      industry: "Manufacturing",description: "Engineering recruitment, technical skills, and safety compliance assessment"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -388,7 +360,7 @@ export default function InterviewAssessmentAI() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-emerald-400/30 text-emerald-300 font-semibold rounded-lg hover:bg-emerald-400/10 transition-all duration-300"
+                className="px-8 py-4 border border-emerald-400/30 text-emerald-300 font-semibold rounded-lg hover: bg-emerald-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -397,5 +369,5 @@ export default function InterviewAssessmentAI() {
         </div>
       </section>
     </div>
-  );
+  )
 }

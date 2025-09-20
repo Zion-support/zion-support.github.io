@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 export default function CybersecurityPage() {,
 	return (,
 		<>,
@@ -11,7 +11,7 @@ export default function CybersecurityPage() {,
 			</Head>,
 			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">,
 				<div className="container mx-auto px-6 py-16">,
-					{/* Hero Section */,}
+					{/* Hero Section */}
 					<section className="text-center mb-16">,
 						<h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">,
 							Cybersecurity Services,
@@ -28,7 +28,7 @@ export default function CybersecurityPage() {,
 							</Link>,
 						</div>,
 					</section>,
-					{/* Security Services Overview */,}
+					{/* Security Services Overview */}
 					<section className="mb-16">,
 						<h2 className="text-3xl font-bold mb-8 text-center text-white">Our Cybersecurity Services</h2>,
 						<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -94,7 +94,7 @@ export default function CybersecurityPage() {,
 							</div>,
 						</div>,
 					</section>,
-					{/* Security Solutions */,}
+					{/* Security Solutions */}
 					<section className="mb-16">,
 						<h2 className="text-3xl font-bold mb-8 text-center text-white">Security Solutions</h2>,
 						<div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
@@ -204,7 +204,7 @@ export default function CybersecurityPage() {,
 							</div>,
 						</div>,
 					</section>,
-					{/* CTA Section */,}
+					{/* CTA Section */}
 					<section className="text-center">,
 						<div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-400/30 rounded-lg p-8">,
 							<h2 className="text-2xl font-bold mb-4 text-white">Ready to Secure Your Business?</h2>,
@@ -223,5 +223,4 @@ export default function CybersecurityPage() {,
 					</section>,
 				</div>,
 			</main>,
-		</>,
-	),}
+		</>)}

@@ -1,12 +1,12 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
-import { CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import SEO from '../../../components/SEO',
+import Link from 'next/link',
+import { CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline',
 export const metadata = {,
-  title: 'Neural Interface Breakthrough: The Future of Human-AI Interaction';
-  description: 'Discover how neural interfaces are revolutionizing human-AI interaction with breakthrough technologies that enable direct brain-computer communication.';
-  keywords: 'neural interfaces, brain-computer interface, BCI, AI interaction, neural technology, cognitive enhancement',
-};
+  title: 'Neural Interface Breakthrough: The Future of Human-AI Interaction',
+  description: 'Discover how neural interfaces are revolutionizing human-AI interaction with breakthrough technologies that enable direct brain-computer communication.',
+  keywords: 'neural interfaces, brain-computer interface, BCI, AI interaction, neural technology, cognitive enhancement'
+},
 export default function NeuralInterfaceBreakthrough() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -38,7 +38,7 @@ export default function NeuralInterfaceBreakthrough() {,
           </h1>,
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6 rounded-lg mb-8">,
             <p className="text-xl leading-relaxed">,
-              Revolutionary neural interface technologies are enabling direct brain-computer communication;
+              Revolutionary neural interface technologies are enabling direct brain-computer communication,
               transforming how humans interact with AI systems and unlocking unprecedented cognitive capabilities.,
             </p>,
           </div>,
@@ -144,7 +144,7 @@ export default function NeuralInterfaceBreakthrough() {,
             </div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-8 rounded-lg mb-8">,
           <h3 className="text-2xl font-bold mb-4">Ready to Explore Neural Interface Technology?</h3>,
           <p className="text-xl mb-6 opacity-90">,
@@ -165,7 +165,7 @@ export default function NeuralInterfaceBreakthrough() {,
             </Link>,
           </div>,
         </div>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <div className="border-t pt-8">,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Content</h3>,
           <div className="grid md: grid-cols-3 gap-6">,
@@ -202,5 +202,4 @@ export default function NeuralInterfaceBreakthrough() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

@@ -1,30 +1,29 @@
-import React, { useState, useMemo } from 'react';
-export default ZionCuttingEdgeServices2031;
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031';
+import React, { useState, useMemo } from 'react',
+export default ZionCuttingEdgeServices2031,
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031',
 
 export default function Page() {
     // Sort services
     filtered.sort((a, b) => {
       switch(sortBy) {
         case 'price':
-          return a.price - b.price;
+          return a.price - b.price,
         case 'innovation':
           const innovationOrder = {
             Revolutionary: 3,
             'Cutting - edge': 2,
             Advanced: 1,
-            Breakthrough: 3,
-          };
+            Breakthrough: 3
+          },
           return ((innovationOrder[b.innovationLevel as keyof typeof innovationOrder
             ] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder
-            ] || 0) ) ;
-        default:
-          return a.name.localeCompare(b.name) ;
+            ] || 0) ) ,
+        default: return a.name.localeCompare(b.name) 
       }
-    }) ;
+    }) ,
 
-    return filtered;
-  }, [searchQuery, selectedCategory, sortBy]) ;
+    return filtered,
+  }, [searchQuery, selectedCategory, sortBy]) ,
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType < any> } = {
@@ -37,24 +36,23 @@ export default function Page() {
       'IoT & Predictive Analytics': Network,
       'Customer Experience & AI': Users,
       'Research & AI': Code,
-      'Business Intelligence & AI': BarChart3,
-    };
-    return iconMap[category] || Globe;
-  };
+      'Business Intelligence & AI': BarChart3
+    },
+    return iconMap[category] || Globe,
+  },
 
   const getInnovationColor = (level: string) => {
     const colorMap: { [key: string]: string } = {
-      Revolutionary: 'from - purple - 500 to - pink - 500',
-      'Cutting - edge': 'from - blue - 500 to - indigo - 500',
+      Revolutionary: 'from - purple - 500 to - pink - 500Cutting - edge': 'from - blue - 500 to - indigo - 500',
       Advanced: 'from - green - 500 to - teal - 500',
-      Breakthrough: 'from - red - 500 to - orange - 500',
-    };
-    return colorMap[level] || 'from - gray - 500 to - slate - 500';
-  };
+      Breakthrough: 'from - red - 500 to - orange - 500'
+    },
+    return colorMap[level] || 'from - gray - 500 to - slate - 500',
+  },
 
   const toggleServiceExpansion = (id: number) => {
-    setExpandedService(expandedService === id ? null : id) ;
-  };
+    setExpandedService(expandedService === id ? null : id) 
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -171,11 +169,11 @@ export default function Page() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm: px-6 lg:px-8">
         <div  className="max - w-7xl mx -auto">
           <div  className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8">
             {filteredServices.map(service => {
-              const CategoryIcon = getCategoryIcon (service.category) ;
+              const CategoryIcon = getCategoryIcon (service.category) ,
               return (<motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -367,7 +365,7 @@ export default function Page() {
                         </div>
                       </div>
                     </motion.div>) }
-                </motion.div>) ;
+                </motion.div>) ,
             }) }
           </div>
 
@@ -390,7 +388,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray - 300 mb-8">
@@ -417,6 +415,6 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

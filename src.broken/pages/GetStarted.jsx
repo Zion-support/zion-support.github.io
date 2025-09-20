@@ -1,21 +1,21 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             title: "IT Infrastructure",
             description: "Modernize your technology foundation",
             icon: Zap,
             color: "from - green - 500 to - teal - 600",
-            features["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"];
+            features["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"],
         }
-    ];
+    ],
     const benefits = ["Free initial consultation",
         "Customized solution design",
         "Expert implementation team",
         "Ongoing support & maintenance",
         "Performance monitoring",
         "Regular updates & improvements"
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - gray - 900 via - black to - gray - 900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -207,5 +207,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

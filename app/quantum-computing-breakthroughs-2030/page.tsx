@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Quantum Computing Breakthroughs 2030: Revolutionary AI | Zion Tech Group';
-  description: 'Discover the most advanced quantum computing breakthroughs that will revolutionize AI, cryptography, and computational power by 2030.';
-  keywords: ['quantum computingquantum AI', 'quantum cryptographyquantum algorithms', 'quantum supremacyfuture computing'],
-};
+  title: 'Quantum Computing Breakthroughs 2030: Revolutionary AI | Zion Tech Group',
+  description: 'Discover the most advanced quantum computing breakthroughs that will revolutionize AI, cryptography, and computational power by 2030.',
+  keywords: ['quantum computingquantum AIquantum cryptographyquantum algorithms', 'quantum supremacyfuture computing']
+},
 export default function QuantumComputingPage() {,
   return (,
     <div>,
@@ -32,7 +32,7 @@ export default function QuantumComputingPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Quantum Supremacy Stats */,}
+        {/* Quantum Supremacy Stats */}
         <section className="py-16 bg-white">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -55,12 +55,12 @@ export default function QuantumComputingPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Breakthroughs */,}
+        {/* Key Breakthroughs */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Revolutionary Quantum Breakthroughs</h2>,
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
-              {/* Quantum AI */,}
+              {/* Quantum AI */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-500">,
                 <div className="flex items-center mb-6">,
                   <div className="text-4xl mr-4">🧠</div>,
@@ -96,7 +96,7 @@ export default function QuantumComputingPage() {,
                   Explore Quantum AI →,
                 </Link>,
               </div>,
-              {/* Quantum Cryptography */,}
+              {/* Quantum Cryptography */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-500">,
                 <div className="flex items-center mb-6">,
                   <div className="text-4xl mr-4">🔐</div>,
@@ -132,7 +132,7 @@ export default function QuantumComputingPage() {,
                   Learn About Quantum Security →,
                 </Link>,
               </div>,
-              {/* Quantum Simulation */,}
+              {/* Quantum Simulation */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500">,
                 <div className="flex items-center mb-6">,
                   <div className="text-4xl mr-4">🧪</div>,
@@ -168,7 +168,7 @@ export default function QuantumComputingPage() {,
                   Discover Quantum Simulation →,
                 </Link>,
               </div>,
-              {/* Quantum Networking */,}
+              {/* Quantum Networking */}
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">,
                 <div className="flex items-center mb-6">,
                   <div className="text-4xl mr-4">🌐</div>,
@@ -207,7 +207,7 @@ export default function QuantumComputingPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Applications Timeline */,}
+        {/* Applications Timeline */}
         <section className="py-16 bg-white">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Quantum Computing Applications Timeline</h2>,
@@ -301,7 +301,7 @@ export default function QuantumComputingPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 bg-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Prepare for the Quantum Revolution</h2>,
@@ -325,5 +325,4 @@ export default function QuantumComputingPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

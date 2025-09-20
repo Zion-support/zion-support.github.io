@@ -1,27 +1,27 @@
 <<<<<<< HEAD
 
-import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { LockKeyhole } from "lucide-react";
+import { useState, useEffect } from "react",
+import { useNavigate, useLocation } from "react-router-dom",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { LockKeyhole } from "lucide-react",
 
-import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { supabase } from "@/integrations/supabase/client",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { toast } from "@/hooks/use-toast";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { cleanupAuthState } from "@/utils/authUtils";
+  FormMessage
+} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { cleanupAuthState } from "@/utils/authUtils",
 
 // Form validation schema
 const updatePasswordSchema = z
@@ -30,101 +30,101 @@ const updatePasswordSchema = z
       .string()
       .min(8, "Password must be at least 8 characters")
       .max(64, "Password must be less than 64 characters"),
-    confirmPassword: z.string(),
+    confirmPassword: z.string()
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path: ["confirmPassword"],
-  });
+    path: ["confirmPassword"]
+  }),
 
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [isLoading, setIsLoading] = useState(false),
+  const [accessToken, setAccessToken] = useState<string | null>(null),
+  const [error, setError] = useState<string | null>(null),
+  const [success, setSuccess] = useState(false),
+  const navigate = useNavigate(),
+  const location = useLocation(),
 
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema),
     defaultValues: {
       password: "",
-      confirmPassword: "",
-    },
-  });
+      confirmPassword: ""
+    }
+  }),
 
   useEffect(() => {
     // Extract access token from URL hash
-    const hashParams = new URLSearchParams(location.hash.substring(1));
-    const token = hashParams.get("access_token");
+    const hashParams = new URLSearchParams(location.hash.substring(1)),
+    const token = hashParams.get("access_token"),
     
     if (token) {
-      setAccessToken(token);
+      setAccessToken(token),
     } else {
-      setError("No access token found. Please request a new password reset link.");
+      setError("No access token found. Please request a new password reset link."),
     }
 
     // Clean up auth state to prevent issues
-    cleanupAuthState();
-  }, [location]);
+    cleanupAuthState(),
+  }, [location]),
 
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
-      setError("No access token found. Please request a new password reset link.");
-      return;
+      setError("No access token found. Please request a new password reset link."),
+      return
     }
 
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
         access_token: accessToken,
-        refresh_token: '',
-      });
+        refresh_token: ''
+      }),
 
       // Update the password
       const { error } = await supabase.auth.updateUser({
-        password: data.password,
-      });
+        password: data.password
+      }),
 
       if (error) {
         toast({
           title: "Password update failed",
           description: error.message,
-          variant: "destructive",
-        });
-        setError(error.message);
-        return;
+          variant: "destructive"
+        }),
+        setError(error.message),
+        return,
       }
 
       // Show success message and clean up auth state
-      setSuccess(true);
+      setSuccess(true),
       toast({
         title: "Password updated successfully",
-        description: "You can now log in with your new password.",
-      });
+        description: "You can now log in with your new password."
+      }),
 
       // Clean auth state and redirect after a delay
-      cleanupAuthState();
+      cleanupAuthState(),
       setTimeout(() => {
-        navigate("/login");
-      }, 3000);
+        navigate("/login"),
+      }, 3000),
     } catch (error: any) {
-      console.error("Password update error:", error);
+      console.error("Password update error:", error),
       toast({
         title: "Password update failed",
         description: error.message || "An unexpected error occurred",
-        variant: "destructive",
-      });
-      setError(error.message || "An unexpected error occurred");
+        variant: "destructive"
+      }),
+      setError(error.message || "An unexpected error occurred"),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   return (
     <>
@@ -235,7 +235,7 @@ export default function UpdatePassword() {
             </div>
           </div>
         </div>
-        <div className="hidden lg:block relative w-0 flex-1">
+        <div className="hidden lg: block relative w-0 flex-1">
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
             <div className="flex flex-col justify-center items-center h-full px-8">
               <div className="max-w-md text-center">
@@ -251,13 +251,13 @@ export default function UpdatePassword() {
       <Footer />
     </>
 =======
-import React from 'react';
+import React from 'react',
 export function UpdatePassword() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
+  )
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

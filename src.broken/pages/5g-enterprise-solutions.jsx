@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 export default function Page() {
 ,
         {
@@ -11,28 +11,28 @@ export default function Page() {
             title: "Massive IoT Support",
             description: "Support for thousands of connected devices simultaneously"
 
-    ];
+    ],
     const solutions = [{
             title: "Smart Manufacturing",
             description: "Enable Industry 4.0 with real - time monitoring and automation",
-            applications["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"];
-        },;
+            applications["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"],
+        },
         {
             title: "Healthcare Innovation",
             description: "Transform healthcare delivery with connected medical devices",
-            applications["Remote Monitoring", "Telemedicine", "Medical IoT"];
-        },;
+            applications["Remote Monitoring", "Telemedicine", "Medical IoT"],
+        },
         {
             title: "Autonomous Vehicles",
             description: "Power the future of transportation with reliable connectivity",
-            applications["Vehicle - to - Everything", "Fleet Management", "Safety Systems"];
-        },;
+            applications["Vehicle - to - Everything", "Fleet Management", "Safety Systems"],
+        },
         {
             title: "Smart Cities",
             description: "Build intelligent urban infrastructure and services",
-            applications["Traffic Management", "Energy Grids", "Public Safety"];
+            applications["Traffic Management", "Energy Grids", "Public Safety"],
         }
-    ];
+    ],
     const benefits = [{
             icon: Rocket,
             title: "10x Faster Speeds",
@@ -48,7 +48,7 @@ export default function Page() {
             title: "Global Reach",
             description: "Connect your enterprise worldwide"
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - teal - 900 to - slate -900">
       <Helmet>
         <title > 5G Enterprise Solutions - Zion Tech Group</title>
@@ -292,7 +292,7 @@ export default function Page() {
                 <p className="text-gray - 300 text-sm">{tech.description}</p>
               </motion.div>) ) }
           </div>
-        </div>;
+        </div>,
       </section>
 
       {/* Implementation Process Section */}
@@ -372,5 +372,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}}

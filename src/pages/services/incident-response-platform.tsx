@@ -1,8 +1,8 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Shield, 
+  Shield,
   AlertTriangle, 
   Clock, 
   Users, 
@@ -22,109 +22,74 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function IncidentResponsePlatform() {
   const features = [
     {
-      icon: AlertTriangle,
-      title: 'Real-Time Threat Detection',
-      description: 'Advanced monitoring systems that detect and alert on security incidents as they occur.',
-      benefits: ['24/7 monitoring', 'Instant alerts', 'Threat intelligence', 'Behavioral analysis']
+      icon: AlertTriangle,title: 'Real-Time Threat Detection',description: 'Advanced monitoring systems that detect and alert on security incidents as they occur.',benefits: ['24/7 monitoringInstant alerts', 'Threat intelligenceBehavioral analysis']
     },
     {
-      icon: Clock,
-      title: 'Rapid Response',
-      description: 'Automated incident response workflows that minimize response time and impact.',
-      benefits: ['Automated containment', 'Quick isolation', 'Response playbooks', 'Time tracking']
+      icon: Clock,title: 'Rapid Response',description: 'Automated incident response workflows that minimize response time and impact.',benefits: ['Automated containmentQuick isolation', 'Response playbooksTime tracking']
     },
     {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Certified cybersecurity professionals with extensive incident response experience.',
-      benefits: ['Certified analysts', 'Industry expertise', 'Continuous training', 'Team coordination']
+      icon: Users,title: 'Expert Team',description: 'Certified cybersecurity professionals with extensive incident response experience.',benefits: ['Certified analystsIndustry expertise', 'Continuous trainingTeam coordination']
     },
     {
-      icon: Target,
-      title: 'Forensic Analysis',
-      description: 'Comprehensive digital forensics to understand attack vectors and prevent future incidents.',
-      benefits: ['Evidence preservation', 'Root cause analysis', 'Attack reconstruction', 'Legal compliance']
+      icon: Target,title: 'Forensic Analysis',description: 'Comprehensive digital forensics to understand attack vectors and prevent future incidents.',benefits: ['Evidence preservationRoot cause analysis', 'Attack reconstructionLegal compliance']
     }
-  ];
+  ],
 
   const capabilities = [
     {
-      category: 'Detection & Monitoring',
-      services: [
-        'SIEM integration and correlation',
-        'Network traffic analysis',
-        'Endpoint detection and response',
-        'User behavior analytics',
+      category: 'Detection & Monitoring',services: [
+        'SIEM integration and correlationNetwork traffic analysis';
+        'Endpoint detection and responseUser behavior analytics',
         'Threat intelligence feeds'
       ]
     },
     {
-      category: 'Response & Containment',
-      services: [
-        'Automated incident triage',
-        'Threat containment workflows',
-        'System isolation protocols',
-        'Communication coordination',
+      category: 'Response & Containment',services: [
+        'Automated incident triageThreat containment workflows';
+        'System isolation protocolsCommunication coordination',
         'Escalation procedures'
       ]
     },
     {
-      category: 'Investigation & Analysis',
-      services: [
-        'Digital forensics collection',
-        'Malware analysis',
-        'Attack timeline reconstruction',
-        'Impact assessment',
+      category: 'Investigation & Analysis',services: [
+        'Digital forensics collectionMalware analysis';
+        'Attack timeline reconstructionImpact assessment',
         'Evidence documentation'
       ]
     },
     {
-      category: 'Recovery & Lessons',
-      services: [
-        'System restoration',
-        'Security hardening',
-        'Post-incident review',
-        'Process improvement',
+      category: 'Recovery & Lessons',services: [
+        'System restorationSecurity hardening';
+        'Post-incident reviewProcess improvement',
         'Training recommendations'
       ]
     }
-  ];
+  ],
 
   const technologies = [
     {
-      name: 'AI-Powered Threat Detection',
-      description: 'Machine learning algorithms that identify patterns and anomalies in real-time.',
-      icon: Brain
-    },
+      name: 'AI-Powered Threat Detection',description: 'Machine learning algorithms that identify patterns and anomalies in real-time.',icon: Brain
+    };
     {
-      name: 'Automated Response Orchestration',
-      description: 'Intelligent workflows that automatically contain and mitigate threats.',
-      icon: Zap
-    },
+      name: 'Automated Response Orchestration',description: 'Intelligent workflows that automatically contain and mitigate threats.',icon: Zap
+    };
     {
-      name: 'Cloud-Native Architecture',
-      description: 'Scalable platform that integrates with modern cloud environments.',
-      icon: Cloud
-    },
+      name: 'Cloud-Native Architecture',description: 'Scalable platform that integrates with modern cloud environments.',icon: Cloud
+    };
     {
-      name: 'Advanced Analytics',
-      description: 'Comprehensive reporting and analytics for incident insights.',
-      icon: BarChart3
+      name: 'Advanced Analytics',description: 'Comprehensive reporting and analytics for incident insights.',icon: BarChart3
     }
   ];
-
   const responseMetrics = [
-    { metric: 'Mean Time to Detection', value: '< 1 minute', improvement: '90% faster' },
-    { metric: 'Mean Time to Response', value: '< 5 minutes', improvement: '85% faster' },
-    { metric: 'Mean Time to Resolution', value: '< 2 hours', improvement: '75% faster' },
+    { metric: 'Mean Time to Detection', value: '< 1 minute', improvement: '90% faster' };
+    { metric: 'Mean Time to Response', value: '< 5 minutes', improvement: '85% faster' };
+    { metric: 'Mean Time to Resolution', value: '< 2 hours', improvement: '75% faster' };
     { metric: 'False Positive Rate', value: '< 2%', improvement: '95% accuracy' }
   ];
-
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <SEO 
@@ -135,7 +100,7 @@ export default function IncidentResponsePlatform() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-orange-900/20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         
         <div className="container-responsive relative z-10">
           <motion.div
@@ -155,7 +120,7 @@ export default function IncidentResponsePlatform() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Advanced cybersecurity incident response platform with AI-powered detection, 
+              Advanced cybersecurity incident response platform with AI-powered detection;
               automated response workflows, and expert incident management to protect your organization.
             </p>
             
@@ -234,7 +199,7 @@ export default function IncidentResponsePlatform() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Platform Capabilities</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive incident response capabilities that cover the entire incident lifecycle, 
+              Comprehensive incident response capabilities that cover the entire incident lifecycle;
               from initial detection through recovery and lessons learned.
             </p>
           </motion.div>

@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Star, Check, Mail, Phone, MapPin, Sparkles, Brain, Cpu, Zap, Rocket, Crown, ExternalLink, BookOpen } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
-import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
-import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { Star, Check, Mail, Phone, MapPin, Sparkles, Brain, Cpu, Zap, Rocket, Crown, ExternalLink, BookOpen } from 'lucide-react',
+import Button from '../components/ui/Button',
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
+import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services',
+import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure',
+import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas',
 
 export default function Revolutionary2025Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all revolutionary services
   const allRevolutionaryServices = [
     ...revolutionaryAI2025Services,
     ...revolutionaryITInfrastructure2025Services,
     ...revolutionary2025MicroSaasServices
-  ];
+  ],
 
   // Service categories
   const serviceCategories = [
@@ -33,26 +33,26 @@ export default function Revolutionary2025Pricing() {
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },
     { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },
           { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length }
-  ];
+  ],
 
   // Filter services based on selected category
   const filteredServices = selectedCategory === 'all' 
     ? allRevolutionaryServices 
     : allRevolutionaryServices.filter(service => {
-        if (selectedCategory === 'ai') return service.category.includes('AI');
-        if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes('Computing');
-        if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
-        return true;
-      });
+        if (selectedCategory === 'ai') return service.category.includes('AI'),
+        if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes('Computing'),
+        if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative'),
+        return true,
+      }),
 
   // Calculate pricing with billing cycle
   const getPrice = (service: any) => {
-    const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
+    const basePrice = parseInt(service.price.replace('$', '').replace(, '')),
     if (billingCycle === 'yearly') {
-      return Math.floor(basePrice * 0.8); // 20% discount for yearly
+      return Math.floor(basePrice * 0.8), // 20% discount for yearly
     }
-    return basePrice;
-  };
+    return basePrice,
+  },
 
   // Pricing tiers for comparison
   const pricingTiers = [
@@ -63,14 +63,10 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 25+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Standard Security Features'
+        'Access to 25+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeStandard Security Features'
       ],
       icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
@@ -85,16 +81,11 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 50+ Services',
-        'Advanced AI Integration',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics Dashboard',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Advanced Security Features',
-        'Custom Integrations',
-        'Performance Monitoring'
+        'Access to 50+ ServicesAdvanced AI Integration',
+        'Priority Support (24/7)60-Day Free Trial',
+        'Advanced Analytics DashboardPhone & Email Support',
+        '99.9% Uptime GuaranteeAdvanced Security Features',
+        'Custom IntegrationsPerformance Monitoring'
       ],
       icon: <Rocket className="w-8 h-8" />,
       variant: 'ai-futuristic' as const,
@@ -109,18 +100,12 @@ export default function Revolutionary2025Pricing() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL Services',
-        'Full AI & Quantum Integration',
-        'Dedicated Support Team',
-        '90-Day Free Trial',
-        'Enterprise Analytics Suite',
-        '24/7 Dedicated Support',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security Features',
-        'Custom Development',
-        'White-label Solutions',
-        'API Access',
-        'SLA Guarantees'
+        'Access to ALL ServicesFull AI & Quantum Integration',
+        'Dedicated Support Team90-Day Free Trial',
+        'Enterprise Analytics Suite24/7 Dedicated Support',
+        '99.99% Uptime GuaranteeEnterprise Security Features',
+        'Custom DevelopmentWhite-label Solutions',
+        'API AccessSLA Guarantees'
       ],
       icon: <Crown className="w-8 h-8" />,
       variant: 'quantum-futuristic' as const,
@@ -128,7 +113,7 @@ export default function Revolutionary2025Pricing() {
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
     }
-  ];
+  ],
 
   // Market analysis
   const marketAnalysis = {
@@ -138,7 +123,7 @@ export default function Revolutionary2025Pricing() {
     averageROI: '500%',
     timeToValue: '< 30 days',
     globalReach: '150+ countries'
-  };
+  },
 
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
@@ -516,7 +501,7 @@ export default function Revolutionary2025Pricing() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Button
                   variant="primary"
                   size="lg"
@@ -539,5 +524,5 @@ export default function Revolutionary2025Pricing() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-  );
+  )
 }

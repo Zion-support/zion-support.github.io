@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 image-optimizer-runner function triggered');
+  console.log('🤖 image-optimizer-runner function triggered'),
   
   try {
     // Image optimization logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate image processing
     const imageStats = {
@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
       optimized: Math.floor(Math.random() * 80) + 40,
       skipped: Math.floor(Math.random() * 20) + 5,
       totalSizeReduction: Math.floor(Math.random() * 60) + 20
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -21,16 +21,16 @@ exports.handler = async function(event, context) {
         function: 'image-optimizer-runner',
         status: 'success',
         imageStats: imageStats,
-        formats: ['webp', 'avif', 'jpeg'],
+        formats: ['webpavif', 'jpeg'],
         quality: 'high'
       })
-    };
+    },
     
-    console.log('✅ image-optimizer-runner completed successfully');
-    return result;
+    console.log('✅ image-optimizer-runner completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ image-optimizer-runner failed:', error);
+    console.error('❌ image-optimizer-runner failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -39,6 +39,6 @@ exports.handler = async function(event, context) {
         function: 'image-optimizer-runner',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

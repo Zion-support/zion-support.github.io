@@ -17,18 +17,18 @@ import { MyApplications } from "@/components/jobs/MyApplications";
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
-    const { user } = useAuth();
-    const [activeTab, setActiveTab] = useState("job-matches");
-    const onboardingStatus = useOnboardingStatus();
+    const { user } = useAuth(),
+    const [activeTab, setActiveTab] = useState("job-matches"),
+    const onboardingStatus = useOnboardingStatus(),
     const showAdvanced = onboardingStatus.profileCompleted &&
         onboardingStatus.skillsAdded &&
         onboardingStatus.availabilitySet &&
-        onboardingStatus.matchReceived;
+        onboardingStatus.matchReceived,
     return (<>
       <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
       
       <main className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div className="flex flex-col md: flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
             <h1 className="text-3xl font-bold">Talent Dashboard</h1>
             <p className="text-muted-foreground mt-1">Find opportunities matched to your skills and experience</p>

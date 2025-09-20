@@ -3,8 +3,8 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
 export function NotificationContainer({ notifications, onClose }) {
 
 =======
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react',
 ,
     error: {
 
@@ -30,24 +30,24 @@ import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
         textColor: 'text-zion-gold',
         iconColor: 'text-zion-gold'
 
-};
+},
 export function Notification({ id, type, title, message, duration = 5000, onClose }) {
 
-    const [isVisible, setIsVisible] = useState(true);
-    const styles = notificationStyles[type];
-    const Icon = styles.icon;
+    const [isVisible, setIsVisible] = useState(true),
+    const styles = notificationStyles[type],
+    const Icon = styles.icon,
     useEffect(() => {
         if(duration > 0) {
 
             const timer = setTimeout(() => {
-                handleClose()}, duration);
+                handleClose()}, duration),
             return () => clearTimeout(timer)}
-    }, [duration]);
+    }, [duration]),
     const handleClose = () => {
-        setIsVisible(false);
-        setTimeout(() => onClose(id), 300)};
+        setIsVisible(false),
+        setTimeout(() => onClose(id), 300)},
     if(!isVisible)
-        return null;
+        return null,
     return (<div className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`} role="alert" aria-live="assertive">"
       <div className="flex items-start space-x-3">`
         <Icon className={`w-5 h-5 mt-0.5 ${styles.iconColor}`}/>"

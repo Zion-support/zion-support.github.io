@@ -1,39 +1,39 @@
 
-import React from "react";
-import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react";
+import React from "react",
+import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 const features = [
   {
     title: "Private Hiring Portal",
     description: "Create a secure, private hiring portal accessible only to your team members.",
-    icon: Shield,
+    icon: Shield
   },
   {
     title: "Dedicated Talent Pool",
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs.",
-    icon: Users,
+    icon: Users
   },
   {
     title: "Custom SLA",
     description: "Get guaranteed response times and dedicated support with our custom SLAs.",
-    icon: Award,
+    icon: Award
   },
   {
     title: "Branded Onboarding",
     description: "Customize the onboarding experience with your company branding and messaging.",
-    icon: Briefcase,
+    icon: Briefcase
   },
   {
     title: "Admin Dashboards",
     description: "Powerful analytics and management tools for team leaders and administrators.",
-    icon: Settings,
+    icon: Settings
   },
   {
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
-    icon: Globe,
-  },
-];
+    icon: Globe
+  }
+],
 
 export function EnterpriseFeatures() {
   return (
@@ -64,5 +64,5 @@ export function EnterpriseFeatures() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

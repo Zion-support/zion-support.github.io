@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Building2,
   Zap,
@@ -9,35 +9,35 @@ import {,
   CheckCircle,
   Star,
   Users,
-  Clock;
-  Shield;
-  DollarSign;
-  Target;
-  BarChart3;
-  Workflow;
-  Database;
-  MessageSquare;
-  CreditCard;
-  PieChart;
-  Activity;
-  Play;
-  Sparkles;
-  Globe;
-  Lock;
-  Cloud;
-  Bot;
-  Brain,
-} from 'lucide-react';
+  Clock,
+  Shield,
+  DollarSign,
+  Target,
+  BarChart3,
+  Workflow,
+  Database,
+  MessageSquare,
+  CreditCard,
+  PieChart,
+  Activity,
+  Play,
+  Sparkles,
+  Globe,
+  Lock,
+  Cloud,
+  Bot,
+  Brain
+} from 'lucide-react',
 const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
   return (,
     <div,
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-20",
     >,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="space-y-8">,
             <div,
             >,
@@ -56,19 +56,17 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
                 suite of AI-powered automation solutions designed for enterprise scale.,
               </p>,
             </div>,
-            {/* Features List */,}
+            {/* Features List */}
             <div,
               className="space-y-4",
             >,
               {[,
-                '12+ specialized automation solutions300% average ROI in 6 months';
-                '80% reduction in manual processesEnterprise-grade security & compliance',
+                '12+ specialized automation solutions300% average ROI in 6 months80% reduction in manual processesEnterprise-grade security & compliance'
               ].map((featureindex) => (,
                 <div key={index} className="flex items-center space-x-3">,
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                   <span className="text-gray-300">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* CTA Buttons */}
             <div,
@@ -83,7 +81,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
                 Schedule Demo,
               </button>,
             </div>,
-            {/* Dynamic Stats */,}
+            {/* Dynamic Stats */}
             <div,
               className="pt-8 border-t border-white/10",
             >,
@@ -113,12 +111,12 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
                 <div,
                   key={solution.name}
                   className={`p-4 rounded-lg border transition-all duration-300 ${,
-                    index === 0 ? 'bg-gradient-to-r ' + solution.color + ' border-white/20' : 'bg-white/5 border-white/10',
+                    index === 0 ? 'bg-gradient-to-r ' + solution.color + ' border-white/20' : 'bg-white/5 border-white/10'
                   }`}
                 >,
                   <div className="flex items-center space-x-3">,
                     <div className={`p-2 rounded-lg ${,
-                      index === 0 ? 'bg-white/20' : 'bg-white/10',
+                      index === 0 ? 'bg-white/20' : 'bg-white/10'
                     }`}>,
                       {solution.icon}
                     </div>,
@@ -129,8 +127,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
                       </p>,
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* Additional Solutions */}
             <div className="grid grid-cols-2 gap-4">,
@@ -141,34 +138,33 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
                 >,
                   <div className="flex items-center space-x-3">,
                     <div className="p-2 bg-white/10 rounded-lg">,
-                      {solution.icon,}
+                      {solution.icon}
                     </div>,
                     <div>,
                       <h4 className="font-semibold text-white text-sm">{solution.name}</h4>,
                       <p className="text-xs text-gray-300">Available</p>,
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* Floating Elements */}
             <div,
-                y: [0-10];
-                rotate: [050],}}
-                duration: 3;
-                repeat: Infinity;
-                ease: "easeInOut",}}
+                y: [0-10],
+                rotate: [050]}}
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"}}
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg",
             >,
               <Zap className="w-8 h-8 text-white" />,
             </div>,
             <div,
-                y: [010];
-                rotate: [0-50],}}
-                duration: 4;
-                repeat: Infinity;
-                ease: "easeInOut";
-                delay: 1,}}
+                y: [010],
+                rotate: [0-50]}}
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1}}
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg",
             >,
               <Brain className="w-6 h-6 text-white" />,
@@ -187,10 +183,10 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
           className="mt-16 grid grid-cols-2 md: grid-cols-4 gap-8",
         >,
           {[,
-            { icon: <Building2 className="w-6 h-6" />label: 'Enterprise 'Clientsvalue: '500+' ,};
-            { icon: <TrendingUp className="w-6 h-6" />label: 'Average 'ROIvalue: '300%' ,};
-            { icon: <Clock className="w-6 h-6" />label: 'Time 'Savedvalue: '80%' ,};
-            { icon: <Shield className="w-6 h-6" />label: ''Uptimevalue: '99.9%' ,}
+            { icon: <Building2 className="w-6 h-6" />label: 'Enterprise 'Clientsvalue: '500+' },
+            { icon: <TrendingUp className="w-6 h-6" />label: 'Average 'ROIvalue: '300%' },
+            { icon: <Clock className="w-6 h-6" />label: 'Time 'Savedvalue: '80%' },
+            { icon: <Shield className="w-6 h-6" />label: ''Uptimevalue: '99.9%' }
           ].map((statindex) => (,
             <div key={index} className="text-center">,
               <div className="p-3 bg-blue-500/20 rounded-lg text-blue-400 mb-3 inline-block">,
@@ -198,13 +194,12 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
               </div>,
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
               <div className="text-sm text-gray-400">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>,
     </div>,
-  );
-};
-export default EnterpriseAutomationSolutions2025PromotionBanner;
+  ),
+},
+export default EnterpriseAutomationSolutions2025PromotionBanner,

@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Reliable Agent Rollouts | Zion Tech Group';
+  title: 'AI 2026: Reliable Agent Rollouts | Zion Tech Group',
   description:,
-    'A practical field guide to progressive delivery, eval-gated rollouts, and automated rollback for safe agent operations.',
-};
+    'A practical field guide to progressive delivery, eval-gated rollouts, and automated rollback for safe agent operations.'
+},
 export default function ReliableAgentRolloutsPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -66,6 +66,5 @@ export default function ReliableAgentRolloutsPage() {,
         <span className="text-gray-300">/</span>,
         <Link href="/content" className="text-indigo-700 hover:underline">Content Hub</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react',
+import { motion, useInView } from 'framer-motion',
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  threshold?: number;
-  delay?: number;
-  duration?: number;
-  className?: string;
+  children: React.ReactNode,
+  threshold?: number,
+  delay?: number,
+  duration?: number,
+  className?: string
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -16,15 +16,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   duration = 0.6,
   className = ''
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { threshold });
-  const [isLoaded, setIsLoaded] = useState(false);
+  const ref = useRef<HTMLDivElement>(null),
+  const isInView = useInView(ref, { threshold }),
+  const [isLoaded, setIsLoaded] = useState(false),
 
   useEffect(() => {
     if (isInView && !isLoaded) {
-      setIsLoaded(true);
+      setIsLoaded(true),
     }
-  }, [isInView, isLoaded]);
+  }, [isInView, isLoaded]),
 
   const variants = {
     hidden: { 
@@ -42,7 +42,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         ease: [0.25, 0.46, 0.45, 0.94]
       }
     }
-  };
+  },
 
   if (!isLoaded) {
     return (
@@ -50,7 +50,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         ref={ref} 
         className={`min-h-[200px] bg-gradient-to-r from-gray-100 to-gray-200 animate-pulse rounded-lg ${className}`}
       />
-    );
+    ),
   }
 
 const PerformanceOptimizer: React.FC = () => {
@@ -59,7 +59,7 @@ const PerformanceOptimizer: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">PerformanceOptimizer</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer,

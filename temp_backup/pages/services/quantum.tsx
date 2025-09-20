@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Atom, Cpu, Shield, Rocket, Zap, Database, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function QuantumServicesPage() {
   const services = [
@@ -42,14 +42,14 @@ export default function QuantumServicesPage() {
       icon: Zap,
       color: "from-emerald-500 to-teal-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "100+", label: "Quantum Algorithms", icon: Atom },
     { number: "99.99%", label: "Security Guarantee", icon: Shield },
     { number: "10x", label: "Performance Boost", icon: TrendingUp },
     { number: "24/7", label: "Quantum Support", icon: Clock }
-  ];
+  ],
 
 const quantum: React.FC = () => {
   return (
@@ -66,7 +66,7 @@ const quantum: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default quantum;
+export default quantum,

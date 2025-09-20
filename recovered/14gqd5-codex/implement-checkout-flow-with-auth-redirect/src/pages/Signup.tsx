@@ -1,27 +1,27 @@
 
-import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
+import { useState } from "react",
+import { Link, Navigate, useNavigate } from "react-router-dom",
+import { useForm, type UseFormReturn } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react",
 
-import { useAuth } from "@/hooks/useAuth";
-import { register } from "@/services/auth";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import { useAuth } from "@/hooks/useAuth",
+import { register } from "@/services/auth",
+import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage
+} from "@/components/ui/form",
 
 // Form validation schema
 const signupSchema = z
@@ -35,24 +35,24 @@ const signupSchema = z
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
-      message: "You must accept the terms and conditions",
-    }),
+      message: "You must accept the terms and conditions"
+    })
   })
   .refine(data => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path: ["confirmPassword"],
-  });
+    path: ["confirmPassword"]
+  }),
 
-type SignupFormValues = z.infer<typeof signupSchema>;
+type SignupFormValues = z.infer<typeof signupSchema>,
 
 export default function Signup() {
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isAuthenticated, user } = useAuth();
-  const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isAuthenticated, user } = useAuth(),
+  const navigate = useNavigate(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   // Track confirm password locally to prevent it from clearing on blur
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
 
   // Initialize react-hook-form
   const form = useForm({
@@ -62,57 +62,57 @@ export default function Signup() {
       email: "",
       password: "",
       confirmPassword: "",
-      termsAccepted: false,
-    },
-  }) as UseFormReturn<SignupFormValues>;
+      termsAccepted: false
+    }
+  }) as UseFormReturn<SignupFormValues>,
 
-  const passwordValue = form.watch("password");
+  const passwordValue = form.watch("password"),
 
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
-    if (isSubmitting) return; // Prevent multiple submissions
+    if (isSubmitting) return, // Prevent multiple submissions
 
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
       const { res, data: resData } = await register(
         data.displayName,
         data.email,
         data.password
-      );
+      ),
       if (res.status !== 201) {
-        throw new Error(resData?.error || "Registration failed");
+        throw new Error(resData?.error || "Registration failed"),
       }
 
       if (resData?.token) {
-        localStorage.setItem("token", resData.token);
+        localStorage.setItem("token", resData.token),
       }
 
-      toast.success("Account created");
-      navigate("/dashboard");
+      toast.success("Account created"),
+      navigate("/dashboard"),
     } catch (err: any) {
-      const message = err.message ?? "Registration failed";
-      form.setError("root", { message });
-      toast.error(message);
+      const message = err.message ?? "Registration failed",
+      form.setError("root", { message }),
+      toast.error(message),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof SignupFormValues;
+    const firstError = Object.keys(errors)[0] as keyof SignupFormValues,
     if (firstError) {
-      form.setFocus(firstError);
+      form.setFocus(firstError)
     }
-  };
+  },
 
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />;
+    return <Navigate to="/" />,
   }
   
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
-    return <Navigate to="/onboarding" />;
+    return <Navigate to="/onboarding" />,
   }
 
   return (
@@ -394,5 +394,5 @@ export default function Signup() {
         </div>
       </div>
     </>
-  );
+  ),
 }

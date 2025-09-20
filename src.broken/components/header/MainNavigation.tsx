@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { cn } from "@/lib/utils";
+import React from 'react',
+import { Link, NavLink } from 'react-router-dom',
+import { cn } from "@/lib/utils",
 
 interface MainNavigationProps {
-  className?: string;
+  className?: string,
 }
 
 export function MainNavigation({ className }: MainNavigationProps) {
@@ -36,7 +36,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
           <ChevronDown className="w-3 h-3"  />
 =======
   HelpCircle,'
-  BarChart3} from 'lucide-react';          <ChevronDown className="w-3 h-3"  />
+  BarChart3} from 'lucide-react',          <ChevronDown className="w-3 h-3"  />
         </button>
         {isServicesOpen && (
           <div

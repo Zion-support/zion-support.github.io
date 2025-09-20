@@ -1,55 +1,38 @@
-import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award } from 'lucide-react';
-
+import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award } from "lucide-react";
 export default function AIBusinessProcessOptimizer() {
   const features = [
-    'AI-powered process mining and discovery',
-    'Real-time performance monitoring and alerts',
-    'Predictive analytics for process bottlenecks',
-    'Automated workflow optimization recommendations',
-    'Resource allocation optimization',
-    'ROI tracking and performance metrics',
-    'Integration with 50+ business tools',
-    'Custom AI model training for your industry',
-    '24/7 process monitoring and alerting',
-    'Executive dashboard with KPI tracking'
-  ];
+    'AI-powered process mining and discoveryReal-time performance monitoring and alerts',
+    'Predictive analytics for process bottlenecksAutomated workflow optimization recommendations',
+    'Resource allocation optimizationROI tracking and performance metrics',
+    'Integration with 50+ business toolsCustom AI model training for your industry',
+    '24/7 process monitoring and alertingExecutive dashboard with KPI tracking'
+  ],
 
   const benefits = [
-    'Reduce process costs by 30-50%',
-    'Improve efficiency by 40-70%',
-    'Eliminate manual bottlenecks',
-    'Real-time visibility into operations',
-    'Data-driven decision making',
-    'Scalable process optimization'
-  ];
+    'Reduce process costs by 30-50%Improve efficiency by 40-70%',
+    'Eliminate manual bottlenecksReal-time visibility into operations',
+    'Data-driven decision makingScalable process optimization'
+  ],
 
   const useCases = [
-    'Manufacturing process optimization',
-    'Customer service workflow automation',
-    'Supply chain process improvement',
-    'Financial operations streamlining',
-    'HR process automation',
-    'Sales process optimization'
+    'Manufacturing process optimizationCustomer service workflow automation';
+    'Supply chain process improvementFinancial operations streamlining';
+    'HR process automationSales process optimization'
   ];
-
   const tiers = [
     { 
-      name: 'Starter', 
-      price: '$1,999/mo', 
-      details: ['Up to 10 processes', 'Basic AI insights', 'Email support', 'Standard integrations'] 
+      name: 'Starter',price: '$1,999/mo', 
+      details: ['Up to 10 processesBasic AI insights', 'Email supportStandard integrations'] 
     },
     { 
-      name: 'Professional', 
-      price: '$4,999/mo', 
-      details: ['Up to 50 processes', 'Advanced AI analytics', 'Priority support', 'Custom integrations'] 
+      name: 'Professional',price: '$4,999/mo', 
+      details: ['Up to 50 processesAdvanced AI analytics', 'Priority supportCustom integrations'] 
     },
     { 
-      name: 'Enterprise', 
-      price: '$12,999/mo', 
-      details: ['Unlimited processes', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
-    },
+      name: 'Enterprise',price: '$12,999/mo', 
+      details: ['Unlimited processesCustom AI models', 'Dedicated supportWhite-label solution'] 
+    }
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
@@ -128,7 +111,7 @@ export default function AIBusinessProcessOptimizer() {
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['Real-time monitoring', 'AI-powered insights', 'Process automation'].map((t) => (
+          {['Real-time monitoringAI-powered insights', 'Process automation'].map((t) => (
             <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <BarChart3 className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold">{t}</div>
@@ -138,7 +121,7 @@ export default function AIBusinessProcessOptimizer() {
 
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to optimize your business processes?</div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
             </a>
@@ -152,5 +135,5 @@ export default function AIBusinessProcessOptimizer() {
         </div>
       </section>
     </div>
-  );
+  )
 }

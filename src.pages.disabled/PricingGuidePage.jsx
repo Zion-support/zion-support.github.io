@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface PricingGuidePageProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function PricingGuidePage({ }: PricingGuidePageProps) {,
@@ -8,8 +8,7 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {,
     <div>,
       <h1>PricingGuidePage</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

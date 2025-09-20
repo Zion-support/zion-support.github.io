@@ -1,18 +1,18 @@
-import React from 'react';
+import React from 'react',
 export default React.memo(function CloudSolutions (...args[]) :  {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-,;
+,
     {
-      features["CI / CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto - scaling"];
-    };
-      icon: Zap,;
-      title: "DevOps Automation",;
-      description: "Streamline your development and deployment processes with automation",;
-      features: ["CI / CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto - scaling"];
-    };
-  ];
+      features["CI / CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto - scaling"],
+    },
+      icon: Zap,
+      title: "DevOps Automation",
+      description: "Streamline your development and deployment processes with automation",
+      features: ["CI / CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto - scaling"],
+    },
+  ],
 
   const benefits = [{
       icon: BarChart3,
@@ -27,46 +27,46 @@ export default function Page() {
     {
       icon: Lock,
       title: "Enhanced Security",
-      description: "Enterprise - grade security with advanced threat protection and compliance";
-    },;
-    {;
-      icon: Users,;
-      title: "24 / 7 Support",;
-      description: "Round - the - clock expert support for your cloud infrastructure needs";
-    };
-  ];
+      description: "Enterprise - grade security with advanced threat protection and compliance"
+    },
+    {,
+      icon: Users,
+      title: "24 / 7 Support",
+      description: "Round - the - clock expert support for your cloud infrastructure needs"
+    },
+  ],
 
-  const technologies = [;
-    { name: "AWS", logo: "AWS", description: "Amazon Web Services" },;
-    { name: "Azure", logo: "Azure", description: "Microsoft Azure" },;
-    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },;
-    { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" },;
-    { name: "Docker", logo: "Docker", description: "Containerization" },;
-    { name: "Terraform", logo: "TF", description: "Infrastructure as Code" };
-  ];
+  const technologies = [,
+    { name: "AWS", logo: "AWS", description: "Amazon Web Services" },
+    { name: "Azure", logo: "Azure", description: "Microsoft Azure" },
+    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },
+    { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" },
+    { name: "Docker", logo: "Docker", description: "Containerization" },
+    { name: "Terraform", logo: "TF", description: "Infrastructure as Code" },
+  ],
 
   const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,
+      transition: {,
+        staggerChildren: 0.1
+      },
+    },
+  },
 
   const itemVariants = {
   hidden: { opacity: 0,
   y: 20
 
-;
-},;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.6 };
-    };
-  };
+
+},
+    visible: {,
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  },
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -135,11 +135,11 @@ export default function Page() {
               </motion.button>
             </motion.div>
           </motion.div>
-        </div>;
+        </div>,
       </section>
 
       {/* Cloud Services Grid */}
-      <section className="py-20 bg-zion - slate -dark">;
+      <section className="py-20 bg-zion - slate -dark">,
         <div className="container mx - auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -171,7 +171,7 @@ export default function Page() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {cloudServices.map ( (service, index) => (;
+            {cloudServices.map ( (service, index) => (,
               <motion.div
                 key={index}
                 className="bg-zion - blue - dark / 50 backdrop - blur - sm border border-zion - cyan / 20 rounded-xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300 group"
@@ -201,7 +201,7 @@ export default function Page() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion - blue -dark">;
+      <section className="py-20 bg-zion - blue -dark">,
         <div className="container mx - auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -233,7 +233,7 @@ export default function Page() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {benefits.map((benefit, index) => (;
+            {benefits.map((benefit, index) => (,
               <motion.div
                 key={index}
                 className="text-center"
@@ -244,13 +244,13 @@ export default function Page() {
                 </div>
                 <h3 className="text-xl font - bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-zion - slate - light leading -relaxed">{benefit.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </motion.div>
         </div>
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-zion - slate -dark">;
+      <section className="py-20 bg-zion - slate -dark">,
         <div className="container mx - auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -282,7 +282,7 @@ export default function Page() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {technologies.map((tech, index) => (;
+            {technologies.map((tech, index) => (,
               <motion.div
                 key={index}
                 className="text-center group"
@@ -294,13 +294,13 @@ export default function Page() {
                 </div>
                 <h3 className="text-lg font - semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-zion - slate - light text-sm">{tech.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - blue - dark to - zion - slate -dark">;
+      <section className="py-20 bg-gradient - to - r from - zion - blue - dark to - zion - slate -dark">,
         <div className="container mx - auto px-4 text-center">
           <motion.div
             initial = {
@@ -328,9 +328,9 @@ export default function Page() {
               whileTap={{ scale: 0.95 }}
 
               Start Your Cloud Journey
-            </motion.button>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </motion.button>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) ,
 }

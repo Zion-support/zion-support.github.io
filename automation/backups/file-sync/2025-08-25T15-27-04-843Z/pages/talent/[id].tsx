@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react',
+import { useParams } from 'react-router-dom',
 interface TalentProfile {
-  full_name: string;
-  skills?: string[];
-  availability_type?: string;
+  full_name: string,
+  skills?: string[],
+  availability_type?: string
 }
 interface TalentProfileWithSocial extends TalentProfile {
-  social?: Record<string, string>;
+  social?: Record<string, string>,
 }
 // Simple error component to replace Next.js ErrorPage
 const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
@@ -18,7 +18,7 @@ const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
       </p>
     </div>
   </div>
-);
+),
 // Simple loading component
 const ProfileLoadingState: React.FC = () => (
   <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
@@ -27,44 +27,44 @@ const ProfileLoadingState: React.FC = () => (
       <p>Loading profile...</p>
     </div>
   </div>
-);
+),
 const TalentProfilePage: React.FC = () => {
-  const { id } = useParams();
-  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { id } = useParams(),
+  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
   useEffect(() => {
     const fetchProfile = async () => {
-      if (!id) return;
-      setLoading(true);
-      setError(null);
+      if (!id) return,
+      setLoading(true),
+      setError(null),
       try {
         // For now, we'll simulate a profile since we don't have the API
-        // In a real app, this would be: const res = await fetch(`/api/talent/${id}`);
+        // In a real app, this would be: const res = await fetch(`/api/talent/${id}`),
         setTimeout(() => {
           const mockProfile: TalentProfileWithSocial = {
             full_name: `Talent ${id}`,
-            skills: ['React', 'TypeScript', 'Node.js'],
+            skills: ['ReactTypeScript', 'Node.js'],
             availability_type: 'Full-time',
             social: {
               linkedin: 'https://linkedin.com/in/talent',
               github: 'https://github.com/talent'
             }
-          };
-          setProfile(mockProfile);
-          setLoading(false);
-        }, 1000);
+          },
+          setProfile(mockProfile),
+          setLoading(false),
+        }, 1000),
       } catch (err) {
-        setError('Talent not found');
-        setLoading(false);
+        setError('Talent not found'),
+        setLoading(false),
       }
-    };
+    },
     if (id) {
-      fetchProfile();
+      fetchProfile(),
     }
-  }, [id]);
-  if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <Navigate to="/404" replace />;
+  }, [id]),
+  if (loading) return <ProfileLoadingState />,
+  if (error || !profile) return <Navigate to="/404" replace />,
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">
       <div className="container mx-auto px-4 space-y-4">
@@ -104,6 +104,6 @@ const TalentProfilePage: React.FC = () => {
         )}
       </div>
     </main>
-  );
-};
-export default TalentProfilePage;
+  ),
+},
+export default TalentProfilePage,

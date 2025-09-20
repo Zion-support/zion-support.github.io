@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default BlockchainServicesPage;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default BlockchainServicesPage,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
             ].map((feature, index) => (<motion.div
@@ -28,15 +28,15 @@ export default function Page() {
 
                 <h3 className="text-xl font - bold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion - slate - light leading -relaxed">{feature.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - slate - dark to - zion - blue -dark">;
+      <section className="py-20 bg-gradient - to - r from - zion - slate - dark to - zion - blue -dark">,
         <div className="container mx - auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
             Ready to Build the Future?
           </h2>
           <p className="text-xl text-zion - slate - light mb-8 max - w-3xl mx -auto">
@@ -48,11 +48,11 @@ export default function Page() {
             </button>
             <button     className="px-8 py-4 border border-zion - cyan text-zion - cyan rounded-xl font - semibold text-lg hover:bg-zion - cyan hover:text-white transition - all duration -300">
               Schedule Consultation
-            </button>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </button>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
+},
 
 }}}

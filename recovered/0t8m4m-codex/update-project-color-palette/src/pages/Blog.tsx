@@ -1,17 +1,17 @@
 
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { BlogPost } from "@/types/blog";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { Search } from "lucide-react";
+import { useState, useEffect } from "react",
+import { Link } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { BlogPost } from "@/types/blog",
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
+import { Search } from "lucide-react",
 
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
@@ -208,7 +208,7 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
   }
-];
+],
 
 // Categories for filtering
 const CATEGORIES = [
@@ -219,34 +219,34 @@ const CATEGORIES = [
   "Ethics",
   "Recruitment",
   "Infrastructure"
-];
+],
 
 export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  const [posts, setPosts] = useState<BlogPost[]>([...BLOG_POSTS]);
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+  const [posts, setPosts] = useState<BlogPost[]>([...BLOG_POSTS]),
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPosts(prev => [...prev, generateRandomBlogPost()]);
-    }, 120000); // every 2 minutes
-    return () => clearInterval(interval);
-  }, []);
+      setPosts(prev => [...prev, generateRandomBlogPost()]),
+    }, 120000), // every 2 minutes
+    return () => clearInterval(interval),
+  }, []),
 
   // Filter blog posts based on search and category
   const filteredPosts = posts.filter(post => {
     const matchesSearch = 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
       
-    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
     
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory,
+  }),
   
   // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured);
+  const featuredPosts = posts.filter(post => post.isFeatured),
   
   return (
     <>
@@ -275,10 +275,10 @@ export default function Blog() {
                   <img
                     src={featuredPosts[0].featuredImage}
                     alt={featuredPosts[0].title}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                     onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.src = "/images/blog-placeholder.svg";
+                      const target = e.currentTarget as HTMLImageElement,
+                      target.src = "/images/blog-placeholder.svg"
                     }}
                   />
                 </div>
@@ -298,8 +298,8 @@ export default function Blog() {
                       alt={featuredPosts[0].author.name}
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg",
                       }}
                     />
                     <div>
@@ -363,10 +363,10 @@ export default function Blog() {
                     <img
                       src={post.featuredImage}
                       alt={post.title}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg"
                       }}
                     />
                   </div>
@@ -391,8 +391,8 @@ export default function Blog() {
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";
+                          const target = e.currentTarget as HTMLImageElement,
+                          target.src = "/images/blog-placeholder.svg",
                         }}
                       />
                       <span className="text-sm text-white">{post.author.name}</span>
@@ -419,8 +419,8 @@ export default function Blog() {
               <Button 
                 variant="outline" 
                 onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
+                  setSearchQuery(""),
+                  setSelectedCategory("All Categories"),
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -432,5 +432,5 @@ export default function Blog() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

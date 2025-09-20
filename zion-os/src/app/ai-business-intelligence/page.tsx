@@ -7,6 +7,5 @@ export default function AIBusinessIntelligencePage() {,
           <p className="text-lg text-gray-700">Predictive insights and analytics to drive decisions.</p>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}
 ,

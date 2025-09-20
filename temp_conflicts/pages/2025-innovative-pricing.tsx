@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Check, TrendingUp, Zap, Shield, Globe,
   Brain, Building, Target, Rocket, ArrowRight
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new 2025 services
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services',
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services',
+import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services',
+import { emergingTechnologyServices } from '../data/2025-emerging-technology-services',
 
 // Unified service interface for pricing display
 interface UnifiedService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  icon?: string;
-  popular?: boolean;
-  link?: string;
-  price?: string | number;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  category: string,
+  icon?: string,
+  popular?: boolean,
+  link?: string,
+  price?: string | number,
   pricing?: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom: string;
-  };
-  price_monthly?: number;
-  price_yearly?: number;
-  trialDays?: number;
-  setupTime?: string;
+    starter: string,
+    professional: string,
+    enterprise: string,
+    custom: string
+  },
+  price_monthly?: number,
+  price_yearly?: number,
+  trialDays?: number,
+  setupTime?: string,
 }
 
 const contact = {
@@ -40,7 +40,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 // Service categories with pricing tiers
 const serviceCategories = [
@@ -72,7 +72,7 @@ const serviceCategories = [
     color: 'from-orange-500 to-red-500',
     services: emergingTechnologyServices
   }
-];
+],
 
 // Pricing tiers
 const pricingTiers = [
@@ -82,10 +82,8 @@ const pricingTiers = [
     period: '/month',
     description: 'Perfect for small businesses and startups',
     features: [
-      'Basic service features',
-      'Email support',
-      'Standard integrations',
-      'Community documentation',
+      'Basic service featuresEmail support',
+      'Standard integrationsCommunity documentation',
       'Basic analytics'
     ],
     color: 'from-gray-500 to-slate-500'
@@ -96,12 +94,9 @@ const pricingTiers = [
     period: '/month',
     description: 'Ideal for growing businesses and teams',
     features: [
-      'All Starter features',
-      'Priority support',
-      'Advanced integrations',
-      'Custom configurations',
-      'Advanced analytics',
-      'Team collaboration'
+      'All Starter featuresPriority support',
+      'Advanced integrationsCustom configurations',
+      'Advanced analyticsTeam collaboration'
     ],
     color: 'from-blue-500 to-indigo-500',
     popular: true
@@ -112,22 +107,18 @@ const pricingTiers = [
     period: '/month',
     description: 'For large organizations with complex needs',
     features: [
-      'All Professional features',
-      '24/7 dedicated support',
-      'Custom integrations',
-      'White-label options',
-      'Advanced security',
-      'SLA guarantees',
-      'Custom training',
-      'On-premise options'
+      'All Professional features24/7 dedicated support',
+      'Custom integrationsWhite-label options',
+      'Advanced securitySLA guarantees',
+      'Custom trainingOn-premise options'
     ],
     color: 'from-purple-500 to-pink-500'
   }
-];
+],
 
 export default function InnovativePricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
 
   // Normalize services to unified format
   const normalizeService = (service: any): UnifiedService => {
@@ -147,7 +138,7 @@ export default function InnovativePricing2025() {
         price_yearly: 0,
         trialDays: 14,
         setupTime: '1-2 weeks'
-      };
+      },
     } else if (service.price && typeof service.price === 'object') {
       // Emerging technology service format
       return {
@@ -163,7 +154,7 @@ export default function InnovativePricing2025() {
         price_yearly: service.price.yearly,
         trialDays: service.price.trialDays || 14,
         setupTime: service.price.setupTime || '1-2 weeks'
-      };
+      },
     } else {
       // AI Automation and Micro SAAS format
       return {
@@ -180,12 +171,12 @@ export default function InnovativePricing2025() {
         price_yearly: typeof service.price === 'string' ? 0 : 0,
         trialDays: service.trialDays || 14,
         setupTime: service.setupTime || '1-2 weeks'
-      };
+      },
     }
-  };
+  },
 
   const getFilteredServices = () => {
-    let allServices: UnifiedService[] = [];
+    let allServices: UnifiedService[] = [],
     
     if (selectedCategory === 'all') {
       allServices = [
@@ -193,20 +184,20 @@ export default function InnovativePricing2025() {
         ...innovativeITInfrastructureServices2025.map(normalizeService),
                   ...innovativeMicroSaasServices2025.map(normalizeService),
         ...emergingTechnologyServices.map(normalizeService)
-      ];
+      ],
     } else {
-      const category = serviceCategories.find(cat => cat.id === selectedCategory);
+      const category = serviceCategories.find(cat => cat.id === selectedCategory),
       if (category) {
-        allServices = category.services.map(normalizeService);
+        allServices = category.services.map(normalizeService),
       }
     }
     
-    return allServices;
-  };
+    return allServices,
+  },
 
   const getYearlyDiscount = (monthlyPrice: number) => {
-    return Math.round(monthlyPrice * 12 * 0.17); // 17% discount for yearly
-  };
+    return Math.round(monthlyPrice * 12 * 0.17), // 17% discount for yearly
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -519,5 +510,5 @@ export default function InnovativePricing2025() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

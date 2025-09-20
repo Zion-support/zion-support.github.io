@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Comprehensive Solutions - Complete AI Transformation Platform';
-  description: 'Discover our comprehensive AI 2025 solutions platform featuring quantum-neural fusion, autonomous operations, and transcendent intelligence for complete business transformation.';
-  keywords: 'AI 2025 solutions, comprehensive AI platform, quantum neural fusion, autonomous operations, transcendent intelligence, business transformation',
-};
+  title: 'AI 2025 Comprehensive Solutions - Complete AI Transformation Platform',
+  description: 'Discover our comprehensive AI 2025 solutions platform featuring quantum-neural fusion, autonomous operations, and transcendent intelligence for complete business transformation.',
+  keywords: 'AI 2025 solutions, comprehensive AI platform, quantum neural fusion, autonomous operations, transcendent intelligence, business transformation'
+},
 export default function AI2025ComprehensiveSolutions() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">,
@@ -25,7 +25,7 @@ export default function AI2025ComprehensiveSolutions() {,
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">,
               The most complete AI transformation platform ever created.,
               From <span className="text-purple-400 font-bold">quantum-neural fusion</span> to,
-              <span className="text-blue-400 font-bold"> autonomous operations</span>;
+              <span className="text-blue-400 font-bold"> autonomous operations</span>,
               achieve <span className="text-cyan-400 font-bold">complete business transformation</span>.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -45,7 +45,7 @@ export default function AI2025ComprehensiveSolutions() {,
           </div>,
         </div>,
       </div>,
-      {/* Solutions Overview */,}
+      {/* Solutions Overview */}
       <div className="py-20 bg-black/20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -61,7 +61,7 @@ export default function AI2025ComprehensiveSolutions() {,
               <div className="text-4xl mb-4">⚛️</div>,
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Quantum-Neural Fusion</h3>,
               <p className="text-gray-300 mb-6">,
-                Revolutionary integration of quantum computing with neural networks;
+                Revolutionary integration of quantum computing with neural networks,
                 delivering 10,000x processing power and infinite scalability.,
               </p>,
               <div className="space-y-2">,
@@ -100,7 +100,7 @@ export default function AI2025ComprehensiveSolutions() {,
               <div className="text-4xl mb-4">⚡</div>,
               <h3 className="text-2xl font-bold mb-4 text-orange-400">Lightning Processing</h3>,
               <p className="text-gray-300 mb-6">,
-                Process complex operations 10,000x faster than traditional systems;
+                Process complex operations 10,000x faster than traditional systems,
                 enabling real-time decision making at infinite scale.,
               </p>,
               <div className="space-y-2">,
@@ -126,7 +126,7 @@ export default function AI2025ComprehensiveSolutions() {,
               <div className="text-4xl mb-4">🔮</div>,
               <h3 className="text-2xl font-bold mb-4 text-indigo-400">Predictive Mastery</h3>,
               <p className="text-gray-300 mb-6">,
-                Predict future outcomes with 99.7% accuracy across all domains;
+                Predict future outcomes with 99.7% accuracy across all domains,
                 from business to scientific discoveries.,
               </p>,
               <div className="space-y-2">,
@@ -277,7 +277,7 @@ export default function AI2025ComprehensiveSolutions() {,
           </div>,
         </div>,
       </div>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <div className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -345,5 +345,4 @@ export default function AI2025ComprehensiveSolutions() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

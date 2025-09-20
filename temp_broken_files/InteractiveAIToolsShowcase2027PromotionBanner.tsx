@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
@@ -8,91 +8,91 @@ import {,
   Star,
   Play,
   Download,
-  Users;
-  Clock;
-  ArrowRight;
-  ChevronRight;
-  Search;
-  Filter;
-  Grid;
-  List;
-  Sparkles;
-  Target;
-  Award;
-  TrendingUp;
-  Globe;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  X;
-  CheckCircle;
-  Lightbulb;
-  Code;
-  BarChart3,
-} from 'lucide-react';
+  Users,
+  Clock,
+  ArrowRight,
+  ChevronRight,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Sparkles,
+  Target,
+  Award,
+  TrendingUp,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  X,
+  CheckCircle,
+  Lightbulb,
+  Code,
+  BarChart3
+} from 'lucide-react',
 const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentToolsetCurrentTool] = useState(0);
-  const [isPlayingsetIsPlaying] = useState(false);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentToolsetCurrentTool] = useState(0),
+  const [isPlayingsetIsPlaying] = useState(false),
   const featuredTools = [,
     {,
-      name: "Neural Consciousness AI";
-      description: "Advanced AI with near-human consciousness capabilities";
-      icon: Brain;
-      color: "from-purple-600 to-pink-600";
-      rating: 4.9;
-      downloads: "2.3M";
-      price: "Free";
-      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"],};
+      name: "Neural Consciousness AI",
+      description: "Advanced AI with near-human consciousness capabilities",
+      icon: Brain,
+      color: "from-purple-600 to-pink-600",
+      rating: 4.9,
+      downloads: "2.3M",
+      price: "Free",
+      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"]},
     {,
-      name: "Quantum Automation Suite";
-      description: "Revolutionary automation powered by quantum computing";
-      icon: Zap;
-      color: "from-blue-600 to-cyan-600";
-      rating: 4.8;
-      downloads: "1.8M";
-      price: "$299/month";
-      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"],};
+      name: "Quantum Automation Suite",
+      description: "Revolutionary automation powered by quantum computing",
+      icon: Zap,
+      color: "from-blue-600 to-cyan-600",
+      rating: 4.8,
+      downloads: "1.8M",
+      price: "$299/month",
+      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"]},
     {,
-      name: "Predictive Analytics Engine";
-      description: "AI-powered analytics with 99.7% prediction accuracy";
-      icon: BarChart3;
-      color: "from-green-600 to-emerald-600";
-      rating: 4.7;
-      downloads: "3.1M";
-      price: "$199/month";
-      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"],};
+      name: "Predictive Analytics Engine",
+      description: "AI-powered analytics with 99.7% prediction accuracy",
+      icon: BarChart3,
+      color: "from-green-600 to-emerald-600",
+      rating: 4.7,
+      downloads: "3.1M",
+      price: "$199/month",
+      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"]},
     {,
-      name: "Code Generation AI";
-      description: "Advanced AI for generating and optimizing code";
-      icon: Code;
-      color: "from-orange-600 to-red-600";
-      rating: 4.9;
-      downloads: "4.2M";
-      price: "Free";
-      features: ["Multi-language Support"Code Review"Optimization"],}
-  ];
+      name: "Code Generation AI",
+      description: "Advanced AI for generating and optimizing code",
+      icon: Code,
+      color: "from-orange-600 to-red-600",
+      rating: 4.9,
+      downloads: "4.2M",
+      price: "Free",
+      features: ["Multi-language Support"Code Review"Optimization"]}
+  ],
   const stats = [,
-    { label: "AI Tools"value: "500+"icon: Brain ,};
-    { label: "Active Users"value: "2.3M+"icon: Users ,};
-    { label: "Countries"value: "150+"icon: Globe ,};
-    { label: "Success Rate"value: "99.7%"icon: Target ,}
-  ];
+    { label: "AI Tools"value: "500+"icon: Brain },
+    { label: "Active Users"value: "2.3M+"icon: Users },
+    { label: "Countries"value: "150+"icon: Globe },
+    { label: "Success Rate"value: "99.7%"icon: Target }
+  ],
   const categories = [,
-    { name: "AI Assistants"icon: Braincount: 45 ,};
-    { name: "Automation"icon: Zapcount: 32 ,};
-    { name: "Analytics"icon: BarChart3count: 28 ,};
-    { name: "Development"icon: Codecount: 67 ,};
-    { name: "Security"icon: Shieldcount: 23 ,}
-  ];
+    { name: "AI Assistants"icon: Braincount: 45 },
+    { name: "Automation"icon: Zapcount: 32 },
+    { name: "Analytics"icon: BarChart3count: 28 },
+    { name: "Development"icon: Codecount: 67 },
+    { name: "Security"icon: Shieldcount: 23 }
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentTool(prev => (prev + 1) % featuredTools.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-  if (!isVisible) return null;
+      setCurrentTool(prev => (prev + 1) % featuredTools.length),
+    }4000),
+    return () => clearInterval(interval),
+  }[]),
+  if (!isVisible) return null,
   return (,
     <div,
       className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 overflow-hidden",
@@ -106,22 +106,22 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
           <div,
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-40",
-              x: [0Math.random() * 500];
-              y: [0Math.random() * 300];
-              scale: [010],}}
-              duration: Math.random() * 10 + 8;
-              repeat: Infinity;
-              delay: Math.random() * 4,}}
+              x: [0Math.random() * 500],
+              y: [0Math.random() * 300],
+              scale: [010]}}
+              duration: Math.random() * 10 + 8,
+              repeat: Infinity,
+              delay: Math.random() * 4}}
             style={{,
-              left: `${Math.random() * 100,}%`;
-              top: `${Math.random() * 100,}%`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
             }}
           />,
         ))}
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="space-y-8">,
             {/* Badge */}
             <div,
@@ -136,7 +136,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,
                 Revolutionary,
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,
-                  {" ",}AI Tools,
+                  {" "}AI Tools,
                 </span>,
                 <br />,
                 <span className="text-3xl md: text-5xl">Showcase</span>,
@@ -147,13 +147,13 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
                 and find the perfect solution for your business.,
               </p>,
             </div>,
-            {/* Rotating Featured Tool */,}
+            {/* Rotating Featured Tool */}
             <div,
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10",
             >,
               <div className="flex items-center gap-4 mb-4">,
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${featuredTools[currentTool].color}`}>,
-                  {React.createElement(featuredTools[currentTool].icon{ className: "w-6 h-6 text-white" ,})}
+                  {React.createElement(featuredTools[currentTool].icon{ className: "w-6 h-6 text-white" })}
                 </div>,
                 <div className="flex-1">,
                   <h3 className="text-lg font-semibold text-white">,
@@ -178,8 +178,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
                   <div key={index} className="flex items-center gap-2 text-gray-300 text-sm">,
                     <CheckCircle className="w-4 h-4 text-green-400" />,
                     {feature}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* Tool Indicators */}
               <div className="flex gap-2">,
@@ -187,10 +186,9 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
                   <div,
                     key={index}
                     className={`h-1 rounded-full transition-all duration-300 ${,
-                      index === currentTool ? 'w-8 bg-blue-400' : 'w-2 bg-white/30',
+                      index === currentTool ? 'w-8 bg-blue-400' : 'w-2 bg-white/30'
                     }`}
-                  />,
-                ))}
+                  />))}
               </div>,
             </div>,
             {/* Stats */}
@@ -198,7 +196,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
               className="grid grid-cols-2 md: grid-cols-4 gap-6",
             >,
               {stats.map((statindex) => {,
-                const Icon = stat.icon;
+                const Icon = stat.icon,
                 return (,
                   <div key={index} className="text-center">,
                     <div className="flex justify-center mb-2">,
@@ -208,8 +206,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
                     </div>,
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
                     <div className="text-sm text-gray-300">{stat.label}</div>,
-                  </div>,
-                );
+                  </div>),
               })}
             </div>,
             {/* CTA Buttons */}
@@ -227,7 +224,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Interactive Demo */,}
+          {/* Right Content - Interactive Demo */}
           <div className="relative">,
             {/* Main Demo Area */}
             <div,
@@ -269,14 +266,14 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
                     <div className="text-white text-sm mb-2">Categories</div>,
                     <div className="flex flex-wrap gap-2">,
                       {categories.slice(03).map((categoryindex) => {,
-                        const Icon = category.icon;
+                        const Icon = category.icon,
                         return (,
                           <div key={index} className="flex items-center gap-2 px-3 py-1 bg-white/20 rounded-lg text-white text-xs">,
                             <Icon className="w-3 h-3" />,
                             <span>{category.name}</span>,
                             <span className="text-blue-200">({category.count})</span>,
                           </div>,
-                        );
+                        ),
                       })}
                     </div>,
                   </div>,
@@ -307,7 +304,7 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Floating Elements */,}
+            {/* Floating Elements */}
             <div,
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl flex items-center justify-center shadow-2xl",
             >,
@@ -334,6 +331,6 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {,
         </button>,
       </div>,
     </div>,
-  );
-export default InteractiveAIToolsShowcase2027PromotionBanner;
+  ),
+export default InteractiveAIToolsShowcase2027PromotionBanner,
 </div></div></div>,

@@ -1,2 +1,2 @@
 
-export default PerformanceOptimizedHero;
+export default PerformanceOptimizedHero,

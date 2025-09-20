@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="mb-16">
@@ -73,15 +73,11 @@ export default function Page() {
             <h2 className="text-4xl font - bold text-white text-center mb-12">
               Recommendation Solutions
             </h2>
-            <div className="grid md:grid - cols - 4 gap-6">
-              {['Product Recommendations',
-                'Content Recommendations',
-                'Service Recommendations',
-                'Action Recommendations',
-                'Strategy Recommendations',
-                'Tool Recommendations',
-                'Resource Recommendations',
-                'Solution Recommendations',
+            <div className="grid md: grid - cols - 4 gap-6">
+              {['Product RecommendationsContent Recommendations',
+                'Service RecommendationsAction Recommendations',
+                'Strategy RecommendationsTool Recommendations',
+                'Resource RecommendationsSolution Recommendations'
               ].map (type => (<div
                   key={type}
                   className="bg-white / 5 rounded-lg p - 4 text-center border border-white / 10"
@@ -135,7 +131,7 @@ export default function Page() {
               Transform your decision - making with AI that continuously
               provides personalized recommendations
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-rose - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Start Recommending
               </button>
@@ -146,5 +142,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

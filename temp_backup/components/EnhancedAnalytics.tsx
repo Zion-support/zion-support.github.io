@@ -1,60 +1,60 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useCallback, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   BarChart3, TrendingUp, TrendingDown, Users, Eye, MousePointer, 
   Clock, Target, Zap, Settings, X, Maximize2, Minimize2, 
   RefreshCw, Download, Share2, Filter, Search, AlertTriangle,
   CheckCircle, Info, Activity, Globe, Smartphone, Monitor
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface AnalyticsEvent {
-  id: string;
-  type: 'pageview' | 'click' | 'scroll' | 'form_submit' | 'conversion' | 'error' | 'performance';
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  timestamp: number;
-  sessionId: string;
-  userId?: string;
-  metadata?: Record<string, any>;
+  id: string,
+  type: 'pageview' | 'click' | 'scroll' | 'form_submit' | 'conversion' | 'error' | 'performance',
+  category: string,
+  action: string,
+  label?: string,
+  value?: number,
+  timestamp: number,
+  sessionId: string,
+  userId?: string,
+  metadata?: Record<string, any>,
 }
 
 interface UserBehavior {
-  sessionId: string;
-  startTime: number;
-  lastActivity: number;
-  pageViews: number;
-  clicks: number;
-  scrollDepth: number;
-  timeOnSite: number;
-  referrer: string;
-  userAgent: string;
-  deviceType: 'mobile' | 'tablet' | 'desktop';
-  browser: string;
-  os: string;
-  country?: string;
-  city?: string;
+  sessionId: string,
+  startTime: number,
+  lastActivity: number,
+  pageViews: number,
+  clicks: number,
+  scrollDepth: number,
+  timeOnSite: number,
+  referrer: string,
+  userAgent: string,
+  deviceType: 'mobile' | 'tablet' | 'desktop',
+  browser: string,
+  os: string,
+  country?: string,
+  city?: string
 }
 
 interface ConversionGoal {
-  id: string;
-  name: string;
-  type: 'page_view' | 'click' | 'form_submit' | 'scroll' | 'time_on_site';
-  target: string;
-  value: number;
-  achieved: boolean;
-  timestamp?: number;
+  id: string,
+  name: string,
+  type: 'page_view' | 'click' | 'form_submit' | 'scroll' | 'time_on_site',
+  target: string,
+  value: number,
+  achieved: boolean,
+  timestamp?: number
 }
 
 interface EnhancedAnalyticsProps {
-  trackingId?: string;
-  enableHeatmap?: boolean;
-  enableSessionRecording?: boolean;
-  enableAITracking?: boolean;
-  showDebugPanel?: boolean;
-  conversionGoals?: ConversionGoal[];
-  children?: React.ReactNode;
+  trackingId?: string,
+  enableHeatmap?: boolean,
+  enableSessionRecording?: boolean,
+  enableAITracking?: boolean,
+  showDebugPanel?: boolean,
+  conversionGoals?: ConversionGoal[],
+  children?: React.ReactNode,
 }
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
@@ -66,46 +66,46 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   conversionGoals = [],
   children
 }) => {
-  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
-  const [currentSession, setCurrentSession] = useState<UserBehavior | null>(null);
-  const [conversions, setConversions] = useState<ConversionGoal[]>(conversionGoals);
-  const [showAnalyticsPanel, setShowAnalyticsPanel] = useState(false);
-  const [isRecording, setIsRecording] = useState(false);
-  const [heatmapData, setHeatmapData] = useState<{ x: number; y: number; intensity: number }[]>([]);
+  const [events, setEvents] = useState<AnalyticsEvent[]>([]),
+  const [currentSession, setCurrentSession] = useState<UserBehavior | null>(null),
+  const [conversions, setConversions] = useState<ConversionGoal[]>(conversionGoals),
+  const [showAnalyticsPanel, setShowAnalyticsPanel] = useState(false),
+  const [isRecording, setIsRecording] = useState(false),
+  const [heatmapData, setHeatmapData] = useState<{ x: number, y: number, intensity: number }[]>([]),
   
-  const sessionRef = useRef<string>('');
-  const lastScrollDepthRef = useRef<number>(0);
-  const clickTrackerRef = useRef<Map<string, number>>(new Map());
-  const scrollTrackerRef = useRef<Map<number, number>>(new Map());
-  const formTrackerRef = useRef<Map<string, number>>(new Map());
+  const sessionRef = useRef<string>(''),
+  const lastScrollDepthRef = useRef<number>(0),
+  const clickTrackerRef = useRef<Map<string, number>>(new Map()),
+  const scrollTrackerRef = useRef<Map<number, number>>(new Map()),
+  const formTrackerRef = useRef<Map<string, number>>(new Map()),
 
   // Initialize analytics
   useEffect(() => {
-    initializeAnalytics();
-    setupEventListeners();
-    startSession();
+    initializeAnalytics(),
+    setupEventListeners(),
+    startSession(),
     
     return () => {
-      cleanupEventListeners();
-      endSession();
-    };
-  }, []);
+      cleanupEventListeners(),
+      endSession(),
+    },
+  }, []),
 
   // Initialize Google Analytics
   useEffect(() => {
     if (typeof window !== 'undefined' && trackingId) {
       // Load Google Analytics
-      const script = document.createElement('script');
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      script.async = true;
-      document.head.appendChild(script);
+      const script = document.createElement('script'),
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`,
+      script.async = true,
+      document.head.appendChild(script),
 
       script.onload = () => {
-        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer = (window as any).dataLayer || [],
         (window as any).gtag = function() {
-          (window as any).dataLayer.push(arguments);
-        };
-        (window as any).gtag('js', new Date());
+          (window as any).dataLayer.push(arguments),
+        },
+        (window as any).gtag('js', new Date()),
         (window as any).gtag('config', trackingId, {
           page_title: document.title,
           page_location: window.location.href,
@@ -114,63 +114,63 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             custom_dimension2: 'device_type',
             custom_dimension3: 'user_behavior'
           }
-        });
-      };
+        }),
+      },
     }
-  }, [trackingId]);
+  }, [trackingId]),
 
   const initializeAnalytics = () => {
     // Generate session ID
-    sessionRef.current = generateSessionId();
+    sessionRef.current = generateSessionId(),
     
     // Set up performance monitoring
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            trackPerformanceMetrics(entry as PerformanceNavigationTiming);
+            trackPerformanceMetrics(entry as PerformanceNavigationTiming),
           }
         }
-      });
+      }),
       
       try {
-        observer.observe({ entryTypes: ['navigation'] });
+        observer.observe({ entryTypes: ['navigation'] }),
       } catch (e) {
-        console.log('PerformanceObserver not supported');
+        console.log('PerformanceObserver not supported'),
       }
     }
-  };
+  },
 
   const setupEventListeners = () => {
     // Click tracking
-    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true }),
     
     // Scroll tracking
-    document.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('scroll', handleScroll, { passive: true }),
     
     // Form tracking
-    document.addEventListener('submit', handleFormSubmit, { passive: true });
+    document.addEventListener('submit', handleFormSubmit, { passive: true }),
     
     // Page visibility tracking
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.addEventListener('visibilitychange', handleVisibilityChange),
     
     // Error tracking
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+    window.addEventListener('error', handleError),
+    window.addEventListener('unhandledrejection', handleUnhandledRejection),
     
     // Before unload tracking
-    window.addEventListener('beforeunload', handleBeforeUnload);
-  };
+    window.addEventListener('beforeunload', handleBeforeUnload),
+  },
 
   const cleanupEventListeners = () => {
-    document.removeEventListener('click', handleClick);
-    document.removeEventListener('scroll', handleScroll);
-    document.removeEventListener('submit', handleFormSubmit);
-    document.removeEventListener('visibilitychange', handleVisibilityChange);
-    window.removeEventListener('error', handleError);
-    window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    window.removeEventListener('beforeunload', handleBeforeUnload);
-  };
+    document.removeEventListener('click', handleClick),
+    document.removeEventListener('scroll', handleScroll),
+    document.removeEventListener('submit', handleFormSubmit),
+    document.removeEventListener('visibilitychange', handleVisibilityChange),
+    window.removeEventListener('error', handleError),
+    window.removeEventListener('unhandledrejection', handleUnhandledRejection),
+    window.removeEventListener('beforeunload', handleBeforeUnload),
+  },
 
   const startSession = () => {
     const session: UserBehavior = {
@@ -186,63 +186,63 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       deviceType: getDeviceType(),
       browser: getBrowser(),
       os: getOS()
-    };
+    },
 
-    setCurrentSession(session);
+    setCurrentSession(session),
     
     // Track session start
-    trackEvent('session', 'start', 'session_started', undefined, {
+    trackEvent('sessionstart', 'session_started', undefined, {
       sessionId: session.sessionId,
       referrer: session.referrer,
       deviceType: session.deviceType
-    });
+    }),
 
     // Start session recording if enabled
     if (enableSessionRecording) {
-      startSessionRecording();
+      startSessionRecording(),
     }
 
     // Start heatmap tracking if enabled
     if (enableHeatmap) {
-      startHeatmapTracking();
+      startHeatmapTracking(),
     }
-  };
+  },
 
   const endSession = () => {
     if (currentSession) {
-      const endTime = Date.now();
-      const timeOnSite = endTime - currentSession.startTime;
+      const endTime = Date.now(),
+      const timeOnSite = endTime - currentSession.startTime,
       
       // Update session with final metrics
       const finalSession = {
         ...currentSession,
         timeOnSite,
         lastActivity: endTime
-      };
+      },
 
       // Track session end
-      trackEvent('session', 'end', 'session_ended', timeOnSite, {
+      trackEvent('sessionend', 'session_ended', timeOnSite, {
         sessionId: finalSession.sessionId,
         timeOnSite: finalSession.timeOnSite,
         pageViews: finalSession.pageViews,
         clicks: finalSession.clicks,
         scrollDepth: finalSession.scrollDepth
-      });
+      }),
 
       // Send session data to analytics
-      sendToAnalytics('session_end', finalSession);
+      sendToAnalytics('session_end', finalSession),
     }
-  };
+  },
 
   const handleClick = useCallback((event: MouseEvent) => {
-    const target = event.target as HTMLElement;
-    const tagName = target.tagName.toLowerCase();
-    const className = target.className || '';
-    const id = target.id || '';
-    const text = target.textContent?.trim().substring(0, 50) || '';
+    const target = event.target as HTMLElement,
+    const tagName = target.tagName.toLowerCase(),
+    const className = target.className || '',
+    const id = target.id || '',
+    const text = target.textContent?.trim().substring(0, 50) || '',
     
     // Track click event
-    trackEvent('interaction', 'click', `${tagName}_clicked`, undefined, {
+    trackEvent('interactionclick', `${tagName}_clicked`, undefined, {
       element: tagName,
       className,
       id,
@@ -250,7 +250,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       x: event.clientX,
       y: event.clientY,
       timestamp: Date.now()
-    });
+    }),
 
     // Update session metrics
     if (currentSession) {
@@ -258,28 +258,28 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         ...prev,
         clicks: prev.clicks + 1,
         lastActivity: Date.now()
-      } : null);
+      } : null),
     }
 
     // Check for conversion goals
-    checkConversionGoals('click', target);
-  }, [currentSession]);
+    checkConversionGoals('click', target),
+  }, [currentSession]),
 
   const handleScroll = useCallback(() => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollDepth = Math.round((scrollTop / scrollHeight) * 100);
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight,
+    const scrollDepth = Math.round((scrollTop / scrollHeight) * 100),
     
     // Only track significant scroll changes
     if (Math.abs(scrollDepth - lastScrollDepthRef.current) >= 10) {
-      lastScrollDepthRef.current = scrollDepth;
+      lastScrollDepthRef.current = scrollDepth,
       
-      trackEvent('interaction', 'scroll', 'page_scrolled', scrollDepth, {
+      trackEvent('interactionscroll', 'page_scrolled', scrollDepth, {
         scrollDepth,
         scrollTop,
         scrollHeight,
         viewportHeight: window.innerHeight
-      });
+      }),
 
       // Update session metrics
       if (currentSession && scrollDepth > currentSession.scrollDepth) {
@@ -287,57 +287,57 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           ...prev,
           scrollDepth,
           lastActivity: Date.now()
-        } : null);
+        } : null),
       }
 
       // Check for conversion goals
-      checkConversionGoals('scroll', undefined, scrollDepth);
+      checkConversionGoals('scroll', undefined, scrollDepth),
     }
-  }, [currentSession]);
+  }, [currentSession]),
 
   const handleFormSubmit = useCallback((event: Event) => {
-    const form = event.target as HTMLFormElement;
-    const formId = form.id || form.className || 'unknown_form';
+    const form = event.target as HTMLFormElement,
+    const formId = form.id || form.className || 'unknown_form',
     
-    trackEvent('conversion', 'form_submit', 'form_submitted', undefined, {
+    trackEvent('conversionform_submit', 'form_submitted', undefined, {
       formId,
       formAction: form.action,
       formMethod: form.method,
       formElements: form.elements.length
-    });
+    }),
 
     // Check for conversion goals
-    checkConversionGoals('form_submit', form);
-  }, []);
+    checkConversionGoals('form_submit', form),
+  }, []),
 
   const handleVisibilityChange = useCallback(() => {
     if (document.hidden) {
-      trackEvent('session', 'visibility', 'page_hidden');
+      trackEvent('sessionvisibility', 'page_hidden'),
     } else {
-      trackEvent('session', 'visibility', 'page_visible');
+      trackEvent('sessionvisibility', 'page_visible'),
     }
-  }, []);
+  }, []),
 
   const handleError = useCallback((event: ErrorEvent) => {
-    trackEvent('error', 'javascript_error', 'js_error', undefined, {
+    trackEvent('errorjavascript_error', 'js_error', undefined, {
       message: event.message,
       filename: event.filename,
       lineno: event.lineno,
       colno: event.colno,
       error: event.error?.stack
-    });
-  }, []);
+    }),
+  }, []),
 
   const handleUnhandledRejection = useCallback((event: PromiseRejectionEvent) => {
-    trackEvent('error', 'unhandled_rejection', 'promise_rejection', undefined, {
+    trackEvent('errorunhandled_rejection', 'promise_rejection', undefined, {
       reason: event.reason,
       stack: event.reason?.stack
-    });
-  }, []);
+    }),
+  }, []),
 
   const handleBeforeUnload = useCallback(() => {
-    endSession();
-  }, []);
+    endSession(),
+  }, []),
 
   const trackEvent = (
     category: string,
@@ -356,9 +356,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       timestamp: Date.now(),
       sessionId: sessionRef.current,
       metadata
-    };
+    },
 
-    setEvents(prev => [...prev.slice(-99), event]); // Keep last 100 events
+    setEvents(prev => [...prev.slice(-99), event]), // Keep last 100 events
 
     // Send to Google Analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -369,12 +369,12 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         custom_dimension1: sessionRef.current,
         custom_dimension2: currentSession?.deviceType,
         ...metadata
-      });
+      }),
     }
 
     // Send to internal analytics
-    sendToAnalytics('event', event);
-  };
+    sendToAnalytics('event', event),
+  },
 
   const trackPerformanceMetrics = (entry: PerformanceNavigationTiming) => {
     const metrics = {
@@ -384,69 +384,69 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       domLoad: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
       windowLoad: entry.loadEventEnd - entry.loadEventStart,
       total: entry.loadEventEnd - (entry as any).navigationStart || entry.loadEventEnd
-    };
+    },
 
-    trackEvent('performance', 'navigation', 'page_load', metrics.total, metrics);
-  };
+    trackEvent('performancenavigation', 'page_load', metrics.total, metrics),
+  },
 
   const checkConversionGoals = (action: string, element?: HTMLElement, value?: number) => {
     conversions.forEach(goal => {
-      if (goal.achieved) return;
+      if (goal.achieved) return,
 
-      let achieved = false;
+      let achieved = false,
       
       switch (goal.type) {
         case 'click':
           if (action === 'click' && element) {
             achieved = element.matches(goal.target) || 
-                      element.closest(goal.target) !== null;
+                      element.closest(goal.target) !== null,
           }
-          break;
+          break,
         case 'form_submit':
           if (action === 'form_submit' && element) {
-            achieved = element.matches(goal.target);
+            achieved = element.matches(goal.target),
           }
-          break;
+          break,
         case 'scroll':
           if (action === 'scroll' && value !== undefined) {
-            achieved = value >= parseInt(goal.target);
+            achieved = value >= parseInt(goal.target),
           }
-          break;
+          break,
         case 'time_on_site':
           if (currentSession) {
-            const timeOnSite = Date.now() - currentSession.startTime;
-            achieved = timeOnSite >= goal.value * 1000; // Convert to milliseconds
+            const timeOnSite = Date.now() - currentSession.startTime,
+            achieved = timeOnSite >= goal.value * 1000, // Convert to milliseconds
           }
-          break;
+          break,
       }
 
       if (achieved) {
-        goal.achieved = true;
-        goal.timestamp = Date.now();
+        goal.achieved = true,
+        goal.timestamp = Date.now(),
         
-        setConversions(prev => [...prev]);
+        setConversions(prev => [...prev]),
         
         // Track conversion
-        trackEvent('conversion', 'goal_achieved', goal.name, goal.value, {
+        trackEvent('conversiongoal_achieved', goal.name, goal.value, {
           goalId: goal.id,
           goalType: goal.type,
           goalTarget: goal.target
-        });
+        }),
 
         // Send to analytics
-        sendToAnalytics('conversion', goal);
+        sendToAnalytics('conversion', goal),
       }
-    });
-  };
+    }),
+  },
 
   const startSessionRecording = () => {
-    if (!enableSessionRecording) return;
+    if (!enableSessionRecording) return,
     
-    setIsRecording(true);
+    setIsRecording(true),
     
     // Record user interactions
     const recordInteraction = (event: Event) => {
-      const target = event.target as HTMLElement;
+      const target = event.target as HTMLElement,
       const interaction = {
         type: event.type,
         target: target.tagName.toLowerCase(),
@@ -456,70 +456,70 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         timestamp: Date.now(),
         x: (event as MouseEvent).clientX,
         y: (event as MouseEvent).clientY
-      };
+      },
 
       // Store interaction data
-      sendToAnalytics('interaction', interaction);
-    };
+      sendToAnalytics('interaction', interaction),
+    },
 
     // Record form inputs
     const recordFormInput = (event: Event) => {
-      const target = event.target as HTMLInputElement;
+      const target = event.target as HTMLInputElement,
       const input = {
         type: target.type,
         name: target.name,
         value: target.value,
         timestamp: Date.now()
-      };
+      },
 
-      sendToAnalytics('form_input', input);
-    };
+      sendToAnalytics('form_input', input),
+    },
 
-    document.addEventListener('click', recordInteraction);
-    document.addEventListener('input', recordFormInput);
-    document.addEventListener('change', recordFormInput);
-  };
+    document.addEventListener('click', recordInteraction),
+    document.addEventListener('input', recordFormInput),
+    document.addEventListener('change', recordFormInput),
+  },
 
   const startHeatmapTracking = () => {
-    if (!enableHeatmap) return;
+    if (!enableHeatmap) return,
 
     // Track mouse movements and clicks for heatmap
-    let mousePositions: { x: number; y: number; timestamp: number }[] = [];
+    let mousePositions: { x: number, y: number, timestamp: number }[] = [],
     
     const trackMouse = (event: MouseEvent) => {
       mousePositions.push({
         x: event.clientX,
         y: event.clientY,
         timestamp: Date.now()
-      });
+      }),
 
       // Keep only recent positions
       if (mousePositions.length > 100) {
-        mousePositions = mousePositions.slice(-100);
+        mousePositions = mousePositions.slice(-100),
       }
-    };
+    },
 
     const generateHeatmap = () => {
       const heatmapData = mousePositions.map(pos => ({
         x: pos.x,
         y: pos.y,
         intensity: 1
-      }));
+      })),
 
-      setHeatmapData(heatmapData);
-      sendToAnalytics('heatmap', heatmapData);
-    };
+      setHeatmapData(heatmapData),
+      sendToAnalytics('heatmap', heatmapData),
+    },
 
-    document.addEventListener('mousemove', trackMouse);
+    document.addEventListener('mousemove', trackMouse),
     
     // Generate heatmap every 30 seconds
-    const heatmapInterval = setInterval(generateHeatmap, 30000);
+    const heatmapInterval = setInterval(generateHeatmap, 30000),
     
     return () => {
-      document.removeEventListener('mousemove', trackMouse);
-      clearInterval(heatmapInterval);
-    };
-  };
+      document.removeEventListener('mousemove', trackMouse),
+      clearInterval(heatmapInterval),
+    },
+  },
 
   const sendToAnalytics = (type: string, data: any) => {
     // Send to internal analytics endpoint
@@ -527,7 +527,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           type,
@@ -536,57 +536,57 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           timestamp: Date.now()
         })
       }).catch(error => {
-        console.log('Analytics error:', error);
-      });
+        console.log('Analytics error:', error),
+      }),
     }
-  };
+  },
 
   // Utility functions
   const generateSessionId = () => {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-  };
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+  },
 
   const generateEventId = () => {
-    return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-  };
+    return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+  },
 
   const getEventType = (category: string, action: string): AnalyticsEvent['type'] => {
-    if (category === 'conversion') return 'conversion';
-    if (category === 'error') return 'error';
-    if (category === 'performance') return 'performance';
-    if (action === 'click') return 'click';
-    if (action === 'scroll') return 'scroll';
-    if (action === 'form_submit') return 'form_submit';
-    return 'pageview';
-  };
+    if (category === 'conversion') return 'conversion',
+    if (category === 'error') return 'error',
+    if (category === 'performance') return 'performance',
+    if (action === 'click') return 'click',
+    if (action === 'scroll') return 'scroll',
+    if (action === 'form_submit') return 'form_submit',
+    return 'pageview'
+  },
 
   const getDeviceType = (): 'mobile' | 'tablet' | 'desktop' => {
-    const userAgent = navigator.userAgent.toLowerCase();
+    const userAgent = navigator.userAgent.toLowerCase(),
     if (/mobile|android|iphone|ipad|ipod|blackberry|windows phone/g.test(userAgent)) {
-      return /ipad|android(?!.*mobile)|tablet/g.test(userAgent) ? 'tablet' : 'mobile';
+      return /ipad|android(?!.*mobile)|tablet/g.test(userAgent) ? 'tablet' : 'mobile',
     }
 
   const getBrowser = (): string => {
-    const userAgent = navigator.userAgent;
-    if (userAgent.includes('Chrome')) return 'Chrome';
-    if (userAgent.includes('Firefox')) return 'Firefox';
-    if (userAgent.includes('Safari')) return 'Safari';
-    if (userAgent.includes('Edge')) return 'Edge';
-    return 'Unknown';
-  };
+    const userAgent = navigator.userAgent,
+    if (userAgent.includes('Chrome')) return 'Chrome',
+    if (userAgent.includes('Firefox')) return 'Firefox',
+    if (userAgent.includes('Safari')) return 'Safari',
+    if (userAgent.includes('Edge')) return 'Edge',
+    return 'Unknown',
+  },
 
   const getOS = (): string => {
-    const userAgent = navigator.userAgent;
-    if (userAgent.includes('Windows')) return 'Windows';
-    if (userAgent.includes('Mac')) return 'macOS';
-    if (userAgent.includes('Linux')) return 'Linux';
-    if (userAgent.includes('Android')) return 'Android';
-    if (userAgent.includes('iOS')) return 'iOS';
-    return 'Unknown';
-  };
+    const userAgent = navigator.userAgent,
+    if (userAgent.includes('Windows')) return 'Windows',
+    if (userAgent.includes('Mac')) return 'macOS',
+    if (userAgent.includes('Linux')) return 'Linux',
+    if (userAgent.includes('Android')) return 'Android',
+    if (userAgent.includes('iOS')) return 'iOS',
+    return 'Unknown',
+  },
 
   if (!showDebugPanel) {
-    return <>{children}</>;
+    return <>{children}</>,
   }
 
 const EnhancedAnalytics: React.FC = () => {
@@ -595,7 +595,7 @@ const EnhancedAnalytics: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedAnalytics</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedAnalytics;
+export default EnhancedAnalytics,

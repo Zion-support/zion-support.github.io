@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Grid, List, Filter,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Zap, Star, TrendingUp, Users, Globe, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new innovative 2025 services
-import { innovativeAIAutomationServices2025 } from '../data/2025-innovative-ai-automation-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services';
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+import { innovativeAIAutomationServices2025 } from '../data/2025-innovative-ai-automation-services',
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services',
+import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services',
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
 
 const Innovative2025ServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState<any[]>([]);
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [filteredServices, setFilteredServices] = useState<any[]>([]),
 
   // Combine all services
   const allServices = [
@@ -26,7 +26,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
     ...innovativeITInfrastructureServices2025,
     ...innovativeMicroSaasServices2025,
     ...innovativeBusinessSolutions2025
-  ];
+  ],
 
   // Categories for filtering
   const categories = [
@@ -35,10 +35,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {
     { id: 'it-infrastructure', name: 'IT Infrastructure', icon: Cpu, count: innovativeITInfrastructureServices2025.length },
     { id: 'micro-saas', name: 'Micro SAAS', icon: Building, count: innovativeMicroSaasServices2025.length },
     { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: innovativeBusinessSolutions2025.length }
-  ];
+  ],
 
   useEffect(() => {
-    let filtered = allServices;
+    let filtered = allServices,
 
     // Filter by search term
     if (searchTerm) {
@@ -46,38 +46,38 @@ const Innovative2025ServicesShowcase: React.FC = () => {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
 
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
-        if (selectedCategory === 'ai-automation') return innovativeAIAutomationServices2025.includes(service);
-        if (selectedCategory === 'it-infrastructure') return innovativeITInfrastructureServices2025.includes(service);
-        if (selectedCategory === 'micro-saas') return innovativeMicroSaasServices2025.includes(service);
-        if (selectedCategory === 'business-solutions') return innovativeBusinessSolutions2025.includes(service);
-        return true;
-      });
+        if (selectedCategory === 'ai-automation') return innovativeAIAutomationServices2025.includes(service),
+        if (selectedCategory === 'it-infrastructure') return innovativeITInfrastructureServices2025.includes(service),
+        if (selectedCategory === 'micro-saas') return innovativeMicroSaasServices2025.includes(service),
+        if (selectedCategory === 'business-solutions') return innovativeBusinessSolutions2025.includes(service),
+        return true,
+      }),
     }
 
-    setFilteredServices(filtered);
-  }, [searchTerm, selectedCategory]);
+    setFilteredServices(filtered),
+  }, [searchTerm, selectedCategory]),
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('AI') || category.includes('Automation')) return Brain;
-    if (category.includes('IT') || category.includes('Infrastructure')) return Cpu;
-    if (category.includes('Micro SAAS')) return Building;
-    if (category.includes('Business')) return Target;
-    return Globe;
-  };
+    if (category.includes('AI') || category.includes('Automation')) return Brain,
+    if (category.includes('IT') || category.includes('Infrastructure')) return Cpu,
+    if (category.includes('Micro SAAS')) return Building,
+    if (category.includes('Business')) return Target,
+    return Globe
+  },
 
   const getCategoryColor = (category: string) => {
-    if (category.includes('AI') || category.includes('Automation')) return 'from-purple-600 to-pink-600';
-    if (category.includes('IT') || category.includes('Infrastructure')) return 'from-blue-600 to-cyan-600';
-    if (category.includes('Micro SAAS')) return 'from-green-600 to-emerald-600';
-    if (category.includes('Business')) return 'from-orange-600 to-red-600';
-    return 'from-gray-600 to-slate-600';
-  };
+    if (category.includes('AI') || category.includes('Automation')) return 'from-purple-600 to-pink-600',
+    if (category.includes('IT') || category.includes('Infrastructure')) return 'from-blue-600 to-cyan-600',
+    if (category.includes('Micro SAAS')) return 'from-green-600 to-emerald-600',
+    if (category.includes('Business')) return 'from-orange-600 to-red-600',
+    return 'from-gray-600 to-slate-600'
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -347,7 +347,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-xl rounded-3xl p-12 border border-white/20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -380,7 +380,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default Innovative2025ServicesShowcase;
+export default Innovative2025ServicesShowcase,

@@ -1,109 +1,106 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Grid, List, Filter, Star, Users, TrendingUp,
   Brain, Atom, Shield, Target, Rocket, ArrowRight, Check,
   Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new innovative services
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services',
+import { innovative2040ITServices } from '../data/innovative-2040-it-services',
 
 // Import existing service data for comprehensive showcase
-import { realMicroSaasServices } from '../data/real-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
+import { realMicroSaasServices } from '../data/real-micro-saas-services',
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { enterpriseITServices } from '../data/enterprise-it-services',
 
 interface Service {
-  id: string;
-  name: string;
-  tagline?: string;
-  price: string | { monthly: number; yearly: number; currency: string; trialDays: number; setupTime: string };
-  period?: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link: string;
-  category: string;
-  realService?: boolean;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[];
-  roi?: string;
-  competitors?: string[];
-  marketSize?: string;
-  growthRate?: string;
+  id: string,
+  name: string,
+  tagline?: string,
+  price: string | { monthly: number, yearly: number, currency: string, trialDays: number, setupTime: string },
+  period?: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+  icon?: string,
+  color?: string,
+  textColor?: string,
+  link: string,
+  category: string,
+  realService?: boolean,
+  technology?: string[],
+  integrations?: string[],
+  useCases?: string[],
+  roi?: string,
+  competitors?: string[],
+  marketSize?: string,
+  growthRate?: string,
   contactInfo?: {
-    mobile?: string;
-    phone?: string;
-    email: string;
-    address?: string;
-    website: string;
-  };
-  realImplementation?: boolean | string;
-  implementationDetails?: string;
-  launchDate?: string;
-  customers: number | string;
-  rating: number;
-  reviews: number;
-  benefits?: string[];
+    mobile?: string,
+    phone?: string,
+    email: string,
+    address?: string,
+    website: string
+  },
+  realImplementation?: boolean | string,
+  implementationDetails?: string,
+  launchDate?: string,
+  customers: number | string,
+  rating: number,
+  reviews: number,
+  benefits?: string[]
 }
 
 const Innovative2040FuturisticServicesShowcase: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity' | 'category'>('name');
-  const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity' | 'category'>('name'),
+  const [isLoading, setIsLoading] = useState(true),
 
   // Helper function to get service color with fallback
   const getServiceColor = (service: Service, index: number) => {
-    if (service.color) return service.color;
+    if (service.color) return service.color,
     
     // Default color scheme based on index
     const defaultColors = [
-      'from-cyan-500 to-blue-600',
-      'from-purple-500 to-pink-600',
-      'from-green-500 to-emerald-600',
-      'from-orange-500 to-red-600',
-      'from-indigo-500 to-purple-600',
-      'from-teal-500 to-cyan-600'
-    ];
-    return defaultColors[index % defaultColors.length];
-  };
+      'from-cyan-500 to-blue-600from-purple-500 to-pink-600',
+      'from-green-500 to-emerald-600from-orange-500 to-red-600',
+      'from-indigo-500 to-purple-600from-teal-500 to-cyan-600'
+    ],
+    return defaultColors[index % defaultColors.length],
+  },
 
   // Helper function to get service icon with fallback
   const getServiceIcon = (service: Service) => {
-    if (service.icon) return service.icon;
+    if (service.icon) return service.icon,
     
     // Default icon based on category
-    const category = service.category.toLowerCase();
-    if (category.includes('ai') || category.includes('artificial')) return '🤖';
-    if (category.includes('quantum')) return '⚛️';
-    if (category.includes('space')) return '🚀';
-    if (category.includes('security')) return '🛡️';
-    if (category.includes('automation')) return '⚙️';
-    if (category.includes('cloud')) return '☁️';
-    if (category.includes('mobile')) return '📱';
-    if (category.includes('web')) return '🌐';
-    return '💡'; // Default icon
-  };
+    const category = service.category.toLowerCase(),
+    if (category.includes('ai') || category.includes('artificial')) return '🤖',
+    if (category.includes('quantum')) return '⚛️',
+    if (category.includes('space')) return '🚀',
+    if (category.includes('security')) return '🛡️',
+    if (category.includes('automation')) return '⚙️',
+    if (category.includes('cloud')) return '☁️',
+    if (category.includes('mobile')) return '📱',
+    if (category.includes('web')) return '🌐',
+    return '💡', // Default icon
+  },
 
   // Helper function to get service period with fallback
   const getServicePeriod = (service: Service) => {
-    if (service.period) return service.period;
-    return '/month'; // Default period
-  };
+    if (service.period) return service.period,
+    return '/month', // Default period
+  },
 
   // Helper function to check if service is popular
   const isServicePopular = (service: Service) => {
-    return service.popular === true;
-  };
+    return service.popular === true
+  },
 
   // Combine all services
   const allServices = [
@@ -112,47 +109,46 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
     ...realMicroSaasServices,
     ...innovativeAIServices,
     ...enterpriseITServices
-  ];
+  ],
 
   // Get unique categories
-  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))],
 
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+                           service.category.toLowerCase().includes(searchQuery.toLowerCase()),
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+      return matchesSearch && matchesCategory,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price': {
-          const aPrice = typeof a.price === 'string' ? parseFloat(a.price.replace(/[^0-9.]/g, '')) : a.price.monthly;
-          const bPrice = typeof b.price === 'string' ? parseFloat(b.price.replace(/[^0-9.]/g, '')) : b.price.monthly;
-          return aPrice - bPrice;
+          const aPrice = typeof a.price === 'string' ? parseFloat(a.price.replace(/[^0-9.]/g, '')) : a.price.monthly,
+          const bPrice = typeof b.price === 'string' ? parseFloat(b.price.replace(/[^0-9.]/g, '')) : b.price.monthly,
+          return aPrice - bPrice,
         }
         case 'popularity':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'category':
-          return a.category.localeCompare(b.category);
-        default:
-          return a.name.localeCompare(b.name);
+          return a.category.localeCompare(b.category),
+        default: return a.name.localeCompare(b.name)
       }
-    });
+    }),
 
   useEffect(() => {
     // Simulate loading
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsLoading(false), 1000),
+    return () => clearTimeout(timer),
+  }, []),
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  };
+  },
 
   const staggerContainer = {
     animate: {
@@ -161,7 +157,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   if (isLoading) {
     return (
@@ -180,7 +176,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
           <p className="text-sm text-gray-500">Preparing your futuristic technology journey</p>
         </motion.div>
       </div>
-    );
+    ),
   }
 
   return (
@@ -537,8 +533,8 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
               </p>
               <button
                 onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('All');
+                  setSearchQuery(''),
+                  setSelectedCategory('All'),
                 }}
                 className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors duration-300"
               >
@@ -594,7 +590,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full font-semibold hover: bg-cyan-400 hover:text-gray-900 transition-all duration-300"
               >
                 Download Brochure
               </motion.button>
@@ -603,7 +599,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default Innovative2040FuturisticServicesShowcase;
+export default Innovative2040FuturisticServicesShowcase,

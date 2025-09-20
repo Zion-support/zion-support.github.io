@@ -1,2 +1,2 @@
 
-export default OptimizedImage;
+export default OptimizedImage,

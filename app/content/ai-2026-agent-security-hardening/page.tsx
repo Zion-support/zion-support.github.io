@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import React from 'react';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Agent Security Hardening Guide | Zion Tech Group';
-  description: 'Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture.';
-  keywords: ['AI agent securityprompt security', 'tool permissionssandboxing', 'security 2026'],
-};
+  title: 'AI 2026: Agent Security Hardening Guide | Zion Tech Group',
+  description: 'Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture.',
+  keywords: ['AI agent securityprompt securitytool permissionssandboxing', 'security 2026']
+},
 export default function AgentSecurityHardening2026() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -39,7 +39,6 @@ export default function AgentSecurityHardening2026() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  );
+    </div>),
 }
 ,

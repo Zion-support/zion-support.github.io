@@ -1,8 +1,8 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 
 export function CurrentSubscription() {
   // Mock subscription data
@@ -17,7 +17,7 @@ export function CurrentSubscription() {
       used: 32,
       total: 50
     }
-  };
+  },
 
   return (
     <Card>
@@ -75,5 +75,5 @@ export function CurrentSubscription() {
         <Button variant="destructive">Cancel Subscription</Button>
       </CardFooter>
     </Card>
-  );
+  ),
 }

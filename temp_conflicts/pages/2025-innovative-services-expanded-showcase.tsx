@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Grid, List, Filter,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Star, Users, TrendingUp, Zap, Phone, Mail, MapPin, Cloud
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import all our new innovative services
-import { advancedCybersecurityAutomationServices2025 } from '../data/2025-advanced-cybersecurity-automation-services';
-import { aiAutomationWorkflowServices2025 } from '../data/2025-ai-automation-workflow-services';
-import { cloudDevOpsAutomationServices2025 } from '../data/2025-cloud-devops-automation-services';
-import { businessIntelligenceAutomationServices2025 } from '../data/2025-business-intelligence-automation-services';
-import { marketingAutomationAIServices2025 } from '../data/2025-marketing-automation-ai-services';
-import { healthcareAISpecializedServices2025 } from '../data/2025-healthcare-ai-specialized-services';
+import { advancedCybersecurityAutomationServices2025 } from '../data/2025-advanced-cybersecurity-automation-services',
+import { aiAutomationWorkflowServices2025 } from '../data/2025-ai-automation-workflow-services',
+import { cloudDevOpsAutomationServices2025 } from '../data/2025-cloud-devops-automation-services',
+import { businessIntelligenceAutomationServices2025 } from '../data/2025-business-intelligence-automation-services',
+import { marketingAutomationAIServices2025 } from '../data/2025-marketing-automation-ai-services',
+import { healthcareAISpecializedServices2025 } from '../data/2025-healthcare-ai-specialized-services',
 
 // Combine all services
 const allInnovativeServices = [
@@ -24,16 +24,16 @@ const allInnovativeServices = [
   ...businessIntelligenceAutomationServices2025,
   ...marketingAutomationAIServices2025,
   ...healthcareAISpecializedServices2025
-];
+],
 
 const InnovativeServicesExpandedShowcase = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('name'),
 
   // Get unique categories
-  const categories = ['All', ...Array.from(new Set(allInnovativeServices.map(service => service.category)))];
+  const categories = ['All', ...Array.from(new Set(allInnovativeServices.map(service => service.category)))],
 
   // Filter and sort services
   const filteredServices = allInnovativeServices
@@ -47,15 +47,14 @@ const InnovativeServicesExpandedShowcase = () => {
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.price.monthly - b.price.monthly;
+          return a.price.monthly - b.price.monthly,
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'popularity':
-          return b.customers - a.customers;
-        default:
-          return a.name.localeCompare(b.name);
+          return b.customers - a.customers,
+        default: return a.name.localeCompare(b.name)
       }
-    });
+    }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -65,7 +64,7 @@ const InnovativeServicesExpandedShowcase = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -76,7 +75,7 @@ const InnovativeServicesExpandedShowcase = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
@@ -84,8 +83,8 @@ const InnovativeServicesExpandedShowcase = () => {
         title="2025 Innovative Services Expanded Showcase | Zion Tech Group"
         description="Discover our comprehensive suite of innovative micro SAAS services, IT solutions, and AI-powered platforms. From cybersecurity automation to healthcare AI diagnostics."
         keywords={[
-          'micro SAAS', 'IT services', 'AI services', 'cybersecurity automation', 
-          'business intelligence', 'marketing automation', 'healthcare AI', 'cloud DevOps'
+          'micro SAASIT services', 'AI servicescybersecurity automation', 
+          'business intelligencemarketing automation', 'healthcare AIcloud DevOps'
         ]}
       />
 
@@ -496,7 +495,7 @@ const InnovativeServicesExpandedShowcase = () => {
                 Innovative micro SAAS services, IT solutions, and AI-powered platforms for modern businesses.
               </p>
               <div className="flex space-x-4">
-                <a href="https://ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https: //ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
                   🌐 Website
                 </a>
               </div>
@@ -549,12 +548,12 @@ const InnovativeServicesExpandedShowcase = () => {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white transition-colors">ziontechgroup.com</a></p>
+            <p>&copy, 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white transition-colors">ziontechgroup.com</a></p>
           </div>
         </div>
       </footer>
     </div>
-  );
-};
+  )
+},
 
-export default InnovativeServicesExpandedShowcase;
+export default InnovativeServicesExpandedShowcase,

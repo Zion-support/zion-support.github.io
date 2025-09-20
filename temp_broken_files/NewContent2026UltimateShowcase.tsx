@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const NewContent2026UltimateShowcase: React.FC = () => {,
   return (,
@@ -6,7 +6,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {,
       className="py-20 bg-gradient-to-br from-gray-50 to-blue-50",
     >,
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-16">,
           <div,
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-3 mb-8 shadow-lg",
@@ -28,14 +28,14 @@ const NewContent2026UltimateShowcase: React.FC = () => {,
             and proven implementation frameworks that deliver extraordinary results.,
           </divp>,
         </div>,
-        {/* Content Cards */,}
+        {/* Content Cards */}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16">,
           {contentItems.map((item, index) => (,
             <div,
               key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-300 transform hover:-translate-y-2",
             >,
-              {/* Card Header */,}
+              {/* Card Header */}
               <div className={`bg-gradient-to-r ${item.gradient} p-8 text-white`}>,
                 <div className="flex items-center justify-between mb-4">,
                   <span className="bg-white bg-opacity-20 rounded-full px-4 py-2 text-sm font-bold">,
@@ -44,7 +44,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {,
                   <div className="text-4xl">📚</div>,
                 </div>,
                 <h3 className="text-2xl md: text-3xl font-bold mb-4 leading-tight">,
-                  {item.title,}
+                  {item.title}
                 </h3>,
               </div>,
               {/* Card Content */}
@@ -58,13 +58,12 @@ const NewContent2026UltimateShowcase: React.FC = () => {,
                     <div key={featureIndex} className="flex items-center space-x-2">,
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>,
                       <span className="text-sm font-medium text-gray-700">{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* CTA Button */}
                 <a,
                   href={item.href}
-                  className={`block w-full bg-gradient-to-r ${item.gradient} text-white text-center py-4 rounded-lg font-bold text-lg hover: opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg`,}
+                  className={`block w-full bg-gradient-to-r ${item.gradient} text-white text-center py-4 rounded-lg font-bold text-lg hover: opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg`}
                 >,
                   📖 Read Complete Guide,
                 </a>,
@@ -97,7 +96,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {,
             </a>,
           </div>,
         </div>,
-        {/* Trust Indicators */,}
+        {/* Trust Indicators */}
         <div,
           className="mt-16 pt-8 border-t border-gray-200",
         >,
@@ -115,7 +114,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {,
         </div>,
       </div>,
     </divsection>,
-  );
-};
-export default NewContent2026UltimateShowcase;
+  ),
+},
+export default NewContent2026UltimateShowcase,
 </div></div></div>,

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const RevolutionaryTechBreakthrough2033: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,
@@ -13,6 +13,5 @@ const RevolutionaryTechBreakthrough2033: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default RevolutionaryTechBreakthrough2033;
+    </div>)},
+export default RevolutionaryTechBreakthrough2033,

@@ -6,67 +6,67 @@
                 {analysis.suggestions.map((suggestion, index) => (<li key={index} className="flex items - start space - x-2">
                     <span className="text-green - 500 mt-1">•</span>
 =======
-import React, { useState, useEffect } from 'react';
-export default ContentQualityAnalyzer;
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+export default ContentQualityAnalyzer,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-;
+,
 
     generateSummary(pageMetrics, topIssues) {
 
-        const totalPages = pageMetrics.length;
-        const excellentPages = pageMetrics.filter(page => page.overallScore >= 80) .length;
-        const goodPages = pageMetrics.filter(page => page.overallScore >= 60) .length;
-        const poorPages = pageMetrics.filter(page => page.overallScore < 40) .length;
-        let summary = `Analyzed ${totalPages} pages.`;
+        const totalPages = pageMetrics.length,
+        const excellentPages = pageMetrics.filter(page => page.overallScore >= 80) .length,
+        const goodPages = pageMetrics.filter(page => page.overallScore >= 60) .length,
+        const poorPages = pageMetrics.filter(page => page.overallScore < 40) .length,
+        let summary = `Analyzed ${totalPages} pages.`,
         if(excellentPages > 0) {
 `
-            summary += `${excellentPages} pages have excellent content quality.`;
+            summary += `${excellentPages} pages have excellent content quality.`,
 
         if(goodPages > 0) {
 `
-            summary += `${goodPages} pages have good content quality.`;
+            summary += `${goodPages} pages have good content quality.`,
 
         if(poorPages > 0) {
 `
-            summary += `${poorPages} pages need significant improvement.`;
+            summary += `${poorPages} pages need significant improvement.`,
 
         if(topIssues.length > 0) {
 `
-            summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
+            summary += `Top issues to address: ${topIssues.slice(0, 3).join(')}.`,
 
-        return summary;
+        return summary,
 
     getPageMetrics(pageUrl) {
 
-        return this.analyzedPages.get(pageUrl);
+        return this.analyzedPages.get(pageUrl),
 
     getAllPageMetrics () {
-        return Array.from(this.analyzedPages.values () ) ;
+        return Array.from(this.analyzedPages.values () ) ,
 
     clearCache () {
-        this.analyzedPages.clear () ;
+        this.analyzedPages.clear () ,
     }
 }
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
       if(paragraphCount < 3) {
 
-        analysisResult.suggestions.push('Add more paragraphs to improve content structure');
+        analysisResult.suggestions.push('Add more paragraphs to improve content structure'),
       }
 
-      setAnalysis(analysisResult) ;
-      setIsAnalyzing(false) ;
+      setAnalysis(analysisResult) ,
+      setIsAnalyzing(false) ,
 
       if(onAnalysisComplete) {
 
-        onAnalysisComplete(analysisResult);
+        onAnalysisComplete(analysisResult),
       }
-    }, 2000) ;
-  };
+    }, 2000) ,
+  },
 
   return ()
     <div className="space-y-4">
@@ -124,9 +124,9 @@ export default function Page() {
               </ul>
             </div>) }
         </motion.div>) }
-    </div>) ;
-};
+    </div>) ,
+},
 
-export default ContentQualityAnalyzer;
+export default ContentQualityAnalyzer,
 }}}}}}}}}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

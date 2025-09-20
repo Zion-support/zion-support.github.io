@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="mb-16">
@@ -69,15 +69,11 @@ export default function Page() {
             <h2 className="text-4xl font - bold text-white text-center mb-12">
               Optimization Solutions
             </h2>
-            <div className="grid md:grid - cols - 4 gap-6">
-              {['Performance Optimization',
-                'Process Optimization',
-                'Resource Optimization',
-                'Algorithm Optimization',
-                'System Optimization',
-                'Network Optimization',
-                'Database Optimization',
-                'Code Optimization',
+            <div className="grid md: grid - cols - 4 gap-6">
+              {['Performance OptimizationProcess Optimization',
+                'Resource OptimizationAlgorithm Optimization',
+                'System OptimizationNetwork Optimization',
+                'Database OptimizationCode Optimization'
               ].map (type => (<div
                   key={type}
                   className="bg-white / 5 rounded-lg p - 4 text-center border border-white / 10"
@@ -129,7 +125,7 @@ export default function Page() {
               Transform your systems with AI that continuously optimizes
               performance
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-emerald - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Start Optimizing
               </button>
@@ -140,5 +136,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

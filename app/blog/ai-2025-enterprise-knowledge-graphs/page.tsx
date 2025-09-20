@@ -1,16 +1,14 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'Enterprise Knowledge Graphs in 2025: From Data to Decisions';
+  title: 'Enterprise Knowledge Graphs in 2025: From Data to Decisions',
   description:,
-    'How modern enterprises are using knowledge graphs to unify data, power RAG, and drive autonomous decisioning across the business.';
+    'How modern enterprises are using knowledge graphs to unify data, power RAG, and drive autonomous decisioning across the business.',
   keywords: [,
-    'knowledge graphsenterprise AI';
-    'RAGdata integration';
-    'semantic layergovernance';
-    'vector databases',
-  ],
-};
+    'knowledge graphsenterprise AIRAGdata integration',
+    'semantic layergovernancevector databases'
+  ]
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -73,6 +71,5 @@ export default function Page() {,
           </p>,
         </div>,
       </article>,
-    </main>,
-  ),}
+    </main>)}
 ,

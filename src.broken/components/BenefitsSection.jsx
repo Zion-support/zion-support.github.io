@@ -1,5 +1,5 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 const benefits = [{
 
@@ -11,7 +11,7 @@ const benefits = [{
     color: 'from-yellow-500 to-orange-500',
     bgColor: 'from-yellow-500/20 to-orange-500/20',
     features: ['
-      'Agile development methodology',Parallel development teams',Automated testing pipeline',Continuous deployment',
+      'Agile development methodology',Parallel development teams',Automated testing pipeline',Continuous deployment'
     ]},
   {
 "
@@ -23,7 +23,7 @@ const benefits = [{
     color: 'from-blue-500 to-cyan-500',
     bgColor: 'from-blue-500/20 to-cyan-500/20',
     features: ['
-      'SOC 2 Type II compliant',End-to-end encryption',Regular security audits',GDPR compliance',
+      'SOC 2 Type II compliant',End-to-end encryption',Regular security audits',GDPR compliance'
     ]},
   {
 "
@@ -34,7 +34,7 @@ const benefits = [{
     color: 'from-green-500 to-emerald-500',
     bgColor: 'from-green-500/20 to-emerald-500/20',
     features: ['
-      'Performance optimization',Cost reduction strategies',Revenue growth solutions',Efficiency improvements',
+      'Performance optimization',Cost reduction strategies',Revenue growth solutions',Efficiency improvements'
     ]},
   {
 "
@@ -45,10 +45,10 @@ const benefits = [{
     color: 'from-purple-500 to-pink-500',
     bgColor: 'from-purple-500/20 to-pink-500/20',
     features: ['
-      'Comprehensive testing',Code quality standards',Performance benchmarks',User experience focus',
-    ]},
-];
-;
+      'Comprehensive testing',Code quality standards',Performance benchmarks',User experience focus'
+    ]}
+],
+,
 const additionalStats = [{
 "
     icon: <Users className="w-8 h-8" />,
@@ -56,11 +56,11 @@ const additionalStats = [{
     label: 'Happy Clients'},"
   { icon: <Clock className="w-8 h-8" />, value: '24/7', label: 'Support' },"
   { icon: <Star className="w-8 h-8" />, value: '4.9/5', label: 'Rating' },"
-  { icon: <Award className="w-8 h-8" />, value: '50+', label: 'Awards' },
-];
+  { icon: <Award className="w-8 h-8" />, value: '50+', label: 'Awards' }
+],
 
 export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = (useState < number) | (null > null);
+  const [hoveredIndex, setHoveredIndex] = (useState < number) | (null > null),
 
   const containerVariants = {
 
@@ -71,7 +71,7 @@ export function BenefitsSection() {
       transition: {
 
         staggerChildren: 0.2,
-        delayChildren: 0.1}}};
+        delayChildren: 0.1}}},
 
   const itemVariants = {
 
@@ -83,7 +83,7 @@ export function BenefitsSection() {
       transition: {
 
         duration: 0.6,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
 
   const statsVariants = {
 
@@ -95,7 +95,7 @@ export function BenefitsSection() {
       transition: {
 
         duration: 0.4,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
 
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
@@ -296,7 +296,7 @@ export function BenefitsSection() {
               <p className="text-white text-lg mb-4">
                 Ready to experience the Zion difference?
               </p>"
-              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                 Get Started Today
               </button>
             </div>
@@ -304,10 +304,10 @@ export function BenefitsSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
 '"`
 =======
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

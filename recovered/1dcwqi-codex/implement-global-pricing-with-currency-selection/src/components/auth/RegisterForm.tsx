@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom',
 
 export default function RegisterForm() {
   return (
@@ -10,5 +10,5 @@ export default function RegisterForm() {
         </Link>
       </p>
     </div>
-  );
+  ),
 }

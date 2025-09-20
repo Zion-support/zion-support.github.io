@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Brain,
@@ -8,162 +8,150 @@ import {,
   Shield,
   BarChart3,
   Users,
-  Target;
-  Rocket;
-  Award;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Globe;
-  Cpu;
-  Database;
-  Lightbulb;
-  Settings;
-  Play;
-  Download;
-  ExternalLink,
-} from 'lucide-react';
+  Target,
+  Rocket,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Database,
+  Lightbulb,
+  Settings,
+  Play,
+  Download,
+  ExternalLink
+} from 'lucide-react',
 const ComprehensiveAIServicesShowcase2025 = () => {,
-  const [activeServicesetActiveService] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeServicesetActiveService] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const services = [,
     {,
-      id: 'ai-automation';
-      title: 'AI-Powered Business Automation';
-      description: 'Transform your business operations with intelligent automation that learns and adapts to your needs.';
-      icon: <Settings className="w-8 h-8" />;
+      id: 'ai-automation',
+      title: 'AI-Powered Business Automation',
+      description: 'Transform your business operations with intelligent automation that learns and adapts to your needs.',
+      icon: <Settings className="w-8 h-8" />,
       features: [,
-        'Workflow automation with 90% efficiency gainIntelligent document processing';
-        'Predictive maintenance schedulingAutomated customer service responses';
-        'Real-time decision making support',
-      ];
+        'Workflow automation with 90% efficiency gainIntelligent document processingPredictive maintenance schedulingAutomated customer service responses',
+        'Real-time decision making support'
+      ],
       benefits: [,
-        'Reduce operational costs by 60%Increase productivity by 300%';
-        'Eliminate human error in routine tasks24/7 automated operations',
-      ];
-      pricing: 'Starting at $299/month';
-      category: 'Automation';
-      rating: 4.9;
-      clients: 2500;
-      link: '/services/ai-automation',};
+        'Reduce operational costs by 60%Increase productivity by 300%Eliminate human error in routine tasks24/7 automated operations'
+      ],
+      pricing: 'Starting at $299/month',
+      category: 'Automation',
+      rating: 4.9,
+      clients: 2500,
+      link: '/services/ai-automation'},
     {,
-      id: 'predictive-analytics';
-      title: 'Advanced Predictive Analytics';
-      description: 'Harness the power of AI to predict future trendscustomer behaviorand business outcomes.';
-      icon: <BarChart3 className="w-8 h-8" />;
+      id: 'predictive-analytics',
+      title: 'Advanced Predictive Analytics',
+      description: 'Harness the power of AI to predict future trendscustomer behaviorand business outcomes.',
+      icon: <BarChart3 className="w-8 h-8" />,
       features: [,
-        '95% accurate market predictionsCustomer behavior analysis';
-        'Sales forecasting with confidence intervalsRisk assessment and mitigation';
-        'Real-time data processing',
-      ];
+        '95% accurate market predictionsCustomer behavior analysisSales forecasting with confidence intervalsRisk assessment and mitigation',
+        'Real-time data processing'
+      ],
       benefits: [,
-        'Increase revenue by 40%Reduce risk exposure by 70%';
-        'Optimize inventory managementImprove customer retention',
-      ];
-      pricing: 'Starting at $499/month';
-      category: 'Analytics';
-      rating: 4.8;
-      clients: 1800;
-      link: '/services/predictive-analytics',};
+        'Increase revenue by 40%Reduce risk exposure by 70%Optimize inventory managementImprove customer retention'
+      ],
+      pricing: 'Starting at $499/month',
+      category: 'Analytics',
+      rating: 4.8,
+      clients: 1800,
+      link: '/services/predictive-analytics'},
     {,
-      id: 'ai-content-generation';
-      title: 'Intelligent Content Generation';
-      description: 'Create high-qualityengaging content at scale with our advanced AI content generation platform.';
-      icon: <Lightbulb className="w-8 h-8" />;
+      id: 'ai-content-generation',
+      title: 'Intelligent Content Generation',
+      description: 'Create high-qualityengaging content at scale with our advanced AI content generation platform.',
+      icon: <Lightbulb className="w-8 h-8" />,
       features: [,
-        'Multi-format content creationBrand voice consistency';
-        'SEO optimizationMulti-language support';
-        'Content performance tracking',
-      ];
+        'Multi-format content creationBrand voice consistencySEO optimizationMulti-language support',
+        'Content performance tracking'
+      ],
       benefits: [,
-        'Reduce content creation time by 80%Increase engagement by 150%';
-        'Maintain consistent brand voiceScale content production infinitely',
-      ];
-      pricing: 'Starting at $199/month';
-      category: 'Content';
-      rating: 4.7;
-      clients: 3200;
-      link: '/services/ai-content-generation',};
+        'Reduce content creation time by 80%Increase engagement by 150%Maintain consistent brand voiceScale content production infinitely'
+      ],
+      pricing: 'Starting at $199/month',
+      category: 'Content',
+      rating: 4.7,
+      clients: 3200,
+      link: '/services/ai-content-generation'},
     {,
-      id: 'ai-security';
-      title: 'AI-Powered Cybersecurity';
-      description: 'Protect your business with advanced AI-driven security solutions that adapt to emerging threats.';
-      icon: <Shield className="w-8 h-8" />;
+      id: 'ai-security',
+      title: 'AI-Powered Cybersecurity',
+      description: 'Protect your business with advanced AI-driven security solutions that adapt to emerging threats.',
+      icon: <Shield className="w-8 h-8" />,
       features: [,
-        'Real-time threat detectionAutomated incident response';
-        'Behavioral analysisZero-day attack prevention';
-        'Compliance monitoring',
-      ];
+        'Real-time threat detectionAutomated incident responseBehavioral analysisZero-day attack prevention',
+        'Compliance monitoring'
+      ],
       benefits: [,
-        'Reduce security incidents by 95%Automated 24/7 monitoring';
-        'Faster threat response timesCompliance assurance',
-      ];
-      pricing: 'Starting at $799/month';
-      category: 'Security';
-      rating: 4.9;
-      clients: 1200;
-      link: '/services/ai-security',};
+        'Reduce security incidents by 95%Automated 24/7 monitoringFaster threat response timesCompliance assurance'
+      ],
+      pricing: 'Starting at $799/month',
+      category: 'Security',
+      rating: 4.9,
+      clients: 1200,
+      link: '/services/ai-security'},
     {,
-      id: 'ai-customer-service';
-      title: 'Intelligent Customer Service';
-      description: 'Deliver exceptional customer experiences with AI-powered chatbots and support systems.';
-      icon: <Users className="w-8 h-8" />;
+      id: 'ai-customer-service',
+      title: 'Intelligent Customer Service',
+      description: 'Deliver exceptional customer experiences with AI-powered chatbots and support systems.',
+      icon: <Users className="w-8 h-8" />,
       features: [,
-        'Natural language processingMulti-channel support';
-        'Sentiment analysisEscalation management';
-        'Performance analytics',
-      ];
+        'Natural language processingMulti-channel supportSentiment analysisEscalation management',
+        'Performance analytics'
+      ],
       benefits: [,
-        'Improve customer satisfaction by 85%Reduce support costs by 50%';
-        '24/7 availabilityFaster resolution times',
-      ];
-      pricing: 'Starting at $149/month';
-      category: 'Customer Service';
-      rating: 4.6;
-      clients: 4100;
-      link: '/services/ai-customer-service',};
+        'Improve customer satisfaction by 85%Reduce support costs by 50%24/7 availabilityFaster resolution times'
+      ],
+      pricing: 'Starting at $149/month',
+      category: 'Customer Service',
+      rating: 4.6,
+      clients: 4100,
+      link: '/services/ai-customer-service'},
     {,
-      id: 'ai-data-analysis';
-      title: 'Advanced Data Analysis';
-      description: 'Unlock insights from your data with powerful AI-driven analysis and visualization tools.';
-      icon: <Database className="w-8 h-8" />;
+      id: 'ai-data-analysis',
+      title: 'Advanced Data Analysis',
+      description: 'Unlock insights from your data with powerful AI-driven analysis and visualization tools.',
+      icon: <Database className="w-8 h-8" />,
       features: [,
-        'Automated data processingPattern recognition';
-        'Predictive modelingInteractive dashboards';
-        'Custom reporting',
-      ];
+        'Automated data processingPattern recognitionPredictive modelingInteractive dashboards',
+        'Custom reporting'
+      ],
       benefits: [,
-        'Discover hidden insightsMake data-driven decisions';
-        'Reduce analysis time by 90%Improve accuracy of predictions',
-      ];
-      pricing: 'Starting at $399/month';
-      category: 'Data Analysis';
-      rating: 4.8;
-      clients: 2200;
-      link: '/services/ai-data-analysis',}
-  ];
+        'Discover hidden insightsMake data-driven decisionsReduce analysis time by 90%Improve accuracy of predictions'
+      ],
+      pricing: 'Starting at $399/month',
+      category: 'Data Analysis',
+      rating: 4.8,
+      clients: 2200,
+      link: '/services/ai-data-analysis'}
+  ],
   const containerVariants = {,
-    hidden: { opacity: 0, y: 50 ,};
+    hidden: { opacity: 0, y: 50 },
     visible: {,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.1,}
+        duration: 0.8,
+        staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { opacity: 0, y: 30 ,};
+    hidden: { opacity: 0, y: 30 },
     visible: {,
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.6 ,}
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
-  };
+  },
   return (,
     <divsection,
       className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden",
@@ -188,7 +176,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
             improve efficiencyand drive innovation across every aspect of your business.,
           </p>,
         </div>,
-        {/* Service Navigation */,}
+        {/* Service Navigation */}
           {services.map((serviceindex) => (,
             <button,
               key={service.id}
@@ -196,7 +184,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${,
                 activeService === index,
                   ? 'bg-white text-indigo-900 shadow-lg',
-                  : 'bg-white/10 text-white hover: bg-white/20',}`}
+                  : 'bg-white/10 text-white hover: bg-white/20'}`}
             >,
               {service.icon}
               <span className="ml-2">{service.title}</span>,
@@ -209,7 +197,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
           className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-12",
         >,
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
-            {/* Service Info */,}
+            {/* Service Info */}
             <div>,
               <div className="flex items-center gap-3 mb-4">,
                 <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl text-white">,
@@ -262,7 +250,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Features and Benefits */,}
+            {/* Features and Benefits */}
             <div className="space-y-8">,
               {/* Features */}
               <div>,
@@ -275,8 +263,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
                     <div key={index} className="flex items-start gap-3">,
                       <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />,
                       <span className="text-gray-300">{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Benefits */}
@@ -290,8 +277,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
                     <div key={index} className="flex items-start gap-3">,
                       <Award className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />,
                       <span className="text-gray-300">{benefit}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Pricing */}
@@ -313,7 +299,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* All Services Grid */,}
+        {/* All Services Grid */}
           {services.map((serviceindex) => (,
             <div,
               key={service.id}
@@ -323,7 +309,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 h-full">,
                   <div className="flex items-start gap-4 mb-4">,
                     <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl text-white">,
-                      {service.icon,}
+                      {service.icon}
                     </div>,
                     <div className="flex-1">,
                       <div className="flex items-center gap-2 mb-2">,
@@ -336,7 +322,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
                         </div>,
                       </div>,
                       <h3 className="text-lg font-bold text-white mb-2 group-hover: text-blue-400 transition-colors">,
-                        {service.title,}
+                        {service.title}
                       </h3>,
                       <p className="text-gray-300 text-sm mb-4 line-clamp-3">,
                         {service.description}
@@ -352,7 +338,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
                 </div>,
               </a>,
             </div>,
-          )),}
+          ))}
         </div>,
         {/* Call to Action */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">,
@@ -382,5 +368,5 @@ const ComprehensiveAIServicesShowcase2025 = () => {,
         </div>,
       </div>,
     </divsection>,
-  ),};
-export default ComprehensiveAIServicesShowcase2025;
+  )},
+export default ComprehensiveAIServicesShowcase2025,

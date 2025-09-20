@@ -1,7 +1,7 @@
-import React from "react";
-import Skeleton from "@/components/ui/skeleton";
+import React from "react",
+import Skeleton from "@/components/ui/skeleton",
 export function TokenDisplay(props: any) {,
-    const { wallet, loading } = useWallet();
+    const { wallet, loading } = useWallet(),
     return (<Card>,
       <CardHeader className="flex flex-row items-center justify-between pb-2">,
         <div>,
@@ -28,4 +28,4 @@ export function TokenDisplay(props: any) {,
       </CardContent>,
     </Card>)}
 ,
-export default TokenDisplay;
+export default TokenDisplay,

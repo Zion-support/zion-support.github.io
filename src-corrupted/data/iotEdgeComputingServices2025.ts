@@ -1,307 +1,283 @@
 export interface IoTEdgeService {,
-  id: string;
-  title: string;
-  description: string;
-  longDescription: string;
-  icon: string;
-  color: string;
-  category: 'smart-cities' | 'industrial-iot' | 'edge-ai' | 'connected-devices' | 'sensor-networks' | 'edge-computing' | 'iot-security' | 'data-analytics';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-pricing: {;
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom: string,};
-  estimatedTime: string;
-  technologies: string[];
-  image?: string;
-  iotScore: number;
-  marketPrice: string;
-  contactLink: string;
-  status: 'active' | 'beta' | 'coming-soon';
-  scalability: string;
-  deployment: string,}
+  id: string,
+  title: string,
+  description: string,
+  longDescription: string,
+  icon: string,
+  color: string,
+  category: 'smart-cities' | 'industrial-iot' | 'edge-ai' | 'connected-devices' | 'sensor-networks' | 'edge-computing' | 'iot-security' | 'data-analytics',
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+pricing: {,
+    starter: string,
+    professional: string,
+    enterprise: string,
+    custom: string},
+  estimatedTime: string,
+  technologies: string[],
+  image?: string,
+  iotScore: number,
+  marketPrice: string,
+  contactLink: string,
+  status: 'active' | 'beta' | 'coming-soon',
+  scalability: string,
+  deployment: string}
 export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [,
   {,
-    id: 'smart-city-platform';
-    title: 'Smart City IoT Platform';
-    description: 'Comprehensive IoT platform for smart city infrastructure and management';
-    longDescription: 'Transform your city into a smart, connected ecosystem with our comprehensive IoT platform. Features traffic management, environmental monitoring, energy optimization, and citizen services.';
-    icon: 'Building';
-    color: 'from-blue-500 to-indigo-600';
-    category: 'smart-cities';
+    id: 'smart-city-platform',
+    title: 'Smart City IoT Platform',
+    description: 'Comprehensive IoT platform for smart city infrastructure and management',
+    longDescription: 'Transform your city into a smart, connected ecosystem with our comprehensive IoT platform. Features traffic management, environmental monitoring, energy optimization, and citizen services.',
+    icon: 'Building',
+    color: 'from-blue-500 to-indigo-600',
+    category: 'smart-cities',
     features: [,
-      'Traffic managementEnvironmental monitoring';
-      'Energy optimizationCitizen services';
-      'Public safetyInfrastructure monitoring',
-    ];
+      'Traffic managementEnvironmental monitoringEnergy optimizationCitizen services',
+      'Public safetyInfrastructure monitoring'
+    ],
     benefits: [,
-      'Improved city efficiencyReduced energy consumption';
-      'Enhanced citizen experienceBetter resource management',
-    ];
+      'Improved city efficiencyReduced energy consumptionEnhanced citizen experienceBetter resource management'
+    ],
     useCases: [,
-      'Municipal governmentsCity planners';
-      'Urban developersSmart city initiatives',
-    ];
+      'Municipal governmentsCity plannersUrban developersSmart city initiatives'
+    ],
     pricing: {,
-      starter: '$5,999/month';
-      professional: '$15,999/month';
-      enterprise: '$39,999/month';
-      custom: 'Contact us',};
-    estimatedTime: '16-32 weeks';
-    technologies: ['IoT SensorsEdge Computing', '5G NetworksCloud Computing', 'AI/MLData Analytics'];
-    iotScore: 98;
-    marketPrice: '$5,999-$39,999/month';
-    contactLink: 'https://ziontechgroup.com/contact';
-    status: 'active';
-    scalability: 'City-wide deployment';
-    deployment: 'Phased rollout with pilot programs',};
+      starter: '$5,999/month',
+      professional: '$15,999/month',
+      enterprise: '$39,999/month',
+      custom: 'Contact us'},
+    estimatedTime: '16-32 weeks',
+    technologies: ['IoT SensorsEdge Computing5G NetworksCloud Computing', 'AI/MLData Analytics'],
+    iotScore: 98,
+    marketPrice: '$5,999-$39,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'City-wide deployment',
+    deployment: 'Phased rollout with pilot programs'},
   {,
-    id: 'industrial-iot-suite';
-    title: 'Industrial IoT Suite';
-    description: 'Advanced IoT solutions for manufacturing and industrial operations';
-    longDescription: 'Optimize your industrial operations with our comprehensive IoT suite. Features predictive maintenance, quality control, energy management, and real-time monitoring.';
-    icon: 'Factory';
-    color: 'from-gray-500 to-slate-600';
-    category: 'industrial-iot';
+    id: 'industrial-iot-suite',
+    title: 'Industrial IoT Suite',
+    description: 'Advanced IoT solutions for manufacturing and industrial operations',
+    longDescription: 'Optimize your industrial operations with our comprehensive IoT suite. Features predictive maintenance, quality control, energy management, and real-time monitoring.',
+    icon: 'Factory',
+    color: 'from-gray-500 to-slate-600',
+    category: 'industrial-iot',
     features: [,
-      'Predictive maintenanceQuality control';
-      'Energy managementReal-time monitoring';
-      'Asset trackingPerformance analytics',
-    ];
+      'Predictive maintenanceQuality controlEnergy managementReal-time monitoring',
+      'Asset trackingPerformance analytics'
+    ],
     benefits: [,
-      '30% reduction in downtimeImproved product quality';
-      'Energy cost savingsEnhanced operational efficiency',
-    ];
+      '30% reduction in downtimeImproved product qualityEnergy cost savingsEnhanced operational efficiency'
+    ],
     useCases: [,
-      'Manufacturing plantsIndustrial facilities';
-      'WarehousesProcessing plants',
-    ];
+      'Manufacturing plantsIndustrial facilitiesWarehousesProcessing plants'
+    ],
     pricing: {,
-      starter: '$3,999/month';
-      professional: '$9,999/month';
-      enterprise: '$24,999/month';
-      custom: 'Contact us',};
-    estimatedTime: '12-24 weeks';
-    technologies: ['Industrial SensorsEdge Computing', 'PLC IntegrationSCADA Systems', 'AI/MLCloud Computing'];
-    iotScore: 97;
-    marketPrice: '$3,999-$24,999/month';
-    contactLink: 'https://ziontechgroup.com/contact';
-    status: 'active';
-    scalability: 'Plant-wide deployment';
-    deployment: 'Modular installation with existing systems',};
+      starter: '$3,999/month',
+      professional: '$9,999/month',
+      enterprise: '$24,999/month',
+      custom: 'Contact us'},
+    estimatedTime: '12-24 weeks',
+    technologies: ['Industrial SensorsEdge ComputingPLC IntegrationSCADA Systems', 'AI/MLCloud Computing'],
+    iotScore: 97,
+    marketPrice: '$3,999-$24,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Plant-wide deployment',
+    deployment: 'Modular installation with existing systems'},
   {,
-    id: 'edge-ai-platform';
-    title: 'Edge AI Computing Platform';
-    description: 'Intelligent edge computing with AI capabilities for real-time processing';
-    longDescription: 'Bring AI to the edge with our intelligent computing platform. Process data locally, reduce latency, and enable real-time decision making for IoT applications.';
-    icon: 'Cpu';
-    color: 'from-green-500 to-emerald-600';
-    category: 'edge-ai';
+    id: 'edge-ai-platform',
+    title: 'Edge AI Computing Platform',
+    description: 'Intelligent edge computing with AI capabilities for real-time processing',
+    longDescription: 'Bring AI to the edge with our intelligent computing platform. Process data locally, reduce latency, and enable real-time decision making for IoT applications.',
+    icon: 'Cpu',
+    color: 'from-green-500 to-emerald-600',
+    category: 'edge-ai',
     features: [,
-      'Local AI processingReal-time analytics';
-      'Edge machine learningLow-latency computing';
-      'Offline capabilitiesScalable deployment',
-    ];
+      'Local AI processingReal-time analyticsEdge machine learningLow-latency computing',
+      'Offline capabilitiesScalable deployment'
+    ],
     benefits: [,
-      '90% reduction in latencyReal-time insights';
-      'Offline operationReduced bandwidth usage',
-    ];
+      '90% reduction in latencyReal-time insightsOffline operationReduced bandwidth usage'
+    ],
     useCases: [,
-      'Autonomous vehiclesSmart cameras';
-      'Industrial robotsEdge devices',
-    ];
+      'Autonomous vehiclesSmart camerasIndustrial robotsEdge devices'
+    ],
     pricing: {,
-      starter: '$2,999/month';
-      professional: '$7,999/month';
-      enterprise: '$19,999/month';
-      custom: 'Contact us',};
-    estimatedTime: '8-16 weeks';
-    technologies: ['Edge ComputingAI/ML', 'TensorFlow LiteEdge GPUs', '5G NetworksEdge Analytics'];
-    iotScore: 96;
-    marketPrice: '$2,999-$19,999/month';
-    contactLink: 'https://ziontechgroup.com/contact';
-    status: 'active';
-    scalability: 'Edge device deployment';
-    deployment: 'Edge device installation with cloud management',};
+      starter: '$2,999/month',
+      professional: '$7,999/month',
+      enterprise: '$19,999/month',
+      custom: 'Contact us'},
+    estimatedTime: '8-16 weeks',
+    technologies: ['Edge ComputingAI/MLTensorFlow LiteEdge GPUs', '5G NetworksEdge Analytics'],
+    iotScore: 96,
+    marketPrice: '$2,999-$19,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Edge device deployment',
+    deployment: 'Edge device installation with cloud management'},
   {,
-    id: 'connected-device-management';
-    title: 'Connected Device Management Platform';
-    description: 'Comprehensive management platform for IoT devices and sensors';
-    longDescription: 'Manage thousands of IoT devices with our comprehensive platform. Features device provisioning, monitoring, updates, and security management.';
-    icon: 'Smartphone';
-    color: 'from-purple-500 to-pink-600';
-    category: 'connected-devices';
+    id: 'connected-device-management',
+    title: 'Connected Device Management Platform',
+    description: 'Comprehensive management platform for IoT devices and sensors',
+    longDescription: 'Manage thousands of IoT devices with our comprehensive platform. Features device provisioning, monitoring, updates, and security management.',
+    icon: 'Smartphone',
+    color: 'from-purple-500 to-pink-600',
+    category: 'connected-devices',
     features: [,
-      'Device provisioningRemote monitoring';
-      'Over-the-air updatesSecurity management';
-      'Performance analyticsDevice lifecycle management',
-    ];
+      'Device provisioningRemote monitoringOver-the-air updatesSecurity management',
+      'Performance analyticsDevice lifecycle management'
+    ],
     benefits: [,
-      'Centralized device managementReduced operational costs';
-      'Improved securityBetter device performance',
-    ];
+      'Centralized device managementReduced operational costsImproved securityBetter device performance'
+    ],
     useCases: [,
-      'IoT deploymentsDevice manufacturers';
-      'Service providersEnterprise IoT',
-    ];
+      'IoT deploymentsDevice manufacturersService providersEnterprise IoT'
+    ],
     pricing: {,
-      starter: '$1,999/month';
-      professional: '$4,999/month';
-      enterprise: '$12,999/month';
-      custom: 'Contact us',};
-    estimatedTime: '6-12 weeks';
-    technologies: ['Device ManagementIoT Protocols', 'Cloud ComputingSecurity', 'AnalyticsAPIs'];
-    iotScore: 95;
-    marketPrice: '$1,999-$12,999/month';
-    contactLink: 'https://ziontechgroup.com/contact';
-    status: 'active';
-    scalability: 'Unlimited device support';
-    deployment: 'Cloud-based with device agents',};
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: '$12,999/month',
+      custom: 'Contact us'},
+    estimatedTime: '6-12 weeks',
+    technologies: ['Device ManagementIoT ProtocolsCloud ComputingSecurity', 'AnalyticsAPIs'],
+    iotScore: 95,
+    marketPrice: '$1,999-$12,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Unlimited device support',
+    deployment: 'Cloud-based with device agents'},
   {,
-    id: 'sensor-network-platform';
-    title: 'IoT Sensor Network Platform';
-    description: 'Advanced sensor network solutions for data collection and monitoring';
-    longDescription: 'Deploy and manage comprehensive sensor networks with our advanced platform. Features sensor deployment, data collection, real-time monitoring, and analytics.';
-    icon: 'Radio';
-    color: 'from-teal-500 to-cyan-600';
-    category: 'sensor-networks';
+    id: 'sensor-network-platform',
+    title: 'IoT Sensor Network Platform',
+    description: 'Advanced sensor network solutions for data collection and monitoring',
+    longDescription: 'Deploy and manage comprehensive sensor networks with our advanced platform. Features sensor deployment, data collection, real-time monitoring, and analytics.',
+    icon: 'Radio',
+    color: 'from-teal-500 to-cyan-600',
+    category: 'sensor-networks',
     features: [,
-      'Sensor deploymentData collection';
-      'Real-time monitoringNetwork optimization';
-      'Power managementData analytics',
-    ];
+      'Sensor deploymentData collectionReal-time monitoringNetwork optimization',
+      'Power managementData analytics'
+    ],
     benefits: [,
-      'Comprehensive monitoringReal-time insights';
-      'Optimized network performanceReduced maintenance costs',
-    ];
+      'Comprehensive monitoringReal-time insightsOptimized network performanceReduced maintenance costs'
+    ],
     useCases: [,
-      'Environmental monitoringAgricultural IoT';
-      'Infrastructure monitoringResearch applications',
-    ];
+      'Environmental monitoringAgricultural IoTInfrastructure monitoringResearch applications'
+    ],
     pricing: {,
-      starter: '$1,499/month';
-      professional: '$3,999/month';
-      enterprise: '$9,999/month';
-      custom: 'Contact us',};
-    estimatedTime: '4-12 weeks';
-    technologies: ['IoT SensorsWireless Networks', 'Edge ComputingData Collection', 'AnalyticsCloud Computing'];
-    iotScore: 94;
-    marketPrice: '$1,499-$9,999/month';
-    contactLink: 'https://ziontechgroup.com/contact';
-    status: 'active';
-    scalability: 'Network expansion support';
-    deployment: 'Sensor deployment with network setup',};
+      starter: '$1,499/month',
+      professional: '$3,999/month',
+      enterprise: '$9,999/month',
+      custom: 'Contact us'},
+    estimatedTime: '4-12 weeks',
+    technologies: ['IoT SensorsWireless NetworksEdge ComputingData Collection', 'AnalyticsCloud Computing'],
+    iotScore: 94,
+    marketPrice: '$1,499-$9,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Network expansion support',
+    deployment: 'Sensor deployment with network setup'},
   {,
-    id: 'edge-computing-infrastructure';
-    title: 'Edge Computing Infrastructure';
-    description: 'Scalable edge computing infrastructure for distributed applications';
-    longDescription: 'Build robust edge computing infrastructure with our comprehensive platform. Features edge nodes, distributed computing, load balancing, and high availability.';
-    icon: 'Server';
-    color: 'from-orange-500 to-red-600';
-    category: 'edge-computing';
+    id: 'edge-computing-infrastructure',
+    title: 'Edge Computing Infrastructure',
+    description: 'Scalable edge computing infrastructure for distributed applications',
+    longDescription: 'Build robust edge computing infrastructure with our comprehensive platform. Features edge nodes, distributed computing, load balancing, and high availability.',
+    icon: 'Server',
+    color: 'from-orange-500 to-red-600',
+    category: 'edge-computing',
     features: [,
-      'Edge nodesDistributed computing';
-      'Load balancingHigh availability';
-      'Edge storageNetwork optimization',
-    ];
+      'Edge nodesDistributed computingLoad balancingHigh availability',
+      'Edge storageNetwork optimization'
+    ],
     benefits: [,
-      'Improved performanceReduced latency';
-      'Better reliabilityScalable infrastructure',
-    ];
+      'Improved performanceReduced latencyBetter reliabilityScalable infrastructure'
+    ],
     useCases: [,
-      'Edge applicationsDistributed systems';
-      'Content deliveryEdge computing',
-    ];
+      'Edge applicationsDistributed systemsContent deliveryEdge computing'
+    ],
     pricing: {,
-      starter: '$2,499/month';
-      professional: '$6,999/month';
-      enterprise: '$17,999/month';
-      custom: 'Contact us',};
-    estimatedTime: '8-16 weeks';
-    technologies: ['Edge ComputingKubernetes', 'DockerLoad Balancers', 'StorageNetworking'];
-    iotScore: 95;
-    marketPrice: '$2,499-$17,999/month';
-    contactLink: 'https://ziontechgroup.com/contact';
-    status: 'active';
-    scalability: 'Multi-node deployment';
-    deployment: 'Edge node installation with management',};
+      starter: '$2,499/month',
+      professional: '$6,999/month',
+      enterprise: '$17,999/month',
+      custom: 'Contact us'},
+    estimatedTime: '8-16 weeks',
+    technologies: ['Edge ComputingKubernetesDockerLoad Balancers', 'StorageNetworking'],
+    iotScore: 95,
+    marketPrice: '$2,499-$17,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Multi-node deployment',
+    deployment: 'Edge node installation with management'},
   {,
-    id: 'iot-security-platform';
-    title: 'IoT Security & Privacy Platform';
-    description: 'Comprehensive security solutions for IoT devices and networks';
-    longDescription: 'Protect your IoT ecosystem with our comprehensive security platform. Features device authentication, network security, data encryption, and threat detection.';
-    icon: 'Shield';
-    color: 'from-red-500 to-orange-600';
-    category: 'iot-security';
+    id: 'iot-security-platform',
+    title: 'IoT Security & Privacy Platform',
+    description: 'Comprehensive security solutions for IoT devices and networks',
+    longDescription: 'Protect your IoT ecosystem with our comprehensive security platform. Features device authentication, network security, data encryption, and threat detection.',
+    icon: 'Shield',
+    color: 'from-red-500 to-orange-600',
+    category: 'iot-security',
     features: [,
-      'Device authenticationNetwork security';
-      'Data encryptionThreat detection';
-      'Access controlSecurity monitoring',
-    ];
+      'Device authenticationNetwork securityData encryptionThreat detection',
+      'Access controlSecurity monitoring'
+    ],
     benefits: [,
-      'Enhanced securityData protection';
-      'Threat preventionCompliance support',
-    ];
+      'Enhanced securityData protectionThreat preventionCompliance support'
+    ],
     useCases: [,
-      'IoT deploymentsSmart cities';
-      'Industrial IoTConnected devices',
-    ];
+      'IoT deploymentsSmart citiesIndustrial IoTConnected devices'
+    ],
     pricing: {,
-      starter: '$2,999/month';
-      professional: '$7,999/month';
-      enterprise: '$19,999/month';
-      custom: 'Contact us',};
-    estimatedTime: '6-12 weeks';
-    technologies: ['IoT SecurityEncryption', 'AuthenticationNetwork Security', 'Threat DetectionCompliance'];
-    iotScore: 98;
-    marketPrice: '$2,999-$19,999/month';
-    contactLink: 'https://ziontechgroup.com/contact';
-    status: 'active';
-    scalability: 'Security across all devices';
-    deployment: 'Security layer integration',};
+      starter: '$2,999/month',
+      professional: '$7,999/month',
+      enterprise: '$19,999/month',
+      custom: 'Contact us'},
+    estimatedTime: '6-12 weeks',
+    technologies: ['IoT SecurityEncryptionAuthenticationNetwork Security', 'Threat DetectionCompliance'],
+    iotScore: 98,
+    marketPrice: '$2,999-$19,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Security across all devices',
+    deployment: 'Security layer integration'},
   {,
-    id: 'iot-data-analytics';
-    title: 'IoT Data Analytics Platform';
-    description: 'Advanced analytics and insights for IoT data streams';
-    longDescription: 'Unlock the value of your IoT data with our advanced analytics platform. Features real-time processing, predictive analytics, data visualization, and automated insights.';
-    icon: 'BarChart3';
-    color: 'from-indigo-500 to-purple-600';
-    category: 'data-analytics';
+    id: 'iot-data-analytics',
+    title: 'IoT Data Analytics Platform',
+    description: 'Advanced analytics and insights for IoT data streams',
+    longDescription: 'Unlock the value of your IoT data with our advanced analytics platform. Features real-time processing, predictive analytics, data visualization, and automated insights.',
+    icon: 'BarChart3',
+    color: 'from-indigo-500 to-purple-600',
+    category: 'data-analytics',
     features: [,
-      'Real-time processingPredictive analytics';
-      'Data visualizationAutomated insights';
-      'Data integrationPerformance monitoring',
-    ];
+      'Real-time processingPredictive analyticsData visualizationAutomated insights',
+      'Data integrationPerformance monitoring'
+    ],
     benefits: [,
-      'Data-driven insightsPredictive capabilities';
-      'Automated decision makingImproved efficiency',
-    ];
+      'Data-driven insightsPredictive capabilitiesAutomated decision makingImproved efficiency'
+    ],
     useCases: [,
-      'IoT deploymentsSmart cities';
-      'Industrial monitoringEnvironmental tracking',
-    ];
+      'IoT deploymentsSmart citiesIndustrial monitoringEnvironmental tracking'
+    ],
     pricing: {,
-      starter: '$1,999/month';
-      professional: '$4,999/month';
-      enterprise: '$12,999/month';
-      custom: 'Contact us',};
-    estimatedTime: '4-8 weeks';
-    technologies: ['Big DataAI/ML', 'Real-time ProcessingData Visualization', 'AnalyticsCloud Computing'];
-    iotScore: 95;
-    marketPrice: '$1,999-$12,999/month';
-    contactLink: 'https://ziontechgroup.com/contact';
-    status: 'active';
-    scalability: 'Unlimited data processing';
-    deployment: 'Cloud-based analytics platform',}
-];
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: '$12,999/month',
+      custom: 'Contact us'},
+    estimatedTime: '4-8 weeks',
+    technologies: ['Big DataAI/MLReal-time ProcessingData Visualization', 'AnalyticsCloud Computing'],
+    iotScore: 95,
+    marketPrice: '$1,999-$12,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    scalability: 'Unlimited data processing',
+    deployment: 'Cloud-based analytics platform'}
+],
 export const getIoTEdgeServicesByCategory = (category: anystring): IoTEdgeService[]  => {,
   if (category === 'All') {,
-    return IOT_EDGE_COMPUTING_SERVICES_2025,}
-  return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category);
-};
+    return IOT_EDGE_COMPUTING_SERVICES_2025}
+  return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category),
+},
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {,
-  return IOT_EDGE_COMPUTING_SERVICES_2025;
-};
+  return IOT_EDGE_COMPUTING_SERVICES_2025,
+},

@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion',
 import {
     Atom,
     Award,
@@ -22,9 +22,9 @@ import {
     Users,
     X,
     Zap
-} from 'lucide-react';
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+} from 'lucide-react',
+import React, { useEffect, useState } from 'react',
+import { Link } from 'react-router-dom',
 
 
 
@@ -245,61 +245,61 @@ const sidebarSections = [
       }
     ]
   }
-];
+],
 
 interface EnhancedSidebar2025Props {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void,
   contactInfo?: {
-    mobile: string;
-    email: string;
-  };
+    mobile: string,
+    email: string
+  },
 }
 
 export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: EnhancedSidebar2025Props) {
   const defaultContactInfo = {
     mobile: '+1 (555) 123-4567',
     email: 'contact@ziontechgroup.com'
-  };
+  },
   
-  const finalContactInfo = contactInfo || defaultContactInfo;
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const finalContactInfo = contactInfo || defaultContactInfo,
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set()),
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set()),
 
 
   const toggleSection = (sectionTitle: string) => {
-    const newExpanded = new Set(expandedSections);
+    const newExpanded = new Set(expandedSections),
     if (newExpanded.has(sectionTitle)) {
-      newExpanded.delete(sectionTitle);
+      newExpanded.delete(sectionTitle)
     } else {
-      newExpanded.add(sectionTitle);
+      newExpanded.add(sectionTitle),
     }
-    setExpandedSections(newExpanded);
-  };
+    setExpandedSections(newExpanded),
+  },
 
 
 
   const toggleItem = (itemName: string) => {
-    const newExpanded = new Set(expandedItems);
+    const newExpanded = new Set(expandedItems),
     if (newExpanded.has(itemName)) {
-      newExpanded.delete(itemName);
+      newExpanded.delete(itemName)
     } else {
-      newExpanded.add(itemName);
+      newExpanded.add(itemName),
     }
-    setExpandedItems(newExpanded);
-  };
+    setExpandedItems(newExpanded),
+  },
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden',
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'unset',
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
+      document.body.style.overflow = 'unset',
+    },
+  }, [isOpen]),
 
 
 
@@ -492,7 +492,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: En
               <Link
                 to="/contact"
                 onClick={onClose}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
@@ -502,5 +502,5 @@ export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: En
         </div>
       </motion.div>
     </>
-  );
+  )
 }

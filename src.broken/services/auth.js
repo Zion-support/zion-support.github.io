@@ -1,15 +1,15 @@
-export default authService;
+export default authService,
 
 // Mock authentication service
 // In a real application, this would connect to your backend API
-;
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://api.zion.com';
-;
+,
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https: //api.zion.com',
+,
 class AuthService {
   constructor() {
 
-    this.token = localStorage.getItem('token');
-    this.user = JSON.parse(localStorage.getItem('user') || 'null');
+    this.token = localStorage.getItem('token'),
+    this.user = JSON.parse(localStorage.getItem('user') || 'null')
   }
 
   // Login user
@@ -17,12 +17,12 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 1000) ) ,
 
       // Mock validation
       if(!credentials.email || !credentials.password) {
 
-        throw new Error('Email and password are required');
+        throw new Error('Email and password are required'),
       }
 
       // Mock successful login
@@ -33,23 +33,23 @@ class AuthService {
         name: 'John Doe',
         role: 'user',
         avatar: null,
-        createdAt: new Date().toISOString()};
+        createdAt: new Date().toISOString()},
 
-      const mockToken = 'mock-jwt-token-' + Date.now();
+      const mockToken = 'mock-jwt-token-' + Date.now(),
 
       // Store in localStorage
-      this.token = mockToken;
-      this.user = mockUser;
-      localStorage.setItem('token', mockToken);
-      localStorage.setItem('user', JSON.stringify(mockUser));
+      this.token = mockToken,
+      this.user = mockUser,
+      localStorage.setItem('token', mockToken),
+      localStorage.setItem('user', JSON.stringify(mockUser)),
 
       return {
 
         user: mockUser,
-        token: mockToken};
+        token: mockToken},
     } catch(error) {
 
-      throw new Error(error.message || 'Login failed');
+      throw new Error(error.message || 'Login failed'),
     }
   }
 
@@ -58,12 +58,12 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 1000) ) ,
 
       // Mock validation
       if(!userData.email || !userData.password || !userData.name) {
 
-        throw new Error('Name, email, and password are required');
+        throw new Error('Name, email, and password are required'),
       }
 
       // Mock successful registration
@@ -74,23 +74,23 @@ class AuthService {
         name: userData.name,
         role: 'user',
         avatar: null,
-        createdAt: new Date().toISOString()};
+        createdAt: new Date().toISOString()},
 
-      const mockToken = 'mock-jwt-token-' + Date.now();
+      const mockToken = 'mock-jwt-token-' + Date.now(),
 
       // Store in localStorage
-      this.token = mockToken;
-      this.user = mockUser;
-      localStorage.setItem('token', mockToken);
-      localStorage.setItem('user', JSON.stringify(mockUser));
+      this.token = mockToken,
+      this.user = mockUser,
+      localStorage.setItem('token', mockToken),
+      localStorage.setItem('user', JSON.stringify(mockUser)),
 
       return {
 
         user: mockUser,
-        token: mockToken};
+        token: mockToken},
     } catch(error) {
 
-      throw new Error(error.message || 'Registration failed');
+      throw new Error(error.message || 'Registration failed'),
     }
   }
 
@@ -98,56 +98,56 @@ class AuthService {
   async logout () {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout (resolve, 500) ) ;
+      await new Promise(resolve => setTimeout (resolve, 500) ) ,
 
       // Clear localStorage
-      this.token = null;
-      this.user = null;
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
+      this.token = null,
+      this.user = null,
+      localStorage.removeItem('token'),
+      localStorage.removeItem('user'),
 
-      return { success: true };
+      return { success: true },
     } catch(error) {
 
-      throw new Error(error.message || 'Logout failed');
+      throw new Error(error.message || 'Logout failed'),
     }
   }
 
   // Get current user
   getCurrentUser () {
-    return this.user;
+    return this.user,
   }
 
   // Check if user is authenticated
   isAuthenticated () {
-    return !!this.token && !!this.user;
+    return !!this.token && !!this.user,
   }
 
   // Get token
   getToken () {
-    return this.token;
+    return this.token,
   }
 
   // Refresh token
   async refreshToken () {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout (resolve, 500) ) ;
+      await new Promise(resolve => setTimeout (resolve, 500) ) ,
 
       if(!this.token) {
 
-        throw new Error('No token to refresh');
+        throw new Error('No token to refresh'),
       }
 
       // Mock token refresh'
-      const newToken = 'mock-jwt-token-refreshed-' + Date.now();
-      this.token = newToken;
-      localStorage.setItem('token', newToken);
+      const newToken = 'mock-jwt-token-refreshed-' + Date.now(),
+      this.token = newToken,
+      localStorage.setItem('token', newToken),
 
-      return { token: newToken };
+      return { token: newToken },
     } catch(error) {
 
-      throw new Error(error.message || 'Token refresh failed');
+      throw new Error(error.message || 'Token refresh failed'),
     }
   }
 
@@ -156,21 +156,21 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 1000) ) ,
 
       if(!this.user) {
 
-        throw new Error('User not authenticated');
+        throw new Error('User not authenticated'),
       }
 
       // Update user data
-      this.user = { ...this.user, ...profileData };
-      localStorage.setItem('user', JSON.stringify(this.user));
+      this.user = { ...this.user, ...profileData },
+      localStorage.setItem('user', JSON.stringify(this.user)),
 
-      return { user: this.user };
+      return { user: this.user },
     } catch(error) {
 
-      throw new Error(error.message || 'Profile update failed');
+      throw new Error(error.message || 'Profile update failed'),
     }
   }
 
@@ -179,23 +179,23 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 1000) ) ,
 
       if(!this.user) {
 
-        throw new Error('User not authenticated');
+        throw new Error('User not authenticated'),
       }
 
       if(!passwordData.currentPassword || !passwordData.newPassword) {
 
-        throw new Error('Current password and new password are required');
+        throw new Error('Current password and new password are required'),
       }
 
       // Mock password change'
-      return { success: true, message: 'Password changed successfully' };
+      return { success: true, message: 'Password changed successfully' },
     } catch(error) {
 
-      throw new Error(error.message || 'Password change failed');
+      throw new Error(error.message || 'Password change failed'),
     }
   }
 
@@ -204,18 +204,18 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 1000) ) ,
 
       if(!email) {
 
-        throw new Error('Email is required');
+        throw new Error('Email is required'),
       }
 
       // Mock password reset email'
-      return { success: true, message: 'Password reset email sent' };
+      return { success: true, message: 'Password reset email sent' },
     } catch(error) {
 
-      throw new Error(error.message || 'Password reset failed');
+      throw new Error(error.message || 'Password reset failed'),
     }
   }
 
@@ -224,23 +224,23 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 1000) ) ,
 
       if(!token || !newPassword) {
 
-        throw new Error('Token and new password are required');
+        throw new Error('Token and new password are required'),
       }
 
       // Mock password reset'
-      return { success: true, message: 'Password reset successfully' };
+      return { success: true, message: 'Password reset successfully' },
     } catch(error) {
 
-      throw new Error(error.message || 'Password reset failed');
+      throw new Error(error.message || 'Password reset failed'),
     }
   }
 }
 
 // Create and export a singleton instance
 
-const authService = new AuthService();
-export default authService;
+const authService = new AuthService(),
+export default authService,

@@ -1,17 +1,17 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Button } from "@/components/ui/button",
 import { Search, Sliders } from 'lucide-react'
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input",
 
 interface MobileFilterBarProps {
-  searchTerm: string;
-  setSearchTerm: (value: string) => void;
-  setIsMobileFilterOpen: (isOpen: boolean) => void;
+  searchTerm: string,
+  setSearchTerm: (value: string) => void,
+  setIsMobileFilterOpen: (isOpen: boolean) => void
 }
 
 export function MobileFilterBar({ 
-  searchTerm, 
+  searchTerm,
   setSearchTerm, 
   setIsMobileFilterOpen 
 }: MobileFilterBarProps) {
@@ -37,12 +37,12 @@ export function MobileFilterBar({
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
           aria-describedby="mobile-talent-search-help"
-          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate"
+          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate"
         />
         <p id="mobile-talent-search-help" className="sr-only">
           Search by name or skill
         </p>
       </div>
     </div>
-  );
+  )
 }

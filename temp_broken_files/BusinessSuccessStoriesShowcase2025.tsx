@@ -1,140 +1,140 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Users,
   DollarSign,
   Clock,
-  Target;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  ExternalLink;
-  Play;
-  BarChart3;
-  Zap;
-  Shield;
-  Globe;
-  Award;
-  Quote,
-} from 'lucide-react';
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  ExternalLink,
+  Play,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe,
+  Award,
+  Quote
+} from 'lucide-react',
 const BusinessSuccessStoriesShowcase2025 = () => {,
-  const [activeStorysetActiveStory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)300);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)300),
+    return () => clearTimeout(timer),
+  }[]),
   const successStories = [,
     {,
-      id: 'techcorp';
-      company: 'TechCorp Solutions';
-      industry: 'Technology';
-      logo: 'TC';
-      challenge: 'Struggling with manual data processing and slow decision-making processes';
-      solution: 'Implemented AI-powered analytics and automation systems';
+      id: 'techcorp',
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      logo: 'TC',
+      challenge: 'Struggling with manual data processing and slow decision-making processes',
+      solution: 'Implemented AI-powered analytics and automation systems',
       results: {,
-        revenue: '+340%';
-        efficiency: '+280%';
-        costReduction: '-65%';
-        timeSaved: '2,400 hours/month',
-      };
+        revenue: '+340%',
+        efficiency: '+280%',
+        costReduction: '-65%',
+        timeSaved: '2,400 hours/month'
+      },
       testimonial: {,
-        name: 'Sarah Johnson';
-        role: 'CEOTechCorp Solutions';
-        content: 'Zion Tech Group transformed our entire operation. The AI solutions they implemented increased our revenue by 340% and reduced operational costs by 65%. The ROI was evident within the first quarter.';
-        rating: 5,};
+        name: 'Sarah Johnson',
+        role: 'CEOTechCorp Solutions',
+        content: 'Zion Tech Group transformed our entire operation. The AI solutions they implemented increased our revenue by 340% and reduced operational costs by 65%. The ROI was evident within the first quarter.',
+        rating: 5},
       metrics: [,
-        { label: 'Revenue 'Growthvalue: '340%'icon: TrendingUpcolor: 'text-green-600' ,};
-        { label: 'Efficiency 'Gainvalue: '280%'icon: Zapcolor: 'text-blue-600' ,};
-        { label: 'Cost 'Reductionvalue: '65%'icon: DollarSigncolor: 'text-red-600' ,};
-        { label: 'Time 'Savedvalue: '2,400'hicon: Clockcolor: 'text-purple-600' ,}
-      ],
-    };
+        { label: 'Revenue 'Growthvalue: '340%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Efficiency 'Gainvalue: '280%'icon: Zapcolor: 'text-blue-600' },
+        { label: 'Cost 'Reductionvalue: '65%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Savedvalue: '2,400'hicon: Clockcolor: 'text-purple-600' }
+      ]
+    },
     {,
-      id: 'retailmax';
-      company: 'RetailMax';
-      industry: 'E-commerce';
-      logo: 'RM';
-      challenge: 'Low conversion rates and poor customer experience leading to declining sales';
-      solution: 'Deployed AI-powered personalization and customer service automation';
+      id: 'retailmax',
+      company: 'RetailMax',
+      industry: 'E-commerce',
+      logo: 'RM',
+      challenge: 'Low conversion rates and poor customer experience leading to declining sales',
+      solution: 'Deployed AI-powered personalization and customer service automation',
       results: {,
-        revenue: '+520%';
-        efficiency: '+180%';
-        costReduction: '-45%';
-        timeSaved: '1,800 hours/month',
-      };
+        revenue: '+520%',
+        efficiency: '+180%',
+        costReduction: '-45%',
+        timeSaved: '1,800 hours/month'
+      },
       testimonial: {,
-        name: 'Michael Chen';
-        role: 'CTORetailMax';
-        content: 'The AI personalization engine they built increased our conversion rates by 520%. Our customers love the personalized experienceand we\'ve seen a dramatic improvement in customer satisfaction.';
-        rating: 5,};
+        name: 'Michael Chen',
+        role: 'CTORetailMax',
+        content: 'The AI personalization engine they built increased our conversion rates by 520%. Our customers love the personalized experienceand we\'ve seen a dramatic improvement in customer satisfaction.',
+        rating: 5},
       metrics: [,
-        { label: 'Revenue 'Growthvalue: '520%'icon: TrendingUpcolor: 'text-green-600' ,};
-        { label: 'Conversion 'Ratevalue: '180%'icon: Targetcolor: 'text-blue-600' ,};
-        { label: 'Cost 'Reductionvalue: '45%'icon: DollarSigncolor: 'text-red-600' ,};
-        { label: 'Time 'Savedvalue: '1,800'hicon: Clockcolor: 'text-purple-600' ,}
-      ],
-    };
+        { label: 'Revenue 'Growthvalue: '520%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Conversion 'Ratevalue: '180%'icon: Targetcolor: 'text-blue-600' },
+        { label: 'Cost 'Reductionvalue: '45%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Savedvalue: '1,800'hicon: Clockcolor: 'text-purple-600' }
+      ]
+    },
     {,
-      id: 'healthcareplus';
-      company: 'HealthcarePlus';
-      industry: 'Healthcare';
-      logo: 'HP';
-      challenge: 'Manual patient data processing and inefficient appointment scheduling';
-      solution: 'Implemented AI-driven patient management and automated scheduling systems';
+      id: 'healthcareplus',
+      company: 'HealthcarePlus',
+      industry: 'Healthcare',
+      logo: 'HP',
+      challenge: 'Manual patient data processing and inefficient appointment scheduling',
+      solution: 'Implemented AI-driven patient management and automated scheduling systems',
       results: {,
-        revenue: '+280%';
-        efficiency: '+320%';
-        costReduction: '-55%';
-        timeSaved: '3,200 hours/month',
-      };
+        revenue: '+280%',
+        efficiency: '+320%',
+        costReduction: '-55%',
+        timeSaved: '3,200 hours/month'
+      },
       testimonial: {,
-        name: 'Dr. Emily Rodriguez';
-        role: 'Medical DirectorHealthcarePlus';
-        content: 'The AI patient management system has revolutionized our practice. We can now serve 320% more patients with the same resourcesand patient satisfaction has never been higher.';
-        rating: 5,};
+        name: 'Dr. Emily Rodriguez',
+        role: 'Medical DirectorHealthcarePlus',
+        content: 'The AI patient management system has revolutionized our practice. We can now serve 320% more patients with the same resourcesand patient satisfaction has never been higher.',
+        rating: 5},
       metrics: [,
-        { label: 'Revenue 'Growthvalue: '280%'icon: TrendingUpcolor: 'text-green-600' ,};
-        { label: 'Patient 'Capacityvalue: '320%'icon: Userscolor: 'text-blue-600' ,};
-        { label: 'Cost 'Reductionvalue: '55%'icon: DollarSigncolor: 'text-red-600' ,};
-        { label: 'Time 'Savedvalue: '3,200'hicon: Clockcolor: 'text-purple-600' ,}
-      ],
-    };
+        { label: 'Revenue 'Growthvalue: '280%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Patient 'Capacityvalue: '320%'icon: Userscolor: 'text-blue-600' },
+        { label: 'Cost 'Reductionvalue: '55%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Savedvalue: '3,200'hicon: Clockcolor: 'text-purple-600' }
+      ]
+    },
     {,
-      id: 'financeflow';
-      company: 'FinanceFlow';
-      industry: 'Financial Services';
-      logo: 'FF';
-      challenge: 'Complex financial data analysis and compliance reporting taking too long';
-      solution: 'Deployed AI-powered financial analytics and automated compliance systems';
+      id: 'financeflow',
+      company: 'FinanceFlow',
+      industry: 'Financial Services',
+      logo: 'FF',
+      challenge: 'Complex financial data analysis and compliance reporting taking too long',
+      solution: 'Deployed AI-powered financial analytics and automated compliance systems',
       results: {,
-        revenue: '+450%';
-        efficiency: '+400%';
-        costReduction: '-70%';
-        timeSaved: '4,100 hours/month',
-      };
+        revenue: '+450%',
+        efficiency: '+400%',
+        costReduction: '-70%',
+        timeSaved: '4,100 hours/month'
+      },
       testimonial: {,
-        name: 'David Kim';
-        role: 'CFOFinanceFlow';
-        content: 'The AI financial analytics platform has been a game-changer. We can now process complex financial data 400% faster and ensure 100% compliance with regulations. The accuracy is remarkable.';
-        rating: 5,};
+        name: 'David Kim',
+        role: 'CFOFinanceFlow',
+        content: 'The AI financial analytics platform has been a game-changer. We can now process complex financial data 400% faster and ensure 100% compliance with regulations. The accuracy is remarkable.',
+        rating: 5},
       metrics: [,
-        { label: 'Revenue 'Growthvalue: '450%'icon: TrendingUpcolor: 'text-green-600' ,};
-        { label: 'Processing 'Speedvalue: '400%'icon: Zapcolor: 'text-blue-600' ,};
-        { label: 'Cost 'Reductionvalue: '70%'icon: DollarSigncolor: 'text-red-600' ,};
-        { label: 'Time 'Savedvalue: '4,100'hicon: Clockcolor: 'text-purple-600' ,}
-      ],
+        { label: 'Revenue 'Growthvalue: '450%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Processing 'Speedvalue: '400%'icon: Zapcolor: 'text-blue-600' },
+        { label: 'Cost 'Reductionvalue: '70%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Savedvalue: '4,100'hicon: Clockcolor: 'text-purple-600' }
+      ]
     }
-  ];
+  ],
   const overallStats = [,
-    { number: '500+'label: 'Successful 'Projectsicon: CheckCircle ,};
-    { number: '99.9%'label: 'Client 'Satisfactionicon: Star ,};
-    { number: '350%'label: 'Average 'ROIicon: TrendingUp ,};
-    { number: '50+'label: 'Countries 'Servedicon: Globe ,}
-  ];
-  if (!isVisible) return null;
+    { number: '500+'label: 'Successful 'Projectsicon: CheckCircle },
+    { number: '99.9%'label: 'Client 'Satisfactionicon: Star },
+    { number: '350%'label: 'Average 'ROIicon: TrendingUp },
+    { number: '50+'label: 'Countries 'Servedicon: Globe }
+  ],
+  if (!isVisible) return null,
   return (,
     <div className="relative bg-gradient-to-br from-slate-50 via-white to-green-50 py-20 overflow-hidden">,
       {/* Background Elements */}
@@ -142,7 +142,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-l from-green-400/20 to-blue-400/20 rounded-full blur-3xl -z-10" />,
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl -z-10" />,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -153,19 +153,18 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
             Discover how leading companies across industries have transformed their operations and achieved unprecedented growth with our AI and technology solutions.,
           </p>,
         </div>,
-        {/* Overall Stats */,}
+        {/* Overall Stats */}
         <div,
           className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16",
         >,
           {overallStats.map((statindex) => (,
-            <div key={index,} className="bg-white rounded-2xl p-6 shadow-lg text-center">,
+            <div key={index} className="bg-white rounded-2xl p-6 shadow-lg text-center">,
               <div className="flex justify-center mb-3">,
                 <stat.icon className="w-8 h-8 text-green-600" />,
               </div>,
               <div className="text-3xl font-bold text-slate-900 mb-1">{stat.number}</div>,
               <div className="text-sm text-slate-600">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Success Stories Navigation */}
         <div,
@@ -178,7 +177,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                 activeStory === index,
                   ? 'bg-green-600 text-white shadow-lg shadow-green-600/25',
-                  : 'bg-white text-slate-600 hover: bg-green-50 hover:text-green-600 border border-slate-200',}`}
+                  : 'bg-white text-slate-600 hover: bg-green-50 hover:text-green-600 border border-slate-200'}`}
             >,
               {story.company}
             </button>,
@@ -190,7 +189,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
             className="bg-white rounded-3xl p-8 shadow-xl mb-16",
           >,
             <div className="grid lg: grid-cols-2 gap-8">,
-              {/* Story Details */,}
+              {/* Story Details */}
               <div>,
                 <div className="flex items-center mb-6">,
                   <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-4">,
@@ -203,9 +202,9 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
                 </div>,
                 <div className="mb-6">,
                   <h4 className="font-semibold text-slate-900 mb-2">Challenge: </h4>,
-                  <p className="text-slate-600 mb-4">{successStories[activeStory].challenge,}</p>,
+                  <p className="text-slate-600 mb-4">{successStories[activeStory].challenge}</p>,
                   <h4 className="font-semibold text-slate-900 mb-2">Solution: </h4>,
-                  <p className="text-slate-600 mb-4">{successStories[activeStory].solution,}</p>,
+                  <p className="text-slate-600 mb-4">{successStories[activeStory].solution}</p>,
                 </div>,
                 <div className="grid grid-cols-2 gap-4">,
                   {successStories[activeStory].metrics.map((metricindex) => (,
@@ -213,8 +212,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
                       <metric.icon className={`w-6 h-6 mx-auto mb-2 ${metric.color}`} />,
                       <div className="text-2xl font-bold text-slate-900">{metric.value}</div>,
                       <div className="text-sm text-slate-600">{metric.label}</div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Testimonial */}
@@ -232,8 +230,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
                   </div>,
                   <div className="flex items-center">,
                     {[...Array(successStories[activeStory].testimonial.rating)].map((_i) => (,
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />,
-                    ))}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />))}
                   </div>,
                 </div>,
               </div>,
@@ -269,7 +266,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div,
           className="text-center",
         >,
@@ -290,6 +287,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default BusinessSuccessStoriesShowcase2025;
+  )},
+export default BusinessSuccessStoriesShowcase2025,
 </div></div>,

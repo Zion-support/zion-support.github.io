@@ -1,5 +1,5 @@
-import React from 'react';
-import { SEO } from '@/components / SEO';
+import React from 'react',
+import { SEO } from '@/components / SEO',
 export default function Page() {
 ,
   { name: 'Ecommerce Personalization', path: '/services / ecommerce - personalization', summary: 'Recommendations, bundles, and search tuning.', price: '$499–$2k / mo', category: 'AI Solutions' },
@@ -29,14 +29,14 @@ export default function Page() {
   { name: 'Data Warehouse Modernization', path: '/services / dwh-modernization', summary: 'Snowflake / BigQuery migration, ELT, lineage and governance.', price: '$15k–$120k project', category: 'IT Services' },
   { name: 'SOC2 / ISO 27001 Readiness', path: '/services / soc2 - iso - readiness', summary: 'Policies, controls, evidence automation, and gap closure.', price: '$8k–$45k project', category: 'IT Services' },
   { name: 'FinOps Advisory Sprint', path: '/services / finops - advisory - sprint', summary: '90 - day cost optimization with KPIs and automation.', price: '$9k–$35k fixed', category: 'IT Services' }
-];
+],
 
-  return acc}, {}) ;
+  return acc}, {}) ,
 
-          <p className="text-slate -300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
-          <p className="text-slate - 400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+          <p className="text-slate -300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>,
+          <p className="text-slate - 400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>,
+        </div>,
+      </section>,
+    </div>,) ,
+},
 

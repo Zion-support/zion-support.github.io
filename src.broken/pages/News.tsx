@@ -1,4 +1,4 @@
-import { Calendar, User, Tag, ArrowRight, ExternalLink  } from 'lucide-react';
+import { Calendar, User, Tag, ArrowRight, ExternalLink  } from 'lucide-react',
 export default function Page() {
 ,
     {
@@ -23,16 +23,13 @@ export default function Page() {
       image: '/images / news / european - expansion.jpg',
       href: '/news / european - market - expansion'
     }
-  ];
-  const categories = ['All News',
-    'Product Launch',
-    'Research',
-    'Awards',
-    'Partnerships',
-    'Technology',
+  ],
+  const categories = ['All NewsProduct Launch',
+    'ResearchAwards',
+    'PartnershipsTechnology',
     'Business'
-  ];
-  const featuredArticle = newsArticles[0];
+  ],
+  const featuredArticle = newsArticles[0],
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
         title="News - Zion Tech Group"
@@ -206,7 +203,7 @@ export default function Page() {
             <p className="text-xl text-gray - 300 mb-8">
               Subscribe to our newsletter to receive the latest news,
               product updates, and industry insights directly in your inbox.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify - center max - w-md mx -auto">
+            <div className="flex flex - col sm: flex - row gap-4 justify - center max - w-md mx -auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -219,6 +216,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>;) ;
-};
+    </div>,) 
+},
 

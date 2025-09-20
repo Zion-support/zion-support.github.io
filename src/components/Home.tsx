@@ -1,83 +1,45 @@
-import React, { useState, useEffect, useCallback, useMemo, lazy, Suspense } from 'react';
-import PricingSection from './PricingSection';
-import NewsletterSignup from './NewsletterSignup';
-
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 const Home: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const [hoveredService, setHoveredService] = useState<number | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false),
+  const [scrollY, setScrollY] = useState(0),
+  const [hoveredService, setHoveredService] = useState<number | null>(null),
 
   const handleScroll = useCallback(() => {
-    setScrollY(window.scrollY);
-  }, []);
+    setScrollY(window.scrollY),
+  }, []),
 
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true),
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Performance optimization: Preload critical resources
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = '/images/hero-bg.jpg';
-    link.as = 'image';
-    document.head.appendChild(link);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.head.removeChild(link);
-    };
-  }, [handleScroll]);
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, [handleScroll]),
 
   const services = useMemo(() => [
     {
-      title: "AI Services",
-      description: "Cutting-edge artificial intelligence solutions for your business needs.",
-      icon: "🤖",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
-      gradient: "from-purple-500 to-pink-500",
-      price: "Starting at $5,000/month"
+      title: "AI Services",description: "Cutting-edge artificial intelligence solutions for your business needs.",icon: "🤖",features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+      gradient: "from-purple-500 to-pink-500",price: "Starting at $5,000/month"
     },
     {
-      title: "Micro SaaS",
-      description: "Scalable micro software-as-a-service solutions.",
-      icon: "⚡",
-      features: ["Rapid Deployment", "Scalable Architecture", "API Integration", "Cloud Native"],
-      gradient: "from-blue-500 to-cyan-500",
-      price: "Starting at $2,500/month"
+      title: "Micro SaaS",description: "Scalable micro software-as-a-service solutions.",icon: "⚡",features: ["Rapid Deployment", "Scalable Architecture", "API Integration", "Cloud Native"],
+      gradient: "from-blue-500 to-cyan-500",price: "Starting at $2,500/month"
     },
     {
-      title: "IT Services",
-      description: "Comprehensive IT support and consulting services.",
-      icon: "💻",
-      features: ["Infrastructure Management", "Security Solutions", "Cloud Migration", "24/7 Support"],
-      gradient: "from-green-500 to-emerald-500",
-      price: "Starting at $3,000/month"
+      title: "IT Services",description: "Comprehensive IT support and consulting services.",icon: "💻",features: ["Infrastructure Management", "Security Solutions", "Cloud Migration", "24/7 Support"],
+      gradient: "from-green-500 to-emerald-500",price: "Starting at $3,000/month"
     },
     {
-      title: "Quantum Computing",
-      description: "Next-generation quantum computing solutions.",
-      icon: "⚛️",
-      features: ["Quantum Algorithms", "Quantum Simulation", "Optimization", "Research & Development"],
-      gradient: "from-indigo-500 to-purple-500",
-      price: "Starting at $10,000/month"
+      title: "Quantum Computing",description: "Next-generation quantum computing solutions.",icon: "⚛️",features: ["Quantum Algorithms", "Quantum Simulation", "Optimization", "Research & Development"],
+      gradient: "from-indigo-500 to-purple-500",price: "Starting at $10,000/month"
     },
     {
-      title: "Blockchain",
-      description: "Decentralized solutions and smart contracts.",
-      icon: "🔗",
-      features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Web3 Integration"],
-      gradient: "from-orange-500 to-red-500",
-      price: "Starting at $4,000/month"
+      title: "Blockchain",description: "Decentralized solutions and smart contracts.",icon: "🔗",features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Web3 Integration"],
+      gradient: "from-orange-500 to-red-500",price: "Starting at $4,000/month"
     },
     {
-      title: "Space Technology",
-      description: "Advanced aerospace and satellite solutions.",
-      icon: "🚀",
-      features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
-      gradient: "from-sky-500 to-blue-500",
-      price: "Starting at $15,000/month"
+      title: "Space Technology",description: "Advanced aerospace and satellite solutions.",icon: "🚀",features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
+      gradient: "from-sky-500 to-blue-500",price: "Starting at $15,000/month"
     }
-  ], []);
+  ], []),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
@@ -93,9 +55,9 @@ const Home: React.FC = () => {
               key={i}
               className="absolute w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
+                left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`;
+                animationDelay: `${Math.random() * 3}s`;
                 animationDuration: `${2 + Math.random() * 3}s`
               }}
             />
@@ -157,7 +119,7 @@ const Home: React.FC = () => {
                       </div>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-gray-400 flex items-center group-hover:text-gray-300 transition-colors duration-300">
+                          <li key={featureIndex} className="text-gray-400 flex items-center group-hover: text-gray-300 transition-colors duration-300">
                             <span className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-3 transition-all duration-300 ${hoveredService === index ? 'scale-125' : ''}`}></span>
                             {feature}
                           </li>
@@ -207,27 +169,22 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
-                      title: "Zion AI Platform 2.0 Released",
-                      date: "September 20, 2025",
-                      excerpt: "Revolutionary new features including advanced quantum computing integration and enhanced AI capabilities.",
-                      category: "Product Update"
-                    },
+                      title: "Zion AI Platform 2.0 Released",date: "September 20, 2025",
+                      excerpt: "Revolutionary new features including advanced quantum computing integration and enhanced AI capabilities.",category: "Product Update"
+                    };
                     {
-                      title: "Partnership with SpaceX Announced",
-                      date: "September 18, 2025",
-                      excerpt: "Collaborating on next-generation space technology solutions for commercial and research applications.",
-                      category: "Partnership"
-                    },
+                      title: "Partnership with SpaceX Announced",date: "September 18, 2025",
+                      excerpt: "Collaborating on next-generation space technology solutions for commercial and research applications.",category: "Partnership"
+                    };
                     {
-                      title: "Quantum Computing Breakthrough",
-                      date: "September 15, 2025",
+                      title: "Quantum Computing Breakthrough",date: "September 15, 2025",
                       excerpt: "Our research team achieves 99.9% quantum error correction, paving the way for practical quantum applications.",
                       category: "Research"
                     }
                   ].map((news, index) => (
                     <div
                       key={index}
-                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover: bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                     >
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-sm font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full">
@@ -248,9 +205,6 @@ const Home: React.FC = () => {
             </div>
           </section>
 
-          {/* Pricing Section */}
-          <PricingSection />
-
           {/* Testimonials Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
@@ -261,22 +215,16 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
-                      name: "Sarah Johnson",
-                      role: "CTO, TechCorp",
-                      content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",
-                      rating: 5
-                    },
+                      name: "Sarah Johnson",role: "CTO, TechCorp",
+                      content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",rating: 5
+                    };
                     {
-                      name: "Michael Chen",
-                      role: "CEO, InnovateLab",
-                      content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",
-                      rating: 5
-                    },
+                      name: "Michael Chen",role: "CEO, InnovateLab",
+                      content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",rating: 5
+                    };
                     {
-                      name: "Emily Rodriguez",
-                      role: "VP Engineering, SpaceTech",
-                      content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",
-                      rating: 5
+                      name: "Emily Rodriguez",role: "VP Engineering, SpaceTech",
+                      content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",rating: 5
                     }
                   ].map((testimonial, index) => (
                     <div
@@ -300,14 +248,11 @@ const Home: React.FC = () => {
             </div>
           </section>
 
-          {/* Newsletter Signup */}
-          <NewsletterSignup />
-
           {/* CTA Section */}
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className={`transition-all duration-1000 delay-900 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
+                <h2 className="text-4xl md: text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
                 <p className="text-xl text-gray-300 mb-12">
                   Join hundreds of companies already using our cutting-edge technology solutions
                 </p>
@@ -325,7 +270,6 @@ const Home: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default Home;

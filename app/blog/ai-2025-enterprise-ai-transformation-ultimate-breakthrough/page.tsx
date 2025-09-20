@@ -1,10 +1,10 @@
-import React from 'react';
-import SEO from '../../components/SEO';
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025: The Enterprise AI Transformation Ultimate Breakthrough - 1,500% ROI in 6 Months';
-  description: 'Discover the proven methodologies that Fortune 500 companies are using to achieve 1,500% ROI within 6 months through comprehensive AI transformation strategies.';
-  keywords: ['AI transformationenterprise AI', 'ROIFortune 500', 'digital transformationAI strategy'],
-};
+  title: 'AI 2025: The Enterprise AI Transformation Ultimate Breakthrough - 1,500% ROI in 6 Months',
+  description: 'Discover the proven methodologies that Fortune 500 companies are using to achieve 1,500% ROI within 6 months through comprehensive AI transformation strategies.',
+  keywords: ['AI transformationenterprise AIROIFortune 500', 'digital transformationAI strategy']
+},
 export default function AI2025EnterpriseAITransformationUltimateBreakthrough() {,
   return (,
     <div>,
@@ -169,7 +169,7 @@ export default function AI2025EnterpriseAITransformationUltimateBreakthrough() {
             </div>,
           </div>,
         </section>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -205,5 +205,4 @@ export default function AI2025EnterpriseAITransformationUltimateBreakthrough() {
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

@@ -1,54 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target } from "lucide-react";
 export default function AIBusinessIntelligence() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Intelligent analysis and predictive modeling'
-    },
+      icon: Brain,title: 'AI-Powered Insights',description: 'Intelligent analysis and predictive modeling'
+    };
     {
-      icon: BarChart3,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization and reporting'
-    },
+      icon: BarChart3,title: 'Real-time Analytics',description: 'Live data visualization and reporting'
+    };
     {
-      icon: Zap,
-      title: 'Automated Intelligence',
-      description: 'Smart automation of business processes'
-    },
+      icon: Zap,title: 'Automated Intelligence',description: 'Smart automation of business processes'
+    };
     {
-      icon: Eye,
-      title: 'Predictive Analytics',
-      description: 'Forecast trends and identify opportunities'
+      icon: Eye,title: 'Predictive Analytics',description: 'Forecast trends and identify opportunities'
     }
   ];
-
   const capabilities = [
     {
-      title: 'Business Intelligence Dashboard',
-      description: 'Comprehensive view of all business metrics and KPIs',
-      icon: BarChart3
-    },
+      title: 'Business Intelligence Dashboard',description: 'Comprehensive view of all business metrics and KPIs',icon: BarChart3
+    };
     {
-      title: 'Predictive Modeling',
-      description: 'AI algorithms to forecast business outcomes',
-      icon: TrendingUp
-    },
+      title: 'Predictive Modeling',description: 'AI algorithms to forecast business outcomes',icon: TrendingUp
+    };
     {
-      title: 'Natural Language Query',
-      description: 'Ask questions in plain English and get instant answers',
-      icon: Database
-    },
+      title: 'Natural Language Query',description: 'Ask questions in plain English and get instant answers',icon: Database
+    };
     {
-      title: 'Automated Reporting',
-      description: 'Generate reports automatically with AI insights',
-      icon: Target
+      title: 'Automated Reporting',description: 'Generate reports automatically with AI insights',icon: Target
     }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -305,7 +286,7 @@ export default function AIBusinessIntelligence() {
               <p className="text-xl text-violet-100 mb-8 max-w-2xl mx-auto">
                 Join thousands of businesses using AI to make smarter decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-white text-violet-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
                   Start Free Trial
                 </button>
@@ -318,7 +299,7 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
 // Missing icon component

@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="text-center bg-gradient - to - r from - blue - 600 to - purple - 600 rounded-2xl p -12">
@@ -9,7 +9,7 @@ export default function Page() {
               Join the future of autonomous research and discover breakthroughs
               faster than ever before
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-blue - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Start Free Trial
               </button>
@@ -20,5 +20,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

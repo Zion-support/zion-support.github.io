@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { logDev, logError } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
+import React, { useState } from 'react',
+import { logDev, logError } from '@/utils/productionLogger',
+import { useRouter } from 'next/router',
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
+import { RatingStars } from "@/components/RatingStars",
+import { FavoriteButton } from "@/components/FavoriteButton",
 
 interface ProductListingCardProps {
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  listing: ProductListing,
+  view?: 'grid' | 'list',
+  onRequestQuote?: (id: string) => void,
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
-  detailBasePath?: string;
+  detailBasePath?: string
 }
 
 export function ProductListingCard({
@@ -25,113 +25,113 @@ export function ProductListingCard({
   onRequestQuote,
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-  const router = useRouter(); // Changed from useNavigate
-  const [loading, setLoading] = useState(false);
+  const isGrid = view === 'grid',
+  const router = useRouter(), // Changed from useNavigate
+  const [loading, setLoading] = useState(false),
   
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
-    : '/placeholder.svg';
+    : '/placeholder.svg',
     
   // Format price display
   const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  };
+    if (listing.price === null) return "Custom pricing",
+    return `${listing.currency}${listing.price.toLocaleString()}`,
+  },
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg';
-  };
+    e.currentTarget.src = '/placeholder.svg'
+  },
   
   // Handle navigating to listing detail
   const handleViewListing = () => {
     // Debug logging for development
     if (process.env.NODE_ENV === 'development') {
-      logDev('[ProductCard] Navigating to:', `${detailBasePath}/${listing.id}`);
-      logDev('[ProductCard] Listing ID:', listing.id);
-      logDev('[ProductCard] Listing Title:', listing.title);
+      logDev('[ProductCard] Navigating to:', `${detailBasePath}/${listing.id}`),
+      logDev('[ProductCard] Listing ID:', listing.id),
+      logDev('[ProductCard] Listing Title:', listing.title),
     }
     
     // Validate listing ID exists before navigation
     if (!listing.id) {
-      logError('[ProductCard] Missing listing ID, cannot navigate');
+      logError('[ProductCard] Missing listing ID, cannot navigate'),
       toast({
         title: "Navigation Error",
         description: "Product information is incomplete",
-        variant: "destructive",
-      });
-      return;
+        variant: "destructive"
+      }),
+      return,
     }
     
-    router.push(`${detailBasePath}/${listing.id}`);
-  };
+    router.push(`${detailBasePath}/${listing.id}`),
+  },
 
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch<AppDispatch>(),
 
   const addToCart = () => {
-    setLoading(true);
+    setLoading(true),
     dispatch(
       addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
-    );
-    setLoading(false);
-    router.push('/cart');
-  };
+    ),
+    setLoading(false),
+    router.push('/cart'),
+  },
   
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
+      onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
-      router.push(`/request-quote?listing=${listing.id}`);
+      router.push(`/request-quote?listing=${listing.id}`),
     }
-  };
+  },
 
   const handleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     if (!user) {
-      toast.info('Log in to save favorites');
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
+      toast.info('Log in to save favorites'),
+      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`),
+      return,
     }
-    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing }));
+    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing })),
     fetch(`${getApiUrl()}/wishlist`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: listing.id, type: 'product' }),
-    }).catch(() => {});
-  };
+      body: JSON.stringify({ id: listing.id, type: 'product' })
+    }).catch(() => {}),
+  },
   
   return (
     <div
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      data-testid= "equipment-link";'`
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
-      onClick={handleViewListing};
-      tabIndex={0};"
-      ;
-      onKeyDown={(e) => {;
-        if(e.key === 'Enter' || e.key === ' ') {;
-          e.preventDefault () ;
+      data-testid= "equipment-link",'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`},
+      onClick={handleViewListing},
+      tabIndex={0},"
+      ,
+      onKeyDown={(e) => {,
+        if(e.key === 'Enter' || e.key === ' ') {,
+          e.preventDefault () ,
           handleViewListing () }
       }}
 
       {/* Image */}
       <div'
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
-        onClick={handleViewListing} // Keep existing onClick for navigation;"
-        ;
-        tabIndex={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={(e) => {;
-          if(e.key === 'Enter' || e.key === ' ') {;
-            e.preventDefault () ;
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'},
+        onClick={handleViewListing} // Keep existing onClick for navigation,"
+        ,
+        tabIndex={-1} // Remove from tab order as parent is focusable,
+        onKeyDown={(e) => {,
+          if(e.key === 'Enter' || e.key === ' ') {,
+            e.preventDefault () ,
             handleViewListing () }
         }}
       >`
@@ -242,18 +242,18 @@ export function ProductListingCard({
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
 
                 Request Quote
-              </Button>) };
-          </div>;
-        </div>;
-      </div>;
-    </div>;) }
-export default React.memo(ProductListingCard);
+              </Button>) },
+          </div>,
+        </div>,
+      </div>,
+    </div>,) }
+export default React.memo(ProductListingCard),
 
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
+export default ProductListingCard,
+export default ProductListingCard,
+export default ProductListingCard,
+export default ProductListingCard,
+export default ProductListingCard,
+export default ProductListingCard,
+export default ProductListingCard,
 '"`

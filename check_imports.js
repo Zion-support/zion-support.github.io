@@ -1,37 +1,37 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs',
+import path from 'path',
 // Read App.tsx,
-const appContent = fs.readFileSync('/workspace/src/App.tsxutf8');
+const appContent = fs.readFileSync('/workspace/src/App.tsxutf8'),
 // Extract all imports from './pages/',
-const importRegex = /import\s+(\w+)\s+from\s+['"]\.\/pages\/([^'"]+)['"]/g;
-const imports = [];
-let match;
+const importRegex = /import\s+(\w+)\s+from\s+['"]\.\/pages\/([^'"]+)['"]/g,
+const imports = [],
+let match,
 while ((match = importRegex.exec(appContent)) !== null) {,
   imports.push({,
-    componentName: match[1];
-    filePath: match[2];
-    fullPath: `/workspace/src/pages/${match[2],}.tsx`,
-  });
+    componentName: match[1],
+    filePath: match[2],
+    fullPath: `/workspace/src/pages/${match[2]}.tsx`
+  }),
 }
 ,
-console.log('Checking imports...\n');
-const missingImports = [];
-const existingImports = [];
+console.log('Checking imports...\n'),
+const missingImports = [],
+const existingImports = [],
 imports.forEach(imp => {,
   if (fs.existsSync(imp.fullPath)) {,
-    existingImports.push(imp);
-    console.log(`✓ ${imp.componentName} -> ${imp.filePath}`);
+    existingImports.push(imp),
+    console.log(`✓ ${imp.componentName} -> ${imp.filePath}`),
   } else {,
-    missingImports.push(imp);
-    console.log(`✗ ${imp.componentName} -> ${imp.filePath} (MISSING)`);
+    missingImports.push(imp),
+    console.log(`✗ ${imp.componentName} -> ${imp.filePath} (MISSING)`),
   }
-});
-console.log(`\nSummary: `);
-console.log(`- Existing imports: ${existingImports.length,}`);
-console.log(`- Missing imports: ${missingImports.length,}`);
+}),
+console.log(`\nSummary: `),
+console.log(`- Existing imports: ${existingImports.length}`),
+console.log(`- Missing imports: ${missingImports.length}`),
 if (missingImports.length > 0) {,
-  console.log('\nMissing files: ');
+  console.log('\nMissing files: '),
   missingImports.forEach(imp => {,
-    console.log(`  - ${imp.filePath}.tsx`);
-  });
+    console.log(`  - ${imp.filePath}.tsx`),
+  }),
 }

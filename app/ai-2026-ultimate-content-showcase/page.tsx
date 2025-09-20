@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2026 Ultimate Content Showcase - Zion Tech Group';
-  description: 'Explore the most comprehensive collection of AI 2026 content: Quantum Computing, Enterprise Automation, Neural Interfaces, and Autonomous Systems.';
-  keywords: ['AI 2026quantum computing', 'enterprise automationneural interfaces', 'autonomous systemsAI research'],
-};
+  title: 'AI 2026 Ultimate Content Showcase - Zion Tech Group',
+  description: 'Explore the most comprehensive collection of AI 2026 content: Quantum Computing, Enterprise Automation, Neural Interfaces, and Autonomous Systems.',
+  keywords: ['AI 2026quantum computingenterprise automationneural interfaces', 'autonomous systemsAI research']
+},
 export default function AI2026UltimateContentShowcase() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">,
@@ -29,7 +29,7 @@ export default function AI2026UltimateContentShowcase() {,
           </div>,
           {/* Featured Content Grid */}
           <div className="grid lg: grid-cols-2 gap-8 mb-16">,
-            {/* Quantum Computing */,}
+            {/* Quantum Computing */}
             <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30">,
               <div className="flex items-center mb-6">,
                 <div className="text-5xl mr-4">⚡</div>,
@@ -64,7 +64,7 @@ export default function AI2026UltimateContentShowcase() {,
                 Read the Revolution →,
               </Link>,
             </div>,
-            {/* Enterprise Automation */,}
+            {/* Enterprise Automation */}
             <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">,
               <div className="flex items-center mb-6">,
                 <div className="text-5xl mr-4">🤖</div>,
@@ -74,7 +74,7 @@ export default function AI2026UltimateContentShowcase() {,
                 </div>,
               </div>,
               <p className="text-lg opacity-90 mb-6 leading-relaxed">,
-                Complete guide to transforming enterprises with next-generation AI automation;
+                Complete guide to transforming enterprises with next-generation AI automation,
                 intelligent workflows, and autonomous business operations.,
               </p>,
               <div className="grid grid-cols-2 gap-4 mb-6">,
@@ -100,9 +100,9 @@ export default function AI2026UltimateContentShowcase() {,
               </Link>,
             </div>,
           </div>,
-          {/* Additional Content Sections */,}
+          {/* Additional Content Sections */}
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
-            {/* Neural Interfaces */,}
+            {/* Neural Interfaces */}
             <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">,
               <div className="text-4xl mb-4">🧬</div>,
               <div className="text-pink-300 text-sm font-semibold mb-2">NEURAL INTERFACES</div>,
@@ -112,7 +112,7 @@ export default function AI2026UltimateContentShowcase() {,
                 Explore →,
               </Link>,
             </div>,
-            {/* Autonomous Systems */,}
+            {/* Autonomous Systems */}
             <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">,
               <div className="text-4xl mb-4">🌐</div>,
               <div className="text-blue-300 text-sm font-semibold mb-2">AUTONOMOUS SYSTEMS</div>,
@@ -122,7 +122,7 @@ export default function AI2026UltimateContentShowcase() {,
                 Explore →,
               </Link>,
             </div>,
-            {/* Quantum AI */,}
+            {/* Quantum AI */}
             <div className="bg-gradient-to-br from-purple-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">,
               <div className="text-4xl mb-4">🧠</div>,
               <div className="text-purple-300 text-sm font-semibold mb-2">QUANTUM AI</div>,
@@ -133,7 +133,7 @@ export default function AI2026UltimateContentShowcase() {,
               </Link>,
             </div>,
           </div>,
-          {/* Impact Metrics */,}
+          {/* Impact Metrics */}
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-purple-400/30">,
             <h3 className="text-3xl font-bold text-center mb-8">Revolutionary Impact Metrics</h3>,
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,
@@ -155,7 +155,7 @@ export default function AI2026UltimateContentShowcase() {,
               </div>,
             </div>,
           </div>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <div className="text-center">,
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 mb-8">,
               <h3 className="text-3xl font-bold mb-4">Join the AI Revolution</h3>,
@@ -178,7 +178,7 @@ export default function AI2026UltimateContentShowcase() {,
               </div>,
             </div>,
           </div>,
-          {/* Related Content */,}
+          {/* Related Content */}
           <div className="mt-16">,
             <h3 className="text-2xl font-bold text-center mb-8">More Revolutionary Content</h3>,
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -198,6 +198,5 @@ export default function AI2026UltimateContentShowcase() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  );
+    </div>),
 }

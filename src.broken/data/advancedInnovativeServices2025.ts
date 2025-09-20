@@ -1,38 +1,38 @@
 export interface AdvancedInnovativeService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
+  price: number,
+  currency: string,
+  pricingModel: string,
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  tags: string[],
+  estimatedDelivery: string,
+  supportLevel: string,
+  marketPrice: string,
+  roi: string,
+  innovationLevel: string,
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
+    phone: string,
+    email: string,
+    website: string
+  },
   technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
-  demoUrl?: string;
-  documentationUrl?: string;
+    technology: string[],
+    integrations: string[],
+    apiEndpoints: number,
+    uptime: string,
+    security: string[]
+  },
+  competitors?: string[],
+  marketSize?: string,
+  demoUrl?: string,
+  documentationUrl?: string,
 }
 
 export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = [
@@ -638,4 +638,4 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/ai-recruitment",
     documentationUrl: "https://ziontechgroup.com/docs/ai-recruitment"
   }
-];
+],

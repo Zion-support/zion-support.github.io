@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function FutureOfWork() {,
   return (,
     <>,
@@ -283,5 +283,4 @@ export default function FutureOfWork() {,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),}
+    </>)}

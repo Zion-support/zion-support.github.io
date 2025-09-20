@@ -1,64 +1,64 @@
-import { useState } from "react";
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
+import { useState } from "react",
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+import { Card } from "@/components/ui/card",
 import { Search } from 'lucide-react'
-import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { captureException } from "@/utils/sentry";
-import Skeleton from "@/components/ui/skeleton";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useQuery } from "@tanstack/react-query";
-import { fetchServices } from "@/api/services";
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+import { captureException } from "@/utils/sentry",
+import Skeleton from "@/components/ui/skeleton",
+import { useDebounce } from "@/hooks/useDebounce",
+import { useQuery } from "@tanstack/react-query",
+import { fetchServices } from "@/api/services",
 
 interface ServiceTypeStepProps {
-  formData: QuoteFormData;
+  formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void}
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const debouncedQuery = useDebounce(searchQuery, 300);
+  const [searchQuery, setSearchQuery] = useState(""),
+  const debouncedQuery = useDebounce(searchQuery, 300),
   const {
     data: listings = [],
     isPending: loading,
-    error,
+    error
   } = useQuery({
     queryKey: ['services', formData.serviceType, debouncedQuery],
     queryFn: () =>
       fetchServices(formData.serviceType, debouncedQuery),
     enabled: !!formData.serviceType,
-    retry: 2,
-  });
+    retry: 2
+  }),
 
   const fallbackListings = SAMPLE_SERVICES.filter(
     (item) =>
       item.category === formData.serviceType &&
       item.title.toLowerCase().includes(debouncedQuery.toLowerCase())
-  );
+  ),
   
   const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type });
-  };
+    updateFormData({ serviceType: type }),
+  },
   
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({ 
       specificItem: item,
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
-    });
-  };
+    }),
+  },
   
-  const sourceListings = error ? fallbackListings : listings.length > 0 ? listings : SAMPLE_SERVICES;
+  const sourceListings = error ? fallbackListings : listings.length > 0 ? listings : SAMPLE_SERVICES,
 
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
-      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
-      if (!categoryMatch) return false;
+      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
+      if (!categoryMatch) return false,
     }
     
-    if(searchQuery.trim() === "") return true;
+    if(searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase())});
+           item.category.toLowerCase().includes(searchQuery.toLowerCase())}),
 
   return (<div className="space-y-6">
       <div>

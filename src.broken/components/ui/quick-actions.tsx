@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React, { useState } from 'react',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import {logErrorToProduction} from '@/utils/productionLogger',
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react'
 
 interface QuickAction {
-  id: string;
-  label: string;
-  description: string;
-  icon: React.ReactNode;
-  action: () => void;
-  category: 'performance' | 'development' | 'maintenance';
-  dangerous?: boolean;
+  id: string,
+  label: string,
+  description: string,
+  icon: React.ReactNode,
+  action: () => void,
+  category: 'performance' | 'development' | 'maintenance',
+  dangerous?: boolean
 }
 
 export function QuickActions() {
-  const { user } = useAuth(); // Hook
-  const [isVisible, setIsVisible] = useState(false); // Moved up
-  const [isProcessing, setIsProcessing] = useState<string | null>(null); // Moved up
+  const { user } = useAuth(), // Hook
+  const [isVisible, setIsVisible] = useState(false), // Moved up
+  const [isProcessing, setIsProcessing] = useState<string | null>(null), // Moved up
 
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
 
   // All hooks are above this line
   if (!isAllowed) {
-    return null;
+    return null,
   }
 
   const executeAction = async (actionId: string, action: () => void) => {
-    setIsProcessing(actionId);
+    setIsProcessing(actionId),
     try {
-      await action();
+      await action()
     } catch (error) {
-      logError(`Failed to execute action ${actionId}:`, { data: error });
+      logError(`Failed to execute action ${actionId}:`, { data: error }),
     } finally {
-      setIsProcessing(null);
+      setIsProcessing(null),
     }
-  };
+  },
 
   const actions: QuickAction[] = [
     // Performance Actions
@@ -49,9 +49,9 @@ export function QuickActions() {
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-        localStorage.setItem('performance-monitoring', 'true');
-        window.location.reload();
-      },
+        localStorage.setItem('performance-monitoringtrue'),
+        window.location.reload(),
+      }
     },
     {
       id: 'enable-bundle-analyzer',
@@ -60,9 +60,9 @@ export function QuickActions() {
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-        localStorage.setItem('bundle-analyzer', 'true');
-        window.location.reload();
-      },
+        localStorage.setItem('bundle-analyzertrue'),
+        window.location.reload(),
+      }
     },
     {
       id: 'clear-cache',
@@ -74,13 +74,13 @@ export function QuickActions() {
       action: () => {
         if ('caches' in window) {
           caches.keys().then(names => {
-            names.forEach(name => caches.delete(name));
-          });
+            names.forEach(name => caches.delete(name))
+          }),
         }
-        localStorage.clear();
-        sessionStorage.clear();
-        window.location.reload();
-      },
+        localStorage.clear(),
+        sessionStorage.clear(),
+        window.location.reload(),
+      }
     },
     {
       id: 'preload-critical-resources',
@@ -91,34 +91,32 @@ export function QuickActions() {
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-          '/fonts/inter-var.woff2',
-          '/fonts/cal-sans.woff2'
-        ];
+          '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
+        ],
         
         criticalFonts.forEach(font => {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.as = 'font';
-          link.type = 'font/woff2';
-          link.crossOrigin = 'anonymous';
-          link.href = font;
-          document.head.appendChild(link);
-        });
+          const link = document.createElement('link'),
+          link.rel = 'preload',
+          link.as = 'font',
+          link.type = 'font/woff2',
+          link.crossOrigin = 'anonymous',
+          link.href = font,
+          document.head.appendChild(link),
+        }),
 
         // Preload critical images
         const criticalImages = [
-          '/logos/zion-logo.png',
-          '/images/hero-bg.webp'
-        ];
+          '/logos/zion-logo.png/images/hero-bg.webp'
+        ],
         
         criticalImages.forEach(img => {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.as = 'image';
-          link.href = img;
-          document.head.appendChild(link);
-        });
-      },
+          const link = document.createElement('link'),
+          link.rel = 'preload',
+          link.as = 'image',
+          link.href = img,
+          document.head.appendChild(link),
+        }),
+      }
     },
     {
       id: 'download-performance-report',
@@ -138,21 +136,21 @@ export function QuickActions() {
             height: screen.height,
             colorDepth: screen.colorDepth
           }
-        };
+        },
 
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
-        });
+        }),
         
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `performance-report-${Date.now()}.json`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-      },
+        const url = URL.createObjectURL(blob),
+        const a = document.createElement('a'),
+        a.href = url,
+        a.download = `performance-report-${Date.now()}.json`,
+        document.body.appendChild(a),
+        a.click(),
+        document.body.removeChild(a),
+        URL.revokeObjectURL(url),
+      }
     },
     {
       id: 'test-error-boundary',
@@ -162,8 +160,8 @@ export function QuickActions() {
       category: 'development',
       dangerous: true,
       action: () => {
-        throw new Error('Test error for Sentry integration - this is intentional!');
-      },
+        throw new Error('Test error for Sentry integration - this is intentional!')
+      }
     },
     {
       id: 'refresh-app',
@@ -172,22 +170,22 @@ export function QuickActions() {
       icon: <RefreshCw className="w-4 h-4" />,
       category: 'maintenance',
       action: () => {
-        window.location.reload();
-      },
-    },
-  ];
+        window.location.reload()
+      }
+    }
+  ],
 
   const categorizedActions = {
     performance: actions.filter(a => a.category === 'performance'),
     development: actions.filter(a => a.category === 'development'),
-    maintenance: actions.filter(a => a.category === 'maintenance'),
-  };
+    maintenance: actions.filter(a => a.category === 'maintenance')
+  },
 
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
-    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
-  };
+    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'
+  },
 
   if (!isVisible) {
     return (
@@ -202,7 +200,7 @@ export function QuickActions() {
           Quick Actions
         </Button>
       </div>
-    );
+    ),
   }
 
   return (
@@ -266,5 +264,5 @@ export function QuickActions() {
         </CardContent>
       </Card>
     </div>
-  );
+  ),
 } 

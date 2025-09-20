@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 netlify-auto-healer-runner function triggered');
+  console.log('🤖 netlify-auto-healer-runner function triggered'),
   
   try {
     // Auto-healing logic for Netlify issues
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate health checks
     const healthChecks = {
@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
       deploy: 'healthy',
       functions: 'healthy',
       redirects: 'healthy'
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -21,15 +21,15 @@ exports.handler = async function(event, context) {
         function: 'netlify-auto-healer-runner',
         status: 'success',
         healthChecks: healthChecks,
-        actions: ['monitoring', 'diagnosis', 'recovery']
+        actions: ['monitoringdiagnosis', 'recovery']
       })
-    };
+    },
     
-    console.log('✅ netlify-auto-healer-runner completed successfully');
-    return result;
+    console.log('✅ netlify-auto-healer-runner completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ netlify-auto-healer-runner failed:', error);
+    console.error('❌ netlify-auto-healer-runner failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -38,6 +38,6 @@ exports.handler = async function(event, context) {
         function: 'netlify-auto-healer-runner',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

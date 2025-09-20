@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTrust = () => {
   const stats = ['
     { icon: Users, value: '50K+', label: 'Active Users', color: 'text-blue-400' },
     { icon: Star, value: '4.8/5', label: 'User Rating', color: 'text-yellow-400' },
     { icon: TrendingUp, value: '99.9%', label: 'Uptime', color: 'text-green-400' },
     { icon: Shield, value: 'SOC 2', label: 'Certified', color: 'text-purple-400' }
-  ];
+  ],
 
   const testimonials = [{
 
@@ -34,14 +34,14 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
       rating: 5,
       avatar: '👩‍🔧'
 
-  ];
+  ],
 
   const certifications = ['
     { name: 'SOC 2 Type II', icon: '🔒', description: 'Security & compliance certified' },
     { name: 'ISO 27001', icon: '🛡️', description: 'Information security management' },
     { name: 'GDPR Compliant', icon: '🇪🇺', description: 'Data protection regulation' },
     { name: 'HIPAA Ready', icon: '🏥', description: 'Healthcare data standards' }
-  ];
+  ],
 
   const features = [{
 
@@ -61,7 +61,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
       title: 'Industry Recognition',
       description: 'Award-winning solution trusted by Fortune 500 companies'
 
-  ];
+  ],
 
   return ()
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-slate-900">"
@@ -197,7 +197,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             </h3>"
             <p className="text-blue-100 mb-6">
               Join thousands of IT professionals who trust Zion for their asset management needs.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a"
                 href="#download"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
@@ -213,7 +213,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             </div>
           </div>
         </div>
-      </div>;
+      </div>,
     </section>
-  )};
+  )},
 '"`

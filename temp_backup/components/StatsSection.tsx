@@ -1,15 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { LucideIcon } from 'lucide-react',
 
 interface Stat {
-  number: string;
-  label: string;
-  icon: LucideIcon;
+  number: string,
+  label: string,
+  icon: LucideIcon
 }
 
 interface StatsSectionProps {
-  stats: Stat[];
+  stats: Stat[]
 }
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
@@ -18,6 +18,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
       <h3 className="text-xl font-bold mb-4">StatsSection</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default StatsSection;
+  ),
+},
+export default StatsSection,

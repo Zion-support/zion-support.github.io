@@ -1,15 +1,15 @@
-import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
 interface ChatMessageProps {
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp?: Date;
-  key?: string | number;
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp?: Date,
+  key?: string | number
 }
 
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
-  const isUser = role === 'user';
+  const isUser = role === 'user',
   
   return (
     <div className={cn(
@@ -45,5 +45,5 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         )}
       </div>
     </div>
-  );
+  ),
 }

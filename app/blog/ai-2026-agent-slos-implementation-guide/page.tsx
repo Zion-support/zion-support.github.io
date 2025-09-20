@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Implementing Agent SLOs — Practical Guide';
-  description: 'Define, monitor, and enforce SLOs that matter for autonomous agent platforms with policy-as-code and eval gates.',
-};
+  title: 'AI 2026: Implementing Agent SLOs — Practical Guide',
+  description: 'Define, monitor, and enforce SLOs that matter for autonomous agent platforms with policy-as-code and eval gates.'
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -67,5 +67,5 @@ export default function Page() {,
         </div>,
       </section>,
     </main>,
-  ),}
+  )}
 ,

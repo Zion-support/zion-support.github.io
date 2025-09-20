@@ -1,36 +1,36 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Brain,
   Zap,
   Globe,
-  Shield;
-  ArrowRight;
-  Star;
-  Sparkles;
-  Calendar;
-  Target;
-  X,
-} from 'lucide-react';
+  Shield,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Calendar,
+  Target,
+  X
+} from 'lucide-react',
 const AITrendsPredictions2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)2000),
+    return () => clearTimeout(timer),
+  }[]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-  };
-  if (isDismissed) return null;
+    setIsDismissed(true),
+  },
+  if (isDismissed) return null,
   const predictions = [,
-    { icon: Brainlabel: 'Quantum 'AIconfidence: '95%' ,};
-    { icon: Zaplabel: 'Neural 'Interfacesconfidence: '88%' ,};
-    { icon: Shieldlabel: 'Autonomous 'Systemsconfidence: '92%' ,};
-    { icon: Globelabel: 'AI 'Consciousnessconfidence: '75%' ,}
-  ];
+    { icon: Brainlabel: 'Quantum 'AIconfidence: '95%' },
+    { icon: Zaplabel: 'Neural 'Interfacesconfidence: '88%' },
+    { icon: Shieldlabel: 'Autonomous 'Systemsconfidence: '92%' },
+    { icon: Globelabel: 'AI 'Consciousnessconfidence: '75%' }
+  ],
   return (,
     <div>,
       {isVisible && (,
@@ -46,21 +46,21 @@ const AITrendsPredictions2026PromotionBanner = () => {,
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40",
                   style={{,
-                    left: `${Math.random() * 100,}%`;
-                    top: `${Math.random() * 100,}%`,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`
                   }}
-                    y: [0-30];
-                    opacity: [0.40.80.4],}}
-                    duration: 3 + Math.random() * 2;
-                    repeat: Infinity;
-                    delay: Math.random() * 2,}}
+                    y: [0-30],
+                    opacity: [0.40.80.4]}}
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    delay: Math.random() * 2}}
                 />,
               ))}
             </div>,
           </div>,
           <div className="relative z-10 container mx-auto px-4 py-6">,
             <div className="flex flex-col lg: flex-row items-center justify-between gap-6">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div,
                   className="flex items-center justify-center lg:justify-start mb-3",
@@ -71,8 +71,7 @@ const AITrendsPredictions2026PromotionBanner = () => {,
                   </div>,
                   <div className="flex items-center text-yellow-400">,
                     {[...Array(5)].map((_i) => (,
-                      <Star key={i,} className="w-4 h-4 fill-current" />,
-                    ))}
+                      <Star key={i} className="w-4 h-4 fill-current" />))}
                   </div>,
                 </div>,
                 <divh2,
@@ -85,12 +84,12 @@ const AITrendsPredictions2026PromotionBanner = () => {,
                 >,
                   Discover groundbreaking AI trends: Quantum AINeural InterfacesAutonomous Systemsand AI Consciousness,
                 </divp>,
-                {/* Prediction Icons */,}
+                {/* Prediction Icons */}
                 <div,
                   className="flex flex-wrap items-center justify-center lg: justify-start gap-3 mb-4",
                 >,
                   {predictions.map((predictionindex) => (,
-                    <div key={index,} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">,
+                    <div key={index} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">,
                       <prediction.icon className="w-4 h-4 text-cyan-400 mr-2" />,
                       <span className="text-sm font-medium">{prediction.label}</span>,
                       <span className="text-xs text-cyan-300 ml-2">({prediction.confidence})</span>,
@@ -112,7 +111,7 @@ const AITrendsPredictions2026PromotionBanner = () => {,
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />,
                 </button>,
               </div>,
-              {/* Dismiss Button */,}
+              {/* Dismiss Button */}
               <button,
                 onClick={handleDismiss}
                 className="absolute top-4 right-4 p-2 hover: bg-white/10 rounded-full transition-colors",
@@ -121,14 +120,14 @@ const AITrendsPredictions2026PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Progress Bar */,}
+          {/* Progress Bar */}
           <div,
             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 origin-left",
-            style={{ width: '100%' ,}}
+            style={{ width: '100%' }}
           />,
         </div>,
       )}
     </div>,
-  );
-};
-export default AITrendsPredictions2026PromotionBanner;
+  ),
+},
+export default AITrendsPredictions2026PromotionBanner,

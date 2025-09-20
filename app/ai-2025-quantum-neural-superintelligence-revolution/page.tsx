@@ -1,13 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import SEO from '../../components/SEO';
-import { ArrowLeft, Brain, Zap, Target, TrendingUp, Users, Award, Download } from 'lucide-react';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
+import SEO from '../../components/SEO',
+import { ArrowLeft, Brain, Zap, Target, TrendingUp, Users, Award, Download } from 'lucide-react',
 export const metadata: Metadata = {,
-  title: 'AI 2025: Quantum Neural Superintelligence Revolution - Ultimate Breakthrough';
-  description: 'Discover the convergence of quantum computing, neural networks, and superintelligence. Experience 1 billion times faster processing power and 3000% ROI potential.';
-  keywords: ['quantum neural superintelligencequantum computing', 'AI revolutionneural networks', 'superintelligencequantum AI', 'AI 2025'],
-};
+  title: 'AI 2025: Quantum Neural Superintelligence Revolution - Ultimate Breakthrough',
+  description: 'Discover the convergence of quantum computing, neural networks, and superintelligence. Experience 1 billion times faster processing power and 3000% ROI potential.',
+  keywords: ['quantum neural superintelligencequantum computingAI revolutionneural networks', 'superintelligencequantum AIAI 2025']
+},
 export default function QuantumNeuralSuperintelligenceRevolutionPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">,
@@ -38,7 +38,7 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {,
               <span className="text-yellow-400">Breakthrough</span>,
             </h1>,
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">,
-              Experience the convergence of <span className="text-yellow-400 font-semibold">quantum computing</span>;
+              Experience the convergence of <span className="text-yellow-400 font-semibold">quantum computing</span>,
               <span className="text-green-400 font-semibold"> neural networks</span>, and,
               <span className="text-purple-400 font-semibold"> superintelligence</span> -,
               delivering <span className="text-yellow-400 font-bold">1 billion times faster</span> processing power,
@@ -61,7 +61,7 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {,
           </div>,
         </div>,
       </header>,
-      {/* Key Stats */,}
+      {/* Key Stats */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -84,7 +84,7 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* What is QNS */,}
+      {/* What is QNS */}
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -210,7 +210,7 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Stories */,}
+      {/* Success Stories */}
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -328,7 +328,7 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Roadmap */,}
+      {/* Implementation Roadmap */}
       <section className="py-20 bg-white/5 backdrop-blur-sm">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -393,7 +393,7 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Lead the QNS Revolution?</h2>,
@@ -421,5 +421,4 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

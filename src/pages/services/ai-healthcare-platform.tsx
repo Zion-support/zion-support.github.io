@@ -1,7 +1,7 @@
-import React from 'react';
-import SEO from '../../components/SEO';
+import React from "react";
+import { SEO } from "../../components/SEO";
 import { 
-  Heart, 
+  Heart,
   Brain, 
   Shield, 
   Zap, 
@@ -21,83 +21,53 @@ import {
   AlertTriangle,
   FileText,
   BarChart3
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIHealthcarePlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Diagnostics',
-      description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis'
+      icon: Brain,title: 'AI-Powered Diagnostics',description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis'
+    };
+    {
+      icon: Heart,title: 'Patient Monitoring',description: 'Real-time health monitoring with predictive analytics and early warning systems'
+    };
+    {
+      icon: Shield,title: 'HIPAA Compliant',description: 'Enterprise-grade security with full HIPAA compliance and data protection'
+    };
+    {
+      icon: Zap,title: 'Real-time Analytics',description: 'Instant insights and actionable intelligence for healthcare providers'
+    };
+    {
+      icon: Users,title: 'Multi-user Access',description: 'Role-based access control for doctors, nurses, and administrators'
     },
     {
-      icon: Heart,
-      title: 'Patient Monitoring',
-      description: 'Real-time health monitoring with predictive analytics and early warning systems'
-    },
-    {
-      icon: Shield,
-      title: 'HIPAA Compliant',
-      description: 'Enterprise-grade security with full HIPAA compliance and data protection'
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Analytics',
-      description: 'Instant insights and actionable intelligence for healthcare providers'
-    },
-    {
-      icon: Users,
-      title: 'Multi-user Access',
-      description: 'Role-based access control for doctors, nurses, and administrators'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Availability',
-      description: 'Round-the-clock monitoring and support for critical care scenarios'
+      icon: Clock,title: '24/7 Availability',description: 'Round-the-clock monitoring and support for critical care scenarios'
     }
   ];
-
   const solutions = [
     {
-      icon: Stethoscope,
-      title: 'Clinical Decision Support',
-      description: 'AI-powered recommendations for treatment plans and medication management'
+      icon: Stethoscope,title: 'Clinical Decision Support',description: 'AI-powered recommendations for treatment plans and medication management'
+    };
+    {
+      icon: Microscope,title: 'Medical Imaging Analysis',description: 'Computer vision for X-rays, MRIs, and CT scans with 99.9% accuracy'
     },
     {
-      icon: Microscope,
-      title: 'Medical Imaging Analysis',
-      description: 'Computer vision for X-rays, MRIs, and CT scans with 99.9% accuracy'
+      icon: Pill,title: 'Drug Interaction Checker',description: 'Real-time medication interaction analysis and dosage optimization'
+    };
+    {
+      icon: Activity,title: 'Vital Signs Monitoring',description: 'Continuous monitoring of heart rate, blood pressure, and oxygen levels'
     },
     {
-      icon: Pill,
-      title: 'Drug Interaction Checker',
-      description: 'Real-time medication interaction analysis and dosage optimization'
-    },
+      icon: Database,title: 'Electronic Health Records',description: 'Intelligent EHR system with natural language processing capabilities'
+    };
     {
-      icon: Activity,
-      title: 'Vital Signs Monitoring',
-      description: 'Continuous monitoring of heart rate, blood pressure, and oxygen levels'
-    },
-    {
-      icon: Database,
-      title: 'Electronic Health Records',
-      description: 'Intelligent EHR system with natural language processing capabilities'
-    },
-    {
-      icon: Lock,
-      title: 'Secure Data Exchange',
-      description: 'Blockchain-based secure sharing of patient data between facilities'
+      icon: Lock,title: 'Secure Data Exchange',description: 'Blockchain-based secure sharing of patient data between facilities'
     }
   ];
-
   const benefits = [
-    'Reduce diagnostic errors by up to 85%',
-    'Improve patient outcomes by 60%',
-    'Cut healthcare costs by 30%',
-    'Increase operational efficiency by 45%',
-    'Enable early disease detection',
-    'Streamline administrative processes'
-  ];
+    'Reduce diagnostic errors by up to 85%Improve patient outcomes by 60%',
+    'Cut healthcare costs by 30%Increase operational efficiency by 45%',
+    'Enable early disease detectionStreamline administrative processes'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -115,11 +85,11 @@ const AIHealthcarePlatform: React.FC = () => {
               <Heart className="w-4 h-4 mr-2" />
               Healthcare Technology
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               AI Healthcare Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionizing healthcare with artificial intelligence. Our platform combines advanced AI, 
+              Revolutionizing healthcare with artificial intelligence. Our platform combines advanced AI;
               machine learning, and medical expertise to deliver unprecedented diagnostic accuracy, 
               patient monitoring, and clinical decision support.
             </p>
@@ -253,7 +223,7 @@ const AIHealthcarePlatform: React.FC = () => {
             Join leading healthcare institutions that are already transforming patient care 
             with our AI-powered platform.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">
               Schedule Demo
             </button>
@@ -264,7 +234,6 @@ const AIHealthcarePlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIHealthcarePlatform;

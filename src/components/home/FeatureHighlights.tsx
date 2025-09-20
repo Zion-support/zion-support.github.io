@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   Award,
   Brain,
@@ -6,128 +6,85 @@ import {
   Globe,
   Shield,
   Users
-} from 'lucide-react';
-import React from 'react';
-
+} from "lucide-react";
+import React from "react";
 // Animation variants
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0 };
   visible: {
-    opacity: 1,
-    transition: {
+    opacity: 1,transition: {
       staggerChildren: 0.1
     }
   }
 };
-
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 20 };
   visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
+    opacity: 1,y: 0,transition: {
       duration: 0.6
     }
   }
 };
-
 const achievementVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, scale: 0.8 };
   visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
+    opacity: 1,scale: 1,transition: {
       duration: 0.5
     }
   }
 };
-
 const techVariants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 10 };
   visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.4,
-      staggerChildren: 0.1
+    opacity: 1,y: 0,transition: {
+      duration: 0.4,staggerChildren: 0.1
     }
   }
 };
-
 const achievements = [
-  { icon: Users, number: "10K+", label: "Active Users", color: "text-zion-cyan" },
-  { icon: Globe, number: "150+", label: "Countries", color: "text-zion-purple" },
-  { icon: Shield, number: "99.9%", label: "Uptime", color: "text-zion-green" },
+  { icon: Users, number: "10K+", label: "Active Users", color: "text-zion-cyan" };
+  { icon: Globe, number: "150+", label: "Countries", color: "text-zion-purple" };
+  { icon: Shield, number: "99.9%", label: "Uptime", color: "text-zion-green" };
   { icon: Award, number: "50+", label: "Awards", color: "text-zion-orange" }
 ];
-
 const technologies = [
   "React", "TypeScript", "Node.js", "Python", "AI/ML", "Blockchain", "Cloud", "DevOps"
-];
+],
 
 const highlights = [
   {
-    icon: Brain,
-    title: 'AI-Powered Intelligence',
-    description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-    features: ['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
-    color: 'from-zion-purple to-zion-purple-dark',
-    bgColor: 'bg-zion-purple/10',
-    borderColor: 'border-zion-purple/20'
-  },
+    icon: Brain,title: 'AI-Powered Intelligence',description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',features: ['Predictive AnalyticsSmart Recommendations', 'Automated Workflows'],
+    color: 'from-zion-purple to-zion-purple-dark',bgColor: 'bg-zion-purple/10',borderColor: 'border-zion-purple/20'
+  };
   {
-    icon: Globe,
-    title: 'Global Network',
-    description: 'Connect with professionals and businesses from over 150 countries worldwide.',
-    features: ['Multi-language Support', 'Local Expertise', '24/7 Availability'],
-    color: 'from-zion-cyan to-zion-cyan-dark',
-    bgColor: 'bg-zion-cyan/10',
-    borderColor: 'border-zion-cyan/20'
-  },
+    icon: Globe,title: 'Global Network',description: 'Connect with professionals and businesses from over 150 countries worldwide.',features: ['Multi-language SupportLocal Expertise', '24/7 Availability'],
+    color: 'from-zion-cyan to-zion-cyan-dark',bgColor: 'bg-zion-cyan/10',borderColor: 'border-zion-cyan/20'
+  };
   {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-    features: ['Data Protection', 'Access Control', 'Audit Trails'],
-    color: 'from-zion-blue to-zion-blue-dark',
-    bgColor: 'bg-zion-blue/10',
-    borderColor: 'border-zion-blue/20'
+    icon: Shield,title: 'Enterprise Security',description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',features: ['Data ProtectionAccess Control', 'Audit Trails'],
+    color: 'from-zion-blue to-zion-blue-dark',bgColor: 'bg-zion-blue/10',borderColor: 'border-zion-blue/20'
   }
 ];
-
 const features = [
   {
-    icon: "🚀",
-    title: "Cutting-Edge Technology",
-    description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
+    icon: "🚀",title: "Cutting-Edge Technology",description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
   },
   {
-    icon: "⚡",
-    title: "Lightning Fast Performance",
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
-  },
+    icon: "⚡",title: "Lightning Fast Performance",description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
+  };
   {
-    icon: "🔒",
-    title: "Enterprise Security",
-    description: "Bank-level security protocols and compliance standards to protect your valuable data"
-  },
+    icon: "🔒",title: "Enterprise Security",description: "Bank-level security protocols and compliance standards to protect your valuable data"
+  };
   {
-    icon: "🌐",
-    title: "Global Scalability",
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
-  },
+    icon: "🌐",title: "Global Scalability",description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
+  };
   {
-    icon: "🤖",
-    title: "AI-Powered Intelligence",
-    description: "Smart automation and predictive analytics that adapt to your business requirements"
-  },
+    icon: "🤖",title: "AI-Powered Intelligence",description: "Smart automation and predictive analytics that adapt to your business requirements"
+  };
   {
-    icon: "📊",
-    title: "Real-Time Analytics",
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly"
+    icon: "📊",title: "Real-Time Analytics",description: "Comprehensive insights and reporting to make data-driven decisions instantly"
   }
 ];
-
 export function FeatureHighlights() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -149,7 +106,7 @@ export function FeatureHighlights() {
           </h2>
 
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Experience the next generation of talent marketplace with cutting-edge AI,
+            Experience the next generation of talent marketplace with cutting-edge AI;
             global reach, and enterprise-grade security.
           </p>
         </motion.div>
@@ -167,9 +124,7 @@ export function FeatureHighlights() {
               key={index}
               variants={itemVariants}
               whileHover={{
-                y: -10,
-                scale: 1.02,
-                transition: { duration: 0.3 }
+                y: -10,scale: 1.02,transition: { duration: 0.3 }
               }}
               className="group"
             >
@@ -222,9 +177,7 @@ export function FeatureHighlights() {
               key={index}
               variants={itemVariants}
               whileHover={{
-                y: -5,
-                scale: 1.02,
-                transition: { duration: 0.3 }
+                y: -5,scale: 1.02,transition: { duration: 0.3 }
               }}
               className="group"
             >

@@ -1,5 +1,5 @@
-import React from 'react,',',',';
-import {SEO} from '@/components/SEO';
+import React from 'react,,',',
+import {SEO} from '@/components/SEO',
 export default function FeaturedListingsSection(props: any) {return (,
     <div className="min-h-screen bg-white">,
       <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group"  />,
@@ -8,6 +8,6 @@ export default function FeaturedListingsSection(props: any) {return (,
         <p className="text-gray-300 text-lg">,
           Professional FeaturedListingsSection services to help your business grow.,
         </p>,
-      </div>';
-    </div>;
-  ),',','}",',';
+      </div>',
+    </div>,
+  ),,'}",',',

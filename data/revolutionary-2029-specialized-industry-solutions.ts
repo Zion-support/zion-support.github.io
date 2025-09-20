@@ -1,45 +1,45 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface RevolutionarySpecializedIndustryService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  category: string;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  benefits: string[],
+  category: string,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  isPopular?: boolean;
-  isNew?: boolean;
+    mobile: string,
+    email: string,
+    address: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  isPopular?: boolean,
+  isNew?: boolean
 }
 
 export const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] = [
@@ -52,18 +52,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Comprehensive AI-powered healthcare platform that improves patient outcomes, optimizes clinical workflows, and enhances healthcare delivery across all specialties.',
     features: [
-      'AI-powered diagnosis support',
-      'Clinical decision support',
-      'Patient outcome prediction',
-      'Population health analytics',
-      'Medical image analysis',
-      'Compliance automation'
+      'AI-powered diagnosis supportClinical decision support',
+      'Patient outcome predictionPopulation health analytics',
+      'Medical image analysisCompliance automation'
     ],
     benefits: [
-      'Improve patient outcomes by 40%',
-      'Reduce diagnostic errors by 60%',
-      'Optimize clinical workflows by 50%',
-      'Ensure regulatory compliance'
+      'Improve patient outcomes by 40%Reduce diagnostic errors by 60%',
+      'Optimize clinical workflows by 50%Ensure regulatory compliance'
     ],
     category: 'Healthcare & Life Sciences',
     icon: '🏥',
@@ -71,15 +66,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-red-200',
     link: 'https://ziontechgroup.com/services/ai-healthcare-platform',
     marketPosition: 'AI-powered healthcare for modern medical facilities',
-    targetAudience: ['Hospitals', 'Clinics', 'Healthcare Systems'],
+    targetAudience: ['HospitalsClinics', 'Healthcare Systems'],
     trialDays: 60,
     setupTime: '2 weeks',
     realService: true,
-    technology: ['Deep Learning', 'NLP', 'Computer Vision'],
-    integrations: ['Epic', 'Cerner', 'Allscripts', 'PACS systems'],
-    useCases: ['Clinical decision support', 'Medical imaging', 'Population health'],
+    technology: ['Deep LearningNLP', 'Computer Vision'],
+    integrations: ['EpicCerner', 'AllscriptsPACS systems'],
+    useCases: ['Clinical decision supportMedical imaging', 'Population health'],
     roi: 'Save $1M+ annually in healthcare costs and improve outcomes by 40%',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare'],
+    competitors: ['IBM Watson HealthGoogle Health AI', 'Microsoft Healthcare'],
     marketSize: '$100B Healthcare AI',
     growthRate: '25% CAGR',
     variant: 'healthcare-ai',
@@ -106,18 +101,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Advanced fintech platform that enables rapid development of innovative financial services, including digital banking, payments, and investment solutions.',
     features: [
-      'Digital banking infrastructure',
-      'Payment processing engine',
-      'Investment management tools',
-      'Regulatory compliance',
-      'Risk management',
-      'API ecosystem'
+      'Digital banking infrastructurePayment processing engine',
+      'Investment management toolsRegulatory compliance',
+      'Risk managementAPI ecosystem'
     ],
     benefits: [
-      'Launch fintech products 10x faster',
-      'Reduce development costs by 70%',
-      'Ensure regulatory compliance',
-      'Scale globally with ease'
+      'Launch fintech products 10x fasterReduce development costs by 70%',
+      'Ensure regulatory complianceScale globally with ease'
     ],
     category: 'Fintech & Financial Services',
     icon: '💳',
@@ -125,15 +115,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/fintech-innovation-platform',
     marketPosition: 'Comprehensive fintech platform for modern financial services',
-    targetAudience: ['Banks', 'Fintech Startups', 'Financial Institutions'],
+    targetAudience: ['BanksFintech Startups', 'Financial Institutions'],
     trialDays: 30,
     setupTime: '1 week',
     realService: true,
-    technology: ['Blockchain', 'AI/ML', 'Cloud Computing'],
-    integrations: ['Banking systems', 'Payment processors', 'Regulatory platforms'],
-    useCases: ['Digital banking', 'Payment solutions', 'Investment platforms'],
+    technology: ['BlockchainAI/ML', 'Cloud Computing'],
+    integrations: ['Banking systemsPayment processors', 'Regulatory platforms'],
+    useCases: ['Digital bankingPayment solutions', 'Investment platforms'],
     roi: 'Launch fintech products 10x faster and reduce costs by 70%',
-    competitors: ['Stripe', 'Plaid', 'Marqeta'],
+    competitors: ['StripePlaid', 'Marqeta'],
     marketSize: '$150B Fintech',
     growthRate: '30% CAGR',
     variant: 'fintech-platform',
@@ -160,18 +150,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Comprehensive smart manufacturing platform that uses AI, IoT, and automation to optimize production processes, improve quality, and reduce costs.',
     features: [
-      'AI-powered production optimization',
-      'IoT device management',
-      'Predictive maintenance',
-      'Quality control automation',
-      'Supply chain optimization',
-      'Real-time monitoring'
+      'AI-powered production optimizationIoT device management',
+      'Predictive maintenanceQuality control automation',
+      'Supply chain optimizationReal-time monitoring'
     ],
     benefits: [
-      'Increase production efficiency by 35%',
-      'Reduce downtime by 60%',
-      'Improve product quality by 45%',
-      'Lower operational costs by 25%'
+      'Increase production efficiency by 35%Reduce downtime by 60%',
+      'Improve product quality by 45%Lower operational costs by 25%'
     ],
     category: 'Manufacturing & Industry 4.0',
     icon: '🏭',
@@ -179,15 +164,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/smart-manufacturing-solutions',
     marketPosition: 'Industry 4.0 solutions for modern manufacturing',
-    targetAudience: ['Manufacturers', 'Industrial Companies', 'Factories'],
+    targetAudience: ['ManufacturersIndustrial Companies', 'Factories'],
     trialDays: 45,
     setupTime: '2 weeks',
     realService: true,
-    technology: ['AI/ML', 'IoT', 'Automation'],
-    integrations: ['ERP systems', 'MES platforms', 'SCADA systems'],
-    useCases: ['Production optimization', 'Predictive maintenance', 'Quality control'],
+    technology: ['AI/MLIoT', 'Automation'],
+    integrations: ['ERP systemsMES platforms', 'SCADA systems'],
+    useCases: ['Production optimizationPredictive maintenance', 'Quality control'],
     roi: 'Increase production efficiency by 35% and reduce costs by 25%',
-    competitors: ['Siemens', 'GE Digital', 'Rockwell Automation'],
+    competitors: ['SiemensGE Digital', 'Rockwell Automation'],
     marketSize: '$80B Smart Manufacturing',
     growthRate: '22% CAGR',
     variant: 'manufacturing-ai',
@@ -213,18 +198,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Advanced retail technology platform that provides omnichannel experiences, AI-powered personalization, and seamless customer engagement across all touchpoints.',
     features: [
-      'Omnichannel retail platform',
-      'AI-powered personalization',
-      'Inventory management',
-      'Customer analytics',
-      'Mobile commerce',
-      'Loyalty programs'
+      'Omnichannel retail platformAI-powered personalization',
+      'Inventory managementCustomer analytics',
+      'Mobile commerceLoyalty programs'
     ],
     benefits: [
-      'Increase sales by 40%',
-      'Improve customer retention by 50%',
-      'Reduce inventory costs by 30%',
-      'Enable seamless omnichannel experiences'
+      'Increase sales by 40%Improve customer retention by 50%',
+      'Reduce inventory costs by 30%Enable seamless omnichannel experiences'
     ],
     category: 'Retail & E-commerce',
     icon: '🛍️',
@@ -232,15 +212,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/retail-technology-platform',
     marketPosition: 'Comprehensive retail technology for modern businesses',
-    targetAudience: ['Retailers', 'E-commerce', 'Brands'],
+    targetAudience: ['RetailersE-commerce', 'Brands'],
     trialDays: 21,
     setupTime: '1 week',
     realService: true,
-    technology: ['AI/ML', 'Omnichannel', 'Mobile Commerce'],
-    integrations: ['POS systems', 'E-commerce platforms', 'Payment processors'],
-    useCases: ['Omnichannel retail', 'Customer personalization', 'Inventory optimization'],
+    technology: ['AI/MLOmnichannel', 'Mobile Commerce'],
+    integrations: ['POS systemsE-commerce platforms', 'Payment processors'],
+    useCases: ['Omnichannel retailCustomer personalization', 'Inventory optimization'],
     roi: 'Increase sales by 40% and improve customer retention by 50%',
-    competitors: ['Shopify', 'Salesforce Commerce', 'Adobe Commerce'],
+    competitors: ['ShopifySalesforce Commerce', 'Adobe Commerce'],
     marketSize: '$60B Retail Technology',
     growthRate: '18% CAGR',
     variant: 'retail-tech',
@@ -267,18 +247,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Comprehensive education technology platform that uses AI to provide personalized learning experiences, adaptive content, and comprehensive educational analytics.',
     features: [
-      'AI-powered personalized learning',
-      'Adaptive content delivery',
-      'Student progress tracking',
-      'Learning analytics',
-      'Content management',
-      'Assessment tools'
+      'AI-powered personalized learningAdaptive content delivery',
+      'Student progress trackingLearning analytics',
+      'Content managementAssessment tools'
     ],
     benefits: [
-      'Improve learning outcomes by 50%',
-      'Personalize education for every student',
-      'Reduce administrative workload by 40%',
-      'Enable data-driven education'
+      'Improve learning outcomes by 50%Personalize education for every student',
+      'Reduce administrative workload by 40%Enable data-driven education'
     ],
     category: 'Education & EdTech',
     icon: '🎓',
@@ -286,15 +261,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-yellow-200',
     link: 'https://ziontechgroup.com/services/education-technology-platform',
     marketPosition: 'AI-powered education technology for modern learning',
-    targetAudience: ['Schools', 'Universities', 'Training Organizations'],
+    targetAudience: ['SchoolsUniversities', 'Training Organizations'],
     trialDays: 30,
     setupTime: '1 week',
     realService: true,
-    technology: ['AI/ML', 'Adaptive Learning', 'Learning Analytics'],
-    integrations: ['LMS platforms', 'Student information systems', 'Content providers'],
-    useCases: ['K-12 education', 'Higher education', 'Corporate training'],
+    technology: ['AI/MLAdaptive Learning', 'Learning Analytics'],
+    integrations: ['LMS platformsStudent information systems', 'Content providers'],
+    useCases: ['K-12 educationHigher education', 'Corporate training'],
     roi: 'Improve learning outcomes by 50% and reduce administrative costs by 40%',
-    competitors: ['Canvas', 'Blackboard', 'Moodle'],
+    competitors: ['CanvasBlackboard', 'Moodle'],
     marketSize: '$40B EdTech',
     growthRate: '20% CAGR',
     variant: 'education-tech',
@@ -320,18 +295,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Advanced legal technology platform that automates legal processes, provides AI-powered research, and streamlines legal practice management.',
     features: [
-      'AI-powered legal research',
-      'Document automation',
-      'Case management',
-      'Compliance monitoring',
-      'Client portal',
-      'Billing automation'
+      'AI-powered legal researchDocument automation',
+      'Case managementCompliance monitoring',
+      'Client portalBilling automation'
     ],
     benefits: [
-      'Reduce research time by 70%',
-      'Automate document creation by 80%',
-      'Improve client service by 60%',
-      'Increase billable hours by 30%'
+      'Reduce research time by 70%Automate document creation by 80%',
+      'Improve client service by 60%Increase billable hours by 30%'
     ],
     category: 'Legal & Compliance',
     icon: '⚖️',
@@ -339,15 +309,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-slate-200',
     link: 'https://ziontechgroup.com/services/legal-technology-platform',
     marketPosition: 'Comprehensive legal technology for modern law firms',
-    targetAudience: ['Law Firms', 'Legal Departments', 'Legal Professionals'],
+    targetAudience: ['Law FirmsLegal Departments', 'Legal Professionals'],
     trialDays: 30,
     setupTime: '2 weeks',
     realService: true,
-    technology: ['AI/ML', 'Document Processing', 'Legal Automation'],
-    integrations: ['Case management systems', 'Document management', 'Billing platforms'],
-    useCases: ['Legal research', 'Document automation', 'Case management'],
+    technology: ['AI/MLDocument Processing', 'Legal Automation'],
+    integrations: ['Case management systemsDocument management', 'Billing platforms'],
+    useCases: ['Legal researchDocument automation', 'Case management'],
     roi: 'Reduce research time by 70% and increase billable hours by 30%',
-    competitors: ['LexisNexis', 'Westlaw', 'Clio'],
+    competitors: ['LexisNexisWestlaw', 'Clio'],
     marketSize: '$25B Legal Tech',
     growthRate: '18% CAGR',
     variant: 'legal-tech',
@@ -374,18 +344,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Comprehensive real estate technology platform that provides AI-powered property valuation, market analysis, and digital transaction management.',
     features: [
-      'AI property valuation',
-      'Market analysis tools',
-      'Digital transaction management',
-      'Property management',
-      'Client relationship management',
-      'Marketing automation'
+      'AI property valuationMarket analysis tools',
+      'Digital transaction managementProperty management',
+      'Client relationship managementMarketing automation'
     ],
     benefits: [
-      'Improve property valuations by 25%',
-      'Reduce transaction time by 40%',
-      'Increase client satisfaction by 50%',
-      'Streamline property management'
+      'Improve property valuations by 25%Reduce transaction time by 40%',
+      'Increase client satisfaction by 50%Streamline property management'
     ],
     category: 'Real Estate & Property',
     icon: '🏠',
@@ -393,15 +358,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/real-estate-technology-platform',
     marketPosition: 'AI-powered real estate technology for modern agencies',
-    targetAudience: ['Real Estate Agencies', 'Property Managers', 'Developers'],
+    targetAudience: ['Real Estate AgenciesProperty Managers', 'Developers'],
     trialDays: 21,
     setupTime: '1 week',
     realService: true,
-    technology: ['AI/ML', 'Property Analytics', 'Digital Transactions'],
-    integrations: ['MLS systems', 'Property databases', 'Payment platforms'],
-    useCases: ['Property valuation', 'Market analysis', 'Transaction management'],
+    technology: ['AI/MLProperty Analytics', 'Digital Transactions'],
+    integrations: ['MLS systemsProperty databases', 'Payment platforms'],
+    useCases: ['Property valuationMarket analysis', 'Transaction management'],
     roi: 'Improve valuations by 25% and reduce transaction time by 40%',
-    competitors: ['Zillow', 'Redfin', 'Compass'],
+    competitors: ['ZillowRedfin', 'Compass'],
     marketSize: '$30B Real Estate Tech',
     growthRate: '16% CAGR',
     variant: 'real-estate-tech',
@@ -427,18 +392,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Advanced transportation and logistics platform that uses AI to optimize routes, track shipments, and improve supply chain efficiency.',
     features: [
-      'AI route optimization',
-      'Real-time tracking',
-      'Supply chain optimization',
-      'Fleet management',
-      'Warehouse automation',
-      'Analytics dashboard'
+      'AI route optimizationReal-time tracking',
+      'Supply chain optimizationFleet management',
+      'Warehouse automationAnalytics dashboard'
     ],
     benefits: [
-      'Reduce transportation costs by 30%',
-      'Improve delivery times by 40%',
-      'Optimize routes by 50%',
-      'Enhance supply chain visibility'
+      'Reduce transportation costs by 30%Improve delivery times by 40%',
+      'Optimize routes by 50%Enhance supply chain visibility'
     ],
     category: 'Transportation & Logistics',
     icon: '🚚',
@@ -446,15 +406,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-orange-200',
     link: 'https://ziontechgroup.com/services/transportation-logistics-platform',
     marketPosition: 'AI-powered logistics for modern supply chains',
-    targetAudience: ['Logistics Companies', 'Transportation', 'Manufacturers'],
+    targetAudience: ['Logistics CompaniesTransportation', 'Manufacturers'],
     trialDays: 30,
     setupTime: '2 weeks',
     realService: true,
-    technology: ['AI/ML', 'IoT', 'Supply Chain Analytics'],
-    integrations: ['ERP systems', 'WMS platforms', 'Transportation systems'],
-    useCases: ['Route optimization', 'Fleet management', 'Supply chain optimization'],
+    technology: ['AI/MLIoT', 'Supply Chain Analytics'],
+    integrations: ['ERP systemsWMS platforms', 'Transportation systems'],
+    useCases: ['Route optimizationFleet management', 'Supply chain optimization'],
     roi: 'Reduce transportation costs by 30% and improve delivery times by 40%',
-    competitors: ['Manhattan Associates', 'Oracle Transportation', 'SAP Logistics'],
+    competitors: ['Manhattan AssociatesOracle Transportation', 'SAP Logistics'],
     marketSize: '$45B Logistics Technology',
     growthRate: '20% CAGR',
     variant: 'logistics-tech',
@@ -481,18 +441,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Comprehensive energy and utilities platform that uses AI and IoT to optimize energy consumption, improve grid efficiency, and enable smart energy management.',
     features: [
-      'AI energy optimization',
-      'Smart grid management',
-      'IoT device monitoring',
-      'Predictive maintenance',
-      'Energy analytics',
-      'Sustainability tracking'
+      'AI energy optimizationSmart grid management',
+      'IoT device monitoringPredictive maintenance',
+      'Energy analyticsSustainability tracking'
     ],
     benefits: [
-      'Reduce energy costs by 25%',
-      'Improve grid efficiency by 30%',
-      'Enable predictive maintenance',
-      'Support sustainability goals'
+      'Reduce energy costs by 25%Improve grid efficiency by 30%',
+      'Enable predictive maintenanceSupport sustainability goals'
     ],
     category: 'Energy & Utilities',
     icon: '⚡',
@@ -500,15 +455,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-yellow-200',
     link: 'https://ziontechgroup.com/services/energy-utilities-platform',
     marketPosition: 'AI-powered energy optimization for modern utilities',
-    targetAudience: ['Utilities', 'Energy Companies', 'Smart Cities'],
+    targetAudience: ['UtilitiesEnergy Companies', 'Smart Cities'],
     trialDays: 45,
     setupTime: '3 weeks',
     realService: true,
-    technology: ['AI/ML', 'IoT', 'Smart Grid'],
-    integrations: ['SCADA systems', 'Energy management', 'IoT platforms'],
-    useCases: ['Energy optimization', 'Grid management', 'Predictive maintenance'],
+    technology: ['AI/MLIoT', 'Smart Grid'],
+    integrations: ['SCADA systemsEnergy management', 'IoT platforms'],
+    useCases: ['Energy optimizationGrid management', 'Predictive maintenance'],
     roi: 'Reduce energy costs by 25% and improve grid efficiency by 30%',
-    competitors: ['Siemens Energy', 'GE Digital', 'Schneider Electric'],
+    competitors: ['Siemens EnergyGE Digital', 'Schneider Electric'],
     marketSize: '$50B Energy Technology',
     growthRate: '18% CAGR',
     variant: 'energy-tech',
@@ -534,18 +489,13 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     period: '/month',
     description: 'Advanced agriculture technology platform that uses AI, IoT, and precision agriculture to optimize crop yields, reduce costs, and improve sustainability.',
     features: [
-      'AI crop monitoring',
-      'Precision agriculture',
-      'IoT sensor management',
-      'Weather prediction',
-      'Crop optimization',
-      'Sustainability tracking'
+      'AI crop monitoringPrecision agriculture',
+      'IoT sensor managementWeather prediction',
+      'Crop optimizationSustainability tracking'
     ],
     benefits: [
-      'Increase crop yields by 30%',
-      'Reduce water usage by 25%',
-      'Lower fertilizer costs by 20%',
-      'Improve sustainability'
+      'Increase crop yields by 30%Reduce water usage by 25%',
+      'Lower fertilizer costs by 20%Improve sustainability'
     ],
     category: 'Agriculture & AgTech',
     icon: '🌾',
@@ -553,15 +503,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/agriculture-technology-platform',
     marketPosition: 'AI-powered agriculture for modern farming',
-    targetAudience: ['Farmers', 'Agricultural Companies', 'Food Producers'],
+    targetAudience: ['FarmersAgricultural Companies', 'Food Producers'],
     trialDays: 60,
     setupTime: '2 weeks',
     realService: true,
-    technology: ['AI/ML', 'IoT', 'Precision Agriculture'],
-    integrations: ['Weather systems', 'IoT sensors', 'Agricultural equipment'],
-    useCases: ['Crop monitoring', 'Precision farming', 'Sustainability management'],
+    technology: ['AI/MLIoT', 'Precision Agriculture'],
+    integrations: ['Weather systemsIoT sensors', 'Agricultural equipment'],
+    useCases: ['Crop monitoringPrecision farming', 'Sustainability management'],
     roi: 'Increase crop yields by 30% and reduce costs by 20%',
-    competitors: ['John Deere', 'Climate Corporation', 'Farmers Edge'],
+    competitors: ['John DeereClimate Corporation', 'Farmers Edge'],
     marketSize: '$35B AgTech',
     growthRate: '25% CAGR',
     variant: 'agriculture-tech',
@@ -578,23 +528,23 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     reviews: 17,
     isNew: true
   }
-];
+],
 
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
-  return revolutionarySpecializedIndustryServices2029.filter(service => service.category === category);
-};
+  return revolutionarySpecializedIndustryServices2029.filter(service => service.category === category)
+},
 
 export const getPopularSpecializedIndustryServices = () => {
-  return revolutionarySpecializedIndustryServices2029.filter(service => service.isPopular);
-};
+  return revolutionarySpecializedIndustryServices2029.filter(service => service.isPopular),
+},
 
 export const getNewSpecializedIndustryServices = () => {
-  return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew);
-};
+  return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew),
+},
 
 export const getSpecializedIndustryServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    const price = parseInt(service.price.replace('$', '').replace(, '')),
+    return price >= minPrice && price <= maxPrice,
+  }),
+},

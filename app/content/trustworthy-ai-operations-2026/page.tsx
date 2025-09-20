@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Trustworthy AI Operations 2026 | Zion Tech Group';
+  title: 'Trustworthy AI Operations 2026 | Zion Tech Group',
   description:,
-    'Practical operating model for safe, reliable, and auditable AI systems in production.',
-};
+    'Practical operating model for safe, reliable, and auditable AI systems in production.'
+},
 export default function TrustworthyAIOperations2026() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -48,6 +48,5 @@ export default function TrustworthyAIOperations2026() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

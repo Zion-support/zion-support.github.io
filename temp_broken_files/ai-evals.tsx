@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 const function AIEvalsPage() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -9,7 +9,7 @@ const function AIEvalsPage() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function AIEvalsPage() {;
+  ),
+},
+export default function AIEvalsPage() {,
 }}}

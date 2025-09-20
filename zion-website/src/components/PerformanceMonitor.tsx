@@ -1,95 +1,95 @@
-'use client';
-import { useEffect, useState } from 'react';
+'use client',
+import { useEffect, useState } from 'react',
 interface PerformanceMetrics {,
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  fmp: number | null,}
+  fcp: number | null,
+  lcp: number | null,
+  fid: number | null,
+  cls: number | null,
+  ttfb: number | null,
+  fmp: number | null}
 ,
 export default function PerformanceMonitor() {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({,
-    fcp: null;
-    lcp: null;
-    fid: null;
-    cls: null;
-    ttfb: null;
-    fmp: null,});
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    fmp: null}),
   useEffect(() => {,
     // Only run in browser,
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return,
     // Performance Observer for Core Web Vitals,
     const observer = new PerformanceObserver((list) => {,
       for (const entry of list.getEntries()) {,
-        const metric = entry as PerformanceEntry & { value?: number };
+        const metric = entry as PerformanceEntry & { value?: number },
         switch (entry.entryType) {,
           case 'paint':,
             if (entry.name === 'first-contentful-paint') {,
-              setMetrics(prev => ({ ...prev, fcp: metric.value || entry.startTime ,}));
+              setMetrics(prev => ({ ...prev, fcp: metric.value || entry.startTime })),
             }
-            break;
+            break,
           case 'largest-contentful-paint':,
-            setMetrics(prev => ({ ...prev, lcp: metric.value || entry.startTime ,}));
-            break;
+            setMetrics(prev => ({ ...prev, lcp: metric.value || entry.startTime })),
+            break,
           case 'first-input':,
-            setMetrics(prev => ({ ...prev, fid: metric.value || entry.processingStart - entry.startTime ,}));
-            break;
+            setMetrics(prev => ({ ...prev, fid: metric.value || entry.processingStart - entry.startTime })),
+            break,
           case 'layout-shift':,
             if (!(entry as any).hadRecentInput) {,
               setMetrics(prev => ({,
-                ...prev;
-                cls: (prev.cls || 0) + ((entry as any).value || 0),}));
+                ...prev,
+                cls: (prev.cls || 0) + ((entry as any).value || 0)})),
             }
-            break;
+            break,
         }
       }
-    });
+    }),
     // Observe different entry types,
     try {,
-      observer.observe({ entryTypes: ['paintlargest-contentful-paint', 'first-inputlayout-shift'] });
+      observer.observe({ entryTypes: ['paintlargest-contentful-paintfirst-inputlayout-shift'] }),
     } catch (e) {,
-      console.warn('Performance Observer not supported:', e);
+      console.warn('Performance Observer not supported:', e),
     }
 ,
     // TTFB measurement,
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
     if (navigationEntry) {,
       setMetrics(prev => ({,
-        ...prev;
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart,}));
+        ...prev,
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart})),
     }
 ,
     // Send metrics to analytics,
     const sendMetrics = () => {,
-      const validMetrics = Object.entries(metrics).filter(([_, value]) => value !== null);
+      const validMetrics = Object.entries(metrics).filter(([_, value]) => value !== null),
       if (validMetrics.length > 0) {,
         // Send to your analytics service,
         fetch('/api/analytics/performance', {,
-          method: 'POST';
-          headers: { 'Content-Type': 'application/json' ,};
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({,
-            metrics: Object.fromEntries(validMetrics);
-            url: window.location.href;
-            timestamp: Date.now();
-            userAgent: navigator.userAgent,}),
-        }).catch(console.error);
+            metrics: Object.fromEntries(validMetrics),
+            url: window.location.href,
+            timestamp: Date.now(),
+            userAgent: navigator.userAgent})
+        }).catch(console.error),
       }
-    };
+    },
     // Send metrics after a delay to ensure all metrics are collected,
-    const timeoutId = setTimeout(sendMetrics, 5000);
+    const timeoutId = setTimeout(sendMetrics, 5000),
     return () => {,
-      observer.disconnect();
-      clearTimeout(timeoutId);
-    };
-  }, [metrics]);
+      observer.disconnect(),
+      clearTimeout(timeoutId),
+    },
+  }, [metrics]),
   // Development mode: show metrics in console,
   useEffect(() => {,
     if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(v => v !== null)) {,
-      console.log('Performance Metrics:', metrics);
+      console.log('Performance Metrics:', metrics),
     }
-  }, [metrics]);
-  return null, // This component doesn't render anything,
+  }, [metrics]),
+  return null, // This component doesn't render anything
 }
 ,
 // Performance optimization utilities,
@@ -99,34 +99,34 @@ export const performanceUtils = {,
     const observer = new IntersectionObserver((entries) => {,
       entries.forEach((entry) => {,
         if (entry.isIntersecting) {,
-          img.src = src;
-          observer.unobserve(img),
+          img.src = src,
+          observer.unobserve(img)
         }
-      });
-    });
-    observer.observe(img);
-  };
+      }),
+    }),
+    observer.observe(img),
+  },
   // Preload critical resources,
   preloadResource: (href: string, as: string) => {,
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = href;
-    link.as = as;
-    document.head.appendChild(link),
-  };
+    const link = document.createElement('link'),
+    link.rel = 'preload',
+    link.href = href,
+    link.as = as,
+    document.head.appendChild(link)
+  },
   // Defer non-critical JavaScript,
   deferScript: (src: string) => {,
-    const script = document.createElement('script');
-    script.src = src;
-    script.defer = true;
-    document.head.appendChild(script),
-  };
+    const script = document.createElement('script'),
+    script.src = src,
+    script.defer = true,
+    document.head.appendChild(script)
+  },
   // Optimize images,
   optimizeImage: (src: string, width?: number, quality: number = 80) => {,
     if (src.startsWith('http') && width) {,
       // Use Next.js Image Optimization if available,
-      return `/api/image?url=${encodeURIComponent(src),}&w=${width}&q=${quality}`;
+      return `/api/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`,
     }
-    return src;
+    return src,
   }
-};
+},

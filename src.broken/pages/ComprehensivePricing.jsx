@@ -1,7 +1,7 @@
-import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award  } from 'lucide-react';
+import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award  } from 'lucide-react',
 
 export default function Page() {
-;
+,
     const formatPrice = (price, pricingModel) => {
         if(pricingModel === 'per API call') {
             return `$${price.toFixed(3) } per call`}
@@ -21,7 +21,7 @@ export default function Page() {
             return `$${price}/month`}
         else {
             return `$${price}`}
-    };
+    },
     const renderITPricing = () => (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
       {enhancedITServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient - to - br from - blue - 800 / 50 to - indigo - 700 / 50 border-blue - 600 / 30 hover:border-blue - 500 / 50 transition - all duration - 500 hover:scale - 105 backdrop - blur -sm">
           <CardHeader className="pb -4">
@@ -98,7 +98,7 @@ export default function Page() {
             </div>
           </CardContent>
         </Card>) ) }
-    </div>) ;
+    </div>) ,
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -181,8 +181,7 @@ export default function Page() {
             </div>
           </div>
           <div className="flex flex - col sm:flex - row gap-4 justify -center">
-            <Button size="lg" className="bg-gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text-white font - semibold px-8 py-3" onClick = { () => window.open('https://ziontechgroup.com',
-  '_blank') }>
+            <Button size="lg" className="bg-gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text-white font - semibold px-8 py-3" onClick = { () => window.open('https://ziontechgroup.com_blank') }>
               Visit Our Website < ExternalLink className="ml-2 h-4 w-4"/>
             </Button>
             <Button size="lg" variant="outline" className="border-slate - 500 text-slate - 300 hover:border-blue - 500 hover:text-blue - 400 px-8 py-3" onClick={ () => window.open(`mailto:kleber@ziontechgroup.com`) }>
@@ -191,5 +190,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}}}}}}}}}}

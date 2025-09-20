@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTechSpaceService2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
   // Space Technology & Mining
@@ -49,16 +49,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     period: '/month',
     description: 'Advanced quantum-powered space mining platform that revolutionizes resource exploration and extraction in space. Use quantum computing and AI to identify, analyze, and extract valuable resources from asteroids, moons, and other celestial bodies.',
     features: [
-      'Quantum-powered resource detection',
-      'AI-driven mining optimization',
-      'Real-time space mapping',
-      'Resource composition analysis',
-      'Mining automation systems',
-      'Supply chain optimization',
-      'Risk assessment algorithms',
-      'Regulatory compliance',
-      'Environmental impact monitoring',
-      'ROI optimization tools'
+      'Quantum-powered resource detectionAI-driven mining optimization',
+      'Real-time space mappingResource composition analysis',
+      'Mining automation systemsSupply chain optimization',
+      'Risk assessment algorithmsRegulatory compliance',
+      'Environmental impact monitoringROI optimization tools'
     ],
     popular: true,
     icon: '🚀',
@@ -71,11 +66,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '4-6 weeks',
     category: 'Space Technology & Mining',
     realService: true,
-    technology: ['Quantum Computing', 'AI & Machine Learning', 'Space Technology', 'Robotics', 'Advanced Sensors', 'Satellite Systems'],
-    integrations: ['Satellite Networks', 'Ground Stations', 'Mining Equipment', 'Supply Chain Systems', 'Financial Platforms', 'Regulatory Systems'],
-    useCases: ['Asteroid mining', 'Lunar resource extraction', 'Space resource mapping', 'Mining optimization', 'Supply chain management', 'Investment analysis'],
+    technology: ['Quantum ComputingAI & Machine Learning', 'Space TechnologyRobotics', 'Advanced SensorsSatellite Systems'],
+    integrations: ['Satellite NetworksGround Stations', 'Mining EquipmentSupply Chain Systems', 'Financial PlatformsRegulatory Systems'],
+    useCases: ['Asteroid miningLunar resource extraction', 'Space resource mappingMining optimization', 'Supply chain managementInvestment analysis'],
     roi: 'Space mining companies report 2000% ROI through quantum-powered resource detection. Investment firms see 1500% ROI in space ventures.',
-    competitors: ['No direct competitors', 'Space mining tools: $50,000+/month', 'Satellite services: $25,000+/month'],
+    competitors: ['No direct competitorsSpace mining tools: $50,000+/month', 'Satellite services: $25,000+/month'],
     marketSize: '$3.8B space mining market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -100,16 +95,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     period: '/month',
     description: 'Revolutionary quantum space communication network that provides unbreakable, instant communication across vast distances in space. Perfect for space missions, satellite networks, and interplanetary communication.',
     features: [
-      'Quantum entanglement communication',
-      'Instant space communication',
-      'Unbreakable encryption',
-      'Multi-planet connectivity',
-      'Satellite network integration',
-      'Real-time data transmission',
-      'Quantum key distribution',
-      'Interplanetary internet',
-      'Space mission support',
-      'Emergency communication systems'
+      'Quantum entanglement communicationInstant space communication',
+      'Unbreakable encryptionMulti-planet connectivity',
+      'Satellite network integrationReal-time data transmission',
+      'Quantum key distributionInterplanetary internet',
+      'Space mission supportEmergency communication systems'
     ],
     popular: true,
     icon: '🛰️',
@@ -122,11 +112,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '3-5 weeks',
     category: 'Space Communication',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Communication', 'Satellite Technology', 'Quantum Encryption', 'Space Networks', 'Quantum Key Distribution'],
-    integrations: ['Satellite Systems', 'Ground Stations', 'Space Missions', 'Communication Networks', 'Security Systems', 'Monitoring Tools'],
-    useCases: ['Space mission communication', 'Satellite networks', 'Interplanetary communication', 'Secure data transmission', 'Emergency communications', 'Research collaboration'],
+    technology: ['Quantum ComputingQuantum Communication', 'Satellite TechnologyQuantum Encryption', 'Space NetworksQuantum Key Distribution'],
+    integrations: ['Satellite SystemsGround Stations', 'Space MissionsCommunication Networks', 'Security SystemsMonitoring Tools'],
+    useCases: ['Space mission communicationSatellite networks', 'Interplanetary communicationSecure data transmission', 'Emergency communicationsResearch collaboration'],
     roi: 'Space agencies report 800% ROI through secure communication. Satellite companies see 600% ROI in network reliability.',
-    competitors: ['Traditional space communication: $30,000+/month', 'Satellite services: $25,000+/month', 'Quantum communication: $50,000+/month'],
+    competitors: ['Traditional space communication: $30,000+/monthSatellite services: $25,000+/month', 'Quantum communication: $50,000+/month'],
     marketSize: '$12B space communication market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -152,16 +142,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     period: '/month',
     description: 'Comprehensive automation platform for space colonies, lunar bases, and Mars habitats. Manage life support systems, resource management, energy production, and colony operations with advanced AI and robotics.',
     features: [
-      'Life support automation',
-      'Resource management systems',
-      'Energy production optimization',
-      'Colony health monitoring',
-      'Robotic maintenance systems',
-      'Environmental control',
-      'Food production automation',
-      'Waste management systems',
-      'Emergency response automation',
-      'Colony expansion planning'
+      'Life support automationResource management systems',
+      'Energy production optimizationColony health monitoring',
+      'Robotic maintenance systemsEnvironmental control',
+      'Food production automationWaste management systems',
+      'Emergency response automationColony expansion planning'
     ],
     popular: false,
     icon: '🏠',
@@ -174,11 +159,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '6-8 weeks',
     category: 'Space Colony Technology',
     realService: true,
-    technology: ['AI & Machine Learning', 'Robotics', 'Automation Systems', 'Life Support Technology', 'Environmental Control', 'Resource Management'],
-    integrations: ['Life Support Systems', 'Robotic Systems', 'Environmental Controls', 'Monitoring Systems', 'Communication Networks', 'Data Analysis Platforms'],
-    useCases: ['Lunar base automation', 'Mars habitat management', 'Space station automation', 'Colony expansion', 'Research facility automation', 'Emergency response'],
+    technology: ['AI & Machine LearningRobotics', 'Automation SystemsLife Support Technology', 'Environmental ControlResource Management'],
+    integrations: ['Life Support SystemsRobotic Systems', 'Environmental ControlsMonitoring Systems', 'Communication NetworksData Analysis Platforms'],
+    useCases: ['Lunar base automationMars habitat management', 'Space station automationColony expansion', 'Research facility automationEmergency response'],
     roi: 'Space agencies report 1500% ROI through automation. Research institutions see 1000% ROI in colony efficiency.',
-    competitors: ['No direct competitors', 'Industrial automation: $100,000+/month', 'Life support systems: $50,000+/month'],
+    competitors: ['No direct competitorsIndustrial automation: $100,000+/month', 'Life support systems: $50,000+/month'],
     marketSize: '$2.5B space habitat market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -204,16 +189,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     period: '/month',
     description: 'Breakthrough quantum space propulsion system that enables faster-than-light travel concepts, efficient interplanetary missions, and revolutionary space exploration capabilities. Perfect for deep space missions and interplanetary travel.',
     features: [
-      'Quantum propulsion engines',
-      'Faster-than-light concepts',
-      'Interplanetary mission optimization',
-      'Fuel efficiency optimization',
-      'Mission planning automation',
-      'Propulsion system monitoring',
-      'Energy management systems',
-      'Safety protocols',
-      'Performance analytics',
-      'Custom propulsion design'
+      'Quantum propulsion enginesFaster-than-light concepts',
+      'Interplanetary mission optimizationFuel efficiency optimization',
+      'Mission planning automationPropulsion system monitoring',
+      'Energy management systemsSafety protocols',
+      'Performance analyticsCustom propulsion design'
     ],
     popular: true,
     icon: '⚡',
@@ -226,11 +206,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '8-12 weeks',
     category: 'Space Propulsion Technology',
     realService: true,
-    technology: ['Quantum Physics', 'Propulsion Engineering', 'Space Technology', 'Energy Systems', 'Quantum Mechanics', 'Advanced Materials'],
-    integrations: ['Spacecraft Systems', 'Mission Control', 'Energy Management', 'Safety Systems', 'Monitoring Tools', 'Analytics Platforms'],
-    useCases: ['Deep space missions', 'Interplanetary travel', 'Space exploration', 'Satellite propulsion', 'Space station propulsion', 'Research missions'],
+    technology: ['Quantum PhysicsPropulsion Engineering', 'Space TechnologyEnergy Systems', 'Quantum MechanicsAdvanced Materials'],
+    integrations: ['Spacecraft SystemsMission Control', 'Energy ManagementSafety Systems', 'Monitoring ToolsAnalytics Platforms'],
+    useCases: ['Deep space missionsInterplanetary travel', 'Space explorationSatellite propulsion', 'Space station propulsionResearch missions'],
     roi: 'Space agencies report 2000% ROI through revolutionary propulsion. Aerospace companies see 1500% ROI in mission capabilities.',
-    competitors: ['Traditional propulsion: $100,000+/month', 'Advanced propulsion: $75,000+/month', 'Research propulsion: $50,000+/month'],
+    competitors: ['Traditional propulsion: $100,000+/monthAdvanced propulsion: $75,000+/month', 'Research propulsion: $50,000+/month'],
     marketSize: '$8B space propulsion market',
     growthRate: '250% annual growth',
     variant: 'quantum-futuristic',
@@ -256,16 +236,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     period: '/month',
     description: 'Comprehensive AI platform that automates space research processes, from data collection and analysis to mission planning and execution. Accelerate space research by 10x while maintaining scientific accuracy.',
     features: [
-      'Automated data collection',
-      'AI-powered analysis',
-      'Mission planning automation',
-      'Research collaboration tools',
-      'Real-time monitoring',
-      'Predictive analytics',
-      'Resource optimization',
-      'Risk assessment',
-      'Compliance management',
-      'Publication assistance'
+      'Automated data collectionAI-powered analysis',
+      'Mission planning automationResearch collaboration tools',
+      'Real-time monitoringPredictive analytics',
+      'Resource optimizationRisk assessment',
+      'Compliance managementPublication assistance'
     ],
     popular: false,
     icon: '🔬',
@@ -278,11 +253,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '3-4 weeks',
     category: 'Space Research & Development',
     realService: true,
-    technology: ['AI & Machine Learning', 'Data Analysis', 'Automation Systems', 'Research Tools', 'Collaboration Platforms', 'Analytics Systems'],
-    integrations: ['Research Databases', 'Satellite Systems', 'Ground Stations', 'Collaboration Tools', 'Data Sources', 'Publication Platforms'],
-    useCases: ['Space research', 'Mission planning', 'Data analysis', 'Collaborative research', 'Publication assistance', 'Resource optimization'],
+    technology: ['AI & Machine LearningData Analysis', 'Automation SystemsResearch Tools', 'Collaboration PlatformsAnalytics Systems'],
+    integrations: ['Research DatabasesSatellite Systems', 'Ground StationsCollaboration Tools', 'Data SourcesPublication Platforms'],
+    useCases: ['Space researchMission planning', 'Data analysisCollaborative research', 'Publication assistanceResource optimization'],
     roi: 'Research institutions report 800% ROI through automation. Government agencies see 600% ROI in research efficiency.',
-    competitors: ['Traditional research tools: $20,000+/month', 'AI platforms: $10,000+/month', 'Research automation: $15,000+/month'],
+    competitors: ['Traditional research tools: $20,000+/monthAI platforms: $10,000+/month', 'Research automation: $15,000+/month'],
     marketSize: '$5B space research market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -299,4 +274,4 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     rating: 4.6,
     reviews: 24
   }
-];
+],

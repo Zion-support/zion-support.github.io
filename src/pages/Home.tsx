@@ -1,8 +1,8 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { Suspense, useState, useEffect, useMemo, useCallback } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  CheckCircle, 
+  CheckCircle,
   ArrowRight, 
   Star, 
   Zap, 
@@ -41,276 +41,150 @@ import {
   Phone, 
   Mail, 
   TrendingUp 
-} from 'lucide-react';
-import SEO from "@/components/SEO";
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
-
 // Lazy load heavy components
-const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
-const BenefitsSection = React.lazy(() => import("@/components/BenefitsSection"));
-const HowItWorksSection = React.lazy(() => import("@/components/HowItWorksSection"));
-const NewsletterSection = React.lazy(() => import("@/components/NewsletterSection"));
-const FeaturedListingsSection = React.lazy(() => import("@/components/FeaturedListingsSection"));
-const QuickAccess = React.lazy(() => import("@/components/home/QuickAccess"));
-const FeatureCTAs = React.lazy(() => import("@/components/home/FeatureCTAs"));
-const FeatureHighlights = React.lazy(() => import("@/components/home/FeatureHighlights"));
-const ITServiceRequestHero = React.lazy(() => import("@/components/home/ITServiceRequestHero"));
-const FloatingCTA = React.lazy(() => import("@/components/FloatingCTA"));
-const PricingSection = React.lazy(() => import("@/components/PricingSection"));
-const TechSolutionsSection = React.lazy(() => import("@/components/TechSolutionsSection"));
-const CaseStudiesSection = React.lazy(() => import("@/components/CaseStudiesSection"));
-const TeamExpertiseSection = React.lazy(() => import("@/components/TeamExpertiseSection"));
-const GlobalPresenceSection = React.lazy(() => import("@/components/GlobalPresenceSection"));
-const InnovationResearchSection = React.lazy(() => import("@/components/InnovationResearchSection"));
-const ClientSuccessStoriesSection = React.lazy(() => import("@/components/ClientSuccessStoriesSection"));
-const TechnologyStackSection = React.lazy(() => import("@/components/TechnologyStackSection"));
-const SecurityComplianceSection = React.lazy(() => import("@/components/SecurityComplianceSection"));
-const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowcase"));
-const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials"));
-const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
+const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection")),
+const BenefitsSection = React.lazy(() => import("@/components/BenefitsSection")),
+const HowItWorksSection = React.lazy(() => import("@/components/HowItWorksSection")),
+const NewsletterSection = React.lazy(() => import("@/components/NewsletterSection")),
+const FeaturedListingsSection = React.lazy(() => import("@/components/FeaturedListingsSection")),
+const QuickAccess = React.lazy(() => import("@/components/home/QuickAccess")),
+const FeatureCTAs = React.lazy(() => import("@/components/home/FeatureCTAs")),
+const FeatureHighlights = React.lazy(() => import("@/components/home/FeatureHighlights")),
+const ITServiceRequestHero = React.lazy(() => import("@/components/home/ITServiceRequestHero")),
+const FloatingCTA = React.lazy(() => import("@/components/FloatingCTA")),
+const PricingSection = React.lazy(() => import("@/components/PricingSection")),
+const TechSolutionsSection = React.lazy(() => import("@/components/TechSolutionsSection")),
+const CaseStudiesSection = React.lazy(() => import("@/components/CaseStudiesSection")),
+const TeamExpertiseSection = React.lazy(() => import("@/components/TeamExpertiseSection")),
+const GlobalPresenceSection = React.lazy(() => import("@/components/GlobalPresenceSection")),
+const InnovationResearchSection = React.lazy(() => import("@/components/InnovationResearchSection")),
+const ClientSuccessStoriesSection = React.lazy(() => import("@/components/ClientSuccessStoriesSection")),
+const TechnologyStackSection = React.lazy(() => import("@/components/TechnologyStackSection")),
+const SecurityComplianceSection = React.lazy(() => import("@/components/SecurityComplianceSection")),
+const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowcase")),
+const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials")),
+const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase")),
 
 interface StatItem {
-  value: string;
-  label: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  color: string;
+  value: string,label: string,description: string,icon: React.ComponentType<any>,color: string
 }
 
 interface AIService {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  features: string[];
-  href: string;
-  color: string;
+  title: string,description: string,icon: React.ComponentType<any>,features: string[],href: string,color: string
 }
 
 interface ServiceCategory {
-  name: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  href: string;
-  count: number;
-  color: string;
-  services: string[];
+  name: string,description: string,icon: React.ComponentType<any>,href: string,count: number,color: string,services: string[]
 }
 
 interface EmergingTech {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  href: string;
-  price: string;
-  category: string;
+  title: string,description: string,icon: React.ComponentType<any>,href: string,price: string,category: string
 }
 
 interface MicroSaasService {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  href: string;
-  price: string;
-  category: string;
+  title: string,description: string,icon: React.ComponentType<any>,href: string,price: string,category: string
 }
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
     // Simulate loading time for better UX
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+      setIsLoading(false),
+    }, 1000),
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer),
+  }, []),
 
   const handleError = useCallback((error: Error) => {
     console.error('Home component error:', error);
     setError(error.message);
   }, []);
-
   const stats: StatItem[] = useMemo(() => [
     {
-      value: "500+",
-      label: "Projects Delivered",
-      description: "Successfully completed across industries",
-      icon: CheckCircle,
-      color: "from-green-400 to-emerald-500"
-    },
+      value: "500+",label: "Projects Delivered",description: "Successfully completed across industries",icon: CheckCircle,color: "from-green-400 to-emerald-500"
+    };
     {
-      value: "50+",
-      label: "AI Solutions",
-      description: "Cutting-edge artificial intelligence services",
-      icon: Brain,
-      color: "from-cyan-400 to-blue-500"
-    },
+      value: "50+",label: "AI Solutions",description: "Cutting-edge artificial intelligence services",icon: Brain,color: "from-cyan-400 to-blue-500"
+    };
     {
-      value: "24/7",
-      label: "Support Available",
-      description: "Round-the-clock technical assistance",
-      icon: Clock,
-      color: "from-blue-400 to-indigo-500"
-    },
+      value: "24/7",label: "Support Available",description: "Round-the-clock technical assistance",icon: Clock,color: "from-blue-400 to-indigo-500"
+    };
     {
-      value: "99.9%",
-      label: "Uptime Guarantee",
-      description: "Reliable infrastructure and services",
-      icon: Shield,
-      color: "from-purple-400 to-pink-500"
+      value: "99.9%",label: "Uptime Guarantee",description: "Reliable infrastructure and services",icon: Shield,color: "from-purple-400 to-pink-500"
     }
-  ], []);
+  ], []),
 
   const aiServices: AIService[] = useMemo(() => [
     {
-      title: "AI Business Intelligence",
-      description: "Transform your data into actionable insights with advanced analytics and machine learning",
-      icon: Brain,
-      features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models"],
-      href: "/services/ai-business-intelligence",
-      color: "from-cyan-400 to-blue-500"
-    },
+      title: "AI Business Intelligence",description: "Transform your data into actionable insights with advanced analytics and machine learning",icon: Brain,features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models"],
+      href: "/services/ai-business-intelligence",color: "from-cyan-400 to-blue-500"
+    };
     {
-      title: "AI Compliance Assistant",
-      description: "Automate regulatory compliance with AI-powered monitoring and reporting",
-      icon: Shield,
-      features: ["Automated Auditing", "Risk Assessment", "Compliance Reporting"],
-      href: "/services/ai-compliance-assistant",
-      color: "from-red-400 to-pink-500"
-    },
+      title: "AI Compliance Assistant",description: "Automate regulatory compliance with AI-powered monitoring and reporting",icon: Shield,features: ["Automated Auditing", "Risk Assessment", "Compliance Reporting"],
+      href: "/services/ai-compliance-assistant",color: "from-red-400 to-pink-500"
+    };
     {
-      title: "AI Sales Copilot",
-      description: "Boost sales performance with intelligent lead scoring and customer insights",
-      icon: Users,
-      features: ["Lead Scoring", "Customer Insights", "Sales Forecasting"],
-      href: "/services/ai-sales-copilot",
-      color: "from-green-400 to-emerald-500"
+      title: "AI Sales Copilot",description: "Boost sales performance with intelligent lead scoring and customer insights",icon: Users,features: ["Lead Scoring", "Customer Insights", "Sales Forecasting"],
+      href: "/services/ai-sales-copilot",color: "from-green-400 to-emerald-500"
     }
-  ], []);
+  ], []),
 
   const serviceCategories: ServiceCategory[] = [
     {
-      name: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions for business transformation",
-      icon: Brain,
-      href: "/ai-services",
-      count: 25,
-      color: "from-cyan-400 to-blue-500",
-      services: ["AI Business Intelligence", "Machine Learning", "Natural Language Processing", "Computer Vision"]
+      name: "AI & Machine Learning",description: "Cutting-edge artificial intelligence solutions for business transformation",icon: Brain,href: "/ai-services",count: 25,color: "from-cyan-400 to-blue-500",services: ["AI Business Intelligence", "Machine Learning", "Natural Language Processing", "Computer Vision"]
     },
     {
-      name: "Cloud & DevOps",
-      description: "Enterprise-grade cloud infrastructure and automated deployment solutions",
-      icon: Cloud,
-      href: "/services/cloud-devops",
-      count: 18,
-      color: "from-blue-400 to-indigo-500",
-      services: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Serverless Architecture"]
+      name: "Cloud & DevOps",description: "Enterprise-grade cloud infrastructure and automated deployment solutions",icon: Cloud,href: "/services/cloud-devops",count: 18,color: "from-blue-400 to-indigo-500",services: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Serverless Architecture"]
     },
     {
-      name: "Cybersecurity",
-      description: "Advanced security solutions to protect your digital assets and infrastructure",
-      icon: Shield,
-      href: "/services/cybersecurity",
-      count: 22,
-      color: "from-red-400 to-pink-500",
-      services: ["Threat Detection", "Zero Trust Security", "Compliance Management", "Incident Response"]
+      name: "Cybersecurity",description: "Advanced security solutions to protect your digital assets and infrastructure",icon: Shield,href: "/services/cybersecurity",count: 22,color: "from-red-400 to-pink-500",services: ["Threat Detection", "Zero Trust Security", "Compliance Management", "Incident Response"]
     },
     {
-      name: "Digital Transformation",
-      description: "Strategic technology consulting and implementation guidance",
-      icon: Zap,
-      href: "/services/digital-transformation",
-      count: 15,
-      color: "from-yellow-400 to-orange-500",
-      services: ["Process Automation", "Digital Strategy", "Change Management", "Technology Roadmap"]
+      name: "Digital Transformation",description: "Strategic technology consulting and implementation guidance",icon: Zap,href: "/services/digital-transformation",count: 15,color: "from-yellow-400 to-orange-500",services: ["Process Automation", "Digital Strategy", "Change Management", "Technology Roadmap"]
     },
     {
-      name: "IoT & Edge Computing",
-      description: "Smart device networks and edge computing solutions",
-      icon: Cpu,
-      href: "/services/iot-edge",
-      count: 20,
-      color: "from-green-400 to-emerald-500",
-      services: ["IoT Platforms", "Edge Analytics", "Device Management", "Smart Cities"]
+      name: "IoT & Edge Computing",description: "Smart device networks and edge computing solutions",icon: Cpu,href: "/services/iot-edge",count: 20,color: "from-green-400 to-emerald-500",services: ["IoT Platforms", "Edge Analytics", "Device Management", "Smart Cities"]
     },
     {
-      name: "Quantum Computing",
-      description: "Next-generation quantum solutions for complex problem solving",
-      icon: Atom,
-      href: "/services/quantum-computing",
-      count: 12,
-      color: "from-purple-400 to-pink-500",
-      services: ["Quantum Algorithms", "Quantum Security", "Quantum Simulation", "Quantum ML"]
+      name: "Quantum Computing",description: "Next-generation quantum solutions for complex problem solving",icon: Atom,href: "/services/quantum-computing",count: 12,color: "from-purple-400 to-pink-500",services: ["Quantum Algorithms", "Quantum Security", "Quantum Simulation", "Quantum ML"]
     }
-  ];
+  ],
 
   const emergingTech: EmergingTech[] = [
     {
-      title: "Metaverse Commerce",
-      description: "Create virtual storefronts and immersive shopping experiences",
-      icon: Globe2,
-      href: "/services/metaverse-commerce-platform",
-      price: "$399/month",
-      category: "Emerging Tech"
-    },
+      title: "Metaverse Commerce",description: "Create virtual storefronts and immersive shopping experiences",icon: Globe2,href: "/services/metaverse-commerce-platform",price: "$399/month",category: "Emerging Tech"
+    };
     {
-      title: "Quantum AI Trading",
-      description: "Revolutionary trading platform using quantum computing principles",
-      icon: TrendingUp,
-      href: "/services/quantum-ai-trading-platform",
-      price: "$2,999/month",
+      title: "Quantum AI Trading",description: "Revolutionary trading platform using quantum computing principles",icon: TrendingUp,href: "/services/quantum-ai-trading-platform",price: "$2,999/month",
       category: "FinTech"
-    },
+    };
     {
-      title: "Space Technology",
-      description: "Satellite operations and space mission optimization",
-      icon: Building,
-      href: "/services/space-tech-optimization-platform",
-      price: "$3,999/month",
+      title: "Space Technology",description: "Satellite operations and space mission optimization",icon: Building,href: "/services/space-tech-optimization-platform",price: "$3,999/month",
       category: "Space Tech"
-    },
+    };
     {
-      title: "Autonomous Vehicles",
-      description: "Fleet management for autonomous vehicle operations",
-      icon: Car,
-      href: "/services/autonomous-vehicle-fleet-management",
-      price: "$799/month",
-      category: "Transportation"
+      title: "Autonomous Vehicles",description: "Fleet management for autonomous vehicle operations",icon: Car,href: "/services/autonomous-vehicle-fleet-management",price: "$799/month",category: "Transportation"
     }
   ];
-
   const microSaasServices: MicroSaasService[] = [
     {
-      title: "AI Customer Success",
-      description: "Predictive churn prevention and automated onboarding",
-      icon: Users,
-      href: "/services/ai-powered-customer-success",
-      price: "$199/month",
-      category: "Customer Success"
-    },
+      title: "AI Customer Success",description: "Predictive churn prevention and automated onboarding",icon: Users,href: "/services/ai-powered-customer-success",price: "$199/month",category: "Customer Success"
+    };
     {
-      title: "AI Marketing Automation",
-      description: "Intelligent campaign optimization and audience targeting",
-      icon: Target,
-      href: "/services/ai-marketing-automation",
-      price: "$299/month",
-      category: "Marketing"
-    },
+      title: "AI Marketing Automation",description: "Intelligent campaign optimization and audience targeting",icon: Target,href: "/services/ai-marketing-automation",price: "$299/month",category: "Marketing"
+    };
     {
-      title: "AI Financial Advisor",
-      description: "Automated financial planning and investment recommendations",
-      icon: DollarSign,
-      href: "/services/ai-financial-advisor",
-      price: "$399/month",
-      category: "Finance"
+      title: "AI Financial Advisor",description: "Automated financial planning and investment recommendations",icon: DollarSign,href: "/services/ai-financial-advisor",price: "$399/month",category: "Finance"
     }
   ];
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -319,7 +193,7 @@ export default function Home() {
           <p className="text-lg text-gray-300 mt-4">Preparing amazing experiences...</p>
         </div>
       </div>
-    );
+    ),
   }
 
   if (error) {
@@ -330,13 +204,13 @@ export default function Home() {
           <p className="text-gray-300">{error}</p>
           <button 
             onClick={() => setError(null)}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
           >
             Try Again
           </button>
         </div>
       </div>
-    );
+    )
   }
 
   return (

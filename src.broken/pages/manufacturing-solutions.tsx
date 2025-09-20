@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -6,57 +6,51 @@ export default function Page() {
       description:
         'AI - driven maintenance systems that prevent equipment failures and reduce downtime.',
       icon: TrendingUp,
-      features: ['Equipment monitoring',
-        'Failure prediction',
-        'Maintenance scheduling',
-        'Cost optimization',
-      ],
+      features: ['Equipment monitoringFailure prediction',
+        'Maintenance schedulingCost optimization'
+      ]
     },
     {
       title: 'Supply Chain Optimization',
       description:
         'Intelligent supply chain management with AI - powered forecasting and optimization.',
       icon: Cog,
-      features: ['Demand forecasting',
-        'Inventory optimization',
-        'Route planning',
-        'Supplier management',
-      ],
+      features: ['Demand forecastingInventory optimization',
+        'Route planningSupplier management'
+      ]
     },
     {
       title: 'Digital Twin Technology',
       description:
         'Virtual replicas of physical manufacturing systems for simulation and optimization.',
       icon: Cloud,
-      features: ['System simulation',
-        'Performance optimization',
-        'Scenario testing',
-        'Real - time monitoring',
-      ],
-    },
-  ];
+      features: ['System simulationPerformance optimization',
+        'Scenario testingReal - time monitoring'
+      ]
+    }
+  ],
 
   const benefits = [{
       title: 'Increased Efficiency',
       description: 'Optimize production processes and reduce waste',
-      icon: TrendingUp,
+      icon: TrendingUp
     },
     {
       title: 'Cost Reduction',
       description: 'Lower operational costs through intelligent automation',
-      icon: BarChart3,
+      icon: BarChart3
     },
     {
       title: 'Quality Improvement',
       description: 'Enhanced product quality and consistency',
-      icon: Star,
+      icon: Star
     },
     {
       title: 'Predictive Capabilities',
       description: 'Anticipate and prevent issues before they occur',
-      icon: Brain,
-    },
-  ];
+      icon: Brain
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Header */}
@@ -191,7 +185,7 @@ export default function Page() {
           <p className="text-xl text-gray - 300 mb-8 max - w-2xl mx -auto">
             Let's discuss how our manufacturing solutions can optimize your
             operations and drive growth.</p>
-          <div className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div className="flex flex - col sm: flex - row gap-4 justify -center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:scale -105"
@@ -207,6 +201,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},
 

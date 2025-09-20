@@ -1,90 +1,89 @@
 
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
 import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
 
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
-import { WebhooksManager } from "@/components/developers/WebhooksManager";
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
+import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+import { ApiLogs } from "@/components/developers/ApiLogs",
 
 interface TabDefinition {
-  id: string;
-  label: string;
-  icon: LucideIcon;
+  id: string,
+  label: string,
+  icon: LucideIcon
 }
 
 export function DeveloperPortal() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>("documentation");
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen },
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
-    { id: "logs", label: "Logs", icon: List },
-  ];
+    { id: "logs", label: "Logs", icon: List }
+  ],
 
   const resources = [{
-      title: 'Getting Started Guide',;
+      title: 'Getting Started Guide',
       description: 'Quick start tutorial for new developers',
       icon: '🚀',
       difficulty: 'Beginner'
     },
     {
-      title: 'API Reference',;
+      title: 'API Reference',
       description: 'Complete endpoint documentation',
       icon: '📚',
       difficulty: 'All Levels'
     },
     {
-      title: 'Best Practices',;
+      title: 'Best Practices',
       description: 'Development guidelines and patterns',
       icon: '⭐',
       difficulty: 'Intermediate'
-    },;
-    {;
-      title: 'Code Samples',;
-      description: 'Real - world implementation examples',;
-      icon: '💻',;
-      difficulty: 'All Levels';
-    };
-  ];
+    },
+    {,
+      title: 'Code Samples',
+      description: 'Real - world implementation examples',
+      icon: '💻',
+      difficulty: 'All Levels'
+    },
+  ],
 
   const community = [{
-      language: 'JavaScript',;
+      language: 'JavaScript',
       code: `const response = await fetch('https://api.ziontechgroup.com / v1 / data', {
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content - Type': 'application / json';
-  };
-}) ;
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json',
+  },
+}) ,
 
-const data = await response.json () ;
-// // // // console.log(data) ;`,
+const data = await response.json () ,
+// // // // console.log(data) ,`,
       icon: Code
     },
     {
-      name: 'GitHub Discussions',;
+      name: 'GitHub Discussions',
       description: 'Open source collaboration',
       members: '1.8K+',
       icon: '🐙'
     },
     {
-      name: 'Discord Server',;
+      name: 'Discord Server',
       description: 'Real - time developer chat',
       members: '3.2K+',
       icon: '🎮'
     },
     {
-      name: 'Stack Overflow',;
-      description: 'Q & A platform integration',;
-      members: '5K+',;
-      icon: '📝';
-    };
-  ];
+      name: 'Stack Overflow',
+      description: 'Q & A platform integration',
+      members: '5K+',
+      icon: '📝'
+    },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -257,7 +256,7 @@ const data = await response.json () ;
       </section>
 
       {/* Code Examples */}
-      <section className="py-20 bg-zion - slate -dark">;
+      <section className="py-20 bg-zion - slate -dark">,
         <div className="container mx - auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -297,7 +296,7 @@ const data = await response.json () ;
       </section>
 
       {/* Resources */}
-      <section className="py-20 bg-zion - blue -dark">;
+      <section className="py-20 bg-zion - blue -dark">,
         <div className="container mx - auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -357,17 +356,17 @@ const data = await response.json () ;
                     {resource.badge}
                   </span>
 
-                  <button     className="text-zion - cyan hover:text-white transition - colors duration - 300 text-sm group - hover:translate - x-1 transition - transform duration -300">
+                  <button     className="text-zion - cyan hover: text-white transition - colors duration - 300 text-sm group - hover:translate - x-1 transition - transform duration -300">
                     View Resource
                   </button>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>) ) }
           </div>
         </div>
       </section>
 
       {/* Quick Start Section */}
-      <section className="py-16 px-4 bg-slate -800 / 30">;
+      <section className="py-16 px-4 bg-slate -800 / 30">,
         <div className="max - w-4xl mx -auto">
           <motion.div
             initial = {
@@ -443,9 +442,9 @@ const data = await response.json () ;
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - slate - dark to - zion - blue -dark">;
+      <section className="py-20 bg-gradient - to - r from - zion - slate - dark to - zion - blue -dark">,
         <div className="container mx - auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
             Ready to Build Something Amazing?
           </h2>
           <p className="text-xl text-zion - slate - light mb-8 max - w-3xl mx -auto">
@@ -461,13 +460,13 @@ const data = await response.json () ;
             </button>
           </div>
         </div>
-      </section>;
-    </div>;) };
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+      </section>,
+    </div>,) },
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) ,
+},
 
 }}}}

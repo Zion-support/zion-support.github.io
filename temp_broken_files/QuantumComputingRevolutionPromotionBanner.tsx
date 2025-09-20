@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 CpuAtomZapClockShieldGlobeTrendingUp,
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const QuantumComputingRevolutionPromotionBanner: React.FC = () => {,
@@ -8,15 +8,15 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {,
     <div,
       className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 py-12",
     >,
-      {/* Quantum Background Animation */,}
+      {/* Quantum Background Animation */}
       <div className="absolute inset-0">,
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>,
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>,
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-spin" style={{ animationDuration: '15s' ,}}></div>,
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-spin" style={{ animationDuration: '15s' }}></div>,
       </div>,
       <div className="container mx-auto px-4 relative z-10">,
         <div className="flex flex-col lg: flex-row items-center justify-between gap-8">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="flex-1 text-center lg: text-left">,
             <div,
               className="mb-4",
@@ -33,7 +33,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {,
                 that are reshaping the boundaries of computational possibility.,
               </p>,
             </div>,
-            {/* Features List */,}
+            {/* Features List */}
             <div,
               className="grid grid-cols-2 gap-2 mb-6",
             >,
@@ -41,8 +41,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {,
                 <div key={index} className="flex items-center gap-2 text-gray-300">,
                   <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>,
                   <span className="text-sm">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* CTA Buttons */}
             <div,
@@ -63,7 +62,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {,
               </a>,
             </div>,
           </div>,
-          {/* Right Quantum Stats */,}
+          {/* Right Quantum Stats */}
           <div,
             className="flex-shrink-0",
           >,
@@ -116,6 +115,6 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default QuantumComputingRevolutionPromotionBanner;
+  ),
+},
+export default QuantumComputingRevolutionPromotionBanner,

@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
 export default function CaseStudyDetailPage() {
-  const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter(),
+  const { id } = router.query,
 
   // Case study data - in a real app, this would come from an API or database
   const caseStudies = {
@@ -16,12 +16,10 @@ export default function CaseStudyDetailPage() {
       challenge: 'Inefficient production processes, high downtime, and quality control issues',
       solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
       results: [
-        '40% increase in production efficiency',
-        '60% reduction in unplanned downtime',
-        '35% improvement in product quality',
-        '25% reduction in operational costs'
+        '40% increase in production efficiency60% reduction in unplanned downtime',
+        '35% improvement in product quality25% reduction in operational costs'
       ],
-      technologies: ['Machine Learning', 'Computer Vision', 'IoT Sensors', 'Predictive Analytics'],
+      technologies: ['Machine LearningComputer Vision', 'IoT SensorsPredictive Analytics'],
       duration: '6 months',
       teamSize: '8 engineers',
       featured: true,
@@ -34,12 +32,10 @@ export default function CaseStudyDetailPage() {
       challenge: 'Unable to meet client demand for high-quality content at scale',
       solution: 'Deployed autonomous content generation systems with human oversight and quality control',
       results: [
-        '10x increase in content output',
-        '85% improvement in engagement metrics',
-        '70% reduction in content creation time',
-        '95% client satisfaction rate'
+        '10x increase in content output85% improvement in engagement metrics',
+        '70% reduction in content creation time95% client satisfaction rate'
       ],
-      technologies: ['Natural Language Processing', 'Content Optimization', 'SEO Automation', 'Analytics'],
+      technologies: ['Natural Language ProcessingContent Optimization', 'SEO AutomationAnalytics'],
       duration: '4 months',
       teamSize: '5 engineers + 3 content specialists',
       featured: false,
@@ -52,12 +48,10 @@ export default function CaseStudyDetailPage() {
       challenge: 'High cloud costs, performance issues, and manual scaling requirements',
       solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent resource management',
       results: [
-        '50% reduction in cloud costs',
-        '99.9% uptime achieved',
-        '3x improvement in response times',
-        'Zero manual intervention required'
+        '50% reduction in cloud costs99.9% uptime achieved',
+        '3x improvement in response timesZero manual intervention required'
       ],
-      technologies: ['Auto-scaling', 'Load Balancing', 'Monitoring', 'Cost Optimization'],
+      technologies: ['Auto-scalingLoad Balancing', 'MonitoringCost Optimization'],
       duration: '8 months',
       teamSize: '6 DevOps engineers',
       featured: false,
@@ -70,12 +64,10 @@ export default function CaseStudyDetailPage() {
       challenge: 'High customer service costs and long response times',
       solution: 'Implemented AI-powered chatbots and automated ticket routing systems',
       results: [
-        '80% reduction in response time',
-        '60% decrease in customer service costs',
-        '90% customer satisfaction rate',
-        '24/7 automated support coverage'
+        '80% reduction in response time60% decrease in customer service costs',
+        '90% customer satisfaction rate24/7 automated support coverage'
       ],
-      technologies: ['Chatbots', 'Natural Language Processing', 'Ticket Routing', 'Sentiment Analysis'],
+      technologies: ['ChatbotsNatural Language Processing', 'Ticket RoutingSentiment Analysis'],
       duration: '5 months',
       teamSize: '4 engineers + 2 customer service specialists',
       featured: false,
@@ -88,20 +80,18 @@ export default function CaseStudyDetailPage() {
       challenge: 'Inability to leverage data for patient care improvements and operational efficiency',
       solution: 'Built comprehensive data analytics platform with real-time insights and predictive modeling',
       results: [
-        '30% improvement in patient outcomes',
-        '40% reduction in operational costs',
-        'Real-time data insights',
-        'Predictive analytics for patient care'
+        '30% improvement in patient outcomes40% reduction in operational costs',
+        'Real-time data insightsPredictive analytics for patient care'
       ],
-      technologies: ['Big Data', 'Machine Learning', 'Real-time Analytics', 'Predictive Modeling'],
+      technologies: ['Big DataMachine Learning', 'Real-time AnalyticsPredictive Modeling'],
       duration: '10 months',
       teamSize: '10 data scientists + 5 engineers',
       featured: false,
       description: 'A healthcare transformation case study showing how data analytics and AI improved patient outcomes and operational efficiency.'
     }
-  };
+  },
 
-  const caseStudy = caseStudies[id as keyof typeof caseStudies];
+  const caseStudy = caseStudies[id as keyof typeof caseStudies],
 
   if (!caseStudy) {
     return (
@@ -109,12 +99,12 @@ export default function CaseStudyDetailPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
           <p className="text-white/80 mb-8">The requested case study could not be found.</p>
-          <Link href="/case-studies" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+          <Link href="/case-studies" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
             View All Case Studies
           </Link>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -208,9 +198,9 @@ export default function CaseStudyDetailPage() {
                   <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>
                   <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                     This case study demonstrates the real impact of AI automation. 
-                    Let&apos;s discuss how we can help you achieve similar results for your business.
+                    Let&apos,s discuss how we can help you achieve similar results for your business.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm: flex-row gap-4 justify-center">
                     <Link 
                       href="/contact"
                       className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -231,5 +221,5 @@ export default function CaseStudyDetailPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

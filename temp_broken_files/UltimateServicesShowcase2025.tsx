@@ -4,17 +4,16 @@
         <div className="grid lg: grid-cols-2 xl:grid-cols-3 gap-8 mb-16">,
           {filteredServices.map((serviceindex) => (,
             <div,
-              key={service.id,}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              key={service.id}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-300 group ${,
-                service.popular ? 'ring-2 ring-blue-500 ring-opacity-50' : '',}`}
+                service.popular ? 'ring-2 ring-blue-500 ring-opacity-50' : ''}`}
             >,
               {/* Popular Badge */}
               {service.popular && (,
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">,
-                  Most Popular,
-              )}
+                  Most Popular)}
               {/* Header */}
               <div className={`bg-gradient-to-r ${service.color} p-6 text-white`}>,
                 <div className="flex items-center justify-between mb-4">,
@@ -33,8 +32,7 @@
                   {service.features.map((featureIndex) => (,
                     <div key={featureIndex} className="flex items-center">,
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />,
-                      <span className="text-gray-700 text-sm">{feature}</span>,
-                  ))}
+                      <span className="text-gray-700 text-sm">{feature}</span>))}
                 {/* CTA */}
                 <a,
                   href={`/services/${service.id}`}
@@ -45,11 +43,11 @@
                 </a>,
               </div>,
             </div>,
-          )),}
+          ))}
         {/* Stats Section */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="bg-white rounded-2xl shadow-xl p-8 mb-16",
         >,
           <div className="text-center mb-8">,
@@ -71,10 +69,10 @@
             </div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white",
         >,
           <h3 className="text-2xl md: text-3xl font-bold mb-4">,
@@ -100,9 +98,9 @@
         </div>,
       </div>,
     </section>,
-  );
-export default UltimateServicesShowcase2025;
-import React from "react";
+  ),
+export default UltimateServicesShowcase2025,
+import React from "react",
 const function UltimateServicesShowcase2025() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -113,7 +111,7 @@ const function UltimateServicesShowcase2025() { = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-};
-export default function UltimateServicesShowcase2025() {;
+  )
+},
+export default function UltimateServicesShowcase2025() {,
 }}}

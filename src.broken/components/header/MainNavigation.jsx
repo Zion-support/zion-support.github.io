@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
 =======
-import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import React, { useState } from 'react',
+import { Link, NavLink } from 'react-router-dom',
+import { cn } from '@/lib/utils',
 import {
   ChevronDown,
   Zap,
@@ -20,11 +20,11 @@ import {
   User,
   MessageCircle,
   Rocket
-} from 'lucide-react';
+} from 'lucide-react',
 
 export function MainNavigation({ className }) {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false),
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false),
 
   return (
     <nav className={cn('hidden md:flex items-center space-x-6', className)}>
@@ -340,6 +340,6 @@ export function MainNavigation({ className }) {
         Get Started
       </NavLink>
     </nav>
-  );
+  ),
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

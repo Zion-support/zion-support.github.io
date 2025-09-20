@@ -1,5 +1,5 @@
-// Hook for useCertifications;
+// Hook for useCertifications,
 export const useUseCertifications: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

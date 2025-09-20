@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -25,7 +25,7 @@ export default function Page() {
             icon: <Smartphone className="h-6 w-6 text-zion -purple"/>,
             link: "/mobile - launch"
 
-    ];
+    ],
     return (<div className="min - h-screen bg-zion - blue text-white">
       <SEO title={t ("home.seo_title") } description={t("home.seo_description") } keywords={t("home.seo_keywords") } canonical="https://ziontechgroup.com/"/>
       <Header />

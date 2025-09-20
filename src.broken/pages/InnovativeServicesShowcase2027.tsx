@@ -1,21 +1,21 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-  };
+,
+  },
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0
 
 },
     visible: {
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0.5,;
-        ease: "easeOut";
-      };
-    };
-  };
+      y: 0,
+      opacity: 1,
+      transition: {,
+        duration: 0.5,
+        ease: "easeOut"
+      },
+    },
+  },
   const cardVariants = {
   hidden: { scale: 0.8,
   opacity: 0
@@ -30,14 +30,14 @@ export default function Page() {
 
     },
     hover: {
-      scale: 1.05,;
-      y: -10,;
-      transition: {;
-        duration: 0.2,;
-        ease: "easeOut";
-      };
-    };
-  };
+      scale: 1.05,
+      y: -10,
+      transition: {,
+        duration: 0.2,
+        ease: "easeOut"
+      },
+    },
+  },
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Animated Background */}
       <div  className="fixed inset - 0 overflow-hidden pointer - events -none">
@@ -227,7 +227,7 @@ export default function Page() {
         initial="hidden"
         animate="visible"
 
-        <div  className="max - w-7xl mx -auto">;
+        <div  className="max - w-7xl mx -auto">,
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (<motion.div
                 className={viewMode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8' : 'space - y-6'}
@@ -254,7 +254,7 @@ export default function Page() {
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion - blue - dark / 30 backdrop - blur - md rounded-2xl p - 6 border border-zion - purple / 20'}
 
-                    {viewMode === 'grid' ? (;
+                    {viewMode === 'grid' ? (,
                       <motion.div
                         className="bg-zion - blue - dark / 30 backdrop - blur - md rounded-2xl p - 6 border border-zion - purple / 20 h-full group cursor -pointer"
                         variants={cardVariants}
@@ -312,11 +312,11 @@ export default function Page() {
                             </div>
                           </div>
                           {/* CTA Button */}
-                          <button     className="w-full mt-4 bg-gradient - to - r from - zion - cyan to - zion - blue text-black font - semibold py-3 px-6 rounded-lg hover:from - zion - blue hover:to - zion - cyan transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap-2">
+                          <button     className="w-full mt-4 bg-gradient - to - r from - zion - cyan to - zion - blue text-black font - semibold py-3 px-6 rounded-lg hover: from - zion - blue hover:to - zion - cyan transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap-2">
                             Learn More < ArrowRight className="w-4 h-4" />
                           </button>
                         </div>
-                      </motion.div>;) : (<div  className="flex gap-6">
+                      </motion.div>,) : (<div  className="flex gap-6">
                         {/* Service Image */}
                         <div  className="relative w-48 h-32 overflow-hidden rounded-lg flex - shrink -0">
                           <img
@@ -362,12 +362,12 @@ export default function Page() {
                                 </span>) ) }
                             </div>
                             <button     onClick={ () => window.open(service.website, '_blank') }
-                              className="bg-gradient - to - r from - zion - cyan to - zion - blue text-black font - semibold py-2 px-4 rounded-lg hover:from - zion - blue hover:to - zion - cyan transition - all duration - 300 flex items - center gap-2"
+                              className="bg-gradient - to - r from - zion - cyan to - zion - blue text-black font - semibold py-2 px-4 rounded-lg hover: from - zion - blue hover:to - zion - cyan transition - all duration - 300 flex items - center gap-2"
 
                               View Details < ArrowRight className="w-4 h-4" />
                             </button>
                           </div>
-                        </div>;
+                        </div>,
                       </div>) }
                   </motion.div>) ) }
               </motion.div>) : (<motion.div
@@ -379,7 +379,7 @@ export default function Page() {
                 <div  className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font - bold text-white mb-2">No services found</h3>
                 <p className="text-gray -400">Try adjusting your search criteria or filters</p>
-              </motion.div>;) }
+              </motion.div>,) }
           </AnimatePresence>
         </div>
       </motion.section>
@@ -388,23 +388,23 @@ export default function Page() {
         className="relative z - 10 px-6 pb -20"
         initial = {
   { opacity: 0,
-  y: 30 ;
+  y: 30 
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
         transition = {
   { duration: 0.8,
-  delay: 1.2 ;
+  delay: 1.2 
 
 }}
       >
         <div  className="max - w-4xl mx - auto text-center">
           <div  className="bg-gradient - to - r from - zion - cyan / 20 to - zion - blue / 20 backdrop - blur - md rounded-2xl p - 12 border border-zion -cyan / 30">
-            <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray - 300 mb-8">
@@ -423,9 +423,9 @@ export default function Page() {
 
                 Call + 1 302 464 0950
               </a>
-            </div>;
-          </div>;
-        </div>;
-      </motion.section>;
-    </div>;) ;
+            </div>,
+          </div>,
+        </div>,
+      </motion.section>,
+    </div>,) 
 }

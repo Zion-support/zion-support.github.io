@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function LoginCard() {
   return (
     <>
@@ -37,5 +37,5 @@ export function LoginCard() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }

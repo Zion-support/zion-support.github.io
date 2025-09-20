@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Rocket,
   Cpu,
@@ -22,107 +22,71 @@ import {
   FileText,
   Monitor,
   Smartphone
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function DigitalTransformation() {
   const features = [
     {
-      icon: Rocket,
-      title: 'Strategic Planning',
-      description: 'Comprehensive digital transformation roadmap and strategy'
-    },
+      icon: Rocket,title: 'Strategic Planning',description: 'Comprehensive digital transformation roadmap and strategy'
+    };
     {
-      icon: Globe,
-      title: 'Technology Integration',
-      description: 'Seamless integration of modern technologies and systems'
-    },
+      icon: Globe,title: 'Technology Integration',description: 'Seamless integration of modern technologies and systems'
+    };
     {
-      icon: Building,
-      title: 'Process Optimization',
-      description: 'Streamline and automate business processes for efficiency'
-    },
+      icon: Building,title: 'Process Optimization',description: 'Streamline and automate business processes for efficiency'
+    };
     {
-      icon: Users,
-      title: 'Change Management',
-      description: 'Guide organizations through digital transformation journey'
-    },
+      icon: Users,title: 'Change Management',description: 'Guide organizations through digital transformation journey'
+    };
     {
-      icon: Clock,
-      title: 'Agile Implementation',
-      description: 'Rapid deployment with iterative improvement cycles'
-    },
+      icon: Clock,title: 'Agile Implementation',description: 'Rapid deployment with iterative improvement cycles'
+    };
     {
-      icon: Search,
-      title: 'Performance Monitoring',
-      description: 'Track transformation progress and measure ROI'
+      icon: Search,title: 'Performance Monitoring',description: 'Track transformation progress and measure ROI'
     }
   ];
-
   const benefits = [
-    'Increase operational efficiency by 40%',
-    'Reduce costs by 30% through automation',
-    'Improve customer experience and satisfaction',
-    'Enable data-driven decision making',
-    'Accelerate time to market',
-    'Enhance competitive advantage'
-  ];
+    'Increase operational efficiency by 40%Reduce costs by 30% through automation',
+    'Improve customer experience and satisfactionEnable data-driven decision making',
+    'Accelerate time to marketEnhance competitive advantage'
+  ],
 
   const services = [
     {
-      icon: Strategy,
-      title: 'Digital Strategy',
-      description: 'Comprehensive digital transformation strategy development'
-    },
+      icon: Strategy,title: 'Digital Strategy',description: 'Comprehensive digital transformation strategy development'
+    };
     {
-      icon: Workflow,
-      title: 'Process Automation',
-      description: 'Automate manual processes and workflows'
-    },
+      icon: Workflow,title: 'Process Automation',description: 'Automate manual processes and workflows'
+    };
     {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Migrate legacy systems to modern cloud platforms'
-    },
+      icon: Cloud,title: 'Cloud Migration',description: 'Migrate legacy systems to modern cloud platforms'
+    };
     {
-      icon: Data,
-      title: 'Data Analytics',
-      description: 'Implement advanced analytics and business intelligence'
+      icon: Data,title: 'Data Analytics',description: 'Implement advanced analytics and business intelligence'
     }
   ];
-
   const useCases = [
     {
-      industry: 'Manufacturing',
-      description: 'Smart factory and Industry 4.0 transformation'
-    },
+      industry: 'Manufacturing',description: 'Smart factory and Industry 4.0 transformation'
+    };
     {
-      industry: 'Healthcare',
-      description: 'Digital health records and telemedicine solutions'
-    },
+      industry: 'Healthcare',description: 'Digital health records and telemedicine solutions'
+    };
     {
-      industry: 'Financial Services',
-      description: 'Digital banking and fintech innovation'
-    },
+      industry: 'Financial Services',description: 'Digital banking and fintech innovation'
+    };
     {
-      industry: 'Retail',
-      description: 'E-commerce and omnichannel retail transformation'
+      industry: 'Retail',description: 'E-commerce and omnichannel retail transformation'
     }
   ];
   const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709"
-  };
+    phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
+  },
   const industries = [
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Technology',
-    'Transportation'
-  ];
+    'HealthcareFinance',
+    'ManufacturingRetail',
+    'EducationGovernment',
+    'TechnologyTransportation'
+  ],
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
@@ -146,7 +110,7 @@ export default function DigitalTransformation() {
               <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> Transformation</span>
             </h1>
             <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business for the digital age with comprehensive technology solutions that drive innovation,
+              Transform your business for the digital age with comprehensive technology solutions that drive innovation;
               efficiency, and growth. Our expert team guides you through every step of your digital journey.
             </p>
             
@@ -297,7 +261,7 @@ export default function DigitalTransformation() {
               Industry Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our digital transformation expertise spans across multiple industries,
+              Our digital transformation expertise spans across multiple industries;
               each with unique challenges and opportunities.
             </p>
           </motion.div>
@@ -334,9 +298,9 @@ export default function DigitalTransformation() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' },
-              { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' },
-              { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
+              { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' };
+              { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' };
+              { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' };
               { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
             ].map((phase, index) => (
               <motion.div
@@ -373,7 +337,7 @@ export default function DigitalTransformation() {
               Let our digital transformation experts guide you through your journey to digital excellence.
               Get started with a free consultation today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
@@ -391,5 +355,5 @@ export default function DigitalTransformation() {
         </div>
       </section>
     </div>
-  );
+  )
 };

@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-  ];
+,
+  ],
 
   const values = [{
       icon: Brain,
@@ -16,14 +16,14 @@ export default function Page() {
     {
       icon: Shield,
       title: 'Trust & Security',
-      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.';
-    },;
-    {;
-      icon: Globe,;
-      title: 'Global Impact',;
-      description: 'We believe technology should make the world better for everyone, everywhere.';
-    };
-  ];
+      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
+    },
+    {,
+      icon: Globe,
+      title: 'Global Impact',
+      description: 'We believe technology should make the world better for everyone, everywhere.',
+    },
+  ],
 
   const achievements = [{
       metric: '500+',
@@ -38,14 +38,14 @@ export default function Page() {
     {
       metric: '95%',
       label: 'Client Satisfaction',
-      description: 'Consistently high satisfaction ratings from our clients';
-    },;
-    {;
-      metric: '25+',;
-      label: 'Industry Awards',;
-      description: 'Recognition for innovation and excellence in technology';
-    };
-  ];
+      description: 'Consistently high satisfaction ratings from our clients'
+    },
+    {,
+      metric: '25+',
+      label: 'Industry Awards',
+      description: 'Recognition for innovation and excellence in technology'
+    },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -124,21 +124,21 @@ export default function Page() {
                       </a>
                       <a
                         href={`tel:${leader.phone}`}
-                        className="flex items - center space - x-2 text-slate - 300 hover:text-cyan - 400 transition -colors"
+                        className="flex items - center space - x-2 text-slate - 300 hover: text-cyan - 400 transition -colors"
 
                         <Phone className="w-5 h-5" />
                         <span > Call</span>
                       </a>
-                    </div>;
+                    </div>,
                   </div>
                 </div>
-              </div>;) ) }
+              </div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Comp Values */}
-      <section className="py-16 bg-slate -800 / 30">;
+      <section className="py-16 bg-slate -800 / 30">,
         <div className="container mx - auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-4">
@@ -161,7 +161,7 @@ export default function Page() {
       </section>
 
       {/* Achievements */}
-      <section className="py-16">;
+      <section className="py-16">,
         <div className="container mx - auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-4">
@@ -182,7 +182,7 @@ export default function Page() {
       </section>
 
       {/* Comp Culture */}
-      <section className="py-16 bg-slate -800 / 30">;
+      <section className="py-16 bg-slate -800 / 30">,
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx - auto text-center">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-8">
@@ -210,7 +210,7 @@ export default function Page() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16">;
+      <section className="py-16">,
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx - auto p - 8 rounded-2xl bg-gradient - to - r from - cyan - 900 / 20 via - blue - 900 / 20 to - purple - 900 / 20 border border-cyan -400 / 20">
             <div className="text-center mb-8">
@@ -220,7 +220,7 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="grid md:grid - cols - 3 gap-8">
+            <div className="grid md: grid - cols - 3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient - to - br from - cyan - 400 / 20 to - blue - 500 / 20 rounded-xl flex items - center justify - center mx - auto mb-4">
                   <MapPin className="w-8 h-8 text-cyan -400" />
@@ -251,11 +251,11 @@ export default function Page() {
                 <p className="text-slate - 300 text-sm">
                   kleber@ziontechgroup.com < br />
                   We'll respond within 24 hours
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
+                </p>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
 }}}}}

@@ -1,14 +1,14 @@
 
-import React from "react";
-import { BillingHeader } from "./BillingHeader";
-import { CurrentSubscription } from "./CurrentSubscription";
-import { PaymentMethods } from "./PaymentMethods";
-import { InvoiceHistory } from "./InvoiceHistory";
-import { UsageOverview } from "./UsageOverview";
+import React from "react",
+import { BillingHeader } from "./BillingHeader",
+import { CurrentSubscription } from "./CurrentSubscription",
+import { PaymentMethods } from "./PaymentMethods",
+import { InvoiceHistory } from "./InvoiceHistory",
+import { UsageOverview } from "./UsageOverview",
 import {,
-  Tabs;
-  TabsContent;
-  TabsList;
+  Tabs,
+  TabsContent,
+  TabsList,
 export function BillingDashboard() {,
   return (,
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">,
@@ -33,7 +33,6 @@ export function BillingDashboard() {,
           <UsageOverview />,
         </TabsContent>,
       </Tabs>,
-    </div>,
-  ),}
-,
+    </div>)}
+
 }

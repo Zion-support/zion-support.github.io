@@ -1,16 +1,16 @@
 <<<<<<< HEAD
-export default EnhancedServicesShowcase;
-import { enhancedServices2025 } from '../data/enhanced - services -2025';
+export default EnhancedServicesShowcase,
+import { enhancedServices2025 } from '../data/enhanced - services -2025',
 export default function Page() {
 ,
         { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
-    ];
+    ],
     const filteredServices = enhancedServices2025.filter(service => {
 
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch});
+            service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+        return matchesCategory && matchesSearch}),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -22,7 +22,7 @@ export default function Page() {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
 
-    };
+    },
     const itemVariants = {
 
   hidden: { opacity: 0,
@@ -35,7 +35,7 @@ export default function Page() {
             y: 0,
             transition: { duration: 0.5 }
 
-    };"
+    },"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -78,7 +78,7 @@ export default function Page() {
           {/* Contact Information */}"
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto" initial = {
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
           "
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
@@ -167,7 +167,7 @@ import React, { useState } from 'react';
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>'"
-                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-',).toUpperCase()}</p>
+                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-').toUpperCase()}</p>
                 </div>
 
                 {/* Tagline */}"
@@ -230,7 +230,7 @@ import React, { useState } from 'react';
               <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
               <button onClick={() => {
 
-                setSelectedCategory('all');'"
+                setSelectedCategory('all'),'"
                 setSearchTerm('')}} className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
                 View All Services
               </button>
@@ -308,7 +308,7 @@ import React, { useState } from 'react';
           </motion.div>
         </div>
       </section>
-    </div>)};
-export default EnhancedServicesShowcase;
+    </div>)},
+export default EnhancedServicesShowcase,
 }}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,74 +1,70 @@
-import React, { useState, useEffect } from 'react';
-import { api, ApiResponse } from '@/services/api';
-
+import React, { useState, useEffect } from "react";
+import { api, ApiResponse } from "@/services/api";
 interface User {
-  id: number;
-  name: string;
-  email: string;
-  createdAt?: string;
+  id: number,name: string,email: string;
+  createdAt?: string
 }
 
 const ApiDemo: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [users, setUsers] = useState<User[]>([]),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
   const [newUser, setNewUser] = useState({ name: '', email: '' });
-  const [healthStatus, setHealthStatus] = useState<string>('Checking...');
+  const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
 
   // Check API health on component mount
   useEffect(() => {
-    checkHealth();
-    fetchUsers();
-  }, []);
+    checkHealth(),
+    fetchUsers(),
+  }, []),
 
   const checkHealth = async () => {
     try {
-      const response = await api.health();
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
+      const response = await api.health(),
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`),
     } catch (err) {
-      setHealthStatus('❌ API Unhealthy');
+      setHealthStatus('❌ API Unhealthy'),
     }
-  };
+  },
 
   const fetchUsers = async () => {
-    setLoading(true);
-    setError(null);
+    setLoading(true),
+    setError(null),
     
     try {
-      const response = await api.getUsers();
+      const response = await api.getUsers(),
       if (response.success && response.data) {
-        setUsers(response.data);
+        setUsers(response.data),
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch users');
+      setError(err instanceof Error ? err.message : 'Failed to fetch users'),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   const handleCreateUser = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!newUser.name.trim() || !newUser.email.trim()) {
-      setError('Name and email are required');
-      return;
+      setError('Name and email are required'),
+      return
     }
 
-    setLoading(true);
-    setError(null);
+    setLoading(true),
+    setError(null),
 
     try {
-      const response = await api.createUser(newUser);
+      const response = await api.createUser(newUser),
       if (response.success && response.data) {
-        setUsers(prev => [...prev, response.data!]);
+        setUsers(prev => [...prev, response.data!]),
         setNewUser({ name: '', email: '' });
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to create user');
+      setError(err instanceof Error ? err.message : 'Failed to create user'),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
@@ -168,7 +164,7 @@ const ApiDemo: React.FC = () => {
         <div className="mt-8 p-4 bg-green-50 rounded-lg">
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>
           <div className="text-sm text-green-700 space-y-1">
-            <p>• <strong>Frontend:</strong> Vite + React (Port 3000) - Fast HMR & optimized builds</p>
+            <p>• <strong>Frontend: </strong> Vite + React (Port 3000) - Fast HMR & optimized builds</p>
             <p>• <strong>Backend:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>
             <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>
             <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>
@@ -176,7 +172,6 @@ const ApiDemo: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default ApiDemo;

@@ -1,37 +1,36 @@
-import React, { useState, useMemo } from 'react';
-export default InnovativeServicesShowcase2026;
+import React, { useState, useMemo } from 'react',
+export default InnovativeServicesShowcase2026,
 export default React.memo(function InnovativeServicesShowcase2026 () {
-import { INNOVATIVE_SERVICES } from '../data/servicesData';
+import { INNOVATIVE_SERVICES } from '../data/servicesData',
 
 export default function Page() {
-  }) ;
+  }) ,
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      };
-    };
-  };
+      },
+    },
+  },
 
   const getInnovationBadge = (level: string) => {
     const colors = {
-  'Revolutionary': 'bg-gradient - to - r from - purple - 600 to - pink - 600',
-      'Advanced': 'bg-gradient - to - r from - blue - 600 to - cyan - 600',;
-  ;
-  ;
-  ;
-  ;
-  'Cutting - Edge': 'bg-gradient - to - r from - green - 600 to - emerald - 600';
-    ;
+  'Revolutionary': 'bg-gradient - to - r from - purple - 600 to - pink - 600Advanced': 'bg-gradient - to - r from - blue - 600 to - cyan - 600',
+  ,
+  ,
+  ,
+  ,
+  'Cutting - Edge': 'bg-gradient - to - r from - green - 600 to - emerald - 600',
+    ,
 
-};
+},
 
-    return (<span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font - semibold`}>;
-        {level};
-      </span>;) ;
-  };
+    return (<span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font - semibold`}>,
+        {level},
+      </span>,) ,
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Animated Background */}
@@ -126,7 +125,7 @@ export default function Page() {
                 <select
                   value={sortBy}
                   onChange={ (e) => setSortBy(e.target.value) }
-                  className="bg-slate - 800 border border-slate - 600 rounded-lg px-3 py-2 text-white focus:border-cyan - 400 focus:ring - 2 focus:ring - cyan - 400 / 20 outline -none"
+                  className="bg-slate - 800 border border-slate - 600 rounded-lg px-3 py-2 text-white focus: border-cyan - 400 focus:ring - 2 focus:ring - cyan - 400 / 20 outline -none"
 
                   <option value="innovation">Innovation Level</option>
                   <option value="price">Price</option>
@@ -136,7 +135,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </section>;
+      </section>,
 
       {/* Services Grid */}
       <motion.div
@@ -203,7 +202,7 @@ export default function Page() {
                 </div>
 
                 {/* Pricing and ROI */}
-                <div className="flex items - center justify - between mb-4">;
+                <div className="flex items - center justify - between mb-4">,
                   <div className="text-2xl font - bold text-cyan -400">
                     ${service.price.toLocaleString () }
                     <span className="text-sm text-slate - 400 font -normal">/mo</span>
@@ -216,7 +215,7 @@ export default function Page() {
                       {service.marketPrice}
                     </div>
                   </div>
-                </div>;
+                </div>,
 
                 {/* Benefits */}
                 <div className="mb-4">
@@ -395,10 +394,10 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) ,
+},
 

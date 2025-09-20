@@ -1,5 +1,5 @@
-import React from 'react,',',',';
-import {SEO } from '@/components/SEO';
+import React from 'react,,',',
+import {SEO } from '@/components/SEO',
 export default function EnhancedPricingComparison.test() {return (,
     <div className="min-h-screen bg-white">,
       <SEO title="EnhancedPricingComparison.test - Zion Tech Group" description="Professional EnhancedPricingComparison.test services by Zion Tech Group"  />,
@@ -8,7 +8,7 @@ export default function EnhancedPricingComparison.test() {return (,
         <p className="text-gray-300 text-lg">,
           Professional EnhancedPricingComparison.test services to help your business grow.,
         </p>,
-      </div>';
-    </div>;
-  ),',',';
-}",',';
+      </div>',
+    </div>,
+  ),,',
+}",',',

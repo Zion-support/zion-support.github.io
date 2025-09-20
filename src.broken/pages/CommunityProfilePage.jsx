@@ -1,4 +1,4 @@
-import { useParams, Link  } from 'react-router-dom';
+import { useParams, Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -10,7 +10,7 @@ export default function Page() {
         authorAvatar: "https://i.pravatar.cc / 150?img = 3",
         authorRole: "Verified Talent",
         categoryId: "ai - tools",
-        tags["prompts", "techniques", "optimization"],;
+        tags["prompts", "techniques", "optimization"],
         createdAt: "2025 - 03 - 20T14:25:00Z",
         updatedAt: "2025 - 03 - 20T14:25:00Z",
         upvotes: 36,
@@ -26,24 +26,24 @@ export default function Page() {
         authorAvatar: "https://i.pravatar.cc / 150?img = 3",
         authorRole: "Verified Talent",
         categoryId: "project - help",
-        tags["monitoring", "production", "devops"],;
+        tags["monitoring", "production", "devops"],
         createdAt: "2025 - 03 - 12T09:30:00Z",
         updatedAt: "2025 - 03 - 12T09:30:00Z",
         upvotes: 24,
         downvotes: 0,
         replyCount: 6
 
-];
-    const { userId } = useParams () ;
-    const [user, setUser] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [posts, setPosts] = useState([]);
+],
+    const { userId } = useParams () ,
+    const [user, setUser] = useState(null),
+    const [isLoading, setIsLoading] = useState(true),
+    const [posts, setPosts] = useState([]),
     useEffect(() => {
         // In a real app, we would fetch the user data here
         // For now, we'll just use the mock data
-        setUser(mockUser) ;
-        setPosts(userPosts) ;
-        setIsLoading(false) }, [userId]) ;
+        setUser(mockUser) ,
+        setPosts(userPosts) ,
+        setIsLoading(false) }, [userId]) ,
     if(isLoading) {
         return (<div className="container py-8">
           <div className="flex justify - center items - center h-64">
@@ -56,7 +56,7 @@ export default function Page() {
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
-        </div>) ;
+        </div>) ,
     }
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
   `community, forum, profile, user profile,

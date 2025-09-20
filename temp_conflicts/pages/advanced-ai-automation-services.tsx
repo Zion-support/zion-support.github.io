@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
@@ -9,23 +9,23 @@ import {
   Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
   Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices } from '../data/2025-advanced-ai-automation-services';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { advancedAIAutomationServices } from '../data/2025-advanced-ai-automation-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const heroStats = [
   { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
   { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
   { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" /> }
-];
+],
 
 const serviceCategories = [
   {
@@ -34,7 +34,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools'),
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
-    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence']
+    features: ['Code Review AutomationAI Testing', 'DevOps Intelligence']
   },
   {
     title: 'AI Testing & Quality Assurance',
@@ -42,7 +42,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Testing & Quality Assurance'),
     icon: TestTube,
     color: 'from-purple-500 to-indigo-600',
-    features: ['Test Generation', 'Performance Testing', 'Quality Assurance']
+    features: ['Test GenerationPerformance Testing', 'Quality Assurance']
   },
   {
     title: 'AI DevOps & Infrastructure',
@@ -50,7 +50,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI DevOps & Infrastructure'),
     icon: Server,
     color: 'from-blue-500 to-indigo-600',
-    features: ['Infrastructure Management', 'Deployment Optimization', 'Performance Monitoring']
+    features: ['Infrastructure ManagementDeployment Optimization', 'Performance Monitoring']
   },
   {
     title: 'AI Cybersecurity',
@@ -58,7 +58,7 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Cybersecurity'),
     icon: SecurityIcon,
     color: 'from-red-500 to-pink-600',
-    features: ['Threat Detection', 'Incident Response', 'Security Automation']
+    features: ['Threat DetectionIncident Response', 'Security Automation']
   },
   {
     title: 'AI Data Management',
@@ -66,9 +66,9 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
-    features: ['Pipeline Management', 'Quality Assurance', 'Governance Automation']
+    features: ['Pipeline ManagementQuality Assurance', 'Governance Automation']
   }
-];
+],
 
 const heroFeatures = [
   {
@@ -95,7 +95,7 @@ const heroFeatures = [
     icon: BarChart3,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
-];
+],
 
 const testimonials = [
   {
@@ -122,7 +122,7 @@ const testimonials = [
     rating: 5,
     avatar: '👨‍🔒'
   }
-];
+],
 
 export default function AdvancedAIAutomationServices() {
   return (
@@ -413,5 +413,5 @@ export default function AdvancedAIAutomationServices() {
         </div>
       </section>
     </Layout>
-  );
+  ),
 }

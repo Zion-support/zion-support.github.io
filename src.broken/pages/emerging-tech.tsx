@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -7,11 +7,9 @@ export default function Page() {
         'Cutting - edge space technology solutions for satellite and aerospace applications.',
       icon: Satellite,
       path: '/space - tech',
-      features: ['Satellite systems',
-        'Aerospace solutions',
-        'Space data',
-        'Orbital mechanics',
-      ],
+      features: ['Satellite systemsAerospace solutions',
+        'Space dataOrbital mechanics'
+      ]
     },
     {
       title: 'Quantum Machine Learning',
@@ -19,11 +17,9 @@ export default function Page() {
         'Quantum - enhanced machine learning algorithms for superior pattern recognition.',
       icon: Atom,
       path: '/services / quantum - machine - learning',
-      features: ['Quantum neural networks',
-        'Pattern recognition',
-        'Optimization',
-        'Quantum algorithms',
-      ],
+      features: ['Quantum neural networksPattern recognition',
+        'OptimizationQuantum algorithms'
+      ]
     },
     {
       title: 'AI Predictive Maintenance',
@@ -31,11 +27,9 @@ export default function Page() {
         'AI - powered predictive maintenance systems for industrial equipment and machinery.',
       icon: TrendingUp,
       path: '/services / ai - predictive - maintenance',
-      features: ['Equipment monitoring',
-        'Predictive analytics',
-        'Maintenance scheduling',
-        'Cost optimization',
-      ],
+      features: ['Equipment monitoringPredictive analytics',
+        'Maintenance schedulingCost optimization'
+      ]
     },
     {
       title: 'Sustainable Technology',
@@ -43,13 +37,11 @@ export default function Page() {
         'Green technology solutions for environmental sustainability and energy efficiency.',
       icon: Leaf,
       path: '/services / sustainable - technology',
-      features: ['Energy efficiency',
-        'Green computing',
-        'Carbon reduction',
-        'Sustainable AI',
-      ],
-    },
-  ];
+      features: ['Energy efficiencyGreen computing',
+        'Carbon reductionSustainable AI'
+      ]
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Header */}
@@ -143,7 +135,7 @@ export default function Page() {
           <p className="text-xl text-gray - 300 mb-8 max - w-2xl mx -auto">
             Let's discuss how these emerging technologies can transform your
             business and give you a competitive edge.</p>
-          <div className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div className="flex flex - col sm: flex - row gap-4 justify -center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:scale -105"
@@ -159,6 +151,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},
 

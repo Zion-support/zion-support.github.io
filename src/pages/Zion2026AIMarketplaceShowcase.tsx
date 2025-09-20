@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import { 
-  Search, 
+  Search,
   Filter, 
   Grid3X3, 
   List, 
@@ -17,47 +17,44 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { zion2026AIMarketplaceServices } from '../../data/zion-2026-ai-marketplace-services';
-
+} from "lucide-react";
+import { zion2026AIMarketplaceServices } from "../../data/zion-2026-ai-marketplace-services";
 const Zion2026AIMarketplaceShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
-  const categories = ['all', 'AI Marketplace', 'AI Integration', 'AI Automation', 'AI Analytics', 'AI Development'];
+  const categories = ['allAI Marketplace', 'AI IntegrationAI Automation', 'AI AnalyticsAI Development'],
 
   const filteredServices = useMemo(() => {
     return zion2026AIMarketplaceServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
-  }, [searchTerm, selectedCategory]);
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+      return matchesSearch && matchesCategory,
+    }),
+  }, [searchTerm, selectedCategory]),
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Marketplace': return Globe;
-      case 'AI Integration': return Zap;
-      case 'AI Automation': return Shield;
-      case 'AI Analytics': return BarChart3;
-      case 'AI Development': return Code;
-      default: return Globe;
+      case 'AI Integration': return Zap,
+      case 'AI Automation': return Shield,
+      case 'AI Analytics': return BarChart3,
+      case 'AI Development': return Code,
+      default: return Globe
     }
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI Marketplace': return 'from-blue-500 to-cyan-500';
-      case 'AI Integration': return 'from-purple-500 to-pink-500';
-      case 'AI Automation': return 'from-green-500 to-emerald-500';
-      case 'AI Analytics': return 'from-orange-500 to-red-500';
-      case 'AI Development': return 'from-indigo-500 to-blue-500';
-      default: return 'from-gray-500 to-slate-500';
+      case 'AI Integration': return 'from-purple-500 to-pink-500',
+      case 'AI Automation': return 'from-green-500 to-emerald-500',
+      case 'AI Analytics': return 'from-orange-500 to-red-500',
+      case 'AI Development': return 'from-indigo-500 to-blue-500',
+      default: return 'from-gray-500 to-slate-500'
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -289,10 +286,10 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Connect with our team to discover how Zion AI Marketplace services can drive innovation, 
+              Connect with our team to discover how Zion AI Marketplace services can drive innovation;
               efficiency, and growth for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -304,7 +301,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
+                className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover: border-gray-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Mail className="w-5 h-5" />
                 <span>Email Us</span>
@@ -325,7 +322,6 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Zion2026AIMarketplaceShowcase;

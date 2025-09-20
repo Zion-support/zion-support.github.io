@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import { useEffect, useMemo, useState } from 'react',
 
 const translations: Record<string, Record<string, string>> = {
   en: {
@@ -14,7 +14,7 @@ const translations: Record<string, Record<string, string>> = {
     versionControl: 'Version Control',
     signCta: 'Sign the Constitution',
     signedCountLabel: 'to sign the Zion Constitution',
-    chapters: 'Regional Chapters',
+    chapters: 'Regional Chapters'
   },
   es: {
     title: 'Constitución de Zion',
@@ -27,7 +27,7 @@ const translations: Record<string, Record<string, string>> = {
     versionControl: 'Control de Versiones',
     signCta: 'Firmar la Constitución',
     signedCountLabel: 'han firmado la Constitución de Zion',
-    chapters: 'Capítulos Regionales',
+    chapters: 'Capítulos Regionales'
   },
   fr: {
     title: 'Constitution de Zion',
@@ -40,53 +40,53 @@ const translations: Record<string, Record<string, string>> = {
     versionControl: 'Contrôle de Version',
     signCta: 'Signer la Constitution',
     signedCountLabel: 'ont signé la Constitution de Zion',
-    chapters: 'Chapitres Régionaux',
-  },
-};
+    chapters: 'Chapitres Régionaux'
+  }
+},
 
-const supportedLanguages = Object.keys(translations);
+const supportedLanguages = Object.keys(translations),
 
 export default function ConstitutionPage() {
-  const [language, setLanguage] = useState<string>('en');
-  const t = useMemo(() => translations[language] || translations.en, [language]);
+  const [language, setLanguage] = useState<string>('en'),
+  const t = useMemo(() => translations[language] || translations.en, [language]),
 
   // Optional signature UI (local-only demo)
-  const [hasSigned, setHasSigned] = useState<boolean>(false);
-  const [localCount, setLocalCount] = useState<number>(0);
+  const [hasSigned, setHasSigned] = useState<boolean>(false),
+  const [localCount, setLocalCount] = useState<number>(0),
 
   useEffect(() => {
     try {
-      const signed = localStorage.getItem('zion:constitution:signed') === '1';
-      setHasSigned(signed);
-      const count = parseInt(localStorage.getItem('zion:constitution:localCount') || '0', 10) || 0;
-      setLocalCount(count);
+      const signed = localStorage.getItem('zion: constitution:signed') === '1',
+      setHasSigned(signed),
+      const count = parseInt(localStorage.getItem('zion:constitution:localCount') || '0', 10) || 0,
+      setLocalCount(count),
     } catch {}
-  }, []);
+  }, []),
 
-  const totalDisplayCount = useMemo(() => 1302 + localCount, [localCount]);
+  const totalDisplayCount = useMemo(() => 1302 + localCount, [localCount]),
 
   const handleSign = async () => {
     try {
       // If a wallet exists, request a message signature (optional, non-blocking)
-      const eth = (typeof window !== 'undefined' && (window as any).ethereum) || null;
+      const eth = (typeof window !== 'undefined' && (window as any).ethereum) || null,
       if (eth) {
-        await eth.request?.({ method: 'eth_requestAccounts' });
-        const accounts: string[] = await eth.request?.({ method: 'eth_accounts' });
-        const account = accounts?.[0];
-        const message = 'I affirm the Zion Constitution and commit to its principles.';
+        await eth.request?.({ method: 'eth_requestAccounts' }),
+        const accounts: string[] = await eth.request?.({ method: 'eth_accounts' }),
+        const account = accounts?.[0],
+        const message = 'I affirm the Zion Constitution and commit to its principles.',
         try {
-          await eth.request?.({ method: 'personal_sign', params: [message, account] });
+          await eth.request?.({ method: 'personal_sign', params: [message, account] }),
         } catch {}
       }
     } catch {}
     try {
-      localStorage.setItem('zion:constitution:signed', '1');
-      setHasSigned(true);
-      const next = localCount + 1;
-      localStorage.setItem('zion:constitution:localCount', String(next));
-      setLocalCount(next);
+      localStorage.setItem('zion:constitution:signed1'),
+      setHasSigned(true),
+      const next = localCount + 1,
+      localStorage.setItem('zion:constitution:localCount', String(next)),
+      setLocalCount(next),
     } catch {}
-  };
+  },
 
   return (
     <>
@@ -158,7 +158,7 @@ export default function ConstitutionPage() {
             <li>Talent is sovereign</li>
             <li>AI must serve people, not replace them</li>
             <li>Decentralized reputation is better than centralized scores</li>
-            <li>Open knowledge &gt; closed platforms</li>
+            <li>Open knowledge &gt, closed platforms</li>
           </ul>
         </section>
 
@@ -227,10 +227,10 @@ export default function ConstitutionPage() {
 
         <div className="mt-12 text-sm opacity-70">
           <p>
-            This document is open-source. Contribute improvements via <Link href="https://github.com/Zion-Holdings/zion.app"><a className="underline">GitHub</a></Link>.
+            This document is open-source. Contribute improvements via <Link href="https: //github.com/Zion-Holdings/zion.app"><a className="underline">GitHub</a></Link>.
           </p>
         </div>
       </div>
     </>
-  );
+  )
 }

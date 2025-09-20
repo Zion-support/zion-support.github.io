@@ -1,19 +1,19 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { HELP_CATEGORIES } from "./help-content";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
 
 interface HelpArticleListProps {
-  categoryId: string;
-  onArticleSelect: (articleId: string) => void;
-  searchQuery: string;
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
+  searchQuery: string
 }
 
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
-  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),
   
   if (!category) {
-    return <div>Category not found</div>;
+    return <div>Category not found</div>,
   }
   
   // Filter articles based on search query
@@ -23,7 +23,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : category.articles;
+    : category.articles,
   
   return (
     <div>
@@ -63,7 +63,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
         </div>
       )}
     </div>
-  );
+  ),
 }
 
 function formatDate(date: string): string {
@@ -71,5 +71,5 @@ function formatDate(date: string): string {
     year: "numeric",
     month: "long",
     day: "numeric"
-  });
+  }),
 }

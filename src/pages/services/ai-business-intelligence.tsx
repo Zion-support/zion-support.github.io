@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
+  Brain,
   BarChart3, 
   TrendingUp, 
   Target, 
@@ -30,99 +30,68 @@ import {
   DollarSign,
   Heart,
   Factory
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIBusinessIntelligence() {
   const features = [
     {
-      icon: Brain,
-      title: 'Advanced Machine Learning',
-      description: 'State-of-the-art ML algorithms that continuously learn and improve from your data'
+      icon: Brain,title: 'Advanced Machine Learning',description: 'State-of-the-art ML algorithms that continuously learn and improve from your data'
+    };
+    {
+      icon: BarChart3,title: 'Real-time Analytics',description: 'Instant insights and dashboards updated in real-time for immediate decision-making'
+    };
+    {
+      icon: TrendingUp,title: 'Predictive Analytics',description: 'Forecast trends, identify opportunities, and predict potential risks before they occur'
     },
     {
-      icon: BarChart3,
-      title: 'Real-time Analytics',
-      description: 'Instant insights and dashboards updated in real-time for immediate decision-making'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Forecast trends, identify opportunities, and predict potential risks before they occur'
-    },
-    {
-      icon: Target,
-      title: 'Intelligent Automation',
-      description: 'Automate routine analysis tasks and focus on strategic decision-making'
+      icon: Target,title: 'Intelligent Automation',description: 'Automate routine analysis tasks and focus on strategic decision-making'
     }
   ];
-
   const benefits = [
-    'Faster decision-making with real-time insights',
-    'Improved accuracy through machine learning',
-    'Cost reduction through process automation',
-    'Competitive advantage with predictive capabilities',
-    'Enhanced customer understanding and personalization',
-    'Streamlined operations and resource optimization'
-  ];
+    'Faster decision-making with real-time insightsImproved accuracy through machine learning',
+    'Cost reduction through process automationCompetitive advantage with predictive capabilities',
+    'Enhanced customer understanding and personalizationStreamlined operations and resource optimization'
+  ],
 
   const useCases = [
     {
-      industry: 'Retail & E-commerce',
-      applications: ['Customer segmentation', 'Demand forecasting', 'Inventory optimization', 'Personalized marketing'],
+      industry: 'Retail & E-commerce',applications: ['Customer segmentationDemand forecasting', 'Inventory optimizationPersonalized marketing'],
       icon: ShoppingCart
-    },
+    };
     {
-      industry: 'Financial Services',
-      applications: ['Risk assessment', 'Fraud detection', 'Portfolio optimization', 'Customer churn prediction'],
+      industry: 'Financial Services',applications: ['Risk assessmentFraud detection', 'Portfolio optimizationCustomer churn prediction'],
       icon: DollarSign
-    },
+    };
     {
-      industry: 'Healthcare',
-      applications: ['Patient outcome prediction', 'Resource allocation', 'Treatment optimization', 'Disease prevention'],
+      industry: 'Healthcare',applications: ['Patient outcome predictionResource allocation', 'Treatment optimizationDisease prevention'],
       icon: Heart
-    },
+    };
     {
-      industry: 'Manufacturing',
-      applications: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning'],
+      industry: 'Manufacturing',applications: ['Predictive maintenanceQuality control', 'Supply chain optimizationProduction planning'],
       icon: Factory
     }
   ];
-
   const technologies = [
-    'TensorFlow & PyTorch',
-    'Apache Spark',
-    'AWS SageMaker',
-    'Azure Machine Learning',
-    'Google Cloud AI',
-    'Snowflake Data Platform',
-    'Tableau & Power BI',
-    'Custom ML Models'
-  ];
+    'TensorFlow & PyTorchApache Spark',
+    'AWS SageMakerAzure Machine Learning',
+    'Google Cloud AISnowflake Data Platform',
+    'Tableau & Power BICustom ML Models'
+  ],
 
   const process = [
     {
-      step: 1,
-      title: 'Data Assessment',
-      description: 'Evaluate your current data infrastructure and identify opportunities for improvement'
-    },
+      step: 1,title: 'Data Assessment',description: 'Evaluate your current data infrastructure and identify opportunities for improvement'
+    };
     {
-      step: 2,
-      title: 'Strategy Development',
-      description: 'Create a comprehensive AI BI roadmap aligned with your business objectives'
-    },
+      step: 2,title: 'Strategy Development',description: 'Create a comprehensive AI BI roadmap aligned with your business objectives'
+    };
     {
-      step: 3,
-      title: 'Implementation',
-      description: 'Deploy AI-powered BI solutions with minimal disruption to existing operations'
-    },
+      step: 3,title: 'Implementation',description: 'Deploy AI-powered BI solutions with minimal disruption to existing operations'
+    };
     {
-      step: 4,
-      title: 'Training & Optimization',
-      description: 'Train your team and continuously optimize the system for maximum performance'
+      step: 4,title: 'Training & Optimization',description: 'Train your team and continuously optimize the system for maximum performance'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -132,7 +101,7 @@ export default function AIBusinessIntelligence() {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -272,7 +241,7 @@ export default function AIBusinessIntelligence() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Industry Applications</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI business intelligence solutions are transforming industries across the globe, 
+              Our AI business intelligence solutions are transforming industries across the globe;
               delivering measurable results and competitive advantages.
             </p>
           </motion.div>
@@ -317,7 +286,7 @@ export default function AIBusinessIntelligence() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Cutting-Edge Technologies</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage the latest AI and machine learning technologies to deliver powerful, 
+              We leverage the latest AI and machine learning technologies to deliver powerful;
               scalable business intelligence solutions.
             </p>
           </motion.div>
@@ -398,7 +367,7 @@ export default function AIBusinessIntelligence() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+                className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Get Started Today
               </Link>
@@ -413,5 +382,5 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
     </div>
-  );
+  )
 }

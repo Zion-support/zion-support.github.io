@@ -1,35 +1,35 @@
 <<<<<<< HEAD
-import { Link, useLocation  } from 'react-router-dom';
- from 'react';
+import { Link, useLocation  } from 'react-router-dom',
+ from 'react',
 export const EnhancedMobileNavigation: React.FC = () => {
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
- from 'lucide-react';
+ from 'lucide-react',
 
->} from 'lucide-react';
-
-interface NavigationItem {
-
-  label: string;
-  path: string;
-  icon: React.ComponentType<{ size?: number; className?: string
-}>;
-} from 'lucide - react';
+>} from 'lucide-react',
 
 interface NavigationItem {
-  label: string;
-  path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
-  children?: NavigationItem[];
+
+  label: string,
+  path: string,
+  icon: React.ComponentType<{ size?: number, className?: string
+}>,
+} from 'lucide - react',
+
+interface NavigationItem {
+  label: string,
+  path: string,
+  icon: React.ComponentType<{ size?: number, className?: string }>,
+  children?: NavigationItem[],
 }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
                 size={16}`
                 size={16}`
 =======
-  icon: React.ComponentType<{ size?: number; className?: string 
-}>;  children?: NavigationItem[];
+  icon: React.ComponentType<{ size?: number, className?: string 
+}>,  children?: NavigationItem[],
   description?: string}
-;
+,
 const navigationItems: NavigationItem[] = [{
 
     label: 'Home',
@@ -49,7 +49,7 @@ const navigationItems: NavigationItem[] = [{
     label: 'Services',
     path: '/services',
     icon: Briefcase,
-    children[;
+    children[,
       {
 
         label: 'AI & Machine Learning',
@@ -92,7 +92,7 @@ const navigationItems: NavigationItem[] = [{
         icon: Users,
         description: 'Strategic IT consulting'
 
-    ]},;
+    ]},
   {
 
     label: 'Solutions',
@@ -107,22 +107,22 @@ const navigationItems: NavigationItem[] = [{
     icon: Phone,
     description: 'Get in touch with us'
 
-];
-;
+],
+,
 
-  {;
-    label: 'Documentation',;
-    path: '/docs',;
-    icon: FileText,;
-    color: 'bg-zion-blue'};];
+  {,
+    label: 'Documentation',
+    path: '/docs',
+    icon: FileText,
+    color: 'bg-zion-blue'},],
 
 export const EnhancedMobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const [activePath, setActivePath] = useState('/');
+  const [isOpen, setIsOpen] = useState(false),
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set()),
+  const [activePath, setActivePath] = useState('/'),
 
   useEffect(() => {
-    setActivePath(location.pathname)}, [location]);
+    setActivePath(location.pathname)}, [location]),
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -130,13 +130,13 @@ export const EnhancedMobileNavigation: React.FC = () => {
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {
 
         setIsOpen(false)}
-    };
+    },
 
 export default function EnhancedMobileNavigation() {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(''),
   
   const navigationItems: NavigationItem[] = [{
       label: 'Home',
@@ -171,38 +171,38 @@ export default function EnhancedMobileNavigation() {
       path: '/contact',
       icon: Phone
     }
-  ];
+  ],
 
   // Close mobile menu when route changes
   useEffect(() => {
-    setIsOpen(false);
-    setActiveSubmenu(null)}, [location.pathname]);
+    setIsOpen(false),
+    setActiveSubmenu(null)}, [location.pathname]),
 
   // Prevent body scroll when menu is open
   useEffect(() => {
     if(isOpen) {
 
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside),
       document.body.style.overflow = 'hidden'}
-;
-    return () => {;
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'unset'}}, [isOpen]);
+,
+    return () => {,
+      document.removeEventListener('mousedown', handleClickOutside),
+      document.body.style.overflow = 'unset'}}, [isOpen]),
 
   const toggleExpanded = (label: string) => {
 
     setExpandedItems(prev => {
 
-      const newSet = new Set(prev);      if(newSet.has(label)) {
+      const newSet = new Set(prev),      if(newSet.has(label)) {
 
         newSet.delete(label)} else {
 
         newSet.add(label)}
-      return newSet})};
+      return newSet})},
 
-    setExpandedItems(new Set())};
+    setExpandedItems(new Set())},
 
-    if(path === '/') {};
+    if(path === '/') {},
 
     return ()      <div key = {item.label} className="w-full">
         <motion.div
@@ -210,7 +210,7 @@ export default function EnhancedMobileNavigation() {
           animate = {
 
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
-  0.1)' : 'transparent' ;
+  0.1)' : 'transparent' ,
 
 }}'          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
 
@@ -241,7 +241,7 @@ export default function EnhancedMobileNavigation() {
                 }`}
               />) }          </Link>
 
-          {hasChildren && (;
+          {hasChildren && (,
             <button
               onClick={() => toggleExpanded(item.label)}"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"'`
@@ -252,9 +252,9 @@ export default function EnhancedMobileNavigation() {
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />
-            </button>;) }        </motion.div>
+            </button>,) }        </motion.div>
 
-        {hasChildren && (;
+        {hasChildren && (,
           <AnimatePresence>
             {isExpanded && (<motion.div
                 initial = {
@@ -286,9 +286,9 @@ export default function EnhancedMobileNavigation() {
                 <div className="border-l border-zion-slate-light/20 ml-4">
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
-              </motion.div>;) };
-          </AnimatePresence>;) };
-      </div>;) };
+              </motion.div>,) },
+          </AnimatePresence>,) },
+      </div>,) },
   return ()
     <>
       {/* Mobile Menu Toggle */}
@@ -338,12 +338,12 @@ export default function EnhancedMobileNavigation() {
 
                   <X size={24}   />
                 </button>
-              </div>;
+              </div>,
 
               {/* Navigation Content */}"
-              <div className="flex-1 overflow-y-auto">;
+              <div className="flex-1 overflow-y-auto">,
                 {/* Quick Actions */}"
-                <div className="p-6 border-b border-zion-slate-light/20">;"
+                <div className="p-6 border-b border-zion-slate-light/20">,"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Quick Actions
                   </h3>"
@@ -357,13 +357,13 @@ export default function EnhancedMobileNavigation() {
 "
                         <action.icon size={20} className="mx-auto mb-2" />"
                         <span className="text-xs font-medium">{action.label}</span>
-                      </Link>;
+                      </Link>,
                     ))}
                   </div>
                 </div>
 
                 {/* Main Navigation */}"
-                <nav className="p-6">;"
+                <nav className="p-6">,"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Navigation
                   </h3>"
@@ -374,7 +374,7 @@ export default function EnhancedMobileNavigation() {
               </div>
 
                 {/* Contact Information */}"
-                <div className="p-6 border-t border-zion-slate-light/20">;"
+                <div className="p-6 border-t border-zion-slate-light/20">,"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Contact Info
                   </h3>"
@@ -399,11 +399,11 @@ export default function EnhancedMobileNavigation() {
               </div>
 
               {/* Footer */}"
-              <div className="p-6 border-t border-zion-slate-light/20">;"
+              <div className="p-6 border-t border-zion-slate-light/20">,"
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <span>© 2024 Zion Tech Group</span>"
                   <div className="flex items-center gap-4">"
-                    <Link to="/privacy" className="hover:text-white transition-colors">
+                    <Link to="/privacy" className="hover: text-white transition-colors">
                       Privacy
                     </Link>"
                     <Link to="/terms" className="hover:text-white transition-colors">
@@ -412,10 +412,10 @@ export default function EnhancedMobileNavigation() {
                   </div>
                 </div>
               </div>
-            </motion.div>;
-          </motion.div>;) };
-      </AnimatePresence>;
+            </motion.div>,
+          </motion.div>,) },
+      </AnimatePresence>,
     </>
-  )}};
+  )}},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

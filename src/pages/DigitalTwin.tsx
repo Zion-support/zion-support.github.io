@@ -1,8 +1,8 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Globe, 
+  Globe,
   Brain, 
   Zap, 
   CheckCircle,
@@ -45,102 +45,62 @@ import {
   Factory,
   Car,
   Heart
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function DigitalTwin() {
   const features = [
     {
-      icon: Globe,
-      title: 'Virtual Replicas',
-      description: 'Create accurate digital representations of physical assets and systems',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Globe,title: 'Virtual Replicas',description: 'Create accurate digital representations of physical assets and systems',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Intelligent insights and predictive modeling for optimization',
-      color: 'from-purple-500 to-pink-500'
-    },
+      icon: Brain,title: 'AI-Powered Analytics',description: 'Intelligent insights and predictive modeling for optimization',color: 'from-purple-500 to-pink-500'
+    };
     {
-      icon: Zap,
-      title: 'Real-Time Monitoring',
-      description: 'Live data synchronization and instant status updates',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Zap,title: 'Real-Time Monitoring',description: 'Live data synchronization and instant status updates',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Cube,
-      title: '3D Visualization',
-      description: 'Immersive 3D models and interactive simulations',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Cube,title: '3D Visualization',description: 'Immersive 3D models and interactive simulations',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: Network,
-      title: 'IoT Integration',
-      description: 'Seamless connection with sensors and connected devices',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: Network,title: 'IoT Integration',description: 'Seamless connection with sensors and connected devices',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Comprehensive metrics and optimization insights',
-      color: 'from-indigo-500 to-blue-500'
+      icon: BarChart3,title: 'Performance Analytics',description: 'Comprehensive metrics and optimization insights',color: 'from-indigo-500 to-blue-500'
     }
   ];
-
   const benefits = [
-    'Reduce operational costs by 30% with predictive maintenance',
-    'Improve asset performance by 25% through optimization',
-    'Minimize downtime with real-time monitoring and alerts',
-    'Enable remote operations and virtual collaboration',
-    'Optimize resource allocation and energy efficiency',
-    'Accelerate decision-making with data-driven insights'
-  ];
+    'Reduce operational costs by 30% with predictive maintenanceImprove asset performance by 25% through optimization',
+    'Minimize downtime with real-time monitoring and alertsEnable remote operations and virtual collaboration',
+    'Optimize resource allocation and energy efficiencyAccelerate decision-making with data-driven insights'
+  ],
 
   const useCases = [
     {
-      title: 'Manufacturing',
-      description: 'Digital twins for production lines and industrial processes',
-      icon: Factory
-    },
+      title: 'Manufacturing',description: 'Digital twins for production lines and industrial processes',icon: Factory
+    };
     {
-      title: 'Smart Cities',
-      description: 'Urban infrastructure monitoring and management',
-      icon: Building
-    },
+      title: 'Smart Cities',description: 'Urban infrastructure monitoring and management',icon: Building
+    };
     {
-      title: 'Healthcare',
-      description: 'Patient monitoring and medical device management',
-      icon: Heart
-    },
+      title: 'Healthcare',description: 'Patient monitoring and medical device management',icon: Heart
+    };
     {
-      title: 'Transportation',
-      description: 'Vehicle fleet management and infrastructure optimization',
-      icon: Car
+      title: 'Transportation',description: 'Vehicle fleet management and infrastructure optimization',icon: Car
     }
   ];
-
   const digitalTwinCapabilities = [
     {
-      name: 'Real-Time Monitoring',
-      description: 'Live data synchronization and instant status updates',
-      examples: ['Live sensor data', 'Performance metrics', 'Status monitoring']
+      name: 'Real-Time Monitoring',description: 'Live data synchronization and instant status updates',examples: ['Live sensor dataPerformance metrics', 'Status monitoring']
     },
     {
-      name: 'Predictive Analytics',
-      description: 'AI-powered forecasting and predictive maintenance',
-      examples: ['Failure prediction', 'Performance optimization', 'Trend analysis']
+      name: 'Predictive Analytics',description: 'AI-powered forecasting and predictive maintenance',examples: ['Failure predictionPerformance optimization', 'Trend analysis']
     },
     {
-      name: '3D Visualization',
-      description: 'Immersive 3D models and interactive simulations',
-      examples: ['Virtual walkthroughs', 'Interactive models', 'Spatial analysis']
+      name: '3D Visualization',description: 'Immersive 3D models and interactive simulations',examples: ['Virtual walkthroughsInteractive models', 'Spatial analysis']
     },
     {
-      name: 'Simulation & Testing',
-      description: 'Virtual testing and scenario modeling',
-      examples: ['What-if scenarios', 'Performance testing', 'Risk assessment']
+      name: 'Simulation & Testing',description: 'Virtual testing and scenario modeling',examples: ['What-if scenariosPerformance testing', 'Risk assessment']
     }
-  ];
+  ],
 
   return (
     <>
@@ -394,7 +354,7 @@ export default function DigitalTwin() {
                 Digital Twin Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our digital twin platform adapts to various industries and applications, 
+                Our digital twin platform adapts to various industries and applications;
                 providing tailored solutions for different asset management needs.
               </p>
             </motion.div>
@@ -459,7 +419,7 @@ export default function DigitalTwin() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -469,5 +429,5 @@ export default function DigitalTwin() {
         </section>
       </div>
     </>
-  );
+  )
 }

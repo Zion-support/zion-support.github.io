@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const ProductsPage: NextPage = () => {
   const products = [
@@ -236,7 +236,7 @@ const ProductsPage: NextPage = () => {
         }
       ]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">
@@ -351,7 +351,7 @@ const ProductsPage: NextPage = () => {
           <div className="flex justify-center gap-4 mb-8">
             <Link 
               href="/contact"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-green-600 hover: bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Start Free Trial
             </Link>
@@ -379,12 +379,12 @@ const ProductsPage: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ProductsPage;
+export default ProductsPage,
 =======
-import React from 'react';
+import React from 'react',
 
   return (
     <>
@@ -580,7 +580,7 @@ import React from 'react';
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact our team to discuss your requirements and get a customized solution for your business.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
               Request Demo
             </Link>
@@ -591,6 +591,6 @@ import React from 'react';
         </div>
       </section>
     </>
-  );
+  )
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

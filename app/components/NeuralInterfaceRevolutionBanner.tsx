@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { Brain, Cpu, Zap, Target, Users, TrendingUp } from 'lucide-react';
+import Link from 'next/link',
+import { Brain, Cpu, Zap, Target, Users, TrendingUp } from 'lucide-react',
 export default function NeuralInterfaceRevolutionBanner() {,
   return (,
     <section className="py-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">,
@@ -30,7 +30,7 @@ export default function NeuralInterfaceRevolutionBanner() {,
             <Cpu className="w-12 h-12 text-emerald-400 mb-4" />,
             <h3 className="text-xl font-bold mb-3">Thought-to-Action</h3>,
             <p className="text-gray-300">,
-              Convert mental commands into digital actions instantly;
+              Convert mental commands into digital actions instantly,
               enabling unprecedented control and efficiency.,
             </p>,
           </div>,
@@ -77,7 +77,7 @@ export default function NeuralInterfaceRevolutionBanner() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
             <Link,
@@ -99,7 +99,7 @@ export default function NeuralInterfaceRevolutionBanner() {,
               Schedule Consultation,
             </Link>,
           </div>,
-          {/* Impact Metrics */,}
+          {/* Impact Metrics */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">,
             <div className="text-center">,
               <div className="text-3xl font-bold text-emerald-400 mb-2">200-400%</div>,
@@ -120,5 +120,4 @@ export default function NeuralInterfaceRevolutionBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

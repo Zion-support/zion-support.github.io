@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+import React, { useEffect } from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
 
 export default function IntegrationsFeature() {
   const schema = {
@@ -13,13 +13,13 @@ export default function IntegrationsFeature() {
     "name": "API & Integrations",
     "description": "Connect Zion with Slack, your website and other tools via our API and widgets.",
     "url": "https://app.ziontechgroup.com/features/integrations"
-  };
+  },
 
-  const { markSlackConnected } = useAdvancedOnboardingStatus();
+  const { markSlackConnected } = useAdvancedOnboardingStatus(),
 
   useEffect(() => {
-    markSlackConnected();
-  }, [markSlackConnected]);
+    markSlackConnected(),
+  }, [markSlackConnected]),
 
   return (
     <>
@@ -36,7 +36,7 @@ export default function IntegrationsFeature() {
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">API & Integrations</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Automate your workflows by connecting Zion with the tools you already use.
@@ -48,7 +48,7 @@ export default function IntegrationsFeature() {
               className="object-cover"
             />
           </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Trigger Slack notifications for new orders or messages.</li>
             <li>Embed talent search or job listings directly on your site.</li>
@@ -73,5 +73,5 @@ export default function IntegrationsFeature() {
         </div>
       </main>
     </>
-  );
+  ),
 }

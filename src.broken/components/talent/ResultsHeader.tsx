@@ -2,8 +2,8 @@
 import { Loader2 } from 'lucide-react'
 
 interface ResultsHeaderProps {
-  isLoading: boolean;
-  resultCount: number;
+  isLoading: boolean,
+  resultCount: number
 }
 
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
@@ -24,5 +24,5 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </span>
       )}
     </div>
-  );
+  ),
 }

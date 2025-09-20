@@ -1,35 +1,35 @@
-import React, { useState, useMemo } from 'react';
-export default ZionTechGroup2025ComprehensiveShowcase;
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useMemo } from 'react',
+export default ZionTechGroup2025ComprehensiveShowcase,
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-    }) ;
+    }) ,
 
-    return services;
-  }, [searchQuery, selectedCategory, priceRange, sortBy]) ;
+    return services,
+  }, [searchQuery, selectedCategory, priceRange, sortBy]) ,
 
-  const categories = [{ id: 'all', name: 'All Services', icon: Globe, color: 'bg-gray - 500' },;
-    { id: 'AI Solutions', name: 'AI Solutions', icon: Brain, color: 'bg-purple - 500' },;
-    { id: 'Micro SaaS', name: 'Micro SaaS', icon: Zap, color: 'bg-blue - 500' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'bg-red - 500' },;
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, color: 'bg-green - 500' },;
-    { id: 'Industry Specific', name: 'Industry Specific', icon: Target, color: 'bg-orange - 500' },;
-    { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo - 500' };
-  ];
+  const categories = [{ id: 'all', name: 'All Services', icon: Globe, color: 'bg-gray - 500' },
+    { id: 'AI Solutions', name: 'AI Solutions', icon: Brain, color: 'bg-purple - 500' },
+    { id: 'Micro SaaS', name: 'Micro SaaS', icon: Zap, color: 'bg-blue - 500' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'bg-red - 500' },
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, color: 'bg-green - 500' },
+    { id: 'Industry Specific', name: 'Industry Specific', icon: Target, color: 'bg-orange - 500' },
+    { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo - 500' },
+  ],
 
-  const getCategoryIcon = (category: anystring) => {;
-    const categoryData = categories.find(cat => cat.id === category) ;
+  const getCategoryIcon = (category: anystring) => {,
+    const categoryData = categories.find(cat => cat.id === category) ,
     if(categoryData) {
-      const IconComponent = categoryData.icon;
-      return < IconComponent className="w-5 h-5" />;
+      const IconComponent = categoryData.icon,
+      return < IconComponent className="w-5 h-5" />
     }
-    return < Globe className="w-5 h-5" />;
-  };
+    return < Globe className="w-5 h-5" />,
+  },
 
-  const getCategoryColor = (category: anystring) => {;
-    const categoryData = categories.find(cat => cat.id === category) ;
-    return categoryData?.color || 'bg-gray - 500';
-  };
+  const getCategoryColor = (category: anystring) => {,
+    const categoryData = categories.find(cat => cat.id === category) ,
+    return categoryData?.color || 'bg-gray - 500'
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate -900">
       {/* Hero Section */}
@@ -387,28 +387,28 @@ export default function Page() {
               className="text-center py-20"
             >
               <div  className="text-gray - 400 text-xl mb-4">No services found matching your criteria</div>
-              <button     onClick = {;
-  ;
-  ;
-  ;
-  ;
-  ; () => {;
-                  setSearchQuery('') ;
-                  setSelectedCategory('all') ;
+              <button     onClick = {,
+  ,
+  ,
+  ,
+  ,
+  , () => {,
+                  setSearchQuery('') ,
+                  setSelectedCategory('all') ,
                   setPriceRange([0,
-  10000]) ;
+  10000]) ,
 
 }}
-                className="bg-blue - 600 hover:bg-blue - 700 text-white font - semibold py-2 px-6 rounded-lg transition -colors"
+                className="bg-blue - 600 hover: bg-blue - 700 text-white font - semibold py-2 px-6 rounded-lg transition -colors"
               >
                 Clear Filters
               </button>
-            </motion.div>;) }
+            </motion.div>,) }
         </div>
-      </section>;
+      </section>,
 
       {/* Contact CTA Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pb -20">;
+      <section className="px-4 sm: px-6 lg:px-8 pb -20">,
         <div  className="max - w-4xl mx - auto text-center">
           <div  className="bg-gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 backdrop - blur - sm rounded-2xl p - 12 border border-white / 20">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
@@ -433,11 +433,11 @@ export default function Page() {
               </a>
             </div>
             <div  className="mt-8 text-gray -400">
-              <p > Visit us at: 364 E Main St STE 1008, Middletown DE 19709</p>;
-              <p > Website: <a href="https://ziontechgroup.com" className="text-blue - 400 hover:text-blue -300 underline">ziontechgroup.com</a></p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+              <p > Visit us at: 364 E Main St STE 1008, Middletown DE 19709</p>,
+              <p > Website: <a href="https://ziontechgroup.com" className="text-blue - 400 hover:text-blue -300 underline">ziontechgroup.com</a></p>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

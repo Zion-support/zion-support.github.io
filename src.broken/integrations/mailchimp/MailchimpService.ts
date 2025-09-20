@@ -1,6 +1,6 @@
 export interface MailchimpMember {
-  email: string;
-  mergeFields?: Record<string, string>;
+  email: string,
+  mergeFields?: Record<string, string>,
 }
 
 /**
@@ -10,17 +10,17 @@ export interface MailchimpMember {
  * implemented.
  */
 export class MailchimpService {
-  private apiKey: string;
-  private baseUrl: string;
-  private listId: string;
+  private apiKey: string,
+  private baseUrl: string,
+  private listId: string,
 
   constructor(apiKey: string, listId: string) {
-    if (!apiKey) throw new Error('Mailchimp API key missing');
-    if (!listId) throw new Error('Mailchimp list ID missing');
-    this.apiKey = apiKey;
-    const dc = apiKey.split('-')[1];
-    this.baseUrl = `https://${dc}.api.mailchimp.com/3.0`;
-    this.listId = listId;
+    if (!apiKey) throw new Error('Mailchimp API key missing'),
+    if (!listId) throw new Error('Mailchimp list ID missing'),
+    this.apiKey = apiKey,
+    const dc = apiKey.split('-')[1],
+    this.baseUrl = `https://${dc}.api.mailchimp.com/3.0`,
+    this.listId = listId,
   }
 
   /**
@@ -34,13 +34,13 @@ export class MailchimpService {
         'Content-Type': 'application/json',
         ...(options.headers || {})
       }
-    });
+    }),
 
     if (!res.ok) {
-      const text = await res.text().catch(() => '');
-      throw new Error(`Mailchimp error: ${res.status} ${text}`);
+      const text = await res.text().catch(() => ''),
+      throw new Error(`Mailchimp error: ${res.status} ${text}`),
     }
-    return res.json().catch(() => ({}));
+    return res.json().catch(() => ({})),
   }
 
   /**
@@ -54,15 +54,15 @@ export class MailchimpService {
         status: 'subscribed',
         merge_fields: member.mergeFields || {}
       })
-    });
+    }),
   }
 
   /**
    * Upsert a member in the list, used for nightly sync jobs.
    */
   async upsertMember(member: MailchimpMember) {
-    const crypto = await import('crypto');
-    const hash = crypto.createHash('md5').update(member.email.toLowerCase()).digest('hex');
+    const crypto = await import('crypto'),
+    const hash = crypto.createHash('md5').update(member.email.toLowerCase()).digest('hex'),
     return this.request(`/lists/${this.listId}/members/${hash}`, {
       method: 'PUT',
       body: JSON.stringify({
@@ -70,7 +70,7 @@ export class MailchimpService {
         status_if_new: 'subscribed',
         merge_fields: member.mergeFields || {}
       })
-    });
+    }),
   }
 
   /**
@@ -82,13 +82,13 @@ export class MailchimpService {
     return this.request(`/automations/welcome/emails/1/queue`, {
       method: 'POST',
       body: JSON.stringify({ email_address: email, coupon })
-    });
+    }),
   }
 
   /**
    * Export a segment by ID. Used by the scheduled export job.
    */
   async exportSegment(segmentId: string) {
-    return this.request(`/lists/${this.listId}/segments/${segmentId}/members`);
+    return this.request(`/lists/${this.listId}/segments/${segmentId}/members`),
   }
 }

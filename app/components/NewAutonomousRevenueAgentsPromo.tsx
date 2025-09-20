@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export default function NewAutonomousRevenueAgentsPromo() {,
   return (,
     <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">,
@@ -13,7 +13,7 @@ export default function NewAutonomousRevenueAgentsPromo() {,
               AI 2026: Autonomous Revenue Agents — From Lead to Closed Won,
             </h3>,
             <p className="text-gray-600 mt-2 max-w-2xl">,
-              See how enterprise‑grade agents prospect, qualify, run meetings, draft proposals;
+              See how enterprise‑grade agents prospect, qualify, run meetings, draft proposals,
               and update CRM automatically — with measurable impact.,
             </p>,
           </div>,
@@ -27,6 +27,5 @@ export default function NewAutonomousRevenueAgentsPromo() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}
 ,

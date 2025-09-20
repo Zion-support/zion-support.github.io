@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
   {
@@ -6,68 +6,62 @@ export default function Page() {
     price: '$2,999',
     period: '/month',
     description: 'Ideal for growing businesses',
-    features: ['Advanced AI features',
-      'Priority support',
-      'Custom integrations',
-      'Advanced analytics',
-      'Phone & email support',
-      'Training sessions',
+    features: ['Advanced AI featuresPriority support',
+      'Custom integrationsAdvanced analytics',
+      'Phone & email supportTraining sessions'
     ],
-    popular: true,
+    popular: true
   },
   {
     name: 'Enterprise',
     price: '$7,999',
     period: '/month',
     description: 'For large organizations',
-    features: ['Full AI suite',
-      '24 / 7 dedicated support',
-      'Custom development',
-      'Enterprise analytics',
-      'Dedicated account manager',
-      'Custom training programs',
-      'SLA guarantees',
+    features: ['Full AI suite24 / 7 dedicated support',
+      'Custom developmentEnterprise analytics',
+      'Dedicated account managerCustom training programs',
+      'SLA guarantees'
     ],
-    popular: false,
-  },
-];
+    popular: false
+  }
+],
 
-  const [selectedCategory, setSelectedCategory] = useState < any> ('all') ;
-  const [selectedPriceRange, setSelectedPriceRange] = useState < any> ('all') ;
+  const [selectedCategory, setSelectedCategory] = useState < any> ('all') ,
+  const [selectedPriceRange, setSelectedPriceRange] = useState < any> ('all') ,
 
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027,
-    ...specializedInnovativeServices2027,
-  ];
+    ...specializedInnovativeServices2027
+  ],
 
   // Get unique categories
-  const categories = Array.from(new Set (allServices.map (service => service.category) ) ) ;
+  const categories = Array.from(new Set (allServices.map (service => service.category) ) ) ,
 
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
 
-    let matchesPrice = true;
+    let matchesPrice = true,
     if (selectedPriceRange !== 'all') {
-      const price = parseInt(service.price.replace (/[^0 - 9]/g, '') ) ;
+      const price = parseInt(service.price.replace (/[^0 - 9]/g, '') ) ,
       switch(selectedPriceRange) {
         case 'under - 1000':
-          matchesPrice = price < 1000;
-          break;
+          matchesPrice = price < 1000,
+          break,
         case '1000 - 3000':
-          matchesPrice = price >= 1000 && price < 3000;
-          break;
+          matchesPrice = price >= 1000 && price < 3000,
+          break,
         case '3000 - 5000':
-          matchesPrice = price >= 3000 && price < 5000;
-          break;
+          matchesPrice = price >= 3000 && price < 5000,
+          break,
         case 'over - 5000':
-          matchesPrice = price >= 5000;
-          break;
+          matchesPrice = price >= 5000,
+          break,
       }
     }
 
-    return matchesCategory && matchesPrice;
-  }) ;
+    return matchesCategory && matchesPrice,
+  }) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Header */}
@@ -294,8 +288,8 @@ export default function Page() {
                 No services found matching your criteria.</p>
               <Button
                 onClick={ () => {
-                  setSelectedCategory('all') ;
-                  setSelectedPriceRange('all') ;
+                  setSelectedCategory('all') ,
+                  setSelectedPriceRange('all') ,
                 }}
                 className="mt-4 bg-zion - cyan text-white hover:bg-zion - cyan -dark"
               >
@@ -397,5 +391,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>) ,
 }

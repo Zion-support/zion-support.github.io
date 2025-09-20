@@ -1,29 +1,29 @@
-import React from 'react';
-import type { GetServerSideProps } from 'next';
-import { useRouter } from 'next/router';
-import { JOBS } from '../../../data/jobs';
-import { APPLICATIONS } from '../../../data/applications';
-import ApplicationsTable from '../../../components/marketplace/ApplicationsTable';
+import React from 'react',
+import type { GetServerSideProps } from 'next',
+import { useRouter } from 'next/router',
+import { JOBS } from '../../../data/jobs',
+import { APPLICATIONS } from '../../../data/applications',
+import ApplicationsTable from '../../../components/marketplace/ApplicationsTable',
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const jobId = ctx.params?.jobId as string;
-  const job = JOBS.find((j) => j.id === jobId) || null;
+  const jobId = ctx.params?.jobId as string,
+  const job = JOBS.find((j) => j.id === jobId) || null,
   if (!job) {
-    return { notFound: true };
+    return { notFound: true },
   }
-  const clientId = 'client-demo-001';
+  const clientId = 'client-demo-001',
   if (job.clientId !== clientId) {
-    return { redirect: { destination: '/auth', permanent: false } };
+    return { redirect: { destination: '/auth', permanent: false } },
   }
-  return { props: { jobId } };
-};
+  return { props: { jobId } },
+},
 
-type Props = { jobId: string };
+type Props = { jobId: string },
 
 const JobApplicationsPage: React.FC<Props> = ({ jobId }) => {
-  const job = JOBS.find((j) => j.id === jobId)!;
-  const apps = APPLICATIONS.filter((a) => a.jobId === jobId);
-  const router = useRouter();
+  const job = JOBS.find((j) => j.id === jobId)!,
+  const apps = APPLICATIONS.filter((a) => a.jobId === jobId),
+  const router = useRouter(),
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-8">
@@ -35,7 +35,7 @@ const JobApplicationsPage: React.FC<Props> = ({ jobId }) => {
         <ApplicationsTable applications={apps} />
       </div>
     </main>
-  );
-};
+  ),
+},
 
-export default JobApplicationsPage;
+export default JobApplicationsPage,

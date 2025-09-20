@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-export default PerformanceOptimizer;
+import React, { useState, useEffect, useCallback } from 'react',
+export default PerformanceOptimizer,
 =======
 
 export default function Page() {
@@ -44,20 +44,20 @@ export default function Page() {
       description: 'Optimize server response time and enable compression',
       impact: 'medium',
       category: 'server',
-      implemented: false},
-  ]);
+      implemented: false}
+  ]),
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
+  const [isMonitoring, setIsMonitoring] = useState(false),
+  const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ,
 
   // Simulate performance monitoring
   
     // Calculate performance score
-    calculatePerformanceScore(initialMetrics, resourceMetrics);
+    calculatePerformanceScore(initialMetrics, resourceMetrics),
 
     // Continuous monitoring
     intervalRef.current = setInterval(() => {
-      updateResourceMetrics()}, 5000)}, [])}, []);
+      updateResourceMetrics()}, 5000)}, [])}, []),
 
     const newResourceMetrics: ResourceMetrics = {
       totalResources: resources.length,
@@ -66,34 +66,34 @@ export default function Page() {
       scripts: resources.filter(r => r.initiatorType === 'script').length,
       stylesheets: resources.filter(r => r.initiatorType === 'link').length,
       fonts: resources.filter(r => r.initiatorType === 'font').length
-    };
-    setResourceMetrics(newResourceMetrics)}, []);
+    },
+    setResourceMetrics(newResourceMetrics)}, []),
 
-    if(newMetrics.fcp > 1800) score -= 20;
-    if(newMetrics.lcp > 2500) score -= 25;
-    if(newMetrics.fid > 100) score -= 20;
-    if(newMetrics.cls > 0.1) score -= 15;
-    if(newMetrics.ttfb > 600) score -= 20;
+    if(newMetrics.fcp > 1800) score -= 20,
+    if(newMetrics.lcp > 2500) score -= 25,
+    if(newMetrics.fid > 100) score -= 20,
+    if(newMetrics.cls > 0.1) score -= 15,
+    if(newMetrics.ttfb > 600) score -= 20,
 
-    newMetrics.score = Math.max(0, score) ;
-    setMetrics(newMetrics) ;
-    setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
+    newMetrics.score = Math.max(0, score) ,
+    setMetrics(newMetrics) ,
+    setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ,
 
   useEffect(() => {
     if(isMonitoring) {
 
       return () => clearInterval(interval)}
 
-    if(score >= 70) return 'text-yellow-500';
-    return 'text-red-500'};
+    if(score >= 70) return 'text-yellow-500',
+    return 'text-red-500'},
 
     if(score >= 70)"
-      return <AlertTriangle className="w-5 h-5 text-yellow-500"  />;"
-    return <AlertTriangle className="w-5 h-5 text-red-500"  />};
+      return <AlertTriangle className="w-5 h-5 text-yellow-500"  />,"
+    return <AlertTriangle className="w-5 h-5 text-red-500"  />},
 
   ) => {
 
-    return isGood ? 'text-green-500' : 'text-red-500'}};
+    return isGood ? 'text-green-500' : 'text-red-500'}},
 
   return ("
     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
@@ -253,13 +253,13 @@ export default function Page() {
             </div>
           </div>
         </div>) }
-    </div>) ;
+    </div>) ,
 =======
 const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {
-  if(!enabled) return null;
+  if(!enabled) return null,
   return (<div className="hidden" aria-hidden="true" />
-  );
-};
+  ),
+},
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

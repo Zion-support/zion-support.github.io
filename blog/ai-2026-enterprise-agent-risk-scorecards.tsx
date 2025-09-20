@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link',
 
 export const metadata = {
 	title: 'AI 2026: Enterprise Agent Risk Scorecards',
 	description: 'A practical blueprint to define, measure, and govern risk for autonomous agents using scorecards and policy-as-code.'
-};
+},
 
 export default function EnterpriseAgentRiskScorecards2026() {
 	return (
@@ -41,10 +41,10 @@ export default function EnterpriseAgentRiskScorecards2026() {
 					<p>Translate score thresholds into automated checks in CI/CD. Block promotion when high-risk scenarios fail, and attach evaluation artifacts to evidence bundles for reviews.</p>
 
 					<h2>Operational loop</h2>
-					<p>Plan → Evaluate → Promote → Observe → Learn. Incidents and drift lower the score; playbooks trigger rollbacks and corrective actions. Quarterly reviews adjust tiers and controls.</p>
+					<p>Plan → Evaluate → Promote → Observe → Learn. Incidents and drift lower the score, playbooks trigger rollbacks and corrective actions. Quarterly reviews adjust tiers and controls.</p>
 
 					<div className="mt-10 p-6 rounded-xl bg-white/5 border border-white/10">
-						<p className="text-white/80">Starter resources:</p>
+						<p className="text-white/80">Starter resources: </p>
 						<ul className="list-disc pl-5 mt-2">
 							<li><Link href="/content/ai-2026-guardrail-scorecards-starter-kit" className="text-cyan-300 hover:text-cyan-200">Guardrail Scorecards Starter Kit</Link></li>
 							<li><Link href="/content/ai-2026-evidence-driven-operations" className="text-cyan-300 hover:text-cyan-200">Evidence‑Driven Operations</Link></li>
@@ -58,7 +58,7 @@ export default function EnterpriseAgentRiskScorecards2026() {
 				</footer>
 			</section>
 		</main>
-	);
+	)
 }
 
 import React from 'react'

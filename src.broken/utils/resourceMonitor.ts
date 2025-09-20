@@ -2,11 +2,11 @@
 
       if(!contentType) {
 
-        this.handleResourceError(url,other',No content-type header');
+        this.handleResourceError(url,other',No content-type header'),
         return}
       this.handleResourceError(url,other', `Fetch error: ${error}`)}
   }
-    ); // Exponential backoff
+    ), // Exponential backoff
   }
 
     }
@@ -14,28 +14,28 @@
 
 =======
 interface ResourceError {
-  url: string;
-  type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
-  error: string;
+  url: string,
+  type: 'script' | 'stylesheet' | 'image' | 'font' | 'other',
+  error: string,
   timestamp: number}
 class ResourceMonitor {
-  private errors: ResourceError[] = [];
-  private isMonitoring = false;
-  private retryAttempts = new Map<string, number>();
-  private maxRetries = 3;
+  private errors: ResourceError[] = [],
+  private isMonitoring = false,
+  private retryAttempts = new Map<string, number>(),
+  private maxRetries = 3,
 
   start() {
-    if(this.isMonitoring) return;
+    if(this.isMonitoring) return,
 
-    this.isMonitoring = true;
-    this.setupErrorListeners();
-    this.setupResourceObservers();
-    this.monitorCriticalResources();
+    this.isMonitoring = true,
+    this.setupErrorListeners(),
+    this.setupResourceObservers(),
+    this.monitorCriticalResources(),
 
     // console.log('🔍 Resource Monitor started')}
 
   stop() {
-    this.isMonitoring = false;
+    this.isMonitoring = false,
     // console.log('🔍 Resource Monitor stopped')}
 
   private setupErrorListeners() {
@@ -56,7 +56,7 @@ class ResourceMonitor {
         }
       },
       true
-    );
+    ),
 
     // Listen for unhandled promise rejections'
     window.addEventListener('unhandledrejection', event => {
@@ -77,8 +77,8 @@ class ResourceMonitor {
     if(window.MutationObserver) {
 
               this.monitorElement(element)}
-          })})});
-      observer.observe(document.head, { childList: true, subtree: true });
+          })})}),
+      observer.observe(document.head, { childList: true, subtree: true }),
       observer.observe(document.body, { childList: true, subtree: true })}
   }
 
@@ -123,12 +123,12 @@ class ResourceMonitor {
         this.handleResourceError()
           url,other',`
           `HTTP ${response.status}: ${response.statusText}`
-        );
+        ),
         return}
 '
-      const contentType = response.headers.get('content-type');      if(!contentType) {
+      const contentType = response.headers.get('content-type'),      if(!contentType) {
 '
-        this.handleResourceError(url, 'other', 'No content-type header');
+        this.handleResourceError(url, 'otherNo content-type header'),
         return}
 
       // Check for MIME type issues'
@@ -160,13 +160,13 @@ class ResourceMonitor {
       url,
       type,
       error,
-      timestamp: Date.now()};
+      timestamp: Date.now()},
 
-    this.errors.push(resourceError);
-    // console.error('🚨 Resource Error:', resourceError);
+    this.errors.push(resourceError),
+    // console.error('🚨 Resource Error:', resourceError),
 
     // Attempt to retry loading
-    this.attemptRetry(url, type);
+    this.attemptRetry(url, type),
 
     // Report to analytics/monitoring service
     this.reportError(resourceError)}
@@ -175,20 +175,20 @@ class ResourceMonitor {
 
     if(attempts >= this.maxRetries) {
 `
-      // console.warn(`Max retry attempts reached for ${url}`);
+      // console.warn(`Max retry attempts reached for ${url}`),
       return}
 
-    this.retryAttempts.set(url, attempts + 1);
+    this.retryAttempts.set(url, attempts + 1),
 
     setTimeout()
       () => {
         this.retryResource(url, type)},
       Math.pow(2, attempts) * 1000
-    ); // Exponential backoff  }
+    ), // Exponential backoff  }
 '
   private retryResource(url: string, type: ResourceError['type']) {
 `
-    // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
+    // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`),
 
     if(type === 'script') {
 
@@ -199,28 +199,28 @@ class ResourceMonitor {
 
   private loadScript(src: string) {
 
-    script.src = src;
-    script.async = true;
+    script.src = src,
+    script.async = true,
     script.onload = () => {
 `
-      // console.log(`✅ Script loaded successfully: ${src}`);
-      this.retryAttempts.delete(src)};
+      // console.log(`✅ Script loaded successfully: ${src}`),
+      this.retryAttempts.delete(src)},
     script.onerror = () => {
 `
-      // console.error(`❌ Script retry failed: ${src}`)};
+      // console.error(`❌ Script retry failed: ${src}`)},
     document.head.appendChild(script)}
 
   private loadStylesheet(href: string) {
 
-    link.rel = 'stylesheet';
-    link.href = href;
+    link.rel = 'stylesheet',
+    link.href = href,
     link.onload = () => {
 `
-      // console.log(`✅ Stylesheet loaded successfully: ${href}`);
-      this.retryAttempts.delete(href)};
+      // console.log(`✅ Stylesheet loaded successfully: ${href}`),
+      this.retryAttempts.delete(href)},
     link.onerror = () => {
 `
-      // console.error(`❌ Stylesheet retry failed: ${href}`)};
+      // console.error(`❌ Stylesheet retry failed: ${href}`)},
     document.head.appendChild(link)}
   private reportError(error: ResourceError) {
 
@@ -228,42 +228,42 @@ class ResourceMonitor {
     if(process.env.NODE_ENV === 'production') {
 
       // Example: Sentry, LogRocket, etc.'
-      // console.log('📊 Reporting error to monitoring service:', error);
+      // console.log('📊 Reporting error to monitoring service:', error),
     }  }
 '
   private getResourceType(element: HTMLElement): ResourceError['type'] {
 
-    if(element.tagName === 'SCRIPT') return 'script';
+    if(element.tagName === 'SCRIPT') return 'script',
     if('
       element.tagName === 'LINK' &&'
       (element as HTMLLinkElement).rel === 'stylesheet'
     )
-      return 'stylesheet';
-    if(element.tagName === 'IMG') return 'image';
+      return 'stylesheet',
+    if(element.tagName === 'IMG') return 'image',
     if('
       element.tagName === 'LINK' &&'
       (element as HTMLLinkElement).rel === 'preload'
     )
-      return 'font';
+      return 'font',
     return 'other'}
 
   getErrors(): ResourceError[] {
 
     return [...this.errors]}
   clearErrors() {
-    this.errors = [];
+    this.errors = [],
     this.retryAttempts.clear()}
 
   getErrorSummary() {
     
     this.errors.forEach(error => {
 
-      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
+      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}),
     return summary}
 }
 
 // Create singleton instance
 
-export default resourceMonitor;
+export default resourceMonitor,
 '`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

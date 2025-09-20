@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
+import React, { useState } from 'react',
+import { Button } from '@/components / ui / button',
 export default function Page() {
 ,
     { id: 'optimism', name: 'Optimism', logo: '/logos / optimism - logo.svg' },
     {
       id: 'avalanche',
       name: 'Avalanche',
-      logo: '/logos / avalanche - logo.svg',
+      logo: '/logos / avalanche - logo.svg'
     },
-    { id: 'bnb', name: 'BNB', logo: '/logos / bnb - logo.svg' },
-  ];
+    { id: 'bnb', name: 'BNB', logo: '/logos / bnb - logo.svg' }
+  ],
   function suggestChain(region, stake) {
-    if(stake > 1000) return 'ethereum';
-    if(region === 'asia') return 'bnb';
-    if(region === 'europe') return 'polygon';
-    return 'optimism';
+    if(stake > 1000) return 'ethereum',
+    if(region === 'asia') return 'bnb',
+    if(region === 'europe') return 'polygon',
+    return 'optimism',
   }
-  const { address, isConnected } = useWallet () ;
-  const [fromChain, setFromChain] = useState('ethereum');
-  const [toChain, setToChain] = useState('polygon');
-  const [txHash, setTxHash] = useState(null);
-  const [status, setStatus] = useState(null);
-  const [region, setRegion] = useState('');
-  const [stake, setStake] = useState(0);
-  const [suggested, setSuggested] = useState(null);
+  const { address, isConnected } = useWallet () ,
+  const [fromChain, setFromChain] = useState('ethereum'),
+  const [toChain, setToChain] = useState('polygon'),
+  const [txHash, setTxHash] = useState(null),
+  const [status, setStatus] = useState(null),
+  const [region, setRegion] = useState(''),
+  const [stake, setStake] = useState(0),
+  const [suggested, setSuggested] = useState(null),
   const handleBridge = () => {
-    setStatus('Bridging...') ;
-    setTxHash(null) ;
+    setStatus('Bridging...') ,
+    setTxHash(null) ,
     // TODO: integrate actual LayerZero bridge logic
     // Record onchain tx logs and enforce rate limits
     // Use burn - and - mint model if tokens are wrapped
     setTimeout(() => {
-      setTxHash('0xabc123') ;
-      setStatus(`ZION$ arrived on ${toChain} in 12s`) ;
-    }, 1200) ;
-  };
+      setTxHash('0xabc123') ,
+      setStatus(`ZION$ arrived on ${toChain} in 12s`) ,
+    }, 1200) ,
+  },
   const handleSuggest = () => {
-    const chain = suggestChain(region.toLowerCase () , stake) ;
-    setSuggested(chain) ;
-  };
+    const chain = suggestChain(region.toLowerCase () , stake) ,
+    setSuggested(chain) ,
+  },
   return (<div>
       <Header />
       <div className="min - h-screen bg-zion - blue pt - 12 pb -20">
@@ -138,5 +138,5 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-    </div>) ;
+    </div>) ,
 }

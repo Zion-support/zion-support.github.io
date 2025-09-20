@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface AiemailresponderProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Aiemailresponder({ }: AiemailresponderProps) {,
@@ -8,7 +8,6 @@ export default function Aiemailresponder({ }: AiemailresponderProps) {,
     <div>,
       <h1>Aiemailresponder</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

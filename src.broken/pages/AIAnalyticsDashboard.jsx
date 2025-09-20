@@ -1,4 +1,4 @@
-import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star  } from 'lucide-react';
+import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star  } from 'lucide-react',
 export default function Page() {
 ,
         {
@@ -6,14 +6,14 @@ export default function Page() {
             price: "$299",
             period: "/month",
             description: "Advanced analytics for growing businesses",
-            features[;
+            features[,
                 "Up to 20 data sources",
                 "Advanced AI insights",
                 "Custom dashboards",
                 "Priority support",
                 "Real - time alerts",
                 "API access"
-            ],;
+            ],
             popular: true
         },
         {
@@ -21,17 +21,17 @@ export default function Page() {
             price: "$799",
             period: "/month",
             description: "Full - scale AI analytics for large organizations",
-            features[;
+            features[,
                 "Unlimited data sources",
                 "Custom AI models",
                 "White - label dashboards",
                 "Dedicated support",
                 "Advanced security",
                 "Custom integrations"
-            ],;
+            ],
             popular: false
 
-    ];
+    ],
     const testimonials = [{
             name: "Sarah Chen",
             role: "CTO, TechFlow Inc.",
@@ -50,7 +50,7 @@ export default function Page() {
             content: "Real - time dashboards help us make faster, better decisions.ROI was immediate.",
             rating: 5
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">
       <SEO title="AI Analytics Dashboard - Zion Tech Group" description="Transform your business with AI - powered analytics, real - time insights, and predictive intelligence.Get started today!" keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group" canonical="https://ziontechgroup.com / ai - analytics - dashboard"/>
 

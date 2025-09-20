@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react',
 const QuantumConsciousnessRevolution2028: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>,
         <div className="relative z-10 container mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full text-sm font-bold mb-6 animate-pulse">,
               🧠 QUANTUM CONSCIOUSNESS • 2028,
@@ -33,7 +33,7 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Quantum Consciousness Features */,}
+      {/* Quantum Consciousness Features */}
       <section className="py-20 px-4">,
         <div className="container mx-auto">,
           <div className="text-center mb-16">,
@@ -41,11 +41,11 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
             <p className="text-xl opacity-80">Where quantum mechanics meets artificial intelligence</p>,
           </div>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {/* Quantum Neural Networks */,}
+            {/* Quantum Neural Networks */}
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover: scale-105 transition-all duration-300",
             >,
               <div className="text-6xl mb-4 text-center">⚛️</div>,
@@ -64,11 +64,11 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
                 Explore Quantum AI →,
               </button>,
             </motion.div>,
-            {/* Consciousness Amplification */,}
+            {/* Consciousness Amplification */}
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.2 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-fuchsia-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-fuchsia-400/30 hover: scale-105 transition-all duration-300",
             >,
               <div className="text-6xl mb-4 text-center">🌟</div>,
@@ -87,11 +87,11 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
                 Amplify Consciousness →,
               </button>,
             </motion.div>,
-            {/* Quantum Creativity Engine */,}
+            {/* Quantum Creativity Engine */}
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.4 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all duration-300",
             >,
               <div className="text-6xl mb-4 text-center">🎨</div>,
@@ -113,7 +113,7 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Advanced Applications */,}
+      {/* Advanced Applications */}
       <section className="py-20 px-4 bg-gradient-to-r from-violet-800/50 to-fuchsia-800/50">,
         <div className="container mx-auto">,
           <div className="text-center mb-16">,
@@ -122,9 +122,9 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
           </div>,
           <div className="grid md: grid-cols-2 gap-12 items-center">,
             <motion.div,
-              initial={{ opacity: 0, x: -30 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h3 className="text-3xl font-bold mb-6">Quantum Problem Solving</h3>,
               <p className="text-lg opacity-90 mb-6">,
@@ -148,15 +148,15 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
               </div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, x: 30 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               className="bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 rounded-xl p-8 border border-violet-400/30",
             >,
               <div className="text-6xl mb-4 text-center">🧠</div>,
               <h4 className="text-xl font-bold mb-4 text-center">Quantum Mind Interface</h4>,
               <p className="text-center opacity-90">,
-                Direct interface between human consciousness and quantum AI systems;
+                Direct interface between human consciousness and quantum AI systems,
                 enabling unprecedented collaboration and understanding.,
               </p>,
             </motion.div>,
@@ -167,9 +167,9 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
       <section className="py-20 px-4">,
         <div className="container mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h2 className="text-4xl font-bold mb-6">🚀 The Quantum Future</h2>,
             <p className="text-xl opacity-80 mb-8 max-w-4xl mx-auto">,
@@ -188,6 +188,5 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),};
-export default QuantumConsciousnessRevolution2028;
+    </div>)},
+export default QuantumConsciousnessRevolution2028,

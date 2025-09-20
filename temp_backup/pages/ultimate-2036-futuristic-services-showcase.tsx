@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import {
   Search, Star, DollarSign, CheckCircle, Rocket, Phone, Mail, MapPin, 
   Grid, List, ChevronDown, Brain, Atom, Shield, Zap, Globe, Users,
@@ -10,47 +10,47 @@ import {
   Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone,
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building,
   MessageCircle, Target, BarChart3, Truck, BookOpen, X
-} from 'lucide-react';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036EmergingTechServices } from '../data/real-2036-emerging-tech-services';
+} from 'lucide-react',
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
+import { real2036EmergingTechServices } from '../data/real-2036-emerging-tech-services',
 
 export default function Ultimate2036FuturisticServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [selectedService, setSelectedService] = useState<any>(null),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all services
   const allServices = [
     ...real2036InnovativeServices,
     ...real2036EmergingTechServices
-  ];
+  ],
 
   // Dynamic category counts
   const aiCount = allServices.filter(service =>
     service.category?.includes('AI') || service.category?.includes('Machine Learning')
-  ).length;
+  ).length,
   const quantumCount = allServices.filter(service =>
     service.category?.includes('Quantum') || service.category?.includes('Space')
-  ).length;
+  ).length,
   const emergingCount = allServices.filter(service =>
     service.category?.includes('Emerging') || service.category?.includes('Innovation')
-  ).length;
+  ).length,
   const roboticsCount = allServices.filter(service =>
     service.category?.includes('Robotics') || service.category?.includes('Automation')
-  ).length;
+  ).length,
   const biotechCount = allServices.filter(service =>
     service.category?.includes('Biology') || service.category?.includes('Biotech')
-  ).length;
+  ).length,
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length, color: 'from-blue-500 to-purple-600' },
@@ -59,7 +59,7 @@ export default function Ultimate2036FuturisticServicesShowcase() {
     { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount, color: 'from-green-500 to-emerald-600' },
     { id: 'robotics', name: 'Robotics & Automation', icon: '🤖', count: roboticsCount, color: 'from-orange-500 to-red-600' },
     { id: 'biotech', name: 'Biotechnology', icon: '🧬', count: biotechCount, color: 'from-teal-500 to-green-600' }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -67,53 +67,53 @@ export default function Ultimate2036FuturisticServicesShowcase() {
     { id: 'medium', name: '$2K - $5K/month', range: '$2K - $5K' },
     { id: 'high', name: '$5K - $10K/month', range: '$5K - $10K' },
     { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
 
       const matchesCategory = selectedCategory === 'all' ||
         (selectedCategory === 'ai' && service.category.includes('AI')) ||
         (selectedCategory === 'quantum' && service.category.includes('Quantum')) ||
         (selectedCategory === 'emerging' && service.category.includes('Emerging')) ||
         (selectedCategory === 'robotics' && service.category.includes('Robotics')) ||
-        (selectedCategory === 'biotech' && service.category.includes('Biology'));
+        (selectedCategory === 'biotech' && service.category.includes('Biology')),
 
       const matchesPrice = selectedPriceRange === 'all' ||
         (selectedPriceRange === 'low' && service.price.monthly < 2000) ||
         (selectedPriceRange === 'medium' && service.price.monthly >= 2000 && service.price.monthly <= 5000) ||
-        (selectedPriceRange === 'high' && service.price.monthly > 5000);
+        (selectedPriceRange === 'high' && service.price.monthly > 5000),
 
-      return matchesSearch && matchesCategory && matchesPrice;
-    });
+      return matchesSearch && matchesCategory && matchesPrice,
+    }),
 
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),
+        break,
       case 'price':
-        filtered.sort((a, b) => a.price.monthly - b.price.monthly);
-        break;
+        filtered.sort((a, b) => a.price.monthly - b.price.monthly),
+        break,
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        break,
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
+        filtered.sort((a, b) => b.rating - a.rating),
+        break,
       case 'customers':
-        filtered.sort((a, b) => b.customers - a.customers);
-        break;
+        filtered.sort((a, b) => b.customers - a.customers),
+        break,
       default:
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),
     }
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+    return filtered,
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -123,7 +123,7 @@ export default function Ultimate2036FuturisticServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -134,7 +134,7 @@ export default function Ultimate2036FuturisticServicesShowcase() {
         duration: 0.5
       }
     }
-  };
+  },
 
 const ultimate-2036-futuristic-services-showcase: React.FC = () => {
   return (
@@ -151,7 +151,7 @@ const ultimate-2036-futuristic-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ultimate-2036-futuristic-services-showcase;
+export default ultimate-2036-futuristic-services-showcase,

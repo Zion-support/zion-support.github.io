@@ -1,2 +1,2 @@
 
-export default Cybersecurity;
+export default Cybersecurity,

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from "lucide-react";
 const AIAutonomousResearchAssistant = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
@@ -225,7 +225,7 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {/* Applications */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Applications
@@ -309,7 +309,7 @@ const AIAutonomousResearchAssistant = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Unprecedented Speed</h3>
                   <p className="text-gray-300">
-                    Complete research tasks in minutes that would take human researchers weeks or months, 
+                    Complete research tasks in minutes that would take human researchers weeks or months;
                     dramatically accelerating your innovation timeline.
                   </p>
                 </div>
@@ -396,7 +396,7 @@ const AIAutonomousResearchAssistant = () => {
             Join the future of autonomous research with Zion Tech Group's AI Research Assistant. 
             Accelerate discoveries, uncover insights, and stay ahead of the competition.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
               Start Your Research Project
             </Link>
@@ -406,6 +406,6 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 };
 export default AIAutonomousResearchAssistant;

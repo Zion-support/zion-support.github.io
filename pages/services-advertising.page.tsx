@@ -1,32 +1,28 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-import Link from 'next/link';
+import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react',
+import Link from 'next/link',
 export default function ServicesAdvertisingPage() {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
   const benefits = [
-    '1000% ROI target with measurable KPIs',
-    'Transparent pricing with market references',
-    'Fast onboarding with templates and playbooks',
-    'Enterprise-grade security and compliance',
-    '24/7 support with SLAs',
-    'Proven architectures and reference implementations',
-    'No long-term lock-in; cancel anytime',
-    'SOC 2-aligned processes and data handling',
+    '1000% ROI target with measurable KPIsTransparent pricing with market references',
+    'Fast onboarding with templates and playbooksEnterprise-grade security and compliance',
+    '24/7 support with SLAsProven architectures and reference implementations',
+    'No long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',
     'Flexible deployment: SaaS or self-hosted options'
-  ];
+  ],
   const newHighlights = [
-    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
+    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
     { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
     { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
     { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' }
-  ];
+  ],
   const anchors = [
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },
     { title: 'Security', href: '#ai-guardrails-safety' },
@@ -34,7 +30,7 @@ export default function ServicesAdvertisingPage() {
     { title: 'Compliance', href: '#k8s-soc2-control-pack' },
     { title: 'Edge & Cron', href: '#edge-cron-orchestrator' },
     { title: 'Commerce', href: '#checkout-performance-optimizer' }
-  ];
+  ],
   const pricingRefs = [
     {
       title: 'AI Platforms',
@@ -122,7 +118,7 @@ export default function ServicesAdvertisingPage() {
       ],
       note: 'SMB budgets: $50–$2,000/mo.'
     }
-  ];
+  ],
   const external = {
     privacy: [
       { name: 'OneTrust', href: 'https://www.onetrust.com/pricing/' },
@@ -139,11 +135,11 @@ export default function ServicesAdvertisingPage() {
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
     ]
-  } as const;
+  } as const,
   function ext(url: string) {
     return (
       <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
-    );
+    ),
   }
   return (
     <div className="min-h-screen bg-black">
@@ -531,7 +527,7 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl font-bold text-white">Contact Us</h2>
             <p className="text-slate-300">We respond fast. Prefer WhatsApp or email for quickest turnaround.</p>
             <ul className="text-slate-300 space-y-1">
-              <li><strong className="text-white">Mobile:</strong> <a className="text-cyan-400 underline" href="tel:+13024640950">+1 302 464 0950</a></li>
+              <li><strong className="text-white">Mobile: </strong> <a className="text-cyan-400 underline" href="tel:+13024640950">+1 302 464 0950</a></li>
               <li><strong className="text-white">E-mail:</strong> <a className="text-cyan-400 underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></li>
               <li><strong className="text-white">Address:</strong> 364 E Main St STE 1008 Middletown DE 19709</li>
               <li><strong className="text-white">Website:</strong> <a className="text-cyan-400 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a></li>
@@ -544,5 +540,5 @@ export default function ServicesAdvertisingPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

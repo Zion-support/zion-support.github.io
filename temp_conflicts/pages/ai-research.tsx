@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function AIResearchPage() {
   return (
@@ -150,7 +150,7 @@ export default function AIResearchPage() {
                   We're always looking for talented researchers, engineers, and innovators to join our 
                   mission of advancing autonomous AI technology.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a 
                     href="/contact" 
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
@@ -170,5 +170,5 @@ export default function AIResearchPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

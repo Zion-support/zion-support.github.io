@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface PostJobProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function PostJob({ }: PostJobProps) {,
@@ -8,8 +8,7 @@ export default function PostJob({ }: PostJobProps) {,
     <div>,
       <h1>PostJob</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

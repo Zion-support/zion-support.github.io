@@ -1,25 +1,12 @@
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState } from "react";
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
-  fps: number;
-  lighthouseScore: number;
-}
+  loadTime: number,renderTime: number,memoryUsage: number,networkLatency: number,fps: number,lighthouseScore: number}
 
 export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0,
-    fps: 0,
-    lighthouseScore: 0
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
+      const [metrics, setMetrics] = useState<PerformanceMetrics>({
+        loadTime: 0,renderTime: 0,memoryUsage: 0,networkLatency: 0,fps: 0,lighthouseScore: 0
+      });
+      const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Measure page load time
@@ -59,22 +46,17 @@ export default function PerformanceMonitor() {
       100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10)
     ));
 
-    setMetrics({
-      loadTime: Math.round(loadTime),
-      renderTime: Math.round(renderTime),
-      memoryUsage: Math.round(memoryUsage * 100) / 100,
-      networkLatency: Math.round(networkLatency),
-      fps,
-      lighthouseScore: Math.round(lighthouseScore)
-    });
-
+      setMetrics({
+        loadTime: Math.round(loadTime),renderTime: Math.round(renderTime),memoryUsage: Math.round(memoryUsage * 100) / 100,networkLatency: Math.round(networkLatency);
+        fps,
+        lighthouseScore: Math.round(lighthouseScore)
+      });
     // Show performance monitor on Ctrl+Shift+P
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         setIsVisible(!isVisible);
       }
     };
-
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [isVisible]);

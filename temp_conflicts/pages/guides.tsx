@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 const Guides: React.FC = () => {
   const guides = [
@@ -10,8 +10,8 @@ const Guides: React.FC = () => {
       description: 'Complete beginner guide to using our AI marketplace platform',
       readTime: '15 min',
       difficulty: 'Beginner',
-      tags: ['onboarding', 'setup', 'first-steps'],
-      featured: true,
+      tags: ['onboardingsetup', 'first-steps'],
+      featured: true
     },
     {
       id: 2,
@@ -20,8 +20,8 @@ const Guides: React.FC = () => {
       description: 'Deep dive into advanced techniques for AI service integration',
       readTime: '45 min',
       difficulty: 'Advanced',
-      tags: ['integration', 'advanced', 'workflow'],
-      featured: false,
+      tags: ['integrationadvanced', 'workflow'],
+      featured: false
     },
     {
       id: 3,
@@ -30,8 +30,8 @@ const Guides: React.FC = () => {
       description: 'Learn how to architect AI solutions that grow with your business',
       readTime: '30 min',
       difficulty: 'Intermediate',
-      tags: ['architecture', 'scalability', 'best-practices'],
-      featured: true,
+      tags: ['architecturescalability', 'best-practices'],
+      featured: true
     },
     {
       id: 4,
@@ -40,8 +40,8 @@ const Guides: React.FC = () => {
       description: 'Essential principles for developing ethical AI systems',
       readTime: '25 min',
       difficulty: 'Intermediate',
-      tags: ['ethics', 'responsible-ai', 'governance'],
-      featured: false,
+      tags: ['ethicsresponsible-ai', 'governance'],
+      featured: false
     },
     {
       id: 5,
@@ -50,8 +50,8 @@ const Guides: React.FC = () => {
       description: 'Practical techniques for improving AI model accuracy and efficiency',
       readTime: '40 min',
       difficulty: 'Advanced',
-      tags: ['optimization', 'performance', 'ml'],
-      featured: false,
+      tags: ['optimizationperformance', 'ml'],
+      featured: false
     },
     {
       id: 6,
@@ -60,12 +60,12 @@ const Guides: React.FC = () => {
       description: 'Comprehensive security guide for AI marketplace implementations',
       readTime: '35 min',
       difficulty: 'Intermediate',
-      tags: ['security', 'compliance', 'best-practices'],
-      featured: true,
-    },
-  ];
+      tags: ['securitycompliance', 'best-practices'],
+      featured: true
+    }
+  ],
 
-  const categories = ['All', 'Beginner', 'Intermediate', 'Advanced'];
+  const categories = ['AllBeginner', 'IntermediateAdvanced'],
 
   return (
     <>
@@ -194,7 +194,7 @@ const Guides: React.FC = () => {
             <div className="text-center text-gray-400">
               <p>Need help with a specific topic? Contact our support team</p>
               <p className="mt-2">
-                <a href="/contact" className="text-blue-400 hover:text-blue-300">
+                <a href="/contact" className="text-blue-400 hover: text-blue-300">
                   Get Help →
                 </a>
               </p>
@@ -203,7 +203,7 @@ const Guides: React.FC = () => {
         </footer>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default Guides;
+export default Guides,

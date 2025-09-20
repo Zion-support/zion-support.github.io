@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Newspaper, 
+  Newspaper,
   Calendar, 
   User, 
   Tag, 
@@ -15,8 +15,8 @@ import {
   Brain,
   Atom,
   Zap
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 
 const NewsPage: React.FC = () => {
   const newsArticles = [
@@ -39,6 +39,6 @@ const NewsPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default news;
+  ),
+},
+export default news,

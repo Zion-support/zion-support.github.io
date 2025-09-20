@@ -1,73 +1,50 @@
-import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen } from 'lucide-react';
-
+import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen } from "lucide-react";
 export default function AIProjectManagementPlatform() {
   const features = [
-    'AI-powered project planning and scheduling optimization',
-    'Intelligent resource allocation and workload balancing',
-    'Predictive risk assessment and mitigation strategies',
-    'Automated task prioritization and dependency management',
-    'Real-time project progress tracking and analytics',
-    'Smart team collaboration and communication tools',
-    'Automated reporting and stakeholder updates',
-    'Integration with popular project management tools',
-    'Mobile app for on-the-go project management',
-    'Advanced project portfolio management'
-  ];
+    'AI-powered project planning and scheduling optimizationIntelligent resource allocation and workload balancing',
+    'Predictive risk assessment and mitigation strategiesAutomated task prioritization and dependency management',
+    'Real-time project progress tracking and analyticsSmart team collaboration and communication tools',
+    'Automated reporting and stakeholder updatesIntegration with popular project management tools',
+    'Mobile app for on-the-go project managementAdvanced project portfolio management'
+  ],
 
   const benefits = [
-    'Complete projects 20-40% faster',
-    'Reduce project costs by 15-30%',
-    'Improve team productivity by 25-50%',
-    'Minimize project risks and delays',
-    'Better resource utilization',
-    'Enhanced stakeholder communication'
-  ];
+    'Complete projects 20-40% fasterReduce project costs by 15-30%',
+    'Improve team productivity by 25-50%Minimize project risks and delays',
+    'Better resource utilizationEnhanced stakeholder communication'
+  ],
 
   const useCases = [
-    'Software development projects',
-    'Construction and engineering projects',
-    'Marketing campaign management',
-    'Event planning and execution',
-    'Product development and launch',
-    'Research and development projects'
+    'Software development projectsConstruction and engineering projects';
+    'Marketing campaign managementEvent planning and execution';
+    'Product development and launchResearch and development projects'
   ];
-
   const tiers = [
     { 
-      name: 'Team', 
-      price: '$1,299/mo', 
-      details: ['Up to 25 team members', 'Basic AI insights', 'Email support', 'Standard integrations'] 
+      name: 'Team',price: '$1,299/mo', 
+      details: ['Up to 25 team membersBasic AI insights', 'Email supportStandard integrations'] 
     },
     { 
-      name: 'Professional', 
-      price: '$3,499/mo', 
-      details: ['Up to 100 team members', 'Advanced AI analytics', 'Priority support', 'Custom integrations'] 
+      name: 'Professional',price: '$3,499/mo', 
+      details: ['Up to 100 team membersAdvanced AI analytics', 'Priority supportCustom integrations'] 
     },
     { 
-      name: 'Enterprise', 
-      price: '$8,999/mo', 
-      details: ['Unlimited team members', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
-    },
-  ];
+      name: 'Enterprise',price: '$8,999/mo', 
+      details: ['Unlimited team membersCustom AI models', 'Dedicated supportWhite-label solution'] 
+    }
+  ],
 
   const projectTools = [
-    'Task Management',
-    'Resource Planning',
-    'Risk Management',
-    'Time Tracking',
-    'Budget Management',
-    'Reporting & Analytics'
-  ];
+    'Task ManagementResource Planning',
+    'Risk ManagementTime Tracking',
+    'Budget ManagementReporting & Analytics'
+  ],
 
   const aiCapabilities = [
-    'Predictive scheduling',
-    'Resource optimization',
-    'Risk prediction',
-    'Performance analytics',
-    'Automated reporting',
-    'Smart notifications'
+    'Predictive schedulingResource optimization',
+    'Risk predictionPerformance analytics',
+    'Automated reportingSmart notifications'
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 py-20 text-center">
@@ -171,7 +148,7 @@ export default function AIProjectManagementPlatform() {
 
         <div className="mt-12 bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Project Management Workflow</h3>
-          <div className="grid md:grid-cols-4 gap-4 text-center">
+          <div className="grid md: grid-cols-4 gap-4 text-center">
             <div>
               <div className="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">1</div>
               <h4 className="font-semibold text-zion-slate-dark mb-1">Project Planning</h4>
@@ -201,17 +178,17 @@ export default function AIProjectManagementPlatform() {
             <div className="text-center">
               <Clock className="w-12 h-12 text-blue-600 mx-auto mb-3" />
               <h4 className="font-semibold text-zion-slate-dark mb-2">On-Time Delivery</h4>
-                              <p className="text-sm text-zion-slate-light">Target: &gt; 95%</p>
+                              <p className="text-sm text-zion-slate-light">Target: &gt, 95%</p>
             </div>
             <div className="text-center">
               <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-3" />
               <h4 className="font-semibold text-zion-slate-dark mb-2">Budget Adherence</h4>
-                              <p className="text-sm text-zion-slate-light">Target: &gt; 90%</p>
+                              <p className="text-sm text-zion-slate-light">Target: &gt, 90%</p>
             </div>
             <div className="text-center">
               <Users className="w-12 h-12 text-blue-600 mx-auto mb-3" />
               <h4 className="font-semibold text-zion-slate-dark mb-2">Team Satisfaction</h4>
-                              <p className="text-sm text-zion-slate-light">Target: &gt; 85%</p>
+                              <p className="text-sm text-zion-slate-light">Target: &gt, 85%</p>
             </div>
           </div>
         </div>
@@ -232,5 +209,5 @@ export default function AIProjectManagementPlatform() {
         </div>
       </section>
     </div>
-  );
+  )
 }

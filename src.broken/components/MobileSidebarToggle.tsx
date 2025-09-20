@@ -4,17 +4,17 @@
       newExpanded.delete(section)} else {
 
       newExpanded.add(section)}
-    setExpandedSections(newExpanded)};
+    setExpandedSections(newExpanded)},
 
       newExpanded.delete(section) } else {
       newExpanded.add(section) }
-    setExpandedSections(newExpanded) };
+    setExpandedSections(newExpanded) },
 
   const navigationSections = [{
 
       title: "Main",
       icon: Home,
-      items[;"
+      items[,"
         { name: "Home", href: "/", icon: Home },"
         { name: "About Us", href: "/about", icon: Users },"
         { name: "Contact", href: "/contact", icon: MessageCircle },"
@@ -22,45 +22,45 @@
         { name: "Careers", href: "/careers", icon: Briefcase }
 =======
       ]
-    },;
+    },
     {
 "
       title: "Services",
       icon: Zap,
-      items[;"
+      items[,"
         { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },"
         { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },"
         { name: "IT Infrastructure", href: "/it-services", icon: Server },"
         { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
       ]
-    },;
+    },
     {
 "
       title: "Solutions",
       icon: Target,
-      items[;"
+      items[,"
         { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Rocket },"
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Cloud },"
         { name: "Edge Computing", href: "/emerging-tech/edge", icon: Server },"
         { name: "IoT Solutions", href: "/emerging-tech/iot", icon: Brain }
       ]
-    },;
+    },
     {
 "
       title: "Resources",
       icon: BookOpen,
-      items[;"
-        { name: "Documentation", href: "/docs", icon: FileText },;"
-        { name: "API Reference", href: "/api", icon: FileText },;"
-        { name: "Developer Portal", href: "/developer", icon: Server },;"
-        { name: "Support Center", href: "/support", icon: HelpCircle };
-      ]};
-  ];
+      items[,"
+        { name: "Documentation", href: "/docs", icon: FileText },"
+        { name: "API Reference", href: "/api", icon: FileText },"
+        { name: "Developer Portal", href: "/developer", icon: Server },"
+        { name: "Support Center", href: "/support", icon: HelpCircle },
+      ]},
+  ],
 
-  const quickActions = [;"
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
-    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
-  ];
+  const quickActions = [,"
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },"
+    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" },
+  ],
 
   return ()
     <>
@@ -157,13 +157,13 @@
                           <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
                           <span className="font-medium">{action.name}</span>
                         </Link>
-                      </motion.div>;) ) }
+                      </motion.div>,) ) }
                   </div>
                 </div>
 
                 {/* Navigation Sections */}"
-                <div className="space-y-6">;
-                  {navigationSections.map((section, sectionIndex) => (;
+                <div className="space-y-6">,
+                  {navigationSections.map((section, sectionIndex) => (,
                     <motion.div
                       key={section.title}
                       initial = {
@@ -222,7 +222,7 @@
                             transition={{ duration: 0.3 }}"
                             className="ml-7 mt-2 space-y-1"
 
-                            {section.items.map((item, itemIndex) => (;
+                            {section.items.map((item, itemIndex) => (,
                               <motion.div
                                 key={item.name}
                                 initial = {
@@ -255,14 +255,14 @@
                                   <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />"
                                   <span className="text-sm">{item.name}</span>
                                 </Link>
-                              </motion.div>;) ) }
+                              </motion.div>,) ) }
                           </motion.div>) }
                       </AnimatePresence>
                     </motion.div>) ) }
                 </div>
 
                 {/* Contact Info */}"
-                <div className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg">;"
+                <div className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg">,"
                   <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
                   <div className="space-y-2 text-xs text-zion-slate-light">"
                     <div className="flex items-center space-x-2">
@@ -277,11 +277,11 @@
                   </div>
                 </div>
               </div>
-            </motion.div>;
+            </motion.div>,
           </>
-        )};
-      </AnimatePresence>;
+        )},
+      </AnimatePresence>,
     </>
-  )};
+  )},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

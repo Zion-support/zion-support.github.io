@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Quantum AI 2026 Breakthrough - Zion Tech Group';
-  description: 'Explore the revolutionary fusion of quantum computing and artificial intelligence. Discover how quantum AI will transform business operations in 2026.';
-  keywords: ['quantum AIquantum computing', 'AI breakthrough 2026quantum machine learning', 'quantum algorithms'],
-};
+  title: 'Quantum AI 2026 Breakthrough - Zion Tech Group',
+  description: 'Explore the revolutionary fusion of quantum computing and artificial intelligence. Discover how quantum AI will transform business operations in 2026.',
+  keywords: ['quantum AIquantum computingAI breakthrough 2026quantum machine learning', 'quantum algorithms']
+},
 export default function QuantumAI2026BreakthroughPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,
@@ -40,7 +40,7 @@ export default function QuantumAI2026BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Quantum Capabilities Section */,}
+      {/* Quantum Capabilities Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Quantum AI Capabilities</h2>,
@@ -167,7 +167,7 @@ export default function QuantumAI2026BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Stories Section */,}
+      {/* Success Stories Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Quantum AI Success Stories</h2>,
@@ -190,7 +190,7 @@ export default function QuantumAI2026BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold mb-6">Ready for Quantum AI?</h2>,
@@ -213,5 +213,4 @@ export default function QuantumAI2026BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

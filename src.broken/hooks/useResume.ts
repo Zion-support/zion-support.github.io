@@ -1,5 +1,5 @@
-// Hook for useResume;
+// Hook for useResume,
 export const useUseResume: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

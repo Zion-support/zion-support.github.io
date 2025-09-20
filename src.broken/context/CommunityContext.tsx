@@ -1,20 +1,20 @@
-import React, { createContext, useContext, ReactNode } from 'react';
-import { ForumPost } from '@/types/community';
+import React, { createContext, useContext, ReactNode } from 'react',
+import { ForumPost } from '@/types/community',
 
 interface CommunityContextType {
-  featuredPosts: ForumPost[];
-  recentPosts: ForumPost[];
+  featuredPosts: ForumPost[],
+  recentPosts: ForumPost[]
 }
 
 const defaultContext: CommunityContextType = {
   featuredPosts: [],
-  recentPosts: [],
-};
+  recentPosts: []
+},
 
-const CommunityContext = createContext<CommunityContextType>(defaultContext);
+const CommunityContext = createContext<CommunityContextType>(defaultContext),
 
 export function useCommunity(): CommunityContextType {
-  return useContext(CommunityContext);
+  return useContext(CommunityContext),
 }
 
 export function CommunityProvider({ children }: { children: ReactNode }) {
@@ -29,14 +29,14 @@ export function CommunityProvider({ children }: { children: ReactNode }) {
       authorAvatar: 'https://i.pravatar.cc/150?img=3',
       authorRole: 'Verified Talent',
       categoryId: 'ai-tools',
-      tags: ['machine-learning', 'fine-tuning', 'gpt'],
+      tags: ['machine-learningfine-tuning', 'gpt'],
       createdAt: '2025-04-01T12:00:00Z',
       updatedAt: '2025-04-01T12:00:00Z',
       upvotes: 48,
       downvotes: 2,
       replyCount: 12,
       isAnswered: true,
-      isFeatured: true,
+      isFeatured: true
     },
     {
       id: '2',
@@ -47,16 +47,16 @@ export function CommunityProvider({ children }: { children: ReactNode }) {
       authorName: 'Sarah Chen',
       authorAvatar: 'https://i.pravatar.cc/150?img=5',
       categoryId: 'getting-hired',
-      tags: ['profile', 'tips', 'hiring'],
+      tags: ['profiletips', 'hiring'],
       createdAt: '2025-04-03T09:15:00Z',
       updatedAt: '2025-04-03T09:15:00Z',
       upvotes: 32,
       downvotes: 0,
       replyCount: 8,
       isPinned: true,
-      isFeatured: true,
-    },
-  ];
+      isFeatured: true
+    }
+  ],
 
   const recentPosts: ForumPost[] = [
     {
@@ -67,12 +67,12 @@ export function CommunityProvider({ children }: { children: ReactNode }) {
       authorId: 'user3',
       authorName: 'Michael Wong',
       categoryId: 'project-help',
-      tags: ['testing', 'automation', 'ci-cd'],
+      tags: ['testingautomation', 'ci-cd'],
       createdAt: '2025-04-10T14:30:00Z',
       updatedAt: '2025-04-10T14:30:00Z',
       upvotes: 5,
       downvotes: 0,
-      replyCount: 2,
+      replyCount: 2
     },
     {
       id: '4',
@@ -82,12 +82,12 @@ export function CommunityProvider({ children }: { children: ReactNode }) {
       authorId: 'user4',
       authorName: 'Emma Davis',
       categoryId: 'feedback',
-      tags: ['feature-request', 'teams', 'collaboration'],
+      tags: ['feature-requestteams', 'collaboration'],
       createdAt: '2025-04-09T18:45:00Z',
       updatedAt: '2025-04-09T18:45:00Z',
       upvotes: 12,
       downvotes: 1,
-      replyCount: 3,
+      replyCount: 3
     },
     {
       id: '5',
@@ -97,20 +97,20 @@ export function CommunityProvider({ children }: { children: ReactNode }) {
       authorId: 'user5',
       authorName: 'David Lin',
       categoryId: 'project-help',
-      tags: ['client-management', 'scope', 'projects'],
+      tags: ['client-managementscope', 'projects'],
       createdAt: '2025-04-08T10:20:00Z',
       updatedAt: '2025-04-08T10:20:00Z',
       upvotes: 24,
       downvotes: 0,
       replyCount: 7,
-      isAnswered: true,
-    },
-  ];
+      isAnswered: true
+    }
+  ],
 
   return (
     <CommunityContext.Provider value={{ featuredPosts, recentPosts }}>
       {children}
     </CommunityContext.Provider>
-  );
+  ),
 }
 

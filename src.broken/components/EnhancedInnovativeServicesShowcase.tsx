@@ -2,7 +2,7 @@
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 to - slate -800">
       <div className="max - w-7xl mx - auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
             Enhanced < span className="bg-gradient - to - r from - cyan - 400 to - blue - 500 bg-clip - text text-transparent">Innovative Services</span>
           </h2>
           <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
@@ -35,13 +35,13 @@
             <p className="text-gray - 300 mb-4">Advanced security and compliance solutions</p>
             <Link to="/services / cybersecurity" className="text-cyan - 400 hover:text-cyan -300">
               Learn More →
-            </Link>;
+            </Link>,
 =======
 
 export 
-          </div>;
-        </div>;
-      </div>;
-    </section>;) };
-export default EnhancedInnovativeServicesShowcase;'"
+          </div>,
+        </div>,
+      </div>,
+    </section>) },
+export default EnhancedInnovativeServicesShowcase,'"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

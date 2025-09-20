@@ -1,15 +1,15 @@
 
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client",
 
 export async function createJob(jobData: any) {
   const { data, error } = await supabase
     .from('jobs')
     .insert([jobData])
     .select()
-    .single();
+    .single(),
 
-  if (error) throw error;
-  return data;
+  if (error) throw error,
+  return data,
 }
 
 export async function updateJob(jobId: string, jobData: any) {
@@ -18,10 +18,10 @@ export async function updateJob(jobId: string, jobData: any) {
     .update(jobData)
     .eq('id', jobId)
     .select()
-    .single();
+    .single(),
 
-  if (error) throw error;
-  return data;
+  if (error) throw error,
+  return data,
 }
 
 export async function getJobById(jobId: string) {
@@ -29,8 +29,8 @@ export async function getJobById(jobId: string) {
     .from('jobs')
     .select('*')
     .eq('id', jobId)
-    .single();
+    .single(),
 
-  if (error) throw error;
-  return data;
+  if (error) throw error,
+  return data,
 }

@@ -1,22 +1,22 @@
 <<<<<<< HEAD
-  ;
+  ,
 
-};
-  ;
-  ;
+},
+  ,
+  ,
 
-};
-      setMessages(prev => [...prev, aiMessage]);
-    }, 1000);
+},
+      setMessages(prev => [...prev, aiMessage]),
+    }, 1000),
 =======
-import React from 'react';
+import React from 'react',
 export function ErrorBoundary() {
   return (
     <div>
       <h1>Component</h1>
-      <p>Component placeholder - needs implementation</p>;
+      <p>Component placeholder - needs implementation</p>,
     </div>
-  );
+  ),
 }
 
 export function ChatAssistant({
@@ -28,16 +28,16 @@ export function ChatAssistant({
   onSendMessage,
   contextHeader
 }: ChatAssistantProps) {
-  const [messages, setMessages] = useState(initialMessages);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const [messages, setMessages] = useState(initialMessages),
+  const messagesEndRef = useRef<HTMLDivElement | null>(null),
   
-      timestamp: new Date(),;
-  ;
-  ;
-  ;
-  };
-    setMessages(prev => [...prev, userMessage]);
-    setInputMessage('');
+      timestamp: new Date(),
+  ,
+  ,
+  ,
+  },
+    setMessages(prev => [...prev, userMessage]),
+    setInputMessage(''),
 =======
     // Simulate AI response
     setTimeout(: unknown {
@@ -46,13 +46,13 @@ export function ChatAssistant({
   id: (Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
-        timestamp: new Date(),;
-  ;
-  ;
-  };
+        timestamp: new Date(),
+  ,
+  ,
+  },
   
   const handleSendMessage = async (message: string) => {
-    if (!message.trim()) return;
+    if (!message.trim()) return,
     
     // Add user message to the chat
     const newMessage: Message = {
@@ -60,24 +60,24 @@ export function ChatAssistant({
       role: 'user',
       message,
       timestamp: new Date()
-    };
+    },
     
-    setMessages((prev: Message[]) => [...prev, newMessage]);
+    setMessages((prev: Message[]) => [...prev, newMessage]),
     
     // Send message to recipient via the provided handler
-    await onSendMessage(message, conversationId);
-  };
+    await onSendMessage(message, conversationId),
+  },
 
     return ()
       <button
         onClick = {toggleChat}
-        className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50"
+        className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover: bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50"
         
-      >;"
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;"
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />;
-        </svg>;
-      </button>;
+      >,"
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,"
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />,
+        </svg>,
+      </button>,
     )}
   return ("    <div className="fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
       {/* Header */}"
@@ -111,14 +111,14 @@ export function ChatAssistant({
                 <p className="text-xs opacity-70 mt-1">
                   {message.timestamp.toLocaleTimeString()}
                 </p>
-              </div>;
+              </div>,
             </div>
           ))
         )}
         <div ref={messagesEndRef} />
       </div>
       {/* Input */}"
-      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">;"
+      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">,"
         <div className="flex space-x-2">
           <input"
             type="text"
@@ -131,11 +131,11 @@ export function ChatAssistant({
             type="submit"
             className="bg-zion-cyan text-zion-blue-dark p-2 rounded-lg hover:bg-zion-cyan-light transition-colors"
           >
-            <Send size={20}   />;
-          </button>;
-        </div>;
-      </form>;
-    </div>;
+            <Send size={20}   />,
+          </button>,
+        </div>,
+      </form>,
+    </div>,
   )}
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

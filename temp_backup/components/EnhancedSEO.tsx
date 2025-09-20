@@ -1,37 +1,37 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Search, TrendingUp, BarChart3, Target, Eye, 
   Globe, Smartphone, Monitor, Zap, CheckCircle,
   AlertTriangle, Info, ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  ogImage: string;
-  canonical: string;
-  structuredData: any;
+  title: string,
+  description: string,
+  keywords: string[],
+  ogImage: string,
+  canonical: string,
+  structuredData: any
 }
 
 interface SEOMetrics {
-  titleLength: number;
-  descriptionLength: number;
-  keywordDensity: number;
-  imageOptimization: number;
-  mobileOptimization: number;
-  overallScore: number;
+  titleLength: number,
+  descriptionLength: number,
+  keywordDensity: number,
+  imageOptimization: number,
+  mobileOptimization: number,
+  overallScore: number
 }
 
 interface SEOIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  message: string;
-  impact: 'high' | 'medium' | 'low';
-  fix: string;
-  category: 'meta' | 'content' | 'technical' | 'performance';
+  id: string,
+  type: 'error' | 'warning' | 'info',
+  message: string,
+  impact: 'high' | 'medium' | 'low',
+  fix: string,
+  category: 'meta' | 'content' | 'technical' | 'performance'
 }
 
 const EnhancedSEO: React.FC = () => {
@@ -40,7 +40,7 @@ const EnhancedSEO: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedSEO</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedSEO;
+export default EnhancedSEO,

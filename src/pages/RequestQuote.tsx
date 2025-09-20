@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Calculator, 
+  Calculator,
   FileText, 
   Clock, 
   CheckCircle, 
@@ -37,316 +37,203 @@ import {
   Package,
   Truck,
   Headphones
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function RequestQuote() {
   const [formData, setFormData] = useState({
-    companyName: '',
-    contactName: '',
-    email: '',
-    phone: '',
-    companySize: '',
-    industry: '',
-    projectType: '',
-    budget: '',
-    timeline: '',
-    description: '',
-    services: [] as string[],
-    urgency: 'medium',
-    preferredContact: 'email'
+    companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [] as string[],urgency: 'medium',preferredContact: 'email'
   });
-
-  const [formStep, setFormStep] = useState(1);
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [isSubmitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [formStep, setFormStep] = useState(1),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
+  const [isSubmitting, setSubmitting] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
 
   const companySizes = [
-    '1-10 employees',
-    '11-50 employees',
-    '51-200 employees',
-    '201-500 employees',
+    '1-10 employees11-50 employees',
+    '51-200 employees201-500 employees',
     '500+ employees'
-  ];
+  ],
 
   const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Real Estate',
-    'Consulting',
-    'Non-profit',
-    'Other'
-  ];
+    'TechnologyHealthcare',
+    'FinanceManufacturing',
+    'RetailEducation',
+    'Real EstateConsulting',
+    'Non-profitOther'
+  ],
 
   const projectTypes = [
-    'New Development',
-    'System Upgrade',
-    'Integration',
-    'Consulting',
-    'Support & Maintenance',
-    'Training',
+    'New DevelopmentSystem Upgrade',
+    'IntegrationConsulting',
+    'Support & MaintenanceTraining',
     'Other'
-  ];
+  ],
 
   const budgets = [
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $250,000',
-    '$250,000+'
-  ];
+    'Under $10,000$10,000 - $25,000',
+    '$25,000 - $50,000$50,000 - $100,000',
+    '$100,000 - $250,000$250,000+'
+  ],
 
   const timelines = [
-    'ASAP',
-    '1-2 weeks',
-    '1-2 months',
-    '3-6 months',
-    '6+ months',
-    'Flexible'
-  ];
+    'ASAP1-2 weeks',
+    '1-2 months3-6 months',
+    '6+ monthsFlexible'
+  ],
 
   const urgencyLevels = [
-    { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },
-    { value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text-yellow-400' },
-    { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' },
+    { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' };
+    { value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text-yellow-400' };
+    { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' };
     { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' }
   ];
-
   const contactMethods = [
-    { value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' },
-    { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' },
+    { value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' };
+    { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' };
     { value: 'video', label: 'Video Call', icon: Users, description: 'Best for complex discussions' }
   ];
-
   const services = [
     {
-      id: 'ai-ml',
-      name: 'AI & Machine Learning',
-      icon: Bot,
-      description: 'Custom AI solutions, ML models, and intelligent automation',
+      id: 'ai-ml',name: 'AI & Machine Learning',icon: Bot,description: 'Custom AI solutions, ML models, and intelligent automation',
       features: [
-        'Custom AI model development',
-        'Machine learning pipelines',
-        'Natural language processing',
-        'Computer vision solutions',
-        'Predictive analytics',
-        'AI-powered automation'
+        'Custom AI model developmentMachine learning pipelines';
+        'Natural language processingComputer vision solutions',
+        'Predictive analyticsAI-powered automation'
       ],
       pricing: 'Starting from $25,000',
-      timeline: '4-12 weeks',
-      category: 'AI Services'
-    },
+      timeline: '4-12 weeks',category: 'AI Services'
+    };
     {
-      id: 'cloud-devops',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation',
+      id: 'cloud-devops',name: 'Cloud & DevOps',icon: Cloud,description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation',
       features: [
-        'AWS/Azure/GCP setup',
-        'Kubernetes orchestration',
-        'CI/CD pipeline development',
-        'Infrastructure as Code',
-        'Monitoring & logging',
-        'Security & compliance'
+        'AWS/Azure/GCP setupKubernetes orchestration';
+        'CI/CD pipeline developmentInfrastructure as Code',
+        'Monitoring & loggingSecurity & compliance'
       ],
       pricing: 'Starting from $15,000',
-      timeline: '2-8 weeks',
-      category: 'IT Services'
-    },
+      timeline: '2-8 weeks',category: 'IT Services'
+    };
     {
-      id: 'web-development',
-      name: 'Web Development',
-      icon: Monitor,
-      description: 'Modern web applications, e-commerce, and custom web solutions',
+      id: 'web-development',name: 'Web Development',icon: Monitor,description: 'Modern web applications, e-commerce, and custom web solutions',
       features: [
-        'React/Next.js applications',
-        'E-commerce platforms',
-        'Custom web portals',
-        'API development',
-        'Performance optimization',
-        'SEO & accessibility'
+        'React/Next.js applicationsE-commerce platforms';
+        'Custom web portalsAPI development',
+        'Performance optimizationSEO & accessibility'
       ],
       pricing: 'Starting from $10,000',
-      timeline: '3-10 weeks',
-      category: 'IT Services'
-    },
+      timeline: '3-10 weeks',category: 'IT Services'
+    };
     {
-      id: 'mobile-apps',
-      name: 'Mobile Applications',
-      icon: Smartphone,
-      description: 'iOS and Android apps with cross-platform solutions',
-      features: [
-        'Native iOS development',
-        'Native Android development',
-        'React Native apps',
-        'Flutter applications',
-        'App store optimization',
-        'Push notifications'
+      id: 'mobile-apps',name: 'Mobile Applications',icon: Smartphone,description: 'iOS and Android apps with cross-platform solutions',features: [
+        'Native iOS developmentNative Android development';
+        'React Native appsFlutter applications',
+        'App store optimizationPush notifications'
       ],
       pricing: 'Starting from $20,000',
-      timeline: '6-16 weeks',
-      category: 'IT Services'
-    },
+      timeline: '6-16 weeks',category: 'IT Services'
+    };
     {
-      id: 'data-analytics',
-      name: 'Data & Analytics',
-      icon: BarChart3,
-      description: 'Data warehousing, business intelligence, and advanced analytics',
+      id: 'data-analytics',name: 'Data & Analytics',icon: BarChart3,description: 'Data warehousing, business intelligence, and advanced analytics',
       features: [
-        'Data warehouse design',
-        'ETL pipeline development',
-        'Business intelligence dashboards',
-        'Advanced analytics',
-        'Data visualization',
-        'Predictive modeling'
+        'Data warehouse designETL pipeline development';
+        'Business intelligence dashboardsAdvanced analytics',
+        'Data visualizationPredictive modeling'
       ],
       pricing: 'Starting from $18,000',
-      timeline: '4-12 weeks',
-      category: 'AI Services'
-    },
+      timeline: '4-12 weeks',category: 'AI Services'
+    };
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      description: 'Security audits, compliance, and threat protection',
+      id: 'cybersecurity',name: 'Cybersecurity',icon: Shield,description: 'Security audits, compliance, and threat protection',
       features: [
-        'Security assessments',
-        'Penetration testing',
-        'Compliance frameworks',
-        'Threat detection',
-        'Incident response',
-        'Security training'
+        'Security assessmentsPenetration testing';
+        'Compliance frameworksThreat detection',
+        'Incident responseSecurity training'
       ],
       pricing: 'Starting from $12,000',
-      timeline: '2-6 weeks',
-      category: 'Security'
-    },
+      timeline: '2-6 weeks',category: 'Security'
+    };
     {
-      id: 'micro-saas',
-      name: 'Micro SaaS Solutions',
-      icon: Package,
-      description: 'Custom SaaS applications and business automation tools',
-      features: [
-        'Custom SaaS platforms',
-        'Business process automation',
-        'Workflow management',
-        'User management systems',
-        'Subscription billing',
-        'Analytics & reporting'
+      id: 'micro-saas',name: 'Micro SaaS Solutions',icon: Package,description: 'Custom SaaS applications and business automation tools',features: [
+        'Custom SaaS platformsBusiness process automation';
+        'Workflow managementUser management systems',
+        'Subscription billingAnalytics & reporting'
       ],
       pricing: 'Starting from $30,000',
-      timeline: '8-20 weeks',
-      category: 'Micro SaaS'
-    },
+      timeline: '8-20 weeks',category: 'Micro SaaS'
+    };
     {
-      id: 'integration',
-      name: 'System Integration',
-      icon: Settings,
-      description: 'API development, third-party integrations, and data synchronization',
+      id: 'integration',name: 'System Integration',icon: Settings,description: 'API development, third-party integrations, and data synchronization',
       features: [
-        'API development',
-        'Third-party integrations',
-        'Data synchronization',
-        'Webhook implementation',
-        'Custom connectors',
-        'Integration testing'
+        'API developmentThird-party integrations';
+        'Data synchronizationWebhook implementation',
+        'Custom connectorsIntegration testing'
       ],
       pricing: 'Starting from $15,000',
-      timeline: '3-8 weeks',
-      category: 'IT Services'
+      timeline: '3-8 weeks',category: 'IT Services'
     }
   ];
-
   const benefits = [
     {
-      icon: Calculator,
-      title: 'Transparent Pricing',
-      description: 'Clear, upfront pricing with no hidden fees'
+      icon: Calculator,title: 'Transparent Pricing',description: 'Clear, upfront pricing with no hidden fees'
     },
     {
-      icon: Clock,
-      title: 'Fast Response',
-      description: 'Get a detailed quote within 24-48 hours'
-    },
+      icon: Clock,title: 'Fast Response',description: 'Get a detailed quote within 24-48 hours'
+    };
     {
-      icon: FileText,
-      title: 'Detailed Proposals',
-      description: 'Comprehensive project breakdowns and timelines'
-    },
+      icon: FileText,title: 'Detailed Proposals',description: 'Comprehensive project breakdowns and timelines'
+    };
     {
-      icon: CheckCircle,
-      title: 'Quality Guarantee',
-      description: 'We stand behind our work with satisfaction guarantees'
+      icon: CheckCircle,title: 'Quality Guarantee',description: 'We stand behind our work with satisfaction guarantees'
     }
   ];
-
   const handleInputChange = (field: string, value: string | string[]) => {
     setFormData(prev => ({
-      ...prev,
+      ...prev;
       [field]: value
-    }));
-  };
+    })),
+  },
 
   const toggleService = (serviceId: string) => {
     setFormData(prev => ({
-      ...prev,
+      ...prev;
       services: prev.services.includes(serviceId)
         ? prev.services.filter(id => id !== serviceId)
         : [...prev.services, serviceId]
-    }));
-  };
+    })),
+  },
 
   const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+    setExpandedService(expandedService === serviceId ? null : serviceId)
   };
-
   const nextStep = () => {
     if (formStep < 3) {
-      setFormStep(formStep + 1);
+      setFormStep(formStep + 1),
     }
-  };
+  },
 
   const prevStep = () => {
     if (formStep > 1) {
-      setFormStep(formStep - 1);
+      setFormStep(formStep - 1),
     }
-  };
+  },
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
+    setSubmitting(true),
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)),
     
-    setSubmitting(false);
-    setSubmitted(true);
-  };
+    setSubmitting(false),
+    setSubmitted(true),
+  },
 
   const resetForm = () => {
     setFormData({
-      companyName: '',
-      contactName: '',
-      email: '',
-      phone: '',
-      companySize: '',
-      industry: '',
-      projectType: '',
-      budget: '',
-      timeline: '',
-      description: '',
-      services: [],
-      urgency: 'medium',
-      preferredContact: 'email'
+      companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [],urgency: 'medium',preferredContact: 'email'
     });
-    setFormStep(1);
-    setSubmitted(false);
-  };
+    setFormStep(1),
+    setSubmitted(false),
+  },
 
   if (submitted) {
     return (
@@ -406,7 +293,7 @@ export default function RequestQuote() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={resetForm}
-              className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+              className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover: from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
             >
               Request Another Quote
             </button>
@@ -419,7 +306,7 @@ export default function RequestQuote() {
           </div>
         </motion.div>
       </div>
-    );
+    )
   }
 
   return (
@@ -446,7 +333,7 @@ export default function RequestQuote() {
               Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Tell us about your project and we'll provide a detailed quote with pricing, 
+              Tell us about your project and we'll provide a detailed quote with pricing;
               timeline, and implementation plan tailored to your specific needs.
             </p>
           </motion.div>
@@ -922,7 +809,7 @@ export default function RequestQuote() {
               or to discuss your project in detail.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">
                   <Mail className="w-8 h-8 text-blue-400" />
@@ -966,5 +853,5 @@ export default function RequestQuote() {
         </div>
       </section>
     </div>
-  );
+  )
 }

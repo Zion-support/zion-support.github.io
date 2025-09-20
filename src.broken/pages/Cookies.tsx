@@ -1,14 +1,12 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       id: 'marketing',
       name: 'Marketing Cookies',
       description: 'These cookies are used to deliver personalized advertisements.',
-      examples: ['Ad targeting',
-        'Campaign performance',
-        'User preferences',
-        'Conversion tracking'
+      examples: ['Ad targetingCampaign performance',
+        'User preferencesConversion tracking'
       ],
       icon: Users,
       color: 'from - orange - 500 to - red - 500'
@@ -17,15 +15,13 @@ export default function Page() {
       id: 'functional',
       name: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
-      examples: ['Language preferences',
-        'Theme settings',
-        'Form data storage',
-        'Social media integration'
+      examples: ['Language preferencesTheme settings',
+        'Form data storageSocial media integration'
       ],
       icon: Settings,
       color: 'from - green - 500 to - emerald - 500'
     }
-  ];
+  ],
 
   const cookieDetails = [{
       name: '_ga',
@@ -69,27 +65,27 @@ export default function Page() {
       provider: 'Zion Tech Group',
       type: 'functional'
     }
-  ];
+  ],
 
   const toggleSection = (sectionId: string) => {
-    setExpandedSection(expandedSection === sectionId ? null : sectionId) ;
-  };
+    setExpandedSection(expandedSection === sectionId ? null : sectionId) 
+  },
 
   const updateCookiePreference = (type: string, enabled: boolean) => {
-    if(type === 'essential') return; // Essential cookies cannot be disabled
+    if(type === 'essential') return, // Essential cookies cannot be disabled
 
     setCookiePreferences(prev => ({
       ...prev,
       [type]: enabled
-    }) ) ;
-  };
+    }) ) ,
+  },
 
   const savePreferences = () => {
     // In a real app, this would save preferences and update cookies
-    console.log('Cookie preferences saved:', cookiePreferences) ;
+    console.log('Cookie preferences saved:', cookiePreferences) ,
     // Show success message
-    alert('Cookie preferences saved successfully!') ;
-  };
+    alert('Cookie preferences saved successfully!') ,
+  },
 
   const acceptAll = () => {
     setCookiePreferences({
@@ -97,9 +93,9 @@ export default function Page() {
       analytics: true,
       marketing: true,
       functional: true
-    }) ;
-    savePreferences () ;
-  };
+    }) ,
+    savePreferences () ,
+  },
 
   const rejectAll = () => {
     setCookiePreferences({
@@ -107,9 +103,9 @@ export default function Page() {
       analytics: false,
       marketing: false,
       functional: false
-    }) ;
-    savePreferences () ;
-  };
+    }) ,
+    savePreferences () ,
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate -900">
       {/* Header Section */}
@@ -655,7 +651,7 @@ export default function Page() {
       </div>
 
       {/* Contact Section */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-16">
         <div  className="bg-gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 rounded-3xl p - 8 text-center">
           <h2 className="text-3xl font - bold text-white mb-4">
             Questions About Our Cookie Policy?
@@ -681,5 +677,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
+    </>) 
 }

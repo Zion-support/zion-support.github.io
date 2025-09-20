@@ -1,28 +1,28 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import { format } from "date-fns";
-import { useAuth } from "@/hooks/useAuth";
-import { useProjects } from "@/hooks/useProjects";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Project, ProjectStatus } from "@/types/projects";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react",
+import { useParams, useNavigate, Link } from "react-router-dom",
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+import { Button } from "@/components/ui/button",
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  CardTitle
+} from "@/components/ui/card",
 import {
   Tabs,
   TabsContent,
   TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+  TabsTrigger
+} from "@/components/ui/tabs",
 import {
   AlertDialog,
   AlertDialogAction,
@@ -32,14 +32,14 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
+  AlertDialogTrigger
+} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
 import {
   AlertCircle,
   Calendar,
@@ -50,51 +50,51 @@ import {
   MessageSquare,
   Video,
   User,
-  XCircle,
-} from "lucide-react";
+  XCircle
+} from "lucide-react",
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { projectId } = useParams() as { projectId?: string };
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
+  const { projectId } = useParams() as { projectId?: string },
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
+  const { getProjectById, updateProjectStatus } = useProjects(),
   
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("");
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState("details");
+  const [project, setProject] = useState<Project | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [notes, setNotes] = useState<any[]>([]),
+  const [newNote, setNewNote] = useState(""),
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),
+  const [activeTab, setActiveTab] = useState("details"),
   
   // Load project data
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return;
+      if (!projectId) return,
       
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
+      setIsLoading(true),
+      const projectData = await getProjectById(projectId),
       
       if (projectData) {
-        setProject(projectData);
+        setProject(projectData),
         
         // Now fetch notes
-        fetchProjectNotes(projectId);
+        fetchProjectNotes(projectId),
       } else {
         toast({
           title: "Project not found",
           description: "The requested project could not be found.",
-          variant: "destructive",
-        });
-        navigate("/dashboard");
+          variant: "destructive"
+        }),
+        navigate("/dashboard"),
       }
       
-      setIsLoading(false);
+      setIsLoading(false),
     }
     
-    loadProject();
-  }, [projectId]);
+    loadProject(),
+  }, [projectId]),
   
   const fetchProjectNotes = async (projectId: string) => {
     try {
@@ -105,20 +105,20 @@ function ProjectDetailsContent() {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
-        .order("created_at", { ascending: false });
+        .order("created_at", { ascending: false }),
       
-      if (error) throw error;
+      if (error) throw error,
       
-      setNotes(data || []);
+      setNotes(data || []),
     } catch (err) {
-      console.error("Error fetching project notes:", err);
+      console.error("Error fetching project notes:", err),
     }
-  };
+  },
   
   const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return;
+    if (!newNote.trim() || !project || !user) return,
     
-    setIsSubmittingNote(true);
+    setIsSubmittingNote(true),
     
     try {
       const { data, error } = await supabase
@@ -126,71 +126,70 @@ function ProjectDetailsContent() {
         .insert({
           project_id: project.id,
           user_id: user.id,
-          content: newNote,
+          content: newNote
         })
-        .select();
+        .select(),
       
-      if (error) throw error;
+      if (error) throw error,
       
       // Refresh notes
-      fetchProjectNotes(project.id);
-      setNewNote("");
+      fetchProjectNotes(project.id),
+      setNewNote(""),
       
       toast({
         title: "Note added",
-        description: "Your note has been added to the project.",
-      });
+        description: "Your note has been added to the project."
+      }),
     } catch (err: any) {
-      console.error("Error adding note:", err);
+      console.error("Error adding note:", err),
       toast({
         title: "Failed to add note",
         description: err.message || "An error occurred while adding your note.",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     } finally {
-      setIsSubmittingNote(false);
+      setIsSubmittingNote(false),
     }
-  };
+  },
   
   const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return;
+    if (!project) return,
     
-    const success = await updateProjectStatus(project.id, newStatus);
+    const success = await updateProjectStatus(project.id, newStatus),
     
     if (success) {
       setProject({
         ...project,
-        status: newStatus,
-      });
+        status: newStatus
+      }),
       
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
           title: "Offer Accepted! 🎉",
-          description: "The project is now in progress. Congratulations!",
-        });
+          description: "The project is now in progress. Congratulations!"
+        }),
       }
     }
-  };
+  },
   
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
-      case "offer_sent":
-        return <Badge variant="outline">Offer Sent</Badge>;
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
       case "offer_accepted":
-        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
+        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,
       case "changes_requested":
-        return <Badge variant="secondary">Changes Requested</Badge>;
+        return <Badge variant="secondary">Changes Requested</Badge>,
       case "in_progress":
-        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
+        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,
       case "completed":
-        return <Badge variant="default">Completed</Badge>;
+        return <Badge variant="default">Completed</Badge>,
       case "canceled":
-        return <Badge variant="destructive">Canceled</Badge>;
+        return <Badge variant="destructive">Canceled</Badge>,
       default:
-        return <Badge variant="outline">{status}</Badge>;
+        return <Badge variant="outline">{status}</Badge>,
     }
-  };
+  },
   
   if (isLoading) {
     return (
@@ -202,7 +201,7 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </div>
-    );
+    ),
   }
   
   if (!project) {
@@ -221,21 +220,21 @@ function ProjectDetailsContent() {
           </CardContent>
         </Card>
       </div>
-    );
+    ),
   }
   
   // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
   
   if (!isClient && !isTalent) {
-    navigate("/unauthorized");
-    return null;
+    navigate("/unauthorized"),
+    return null,
   }
   
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  const isOfferPending = project.status === "offer_sent",
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
   return (
     <>
@@ -677,7 +676,7 @@ function ProjectDetailsContent() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }
 
 export default function ProjectDetails() {
@@ -685,5 +684,5 @@ export default function ProjectDetails() {
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
-  );
+  ),
 }

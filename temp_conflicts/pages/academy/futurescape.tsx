@@ -1,7 +1,7 @@
-import dynamic from 'next/dynamic';
-import React from 'react';
+import dynamic from 'next/dynamic',
+import React from 'react',
 
-const Simulator = dynamic(() => import('../../components/sim/Simulator'), { ssr: false });
+const Simulator = dynamic(() => import('../../components/sim/Simulator'), { ssr: false }),
 
 export default function FuturescapePage() {
   return (
@@ -9,5 +9,5 @@ export default function FuturescapePage() {
       <h1 className="text-2xl font-semibold">ZionGPT Simulation: Futurescape</h1>
       <Simulator routeId="academy/futurescape" />
     </div>
-  );
+  )
 }

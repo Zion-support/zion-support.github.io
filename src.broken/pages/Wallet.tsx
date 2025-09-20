@@ -1,19 +1,19 @@
-import React from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { getWallet } from '@/api/wallet';
-import Skeleton from '@/components/ui/skeleton';
-import type { TokenTransaction } from '@/types/tokens';
+import React from 'react',
+import { useQuery } from '@tanstack/react-query',
+import { getWallet } from '@/api/wallet',
+import Skeleton from '@/components/ui/skeleton',
+import type { TokenTransaction } from '@/types/tokens',
 
 interface WalletResponse {
-  points: number;
-  history: TokenTransaction[];
+  points: number,
+  history: TokenTransaction[]
 }
 
 const Wallet = () => {
   const { data, isLoading } = useQuery<WalletResponse>({
     queryKey: ['wallet'],
-    queryFn: getWallet,
-  });
+    queryFn: getWallet
+  }),
 
   if (isLoading) {
     return (
@@ -22,11 +22,11 @@ const Wallet = () => {
         <Skeleton className="h-6 w-24" />
         <Skeleton className="h-32 w-full" />
       </div>
-    );
+    ),
   }
 
-  const points = data?.points ?? 0;
-  const history = data?.history ?? [];
+  const points = data?.points ?? 0,
+  const history = data?.history ?? [],
 
   return (
     <div className="p-4">
@@ -60,7 +60,7 @@ const Wallet = () => {
         )}
       </section>
     </div>
-  );
-};
+  ),
+},
 
-export default Wallet;
+export default Wallet,

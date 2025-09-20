@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Zap, Award, Brain, Database, Shield } from 'lucide-react';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import { ArrowRight, Star, TrendingUp, Zap, Award, Brain, Database, Shield } from 'lucide-react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025 Ultimate Content Showcase - Zion Tech Group';
-  description: 'Discover the most comprehensive collection of AI transformation guides, case studies, and breakthrough technologies reshaping enterprise operations in 2025.';
-  keywords: ['AI 2025Enterprise AI', 'AI TransformationEdge Computing', 'Generative AIAI Case Studies'],
-};
+  title: 'AI 2025 Ultimate Content Showcase - Zion Tech Group',
+  description: 'Discover the most comprehensive collection of AI transformation guides, case studies, and breakthrough technologies reshaping enterprise operations in 2025.',
+  keywords: ['AI 2025Enterprise AIAI TransformationEdge Computing', 'Generative AIAI Case Studies']
+},
 export default function AI2025UltimateContentShowcase() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -29,7 +29,7 @@ export default function AI2025UltimateContentShowcase() {,
               Revolutionary AI Content Collection,
             </h1>,
             <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">,
-              Discover the most comprehensive collection of AI transformation guides;
+              Discover the most comprehensive collection of AI transformation guides,
               case studies, and breakthrough technologies that are reshaping enterprise operations in 2025.,
             </p>,
           </div>,
@@ -40,7 +40,7 @@ export default function AI2025UltimateContentShowcase() {,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-4xl font-bold text-center mb-16">Featured Content</h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {/* Generative AI Revolution */,}
+            {/* Generative AI Revolution */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover: shadow-xl transition-all duration-300 border border-gray-200">,
               <div className="flex items-center mb-4">,
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">,
@@ -62,7 +62,7 @@ export default function AI2025UltimateContentShowcase() {,
                 </Link>,
               </div>,
             </div>,
-            {/* Edge Computing Revolution */,}
+            {/* Edge Computing Revolution */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover: shadow-xl transition-all duration-300 border border-gray-200">,
               <div className="flex items-center mb-4">,
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">,
@@ -84,7 +84,7 @@ export default function AI2025UltimateContentShowcase() {,
                 </Link>,
               </div>,
             </div>,
-            {/* Fortune 500 Success Story */,}
+            {/* Fortune 500 Success Story */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover: shadow-xl transition-all duration-300 border border-gray-200">,
               <div className="flex items-center mb-4">,
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">,
@@ -109,7 +109,7 @@ export default function AI2025UltimateContentShowcase() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Stack Showcase */,}
+      {/* Technology Stack Showcase */}
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-4xl font-bold text-center mb-16">Cutting-Edge Technologies</h2>,
@@ -145,7 +145,7 @@ export default function AI2025UltimateContentShowcase() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <section className="py-20 bg-gray-50">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-4xl font-bold text-center mb-16">Success Metrics</h2>,
@@ -169,7 +169,7 @@ export default function AI2025UltimateContentShowcase() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Enterprise?</h2>,
@@ -196,4 +196,4 @@ export default function AI2025UltimateContentShowcase() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

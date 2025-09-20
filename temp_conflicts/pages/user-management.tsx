@@ -1,72 +1,72 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import Head from 'next/head';
+import React, { useState, useEffect, useMemo } from 'react',
+import Head from 'next/head',
 
 interface User {
-  id: string;
-  username: string;
-  email: string;
-  firstName: string;
-  lastName: string;
-  role: UserRole;
-  status: 'active' | 'inactive' | 'suspended' | 'pending';
-  lastLogin: Date;
-  createdAt: Date;
-  permissions: Permission[];
-  avatar?: string;
-  department?: string;
-  phone?: string;
-  twoFactorEnabled: boolean;
-  loginAttempts: number;
-  lastPasswordChange: Date;
+  id: string,
+  username: string,
+  email: string,
+  firstName: string,
+  lastName: string,
+  role: UserRole,
+  status: 'active' | 'inactive' | 'suspended' | 'pending',
+  lastLogin: Date,
+  createdAt: Date,
+  permissions: Permission[],
+  avatar?: string,
+  department?: string,
+  phone?: string,
+  twoFactorEnabled: boolean,
+  loginAttempts: number,
+  lastPasswordChange: Date
 }
 
 interface UserRole {
-  id: string;
-  name: string;
-  description: string;
-  permissions: Permission[];
-  isSystem: boolean;
-  userCount: number;
+  id: string,
+  name: string,
+  description: string,
+  permissions: Permission[],
+  isSystem: boolean,
+  userCount: number
 }
 
 interface Permission {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  resource: string;
-  action: string;
+  id: string,
+  name: string,
+  description: string,
+  category: string,
+  resource: string,
+  action: string
 }
 
 interface UserFilters {
-  role: string[];
-  status: string[];
-  department: string[];
-  search: string;
-  dateRange: string;
+  role: string[],
+  status: string[],
+  department: string[],
+  search: string,
+  dateRange: string
 }
 
 const UserManagement: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]);
-  const [roles, setRoles] = useState<UserRole[]>([]);
-  const [permissions, setPermissions] = useState<Permission[]>([]);
+  const [users, setUsers] = useState<User[]>([]),
+  const [roles, setRoles] = useState<UserRole[]>([]),
+  const [permissions, setPermissions] = useState<Permission[]>([]),
   const [filters, setFilters] = useState<UserFilters>({
     role: [],
     status: [],
     department: [],
     search: '',
     dateRange: 'all'
-  });
-  const [selectedUsers, setSelectedUsers] = useState<Set<string>>(new Set());
-  const [showFilters, setShowFilters] = useState(false);
-  const [sortBy, setSortBy] = useState<'username' | 'role' | 'status' | 'lastLogin' | 'createdAt'>('username');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-  const [currentView, setCurrentView] = useState<'users' | 'roles' | 'permissions'>('users');
+  }),
+  const [selectedUsers, setSelectedUsers] = useState<Set<string>>(new Set()),
+  const [showFilters, setShowFilters] = useState(false),
+  const [sortBy, setSortBy] = useState<'username' | 'role' | 'status' | 'lastLogin' | 'createdAt'>('username'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc'),
+  const [currentView, setCurrentView] = useState<'users' | 'roles' | 'permissions'>('users'),
   // These state variables are reserved for future editing functionality
-  // const [editingUser, setEditingUser] = useState<User | null>(null);
-  // const [editingRole, setEditingRole] = useState<UserRole | null>(null);
-  // const [showCreateModal, setShowCreateModal] = useState(false);
-  // const [showRoleModal, setShowRoleModal] = useState(false);
+  // const [editingUser, setEditingUser] = useState<User | null>(null),
+  // const [editingRole, setEditingRole] = useState<UserRole | null>(null),
+  // const [showCreateModal, setShowCreateModal] = useState(false),
+  // const [showRoleModal, setShowRoleModal] = useState(false),
 
   // Mock data for demonstration
   const mockUsers = useMemo<User[]>(() => [
@@ -160,7 +160,7 @@ const UserManagement: React.FC = () => {
       loginAttempts: 0,
       lastPasswordChange: new Date('2024-01-15')
     }
-  ]), []);
+  ]), []),
 
   const mockRoles = useMemo<UserRole[]>(() => [
     {
@@ -203,7 +203,7 @@ const UserManagement: React.FC = () => {
       isSystem: false,
       userCount: 8
     }
-  ]), []);
+  ]), []),
 
   const mockPermissions = useMemo<Permission[]>(() => [
     {
@@ -270,60 +270,60 @@ const UserManagement: React.FC = () => {
       resource: 'settings',
       action: 'write'
     }
-  ]), []);
+  ]), []),
 
   useEffect(() => {
-    setUsers(mockUsers);
-    setRoles(mockRoles);
-    setPermissions(mockPermissions);
-  }, [mockUsers, mockRoles, mockPermissions]);
+    setUsers(mockUsers),
+    setRoles(mockRoles),
+    setPermissions(mockPermissions),
+  }, [mockUsers, mockRoles, mockPermissions]),
 
   const filteredUsers = users.filter(user => {
-    const roleMatch = filters.role.length === 0 || filters.role.includes(user.role.name);
-    const statusMatch = filters.status.length === 0 || filters.status.includes(user.status);
-    const departmentMatch = filters.department.length === 0 || (user.department && filters.department.includes(user.department));
+    const roleMatch = filters.role.length === 0 || filters.role.includes(user.role.name),
+    const statusMatch = filters.status.length === 0 || filters.status.includes(user.status),
+    const departmentMatch = filters.department.length === 0 || (user.department && filters.department.includes(user.department)),
     const searchMatch = !filters.search || 
                        user.username.toLowerCase().includes(filters.search.toLowerCase()) ||
                        user.email.toLowerCase().includes(filters.search.toLowerCase()) ||
-                       `${user.firstName} ${user.lastName}`.toLowerCase().includes(filters.search.toLowerCase());
+                       `${user.firstName} ${user.lastName}`.toLowerCase().includes(filters.search.toLowerCase()),
     
-    return roleMatch && statusMatch && departmentMatch && searchMatch;
-  });
+    return roleMatch && statusMatch && departmentMatch && searchMatch,
+  }),
 
   const sortedUsers = [...filteredUsers].sort((a, b) => {
-    let aValue: string | number, bValue: string | number;
+    let aValue: string | number, bValue: string | number,
     
     switch (sortBy) {
       case 'username':
-        aValue = a.username;
-        bValue = b.username;
-        break;
+        aValue = a.username,
+        bValue = b.username,
+        break,
       case 'role':
-        aValue = a.role.name;
-        bValue = b.role.name;
-        break;
+        aValue = a.role.name,
+        bValue = b.role.name,
+        break,
       case 'status':
-        aValue = a.status;
-        bValue = b.status;
-        break;
+        aValue = a.status,
+        bValue = b.status,
+        break,
       case 'lastLogin':
-        aValue = a.lastLogin.getTime();
-        bValue = b.lastLogin.getTime();
-        break;
+        aValue = a.lastLogin.getTime(),
+        bValue = b.lastLogin.getTime(),
+        break,
       case 'createdAt':
-        aValue = a.createdAt.getTime();
-        bValue = b.createdAt.getTime();
-        break;
+        aValue = a.createdAt.getTime(),
+        bValue = b.createdAt.getTime(),
+        break,
       default:
-        return 0;
+        return 0
     }
     
     if (sortOrder === 'asc') {
-      return aValue > bValue ? 1 : -1;
+      return aValue > bValue ? 1 : -1,
     } else {
-      return aValue < bValue ? 1 : -1;
+      return aValue < bValue ? 1 : -1,
     }
-  });
+  }),
 
   const getStatusColor = (status: string) => {
     const colors = {
@@ -331,85 +331,81 @@ const UserManagement: React.FC = () => {
       inactive: 'bg-gray-100 text-gray-800',
       suspended: 'bg-red-100 text-red-800',
       pending: 'bg-yellow-100 text-yellow-800'
-    };
-    return colors[status as keyof typeof colors] || colors.inactive;
-  };
+    },
+    return colors[status as keyof typeof colors] || colors.inactive,
+  },
 
   const getRoleColor = (roleName: string) => {
     const colors = {
-      'Super Admin': 'bg-purple-100 text-purple-800',
-      'Content Manager': 'bg-blue-100 text-blue-800',
-      'Analytics Specialist': 'bg-green-100 text-green-800',
-      'Developer': 'bg-indigo-100 text-indigo-800',
-      'Viewer': 'bg-gray-100 text-gray-800'
-    };
-    return colors[roleName as keyof typeof colors] || colors.Viewer;
-  };
+      'Super Admin': 'bg-purple-100 text-purple-800Content Manager': 'bg-blue-100 text-blue-800Analytics Specialist': 'bg-green-100 text-green-800Developer': 'bg-indigo-100 text-indigo-800Viewer': 'bg-gray-100 text-gray-800'
+    },
+    return colors[roleName as keyof typeof colors] || colors.Viewer,
+  },
 
   const formatDate = (date: Date) => {
-    const now = new Date();
-    const diffTime = Math.abs(now.getTime() - date.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const now = new Date(),
+    const diffTime = Math.abs(now.getTime() - date.getTime()),
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
     
-    if (diffDays === 0) return 'Today';
-    if (diffDays === 1) return 'Yesterday';
-    if (diffDays < 7) return `${diffDays} days ago`;
-    return date.toLocaleDateString();
-  };
+    if (diffDays === 0) return 'Today',
+    if (diffDays === 1) return 'Yesterday',
+    if (diffDays < 7) return `${diffDays} days ago`,
+    return date.toLocaleDateString(),
+  },
 
   const toggleUserSelection = (userId: string) => {
-    const newSelected = new Set(selectedUsers);
+    const newSelected = new Set(selectedUsers),
     if (newSelected.has(userId)) {
-      newSelected.delete(userId);
+      newSelected.delete(userId)
     } else {
-      newSelected.add(userId);
+      newSelected.add(userId),
     }
-    setSelectedUsers(newSelected);
-  };
+    setSelectedUsers(newSelected),
+  },
 
   const toggleSelectAll = () => {
     if (selectedUsers.size === filteredUsers.length) {
-      setSelectedUsers(new Set());
+      setSelectedUsers(new Set()),
     } else {
-      setSelectedUsers(new Set(filteredUsers.map(u => u.id)));
+      setSelectedUsers(new Set(filteredUsers.map(u => u.id))),
     }
-  };
+  },
 
   const activateUsers = () => {
     setUsers(prev => prev.map(user => 
       selectedUsers.has(user.id) ? { ...user, status: 'active' as const } : user
-    ));
-    setSelectedUsers(new Set());
-  };
+    )),
+    setSelectedUsers(new Set()),
+  },
 
   const deactivateUsers = () => {
     setUsers(prev => prev.map(user => 
       selectedUsers.has(user.id) ? { ...user, status: 'inactive' as const } : user
-    ));
-    setSelectedUsers(new Set());
-  };
+    )),
+    setSelectedUsers(new Set()),
+  },
 
   const deleteUsers = () => {
-    setUsers(prev => prev.filter(user => !selectedUsers.has(user.id)));
-    setSelectedUsers(new Set());
-  };
+    setUsers(prev => prev.filter(user => !selectedUsers.has(user.id))),
+    setSelectedUsers(new Set()),
+  },
 
   const resetPassword = (userId: string) => {
     // Simulate password reset
     // Password reset logic would go here
-  };
+  },
 
   const enableTwoFactor = (userId: string) => {
     setUsers(prev => prev.map(user => 
       user.id === userId ? { ...user, twoFactorEnabled: true } : user
-    ));
-  };
+    )),
+  },
 
   const disableTwoFactor = (userId: string) => {
     setUsers(prev => prev.map(user => 
       user.id === userId ? { ...user, twoFactorEnabled: false } : user
-    ));
-  };
+    )),
+  },
 
   return (
     <>
@@ -563,8 +559,8 @@ const UserManagement: React.FC = () => {
                           multiple
                           value={filters.role}
                           onChange={(e) => {
-                            const selected = Array.from(e.target.selectedOptions, option => option.value);
-                            setFilters(prev => ({ ...prev, role: selected }));
+                            const selected = Array.from(e.target.selectedOptions, option => option.value),
+                            setFilters(prev => ({ ...prev, role: selected })),
                           }}
                           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
                         >
@@ -581,8 +577,8 @@ const UserManagement: React.FC = () => {
                           multiple
                           value={filters.status}
                           onChange={(e) => {
-                            const selected = Array.from(e.target.selectedOptions, option => option.value);
-                            setFilters(prev => ({ ...prev, status: selected }));
+                            const selected = Array.from(e.target.selectedOptions, option => option.value),
+                            setFilters(prev => ({ ...prev, status: selected })),
                           }}
                           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
                         >
@@ -600,8 +596,8 @@ const UserManagement: React.FC = () => {
                           multiple
                           value={filters.department}
                           onChange={(e) => {
-                            const selected = Array.from(e.target.selectedOptions, option => option.value);
-                            setFilters(prev => ({ ...prev, department: selected }));
+                            const selected = Array.from(e.target.selectedOptions, option => option.value),
+                            setFilters(prev => ({ ...prev, department: selected })),
                           }}
                           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
                         >
@@ -904,7 +900,7 @@ const UserManagement: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  ),
+},
 
-export default UserManagement;
+export default UserManagement,

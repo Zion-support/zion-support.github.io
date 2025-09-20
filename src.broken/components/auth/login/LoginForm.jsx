@@ -1,37 +1,37 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 =======
-import { useState } from 'react';
+import { useState } from 'react',
 export default function Page() {
-);
+),
 
   const onSubmit = async data => {
 
-    if(isSubmitting) return;
+    if(isSubmitting) return,
 
     try {
-      setIsSubmitting(true);
-      const result = await login(data.email, data.password);
+      setIsSubmitting(true),
+      const result = await login(data.email, data.password),
 
       if(result.success) {
 
-        navigate('/');
+        navigate('/'),
       } else {
 
         form.setError('root', {
 
-          message: 'Login failed.Please check your credentials.'});
+          message: 'Login failed.Please check your credentials.'}),
       }
     } catch(error) {
 
       form.setError('root', {
 
-        message: 'An error occurred.Please try again.'});
+        message: 'An error occurred.Please try again.'}),
     } finally {
 
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return ()
     <Form {...form}>
@@ -142,17 +142,17 @@ export default function Page() {
           <span className="text-zion-slate-light">Don't have an account? </span>
           <Link"
             to="/signup"
-            className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+            className="font-medium text-zion-cyan hover: text-zion-cyan-light"
           >
             Sign up
           </Link>
         </div>
       </form>
     </Form>
-  );
+  )
 }
-;
-export { LoginForm };
-export default LoginForm;
+,
+export { LoginForm },
+export default LoginForm,
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

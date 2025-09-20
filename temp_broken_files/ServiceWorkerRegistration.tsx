@@ -1,89 +1,89 @@
-"use client";
-import React, { useEffect, useState } from 'react';
-import { Download, CheckCircle, XCircle, RefreshCw } from 'lucide-react';
+"use client",
+import React, { useEffect, useState } from 'react',
+import { Download, CheckCircle, XCircle, RefreshCw } from 'lucide-react',
 interface ServiceWorkerRegistrationProps {,
-  onUpdateAvailable?: () => void;
-  onUpdateInstalled?: () => void;
+  onUpdateAvailable?: () => void,
+  onUpdateInstalled?: () => void,
 }
 ,
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
-  onUpdateAvailable;
-  onUpdateInstalled,
+  onUpdateAvailable,
+  onUpdateInstalled
 }) => {,
-  const [isInstalling, setIsInstalling] = useState(false);
-  const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
-  const [isUpdateInstalled, setIsUpdateInstalled] = useState(false);
-  const [registration, setRegistration] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [isInstalling, setIsInstalling] = useState(false),
+  const [isUpdateAvailable, setIsUpdateAvailable] = useState(false),
+  const [isUpdateInstalled, setIsUpdateInstalled] = useState(false),
+  const [registration, setRegistration] = useState<any>(null),
+  const [error, setError] = useState<string | null>(null),
   useEffect(() => {,
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {,
-      registerServiceWorker();
+      registerServiceWorker(),
     }
-  }, []);
+  }, []),
   const registerServiceWorker = async () => {,
     try {,
-      const swRegistration = await navigator.serviceWorker.register('/sw.js');
-      setRegistration(swRegistration);
+      const swRegistration = await navigator.serviceWorker.register('/sw.js'),
+      setRegistration(swRegistration),
       // Check for updates,
       swRegistration.addEventListener('updatefound', () => {,
-        const newWorker = swRegistration.installing;
+        const newWorker = swRegistration.installing,
         if (newWorker) {,
           newWorker.addEventListener('statechange', () => {,
             if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {,
-              setIsUpdateAvailable(true);
-              onUpdateAvailable?.();
+              setIsUpdateAvailable(true),
+              onUpdateAvailable?.(),
             }
-          });
+          }),
         }
-      });
+      }),
       // Handle controller change (update installed),
       navigator.serviceWorker.addEventListener('controllerchange', () => {,
-        setIsUpdateInstalled(true);
-        onUpdateInstalled?.();
+        setIsUpdateInstalled(true),
+        onUpdateInstalled?.(),
         // Reload after a short delay to ensure the new service worker is active,
         setTimeout(() => {,
-          window.location.reload();
-        }, 1000);
-      });
+          window.location.reload(),
+        }, 1000),
+      }),
       // Handle service worker messages,
       navigator.serviceWorker.addEventListener('message', (event) => {,
         if (event.data && event.data.type === 'SW_VERSION') {,
-          console.log('Service Worker version:', event.data.version);
+          console.log('Service Worker version:', event.data.version),
         }
-      });
+      }),
     } catch (error) {,
-      console.error('Service worker registration failed:', error);
-      setError('Failed to register service worker');
+      console.error('Service worker registration failed:', error),
+      setError('Failed to register service worker'),
     }
-  };
+  },
   const handleUpdate = async () => {,
-    if (!registration) return;
-    setIsInstalling(true);
-    setError(null);
+    if (!registration) return,
+    setIsInstalling(true),
+    setError(null),
     try {,
       // Send message to service worker to skip waiting,
       if (registration.waiting) {,
-        registration.waiting.postMessage({ type: 'SKIP_WAITING' ,});
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' }),
       }
 ,
       // Check for updates,
-      await registration.update();
+      await registration.update(),
       // Force reload to activate new service worker,
-      window.location.reload();
+      window.location.reload(),
     } catch (error) {,
-      console.error('Update failed:', error);
-      setError('Failed to update application');
+      console.error('Update failed:', error),
+      setError('Failed to update application'),
     } finally {,
-      setIsInstalling(false);
+      setIsInstalling(false),
     }
-  };
+  },
   const handleDismiss = () => {,
-    setIsUpdateAvailable(false);
-    setIsUpdateInstalled(false);
-  };
+    setIsUpdateAvailable(false),
+    setIsUpdateInstalled(false),
+  },
   // Don't render anything if service worker is not supported,
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {,
-    return null;
+    return null,
   }
 ,
   return (,
@@ -114,10 +114,8 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
                     <>,
                       <RefreshCw className="w-3 h-3 animate-spin" />,
                       Updating...,
-                    </>,
-                  ) : (,
-                    'Update Now',
-                  ),}
+                    </>) : (,
+                    'Update Now')}
                 </button>,
                 <button,
                   onClick={handleDismiss}
@@ -128,14 +126,14 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
               </div>,
             </div>,
             <button,
-              onClick={handleDismiss,}
+              onClick={handleDismiss}
               className="flex-shrink-0 text-gray-500 hover: text-gray-300 transition-colors duration-200",
             >,
               <XCircle className="w-4 h-4" />,
             </button>,
           </div>,
         </div>,
-      ),}
+      )}
       {/* Update Installed Notification */}
       {isUpdateInstalled && (,
         <div,
@@ -160,14 +158,14 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
               </button>,
             </div>,
             <button,
-              onClick={handleDismiss,}
+              onClick={handleDismiss}
               className="flex-shrink-0 text-gray-500 hover: text-gray-300 transition-colors duration-200",
             >,
               <XCircle className="w-4 h-4" />,
             </button>,
           </div>,
         </div>,
-      ),}
+      )}
       {/* Error Notification */}
       {error && (,
         <div,
@@ -193,8 +191,8 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({,
             </div>,
           </div>,
         </div>,
-      ),}
+      )}
     </div>,
-  );
-};
-export default ServiceWorkerRegistration;
+  ),
+},
+export default ServiceWorkerRegistration,

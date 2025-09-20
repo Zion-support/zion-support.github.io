@@ -1,10 +1,10 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, FileText, Zap, Shield, TrendingUp,
   ArrowRight, Play, Clock, Award, Globe, Cpu, Eye, Users
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function IntelligentDocumentProcessingSuite() {
   return (
@@ -21,6 +21,6 @@ export default function IntelligentDocumentProcessingSuite() {
         </div>
       </div>
     </div>
-  );
-};
-export default intelligent-document-processing-suite;
+  ),
+},
+export default intelligent-document-processing-suite,

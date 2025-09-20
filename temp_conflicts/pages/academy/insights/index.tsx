@@ -1,1 +1,1 @@
-export { default } from './latest';
+export { default } from './latest',

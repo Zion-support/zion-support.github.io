@@ -1,11 +1,11 @@
-import { TalentCard } from '@/components/talent/TalentCard';"
-import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
+import { TalentCard } from '@/components/talent/TalentCard',"
+import { TalentSkeleton } from '@/components/talent/TalentSkeleton',
 
 export default function Page() {
-;
+,
     if(isLoading) {
 
-        return <TalentSkeleton />;
+        return <TalentSkeleton />,
 
     const handleMessageInternal = (talent) => {
 
@@ -15,7 +15,7 @@ export default function Page() {
         else {
 
             onTalentClick(talent.id)}
-    };
+    },
     if(isLoading) {
 
         return <TalentSkeleton />}

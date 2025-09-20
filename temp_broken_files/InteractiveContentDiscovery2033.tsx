@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { ArrowRight, Search, Filter, TrendingUp, Star, Eye, Zap, Brain, Globe, Rocket } from 'lucide-react';
+import React, { useState } from 'react',
+import { ArrowRight, Search, Filter, TrendingUp, Star, Eye, Zap, Brain, Globe, Rocket } from 'lucide-react',
 const InteractiveContentDiscovery2033: React.FC = () => {,
   return (,
     <divsection,
-      whileInView={{ opacity: 1, y: 0 ,}}
+      whileInView={{ opacity: 1, y: 0 }}
       className="relative py-16 px-4 overflow-hidden",
     >,
       {/* Background Effects */}
@@ -15,7 +15,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
       <div className="relative max-w-7xl mx-auto">,
         {/* Header */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12",
         >,
           <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,
@@ -25,9 +25,9 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
             Discover groundbreaking innovations and cutting-edge technologies through our intelligent content recommendation system,
           </p>,
         </div>,
-        {/* Search and Filters */,}
+        {/* Search and Filters */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="mb-12",
         >,
           {/* Search Bar */}
@@ -41,7 +41,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
               className="w-full pl-12 pr-4 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-full text-white placeholder-gray-400 focus: outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all",
             />,
           </div>,
-          {/* Filter Buttons */,}
+          {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4">,
             {filters.map((filter) => (,
               <button,
@@ -50,7 +50,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${,
                   activeFilter === filter.id,
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25',
-                    : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-600/50',}`}
+                    : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-600/50'}`}
               >,
                 {filter.icon}
                 {filter.label}
@@ -70,7 +70,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
                 onHoverEnd={() => setHoveredItem(null)}
                 className="bg-gradient-to-br from-gray-800/20 to-gray-900/20 backdrop-blur-sm border border-gray-600/20 rounded-2xl p-6 hover: border-blue-500/40 transition-all group cursor-pointer",
               >,
-                {/* Header */,}
+                {/* Header */}
                 <div className="flex items-start justify-between mb-4">,
                   <div className="text-4xl">{item.image}</div>,
                   <div className="flex items-center gap-2">,
@@ -78,8 +78,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
                       <div className="flex items-center gap-1 bg-gradient-to-r from-orange-500 to-red-500 px-2 py-1 rounded-full text-xs font-semibold">,
                         <TrendingUp className="w-3 h-3" />,
                         Trending,
-                      </div>,
-                    )}
+                      </div>)}
                     <div className="flex items-center gap-1 text-yellow-400">,
                       <Star className="w-4 h-4 fill-current" />,
                       <span className="text-sm font-semibold">{item.rating}</span>,
@@ -88,7 +87,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
                 </div>,
                 {/* Title and Description */}
                 <h3 className="text-xl font-bold mb-3 text-white group-hover: text-blue-300 transition-colors">,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 <p className="text-gray-300 mb-4 leading-relaxed">,
                   {item.description}
@@ -101,8 +100,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
                       className="px-3 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full border border-blue-500/30",
                     >,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* Footer */}
                 <div className="flex items-center justify-between">,
@@ -117,13 +115,12 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
                     <ArrowRight className="w-4 h-4" />,
                   </button>,
                 </div>,
-                {/* Hover Effect */,}
+                {/* Hover Effect */}
                 <div>,
                   {hoveredItem === item.id && (,
                     <div,
                       className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl pointer-events-none",
-                    />,
-                  )}
+                    />)}
                 </div>,
               </div>,
             ))}
@@ -137,11 +134,10 @@ const InteractiveContentDiscovery2033: React.FC = () => {,
             <div className="text-6xl mb-4">🔍</div>,
             <h3 className="text-2xl font-bold text-gray-300 mb-2">No content found</h3>,
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>,
-          </div>,
-        )}
+          </div>)}
       </div>,
     </divsection>,
-  );
-};
-export default InteractiveContentDiscovery2033;
+  ),
+},
+export default InteractiveContentDiscovery2033,
 </div></div></div>,

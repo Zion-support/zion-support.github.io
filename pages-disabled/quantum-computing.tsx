@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function QuantumComputing() {,
-  const site = 'https: //ziontechgroup.com';
-  const phone = '+1 302 464 0950';
+  const site = 'https: //ziontechgroup.com',
+  const phone = '+1 302 464 0950',
   return (,
     <>,
       <Head>,
@@ -18,5 +18,5 @@ export default function QuantumComputing() {,
         </div>,
       </section>,
     </>,
-  );
+  ),
 }

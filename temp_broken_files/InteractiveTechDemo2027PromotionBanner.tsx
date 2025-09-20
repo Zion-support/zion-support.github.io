@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   Pause,
@@ -9,57 +9,56 @@ import {,
   Zap,
   Brain,
   Rocket,
-  ArrowRight;
-  X;
-  ChevronRight;
-  Award;
-  Users;
-  Clock;
-  TrendingUp;
-  CheckCircle;
-  BarChart3,
-} from 'lucide-react';
+  ArrowRight,
+  X,
+  ChevronRight,
+  Award,
+  Users,
+  Clock,
+  TrendingUp,
+  CheckCircle,
+  BarChart3
+} from 'lucide-react',
 const InteractiveTechDemo2027PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentDemosetCurrentDemo] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const demos = [,
     {,
-      icon: Brain;
-      title: 'AI Quantum Processing';
-      description: '1.2M ops/sec';
-      color: 'from-purple-500 to-blue-500',};
+      icon: Brain,
+      title: 'AI Quantum Processing',
+      description: '1.2M ops/sec',
+      color: 'from-purple-500 to-blue-500'},
     {,
-      icon: Zap;
-      title: 'Autonomous Automation';
-      description: '847 tasks automated';
-      color: 'from-green-500 to-teal-500',};
+      icon: Zap,
+      title: 'Autonomous Automation',
+      description: '847 tasks automated',
+      color: 'from-green-500 to-teal-500'},
     {,
-      icon: Rocket;
-      title: 'Neural Interface';
-      description: '12ms response time';
-      color: 'from-orange-500 to-red-500',}
-  ];
+      icon: Rocket,
+      title: 'Neural Interface',
+      description: '12ms response time',
+      color: 'from-orange-500 to-red-500'}
+  ],
   const features = [,
-    'Real-time ProcessingInteractive Controls';
-    'Live MetricsStep-by-step Guide',
-  ];
+    'Real-time ProcessingInteractive ControlsLive MetricsStep-by-step Guide'
+  ],
   const stats = [,
-    { value: '99.97%'label: 'Accuracy' ,};
-    { value: '2.3k 'hrslabel: 'Time Saved' ,};
-    { value: '0.02%'label: 'Error Rate' ,};
-    { value: '$1.2'Mlabel: 'Cost Saved' ,}
-  ];
+    { value: '99.97%'label: 'Accuracy' },
+    { value: '2.3k 'hrslabel: 'Time Saved' },
+    { value: '0.02%'label: 'Error Rate' },
+    { value: '$1.2'Mlabel: 'Cost Saved' }
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
-  if (isDismissed) return null;
+      setCurrentDemo((prev) => (prev + 1) % demos.length),
+    }2500),
+    return () => clearInterval(interval),
+  }[]),
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -71,15 +70,14 @@ const InteractiveTechDemo2027PromotionBanner = () => {,
             <div,
               className="absolute inset-0 opacity-30",
                 background: [,
-                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
-                ],
+                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)'
+                ]
               }}
             />,
           </div>,
           <div className="relative z-10 container mx-auto px-4 py-6">,
             <div className="flex flex-col lg: flex-row items-center justify-between gap-6">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">,
                   <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30">,
@@ -100,7 +98,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {,
                   Experience our cutting-edge technology in action! Watch real-time demonstrations,
                   of AI processingautomationand neural interfaces with interactive controls.,
                 </p>,
-                {/* Rotating Demo Features */,}
+                {/* Rotating Demo Features */}
                 <div className="flex items-center gap-4 mb-4">,
                     <div,
                       key={currentDemo}
@@ -126,8 +124,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {,
                     <div key={index} className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/10">,
                       <CheckCircle className="w-3 h-3 text-green-400" />,
                       <span className="text-gray-300">{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Center - Live Stats */}
@@ -147,7 +144,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {,
                   <div className="text-xs text-gray-400">Cost Saved</div>,
                 </div>,
               </div>,
-              {/* Right Content - CTA */,}
+              {/* Right Content - CTA */}
               <div className="flex flex-col sm: flex-row items-center gap-3">,
                 <button className="group px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">,
                   <Play className="w-4 h-4" />,
@@ -159,7 +156,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {,
                   <span>Schedule Demo</span>,
                 </button>,
               </div>,
-              {/* Dismiss Button */,}
+              {/* Dismiss Button */}
               <button,
                 onClick={() => setIsDismissed(true)}
                 className="absolute top-4 right-4 p-2 rounded-full hover: bg-white/10 transition-colors",
@@ -167,14 +164,13 @@ const InteractiveTechDemo2027PromotionBanner = () => {,
                 <X className="w-4 h-4 text-gray-400 hover:text-white" />,
               </button>,
             </div>,
-            {/* Mobile Stats */,}
+            {/* Mobile Stats */}
             <div className="lg: hidden mt-4 grid grid-cols-4 gap-4">,
               {stats.map((statindex) => (,
-                <div key={index,} className="text-center p-2 rounded-lg bg-white/5">,
+                <div key={index} className="text-center p-2 rounded-lg bg-white/5">,
                   <div className="text-lg font-bold text-white">{stat.value}</div>,
                   <div className="text-xs text-gray-400">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           {/* Progress Bar */}
@@ -182,7 +178,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  );
-};
-export default InteractiveTechDemo2027PromotionBanner;
+  ),
+},
+export default InteractiveTechDemo2027PromotionBanner,
 </div></div></div></div>,

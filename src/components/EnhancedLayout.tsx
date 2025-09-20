@@ -1,17 +1,16 @@
-import React from 'react';
-import { ReactNode } from 'react';
-import { FuturisticNavigation } from './FuturisticNavigation';
-import { FuturisticFooter } from './FuturisticFooter';
-import { EnhancedSidebar } from './EnhancedSidebar';
-import { FuturisticAnimatedBackground } from './FuturisticAnimatedBackground';
-
+import React from "react";
+import { ReactNode } from "react";
+import { FuturisticNavigation } from "./FuturisticNavigation";
+import { FuturisticFooter } from "./FuturisticFooter";
+import { EnhancedSidebar } from "./EnhancedSidebar";
+import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
 interface EnhancedLayoutProps {
   children: ReactNode;
-  showSidebar?: boolean;
+  showSidebar?: boolean
 }
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
-  children,
+  children;
   showSidebar = true
 }) => {
   return (
@@ -28,7 +27,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         {showSidebar && <EnhancedSidebar />}
 
         {/* Main Content */}
-        <main className={`flex-1 ${showSidebar ? 'lg:ml-80' : ''}`}>
+        <main className={`flex-1 ${showSidebar ? 'lg: ml-80' : ''}`}>
           {children}
         </main>
       </div>

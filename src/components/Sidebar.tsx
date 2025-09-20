@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Menu, 
+  Menu,
   X, 
   Home, 
   Zap, 
@@ -26,120 +26,93 @@ import {
   Globe,
   ChevronDown,
   ChevronRight
-} from 'lucide-react';
-
+} from "lucide-react";
 interface SidebarItem {
-  name: string;
-  href: string;
-  icon: React.ComponentType<any>;
-  children?: SidebarItem[];
+  name: string,href: string,icon: React.ComponentType<any>;
+  children?: SidebarItem[]
 }
 
 export const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
-
   const navigation: SidebarItem[] = [
     {
-      title: 'Main Navigation',
-      icon: Home,
-      items: [
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-        { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
-        { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' },
+      title: 'Main Navigation',icon: Home,items: [
+        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' };
+        { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' };
+        { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' };
         // Pricing page currently not implemented
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
+        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' };
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
-    },
+    };
     {
-      title: 'AI & Analytics',
-      icon: Brain,
-      items: [
+      title: 'AI & Analytics',icon: Brain,items: [
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' }
       ]
-    },
+    };
     {
-      title: 'Cloud & Infrastructure',
-      icon: Cloud,
-      items: [
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud, description: 'Cloud migration and DevOps' },
+      title: 'Cloud & Infrastructure',icon: Cloud,items: [
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud, description: 'Cloud migration and DevOps' };
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building, description: 'Enterprise infrastructure' }
       ]
-    },
+    };
     {
-      title: 'Cybersecurity & Compliance',
-      icon: Shield,
-      items: [
+      title: 'Cybersecurity & Compliance',icon: Shield,items: [
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' }
       ]
-    },
+    };
     {
-      title: 'Data & Analytics',
-      icon: Database,
-      items: [
+      title: 'Data & Analytics',icon: Database,items: [
         { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' }
       ]
-    },
+    };
     {
-      title: 'Monitoring & Observability',
-      icon: Monitor,
-      items: []
-    },
+      title: 'Monitoring & Observability',icon: Monitor,items: []
+    };
     {
-      title: 'Business Solutions',
-      icon: Building,
-      items: []
-    },
+      title: 'Business Solutions',icon: Building,items: []
+    };
     {
-      title: 'Quantum Technology',
-      icon: Atom,
-      items: []
-    },
+      title: 'Quantum Technology',icon: Atom,items: []
+    };
     {
-      title: 'Space Technology',
-      icon: Rocket,
-      items: []
-    },
+      title: 'Space Technology',icon: Rocket,items: []
+    };
     {
-      title: 'Resources & Insights',
-      icon: FileText,
-      items: [
-        { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' },
+      title: 'Resources & Insights',icon: FileText,items: [
+        { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' };
         { name: 'Research & Development', path: '/research-development', icon: TestTube, description: 'R&D projects' }
       ]
-    },
+    };
     {
-      title: 'Company & Team',
-      icon: Users,
-      items: [
-        { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
-        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
+      title: 'Company & Team',icon: Users,items: [
+        { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' };
+        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' };
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     }
   ];
-
   const toggleSection = (sectionName: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
         ? prev.filter(name => name !== sectionName)
         : [...prev, sectionName]
-    );
-  };
+    ),
+  },
 
   const isActive = (href: string) => {
     if (href === '/') {
-      return location.pathname === '/';
+      return location.pathname === '/'
     }
     return location.pathname.startsWith(href);
-  };
+  },
 
   const renderNavItem = (item: SidebarItem, level: number = 0) => {
     const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const active = isActive(item.href);
+    const isExpanded = expandedSections.includes(item.name.toLowerCase()),
+    const active = isActive(item.href),
 
     return (
       <div key={item.name}>
@@ -202,7 +175,7 @@ export const Sidebar: React.FC = () => {
         )}
       </div>
     );
-  };
+  },
 
   return (
     <>
@@ -284,7 +257,7 @@ export const Sidebar: React.FC = () => {
           <div className="text-center">
             <Link
               to="/contact"
-              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
+              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover: from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
             >
               Get Started
             </Link>
@@ -292,5 +265,5 @@ export const Sidebar: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 };

@@ -1,18 +1,18 @@
 
-import { useState } from "react";
-import CreatePostButton from "@/components/community/CreatePostButton";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import ForumCategories from "@/components/community/ForumCategories";
-import PostCard from "@/components/community/PostCard";
-import { useAuth } from "@/hooks/useAuth";
-import { useCommunity } from "@/context";
+import { useState } from "react",
+import CreatePostButton from "@/components/community/CreatePostButton",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import ForumCategories from "@/components/community/ForumCategories",
+import PostCard from "@/components/community/PostCard",
+import { useAuth } from "@/hooks/useAuth",
+import { useCommunity } from "@/context",
 
 
 export default function CommunityPage() {
-  const { user } = useAuth();
-  const { featuredPosts, recentPosts } = useCommunity();
-  const [activeTab, setActiveTab] = useState("categories");
+  const { user } = useAuth(),
+  const { featuredPosts, recentPosts } = useCommunity(),
+  const [activeTab, setActiveTab] = useState("categories"),
   
   return (
     <>
@@ -64,5 +64,5 @@ export default function CommunityPage() {
         </Tabs>
       </div>
     </>
-  );
+  ),
 }

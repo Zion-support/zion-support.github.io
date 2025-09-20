@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Bot,
   MessageCircle,
@@ -9,102 +9,102 @@ import {,
   Zap,
   Brain,
   Rocket,
-  Star;
-  Loader2;
-  CheckCircle;
-  AlertCircle;
-  Lightbulb;
-  Target;
-  TrendingUp,
-} from 'lucide-react';
+  Star,
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+  Lightbulb,
+  Target,
+  TrendingUp
+} from 'lucide-react',
 const InteractiveAIDemo2025 = () => {,
   const [messagesetMessages] = useState([,
     {,
-      id: 1;
-      type: 'ai';
-      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?';
-      timestamp: new Date();
-      features: ['Neural 'InterfacesQuantum 'AI', 'Business Automation'],
+      id: 1,
+      type: 'ai',
+      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
+      timestamp: new Date(),
+      features: ['Neural 'InterfacesQuantum 'AIBusiness Automation']
     }
-  ]);
-  const [inputValuesetInputValue] = useState('');
-  const [isTypingsetIsTyping] = useState(false);
-  const [isVisiblesetIsVisible] = useState(false);
+  ]),
+  const [inputValuesetInputValue] = useState(''),
+  const [isTypingsetIsTyping] = useState(false),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const aiResponses = [,
     {,
-      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.";
-      features: ['Neural 'InterfacesBrain-Computer 'Interface', 'Efficiency Boost'];
-      icon: Brain;
-      color: 'from-purple-500 to-pink-500',};
+      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.",
+      features: ['Neural 'InterfacesBrain-Computer 'InterfaceEfficiency Boost'],
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'},
     {,
-      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.";
-      features: ['Quantum 'ComputingAI 'Algorithms', 'Real-time Processing'];
-      icon: Zap;
-      color: 'from-blue-500 to-cyan-500',};
+      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
+      features: ['Quantum 'ComputingAI 'AlgorithmsReal-time Processing'],
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500'},
     {,
-      content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.";
-      features: ['Enterprise 'AutomationCost 'Reduction', 'Process Optimization'];
-      icon: Target;
-      color: 'from-green-500 to-emerald-500',};
+      content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
+      features: ['Enterprise 'AutomationCost 'ReductionProcess Optimization'],
+      icon: Target,
+      color: 'from-green-500 to-emerald-500'},
     {,
-      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.";
-      features: ['Future 'PredictionsMarket 'Forecasting', 'Market Opportunity'];
-      icon: TrendingUp;
-      color: 'from-orange-500 to-red-500',}
-  ];
+      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.",
+      features: ['Future 'PredictionsMarket 'ForecastingMarket Opportunity'],
+      icon: TrendingUp,
+      color: 'from-orange-500 to-red-500'}
+  ],
   const handleSendMessage = async () => {,
-    if (!inputValue.trim() || isTyping) return;
+    if (!inputValue.trim() || isTyping) return,
     const userMessage = {,
-      id: messages.length + 1;
-      type: 'user';
-      content: inputValue;
-      timestamp: new Date(),};
-    setMessages(prev => [...prevuserMessage]);
-    setInputValue();
-    setIsTyping(true);
+      id: messages.length + 1,
+      type: 'user',
+      content: inputValue,
+      timestamp: new Date()},
+    setMessages(prev => [...prevuserMessage]),
+    setInputValue(),
+    setIsTyping(true),
     // Simulate AI response delay,
     setTimeout(() => {,
-      const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
+      const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)],
       const aiMessage = {,
-        id: messages.length + 2;
-        type: 'ai';
-        content: randomResponse.content;
-        timestamp: new Date();
-        features: randomResponse.features;
-        icon: randomResponse.icon;
-        color: randomResponse.color,};
-      setMessages(prev => [...prevaiMessage]);
-      setIsTyping(false);
-    }1500);
-  };
+        id: messages.length + 2,
+        type: 'ai',
+        content: randomResponse.content,
+        timestamp: new Date(),
+        features: randomResponse.features,
+        icon: randomResponse.icon,
+        color: randomResponse.color},
+      setMessages(prev => [...prevaiMessage]),
+      setIsTyping(false),
+    }1500),
+  },
   const handleKeyPress = (e: React.KeyboardEvent) => {,
     if (e.key === 'Enter' && !e.shiftKey) {,
-      e.preventDefault();
-      handleSendMessage(),
+      e.preventDefault(),
+      handleSendMessage()
     }
-  };
+  },
   const containerVariants = {,
-    hidden: { opacity: 0, y: 50 ,};
+    hidden: { opacity: 0, y: 50 },
     visible: {,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.1,}
+        duration: 0.8,
+        staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { opacity: 0, y: 20 ,};
+    hidden: { opacity: 0, y: 20 },
     visible: {,
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.5 ,}
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
     }
-  };
-  if (!isVisible) return null;
+  },
+  if (!isVisible) return null,
   return (,
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -134,7 +134,7 @@ const InteractiveAIDemo2025 = () => {,
             quantum computingbusiness automationand future predictions.,
           </p>,
         </div>,
-        {/* Chat Interface */,}
+        {/* Chat Interface */}
         <div,
           className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl",
         >,
@@ -165,7 +165,7 @@ const InteractiveAIDemo2025 = () => {,
                   <div className={`max-w-xs lg: max-w-md ${,
                     message.type === 'user',
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white',
-                      : 'bg-white/10 text-gray-100',} rounded-2xl p-4`}>,
+                      : 'bg-white/10 text-gray-100'} rounded-2xl p-4`}>,
                     <p className="text-sm leading-relaxed">{message.content}</p>,
                     {message.features && (,
                       <div className="mt-3 flex flex-wrap gap-2">,
@@ -175,8 +175,7 @@ const InteractiveAIDemo2025 = () => {,
                             className="text-xs px-2 py-1 bg-white/20 rounded-full",
                           >,
                             {feature}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
                     )}
                     <div className="text-xs opacity-70 mt-2">,
@@ -195,8 +194,7 @@ const InteractiveAIDemo2025 = () => {,
                   <Loader2 className="w-4 h-4 animate-spin" />,
                   <span className="text-sm">AI is thinking...</span>,
                 </div>,
-              </div>,
-            )}
+              </div>)}
           </div>,
           {/* Input Area */}
           <div className="border-t border-white/10 p-6">,
@@ -209,7 +207,7 @@ const InteractiveAIDemo2025 = () => {,
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about AI breakthroughsbusiness automationor future predictions...",
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent",
-                  disabled={isTyping,}
+                  disabled={isTyping}
                 />,
               </div>,
               <button,
@@ -218,10 +216,8 @@ const InteractiveAIDemo2025 = () => {,
                 className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold disabled: opacity-50 disabled:cursor-not-allowed hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center gap-2",
               >,
                 {isTyping ? (,
-                  <Loader2 className="w-4 h-4 animate-spin" />,
-                ) : (,
-                  <Send className="w-4 h-4" />,
-                ),}
+                  <Loader2 className="w-4 h-4 animate-spin" />) : (,
+                  <Send className="w-4 h-4" />)}
                 Send,
               </button>,
             </div>,
@@ -232,12 +228,12 @@ const InteractiveAIDemo2025 = () => {,
           className="mt-16 grid md: grid-cols-4 gap-6",
         >,
           {[,
-            { icon: Braintitle: 'Neural 'Interfacesdescription: '500% efficiency boost' ,};
-            { icon: Zaptitle: 'Quantum 'AIdescription: '1000x faster processing' ,};
-            { icon: Targetitle: 'Business 'Automationdescription: '90% cost reduction' ,};
-            { icon: TrendingUptitle: 'Future 'Predictionsdescription: '95% accuracy rate' ,}
+            { icon: Braintitle: 'Neural 'Interfacesdescription: '500% efficiency boost' },
+            { icon: Zaptitle: 'Quantum 'AIdescription: '1000x faster processing' },
+            { icon: Targetitle: 'Business 'Automationdescription: '90% cost reduction' },
+            { icon: TrendingUptitle: 'Future 'Predictionsdescription: '95% accuracy rate' }
           ].map((featureindex) => {,
-            const Icon = feature.icon;
+            const Icon = feature.icon,
             return (,
               <div,
                 key={index}
@@ -246,14 +242,13 @@ const InteractiveAIDemo2025 = () => {,
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">,
                   <Icon className="w-6 h-6 text-white" />,
                 </div>,
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title,}</h3>,
+                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>,
                 <p className="text-purple-300 text-sm">{feature.description}</p>,
-              </div>,
-            );
+              </div>),
           })}
         </div>,
       </div>,
     </div>,
-  );
-export default InteractiveAIDemo2025;
+  ),
+export default InteractiveAIDemo2025,
 }

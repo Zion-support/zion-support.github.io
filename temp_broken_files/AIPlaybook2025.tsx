@@ -1,5 +1,5 @@
-import React from 'react';
-};
+import React from 'react',
+},
 const function AIPlaybook2025(): JSX.Element {: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -10,7 +10,7 @@ const function AIPlaybook2025(): JSX.Element {: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function AIPlaybook2025(): JSX.Element {;
+  ),
+},
+export default function AIPlaybook2025(): JSX.Element {,
 }}

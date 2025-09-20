@@ -1,7 +1,7 @@
-import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings  } from 'lucide-react';
+import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings  } from 'lucide-react',
 
 export default function Page() {
-                                        ];
+                                        ],
                                         const useCases = [{
                                                 title: 'Supply Chain Management',
                                                 description: 'Automated inventory management, demand forecasting, and supplier coordination.',
@@ -22,23 +22,16 @@ export default function Page() {
                                                 description: 'Automated candidate screening, onboarding processes, and performance management.',
                                                 icon: Users
                                             }
-                                        ];
-                                        const benefits = ['Reduce operational costs by up to 40%',
-                                            'Improve process efficiency by 60%',
-                                            'Eliminate manual errors and delays',
-                                            '24 / 7 automated operations',
-                                            'Scalable infrastructure for growth',
-                                            'Real - time monitoring and analytics'
-                                        ];
-                                        const industries = ['Manufacturing',
-                                            'Healthcare',
-                                            'Finance',
-                                            'Retail',
-                                            'Logistics',
-                                            'Technology',
-                                            'Energy',
-                                            'Education'
-                                        ];
+                                        ],
+                                        const benefits = ['Reduce operational costs by up to 40%Improve process efficiency by 60%',
+                                            'Eliminate manual errors and delays24 / 7 automated operations',
+                                            'Scalable infrastructure for growthReal - time monitoring and analytics'
+                                        ],
+                                        const industries = ['ManufacturingHealthcare',
+                                            'FinanceRetail',
+                                            'LogisticsTechnology',
+                                            'EnergyEducation'
+                                        ],
                                         return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 px-4 sm:px-6 lg:px-8">
@@ -214,7 +207,7 @@ export default function Page() {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
             {features.map((feature, index) => {
-                                                            const IconComponent = feature.icon;
+                                                            const IconComponent = feature.icon,
                                                             return (<div key={index} className="bg-slate - 800 / 50 backdrop - blur - lg rounded-xl p - 6 border border-white / 10 hover:border-green - 500 / 30 transition - all duration -300">
                   <div className="w-12 h-12 bg-gradient - to - r from - green - 600 to - emerald - 600 rounded-lg flex items - center justify - center mb-4">
                     <IconComponent className="w-6 h-6 text-white"/>
@@ -240,7 +233,7 @@ export default function Page() {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">
             {useCases.map((useCase, index) => {
-                                                            const IconComponent = useCase.icon;
+                                                            const IconComponent = useCase.icon,
                                                             return (<div key={index} className="bg-slate - 800 / 50 backdrop - blur - lg rounded-xl p - 8 border border-white / 10">
                   <div className="w-16 h-16 bg-gradient - to - r from - green - 600 to - emerald - 600 rounded-xl flex items - center justify - center mb-6">
                     <IconComponent className="w-8 h-8 text-white"/>
@@ -989,7 +982,7 @@ export default function Page() {
       rating: 5,
       avatar: "👨‍💻"
     }
-  ];
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue - 900 text-white">
       {/* Hero Section */}
@@ -1260,5 +1253,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 

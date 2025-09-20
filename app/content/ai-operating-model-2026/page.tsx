@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-	title: 'AI Operating Model 2026';
-	description: 'Design an outcome-driven AI operating model: teams, processes, and platforms.',
-};
+	title: 'AI Operating Model 2026',
+	description: 'Design an outcome-driven AI operating model: teams, processes, and platforms.'
+},
 export default function AIOperatingModel2026() {,
 	return (,
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -22,7 +22,6 @@ export default function AIOperatingModel2026() {,
 					Start with one pod, clear KPIs, and a thin platform slice. Iterate every quarter based on outcomes and developer feedback.,
 				</p>,
 			</section>,
-		</main>,
-	);
+		</main>),
 }
 ,

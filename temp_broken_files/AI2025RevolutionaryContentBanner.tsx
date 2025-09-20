@@ -1,70 +1,70 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+"use client",
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
-  ArrowRight;
-  Star;
-  Zap;
-  Brain;
-  TrendingUp;
-  Users;
-  Globe;
-  X;
-  Play;
-  Download;
-  ExternalLink;
-  Sparkles;
-  Cpu;
-  Database;
-  Cloud;
-  Rocket;
-  Heart;
-  Lightbulb,
-} from 'lucide-react';
+  ArrowRight,
+  Star,
+  Zap,
+  Brain,
+  TrendingUp,
+  Users,
+  Globe,
+  X,
+  Play,
+  Download,
+  ExternalLink,
+  Sparkles,
+  Cpu,
+  Database,
+  Cloud,
+  Rocket,
+  Heart,
+  Lightbulb
+} from 'lucide-react',
 const RevolutionaryContentBanner2028 = () => {,
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false),
+  const [isDismissed, setIsDismissed] = useState(false),
+  const [currentFeature, setCurrentFeature] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Auto-advance features,
     const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % 4);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentFeature((prev) => (prev + 1) % 4),
+    }, 4000),
+    return () => clearInterval(interval),
+  }, []),
   const features = [,
     {,
-      title: "Ultimate Tech Revolution 2028";
-      description: "Experience the most advanced technologies ever created";
-      icon: Rocket;
-      color: "from-purple-600 to-pink-600";
-      stats: "Revolutionary Breakthrough";
-      link: "/pages/UltimateTechRevolution2028",};
+      title: "Ultimate Tech Revolution 2028",
+      description: "Experience the most advanced technologies ever created",
+      icon: Rocket,
+      color: "from-purple-600 to-pink-600",
+      stats: "Revolutionary Breakthrough",
+      link: "/pages/UltimateTechRevolution2028"},
     {,
-      title: "Consciousness Computing";
-      description: "AI systems that achieve true self-awareness and emotional intelligence";
-      icon: Brain;
-      color: "from-blue-600 to-cyan-600";
-      stats: "95% Emotional Accuracy";
-      link: "/pages/ConsciousnessComputingRevolution2028",};
+      title: "Consciousness Computing",
+      description: "AI systems that achieve true self-awareness and emotional intelligence",
+      icon: Brain,
+      color: "from-blue-600 to-cyan-600",
+      stats: "95% Emotional Accuracy",
+      link: "/pages/ConsciousnessComputingRevolution2028"},
     {,
-      title: "Quantum Neural Networks";
-      description: "Fusion of quantum computing with neural networks for unprecedented power";
-      icon: Cpu;
-      color: "from-green-600 to-emerald-600";
-      stats: "1000x Speed Improvement";
-      link: "/pages/UltimateTechRevolution2028",};
+      title: "Quantum Neural Networks",
+      description: "Fusion of quantum computing with neural networks for unprecedented power",
+      icon: Cpu,
+      color: "from-green-600 to-emerald-600",
+      stats: "1000x Speed Improvement",
+      link: "/pages/UltimateTechRevolution2028"},
     {,
-      title: "Holographic Reality";
-      description: "Full-sensory holographic environments indistinguishable from reality";
-      icon: Globe;
-      color: "from-orange-600 to-red-600";
-      stats: "100% Reality Simulation";
-      link: "/pages/UltimateTechRevolution2028",}
-  ];
-  const currentFeatureData = features[currentFeature];
-  if (isDismissed) return null;
+      title: "Holographic Reality",
+      description: "Full-sensory holographic environments indistinguishable from reality",
+      icon: Globe,
+      color: "from-orange-600 to-red-600",
+      stats: "100% Reality Simulation",
+      link: "/pages/UltimateTechRevolution2028"}
+  ],
+  const currentFeatureData = features[currentFeature],
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -82,25 +82,25 @@ const RevolutionaryContentBanner2028 = () => {,
                 key={i}
                 className="absolute w-1 h-1 bg-white/40 rounded-full",
                 style={{,
-                  left: `${Math.random() * 100,}%`;
-                  top: `${Math.random() * 100,}%`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`
                 }}
-                  y: [0-20];
-                  opacity: [0.40.80.4];
-                  scale: [1.51],}}
-                  duration: 3 + Math.random() * 2;
-                  repeat: Infinity;
-                  delay: Math.random() * 2,}}
+                  y: [0-20],
+                  opacity: [0.40.80.4],
+                  scale: [1.51]}}
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2}}
               />,
             ))}
           </div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">,
-              {/* Left side - Content */,}
+              {/* Left side - Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div,
                 >,
-                  {/* Badge */,}
+                  {/* Badge */}
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold mb-6">,
                     <Sparkles className="w-4 h-4 mr-2" />,
                     AI 2025 REVOLUTIONARY CONTENT,
@@ -113,7 +113,7 @@ const RevolutionaryContentBanner2028 = () => {,
                       Revolutionary AI,
                     </span>,
                   </h1>,
-                  {/* Subheading */,}
+                  {/* Subheading */}
                   <p className="text-xl text-gray-300 mb-8 max-w-2xl">,
                     Discover cutting-edge AI technologies that are reshaping industries,
                     and unlocking unprecedented opportunities for growth and innovation.,
@@ -124,7 +124,7 @@ const RevolutionaryContentBanner2028 = () => {,
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20",
                   >,
                     <div className="flex items-center justify-center lg: justify-start space-x-4 mb-4">,
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${currentFeatureData.color,} flex items-center justify-center`}>,
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${currentFeatureData.color} flex items-center justify-center`}>,
                         <currentFeatureData.icon className="w-6 h-6 text-white" />,
                       </div>,
                       <div>,
@@ -134,7 +134,7 @@ const RevolutionaryContentBanner2028 = () => {,
                     </div>,
                     <div className="text-center lg: text-left">,
                       <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 rounded-full text-sm font-semibold">,
-                        {currentFeatureData.stats,}
+                        {currentFeatureData.stats}
                       </span>,
                     </div>,
                   </div>,
@@ -157,7 +157,7 @@ const RevolutionaryContentBanner2028 = () => {,
                   </div>,
                 </div>,
               </div>,
-              {/* Right side - Visual elements */,}
+              {/* Right side - Visual elements */}
               <div className="flex-shrink-0">,
                 <div className="relative w-80 h-80">,
                   {/* Rotating rings */}
@@ -174,8 +174,8 @@ const RevolutionaryContentBanner2028 = () => {,
                   <div className="absolute inset-0 flex items-center justify-center">,
                     <div,
                       className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentFeatureData.color} flex items-center justify-center shadow-2xl`}
-                        scale: [1.1];
-                        rotate: [05-50],}}
+                        scale: [1.1],
+                        rotate: [05-50]}}
                     >,
                       <currentFeatureData.icon className="w-12 h-12 text-white" />,
                     </div>,
@@ -187,14 +187,14 @@ const RevolutionaryContentBanner2028 = () => {,
                       className={`absolute w-4 h-4 rounded-full ${,
                         index === currentFeature,
                           ? 'bg-white shadow-lg',
-                          : 'bg-white/40',
+                          : 'bg-white/40'
                       }`}
                       style={{,
-                        left: `${50 + 40 * Math.cos((index * 90 - 90) * Math.PI / 180),}%`;
-                        top: `${50 + 40 * Math.sin((index * 90 - 90) * Math.PI / 180),}%`;
-                        transform: 'translate(-50%)',}}
-                        scale: index === currentFeature ? [1.21] : 1;
-                        opacity: index === currentFeature ? [0.810.8] : 0.4,}}
+                        left: `${50 + 40 * Math.cos((index * 90 - 90) * Math.PI / 180)}%`,
+                        top: `${50 + 40 * Math.sin((index * 90 - 90) * Math.PI / 180)}%`,
+                        transform: 'translate(-50%)'}}
+                        scale: index === currentFeature ? [1.21] : 1,
+                        opacity: index === currentFeature ? [0.810.8] : 0.4}}
                     />,
                   ))}
                   {/* Floating elements */}
@@ -203,15 +203,15 @@ const RevolutionaryContentBanner2028 = () => {,
                       key={i}
                       className="absolute w-2 h-2 bg-white/60 rounded-full",
                       style={{,
-                        left: `${30 + (i * 10),}%`;
-                        top: `${30 + (i * 8),}%`,
+                        left: `${30 + (i * 10)}%`,
+                        top: `${30 + (i * 8)}%`
                       }}
-                        y: [0-150];
-                        opacity: [0.610.6];
-                        scale: [1.21],}}
-                        duration: 2 + i * 0.3;
-                        repeat: Infinity;
-                        delay: i * 0.4,}}
+                        y: [0-150],
+                        opacity: [0.610.6],
+                        scale: [1.21]}}
+                        duration: 2 + i * 0.3,
+                        repeat: Infinity,
+                        delay: i * 0.4}}
                     />,
                   ))}
                 </div>,
@@ -226,7 +226,7 @@ const RevolutionaryContentBanner2028 = () => {,
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${,
                     index === currentFeature,
                       ? 'bg-white w-8',
-                      : 'bg-white/40 hover: bg-white/60',}`}
+                      : 'bg-white/40 hover: bg-white/60'}`}
                 />,
               ))}
             </div>,
@@ -239,9 +239,9 @@ const RevolutionaryContentBanner2028 = () => {,
             </button>,
           </div>,
         </div>,
-      ),}
+      )}
     </div>,
-  );
-};
-export default AI2025RevolutionaryContentBanner;
+  ),
+},
+export default AI2025RevolutionaryContentBanner,
 </div></div></div></div></div></div></div></div>,

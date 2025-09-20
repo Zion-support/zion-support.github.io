@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
-import { NextSeo } from '@/components/NextSeo';
+import React, { useEffect, useState } from 'react',
+import { Header } from '@/components/Header',
+import { NextSeo } from '@/components/NextSeo',
 import { Globe, MapPin } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',
 
 interface Instance {
-  id: number;
-  name: string;
-  lat: number;
-  lng: number;
-  talent: number;
-  governance: 'admin' | 'hybrid' | 'vote';
-  votesPassed: number;
-  votesPending: number;
-  region: string;
+  id: number,
+  name: string,
+  lat: number,
+  lng: number,
+  talent: number,
+  governance: 'admin' | 'hybrid' | 'vote',
+  votesPassed: number,
+  votesPending: number,
+  region: string
 }
 
 const INSTANCES: Instance[] = [
@@ -26,7 +26,7 @@ const INSTANCES: Instance[] = [
     governance: 'hybrid',
     votesPassed: 5,
     votesPending: 1,
-    region: 'Latin America',
+    region: 'Latin America'
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const INSTANCES: Instance[] = [
     governance: 'admin',
     votesPassed: 8,
     votesPending: 2,
-    region: 'North America',
+    region: 'North America'
   },
   {
     id: 3,
@@ -48,41 +48,40 @@ const INSTANCES: Instance[] = [
     governance: 'vote',
     votesPassed: 12,
     votesPending: 3,
-    region: 'Europe',
-  },
-];
+    region: 'Europe'
+  }
+],
 
 interface FeedItem {
-  id: number;
-  text: string;
+  id: number,
+  text: string
 }
 
 export default function GlobalMapPage() {
-  const [feed, setFeed] = useState<FeedItem[]>([]);
+  const [feed, setFeed] = useState<FeedItem[]>([]),
 
   useEffect(() => {
     const interval = setInterval(() => {
       const messages = [
-        'ZionGPT upgraded to v1.7 in Egypt',
-        'Proposal #121 passed in Zion DevOps',
-        'New franchise deployed: Zion Indonesia',
-      ];
-      const id = Date.now();
-      const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress';
-      setFeed((f) => [{ id, text }, ...f].slice(0, 5));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+        'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOps',
+        'New franchise deployed: Zion Indonesia'
+      ],
+      const id = Date.now(),
+      const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',
+      setFeed((f) => [{ id, text }, ...f].slice(0, 5)),
+    }, 5000),
+    return () => clearInterval(interval),
+  }, []),
 
-  const width = 800;
-  const height = 400;
+  const width = 800,
+  const height = 400,
   function project(lat: number, lng: number) {
-    const x = ((lng + 180) / 360) * width;
-    const y = ((90 - lat) / 180) * height;
-    return { x, y };
+    const x = ((lng + 180) / 360) * width,
+    const y = ((90 - lat) / 180) * height,
+    return { x, y },
   }
 
-  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5);
+  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
 
   return (
     <div className="min-h-screen bg-background">
@@ -94,8 +93,8 @@ export default function GlobalMapPage() {
           <div className="relative" style={{ width, height }}>
             <Globe className="w-full h-full text-secondary" />
             {INSTANCES.map((i) => {
-              const { x, y } = project(i.lat, i.lng);
-              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500';
+              const { x, y } = project(i.lat, i.lng),
+              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>
@@ -118,7 +117,7 @@ export default function GlobalMapPage() {
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
-              );
+              ),
             })}
           </div>
           <div className="flex-1 space-y-6">
@@ -145,6 +144,6 @@ export default function GlobalMapPage() {
         </div>
       </main>
     </div>
-  );
+  ),
 }
 

@@ -1,223 +1,211 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react',
 import {,
-  FaRocket;
-  FaBrain;
-  FaCloud;
-  FaShieldAlt;
-  FaChartLine;
-  FaCogs;
-  FaLightbulb;
-  FaGlobe;
-  FaMobile;
-  FaDatabase;
-  FaNetworkWired;
-  FaRobot;
-  FaSearch,
-} from 'react-icons/fa';
-  SiNextdotjs;
-  SiReact;
-  SiTypescript;
-  SiTailwindcss;
-  SiPrisma;
-  SiSupabase;
-  SiVercel;
-  SiDocker;
-  SiKubernetes;
-  SiAws;
-  SiGooglecloud;
-  SiMicrosoftazure,
-} from 'react-icons/si';
+  FaRocket,
+  FaBrain,
+  FaCloud,
+  FaShieldAlt,
+  FaChartLine,
+  FaCogs,
+  FaLightbulb,
+  FaGlobe,
+  FaMobile,
+  FaDatabase,
+  FaNetworkWired,
+  FaRobot,
+  FaSearch
+} from 'react-icons/fa',
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrisma,
+  SiSupabase,
+  SiVercel,
+  SiDocker,
+  SiKubernetes,
+  SiAws,
+  SiGooglecloud,
+  SiMicrosoftazure
+} from 'react-icons/si',
 interface Service {,
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  category: string;
-  features: string[];
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  category: string,
+  features: string[],
   pricing: {,
-    starter: number;
-    professional: number;
-    enterprise: number,};
-  technologies: string[];
-  benefits: string[],}
+    starter: number,
+    professional: number,
+    enterprise: number},
+  technologies: string[],
+  benefits: string[]}
 ,
 interface ServiceCategory {,
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string,}
+  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string}
 ,
 const serviceCategories: ServiceCategory[] = [,
   {,
-    id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    description: 'Cutting-edge artificial intelligence and machine learning solutions';
-    icon: <FaBrain className="w-8 h-8" />;
-    color: 'from-purple-500 to-pink-500',};
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    description: 'Cutting-edge artificial intelligence and machine learning solutions',
+    icon: <FaBrain className="w-8 h-8" />,
+    color: 'from-purple-500 to-pink-500'},
   {,
-    id: 'cloud';
-    name: 'Cloud & DevOps';
-    description: 'Scalable cloud infrastructure and development operations';
-    icon: <FaCloud className="w-8 h-8" />;
-    color: 'from-blue-500 to-cyan-500',};
+    id: 'cloud',
+    name: 'Cloud & DevOps',
+    description: 'Scalable cloud infrastructure and development operations',
+    icon: <FaCloud className="w-8 h-8" />,
+    color: 'from-blue-500 to-cyan-500'},
   {,
-    id: 'security';
-    name: 'Cybersecurity';
-    description: 'Advanced security solutions for modern threats';
-    icon: <FaShieldAlt className="w-8 h-8" />;
-    color: 'from-red-500 to-orange-500',};
+    id: 'security',
+    name: 'Cybersecurity',
+    description: 'Advanced security solutions for modern threats',
+    icon: <FaShieldAlt className="w-8 h-8" />,
+    color: 'from-red-500 to-orange-500'},
   {,
-    id: 'data';
-    name: 'Data & Analytics';
-    description: 'Comprehensive data management and analytics platforms';
-    icon: <FaDatabase className="w-8 h-8" />;
-    color: 'from-green-500 to-emerald-500',};
+    id: 'data',
+    name: 'Data & Analytics',
+    description: 'Comprehensive data management and analytics platforms',
+    icon: <FaDatabase className="w-8 h-8" />,
+    color: 'from-green-500 to-emerald-500'},
   {,
-    id: 'iot';
-    name: 'IoT & Edge Computing';
-    description: 'Internet of Things and edge computing solutions';
-    icon: <FaNetworkWired className="w-8 h-8" />;
-    color: 'from-indigo-500 to-purple-500',};
+    id: 'iot',
+    name: 'IoT & Edge Computing',
+    description: 'Internet of Things and edge computing solutions',
+    icon: <FaNetworkWired className="w-8 h-8" />,
+    color: 'from-indigo-500 to-purple-500'},
   {,
-    id: 'automation';
-    name: 'Process Automation';
-    description: 'Intelligent automation for business processes';
-    icon: <FaRobot className="w-8 h-8" />;
-    color: 'from-yellow-500 to-orange-500',}
-];
+    id: 'automation',
+    name: 'Process Automation',
+    description: 'Intelligent automation for business processes',
+    icon: <FaRobot className="w-8 h-8" />,
+    color: 'from-yellow-500 to-orange-500'}
+],
 const services: Service[] = [,
   {,
-    id: 'ai-automation-suite';
-    title: 'AI-Powered Automation Suite';
-    description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization';
-    icon: <FaRobot className="w-6 h-6" />;
-    category: 'automation';
+    id: 'ai-automation-suite',
+    title: 'AI-Powered Automation Suite',
+    description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
+    icon: <FaRobot className="w-6 h-6" />,
+    category: 'automation',
     features: [,
-      'Intelligent workflow automationNatural language processing';
-      'Predictive analyticsReal-time decision making';
-      'Custom AI model trainingMulti-platform integration',
-    ];
-    pricing: {,
-      starter: 299;
-      professional: 799;
-      enterprise: 1999,};
-    technologies: ['TensorFlowPyTorch', 'OpenAILangChain', 'ReactNode.js'];
-    benefits: [,
-      'Reduce manual tasks by 80%Improve accuracy by 95%';
-      '24/7 automated operationsScalable AI infrastructure',
+      'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision making',
+      'Custom AI model trainingMulti-platform integration'
     ],
-  };
+    pricing: {,
+      starter: 299,
+      professional: 799,
+      enterprise: 1999},
+    technologies: ['TensorFlowPyTorchOpenAILangChain', 'ReactNode.js'],
+    benefits: [,
+      'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure'
+    ]
+  },
   {,
-    id: 'quantum-computing-platform';
-    title: 'Quantum Computing Platform';
-    description: 'Next-generation quantum computing solutions for complex problem solving';
-    icon: <FaBrain className="w-6 h-6" />;
-    category: 'ai-ml';
+    id: 'quantum-computing-platform',
+    title: 'Quantum Computing Platform',
+    description: 'Next-generation quantum computing solutions for complex problem solving',
+    icon: <FaBrain className="w-6 h-6" />,
+    category: 'ai-ml',
     features: [,
-      'Quantum algorithm optimizationHybrid classical-quantum computing';
-      'Quantum machine learningCryptographic solutions';
-      'Quantum simulation toolsAPI access to quantum hardware',
-    ];
-    pricing: {,
-      starter: 999;
-      professional: 2499;
-      enterprise: 4999,};
-    technologies: ['QiskitCirq', 'PennyLanePython', 'C++CUDA'];
-    benefits: [,
-      'Solve previously impossible problemsExponential speed improvements';
-      'Future-proof technologyResearch and development support',
+      'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutions',
+      'Quantum simulation toolsAPI access to quantum hardware'
     ],
-  };
+    pricing: {,
+      starter: 999,
+      professional: 2499,
+      enterprise: 4999},
+    technologies: ['QiskitCirqPennyLanePython', 'C++CUDA'],
+    benefits: [,
+      'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support'
+    ]
+  },
   {,
-    id: 'edge-ai-platform';
-    title: 'Edge AI Computing Platform';
-    description: 'Distributed artificial intelligence at the edge for real-time processing';
-    icon: <FaNetworkWired className="w-6 h-6" />;
-    category: 'iot';
+    id: 'edge-ai-platform',
+    title: 'Edge AI Computing Platform',
+    description: 'Distributed artificial intelligence at the edge for real-time processing',
+    icon: <FaNetworkWired className="w-6 h-6" />,
+    category: 'iot',
     features: [,
-      'Edge device optimizationReal-time AI inference';
-      'Distributed learningLow-latency processing';
-      'Offline AI capabilitiesEdge-to-cloud synchronization',
-    ];
-    pricing: {,
-      starter: 199;
-      professional: 599;
-      enterprise: 1499,};
-    technologies: ['TensorFlow LiteONNX Runtime', 'Edge TPURaspberry Pi', 'Arduino'];
-    benefits: [,
-      'Reduced latency by 90%Lower bandwidth costs';
-      'Enhanced privacyScalable edge deployment',
+      'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processing',
+      'Offline AI capabilitiesEdge-to-cloud synchronization'
     ],
-  };
+    pricing: {,
+      starter: 199,
+      professional: 599,
+      enterprise: 1499},
+    technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry Pi', 'Arduino'],
+    benefits: [,
+      'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment'
+    ]
+  },
   {,
-    id: 'quantum-cybersecurity';
-    title: 'Quantum Cybersecurity Suite';
-    description: 'Advanced security solutions leveraging quantum-resistant cryptography';
-    icon: <FaShieldAlt className="w-6 h-6" />;
-    category: 'security';
+    id: 'quantum-cybersecurity',
+    title: 'Quantum Cybersecurity Suite',
+    description: 'Advanced security solutions leveraging quantum-resistant cryptography',
+    icon: <FaShieldAlt className="w-6 h-6" />,
+    category: 'security',
     features: [,
-      'Post-quantum cryptographyQuantum key distribution';
-      'Advanced threat detectionZero-trust architecture';
-      'Compliance frameworksReal-time monitoring',
-    ];
-    pricing: {,
-      starter: 399;
-      professional: 999;
-      enterprise: 2499,};
-    technologies: ['NIST PQCQKD protocols', 'Zero TrustSIEM', 'SOAR'];
-    benefits: [,
-      'Future-proof securityQuantum-resistant encryption';
-      'Comprehensive complianceAdvanced threat protection',
+      'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architecture',
+      'Compliance frameworksReal-time monitoring'
     ],
-  };
+    pricing: {,
+      starter: 399,
+      professional: 999,
+      enterprise: 2499},
+    technologies: ['NIST PQCQKD protocolsZero TrustSIEM', 'SOAR'],
+    benefits: [,
+      'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection'
+    ]
+  },
   {,
-    id: 'data-fabric-platform';
-    title: 'Intelligent Data Fabric Platform';
-    description: 'Unified data management and analytics across all sources and formats';
-    icon: <FaDatabase className="w-6 h-6" />;
-    category: 'data';
+    id: 'data-fabric-platform',
+    title: 'Intelligent Data Fabric Platform',
+    description: 'Unified data management and analytics across all sources and formats',
+    icon: <FaDatabase className="w-6 h-6" />,
+    category: 'data',
     features: [,
-      'Unified data accessReal-time analytics';
-      'Data governanceAI-powered insights';
-      'Multi-cloud supportData lineage tracking',
-    ];
-    pricing: {,
-      starter: 299;
-      professional: 799;
-      enterprise: 1999,};
-    technologies: ['Apache KafkaApache Spark', 'SnowflakeDatabricks', 'Airflow'];
-    benefits: [,
-      'Unified data viewReal-time insights';
-      'Improved data qualityReduced integration costs',
+      'Unified data accessReal-time analyticsData governanceAI-powered insights',
+      'Multi-cloud supportData lineage tracking'
     ],
-  };
+    pricing: {,
+      starter: 299,
+      professional: 799,
+      enterprise: 1999},
+    technologies: ['Apache KafkaApache SparkSnowflakeDatabricks', 'Airflow'],
+    benefits: [,
+      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
+    ]
+  },
   {,
-    id: 'cloud-native-platform';
-    title: 'Cloud-Native Development Platform';
-    description: 'Modern cloud-native development and deployment platform';
-    icon: <FaCloud className="w-6 h-6" />;
-    category: 'cloud';
+    id: 'cloud-native-platform',
+    title: 'Cloud-Native Development Platform',
+    description: 'Modern cloud-native development and deployment platform',
+    icon: <FaCloud className="w-6 h-6" />,
+    category: 'cloud',
     features: [,
-      'Kubernetes orchestrationMicroservices architecture';
-      'CI/CD pipelinesAuto-scaling';
-      'Multi-cloud deploymentDevOps automation',
-    ];
-    pricing: {,
-      starter: 199;
-      professional: 599;
-      enterprise: 1499,};
-    technologies: ['KubernetesDocker', 'HelmArgoCD', 'PrometheusGrafana'];
-    benefits: [,
-      'Faster deploymentImproved scalability';
-      'Better resource utilizationEnhanced reliability',
+      'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scaling',
+      'Multi-cloud deploymentDevOps automation'
     ],
+    pricing: {,
+      starter: 199,
+      professional: 599,
+      enterprise: 1499},
+    technologies: ['KubernetesDockerHelmArgoCD', 'PrometheusGrafana'],
+    benefits: [,
+      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
+    ]
   }
-];
+],
 const EnhancedServicesShowcase2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
-      {/* Header */,}
+      {/* Header */}
       <div className="container mx-auto px-4 py-16">,
         <div,
           className="text-center mb-16",
@@ -246,7 +234,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
               <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />,
             </div>,
             <select,
-              value={sortBy,}
+              value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500",
             >,
@@ -256,7 +244,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
             </select>,
           </div>,
         </div>,
-        {/* Category Tabs */,}
+        {/* Category Tabs */}
         <div,
           className="mb-12",
         >,
@@ -266,7 +254,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${,
                 selectedCategory === 'all',
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg',
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover: bg-white/20',}`}
+                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover: bg-white/20'}`}
             >,
               All Services,
             </button>,
@@ -277,7 +265,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${,
                   selectedCategory === category.id,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover: bg-white/20',}`}
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover: bg-white/20'}`}
               >,
                 {category.icon}
                 {category.name}
@@ -293,7 +281,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
             <div,
               key={service.id}
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover: bg-white/20 transition-all duration-300",
-              onClick={() => handleServiceSelect(service),}
+              onClick={() => handleServiceSelect(service)}
             >,
               <div className="flex items-center gap-3 mb-4">,
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">,
@@ -312,13 +300,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
                     className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300",
                   >,
                     {tech}
-                  </span>,
-                ))}
+                  </span>))}
                 {service.technologies.length > 3 && (,
                   <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">,
                     +{service.technologies.length - 3} more,
-                  </span>,
-                )}
+                  </span>)}
               </div>,
               <div className="flex items-center justify-between">,
                 <div className="text-2xl font-bold text-blue-400">,
@@ -330,7 +316,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
                 </button>,
               </div>,
             </div>,
-          )),}
+          ))}
         </div>,
         {/* No Results */}
         {filteredServices.length === 0 && (,
@@ -340,8 +326,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
             <div className="text-6xl mb-4">🔍</div>,
             <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>,
             <p className="text-gray-400">Try adjusting your search terms or category filters</p>,
-          </div>,
-        )}
+          </div>)}
       </div>,
       {/* Service Detail Modal */}
       <div>,
@@ -371,9 +356,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
                   <span className="text-2xl">×</span>,
                 </button>,
               </div>,
-              <p className="text-gray-300 text-lg mb-8">{selectedService.description,}</p>,
+              <p className="text-gray-300 text-lg mb-8">{selectedService.description}</p>,
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-                {/* Features */,}
+                {/* Features */}
                 <div>,
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>,
                   <ul className="space-y-2">,
@@ -381,8 +366,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
                       <li key={index} className="flex items-center gap-2 text-gray-300">,
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>,
                         {feature}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
                 {/* Benefits */}
@@ -393,8 +377,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
                       <li key={index} className="flex items-center gap-2 text-gray-300">,
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>,
                         {benefit}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
               </div>,
@@ -408,8 +391,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
                       className="px-3 py-2 bg-white/10 rounded-lg text-gray-300",
                     >,
                       {tech}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
               </div>,
               {/* Pricing */}
@@ -429,8 +411,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
                       <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300">,
                         Get Started,
                       </button>,
-                    </div>,
-                  )),}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
@@ -438,6 +419,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {,
         )}
       </div>,
     </div>,
-  );
-};
-export default EnhancedServicesShowcase2025;
+  ),
+},
+export default EnhancedServicesShowcase2025,

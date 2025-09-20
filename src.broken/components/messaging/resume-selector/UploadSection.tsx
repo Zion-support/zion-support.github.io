@@ -1,11 +1,11 @@
 
-import React from 'react';
-import { Button } from "@/components/ui/button";
+import React from 'react',
+import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react'
 
 interface UploadSectionProps {
-  customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  customFile: File | null,
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
@@ -39,5 +39,5 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </div>
       )}
     </div>
-  );
+  ),
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function AIPage() {
   return (
@@ -121,7 +121,7 @@ export default function AIPage() {
                 <p className="text-white/70 mb-4">
                   Our AI systems continuously generate and optimize content, ensuring your platform stays fresh and engaging.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mt-6">
                   <div className="text-center">
                     <div className="text-2xl mb-2">📝</div>
                     <div className="text-sm text-white/60">Content Generation</div>
@@ -202,5 +202,5 @@ export default function AIPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

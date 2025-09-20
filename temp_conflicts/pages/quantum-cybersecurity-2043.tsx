@@ -1,11 +1,11 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Shield, Atom, Zap, Target, CheckCircle, ArrowRight,
   Cpu, Database, Lock, Globe, Users, Network
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const QuantumCybersecurity2043: React.FC = () => {
   const features = [
@@ -33,16 +33,13 @@ const QuantumCybersecurity2043: React.FC = () => {
       description: 'Comprehensive security framework with continuous verification',
       color: 'from-green-500 to-emerald-500'
     }
-  ];
+  ],
 
   const useCases = [
-    'Data Protection',
-    'Network Security',
-    'Identity Management',
-    'Threat Detection',
-    'Compliance & Governance',
-    'Incident Response'
-  ];
+    'Data ProtectionNetwork Security',
+    'Identity ManagementThreat Detection',
+    'Compliance & GovernanceIncident Response'
+  ],
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -182,7 +179,7 @@ const QuantumCybersecurity2043: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300 shadow-lg shadow-red-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: from-red-600 hover:to-orange-700 transition-all duration-300 shadow-lg shadow-red-500/25"
               >
                 Start Your Journey
               </motion.button>
@@ -191,7 +188,7 @@ const QuantumCybersecurity2043: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default QuantumCybersecurity2043;
+export default QuantumCybersecurity2043,

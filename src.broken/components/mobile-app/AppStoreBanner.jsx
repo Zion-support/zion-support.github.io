@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { Download, Star, Users, Award export const AppStoreBanner = () => {
   const appStores = [{
 
@@ -18,13 +18,13 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
       downloadUrl: '#',
       badge: 'Top Rated'
 
-  ];
+  ],
 
   const features = ['
     { icon: Star, text: '4.8/5 Rating', color: 'text-yellow-400' },
     { icon: Users, text: '10K+ Downloads', color: 'text-blue-400' },
     { icon: Award, text: 'Editor\'s Choice', color: 'text-green-400' }
-  ];
+  ],
 
   return ()
     <section className="py-20 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">"
@@ -103,14 +103,14 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                       </span>
                       <a
                         href={store.downloadUrl}"
-                        className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+                        className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300"
 "
                         <Download className="w-4 h-4 mr-2" />
                         Download
                       </a>
                     </div>
                   </div>
-                </div>;
+                </div>,
               ))}
             </div>
 
@@ -147,7 +147,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
             </h3>"
             <p className="text-gray-300 mb-6">
               Our support team is here to help you get started and make the most of Zion mobile.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a"
                 href="#support"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
@@ -162,8 +162,8 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
               </a>
             </div>
           </div>
-        </div>;
+        </div>,
       </div>
     </section>
-  )};
+  )},
 '"`

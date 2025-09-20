@@ -1,41 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import {,
-  Mail;
-  Send;
-  CheckCircle;
-  Star;
-  Sparkles;
-  ArrowRight;
-  Bell;
-  Zap,
-} from 'lucide-react';
+  Mail,
+  Send,
+  CheckCircle,
+  Star,
+  Sparkles,
+  ArrowRight,
+  Bell,
+  Zap
+} from 'lucide-react',
 const NewsletterSignup2025: React.FC = () => {,
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState(''),
+  const [isSubscribed, setIsSubscribed] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
   const handleSubmit = async (e: React.FormEvent) => {,
-    e.preventDefault();
-    setIsLoading(true);
+    e.preventDefault(),
+    setIsLoading(true),
     // Simulate API call,
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail('');
-  };
+    await new Promise(resolve => setTimeout(resolve, 2000)),
+    setIsSubscribed(true),
+    setIsLoading(false),
+    setEmail(''),
+  },
   const benefits = [,
     {,
-      icon: <Zap className="w-6 h-6 text-yellow-400" />;
-      title: "Exclusive Tech Updates";
-      description: "Get first access to revolutionary technology announcements",};
+      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      title: "Exclusive Tech Updates",
+      description: "Get first access to revolutionary technology announcements"},
     {,
-      icon: <Star className="w-6 h-6 text-purple-400" />;
-      title: "Early Access Demos";
-      description: "Be among the first to experience new AI and quantum technologies",};
+      icon: <Star className="w-6 h-6 text-purple-400" />,
+      title: "Early Access Demos",
+      description: "Be among the first to experience new AI and quantum technologies"},
     {,
-      icon: <Bell className="w-6 h-6 text-blue-400" />;
-      title: "Weekly Insights";
-      description: "Deep dives into the latest breakthroughs in consciousness and quantum computing",}
-  ];
+      icon: <Bell className="w-6 h-6 text-blue-400" />,
+      title: "Weekly Insights",
+      description: "Deep dives into the latest breakthroughs in consciousness and quantum computing"}
+  ],
   if (isSubscribed) {,
     return (,
       <div className="bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">,
@@ -72,8 +72,7 @@ const NewsletterSignup2025: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-      </div>,
-    );
+      </div>),
   }
   return (,
     <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">,
@@ -92,13 +91,13 @@ const NewsletterSignup2025: React.FC = () => {,
             🚀 Stay Ahead of the Future,
           </h2>,
           <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">,
-            Get exclusive access to the latest revolutionary technologies;
+            Get exclusive access to the latest revolutionary technologies,
             early demos, and insider insights from the cutting edge of AI consciousness,
             and quantum computing.,
           </p>,
         </div>,
         <div className="grid lg: grid-cols-2 gap-12 items-center">,
-          {/* Benefits */,}
+          {/* Benefits */}
           <div,
           >,
             <h3 className="text-3xl font-bold mb-8">Why Join Our Community?</h3>,
@@ -115,8 +114,7 @@ const NewsletterSignup2025: React.FC = () => {,
                     <h4 className="text-xl font-bold text-white mb-2">{benefit.title}</h4>,
                     <p className="text-gray-300">{benefit.description}</p>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           {/* Signup Form */}
@@ -146,21 +144,19 @@ const NewsletterSignup2025: React.FC = () => {,
               </div>,
               <button,
                 type="submit",
-                disabled={isLoading,}
+                disabled={isLoading}
                 className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-6 rounded-lg font-bold text-lg hover: shadow-2xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2",
               >,
                 {isLoading ? (,
                   <>,
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>,
                     <span>Joining...</span>,
-                  </>,
-                ) : (,
+                  </>) : (,
                   <>,
                     <Send className="w-5 h-5" />,
                     <span>Join the Revolution</span>,
                     <ArrowRight className="w-5 h-5" />,
-                  </>,
-                ),}
+                  </>)}
               </button>,
             </form>,
             <p className="text-sm text-gray-400 mt-4 text-center">,
@@ -192,6 +188,6 @@ const NewsletterSignup2025: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default NewsletterSignup2025;
+  ),
+export default NewsletterSignup2025,
 }

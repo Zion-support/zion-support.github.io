@@ -1,6 +1,6 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { useTheme } from "@/context/ThemeContext";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { useTheme } from "@/context/ThemeContext",
 export default function ThemeToggle(): JSX.Element {,
   return (,
     <Button,
@@ -10,12 +10,10 @@ export default function ThemeToggle(): JSX.Element {,
       size="icon",
     >,
       {mode === "dark" ? (,
-        <Sun className="h-5 w-5" />,
-      ) : (,
-        <Moon className="h-5 w-5" />,
-      )}
+        <Sun className="h-5 w-5" />) : (,
+        <Moon className="h-5 w-5" />)}
       <span className="sr-only">Toggle theme</span>,
     </Button>,
-  );
+  ),
 }
 ,

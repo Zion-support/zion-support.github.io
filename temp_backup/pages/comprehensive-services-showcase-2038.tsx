@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List, Brain, Atom, Shield, Rocket,
   ArrowRight, Check, Globe, Cpu, Cloud, Users, Target
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new innovative services
-import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
-import { innovative2038ITServices } from '../data/innovative-2038-it-services';
-import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
+import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services',
+import { innovative2038ITServices } from '../data/innovative-2038-it-services',
+import { innovative2038AIServices } from '../data/innovative-2038-ai-services',
 
 // Import existing services for comprehensive coverage
-import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services';
-import { innovative2037ITServices } from '../data/innovative-2037-it-services';
-import { innovative2037AIServices } from '../data/innovative-2037-ai-services';
+import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services',
+import { innovative2037ITServices } from '../data/innovative-2037-it-services',
+import { innovative2037AIServices } from '../data/innovative-2037-ai-services',
 
 
 
 // Helper function to get service pricing
 const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  return 'Contact for pricing';
-};
+  if (service.pricing?.starter) return service.pricing.starter,
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
+  if (service.price?.monthly) return `$${service.price.monthly}/month`,
+  return 'Contact for pricing',
+},
 
 // Helper function to get service features
 const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};
+  if (service.features) return service.features,
+  if (service.keyFeatures) return service.keyFeatures,
+  return []
+},
 
 // Helper function to get service description
 const getServiceDescription = (service: any) => {
-  if (service.description) return service.description;
-  if (service.tagline) return service.tagline;
-  return 'No description available';
-};
+  if (service.description) return service.description,
+  if (service.tagline) return service.tagline,
+  return 'No description available'
+},
 
 // Create unified services array
 const allServices = [
@@ -48,7 +48,7 @@ const allServices = [
   ...innovative2037MicroSaasServices,
   ...innovative2037ITServices,
   ...innovative2037AIServices
-];
+],
 
 const categories = [
   {
@@ -107,13 +107,13 @@ const categories = [
     color: 'from-blue-500 to-indigo-500',
     description: 'Cloud computing and infrastructure'
   }
-];
+],
 
 const ComprehensiveServicesShowcase2038: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'market'>('name');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'market'>('name'),
 
 
   // Filter and sort services
@@ -121,28 +121,27 @@ const ComprehensiveServicesShowcase2038: React.FC = () => {
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+                           service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),
       const matchesCategory = selectedCategory === 'all' || 
                              (service as any).type === selectedCategory || 
-                             service.category?.toLowerCase().includes(selectedCategory);
-      return matchesSearch && matchesCategory;
+                             service.category?.toLowerCase().includes(selectedCategory),
+      return matchesSearch && matchesCategory,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price': {
-          const priceA = parseFloat(a.pricing?.starter?.replace(/[^0-9.]/g, '') || '0');
-          const priceB = parseFloat(b.pricing?.starter?.replace(/[^0-9.]/g, '') || '0');
-          return priceA - priceB;
+          const priceA = parseFloat(a.pricing?.starter?.replace(/[^0-9.]/g, '') || '0'),
+          const priceB = parseFloat(b.pricing?.starter?.replace(/[^0-9.]/g, '') || '0'),
+          return priceA - priceB,
         }
         case 'market': {
-          const marketA = parseFloat((a as any).marketSize?.replace(/[^0-9.]/g, '') || '0');
-          const marketB = parseFloat((b as any).marketSize?.replace(/[^0-9.]/g, '') || '0');
-          return marketB - marketA;
+          const marketA = parseFloat((a as any).marketSize?.replace(/[^0-9.]/g, '') || '0'),
+          const marketB = parseFloat((b as any).marketSize?.replace(/[^0-9.]/g, '') || '0'),
+          return marketB - marketA,
         }
-        default:
-          return a.name.localeCompare(b.name);
+        default: return a.name.localeCompare(b.name)
       }
-    });
+    }),
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -150,9 +149,9 @@ const ComprehensiveServicesShowcase2038: React.FC = () => {
         title="Comprehensive Services Showcase 2038 - Zion Tech Group"
         description="Explore our revolutionary 2038 services portfolio featuring cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions."
         keywords={[
-          '2038 services', 'AI services', 'quantum computing', 'space technology', 
-          'micro SAAS', 'IT services', 'Zion Tech Group', 'artificial intelligence',
-          'machine learning', 'enterprise solutions', 'technology consulting'
+          '2038 servicesAI services', 'quantum computingspace technology', 
+          'micro SAASIT services', 'Zion Tech Groupartificial intelligence',
+          'machine learningenterprise solutions', 'technology consulting'
         ]}
       />
 
@@ -292,7 +291,7 @@ const ComprehensiveServicesShowcase2038: React.FC = () => {
               <div className="text-gray-400 text-sm">Categories</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
+              <div className="text-3xl md: text-4xl font-bold text-blue-400 mb-2">
                 $200B+
               </div>
               <div className="text-gray-400 text-sm">Market Value</div>
@@ -302,15 +301,15 @@ const ComprehensiveServicesShowcase2038: React.FC = () => {
                 99.9%
               </div>
               <div className="text-gray-400 text-sm">Success Rate</div>
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Star, CheckCircle, TrendingUp, Users, 
   Globe, Brain, Atom, Shield, Rocket,
   Target, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Database, Cloud, Lock
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function ComprehensiveServicesShowcase2038() {
   const contactInfo = {
@@ -318,24 +317,22 @@ export default function ComprehensiveServicesShowcase2038() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const marketStats = [
     { label: 'Total Market Size', value: '$2.5T+', description: 'Combined market value of all service categories' },
     { label: 'Annual Growth Rate', value: '45%+', description: 'Average growth across all service sectors' },
     { label: 'Active Customers', value: '50K+', description: 'Satisfied clients worldwide' },
     { label: 'Service Categories', value: '25+', description: 'Comprehensive solution coverage' }
-  ];
+  ],
 
   const serviceCategories = [
     {
       name: 'AI & Machine Learning',
       description: 'Revolutionary AI solutions that transform business operations',
       services: [
-        'AI Neural Architecture Optimizer - $199/month',
-        'AI Emotional Intelligence Coach - $89/month',
-        'AI Content Generation Studio - $149/month',
-        'Autonomous AI Systems - $399/month'
+        'AI Neural Architecture Optimizer - $199/monthAI Emotional Intelligence Coach - $89/month',
+        'AI Content Generation Studio - $149/monthAutonomous AI Systems - $399/month'
       ],
       marketSize: '$500B+',
       growthRate: '35% annually'
@@ -344,10 +341,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Quantum Computing & Technology',
       description: 'Next-generation quantum solutions for unprecedented computational power',
       services: [
-        'Quantum Edge Computing Orchestrator - $399/month',
-        'Quantum Secure Communication Hub - $299/month',
-        'Quantum Financial Trading Engine - $1,299/month',
-        'Quantum Reality Fabric - $3,999/month'
+        'Quantum Edge Computing Orchestrator - $399/monthQuantum Secure Communication Hub - $299/month',
+        'Quantum Financial Trading Engine - $1,299/monthQuantum Reality Fabric - $3,999/month'
       ],
       marketSize: '$65B+',
       growthRate: '100% annually'
@@ -356,10 +351,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Cybersecurity & Autonomous Systems',
       description: 'AI-powered autonomous security and operational systems',
       services: [
-        'Autonomous Cybersecurity Sentinel - $299/month',
-        'Autonomous Logistics Optimizer - $449/month',
-        'Autonomous Energy Grid Manager - $549/month',
-        'Autonomous Reality Architect - $4,999/month'
+        'Autonomous Cybersecurity Sentinel - $299/monthAutonomous Logistics Optimizer - $449/month',
+        'Autonomous Energy Grid Manager - $549/monthAutonomous Reality Architect - $4,999/month'
       ],
       marketSize: '$200B+',
       growthRate: '25% annually'
@@ -368,10 +361,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Metaverse & Digital Commerce',
       description: 'Complete business infrastructure for the virtual economy',
       services: [
-        'Metaverse Business Infrastructure - $599/month',
-        'Metaverse Advertising Platform - $499/month',
-        'Virtual Event Hologram Platform - $799/month',
-        'Digital Asset Marketplace - $399/month'
+        'Metaverse Business Infrastructure - $599/monthMetaverse Advertising Platform - $499/month',
+        'Virtual Event Hologram Platform - $799/monthDigital Asset Marketplace - $399/month'
       ],
       marketSize: '$800B+',
       growthRate: '40% annually'
@@ -380,10 +371,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Healthcare & Biotechnology',
       description: 'AI-powered healthcare solutions and biotech research platforms',
       services: [
-        'Biotech AI Research Platform - $799/month',
-        'AI Healthcare Analytics - $299/month',
-        'AI Mental Health Companion - $149/month',
-        'Quantum Biological Computing - $3,499/month'
+        'Biotech AI Research Platform - $799/monthAI Healthcare Analytics - $299/month',
+        'AI Mental Health Companion - $149/monthQuantum Biological Computing - $3,499/month'
       ],
       marketSize: '$150B+',
       growthRate: '45% annually'
@@ -392,10 +381,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Space Technology & Exploration',
       description: 'Advanced space solutions for the new space economy',
       services: [
-        'Space Resource Mining Platform - $899/month',
-        'Space Technology AI Platform - $599/month',
-        'Satellite Communication Hub - $399/month',
-        'Space Logistics Optimization - $699/month'
+        'Space Resource Mining Platform - $899/monthSpace Technology AI Platform - $599/month',
+        'Satellite Communication Hub - $399/monthSpace Logistics Optimization - $699/month'
       ],
       marketSize: '$469B+',
       growthRate: '60% annually'
@@ -404,10 +391,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Advertising & Marketing',
       description: 'AI-powered marketing solutions for maximum ROI',
       services: [
-        'AI Digital Marketing Suite - $299/month',
-        'Quantum SEO Optimization - $199/month',
-        'Autonomous Social Media Manager - $249/month',
-        'AI Influencer Marketing Platform - $399/month'
+        'AI Digital Marketing Suite - $299/monthQuantum SEO Optimization - $199/month',
+        'Autonomous Social Media Manager - $249/monthAI Influencer Marketing Platform - $399/month'
       ],
       marketSize: '$100B+',
       growthRate: '30% annually'
@@ -416,15 +401,13 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Consciousness & Human Augmentation',
       description: 'Revolutionary platforms for human consciousness and AI evolution',
       services: [
-        'Consciousness AI Evolution Platform - $2,499/month',
-        'Quantum AI Brain-Computer Interface - $1,599/month',
-        'Autonomous Consciousness Evolution - $6,999/month',
-        'Human Augmentation Suite - $899/month'
+        'Consciousness AI Evolution Platform - $2,499/monthQuantum AI Brain-Computer Interface - $1,599/month',
+        'Autonomous Consciousness Evolution - $6,999/monthHuman Augmentation Suite - $899/month'
       ],
       marketSize: '$75B+',
       growthRate: '150% annually'
     }
-  ];
+  ],
 
   const competitiveAdvantages = [
     {
@@ -457,7 +440,7 @@ export default function ComprehensiveServicesShowcase2038() {
       description: 'Documented success with 300%+ ROI improvements for clients',
       icon: '📈'
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -492,7 +475,7 @@ export default function ComprehensiveServicesShowcase2038() {
       rating: 5,
       service: 'AI Digital Marketing Suite'
     }
-  ];
+  ],
 
 const comprehensive-services-showcase-2038: React.FC = () => {
   return (
@@ -509,7 +492,7 @@ const comprehensive-services-showcase-2038: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default comprehensive-services-showcase-2038;
+export default comprehensive-services-showcase-2038,

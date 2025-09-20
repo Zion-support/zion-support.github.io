@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import ServiceComparison from '../components/ui/ServiceComparison';
-import Button from '../components/ui/Button';
-import { ArrowLeft, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import ServiceComparison from '../components/ui/ServiceComparison',
+import Button from '../components/ui/Button',
+import { ArrowLeft, BarChart3, TrendingUp, DollarSign } from 'lucide-react',
 
 export default function ServiceComparisonPage() {
   const microSaasServices = [
@@ -11,9 +11,9 @@ export default function ServiceComparisonPage() {
       title: 'Email Marketing Automation',
       description: 'AI-powered email marketing platform with advanced automation, personalization, and analytics.',
       pricing: {
-        starter: { price: '$89', period: '/month', features: ['Up to 10,000 emails', 'Basic automation', 'Email support'] },
-        pro: { price: '$199', period: '/month', features: ['Up to 100,000 emails', 'Advanced automation', 'Priority support'] },
-        enterprise: { price: '$399', period: '/month', features: ['Unlimited emails', 'Custom features', 'Dedicated support'] }
+        starter: { price: '$89', period: '/month', features: ['Up to 10,000 emailsBasic automation', 'Email support'] },
+        pro: { price: '$199', period: '/month', features: ['Up to 100,000 emailsAdvanced automation', 'Priority support'] },
+        enterprise: { price: '$399', period: '/month', features: ['Unlimited emailsCustom features', 'Dedicated support'] }
       },
       marketPrice: '$75-200/month',
       competitors: [
@@ -31,9 +31,9 @@ export default function ServiceComparisonPage() {
       title: 'Payment Processing & Billing',
       description: 'Secure payment gateway with subscription billing, recurring payments, and fraud detection.',
       pricing: {
-        starter: { price: '$49', period: '/month + 2.9%', features: ['Up to $50K/month', 'Basic fraud protection', 'Email support'] },
-        pro: { price: '$99', period: '/month + 2.7%', features: ['Up to $500K/month', 'Advanced fraud protection', 'Phone support'] },
-        enterprise: { price: '$199', period: '/month + 2.5%', features: ['Unlimited volume', 'Custom fraud rules', 'Dedicated support'] }
+        starter: { price: '$49', period: '/month + 2.9%', features: ['Up to $50K/monthBasic fraud protection', 'Email support'] },
+        pro: { price: '$99', period: '/month + 2.7%', features: ['Up to $500K/monthAdvanced fraud protection', 'Phone support'] },
+        enterprise: { price: '$199', period: '/month + 2.5%', features: ['Unlimited volumeCustom fraud rules', 'Dedicated support'] }
       },
       marketPrice: '$29-99/month + 2.5-3.5%',
       competitors: [
@@ -51,9 +51,9 @@ export default function ServiceComparisonPage() {
       title: 'Customer Relationship Management',
       description: 'Comprehensive CRM solution with sales automation, lead management, and customer insights.',
       pricing: {
-        starter: { price: '$25', period: '/user/month', features: ['Up to 5 users', 'Basic CRM features', 'Email support'] },
-        pro: { price: '$45', period: '/user/month', features: ['Up to 25 users', 'Advanced features', 'Phone support'] },
-        enterprise: { price: '$75', period: '/user/month', features: ['Unlimited users', 'Custom features', 'Dedicated support'] }
+        starter: { price: '$25', period: '/user/month', features: ['Up to 5 usersBasic CRM features', 'Email support'] },
+        pro: { price: '$45', period: '/user/month', features: ['Up to 25 usersAdvanced features', 'Phone support'] },
+        enterprise: { price: '$75', period: '/user/month', features: ['Unlimited usersCustom features', 'Dedicated support'] }
       },
       marketPrice: '$20-50/month/user',
       competitors: [
@@ -71,9 +71,9 @@ export default function ServiceComparisonPage() {
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile app development with modern frameworks and cloud backend.',
       pricing: {
-        starter: { price: '$5,000', period: '/project', features: ['Basic app features', 'Single platform', '3 months support'] },
-        pro: { price: '$15,000', period: '/project', features: ['Advanced features', 'Both platforms', '6 months support'] },
-        enterprise: { price: '$50,000+', period: '/project', features: ['Custom features', 'All platforms', '12 months support'] }
+        starter: { price: '$5,000', period: '/project', features: ['Basic app featuresSingle platform', '3 months support'] },
+        pro: { price: '$15,000', period: '/project', features: ['Advanced featuresBoth platforms', '6 months support'] },
+        enterprise: { price: '$50,000+', period: '/project', features: ['Custom featuresAll platforms', '12 months support'] }
       },
       marketPrice: '$3,000-15,000/project',
       competitors: [
@@ -91,9 +91,9 @@ export default function ServiceComparisonPage() {
       title: 'E-commerce Platform',
       description: 'Complete e-commerce solution with inventory management, payment processing, and analytics.',
       pricing: {
-        starter: { price: '$79', period: '/month', features: ['Up to 1,000 products', 'Basic features', 'Email support'] },
-        pro: { price: '$199', period: '/month', features: ['Up to 10,000 products', 'Advanced features', 'Phone support'] },
-        enterprise: { price: '$299', period: '/month', features: ['Unlimited products', 'Custom features', 'Dedicated support'] }
+        starter: { price: '$79', period: '/month', features: ['Up to 1,000 productsBasic features', 'Email support'] },
+        pro: { price: '$199', period: '/month', features: ['Up to 10,000 productsAdvanced features', 'Phone support'] },
+        enterprise: { price: '$299', period: '/month', features: ['Unlimited productsCustom features', 'Dedicated support'] }
       },
       marketPrice: '$29-299/month',
       competitors: [
@@ -111,9 +111,9 @@ export default function ServiceComparisonPage() {
       title: 'SEO & Content Marketing',
       description: 'Search engine optimization and content marketing services to improve online visibility.',
       pricing: {
-        starter: { price: '$299', period: '/month', features: ['Basic SEO package', 'Monthly reports', 'Email support'] },
-        pro: { price: '$599', period: '/month', features: ['Advanced SEO package', 'Weekly reports', 'Phone support'] },
-        enterprise: { price: '$999', period: '/month', features: ['Full-service package', 'Daily monitoring', 'Dedicated support'] }
+        starter: { price: '$299', period: '/month', features: ['Basic SEO packageMonthly reports', 'Email support'] },
+        pro: { price: '$599', period: '/month', features: ['Advanced SEO packageWeekly reports', 'Phone support'] },
+        enterprise: { price: '$999', period: '/month', features: ['Full-service packageDaily monitoring', 'Dedicated support'] }
       },
       marketPrice: '$200-800/month',
       competitors: [
@@ -126,7 +126,7 @@ export default function ServiceComparisonPage() {
       growthRate: '14.2%',
       targetAudience: 'Small businesses, e-commerce, service providers'
     }
-  ];
+  ],
 
   const marketOverview = [
     {
@@ -147,7 +147,7 @@ export default function ServiceComparisonPage() {
       value: '$25-$999',
       description: 'Typical monthly pricing for micro SaaS services'
     }
-  ];
+  ],
 
   return (
     <>
@@ -263,11 +263,11 @@ export default function ServiceComparisonPage() {
         <Button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           size="lg"
-          className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-2xl"
+          className="bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 shadow-2xl"
         >
           <ArrowLeft className="w-5 h-5 rotate-90" />
         </Button>
       </div>
     </>
-  );
+  )
 }

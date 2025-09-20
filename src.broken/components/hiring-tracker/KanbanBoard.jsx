@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 =======
-import { useState, useEffect } from 'react';
-import { DragDropContext } from '@hello-pangea/dnd';
-import { useJobApplications } from '@/hooks/useJobApplications';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
-import { toast } from '@/hooks/use-toast';
-import { KanbanColumn } from './KanbanColumn';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { useState, useEffect } from 'react',
+import { DragDropContext } from '@hello-pangea/dnd',
+import { useJobApplications } from '@/hooks/useJobApplications',
+import { Card, CardContent, CardHeader } from '@/components/ui/card',
+import { Skeleton } from '@/components/ui/skeleton',
+import { toast } from '@/hooks/use-toast',
+import { KanbanColumn } from './KanbanColumn',
+import { useIsMobile } from '@/hooks/use-mobile',
 ,
   {
 
@@ -29,17 +29,17 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
     id: 'rejected',
     title: 'Rejected',
-    description: 'Not moving forward'},
-];
+    description: 'Not moving forward'}
+],
 export function KanbanBoard({ jobId }) {
 
   const { applications, isLoading, updateApplicationStatus } =
-    useJobApplications(jobId);
+    useJobApplications(jobId),
   const [columns, setColumns] = useState({
 
     /* empty */
-  });
-  const isMobile = useIsMobile();
+  }),
+  const isMobile = useIsMobile(),
   // Initialize columns with applications based on their status
   useEffect(() => {
     if(applications) {
@@ -47,16 +47,16 @@ export function KanbanBoard({ jobId }) {
       // Group applications by status
       const groupedApplications = COLUMNS.reduce((acc, column) => {
 
-        acc[column.id] = applications.filter(app => app.status === column.id);
-        return acc;
-      }, {});
-      setColumns(groupedApplications);
+        acc[column.id] = applications.filter(app => app.status === column.id),
+        return acc,
+      }, {}),
+      setColumns(groupedApplications),
     }
-  }, [applications]);
+  }, [applications]),
   // Handle drag end event to update the application status
   const handleDragEnd = async result => {
 
-    const { destination, source, draggableId } = result;
+    const { destination, source, draggableId } = result,
     // If there's no destination or the item is dropped in the same place, do nothing
     if()
       !destination ||
@@ -64,39 +64,39 @@ export function KanbanBoard({ jobId }) {
         destination.index === source.index)
     ) {
 
-      return;
+      return,
     }
     // Get the application that was dragged
-    const application = applications.find(app => app.id === draggableId);
-    if(!application) return;
+    const application = applications.find(app => app.id === draggableId),
+    if(!application) return,
     // Update the application status in the database
-    const newStatus = destination.droppableId;
+    const newStatus = destination.droppableId,
     // Optimistically update the UI
-    const sourceColumn = [...columns[source.droppableId]];
-    const destColumn = [...columns[destination.droppableId]];
-    const [removed] = sourceColumn.splice(source.index, 1);
-    destColumn.splice(destination.index, 0, { ...removed, status: newStatus });
+    const sourceColumn = [...columns[source.droppableId]],
+    const destColumn = [...columns[destination.droppableId]],
+    const [removed] = sourceColumn.splice(source.index, 1),
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus }),
     setColumns({
 
       ...columns,
       [source.droppableId]: sourceColumn,
-      [destination.droppableId]: destColumn});
+      [destination.droppableId]: destColumn}),
     // Update status in the database
     try {
-      await updateApplicationStatus(draggableId, newStatus);
+      await updateApplicationStatus(draggableId, newStatus),
       toast({
 
         title: 'Status updated',
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`}),
     } catch(error) {
       // Revert the UI changes if the database update fails
       toast({
 
         title: 'Failed to update status',
         description: 'Please try again',
-        variant: 'destructive'});
+        variant: 'destructive'}),
     }
-  };
+  },
   if(isLoading) {
 
     return ()
@@ -114,7 +114,7 @@ export function KanbanBoard({ jobId }) {
           </Card>
         ))}
       </div>
-    );
+    ),
   }
   if(!applications || applications.length === 0) {
 
@@ -126,7 +126,7 @@ export function KanbanBoard({ jobId }) {
             You haven't received applications for this job yet.</p>
         </CardContent>
       </Card>
-    );
+    ),
   }
   return ()
     <DragDropContext onDragEnd={handleDragEnd}>
@@ -145,7 +145,7 @@ export function KanbanBoard({ jobId }) {
         ))}
       </div>
     </DragDropContext>
-  );
+  ),
 }
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

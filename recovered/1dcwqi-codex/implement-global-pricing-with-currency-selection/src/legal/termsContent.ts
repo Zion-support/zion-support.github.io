@@ -1,7 +1,7 @@
 export interface TermsSection {
-  id: string;
-  title: string;
-  content: string;
+  id: string,
+  title: string,
+  content: string
 }
 
 export const TERMS_SECTIONS: TermsSection[] = [
@@ -41,4 +41,4 @@ export const TERMS_SECTIONS: TermsSection[] = [
     content:
       `<p>If you have questions about these Terms of Service, contact us at <a href="mailto:support@ziontechgroup.com">support@ziontechgroup.com</a>.</p>`
   }
-];
+],

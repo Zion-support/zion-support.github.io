@@ -1,20 +1,20 @@
 
-import React from "react";
+import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { logInfo } from '@/utils/productionLogger';
+import { cn } from "@/lib/utils",
+import { logInfo } from '@/utils/productionLogger',
 
 
 interface AppStoreButtonsProps {
-  className?: string;
-  appStoreUrl?: string;
-  googlePlayUrl?: string;
-  onAppStoreClick?: () => void;
-  onGooglePlayClick?: () => void;
+  className?: string,
+  appStoreUrl?: string,
+  googlePlayUrl?: string,
+  onAppStoreClick?: () => void,
+  onGooglePlayClick?: () => void,
 }
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-  className, 
+  className,
   appStoreUrl = "#",
   googlePlayUrl = "#",
   onAppStoreClick,
@@ -22,19 +22,19 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
-      e.preventDefault();
-      logInfo("App Store download clicked");
-      onAppStoreClick?.();
+      e.preventDefault(),
+      logInfo("App Store download clicked"),
+      onAppStoreClick?.()
     }
-  };
+  },
 
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!googlePlayUrl || googlePlayUrl === "#") {
-      e.preventDefault();
-      logInfo("Google Play download clicked");
-      onGooglePlayClick?.();
+      e.preventDefault(),
+      logInfo("Google Play download clicked"),
+      onGooglePlayClick?.()
     }
-  };
+  },
 
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
@@ -63,7 +63,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       >
         <svg
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="http: //www.w3.org/2000/svg"
           className="h-8 w-8 mr-3 fill-current"
           aria-hidden="true"
           focusable="false"
@@ -79,5 +79,5 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         </div>
       </a>
     </div>
-  );
-};
+  )
+},

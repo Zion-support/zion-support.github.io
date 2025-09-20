@@ -1,7 +1,7 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'Edge AI Marketplaces';
-  description: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',};
+  title: 'Edge AI Marketplaces',
+  description: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.'},
 export default function EdgeAIMarketplacesPage() {,
   return (,
     <article className="min-h-screen bg-white">,
@@ -32,5 +32,5 @@ export default function EdgeAIMarketplacesPage() {,
         </div>,
       </main>,
     </article>,
-  ),}
+  )}
 ,

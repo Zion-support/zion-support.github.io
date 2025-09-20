@@ -1,16 +1,16 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import React from 'react',
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { Button } from '@/components/ui/button',
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
 export default function MockCheckoutPage() {
-  const router = useRouter();
-  const { mock } = router.query;
+  const router = useRouter(),
+  const { mock } = router.query,
 
   if (!mock) {
-    router.push('/checkout');
-    return <div>Redirecting...</div>;
+    router.push('/checkout'),
+    return <div>Redirecting...</div>,
   }
 
   return (
@@ -43,7 +43,7 @@ export default function MockCheckoutPage() {
 
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
-              <p>To test with real Stripe:</p>
+              <p>To test with real Stripe: </p>
               <ol className="list-decimal list-inside space-y-1 mt-2">
                 <li>Configure real Stripe test keys in environment variables</li>
                 <li>Set STRIPE_TEST_MODE=true for test environment</li>
@@ -69,5 +69,5 @@ export default function MockCheckoutPage() {
         </div>
       </div>
     </div>
-  );
+  )
 } 

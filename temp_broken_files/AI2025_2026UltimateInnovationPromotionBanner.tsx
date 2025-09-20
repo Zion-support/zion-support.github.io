@@ -1,34 +1,34 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Sparkles,
   ArrowRight,
   Brain,
   Zap,
   Cpu,
-  Star;
-  TrendingUp;
-  Award;
-  Rocket;
-  X,
-} from 'lucide-react';
+  Star,
+  TrendingUp,
+  Award,
+  Rocket,
+  X
+} from 'lucide-react',
 const AI2025_2026UltimateInnovationPromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentFeaturesetCurrentFeature] = useState(0),
   const features = [,
-    { icon: Braintext: 'Quantum-AI Fusion 'Technologycolor: 'text-purple-400' ,};
-    { icon: Zaptext: '10,000x Processing 'Speedcolor: 'text-yellow-400' ,};
-    { icon: Cputext: 'Neural Consensus 'Revolutioncolor: 'text-blue-400' ,};
-    { icon: Startext: 'Synthetic 'Consciousnesscolor: 'text-green-400' ,}
-  ];
+    { icon: Braintext: 'Quantum-AI Fusion 'Technologycolor: 'text-purple-400' },
+    { icon: Zaptext: '10,000x Processing 'Speedcolor: 'text-yellow-400' },
+    { icon: Cputext: 'Neural Consensus 'Revolutioncolor: 'text-blue-400' },
+    { icon: Startext: 'Synthetic 'Consciousnesscolor: 'text-green-400' }
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-  if (!isVisible) return null;
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
+  if (!isVisible) return null,
   return (,
     <div>,
       <div,
@@ -41,7 +41,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {,
         </div>,
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
           <div className="flex flex-col lg:flex-row items-center justify-between">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div className="flex-1 text-center lg: text-left mb-4 lg:mb-0">,
               <div className="flex items-center justify-center lg:justify-start mb-3">,
                 <div,
@@ -58,7 +58,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {,
               </h2>,
               <div className="flex items-center justify-center lg:justify-start mb-4">,
                 <div,
-                  key={currentFeature,}
+                  key={currentFeature}
                   className="flex items-center",
                 >,
                   <features[currentFeature].icon className={`w-5 h-5 ${features[currentFeature].color} mr-2`} />,
@@ -72,7 +72,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {,
                 Quantum-AI fusioneural consensusand synthetic consciousness await.,
               </p>,
             </div>,
-            {/* Right Content - CTA Buttons */,}
+            {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm: flex-row items-center gap-3">,
               <button,
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full font-bold text-sm hover:shadow-lg transition-all duration-300 flex items-center group",
@@ -88,7 +88,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {,
                 Learn More,
               </button>,
             </div>,
-            {/* Close Button */,}
+            {/* Close Button */}
             <button,
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors",
@@ -97,7 +97,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {,
             </button>,
           </div>,
         </div>,
-        {/* Animated Progress Bar */,}
+        {/* Animated Progress Bar */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-black/20">,
           <div,
             className="h-full bg-gradient-to-r from-yellow-400 to-orange-500",
@@ -105,7 +105,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default AI2025_2026UltimateInnovationPromotionBanner;
+  ),
+},
+export default AI2025_2026UltimateInnovationPromotionBanner,
 </div></div></div></div></div></div>,

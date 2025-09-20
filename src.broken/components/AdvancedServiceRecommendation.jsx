@@ -1,76 +1,76 @@
 <<<<<<< HEAD
-export default AdvancedServiceRecommendation;
-import { Badge } from './ui / badge';
+export default AdvancedServiceRecommendation,
+import { Badge } from './ui / badge',
 export default function Page() {
- from './ui/badge';
+ from './ui/badge',
 
         // Budget compatibility'
-        const servicePrice = parseInt(service.price.replace(/[^0-9]/g,));
+        const servicePrice = parseInt(service.price.replace(/[^0-9]/g)),
         if(profile.budget === 'Under $50K' && servicePrice < 50)
-            score += 20;
+            score += 20,
         else if(profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)
-            score += 20;
+            score += 20,
         else if(profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500)
-            score += 20;
+            score += 20,
         else if(profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000)
-            score += 20;
+            score += 20,
         else if(profile.budget === '$1M+' && servicePrice >= 1000)
-            score += 20;
+            score += 20,
         // Timeline compatibility'
-        const serviceDuration = parseInt(service.duration.split('-')[0]);
+        const serviceDuration = parseInt(service.duration.split('-')[0]),
         if(profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3)
-            score += 15;
+            score += 15,
         else if(profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6)
-            score += 15;
+            score += 15,
         else if(profile.timeline === 'Medium-term (6-12 months)' && serviceDuration <= 12)
-            score += 15;
+            score += 15,
         else if(profile.timeline === 'Long-term (12+ months)' && serviceDuration > 12)
-            score += 15;
+            score += 15,
         // Technology maturity alignment'
         if(profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum')
-            score += 20;
+            score += 20,
         else if(profile.technologyMaturity === 'Advanced' && ['ai',blockchain'].includes(service.category))
-            score += 20;
+            score += 20,
         else if(profile.technologyMaturity === 'Mature' && ['iot',edge-computing'].includes(service.category))
-            score += 20;
+            score += 20,
         else if(profile.technologyMaturity === 'Growing' && ['cloud-services',web-development'].includes(service.category))
-            score += 20;
+            score += 20,
         else if(profile.technologyMaturity === 'Early Adopter' && ['basic-services',consulting'].includes(service.category))
-            score += 20;
+            score += 20,
         // Goal alignment
-        const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length;
-        score += (goalMatches / profile.primaryGoals.length) * 20;
-        return Math.min(100, score) };
+        const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length,
+        score += (goalMatches / profile.primaryGoals.length) * 20,
+        return Math.min(100, score) },
     const generateRecommendations = () => {
-        setIsAnalyzing(true) ;
+        setIsAnalyzing(true) ,
         // Simulate analysis time
         setTimeout(() => {
             const recs = mockServices.map(service => {
 
-                const matchScore = calculateMatchScore(service, clientProfile);
-                let priority;
+                const matchScore = calculateMatchScore(service, clientProfile),
+                let priority,
                 if(matchScore >= 80)
-                    priority = 'High';
+                    priority = 'High',
                 else if(matchScore >= 60)
-                    priority = 'Medium';
+                    priority = 'Medium',
                 else'
-                    priority = 'Low';
-                let complexity;
+                    priority = 'Low',
+                let complexity,
                 if(service.category === 'quantum' || service.category === 'ai')
-                    complexity = 'Complex';
+                    complexity = 'Complex',
                 else if(service.category === 'blockchain' || service.category === 'iot')
-                    complexity = 'Moderate';
+                    complexity = 'Moderate',
                 else'
-                    complexity = 'Simple';
+                    complexity = 'Simple',
                 const reasoning = [`High match with ${clientProfile.industry} industry requirements`,`
                     `Budget alignment with ${clientProfile.budget} range`,`
                     `Timeline compatibility with ${clientProfile.timeline} expectations`,`
                     `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`
-                ];
+                ],
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' :'
-                    matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';
+                    matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated',
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :'
-                    complexity === 'Moderate' ? '4-8 months' : '8-12 months';
+                    complexity === 'Moderate' ? '4-8 months' : '8-12 months',
                 return {
 
                     service,
@@ -80,32 +80,32 @@ export default function Page() {
                     implementationComplexity: complexity,
                     expectedROI,
                     timeToValue
-                }}) .sort((a, b) => b.matchScore - a.matchScore) ;
-            setRecommendations(recs) ;
-            setIsAnalyzing(false) ;
-            setShowResults(true) }, 2000) };
+                }}) .sort((a, b) => b.matchScore - a.matchScore) ,
+            setRecommendations(recs) ,
+            setIsAnalyzing(false) ,
+            setShowResults(true) }, 2000) },
     const getPriorityColor = (priority) => {
 
         switch(priority) {
 
-            case 'High': return 'bg-red-100 text-red-800';
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';
-            case 'Low': return 'bg-green-100 text-green-800';
+            case 'High': return 'bg-red-100 text-red-800',
+            case 'Medium': return 'bg-yellow-100 text-yellow-800',
+            case 'Low': return 'bg-green-100 text-green-800',
             default: return 'bg-gray-100 text-gray-800'}
-    };
+    },
     const getComplexityColor = (complexity) => {
 
         switch(complexity) {
 
-            case 'Complex': return 'bg-red-100 text-red-800';
-            case 'Moderate': return 'bg-yellow-100 text-yellow-800';
-            case 'Simple': return 'bg-green-100 text-green-800';
+            case 'Complex': return 'bg-red-100 text-red-800',
+            case 'Moderate': return 'bg-yellow-100 text-yellow-800',
+            case 'Simple': return 'bg-green-100 text-green-800',
             default: return 'bg-gray-100 text-gray-800'}
-    };
+    },
     const isFormComplete = () => {
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&
             clientProfile.timeline && clientProfile.technologyMaturity &&
-            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};"
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0},"
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {
@@ -130,7 +130,7 @@ export default function Page() {
       {/* Client Profile Form */}
       <motion.div initial = {
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
   (e) => setClientProfile(prev => ({ ...prev,
   industry: e.target.value 
 
@@ -211,7 +211,7 @@ import React, { useState } from 'react';
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
   goal] 
 
-}) ) ;
+}) ) ,
                 }
                 else {
 
@@ -235,7 +235,7 @@ import React, { useState } from 'react';
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
   challenge] 
 
-}) ) ;
+}) ) ,
                 }
                 else {
 
@@ -454,7 +454,7 @@ import React, { useState } from 'react';
             </div>
           </motion.div>
         </motion.div>)}
-    </div>)};
-export default AdvancedServiceRecommendation;
+    </div>)},
+export default AdvancedServiceRecommendation,
 }}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

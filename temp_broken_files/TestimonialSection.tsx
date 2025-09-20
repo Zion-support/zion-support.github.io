@@ -1,13 +1,13 @@
-import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import React from 'react',
+import { Star, Quote } from 'lucide-react',
 const TestimonialSection: React.FC = () => {,
   return (,
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">,
       <div className="container mx-auto px-4">,
         <div,
           className="text-center mb-16",
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
         >,
           <h2 id="testimonials-heading" className="text-4xl lg: text-6xl font-bold mb-6">,
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,
@@ -23,22 +23,21 @@ const TestimonialSection: React.FC = () => {,
             <div,
               key={testimonial.id}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover: border-cyan-500/50 transition-all duration-300 group",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               {/* Quote Icon */}
               <div className="mb-6">,
                 <Quote className="w-8 h-8 text-cyan-400/60 group-hover: text-cyan-400 transition-colors duration-300" />,
               </div>,
-              {/* Rating */,}
+              {/* Rating */}
               <div className="flex items-center mb-4">,
                 {[...Array(testimonial.rating)].map((_, i) => (,
                   <Star,
                     key={i} ,
                     className="w-5 h-5 text-yellow-400 fill-current",
                     aria-hidden="true",
-                  />,
-                ))}
+                  />))}
               </div>,
               {/* Content */}
               <blockquote className="text-gray-300 mb-6 leading-relaxed italic">,
@@ -63,8 +62,8 @@ const TestimonialSection: React.FC = () => {,
         {/* CTA Section */}
         <div,
           className="text-center mt-16",
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
         >,
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">,
             <h3 className="text-2xl font-bold text-white mb-4">,
@@ -76,14 +75,14 @@ const TestimonialSection: React.FC = () => {,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button,
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-500",
-                onClick={() => window.location.href = '/contact',}
+                onClick={() => window.location.href = '/contact'}
                 aria-label="Get started with Zion Tech Group",
               >,
                 Get Started Today,
               </button>,
               <button,
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50",
-                onClick={() => window.location.href = '/services',}
+                onClick={() => window.location.href = '/services'}
                 aria-label="View all services",
               >,
                 View All Services,
@@ -93,6 +92,6 @@ const TestimonialSection: React.FC = () => {,
         </div>,
       </div>,
     </section>,
-  );
-};
-export default TestimonialSection;
+  ),
+},
+export default TestimonialSection,

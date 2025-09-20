@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 const NeuralRealityBanner: React.FC = () => {,
   return (,
     <div,
-      whileInView={{ opacity: 1, y: 0 ,}}
+      whileInView={{ opacity: 1, y: 0 }}
       className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden",
     >,
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>,
@@ -13,7 +13,7 @@ const NeuralRealityBanner: React.FC = () => {,
           <span className="text-4xl animate-pulse">🧠</span>,
         </div>,
         <p className="text-2xl opacity-95 mb-6 max-w-5xl mx-auto">,
-          Step into the future with direct brain-computer interfaces, neural reality experiences;
+          Step into the future with direct brain-computer interfaces, neural reality experiences,
           and consciousness-computing integration,
         </p>,
         <div className="grid grid-cols-1 md: grid-cols-2 gap-4 max-w-4xl mx-auto">,
@@ -39,6 +39,5 @@ const NeuralRealityBanner: React.FC = () => {,
           <span className="bg-white/20 px-3 py-1 rounded-full">🚀 Future Technology</span>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default NeuralRealityBanner;
+    </div>)},
+export default NeuralRealityBanner,

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link  } from 'react-router-dom';
-import { motion  } from 'framer-motion';
-import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe  } from 'lucide-react';
+import React, { useState } from 'react',
+import { Link  } from 'react-router-dom',
+import { motion  } from 'framer-motion',
+import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe  } from 'lucide-react',
 
-, 1000);
-  };
+, 1000),
+  },
 
   return (<div className="bg-zinc-900/30 p-6 rounded-xl border border-zinc-700/50">
       <h3 className="text-xl font-semibold text-white mb-4">Stay Updated</h3>
@@ -49,11 +49,11 @@ import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe  } from '
         </form>
       )}
     </div>
-  );
+  ),
 }
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const socialLinks = [{
       name: 'LinkedIn',
@@ -85,7 +85,7 @@ export function Footer() {
       icon: '🎮',
       color: 'hover:bg-indigo-600/20'
     }
-  ];
+  ],
 
   const footerSections = [{
       title: 'Services',
@@ -112,7 +112,7 @@ export function Footer() {
         { label: 'Pricing', path: '/pricing' }
       ]
     }
-  ];
+  ],
 
   const contactInfo = [{
       icon: Mail,
@@ -138,12 +138,12 @@ export function Footer() {
       value: 'ziontechgroup.com',
       href: 'https://ziontechgroup.com'
     }
-  ];
+  ],
 
   const scrollToTop = () => {
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
   return (<footer className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
@@ -287,5 +287,5 @@ export function Footer() {
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
-  );
+  ),
 }

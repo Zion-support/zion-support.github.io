@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 ai-changelog-runner function triggered');
+  console.log('🤖 ai-changelog-runner function triggered'),
   
   try {
     // AI changelog generation logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate AI analysis
     const changelogData = {
@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
       features: Math.floor(Math.random() * 10) + 2,
       fixes: Math.floor(Math.random() * 15) + 5,
       breaking: Math.floor(Math.random() * 3)
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -24,13 +24,13 @@ exports.handler = async function(event, context) {
         aiModel: 'gpt-4',
         confidence: 0.95
       })
-    };
+    },
     
-    console.log('✅ ai-changelog-runner completed successfully');
-    return result;
+    console.log('✅ ai-changelog-runner completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ ai-changelog-runner failed:', error);
+    console.error('❌ ai-changelog-runner failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -39,6 +39,6 @@ exports.handler = async function(event, context) {
         function: 'ai-changelog-runner',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

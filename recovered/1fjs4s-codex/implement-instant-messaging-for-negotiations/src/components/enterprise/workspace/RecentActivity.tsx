@@ -1,7 +1,7 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 
 export function RecentActivity() {
   // Mock activity data
@@ -38,22 +38,21 @@ export function RecentActivity() {
       timestamp: "2d ago",
       type: "comment"
     }
-  ];
+  ],
 
   const getBadgeForType = (type: string) => {
     switch (type) {
-      case "job":
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
+      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
       case "candidate":
-        return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
+        return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>,
       case "interview":
-        return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
+        return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>,
       case "comment":
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>,
       default:
-        return <Badge variant="outline">Activity</Badge>;
+        return <Badge variant="outline">Activity</Badge>
     }
-  };
+  },
 
   return (
     <Card>
@@ -86,11 +85,11 @@ export function RecentActivity() {
         </div>
         
         <div className="p-3 text-center border-t border-border">
-          <button className="text-sm text-blue-500 font-medium hover:text-blue-700">
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View All Activity
           </button>
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

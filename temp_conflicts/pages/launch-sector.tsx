@@ -1,4 +1,4 @@
-import NewVertical from './admin/multiverse/new';
+import NewVertical from './admin/multiverse/new',
 export default function LaunchSector() {
-  return <NewVertical />;
+  return <NewVertical />,
 }

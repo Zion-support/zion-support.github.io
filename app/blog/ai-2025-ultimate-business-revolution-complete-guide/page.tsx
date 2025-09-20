@@ -1,20 +1,20 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Ultimate Business Revolution: Complete Implementation Guide';
-  description: 'Discover the complete roadmap for implementing AI-driven business transformation in 2025. Learn from Fortune 500 success stories and get actionable strategies for 1000%+ ROI.';
-  keywords: ['AI 2025Business Transformation', 'AI ImplementationROI', 'Enterprise AI'];
+  title: 'AI 2025 Ultimate Business Revolution: Complete Implementation Guide',
+  description: 'Discover the complete roadmap for implementing AI-driven business transformation in 2025. Learn from Fortune 500 success stories and get actionable strategies for 1000%+ ROI.',
+  keywords: ['AI 2025Business TransformationAI ImplementationROI', 'Enterprise AI'],
   openGraph: {,
-    title: 'AI 2025 Ultimate Business Revolution: Complete Implementation Guide';
-    description: 'Discover the complete roadmap for implementing AI-driven business transformation in 2025. Learn from Fortune 500 success stories and get actionable strategies for 1000%+ ROI.';
-    type: 'article';
-    publishedTime: '2025-01-14T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI 2025Business Transformation', 'AI ImplementationROI', 'Enterprise AI'],
+    title: 'AI 2025 Ultimate Business Revolution: Complete Implementation Guide',
+    description: 'Discover the complete roadmap for implementing AI-driven business transformation in 2025. Learn from Fortune 500 success stories and get actionable strategies for 1000%+ ROI.',
+    type: 'article',
+    publishedTime: '2025-01-14T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI 2025Business TransformationAI ImplementationROI', 'Enterprise AI']
   }
-};
+},
 export default function BlogPost() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -67,7 +67,7 @@ export default function BlogPost() {,
           </div>,
         </div>,
       </div>,
-      {/* Content */,}
+      {/* Content */}
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="prose prose-lg max-w-none">,
           <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-400 p-6 mb-8">,
@@ -269,4 +269,4 @@ export default function BlogPost() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

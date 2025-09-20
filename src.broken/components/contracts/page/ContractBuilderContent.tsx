@@ -1,13 +1,13 @@
 
-import { useState } from 'react';
-import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder';
-import { ContractBuilder } from '@/components/contracts/ContractBuilder';
-import { ContractHeader } from './ContractHeader';
-import { ContractTypeCards } from './ContractTypeCards';
-import { RecentContractsTable } from './RecentContractsTable';
-import { TalentProfile } from '@/types/talent';
-import { useAuth } from '@/hooks/useAuth';
-import { logDev } from '@/utils/productionLogger';
+import { useState } from 'react',
+import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',
+import { ContractBuilder } from '@/components/contracts/ContractBuilder',
+import { ContractHeader } from './ContractHeader',
+import { ContractTypeCards } from './ContractTypeCards',
+import { RecentContractsTable } from './RecentContractsTable',
+import { TalentProfile } from '@/types/talent',
+import { useAuth } from '@/hooks/useAuth',
+import { logDev } from '@/utils/productionLogger',
 
 // Mock data for demo purposes
 const mockTalent: TalentProfile = {
@@ -17,12 +17,12 @@ const mockTalent: TalentProfile = {
   professional_title: 'Full Stack Developer',
   hourly_rate: 85,
   profile_picture_url: '',
-  skills: ['React', 'Node.js', 'Smart Contracts'],
-};
+  skills: ['ReactNode.js', 'Smart Contracts']
+},
 
 export function ContractBuilderContent() {
-  const { user } = useAuth();
-  const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
+  const { user } = useAuth(),
+  const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none'),
   const [recentContracts, _setRecentContracts] = useState([
     {
       id: 'contract-1',
@@ -40,16 +40,16 @@ export function ContractBuilderContent() {
       date: '2025-05-10',
       isSmartContract: false
     }
-  ]);
+  ]),
 
   const handleContractGenerated = (content: string) => {
-    logDev('Contract generated:', content.substring(0, 100) + '...');
-  };
+    logDev('Contract generated:', content.substring(0, 100) + '...'),
+  },
 
   const handleViewContract = (contractId: string) => {
-    logDev('Viewing contract:', contractId);
+    logDev('Viewing contract:', contractId),
     // Future implementation: View specific contract details
-  };
+  },
 
   return (
     <>
@@ -85,5 +85,5 @@ export function ContractBuilderContent() {
         />
       )}
     </>
-  );
+  ),
 }

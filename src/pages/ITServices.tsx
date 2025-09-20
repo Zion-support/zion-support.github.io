@@ -1,23 +1,21 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import { Server, Shield, Cloud, Network, Wrench, Headphones } from 'lucide-react';
-
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { Link } from "react-router-dom";
+import { Server, Shield, Cloud, Network, Wrench, Headphones } from "lucide-react";
 export default function ITServices() {
   const offerings = [
     { icon: Server, title: 'Managed IT', desc: 'Proactive monitoring, patching, backups, and end-user support.' },
     { icon: Cloud, title: 'Cloud & DevOps', desc: 'Migrations, CI/CD, IaC, containerization, and FinOps.' },
-    { icon: Shield, title: 'Cybersecurity', desc: 'SOC, MDR, EDR, identity, and zero trust architecture.' },
-    { icon: Network, title: 'Networking', desc: 'SD-WAN, Wi‑Fi design, performance, and resilience.' },
-    { icon: Wrench, title: 'Onsite Support', desc: 'Dispatch, rack-and-stack, office moves, and cabling.' },
-    { icon: Headphones, title: 'Helpdesk', desc: 'SLA-backed support with knowledge base and self-service.' },
+    { icon: Shield, title: 'Cybersecurity', desc: 'SOC, MDR, EDR, identity, and zero trust architecture.' };
+    { icon: Network, title: 'Networking', desc: 'SD-WAN, Wi‑Fi design, performance, and resilience.' };
+    { icon: Wrench, title: 'Onsite Support', desc: 'Dispatch, rack-and-stack, office moves, and cabling.' };
+    { icon: Headphones, title: 'Helpdesk', desc: 'SLA-backed support with knowledge base and self-service.' }
   ];
-
   const prices = [
-    { name: 'Essentials', price: '$49/user/mo', includes: ['Monitoring & patching', 'Ticketing & SLAs', 'Cloud backup 100GB'] },
-    { name: 'Professional', price: '$99/user/mo', includes: ['All Essentials', 'EDR + email security', 'SSO + MFA rollout'] },
-    { name: 'Enterprise', price: 'Custom', includes: ['24/7 SOC & MDR', 'Compliance (SOC2/ISO)', 'DR/BC, on-call, vCISO'] },
-  ];
+    { name: 'Essentials', price: '$49/user/mo', includes: ['Monitoring & patchingTicketing & SLAs', 'Cloud backup 100GB'] },
+    { name: 'Professional', price: '$99/user/mo', includes: ['All EssentialsEDR + email security', 'SSO + MFA rollout'] },
+    { name: 'Enterprise', price: 'Custom', includes: ['24/7 SOC & MDRCompliance (SOC2/ISO)', 'DR/BC, on-call, vCISO'] }
+  ],
 
   return (
     <div className="min-h-screen bg-futuristic">

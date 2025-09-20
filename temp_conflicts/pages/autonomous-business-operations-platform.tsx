@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Bot, Zap, TrendingUp, Shield, Globe, Cpu, BarChart3, Users } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { Bot, Zap, TrendingUp, Shield, Globe, Cpu, BarChart3, Users } from 'lucide-react',
 
 export default function AutonomousBusinessOperationsPlatform() {
   const features = [
@@ -35,18 +35,14 @@ export default function AutonomousBusinessOperationsPlatform() {
       title: 'Machine Learning Integration',
       description: 'Continuous learning systems that improve performance and efficiency over time.'
     }
-  ];
+  ],
 
   const capabilities = [
-    'Process Automation',
-    'Resource Management',
-    'Customer Service',
-    'Supply Chain Optimization',
-    'Financial Operations',
-    'Marketing Automation',
-    'Risk Management',
-    'Performance Monitoring'
-  ];
+    'Process AutomationResource Management',
+    'Customer ServiceSupply Chain Optimization',
+    'Financial OperationsMarketing Automation',
+    'Risk ManagementPerformance Monitoring'
+  ],
 
   const benefits = [
     {
@@ -65,7 +61,7 @@ export default function AutonomousBusinessOperationsPlatform() {
       title: 'Data-Driven Decisions',
       description: 'Make informed decisions based on comprehensive data analysis and insights.'
     }
-  ];
+  ],
 
   return (
     <>
@@ -176,7 +172,7 @@ export default function AutonomousBusinessOperationsPlatform() {
             <p className="text-xl text-gray-300 mb-8">
               Join the future of business operations with AI-powered autonomous systems that never sleep.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
@@ -194,5 +190,5 @@ export default function AutonomousBusinessOperationsPlatform() {
         </section>
       </div>
     </>
-  );
+  )
 }

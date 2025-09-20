@@ -10,6 +10,5 @@ const portfolio: React.FC = () => {,
           <h1 className="text-4xl font-bold mb-6">portfolio</h1>,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
-    </div>,
-  ),};
-export default portfolio;
+    </div>)},
+export default portfolio,

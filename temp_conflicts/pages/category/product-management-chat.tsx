@@ -1,7 +1,7 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
+import Head from 'next/head',
+import Link from 'next/link',
+import Seo from '../../components/seo/Seo',
 
 const ProductManagementChat = () => {
   return (
@@ -13,7 +13,7 @@ const ProductManagementChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default ProductManagementChat;
+export default ProductManagementChat,

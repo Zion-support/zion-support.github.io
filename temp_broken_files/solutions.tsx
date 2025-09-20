@@ -1,160 +1,160 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
-  Heart, DollarSign, Factory, ShoppingCart, Building2;
-  GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle;
-  Users, Globe, Cpu, Database, Network, Target,
-} from 'lucide-react';
+  Heart, DollarSign, Factory, ShoppingCart, Building2,
+  GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
+  Users, Globe, Cpu, Database, Network, Target
+} from 'lucide-react',
 const SolutionsPage: React.FC = () => {,
   const industrySolutions = [,
     {,
-      category: 'Healthcare & Life Sciences';
+      category: 'Healthcare & Life Sciences',
       solutions: [,
         {,
-          name: 'Healthcare AI Solutions';
-          description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms';
-          href: '/healthcare-solutions';
-          featured: true;
-          icon: <Heart className="w-6 h-6" />,};
+          name: 'Healthcare AI Solutions',
+          description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms',
+          href: '/healthcare-solutions',
+          featured: true,
+          icon: <Heart className="w-6 h-6" />},
         {,
-          name: 'AI Healthcare Diagnostics';
-          description: 'Advanced diagnostic systems using machine learning and medical imaging';
-          href: '/ai-healthcare-diagnostics';
-          icon: <Cpu className="w-6 h-6" />,};
+          name: 'AI Healthcare Diagnostics',
+          description: 'Advanced diagnostic systems using machine learning and medical imaging',
+          href: '/ai-healthcare-diagnostics',
+          icon: <Cpu className="w-6 h-6" />},
         {,
-          name: 'Biotech AI Research Platform';
-          description: 'AI-driven research tools for biotechnology and pharmaceutical development';
-          href: '/biotech-ai-research-platform';
-          icon: <Database className="w-6 h-6" />,}
-      ],
-    };
+          name: 'Biotech AI Research Platform',
+          description: 'AI-driven research tools for biotechnology and pharmaceutical development',
+          href: '/biotech-ai-research-platform',
+          icon: <Database className="w-6 h-6" />}
+      ]
+    },
     {,
-      category: 'Financial Services';
+      category: 'Financial Services',
       solutions: [,
         {,
-          name: 'Financial Solutions';
-          description: 'Comprehensive financial technology solutions for modern enterprises';
-          href: '/financial-solutions';
-          featured: true;
-          icon: <DollarSign className="w-6 h-6" />,};
+          name: 'Financial Solutions',
+          description: 'Comprehensive financial technology solutions for modern enterprises',
+          href: '/financial-solutions',
+          featured: true,
+          icon: <DollarSign className="w-6 h-6" />},
         {,
-          name: 'AI Financial Intelligence';
-          description: 'Intelligent financial analysis and decision-making platforms';
-          href: '/ai-financial-intelligence';
-          icon: <Globe className="w-6 h-6" />,};
+          name: 'AI Financial Intelligence',
+          description: 'Intelligent financial analysis and decision-making platforms',
+          href: '/ai-financial-intelligence',
+          icon: <Globe className="w-6 h-6" />},
         {,
-          name: 'Quantum Financial Trading';
-          description: 'Quantum-powered trading algorithms and financial modeling';
-          href: '/quantum-financial-trading';
-          icon: <Network className="w-6 h-6" />,}
-      ],
-    };
+          name: 'Quantum Financial Trading',
+          description: 'Quantum-powered trading algorithms and financial modeling',
+          href: '/quantum-financial-trading',
+          icon: <Network className="w-6 h-6" />}
+      ]
+    },
     {,
-      category: 'Manufacturing & Industry';
+      category: 'Manufacturing & Industry',
       solutions: [,
         {,
-          name: 'Manufacturing AI Solutions';
-          description: 'AI-powered automation and optimization for manufacturing processes';
-          href: '/manufacturing-ai-solutions';
-          featured: true;
-          icon: <Factory className="w-6 h-6" />,};
+          name: 'Manufacturing AI Solutions',
+          description: 'AI-powered automation and optimization for manufacturing processes',
+          href: '/manufacturing-ai-solutions',
+          featured: true,
+          icon: <Factory className="w-6 h-6" />},
         {,
-          name: 'Industrial Automation AI';
-          description: 'Intelligent automation systems for industrial operations';
-          href: '/industrial-automation-ai';
-          icon: <Cpu className="w-6 h-6" />,};
+          name: 'Industrial Automation AI',
+          description: 'Intelligent automation systems for industrial operations',
+          href: '/industrial-automation-ai',
+          icon: <Cpu className="w-6 h-6" />},
         {,
-          name: 'Autonomous Manufacturing';
-          description: 'Self-managing manufacturing systems with AI oversight';
-          href: '/autonomous-manufacturing';
-          icon: <Database className="w-6 h-6" />,}
-      ],
-    };
+          name: 'Autonomous Manufacturing',
+          description: 'Self-managing manufacturing systems with AI oversight',
+          href: '/autonomous-manufacturing',
+          icon: <Database className="w-6 h-6" />}
+      ]
+    },
     {,
-      category: 'Retail & E-commerce';
+      category: 'Retail & E-commerce',
       solutions: [,
         {,
-          name: 'Retail Technology Solutions';
-          description: 'Advanced technology solutions for modern retail operations';
-          href: '/retail-technology-solutions';
-          featured: true;
-          icon: <ShoppingCart className="w-6 h-6" />,};
+          name: 'Retail Technology Solutions',
+          description: 'Advanced technology solutions for modern retail operations',
+          href: '/retail-technology-solutions',
+          featured: true,
+          icon: <ShoppingCart className="w-6 h-6" />},
         {,
-          name: 'AI Customer Journey Analytics';
-          description: 'Comprehensive customer behavior analysis and optimization';
-          href: '/ai-customer-journey-analytics';
-          icon: <Users className="w-6 h-6" />,};
+          name: 'AI Customer Journey Analytics',
+          description: 'Comprehensive customer behavior analysis and optimization',
+          href: '/ai-customer-journey-analytics',
+          icon: <Users className="w-6 h-6" />},
         {,
-          name: 'AI Content Personalization';
-          description: 'Dynamic content adaptation based on customer preferences';
-          href: '/ai-content-personalization-engine';
-          icon: <Globe className="w-6 h-6" />,}
-      ],
-    };
+          name: 'AI Content Personalization',
+          description: 'Dynamic content adaptation based on customer preferences',
+          href: '/ai-content-personalization-engine',
+          icon: <Globe className="w-6 h-6" />}
+      ]
+    },
     {,
-      category: 'Government & Public Sector';
+      category: 'Government & Public Sector',
       solutions: [,
         {,
-          name: 'Government Technology Solutions';
-          description: 'Innovative technology solutions for government agencies and public services';
-          href: '/government-technology-solutions';
-          featured: true;
-          icon: <Building2 className="w-6 h-6" />,};
+          name: 'Government Technology Solutions',
+          description: 'Innovative technology solutions for government agencies and public services',
+          href: '/government-technology-solutions',
+          featured: true,
+          icon: <Building2 className="w-6 h-6" />},
         {,
-          name: 'AI Ethics & Governance Framework';
-          description: 'Comprehensive frameworks for responsible AI deployment';
-          href: '/ai-ethics-governance-framework';
-          icon: <Shield className="w-6 h-6" />,};
+          name: 'AI Ethics & Governance Framework',
+          description: 'Comprehensive frameworks for responsible AI deployment',
+          href: '/ai-ethics-governance-framework',
+          icon: <Shield className="w-6 h-6" />},
         {,
-          name: 'Cybersecurity Solutions';
-          description: 'Advanced security solutions for government and enterprise';
-          href: '/cybersecurity';
-          icon: <Shield className="w-6 h-6" />,}
-      ],
-    };
+          name: 'Cybersecurity Solutions',
+          description: 'Advanced security solutions for government and enterprise',
+          href: '/cybersecurity',
+          icon: <Shield className="w-6 h-6" />}
+      ]
+    },
     {,
-      category: 'Education & Training';
+      category: 'Education & Training',
       solutions: [,
         {,
-          name: 'Education Technology Solutions';
-          description: 'Innovative technology solutions for modern education and training';
-          href: '/education-technology-solutions';
-          featured: true;
-          icon: <GraduationCap className="w-6 h-6" />,};
+          name: 'Education Technology Solutions',
+          description: 'Innovative technology solutions for modern education and training',
+          href: '/education-technology-solutions',
+          featured: true,
+          icon: <GraduationCap className="w-6 h-6" />},
         {,
-          name: 'AI Education Platform';
-          description: 'Intelligent learning systems and educational content platforms';
-          href: '/ai-education-platform';
-          icon: <Cpu className="w-6 h-6" />,};
+          name: 'AI Education Platform',
+          description: 'Intelligent learning systems and educational content platforms',
+          href: '/ai-education-platform',
+          icon: <Cpu className="w-6 h-6" />},
         {,
-          name: 'Training Solutions';
-          description: 'Comprehensive training and development platforms';
-          href: '/training';
-          icon: <Users className="w-6 h-6" />,}
-      ],
-    };
+          name: 'Training Solutions',
+          description: 'Comprehensive training and development platforms',
+          href: '/training',
+          icon: <Users className="w-6 h-6" />}
+      ]
+    },
     {,
-      category: 'Sustainability & Energy';
+      category: 'Sustainability & Energy',
       solutions: [,
         {,
-          name: 'Energy & Utilities Solutions';
-          description: 'Technology solutions for energy optimization and sustainability';
-          href: '/energy-utilities-solutions';
-          featured: true;
-          icon: <Leaf className="w-6 h-6" />,};
+          name: 'Energy & Utilities Solutions',
+          description: 'Technology solutions for energy optimization and sustainability',
+          href: '/energy-utilities-solutions',
+          featured: true,
+          icon: <Leaf className="w-6 h-6" />},
         {,
-          name: 'AI Sustainability Platform';
-          description: 'AI-driven sustainability monitoring and optimization';
-          href: '/ai-sustainability-platform';
-          icon: <Globe className="w-6 h-6" />,};
+          name: 'AI Sustainability Platform',
+          description: 'AI-driven sustainability monitoring and optimization',
+          href: '/ai-sustainability-platform',
+          icon: <Globe className="w-6 h-6" />},
         {,
-          name: 'Quantum Energy Platform';
-          description: 'Quantum computing solutions for energy optimization';
-          href: '/quantum-energy-platform';
-          icon: <Network className="w-6 h-6" />,}
-      ],
+          name: 'Quantum Energy Platform',
+          description: 'Quantum computing solutions for energy optimization',
+          href: '/quantum-energy-platform',
+          icon: <Network className="w-6 h-6" />}
+      ]
     }
-  ];
+  ],
   return (,
     <UltraFuturisticBackground>,
       <div className="min-h-screen">,
@@ -186,8 +186,7 @@ const SolutionsPage: React.FC = () => {,
                   </div>,
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-sm text-gray-400">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -196,8 +195,8 @@ const SolutionsPage: React.FC = () => {,
           <div className="max-w-7xl mx-auto">,
             <div,
               className="text-center mb-16",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Our Solution Portfolio,
@@ -211,14 +210,14 @@ const SolutionsPage: React.FC = () => {,
                 <div,
                   key={index}
                   className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover: border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105",
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  viewport={{ once: true ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                 >,
-                  <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover: scale-110 transition-transform duration-300`,}>,
+                  <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover: scale-110 transition-transform duration-300`}>,
                     {solution.icon}
                   </div>,
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors duration-300">,
-                    {solution.title,}
+                    {solution.title}
                   </h3>,
                   <p className="text-gray-300 mb-6 leading-relaxed">,
                     {solution.description}
@@ -228,8 +227,7 @@ const SolutionsPage: React.FC = () => {,
                       <li key={featureIndex} className="flex items-center space-x-3">,
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />,
                         <span className="text-gray-300">{feature}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                   <a,
                     href={solution.href}
@@ -239,7 +237,7 @@ const SolutionsPage: React.FC = () => {,
                     <ArrowRight className="w-4 h-4" />,
                   </a>,
                 </div>,
-              )),}
+              ))}
             </div>,
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,
               Industry Solutions,
@@ -265,12 +263,12 @@ const SolutionsPage: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Solutions Grid */,}
+      {/* Solutions Grid */}
       <section className="py-20 px-4 bg-black">,
         <div className="max-w-7xl mx-auto">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-16",
           >,
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
@@ -284,8 +282,8 @@ const SolutionsPage: React.FC = () => {,
             {industrySolutions.map((category, categoryIndex) => (,
               <div,
                 key={category.category}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
               >,
                 <h3 className="text-3xl font-bold text-white mb-8 text-center">,
                   {category.category}
@@ -294,17 +292,16 @@ const SolutionsPage: React.FC = () => {,
                   {category.solutions.map((solution, solutionIndex) => (,
                     <div,
                       key={solution.name}
-                      whileInView={{ opacity: 1, y: 0 ,}}
-                      viewport={{ once: true ,}}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
                       className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover: border-green-500/40 transition-all duration-300 ${,
-                        solution.featured ? 'border-green-500/30' : 'border-gray-700/50',}`}
+                        solution.featured ? 'border-green-500/30' : 'border-gray-700/50'}`}
                     >,
                       {solution.featured && (,
                         <div className="flex items-center mb-4">,
                           <Star className="w-5 h-5 text-yellow-400 mr-2" />,
                           <span className="text-yellow-400 text-sm font-semibold">Featured</span>,
-                        </div>,
-                      )}
+                        </div>)}
                       <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">,
                         {solution.icon}
                       </div>,
@@ -317,7 +314,7 @@ const SolutionsPage: React.FC = () => {,
                         Learn More <ArrowRight className="ml-2 w-4 h-4" />,
                       </a>,
                     </div>,
-                  )),}
+                  ))}
                 </div>,
               </div>,
             ))}
@@ -328,8 +325,8 @@ const SolutionsPage: React.FC = () => {,
       <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">,
         <div className="max-w-4xl mx-auto text-center">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
           >,
             <h2 className="text-4xl font-bold text-white mb-6">,
               Ready to Transform Your Industry?,
@@ -356,6 +353,6 @@ const SolutionsPage: React.FC = () => {,
         </div>,
       </section>,
     </Layout>,
-  ),};
-export default Solutions;
+  )},
+export default Solutions,
 </div></div>,

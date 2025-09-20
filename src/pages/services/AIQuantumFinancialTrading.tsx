@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   TrendingUp, 
   Shield, 
   Zap, 
@@ -20,56 +20,35 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIQuantumFinancialTrading = () => {
   const features = [
     {
-      title: "Quantum-AI Algorithm Trading",
-      description: "Advanced quantum computing algorithms combined with AI for ultra-fast market analysis and execution",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    },
+      title: "Quantum-AI Algorithm Trading",description: "Advanced quantum computing algorithms combined with AI for ultra-fast market analysis and execution",icon: Brain,color: "from-purple-500 to-pink-500"
+    };
     {
-      title: "Real-time Market Prediction",
-      description: "Machine learning models that predict market movements with 85%+ accuracy using quantum-enhanced analytics",
-      icon: TrendingUp,
-      color: "from-green-500 to-emerald-500"
-    },
+      title: "Real-time Market Prediction",description: "Machine learning models that predict market movements with 85%+ accuracy using quantum-enhanced analytics",icon: TrendingUp,color: "from-green-500 to-emerald-500"
+    };
     {
-      title: "Risk Management System",
-      description: "AI-powered risk assessment and portfolio optimization with quantum computing speed",
-      icon: Shield,
-      color: "from-red-500 to-orange-500"
-    },
+      title: "Risk Management System",description: "AI-powered risk assessment and portfolio optimization with quantum computing speed",icon: Shield,color: "from-red-500 to-orange-500"
+    };
     {
-      title: "Multi-Asset Trading",
-      description: "Support for stocks, forex, crypto, commodities, and derivatives with unified interface",
-      icon: BarChart3,
-      color: "from-blue-500 to-indigo-500"
-    },
+      title: "Multi-Asset Trading",description: "Support for stocks, forex, crypto, commodities, and derivatives with unified interface",
+      icon: BarChart3,color: "from-blue-500 to-indigo-500"
+    };
     {
-      title: "Regulatory Compliance",
-      description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
-      icon: Lock,
-      color: "from-yellow-500 to-orange-500"
-    },
+      title: "Regulatory Compliance",description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
+      icon: Lock,color: "from-yellow-500 to-orange-500"
+    };
     {
-      title: "Portfolio Analytics",
-      description: "Advanced portfolio performance tracking with quantum-enhanced optimization",
-      icon: Target,
-      color: "from-cyan-500 to-blue-500"
+      title: "Portfolio Analytics",description: "Advanced portfolio performance tracking with quantum-enhanced optimization",icon: Target,color: "from-cyan-500 to-blue-500"
     }
   ];
-
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$2,999",
-      period: "/month",
-      description: "Perfect for individual traders and small funds",
-      features: [
-        "Quantum-AI trading algorithms",
+      name: "Starter",price: "$2,999",
+      period: "/month",description: "Perfect for individual traders and small funds",features: [
+        "Quantum-AI trading algorithms";
         "Real-time market data",
         "Basic risk management",
         "5 trading strategies",
@@ -77,14 +56,11 @@ const AIQuantumFinancialTrading = () => {
         "Mobile app access"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$7,999",
-      period: "/month",
-      description: "Ideal for professional traders and medium funds",
-      features: [
-        "Advanced quantum algorithms",
+      name: "Professional",price: "$7,999",
+      period: "/month",description: "Ideal for professional traders and medium funds",features: [
+        "Advanced quantum algorithms";
         "Custom strategy development",
         "Advanced risk management",
         "Unlimited trading strategies",
@@ -93,14 +69,11 @@ const AIQuantumFinancialTrading = () => {
         "White-label options"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$19,999",
-      period: "/month",
-      description: "For large institutions and hedge funds",
-      features: [
-        "Custom quantum computing integration",
+      name: "Enterprise",price: "$19,999",
+      period: "/month",description: "For large institutions and hedge funds",features: [
+        "Custom quantum computing integration";
         "Dedicated support team",
         "Custom compliance modules",
         "Multi-tenant architecture",
@@ -111,30 +84,20 @@ const AIQuantumFinancialTrading = () => {
       popular: false
     }
   ];
-
   const benefits = [
     {
-      title: "Increased Trading Speed",
-      description: "Quantum computing reduces execution time from milliseconds to microseconds",
-      metric: "1000x faster"
-    },
+      title: "Increased Trading Speed",description: "Quantum computing reduces execution time from milliseconds to microseconds",metric: "1000x faster"
+    };
     {
-      title: "Higher Accuracy",
-      description: "AI algorithms combined with quantum processing improve prediction accuracy",
-      metric: "85%+ accuracy"
-    },
+      title: "Higher Accuracy",description: "AI algorithms combined with quantum processing improve prediction accuracy",metric: "85%+ accuracy"
+    };
     {
-      title: "Risk Reduction",
-      description: "Advanced risk management reduces portfolio volatility and losses",
-      metric: "40% less risk"
-    },
+      title: "Risk Reduction",description: "Advanced risk management reduces portfolio volatility and losses",metric: "40% less risk"
+    };
     {
-      title: "Cost Savings",
-      description: "Automated trading reduces manual intervention and operational costs",
-      metric: "60% cost reduction"
+      title: "Cost Savings",description: "Automated trading reduces manual intervention and operational costs",metric: "60% cost reduction"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -363,7 +326,7 @@ const AIQuantumFinancialTrading = () => {
 
       {/* Contact Information */}
       <section className="py-16 bg-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
@@ -389,7 +352,6 @@ const AIQuantumFinancialTrading = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIQuantumFinancialTrading;

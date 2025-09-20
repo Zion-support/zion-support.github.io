@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface PartnersProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Partners({ }: PartnersProps) {,
@@ -8,8 +8,7 @@ export default function Partners({ }: PartnersProps) {,
     <div>,
       <h1>Partners</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

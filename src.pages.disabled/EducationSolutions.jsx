@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface EducationSolutionsProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function EducationSolutions({ }: EducationSolutionsProps) {,
@@ -8,8 +8,7 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {,
     <div>,
       <h1>EducationSolutions</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

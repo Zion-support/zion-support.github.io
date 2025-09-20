@@ -1,4 +1,4 @@
-import { FileText, Download, Calendar, User  } from 'lucide-react';
+import { FileText, Download, Calendar, User  } from 'lucide-react',
 
 export default function Page() {
                   </div>
@@ -28,5 +28,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) ,
+},

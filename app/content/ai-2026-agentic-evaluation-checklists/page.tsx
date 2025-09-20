@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agentic Evaluation Checklists';
+  title: 'AI 2026: Agentic Evaluation Checklists',
   description:,
-    'Practical checklists for red-teaming, reliability, and safety evaluations of agentic systems across the SDLC.',
-};
+    'Practical checklists for red-teaming, reliability, and safety evaluations of agentic systems across the SDLC.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
       <article className="prose prose-lg">,
         <h1>AI 2026: Agentic Evaluation Checklists</h1>,
         <p>,
-          Use these evaluation checklists to systematically test agent behavior;
+          Use these evaluation checklists to systematically test agent behavior,
           safety guardrails, and end-to-end outcomes before promotion to,
           production.,
         </p>,
@@ -28,7 +28,6 @@ export default function Page() {,
           harnesses to measure pass/fail thresholds aligned to SLOs.,
         </p>,
       </article>,
-    </main>,
-  );
+    </main>),
 }
 ,

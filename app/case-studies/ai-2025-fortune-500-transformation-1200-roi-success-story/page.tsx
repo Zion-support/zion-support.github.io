@@ -1,12 +1,12 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon, BuildingOfficeIcon, CurrencyDollarIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon, BuildingOfficeIcon, CurrencyDollarIcon, ChartBarIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'Fortune 500 AI Transformation: $15.8B Annual Savings with 1,200% ROI - Ultimate Success Story';
-  description: 'Discover how a Fortune 500 manufacturing company achieved unprecedented success through comprehensive AI transformation, generating $15.8B in annual savings and 1,200% ROI within 18 months.';
-  keywords: 'Fortune 500, AI transformation, case study, ROI, success story, manufacturing, cost savings, AI implementation',
-};
+  title: 'Fortune 500 AI Transformation: $15.8B Annual Savings with 1,200% ROI - Ultimate Success Story',
+  description: 'Discover how a Fortune 500 manufacturing company achieved unprecedented success through comprehensive AI transformation, generating $15.8B in annual savings and 1,200% ROI within 18 months.',
+  keywords: 'Fortune 500, AI transformation, case study, ROI, success story, manufacturing, cost savings, AI implementation'
+},
 export default function Fortune500AITransformationPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -395,4 +395,4 @@ export default function Fortune500AITransformationPage() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

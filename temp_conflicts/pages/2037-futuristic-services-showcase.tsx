@@ -1,18 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight,
   Phone, Mail, MapPin, ExternalLink, Sparkles, Globe,
   Cpu, Lock, Eye, Palette, ChartBar, Cloud
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 
-import { realAIInnovationServices } from '../data/real-2037-ai-innovation-services';
-import { realITInfrastructureServices } from '../data/real-2037-it-infrastructure-services';
-import { realMicroSAASInnovationServices } from '../data/real-2037-micro-saas-innovations';
-import { realEmergingTechServices } from '../data/real-2037-emerging-tech-services';
+import { realAIInnovationServices } from '../data/real-2037-ai-innovation-services',
+import { realITInfrastructureServices } from '../data/real-2037-it-infrastructure-services',
+import { realMicroSAASInnovationServices } from '../data/real-2037-micro-saas-innovations',
+import { realEmergingTechServices } from '../data/real-2037-emerging-tech-services',
 
 export default function FuturisticServicesShowcase2037() {
   const contactInfo = {
@@ -20,7 +20,7 @@ export default function FuturisticServicesShowcase2037() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -31,7 +31,7 @@ export default function FuturisticServicesShowcase2037() {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -43,7 +43,7 @@ export default function FuturisticServicesShowcase2037() {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   // Combine all services for the showcase
   const allServices = [
@@ -51,7 +51,7 @@ export default function FuturisticServicesShowcase2037() {
     ...realITInfrastructureServices,
     ...realMicroSAASInnovationServices,
     ...realEmergingTechServices
-  ];
+  ],
 
   const featuredServices = [
     {
@@ -61,7 +61,7 @@ export default function FuturisticServicesShowcase2037() {
       marketData: '$25B emotional AI market, 150% annual growth',
       competitors: 'Affectiva, Realeyes, Emotient (Apple)',
       savings: 'Improve customer satisfaction by 35% and reduce escalations by 40%',
-      features: ['Real-time emotion detection', 'Multi-modal emotion analysis', 'Emotional state tracking', 'Personalized responses', 'Privacy-compliant handling'],
+      features: ['Real-time emotion detectionMulti-modal emotion analysis', 'Emotional state trackingPersonalized responses', 'Privacy-compliant handling'],
       link: 'https://ziontechgroup.com/ai-emotional-intelligence',
       color: 'from-pink-600 to-purple-700'
     },
@@ -72,7 +72,7 @@ export default function FuturisticServicesShowcase2037() {
       marketData: '$15B quantum security market, 300% annual growth',
       competitors: 'IBM Quantum, Microsoft Azure Quantum, Google Quantum AI',
       savings: 'Future-proof security investment with 99.99% quantum resistance',
-      features: ['Quantum-resistant encryption', 'Post-quantum cryptography', 'Quantum key distribution', 'Zero-trust architecture', 'Multi-cloud security'],
+      features: ['Quantum-resistant encryptionPost-quantum cryptography', 'Quantum key distributionZero-trust architecture', 'Multi-cloud security'],
       link: 'https://ziontechgroup.com/quantum-secure-cloud',
       color: 'from-purple-600 to-indigo-700'
     },
@@ -83,7 +83,7 @@ export default function FuturisticServicesShowcase2037() {
       marketData: '$12B no-code AI market, 220% annual growth',
       competitors: 'Zapier AI, Make.com, n8n, Bubble AI features',
       savings: 'Reduce development time by 80% and enable AI adoption without technical expertise',
-      features: ['Drag-and-drop builder', 'Pre-built AI components', 'Visual workflow designer', 'AI model integration', 'API generation'],
+      features: ['Drag-and-drop builderPre-built AI components', 'Visual workflow designerAI model integration', 'API generation'],
       link: 'https://ziontechgroup.com/no-code-ai-workflows',
       color: 'from-purple-600 to-pink-700'
     },
@@ -94,11 +94,11 @@ export default function FuturisticServicesShowcase2037() {
       marketData: '$50B metaverse market, 400% annual growth',
       competitors: 'Meta Horizon Worlds, Microsoft Mesh, Spatial, VRChat',
       savings: 'Reduce travel costs by 60% and increase global collaboration by 80%',
-      features: ['3D virtual environments', 'Virtual office spaces', 'Avatar management', 'Real-time collaboration', 'Virtual event hosting'],
+      features: ['3D virtual environmentsVirtual office spaces', 'Avatar managementReal-time collaboration', 'Virtual event hosting'],
       link: 'https://ziontechgroup.com/metaverse-business-platform',
       color: 'from-indigo-600 to-purple-700'
     }
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -125,7 +125,7 @@ export default function FuturisticServicesShowcase2037() {
       services: realEmergingTechServices,
       color: 'from-indigo-600 to-purple-700'
     }
-  ];
+  ],
 
   return (
     <>
@@ -459,12 +459,12 @@ export default function FuturisticServicesShowcase2037() {
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-gray-400">
               © 2025 Zion Tech Group. All rights reserved. | 
-              <a href="/privacy" className="text-purple-400 hover:text-purple-300 ml-2">Privacy Policy</a> | 
+              <a href="/privacy" className="text-purple-400 hover: text-purple-300 ml-2">Privacy Policy</a> | 
               <a href="/terms" className="text-purple-400 hover:text-purple-300 ml-2">Terms of Service</a>
             </p>
           </div>
         </motion.footer>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }

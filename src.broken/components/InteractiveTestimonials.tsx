@@ -4,8 +4,8 @@
  * @returns {*} Function return value
  */
 function InteractiveTestimonials () {
-      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
-  };
+      prev === 0 ? filteredTestimonials.length-1 : prev - 1,) ,
+  },
 
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div  className="max - w-7xl mx - auto px-6">
@@ -23,7 +23,7 @@ function InteractiveTestimonials () {
   Users,
   Award,
   TrendingUp'
-} from 'lucide-react';
+} from 'lucide-react',
 
 const testimonials = [{
 
@@ -78,29 +78,29 @@ const testimonials = [{
     id: 5,"
     name: "Lisa Wang","
     position: "Security Director, SecureNet","
-    company: "SecureNet",;"
-    avatar: "👩‍💻",;
-    rating: 5,;'"
-    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof.We've achieved 100% compliance with all industry standards and zero security incidents.",;"
-    category: "Cybersecurity",;"
-    results: ["100% compliance", "Zero incidents", "Automated security"]};
-];
+    company: "SecureNet","
+    avatar: "👩‍💻",
+    rating: 5,'"
+    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof.We've achieved 100% compliance with all industry standards and zero security incidents.","
+    category: "Cybersecurity","
+    results: ["100% compliance", "Zero incidents", "Automated security"]},
+],
 "
 
 =======
 export function InteractiveTestimonials() {
 "
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState("All"),
+  const [selectedTestimonial, setSelectedTestimonial] = useState(0),
 "
-  const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
-    : testimonials.filter(t => t.category === selectedCategory) ;
+  const filteredTestimonials = selectedCategory === "All" ,    ? testimonials ,
+    : testimonials.filter(t => t.category === selectedCategory) ,
 
-    setSelectedTestimonial((prev) => ;
-      prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
+    setSelectedTestimonial((prev) => ,
+      prev === filteredTestimonials.length-1 ? 0 : prev + 1,) },
 
-    setSelectedTestimonial((prev) => ;
-      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) };
+    setSelectedTestimonial((prev) => ,
+      prev === 0 ? filteredTestimonials.length-1 : prev - 1,) },
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -139,7 +139,7 @@ export function InteractiveTestimonials() {
         >
           {categories.map ( (category) => (<button      key={category}
               onClick={ () => {
-                setSelectedCategory(category) ;
+                setSelectedCategory(category) ,
                 setSelectedTestimonial(0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category'
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25''
                   : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`
@@ -207,7 +207,7 @@ export function InteractiveTestimonials() {
         </div>
 
         {/* Testimonial Indicators */}"
-        <div className="flex justify-center mb-8">;"
+        <div className="flex justify-center mb-8">,"
           <div className="flex space-x-2">
             {testimonials.map((_, index) => (
               <button
@@ -220,7 +220,7 @@ export function InteractiveTestimonials() {
         </div>
 
         {/* Play/Pause Controls */}"
-        <div className="flex justify-center mb-8">;
+        <div className="flex justify-center mb-8">,
           <button
             onClick={togglePlayPause}"
             className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -272,7 +272,7 @@ export function InteractiveTestimonials() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Let's discuss how we can transform your business with innovative
               technology solutions tailored to your specific needs.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
                 <Award className="ml-2 h-5 w-5"  />
@@ -283,16 +283,16 @@ export function InteractiveTestimonials() {
             </div>
           </div>
         </motion.div>
-      </div>;
-    </section>;) };
+      </div>,
+    </section>,) },
 
-export default InteractiveTestimonials;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default InteractiveTestimonials;
-export default InteractiveTestimonials;
+export default InteractiveTestimonials,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default InteractiveTestimonials,
+export default InteractiveTestimonials,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

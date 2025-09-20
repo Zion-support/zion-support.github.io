@@ -5,27 +5,27 @@ export type DisputeReason =
   | 'Delivery Delay'
   | 'Payment Issue'
   | 'Communication Breakdown'
-  | 'Other';
+  | 'Other',
 
 export type DisputeAttachment = {
-  id: string;
-  fileName: string;
-  fileSize: number;
-  mimeType: string;
-};
+  id: string,
+  fileName: string,
+  fileSize: number,
+  mimeType: string
+},
 
 export type DisputeMessage = {
-  id: string;
-  authorUserId: string;
-  authorRole: 'client' | 'talent' | 'admin';
-  body: string;
-  createdAt: string;
-  clientUserId: string;
-  talentUserId: string;
-  updatedAt: string;
-};
+  id: string,
+  authorUserId: string,
+  authorRole: 'client' | 'talent' | 'admin',
+  body: string,
+  createdAt: string,
+  clientUserId: string,
+  talentUserId: string,
+  updatedAt: string
+},
 
 export type UserSummary = {
-  id: string;
-  name: string;
-};
+  id: string,
+  name: string
+},

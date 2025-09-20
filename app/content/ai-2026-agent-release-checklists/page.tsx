@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agent Release Checklists';
+  title: 'AI 2026: Agent Release Checklists',
   description:,
-    'Production-ready checklists covering safety, security, reliability, and governance for agent releases.',
-};
+    'Production-ready checklists covering safety, security, reliability, and governance for agent releases.'
+},
 export default function AgentReleaseChecklistsPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -32,6 +32,5 @@ export default function AgentReleaseChecklistsPage() {,
         <Link href="/content/ai-2026-agentic-evaluation-checklists" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">Related: Evaluation Checklists</Link>,
         <Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evaluation Harness</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

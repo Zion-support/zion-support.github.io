@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const RemoteMeetingSummarizer: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -38,7 +37,7 @@ const RemoteMeetingSummarizer: React.FC = () => {
             <div className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
-                <li><a className="hover:underline" href="https://marketplace.zoom.us/" target="_blank" rel="noreferrer">Zoom App Marketplace</a></li>
+                <li><a className="hover: underline" href="https://marketplace.zoom.us/" target="_blank" rel="noreferrer">Zoom App Marketplace</a></li>
                 <li><a className="hover:underline" href="https://developers.google.com/calendar" target="_blank" rel="noreferrer">Google Calendar/Meet APIs</a></li>
                 <li><a className="hover:underline" href="https://platform.openai.com/docs" target="_blank" rel="noreferrer">OpenAI Platform docs</a></li>
               </ul>
@@ -54,8 +53,7 @@ const RemoteMeetingSummarizer: React.FC = () => {
         </section>
       </div>
     </div>
-  );
+  )
 }
 
 export default RemoteMeetingSummarizer;
-

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function TestimonialsSection() {
     const testimonials = [{
 
@@ -27,12 +27,12 @@ export function TestimonialsSection() {
             rating: 5,
             avatar: '👩‍🔬'
 
-    ];
+    ],
     const renderStars = (rating) => {
 
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
-      </span>))};
+      </span>))},
     return (<section className="py-16 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-12">"

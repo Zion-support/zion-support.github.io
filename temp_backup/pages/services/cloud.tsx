@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Cloud, Cpu, Database, Zap, Shield, Rocket, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function CloudServicesPage() {
   const services = [
@@ -42,14 +42,14 @@ export default function CloudServicesPage() {
       icon: Shield,
       color: "from-red-500 to-orange-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "99.99%", label: "Uptime Guarantee", icon: Cloud },
     { number: "50%", label: "Cost Reduction", icon: TrendingUp },
     { number: "24/7", label: "Support Available", icon: Clock },
     { number: "100+", label: "Cloud Projects", icon: CheckCircle }
-  ];
+  ],
 
 const cloud: React.FC = () => {
   return (
@@ -66,7 +66,7 @@ const cloud: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default cloud;
+export default cloud,

@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
-import type { KycProfile } from '../../utils/kyc';
+import React, { useEffect, useState } from 'react',
+import Head from 'next/head',
+import type { KycProfile } from '../../utils/kyc',
 
 export default function AdminKycPage() {
-  const [queue, setQueue] = useState<KycProfile[]>([]);
-  const [reason, setReason] = useState<string>('');
+  const [queue, setQueue] = useState<KycProfile[]>([]),
+  const [reason, setReason] = useState<string>(''),
 
   async function load() {
-    const res = await fetch('/api/admin/kyc-queue');
-    const data = await res.json();
-    if (data.ok) setQueue(data.queue);
+    const res = await fetch('/api/admin/kyc-queue'),
+    const data = await res.json(),
+    if (data.ok) setQueue(data.queue),
   }
 
   useEffect(() => {
-    load();
-  }, []);
+    load(),
+  }, []),
 
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, action, reason: reason || undefined }),
-    });
-    const data = await res.json();
-    if (data.ok) load();
+      body: JSON.stringify({ userId, action, reason: reason || undefined })
+    }),
+    const data = await res.json(),
+    if (data.ok) load(),
   }
 
   return (
@@ -49,7 +49,7 @@ export default function AdminKycPage() {
                   <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
                   <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
-                    <div className="text-xs mt-1">Flags: {p.flags.join(', ')}</div>
+                    <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
                   )}
                 </div>
                 <div className="flex gap-2">
@@ -75,5 +75,5 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
-  );
+  ),
 }

@@ -1,55 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-        };
-        detectDevice();
-        window.addEventListener('resize', detectDevice);
+        },
+        detectDevice(),
+        window.addEventListener('resize', detectDevice),
         // Load saved theme'
-        const savedTheme = localStorage.getItem('ui-theme');
+        const savedTheme = localStorage.getItem('ui-theme'),
         if(savedTheme) {
 
             setTheme(savedTheme)}
         // Apply theme'
-        applyTheme(savedTheme || 'dark');
+        applyTheme(savedTheme || 'dark'),
         // Scroll to top visibility
         const handleScroll = () => {
-            setShowScrollToTop(window.scrollY > 300) };
+            setShowScrollToTop(window.scrollY > 300) },
         if(enableScrollEffects) {
 
             window.addEventListener('scroll', handleScroll)}
         return () => {
 
-            window.removeEventListener('resize', detectDevice);
+            window.removeEventListener('resize', detectDevice),
             if(enableScrollEffects) {
 
                 window.removeEventListener('scroll', handleScroll)}
-        }}, [enableScrollEffects]);
+        }}, [enableScrollEffects]),
     const applyTheme = (newTheme) => {
 
-        const root = document.documentElement;
+        const root = document.documentElement,
         if(newTheme === 'auto') {
 
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
-            root.classList.toggle('dark', prefersDark);
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches,
+            root.classList.toggle('dark', prefersDark),
             root.classList.toggle('light', !prefersDark)}
         else {
 
-            root.classList.remove('light',dark');
+            root.classList.remove('light',dark'),
             root.classList.add(newTheme)}
-        localStorage.setItem('ui-theme', newTheme)};
+        localStorage.setItem('ui-theme', newTheme)},
     const handleThemeChange = (newTheme) => {
 
-        setTheme(newTheme);
-        applyTheme(newTheme)};
+        setTheme(newTheme),
+        applyTheme(newTheme)},
     const scrollToTop = () => {
         window.scrollTo({
 
             top: 0,
             behavior: 'smooth'
-        }) };
+        }) },
     const toggleParticleMode = () => {
-        setIsParticleMode(!isParticleMode) };
+        setIsParticleMode(!isParticleMode) },
     return (<>
       {/* Floating Action Buttons */}
       {showFloatingActions && (<div className="fixed bottom-4 right-4 z-40 space-y-3">
@@ -180,6 +180,6 @@ export default function Page() {
           </div>
         </div>
       </motion.div>
-    </>)};
-export default UIEnhancer;
+    </>)},
+export default UIEnhancer,
 }}}}}}}</motion.div>}'"`

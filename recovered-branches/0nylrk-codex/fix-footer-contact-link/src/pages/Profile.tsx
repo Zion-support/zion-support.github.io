@@ -1,7 +1,7 @@
 
-      navigate("/login?redirect=/profile");
+      navigate("/login?redirect=/profile"),
     }
-  }, [user, isLoading, navigate]);
+  }, [user, isLoading, navigate]),
                 >,
                   Logout,
                 </Button>,
@@ -12,6 +12,6 @@
       </div>,
       <Footer />,
     </>,
-  );
+  ),
 }
 ,

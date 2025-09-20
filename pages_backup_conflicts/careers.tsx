@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface CareersProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Careers({ }: CareersProps) {,
@@ -8,7 +8,6 @@ export default function Careers({ }: CareersProps) {,
     <div>,
       <h1>Careers</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

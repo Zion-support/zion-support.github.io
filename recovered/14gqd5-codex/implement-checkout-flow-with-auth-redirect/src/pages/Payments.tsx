@@ -1,10 +1,10 @@
 
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { TransactionHistory } from "@/components/transactions/TransactionHistory";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 export default function Payments() {
   return (
@@ -42,7 +42,7 @@ export default function Payments() {
                       Manage your payment methods and set your default preference.
                     </p>
                     <Button 
-                      onClick={() => window.open('https://stripe.com', '_blank')}
+                      onClick={() => window.open('https://stripe.com_blank')}
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                     >
                       Manage Payment Methods
@@ -72,7 +72,7 @@ export default function Payments() {
                         <Checkbox id="notify-email" defaultChecked />
                         <label
                           htmlFor="notify-email"
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white"
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white"
                         >
                           Email notifications
                         </label>
@@ -96,11 +96,11 @@ export default function Payments() {
       </div>
       <Footer />
     </>
-  );
+  )
 }
 
 // Import UI components for Payment Settings tab
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Checkbox } from "@/components/ui/checkbox",

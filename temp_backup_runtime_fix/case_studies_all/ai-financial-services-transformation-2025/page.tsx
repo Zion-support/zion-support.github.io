@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../../components/SEO',
+import Link from 'next/link',
 export default function AIFinancialServicesTransformation2025() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -30,7 +30,7 @@ export default function AIFinancialServicesTransformation2025() {,
             AI transformationdelivering $50M in annual cost savings and 300% productivity improvements.,
           </p>,
         </div>,
-        {/* Executive Summary */,}
+        {/* Executive Summary */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl mb-8">,
           <h2 className="text-2xl font-bold text-gray-900 mb-4">📊 Executive Summary</h2>,
           <div className="grid md: grid-cols-2 gap-8">,
@@ -63,7 +63,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Company Background */,}
+        {/* Company Background */}
         <div className="mb-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Background</h2>,
           <div className="bg-white border border-gray-200 rounded-xl p-6">,
@@ -144,7 +144,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* The Solution */,}
+        {/* The Solution */}
         <div className="mb-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The AI Solution</h2>,
           <div className="space-y-6">,
@@ -209,7 +209,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Implementation Timeline */,}
+        {/* Implementation Timeline */}
         <div className="mb-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Timeline</h2>,
           <div className="space-y-4">,
@@ -299,7 +299,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Results */,}
+        {/* Results */}
         <div className="mb-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Results</h2>,
           <div className="space-y-6">,
@@ -381,7 +381,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Lessons Learned */,}
+        {/* Lessons Learned */}
         <div className="mb-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>,
           <div className="space-y-6">,
@@ -436,7 +436,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Client Testimonial */,}
+        {/* Client Testimonial */}
         <div className="mb-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Client Testimonial</h2>,
           <div className="bg-gray-50 rounded-xl p-8">,
@@ -487,7 +487,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Related Case Studies */,}
+        {/* Related Case Studies */}
         <div className="border-t border-gray-200 pt-8">,
           <h4 className="text-lg font-semibold text-gray-900 mb-4">Related Case Studies</h4>,
           <div className="grid md: grid-cols-2 gap-4">,
@@ -502,5 +502,4 @@ export default function AIFinancialServicesTransformation2025() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

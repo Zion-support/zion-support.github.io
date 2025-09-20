@@ -1,11 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 import { 
   Gamepad2, Eye, Globe, Users, Target, ArrowRight, 
   CheckCircle, Building, Rocket, Shield, Zap, Star,
   Palette, Music, Film, BookOpen, Cpu, Database,
   Cloud, Lock, Settings, Code, TrendingUp, Award
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function Metaverse() {
   const metaverseServices = [
@@ -14,18 +14,13 @@ export default function Metaverse() {
       description: 'Design and build immersive 3D virtual environments for businesses, education, and entertainment.',
       icon: <Globe className="w-12 h-12 text-blue-400" />,
       features: [
-        'Custom 3D Environment Design',
-        'Interactive Virtual Spaces',
-        'Real-time Rendering',
-        'Multi-user Environments',
-        'Cross-platform Compatibility',
-        'Performance Optimization'
+        'Custom 3D Environment DesignInteractive Virtual Spaces',
+        'Real-time RenderingMulti-user Environments',
+        'Cross-platform CompatibilityPerformance Optimization'
       ],
       useCases: [
-        'Virtual Offices & Workspaces',
-        'Educational Virtual Campuses',
-        'Virtual Events & Conferences',
-        'Virtual Shopping Experiences'
+        'Virtual Offices & WorkspacesEducational Virtual Campuses',
+        'Virtual Events & ConferencesVirtual Shopping Experiences'
       ]
     },
     {
@@ -33,18 +28,13 @@ export default function Metaverse() {
       description: 'Create engaging VR/AR experiences that captivate users and drive engagement.',
       icon: <Eye className="w-12 h-12 text-purple-400" />,
       features: [
-        'VR/AR Development',
-        '360° Video Experiences',
-        'Interactive Storytelling',
-        'Spatial Audio Integration',
-        'Haptic Feedback Systems',
-        'Motion Tracking'
+        'VR/AR Development360° Video Experiences',
+        'Interactive StorytellingSpatial Audio Integration',
+        'Haptic Feedback SystemsMotion Tracking'
       ],
       useCases: [
-        'Virtual Training & Simulation',
-        'Interactive Marketing Campaigns',
-        'Virtual Tourism & Exploration',
-        'Immersive Gaming Experiences'
+        'Virtual Training & SimulationInteractive Marketing Campaigns',
+        'Virtual Tourism & ExplorationImmersive Gaming Experiences'
       ]
     },
     {
@@ -52,18 +42,13 @@ export default function Metaverse() {
       description: 'Build accurate digital replicas of physical assets and environments for monitoring and optimization.',
       icon: <Building className="w-12 h-12 text-green-400" />,
       features: [
-        '3D Asset Scanning & Modeling',
-        'Real-time Data Integration',
-        'Predictive Analytics',
-        'IoT Sensor Integration',
-        'Performance Monitoring',
-        'Predictive Maintenance'
+        '3D Asset Scanning & ModelingReal-time Data Integration',
+        'Predictive AnalyticsIoT Sensor Integration',
+        'Performance MonitoringPredictive Maintenance'
       ],
       useCases: [
-        'Smart City Planning',
-        'Industrial Facility Management',
-        'Building Information Modeling',
-        'Infrastructure Monitoring'
+        'Smart City PlanningIndustrial Facility Management',
+        'Building Information ModelingInfrastructure Monitoring'
       ]
     },
     {
@@ -71,18 +56,13 @@ export default function Metaverse() {
       description: 'Develop cutting-edge virtual and augmented reality applications for various industries.',
       icon: <Gamepad2 className="w-12 h-12 text-orange-400" />,
       features: [
-        'Mobile AR Applications',
-        'VR Headset Applications',
-        'Mixed Reality Solutions',
-        'Gesture Recognition',
-        'Voice Commands',
-        'Eye Tracking'
+        'Mobile AR ApplicationsVR Headset Applications',
+        'Mixed Reality SolutionsGesture Recognition',
+        'Voice CommandsEye Tracking'
       ],
       useCases: [
-        'Remote Collaboration Tools',
-        'Virtual Design Reviews',
-        'AR-powered Maintenance',
-        'Virtual Showrooms'
+        'Remote Collaboration ToolsVirtual Design Reviews',
+        'AR-powered MaintenanceVirtual Showrooms'
       ]
     },
     {
@@ -90,18 +70,13 @@ export default function Metaverse() {
       description: 'Build scalable metaverse platforms that can host thousands of concurrent users.',
       icon: <Cpu className="w-12 h-12 text-cyan-400" />,
       features: [
-        'Scalable Infrastructure',
-        'Real-time Multiplayer',
-        'User Authentication',
-        'Content Management',
-        'Analytics & Insights',
-        'Monetization Systems'
+        'Scalable InfrastructureReal-time Multiplayer',
+        'User AuthenticationContent Management',
+        'Analytics & InsightsMonetization Systems'
       ],
       useCases: [
-        'Virtual Social Platforms',
-        'Virtual Commerce Platforms',
-        'Virtual Learning Platforms',
-        'Virtual Entertainment Venues'
+        'Virtual Social PlatformsVirtual Commerce Platforms',
+        'Virtual Learning PlatformsVirtual Entertainment Venues'
       ]
     },
     {
@@ -109,21 +84,16 @@ export default function Metaverse() {
       description: 'Create and manage digital assets including NFTs, virtual goods, and digital collectibles.',
       icon: <Palette className="w-12 h-12 text-pink-400" />,
       features: [
-        'NFT Creation & Management',
-        'Digital Asset Marketplaces',
-        'Blockchain Integration',
-        'Smart Contract Development',
-        'Digital Rights Management',
-        'Asset Trading Systems'
+        'NFT Creation & ManagementDigital Asset Marketplaces',
+        'Blockchain IntegrationSmart Contract Development',
+        'Digital Rights ManagementAsset Trading Systems'
       ],
       useCases: [
-        'Virtual Real Estate',
-        'Digital Art Galleries',
-        'Virtual Fashion & Accessories',
-        'Gaming Asset Marketplaces'
+        'Virtual Real EstateDigital Art Galleries',
+        'Virtual Fashion & AccessoriesGaming Asset Marketplaces'
       ]
     }
-  ];
+  ],
 
   const industries = [
     {
@@ -131,10 +101,8 @@ export default function Metaverse() {
       description: 'Virtual property tours, digital twins of buildings, and virtual real estate marketplaces.',
       icon: <Building className="w-8 h-8 text-blue-400" />,
       benefits: [
-        'Virtual Property Tours',
-        '3D Building Visualization',
-        'Virtual Staging',
-        'Remote Property Viewing'
+        'Virtual Property Tours3D Building Visualization',
+        'Virtual StagingRemote Property Viewing'
       ]
     },
     {
@@ -142,10 +110,8 @@ export default function Metaverse() {
       description: 'Immersive learning environments, virtual classrooms, and interactive educational experiences.',
       icon: <BookOpen className="w-8 h-8 text-green-400" />,
       benefits: [
-        'Virtual Classrooms',
-        'Interactive Learning Modules',
-        'Virtual Field Trips',
-        '3D Educational Content'
+        'Virtual ClassroomsInteractive Learning Modules',
+        'Virtual Field Trips3D Educational Content'
       ]
     },
     {
@@ -153,10 +119,8 @@ export default function Metaverse() {
       description: 'Virtual medical training, patient education, and therapeutic virtual environments.',
       icon: <Shield className="w-8 h-8 text-red-400" />,
       benefits: [
-        'Medical Training Simulations',
-        'Virtual Therapy Sessions',
-        'Patient Education Tools',
-        'Surgical Planning'
+        'Medical Training SimulationsVirtual Therapy Sessions',
+        'Patient Education ToolsSurgical Planning'
       ]
     },
     {
@@ -164,10 +128,8 @@ export default function Metaverse() {
       description: 'Virtual shopping experiences, digital showrooms, and immersive product demonstrations.',
       icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
       benefits: [
-        'Virtual Shopping Malls',
-        '3D Product Visualization',
-        'Virtual Try-On Experiences',
-        'Interactive Product Demos'
+        'Virtual Shopping Malls3D Product Visualization',
+        'Virtual Try-On ExperiencesInteractive Product Demos'
       ]
     },
     {
@@ -175,10 +137,8 @@ export default function Metaverse() {
       description: 'Virtual concerts, gaming experiences, and immersive entertainment platforms.',
       icon: <Music className="w-8 h-8 text-yellow-400" />,
       benefits: [
-        'Virtual Concert Venues',
-        'Immersive Gaming Worlds',
-        'Virtual Movie Theaters',
-        'Interactive Storytelling'
+        'Virtual Concert VenuesImmersive Gaming Worlds',
+        'Virtual Movie TheatersInteractive Storytelling'
       ]
     },
     {
@@ -186,60 +146,46 @@ export default function Metaverse() {
       description: 'Virtual factory tours, digital twins, and training simulations.',
       icon: <Settings className="w-8 h-8 text-cyan-400" />,
       benefits: [
-        'Virtual Factory Tours',
-        'Training Simulations',
-        'Equipment Maintenance',
-        'Process Optimization'
+        'Virtual Factory ToursTraining Simulations',
+        'Equipment MaintenanceProcess Optimization'
       ]
     }
-  ];
+  ],
 
   const technologyStack = [
     {
       category: '3D Graphics & Rendering',
       technologies: [
-        'Unity 3D',
-        'Unreal Engine',
-        'Three.js',
-        'WebGL',
-        'OpenGL',
-        'Vulkan'
+        'Unity 3DUnreal Engine',
+        'Three.jsWebGL',
+        'OpenGLVulkan'
       ]
     },
     {
       category: 'VR/AR Development',
       technologies: [
-        'Oculus SDK',
-        'HTC Vive SDK',
-        'ARKit & ARCore',
-        'WebXR',
-        'SteamVR',
-        'Mixed Reality Toolkit'
+        'Oculus SDKHTC Vive SDK',
+        'ARKit & ARCoreWebXR',
+        'SteamVRMixed Reality Toolkit'
       ]
     },
     {
       category: 'Backend & Infrastructure',
       technologies: [
-        'Node.js',
-        'Python',
-        'AWS/Azure/GCP',
-        'Docker',
-        'Kubernetes',
-        'WebRTC'
+        'Node.jsPython',
+        'AWS/Azure/GCPDocker',
+        'KubernetesWebRTC'
       ]
     },
     {
       category: 'Blockchain & NFTs',
       technologies: [
-        'Ethereum',
-        'Polygon',
-        'IPFS',
-        'MetaMask',
-        'Web3.js',
-        'Solidity'
+        'EthereumPolygon',
+        'IPFSMetaMask',
+        'Web3.jsSolidity'
       ]
     }
-  ];
+  ],
 
   const developmentProcess = [
     {
@@ -272,7 +218,7 @@ export default function Metaverse() {
       description: 'Deploy to production, launch the metaverse, and provide ongoing support.',
       icon: <Rocket className="w-8 h-8 text-red-400" />
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -288,6 +234,6 @@ export default function Metaverse() {
         </div>
       </div>
     </div>
-  );
-};
-export default NextGenTechShowcase2026;
+  ),
+},
+export default NextGenTechShowcase2026,

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { Metadata } from "next";
+import { Metadata } from "next",
 
 export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
@@ -49,7 +49,7 @@ export const metadata = {
         <main className="min-h-screen">{children}</main>
         
         <footer className="border-t border-white/10 bg-zinc-900/50 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
@@ -84,23 +84,23 @@ export const metadata = {
             </div>
             
             <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50">
-              <p>&copy; 2024 Zion OS. All rights reserved.</p>
+              <p>&copy, 2024 Zion OS. All rights reserved.</p>
             </div>
           </div>
         </footer>
 =======
-import "./globals.css";
-import type { ReactNode } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import "./globals.css",
+import type { ReactNode } from "react",
+import Header from "@/components/Header",
+import Footer from "@/components/Footer",
 
 export const metadata = {
   title: "Zion Tech Group - AI-Powered Technology Solutions",
   description: "Leading provider of AI-powered technology solutions, autonomous business platforms, and cutting-edge innovation services. Transform your business with Zion Tech Group.",
   keywords: "AI, artificial intelligence, autonomous business, technology solutions, Zion Tech Group",
   authors: [{ name: "Zion Tech Group" }],
-  viewport: "width=device-width, initial-scale=1",
-};
+  viewport: "width=device-width, initial-scale=1"
+},
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -111,6 +111,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
       </body>
     </html>
-  );
+  ),
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

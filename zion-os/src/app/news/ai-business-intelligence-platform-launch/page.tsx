@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 export const metadata = {,
-  title: "AI-Powered Business Intelligence Platform Launch | Zion Tech Group";
-  description: "Details on Zion Tech Group's new AI-powered business intelligence platform, features, and impact.";
-  keywords: "AI platform, business intelligence, launch, Zion Tech Group",
-};
+  title: "AI-Powered Business Intelligence Platform Launch | Zion Tech Group",
+  description: "Details on Zion Tech Group's new AI-powered business intelligence platform, features, and impact.",
+  keywords: "AI platform, business intelligence, launch, Zion Tech Group"
+},
 export default function ArticlePage() {,
   return (,
     <div className="min-h-screen">,
@@ -50,7 +50,6 @@ export default function ArticlePage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  );
+    </div>),
 }
 ,

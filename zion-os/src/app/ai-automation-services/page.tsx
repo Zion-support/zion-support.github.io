@@ -7,6 +7,5 @@ export default function AIAutomationServicesPage() {,
           <p className="text-lg text-gray-700">Streamline operations with intelligent automation built on Zion OS.</p>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}
 ,

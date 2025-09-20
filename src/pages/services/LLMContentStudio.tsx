@@ -1,6 +1,5 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-
+import React from "react";
+import SEO from "@/components/SEO";
 export default function LLMContentStudio() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -35,12 +34,12 @@ export default function LLMContentStudio() {
               <li>• Enterprise: SSO, custom models, SLAs</li>
             </ul>
             <p className="mt-4 text-xs text-zion-slate-light">
-              References: <a className="text-cyan-400" href="https://jasper.ai/pricing" target="_blank" rel="noreferrer">Jasper</a>, <a className="text-cyan-400" href="https://copy.ai/pricing" target="_blank" rel="noreferrer">Copy.ai</a>
+              References: <a className="text-cyan-400" href="https://jasper.ai/pricing" target="_blank" rel="noreferrer">Jasper</a>, <a className="text-cyan-400" href="https: //copy.ai/pricing" target="_blank" rel="noreferrer">Copy.ai</a>
             </p>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }
 

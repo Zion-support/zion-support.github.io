@@ -1,24 +1,24 @@
 <<<<<<< HEAD
-      // // // // // // // console.error('Newsletter subscription failed:', error) ;
+      // // // // // // // console.error('Newsletter subscription failed:', error) ,
     } finally {
-      setIsSubmitting(false) ;
+      setIsSubmitting(false) ,
 =======
-import React, { useState, useRef } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
+import React, { useState, useRef } from 'react',
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
+import { useToast } from '@/hooks/use-toast',
 import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 
       // // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
 
       setTimeout(() => setIsSubmitted(false), 3000)} catch(error) {
 
       // console.error('Newsletter subscription failed:', error)} finally {
 
       setIsSubmitting(false)}
-  };
+  },
 
   return ()
     <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">"
@@ -51,9 +51,9 @@ import {logErrorToProduction} from '@/utils/productionLogger';
             <button"
               type="submit"
               disabled={isSubmitting || !email.trim()}"
-              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hover:from-zion-cyan/90 hover:to-blue-500/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hover: from-zion-cyan/90 hover:to-blue-500/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
 
-              {isSubmitting ? (;
+              {isSubmitting ? (,
                 <>"
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                   Subscribing...
@@ -63,13 +63,13 @@ import {logErrorToProduction} from '@/utils/productionLogger';
                   <Send className="w-4 h-4"  />                  Subscribe
                 </>) }
             </button>
-          </form>;
+          </form>,
         )}
 "
-        <p className="text-xs text-gray-400 mt-4">;
-          We respect your privacy.Unsubscribe at any time.;
-        </p>;
-      </div>;
-    </div>;) };
+        <p className="text-xs text-gray-400 mt-4">,
+          We respect your privacy.Unsubscribe at any time.,
+        </p>,
+      </div>,
+    </div>,) },
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

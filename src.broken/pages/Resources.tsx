@@ -1,9 +1,9 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },;
-    { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
-  ];
+    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },
+    { id: 'support', name: 'Support', count: 10, icon: HelpCircle },
+  ],
 
   const featuredResources = [{
       id: 1,
@@ -17,7 +17,7 @@ export default function Page() {
       downloads: 3120,
       rating: 4.9,
       image: '/resources / ai - autonomous - research.jpg',
-      tags: ['AI Research', 'Autonomous AI', 'Knowledge Discovery', 'Research Automation'],
+      tags: ['AI ResearchAutonomous AI', 'Knowledge DiscoveryResearch Automation'],
       featured: true,
       fileSize: '3.1 MB',
       fileType: 'PDF',
@@ -35,7 +35,7 @@ export default function Page() {
       downloads: 2890,
       rating: 4.8,
       image: '/resources / ai - supply - chain - optimization.jpg',
-      tags: ['AI Supply Chain', 'Optimization', 'Implementation', 'Cost Savings'],
+      tags: ['AI Supply ChainOptimization', 'ImplementationCost Savings'],
       featured: true,
       fileSize: '2.8 MB',
       fileType: 'PDF',
@@ -53,7 +53,7 @@ export default function Page() {
       downloads: 2650,
       rating: 4.9,
       image: '/resources / ai - content - marketing - guide.jpg',
-      tags: ['AI Content', 'Content Marketing', 'User Guide', 'Best Practices'],
+      tags: ['AI ContentContent Marketing', 'User GuideBest Practices'],
       featured: true,
       fileSize: '3.5 MB',
       fileType: 'PDF',
@@ -71,7 +71,7 @@ export default function Page() {
       downloads: 2540,
       rating: 4.9,
       image: '/resources / ai - business - transformation.jpg',
-      tags: ['AI', 'Business Transformation', 'Guide', 'Strategy'],
+      tags: ['AIBusiness Transformation', 'GuideStrategy'],
       featured: false,
       fileSize: '2.4 MB',
       fileType: 'PDF',
@@ -89,7 +89,7 @@ export default function Page() {
       downloads: 1890,
       rating: 4.8,
       image: '/resources / quantum - financial - case.jpg',
-      tags: ['Quantum Computing', 'Financial Services', 'Performance', 'Success Story'],
+      tags: ['Quantum ComputingFinancial Services', 'PerformanceSuccess Story'],
       featured: false,
       fileSize: '1.8 MB',
       fileType: 'PDF',
@@ -107,7 +107,7 @@ export default function Page() {
       views: 3200,
       rating: 4.7,
       image: '/resources / cybersecurity - ai - webinar.jpg',
-      tags['Cybersecurity', 'AI', 'Webinar', 'Security'],;
+      tags['CybersecurityAI', 'WebinarSecurity'],
       featured: false,
       fileSize: '450 MB',
       fileType: 'MP4',
@@ -125,7 +125,7 @@ export default function Page() {
       downloads: 1560,
       rating: 4.6,
       image: '/resources / blockchain - supply - chain.jpg',
-      tags['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],;
+      tags['BlockchainSupply Chain', 'EnterpriseImplementation'],
       featured: false,
       fileSize: '2.1 MB',
       fileType: 'PDF',
@@ -143,7 +143,7 @@ export default function Page() {
       downloads: 2100,
       rating: 4.8,
       image: '/resources / iot - edge - computing.jpg',
-      tags['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],;
+      tags['IoTEdge Computing', 'ArchitectureBest Practices'],
       featured: false,
       fileSize: '3.2 MB',
       fileType: 'PDF',
@@ -161,7 +161,7 @@ export default function Page() {
       downloads: 3200,
       rating: 4.9,
       image: '/resources / ai - consciousness - research.jpg',
-      tags['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],;
+      tags['AI ConsciousnessResearch', 'BreakthroughSimulation'],
       featured: false,
       items: [{ title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },
         { title: 'Common Issues & Solutions', type: 'Troubleshooting', readTime: '8 min', featured: false },
@@ -177,12 +177,12 @@ export default function Page() {
       color: 'from - emerald - 500 to - green - 500',
       featured: true,
       items: [{ title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },
-        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;
-        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;
-        { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
-      ];
-    };
-  ];
+        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },
+        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },
+        { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false },
+      ],
+    },
+  ],
 
   const additionalResources = [{
       id: 'api - docs',
@@ -209,26 +209,26 @@ export default function Page() {
       href: '/training'
     },
     {
-      id: 'community',;
-      title: 'Community Forum',;
-      icon: Users,;
-      description: 'Connect with peers and experts',;
-      color: 'from - orange - 500 to - red - 500',;
-      href: '/community';
-    };
-  ];
+      id: 'community',
+      title: 'Community Forum',
+      icon: Users,
+      description: 'Connect with peers and experts',
+      color: 'from - orange - 500 to - red - 500',
+      href: '/community'
+    },
+  ],
 
   const contactInfo = {
   phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',;
-  ;
-  ;
-  ;
-  ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
+    email: 'kleber@ziontechgroup.com',
+  ,
+  ,
+  ,
+  ,
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  
 
-};
+},
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
@@ -316,16 +316,16 @@ export default function Page() {
                     }`}>
                       {resource.badge}
                     </span>
-                    <ExternalLink className="w-4 h-4 text-cyan - 500 group - hover:text-cyan - 400 transition -colors" />
+                    <ExternalLink className="w-4 h-4 text-cyan - 500 group - hover: text-cyan - 400 transition -colors" />
                   </div>
-                </Link>;
+                </Link>,
               </motion.div>) ) }
           </div>
-        </motion.div>;
+        </motion.div>,
 
         {/* Resource Categories */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
-          {resourceCategories.map((category, categoryIndex) => (;
+        <div className="grid grid - cols - 1 lg: grid - cols - 2 gap-8">,
+          {resourceCategories.map((category, categoryIndex) => (,
             <motion.div
               initial = {
   { opacity: 0,
@@ -344,9 +344,9 @@ export default function Page() {
               <p className="text-zion - slate -light">Our most popular and valuable resources</p>
             </motion.div>
 
-            <div className="grid grid - cols - 1 lg: grid - cols - 2 gap-8">;
-              {featuredResources.map((resource, index) => {;
-                const ResourceIcon = getResourceIcon(resource.type) ;
+            <div className="grid grid - cols - 1 lg: grid - cols - 2 gap-8">,
+              {featuredResources.map((resource, index) => {,
+                const ResourceIcon = getResourceIcon(resource.type) ,
                 return (<motion.article
                     key = {resource.id}
                     initial = {
@@ -421,7 +421,7 @@ export default function Page() {
                     </div>
                   </motion.article>) }) }
             </div>
-          </div>;
+          </div>,
         </section>) }
 
       {/* Regular Resources Grid */}
@@ -511,12 +511,12 @@ export default function Page() {
                           >
                             {tag}
                           </span>
-                          <ExternalLink className="w-3 h-3 text-cyan - 500 / 50 group - hover:text-cyan - 400 transition -colors" />
-                        </div>;
-                      </div>;
+                          <ExternalLink className="w-3 h-3 text-cyan - 500 / 50 group - hover: text-cyan - 400 transition -colors" />
+                        </div>,
+                      </div>,
                     </div>
                   </div>
-                </motion.article>;) }) }
+                </motion.article>) }) }
           </div>
         </div>
 
@@ -730,7 +730,7 @@ export default function Page() {
               <div className="flex flex - wrap justify - center gap-4">
                 <Link
                   to="/contact"
-                  className="px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text-white font - semibold rounded-xl transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-cyan -500 / 25"
+                  className="px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 hover: from - cyan - 600 hover:to - blue - 700 text-white font - semibold rounded-xl transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-cyan -500 / 25"
                 >
                   Get Support
                 </Link>
@@ -748,9 +748,9 @@ export default function Page() {
                   Schedule Demo
                 </Link>
               </div>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
 }

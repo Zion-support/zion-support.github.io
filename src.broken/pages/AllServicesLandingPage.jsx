@@ -1,31 +1,31 @@
-import React from 'react';
-import { Badge } from '@/components / ui / badge';
+import React from 'react',
+import { Badge } from '@/components / ui / badge',
 
 export default function Page() {
-;
+,
     const getPricingModelColor = (model) => {
         switch(model) {
-            case 'subscription': return 'bg-blue - 100 text-blue - 800';
-            case 'project - based': return 'bg-purple - 100 text-purple - 800';
-            case 'one - time': return 'bg-green - 100 text-green - 800';
-            case 'usage - based': return 'bg-orange - 100 text-orange - 800';
+            case 'subscription': return 'bg-blue - 100 text-blue - 800',
+            case 'project - based': return 'bg-purple - 100 text-purple - 800',
+            case 'one - time': return 'bg-green - 100 text-green - 800',
+            case 'usage - based': return 'bg-orange - 100 text-orange - 800',
             default: return 'bg-gray - 100 text-gray - 800'}
-    };
+    },
     const getServiceIcon = (subcategory) => {
         switch(subcategory) {
-            case 'Customer Service': return < MessageSquare className="h-5 w-5"/>;
-            case 'Analytics': return < BarChart3 className="h-5 w-5"/>;
-            case 'Content Creation': return < FileText className="h-5 w-5"/>;
-            case 'Inventory Management': return < Database className="h-5 w-5"/>;
-            case 'HR Analytics': return < Users className="h-5 w-5"/>;
-            case 'Financial Management': return < BarChart3 className="h-5 w-5"/>;
-            case 'Cloud Solutions': return < Cloud className="h-5 w-5"/>;
-            case 'Cybersecurity': return < Lock className="h-5 w-5"/>;
-            case 'DevOps': return < Code className="h-5 w-5"/>;
-            case 'Transformation': return < ArrowUpRight className="h-5 w-5"/>;
-            case 'E - commerce': return < ShoppingCart className="h-5 w-5"/>;
+            case 'Customer Service': return < MessageSquare className="h-5 w-5"/>,
+            case 'Analytics': return < BarChart3 className="h-5 w-5"/>,
+            case 'Content Creation': return < FileText className="h-5 w-5"/>,
+            case 'Inventory Management': return < Database className="h-5 w-5"/>,
+            case 'HR Analytics': return < Users className="h-5 w-5"/>,
+            case 'Financial Management': return < BarChart3 className="h-5 w-5"/>,
+            case 'Cloud Solutions': return < Cloud className="h-5 w-5"/>,
+            case 'Cybersecurity': return < Lock className="h-5 w-5"/>,
+            case 'DevOps': return < Code className="h-5 w-5"/>,
+            case 'Transformation': return < ArrowUpRight className="h-5 w-5"/>,
+            case 'E - commerce': return < ShoppingCart className="h-5 w-5"/>,
             default: return < Settings className="h-5 w-5"/>}
-    };
+    },
     return (<div className="min - h-screen bg-background">
       <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services.Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / services"/>
 
@@ -107,7 +107,7 @@ export default function Page() {
                         <div className="flex items - start justify - between mb-2">
                           <div className="text-2xl">{getCategoryIcon(service.category) }</div>
                           <Badge className={getPricingModelColor(service.pricingModel) }>
-                            {service.pricingModel.replace('-', ' ') }
+                            {service.pricingModel.replace('- ') }
                           </Badge>
                         </div>
                         <div className="flex items - center space - x-2 mb-2">

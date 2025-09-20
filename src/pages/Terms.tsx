@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   FileText,
   Shield,
@@ -22,12 +22,10 @@ import {
   Rocket,
   Brain,
   Cpu
-} from 'lucide-react';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 const Terms: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -701,7 +699,7 @@ const Terms: React.FC = () => {
               Questions About Terms?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about these terms or need clarification,
+              If you have questions about these terms or need clarification;
               please contact our legal team.
             </p>
           </motion.div>
@@ -746,7 +744,7 @@ const Terms: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover: from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
               >
                 Contact Us
               </a>
@@ -761,7 +759,6 @@ const Terms: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Terms;

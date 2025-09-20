@@ -1,16 +1,16 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { IntegrationCards } from "./IntegrationCards";
-import { ZapierIntegration } from "./ZapierIntegration";
-import { Badge } from "@/components/ui/badge";
-import { WebhookManager } from "./WebhookManager";
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { IntegrationCards } from "./IntegrationCards",
+import { ZapierIntegration } from "./ZapierIntegration",
+import { Badge } from "@/components/ui/badge",
+import { WebhookManager } from "./WebhookManager",
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
 
 export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
+  const [activeTab, setActiveTab] = useState("marketplace"),
   
   return (
     <div className="space-y-6">
@@ -90,7 +90,7 @@ export function IntegrationsHub() {
       </div>
       
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid grid-cols-3 md:w-[400px]">
+        <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
@@ -133,5 +133,5 @@ export function IntegrationsHub() {
         </div>
       </Tabs>
     </div>
-  );
+  )
 }

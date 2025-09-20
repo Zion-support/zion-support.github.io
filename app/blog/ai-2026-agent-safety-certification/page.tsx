@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import React from 'react';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import ErrorBoundary from '../../components/ErrorBoundary',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Agent Safety Certification';
-  description: 'A practical certification framework for autonomous agent safety: scenarios, metrics, gates, and governance.';
-  keywords: ['agent safetyAI certification', 'safety evaluationsrisk management', 'AI governance'],
-};
+  title: 'AI 2026: Agent Safety Certification',
+  description: 'A practical certification framework for autonomous agent safety: scenarios, metrics, gates, and governance.',
+  keywords: ['agent safetyAI certificationsafety evaluationsrisk management', 'AI governance']
+},
 export default function AgentSafetyCertification2026() {,
   return (,
     <ErrorBoundary>,
@@ -76,5 +76,5 @@ export default function AgentSafetyCertification2026() {,
         </article>,
       </div>,
     </ErrorBoundary>,
-  ),}
+  )}
 ,

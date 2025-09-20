@@ -1,6 +1,6 @@
-import { Card, CardContent } from '@/components/ui/card';"
-import { Badge } from '@/components/ui/badge';"
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Card, CardContent } from '@/components/ui/card',"
+import { Badge } from '@/components/ui/badge',"
+import { AspectRatio } from '@/components/ui/aspect-ratio',
 export default function Page() {
  alt={project.title} className="w-full h-full object-cover"/>"
               </AspectRatio>) : (<div className="h-40 w-full flex items-center justify-center bg-zion-blue">"

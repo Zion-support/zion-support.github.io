@@ -1,7 +1,7 @@
 
-import { Card } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Button } from "@/components/ui/button",
 export function TalentPlaceholder() {,
   return (,
     <div className="p-8 text-center">,
@@ -12,6 +12,5 @@ export function TalentPlaceholder() {,
       <Button className="bg-zion-purple hover: bg-zion-purple-dark text-white">,
         Join as Talent,
       </Button>,
-    </div>,
-  ),}
+    </div>)}
 ,

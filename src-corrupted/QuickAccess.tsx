@@ -1,3 +1,3 @@
 const QuickAccess: React.FC = () => {,
-  return (,};
-export default QuickAccess;)
+  return (},
+export default QuickAccess,)

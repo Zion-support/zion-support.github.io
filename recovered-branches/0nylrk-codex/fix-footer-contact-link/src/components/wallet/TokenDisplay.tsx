@@ -1,9 +1,9 @@
 
-import React from "react";
-import { BadgeDollarSign } from "lucide-react";
-import { useWallet } from "@/hooks/useWallet";
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
+import React from "react",
+import { BadgeDollarSign } from "lucide-react",
+import { useWallet } from "@/hooks/useWallet",
+import { Button } from "@/components/ui/button",
+import { Skeleton } from "@/components/ui/skeleton",
 export function TokenDisplay() {,
   return (,
     <Card>,
@@ -16,8 +16,7 @@ export function TokenDisplay() {,
       </CardHeader>,
       <CardContent>,
         {loading ? (,
-          <Skeleton className="h-12 w-28" />,
-        ) : (,
+          <Skeleton className="h-12 w-28" />) : (,
           <div className="flex flex-col gap-2">,
             <div className="flex items-end">,
               <span className="text-3xl font-bold">{wallet?.balance || 0}</span>,
@@ -30,10 +29,9 @@ export function TokenDisplay() {,
                 View Wallet,
               </Button>,
             </div>,
-          </div>,
-        )}
+          </div>)}
       </CardContent>,
     </Card>,
-  );
+  ),
 }
 ,

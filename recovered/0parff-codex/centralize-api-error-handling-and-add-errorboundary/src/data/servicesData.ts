@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings",
 
 export const SERVICES: ProductListing[] = [
   {
@@ -14,15 +14,15 @@ export const SERVICES: ProductListing[] = [
       name: "TechSolutions Inc.",
       id: "tech-solutions",
       avatarUrl:
-        "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
     },
     images: [
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2023-12-10T14:48:00.000Z",
     aiScore: 95,
     rating: 4.9,
-    reviewCount: 124,
+    reviewCount: 124
   },
   {
     id: "service-2",
@@ -35,15 +35,15 @@ export const SERVICES: ProductListing[] = [
     tags: ["Cloud", "DevOps", "Security"],
     author: {
       name: "CloudPro Experts",
-      id: "cloud-pro",
+      id: "cloud-pro"
     },
     images: [
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2023-11-20T09:30:00.000Z",
     aiScore: 88,
     rating: 4.7,
-    reviewCount: 92,
+    reviewCount: 92
   },
   {
     id: "service-3",
@@ -58,15 +58,15 @@ export const SERVICES: ProductListing[] = [
       name: "DataMind Solutions",
       id: "datamind",
       avatarUrl:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
     },
     images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-01-05T11:15:00.000Z",
     aiScore: 92,
     rating: 4.8,
-    reviewCount: 78,
+    reviewCount: 78
   },
   {
     id: "service-4",
@@ -79,15 +79,15 @@ export const SERVICES: ProductListing[] = [
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
     author: {
       name: "SecureNet Team",
-      id: "secure-net",
+      id: "secure-net"
     },
     images: [
-      "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2023-12-28T16:22:00.000Z",
     aiScore: 89,
     rating: 4.9,
-    reviewCount: 103,
+    reviewCount: 103
   },
   {
     id: "service-5",
@@ -100,15 +100,15 @@ export const SERVICES: ProductListing[] = [
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
     author: {
       name: "ModernizeIT Consulting",
-      id: "modernize-it",
+      id: "modernize-it"
     },
     images: [
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2023-11-10T08:45:00.000Z",
     aiScore: 86,
     rating: 4.6,
-    reviewCount: 67,
+    reviewCount: 67
   },
   {
     id: "service-6",
@@ -123,14 +123,14 @@ export const SERVICES: ProductListing[] = [
       name: "AI Future Consulting",
       id: "ai-future",
       avatarUrl:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
     },
     images: [
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-02-02T10:30:00.000Z",
     aiScore: 94,
     rating: 4.8,
-    reviewCount: 85,
-  },
-];
+    reviewCount: 85
+  }
+],

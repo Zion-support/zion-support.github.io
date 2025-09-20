@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-	title: 'Agent Observability 2026: Evals, Telemetry, and Guardrails';
-	description: 'Design an end-to-end observability stack for AI agents with metrics, tracing, and automated evals.',
-};
+	title: 'Agent Observability 2026: Evals, Telemetry, and Guardrails',
+	description: 'Design an end-to-end observability stack for AI agents with metrics, tracing, and automated evals.'
+},
 export default function AgentObservability2026() {,
 	return (,
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -22,7 +22,6 @@ export default function AgentObservability2026() {,
 				<h2>Guardrails</h2>,
 				<p>Runtime guards for content safety, data exfiltration, PII exposure, and policy violations.</p>,
 			</section>,
-		</main>,
-	);
+		</main>),
 }
 ,

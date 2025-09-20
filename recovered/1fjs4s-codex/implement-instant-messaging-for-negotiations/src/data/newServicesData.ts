@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings",
 
 export const NEW_SERVICES: ProductListing[] = [
   {
@@ -171,4 +171,4 @@ export const NEW_SERVICES: ProductListing[] = [
     rating: 4.8,
     reviewCount: 13
   }
-];
+],

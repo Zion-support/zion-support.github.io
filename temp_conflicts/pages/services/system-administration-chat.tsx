@@ -1,7 +1,7 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import UseTokensButton from '../../components/tokens/UseTokensButton';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+import UseTokensButton from '../../components/tokens/UseTokensButton',
 
 const SystemAdministrationChat: NextPage = () => {
   return (
@@ -17,7 +17,7 @@ const SystemAdministrationChat: NextPage = () => {
         <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default SystemAdministrationChat;
+export default SystemAdministrationChat,

@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function ProductsIndex() {
   return (
@@ -50,7 +50,7 @@ export default function ProductsIndex() {
               { title: 'Link Sentinel', desc: 'Prevents broken links in prod' },
               { title: 'Content Curator', desc: 'Keeps the homepage fresh' },
               { title: 'Design Refiner', desc: 'Iterates layouts with guardrails' },
-              { title: 'Security Scanner', desc: 'Finds and patches risky deps' },
+              { title: 'Security Scanner', desc: 'Finds and patches risky deps' }
             ].map((p) => (
               <div key={p.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -66,12 +66,12 @@ export default function ProductsIndex() {
             <h3 className="text-2xl font-bold">See them in action</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Open the automation hub to view live pipelines and reports.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Open Automation Hub</a></Link>
+              <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: bg-white">Open Automation Hub</a></Link>
               <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Browse Services</a></Link>
             </div>
           </div>
         </section>
       </main>
     </div>
-  );
+  )
 }

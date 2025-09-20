@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Quantum AI 2026: The Ultimate Business Transformation Guide';
-  description: 'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 2026. Learn about quantum AI applications, implementation strategies, and future possibilities.';
-  keywords: ['Quantum ComputingAI', 'Business Transformation2026 Trends', 'Innovation'],
-};
+  title: 'Quantum AI 2026: The Ultimate Business Transformation Guide',
+  description: 'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 2026. Learn about quantum AI applications, implementation strategies, and future possibilities.',
+  keywords: ['Quantum ComputingAIBusiness Transformation2026 Trends', 'Innovation']
+},
 export default function QuantumAI2026Page() {,
   return (,
     <>,
@@ -47,7 +47,7 @@ export default function QuantumAI2026Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -70,14 +70,14 @@ export default function QuantumAI2026Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <section id="content" className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
               <h2 className="text-3xl font-bold text-gray-900 mb-8">The Quantum AI Revolution: What's Changed in 2026</h2>,
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Breakthrough Achievements</h3>,
               <p className="text-gray-600 mb-6">,
-                2026 has witnessed remarkable progress in quantum AI capabilities, with quantum machine learning;
+                2026 has witnessed remarkable progress in quantum AI capabilities, with quantum machine learning,
                 quantum neural networks, and quantum optimization creating unprecedented business opportunities.,
               </p>,
               <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">,
@@ -103,7 +103,7 @@ export default function QuantumAI2026Page() {,
                 <div className="bg-gray-50 p-6 rounded-xl">,
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum Optimization</h3>,
                   <p className="text-gray-600 mb-4">,
-                    Quantum optimization solves complex business problems with exponential speedup;
+                    Quantum optimization solves complex business problems with exponential speedup,
                     enabling solutions to previously intractable optimization challenges.,
                   </p>,
                   <ul className="text-sm text-gray-600 space-y-1">,
@@ -242,7 +242,7 @@ export default function QuantumAI2026Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with Quantum AI?</h2>,
@@ -268,4 +268,4 @@ export default function QuantumAI2026Page() {,
         </section>,
       </div>,
     </>,
-  ),}
+  )}

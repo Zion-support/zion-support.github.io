@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -37,7 +37,7 @@ export default function Page() {
         linkedin: "https://linkedin.com/in/alex-johnson","
         github: "https://github.com/alexjohnson-devops"
     }
-];
+],
 const expertiseAreas = [{
 "
         name: "Artificial Intelligence","
@@ -98,15 +98,15 @@ const expertiseAreas = [{
         projects: 80,"
         success: "99%"
     }
-];
+],
 const stats = ["
     { icon: <Users className="w-6 h-6"/>, value: "100+", label: "Expert Team Members" },"
     { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Completed" },"
     { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },"
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
-];
-    const [selectedMember, setSelectedMember] = useState(null);
-    const [hoveredExpertise, setHoveredExpertise] = useState(null);
+],
+    const [selectedMember, setSelectedMember] = useState(null),
+    const [hoveredExpertise, setHoveredExpertise] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -119,7 +119,7 @@ const stats = ["
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -136,7 +136,7 @@ const stats = ["
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"
@@ -149,7 +149,7 @@ const stats = ["
         {/* Header */}"
         <motion.div className="text-center mb-20" initial = {
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
             Meet Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expert Team</span>

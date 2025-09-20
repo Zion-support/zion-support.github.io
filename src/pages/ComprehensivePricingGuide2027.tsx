@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
+  Brain,
   Cloud, 
   Shield, 
   Rocket, 
@@ -80,59 +80,56 @@ import {
   PhoneIcon,
   MapPinIcon,
   InfinityIcon
-} from 'lucide-react';
-import SEO from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from '../data/innovativeITInfrastructureServices2027';
-import { EMERGING_TECHNOLOGY_SERVICES_2027 } from '../data/emergingTechnologyServices2027';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027";
+import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027";
+import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027";
 export default function ComprehensivePricingGuide2027() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState([0, 50000]);
-  const [sortBy, setSortBy] = useState('price');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [priceRange, setPriceRange] = useState([0, 50000]),
+  const [sortBy, setSortBy] = useState('price'),
 
   // Combine all services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2027,
     ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027,
     ...EMERGING_TECHNOLOGY_SERVICES_2027
-  ];
+  ],
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],
 
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
-    return matchesCategory && matchesPrice;
-  });
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1],
+    return matchesCategory && matchesPrice,
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'rating':
         return b.rating - a.rating;
       case 'roi':
         return parseInt(b.roi) - parseInt(a.roi);
       case 'name':
         return a.title.localeCompare(b.title);
-      default:
-        return a.price - b.price;
+      default: return a.price - b.price
     }
   });
-
   // Calculate statistics
-  const totalServices = allServices.length;
-  const averagePrice = Math.round(allServices.reduce((acc, s) => acc + s.price, 0) / totalServices);
-  const totalValue = allServices.reduce((acc, s) => acc + s.price, 0);
-  const averageROI = Math.round(allServices.reduce((acc, s) => acc + parseInt(s.roi), 0) / totalServices);
+  const totalServices = allServices.length,
+  const averagePrice = Math.round(allServices.reduce((acc, s) => acc + s.price, 0) / totalServices),
+  const totalValue = allServices.reduce((acc, s) => acc + s.price, 0),
+  const averageROI = Math.round(allServices.reduce((acc, s) => acc + parseInt(s.roi), 0) / totalServices),
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-      'AI & Business Intelligence': <Brain className="w-6 h-6" />,
+      'AI & Business Intelligence': <Brain className="w-6 h-6" />;
       'Cybersecurity': <Shield className="w-6 h-6" />,
       'Cloud & DevOps': <Cloud className="w-6 h-6" />,
       'AI & Healthcare': <Heart className="w-6 h-6" />,
@@ -153,21 +150,21 @@ export default function ComprehensivePricingGuide2027() {
       'Quantum Technology': <Atom className="w-6 h-6" />,
       'Autonomous Systems': <Car className="w-6 h-6" />,
       'Robotics & Automation': <Bot className="w-6 h-6" />
-    };
-    return iconMap[category] || <Star className="w-6 h-6" />;
-  };
+    },
+    return iconMap[category] || <Star className="w-6 h-6" />,
+  },
 
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}K`;
     }
-    return `$${price}`;
-  };
+    return `$${price}`,
+  },
 
   const parseROI = (roi: string) => {
     const match = roi.match(/(\d+)%/);
-    return match ? parseInt(match[1]) : 0;
-  };
+    return match ? parseInt(match[1]) : 0
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -200,7 +197,7 @@ export default function ComprehensivePricingGuide2027() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
-            Discover transparent pricing for our cutting-edge technology services. Compare costs, 
+            Discover transparent pricing for our cutting-edge technology services. Compare costs;
             analyze ROI, and find the perfect solution for your business needs.
           </motion.p>
 
@@ -520,7 +517,7 @@ export default function ComprehensivePricingGuide2027() {
             </div>
 
             {/* Contact Information */}
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="mt-12 grid grid-cols-1 md: grid-cols-3 gap-6">
               <div className="text-center">
                 <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                 <div className="text-white font-semibold mb-1">Phone</div>
@@ -548,7 +545,7 @@ export default function ComprehensivePricingGuide2027() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
 // Helper component for DNA icon

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const ComprehensiveServicesShowcase2027: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -8,7 +8,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
         <meta name="description" content="ComprehensiveServicesShowcase2027 - Revolutionary technology solutions" />,
       </Helmet>,
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="relative overflow-hidden">,
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>,
           <div className="relative z-10 container mx-auto px-4 py-20">,
@@ -40,8 +40,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
             {services.map((service, index) => (,
               <div,
                 key={service.category}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                className={`bg-gradient-to-br ${service.color}/30 backdrop-blur-sm rounded-xl p-8 border ${service.borderColor} hover: scale-105 transition-all duration-300`,}
+                whileInView={{ opacity: 1, y: 0 }}
+                className={`bg-gradient-to-br ${service.color}/30 backdrop-blur-sm rounded-xl p-8 border ${service.borderColor} hover: scale-105 transition-all duration-300`}
               >,
                 <div className="text-6xl mb-4 text-center">{service.icon}</div>,
                 <h3 className="text-2xl font-bold mb-6 text-center">{service.category}</h3>,
@@ -50,11 +50,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
                     <div key={itemIndex} className="flex items-center space-x-3">,
                       <div className="w-2 h-2 bg-white rounded-full"></div>,
                       <span className="text-sm opacity-90">{item}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <div className="mt-6 text-center">,
-                  <button className={`bg-gradient-to-r ${service.color} px-6 py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold`,}>,
+                  <button className={`bg-gradient-to-r ${service.color} px-6 py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold`}>,
                     Learn More →,
                   </button>,
                 </div>,
@@ -72,7 +71,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
           </div>,
           <div className="grid md: grid-cols-2 gap-8">,
             <div,
-              whileInView={{ opacity: 1, x: 0 ,}}
+              whileInView={{ opacity: 1, x: 0 }}
               className="bg-gradient-to-r from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30",
             >,
               <div className="flex items-center space-x-4 mb-6">,
@@ -105,7 +104,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
               </button>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, x: 0 ,}}
+              whileInView={{ opacity: 1, x: 0 }}
               className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30",
             >,
               <div className="flex items-center space-x-4 mb-6">,
@@ -116,7 +115,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
                 </div>,
               </div>,
               <p className="text-lg opacity-90 mb-6">,
-                Harness the power of quantum computing to solve complex optimization problems;
+                Harness the power of quantum computing to solve complex optimization problems,
                 accelerate drug discovery, and revolutionize cryptography.,
               </p>,
               <div className="space-y-2 mb-6">,
@@ -139,7 +138,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Pricing Tiers */,}
+        {/* Pricing Tiers */}
         <div className="container mx-auto px-4 py-20">,
           <div className="text-center mb-16">,
             <h2 className="text-4xl font-bold mb-4">Service Tiers</h2>,
@@ -149,7 +148,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
           </div>,
           <div className="grid md: grid-cols-3 gap-8">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50",
             >,
               <h3 className="text-2xl font-bold mb-4">Starter</h3>,
@@ -177,7 +176,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
               </button>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 relative",
             >,
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
@@ -214,7 +213,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
               </button>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30",
             >,
               <h3 className="text-2xl font-bold mb-4">Enterprise</h3>,
@@ -247,7 +246,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <divsection className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">,
           <div className="container mx-auto px-4 py-20">,
             <div className="text-center">,
@@ -268,5 +267,5 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {,
         </divsection>,
       </div>,
     </div>,
-  ),};
-export default ComprehensiveServicesShowcase2027;
+  )},
+export default ComprehensiveServicesShowcase2027,

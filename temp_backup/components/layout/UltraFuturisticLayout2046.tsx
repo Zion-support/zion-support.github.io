@@ -1,17 +1,17 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import UltraFuturisticNavigation2046 from './UltraFuturisticNavigation2046';
-import UltraFuturisticFooter2046 from './UltraFuturisticFooter2046';
-import UltraFuturisticBackground2046 from '../backgrounds/UltraFuturisticBackground2046';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import UltraFuturisticNavigation2046 from './UltraFuturisticNavigation2046',
+import UltraFuturisticFooter2046 from './UltraFuturisticFooter2046',
+import UltraFuturisticBackground2046 from '../backgrounds/UltraFuturisticBackground2046',
 
 interface UltraFuturisticLayout2046Props {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  canonical?: string;
+  children: React.ReactNode,
+  title?: string,
+  description?: string,
+  keywords?: string,
+  ogImage?: string,
+  canonical?: string
 }
 
 const UltraFuturisticLayout2046: React.FC<UltraFuturisticLayout2046Props> = ({
@@ -27,6 +27,6 @@ const UltraFuturisticLayout2046: React.FC<UltraFuturisticLayout2046Props> = ({
       <h3 className="text-xl font-bold mb-4">UltraFuturisticLayout2046</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default UltraFuturisticLayout2046;
+  ),
+},
+export default UltraFuturisticLayout2046,

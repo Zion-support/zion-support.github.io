@@ -1,24 +1,24 @@
-import React, { useState, Suspense } from 'react';
+import React, { useState, Suspense } from 'react',
 import {
   Dialog,
   DialogContent,
-  DialogTrigger,
-} from '@/components/ui/dialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+  DialogTrigger
+} from '@/components/ui/dialog',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
+import { AspectRatio } from '@/components/ui/aspect-ratio',
 
-const ReactPlayer = React.lazy(() => import('react-player'));
-const ModelViewer = React.lazy(() => import('@google/model-viewer/react'));
+const ReactPlayer = React.lazy(() => import('react-player')),
+const ModelViewer = React.lazy(() => import('@google/model-viewer/react')),
 
 interface ProductGalleryProps {
-  images: string[];
-  videoUrl?: string;
-  modelUrl?: string;
+  images: string[],
+  videoUrl?: string,
+  modelUrl?: string
 }
 
 export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryProps) {
-  const [selected, setSelected] = useState(0);
-  const poster = images[0];
+  const [selected, setSelected] = useState(0),
+  const poster = images[0],
 
   return (
     <Tabs defaultValue="images" className="w-full">
@@ -110,5 +110,5 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
       </DialogContent>
     )}
     </Dialog>
-  );
+  ),
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025 Future Predictions - Zion Tech Group';
-  description: 'Explore AI predictions for 2025 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.';
-  keywords: ['AI predictions 2025future AI trends', 'artificial intelligence futureAI technology trends', 'future technology'],
-};
+  title: 'AI 2025 Future Predictions - Zion Tech Group',
+  description: 'Explore AI predictions for 2025 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.',
+  keywords: ['AI predictions 2025future AI trendsartificial intelligence futureAI technology trends', 'future technology']
+},
 export default function AI2025FuturePredictions() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,
@@ -29,7 +29,7 @@ export default function AI2025FuturePredictions() {,
             <span className="text-white">Predictions</span>,
           </h1>,
           <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed">,
-            Explore the future of artificial intelligence. Discover emerging trends;
+            Explore the future of artificial intelligence. Discover emerging trends,
             breakthrough technologies, and unprecedented opportunities that will shape 2025 and beyond.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -48,7 +48,7 @@ export default function AI2025FuturePredictions() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Predictions */,}
+      {/* Key Predictions */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Key AI Predictions for 2025</h2>,
@@ -57,7 +57,7 @@ export default function AI2025FuturePredictions() {,
               <div className="text-4xl mb-4">🧠</div>,
               <h3 className="text-2xl font-bold mb-4">Conscious AI Emergence</h3>,
               <p className="text-gray-300 mb-6">,
-                AI systems will demonstrate self-awareness and consciousness;
+                AI systems will demonstrate self-awareness and consciousness,
                 fundamentally changing how we interact with technology.,
               </p>,
               <div className="text-sm text-cyan-400 font-semibold">Prediction Confidence: 95%</div>,
@@ -93,7 +93,7 @@ export default function AI2025FuturePredictions() {,
               <div className="text-4xl mb-4">🔮</div>,
               <h3 className="text-2xl font-bold mb-4">Predictive Mastery</h3>,
               <p className="text-gray-300 mb-6">,
-                AI will predict future events with unprecedented accuracy;
+                AI will predict future events with unprecedented accuracy,
                 revolutionizing decision-making and planning.,
               </p>,
               <div className="text-sm text-cyan-400 font-semibold">Prediction Confidence: 88%</div>,
@@ -110,7 +110,7 @@ export default function AI2025FuturePredictions() {,
           </div>,
         </div>,
       </section>,
-      {/* Timeline Section */,}
+      {/* Timeline Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white bg-opacity-5">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">AI Evolution Timeline</h2>,
@@ -146,7 +146,7 @@ export default function AI2025FuturePredictions() {,
           </div>,
         </div>,
       </section>,
-      {/* Opportunities Section */,}
+      {/* Opportunities Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Future Opportunities</h2>,
@@ -174,7 +174,7 @@ export default function AI2025FuturePredictions() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold mb-8">Prepare for the AI Future</h2>,
@@ -198,5 +198,4 @@ export default function AI2025FuturePredictions() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

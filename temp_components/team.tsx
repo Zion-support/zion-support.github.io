@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   Award, Mail, Linkedin, Github, Globe, Zap, Star,
   CheckCircle, TrendingUp, BarChart3, Cloud, Network
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function TeamPage() {
   const teamMembers = [
@@ -20,7 +20,7 @@ export default function TeamPage() {
       email: 'kleber@ziontechgroup.com',
       linkedin: 'https://linkedin.com/in/kleberoliveira',
       github: 'https://github.com/kleberoliveira',
-      skills: ['AI Strategy', 'Quantum Computing', 'Business Development', 'Team Leadership'],
+      skills: ['AI StrategyQuantum Computing', 'Business DevelopmentTeam Leadership'],
       color: 'from-blue-600 to-cyan-600'
     },
     {
@@ -32,7 +32,7 @@ export default function TeamPage() {
       email: 'sarah.chen@ziontechgroup.com',
       linkedin: 'https://linkedin.com/in/sarahchen',
       github: 'https://github.com/sarahchen',
-      skills: ['AI Architecture', 'Quantum Algorithms', 'System Design', 'Research & Development'],
+      skills: ['AI ArchitectureQuantum Algorithms', 'System DesignResearch & Development'],
       color: 'from-purple-600 to-pink-600'
     },
     {
@@ -44,7 +44,7 @@ export default function TeamPage() {
       email: 'marcus.rodriguez@ziontechgroup.com',
       linkedin: 'https://linkedin.com/in/marcusrodriguez',
       github: 'https://github.com/marcusrodriguez',
-      skills: ['Quantum Security', 'Threat Intelligence', 'Compliance', 'Incident Response'],
+      skills: ['Quantum SecurityThreat Intelligence', 'ComplianceIncident Response'],
       color: 'from-red-600 to-orange-600'
     },
     {
@@ -56,7 +56,7 @@ export default function TeamPage() {
       email: 'elena.petrova@ziontechgroup.com',
       linkedin: 'https://linkedin.com/in/elenapetrova',
       github: 'https://github.com/elenapetrova',
-      skills: ['Quantum Computing', 'Neural Networks', 'Research', 'Academic Collaboration'],
+      skills: ['Quantum ComputingNeural Networks', 'ResearchAcademic Collaboration'],
       color: 'from-indigo-600 to-purple-600'
     },
     {
@@ -68,7 +68,7 @@ export default function TeamPage() {
       email: 'alex.thompson@ziontechgroup.com',
       linkedin: 'https://linkedin.com/in/alexthompson',
       github: 'https://github.com/alexthompson',
-      skills: ['Platform Architecture', 'DevOps', 'Scalability', 'Team Management'],
+      skills: ['Platform ArchitectureDevOps', 'ScalabilityTeam Management'],
       color: 'from-emerald-600 to-teal-600'
     },
     {
@@ -80,10 +80,10 @@ export default function TeamPage() {
       email: 'james.kim@ziontechgroup.com',
       linkedin: 'https://linkedin.com/in/jameskim',
       github: 'https://github.com/jameskim',
-      skills: ['Machine Learning', 'Neural Interfaces', 'AI Ethics', 'Research Leadership'],
+      skills: ['Machine LearningNeural Interfaces', 'AI EthicsResearch Leadership'],
       color: 'from-pink-600 to-rose-600'
     }
-  ];
+  ],
 
   const values = [
     {
@@ -110,14 +110,14 @@ export default function TeamPage() {
       icon: Shield,
       color: 'from-green-500 to-teal-500'
     }
-  ];
+  ],
 
   const stats = [
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '100+', label: 'Research Papers', icon: Star },
     { number: '25+', label: 'Patents Filed', icon: CheckCircle }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -297,7 +297,7 @@ export default function TeamPage() {
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-blue-500/30 p-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Join Our Mission
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
@@ -324,5 +324,5 @@ export default function TeamPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import type { UserActivityRow } from './supabase.js';
+import type { UserActivityRow } from './supabase.js',
 
 export function mockUsers(): UserActivityRow[] {
-  const nowMinus = (hours: number) => new Date(Date.now() - hours * 3600_000).toISOString();
+  const nowMinus = (hours: number) => new Date(Date.now() - hours * 3600_000).toISOString(),
   return [
     {
       user_id: '00000000-0000-0000-0000-000000000001',
@@ -48,5 +48,5 @@ export function mockUsers(): UserActivityRow[] {
       last_message_sent_at: null,
       receive_reminders: true
     }
-  ];
+  ],
 }

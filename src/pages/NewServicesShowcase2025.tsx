@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
+  Brain,
   Cpu, 
   Shield, 
   Cloud, 
@@ -18,113 +18,71 @@ import {
   Mail,
   ExternalLink,
   ArrowRight
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-
+} from "lucide-react";
+import SEO from "@/components/SEO";
 export default function NewServicesShowcase2025() {
   const serviceCategories = [
     {
-      title: "AI-Powered Micro SAAS Services",
-      icon: Brain,
-      color: "from-purple-600 to-blue-600",
-      services: [
+      title: "AI-Powered Micro SAAS Services",icon: Brain,color: "from-purple-600 to-blue-600",services: [
         {
-          name: "AI Autonomous Code Reviewer",
-          description: "Advanced AI-powered code review system with security analysis and optimization",
-          price: "$2,999",
+          name: "AI Autonomous Code Reviewer",description: "Advanced AI-powered code review system with security analysis and optimization",price: "$2,999",
           features: ["Multi-language Support", "Security Analysis", "Code Quality", "Automation"],
-          aiScore: 98,
-          roi: "400% within 4 months"
-        },
+          aiScore: 98,roi: "400% within 4 months"
+        };
         {
-          name: "AI-Powered SEO Optimization",
-          description: "Intelligent SEO platform with machine learning and content strategy",
-          price: "$1,999",
+          name: "AI-Powered SEO Optimization",description: "Intelligent SEO platform with machine learning and content strategy",price: "$1,999",
           features: ["Content Optimization", "Ranking Tracking", "Keyword Research", "Analytics"],
-          aiScore: 95,
-          roi: "350% within 6 months"
-        },
+          aiScore: 95,roi: "350% within 6 months"
+        };
         {
-          name: "AI Customer Support Automation",
-          description: "Intelligent support automation with chatbots and sentiment analysis",
-          price: "$2,499",
+          name: "AI Customer Support Automation",description: "Intelligent support automation with chatbots and sentiment analysis",price: "$2,499",
           features: ["AI Chatbot", "Ticket Management", "Sentiment Analysis", "24/7 Support"],
-          aiScore: 94,
-          roi: "300% within 5 months"
+          aiScore: 94,roi: "300% within 5 months"
         }
       ]
-    },
+    };
     {
-      title: "Emerging Technology Services 2030",
-      icon: Rocket,
-      color: "from-orange-500 to-red-600",
-      services: [
+      title: "Emerging Technology Services 2030",icon: Rocket,color: "from-orange-500 to-red-600",services: [
         {
-          name: "Quantum-AI Hybrid Computing",
-          description: "Revolutionary platform combining quantum computing with AI",
-          price: "$15,999",
+          name: "Quantum-AI Hybrid Computing",description: "Revolutionary platform combining quantum computing with AI",price: "$15,999",
           features: ["Quantum Computing", "AI Integration", "Optimization", "Simulation"],
-          aiScore: 99,
-          roi: "800% within 18 months"
-        },
+          aiScore: 99,roi: "800% within 18 months"
+        };
         {
-          name: "Neuromorphic Computing Platform",
-          description: "Brain-inspired AI platform with ultra-efficient processing",
-          price: "$12,999",
+          name: "Neuromorphic Computing Platform",description: "Brain-inspired AI platform with ultra-efficient processing",price: "$12,999",
           features: ["Brain-Inspired AI", "Neural Networks", "Real-time Learning", "Low Power"],
-          aiScore: 98,
-          roi: "600% within 15 months"
-        },
+          aiScore: 98,roi: "600% within 15 months"
+        };
         {
-          name: "Edge AI Computing Platform",
-          description: "Distributed intelligence platform for IoT and edge networks",
-          price: "$8,999",
+          name: "Edge AI Computing Platform",description: "Distributed intelligence platform for IoT and edge networks",price: "$8,999",
           features: ["Edge Computing", "Distributed AI", "Real-time Processing", "Privacy"],
-          aiScore: 96,
-          roi: "500% within 12 months"
+          aiScore: 96,roi: "500% within 12 months"
         }
       ]
-    },
+    };
     {
-      title: "IT Infrastructure Services",
-      icon: Cpu,
-      color: "from-green-600 to-teal-600",
-      services: [
+      title: "IT Infrastructure Services",icon: Cpu,color: "from-green-600 to-teal-600",services: [
         {
-          name: "Cloud Migration Automation",
-          description: "Comprehensive cloud migration with zero-downtime deployment",
-          price: "$15,999",
+          name: "Cloud Migration Automation",description: "Comprehensive cloud migration with zero-downtime deployment",price: "$15,999",
           features: ["AWS/Azure/GCP", "Zero Downtime", "Cost Optimization", "Monitoring"],
-          aiScore: 94,
-          roi: "300% within 12 months"
-        },
+          aiScore: 94,roi: "300% within 12 months"
+        };
         {
-          name: "DevOps Automation Platform",
-          description: "Advanced CI/CD platform with intelligent pipeline management",
-          price: "$8,999",
+          name: "DevOps Automation Platform",description: "Advanced CI/CD platform with intelligent pipeline management",price: "$8,999",
           features: ["CI/CD", "Automation", "Testing", "Deployment"],
-          aiScore: 93,
-          roi: "400% within 8 months"
-        },
+          aiScore: 93,roi: "400% within 8 months"
+        };
         {
-          name: "Cybersecurity Intelligence",
-          description: "Advanced threat detection and incident response platform",
-          price: "$12,999",
+          name: "Cybersecurity Intelligence",description: "Advanced threat detection and incident response platform",price: "$12,999",
           features: ["Threat Detection", "Incident Response", "Security Monitoring", "AI Security"],
-          aiScore: 96,
-          roi: "450% within 10 months"
+          aiScore: 96,roi: "450% within 10 months"
         }
       ]
     }
   ];
-
   const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    website: "https://ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709"
+    phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -282,9 +240,9 @@ export default function NewServicesShowcase2025() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { label: "Average ROI", value: "425%", description: "Within 6-18 months" },
-              { label: "Market Size", value: "$2.1T", description: "By 2027" },
-              { label: "Growth Rate", value: "23.4%", description: "CAGR" },
+              { label: "Average ROI", value: "425%", description: "Within 6-18 months" };
+              { label: "Market Size", value: "$2.1T", description: "By 2027" };
+              { label: "Growth Rate", value: "23.4%", description: "CAGR" };
               { label: "AI Capability", value: "95+", description: "Average AI Score" }
             ].map((stat, index) => (
               <motion.div

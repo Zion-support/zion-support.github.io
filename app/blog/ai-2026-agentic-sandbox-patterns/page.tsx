@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Agentic Sandbox Patterns — Isolation, Least Privilege, Runtime Guards';
-  description: 'Practical sandboxing patterns for safe agent tool use: isolation domains, time-boxing, scoped credentials, and runtime guardrails.',
-};
+  title: 'AI 2026: Agentic Sandbox Patterns — Isolation, Least Privilege, Runtime Guards',
+  description: 'Practical sandboxing patterns for safe agent tool use: isolation domains, time-boxing, scoped credentials, and runtime guardrails.'
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -24,29 +24,27 @@ export default function Page() {,
           <h3>Implementation Notes</h3>,
           <p>Start with a deny-by-default posture and add capabilities behind evaluation‑gated feature flags.</p>,
           <p>,
-            Related: {' ',}
+            Related: {' '}
             <Link href="/content/ai-2026-secure-tooling-permissions-blueprint" className="text-purple-700 underline">Secure Tooling Permissions Blueprint</Link>{' '}
             and {' '}
             <Link href="/blog/ai-2026-secure-agent-routing-strategies" className="text-purple-700 underline">Secure Agent Routing Strategies</Link>.,
           </p>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,
-import React from 'react';
-import SEO from '../../components/SEO';
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Agentic Sandbox Patterns (Overview) | Zion Tech Group';
+  title: 'AI 2026: Agentic Sandbox Patterns (Overview) | Zion Tech Group',
   description:,
-    'Quick overview of sandboxing patterns for safe agent tool use: isolation, least privilege, and runtime guards.';
+    'Quick overview of sandboxing patterns for safe agent tool use: isolation, least privilege, and runtime guards.',
   keywords: [,
-    'agent sandbox overviewtool use safety';
-    'policy-as-coderuntime guards';
-    'least privilegeeval gates',
-  ],
-};
+    'agent sandbox overviewtool use safetypolicy-as-coderuntime guards',
+    'least privilegeeval gates'
+  ]
+},
 export default function BlogAgenticSandboxPatterns() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -78,6 +76,6 @@ export default function BlogAgenticSandboxPatterns() {,
         </p>,
       </article>,
     </div>,
-  );
+  ),
 }
 ,

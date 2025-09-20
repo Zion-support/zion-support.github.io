@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server',
 export async function GET(request: NextRequest) {
   try {
     const healthCheck = {
@@ -17,10 +17,10 @@ export async function GET(request: NextRequest) {
         cpu_usage: process.cpuUsage()
         // Add more metrics as needed
       }
-    };
-    return NextResponse.json(healthCheck);
+    },
+    return NextResponse.json(healthCheck),
   } catch (error) {
-    console.error('Health check error:', error);
+    console.error('Health check error:', error),
     return NextResponse.json(
       {
         status: 'unhealthy',
@@ -28,6 +28,6 @@ export async function GET(request: NextRequest) {
         error: error instanceof Error ? error.message : 'Unknown error'
       },
       { status: 500 }
-    );
+    ),
   }
 }

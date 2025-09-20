@@ -1,8 +1,8 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Cloud, 
+  Cloud,
   Brain, 
   Zap, 
   CheckCircle,
@@ -45,102 +45,64 @@ import {
   Monitor,
   Shield,
   Rocket
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function CloudDevOps() {
   const features = [
     {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions with automated provisioning and management',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Cloud,title: 'Cloud Infrastructure',description: 'Scalable cloud solutions with automated provisioning and management',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: GitBranch,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
+      icon: GitBranch,title: 'CI/CD Pipelines',description: 'Automated build, test, and deployment workflows',
       color: 'from-green-500 to-emerald-500'
-    },
+    };
     {
-      icon: Code,
-      title: 'Infrastructure as Code',
-      description: 'Version-controlled infrastructure with Terraform and CloudFormation',
-      color: 'from-purple-500 to-pink-500'
-    },
+      icon: Code,title: 'Infrastructure as Code',description: 'Version-controlled infrastructure with Terraform and CloudFormation',color: 'from-purple-500 to-pink-500'
+    };
     {
-      icon: Monitor,
-      title: 'Monitoring & Logging',
-      description: 'Comprehensive observability and performance monitoring',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Monitor,title: 'Monitoring & Logging',description: 'Comprehensive observability and performance monitoring',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with automated compliance checks',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: Shield,title: 'Security & Compliance',description: 'Enterprise-grade security with automated compliance checks',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: Rocket,
-      title: 'Auto-scaling',
-      description: 'Intelligent resource scaling based on demand and performance',
-      color: 'from-indigo-500 to-blue-500'
+      icon: Rocket,title: 'Auto-scaling',description: 'Intelligent resource scaling based on demand and performance',color: 'from-indigo-500 to-blue-500'
     }
   ];
-
   const benefits = [
-    'Deploy applications 10x faster with automated pipelines',
-    'Reduce infrastructure costs by 40% with cloud optimization',
-    'Improve system reliability with 99.9% uptime',
-    'Enable rapid development and iteration cycles',
-    'Scale infrastructure automatically based on demand',
-    'Ensure security and compliance with automated checks'
-  ];
+    'Deploy applications 10x faster with automated pipelinesReduce infrastructure costs by 40% with cloud optimization',
+    'Improve system reliability with 99.9% uptimeEnable rapid development and iteration cycles',
+    'Scale infrastructure automatically based on demandEnsure security and compliance with automated checks'
+  ],
 
   const useCases = [
     {
-      title: 'Web Applications',
-      description: 'Scalable web apps with automated deployment and scaling',
-      icon: Globe
-    },
+      title: 'Web Applications',description: 'Scalable web apps with automated deployment and scaling',icon: Globe
+    };
     {
-      title: 'Microservices',
-      description: 'Containerized microservices with orchestration and monitoring',
-      icon: Package
-    },
+      title: 'Microservices',description: 'Containerized microservices with orchestration and monitoring',icon: Package
+    };
     {
-      title: 'Data Platforms',
-      description: 'Big data infrastructure with automated processing pipelines',
-      icon: Database
-    },
+      title: 'Data Platforms',description: 'Big data infrastructure with automated processing pipelines',icon: Database
+    };
     {
-      title: 'Mobile Backends',
-      description: 'Scalable mobile app backends with real-time updates',
-      icon: Smartphone
+      title: 'Mobile Backends',description: 'Scalable mobile app backends with real-time updates',icon: Smartphone
     }
   ];
-
   const devOpsCapabilities = [
     {
-      name: 'Continuous Integration',
-      description: 'Automated code building, testing, and quality checks',
-      examples: ['Automated testing', 'Code quality gates', 'Build automation']
+      name: 'Continuous Integration',description: 'Automated code building, testing, and quality checks',
+      examples: ['Automated testingCode quality gates', 'Build automation']
     },
     {
-      name: 'Continuous Deployment',
-      description: 'Automated deployment to multiple environments',
-      examples: ['Staging deployment', 'Production rollout', 'Rollback automation']
+      name: 'Continuous Deployment',description: 'Automated deployment to multiple environments',examples: ['Staging deploymentProduction rollout', 'Rollback automation']
     },
     {
-      name: 'Infrastructure Management',
-      description: 'Version-controlled infrastructure with automation',
-      examples: ['Terraform scripts', 'CloudFormation templates', 'Resource provisioning']
+      name: 'Infrastructure Management',description: 'Version-controlled infrastructure with automation',examples: ['Terraform scriptsCloudFormation templates', 'Resource provisioning']
     },
     {
-      name: 'Monitoring & Alerting',
-      description: 'Real-time system monitoring and automated alerts',
-      examples: ['Performance metrics', 'Error tracking', 'Capacity planning']
+      name: 'Monitoring & Alerting',description: 'Real-time system monitoring and automated alerts',examples: ['Performance metricsError tracking', 'Capacity planning']
     }
-  ];
+  ],
 
   return (
     <>
@@ -265,7 +227,7 @@ export default function CloudDevOps() {
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our cloud DevOps platform delivers measurable improvements in deployment speed, 
+                  Our cloud DevOps platform delivers measurable improvements in deployment speed;
                   infrastructure efficiency, and system reliability while reducing operational 
                   overhead and costs.
                 </p>
@@ -394,7 +356,7 @@ export default function CloudDevOps() {
                 Cloud DevOps Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our DevOps platform adapts to various application types and industries, 
+                Our DevOps platform adapts to various application types and industries;
                 providing tailored solutions for different development needs.
               </p>
             </motion.div>
@@ -459,7 +421,7 @@ export default function CloudDevOps() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -469,5 +431,5 @@ export default function CloudDevOps() {
         </section>
       </div>
     </>
-  );
+  )
 }

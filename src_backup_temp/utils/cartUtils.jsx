@@ -1,15 +1,15 @@
-// cartUtils utility;
-export const cartUtils = {;
-  // Placeholder utility functions;
-"init": "function() {;
+// cartUtils utility,
+export const cartUtils = {,
+  // Placeholder utility functions,
+"init": "function() {,
   "}
 }
-export default cartUtils;
-export const cartUtils = { init: function() {} }, export default cartUtils;
-// cartUtils utility;
+export default cartUtils,
+export const cartUtils = { init: function() {} }, export default cartUtils,
+// cartUtils utility,
 export const cartUtils = {,
-  // Placeholder utility functions;
+  // Placeholder utility functions,
 "init": function() {}
-};
-export default cartUtils;
-export const cartUtils = { init: function() {} }, export default cartUtils;
+},
+export default cartUtils,
+export const cartUtils = { init: function() {} }, export default cartUtils,

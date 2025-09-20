@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -10,29 +10,29 @@ import {
   Phone, Mail, MapPin, ExternalLink, Award,
   Target, Sparkles, Crown, Infinity, Zap as ZapIcon,
   ChevronDown, ChevronUp
-} from 'lucide-react';
-import { revolutionary2025Services } from '../data/revolutionary-2025-services';
-import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Card from '../components/ui/Card';
+} from 'lucide-react',
+import { revolutionary2025Services } from '../data/revolutionary-2025-services',
+import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Card from '../components/ui/Card',
 
 export default function ComprehensiveMarketPricing() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
 
   const allServices = [
     ...revolutionary2025Services,
     ...nextGenInnovations2025
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Market analysis data
   const marketAnalysis = {
@@ -47,7 +47,7 @@ export default function ComprehensiveMarketPricing() {
       { name: 'Emerging Tech', marketSize: '$18.7B', growth: '350%' },
       { name: 'Enterprise IT', marketSize: '$16.0B', growth: '200%' }
     ]
-  };
+  },
 
   // Competitive analysis
   const competitiveAnalysis = {
@@ -66,7 +66,7 @@ export default function ComprehensiveMarketPricing() {
       { name: 'SentinelOne', pricing: '$5-$8 per endpoint/month', ourAdvantage: 'Advanced AI security, behavioral analysis, comprehensive protection' },
       { name: 'Palo Alto Networks', pricing: '$50-$200 per user/month', ourAdvantage: 'Zero trust architecture, quantum encryption, enterprise-grade' }
     ]
-  };
+  },
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -75,52 +75,52 @@ export default function ComprehensiveMarketPricing() {
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Next-Gen')).length },
     { id: 'business', name: 'Business & Finance', icon: '💼', count: allServices.filter(s => s.category.includes('Business') || s.category.includes('Finance')).length },
     { id: 'industry', name: 'Industry 4.0', icon: '🏭', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industry')).length }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $10K/month', range: 'Under $10K' },
     { id: 'medium', name: '$10K - $25K/month', range: '$10K - $25K' },
     { id: 'high', name: '$25K+/month', range: '$25K+' }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
     const parsePriceToNumber = (price: any): number => {
-      if (typeof price === 'number') return price;
+      if (typeof price === 'number') return price,
       if (typeof price === 'string') {
-        const match = price.replace(/[^0-9.]/g, '');
-        const parsed = parseFloat(match || '0');
-        return isNaN(parsed) ? 0 : parsed;
+        const match = price.replace(/[^0-9.]/g, ''),
+        const parsed = parseFloat(match || '0'),
+        return isNaN(parsed) ? 0 : parsed,
       }
-      return 0;
-    };
+      return 0,
+    },
 
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
       
       const matchesCategory = selectedCategory === 'all' || 
                              (selectedCategory === 'ai' && service.category.includes('AI')) ||
                              (selectedCategory === 'quantum' && service.category.includes('Quantum')) ||
                              (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Next-Gen'))) ||
                              (selectedCategory === 'business' && (service.category.includes('Business') || service.category.includes('Finance'))) ||
-                             (selectedCategory === 'industry' && (service.category.includes('Manufacturing') || service.category.includes('Industry')));
+                             (selectedCategory === 'industry' && (service.category.includes('Manufacturing') || service.category.includes('Industry'))),
 
       const matchesPrice = selectedPriceRange === 'all' ||
                           (selectedPriceRange === 'low' && parsePriceToNumber(service.price) < 10000) ||
                           (selectedPriceRange === 'medium' && parsePriceToNumber(service.price) >= 10000 && parsePriceToNumber(service.price) <= 25000) ||
-                          (selectedPriceRange === 'high' && parsePriceToNumber(service.price) > 25000);
+                          (selectedPriceRange === 'high' && parsePriceToNumber(service.price) > 25000),
 
-      return matchesSearch && matchesCategory && matchesPrice;
-    });
+      return matchesSearch && matchesCategory && matchesPrice,
+    }),
 
     // Sort by price low to high
-    filtered.sort((a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price));
+    filtered.sort((a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price)),
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange]);
+    return filtered,
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange]),
 
 const comprehensive-market-pricing: React.FC = () => {
   return (
@@ -137,8 +137,8 @@ const comprehensive-market-pricing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default AdvancedQuantumComputing2026;
+export default AdvancedQuantumComputing2026,

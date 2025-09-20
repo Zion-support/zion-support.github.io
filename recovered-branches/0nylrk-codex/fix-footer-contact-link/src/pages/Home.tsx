@@ -1,7 +1,7 @@
 
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import React from 'react',
+import { SEO } from "@/components/SEO",
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         title="Zion - The Tech & AI Marketplace" 
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
-        canonical="https://ziontechgroup.com/"
+        canonical="https: //ziontechgroup.com/"
       />
 
       <div className="py-20 bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan">
@@ -40,5 +40,5 @@ export default function Home() {
 
       <FeatureCTAs />
     </div>
-  );
+  )
 }

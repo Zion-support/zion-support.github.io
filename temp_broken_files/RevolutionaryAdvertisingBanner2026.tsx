@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
   return (,
     <AnimatePresence>,
       {isVisible && (,
         <motion.div,
-          initial={{ opacity: 0, y: -100 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          exit={{ opacity: 0, y: -100 ,}}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           className="relative overflow-hidden",
         >,
           {/* Main Banner */}
@@ -17,14 +17,14 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
             </div>,
             <div className="container mx-auto relative z-10">,
               <div className="flex flex-col lg: flex-row items-center justify-between">,
-                {/* Content */,}
+                {/* Content */}
                 <div className="flex-1 mb-6 lg: mb-0">,
                   <motion.div,
-                    key={currentContent.id,}
-                    initial={{ opacity: 0, x: -50 ,}}
-                    animate={{ opacity: 1, x: 0 ,}}
-                    exit={{ opacity: 0, x: 50 ,}}
-                    transition={{ duration: 0.5 ,}}
+                    key={currentContent.id}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 50 }}
+                    transition={{ duration: 0.5 }}
                     className="flex items-start space-x-4",
                   >,
                     <div className="flex-shrink-0">,
@@ -34,7 +34,7 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
                     </div>,
                     <div className="flex-1">,
                       <div className="flex items-center space-x-2 mb-2">,
-                        <h2 className="text-2xl lg: text-3xl font-bold">{currentContent.title,}</h2>,
+                        <h2 className="text-2xl lg: text-3xl font-bold">{currentContent.title}</h2>,
                         <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-sm font-bold">,
                           {currentContent.discount}
                         </span>,
@@ -46,8 +46,7 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
                         {currentContent.features.map((feature, index) => (,
                           <span key={index} className="bg-white/20 px-3 py-1 rounded-full text-xs">,
                             {feature}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
                       {/* Price and Urgency */}
                       <div className="flex items-center space-x-4 mb-4">,
@@ -68,7 +67,7 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
                     to={currentContent.link}
                     className="bg-white text-gray-900 font-bold py-4 px-8 rounded-lg text-lg hover: bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2",
                   >,
-                    <span>{currentContent.cta,}</span>,
+                    <span>{currentContent.cta}</span>,
                     <Rocket className="w-5 h-5" />,
                   </Link>,
                 </div>,
@@ -80,7 +79,7 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
               className="absolute top-4 right-4 text-white/80 hover: text-white transition-colors",
             >,
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />,
               </svg>,
             </button>,
           </div>,
@@ -93,7 +92,7 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
                     key={index}
                     onClick={() => setCurrentAd(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${,
-                      index === currentAd ? 'bg-blue-600' : 'bg-gray-300',
+                      index === currentAd ? 'bg-blue-600' : 'bg-gray-300'
                     }`}
                   />,
                 ))}
@@ -103,6 +102,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
         </motion.div>,
       )}
     </AnimatePresence>,
-  );
-};
-export default RevolutionaryAdvertisingBanner2026;
+  ),
+},
+export default RevolutionaryAdvertisingBanner2026,

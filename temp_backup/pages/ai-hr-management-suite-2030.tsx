@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Users, Brain, Target, BarChart3, Zap, Shield, Globe, Phone, Mail, MapPin, TrendingUp, Clock } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { Users, Brain, Target, BarChart3, Zap, Shield, Globe, Phone, Mail, MapPin, TrendingUp, Clock } from 'lucide-react',
+import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 
 // Service data
 const serviceData = {
@@ -45,12 +45,9 @@ const serviceData = {
   ],
   marketPosition: 'Leading AI-powered HR management platform for enterprises seeking to revolutionize human resources through intelligent automation, predictive analytics, and data-driven decision making.',
   useCases: [
-    'Enterprise HR management',
-    'Startup talent acquisition',
-    'Remote workforce management',
-    'Employee performance optimization',
-    'Compliance and risk management',
-    'Strategic workforce planning'
+    'Enterprise HR managementStartup talent acquisition',
+    'Remote workforce managementEmployee performance optimization',
+    'Compliance and risk managementStrategic workforce planning'
   ],
   roi: 'Average customer sees 280% ROI within 9 months through improved employee retention, productivity, and operational efficiency.',
   contactInfo: {
@@ -58,5 +55,5 @@ const serviceData = {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-};
-export default UltimateContentShowcase2032;
+},
+export default UltimateContentShowcase2032,

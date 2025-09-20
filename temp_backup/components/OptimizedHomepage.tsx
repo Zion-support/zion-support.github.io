@@ -1,16 +1,16 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import Layout from './layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useCallback, useMemo } from 'react',
+import Layout from './layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, ChevronRight, ExternalLink
-} from 'lucide-react';
-import EnhancedSEO from './EnhancedSEO';
+} from 'lucide-react',
+import EnhancedSEO from './EnhancedSEO',
 
 // Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
+import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
+import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
+import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services',
 
 // Optimized loading component with better accessibility
 const OptimizedLoadingSpinner = () => (
@@ -21,7 +21,7 @@ const OptimizedLoadingSpinner = () => (
     </div>
     <span className="ml-3 text-lg font-medium text-gray-700">Loading revolutionary technology...</span>
   </div>
-);
+),
 
 // Performance-optimized animations
 const optimizedAnimations = {
@@ -38,7 +38,7 @@ const optimizedAnimations = {
       }
     }
   }
-};
+},
 
 // Animation variants for Framer Motion
 const animationVariants = {
@@ -55,7 +55,7 @@ const animationVariants = {
       }
     }
   }
-};
+},
 
 const OptimizedHomepage: React.FC = () => {
   return (
@@ -63,7 +63,7 @@ const OptimizedHomepage: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">OptimizedHomepage</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default OptimizedHomepage;
+export default OptimizedHomepage,

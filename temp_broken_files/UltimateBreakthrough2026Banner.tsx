@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 const UltimateBreakthrough2026Banner: React.FC = () => {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16">,
-      {/* Animated Background */,}
+      {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 animate-pulse"></div>,
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"></div>,
@@ -35,7 +35,7 @@ const UltimateBreakthrough2026Banner: React.FC = () => {,
               <div className="grid md: grid-cols-2 gap-8 items-center">,
                 <div>,
                   <h3 className="text-3xl font-bold mb-4 text-purple-300">,
-                    {breakthroughContent[currentSlide].title,}
+                    {breakthroughContent[currentSlide].title}
                   </h3>,
                   <p className="text-xl text-gray-200 mb-6 leading-relaxed">,
                     {breakthroughContent[currentSlide].description}
@@ -47,12 +47,11 @@ const UltimateBreakthrough2026Banner: React.FC = () => {,
                         className="px-3 py-1 bg-purple-500/30 text-purple-200 rounded-full text-sm border border-purple-400/30",
                       >,
                         {feature}
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                   <a,
                     href={breakthroughContent[currentSlide].link}
-                    className={`inline-block bg-gradient-to-r ${breakthroughContent[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-bold text-lg transform hover:scale-105`,}
+                    className={`inline-block bg-gradient-to-r ${breakthroughContent[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-bold text-lg transform hover:scale-105`}
                   >,
                     Explore Breakthrough →,
                   </a>,
@@ -80,7 +79,7 @@ const UltimateBreakthrough2026Banner: React.FC = () => {,
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${,
                   index === currentSlide,
                     ? 'bg-purple-400 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',}`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
               />,
             ))}
           </div>,
@@ -93,7 +92,7 @@ const UltimateBreakthrough2026Banner: React.FC = () => {,
             <a,
               key={index}
               href={content.link}
-              className={`bg-gradient-to-r ${content.gradient} text-white px-6 py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center transform hover:scale-105`,}
+              className={`bg-gradient-to-r ${content.gradient} text-white px-6 py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center transform hover:scale-105`}
             >,
               {content.title.split(' ')[1]} →,
             </a>,
@@ -122,5 +121,5 @@ const UltimateBreakthrough2026Banner: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default UltimateBreakthrough2026Banner;
+  )},
+export default UltimateBreakthrough2026Banner,

@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import Link from 'next/link',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 export default function AdminIndex() {
   return (
@@ -13,5 +13,5 @@ export default function AdminIndex() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

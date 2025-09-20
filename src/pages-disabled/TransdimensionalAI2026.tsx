@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const TransdimensionalAI2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -147,7 +146,7 @@ const TransdimensionalAI2026: React.FC = () => {
               <h4 className="text-xl font-bold text-center text-indigo-300 mb-4">DPU Specifications</h4>
               <div className="space-y-2 text-sm text-gray-300">
                 <div className="flex justify-between">
-                  <span>Dimensional Cores:</span>
+                  <span>Dimensional Cores: </span>
                   <span className="text-green-400">∞</span>
                 </div>
                 <div className="flex justify-between">
@@ -179,7 +178,7 @@ const TransdimensionalAI2026: React.FC = () => {
             <div className="bg-gradient-to-r from-indigo-800/30 to-purple-800/30 p-6 rounded-xl border border-indigo-400/20">
               <h3 className="text-2xl font-bold mb-4 text-indigo-300">Medical Breakthroughs</h3>
               <p className="text-gray-300">
-                Access medical solutions from parallel universes where diseases have been cured, 
+                Access medical solutions from parallel universes where diseases have been cured;
                 bringing impossible treatments to our reality.
               </p>
             </div>
@@ -239,7 +238,7 @@ const TransdimensionalAI2026: React.FC = () => {
             Join the pioneers who are already exploring the infinite possibilities of 
             transdimensional AI. The multiverse awaits your discovery.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <div className="flex flex-col sm: flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Enter the Multiverse
             </button>
@@ -263,7 +262,7 @@ const TransdimensionalAI2026: React.FC = () => {
       </div>
     </div>
   );
-};
+},
 
 export default TransdimensionalAI2026;
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>

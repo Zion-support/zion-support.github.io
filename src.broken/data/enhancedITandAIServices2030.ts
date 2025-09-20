@@ -2,39 +2,39 @@
 // Comprehensive IT infrastructure, consulting, and AI solutions with real market data
 
 export interface EnhancedITService {
-  id: string;
-  title: string;
-  description: string;
-  category: 'IT Infrastructure' | 'IT Consulting' | 'AI Solutions' | 'Digital Transformation';
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
+  id: string,
+  title: string,
+  description: string,
+  category: 'IT Infrastructure' | 'IT Consulting' | 'AI Solutions' | 'Digital Transformation',
+  subcategory: string,
+  price: number,
+  currency: string,
+  pricingModel: string,
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  tags: string[],
+  estimatedDelivery: string,
+  supportLevel: string,
+  marketPrice: string,
+  roi: string,
+  innovationLevel: string,
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string};
+    phone: string,
+    email: string,
+    website: string,
+    address: string},
   technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    certifications: string[];
-    uptime: string;
-    security: string[]};
-  competitors?: string[];
-  marketSize?: string;
-  projectType?: string;
-  maintenance?: string;
+    technology: string[],
+    integrations: string[],
+    certifications: string[],
+    uptime: string,
+    security: string[]},
+  competitors?: string[],
+  marketSize?: string,
+  projectType?: string,
+  maintenance?: string,
   compliance?: string[]}
 
 // Zion Tech Group Contact Information
@@ -606,6 +606,6 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [// IT INFRASTRU
     maintenance: "Ongoing support and model updates",
     compliance: ["GDPR", "Privacy protection", "Data security"]
   }
-];
+],
 
-export default enhancedITandAIServices2030;
+export default enhancedITandAIServices2030,

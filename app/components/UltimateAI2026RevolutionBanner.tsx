@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function UltimateAI2026RevolutionBanner() {,
   return (,
     <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">,
@@ -107,5 +107,4 @@ export default function UltimateAI2026RevolutionBanner() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

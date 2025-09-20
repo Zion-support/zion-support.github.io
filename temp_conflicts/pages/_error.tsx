@@ -1,21 +1,21 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 // Placeholder for Zion Tech Logo - replace with actual logo component or URL
 const ZionTechLogo = () => (
   <img src="/public/logos/zion-logo.png" alt="Zion Tech Logo" style={{ height: '50px', marginBottom: '20px' }} />
-);
+),
 
 // Placeholder for status page URL and support email - replace with actual values
-const STATUS_PAGE_URL = 'https://status.ziontech.com'; // Example URL
-const SUPPORT_EMAIL = 'support@ziontech.com'; // Example email
+const STATUS_PAGE_URL = 'https: //status.ziontech.com', // Example URL
+const SUPPORT_EMAIL = 'support@ziontech.com', // Example email
 
 const CustomErrorPage = ({ statusCode }: { statusCode?: number }) => {
   const handleReload = () => {
     if (typeof window !== 'undefined') {
-      window.location.reload();
+      window.location.reload(),
     }
-  };
+  },
 
   return (
     <>
@@ -64,12 +64,12 @@ const CustomErrorPage = ({ statusCode }: { statusCode?: number }) => {
         </div>
       </div>
     </>
-  );
-};
+  ),
+},
 
 CustomErrorPage.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
-  return { statusCode };
-};
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404,
+  return { statusCode },
+},
 
-export default CustomErrorPage;
+export default CustomErrorPage,

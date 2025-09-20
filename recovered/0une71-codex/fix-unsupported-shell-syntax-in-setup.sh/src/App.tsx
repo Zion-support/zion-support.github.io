@@ -1,9 +1,9 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import React from 'react',
+import { Routes, Route } from 'react-router-dom',
+import './App.css',
+import { ThemeProvider } from "./components/ThemeProvider",
+import { Toaster } from "./components/ui/toaster",
+import { Toaster as SonnerToaster } from "./components/ui/sonner",
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -16,8 +16,8 @@ import {
   EnterpriseRoutes,
   CommunityRoutes,
   DeveloperRoutes
-} from './routes';
-import Home from './pages/Home';
+} from './routes',
+import Home from './pages/Home',
 
 const App = () => {
   return (
@@ -39,7 +39,7 @@ const App = () => {
       <Toaster />
       <SonnerToaster position="top-right" />
     </ThemeProvider>
-  );
-};
+  ),
+},
 
-export default App;
+export default App,

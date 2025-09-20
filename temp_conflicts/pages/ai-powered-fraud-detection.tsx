@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Shield, Brain, Zap, Clock, Users, AlertTriangle, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredFraudDetection: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredFraudDetection: React.FC = () => {
       title: 'Multi-industry Support',
       description: 'Fraud detection across various industries and use cases'
     }
-  ];
+  ],
 
   const fraudCapabilities = [
     {
       area: 'Pattern Recognition',
-      capabilities: ['Anomaly detection', 'Behavioral analysis', 'Risk scoring', 'Threat identification'],
+      capabilities: ['Anomaly detectionBehavioral analysis', 'Risk scoringThreat identification'],
       improvement: '99.9% accuracy',
       recognition: 'Advanced'
     },
     {
       area: 'Real-time Analysis',
-      capabilities: ['Live monitoring', 'Instant alerts', 'Automated response', 'Threat mitigation'],
+      capabilities: ['Live monitoringInstant alerts', 'Automated responseThreat mitigation'],
       improvement: 'Real-time detection',
       analysis: 'Instant'
     },
     {
       area: 'Machine Learning',
-      capabilities: ['Continuous learning', 'Adaptive algorithms', 'Pattern evolution', 'False positive reduction'],
+      capabilities: ['Continuous learningAdaptive algorithms', 'Pattern evolutionFalse positive reduction'],
       improvement: '95% reduction',
       learning: 'Continuous'
     },
     {
       area: 'Risk Assessment',
-      capabilities: ['Risk scoring', 'Threat classification', 'Impact analysis', 'Mitigation strategies'],
+      capabilities: ['Risk scoringThreat classification', 'Impact analysisMitigation strategies'],
       improvement: 'Comprehensive coverage',
       assessment: 'Intelligent'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Financial Services',
       description: 'AI-powered fraud detection for banking, payments, and financial transactions',
-      benefits: ['Transaction monitoring', 'Account protection', 'Payment security', 'Regulatory compliance']
+      benefits: ['Transaction monitoringAccount protection', 'Payment securityRegulatory compliance']
     },
     {
       title: 'E-commerce & Retail',
       description: 'Fraud detection for online transactions and retail operations',
-      benefits: ['Order validation', 'Payment verification', 'Account protection', 'Revenue protection']
+      benefits: ['Order validationPayment verification', 'Account protectionRevenue protection']
     },
     {
       title: 'Healthcare & Insurance',
       description: 'Fraud detection for healthcare claims and insurance applications',
-      benefits: ['Claim validation', 'Provider verification', 'Cost optimization', 'Regulatory compliance']
+      benefits: ['Claim validationProvider verification', 'Cost optimizationRegulatory compliance']
     },
     {
       title: 'Cybersecurity',
       description: 'Advanced threat detection and cybersecurity protection',
-      benefits: ['Threat detection', 'Attack prevention', 'Security monitoring', 'Incident response']
+      benefits: ['Threat detectionAttack prevention', 'Security monitoringIncident response']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredFraudDetection: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with fraud detection',
       features: [
-        'Basic fraud detection features',
-        'Single industry support',
-        'Standard monitoring',
-        'Email support',
+        'Basic fraud detection featuresSingle industry support',
+        'Standard monitoringEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredFraudDetection: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced fraud detection needs',
       features: [
-        'Advanced fraud detection features',
-        'Multi-industry support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced fraud detection featuresMulti-industry support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time monitoring'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredFraudDetection: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex fraud detection requirements',
       features: [
-        'Custom fraud detection development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom fraud detection developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredFraudDetection: React.FC = () => {
       position: "Fraud Director",
       company: "Advanced Security Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredFraudDetection: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Protect with AI-Powered Fraud Detection Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredFraudDetection: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredFraudDetection;
+export default AIPoweredFraudDetection,

@@ -1,1 +1,1 @@
-export { default } from '../src/pages/PrivacySettings';
+export { default } from '../src/pages/PrivacySettings',

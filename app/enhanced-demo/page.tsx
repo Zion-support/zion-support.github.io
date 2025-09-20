@@ -1,13 +1,13 @@
-import React from 'react';
-import { Suspense } from 'react';
-import AdvancedPerformanceOptimizer from '../../components/AdvancedPerformanceOptimizer';
-import AIContentGenerator from '../../components/AIContentGenerator';
-import AdvancedAnalyticsDashboard from '../../components/AdvancedAnalyticsDashboard';
-import EnhancedSEO from '../../components/EnhancedSEO';
-import PerformanceMonitor from '../../components/PerformanceMonitor';
-import EnhancedLoadingSpinner from '../../components/EnhancedLoadingSpinner';
-import EnhancedErrorBoundary from '../../components/EnhancedErrorBoundary';
-import InteractiveAICalculator from '../../components/InteractiveAICalculator';
+import React from 'react',
+import { Suspense } from 'react',
+import AdvancedPerformanceOptimizer from '../../components/AdvancedPerformanceOptimizer',
+import AIContentGenerator from '../../components/AIContentGenerator',
+import AdvancedAnalyticsDashboard from '../../components/AdvancedAnalyticsDashboard',
+import EnhancedSEO from '../../components/EnhancedSEO',
+import PerformanceMonitor from '../../components/PerformanceMonitor',
+import EnhancedLoadingSpinner from '../../components/EnhancedLoadingSpinner',
+import EnhancedErrorBoundary from '../../components/EnhancedErrorBoundary',
+import InteractiveAICalculator from '../../components/InteractiveAICalculator',
 export default function EnhancedDemoPage() {,
   return (,
     <EnhancedErrorBoundary>,
@@ -15,7 +15,7 @@ export default function EnhancedDemoPage() {,
         <EnhancedSEO,
           title="Enhanced Demo - Advanced Features",
           description="Demonstration of all advanced components and features",
-          keywords={['demoenhanced', 'advancedfeatures', 'components']}
+          keywords={['demoenhancedadvancedfeatures', 'components']}
         />,
         <Suspense fallback={<EnhancedLoadingSpinner variant="fullscreen" />}>,
           <div className="container mx-auto px-4 py-8 space-y-12">,
@@ -25,7 +25,7 @@ export default function EnhancedDemoPage() {,
               </h1>,
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">,
                 Experience all the advanced components and features in action.,
-                This page demonstrates performance optimization, AI content generation;
+                This page demonstrates performance optimization, AI content generation,
                 analytics, and interactive tools.,
               </p>,
             </div>,
@@ -37,6 +37,5 @@ export default function EnhancedDemoPage() {,
           </div>,
         </Suspense>,
       </div>,
-    </EnhancedErrorBoundary>,
-  );
+    </EnhancedErrorBoundary>),
 }

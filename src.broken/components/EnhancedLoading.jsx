@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
 export default function Page() {
- from 'framer-motion';
+ from 'framer-motion',
 ) => {
 
     const sizeClasses = {

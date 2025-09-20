@@ -1,74 +1,72 @@
 
-import { UserProfile, UserDetails } from '@/types/auth';
-import { Message, Conversation, ConversationContextData } from '@/types/messaging';
-import { useConversationState } from './useConversationState';
-import { useConversations } from './useConversations';
-import { useMessages } from './useMessages';
+import { UserProfile, UserDetails } from '@/types/auth',
+import { Message, Conversation, ConversationContextData } from '@/types/messaging',
+import { useConversationState } from './useConversationState',
+import { useConversations } from './useConversations',
+import { useMessages } from './useMessages',
 // Allow either UserProfile or UserDetails,
-type UserWithProfile = UserProfile | UserDetails | null;
+type UserWithProfile = UserProfile | UserDetails | null,
 /**,
  * Hook that combines all messaging operations,
  */,
 export function useMessagingOperations(user: UserWithProfile) {,
   // State management,
   const {,
-    messages;
-    setMessages;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    unreadCount;
-    setUnreadCount;
-    activeConversation;
-    setActiveConversation;
-    isLoading;
-    setIsLoading,
-  } = useConversationState();
+    messages,
+    setMessages,
+    activeMessages,
+    setActiveMessages,
+    conversations,
+    setConversations,
+    unreadCount,
+    setUnreadCount,
+    activeConversation,
+    setActiveConversation,
+    isLoading,
+    setIsLoading
+  } = useConversationState(),
   // Conversations management,
   const {,
-    fetchConversations;
-    createConversation,
+    fetchConversations,
+    createConversation
   } = useConversations(,
-    user;
-    setConversations;
-    setUnreadCount;
-    setIsLoading,
-  );
+    user,
+    setConversations,
+    setUnreadCount,
+    setIsLoading),
   // Messages management,
   const {,
-    loadMessages;
-    sendMessage;
-    markAsRead,
+    loadMessages,
+    sendMessage,
+    markAsRead
   } = useMessages(,
-    user;
-    activeConversation;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    setUnreadCount;
-    setIsLoading;
-    fetchConversations,
-  );
+    user,
+    activeConversation,
+    activeMessages,
+    setActiveMessages,
+    conversations,
+    setConversations,
+    setUnreadCount,
+    setIsLoading,
+    fetchConversations),
   return {,
     // State,
-    messages;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    unreadCount;
-    setUnreadCount;
-    activeConversation;
-    setActiveConversation;
-    isLoading;
+    messages,
+    activeMessages,
+    setActiveMessages,
+    conversations,
+    setConversations,
+    unreadCount,
+    setUnreadCount,
+    activeConversation,
+    setActiveConversation,
+    isLoading,
     // Operations,
-    sendMessage;
-    createConversation;
-    markAsRead;
-    fetchConversations;
-    loadMessages,
-  };
+    sendMessage,
+    createConversation,
+    markAsRead,
+    fetchConversations,
+    loadMessages
+  },
 }
 ,

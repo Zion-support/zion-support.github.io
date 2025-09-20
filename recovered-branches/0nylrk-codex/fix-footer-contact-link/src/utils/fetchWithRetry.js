@@ -3,24 +3,24 @@
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 1000) => {,
   for (let attempt = 1, attempt <= maxRetries, attempt++) {,
     try {,
-      const response = await fetch(url, options);
+      const response = await fetch(url, options),
       if (response.ok) {,
-        return response;
+        return response,
       }
       // If not the last attempt, wait and retry,
       if (attempt < maxRetries) {,
-        await new Promise(resolve => setTimeout(resolve, delay * attempt));
-        continue;
+        await new Promise(resolve => setTimeout(resolve, delay * attempt)),
+        continue,
       }
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`),
     } catch (error) {,
       // If this is the last attempt, throw the error,
       if (attempt === maxRetries) {,
-        throw error;
+        throw error,
       }
       // Wait before retrying,
-      await new Promise(resolve => setTimeout(resolve, delay * attempt));
+      await new Promise(resolve => setTimeout(resolve, delay * attempt)),
     }
-  };
-};
-export default fetchWithRetry;
+  },
+},
+export default fetchWithRetry,

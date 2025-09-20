@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Atom, Beaker, Zap, Target, Users, Globe, ArrowRight, Search } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Atom, Beaker, Zap, Target, Users, Globe, ArrowRight, Search } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function QuantumMaterialsDiscovery() {
   return (
@@ -18,6 +18,6 @@ export default function QuantumMaterialsDiscovery() {
         </div>
       </div>
     </div>
-  );
-};
-export default UltimateTechRevolution2042;
+  ),
+},
+export default UltimateTechRevolution2042,

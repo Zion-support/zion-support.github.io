@@ -1,7 +1,7 @@
-import { Droppable } from '@hello-pangea/dnd';
+import { Droppable } from '@hello-pangea/dnd',
 
 export default function Page() {
-  };
+  },
   return ()
     <Card
       className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}
@@ -42,6 +42,6 @@ export default function Page() {
         </Droppable>
       </CardContent>
     </Card>
-  );
+  ),
 }
 '"`

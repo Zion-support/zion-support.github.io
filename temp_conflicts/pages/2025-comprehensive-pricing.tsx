@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Filter, Check, Star, Users, TrendingUp, Zap,
   Building, Brain, Server, Globe, Cloud, Shield, Target,
   DollarSign, Users as UsersIcon, ArrowRight, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new service data
-import { advancedEnterpriseSolutions2025 } from '../data/2025-advanced-enterprise-solutions';
-import { innovativeAIAutomationServices2025 } from '../data/2025-innovative-ai-automation-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { advancedEnterpriseSolutions2025 } from '../data/2025-advanced-enterprise-solutions',
+import { innovativeAIAutomationServices2025 } from '../data/2025-innovative-ai-automation-services',
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services',
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions',
 
 // Import existing service data
-import { realMicroSaasServices } from '../data/real-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
+import { realMicroSaasServices } from '../data/real-micro-saas-services',
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { enterpriseITServices } from '../data/enterprise-it-services',
 
 // Create unified services array
 const allServices = [
@@ -27,7 +27,7 @@ const allServices = [
   ...realMicroSaasServices,
   ...innovativeAIServices,
   ...enterpriseITServices
-];
+],
 
 // Service categories with pricing tiers
 const pricingCategories = [
@@ -63,20 +63,20 @@ const pricingCategories = [
     color: 'from-green-500 to-emerald-600',
     services: allServices.filter(s => s.category.toLowerCase().includes('infrastructure') || s.category.toLowerCase().includes('cloud') || s.category.toLowerCase().includes('security') || s.category.toLowerCase().includes('network'))
   }
-];
+],
 
 const ComprehensivePricing2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Categories');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredServices, setFilteredServices] = useState(allServices);
+  const [selectedCategory, setSelectedCategory] = useState('All Categories'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [filteredServices, setFilteredServices] = useState(allServices),
 
   useEffect(() => {
-    let filtered = allServices;
+    let filtered = allServices,
 
     if (selectedCategory !== 'All Categories') {
-      const category = pricingCategories.find(c => c.name === selectedCategory);
+      const category = pricingCategories.find(c => c.name === selectedCategory),
       if (category) {
-        filtered = category.services;
+        filtered = category.services,
       }
     }
 
@@ -85,11 +85,11 @@ const ComprehensivePricing2025: React.FC = () => {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
 
-    setFilteredServices(filtered);
-  }, [selectedCategory, searchTerm]);
+    setFilteredServices(filtered),
+  }, [selectedCategory, searchTerm]),
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -103,25 +103,16 @@ const ComprehensivePricing2025: React.FC = () => {
       'Marketing': <Target className="w-5 h-5" />,
       'Finance': <DollarSign className="w-5 h-5" />,
       'HR & Operations': <UsersIcon className="w-5 h-5" />
-    };
-    return iconMap[category] || <Zap className="w-5 h-5" />;
-  };
+    },
+    return iconMap[category] || <Zap className="w-5 h-5" />,
+  },
 
   const getCategoryColor = (category: string) => {
     const colorMap: { [key: string]: string } = {
-      'Enterprise Solutions': 'from-blue-500 to-indigo-600',
-      'AI & Automation': 'from-purple-500 to-violet-600',
-      'IT Infrastructure': 'from-green-500 to-emerald-600',
-      'Micro SAAS': 'from-orange-500 to-amber-600',
-      'Cloud Services': 'from-cyan-500 to-blue-600',
-      'Security': 'from-red-500 to-pink-600',
-      'Analytics': 'from-teal-500 to-cyan-600',
-      'Marketing': 'from-pink-500 to-rose-600',
-      'Finance': 'from-emerald-500 to-green-600',
-      'HR & Operations': 'from-amber-500 to-orange-600'
-    };
-    return colorMap[category] || 'from-gray-500 to-slate-600';
-  };
+      'Enterprise Solutions': 'from-blue-500 to-indigo-600AI & Automation': 'from-purple-500 to-violet-600IT Infrastructure': 'from-green-500 to-emerald-600Micro SAAS': 'from-orange-500 to-amber-600Cloud Services': 'from-cyan-500 to-blue-600Security': 'from-red-500 to-pink-600Analytics': 'from-teal-500 to-cyan-600Marketing': 'from-pink-500 to-rose-600Finance': 'from-emerald-500 to-green-600HR & Operations': 'from-amber-500 to-orange-600'
+    },
+    return colorMap[category] || 'from-gray-500 to-slate-600',
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
@@ -475,7 +466,7 @@ const ComprehensivePricing2025: React.FC = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Need a Custom Solution?
@@ -500,7 +491,7 @@ const ComprehensivePricing2025: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default ComprehensivePricing2025;
+export default ComprehensivePricing2025,

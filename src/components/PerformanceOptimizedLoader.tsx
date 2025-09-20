@@ -1,31 +1,25 @@
-import React, { memo } from 'react';
-import { motion } from 'framer-motion';
-
+import React, { memo } from "react";
+import { motion } from "framer-motion";
 interface LoaderProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-  text?: string;
-  fullScreen?: boolean;
-  showLogo?: boolean;
+  size?: 'sm' | 'md' | 'lg',
+  color?: 'primary' | 'secondary' | 'white',
+  text?: string,
+  fullScreen?: boolean,
+  showLogo?: boolean,
 }
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({
-  size = 'md',
-  color = 'primary',
-  text,
+  size = 'md';
+  color = 'primary';
+  text;
   fullScreen = false
 }: LoaderProps) => {
   const sizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16'
+    sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16'
   };
   const textSizes = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-base'
+    sm: 'text-xs',md: 'text-sm',lg: 'text-base'
   };
-
-  const showLogo = true; // Add this variable
+  const showLogo = true, // Add this variable
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -37,9 +31,7 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-zion-cyan border-t-transparent rounded-full`}
           animate={{ rotate: 360 }}
           transition={{
-            duration: 1,
-            repeat: Infinity,
-            ease: "linear"
+            duration: 1,repeat: Infinity,ease: "linear"
           }}
         />
         {/* Logo text */}
@@ -61,9 +53,9 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
       </div>
     </div>
   );
-});
+}),
 
-PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
+PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader',
 // Skeleton loader for content
 export function SkeletonLoader({
   className = "",
@@ -111,7 +103,7 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 // Grid skeleton loader
 export function GridSkeleton({
@@ -119,7 +111,7 @@ export function GridSkeleton({
   rows = 2,
   className = ""
 }: {
-  columns?: number;
+  columns?: number,
   rows?: number;
   className?: string;
 }) {

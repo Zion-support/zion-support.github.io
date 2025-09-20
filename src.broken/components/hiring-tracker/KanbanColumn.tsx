@@ -1,16 +1,16 @@
 
-import { Droppable } from "@hello-pangea/dnd";
-import { JobApplication } from "@/types/jobs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CandidateCard } from "./CandidateCard";
+import { Droppable } from "@hello-pangea/dnd",
+import { JobApplication } from "@/types/jobs",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { CandidateCard } from "./CandidateCard",
 
 interface KanbanColumnProps {
-  id: string;
-  title: string;
-  description: string;
-  applications: JobApplication[];
-  count: number;
+  id: string,
+  title: string,
+  description: string,
+  applications: JobApplication[],
+  count: number
 }
 
 export function KanbanColumn({
@@ -23,31 +23,29 @@ export function KanbanColumn({
   // Add color based on column type
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {
-      case "new":
-        return "secondary";
+      case "new": return "secondary",
       case "shortlisted":
-        return "outline";
+        return "outline",
       case "interview":
-        return "default";
+        return "default",
       case "hired":
-        return "success";
+        return "success",
       case "rejected":
-        return "destructive";
+        return "destructive",
       default:
-        return "outline";
+        return "outline"
     }
-  };
+  },
   
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
-      case "hired":
-        return "bg-green-50";
+      case "hired": return "bg-green-50",
       case "rejected":
-        return "bg-red-50";
+        return "bg-red-50",
       default:
-        return "bg-muted/30";
+        return "bg-muted/30"
     }
-  };
+  },
   
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
@@ -87,5 +85,5 @@ export function KanbanColumn({
         </Droppable>
       </CardContent>
     </Card>
-  );
+  ),
 }

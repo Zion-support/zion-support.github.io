@@ -1,13 +1,13 @@
 export interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
+  id: string,
+  name: string,
+  price: number,
+  quantity: number,
   type: 'equipment' | 'service' | 'talent'}
 
 export const calculateCartTotal = (items: CartItem[]): number => {
 
-  return items.reduce((total, item) => total + item.price * item.quantity, 0)};
+  return items.reduce((total, item) => total + item.price * item.quantity, 0)},
 
 export 
   if(existingItem) {
@@ -18,24 +18,24 @@ export
         : cartItem
     )}
 
-  return [...cart, item]};
+  return [...cart, item]},
 
 export 
-};
+},
 
 export 
-};
+},
 
 export 
   }
 
-  return cart.map(item => (item.id === itemId ? { ...item, quantity } : item))};
+  return cart.map(item => (item.id === itemId ? { ...item, quantity } : item))},
 
 export 
-};
+},
 
 export 
-};
+},
 
 export 
   newItems.forEach(newItem => {
@@ -45,7 +45,7 @@ export
       merged[existingIndex].quantity += newItem.quantity} else {
 
       merged.push(newItem)}
-  });
+  }),
 
-  return merged};
+  return merged},
 '`

@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function AI2026RevolutionaryContentShowcase() {,
   return (,
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">,
             <span className="text-sm font-medium">⚡ REVOLUTIONARY AI 2026 CONTENT</span>,
@@ -19,7 +19,7 @@ export default function AI2026RevolutionaryContentShowcase() {,
         </div>,
         {/* Content Showcase Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
-          {/* Featured Article 1 */,}
+          {/* Featured Article 1 */}
           <div className="bg-white rounded-2xl shadow-lg hover: shadow-xl transition-shadow duration-300 overflow-hidden">,
             <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6">,
               <div className="text-3xl mb-2">🤖</div>,
@@ -44,7 +44,7 @@ export default function AI2026RevolutionaryContentShowcase() {,
               </div>,
             </div>,
           </div>,
-          {/* Featured Article 2 */,}
+          {/* Featured Article 2 */}
           <div className="bg-white rounded-2xl shadow-lg hover: shadow-xl transition-shadow duration-300 overflow-hidden">,
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-6">,
               <div className="text-3xl mb-2">⚛️</div>,
@@ -69,7 +69,7 @@ export default function AI2026RevolutionaryContentShowcase() {,
               </div>,
             </div>,
           </div>,
-          {/* Featured Article 3 */,}
+          {/* Featured Article 3 */}
           <div className="bg-white rounded-2xl shadow-lg hover: shadow-xl transition-shadow duration-300 overflow-hidden">,
             <div className="bg-gradient-to-r from-green-500 to-blue-500 p-6">,
               <div className="text-3xl mb-2">🏢</div>,
@@ -80,7 +80,7 @@ export default function AI2026RevolutionaryContentShowcase() {,
             </div>,
             <div className="p-6">,
               <p className="text-gray-600 mb-4">,
-                The ultimate guide to enterprise automation breakthrough with complete strategies;
+                The ultimate guide to enterprise automation breakthrough with complete strategies,
                 frameworks, and implementation roadmaps for business transformation.,
               </p>,
               <div className="flex items-center justify-between">,
@@ -95,7 +95,7 @@ export default function AI2026RevolutionaryContentShowcase() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">,
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>,
@@ -119,5 +119,4 @@ export default function AI2026RevolutionaryContentShowcase() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

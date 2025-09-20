@@ -11,60 +11,40 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         price: '$1,299',
         period: '/month',
         features: [
-            'Self-sovereign identity management',
-            'Zero-knowledge proof verification',
-            'Verifiable credentials',
-            'Cross-platform authentication',
-            'Privacy-preserving verification',
-            'Multi-chain support',
-            'Biometric integration',
-            'Compliance automation',
-            'API access for developers',
-            'Enterprise SSO integration'
+            'Self-sovereign identity managementZero-knowledge proof verification',
+            'Verifiable credentialsCross-platform authentication',
+            'Privacy-preserving verificationMulti-chain support',
+            'Biometric integrationCompliance automation',
+            'API access for developersEnterprise SSO integration'
         ],
         benefits: [
-            '100% privacy-preserving identity verification',
-            'Eliminates password-based authentication',
-            'Reduces identity fraud by 99%',
-            'Compliant with global privacy regulations',
-            'Seamless cross-platform authentication',
-            'Cost-effective identity management'
+            '100% privacy-preserving identity verificationEliminates password-based authentication',
+            'Reduces identity fraud by 99%Compliant with global privacy regulations',
+            'Seamless cross-platform authenticationCost-effective identity management'
         ],
         useCases: [
-            'Enterprise authentication',
-            'Financial services KYC',
-            'Healthcare identity verification',
-            'Government services',
-            'E-commerce verification',
-            'Educational credentials'
+            'Enterprise authenticationFinancial services KYC',
+            'Healthcare identity verificationGovernment services',
+            'E-commerce verificationEducational credentials'
         ],
         targetAudience: [
-            'Financial institutions',
-            'Healthcare organizations',
-            'Government agencies',
-            'E-commerce platforms',
-            'Educational institutions',
-            'Technology companies'
+            'Financial institutionsHealthcare organizations',
+            'Government agenciesE-commerce platforms',
+            'Educational institutionsTechnology companies'
         ],
         technology: [
-            'Blockchain',
-            'Zero-Knowledge Proofs',
-            'Verifiable Credentials',
-            'Cryptography',
-            'Distributed Systems',
-            'Web3 Protocols'
+            'BlockchainZero-Knowledge Proofs',
+            'Verifiable CredentialsCryptography',
+            'Distributed SystemsWeb3 Protocols'
         ],
         integrations: [
-            'Ethereum',
-            'Polygon',
-            'Solana',
-            'Enterprise SSO',
-            'Biometric Systems',
-            'Compliance Platforms'
+            'EthereumPolygon',
+            'SolanaEnterprise SSO',
+            'Biometric SystemsCompliance Platforms'
         ],
         marketPosition: 'First enterprise-grade decentralized identity platform with zero-knowledge proofs',
         roi: '400% ROI through fraud prevention and compliance automation',
-        competitors: ['Microsoft Entra', 'Okta', 'Auth0', 'Spruce ID'],
+        competitors: ['Microsoft EntraOkta', 'Auth0Spruce ID'],
         marketSize: '$18.7B identity and access management market',
         growthRate: '320% annual growth in decentralized identity',
         contactInfo: {
@@ -77,7 +57,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/decentralized-identity-platform/demo',
         trialDays: 30,
         setupTime: '2-3 weeks',
-        complianceStandards: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001', 'NIST'],
+        complianceStandards: ['GDPRCCPA', 'SOC2ISO 27001', 'NIST'],
         supportLevel: 'enterprise'
     },
     // 2. AI-Powered DeFi Analytics Platform
@@ -91,60 +71,40 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         price: '$899',
         period: '/month',
         features: [
-            'Real-time DeFi market analysis',
-            'AI-powered yield optimization',
-            'Cross-chain portfolio tracking',
-            'Automated rebalancing',
-            'Risk assessment algorithms',
-            'Yield farming strategies',
-            'Liquidity analysis',
-            'Gas optimization',
-            'Portfolio performance tracking',
-            'Mobile app access'
+            'Real-time DeFi market analysisAI-powered yield optimization',
+            'Cross-chain portfolio trackingAutomated rebalancing',
+            'Risk assessment algorithmsYield farming strategies',
+            'Liquidity analysisGas optimization',
+            'Portfolio performance trackingMobile app access'
         ],
         benefits: [
-            'Up to 300% higher yields through AI optimization',
-            'Real-time risk monitoring',
-            'Automated portfolio management',
-            'Cross-chain yield opportunities',
-            'Reduced gas costs',
-            'Professional-grade analytics'
+            'Up to 300% higher yields through AI optimizationReal-time risk monitoring',
+            'Automated portfolio managementCross-chain yield opportunities',
+            'Reduced gas costsProfessional-grade analytics'
         ],
         useCases: [
-            'DeFi portfolio management',
-            'Yield farming optimization',
-            'Risk management',
-            'Market analysis',
-            'Portfolio tracking',
-            'Strategy development'
+            'DeFi portfolio managementYield farming optimization',
+            'Risk managementMarket analysis',
+            'Portfolio trackingStrategy development'
         ],
         targetAudience: [
-            'DeFi investors',
-            'Crypto funds',
-            'Individual traders',
-            'Financial advisors',
-            'Institutional investors',
-            'DeFi protocols'
+            'DeFi investorsCrypto funds',
+            'Individual tradersFinancial advisors',
+            'Institutional investorsDeFi protocols'
         ],
         technology: [
-            'Artificial Intelligence',
-            'Machine Learning',
-            'Blockchain Analytics',
-            'DeFi Protocols',
-            'Cross-chain Technology',
-            'Real-time Data Processing'
+            'Artificial IntelligenceMachine Learning',
+            'Blockchain AnalyticsDeFi Protocols',
+            'Cross-chain TechnologyReal-time Data Processing'
         ],
         integrations: [
-            'Ethereum',
-            'Polygon',
-            'BSC',
-            'Solana',
-            'DeFi Protocols',
-            'DEX Aggregators'
+            'EthereumPolygon',
+            'BSCSolana',
+            'DeFi ProtocolsDEX Aggregators'
         ],
         marketPosition: 'First AI-powered DeFi analytics platform with cross-chain optimization',
         roi: '300% ROI through yield optimization and risk reduction',
-        competitors: ['DeFi Pulse', 'DeFi Llama', 'Zapper', 'DeBank'],
+        competitors: ['DeFi PulseDeFi Llama', 'ZapperDeBank'],
         marketSize: '$12.8B DeFi analytics market',
         growthRate: '450% annual growth in DeFi analytics',
         contactInfo: {
@@ -157,7 +117,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/ai-defi-analytics/demo',
         trialDays: 14,
         setupTime: '1 hour',
-        complianceStandards: ['GDPR', 'CCPA', 'SOC2'],
+        complianceStandards: ['GDPRCCPA', 'SOC2'],
         supportLevel: 'premium'
     },
     // ===== IoT & EDGE COMPUTING SERVICES =====
@@ -172,60 +132,40 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         price: '$2,499',
         period: '/month',
         features: [
-            'Real-time fleet tracking',
-            'AI-powered route optimization',
-            'Predictive maintenance alerts',
-            'Autonomous logistics decisions',
-            'Fuel consumption optimization',
-            'Driver behavior monitoring',
-            'Cargo tracking and monitoring',
-            'Weather integration',
-            'Traffic optimization',
-            'Mobile app for drivers'
+            'Real-time fleet trackingAI-powered route optimization',
+            'Predictive maintenance alertsAutonomous logistics decisions',
+            'Fuel consumption optimizationDriver behavior monitoring',
+            'Cargo tracking and monitoringWeather integration',
+            'Traffic optimizationMobile app for drivers'
         ],
         benefits: [
-            '25% reduction in fuel costs',
-            '30% improvement in delivery times',
-            'Predictive maintenance prevents breakdowns',
-            'Real-time route optimization',
-            'Enhanced driver safety',
-            'Comprehensive fleet analytics'
+            '25% reduction in fuel costs30% improvement in delivery times',
+            'Predictive maintenance prevents breakdownsReal-time route optimization',
+            'Enhanced driver safetyComprehensive fleet analytics'
         ],
         useCases: [
-            'Logistics and delivery',
-            'Transportation companies',
-            'Construction fleets',
-            'Agricultural machinery',
-            'Emergency services',
-            'Municipal services'
+            'Logistics and deliveryTransportation companies',
+            'Construction fleetsAgricultural machinery',
+            'Emergency servicesMunicipal services'
         ],
         targetAudience: [
-            'Logistics companies',
-            'Transportation firms',
-            'Construction companies',
-            'Agricultural businesses',
-            'Government agencies',
-            'Emergency services'
+            'Logistics companiesTransportation firms',
+            'Construction companiesAgricultural businesses',
+            'Government agenciesEmergency services'
         ],
         technology: [
-            'Internet of Things',
-            'Edge Computing',
-            'Artificial Intelligence',
-            'Machine Learning',
-            'Real-time Analytics',
-            'GPS and Telematics'
+            'Internet of ThingsEdge Computing',
+            'Artificial IntelligenceMachine Learning',
+            'Real-time AnalyticsGPS and Telematics'
         ],
         integrations: [
-            'GPS Systems',
-            'Vehicle Telematics',
-            'Weather APIs',
-            'Traffic Systems',
-            'ERP Systems',
-            'Mobile Applications'
+            'GPS SystemsVehicle Telematics',
+            'Weather APIsTraffic Systems',
+            'ERP SystemsMobile Applications'
         ],
         marketPosition: 'First autonomous IoT fleet management system with AI-powered optimization',
         roi: '400% ROI through cost reduction and efficiency improvements',
-        competitors: ['Samsara', 'Verizon Connect', 'Geotab', 'Fleet Complete'],
+        competitors: ['SamsaraVerizon Connect', 'GeotabFleet Complete'],
         marketSize: '$25.5B fleet management market',
         growthRate: '280% annual growth in IoT fleet management',
         contactInfo: {
@@ -238,7 +178,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/autonomous-iot-fleet-management/demo',
         trialDays: 30,
         setupTime: '2-4 weeks',
-        complianceStandards: ['ISO 27001', 'SOC2', 'GDPR', 'CCPA'],
+        complianceStandards: ['ISO 27001SOC2', 'GDPRCCPA'],
         supportLevel: 'enterprise'
     },
     // 4. Edge AI Manufacturing Intelligence Platform
@@ -252,60 +192,40 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         price: '$3,999',
         period: '/month',
         features: [
-            'Edge AI processing on manufacturing equipment',
-            'Real-time quality control',
-            'Predictive maintenance',
-            'Production optimization',
-            'Energy consumption monitoring',
-            'Supply chain integration',
-            'Worker safety monitoring',
-            'Quality assurance automation',
-            'Performance analytics',
-            'Mobile dashboard access'
+            'Edge AI processing on manufacturing equipmentReal-time quality control',
+            'Predictive maintenanceProduction optimization',
+            'Energy consumption monitoringSupply chain integration',
+            'Worker safety monitoringQuality assurance automation',
+            'Performance analyticsMobile dashboard access'
         ],
         benefits: [
-            'Real-time manufacturing optimization',
-            'Reduced equipment downtime by 40%',
-            'Improved product quality by 25%',
-            'Energy cost reduction by 30%',
-            'Enhanced worker safety',
-            'Automated quality control'
+            'Real-time manufacturing optimizationReduced equipment downtime by 40%',
+            'Improved product quality by 25%Energy cost reduction by 30%',
+            'Enhanced worker safetyAutomated quality control'
         ],
         useCases: [
-            'Manufacturing optimization',
-            'Quality control',
-            'Predictive maintenance',
-            'Energy management',
-            'Worker safety',
-            'Supply chain optimization'
+            'Manufacturing optimizationQuality control',
+            'Predictive maintenanceEnergy management',
+            'Worker safetySupply chain optimization'
         ],
         targetAudience: [
-            'Manufacturing companies',
-            'Industrial facilities',
-            'Automotive manufacturers',
-            'Electronics manufacturers',
-            'Food processing plants',
-            'Chemical plants'
+            'Manufacturing companiesIndustrial facilities',
+            'Automotive manufacturersElectronics manufacturers',
+            'Food processing plantsChemical plants'
         ],
         technology: [
-            'Edge Computing',
-            'Artificial Intelligence',
-            'Machine Learning',
-            'Internet of Things',
-            'Real-time Analytics',
-            'Industrial Automation'
+            'Edge ComputingArtificial Intelligence',
+            'Machine LearningInternet of Things',
+            'Real-time AnalyticsIndustrial Automation'
         ],
         integrations: [
-            'PLC Systems',
-            'SCADA Systems',
-            'ERP Systems',
-            'MES Systems',
-            'Quality Management Systems',
-            'Energy Management Systems'
+            'PLC SystemsSCADA Systems',
+            'ERP SystemsMES Systems',
+            'Quality Management SystemsEnergy Management Systems'
         ],
         marketPosition: 'First edge AI manufacturing platform with real-time optimization',
         roi: '500% ROI through efficiency improvements and cost reduction',
-        competitors: ['Siemens Mindsphere', 'GE Predix', 'PTC ThingWorx', 'SAP Leonardo'],
+        competitors: ['Siemens MindsphereGE Predix', 'PTC ThingWorxSAP Leonardo'],
         marketSize: '$18.2B edge computing market',
         growthRate: '380% annual growth in edge AI manufacturing',
         contactInfo: {
@@ -318,7 +238,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/edge-ai-manufacturing-intelligence/demo',
         trialDays: 30,
         setupTime: '4-6 weeks',
-        complianceStandards: ['ISO 27001', 'SOC2', 'ISO 9001', 'IATF 16949'],
+        complianceStandards: ['ISO 27001SOC2', 'ISO 9001IATF 16949'],
         supportLevel: 'enterprise'
     },
     // ===== SUSTAINABLE TECHNOLOGY SERVICES =====
@@ -333,60 +253,40 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         price: '$1,799',
         period: '/month',
         features: [
-            'Real-time carbon footprint tracking',
-            'AI-powered sustainability optimization',
-            'Automated sustainability reporting',
-            'Carbon offset recommendations',
-            'Energy consumption monitoring',
-            'Waste reduction tracking',
-            'Supply chain sustainability',
-            'ESG compliance reporting',
-            'Sustainability dashboard',
-            'Mobile app access'
+            'Real-time carbon footprint trackingAI-powered sustainability optimization',
+            'Automated sustainability reportingCarbon offset recommendations',
+            'Energy consumption monitoringWaste reduction tracking',
+            'Supply chain sustainabilityESG compliance reporting',
+            'Sustainability dashboardMobile app access'
         ],
         benefits: [
-            'Real-time carbon footprint visibility',
-            'Automated sustainability optimization',
-            'Compliance with ESG regulations',
-            'Reduced environmental impact',
-            'Cost savings through efficiency',
-            'Enhanced brand reputation'
+            'Real-time carbon footprint visibilityAutomated sustainability optimization',
+            'Compliance with ESG regulationsReduced environmental impact',
+            'Cost savings through efficiencyEnhanced brand reputation'
         ],
         useCases: [
-            'Corporate sustainability',
-            'ESG compliance',
-            'Carbon accounting',
-            'Energy management',
-            'Waste reduction',
-            'Supply chain sustainability'
+            'Corporate sustainabilityESG compliance',
+            'Carbon accountingEnergy management',
+            'Waste reductionSupply chain sustainability'
         ],
         targetAudience: [
-            'Large corporations',
-            'Manufacturing companies',
-            'Retail businesses',
-            'Financial institutions',
-            'Government agencies',
-            'Non-profit organizations'
+            'Large corporationsManufacturing companies',
+            'Retail businessesFinancial institutions',
+            'Government agenciesNon-profit organizations'
         ],
         technology: [
-            'Artificial Intelligence',
-            'Machine Learning',
-            'IoT Sensors',
-            'Data Analytics',
-            'Sustainability Metrics',
-            'ESG Reporting Tools'
+            'Artificial IntelligenceMachine Learning',
+            'IoT SensorsData Analytics',
+            'Sustainability MetricsESG Reporting Tools'
         ],
         integrations: [
-            'ERP Systems',
-            'Energy Management Systems',
-            'Waste Management Systems',
-            'Supply Chain Platforms',
-            'ESG Reporting Tools',
-            'Carbon Offset Marketplaces'
+            'ERP SystemsEnergy Management Systems',
+            'Waste Management SystemsSupply Chain Platforms',
+            'ESG Reporting ToolsCarbon Offset Marketplaces'
         ],
         marketPosition: 'First AI-powered carbon footprint management platform with real-time optimization',
         roi: '300% ROI through sustainability optimization and compliance automation',
-        competitors: ['Watershed', 'Normative', 'Persefoni', 'Carbon Analytics'],
+        competitors: ['WatershedNormative', 'PersefoniCarbon Analytics'],
         marketSize: '$8.9B sustainability management market',
         growthRate: '420% annual growth in AI sustainability',
         contactInfo: {
@@ -399,13 +299,11 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/ai-carbon-footprint-management/demo',
         trialDays: 30,
         setupTime: '2-3 weeks',
-        complianceStandards: ['ISO 14001', 'ISO 50001', 'ESG Standards', 'Carbon Disclosure Project'],
+        complianceStandards: ['ISO 14001ISO 50001', 'ESG StandardsCarbon Disclosure Project'],
         supportLevel: 'premium',
         sustainabilityMetrics: [
-            'Carbon footprint reduction',
-            'Energy efficiency improvement',
-            'Waste reduction percentage',
-            'ESG score improvement',
+            'Carbon footprint reductionEnergy efficiency improvement',
+            'Waste reduction percentageESG score improvement',
             'Sustainability compliance rate'
         ]
     },
@@ -420,60 +318,40 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         price: '$4,999',
         period: '/month',
         features: [
-            'Real-time grid monitoring',
-            'AI-powered demand prediction',
-            'Renewable energy integration',
-            'Demand response automation',
-            'Grid stability optimization',
-            'Energy storage management',
-            'Predictive maintenance',
-            'Load balancing',
-            'Energy trading platform',
-            'Mobile grid management'
+            'Real-time grid monitoringAI-powered demand prediction',
+            'Renewable energy integrationDemand response automation',
+            'Grid stability optimizationEnergy storage management',
+            'Predictive maintenanceLoad balancing',
+            'Energy trading platformMobile grid management'
         ],
         benefits: [
-            '20% reduction in energy costs',
-            'Improved grid stability and reliability',
-            'Enhanced renewable energy integration',
-            'Automated demand response',
-            'Predictive maintenance prevents outages',
-            'Optimized energy distribution'
+            '20% reduction in energy costsImproved grid stability and reliability',
+            'Enhanced renewable energy integrationAutomated demand response',
+            'Predictive maintenance prevents outagesOptimized energy distribution'
         ],
         useCases: [
-            'Utility grid management',
-            'Renewable energy integration',
-            'Demand response programs',
-            'Energy storage optimization',
-            'Grid maintenance',
-            'Energy trading'
+            'Utility grid managementRenewable energy integration',
+            'Demand response programsEnergy storage optimization',
+            'Grid maintenanceEnergy trading'
         ],
         targetAudience: [
-            'Utility companies',
-            'Energy providers',
-            'Municipal utilities',
-            'Industrial facilities',
-            'Commercial buildings',
-            'Government agencies'
+            'Utility companiesEnergy providers',
+            'Municipal utilitiesIndustrial facilities',
+            'Commercial buildingsGovernment agencies'
         ],
         technology: [
-            'Artificial Intelligence',
-            'Machine Learning',
-            'IoT Sensors',
-            'Smart Grid Technology',
-            'Energy Management Systems',
-            'Predictive Analytics'
+            'Artificial IntelligenceMachine Learning',
+            'IoT SensorsSmart Grid Technology',
+            'Energy Management SystemsPredictive Analytics'
         ],
         integrations: [
-            'SCADA Systems',
-            'Energy Management Systems',
-            'Renewable Energy Systems',
-            'Energy Storage Systems',
-            'Demand Response Platforms',
-            'Energy Trading Systems'
+            'SCADA SystemsEnergy Management Systems',
+            'Renewable Energy SystemsEnergy Storage Systems',
+            'Demand Response PlatformsEnergy Trading Systems'
         ],
         marketPosition: 'First AI-powered smart grid platform with comprehensive energy optimization',
         roi: '600% ROI through energy optimization and grid reliability improvements',
-        competitors: ['Schneider Electric', 'Siemens', 'GE Grid Solutions', 'ABB'],
+        competitors: ['Schneider ElectricSiemens', 'GE Grid SolutionsABB'],
         marketSize: '$32.1B smart grid market',
         growthRate: '350% annual growth in AI smart grid',
         contactInfo: {
@@ -486,7 +364,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/smart-grid-energy-optimization/demo',
         trialDays: 30,
         setupTime: '6-8 weeks',
-        complianceStandards: ['ISO 27001', 'SOC2', 'NERC CIP', 'IEEE Standards'],
+        complianceStandards: ['ISO 27001SOC2', 'NERC CIPIEEE Standards'],
         supportLevel: 'enterprise'
     },
     // ===== SPACE TECHNOLOGY SERVICES =====
@@ -501,60 +379,40 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         price: '$2,999',
         period: '/month',
         features: [
-            'Real-time satellite data processing',
-            'AI-powered image analysis',
-            'Climate change monitoring',
-            'Agricultural yield prediction',
-            'Urban development tracking',
-            'Disaster response monitoring',
-            'Environmental impact assessment',
-            'Predictive modeling',
-            'Global coverage',
-            'API access for developers'
+            'Real-time satellite data processingAI-powered image analysis',
+            'Climate change monitoringAgricultural yield prediction',
+            'Urban development trackingDisaster response monitoring',
+            'Environmental impact assessmentPredictive modeling',
+            'Global coverageAPI access for developers'
         ],
         benefits: [
-            'Global coverage and real-time monitoring',
-            'AI-powered insights and predictions',
-            'Comprehensive environmental monitoring',
-            'Disaster response and prevention',
-            'Agricultural optimization',
-            'Urban planning insights'
+            'Global coverage and real-time monitoringAI-powered insights and predictions',
+            'Comprehensive environmental monitoringDisaster response and prevention',
+            'Agricultural optimizationUrban planning insights'
         ],
         useCases: [
-            'Climate change monitoring',
-            'Agricultural optimization',
-            'Urban planning',
-            'Disaster response',
-            'Environmental monitoring',
-            'Infrastructure planning'
+            'Climate change monitoringAgricultural optimization',
+            'Urban planningDisaster response',
+            'Environmental monitoringInfrastructure planning'
         ],
         targetAudience: [
-            'Government agencies',
-            'Agricultural companies',
-            'Urban planning firms',
-            'Environmental organizations',
-            'Insurance companies',
-            'Research institutions'
+            'Government agenciesAgricultural companies',
+            'Urban planning firmsEnvironmental organizations',
+            'Insurance companiesResearch institutions'
         ],
         technology: [
-            'Satellite Technology',
-            'Artificial Intelligence',
-            'Machine Learning',
-            'Computer Vision',
-            'Big Data Analytics',
-            'Geospatial Analysis'
+            'Satellite TechnologyArtificial Intelligence',
+            'Machine LearningComputer Vision',
+            'Big Data AnalyticsGeospatial Analysis'
         ],
         integrations: [
-            'Satellite Data Providers',
-            'GIS Systems',
-            'Weather APIs',
-            'Agricultural Platforms',
-            'Urban Planning Tools',
-            'Environmental Databases'
+            'Satellite Data ProvidersGIS Systems',
+            'Weather APIsAgricultural Platforms',
+            'Urban Planning ToolsEnvironmental Databases'
         ],
         marketPosition: 'First AI-powered satellite data analytics platform with global coverage',
         roi: '400% ROI through data-driven insights and optimization',
-        competitors: ['Planet Labs', 'Maxar Technologies', 'Airbus Defence and Space', 'DigitalGlobe'],
+        competitors: ['Planet LabsMaxar Technologies', 'Airbus Defence and SpaceDigitalGlobe'],
         marketSize: '$4.2B satellite data analytics market',
         growthRate: '280% annual growth in satellite analytics',
         contactInfo: {
@@ -567,7 +425,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/satellite-data-analytics/demo',
         trialDays: 30,
         setupTime: '2-3 weeks',
-        complianceStandards: ['ISO 27001', 'SOC2', 'GDPR', 'Space Data Regulations'],
+        complianceStandards: ['ISO 27001SOC2', 'GDPRSpace Data Regulations'],
         supportLevel: 'enterprise'
     },
     // ===== BIOTECHNOLOGY SERVICES =====
@@ -582,60 +440,40 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         price: '$6,999',
         period: '/month',
         features: [
-            'AI-powered DNA design',
-            'Protein engineering automation',
-            'Metabolic pathway optimization',
-            'Biological system simulation',
-            'Gene editing optimization',
-            'Strain development',
-            'Bioprocess optimization',
-            'Safety assessment',
-            'Regulatory compliance',
-            'Collaboration tools'
+            'AI-powered DNA designProtein engineering automation',
+            'Metabolic pathway optimizationBiological system simulation',
+            'Gene editing optimizationStrain development',
+            'Bioprocess optimizationSafety assessment',
+            'Regulatory complianceCollaboration tools'
         ],
         benefits: [
-            '10x faster biological system design',
-            'Higher accuracy in genetic engineering',
-            'Automated optimization processes',
-            'Reduced development costs',
-            'Enhanced safety profiles',
-            'Regulatory compliance automation'
+            '10x faster biological system designHigher accuracy in genetic engineering',
+            'Automated optimization processesReduced development costs',
+            'Enhanced safety profilesRegulatory compliance automation'
         ],
         useCases: [
-            'Drug development',
-            'Agricultural biotechnology',
-            'Industrial biotechnology',
-            'Environmental remediation',
-            'Biofuel production',
-            'Medical device development'
+            'Drug developmentAgricultural biotechnology',
+            'Industrial biotechnologyEnvironmental remediation',
+            'Biofuel productionMedical device development'
         ],
         targetAudience: [
-            'Biotechnology companies',
-            'Pharmaceutical companies',
-            'Agricultural companies',
-            'Research institutions',
-            'Government agencies',
-            'Academic institutions'
+            'Biotechnology companiesPharmaceutical companies',
+            'Agricultural companiesResearch institutions',
+            'Government agenciesAcademic institutions'
         ],
         technology: [
-            'Artificial Intelligence',
-            'Machine Learning',
-            'Synthetic Biology',
-            'Bioinformatics',
-            'Computational Biology',
-            'Gene Editing'
+            'Artificial IntelligenceMachine Learning',
+            'Synthetic BiologyBioinformatics',
+            'Computational BiologyGene Editing'
         ],
         integrations: [
-            'Laboratory Information Systems',
-            'DNA Synthesis Platforms',
-            'Sequencing Platforms',
-            'Bioinformatics Tools',
-            'Regulatory Databases',
-            'Research Collaboration Tools'
+            'Laboratory Information SystemsDNA Synthesis Platforms',
+            'Sequencing PlatformsBioinformatics Tools',
+            'Regulatory DatabasesResearch Collaboration Tools'
         ],
         marketPosition: 'First AI-powered synthetic biology platform with comprehensive design capabilities',
         roi: '1500% ROI through accelerated biological system development',
-        competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Benchling', 'DNA Script'],
+        competitors: ['Ginkgo BioworksTwist Bioscience', 'BenchlingDNA Script'],
         marketSize: '$15.8B synthetic biology market',
         growthRate: '450% annual growth in AI synthetic biology',
         contactInfo: {
@@ -648,28 +486,22 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         demoUrl: 'https://ziontechgroup.com/ai-synthetic-biology/demo',
         trialDays: 30,
         setupTime: '4-6 weeks',
-        complianceStandards: ['FDA', 'EPA', 'USDA', 'Biosafety Guidelines', 'GMO Regulations'],
+        complianceStandards: ['FDAEPA', 'USDABiosafety Guidelines', 'GMO Regulations'],
         supportLevel: 'enterprise'
     }
-];
+],
 // Market analysis for emerging technology services
 export const EMERGING_TECH_MARKET_ANALYSIS = {
     totalMarketSize: '$892B',
     growthRate: '18.4% CAGR',
     keyTrends: [
-        'Blockchain and Web3 adoption',
-        'IoT and edge computing expansion',
-        'Sustainable technology integration',
-        'Space technology commercialization',
-        'Biotechnology AI integration',
-        'Quantum technology development'
+        'Blockchain and Web3 adoptionIoT and edge computing expansion',
+        'Sustainable technology integrationSpace technology commercialization',
+        'Biotechnology AI integrationQuantum technology development'
     ],
     competitiveAdvantages: [
-        'First-mover advantage in emerging technologies',
-        'AI-powered optimization across all services',
-        'Comprehensive technology stack integration',
-        'Global network and infrastructure',
-        'Regulatory compliance expertise',
-        'Sustainable technology focus'
+        'First-mover advantage in emerging technologiesAI-powered optimization across all services',
+        'Comprehensive technology stack integrationGlobal network and infrastructure',
+        'Regulatory compliance expertiseSustainable technology focus'
     ]
-};
+},

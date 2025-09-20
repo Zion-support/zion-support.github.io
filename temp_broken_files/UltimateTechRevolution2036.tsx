@@ -1,6 +1,6 @@
-import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
+import React from 'react',
+import Header from '../Header',
+import Footer from '../Footer',
 const UltimateTechRevolution2036: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -9,7 +9,7 @@ const UltimateTechRevolution2036: React.FC = () => {,
         <meta name="description" content="UltimateTechRevolution2036 - Revolutionary technology solutions" />,
       </Helmet>,
       <main className="container mx-auto px-4 py-16">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div,
           className="text-center mb-20",
         >,
@@ -31,7 +31,7 @@ const UltimateTechRevolution2036: React.FC = () => {,
             </button>,
           </div>,
         </div>,
-        {/* Revolutionary Technologies Grid */,}
+        {/* Revolutionary Technologies Grid */}
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20">,
           <div,
             className="bg-gradient-to-br from-purple-600/40 to-pink-600/40 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300",
@@ -91,7 +91,7 @@ const UltimateTechRevolution2036: React.FC = () => {,
             </a>,
           </div>,
         </div>,
-        {/* Advanced Technologies */,}
+        {/* Advanced Technologies */}
         <div className="mb-20">,
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔬 Advanced Technologies 2036</h2>,
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -145,7 +145,7 @@ const UltimateTechRevolution2036: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Revolution Impact Stats */,}
+        {/* Revolution Impact Stats */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-3xl p-16 mb-20">,
           <h2 className="text-5xl font-bold text-white text-center mb-16">📊 Revolution Impact 2036</h2>,
           <div className="grid md: grid-cols-4 gap-8">,
@@ -171,7 +171,7 @@ const UltimateTechRevolution2036: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Future Predictions */,}
+        {/* Future Predictions */}
         <div className="mb-20">,
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔮 Future Predictions 2036</h2>,
           <div className="grid md: grid-cols-2 gap-8">,
@@ -230,6 +230,5 @@ const UltimateTechRevolution2036: React.FC = () => {,
         </div>,
       </main>,
       <Footer />,
-    </div>,
-  ),};
-export default UltimateTechRevolution2036;
+    </div>)},
+export default UltimateTechRevolution2036,

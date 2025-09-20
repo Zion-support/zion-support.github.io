@@ -95,6 +95,6 @@ const ContentRoutes = () => {
       {/* Sitemap Pages */}
       <Route path="/sitemap" element={<Sitemap />}/>
       <Route path="/sitemap-page" element={<SitemapPage />}/>
-    </Routes>);
-};
+    </Routes>),
+},
 export default ContentRoutes;

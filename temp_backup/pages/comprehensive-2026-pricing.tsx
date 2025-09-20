@@ -1,37 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket,
   Brain, Globe, Database, Cloud, Lock, Palette, Target, Layers, Sparkles, Atom, Microscope, Satellite,
   Crown, Award, Users, BarChart3, Clock, Eye, EyeOff, Filter, Search
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
-import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
-import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
+import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026',
+import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026',
+import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026',
 
 export default function Comprehensive2026Pricing() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [showPopularOnly, setShowPopularOnly] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [priceRange, setPriceRange] = useState('all'),
+  const [sortBy, setSortBy] = useState('popularity'),
+  const [showPopularOnly, setShowPopularOnly] = useState(false),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all services
   const allServices = [
     ...nextGenAIServices2026,
     ...revolutionaryITInfrastructure2026,
     ...innovativeMicroSaas2026
-  ];
+  ],
 
   // Categories for filtering
   const categories = [
@@ -42,7 +42,7 @@ export default function Comprehensive2026Pricing() {
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
     { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length },
     { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
-  ];
+  ],
 
   // Price ranges
   const priceRanges = [
@@ -51,52 +51,51 @@ export default function Comprehensive2026Pricing() {
     { id: 'mid', name: 'Mid-Range ($300-$999)', range: '300-999' },
     { id: 'premium', name: 'Premium ($1000-$2999)', range: '1000-2999' },
     { id: 'enterprise', name: 'Enterprise ($3000+)', range: '3000+' }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
       const matchesCategory = selectedCategory === 'all' || 
-                             service.category.toLowerCase().includes(selectedCategory);
+                             service.category.toLowerCase().includes(selectedCategory),
       
       const matchesPriceRange = (() => {
-        const price = parseFloat(service.price.replace('$', '').replace(',', ''));
+        const price = parseFloat(service.price.replace('$', '').replace(, '')),
         switch (priceRange) {
-          case 'budget': return price <= 299;
-          case 'mid': return price >= 300 && price <= 999;
-          case 'premium': return price >= 1000 && price <= 2999;
-          case 'enterprise': return price >= 3000;
-          default: return true;
+          case 'budget': return price <= 299,
+          case 'mid': return price >= 300 && price <= 999,
+          case 'premium': return price >= 1000 && price <= 2999,
+          case 'enterprise': return price >= 3000,
+          default: return true
         }
-      })();
+      })(),
       
-      const matchesPopular = !showPopularOnly || service.popular;
+      const matchesPopular = !showPopularOnly || service.popular,
       
-      return matchesCategory && matchesPriceRange && matchesPopular;
+      return matchesCategory && matchesPriceRange && matchesPopular,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
         case 'price-high':
-          return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', ''));
+          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, '')),
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'customers':
-          return b.customers - a.customers;
-        default:
-          return a.popular ? -1 : 1;
+          return b.customers - a.customers,
+        default: return a.popular ? -1 : 1
       }
-    });
+    }),
 
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: allServices.length,
-    averagePrice: Math.round(allServices.reduce((sum, s) => sum + parseFloat(s.price.replace('$', '').replace(',', '')), 0) / allServices.length),
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(',', '')))),
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(',', '')))),
+    averagePrice: Math.round(allServices.reduce((sum, s) => sum + parseFloat(s.price.replace('$', '').replace(, '')), 0) / allServices.length),
+    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(, '')))),
+    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(, '')))),
     popularServices: allServices.filter(s => s.popular).length
-  };
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -106,7 +105,7 @@ export default function Comprehensive2026Pricing() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -117,7 +116,7 @@ export default function Comprehensive2026Pricing() {
         duration: 0.5
       }
     }
-  };
+  },
 
 const comprehensive-2026-pricing: React.FC = () => {
   return (
@@ -134,7 +133,7 @@ const comprehensive-2026-pricing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default comprehensive-2026-pricing;
+export default comprehensive-2026-pricing,

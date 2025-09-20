@@ -1,10 +1,10 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import React from 'react',
+import { Routes, Route } from 'react-router-dom',
+import './App.css',
+import { ThemeProvider } from "./components/ThemeProvider",
+import { WhitelabelProvider } from "./context/WhitelabelContext",
+import { Toaster } from "./components/ui/toaster",
+import { Toaster as SonnerToaster } from "./components/ui/sonner",
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -17,20 +17,20 @@ import {
   EnterpriseRoutes,
   CommunityRoutes,
   DeveloperRoutes
-} from './routes';
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import Categories from './pages/Categories';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
+} from './routes',
+import Home from './pages/Home',
+import AIMatcherPage from './pages/AIMatcher',
+import TalentDirectory from './pages/TalentDirectory',
+import TalentsPage from './pages/TalentsPage',
+import ServicesPage from './pages/ServicesPage',
+import EquipmentPage from './pages/EquipmentPage',
+import Analytics from './pages/Analytics',
+import MobileLaunchPage from './pages/MobileLaunchPage',
+import CommunityPage from './pages/CommunityPage',
+import Categories from './pages/Categories',
+import Login from './pages/Login',
+import Signup from './pages/Signup',
+import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage',
 
 const App = () => {
   return (
@@ -66,7 +66,7 @@ const App = () => {
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
-  );
-};
+  ),
+},
 
-export default App;
+export default App,

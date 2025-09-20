@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Brain, ArrowRight, CheckCircle, Star, TrendingUp, 
   BarChart3, Zap, Shield, Users, Globe, 
   Phone, Mail, MapPin, Rocket, Sparkles
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
 
 export default function AIBusinessIntelligenceElite2026() {
   const contactInfo = {
@@ -16,41 +16,31 @@ export default function AIBusinessIntelligenceElite2026() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
-    'Real-time predictive analytics',
-    'Autonomous business intelligence',
-    'Natural language query interface',
-    'Advanced data visualization',
-    'Custom AI model training',
-    'Multi-source data integration',
-    'Automated reporting & alerts',
-    'Business process optimization',
-    'ROI tracking & forecasting',
-    'Team collaboration tools'
-  ];
+    'Real-time predictive analyticsAutonomous business intelligence',
+    'Natural language query interfaceAdvanced data visualization',
+    'Custom AI model trainingMulti-source data integration',
+    'Automated reporting & alertsBusiness process optimization',
+    'ROI tracking & forecastingTeam collaboration tools'
+  ],
 
   const useCases = [
-    'Business performance monitoring',
-    'Predictive analytics',
-    'Customer behavior analysis',
-    'Financial forecasting',
-    'Operational optimization',
-    'Market trend analysis'
-  ];
+    'Business performance monitoringPredictive analytics',
+    'Customer behavior analysisFinancial forecasting',
+    'Operational optimizationMarket trend analysis'
+  ],
 
   const integrations = [
-    'Salesforce', 'HubSpot', 'Slack', 'Microsoft Teams', 
-    'Zapier', 'Tableau', 'Power BI', 'Google Analytics'
-  ];
+    'SalesforceHubSpot', 'SlackMicrosoft Teams', 
+    'ZapierTableau', 'Power BIGoogle Analytics'
+  ],
 
   const competitors = [
-    'Tableau ($70-75/user/month)',
-    'Power BI ($9.99/user/month)',
-    'Looker ($3000/month)',
-    'Qlik', 'Sisense', 'Domo'
-  ];
+    'Tableau ($70-75/user/month)Power BI ($9.99/user/month)',
+    'Looker ($3000/month)Qlik', 'SisenseDomo'
+  ],
 
 const ai-business-intelligence-elite-2026: React.FC = () => {
   return (
@@ -67,7 +57,7 @@ const ai-business-intelligence-elite-2026: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-business-intelligence-elite-2026;
+export default ai-business-intelligence-elite-2026,

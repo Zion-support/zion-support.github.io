@@ -1,53 +1,52 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-];
+],
 const pricingModels = [{ id: 'all', name: 'All Pricing' },
     { id: 'monthly', name: 'Monthly' },
     { id: 'yearly', name: 'Yearly' },
     { id: 'one - time', name: 'One - time' },
     { id: 'usage - based', name: 'Usage - based' }
-];
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPricing, setSelectedPricing] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
-    const [sortBy, setSortBy] = useState('rating');
+],
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedPricing, setSelectedPricing] = useState('all'),
+    const [searchQuery, setSearchQuery] = useState(''),
+    const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES),
+    const [sortBy, setSortBy] = useState('rating'),
     useEffect(() => {
-        let filtered = MICRO_SAAS_SERVICES;
+        let filtered = MICRO_SAAS_SERVICES,
         // Filter by category
         if(selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory) ;
+            filtered = filtered.filter(service => service.category === selectedCategory) ,
         }
         // Filter by pricing model
         if(selectedPricing !== 'all') {
-            filtered = filtered.filter(service => service.pricingModel === selectedPricing) ;
+            filtered = filtered.filter(service => service.pricingModel === selectedPricing) ,
         }
         // Filter by search query
         if(searchQuery.trim () ) {
-            const query = searchQuery.toLowerCase () ;
+            const query = searchQuery.toLowerCase () ,
             filtered = filtered.filter(service => service.title.toLowerCase () .includes(query) ||
                 service.description.toLowerCase () .includes(query) ||
                 service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||
-                service.subcategory.toLowerCase () .includes(query) ) ;
+                service.subcategory.toLowerCase () .includes(query) ) ,
         }
         // Sort services
         filtered.sort((a, b) => {
             switch(sortBy) {
                 case 'rating':
-                    return (b.rating || 0) - (a.rating || 0) ;
+                    return (b.rating || 0) - (a.rating || 0) ,
                 case 'price':
-                    return a.price - b.price;
+                    return a.price - b.price,
                 case 'aiScore':
-                    return b.aiScore - a.aiScore;
+                    return b.aiScore - a.aiScore,
                 case 'newest':
-                    return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ;
-                default:
-                    return 0;
+                    return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ,
+                default: return 0
             }
-        }) ;
-        setFilteredServices(filtered) ;
-    }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
+        }) ,
+        setFilteredServices(filtered) ,
+    }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ,
     const ServiceCard = ({ service }) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">
       {/* Featured Badge */}
       {service.featured && (<div className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">
@@ -70,12 +69,12 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
             </div>
           </div>
         </div>
-      </div > import React, {useState} from 'react';
+      </div > import React, {useState} from 'react',
             SERVICE_CATEGORIES,
 
             type} MicroSaasService
 
-} from '@/data / microSaasServices';
+} from '@/data / microSaasServices',
             Clock,
             Users,
             Zap,
@@ -88,27 +87,27 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
             FileText,
             MessageCircle,
             ArrowRight,
-            Sparkles} from 'lucide - react';
+            Sparkles} from 'lucide - react',
 
-  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
-  const [searchQuery, setSearchQuery] = useState < string> ('') ;
+  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ,
+  const [searchQuery, setSearchQuery] = useState < string> ('') ,
 
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
 
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-                         service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
+                         service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
+    return matchesCategory && matchesSearch,
+  }) ,
 
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
 
-    if(model === 'monthly') return `${currency}${price}/month`;
-    if(model === 'yearly') return `${currency}${price}/year`;
-    if(model === 'one - time') return `${currency}${price}`;
-    return `${currency}${price}`;
-  };
+    if(model === 'monthly') return `${currency}${price}/month`,
+    if(model === 'yearly') return `${currency}${price}/year`,
+    if(model === 'one - time') return `${currency}${price}`,
+    return `${currency}${price}`,
+  },
 
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (<Card className="group relative overflow-hidden border-0 bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate / 50 backdrop - blur - sm hover:from - zion - blue - dark / 70 hover:to - zion - slate / 70 transition - all duration - 500 hover:scale - 105 hover:shadow-2xl hover:shadow-zion -purple / 20">
       <div className="absolute inset - 0 bg-gradient - to - r from - zion - purple / 5 to - zion - cyan / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration -500"></div>
@@ -246,14 +245,14 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
           </Button>
         </div>
       </div>
-    </div>) ;
+    </div>) ,
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">
       <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services"/>
 
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient - to - r from - zion - blue - dark via - zion - purple - dark to - zion - slate - dark py-20">
-        <div className="absolute inset - 0 bg-[url ("data:image / svg + xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI + PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c + PC9zdmc+') ] opacity - 20"/>
+        <div className="absolute inset - 0 bg-[url ("data: image / svg + xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI + PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c + PC9zdmc+') ] opacity - 20"/>
         <div className="container mx - auto px-4 relative z -10">
           <div className="text-center max - w-4xl mx -auto">
             <h1 className="text-5xl md:text-6xl font - bold bg-gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg-clip - text text-transparent mb-6">
@@ -351,9 +350,9 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
             <h3 className="text-2xl font - bold text-white mb-2">No services found</h3>
             <p className="text-zion - slate - light mb-6">Try adjusting your search criteria or filters</p>
             <Button onClick={ () => {
-                setSearchQuery('') ;
-                setSelectedCategory('all') ;
-                setSelectedPricing('all') ;
+                setSearchQuery('') ,
+                setSelectedCategory('all') ,
+                setSelectedPricing('all') ,
             }} className="bg-zion - purple text-white hover:bg-zion - purple -light">
               Clear Filters
             </Button>
@@ -381,7 +380,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
           <p className="text-xl text-zion - slate - light mb-8 max - w-2xl mx -auto">
             Our team of experts is ready to help you implement the perfect solution for your business needs.Get in touch today for a personalized consultation.</p>
           <div className="flex flex - wrap justify - center gap-4">
-            <Button size="lg" className="bg-gradient - to - r from - zion - purple to - zion - cyan text-white hover:from - zion - purple - light hover:to - zion - cyan -light">
+            <Button size="lg" className="bg-gradient - to - r from - zion - purple to - zion - cyan text-white hover: from - zion - purple - light hover:to - zion - cyan -light">
               <Phone className="w-5 h-5 mr-2"/>
               Call Now: +1 302 464 0950
             </Button>
@@ -392,6 +391,6 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
           </div>
         </div>
       </div>
-    </div>) ;
-}</></></></></></>) ;
+    </div>) 
+}</></></></></></>) ,
 }

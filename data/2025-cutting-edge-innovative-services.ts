@@ -1,41 +1,41 @@
 export interface CuttingEdgeInnovativeService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [
   // AI-POWERED INNOVATIVE SERVICES
@@ -47,16 +47,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Revolutionary AI platform that autonomously manages entire business operations including decision-making, resource allocation, and strategic planning. Features advanced machine learning algorithms and real-time market analysis.',
     features: [
-      'Autonomous decision-making engine',
-      'Real-time market analysis',
-      'Predictive business modeling',
-      'Resource optimization algorithms',
-      'Strategic planning automation',
-      'Performance monitoring & alerts',
-      'Multi-department coordination',
-      'Risk assessment & mitigation',
-      'Compliance automation',
-      '24/7 operational oversight'
+      'Autonomous decision-making engineReal-time market analysis',
+      'Predictive business modelingResource optimization algorithms',
+      'Strategic planning automationPerformance monitoring & alerts',
+      'Multi-department coordinationRisk assessment & mitigation',
+      'Compliance automation24/7 operational oversight'
     ],
     popular: true,
     icon: '🤖',
@@ -69,11 +64,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '2-4 weeks',
     category: 'AI & Autonomous Systems',
     realService: true,
-    technology: ['GPT-5', 'Advanced ML', 'Neural Networks', 'Quantum Computing', 'Blockchain'],
-    integrations: ['ERP Systems', 'CRM Platforms', 'Financial Software', 'HR Systems', 'Supply Chain Tools'],
-    useCases: ['Business automation', 'Strategic planning', 'Resource optimization', 'Risk management'],
+    technology: ['GPT-5Advanced ML', 'Neural NetworksQuantum Computing', 'Blockchain'],
+    integrations: ['ERP SystemsCRM Platforms', 'Financial SoftwareHR Systems', 'Supply Chain Tools'],
+    useCases: ['Business automationStrategic planning', 'Resource optimizationRisk management'],
     roi: '500% average ROI in 12 months with 40% operational cost reduction',
-    competitors: ['No direct competitors', 'Traditional consulting firms'],
+    competitors: ['No direct competitorsTraditional consulting firms'],
     marketSize: '$15B autonomous business market',
     growthRate: '300% annual growth',
     contactInfo: {
@@ -98,16 +93,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Groundbreaking quantum computing platform that leverages quantum neural networks for unprecedented AI capabilities. Solves complex problems in seconds that would take traditional computers years.',
     features: [
-      'Quantum neural network processing',
-      'Quantum machine learning algorithms',
-      'Complex problem solving',
-      'Cryptographic security',
-      'Real-time optimization',
-      'Quantum error correction',
-      'Hybrid classical-quantum computing',
-      'Advanced simulation capabilities',
-      'Quantum advantage analytics',
-      'Research collaboration tools'
+      'Quantum neural network processingQuantum machine learning algorithms',
+      'Complex problem solvingCryptographic security',
+      'Real-time optimizationQuantum error correction',
+      'Hybrid classical-quantum computingAdvanced simulation capabilities',
+      'Quantum advantage analyticsResearch collaboration tools'
     ],
     popular: true,
     icon: '⚛️',
@@ -120,11 +110,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '4-6 weeks',
     category: 'Quantum Computing & AI',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Neural Networks', 'Quantum Algorithms', 'Quantum Error Correction'],
-    integrations: ['Research Platforms', 'Scientific Software', 'Cloud Computing', 'High-Performance Computing'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Climate simulation', 'Cryptography'],
+    technology: ['Quantum ComputingQuantum Neural Networks', 'Quantum AlgorithmsQuantum Error Correction'],
+    integrations: ['Research PlatformsScientific Software', 'Cloud ComputingHigh-Performance Computing'],
+    useCases: ['Drug discoveryFinancial modeling', 'Climate simulationCryptography'],
     roi: '1000% ROI for research applications with 90% faster problem solving',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
+    competitors: ['IBM QuantumGoogle Quantum AI', 'Microsoft Azure Quantum'],
     marketSize: '$8.6B quantum computing market',
     growthRate: '500% annual growth',
     contactInfo: {
@@ -149,16 +139,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Revolutionary DeFi trading platform that uses advanced AI to autonomously trade across multiple blockchain networks, maximizing returns while minimizing risks through intelligent portfolio management.',
     features: [
-      'Autonomous trading algorithms',
-      'Multi-chain DeFi integration',
-      'Risk management systems',
-      'Portfolio optimization',
-      'Yield farming automation',
-      'Liquidity provision',
-      'Arbitrage detection',
-      'Smart contract auditing',
-      'Real-time analytics',
-      'Regulatory compliance'
+      'Autonomous trading algorithmsMulti-chain DeFi integration',
+      'Risk management systemsPortfolio optimization',
+      'Yield farming automationLiquidity provision',
+      'Arbitrage detectionSmart contract auditing',
+      'Real-time analyticsRegulatory compliance'
     ],
     popular: true,
     icon: '🔗',
@@ -171,11 +156,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '1-2 weeks',
     category: 'Blockchain & DeFi',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'AI/ML', 'DeFi Protocols', 'Cryptography'],
-    integrations: ['Ethereum', 'Polygon', 'Binance Smart Chain', 'Solana', 'Uniswap', 'Aave'],
-    useCases: ['Automated trading', 'Portfolio management', 'Yield optimization', 'Risk mitigation'],
+    technology: ['BlockchainSmart Contracts', 'AI/MLDeFi Protocols', 'Cryptography'],
+    integrations: ['EthereumPolygon', 'Binance Smart ChainSolana', 'UniswapAave'],
+    useCases: ['Automated tradingPortfolio management', 'Yield optimizationRisk mitigation'],
     roi: '200% average annual returns with 95% risk reduction',
-    competitors: ['Traditional DeFi platforms', 'Manual trading services'],
+    competitors: ['Traditional DeFi platformsManual trading services'],
     marketSize: '$100B DeFi market',
     growthRate: '150% annual growth',
     contactInfo: {
@@ -200,16 +185,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Advanced cybersecurity platform that uses AI to proactively hunt for threats before they become attacks. Features autonomous incident response and predictive threat intelligence.',
     features: [
-      'Autonomous threat hunting',
-      'Predictive threat intelligence',
-      'Zero-day vulnerability detection',
-      'Automated incident response',
-      'Behavioral analysis',
-      'Threat correlation',
-      'Real-time monitoring',
-      'Compliance reporting',
-      'Incident automation',
-      'Security orchestration'
+      'Autonomous threat huntingPredictive threat intelligence',
+      'Zero-day vulnerability detectionAutomated incident response',
+      'Behavioral analysisThreat correlation',
+      'Real-time monitoringCompliance reporting',
+      'Incident automationSecurity orchestration'
     ],
     popular: true,
     icon: '🛡️',
@@ -222,11 +202,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '2-3 weeks',
     category: 'Cybersecurity & AI',
     realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Behavioral Analysis', 'Threat Intelligence', 'Automation'],
-    integrations: ['SIEM Systems', 'EDR Solutions', 'Firewalls', 'Identity Management', 'Cloud Security'],
-    useCases: ['Threat detection', 'Incident response', 'Compliance', 'Risk management'],
+    technology: ['AI/MLMachine Learning', 'Behavioral AnalysisThreat Intelligence', 'Automation'],
+    integrations: ['SIEM SystemsEDR Solutions', 'FirewallsIdentity Management', 'Cloud Security'],
+    useCases: ['Threat detectionIncident response', 'ComplianceRisk management'],
     roi: '300% ROI with 90% reduction in security incidents',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace'],
+    competitors: ['CrowdStrikeSentinelOne', 'Darktrace'],
     marketSize: '$150B cybersecurity market',
     growthRate: '120% annual growth',
     contactInfo: {
@@ -251,16 +231,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Revolutionary IoT management platform that autonomously manages and optimizes entire IoT ecosystems. Features self-healing networks, predictive maintenance, and intelligent resource allocation.',
     features: [
-      'Autonomous IoT management',
-      'Self-healing networks',
-      'Predictive maintenance',
-      'Resource optimization',
-      'Edge computing integration',
-      'Real-time analytics',
-      'Device lifecycle management',
-      'Security automation',
-      'Scalability management',
-      'Performance monitoring'
+      'Autonomous IoT managementSelf-healing networks',
+      'Predictive maintenanceResource optimization',
+      'Edge computing integrationReal-time analytics',
+      'Device lifecycle managementSecurity automation',
+      'Scalability managementPerformance monitoring'
     ],
     popular: false,
     icon: '🌐',
@@ -273,11 +248,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '3-4 weeks',
     category: 'IoT & Edge Computing',
     realService: true,
-    technology: ['IoT', 'Edge Computing', 'AI/ML', '5G Networks', 'Cloud Computing'],
-    integrations: ['IoT Devices', 'Cloud Platforms', 'Manufacturing Systems', 'Smart City Infrastructure'],
-    useCases: ['Smart manufacturing', 'Smart cities', 'Predictive maintenance', 'Resource optimization'],
+    technology: ['IoTEdge Computing', 'AI/ML5G Networks', 'Cloud Computing'],
+    integrations: ['IoT DevicesCloud Platforms', 'Manufacturing SystemsSmart City Infrastructure'],
+    useCases: ['Smart manufacturingSmart cities', 'Predictive maintenanceResource optimization'],
     roi: '400% ROI with 80% reduction in operational costs',
-    competitors: ['Traditional IoT platforms', 'Manual management systems'],
+    competitors: ['Traditional IoT platformsManual management systems'],
     marketSize: '$1.1T IoT market',
     growthRate: '200% annual growth',
     contactInfo: {
@@ -302,16 +277,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Breakthrough AI-powered diagnostic system that autonomously analyzes medical data to provide accurate diagnoses and treatment recommendations. Features advanced medical imaging analysis and predictive health modeling.',
     features: [
-      'Autonomous medical diagnostics',
-      'Advanced imaging analysis',
-      'Predictive health modeling',
-      'Treatment recommendations',
-      'Patient data analysis',
-      'Clinical decision support',
-      'Medical research integration',
-      'Compliance management',
-      'Real-time monitoring',
-      'Telemedicine integration'
+      'Autonomous medical diagnosticsAdvanced imaging analysis',
+      'Predictive health modelingTreatment recommendations',
+      'Patient data analysisClinical decision support',
+      'Medical research integrationCompliance management',
+      'Real-time monitoringTelemedicine integration'
     ],
     popular: true,
     icon: '🏥',
@@ -324,11 +294,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '4-6 weeks',
     category: 'Healthcare AI',
     realService: true,
-    technology: ['AI/ML', 'Medical Imaging', 'Natural Language Processing', 'Predictive Analytics', 'Blockchain'],
-    integrations: ['EHR Systems', 'Medical Imaging Devices', 'Lab Systems', 'Telemedicine Platforms'],
-    useCases: ['Medical diagnostics', 'Treatment planning', 'Research analysis', 'Patient monitoring'],
+    technology: ['AI/MLMedical Imaging', 'Natural Language ProcessingPredictive Analytics', 'Blockchain'],
+    integrations: ['EHR SystemsMedical Imaging Devices', 'Lab SystemsTelemedicine Platforms'],
+    useCases: ['Medical diagnosticsTreatment planning', 'Research analysisPatient monitoring'],
     roi: '600% ROI with 90% improvement in diagnostic accuracy',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare'],
+    competitors: ['IBM Watson HealthGoogle Health AI', 'Microsoft Healthcare'],
     marketSize: '$45B AI healthcare market',
     growthRate: '250% annual growth',
     contactInfo: {
@@ -353,16 +323,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Revolutionary financial trading platform that leverages quantum computing for ultra-fast market analysis and trading execution. Features quantum advantage algorithms and real-time market prediction.',
     features: [
-      'Quantum computing trading',
-      'Ultra-fast market analysis',
-      'Quantum advantage algorithms',
-      'Real-time market prediction',
-      'Risk assessment',
-      'Portfolio optimization',
-      'Multi-asset trading',
-      'Regulatory compliance',
-      'Performance analytics',
-      'Trading automation'
+      'Quantum computing tradingUltra-fast market analysis',
+      'Quantum advantage algorithmsReal-time market prediction',
+      'Risk assessmentPortfolio optimization',
+      'Multi-asset tradingRegulatory compliance',
+      'Performance analyticsTrading automation'
     ],
     popular: true,
     icon: '💰',
@@ -375,11 +340,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '3-4 weeks',
     category: 'Quantum Finance',
     realService: true,
-    technology: ['Quantum Computing', 'Financial Algorithms', 'Machine Learning', 'High-Frequency Trading'],
-    integrations: ['Trading Platforms', 'Market Data Feeds', 'Risk Management Systems', 'Compliance Tools'],
-    useCases: ['High-frequency trading', 'Portfolio optimization', 'Risk management', 'Market analysis'],
+    technology: ['Quantum ComputingFinancial Algorithms', 'Machine LearningHigh-Frequency Trading'],
+    integrations: ['Trading PlatformsMarket Data Feeds', 'Risk Management SystemsCompliance Tools'],
+    useCases: ['High-frequency tradingPortfolio optimization', 'Risk managementMarket analysis'],
     roi: '800% ROI with 1000x faster trading execution',
-    competitors: ['Traditional trading platforms', 'High-frequency trading systems'],
+    competitors: ['Traditional trading platformsHigh-frequency trading systems'],
     marketSize: '$25B algorithmic trading market',
     growthRate: '400% annual growth',
     contactInfo: {
@@ -404,16 +369,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Revolutionary satellite management system that autonomously operates satellite constellations, optimizes orbits, and manages communications. Features autonomous navigation and predictive maintenance.',
     features: [
-      'Autonomous satellite operations',
-      'Orbit optimization',
-      'Predictive maintenance',
-      'Communication management',
-      'Navigation automation',
-      'Constellation coordination',
-      'Real-time monitoring',
-      'Performance analytics',
-      'Mission planning',
-      'Emergency response'
+      'Autonomous satellite operationsOrbit optimization',
+      'Predictive maintenanceCommunication management',
+      'Navigation automationConstellation coordination',
+      'Real-time monitoringPerformance analytics',
+      'Mission planningEmergency response'
     ],
     popular: false,
     icon: '🛰️',
@@ -426,11 +386,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '6-8 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['AI/ML', 'Satellite Technology', 'Orbital Mechanics', 'Communication Systems', 'Automation'],
-    integrations: ['Satellite Systems', 'Ground Stations', 'Communication Networks', 'Mission Control'],
-    useCases: ['Satellite operations', 'Communication management', 'Mission planning', 'Emergency response'],
+    technology: ['AI/MLSatellite Technology', 'Orbital MechanicsCommunication Systems', 'Automation'],
+    integrations: ['Satellite SystemsGround Stations', 'Communication NetworksMission Control'],
+    useCases: ['Satellite operationsCommunication management', 'Mission planningEmergency response'],
     roi: '1000% ROI with 99.9% satellite uptime',
-    competitors: ['Traditional satellite management', 'Manual operations'],
+    competitors: ['Traditional satellite managementManual operations'],
     marketSize: '$350B space economy',
     growthRate: '600% annual growth',
     contactInfo: {
@@ -455,16 +415,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     period: '/month',
     description: 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation, predictive maintenance, and real-time optimization.',
     features: [
-      'AI-powered optimization',
-      'Autonomous operation',
-      'Predictive maintenance',
-      'Real-time efficiency monitoring',
-      'Carbon credit management',
-      'Environmental reporting',
-      'Cost optimization',
-      'Performance analytics',
-      'Compliance management',
-      'Sustainability tracking'
+      'AI-powered optimizationAutonomous operation',
+      'Predictive maintenanceReal-time efficiency monitoring',
+      'Carbon credit managementEnvironmental reporting',
+      'Cost optimizationPerformance analytics',
+      'Compliance managementSustainability tracking'
     ],
     popular: true,
     icon: '🌱',
@@ -477,11 +432,11 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     setupTime: '3-4 weeks',
     category: 'Green Technology',
     realService: true,
-    technology: ['AI/ML', 'Carbon Capture', 'IoT Sensors', 'Predictive Analytics', 'Automation'],
-    integrations: ['Carbon Capture Systems', 'Environmental Monitoring', 'Energy Management', 'Compliance Systems'],
-    useCases: ['Carbon capture optimization', 'Environmental compliance', 'Cost reduction', 'Sustainability reporting'],
+    technology: ['AI/MLCarbon Capture', 'IoT SensorsPredictive Analytics', 'Automation'],
+    integrations: ['Carbon Capture SystemsEnvironmental Monitoring', 'Energy ManagementCompliance Systems'],
+    useCases: ['Carbon capture optimizationEnvironmental compliance', 'Cost reductionSustainability reporting'],
     roi: '300% ROI with 40% efficiency improvement',
-    competitors: ['Traditional carbon capture', 'Manual optimization'],
+    competitors: ['Traditional carbon captureManual optimization'],
     marketSize: '$2.5B carbon capture market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -497,24 +452,24 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.7,
     reviews: 42
   }
-];
+],
 export const serviceCategories2025: string[] = Array.from(
   new Set(
     cuttingEdgeInnovativeServices2025
       .map((s) => s.category)
       .filter((v): v is string => Boolean(v))
   )
-).sort();
+).sort(),
 export const getServicesByCategory2025 = (category: string) => {
-  if (!category || category === 'All') return cuttingEdgeInnovativeServices2025;
-  return cuttingEdgeInnovativeServices2025.filter((s) => s.category === category);
-};
+  if (!category || category === 'All') return cuttingEdgeInnovativeServices2025,
+  return cuttingEdgeInnovativeServices2025.filter((s) => s.category === category)
+},
 export const getPopularServices2025 = () =>
   cuttingEdgeInnovativeServices2025
     .filter((s) => !!s.popular)
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0)),
 export const getServicesByTechnology = (technology: string) => {
   return cuttingEdgeInnovativeServices2025.filter((s) => 
     s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()))
-  );
-};
+  )
+},

@@ -1,15 +1,15 @@
 <<<<<<< HEAD
-export default EnhancedScrollToTop;
-import { motion, AnimatePresence  } from 'framer-motion';
+export default EnhancedScrollToTop,
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-, []);
+, []),
     const scrollToTop = () => {
         window.scrollTo({
 
             top: 0,
             behavior: 'smooth'
-        }) };
+        }) },
     return (<AnimatePresence>
       {isVisible && (<motion.button initial = {
 
@@ -29,9 +29,9 @@ export default function Page() {
 }} onClick={scrollToTop} className="fixed bottom-24 right-6 z-40 p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} >"
           <ChevronUpIcon className="w-6 h-6"/>
         </motion.button>)}
-    </AnimatePresence>)};
-export default EnhancedScrollToTop;
+    </AnimatePresence>)},
+export default EnhancedScrollToTop,
 }}'"
 =======
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

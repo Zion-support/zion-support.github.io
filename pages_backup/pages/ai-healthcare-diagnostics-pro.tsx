@@ -11,6 +11,5 @@ const ai-healthcare-diagnostics-pro: React.FC = () => {,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default ai-healthcare-diagnostics-pro;
+    </div>)},
+export default ai-healthcare-diagnostics-pro,

@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Brain, 
+  Brain,
   Zap, 
   Target, 
   TrendingUp, 
@@ -21,8 +21,8 @@ import {
   Eye,
   Heart,
   Sparkles
-} from 'lucide-react';
-import SEO from '../components/SEO';
+} from 'lucide-react',
+import SEO from '../components/SEO',
 
 const AIAutonomousBusinessOrchestrator: React.FC = () => {
   const features = [
@@ -56,7 +56,7 @@ const AIAutonomousBusinessOrchestrator: React.FC = () => {
       title: "Human-AI Collaboration",
       description: "Seamless integration with human teams, providing insights and recommendations while learning from human expertise."
     }
-  ];
+  ],
 
   const benefits = [
     "24/7 autonomous operation with zero downtime",
@@ -65,7 +65,7 @@ const AIAutonomousBusinessOrchestrator: React.FC = () => {
     "Predictive maintenance and risk assessment",
     "Scalable solution that grows with your business",
     "Comprehensive reporting and performance metrics"
-  ];
+  ],
 
   const useCases = [
     {
@@ -84,7 +84,7 @@ const AIAutonomousBusinessOrchestrator: React.FC = () => {
       title: "Financial Management",
       description: "Automate financial analysis, budgeting, and investment decisions."
     }
-  ];
+  ],
 
   return (
     <>
@@ -240,7 +240,7 @@ const AIAutonomousBusinessOrchestrator: React.FC = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                   Ready to Transform Your Business?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
@@ -260,7 +260,7 @@ const AIAutonomousBusinessOrchestrator: React.FC = () => {
         </div>
       </Layout>
     </>
-  );
-};
+  )
+},
 
-export default AIAutonomousBusinessOrchestrator;
+export default AIAutonomousBusinessOrchestrator,

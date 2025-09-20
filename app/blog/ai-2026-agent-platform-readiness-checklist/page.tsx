@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'Announcing: Agent Platform Readiness Checklist (2026)';
-  description: 'A practical checklist to ensure your agent platform is safe, reliable, observable, and cost-aware before scaling autonomy.',
-};
+  title: 'Announcing: Agent Platform Readiness Checklist (2026)',
+  description: 'A practical checklist to ensure your agent platform is safe, reliable, observable, and cost-aware before scaling autonomy.'
+},
 export default function Announcement() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -34,6 +34,5 @@ export default function Announcement() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

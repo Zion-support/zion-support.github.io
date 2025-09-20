@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
+import React, { useState } from 'react',
+import { useAuth } from '@/hooks/useAuth',
 
 export default function Page() {
-  };
+  },
 
   return ()
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light p-4">"
@@ -79,9 +79,9 @@ export default function Page() {
                 <button"
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}"
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-zion-slate-light hover: text-zion-cyan transition-colors duration-200"
 
-                  {showPassword ? (;"
+                  {showPassword ? (,"
                     <EyeOff className="h-5 w-5" />
                   ) : ("
                     <Eye className="h-5 w-5" />
@@ -126,12 +126,12 @@ export default function Page() {
                   </>
                 )}
               </span>"
-              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>
             </button>
-          </form>;
+          </form>,
 
           {/* Divider */}"
-          <div className="relative my-6">;"
+          <div className="relative my-6">,"
             <div className="absolute inset-0 flex items-center">"
               <div className="w-full border-t border-zion-purple/20"></div>
             </div>"
@@ -141,7 +141,7 @@ export default function Page() {
           </div>
 
           {/* Social Login Buttons */}"
-          <div className="space-y-3">;"
+          <div className="space-y-3">,"
             <button className="w-full flex items-center justify-center px-4 py-3 border border-zion-purple/30 rounded-lg text-zion-slate-light hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300 group">"
               <div className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300">
                 {/* Google Icon */}"
@@ -168,7 +168,7 @@ export default function Page() {
         </div>
 
         {/* Sign Up Link */}"
-        <div className="text-center">;"
+        <div className="text-center">,"
           <span className="text-zion-slate-light text-sm">
             Don't have an account?{' '}
           </span>

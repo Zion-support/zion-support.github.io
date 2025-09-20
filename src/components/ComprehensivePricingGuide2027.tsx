@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   DollarSign,
   TrendingUp,
@@ -22,113 +22,98 @@ import {
   Shield,
   Brain,
   Rocket
-} from 'lucide-react';
-import { servicesCatalog } from '../data/servicesCatalog';
-import { innovativeServices2027 } from '../data/innovativeServices2027';
-
+} from "lucide-react";
+import { servicesCatalog } from "../data/servicesCatalog";
+import { innovativeServices2027 } from "../data/innovativeServices2027";
 export const ComprehensivePricingGuide2027: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [priceRange, setPriceRange] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
+  const [priceRange, setPriceRange] = useState<string>('All'),
+  const [sortBy, setSortBy] = useState<string>('name'),
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
         }
-      },
+      };
       { threshold: 0.1 }
     );
-
-    const element = document.getElementById('comprehensive-pricing-guide');
+    const element = document.getElementById('comprehensive-pricing-guide'),
     if (element) {
-      observer.observe(element);
+      observer.observe(element),
     }
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect(),
+  }, []),
 
   // Combine all services
   const allServices = [
     ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
         ...item,
-        source: 'catalog',
-        category: category.name
+        source: 'catalog',category: category.name
       }))
-    ),
+    );
     ...innovativeServices2027.map(service => ({
       ...service,
-      source: 'innovative',
-      category: service.category,
-      features: service.features || [],
-      ctaLabel: service.ctaLabel || 'Get Started',
-      href: service.href || '/contact'
+      source: 'innovative',category: service.category,features: service.features || [],ctaLabel: service.ctaLabel || 'Get Started',href: service.href || '/contact'
     }))
   ];
-
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase()),
 
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
 
     const matchesPrice = priceRange === 'All' ||
       (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||
       (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||
-      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
+      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000),
 
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice,
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.title.localeCompare(b.title);
+        return a.title.localeCompare(b.title),
       case 'price':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
       case 'category':
-        return a.category.localeCompare(b.category);
-      default:
-        return 0;
+        return a.category.localeCompare(b.category),
+      default: return 0
     }
   });
-
-  const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
-  const priceRanges = ['All', 'Low (<$100)', 'Medium ($100-$999)', 'High ($1000+)'];
+  const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
+  const priceRanges = ['AllLow (<$100)', 'Medium ($100-$999)High ($1000+)'],
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-
   const getPriceRange = (price: string) => {
-    const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
-    if (numPrice < 100) return 'Low';
-    if (numPrice < 1000) return 'Medium';
-    return 'High';
-  };
+    const numPrice = parseFloat(price.replace(/[^0-9.]/g, '')),
+    if (numPrice < 100) return 'Low',
+    if (numPrice < 1000) return 'Medium',
+    return 'High',
+  },
 
   const getPriceColor = (price: string) => {
     const range = getPriceRange(price);
     switch (range) {
-      case 'Low': return 'text-green-400';
-      case 'Medium': return 'text-yellow-400';
-      case 'High': return 'text-red-400';
-      default: return 'text-white';
+      case 'Low': return 'text-green-400',
+      case 'Medium': return 'text-yellow-400',
+      case 'High': return 'text-red-400',
+      default: return 'text-white'
     }
   };
-
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
-      'AI Solutions': Brain,
+      'AI Solutions': Brain;
       'Micro SaaS': Zap,
       'IT Services': Shield,
       'Cybersecurity': Shield,
@@ -148,9 +133,9 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       'LegalTech Solutions': Scale,
       'Real Estate Tech': Home,
       'Supply Chain Solutions': Truck
-    };
-    return iconMap[category] || Target;
-  };
+    },
+    return iconMap[category] || Target,
+  },
 
   return (
     <section id="comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -182,7 +167,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
           </h2>
 
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Explore our complete portfolio of innovative services with transparent pricing,
+            Explore our complete portfolio of innovative services with transparent pricing;
             detailed ROI analysis, and market insights to help you make informed decisions.
           </p>
         </motion.div>
@@ -389,7 +374,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
@@ -411,5 +396,5 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
+  )
 };

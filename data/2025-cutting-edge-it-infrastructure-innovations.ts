@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface CuttingEdgeITInfrastructureInnovation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const cuttingEdgeITInfrastructureInnovations2025 = [
   // Quantum-Safe Cloud Infrastructure Platform
@@ -55,36 +55,23 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       custom: 'Contact for pricing'
     },
     features: [
-      'Quantum-resistant encryption algorithms',
-      'Post-quantum cryptography implementation',
-      'Advanced threat detection and prevention',
-      'Zero-trust security architecture',
-      'Multi-cloud deployment options',
-      'Automated security compliance',
-      'Real-time security monitoring',
-      'Quantum-safe key management',
-      'Disaster recovery and backup',
-      'Global edge computing network',
-      'API-first infrastructure',
-      'Enterprise-grade SLA guarantees'
+      'Quantum-resistant encryption algorithmsPost-quantum cryptography implementation',
+      'Advanced threat detection and preventionZero-trust security architecture',
+      'Multi-cloud deployment optionsAutomated security compliance',
+      'Real-time security monitoringQuantum-safe key management',
+      'Disaster recovery and backupGlobal edge computing network',
+      'API-first infrastructureEnterprise-grade SLA guarantees'
     ],
     benefits: [
-      'Future-proof against quantum threats',
-      'Unprecedented security levels',
-      'Compliance with emerging standards',
-      'Reduced security breach risks',
-      'Competitive security advantage',
-      'Long-term infrastructure investment',
-      'Advanced threat protection',
-      'Global compliance readiness'
+      'Future-proof against quantum threatsUnprecedented security levels',
+      'Compliance with emerging standardsReduced security breach risks',
+      'Competitive security advantageLong-term infrastructure investment',
+      'Advanced threat protectionGlobal compliance readiness'
     ],
     useCases: [
-      'Financial services and banking',
-      'Healthcare and medical data',
-      'Government and defense',
-      'Critical infrastructure',
-      'Research and development',
-      'Enterprise data centers'
+      'Financial services and bankingHealthcare and medical data',
+      'Government and defenseCritical infrastructure',
+      'Research and developmentEnterprise data centers'
     ],
     marketSize: '$14.3B by 2025',
     targetAudience: 'Enterprises requiring quantum-safe security, government agencies, financial institutions',
@@ -110,36 +97,23 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       custom: 'Contact for pricing'
     },
     features: [
-      'AI-powered edge resource management',
-      'Autonomous load balancing and scaling',
-      'Predictive performance optimization',
-      'Global edge node deployment',
-      'Real-time latency optimization',
-      'Intelligent content delivery',
-      'Edge AI model deployment',
-      'Autonomous fault detection and recovery',
-      'Dynamic resource allocation',
-      'Multi-cloud edge orchestration',
-      'Advanced analytics and insights',
-      'Custom edge application deployment'
+      'AI-powered edge resource managementAutonomous load balancing and scaling',
+      'Predictive performance optimizationGlobal edge node deployment',
+      'Real-time latency optimizationIntelligent content delivery',
+      'Edge AI model deploymentAutonomous fault detection and recovery',
+      'Dynamic resource allocationMulti-cloud edge orchestration',
+      'Advanced analytics and insightsCustom edge application deployment'
     ],
     benefits: [
-      'Reduce latency by 80%',
-      'Improve user experience globally',
-      'Reduce bandwidth costs by 60%',
-      'Enable autonomous edge management',
-      'Scale edge computing automatically',
-      'Optimize performance in real-time',
-      'Reduce operational overhead',
-      'Global edge presence'
+      'Reduce latency by 80%Improve user experience globally',
+      'Reduce bandwidth costs by 60%Enable autonomous edge management',
+      'Scale edge computing automaticallyOptimize performance in real-time',
+      'Reduce operational overheadGlobal edge presence'
     ],
     useCases: [
-      'Content delivery networks',
-      'IoT and edge computing',
-      'Mobile applications',
-      'Gaming and entertainment',
-      'E-commerce platforms',
-      'Real-time applications'
+      'Content delivery networksIoT and edge computing',
+      'Mobile applicationsGaming and entertainment',
+      'E-commerce platformsReal-time applications'
     ],
     marketSize: '$11.7B by 2025',
     targetAudience: 'CDN providers, IoT companies, mobile app developers, global businesses',
@@ -165,36 +139,23 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       custom: 'Contact for pricing'
     },
     features: [
-      'Neuromorphic chip architecture',
-      'Brain-inspired neural networks',
-      'Ultra-low power consumption',
-      'Real-time learning capabilities',
-      'Cognitive computing processing',
-      'Advanced pattern recognition',
-      'Neuromorphic AI models',
-      'Scalable neural architecture',
-      'Custom neuromorphic designs',
-      'Research and development tools',
-      'Academic licensing options',
-      'Enterprise integration support'
+      'Neuromorphic chip architectureBrain-inspired neural networks',
+      'Ultra-low power consumptionReal-time learning capabilities',
+      'Cognitive computing processingAdvanced pattern recognition',
+      'Neuromorphic AI modelsScalable neural architecture',
+      'Custom neuromorphic designsResearch and development tools',
+      'Academic licensing optionsEnterprise integration support'
     ],
     benefits: [
-      '1000x more energy efficient than traditional computing',
-      'Real-time learning and adaptation',
-      'Unprecedented AI processing speed',
-      'Cognitive computing capabilities',
-      'Breakthrough in computing architecture',
-      'Future-proof technology investment',
-      'Research and development platform',
-      'Competitive technological advantage'
+      '1000x more energy efficient than traditional computingReal-time learning and adaptation',
+      'Unprecedented AI processing speedCognitive computing capabilities',
+      'Breakthrough in computing architectureFuture-proof technology investment',
+      'Research and development platformCompetitive technological advantage'
     ],
     useCases: [
-      'AI research and development',
-      'Autonomous vehicles and robotics',
-      'Edge AI applications',
-      'Cognitive computing systems',
-      'Scientific research',
-      'Advanced AI applications'
+      'AI research and developmentAutonomous vehicles and robotics',
+      'Edge AI applicationsCognitive computing systems',
+      'Scientific researchAdvanced AI applications'
     ],
     marketSize: '$19.8B by 2025',
     targetAudience: 'AI research institutions, autonomous vehicle companies, robotics manufacturers',
@@ -220,36 +181,23 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       custom: 'Contact for pricing'
     },
     features: [
-      'Autonomous power management',
-      'AI-driven cooling optimization',
-      'Predictive maintenance scheduling',
-      'Real-time security monitoring',
-      'Dynamic resource allocation',
-      'Energy efficiency optimization',
-      'Automated disaster recovery',
-      'Performance monitoring and alerting',
-      'Capacity planning and scaling',
-      'Multi-data center orchestration',
-      'Compliance and audit automation',
-      'Custom automation workflows'
+      'Autonomous power managementAI-driven cooling optimization',
+      'Predictive maintenance schedulingReal-time security monitoring',
+      'Dynamic resource allocationEnergy efficiency optimization',
+      'Automated disaster recoveryPerformance monitoring and alerting',
+      'Capacity planning and scalingMulti-data center orchestration',
+      'Compliance and audit automationCustom automation workflows'
     ],
     benefits: [
-      'Reduce energy costs by 40%',
-      'Improve uptime to 99.999%',
-      'Reduce operational costs by 60%',
-      'Enable 24/7 autonomous operation',
-      'Predict and prevent failures',
-      'Optimize resource utilization',
-      'Reduce carbon footprint',
-      'Scale operations automatically'
+      'Reduce energy costs by 40%Improve uptime to 99.999%',
+      'Reduce operational costs by 60%Enable 24/7 autonomous operation',
+      'Predict and prevent failuresOptimize resource utilization',
+      'Reduce carbon footprintScale operations automatically'
     ],
     useCases: [
-      'Enterprise data centers',
-      'Cloud service providers',
-      'Colocation facilities',
-      'Edge computing locations',
-      'Government data centers',
-      'Research and educational institutions'
+      'Enterprise data centersCloud service providers',
+      'Colocation facilitiesEdge computing locations',
+      'Government data centersResearch and educational institutions'
     ],
     marketSize: '$16.4B by 2025',
     targetAudience: 'Data center operators, cloud providers, enterprises with large IT infrastructure',
@@ -260,4 +208,4 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     website: 'https://ziontechgroup.com',
     slug: '/autonomous-data-center-management-platform'
   }
-];
+],

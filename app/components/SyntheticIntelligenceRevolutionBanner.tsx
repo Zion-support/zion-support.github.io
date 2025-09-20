@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { Brain, Zap, TrendingUp, Users } from 'lucide-react';
+import Link from 'next/link',
+import { Brain, Zap, TrendingUp, Users } from 'lucide-react',
 export default function SyntheticIntelligenceRevolutionBanner() {,
   return (,
     <section className="py-16 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white relative overflow-hidden">,
@@ -30,7 +30,7 @@ export default function SyntheticIntelligenceRevolutionBanner() {,
             <Zap className="w-12 h-12 text-yellow-400 mb-4" />,
             <h3 className="text-xl font-bold mb-3">Self-Evolving Systems</h3>,
             <p className="text-gray-300">,
-              AI that continuously improves itself without human intervention;
+              AI that continuously improves itself without human intervention,
               adapting to new challenges in real-time.,
             </p>,
           </div>,
@@ -73,7 +73,7 @@ export default function SyntheticIntelligenceRevolutionBanner() {,
               Get Implementation Guide,
             </Link>,
           </div>,
-          {/* Success Metrics */,}
+          {/* Success Metrics */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">,
             <div className="text-center">,
               <div className="text-3xl font-bold text-purple-400 mb-2">800%</div>,
@@ -94,5 +94,4 @@ export default function SyntheticIntelligenceRevolutionBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

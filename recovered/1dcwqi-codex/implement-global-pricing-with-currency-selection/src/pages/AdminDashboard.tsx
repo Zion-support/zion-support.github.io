@@ -1,5 +1,5 @@
-import React from 'react';
-import AdminLayout from '@/components/admin/AdminLayout';
+import React from 'react',
+import AdminLayout from '@/components/admin/AdminLayout',
 
 export default function AdminDashboard() {
   return (
@@ -9,5 +9,5 @@ export default function AdminDashboard() {
         <p>Select a section from the sidebar.</p>
       </div>
     </AdminLayout>
-  );
+  ),
 }

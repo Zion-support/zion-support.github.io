@@ -118,11 +118,11 @@ const TermsOfService = () => {
       </div>
 "
       <div className="mt-12 text-center">"
-        <a href="/" className="text-indigo-400 hover:text-indigo-300 font-medium">
-          ← Back to Home;        </a>;
-      </div>;
-      </div>;
-    </div>;
-  )};
+        <a href="/" className="text-indigo-400 hover: text-indigo-300 font-medium">
+          ← Back to Home,        </a>,
+      </div>,
+      </div>,
+    </div>,
+  )},
 
-export default TermsOfService;'"
+export default TermsOfService,'"

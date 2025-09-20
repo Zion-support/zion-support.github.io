@@ -1,28 +1,28 @@
 <<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react',
 export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({ children }) => {
-export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
-export const useAccessibility = () => {;
-import { motion, AnimatePresence  } from 'framer-motion';
+export const FocusTrap: React.FC<{ children: ReactNode, isActive?: boolean }> = ({
+export const useAccessibility = () => {,
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 > {
   children: ReactNode}
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [highContrast, setHighContrast] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [showSkipLinks, setShowSkipLinks] = useState(false);
-  const [voiceNavigation, setVoiceNavigation] = useState(false);
+  const [highContrast, setHighContrast] = useState(false),
+  const [reducedMotion, setReducedMotion] = useState(false),
+  const [fontSize, setFontSize] = useState(16),
+  const [showSkipLinks, setShowSkipLinks] = useState(false),
+  const [voiceNavigation, setVoiceNavigation] = useState(false),
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
 
-    setHighContrast(savedHighContrast);
-    setReducedMotion(savedReducedMotion);
-    setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
-    setVoiceNavigation(savedVoiceNavigation)}, []);
+    setHighContrast(savedHighContrast),
+    setReducedMotion(savedReducedMotion),
+    setFontSize(savedFontSize ? parseInt(savedFontSize) : 16),
+    setVoiceNavigation(savedVoiceNavigation)}, []),
 
   // Apply accessibility settings to document
   useEffect(() => {
@@ -38,7 +38,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       root.classList.remove('reduce-motion')}
 
     // Apply font size
-    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
+    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]),
 
   // Keyboard navigation support
   useEffect(() => {
@@ -47,37 +47,37 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
       // High contrast toggle(Alt + H)
       if(event.altKey && event.key === 'h') {
-        event.preventDefault();
+        event.preventDefault(),
         toggleHighContrast()}
 
       // Font size controls(Alt + Plus/Minus)
       if(event.altKey && event.key === '+') {
-        event.preventDefault();
+        event.preventDefault(),
         increaseFontSize()}
       if(event.altKey && event.key === '-') {
-        event.preventDefault();
+        event.preventDefault(),
         decreaseFontSize()}
-    };
+    },
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []),
 
-    setHighContrast(newValue);
-    localStorage.setItem('zion-high-contrast', newValue.toString())};
+    setHighContrast(newValue),
+    localStorage.setItem('zion-high-contrast', newValue.toString())},
 
-    setReducedMotion(newValue);
-    localStorage.setItem('zion-reduced-motion', newValue.toString())};
+    setReducedMotion(newValue),
+    localStorage.setItem('zion-reduced-motion', newValue.toString())},
 
-    setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString())};
+    setFontSize(newSize),
+    localStorage.setItem('zion-font-size', newSize.toString())},
 
-    setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString())};
+    setFontSize(newSize),
+    localStorage.setItem('zion-font-size', newSize.toString())},
 
-    localStorage.setItem('zion-font-size', '16')};
+    localStorage.setItem('zion-font-size16')},
 
-    setVoiceNavigation(newValue);
-    localStorage.setItem('zion-voice-navigation', newValue.toString())};
+    setVoiceNavigation(newValue),
+    localStorage.setItem('zion-voice-navigation', newValue.toString())},
 
   const contextValue: AccessibilityContextType = {
     highContrast,
@@ -91,8 +91,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     showSkipLinks,
     setShowSkipLinks,
     voiceNavigation,
-    toggleVoiceNavigation,
-  };
+    toggleVoiceNavigation
+  },
 
   return (<AccessibilityContext.Provider value={contextValue}>
       {children}
@@ -120,9 +120,9 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <div  className="max - w-4xl mx - auto flex flex - wrap justify - center gap-4">
               <a
                 href="#main - content"
-                className="px-4 py-2 bg-white rounded-lg font - semibold hover:bg-gray - 100 focus:outline - none focus:ring - 2 focus:ring -black"
+                className="px-4 py-2 bg-white rounded-lg font - semibold hover: bg-gray - 100 focus:outline - none focus:ring - 2 focus:ring -black"
 
-      <div  className="fixed bottom - 4 left - 4 z -40">;
+      <div  className="fixed bottom - 4 left - 4 z -40">,
         <motion.div
           initial = {
   { opacity: 0,
@@ -218,5 +218,5 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         </div>
       </div>
     </AccessibilityContext.Provider>
-  )};
+  )},
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

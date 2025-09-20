@@ -1,61 +1,61 @@
-import React, { useState, useEffect } from 'react';
-import { Input } from '@/components/ui/input';
-import { useAutocomplete } from '@/hooks/useAutocomplete';
-import { ProductListing } from '@/types/listings';
-import { safeStorage } from '@/utils/safeStorage';
-import debounce from 'lodash.debounce';
+import React, { useState, useEffect } from 'react',
+import { Input } from '@/components/ui/input',
+import { useAutocomplete } from '@/hooks/useAutocomplete',
+import { ProductListing } from '@/types/listings',
+import { safeStorage } from '@/utils/safeStorage',
+import debounce from 'lodash.debounce',
 
 interface MarketplaceSearchProps {
-  products: ProductListing[];
-  onSelect?: (item: ProductListing) => void;
+  products: ProductListing[],
+  onSelect?: (item: ProductListing) => void
 }
 
 export function MarketplaceSearch({ products, onSelect }: MarketplaceSearchProps) {
-  const [query, setQuery] = useState(() => safeStorage.getItem('marketplace_search_query') || '');
-  const { suggestions, getSuggestions, clearSuggestions } = useAutocomplete(products);
-  const [highlight, setHighlight] = useState(-1);
+  const [query, setQuery] = useState(() => safeStorage.getItem('marketplace_search_query') || ''),
+  const { suggestions, getSuggestions, clearSuggestions } = useAutocomplete(products),
+  const [highlight, setHighlight] = useState(-1),
 
   useEffect(() => {
-    safeStorage.setItem('marketplace_search_query', query);
-  }, [query]);
+    safeStorage.setItem('marketplace_search_query', query),
+  }, [query]),
 
   // Debounce fetching suggestions to reduce expensive computations/API calls
   const debouncedSuggest = React.useMemo(
     () => debounce((value: string) => getSuggestions(value), 300),
     [getSuggestions]
-  );
+  ),
 
   useEffect(() => {
-    debouncedSuggest(query);
+    debouncedSuggest(query),
     return () => {
-      debouncedSuggest.cancel();
-    };
-  }, [query, debouncedSuggest]);
+      debouncedSuggest.cancel(),
+    },
+  }, [query, debouncedSuggest]),
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setQuery(value);
-    setHighlight(-1);
-  };
+    const value = e.target.value,
+    setQuery(value),
+    setHighlight(-1)
+  },
 
   const select = (item: ProductListing) => {
-    setQuery(item.title);
-    clearSuggestions();
-    if (onSelect) onSelect(item);
-  };
+    setQuery(item.title),
+    clearSuggestions(),
+    if (onSelect) onSelect(item)
+  },
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      setHighlight(h => Math.min(h + 1, suggestions.length - 1));
+      e.preventDefault(),
+      setHighlight(h => Math.min(h + 1, suggestions.length - 1)),
     } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      setHighlight(h => Math.max(h - 1, 0));
+      e.preventDefault(),
+      setHighlight(h => Math.max(h - 1, 0)),
     } else if (e.key === 'Enter' && highlight >= 0) {
-      e.preventDefault();
-      select(suggestions[highlight]);
+      e.preventDefault(),
+      select(suggestions[highlight]),
     }
-  };
+  },
 
   return (
     <div className="relative">
@@ -80,7 +80,7 @@ export function MarketplaceSearch({ products, onSelect }: MarketplaceSearchProps
         </ul>
       )}
     </div>
-  );
+  ),
 }
 
-export default MarketplaceSearch;
+export default MarketplaceSearch,

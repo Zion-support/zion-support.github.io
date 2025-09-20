@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const RevolutionaryAIServices2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>,
         <div className="relative z-10 container mx-auto px-4 py-20">,
@@ -28,7 +28,7 @@ const RevolutionaryAIServices2025: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Revolutionary AI Services Grid */,}
+      {/* Revolutionary AI Services Grid */}
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center mb-16">,
           <h2 className="text-5xl font-bold mb-6">🌟 Revolutionary AI Services</h2>,
@@ -37,7 +37,7 @@ const RevolutionaryAIServices2025: React.FC = () => {,
           </p>,
         </div>,
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20">,
-          {/* Autonomous AI Agents */,}
+          {/* Autonomous AI Agents */}
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover: scale-105 transition-all duration-300">,
             <div className="text-6xl mb-6 text-center">🤖</div>,
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI Agents</h3>,
@@ -58,7 +58,7 @@ const RevolutionaryAIServices2025: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Quantum AI Processing */,}
+          {/* Quantum AI Processing */}
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover: scale-105 transition-all duration-300">,
             <div className="text-6xl mb-6 text-center">⚡</div>,
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI Processing</h3>,
@@ -79,7 +79,7 @@ const RevolutionaryAIServices2025: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Neural Interface AI */,}
+          {/* Neural Interface AI */}
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover: scale-105 transition-all duration-300">,
             <div className="text-6xl mb-6 text-center">🧠</div>,
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Interface AI</h3>,
@@ -100,7 +100,7 @@ const RevolutionaryAIServices2025: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* AI-Powered Analytics */,}
+          {/* AI-Powered Analytics */}
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover: scale-105 transition-all duration-300">,
             <div className="text-6xl mb-6 text-center">📊</div>,
             <h3 className="text-2xl font-bold mb-4 text-center">AI-Powered Analytics</h3>,
@@ -121,7 +121,7 @@ const RevolutionaryAIServices2025: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* AI Content Generation */,}
+          {/* AI Content Generation */}
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover: scale-105 transition-all duration-300">,
             <div className="text-6xl mb-6 text-center">✍️</div>,
             <h3 className="text-2xl font-bold mb-4 text-center">AI Content Generation</h3>,
@@ -142,7 +142,7 @@ const RevolutionaryAIServices2025: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* AI Cybersecurity */,}
+          {/* AI Cybersecurity */}
           <div className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 hover: scale-105 transition-all duration-300">,
             <div className="text-6xl mb-6 text-center">🛡️</div>,
             <h3 className="text-2xl font-bold mb-4 text-center">AI Cybersecurity</h3>,
@@ -164,7 +164,7 @@ const RevolutionaryAIServices2025: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Success Stories Section */,}
+        {/* Success Stories Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-20">,
           <div className="text-center mb-12">,
             <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>,
@@ -222,6 +222,5 @@ const RevolutionaryAIServices2025: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default RevolutionaryAIServices2025;
+    </div>)},
+export default RevolutionaryAIServices2025,

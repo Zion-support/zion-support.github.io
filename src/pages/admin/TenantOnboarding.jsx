@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import SEO from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/Input';
-import { Label } from '@/components/ui/label';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/Input";
+import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -16,89 +16,62 @@ export default function TenantOnboarding() {
     const [activeTab, setActiveTab] = useState("company");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
-        brand_name: "",
-        subdomain: "",
-        logo_url: "",
-        primary_color: "#9b87f5",
-        theme_preset: "light",
-        company_size: "",
-        industry: "",
-        custom_domain: "",
-        is_co_branded: true
+        brand_name: "",subdomain: "",logo_url: "",primary_color: "#9b87f5",theme_preset: "light",company_size: "",industry: "",custom_domain: "",is_co_branded: true
     });
     // Check if user has admin role
-    const isAdmin = user?.role === "admin";
+    const isAdmin = user?.role === "admin",
     if (!isAdmin) {
-        return <Navigate to="/unauthorized"/>;
+        return <Navigate to="/unauthorized"/>,
     }
     const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
+        const { name, value } = e.target,
+        setFormData(prev => ({ ...prev, [name]: value })),
+    },
     const handleSelectChange = (name, value) => {
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
+        setFormData(prev => ({ ...prev, [name]: value })),
+    },
     const handleSwitchChange = (name, checked) => {
-        setFormData(prev => ({ ...prev, [name]: checked }));
-    };
+        setFormData(prev => ({ ...prev, [name]: checked })),
+    },
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+        e.preventDefault(),
+        setIsSubmitting(true),
         try {
             // Generate subdomain if not provided
-            const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
             // Create landing page copy
             const landingPageCopy = {
-                headline: "AI Hiring Assistant",
-                subtitle: `Find the best talent for your ${formData.industry || "company"}`,
+                headline: "AI Hiring Assistant",subtitle: `Find the best talent for your ${formData.industry || "company"}`;
                 cta: "Get Started"
             };
             // Submit to Supabase
             const { data, error } = await supabase
                 .from('whitelabel_tenants')
                 .insert({
-                brand_name: formData.brand_name,
-                subdomain: subdomain,
-                custom_domain: formData.custom_domain || null,
-                primary_color: formData.primary_color,
-                logo_url: formData.logo_url || null,
-                theme_preset: formData.theme_preset,
-                landing_page_copy: landingPageCopy,
-                is_active: true,
-                account_manager_id: user.id,
-                dns_verified: false,
-                email_template_override: null
+                brand_name: formData.brand_name,subdomain: subdomain,custom_domain: formData.custom_domain || null,primary_color: formData.primary_color,logo_url: formData.logo_url || null,theme_preset: formData.theme_preset,landing_page_copy: landingPageCopy,is_active: true,account_manager_id: user.id,dns_verified: false,email_template_override: null
             })
                 .select('id, brand_name, subdomain')
-                .single();
+                .single(),
             if (error)
-                throw error;
+                throw error,
             toast.success("Tenant created successfully!", {
                 description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
             });
             // Reset form
             setFormData({
-                brand_name: "",
-                subdomain: "",
-                logo_url: "",
-                primary_color: "#9b87f5",
-                theme_preset: "light",
-                company_size: "",
-                industry: "",
-                custom_domain: "",
-                is_co_branded: true
+                brand_name: "",subdomain: "",logo_url: "",primary_color: "#9b87f5",theme_preset: "light",company_size: "",industry: "",custom_domain: "",is_co_branded: true
             });
         }
         catch (error) {
-            console.error("Error creating tenant:", error);
+            console.error("Error creating tenant:", error),
             toast.error("Failed to create tenant", {
                 description: error.message
             });
         }
         finally {
-            setIsSubmitting(false);
+            setIsSubmitting(false),
         }
-    };
+    },
     return (<>
       <SEO title="Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform."/>
       

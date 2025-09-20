@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'Guide: Enterprise AI Governance (2026)';
+  title: 'Guide: Enterprise AI Governance (2026)',
   description: ,
-    'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.',};
+    'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.'},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -19,7 +19,7 @@ export default function Page() {,
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">,
           <h2>What You Will Build</h2>,
           <p>,
-            A governance control plane that integrates with CI/CD, evaluation harnesses, and runtime gateways;
+            A governance control plane that integrates with CI/CD, evaluation harnesses, and runtime gateways,
             enabling provable compliance and rapid iteration.,
           </p>,
           <h2>Prerequisites</h2>,
@@ -41,6 +41,6 @@ export default function Page() {,
         </div>,
       </section>,
     </main>,
-  );
+  ),
 }
 ,

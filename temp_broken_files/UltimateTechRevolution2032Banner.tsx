@@ -1,10 +1,10 @@
-import React from 'react';
-import { ArrowRight, Zap, Brain, Globe, Rocket } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { ArrowRight, Zap, Brain, Globe, Rocket } from 'lucide-react',
+import { Link } from 'react-router-dom',
 const UltimateTechRevolution2032Banner: React.FC = () => {,
   return (,
     <divsection,
-      whileInView={{ opacity: 1, y: 0 ,}}
+      whileInView={{ opacity: 1, y: 0 }}
       className="relative py-16 px-4 overflow-hidden",
     >,
       {/* Background Effects */}
@@ -15,9 +15,9 @@ const UltimateTechRevolution2032Banner: React.FC = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto">,
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
-            whileInView={{ opacity: 1, x: 0 ,}}
+            whileInView={{ opacity: 1, x: 0 }}
             className="text-center lg: text-left",
           >,
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">,
@@ -46,45 +46,44 @@ const UltimateTechRevolution2032Banner: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Feature Grid */,}
+          {/* Right Content - Feature Grid */}
           <div,
-            whileInView={{ opacity: 1, x: 0 ,}}
+            whileInView={{ opacity: 1, x: 0 }}
             className="grid grid-cols-2 gap-6",
           >,
             {[,
               {,
-                icon: <Brain className="w-8 h-8" />;
-                title: "Neural Reality";
-                description: "Consciousness transfer technology",};
+                icon: <Brain className="w-8 h-8" />,
+                title: "Neural Reality",
+                description: "Consciousness transfer technology"},
               {,
-                icon: <Globe className="w-8 h-8" />;
-                title: "Omniversal AI";
-                description: "Multi-dimensional intelligence",};
+                icon: <Globe className="w-8 h-8" />,
+                title: "Omniversal AI",
+                description: "Multi-dimensional intelligence"},
               {,
-                icon: <Rocket className="w-8 h-8" />;
-                title: "Interstellar Commerce";
-                description: "Quantum trade networks",};
+                icon: <Rocket className="w-8 h-8" />,
+                title: "Interstellar Commerce",
+                description: "Quantum trade networks"},
               {,
-                icon: <Zap className="w-8 h-8" />;
-                title: "Reality Firewall";
-                description: "Dimensional protection systems",}
+                icon: <Zap className="w-8 h-8" />,
+                title: "Reality Firewall",
+                description: "Dimensional protection systems"}
             ].map((feature, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
+                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-purple-800/20 to-blue-800/20 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover: border-purple-400/40 transition-all group",
               >,
                 <div className="text-purple-400 mb-4 group-hover:text-purple-300 transition-colors flex justify-center">,
-                  {feature.icon,}
+                  {feature.icon}
                 </div>,
                 <h3 className="text-lg font-bold mb-2 text-white group-hover: text-purple-300 transition-colors">,
-                  {feature.title,}
+                  {feature.title}
                 </h3>,
                 <p className="text-sm text-gray-400 group-hover: text-gray-300 transition-colors">,
-                  {feature.description,}
+                  {feature.description}
                 </p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
@@ -93,7 +92,7 @@ const UltimateTechRevolution2032Banner: React.FC = () => {,
       <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>,
       <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>,
     </divsection>,
-  );
-};
-export default UltimateTechRevolution2032Banner;
+  ),
+},
+export default UltimateTechRevolution2032Banner,
 </div></div></div>,

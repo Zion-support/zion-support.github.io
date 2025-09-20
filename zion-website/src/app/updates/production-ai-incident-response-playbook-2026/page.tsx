@@ -45,5 +45,5 @@ export default function ProductionAIIncidentResponsePlaybook2026() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}
 ,

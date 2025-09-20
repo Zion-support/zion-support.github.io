@@ -1,10 +1,10 @@
-import { UnifiedService } from '../types/unified-service-types';
+import { UnifiedService } from '../types/unified-service-types',
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
@@ -21,16 +21,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     features: [
-      'Real-time risk monitoring',
-      'AI risk assessment',
-      'Automated mitigation',
-      'Compliance tracking',
-      'Risk scoring',
-      'Scenario modeling',
-      'Incident response',
-      'Reporting dashboard',
-      'Integration capabilities',
-      'Custom workflows'
+      'Real-time risk monitoringAI risk assessment',
+      'Automated mitigationCompliance tracking',
+      'Risk scoringScenario modeling',
+      'Incident responseReporting dashboard',
+      'Integration capabilitiesCustom workflows'
     ],
     popular: true,
     icon: '⚠️',
@@ -40,11 +35,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: 'Fortune 500 companies, Financial institutions, Healthcare organizations, Government agencies',
     category: 'Enterprise AI',
     realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Risk Analytics', 'Compliance', 'Automation'],
-    integrations: ['ERP systems', 'GRC platforms', 'Compliance tools', 'Security systems', 'Business intelligence tools'],
-    useCases: ['Risk assessment', 'Compliance management', 'Incident response', 'Business continuity', 'Strategic planning'],
+    technology: ['AI/MLMachine Learning', 'Risk AnalyticsCompliance', 'Automation'],
+    integrations: ['ERP systemsGRC platforms', 'Compliance toolsSecurity systems', 'Business intelligence tools'],
+    useCases: ['Risk assessmentCompliance management', 'Incident responseBusiness continuity', 'Strategic planning'],
     roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',
-    competitors: ['MetricStream', 'ServiceNow', 'IBM OpenPages', 'RSA Archer', 'SAP GRC'],
+    competitors: ['MetricStreamServiceNow', 'IBM OpenPagesRSA Archer', 'SAP GRC'],
     marketSize: '$12.8B enterprise risk management market',
     growthRate: '25% annual growth',
     customers: 45,
@@ -60,16 +55,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     period: '/month',
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',
     features: [
-      'Process analysis AI',
-      'Automated optimization',
-      'Workflow automation',
-      'Performance monitoring',
-      'Cost optimization',
-      'Compliance automation',
-      'Integration capabilities',
-      'Real-time analytics',
-      'Custom workflows',
-      'Reporting dashboard'
+      'Process analysis AIAutomated optimization',
+      'Workflow automationPerformance monitoring',
+      'Cost optimizationCompliance automation',
+      'Integration capabilitiesReal-time analytics',
+      'Custom workflowsReporting dashboard'
     ],
     popular: true,
     icon: '⚙️',
@@ -80,11 +70,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: 'Large enterprises, Manufacturing companies, Service organizations, Government agencies',
     category: 'AI Automation',
     realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Process Mining', 'Automation', 'Workflow Management'],
-    integrations: ['ERP systems', 'CRM platforms', 'BPM tools', 'Workflow engines', 'Business intelligence tools'],
-    useCases: ['Process optimization', 'Workflow automation', 'Cost reduction', 'Efficiency improvement', 'Compliance'],
+    technology: ['AI/MLMachine Learning', 'Process MiningAutomation', 'Workflow Management'],
+    integrations: ['ERP systemsCRM platforms', 'BPM toolsWorkflow engines', 'Business intelligence tools'],
+    useCases: ['Process optimizationWorkflow automation', 'Cost reductionEfficiency improvement', 'Compliance'],
     roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
-    competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Pega', 'Appian'],
+    competitors: ['UiPathAutomation Anywhere', 'Blue PrismPega', 'Appian'],
     marketSize: '$19.6B business process automation market',
     growthRate: '31% annual growth',
     customers: 38,
@@ -100,16 +90,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     period: '/month',
     description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',
     features: [
-      'AI knowledge discovery',
-      'Intelligent categorization',
-      'Semantic search',
-      'Knowledge graphs',
-      'Collaborative workspaces',
-      'Version control',
-      'Access control',
-      'Analytics dashboard',
-      'Integration capabilities',
-      'Mobile access'
+      'AI knowledge discoveryIntelligent categorization',
+      'Semantic searchKnowledge graphs',
+      'Collaborative workspacesVersion control',
+      'Access controlAnalytics dashboard',
+      'Integration capabilitiesMobile access'
     ],
     popular: true,
     icon: '🧠',
@@ -120,11 +105,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies',
     category: 'AI Automation',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Knowledge Graphs', 'Machine Learning', 'Semantic Search'],
-    integrations: ['Document management systems', 'CRM platforms', 'ERP systems', 'Collaboration tools', 'Business intelligence tools'],
-    useCases: ['Knowledge discovery', 'Document management', 'Research collaboration', 'Decision support', 'Training and onboarding'],
+    technology: ['AI/MLNatural Language Processing', 'Knowledge GraphsMachine Learning', 'Semantic Search'],
+    integrations: ['Document management systemsCRM platforms', 'ERP systemsCollaboration tools', 'Business intelligence tools'],
+    useCases: ['Knowledge discoveryDocument management', 'Research collaborationDecision support', 'Training and onboarding'],
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',
-    competitors: ['Microsoft SharePoint', 'Confluence', 'Notion', 'Slack', 'Box'],
+    competitors: ['Microsoft SharePointConfluence', 'NotionSlack', 'Box'],
     marketSize: '$15.2B enterprise content management market',
     growthRate: '28% annual growth',
     customers: 29,
@@ -132,4 +117,4 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 41,
     contactInfo: contact
   }
-];
+],

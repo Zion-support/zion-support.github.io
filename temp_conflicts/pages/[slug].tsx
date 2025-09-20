@@ -1,28 +1,28 @@
-import NextHead from 'next/head';
-import UltraFuturisticBackgroundComponent from '../components/ui/UltraFuturisticBackground';
-import UIButton from '../components/ui/Button';
-import UICard from '../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import NextHead from 'next/head',
+import UltraFuturisticBackgroundComponent from '../components/ui/UltraFuturisticBackground',
+import UIButton from '../components/ui/Button',
+import UICard from '../components/ui/Card',
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react',
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { newlyAddedServices } from '../data/newly-added-services';
-import { curatedMarketServices } from '../data/curated-market-services';
-import { new2025Services } from '../data/new-2025-services';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { moreRealServices2025 } from '../data/more-real-services-2025';
-import { verified2025Additions } from '../data/verified-2025-additions';
-import { realServicesQ12025 } from '../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { extraServices } from '../data/extra-services',
+import { additionalEnhancedServices } from '../data/additional-real-services',
+import { newlyAddedServices } from '../data/newly-added-services',
+import { curatedMarketServices } from '../data/curated-market-services',
+import { new2025Services } from '../data/new-2025-services',
+import { marketValidatedServices } from '../data/market-validated-services',
+import { moreRealServices2025 } from '../data/more-real-services-2025',
+import { verified2025Additions } from '../data/verified-2025-additions',
+import { realServicesQ12025 } from '../data/real-services-q1-2025',
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025',
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2',
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { innovative2025Services } from '../data/innovative-2025-services',
+import { quantumSpaceServices } from '../data/quantum-space-services',
 
 // Node modules will be required inside getStaticPaths to avoid client bundling
 
-type Service = typeof enhancedRealMicroSaasServices[number];
+type Service = typeof enhancedRealMicroSaasServices[number],
 
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
@@ -38,93 +38,93 @@ function getAllServices(): Service[] {
     .concat(verifiedRealServices2025Batch2 as unknown as Service[])
     .concat(innovativeAIServices as unknown as Service[])
     .concat(innovative2025Services as unknown as Service[])
-    .concat(quantumSpaceServices as unknown as Service[]);
+    .concat(quantumSpaceServices as unknown as Service[]),
 }
 
 function toSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
 }
 
 function extractSlugFromLink(link: string): string | null {
   try {
-    const url = new URL(link);
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
-    if (!path) return null;
-    const parts = path.split('/');
-    return parts[parts.length - 1] || null;
+    const url = new URL(link),
+    const path = url.pathname.replace(/^\/+|\/+$/g, ''),
+    if (!path) return null,
+    const parts = path.split('/'),
+    return parts[parts.length - 1] || null,
   } catch {
-    return null;
+    return null,
   }
 }
 
 export async function getStaticPaths() {
-  const services = getAllServices();
-  const slugs = new Set<string>();
+  const services = getAllServices(),
+  const slugs = new Set<string>(),
 
   for (const s of services) {
     if (s.link) {
-      const fromLink = extractSlugFromLink(s.link);
+      const fromLink = extractSlugFromLink(s.link),
       if (fromLink) {
-        slugs.add(fromLink);
-        continue;
+        slugs.add(fromLink),
+        continue,
       }
     }
-    if (s.id) slugs.add(toSlug(s.id));
-    else if (s.name) slugs.add(toSlug(s.name));
+    if (s.id) slugs.add(toSlug(s.id)),
+    else if (s.name) slugs.add(toSlug(s.name)),
   }
 
   // Exclude any slugs that already have explicit pages under /pages
-  const fs = require('fs');
-  const path = require('path');
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
-  const existing = new Set<string>();
+  const fs = require('fs'),
+  const path = require('path'),
+  const pagesDir = path.join(process.cwd(), 'pages'),
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
+  const existing = new Set<string>(),
   for (const entry of entries) {
     // skip internals and folders we don't want to shadow
-    if (entry.name.startsWith('_')) continue;
-    if (['api', 'reports', 'services'].includes(entry.name)) continue;
+    if (entry.name.startsWith('_')) continue,
+    if (['apireports', 'services'].includes(entry.name)) continue,
     if (entry.isDirectory()) {
-      existing.add(entry.name);
-      continue;
+      existing.add(entry.name),
+      continue,
     }
     if (entry.isFile()) {
-      const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
+      const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/),
       if (m) {
-        const base = m[1];
-        if (!['index', '[slug]'].includes(base)) existing.add(base);
+        const base = m[1],
+        if (!['index[slug]'].includes(base)) existing.add(base),
       }
     }
   }
 
-  const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
+  const filtered = Array.from(slugs).filter((slug) => !existing.has(slug)),
 
   return {
     paths: filtered.map((slug) => ({ params: { slug } })),
     fallback: false
-  };
+  },
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const services = getAllServices();
-  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+  const services = getAllServices(),
+  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
 
   let service: Service | undefined = services.find((s) => {
-    if (!s.link) return false;
-    const fromLink = extractSlugFromLink(s.link);
-    return fromLink === incomingSlug;
-  });
+    if (!s.link) return false,
+    const fromLink = extractSlugFromLink(s.link),
+    return fromLink === incomingSlug
+  }),
 
   if (!service) {
-    service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+    service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
   }
 
   if (!service) {
-    return { notFound: true };
+    return { notFound: true },
   }
 
   return {
     props: { service }
-  };
+  },
 }
 
 export default function ServiceDetailTopLevelPage({ service }: { service: Service }) {
@@ -133,7 +133,7 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraFuturisticBackgroundComponent variant="quantum" intensity="high">
@@ -197,7 +197,7 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
             <UICard className="p-6 bg-black/40 border border-gray-700/50">
               <div className="text-sm text-gray-400 mb-1">Pricing</div>
               <div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
-              <div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
+              <div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join()}</div>
               <div className="mt-6 flex gap-3">
                 <UIButton href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</UIButton>
                 {service.link ? (
@@ -223,12 +223,12 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
                 {service.competitors?.length ? (
                   <p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join(', ')}</p>
                 ) : null}
-                <a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover:text-cyan-200">See average market prices →</a>
+                <a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a>
               </div>
             </UICard>
           </div>
         </div>
       </div>
     </UltraFuturisticBackgroundComponent>
-  );
+  )
 }

@@ -1,75 +1,72 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 const InteractiveTechShowcase2027: React.FC = () => {,
-  const [activeTab, setActiveTab] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeTab, setActiveTab] = useState(0),
+  const [isAnimating, setIsAnimating] = useState(false),
   const techCategories = [,
     {,
-      id: 'ai-revolution';
-      title: 'Next-Gen AI Revolution 2027';
-      description: 'Conscious AI systems with quantum-enhanced processing';
-      icon: '🧠';
-      color: 'from-purple-600 to-pink-600';
-      borderColor: 'border-purple-400';
-      bgColor: 'from-purple-600/30 to-pink-600/30';
-      link: '/pages/NextGenAIRevolution2027';
+      id: 'ai-revolution',
+      title: 'Next-Gen AI Revolution 2027',
+      description: 'Conscious AI systems with quantum-enhanced processing',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      borderColor: 'border-purple-400',
+      bgColor: 'from-purple-600/30 to-pink-600/30',
+      link: '/pages/NextGenAIRevolution2027',
       features: [,
-        'Emotional IntelligenceCreative Problem Solving';
-        'Self-Directed LearningAutonomous Decision Making',
-      ],
-    };
+        'Emotional IntelligenceCreative Problem SolvingSelf-Directed LearningAutonomous Decision Making'
+      ]
+    },
     {,
-      id: 'quantum-computing';
-      title: 'Quantum Computing Revolution 2027';
-      description: '1000+ qubit quantum computers achieving true supremacy';
-      icon: '⚡';
-      color: 'from-cyan-600 to-blue-600';
-      borderColor: 'border-cyan-400';
-      bgColor: 'from-cyan-600/30 to-blue-600/30';
-      link: '/pages/QuantumComputingRevolution2027';
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution 2027',
+      description: '1000+ qubit quantum computers achieving true supremacy',
+      icon: '⚡',
+      color: 'from-cyan-600 to-blue-600',
+      borderColor: 'border-cyan-400',
+      bgColor: 'from-cyan-600/30 to-blue-600/30',
+      link: '/pages/QuantumComputingRevolution2027',
       features: [,
-        'Quantum SupremacyParallel Processing';
-        'Cryptographic SecurityMolecular Simulation',
-      ],
-    };
+        'Quantum SupremacyParallel ProcessingCryptographic SecurityMolecular Simulation'
+      ]
+    },
     {,
-      id: 'neural-interface';
-      title: 'Neural Interface Revolution 2027';
-      description: 'Direct brain-computer communication and thought control';
-      icon: '🧬';
-      color: 'from-emerald-600 to-teal-600';
-      borderColor: 'border-emerald-400';
-      bgColor: 'from-emerald-600/30 to-teal-600/30';
-      link: '/pages/NeuralInterfaceRevolution2027',};
+      id: 'neural-interface',
+      title: 'Neural Interface Revolution 2027',
+      description: 'Direct brain-computer communication and thought control',
+      icon: '🧬',
+      color: 'from-emerald-600 to-teal-600',
+      borderColor: 'border-emerald-400',
+      bgColor: 'from-emerald-600/30 to-teal-600/30',
+      link: '/pages/NeuralInterfaceRevolution2027'},
     {,
-      id: 0;
-      title: "Conscious AI Systems";
-      icon: "🧠";
-      description: "AI that thinks, feels, and creates with human-level consciousness";
+      id: 0,
+      title: "Conscious AI Systems",
+      icon: "🧠",
+      description: "AI that thinks, feels, and creates with human-level consciousness",
       features: [,
-        '3D VisualizationGesture Control';
-        'Thought InterfaceReal-time Rendering',
-      ],
+        '3D VisualizationGesture ControlThought InterfaceReal-time Rendering'
+      ]
     }
-  ];
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setIsAnimating(true);
+      setIsAnimating(true),
       setTimeout(() => {,
-        setActiveTab((prev) => (prev + 1) % techCategories.length);
-        setIsAnimating(false);
-      }, 300);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [techCategories.length]);
+        setActiveTab((prev) => (prev + 1) % techCategories.length),
+        setIsAnimating(false),
+      }, 300),
+    }, 5000),
+    return () => clearInterval(interval),
+  }, [techCategories.length]),
   const handleTabClick = (index: number) => {,
     if (index !== activeTab) {,
-      setIsAnimating(true);
+      setIsAnimating(true),
       setTimeout(() => {,
-        setActiveTab(index);
-        setIsAnimating(false),
-      }, 300);
+        setActiveTab(index),
+        setIsAnimating(false)
+      }, 300),
     }
-  };
+  },
   return (,
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">,
       {/* Background Effects */}
@@ -102,7 +99,7 @@ const InteractiveTechShowcase2027: React.FC = () => {,
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${,
                   activeTab === index,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                    : 'text-white/70 hover: text-white hover:bg-white/10',}`}
+                    : 'text-white/70 hover: text-white hover:bg-white/10'}`}
               >,
                 <span className="text-2xl mr-2">{category.icon}</span>,
                 {category.title}
@@ -124,12 +121,11 @@ const InteractiveTechShowcase2027: React.FC = () => {,
                     <div className="text-3xl mb-3">🚀</div>,
                     <h4 className="text-lg font-bold mb-2">{feature}</h4>,
                     <p className="text-sm opacity-80">Revolutionary capability</p>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               <a,
                 href={techCategories[activeTab].link}
-                className={`inline-block bg-gradient-to-r ${techCategories[activeTab].color} text-white px-12 py-4 rounded-lg hover: shadow-2xl transition-all duration-300 font-bold text-xl`,}
+                className={`inline-block bg-gradient-to-r ${techCategories[activeTab].color} text-white px-12 py-4 rounded-lg hover: shadow-2xl transition-all duration-300 font-bold text-xl`}
               >,
                 Explore {techCategories[activeTab].title.split(' ')[0]} →,
               </a>,
@@ -167,7 +163,7 @@ const InteractiveTechShowcase2027: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h3 className="text-4xl font-bold text-white mb-6">,
             Ready to Experience the Future?,
@@ -187,5 +183,5 @@ const InteractiveTechShowcase2027: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default InteractiveTechShowcase2027;
+  )},
+export default InteractiveTechShowcase2027,

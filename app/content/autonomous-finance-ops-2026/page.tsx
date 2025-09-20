@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Finance Operations Blueprint';
+  title: 'AI 2026: Autonomous Finance Operations Blueprint',
   description:,
-    'A practical guide to building an autonomous finance operating system: real-time cash, policy-as-code, and continuous close.',
-};
+    'A practical guide to building an autonomous finance operating system: real-time cash, policy-as-code, and continuous close.'
+},
 export default function AutonomousFinanceOps2026Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -43,7 +43,6 @@ export default function AutonomousFinanceOps2026Page() {,
           </p>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

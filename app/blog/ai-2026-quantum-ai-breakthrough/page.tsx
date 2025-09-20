@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Quantum AI Breakthrough - Zion Tech Group';
-  description: 'Discover the quantum AI breakthrough that will revolutionize computing. Achieve 10,000x speed improvements and solve previously impossible problems.',
-};
+  title: 'AI 2026: Quantum AI Breakthrough - Zion Tech Group',
+  description: 'Discover the quantum AI breakthrough that will revolutionize computing. Achieve 10,000x speed improvements and solve previously impossible problems.'
+},
 export default function QuantumAIBreakthrough2026() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -172,5 +172,4 @@ export default function QuantumAIBreakthrough2026() {,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

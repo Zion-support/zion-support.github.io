@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import React from 'react';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Operational Blueprint for Autonomous Agents | Zion Tech Group';
+  title: 'AI 2026: Operational Blueprint for Autonomous Agents | Zion Tech Group',
   description:,
-    'Practical operating model for autonomous agents: roles, gates, on-call, and governance.';
-  keywords: ['autonomous agentsoperations', 'on-callgovernance', 'eval-gates'],
-};
+    'Practical operating model for autonomous agents: roles, gates, on-call, and governance.',
+  keywords: ['autonomous agentsoperationson-callgovernance', 'eval-gates']
+},
 export default function OperationalBlueprintPage() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -55,6 +55,5 @@ export default function OperationalBlueprintPage() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

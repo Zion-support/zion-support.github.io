@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Badge } from '@/components / ui / badge';
+import React, { useState } from 'react',
+import { Badge } from '@/components / ui / badge',
 
 export default function Page() {
-  }) ;
-  const uniqueCategories = Array.from(new Set (ADVANCED_SERVICES.map (service => service.category) ) ) ;
+  }) ,
+  const uniqueCategories = Array.from(new Set (ADVANCED_SERVICES.map (service => service.category) ) ) ,
   return (<div className="min - h-screen bg-background">
       <SEO
         title="Advanced AI & IT Services - Zion Tech Group"
@@ -296,7 +296,7 @@ export default function Page() {
             <p > Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">
               <a
-                href="https://ziontechgroup.com"
+                href="https: //ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zion - cyan hover:text-zion - cyan - dark inline - flex items - center gap-1"
@@ -307,7 +307,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }
 // Service Card Component
 function ServiceCard({ service }) {
@@ -383,7 +383,7 @@ function ServiceCard({ service }) {
 
         {/* CTA Buttons */}
         <div className="flex gap-2">
-          <Button className="flex - 1 bg-zion - cyan hover:bg-zion - cyan - dark text-zion - blue font -semibold">
+          <Button className="flex - 1 bg-zion - cyan hover: bg-zion - cyan - dark text-zion - blue font -semibold">
             Get Quote
           </Button>
           <Button
@@ -394,5 +394,5 @@ function ServiceCard({ service }) {
           </Button>
         </div>
       </CardContent>
-    </Card>) ;
+    </Card>) 
 }

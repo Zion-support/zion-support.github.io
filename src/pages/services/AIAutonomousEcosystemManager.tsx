@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Network, 
+  Network,
   Brain, 
   Target, 
   BarChart3, 
@@ -25,50 +25,33 @@ import {
   Shield,
   Users,
   GitBranch
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousEcosystemManager: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Ecosystem Management',
-      description: 'Advanced machine learning for autonomous ecosystem orchestration and optimization'
-    },
+      icon: Brain,title: 'AI-Powered Ecosystem Management',description: 'Advanced machine learning for autonomous ecosystem orchestration and optimization'
+    };
     {
-      icon: Network,
-      title: 'Ecosystem Mapping',
-      description: 'Comprehensive mapping and visualization of business ecosystem relationships'
-    },
+      icon: Network,title: 'Ecosystem Mapping',description: 'Comprehensive mapping and visualization of business ecosystem relationships'
+    };
     {
-      icon: Target,
-      title: 'Relationship Optimization',
-      description: 'Intelligent optimization of ecosystem partnerships and collaborations'
-    },
+      icon: Target,title: 'Relationship Optimization',description: 'Intelligent optimization of ecosystem partnerships and collaborations'
+    };
     {
-      icon: BarChart3,
-      title: 'Ecosystem Analytics',
-      description: 'Real-time analytics and insights into ecosystem performance and health'
-    },
+      icon: BarChart3,title: 'Ecosystem Analytics',description: 'Real-time analytics and insights into ecosystem performance and health'
+    };
     {
-      icon: GitBranch,
-      title: 'Integration Management',
-      description: 'AI-driven management of ecosystem integrations and connections'
-    },
+      icon: GitBranch,title: 'Integration Management',description: 'AI-driven management of ecosystem integrations and connections'
+    };
     {
-      icon: TrendingUp,
-      title: 'Growth Monitoring',
-      description: 'Continuous monitoring and optimization of ecosystem growth and expansion'
+      icon: TrendingUp,title: 'Growth Monitoring',description: 'Continuous monitoring and optimization of ecosystem growth and expansion'
     }
   ];
-
   const benefits = [
-    'Improve ecosystem efficiency by 50%',
-    'Optimize partnerships by 60%',
-    'Enhance collaboration by 70%',
-    'Automate ecosystem management',
-    '24/7 autonomous operation',
-    'Real-time ecosystem insights'
-  ];
+    'Improve ecosystem efficiency by 50%Optimize partnerships by 60%',
+    'Enhance collaboration by 70%Automate ecosystem management',
+    '24/7 autonomous operationReal-time ecosystem insights'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -210,7 +193,7 @@ const AIAutonomousEcosystemManager: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Ecosystem Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -228,7 +211,6 @@ const AIAutonomousEcosystemManager: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousEcosystemManager;

@@ -1,22 +1,22 @@
-import { FileText } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { FileText } from 'lucide-react',
+import { useAuth } from '@/hooks/useAuth',
+import { useGetOrdersQuery } from '@/hooks/useOrders',
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/components/ui/empty-state';
+  TableRow
+} from '@/components/ui/table',
+import { Skeleton } from '@/components/ui/skeleton',
+import { EmptyState } from '@/components/ui/empty-state',
 
 export default function OrdersPage() {
-  const { user } = useAuth();
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
+  const { user } = useAuth(),
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
+  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
   return (
     <div className="container max-w-4xl py-10">
@@ -79,5 +79,5 @@ export default function OrdersPage() {
         </Table>
       )}
     </div>
-  );
+  ),
 }

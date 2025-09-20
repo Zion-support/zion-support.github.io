@@ -1,83 +1,83 @@
 
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useState } from "react";
-import { AnalyticsChart } from "./AnalyticsChart";
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { useState } from "react",
+import { AnalyticsChart } from "./AnalyticsChart",
 
-type TimeRange = '7d' | '30d' | '90d' | '365d';
+type TimeRange = '7d' | '30d' | '90d' | '365d',
 
 export function UserBehaviorStats() {
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d');
+  const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
   
   const { data: behaviorData, isLoading } = useQuery({
     queryKey: ['user-behavior-data', timeRange],
     queryFn: async () => {
       // Convert timeRange to days
-      const days = parseInt(timeRange.replace('d', ''));
+      const days = parseInt(timeRange.replace('d', '')),
       
       // Get events grouped by type and date
       const { data, error } = await supabase.rpc('get_event_distribution', {
         days_back: days
-      });
+      }),
       
       if (error) {
-        console.error('Error fetching behavior data:', error);
+        console.error('Error fetching behavior data:', error),
         
         // Fallback to manual query if the RPC doesn't exist
-        const startDate = new Date();
-        startDate.setDate(startDate.getDate() - days);
+        const startDate = new Date(),
+        startDate.setDate(startDate.getDate() - days),
         
         const { data: manualData, error: manualError } = await supabase
           .from('analytics_events')
           .select('event_type, created_at')
-          .gte('created_at', startDate.toISOString());
+          .gte('created_at', startDate.toISOString()),
           
-        if (manualError) throw manualError;
+        if (manualError) throw manualError,
         
         // Process data to count events by type and date
-        const eventsByDate: Record<string, Record<string, number>> = {};
+        const eventsByDate: Record<string, Record<string, number>> = {},
         manualData?.forEach(event => {
-          const date = new Date(event.created_at).toISOString().split('T')[0];
-          if (!eventsByDate[date]) eventsByDate[date] = {};
-          if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0;
-          eventsByDate[date][event.event_type]++;
-        });
+          const date = new Date(event.created_at).toISOString().split('T')[0],
+          if (!eventsByDate[date]) eventsByDate[date] = {},
+          if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0,
+          eventsByDate[date][event.event_type]++,
+        }),
         
         // Convert to array format for the chart
         return Object.entries(eventsByDate).map(([date, events]) => ({
           date,
           ...events
-        }));
+        })),
       }
       
-      return data || [];
+      return data || [],
     }
-  });
+  }),
 
   // Get the event types for chart data keys
   const getEventTypes = () => {
-    if (!behaviorData || behaviorData.length === 0) return ['page_view'];
+    if (!behaviorData || behaviorData.length === 0) return ['page_view'],
     
-    const allKeys = new Set<string>();
+    const allKeys = new Set<string>(),
     behaviorData.forEach(item => {
       Object.keys(item).forEach(key => {
-        if (key !== 'date') allKeys.add(key);
-      });
-    });
+        if (key !== 'date') allKeys.add(key),
+      }),
+    }),
     
-    return Array.from(allKeys);
-  };
+    return Array.from(allKeys),
+  },
   
   // Format event type names for better display
   const formatEventType = (type: string) => {
     return type
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-  };
+      .join(' ')
+  },
 
   return (
     <div className="space-y-6">
@@ -127,15 +127,15 @@ export function UserBehaviorStats() {
         onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
       />
     </div>
-  );
+  ),
 }
 
 interface EventTypeCardProps {
-  title: string;
-  description: string;
-  count: number;
-  icon: React.ReactNode;
-  isLoading: boolean;
+  title: string,
+  description: string,
+  count: number,
+  icon: React.ReactNode,
+  isLoading: boolean
 }
 
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
@@ -160,5 +160,5 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
         </div>
       </CardContent>
     </Card>
-  );
+  ),
 }

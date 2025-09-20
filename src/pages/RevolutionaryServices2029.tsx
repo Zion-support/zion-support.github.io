@@ -1,45 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Star, Users, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, CheckCircle, Play, Pause, Volume2, VolumeX } from 'lucide-react';
-import SEO from '@/components/SEO';
-import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data/revolutionary-2029-advanced-micro-saas-services';
-
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, Filter, Star, Users, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, CheckCircle, Play, Pause, Volume2, VolumeX } from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from "../../data/revolutionary-2029-advanced-micro-saas-services";
 export default function RevolutionaryServices2029() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.5);
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [sortBy, setSortBy] = useState('popularity'),
+  const [isPlaying, setIsPlaying] = useState(false),
+  const [volume, setVolume] = useState(0.5),
 
-  const categories = ['All', 'AI & Automation', 'Quantum Computing & AI', 'AI & Security', 'AI & Marketing', 'AI & Sales', 'AI & Support', 'AI & Analytics', 'IT & Infrastructure', 'Quantum Computing & Finance', 'AI & Healthcare'];
+  const categories = ['AllAI & Automation', 'Quantum Computing & AIAI & Security', 'AI & MarketingAI & Sales', 'AI & SupportAI & Analytics', 'IT & InfrastructureQuantum Computing & Finance', 'AI & Healthcare'],
 
   const filteredServices = REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase()),
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
       case 'price-high':
         return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
       case 'rating':
         return b.rating - a.rating;
       case 'customers':
         return b.customers - a.customers;
-      default:
-        return 0;
+      default: return 0
     }
   });
-
-  const togglePlay = () => setIsPlaying(!isPlaying);
-  const toggleMute = () => setVolume(volume > 0 ? 0 : 0.5);
+  const togglePlay = () => setIsPlaying(!isPlaying),
+  const toggleMute = () => setVolume(volume > 0 ? 0 : 0.5),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -61,16 +58,14 @@ export default function RevolutionaryServices2029() {
             animate={{
               x: [0, 100, 0],
               y: [0, -100, 0],
-              opacity: [0.2, 0.8, 0.2],
+              opacity: [0.2, 0.8, 0.2]
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 5,
+              duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5
             }}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`;
+              top: `${Math.random() * 100}%`
             }}
           />
         ))}
@@ -99,7 +94,7 @@ export default function RevolutionaryServices2029() {
                 Advanced Micro SAAS Services
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Experience the future of business technology with our cutting-edge AI automation, 
+                Experience the future of business technology with our cutting-edge AI automation;
                 quantum computing, and next-generation micro SAAS solutions.
               </p>
             </motion.div>
@@ -142,9 +137,9 @@ export default function RevolutionaryServices2029() {
               className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               {[
-                { icon: Users, value: '1,200+', label: 'Active Customers' },
-                { icon: Star, value: '4.9/5', label: 'Average Rating' },
-                { icon: TrendingUp, value: '45%', label: 'Cost Reduction' },
+                { icon: Users, value: '1,200+', label: 'Active Customers' };
+                { icon: Star, value: '4.9/5', label: 'Average Rating' };
+                { icon: TrendingUp, value: '45%', label: 'Cost Reduction' };
                 { icon: Zap, value: '24/7', label: 'AI Operations' }
               ].map((stat, index) => (
                 <div key={index} className="text-center">
@@ -349,7 +344,7 @@ export default function RevolutionaryServices2029() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -376,49 +371,40 @@ export default function RevolutionaryServices2029() {
 
       <style jsx>{`
         .animate-blob {
-          animation: blob 7s infinite;
+          animation: blob 7s infinite
         }
         .animation-delay-2000 {
-          animation-delay: 2s;
+          animation-delay: 2s
         }
         .animation-delay-4000 {
-          animation-delay: 4s;
+          animation-delay: 4s
         }
         @keyframes blob {
           0% {
-            transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1),
           }
           33% {
-            transform: translate(30px, -50px) scale(1.1);
+            transform: translate(30px, -50px) scale(1.1),
           }
           66% {
-            transform: translate(-20px, 20px) scale(0.9);
+            transform: translate(-20px, 20px) scale(0.9),
           }
           100% {
-            transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1),
           }
         }
         .line-clamp-3 {
           display: -webkit-box;
           -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+          -webkit-box-orient: vertical,overflow: hidden
         }
-        .slider::-webkit-slider-thumb {
-          appearance: none;
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #8b5cf6;
-          cursor: pointer;
+        .slider: :-webkit-slider-thumb {
+          appearance: none,height: 20px,width: 20px;
+          border-radius: 50%,background: #8b5cf6,cursor: pointer
         }
-        .slider::-moz-range-thumb {
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #8b5cf6;
-          cursor: pointer;
-          border: none;
+        .slider: :-moz-range-thumb {
+          height: 20px,width: 20px;
+          border-radius: 50%,background: #8b5cf6,cursor: pointer,border: none
         }
       `}</style>
     </div>

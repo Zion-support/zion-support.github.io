@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
   {
@@ -12,15 +12,13 @@ export default function Page() {
     category: 'Data Analytics',
     description:
       'Discover how data analytics can transform your business decisions with real - world case studies and practical implementation strategies.',
-    speakers: ['Data Scientist Emily Chen', 'BI Consultant Robert Wilson'],
+    speakers: ['Data Scientist Emily ChenBI Consultant Robert Wilson'],
     attendees: 200,
     price: 'Free',
-    highlights: ['Data visualization techniques',
-      'Predictive analytics models',
-      'Business intelligence tools',
-      'ROI measurement strategies',
+    highlights: ['Data visualization techniquesPredictive analytics models',
+      'Business intelligence toolsROI measurement strategies'
     ],
-    image: '/images / data - analytics - webinar.jpg',
+    image: '/images / data - analytics - webinar.jpg'
   },
   {
     id: 5,
@@ -33,17 +31,14 @@ export default function Page() {
     category: 'IoT & Edge',
     description:
       'Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.',
-    speakers: ['IoT Specialist Dr.James Brown',
-      'Edge Computing Expert Lisa Chen',
+    speakers: ['IoT Specialist Dr.James BrownEdge Computing Expert Lisa Chen'
     ],
     attendees: 180,
     price: '$149',
-    highlights: ['IoT architecture design',
-      'Edge computing optimization',
-      'Security considerations',
-      'Industry applications',
+    highlights: ['IoT architecture designEdge computing optimization',
+      'Security considerationsIndustry applications'
     ],
-    image: '/images / iot - symposium.jpg',
+    image: '/images / iot - symposium.jpg'
   },
   {
     id: 6,
@@ -56,91 +51,85 @@ export default function Page() {
     category: 'Digital Transformation',
     description:
       'Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.',
-    speakers: ['Digital Strategist Mark Davis',
-      'Transformation Expert Anna Rodriguez',
+    speakers: ['Digital Strategist Mark DavisTransformation Expert Anna Rodriguez'
     ],
     attendees: 400,
     price: '$249',
-    highlights: ['Transformation roadmaps',
-      'Change management strategies',
-      'Technology selection',
-      'Success metrics',
+    highlights: ['Transformation roadmapsChange management strategies',
+      'Technology selectionSuccess metrics'
     ],
-    image: '/images / digital - transformation - summit.jpg',
-  },
-];
+    image: '/images / digital - transformation - summit.jpg'
+  }
+],
 
-const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
-const categories = ['All',
-  'AI & ML',
-  'Cybersecurity',
-  'Cloud & DevOps',
-  'Data Analytics',
-  'IoT & Edge',
-  'Digital Transformation',
-];
-const statuses = ['All', 'upcoming', 'past'];
+const eventTypes = ['AllConference', 'WorkshopWebinar', 'Symposium'],
+const categories = ['AllAI & ML',
+  'CybersecurityCloud & DevOps',
+  'Data AnalyticsIoT & Edge',
+  'Digital Transformation'
+],
+const statuses = ['Allupcoming', 'past'],
 
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedType, setSelectedType] = useState('All'),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedStatus, setSelectedStatus] = useState('All'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const filteredEvents = events.filter(event => {
-    const matchesType = selectedType === 'All' || event.type === selectedType;
-    const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
-    const matchesStatus = selectedStatus === 'All' || event.status === selectedStatus;
+    const matchesType = selectedType === 'All' || event.type === selectedType,
+    const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory,
+    const matchesStatus = selectedStatus === 'All' || event.status === selectedStatus,
     const matchesSearch = event.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
       event.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
       event.speakers.some(speaker =>
-        speaker.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ;
+        speaker.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ,
 
-    return matchesType && matchesCategory && matchesStatus && matchesSearch;
-  }) ;
+    return matchesType && matchesCategory && matchesStatus && matchesSearch,
+  }) ,
 
-  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming') ;
-  const pastEvents = filteredEvents.filter(event => event.status === 'past') ;
+  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming') ,
+  const pastEvents = filteredEvents.filter(event => event.status === 'past') ,
 
   const formatDate = (dateString: anystring) => {
-    const date = new Date(dateString) ;
+    const date = new Date(dateString) ,
     return date.toLocaleDateString('en - US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    }) ;
-  };
+      day: 'numeric'
+    }) ,
+  },
 
   const getCategoryIcon = (category: anystring) => {
     switch(category) {
       case 'AI & ML':
-        return Brain;
+        return Brain,
       case 'Cybersecurity':
-        return Shield;
+        return Shield,
       case 'Cloud & DevOps':
-        return Cloud;
+        return Cloud,
       case 'Data Analytics':
-        return TrendingUp;
+        return TrendingUp,
       case 'IoT & Edge':
-        return Zap;
+        return Zap,
       case 'Digital Transformation':
-        return Globe;
+        return Globe,
       default:
-        return BookOpen;
+        return BookOpen
     }
-  };
+  },
 
   const getStatusBadge = (status: anystring) => {
     if(status === 'upcoming') {
       return (<span className="px-3 py-1 bg-green - 500 / 20 text-green - 400 text-xs rounded-full border border-green -500 / 30">
           Upcoming
-        </span>) ;
+        </span>) 
     } else {
       return (<span className="px-3 py-1 bg-gray - 500 / 20 text-gray - 400 text-xs rounded-full border border-gray -500 / 30">
           Past
-        </span>) ;
+        </span>) ,
     }
-  };
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc -700">
       {/* Hero Section */}
@@ -253,7 +242,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
             <div className="grid grid - cols - 1 lg: anygrid - cols - 2 gap-8">
               {upcomingEvents.map((event, index) => {
-                const CategoryIcon = getCategoryIcon(event.category) ;
+                const CategoryIcon = getCategoryIcon(event.category) ,
                 return (<motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -350,7 +339,7 @@ const statuses = ['All', 'upcoming', 'past'];
                     <div className="flex items - center justify -between">
                       <Link
                         href={`/events/${event.id}`}
-                        className="inline - flex items - center text-zion - cyan hover:text-zion - cyan - light transition - colors duration -300"
+                        className="inline - flex items - center text-zion - cyan hover: text-zion - cyan - light transition - colors duration -300"
                       >
                         Learn More < ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -363,7 +352,7 @@ const statuses = ['All', 'upcoming', 'past'];
                         </div>
                       </div>
                     </div>
-                  </motion.div>) ;
+                  </motion.div>) 
               }) }
             </div>
           </div>
@@ -389,7 +378,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
             <div className="grid grid - cols - 1 lg: anygrid - cols - 2 gap-8">
               {pastEvents.map((event, index) => {
-                const CategoryIcon = getCategoryIcon(event.category) ;
+                const CategoryIcon = getCategoryIcon(event.category) ,
                 return (<motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -439,7 +428,7 @@ const statuses = ['All', 'upcoming', 'past'];
                     <div className="flex items - center justify -between">
                       <Link
                         href={`/events/${event.id}`}
-                        className="inline - flex items - center text-zion - cyan hover:text-zion - cyan - light transition - colors duration -300"
+                        className="inline - flex items - center text-zion - cyan hover: text-zion - cyan - light transition - colors duration -300"
                       >
                         View Event Details < ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -452,7 +441,7 @@ const statuses = ['All', 'upcoming', 'past'];
                         </div>
                       </div>
                     </div>
-                  </motion.div>) ;
+                  </motion.div>) 
               }) }
             </div>
           </div>
@@ -474,7 +463,7 @@ const statuses = ['All', 'upcoming', 'past'];
             <p className="text-zion - slate - light text-lg mb-8">
               Partner with Zion Tech Group to host technology events, workshops,
               or webinars.Let's create valuable learning experiences together.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 href="/contact"
                 className="inline - flex items - center bg-white text-zion - cyan px-8 py-4 rounded-xl hover:bg-zion - slate - light transition - all duration - 300 font - medium text-lg"
@@ -491,5 +480,5 @@ const statuses = ['All', 'upcoming', 'past'];
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

@@ -1,26 +1,26 @@
 
-import React from 'react';
-import { formatDistanceToNow } from "date-fns";
-import Link from "next/link";
+import React from 'react',
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ForumPost } from "@/types/community";
-import { ProfileBadge } from "@/components/profile/ProfileBadge";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { ForumPost } from "@/types/community",
+import { ProfileBadge } from "@/components/profile/ProfileBadge",
 
 post: {
 
-    id: string;
-    title: string;
-    content: string;
-    authorName: string;
-    createdAt: string;
-    likes: number;
-    replies: number;
-    views: number;
+    id: string,
+    title: string,
+    content: string,
+    authorName: string,
+    createdAt: string,
+    likes: number,
+    replies: number,
+    views: number,
 author: {
 
   return (
@@ -64,10 +64,10 @@ author: {
             <span className="flex items-center gap-1">"
               <span className="w-1.5 h-1.5 bg-zion-green rounded-full"></span>
               {post.views} views
-            </span>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+            </span>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,
   )}
 '"

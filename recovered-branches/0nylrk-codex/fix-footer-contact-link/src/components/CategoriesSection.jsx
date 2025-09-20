@@ -1,2 +1,2 @@
 
-export default CategoriesSection;
+export default CategoriesSection,

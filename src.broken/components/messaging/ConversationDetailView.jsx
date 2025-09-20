@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
+import React, { useState, useEffect, useRef } from 'react',
+import { format } from 'date-fns',
 export default function Page() {
-, [activeConversation?.id, loadMessages]);
+, [activeConversation?.id, loadMessages]),
     useEffect(() => {
-        scrollToBottom()}, [activeMessages]);
+        scrollToBottom()}, [activeMessages]),
     const scrollToBottom = () => {
 
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })},
     const handleSendMessage = async(e) => {
 
-        e.preventDefault();
+        e.preventDefault(),
         if(!messageText.trim() || !activeConversation)
-            return;
-        await sendMessage(activeConversation.id, messageText);
-        setMessageText('')};
+            return,
+        await sendMessage(activeConversation.id, messageText),
+        setMessageText('')},
     if(!activeConversation) {
 "
         return (<div className="flex-1 flex flex-col items-center justify-center p-8">"
@@ -23,11 +23,11 @@ export default function Page() {
           Select a conversation from the list to view and send messages.</p>
       </div>)}
     // Group messages by date
-    const groupedMessages = [];
+    const groupedMessages = [],
     activeMessages.forEach(message => {
 
-        const messageDate = format(new Date(message.created_at),yyyy-MM-dd');
-        const existingGroup = groupedMessages.find(group => group.date === messageDate);
+        const messageDate = format(new Date(message.created_at),yyyy-MM-dd'),
+        const existingGroup = groupedMessages.find(group => group.date === messageDate),
         if(existingGroup) {
 
             existingGroup.messages.push(message)}
@@ -36,11 +36,11 @@ export default function Page() {
             groupedMessages.push({
 
                 date: messageDate,
-                messages[message];
+                messages[message],
             })}
-    });
+    }),
     const hasContextData = activeConversation.context_data &&
-        (activeConversation.context_data.title || activeConversation.context_data.description);"
+        (activeConversation.context_data.title || activeConversation.context_data.description),"
     return (<div className="flex-1 flex flex-col h-full">
       {/* Header */}"
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">"

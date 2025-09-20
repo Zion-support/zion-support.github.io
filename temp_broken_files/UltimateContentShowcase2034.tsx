@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 const UltimateContentShowcase2034: React.FC = () => {,
   return (,
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">,
       <div className="container mx-auto px-4">,
-        {/* Header */,}
+        {/* Header */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16",
         >,
           <div className="flex items-center justify-center space-x-4 mb-6">,
@@ -21,7 +21,7 @@ const UltimateContentShowcase2034: React.FC = () => {,
         </div>,
         {/* Tab Navigation */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="flex justify-center mb-12",
         >,
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">,
@@ -32,7 +32,7 @@ const UltimateContentShowcase2034: React.FC = () => {,
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${,
                   activeTab === index,
                     ? `bg-gradient-to-r ${page.color} text-white shadow-lg`,
-                    : 'text-gray-300 hover: text-white hover:bg-white/10',}`}
+                    : 'text-gray-300 hover: text-white hover:bg-white/10'}`}
               >,
                 {page.title}
               </button>,
@@ -44,7 +44,7 @@ const UltimateContentShowcase2034: React.FC = () => {,
           key={activeTab}
           className="grid lg: grid-cols-2 gap-12 items-center",
         >,
-          {/* Left Side - Content Info */,}
+          {/* Left Side - Content Info */}
           <div className="space-y-8">,
             <div className="flex items-center space-x-4 mb-6">,
               <span className="text-6xl">{contentPages[activeTab].icon}</span>,
@@ -73,14 +73,13 @@ const UltimateContentShowcase2034: React.FC = () => {,
                   <div key={index} className="flex items-center space-x-2 bg-white/10 rounded-lg p-3">,
                     <span className="text-cyan-400">✓</span>,
                     <span className="text-sm font-semibold">{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             <div className="flex space-x-4">,
               <a,
                 href={contentPages[activeTab].link}
-                className={`bg-gradient-to-r ${contentPages[activeTab].color} text-white px-8 py-4 rounded-full text-lg font-semibold hover: shadow-lg transition-all duration-300 transform hover:scale-105`,}
+                className={`bg-gradient-to-r ${contentPages[activeTab].color} text-white px-8 py-4 rounded-full text-lg font-semibold hover: shadow-lg transition-all duration-300 transform hover:scale-105`}
               >,
                 Explore Now →,
               </a>,
@@ -89,7 +88,7 @@ const UltimateContentShowcase2034: React.FC = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Side - Interactive Preview */,}
+          {/* Right Side - Interactive Preview */}
           <div className="relative">,
             <div className={`bg-gradient-to-br ${contentPages[activeTab].color} rounded-3xl p-8 relative overflow-hidden`}>,
               <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>,
@@ -107,8 +106,7 @@ const UltimateContentShowcase2034: React.FC = () => {,
                     >,
                       <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>,
                       <span className="font-semibold">{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <div className="mt-8 text-center">,
                   <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">,
@@ -119,9 +117,9 @@ const UltimateContentShowcase2034: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Bottom CTA */,}
+        {/* Bottom CTA */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16",
         >,
           <div className="bg-gradient-to-r from-cyan-500/20 to-pink-500/20 rounded-3xl p-8 border border-cyan-500/30">,
@@ -143,5 +141,5 @@ const UltimateContentShowcase2034: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default UltimateContentShowcase2034;
+  )},
+export default UltimateContentShowcase2034,

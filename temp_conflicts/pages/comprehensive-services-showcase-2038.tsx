@@ -1,12 +1,12 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Star, CheckCircle, TrendingUp, Users, 
   Globe, Brain, Atom, Shield, Rocket,
   Target, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Database, Cloud, Lock
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function ComprehensiveServicesShowcase2038() {
   const contactInfo = {
@@ -14,24 +14,22 @@ export default function ComprehensiveServicesShowcase2038() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const marketStats = [
     { label: 'Total Market Size', value: '$2.5T+', description: 'Combined market value of all service categories' },
     { label: 'Annual Growth Rate', value: '45%+', description: 'Average growth across all service sectors' },
     { label: 'Active Customers', value: '50K+', description: 'Satisfied clients worldwide' },
     { label: 'Service Categories', value: '25+', description: 'Comprehensive solution coverage' }
-  ];
+  ],
 
   const serviceCategories = [
     {
       name: 'AI & Machine Learning',
       description: 'Revolutionary AI solutions that transform business operations',
       services: [
-        'AI Neural Architecture Optimizer - $199/month',
-        'AI Emotional Intelligence Coach - $89/month',
-        'AI Content Generation Studio - $149/month',
-        'Autonomous AI Systems - $399/month'
+        'AI Neural Architecture Optimizer - $199/monthAI Emotional Intelligence Coach - $89/month',
+        'AI Content Generation Studio - $149/monthAutonomous AI Systems - $399/month'
       ],
       marketSize: '$500B+',
       growthRate: '35% annually'
@@ -40,10 +38,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Quantum Computing & Technology',
       description: 'Next-generation quantum solutions for unprecedented computational power',
       services: [
-        'Quantum Edge Computing Orchestrator - $399/month',
-        'Quantum Secure Communication Hub - $299/month',
-        'Quantum Financial Trading Engine - $1,299/month',
-        'Quantum Reality Fabric - $3,999/month'
+        'Quantum Edge Computing Orchestrator - $399/monthQuantum Secure Communication Hub - $299/month',
+        'Quantum Financial Trading Engine - $1,299/monthQuantum Reality Fabric - $3,999/month'
       ],
       marketSize: '$65B+',
       growthRate: '100% annually'
@@ -52,10 +48,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Cybersecurity & Autonomous Systems',
       description: 'AI-powered autonomous security and operational systems',
       services: [
-        'Autonomous Cybersecurity Sentinel - $299/month',
-        'Autonomous Logistics Optimizer - $449/month',
-        'Autonomous Energy Grid Manager - $549/month',
-        'Autonomous Reality Architect - $4,999/month'
+        'Autonomous Cybersecurity Sentinel - $299/monthAutonomous Logistics Optimizer - $449/month',
+        'Autonomous Energy Grid Manager - $549/monthAutonomous Reality Architect - $4,999/month'
       ],
       marketSize: '$200B+',
       growthRate: '25% annually'
@@ -64,10 +58,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Metaverse & Digital Commerce',
       description: 'Complete business infrastructure for the virtual economy',
       services: [
-        'Metaverse Business Infrastructure - $599/month',
-        'Metaverse Advertising Platform - $499/month',
-        'Virtual Event Hologram Platform - $799/month',
-        'Digital Asset Marketplace - $399/month'
+        'Metaverse Business Infrastructure - $599/monthMetaverse Advertising Platform - $499/month',
+        'Virtual Event Hologram Platform - $799/monthDigital Asset Marketplace - $399/month'
       ],
       marketSize: '$800B+',
       growthRate: '40% annually'
@@ -76,10 +68,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Healthcare & Biotechnology',
       description: 'AI-powered healthcare solutions and biotech research platforms',
       services: [
-        'Biotech AI Research Platform - $799/month',
-        'AI Healthcare Analytics - $299/month',
-        'AI Mental Health Companion - $149/month',
-        'Quantum Biological Computing - $3,499/month'
+        'Biotech AI Research Platform - $799/monthAI Healthcare Analytics - $299/month',
+        'AI Mental Health Companion - $149/monthQuantum Biological Computing - $3,499/month'
       ],
       marketSize: '$150B+',
       growthRate: '45% annually'
@@ -88,10 +78,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Space Technology & Exploration',
       description: 'Advanced space solutions for the new space economy',
       services: [
-        'Space Resource Mining Platform - $899/month',
-        'Space Technology AI Platform - $599/month',
-        'Satellite Communication Hub - $399/month',
-        'Space Logistics Optimization - $699/month'
+        'Space Resource Mining Platform - $899/monthSpace Technology AI Platform - $599/month',
+        'Satellite Communication Hub - $399/monthSpace Logistics Optimization - $699/month'
       ],
       marketSize: '$469B+',
       growthRate: '60% annually'
@@ -100,10 +88,8 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Advertising & Marketing',
       description: 'AI-powered marketing solutions for maximum ROI',
       services: [
-        'AI Digital Marketing Suite - $299/month',
-        'Quantum SEO Optimization - $199/month',
-        'Autonomous Social Media Manager - $249/month',
-        'AI Influencer Marketing Platform - $399/month'
+        'AI Digital Marketing Suite - $299/monthQuantum SEO Optimization - $199/month',
+        'Autonomous Social Media Manager - $249/monthAI Influencer Marketing Platform - $399/month'
       ],
       marketSize: '$100B+',
       growthRate: '30% annually'
@@ -112,15 +98,13 @@ export default function ComprehensiveServicesShowcase2038() {
       name: 'Consciousness & Human Augmentation',
       description: 'Revolutionary platforms for human consciousness and AI evolution',
       services: [
-        'Consciousness AI Evolution Platform - $2,499/month',
-        'Quantum AI Brain-Computer Interface - $1,599/month',
-        'Autonomous Consciousness Evolution - $6,999/month',
-        'Human Augmentation Suite - $899/month'
+        'Consciousness AI Evolution Platform - $2,499/monthQuantum AI Brain-Computer Interface - $1,599/month',
+        'Autonomous Consciousness Evolution - $6,999/monthHuman Augmentation Suite - $899/month'
       ],
       marketSize: '$75B+',
       growthRate: '150% annually'
     }
-  ];
+  ],
 
   const competitiveAdvantages = [
     {
@@ -153,7 +137,7 @@ export default function ComprehensiveServicesShowcase2038() {
       description: 'Documented success with 300%+ ROI improvements for clients',
       icon: '📈'
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -188,14 +172,14 @@ export default function ComprehensiveServicesShowcase2038() {
       rating: 5,
       service: 'AI Digital Marketing Suite'
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="Comprehensive Services Showcase 2038 | Zion Tech Group"
         description="Discover Zion Tech Group's revolutionary 2038 services portfolio featuring AI, quantum computing, cybersecurity, metaverse solutions, and more. Transform your business with cutting-edge technology."
-        keywords={['AI services', 'quantum computing', 'cybersecurity', 'metaverse', 'biotechnology', 'space technology', 'Zion Tech Group', '2038 services']}
+        keywords={['AI servicesquantum computing', 'cybersecuritymetaverse', 'biotechnologyspace technology', 'Zion Tech Group2038 services']}
         image="https://ziontechgroup.com/og-image-2038-services.jpg"
       />
       
@@ -480,5 +464,5 @@ export default function ComprehensiveServicesShowcase2038() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

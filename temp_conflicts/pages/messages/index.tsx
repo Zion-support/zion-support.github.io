@@ -1,4 +1,4 @@
-import EnhancedCard from '../../components/ui/EnhancedCard';
+import EnhancedCard from '../../components/ui/EnhancedCard',
 
 export default function MessagesPage() {
   return (
@@ -8,8 +8,8 @@ export default function MessagesPage() {
           <span className="text-3xl">💬</span>
         </div>
         <h1 className="mt-4 text-lg font-semibold">No messages yet</h1>
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">You haven’t started a conversation yet. Try inviting talent or applying to a project!</p>
+        <p className="mt-1 text-sm text-gray-600 dark: text-gray-300">You haven’t started a conversation yet. Try inviting talent or applying to a project!</p>
       </EnhancedCard>
     </div>
-  );
+  )
 }

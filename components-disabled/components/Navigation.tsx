@@ -1,3 +1,3 @@
 const Navigation: React.FC = () => {,
-  return (),};
-export default Navigation;
+  return ()},
+export default Navigation,

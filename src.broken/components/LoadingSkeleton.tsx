@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 interface SkeletonProps extends React.PropsWithChildren<{}> {
-  className?: string;
-  height?: string;
-  width?: string;
-  rounded?: boolean;
-  animated?: boolean;
+  className?: string,
+  height?: string,
+  width?: string,
+  rounded?: boolean,
+  animated?: boolean,
 }
 
 const Skeleton: React.FC < SkeletonProps> = ({
@@ -17,7 +17,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   rounded = true,
   animated = true}) => {
 
-  const baseClasses = `${height} ${width} bg-gray-200 dark:bg-gray-700 ${rounded ? 'rounded' : ''}`;`
+  const baseClasses = `${height} ${width} bg-gray-200 dark:bg-gray-700 ${rounded ? 'rounded' : ''}`,`
   
   if(!animated) {
 
@@ -32,13 +32,13 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
         duration: 1.5,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: 'easeInOut'
       }}
-    />) };
+    />) },
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
 
-  type?: 'card' | 'list' | 'hero' | 'table' | 'form';
-  count?: number;
+  type?: 'card' | 'list' | 'hero' | 'table' | 'form',
+  count?: number,
   className?: string}
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
 
@@ -61,7 +61,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                 <Skeleton height="h-8" width="w-24"  />              </div>
             </div>
           </div>
-        );
+        ),
         '
       case 'list':
         return ("
@@ -76,7 +76,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                 <Skeleton height="h-8" width="w-20"  />              </div>
             ))}
           </div>
-        );
+        ),
         '
       case 'table':
         return ("
@@ -94,7 +94,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               </div>
             ))}
           </div>
-        );
+        ),
         '
       case 'form':
         return ("
@@ -111,34 +111,34 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             <div className="flex space-x-4 pt-4">"
               <Skeleton height="h-10" width="w-24"  />"
               <Skeleton height="h-10" width="w-24"  />            </div>
-          </div>) ;
+          </div>) ,
 
       default:
-        return < Skeleton />}  };
+        return < Skeleton />}  },
 
   return ()`
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
     </div>
-  )};
+  )},
 
 // Specialized skeleton components
 export const HeroSkeleton: React.FC = (): JSX.Element => ("
-  <LoadingSkeleton type="hero"  />);
+  <LoadingSkeleton type="hero"  />),
 
 export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => ("
   <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
     {Array.from({ length: count }).map((_, index)  => ("
       <LoadingSkeleton key={index} type="card"  />    ))}
   </div>
-);
+),
 
 export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => ("
   <LoadingSkeleton type="table" count={count}  />
-);
+),
 
 export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => ("
-  <LoadingSkeleton type="form" count={count}  />);
+  <LoadingSkeleton type="form" count={count}  />),
 
-export default LoadingSkeleton;'"`
+export default LoadingSkeleton,'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -41,6 +41,6 @@ export default function Page() {
 				<a href="/blog/ai-2026-safe-rollouts-in-production" className="inline-flex items-center gap-2 rounded-md bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20">Safe Rollouts</a>
 			</div>
 		</main>
-	);
+	)
 }
 

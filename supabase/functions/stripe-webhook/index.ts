@@ -1,50 +1,50 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
-import { createShippoShipment } from "../_shared/shippo.ts";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import Stripe from "https://esm.sh/stripe@14.21.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+import { createShippoShipment } from "../_shared/shippo.ts",
 
 const supabase = createClient(
   Deno.env.get("SUPABASE_URL") ?? "",
   Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
   { auth: { persistSession: false } }
-);
+),
 
 const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
   apiVersion: "2025-05-28.basil", // Updated to the expected version
-});
+}),
 
-const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET") || "";
+const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET") || "",
 
 serve(async (req) => {
   if (req.method === "POST") {
-    const body = await req.text();
-    const signature = req.headers.get("stripe-signature") || "";
+    const body = await req.text(),
+    const signature = req.headers.get("stripe-signature") || "",
 
-    let event;
+    let event,
     try {
-      event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
+      event = stripe.webhooks.constructEvent(body, signature, webhookSecret),
     } catch (err) {
-      return new Response(`Webhook Error: ${err.message}`, { status: 400 });
+      return new Response(`Webhook Error: ${err.message}`, { status: 400 }),
     }
 
     if (event.type === "checkout.session.completed") {
-      const session = event.data.object as Stripe.Checkout.Session;
-      const orderId = session.metadata?.orderId;
+      const session = event.data.object as Stripe.Checkout.Session,
+      const orderId = session.metadata?.orderId,
       if (orderId) {
-        await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
+        await supabase.from("orders").update({ status: "paid" }).eq("id", orderId),
 
         const { data: order } = await supabase
           .from("orders")
           .select("shipping_address, items")
           .eq("id", orderId)
-          .single();
+          .single(),
 
         if (order?.shipping_address) {
           try {
             const shipment = await createShippoShipment({
               address_to: order.shipping_address,
               parcels: order.items || []
-            });
+            }),
 
             await supabase
               .from("orders")
@@ -53,47 +53,47 @@ serve(async (req) => {
                 tracking_status: shipment.tracking_status?.status,
                 tracking_events: shipment.tracking_history
               })
-              .eq("id", orderId);
+              .eq("id", orderId),
           } catch (err) {
-            console.error("Error creating shipment", err);
+            console.error("Error creating shipment", err),
           }
         }
       }
     }
 
-    return new Response(JSON.stringify({ received: true }), { status: 200 });
+    return new Response(JSON.stringify({ received: true }), { status: 200 }),
   }
 
-  const body = await req.text();
-  const signature = req.headers.get("stripe-signature") || "";
+  const body = await req.text(),
+  const signature = req.headers.get("stripe-signature") || "",
 
-  let event: Stripe.Event;
+  let event: Stripe.Event,
 
   try {
-    event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
+    event = stripe.webhooks.constructEvent(body, signature, webhookSecret),
   } catch (err) {
-    console.error("Webhook signature verification failed:", err.message);
-    return new Response(`Webhook Error: ${err.message}`, { status: 400 });
+    console.error("Webhook signature verification failed:", err.message),
+    return new Response(`Webhook Error: ${err.message}`, { status: 400 }),
   }
 
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     { auth: { persistSession: false } }
-  );
+  ),
 
   if (event.type === "checkout.session.completed") {
-    const session = event.data.object as Stripe.Checkout.Session;
+    const session = event.data.object as Stripe.Checkout.Session,
     await supabaseAdmin
       .from("transactions")
       .update({
         status: "completed",
-        completed_at: new Date().toISOString(),
+        completed_at: new Date().toISOString()
       })
-      .eq("stripe_session_id", session.id);
+      .eq("stripe_session_id", session.id),
   }
 
   return new Response(JSON.stringify({ received: true }), {
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
-  });
-});
+    headers: { ...corsHeaders, "Content-Type": "application/json" }
+  }),
+}),

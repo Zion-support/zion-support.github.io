@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Search, 
   TrendingUp, 
   Zap, 
@@ -39,15 +39,14 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIAutonomousResearchAssistant() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview'),
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true),
+  }, []),
 
   const features = [
     "Fully autonomous research execution",
@@ -60,7 +59,7 @@ export default function AIAutonomousResearchAssistant() {
     "Natural language output",
     "API integration capabilities",
     "Custom research templates"
-  ];
+  ],
 
   const benefits = [
     "Reduce research time by 90%",
@@ -68,7 +67,7 @@ export default function AIAutonomousResearchAssistant() {
     "Unbiased data analysis",
     "Comprehensive coverage",
     "Scalable research capacity"
-  ];
+  ],
 
   const useCases = [
     "Market research automation",
@@ -77,27 +76,23 @@ export default function AIAutonomousResearchAssistant() {
     "Trend analysis",
     "Academic research support"
   ];
-
   const technicalSpecs = {
-    technology: ["GPT-4", "BERT", "Python", "TensorFlow", "PyTorch", "React", "Node.js"],
-    integrations: ["PubMed", "arXiv", "Google Scholar", "Web of Science", "JSTOR"],
-    apiEndpoints: 200,
-    uptime: "99.99%",
-    security: ["SOC 2", "GDPR", "HIPAA", "Zero-trust architecture"]
-  };
+    technology: ["GPT-4", "BERT", "Python", "TensorFlow", "PyTorch", "React", "Node.js"];
+    integrations: ["PubMed", "arXiv", "Google Scholar", "Web of Science", "JSTOR"];
+    apiEndpoints: 200,uptime: "99.99%",security: ["SOC 2", "GDPR", "HIPAA", "Zero-trust architecture"]
+  },
 
   const pricing = {
     monthly: "$4,999",
     yearly: "$49,999",
-    enterprise: "Custom",
-    features: [
-      "Full autonomous research capabilities",
+    enterprise: "Custom",features: [
+      "Full autonomous research capabilities";
       "Unlimited research domains",
       "Priority support",
       "Custom integrations",
       "Advanced analytics"
     ]
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
@@ -116,17 +111,14 @@ export default function AIAutonomousResearchAssistant() {
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.4, 1, 0.4],
-                scale: [0.5, 1.5, 0.5],
+                scale: [0.5, 1.5, 0.5]
               }}
               transition={{
-                duration: 3 + i * 0.2,
-                repeat: Infinity,
-                delay: i * 0.1,
-                ease: "easeInOut"
+                duration: 3 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
               }}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -137,12 +129,10 @@ export default function AIAutonomousResearchAssistant() {
           className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2],
+            opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
+            duration: 4,repeat: Infinity,ease: "easeInOut"
           }}
         />
         
@@ -150,13 +140,10 @@ export default function AIAutonomousResearchAssistant() {
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.2, 0.5],
+            opacity: [0.5, 0.2, 0.5]
           }}
           transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
+            duration: 5,repeat: Infinity,ease: "easeInOut",delay: 1
           }}
         />
       </div>
@@ -177,7 +164,7 @@ export default function AIAutonomousResearchAssistant() {
               AI Autonomous Research Assistant
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              The world's first fully autonomous AI research platform that conducts comprehensive research, 
+              The world's first fully autonomous AI research platform that conducts comprehensive research;
               analyzes data, and generates insights across multiple domains without human intervention.
             </p>
           </motion.div>
@@ -230,7 +217,7 @@ export default function AIAutonomousResearchAssistant() {
       <div className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab) => (
+            {['overviewfeatures', 'pricingtechnical', 'contact'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -609,7 +596,7 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
@@ -631,5 +618,5 @@ export default function AIAutonomousResearchAssistant() {
         </div>
       </section>
     </div>
-  );
+  )
 }

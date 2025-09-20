@@ -21,6 +21,6 @@ const config = {
     site: '@lovable_dev',
     cardType: 'summary_large_image'
   }
-};
+},
 
-export default config;
+export default config,

@@ -1,6 +1,6 @@
-import React from 'react';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
       title: "Manufacturing AI & Machine Learning",
       description: "AI-powered manufacturing optimization with predictive maintenance and quality control",
@@ -29,7 +29,7 @@ import {
       features: ["Real-time monitoring", "Performance analytics", "Predictive insights", "Executive dashboards"],
       href: "/services?category=bi"
     }
-  ];
+  ],
 
       description="Advanced technology solutions for manufacturing. AI, cybersecurity, cloud infrastructure, and analytics designed for the manufacturing sector."
     >
@@ -67,7 +67,7 @@ import {
               </div>
   Cpu, Zap, Brain, Shield, Globe, Cog, 
   TrendingUp, CheckCircle, ArrowRight, BarChart3, Settings
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function ManufacturingSolutions() {
   return (
@@ -84,6 +84,6 @@ export default function ManufacturingSolutions() {
         </div>
       </div>
     </div>
-  );
-};
-export default manufacturing;
+  ),
+},
+export default manufacturing,

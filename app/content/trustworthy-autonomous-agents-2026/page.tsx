@@ -1,10 +1,10 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
+import React from 'react',
+import SEO from '../../../components/SEO',
 export const metadata = {,
-	title: 'AI 2026: Trustworthy Autonomous Agents | Zion Tech Group';
+	title: 'AI 2026: Trustworthy Autonomous Agents | Zion Tech Group',
 	description:,
-		'Blueprint for building measurable, reliable, and auditable autonomous agents with governance-by-design.',
-};
+		'Blueprint for building measurable, reliable, and auditable autonomous agents with governance-by-design.'
+},
 export default function TrustworthyAutonomousAgents2026() {,
 	return (,
 		<main className="min-h-screen bg-white">,
@@ -47,6 +47,5 @@ export default function TrustworthyAutonomousAgents2026() {,
 					</div>,
 				</div>,
 			</section>,
-		</main>,
-	),}
+		</main>)}
 ,

@@ -1,16 +1,16 @@
 
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { Header } from "@/components/header/Header";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { useState, useEffect, useRef, Suspense } from "react";
+import { useRouter } from "next/router",
+import Link from "next/link",
+import { Header } from "@/components/header/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { useState, useEffect, useRef, Suspense } from "react",
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from "@/data/listingData";
-import { ProductListing } from "@/types/listings";
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",
+import { ProductListing } from "@/types/listings",
 // useNavigate will be replaced by useRouter
-import { toast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast",
 
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
@@ -21,13 +21,13 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning",
   "IoT Device Integration Service",
   "Blockchain Data Solutions"
-];
+],
 
 function generateInnovationListing(index: number): ProductListing {
-  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length];
-  const price = Math.floor(Math.random() * 9500) + 500; // $500 - $10,000
-  const rating = Math.floor(Math.random() * 2) + 4; // 4-5 stars
-  const reviewCount = Math.floor(Math.random() * 50) + 10;
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length],
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+  const reviewCount = Math.floor(Math.random() * 50) + 10,
 
   return {
     id: `innovation-auto-${index}`,
@@ -48,39 +48,39 @@ function generateInnovationListing(index: number): ProductListing {
     location: "Global",
     availability: "Immediate",
     aiScore: Math.floor(Math.random() * 20) + 80
-  };
+  },
 }
 
 interface CategoryDetailProps {
-  slug?: string;
+  slug?: string,
 }
 
 export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
-  const router = useRouter();
+  const router = useRouter(),
   // Use router.query for slug in Next.js. Ensure the page is named [slug].tsx or similar.
   // If slugProp is provided, it takes precedence.
-  const slug = slugProp ?? (router.query.slug as string | undefined);
+  const slug = slugProp ?? (router.query.slug as string | undefined),
   // navigate will be replaced by router.push or router.replace
 
   // Redirect to categories list if slug is missing
   // This check should ideally happen earlier or be handled by Next.js routing if possible
   useEffect(() => {
     if (!slug && router.isReady) { // Ensure router.query is populated
-      router.push('/categories');
+      router.push('/categories'),
     }
-  }, [slug, router]);
+  }, [slug, router]),
 
   if (!slug && !slugProp) { // If no slug and not yet redirected, render nothing or a loader
-    return null; // Or a loading spinner, or handle redirection more gracefully
+    return null, // Or a loading spinner, or handle redirection more gracefully
   }
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+  const [isLoading, setIsLoading] = useState(true),
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: "",
     description: "",
     icon: <Bot className="w-6 h-6" />
-  });
-  const innovationCounterRef = useRef(0);
+  }),
+  const innovationCounterRef = useRef(0),
 
   // Map of category slugs to their display data
   const categoryData = {
@@ -144,26 +144,26 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       description: "Enterprise AI integrations and services",
       icon: <Briefcase className="w-6 h-6" />
     }
-  };
+  },
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true),
     
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] || {
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || "Category",
       description: "Explore our collection in this category",
       icon: <Bot className="w-6 h-6" />
-    };
+    },
     
-    setCategory(currentCategory);
-    innovationCounterRef.current = 0;
+    setCategory(currentCategory),
+    innovationCounterRef.current = 0,
 
     // Filter listings by category
-    const categoryTitle = currentCategory.title;
+    const categoryTitle = currentCategory.title,
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing => 
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
-    );
+    ),
     
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings : 
@@ -184,35 +184,35 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         createdAt: new Date().toISOString(),
         rating: Math.floor(Math.random() * 5) + 1,
         reviewCount: Math.floor(Math.random() * 100)
-      }));
+      })),
 
-    setListings(listingsToShow);
-    setIsLoading(false);
-  }, [slug]);
+    setListings(listingsToShow),
+    setIsLoading(false),
+  }, [slug]),
 
   useEffect(() => {
-    if (slug !== 'innovation') return;
+    if (slug !== 'innovation') return,
 
     const interval = setInterval(() => {
-      innovationCounterRef.current += 1;
+      innovationCounterRef.current += 1,
       setListings((prev) => [
         generateInnovationListing(innovationCounterRef.current),
-        ...prev,
-      ]);
-    }, 120000); // every 2 minutes
+        ...prev
+      ]),
+    }, 120000), // every 2 minutes
 
-    return () => clearInterval(interval);
-  }, [slug]);
+    return () => clearInterval(interval),
+  }, [slug]),
 
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId);
+    const listing = listings.find(item => item.id === listingId),
     
     if (listing) {
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
-      });
+      }),
       
       // Navigate to the quote request page with the listing information
       const navigationState = {
@@ -223,13 +223,13 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
             category: listing.category,
             image: listing.images?.[0] // Removed comma
           }
-      }; // navigationState correctly defined
+      }, // navigationState correctly defined
       router.push({
         pathname: "/request-quote",
-        query: { state: JSON.stringify(navigationState) },
-      });
+        query: { state: JSON.stringify(navigationState) }
+      }),
     }
-  };
+  },
 
   return (
     <>
@@ -275,5 +275,5 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       </div>
       <Footer />
     </>
-  );
+  ),
 }

@@ -1,47 +1,47 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 
 interface Proposal {
-  id: string;
-  title: string;
-  description: string;
-  author: string;
-  createdAt: number;
-  status: 'open' | 'passed' | 'failed';
-  votes: { voter: string; choice: 'yes' | 'no'; timestamp: number }[];
+  id: string,
+  title: string,
+  description: string,
+  author: string,
+  createdAt: number,
+  status: 'open' | 'passed' | 'failed',
+  votes: { voter: string, choice: 'yes' | 'no', timestamp: number }[],
 }
 
 export default function DaoDevPage() {
-  const [proposals, setProposals] = useState<Proposal[]>([]);
-  const [title, setTitle] = useState('Test Governance Change');
-  const [description, setDescription] = useState('Allow free faucet for DevNet.');
-  const [author, setAuthor] = useState('dev:alice');
-  const [voter, setVoter] = useState('dev:bob');
+  const [proposals, setProposals] = useState<Proposal[]>([]),
+  const [title, setTitle] = useState('Test Governance Change'),
+  const [description, setDescription] = useState('Allow free faucet for DevNet.'),
+  const [author, setAuthor] = useState('dev: alice'),
+  const [voter, setVoter] = useState('dev: bob'),
 
   async function load() {
-    const res = await fetch('/api/devnet/dao');
-    const data = await res.json();
-    setProposals(data.proposals || []);
+    const res = await fetch('/api/devnet/dao'),
+    const data = await res.json(),
+    setProposals(data.proposals || [])
   }
 
   async function submit() {
     await fetch('/api/devnet/dao', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'submit', title, description, author }),
-    });
-    load();
+      body: JSON.stringify({ action: 'submit', title, description, author })
+    }),
+    load(),
   }
 
   async function vote(id: string, choice: 'yes' | 'no') {
     await fetch('/api/devnet/dao', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'vote', proposalId: id, voter, choice }),
-    });
-    load();
+      body: JSON.stringify({ action: 'vote', proposalId: id, voter, choice })
+    }),
+    load(),
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(), }, []),
 
   return (
     <div className="p-6 max-w-3xl mx-auto space-y-6">
@@ -81,5 +81,5 @@ export default function DaoDevPage() {
         ))}
       </section>
     </div>
-  );
+  ),
 }

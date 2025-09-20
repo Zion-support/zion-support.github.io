@@ -1,4 +1,4 @@
-import { useParams, Link  } from 'react-router-dom';
+import { useParams, Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -49,17 +49,17 @@ export default function Page() {
         isSolution: false,
         isAnswer: false
 
-];
+],
     // Using `useParams` without type arguments avoids issues when TypeScript
-    // can't determine the generic type for the helper from React Router.// Cast the result instead to provide the expected shape.const { postId } = useParams () ;
-    const { user } = useAuth () ;
-    const { toast } = useToast () ;
-    const [post, setPost] = useState(mockPost);
-    const [replies, setReplies] = useState(mockReplies);
+    // can't determine the generic type for the helper from React Router.// Cast the result instead to provide the expected shape.const { postId } = useParams () ,
+    const { user } = useAuth () ,
+    const { toast } = useToast () ,
+    const [post, setPost] = useState(mockPost),
+    const [replies, setReplies] = useState(mockReplies),
     // Check if this is the user's own post
-    const isAuthor = user?.id === post?.authorId;
+    const isAuthor = user?.id === post?.authorId,
     // Check if user is admin / mod
-    const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+    const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
     // For this demo, we'll assume the post is found
     if(!post) {
         return (<div className="container py-8">
@@ -72,32 +72,32 @@ export default function Page() {
         if(!user) {
             toast({
                 title: "Authentication required",
-                description: "Please sign in to vote on posts",
-            }) ;
+                description: "Please sign in to vote on posts"
+            }) ,
             return}
-        setPost({ ...post, upvotes: post.upvotes + 1 }) ;
+        setPost({ ...post, upvotes: post.upvotes + 1 }) ,
         toast({
             title: "Vote recorded",
-            description: "You upvoted this post",
-        }) };
+            description: "You upvoted this post"
+        }) },
     const handleDownvote = () => {
         if(!user) {
             toast({
                 title: "Authentication required",
-                description: "Please sign in to vote on posts",
-            }) ;
+                description: "Please sign in to vote on posts"
+            }) ,
             return}
-        setPost({ ...post, downvotes: post.downvotes + 1 }) ;
+        setPost({ ...post, downvotes: post.downvotes + 1 }) ,
         toast({
             title: "Vote recorded",
-            description: "You downvoted this post",
-        }) };
+            description: "You downvoted this post"
+        }) },
     const handleSubmitReply = async(content) => {
         if(!user) {
             toast({
                 title: "Authentication required",
-                description: "Please sign in to reply",
-            }) ;
+                description: "Please sign in to reply"
+            }) ,
             return}
         // Create a new reply
         const newReply = {
@@ -115,13 +115,13 @@ export default function Page() {
             likes: 0,
             isSolution: false,
             isAnswer: false
-        };
-        setReplies([...replies, newReply]) ;
-        setPost({ ...post, replyCount: post.replyCount + 1 }) ;
+        },
+        setReplies([...replies, newReply]) ,
+        setPost({ ...post, replyCount: post.replyCount + 1 }) ,
         toast({
             title: "Reply posted",
-            description: "Your reply has been added to the discussion",
-        }) };
+            description: "Your reply has been added to the discussion"
+        }) },
     const handleMarkAsAnswer = (replyId) => {
         // Only post author or admin can mark an answer
         if(!isAuthor && !isAdminOrMod) {
@@ -129,54 +129,53 @@ export default function Page() {
                 title: "Permission denied",
                 description: "Only the original poster or moderators can mark answers",
                 variant: "destructive"
-            }) ;
+            }) ,
             return}
         // Update the replies
         const updatedReplies = replies.map(reply => ({
             ...reply,
             isAnswer: reply.id === replyId
-        }) ) ;
-        setReplies(updatedReplies) ;
-        setPost({ ...post, isAnswered: true }) ;
+        }) ) ,
+        setReplies(updatedReplies) ,
+        setPost({ ...post, isAnswered: true }) ,
         toast({
             title: "Answer marked",
-            description: "The reply has been marked as the accepted answer",
-        }) };
+            description: "The reply has been marked as the accepted answer"
+        }) },
     const handleReportPost = () => {
         if(!user) {
             toast({
                 title: "Authentication required",
-                description: "Please sign in to report content",
-            }) ;
+                description: "Please sign in to report content"
+            }) ,
             return}
         toast({
             title: "Report submitted",
-            description: "A moderator will review this content",
-        }) };
+            description: "A moderator will review this content"
+        }) },
     const handlePinPost = () => {
-        if(!isAdminOrMod) return;
-        setPost({ ...post, isPinned: !post.isPinned }) ;
+        if(!isAdminOrMod) return,
+        setPost({ ...post, isPinned: !post.isPinned }) ,
         toast({
             title: post.isPinned ? "Post unpinned" : "Post pinned",
-            description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top",
-        }) };
+            description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"
+        }) },
     const handleLockPost = () => {
-        if(!isAdminOrMod) return;
-        setPost({ ...post, isLocked: !post.isLocked }) ;
+        if(!isAdminOrMod) return,
+        setPost({ ...post, isLocked: !post.isLocked }) ,
         toast({
             title: post.isLocked ? "Post unlocked" : "Post locked",
-            description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled",
-        }) };
-    const timeAgo = formatDistanceToNow(new Date (post.createdAt) , { addSuffix: true }) ;
-    const formattedDate = format(new Date (post.createdAt) , "MMMM d, yyyy 'at' h:mm a") ;
+            description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"
+        }) },
+    const timeAgo = formatDistanceToNow(new Date (post.createdAt) , { addSuffix: true }) ,
+    const formattedDate = format(new Date (post.createdAt) , "MMMM d, yyyy 'at' h: mm a") ,
     return (<>
       <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description = {
   post.content.substring (0,
   160) } keywords = {
-  `community, forum, discussion, ${post.tags.join(',
-  ') ;
+  `community, forum, discussion, ${post.tags.join() ,
 
-}`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}/>;
+}`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}/>,
 
       <div className="container py-8">
         <div className="flex items - center gap-3 mb-6">

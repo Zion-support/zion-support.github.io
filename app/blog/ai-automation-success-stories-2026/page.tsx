@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {,
-  title: 'AI Automation Success Stories 2026: Real ROI Results - Zion Tech Group';
-  description: 'Discover real AI automation success stories from 2026. See how companies achieved 300%+ ROI, 70% cost reduction, and massive productivity gains.';
-  keywords: ['AI automation success storiesAI ROI', 'automation case studiesAI business results', 'automation ROIAI transformation'],
-};
+  title: 'AI Automation Success Stories 2026: Real ROI Results - Zion Tech Group',
+  description: 'Discover real AI automation success stories from 2026. See how companies achieved 300%+ ROI, 70% cost reduction, and massive productivity gains.',
+  keywords: ['AI automation success storiesAI ROIautomation case studiesAI business results', 'automation ROIAI transformation']
+},
 export default function AIAutomationSuccessStories2026() {,
   return (,
     <ErrorBoundary>,
@@ -48,7 +48,7 @@ export default function AIAutomationSuccessStories2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Proven Results Across Industries</h2>,
@@ -72,11 +72,11 @@ export default function AIAutomationSuccessStories2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Stories */,}
+        {/* Success Stories */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Real Success Stories</h2>,
-            {/* Story 1 */,}
+            {/* Story 1 */}
             <div className="mb-16">,
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl">,
                 <div className="flex items-center mb-6">,
@@ -127,7 +127,7 @@ export default function AIAutomationSuccessStories2026() {,
                 </div>,
               </div>,
             </div>,
-            {/* Story 2 */,}
+            {/* Story 2 */}
             <div className="mb-16">,
               <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl">,
                 <div className="flex items-center mb-6">,
@@ -178,7 +178,7 @@ export default function AIAutomationSuccessStories2026() {,
                 </div>,
               </div>,
             </div>,
-            {/* Story 3 */,}
+            {/* Story 3 */}
             <div className="mb-16">,
               <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl">,
                 <div className="flex items-center mb-6">,
@@ -229,7 +229,7 @@ export default function AIAutomationSuccessStories2026() {,
                 </div>,
               </div>,
             </div>,
-            {/* Story 4 */,}
+            {/* Story 4 */}
             <div className="mb-16">,
               <div className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl">,
                 <div className="flex items-center mb-6">,
@@ -282,7 +282,7 @@ export default function AIAutomationSuccessStories2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Success Factors */,}
+        {/* Implementation Success Factors */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">What Makes These Stories Successful?</h2>,
@@ -337,7 +337,7 @@ export default function AIAutomationSuccessStories2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Articles */,}
+        {/* Related Articles */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>,
@@ -358,5 +358,4 @@ export default function AIAutomationSuccessStories2026() {,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),}
+    </ErrorBoundary>)}

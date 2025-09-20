@@ -1,2 +1,2 @@
 
-export default EnhancedLoading;
+export default EnhancedLoading,

@@ -1,17 +1,17 @@
-import fs from 'fs';
-import path from 'path';
-import Head from 'next/head';
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import Link from 'next/link';
+import fs from 'fs',
+import path from 'path',
+import Head from 'next/head',
+import React from 'react',
+import ReactMarkdown from 'react-markdown',
+import remarkGfm from 'remark-gfm',
+import Link from 'next/link',
 
 type DocsPageProps = {
-  title: string;
-  content: string;
-};
+  title: string,
+  content: string
+},
 
-const SLUG_TO_DOC_PATH: Record<string, { title: string; file: string }> = {
+const SLUG_TO_DOC_PATH: Record<string, { title: string, file: string }> = {
   'project-overview': { title: 'Project Overview', file: 'README.md' },
   security: { title: 'Security & Compliance', file: 'SECURITY.md' },
   testing: { title: 'Testing & Quality', file: 'TESTING.md' },
@@ -27,7 +27,7 @@ const SLUG_TO_DOC_PATH: Record<string, { title: string; file: string }> = {
   'content-generation-report': { title: 'AI Content Generation Report', file: 'content-generation-report.md' },
   'github-actions-improvements': { title: 'GitHub Actions Improvements', file: 'GITHUB_ACTIONS_IMPROVEMENTS.md' },
   'performance-weekly-report': { title: 'Performance Weekly Report', file: 'performance-weekly-report.md' }
-};
+},
 
 export default function DocsPage({ title, content }: DocsPageProps) {
   return (
@@ -46,29 +46,29 @@ export default function DocsPage({ title, content }: DocsPageProps) {
         </article>
       </main>
     </div>
-  );
+  ),
 }
 
 export async function getStaticPaths() {
-  const paths = Object.keys(SLUG_TO_DOC_PATH).map((slug) => ({ params: { slug } }));
-  return { paths, fallback: false };
+  const paths = Object.keys(SLUG_TO_DOC_PATH).map((slug) => ({ params: { slug } })),
+  return { paths, fallback: false },
 }
 
 export async function getStaticProps(context: { params?: { slug?: string } }) {
-  const slug = context.params?.slug ?? '';
-  const entry = SLUG_TO_DOC_PATH[slug];
+  const slug = context.params?.slug ?? '',
+  const entry = SLUG_TO_DOC_PATH[slug],
   if (!entry) {
-    return { notFound: true };
+    return { notFound: true },
   }
-  const filePath = path.join(process.cwd(), entry.file);
+  const filePath = path.join(process.cwd(), entry.file),
   if (!fs.existsSync(filePath)) {
-    return { notFound: true };
+    return { notFound: true },
   }
-  const content = fs.readFileSync(filePath, 'utf-8');
+  const content = fs.readFileSync(filePath, 'utf-8'),
   return {
     props: {
       title: entry.title,
       content
     }
-  };
+  },
 }

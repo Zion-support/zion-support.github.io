@@ -1,12 +1,12 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Agent Evaluation Playground | Zion Tech Group';
+  title: 'AI 2026: Agent Evaluation Playground | Zion Tech Group',
   description:,
-    'Hands-on templates and scenarios to prototype, run, and visualize agent evaluations safely.';
-  keywords: ['agent evaluationseval harness', 'policy-as-codesafety', 'observability'],
-};
+    'Hands-on templates and scenarios to prototype, run, and visualize agent evaluations safely.',
+  keywords: ['agent evaluationseval harnesspolicy-as-codesafety', 'observability']
+},
 export default function AgentEvaluationPlaygroundPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -45,6 +45,5 @@ export default function AgentEvaluationPlaygroundPage() {,
           <Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Content</Link>,
         </div>,
       </main>,
-    </div>,
-  ),}
+    </div>)}
 ,

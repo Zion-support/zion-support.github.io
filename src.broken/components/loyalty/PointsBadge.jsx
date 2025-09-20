@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 =======
-import { Gift import { useAuth } from '@/hooks/useAuth';
+import { Gift import { useAuth } from '@/hooks/useAuth',
 export default function Page() {
-, { purchase: 0, post: 0, referral: 0 });
+, { purchase: 0, post: 0, referral: 0 }),
     const handleLogout = async () => {
         if(signOut) {
 
@@ -11,7 +11,7 @@ export default function Page() {
         else if(logout) {
 
             await logout()}
-    };
+    },
     return (<DropdownMenu>
       <TooltipProvider>
         <Tooltip>

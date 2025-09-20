@@ -1,21 +1,21 @@
-import React from 'react';
-import { GetServerSideProps } from 'next';
-import Link from 'next/link'; // Import Link
-import { SEO } from '@/components/SEO';
-import YoutubeEmbed from '@/components/YoutubeEmbed';
+import React from 'react',
+import { GetServerSideProps } from 'next',
+import Link from 'next/link', // Import Link
+import { SEO } from '@/components/SEO',
+import YoutubeEmbed from '@/components/YoutubeEmbed',
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {}
-  };
-};
+  },
+},
 
 export default function ResourcesDocsPage() {
   return (
     <>
       <SEO
         title="Docs - Zion Tech Marketplace Guides & APIs"
-        description="Access developer docs, APIs, and step-by-step guides for Zion Tech Marketplace. Start building integrations and enhancing your workflow now. Explore samples; join our community."
+        description="Access developer docs, APIs, and step-by-step guides for Zion Tech Marketplace. Start building integrations and enhancing your workflow now. Explore samples, join our community."
         canonical="https://app.ziontechgroup.com/resources/docs"
       />
     <div className="min-h-screen bg-zion-blue">
@@ -114,5 +114,5 @@ print(products)
       </div>
     </div>
     </>
-  );
+  ),
 }

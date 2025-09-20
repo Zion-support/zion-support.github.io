@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Quote } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Star, Quote } from 'lucide-react',
 
 const TestimonialSection: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const TestimonialSection: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">TestimonialSection</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default TestimonialSection;
+export default TestimonialSection,

@@ -1,5 +1,5 @@
-import React from 'react';
-import { JobPostingForm } from '@/components / jobs';
+import React from 'react',
+import { JobPostingForm } from '@/components / jobs',
 export default function Page() {
  max - w-4xl`}
       >
@@ -23,5 +23,5 @@ export default function Page() {
 
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
       {isMobile && <div className="h-16"></div>}
-    </>) ;
+    </>) ,
 }

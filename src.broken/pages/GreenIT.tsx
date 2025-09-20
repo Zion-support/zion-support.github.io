@@ -1,28 +1,28 @@
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
 import { Leaf, Server, Cloud } from 'lucide-react'
-import Link from "next/link";
+import Link from "next/link",
 
 export default function GreenIT() {
   const greenITSolutions = [
     {
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-      icon: Server,
+      icon: Server
     },
     {
       title: "Optimized Cooling Systems",
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud,
+      icon: Cloud
     },
     {
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf,
+      icon: Leaf
     }
-  ];
+  ],
 
   const greenSolutions = [{
       id: 'energy - monitoring',
@@ -31,22 +31,17 @@ export default function GreenIT() {
       icon: Activity,
       description: 'Real - time energy consumption tracking and optimization',
       features: [
-        'Real - time energy consumption monitoring',
-        'AI - powered optimization recommendations',
-        'Automated power management',
-        'Energy usage analytics and reporting',
-        'Integration with smart building systems',
-        'Mobile app for remote monitoring',
+        'Real - time energy consumption monitoringAI - powered optimization recommendations',
+        'Automated power managementEnergy usage analytics and reporting',
+        'Integration with smart building systemsMobile app for remote monitoring'
       ],
-      benefits: ['Reduce energy costs by 15 - 25%',
-        'Identify energy waste patterns',
-        'Optimize equipment performance',
-        'Meet sustainability goals',
-        'Comply with energy regulations',
+      benefits: ['Reduce energy costs by 15 - 25%Identify energy waste patterns',
+        'Optimize equipment performanceMeet sustainability goals',
+        'Comply with energy regulations'
       ],
       savings: '15 - 25% energy reduction',
       implementation: '2 - 4 weeks',
-      pricing: 'Starting from $5,000',
+      pricing: 'Starting from $5,000'
     },
     {
       id: 'virtualization',
@@ -54,22 +49,17 @@ export default function GreenIT() {
       category: 'hardware',
       icon: Server,
       description: 'Consolidate physical servers to reduce power consumption',
-      features: ['Server consolidation and virtualization',
-        'Dynamic resource allocation',
-        'Automated power management',
-        'High availability and disaster recovery',
-        'Performance monitoring and optimization',
-        'Green computing best practices',
+      features: ['Server consolidation and virtualizationDynamic resource allocation',
+        'Automated power managementHigh availability and disaster recovery',
+        'Performance monitoring and optimizationGreen computing best practices'
       ],
-      benefits: ['Reduce server power consumption by 60 - 80%',
-        'Lower cooling requirements',
-        'Decrease hardware maintenance costs',
-        'Improve resource utilization',
-        'Reduce carbon footprint',
+      benefits: ['Reduce server power consumption by 60 - 80%Lower cooling requirements',
+        'Decrease hardware maintenance costsImprove resource utilization',
+        'Reduce carbon footprint'
       ],
       savings: '60 - 80% power reduction',
       implementation: '4 - 8 weeks',
-      pricing: 'Starting from $15,000',
+      pricing: 'Starting from $15,000'
     },
     {
       id: 'cloud - optimization',
@@ -77,22 +67,17 @@ export default function GreenIT() {
       category: 'software',
       icon: Cloud,
       description: 'Optimize cloud resources for maximum efficiency',
-      features: ['Cloud resource optimization',
-        'Auto - scaling and load balancing',
-        'Cost optimization algorithms',
-        'Green cloud provider selection',
-        'Carbon footprint tracking',
-        'Sustainable cloud practices',
+      features: ['Cloud resource optimizationAuto - scaling and load balancing',
+        'Cost optimization algorithmsGreen cloud provider selection',
+        'Carbon footprint trackingSustainable cloud practices'
       ],
-      benefits: ['Reduce cloud costs by 20 - 40%',
-        'Lower carbon emissions',
-        'Improve application performance',
-        'Better resource utilization',
-        'Scalable and flexible infrastructure',
+      benefits: ['Reduce cloud costs by 20 - 40%Lower carbon emissions',
+        'Improve application performanceBetter resource utilization',
+        'Scalable and flexible infrastructure'
       ],
       savings: '20 - 40% cost reduction',
       implementation: '3 - 6 weeks',
-      pricing: 'Starting from $8,000',
+      pricing: 'Starting from $8,000'
     },
     {
       id: 'data - center - efficiency',
@@ -100,22 +85,17 @@ export default function GreenIT() {
       category: 'data',
       icon: Database,
       description: 'Optimize data center operations for sustainability',
-      features: ['Cooling system optimization',
-        'Power distribution efficiency',
-        'Heat recovery systems',
-        'Renewable energy integration',
-        'Energy - efficient equipment',
-        'Environmental monitoring',
+      features: ['Cooling system optimizationPower distribution efficiency',
+        'Heat recovery systemsRenewable energy integration',
+        'Energy - efficient equipmentEnvironmental monitoring'
       ],
-      benefits: ['Reduce data center energy by 30 - 50%',
-        'Lower operational costs',
-        'Improve equipment lifespan',
-        'Meet sustainability certifications',
-        'Reduce carbon footprint',
+      benefits: ['Reduce data center energy by 30 - 50%Lower operational costs',
+        'Improve equipment lifespanMeet sustainability certifications',
+        'Reduce carbon footprint'
       ],
       savings: '30 - 50% energy reduction',
       implementation: '8 - 16 weeks',
-      pricing: 'Starting from $25,000',
+      pricing: 'Starting from $25,000'
     },
     {
       id: 'smart - lighting',
@@ -123,22 +103,17 @@ export default function GreenIT() {
       category: 'energy',
       icon: Lightbulb,
       description: 'Intelligent lighting control for energy savings',
-      features: ['Motion - sensing controls',
-        'Daylight harvesting',
-        'Scheduling and automation',
-        'Energy usage analytics',
-        'Mobile app control',
-        'Integration with building systems',
+      features: ['Motion - sensing controlsDaylight harvesting',
+        'Scheduling and automationEnergy usage analytics',
+        'Mobile app controlIntegration with building systems'
       ],
-      benefits: ['Reduce lighting energy by 40 - 60%',
-        'Improve occupant comfort',
-        'Extend bulb lifespan',
-        'Reduce maintenance costs',
-        'Smart building integration',
+      benefits: ['Reduce lighting energy by 40 - 60%Improve occupant comfort',
+        'Extend bulb lifespanReduce maintenance costs',
+        'Smart building integration'
       ],
       savings: '40 - 60% energy reduction',
       implementation: '2 - 3 weeks',
-      pricing: 'Starting from $3,000',
+      pricing: 'Starting from $3,000'
     },
     {
       id: 'green - software',
@@ -146,22 +121,17 @@ export default function GreenIT() {
       category: 'software',
       icon: Code,
       description: 'Eco - friendly software development practices',
-      features: ['Energy - efficient algorithms',
-        'Code optimization techniques',
-        'Green coding standards',
-        'Performance monitoring',
-        'Resource usage optimization',
-        'Sustainable development practices',
+      features: ['Energy - efficient algorithmsCode optimization techniques',
+        'Green coding standardsPerformance monitoring',
+        'Resource usage optimizationSustainable development practices'
       ],
-      benefits: ['Reduce software energy consumption',
-        'Improve application performance',
-        'Lower operational costs',
-        'Better user experience',
-        'Environmental responsibility',
+      benefits: ['Reduce software energy consumptionImprove application performance',
+        'Lower operational costsBetter user experience',
+        'Environmental responsibility'
       ],
       savings: '20 - 35% energy reduction',
       implementation: 'Ongoing',
-      pricing: 'Starting from $10,000',
+      pricing: 'Starting from $10,000'
     },
     {
       id: 'renewable - energy',
@@ -169,22 +139,17 @@ export default function GreenIT() {
       category: 'energy',
       icon: Sun,
       description: 'Integrate solar, wind, and other renewable sources',
-      features: ['Solar panel installation',
-        'Wind turbine integration',
-        'Energy storage systems',
-        'Grid connection management',
-        'Energy production monitoring',
-        'Maintenance and optimization',
+      features: ['Solar panel installationWind turbine integration',
+        'Energy storage systemsGrid connection management',
+        'Energy production monitoringMaintenance and optimization'
       ],
-      benefits: ['Generate clean, renewable energy',
-        'Reduce electricity costs',
-        'Lower carbon footprint',
-        'Energy independence',
-        'Government incentives and tax credits',
+      benefits: ['Generate clean, renewable energyReduce electricity costs',
+        'Lower carbon footprintEnergy independence',
+        'Government incentives and tax credits'
       ],
       savings: '40 - 80% energy costs',
       implementation: '12 - 24 weeks',
-      pricing: 'Starting from $50,000',
+      pricing: 'Starting from $50,000'
     },
     {
       id: 'green - hardware',
@@ -192,22 +157,17 @@ export default function GreenIT() {
       category: 'hardware',
       icon: Cpu,
       description: 'Select and deploy energy - efficient computing equipment',
-      features: ['Energy Star certified equipment',
-        'Low-power processors',
-        'Efficient cooling systems',
-        'Power management features',
-        'Energy monitoring capabilities',
-        'Sustainable disposal programs',
+      features: ['Energy Star certified equipmentLow-power processors',
+        'Efficient cooling systemsPower management features',
+        'Energy monitoring capabilitiesSustainable disposal programs'
       ],
-      benefits: ['Reduce hardware energy consumption',
-        'Lower operational costs',
-        'Extend equipment lifespan',
-        'Meet environmental standards',
-        'Improve corporate sustainability',
+      benefits: ['Reduce hardware energy consumptionLower operational costs',
+        'Extend equipment lifespanMeet environmental standards',
+        'Improve corporate sustainability'
       ],
       savings: '25 - 40% power reduction',
       implementation: '1 - 2 weeks',
-      pricing: 'Starting from $2,000',
+      pricing: 'Starting from $2,000'
     },
     {
       id: 'waste - reduction',
@@ -215,22 +175,17 @@ export default function GreenIT() {
       category: 'hardware',
       icon: Recycle,
       description: 'Comprehensive e - waste management and recycling',
-      features: ['E - waste assessment and audit',
-        'Secure data destruction',
-        'Equipment refurbishment',
-        'Recycling partnerships',
-        'Donation programs',
-        'Sustainability reporting',
+      features: ['E - waste assessment and auditSecure data destruction',
+        'Equipment refurbishmentRecycling partnerships',
+        'Donation programsSustainability reporting'
       ],
-      benefits: ['Reduce environmental impact',
-        'Comply with regulations',
-        'Improve corporate image',
-        'Potential tax benefits',
-        'Support circular economy',
+      benefits: ['Reduce environmental impactComply with regulations',
+        'Improve corporate imagePotential tax benefits',
+        'Support circular economy'
       ],
       savings: 'Varies by program',
       implementation: '2 - 4 weeks',
-      pricing: 'Starting from $1,000',
+      pricing: 'Starting from $1,000'
     },
     {
       id: 'carbon - tracking',
@@ -238,22 +193,17 @@ export default function GreenIT() {
       category: 'software',
       icon: BarChart3,
       description: 'Monitor and reduce carbon emissions',
-      features: ['Carbon emission calculation',
-        'Real - time monitoring',
-        'Reduction tracking',
-        'Sustainability reporting',
-        'Goal setting and tracking',
-        'Stakeholder communication',
+      features: ['Carbon emission calculationReal - time monitoring',
+        'Reduction trackingSustainability reporting',
+        'Goal setting and trackingStakeholder communication'
       ],
-      benefits: ['Track environmental impact',
-        'Set and achieve sustainability goals',
-        'Improve corporate reporting',
-        'Meet compliance requirements',
-        'Enhance brand reputation',
+      benefits: ['Track environmental impactSet and achieve sustainability goals',
+        'Improve corporate reportingMeet compliance requirements',
+        'Enhance brand reputation'
       ],
       savings: 'Measurable impact',
       implementation: '4 - 6 weeks',
-      pricing: 'Starting from $6,000',
+      pricing: 'Starting from $6,000'
     },
     {
       id: 'green - networking',
@@ -261,22 +211,17 @@ export default function GreenIT() {
       category: 'data',
       icon: Network,
       description: 'Optimize network infrastructure for energy efficiency',
-      features: ['Network equipment optimization',
-        'Traffic management',
-        'Power over Ethernet',
-        'Energy - efficient protocols',
-        'Network monitoring',
-        'Performance optimization',
+      features: ['Network equipment optimizationTraffic management',
+        'Power over EthernetEnergy - efficient protocols',
+        'Network monitoringPerformance optimization'
       ],
-      benefits: ['Reduce network energy consumption',
-        'Improve network performance',
-        'Lower operational costs',
-        'Better reliability',
-        'Environmental responsibility',
+      benefits: ['Reduce network energy consumptionImprove network performance',
+        'Lower operational costsBetter reliability',
+        'Environmental responsibility'
       ],
       savings: '20 - 35% energy reduction',
       implementation: '3 - 5 weeks',
-      pricing: 'Starting from $12,000',
+      pricing: 'Starting from $12,000'
     },
     {
       id: 'sustainability - reporting',
@@ -284,76 +229,71 @@ export default function GreenIT() {
       category: 'software',
       icon: FileText,
       description: 'Comprehensive sustainability reporting and analytics',
-      features: ['Environmental data collection',
-        'Sustainability metrics tracking',
-        'Automated reporting',
-        'Stakeholder dashboards',
-        'Compliance monitoring',
-        'Goal tracking and alerts',
+      features: ['Environmental data collectionSustainability metrics tracking',
+        'Automated reportingStakeholder dashboards',
+        'Compliance monitoringGoal tracking and alerts'
       ],
-      benefits: ['Streamline sustainability reporting',
-        'Improve data accuracy',
-        'Meet compliance requirements',
-        'Enhance stakeholder communication',
-        'Track progress toward goals',
+      benefits: ['Streamline sustainability reportingImprove data accuracy',
+        'Meet compliance requirementsEnhance stakeholder communication',
+        'Track progress toward goals'
       ],
       savings: 'Time and resource savings',
       implementation: '6 - 8 weeks',
-      pricing: 'Starting from $8,000',
-    },
-  ];
+      pricing: 'Starting from $8,000'
+    }
+  ],
 
   const environmentalImpact = [{
       icon: TreePine,
       metric: '2,500+',
       label: 'Trees Planted',
-      description: 'Equivalent carbon offset through our green initiatives',
+      description: 'Equivalent carbon offset through our green initiatives'
     },
     {
       icon: Zap,
       metric: '45%',
       label: 'Energy Reduction',
-      description: 'Average energy savings for our clients',
+      description: 'Average energy savings for our clients'
     },
     {
       icon: Recycle,
       metric: '15,000+',
       label: 'Devices Recycled',
-      description: 'Electronic waste diverted from landfills',
+      description: 'Electronic waste diverted from landfills'
     },
     {
       icon: Globe,
       metric: '2,800',
       label: 'Tons CO2 Saved',
-      description: 'Carbon emissions reduced through our solutions',
-    },
-  ];
+      description: 'Carbon emissions reduced through our solutions'
+    }
+  ],
 
   const certifications = [{
       name: 'ISO 14001',
       description: 'Environmental Management Systems',
       icon: Award,
-      color: 'from - green - 500 to - emerald - 500',
+      color: 'from - green - 500 to - emerald - 500'
     },
     {
       name: 'Energy Star',
       description: 'Energy Efficiency Certification',
       icon: Star,
-      color: 'from - yellow-500 to - orange - 500',
+      color: 'from - yellow-500 to - orange - 500'
     },
     {
       name: 'LEED',
       description: 'Leadership in Energy and Environmental Design',
       icon: Leaf,
-      color: 'from - blue - 500 to - cyan - 500',
+      color: 'from - blue - 500 to - cyan - 500'
     },
     {
       name: 'Green Seal',
       description: 'Environmental Standard Certification',
       icon: CheckCircle,
-      color: 'from - purple - 500 to - pink - 500',
-    },
-  ];
+      color: 'from - purple - 500 to - pink - 500'
+    }
+  ],
 
   const caseStudies = [{
       title: 'Fortune 500 Manufacturing Company',
@@ -363,13 +303,11 @@ export default function GreenIT() {
       solution:
         'Implemented server virtualization, cloud optimization, and smart energy monitoring',
       results: [
-        'Reduced energy consumption by 65%',
-        'Lowered IT costs by $2.3M annually',
-        'Achieved carbon neutrality goals 2 years early',
-        'Improved system performance by 40%',
+        'Reduced energy consumption by 65%Lowered IT costs by $2.3M annually',
+        'Achieved carbon neutrality goals 2 years earlyImproved system performance by 40%'
       ],
       savings: '$2.3M annually',
-      timeline: '6 months',
+      timeline: '6 months'
     },
     {
       title: 'Healthcare Network',
@@ -377,13 +315,11 @@ export default function GreenIT() {
       challenge: 'Inefficient data centers consuming excessive energy',
       solution:
         'Data center consolidation, renewable energy integration, and cooling optimization',
-      results: ['Reduced energy consumption by 55%',
-        'Lowered operational costs by $1.8M annually',
-        'Improved system reliability by 99.9%',
-        'Enhanced patient data security',
+      results: ['Reduced energy consumption by 55%Lowered operational costs by $1.8M annually',
+        'Improved system reliability by 99.9%Enhanced patient data security'
       ],
       savings: '$1.8M annually',
-      timeline: '8 months',
+      timeline: '8 months'
     },
     {
       title: 'Educational Institution',
@@ -391,23 +327,21 @@ export default function GreenIT() {
       challenge: 'High electricity bills from inefficient campus technology',
       solution:
         'Smart lighting systems, energy monitoring, and green hardware deployment',
-      results: ['Reduced energy consumption by 45%',
-        'Lowered utility costs by $850K annually',
-        'Improved learning environment',
-        'Enhanced sustainability curriculum',
+      results: ['Reduced energy consumption by 45%Lowered utility costs by $850K annually',
+        'Improved learning environmentEnhanced sustainability curriculum'
       ],
       savings: '$850K annually',
-      timeline: '4 months',
-    },
-  ];
+      timeline: '4 months'
+    }
+  ],
 
   const toggleSection = (sectionId: string) => {
-    setExpandedSection(expandedSection === sectionId ? null : sectionId) ;
-  };
+    setExpandedSection(expandedSection === sectionId ? null : sectionId) 
+  },
 
   const filteredSolutions = selectedCategory === 'all'
       ? greenSolutions
-      : greenSolutions.filter(solution => solution.category === selectedCategory) ;
+      : greenSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -775,7 +709,7 @@ export default function GreenIT() {
               assess your current infrastructure and provide a customized plan
               to reduce costs and environmental impact.</p>
 
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <button     className="px-8 py-3 bg-gradient - to - r from - green - 400 to - blue - 500 text-white font - semibold rounded-lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale -105">
                 Schedule Green IT Assessment
               </button>
@@ -796,5 +730,5 @@ export default function GreenIT() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

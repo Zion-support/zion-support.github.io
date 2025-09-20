@@ -8,8 +8,8 @@
           <div className="max-w-7xl mx-auto">,
             <div,
               className="text-center mb-16",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,
@@ -23,12 +23,12 @@
               {featuredServices.map((service, index) => (,
                 <div,
                   key={index}
-                  whileInView={{ opacity: 1, x: 0 ,}}
-                  viewport={{ once: true ,}}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover: border-cyan-500/40 transition-all duration-300",
                 >,
                   <div className="mb-6">,
-                    <h3 className="text-2xl font-bold text-white mb-4">{service.title,}</h3>,
+                    <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>,
                     <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>,
                     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6">,
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>,
@@ -44,7 +44,7 @@
                         ))}
                     <div className="flex flex-col sm: flex-row gap-3">,
                       <a,
-                        href={service.link,}
+                        href={service.link}
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2",
                       >,
                         <span>Learn More</span>,
@@ -58,14 +58,14 @@
                     </div>,
                   </div>,
                 </div>,
-              )),}
+              ))}
         {/* Emerging Tech Services */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <div,
               className="text-center mb-16",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">,
@@ -79,8 +79,8 @@
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (,
                 <div,
                   key={service.id}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  viewport={{ once: true ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                 >,
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">,
                     <div className="text-4xl mb-4">{service.icon}</div>,
@@ -98,13 +98,12 @@
                       <ArrowRight className="w-4 h-4" />,
                     </a>,
                   </UltraFuturisticCard>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
             <div,
               className="text-center mt-16",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <a,
                 href="/services",
@@ -116,13 +115,13 @@
             </div>,
           </div>,
         </section>,
-        {/* ArrowRight-Gen AI Services */,}
+        {/* ArrowRight-Gen AI Services */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <div,
               className="text-center mb-16",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">,
@@ -136,8 +135,8 @@
               {nextGenAIServices.slice(0, 6).map((service, index) => (,
                 <div,
                   key={service.id}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  viewport={{ once: true ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                 >,
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">,
                     <div className="text-4xl mb-4">{service.icon}</div>,
@@ -155,13 +154,12 @@
                       <ArrowRight className="w-4 h-4" />,
                     </a>,
                   </UltraFuturisticCard>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
             <div,
               className="text-center mt-16",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <a,
                 href="/services",
@@ -173,12 +171,12 @@
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-4xl mx-auto text-center">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Experience the Future?,
@@ -200,7 +198,7 @@
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">,
                   <div className="flex items-center space-x-2">,
                     <Phone className="w-5 h-5 text-cyan-400" />,
-                    <span className="text-white">{contactInfo.mobile,}</span>,
+                    <span className="text-white">{contactInfo.mobile}</span>,
                   <div className="flex items-center space-x-2">,
                     <Mail className="w-5 h-5 text-purple-400" />,
                     <span className="text-white">{contactInfo.email}</span>,
@@ -215,9 +213,9 @@
         </section>,
       </div>,
     </UltraAdvancedFuturisticBackground>,
-  );
-export default innovative-services-showcase;
-import React from "react";
+  ),
+export default innovative-services-showcase,
+import React from "react",
 const function InnovativeServicesShowcase() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -228,7 +226,7 @@ const function InnovativeServicesShowcase() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function InnovativeServicesShowcase() {;
+  ),
+},
+export default function InnovativeServicesShowcase() {,
 }}}

@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function AutonomousAnalytics2025PromoBanner() {,
   return (,
     <section className="py-8 bg-gradient-to-r from-indigo-50 via-purple-50 to-blue-50">,
@@ -17,6 +17,5 @@ export default function AutonomousAnalytics2025PromoBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}
 ,

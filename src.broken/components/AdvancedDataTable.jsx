@@ -3,43 +3,43 @@
               <button onClick = { () => setCurrentPage(prev => Math.min (totalPages,
   prev + 1) ) } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray - 300 dark:border-gray - 600 rounded hover:bg-gray - 100 dark:hover:bg-gray - 600 disabled:opacity - 50 disabled:cursor - not - allowed transition -colors">
 =======
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback } from 'react',
 export default function Page() {
-);
+),
     // State management'
-    const [searchQuery, setSearchQuery] = useState('');
-    const [sortConfig, setSortConfig] = useState(null);
-    const [filters, setFilters] = useState([]);
-    const [selectedItems, setSelectedItems] = useState(new Set());
-    const [currentPage, setCurrentPage] = useState(1);
-    const [showFilters, setShowFilters] = useState(false);
+    const [searchQuery, setSearchQuery] = useState(''),
+    const [sortConfig, setSortConfig] = useState(null),
+    const [filters, setFilters] = useState([]),
+    const [selectedItems, setSelectedItems] = useState(new Set()),
+    const [currentPage, setCurrentPage] = useState(1),
+    const [showFilters, setShowFilters] = useState(false),
     // Process data based on search, filters, and sorting
     const processedData = useMemo(() => {
-        let result = [...data];
+        let result = [...data],
         // Apply search
         if(searchQuery.trim()) {
 
             result = result.filter(item => columns.some(col => {
 
-                const value = String(item[col.key]).toLowerCase();
+                const value = String(item[col.key]).toLowerCase(),
                 return value.includes(searchQuery.toLowerCase())}))}
         // Apply filters
         filters.forEach(filter => {
 
             result = result.filter(item => {
 
-                const value = String(item[filter.key]).toLowerCase();
-                const filterValue = filter.value.toLowerCase();
+                const value = String(item[filter.key]).toLowerCase(),
+                const filterValue = filter.value.toLowerCase(),
                 switch(filter.operator) {
 
                     case 'contains':
-                        return value.includes(filterValue);
+                        return value.includes(filterValue),
                     case 'equals':
-                        return value === filterValue;
+                        return value === filterValue,
                     case 'starts_with':
-                        return value.startsWith(filterValue);
+                        return value.startsWith(filterValue),
                     case 'ends_with':
-                        return value.endsWith(filterValue);
+                        return value.endsWith(filterValue),
                     case 'regex':
                         try {
 
@@ -49,37 +49,37 @@ export default function Page() {
                             return false}
                     default:
                         return true}
-            }) }) ;
+            }) }) ,
         // Apply sorting
         if(sortConfig) {
 
             result.sort((a, b) => {
 
-                const aVal = a[sortConfig.key];
-                const bVal = b[sortConfig.key];
+                const aVal = a[sortConfig.key],
+                const bVal = b[sortConfig.key],
                 if(aVal < bVal)
-                    return sortConfig.direction === 'asc' ? -1 : 1;
+                    return sortConfig.direction === 'asc' ? -1 : 1,
                 if(aVal > bVal)
-                    return sortConfig.direction === 'asc' ? 1 : -1;
+                    return sortConfig.direction === 'asc' ? 1 : -1,
                 return 0})}
-        return result}, [data, searchQuery, filters, sortConfig, columns]);
+        return result}, [data, searchQuery, filters, sortConfig, columns]),
     // Pagination
-    const totalPages = Math.ceil(processedData.length / pageSize);
-    const paginatedData = enablePagination;
+    const totalPages = Math.ceil(processedData.length / pageSize),
+    const paginatedData = enablePagination,
         ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize)
-        : processedData;
+        : processedData,
     // Virtual scrolling
     const { virtualItems, containerProps, listProps } = useVirtualScroll(paginatedData, {
 
         itemHeight: 60,
         containerHeight: height - 120, // Account for header and controls
         overscan: 5
-    }) ;
+    }) ,
     // Handle sorting
     const handleSort = useCallback((key) => {
 
         if(!enableSorting)
-            return;
+            return,
         setSortConfig(prev => {
 
             if (prev?.key === key) {
@@ -87,48 +87,48 @@ export default function Page() {
                 return prev.direction === 'asc''
                     ? { key, direction: 'desc' }
                     : null}
-            return { key, direction: 'asc' }});
-        trackEvent('table',column_sorted', String(key))}, [enableSorting, trackEvent]);
+            return { key, direction: 'asc' }}),
+        trackEvent('table',column_sorted', String(key))}, [enableSorting, trackEvent]),
     // Handle filter change
     const handleFilterChange = useCallback((key, value, operator) => {
 
         setFilters(prev => {
 
-            const newFilters = prev.filter(f => f.key !== key);
+            const newFilters = prev.filter(f => f.key !== key),
             if(value.trim()) {
 
-                newFilters.push({ key, value, operator });
+                newFilters.push({ key, value, operator }),
 
-            return newFilters;
-        });
-        trackEvent('table',filter_applied', String(key), null, { operator, value });
-    }, [trackEvent]);
+            return newFilters,
+        }),
+        trackEvent('table',filter_applied', String(key), null, { operator, value }),
+    }, [trackEvent]),
     // Handle selection
     const handleSelectionChange = useCallback((item, checked) => {
 
-        const itemKey = String(item.id || JSON.stringify(item));
-        const newSelection = new Set(selectedItems);
+        const itemKey = String(item.id || JSON.stringify(item)),
+        const newSelection = new Set(selectedItems),
         if(checked) {
 
             newSelection.add(itemKey)}
         else {
 
             newSelection.delete(itemKey)}
-        setSelectedItems(newSelection);
-        onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data]);
+        setSelectedItems(newSelection),
+        onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data]),
     // Handle select all
     const handleSelectAll = useCallback((checked) => {
 
         if(checked) {
 
-            const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
-            setSelectedItems(allKeys);
+            const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item)))),
+            setSelectedItems(allKeys),
             onSelectionChange?.(paginatedData)}
         else {
 
-            setSelectedItems(new Set());
+            setSelectedItems(new Set()),
             onSelectionChange?.([])}
-    }, [paginatedData, onSelectionChange]);
+    }, [paginatedData, onSelectionChange]),
     // Export data
     const handleExport = useCallback(() => {
         if(onExport) {
@@ -137,28 +137,28 @@ export default function Page() {
         else {
 
             // Default CSV export
-            const csvContent = generateCSV(processedData, columns);
+            const csvContent = generateCSV(processedData, columns),
             downloadCSV(csvContent,table-export.csv')}
-        trackEvent('table',data_exported',export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]);
+        trackEvent('table',data_exported',export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]),
     // Generate CSV content
     const generateCSV = (data, columns) => {
 
-        const headers = columns.map(col => col.header).join(',);
+        const headers = columns.map(col => col.header).join('),
         const rows = data.map(item => columns.map(col => {
 
-            const value = item[col.key];'"
-            return typeof value === 'string' && value.includes(',) ? `"${value}"` : value}).join(',));
-        return [headers, ...rows].join('\n')};
+            const value = item[col.key],'"
+            return typeof value === 'string' && value.includes(') ? `"${value}"` : value}).join(')),
+        return [headers, ...rows].join('\n')},
     // Download CSV
     const downloadCSV = (content, filename) => {
 
-        const blob = new Blob([content], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        a.click () ;
-        window.URL.revokeObjectURL(url) };
+        const blob = new Blob([content], { type: 'text/csv' }),
+        const url = window.URL.createObjectURL(blob),
+        const a = document.createElement('a'),
+        a.href = url,
+        a.download = filename,
+        a.click () ,
+        window.URL.revokeObjectURL(url) },
     // Get sort icon
     const getSortIcon = (key) => {
 
@@ -167,17 +167,17 @@ export default function Page() {
             return <ArrowUpDown className="w-4 h-4 text-gray-400"/>}
         return sortConfig.direction === 'asc'"
             ? <ChevronUp className="w-4 h-4 text-blue-500"/>"
-            : <ChevronDown className="w-4 h-4 text-blue-500"/>};
+            : <ChevronDown className="w-4 h-4 text-blue-500"/>},
     // Render cell content
     const renderCell = (column, item, index) => {
 
-        const value = item[column.key];
+        const value = item[column.key],
         if(column.render) {
 
             return column.render(value, item, index)}'`
         return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>
         {value}
-      </span>)};`
+      </span>)},`
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header Controls */}"
       <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">"
@@ -355,7 +355,7 @@ export default function Page() {
 
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
 
-                const page = i + 1;`
+                const page = i + 1,`
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page'
                         ? 'bg-blue-500 text-white''`
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
@@ -374,6 +374,6 @@ export default function Page() {
             </div>
           </div>
         </div>)}
-    </div>)};
+    </div>)},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -15,14 +15,14 @@ type ThemeProviderState = {
 
 const initialState: ThemeProviderState = {
   theme: "system",
-  setTheme: () => null,
+  setTheme: () => null
 }
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
 export function ThemeProvider({
   children,
-  defaultTheme = "system",
+  defaultTheme = "system"
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
@@ -50,7 +50,7 @@ export function ThemeProvider({
     setTheme: (theme: Theme) => {
       localStorage.setItem("theme", theme)
       setTheme(theme)
-    },
+    }
   }
 
   return (

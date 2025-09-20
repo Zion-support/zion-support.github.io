@@ -8,16 +8,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Comprehensive enterprise data platform that combines data warehousing, AI analytics, machine learning, and business intelligence to provide actionable insights and drive data-driven decision making.',
         features: [
-            'Unified data warehouse',
-            'AI-powered analytics',
-            'Machine learning pipelines',
-            'Real-time data processing',
-            'Advanced visualization',
-            'Data governance tools',
-            'API management',
-            'Custom dashboards',
-            'Multi-cloud support',
-            'Enterprise security'
+            'Unified data warehouseAI-powered analytics',
+            'Machine learning pipelinesReal-time data processing',
+            'Advanced visualizationData governance tools',
+            'API managementCustom dashboards',
+            'Multi-cloud supportEnterprise security'
         ],
         popular: true,
         icon: '📊',
@@ -60,16 +55,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Intelligent multi-cloud management platform that provides unified governance, cost optimization, security management, and performance monitoring across AWS, Azure, Google Cloud, and other cloud providers.',
         features: [
-            'Multi-cloud governance',
-            'Cost optimization',
-            'Security management',
-            'Performance monitoring',
-            'Resource automation',
-            'Compliance tools',
-            'Unified dashboard',
-            'API management',
-            'Custom policies',
-            'Expert support'
+            'Multi-cloud governanceCost optimization',
+            'Security managementPerformance monitoring',
+            'Resource automationCompliance tools',
+            'Unified dashboardAPI management',
+            'Custom policiesExpert support'
         ],
         popular: true,
         icon: '☁️',
@@ -112,16 +102,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Advanced API management platform that provides comprehensive API lifecycle management, including design, development, testing, deployment, monitoring, and governance for enterprise applications.',
         features: [
-            'API design tools',
-            'Development framework',
-            'Testing automation',
-            'Deployment management',
-            'Performance monitoring',
-            'Security controls',
-            'Rate limiting',
-            'Analytics dashboard',
-            'Developer portal',
-            'API governance'
+            'API design toolsDevelopment framework',
+            'Testing automationDeployment management',
+            'Performance monitoringSecurity controls',
+            'Rate limitingAnalytics dashboard',
+            'Developer portalAPI governance'
         ],
         popular: false,
         icon: '🔌',
@@ -164,16 +149,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Next-generation IT service management platform that uses AI and machine learning to automate service desk operations, predict issues, optimize workflows, and improve user experience.',
         features: [
-            'AI-powered service desk',
-            'Predictive issue detection',
-            'Workflow automation',
-            'Knowledge management',
-            'Self-service portal',
-            'Incident management',
-            'Change management',
-            'Asset management',
-            'Reporting analytics',
-            'Mobile applications'
+            'AI-powered service deskPredictive issue detection',
+            'Workflow automationKnowledge management',
+            'Self-service portalIncident management',
+            'Change managementAsset management',
+            'Reporting analyticsMobile applications'
         ],
         popular: true,
         icon: '🛠️',
@@ -216,16 +196,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Comprehensive security operations center platform that provides real-time threat detection, automated response, security analytics, and compliance management using AI and machine learning.',
         features: [
-            'Real-time threat detection',
-            'Automated response',
-            'Security analytics',
-            'Compliance management',
-            'Incident response',
-            'Vulnerability assessment',
-            'Threat intelligence',
-            'Security monitoring',
-            'Reporting tools',
-            'Expert consultation'
+            'Real-time threat detectionAutomated response',
+            'Security analyticsCompliance management',
+            'Incident responseVulnerability assessment',
+            'Threat intelligenceSecurity monitoring',
+            'Reporting toolsExpert consultation'
         ],
         popular: true,
         icon: '🔒',
@@ -268,16 +243,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Advanced data governance platform that provides comprehensive data quality management, privacy protection, compliance monitoring, and data lineage tracking for enterprise data assets.',
         features: [
-            'Data quality management',
-            'Privacy protection',
-            'Compliance monitoring',
-            'Data lineage tracking',
-            'Catalog management',
-            'Policy enforcement',
-            'Audit trails',
-            'Risk assessment',
-            'Reporting tools',
-            'Integration APIs'
+            'Data quality managementPrivacy protection',
+            'Compliance monitoringData lineage tracking',
+            'Catalog managementPolicy enforcement',
+            'Audit trailsRisk assessment',
+            'Reporting toolsIntegration APIs'
         ],
         popular: false,
         icon: '📋',
@@ -320,16 +290,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Advanced workflow automation platform that uses AI and machine learning to automate complex business processes, optimize workflows, and improve operational efficiency across enterprise organizations.',
         features: [
-            'Process automation',
-            'Workflow optimization',
-            'AI decision making',
-            'Integration capabilities',
-            'Custom workflows',
-            'Analytics dashboard',
-            'Compliance tracking',
-            'Mobile access',
-            'API management',
-            'Expert support'
+            'Process automationWorkflow optimization',
+            'AI decision makingIntegration capabilities',
+            'Custom workflowsAnalytics dashboard',
+            'Compliance trackingMobile access',
+            'API managementExpert support'
         ],
         popular: true,
         icon: '⚙️',
@@ -372,16 +337,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Advanced digital twin platform that creates virtual replicas of physical assets, processes, and systems to enable real-time monitoring, predictive maintenance, and optimization.',
         features: [
-            '3D asset modeling',
-            'Real-time monitoring',
-            'Predictive maintenance',
-            'Performance optimization',
-            'Simulation capabilities',
-            'IoT integration',
-            'Analytics dashboard',
-            'Custom visualizations',
-            'API access',
-            'Expert consultation'
+            '3D asset modelingReal-time monitoring',
+            'Predictive maintenancePerformance optimization',
+            'Simulation capabilitiesIoT integration',
+            'Analytics dashboardCustom visualizations',
+            'API accessExpert consultation'
         ],
         popular: false,
         icon: '🔄',
@@ -424,16 +384,11 @@ export const enterpriseITInnovationServices2025 = [
         period: '/month',
         description: 'Advanced edge computing platform that brings computational power closer to data sources, enabling real-time processing, reduced latency, and improved performance for enterprise applications.',
         features: [
-            'Edge computing infrastructure',
-            'Real-time processing',
-            'Low-latency applications',
-            'Distributed computing',
-            'Edge analytics',
-            'Security features',
-            'Monitoring tools',
-            'Custom deployments',
-            'API management',
-            'Expert support'
+            'Edge computing infrastructureReal-time processing',
+            'Low-latency applicationsDistributed computing',
+            'Edge analyticsSecurity features',
+            'Monitoring toolsCustom deployments',
+            'API managementExpert support'
         ],
         popular: false,
         icon: '🌐',
@@ -467,4 +422,4 @@ export const enterpriseITInnovationServices2025 = [
         rating: 4.6,
         reviews: 67
     }
-];
+],

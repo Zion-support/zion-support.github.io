@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import React from 'react';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Evaluation Runbook Starter Kit';
-  description: 'Standardized procedures, checklists, and templates to operate evals for autonomous agents.';
-  keywords: ['evaluationsrunbook', 'SOPchecklist', 'autonomous agents'],
-};
+  title: 'AI 2026: Evaluation Runbook Starter Kit',
+  description: 'Standardized procedures, checklists, and templates to operate evals for autonomous agents.',
+  keywords: ['evaluationsrunbookSOPchecklist', 'autonomous agents']
+},
 export default function EvaluationRunbookStarterKitPage() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -45,6 +45,5 @@ export default function EvaluationRunbookStarterKitPage() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

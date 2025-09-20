@@ -1,11 +1,11 @@
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../data/innovativeServices2025';
+import React, { useState, useMemo } from 'react',
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../data/innovativeServices2025',
 const InnovativeServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('rating');
-  const categories = ['all', 'AI Services', 'IT Services', 'Micro SAAS', 'Business', 'Development'];
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [priceRange, setPriceRange] = useState('all'),
+  const [sortBy, setSortBy] = useState('rating'),
+  const categories = ['allAI Services', 'IT ServicesMicro SAAS', 'BusinessDevelopment'],
   const priceRanges = [
     { label: 'All Prices', value: 'all' },
     { label: 'Under $100', value: '0-100' },
@@ -13,53 +13,53 @@ const InnovativeServicesShowcase: React.FC = () => {
     { label: '$500 - $1000', value: '500-1000' },
     { label: '$1000 - $3000', value: '1000-3000' },
     { label: 'Over $3000', value: '3000+' }
-  ];
+  ],
   const sortOptions = [
     { label: 'Highest Rated', value: 'rating' },
     { label: 'Highest AI Score', value: 'aiScore' },
     { label: 'Lowest Price', value: 'price' },
     { label: 'Newest Launch', value: 'launchDate' }
-  ];
+  ],
   const filteredServices = useMemo(() => {
-    let filtered = INNOVATIVE_SERVICES_2025;
+    let filtered = INNOVATIVE_SERVICES_2025,
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory),
     }
     // Filter by price range
     if (priceRange !== 'all') {
-      const [min, max] = priceRange.split('-').map(Number);
+      const [min, max] = priceRange.split('-').map(Number),
       if (priceRange === '3000+') {
-        filtered = filtered.filter(service => service.price >= 3000);
+        filtered = filtered.filter(service => service.price >= 3000),
       } else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max);
+        filtered = filtered.filter(service => service.price >= min && service.price <= max),
       }
     }
     // Sort services
     switch (sortBy) {
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
+        filtered.sort((a, b) => b.rating - a.rating),
+        break,
       case 'aiScore':
-        filtered.sort((a, b) => b.aiScore - a.aiScore);
-        break;
+        filtered.sort((a, b) => b.aiScore - a.aiScore),
+        break,
       case 'price':
-        filtered.sort((a, b) => a.price - b.price);
-        break;
+        filtered.sort((a, b) => a.price - b.price),
+        break,
       case 'launchDate':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-        break;
+        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
+        break,
     }
-    return filtered;
-  }, [searchTerm, selectedCategory, priceRange, sortBy]);
+    return filtered,
+  }, [searchTerm, selectedCategory, priceRange, sortBy]),
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
@@ -108,7 +108,7 @@ const InnovativeServicesShowcase: React.FC = () => {
         </div>
         
         <div className="flex space-x-3">
-          <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+          <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors">
             Get Quote
           </button>
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors">
@@ -117,7 +117,7 @@ const InnovativeServicesShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  ),
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -246,7 +246,7 @@ const InnovativeServicesShowcase: React.FC = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <div className="flex flex-col sm: flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Schedule a Consultation
             </button>
@@ -257,6 +257,6 @@ const InnovativeServicesShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default InnovativeServicesShowcase;
+  )
+},
+export default InnovativeServicesShowcase,

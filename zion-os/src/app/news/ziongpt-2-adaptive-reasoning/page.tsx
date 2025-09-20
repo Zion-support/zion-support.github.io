@@ -1,12 +1,12 @@
-import Link from "next/link";
-import React from "react";
+import Link from "next/link",
+import React from "react",
 export const metadata = {,
-  title: "ZionGPT 2.0 launches with adaptive reasoning and on-device inference";
+  title: "ZionGPT 2.0 launches with adaptive reasoning and on-device inference",
   description:,
-    "Introducing ZionGPT 2.0 with adaptive reasoning loops, tool-use orchestration, and private on-device inference for latency-sensitive workloads.";
+    "Introducing ZionGPT 2.0 with adaptive reasoning loops, tool-use orchestration, and private on-device inference for latency-sensitive workloads.",
   keywords:,
-    "ZionGPT 2.0, adaptive reasoning, on-device inference, tool use, private AI",
-};
+    "ZionGPT 2.0, adaptive reasoning, on-device inference, tool use, private AI"
+},
 export default function ArticlePage() {,
   return (,
     <div className="min-h-screen">,
@@ -47,7 +47,6 @@ export default function ArticlePage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  );
+    </div>),
 }
 ,

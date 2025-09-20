@@ -1,23 +1,21 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 unused-media-scanner function triggered');
+  console.log('🤖 unused-media-scanner function triggered'),
   
   try {
     // Unused media scanner logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate media scanning operations
     const scanningOperations = [
-      'media-file-discovery',
-      'usage-analysis',
-      'reference-tracking',
-      'cleanup-recommendations'
-    ];
+      'media-file-discoveryusage-analysis',
+      'reference-trackingcleanup-recommendations'
+    ],
     
     // Simulate operation execution
-    const operationResults = {};
+    const operationResults = {},
     for (const operation of scanningOperations) {
-      await new Promise(resolve => setTimeout(resolve, 85)); // Simulate scanning time
-      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-review'; // 96% success rate
+      await new Promise(resolve => setTimeout(resolve, 85)), // Simulate scanning time
+      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-review', // 96% success rate
     }
     
     // Simulate scanning metrics
@@ -26,7 +24,7 @@ exports.handler = async function(event, context) {
       unusedFiles: Math.floor(Math.random() * 200) + 50, // 50-250
       duplicateFiles: Math.floor(Math.random() * 100) + 25, // 25-125
       potentialSavings: Math.floor(Math.random() * 500) + 100 // 100-600 MB
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -41,13 +39,13 @@ exports.handler = async function(event, context) {
         cleanupPriority: scanningMetrics.unusedFiles > 150 ? 'high' : scanningMetrics.unusedFiles > 75 ? 'medium' : 'low',
         nextRun: new Date(Date.now() + 10 * 60 * 60 * 1000).toISOString() // 10 hours from now
       })
-    };
+    },
     
-    console.log('✅ unused-media-scanner completed successfully');
-    return result;
+    console.log('✅ unused-media-scanner completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ unused-media-scanner failed:', error);
+    console.error('❌ unused-media-scanner failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -56,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'unused-media-scanner',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

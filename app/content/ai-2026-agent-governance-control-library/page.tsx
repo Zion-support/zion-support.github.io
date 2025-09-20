@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agent Governance Control Library';
+  title: 'AI 2026: Agent Governance Control Library',
   description:,
-    'Reusable, policy‑as‑code controls for safe, compliant, and observable autonomous agent systems.',
-};
+    'Reusable, policy‑as‑code controls for safe, compliant, and observable autonomous agent systems.'
+},
 export default function AgentGovernanceControlLibraryPage() {,
   return (,
     <main className="max-w-5xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -58,6 +58,5 @@ export default function AgentGovernanceControlLibraryPage() {,
           Policy‑as‑Code Starter Kit,
         </Link>,
       </footer>,
-    </main>,
-  ),}
+    </main>)}
 ,

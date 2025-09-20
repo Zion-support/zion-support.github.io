@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Zap, Star, Globe, Lock, Cloud, Database
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import all our revolutionary services
-import { advancedAIAutonomousEcosystemServices2025 } from '../data/2025-advanced-ai-autonomous-ecosystem-services';
-import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
-import { revolutionaryMicroSaasInnovations2025 } from '../data/2025-revolutionary-micro-saas-innovations';
-import { emergingTechnologyBreakthroughs2025 } from '../data/2025-emerging-technology-breakthroughs';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+import { advancedAIAutonomousEcosystemServices2025 } from '../data/2025-advanced-ai-autonomous-ecosystem-services',
+import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations',
+import { revolutionaryMicroSaasInnovations2025 } from '../data/2025-revolutionary-micro-saas-innovations',
+import { emergingTechnologyBreakthroughs2025 } from '../data/2025-emerging-technology-breakthroughs',
+import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions',
 
 // Combine all services
 const allRevolutionaryServices = [
@@ -21,7 +21,7 @@ const allRevolutionaryServices = [
   ...revolutionaryMicroSaasInnovations2025,
   ...emergingTechnologyBreakthroughs2025,
   ...specializedEnterpriseSolutions2025
-];
+],
 
 const serviceCategories = [
   {
@@ -64,10 +64,10 @@ const serviceCategories = [
     description: 'Industry-specific enterprise solutions and platforms',
     services: specializedEnterpriseSolutions2025
   }
-];
+],
 
-const ServiceShowcaseCard = ({ service, category }: { service: any; category: any }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const ServiceShowcaseCard = ({ service, category }: { service: any, category: any }) => {
+  const [isHovered, setIsHovered] = useState(false),
 
 const 2025-ultimate-revolutionary-services-showcase: React.FC = () => {
   return (
@@ -84,7 +84,7 @@ const 2025-ultimate-revolutionary-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2025-ultimate-revolutionary-services-showcase;
+export default 2025-ultimate-revolutionary-services-showcase,

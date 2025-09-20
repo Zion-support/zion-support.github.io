@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Cost Optimization Blueprint | Zion Tech Group';
+  title: 'AI 2026: Autonomous Cost Optimization Blueprint | Zion Tech Group',
   description:,
-    'A practical blueprint to reduce cloud and AI spend using agentic automation, dynamic right-sizing, and policy-as-code guardrails.',
-};
+    'A practical blueprint to reduce cloud and AI spend using agentic automation, dynamic right-sizing, and policy-as-code guardrails.'
+},
 export default function AutonomousCostOptimizationBlueprintPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
       <h1 className="text-4xl font-bold text-gray-900 mb-6">AI 2026: Autonomous Cost Optimization Blueprint</h1>,
       <p className="text-gray-700 mb-8">,
         This blueprint outlines a pragmatic approach to reduce cloud and AI workload costs using agentic,
-        automation. It combines workload-aware right-sizing, spot orchestration, dynamic model selection;
+        automation. It combines workload-aware right-sizing, spot orchestration, dynamic model selection,
         and policy-as-code controls, delivering sustained savings without sacrificing reliability or speed.,
       </p>,
       <section className="mb-10">,
@@ -37,7 +37,6 @@ export default function AutonomousCostOptimizationBlueprintPage() {,
           <li>Roll out safe automations: idle cleanup, storage lifecycle, non-prod schedule.</li>,
         </ol>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

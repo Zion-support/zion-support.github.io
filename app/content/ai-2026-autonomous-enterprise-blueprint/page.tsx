@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Enterprise Blueprint | Zion Tech Group';
-  description: 'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.',
-};
+  title: 'AI 2026: Autonomous Enterprise Blueprint | Zion Tech Group',
+  description: 'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.'
+},
 export default function AutonomousEnterpriseBlueprint2026Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -42,7 +42,6 @@ export default function AutonomousEnterpriseBlueprint2026Page() {,
           </p>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

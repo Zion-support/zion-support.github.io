@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Navigation, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredAutonomousSystems: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredAutonomousSystems: React.FC = () => {
       title: 'Multi-domain Support',
       description: 'Autonomous systems across various domains and applications'
     }
-  ];
+  ],
 
   const autonomousCapabilities = [
     {
       area: 'Decision Making',
-      capabilities: ['Path planning', 'Obstacle avoidance', 'Risk assessment', 'Goal optimization'],
+      capabilities: ['Path planningObstacle avoidance', 'Risk assessmentGoal optimization'],
       improvement: '99.9% accuracy',
       decision: 'Intelligent'
     },
     {
       area: 'Sensory Integration',
-      capabilities: ['Multi-sensor fusion', 'Environmental perception', 'Object recognition', 'Spatial mapping'],
+      capabilities: ['Multi-sensor fusionEnvironmental perception', 'Object recognitionSpatial mapping'],
       improvement: 'Real-time processing',
       sensory: 'Advanced'
     },
     {
       area: 'Learning & Adaptation',
-      capabilities: ['Continuous learning', 'Behavior adaptation', 'Performance optimization', 'Experience integration'],
+      capabilities: ['Continuous learningBehavior adaptation', 'Performance optimizationExperience integration'],
       improvement: 'Adaptive behavior',
       learning: 'Continuous'
     },
     {
       area: 'Safety & Reliability',
-      capabilities: ['Fault tolerance', 'Redundancy systems', 'Emergency protocols', 'Safety validation'],
+      capabilities: ['Fault toleranceRedundancy systems', 'Emergency protocolsSafety validation'],
       improvement: '99.99% reliability',
       safety: 'Robust'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Autonomous Vehicles',
       description: 'AI-powered autonomous systems for transportation and mobility',
-      benefits: ['Safe navigation', 'Traffic optimization', 'Passenger comfort', 'Efficiency improvement']
+      benefits: ['Safe navigationTraffic optimization', 'Passenger comfortEfficiency improvement']
     },
     {
       title: 'Industrial Robotics',
       description: 'Autonomous systems for manufacturing and industrial automation',
-      benefits: ['Production automation', 'Quality control', 'Safety enhancement', 'Efficiency improvement']
+      benefits: ['Production automationQuality control', 'Safety enhancementEfficiency improvement']
     },
     {
       title: 'Drones & UAVs',
       description: 'Autonomous aerial systems for various applications',
-      benefits: ['Aerial navigation', 'Mission execution', 'Data collection', 'Remote operations']
+      benefits: ['Aerial navigationMission execution', 'Data collectionRemote operations']
     },
     {
       title: 'Service Robots',
       description: 'Autonomous systems for service and assistance applications',
-      benefits: ['Customer service', 'Task automation', '24/7 availability', 'Cost reduction']
+      benefits: ['Customer serviceTask automation', '24/7 availabilityCost reduction']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredAutonomousSystems: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with autonomous systems',
       features: [
-        'Basic autonomous features',
-        'Single domain support',
-        'Standard safety protocols',
-        'Email support',
+        'Basic autonomous featuresSingle domain support',
+        'Standard safety protocolsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredAutonomousSystems: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced autonomous system needs',
       features: [
-        'Advanced autonomous features',
-        'Multi-domain support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced autonomous featuresMulti-domain support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time control'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredAutonomousSystems: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex autonomous system requirements',
       features: [
-        'Custom autonomous system development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom autonomous system developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredAutonomousSystems: React.FC = () => {
       position: "Systems Director",
       company: "Advanced Robotics Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredAutonomousSystems: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Automate with AI-Powered Autonomous Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredAutonomousSystems: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredAutonomousSystems;
+export default AIPoweredAutonomousSystems,

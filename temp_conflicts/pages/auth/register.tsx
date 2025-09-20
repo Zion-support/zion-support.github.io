@@ -1,29 +1,29 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import SignupForm from '@/components/auth/SignupForm';
-import { AuthButtons } from '@/components/AuthButtons';
-import { fireEvent } from '@/lib/analytics';
-// import { logInfo } from '@/utils/productionLogger'; // Unused
-import { useRouter } from 'next/router';
+import React, { useEffect } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import SignupForm from '@/components/auth/SignupForm',
+import { AuthButtons } from '@/components/AuthButtons',
+import { fireEvent } from '@/lib/analytics',
+// import { logInfo } from '@/utils/productionLogger', // Unused
+import { useRouter } from 'next/router',
 
 const RegisterPage = () => {
-  const router = useRouter();
+  const router = useRouter(),
 
   useEffect(() => {
-    fireEvent('signup_page_view');
-  }, []);
+    fireEvent('signup_page_view'),
+  }, []),
 
   const handleSuccess = ({ email, emailVerificationRequired }: {
-    email: string;
-    emailVerificationRequired: boolean;
+    email: string,
+    emailVerificationRequired: boolean
   }) => {
     if (emailVerificationRequired) {
-      router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      router.push(`/verify-status?email=${encodeURIComponent(email)}`),
     } else {
-      router.push('/auth/login?registrationSuccess=true');
+      router.push('/auth/login?registrationSuccess=true'),
     }
-  };
+  },
 
   return (
     <>
@@ -42,8 +42,8 @@ const RegisterPage = () => {
               width={48}
               height={48}
               onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement;
-                target.style.display = 'none';
+                const target = e.currentTarget as HTMLImageElement,
+                target.style.display = 'none',
               }}
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -82,7 +82,7 @@ const RegisterPage = () => {
                 Terms of Service
               </Link>{' '}
               and{' '}
-              <Link href="/legal/privacy" className="text-blue-600 hover:text-blue-500">
+              <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
             </p>
@@ -90,7 +90,7 @@ const RegisterPage = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default RegisterPage;
+export default RegisterPage,

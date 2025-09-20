@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 ArrowRightPlayStarUsersAwardZap
 
 const HeroSection: React.FC = () => {
@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">HeroSection</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default HeroSection;
+export default HeroSection,

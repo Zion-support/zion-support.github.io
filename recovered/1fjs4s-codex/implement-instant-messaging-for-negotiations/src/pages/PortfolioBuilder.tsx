@@ -1,14 +1,14 @@
 
-import { useState } from 'react';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
-import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
+import { useState } from 'react',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
 
 function PortfolioBuilderContent() {
-  const [activeTab, setActiveTab] = useState('resume');
+  const [activeTab, setActiveTab] = useState('resume'),
   
   return (
     <>
@@ -36,7 +36,7 @@ function PortfolioBuilderContent() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }
 
 export default function PortfolioBuilder() {
@@ -44,5 +44,5 @@ export default function PortfolioBuilder() {
     <ProtectedRoute>
       <PortfolioBuilderContent />
     </ProtectedRoute>
-  );
+  ),
 }

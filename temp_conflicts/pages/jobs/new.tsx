@@ -1,20 +1,20 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-import AIAssistant from '../../components/ui/AIAssistant';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import React, { useMemo, useState } from 'react',
+import AIAssistant from '../../components/ui/AIAssistant',
 
 const NewJobPost: NextPage = () => {
-  const [role, setRole] = useState('DevOps Engineer');
-  const [experience, setExperience] = useState('3+ years');
-  const [skills, setSkills] = useState('Kubernetes, AWS');
-  const [timeline, setTimeline] = useState('Immediate');
-  const [description, setDescription] = useState('');
+  const [role, setRole] = useState('DevOps Engineer'),
+  const [experience, setExperience] = useState('3+ years'),
+  const [skills, setSkills] = useState('Kubernetes, AWS'),
+  const [timeline, setTimeline] = useState('Immediate'),
+  const [description, setDescription] = useState(''),
 
-  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
+  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN,
 
   const generateJobPrompt = useMemo(() => (
     `Write a job description for a remote ${role} with ${experience} of experience in ${skills}. Include responsibilities, required skills, and preferred tools.\n\nReturn markdown only.`
-  ), [experience, role, skills]);
+  ), [experience, role, skills]),
 
   return (
     <div>
@@ -50,7 +50,7 @@ const NewJobPost: NextPage = () => {
       </div>
       <textarea value={description} onChange={e => setDescription(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
-  );
-};
+  ),
+},
 
-export default NewJobPost;
+export default NewJobPost,

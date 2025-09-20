@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
   {
@@ -49,62 +49,61 @@ export default function Page() {
     icon: Network,
     color: "from - blue - 500 to - cyan - 500"
   }
-];
+],
 
 const Services2027: React.FC = () : JSX.Element => {
-  const [query, setQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('innovation');
+  const [query, setQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('innovation'),
 
-  const categories = [{ id: any'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length },;
+  const categories = [{ id: any'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length },
     { id: 'AI & Automation', name: 'AI & Automation', icon: Bot, count: SERVICES_2027.filter(s  => s.category === 'AI & Automation') .length },
-    { id: any'Quantum AI', name: 'Quantum AI', icon: Atom, count: SERVICES_2027.filter(s  => s.category === 'Quantum AI') .length },;
-    { id: any'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: SERVICES_2027.filter(s  => s.category === 'Cybersecurity') .length },;
-    { id: any'Edge Computing', name: 'Edge Computing', icon: Cpu, count: SERVICES_2027.filter(s  => s.category === 'Edge Computing') .length },;
-    { id: any'Digital Twin', name: 'Digital Twin', icon: Eye, count: SERVICES_2027.filter(s  => s.category === 'Digital Twin') .length },;
-    { id: any'Sustainability', name: 'Sustainability', icon: Leaf, count: SERVICES_2027.filter(s  => s.category === 'Sustainability') .length },;
-    { id: any'Metaverse', name: 'Metaverse', icon: Gamepad2, count: SERVICES_2027.filter(s  => s.category === 'Metaverse') .length },;
+    { id: any'Quantum AI', name: 'Quantum AI', icon: Atom, count: SERVICES_2027.filter(s  => s.category === 'Quantum AI') .length },
+    { id: any'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: SERVICES_2027.filter(s  => s.category === 'Cybersecurity') .length },
+    { id: any'Edge Computing', name: 'Edge Computing', icon: Cpu, count: SERVICES_2027.filter(s  => s.category === 'Edge Computing') .length },
+    { id: any'Digital Twin', name: 'Digital Twin', icon: Eye, count: SERVICES_2027.filter(s  => s.category === 'Digital Twin') .length },
+    { id: any'Sustainability', name: 'Sustainability', icon: Leaf, count: SERVICES_2027.filter(s  => s.category === 'Sustainability') .length },
+    { id: any'Metaverse', name: 'Metaverse', icon: Gamepad2, count: SERVICES_2027.filter(s  => s.category === 'Metaverse') .length },
     { id: any'IoT', name: 'IoT', icon: Network, count: SERVICES_2027.filter(s  => s.category === 'IoT') .length }
-  ];
+  ],
 
   const filteredAndSorted = useMemo(() => {
-    let filtered = SERVICES_2027;
+    let filtered = SERVICES_2027,
 
     // Filter by search query
     if(query.trim () ) {
-      const q = query.trim () .toLowerCase () ;
+      const q = query.trim () .toLowerCase () ,
       filtered = filtered.filter(s =>
         s.title.toLowerCase () .includes(q) ||
         s.description.toLowerCase () .includes(q) ||
-        s.category.toLowerCase () .includes(q) ) ;
+        s.category.toLowerCase () .includes(q) ) ,
     }
 
     // Filter by category
     if(selectedCategory !== 'all') {
-      filtered = filtered.filter(s => s.category === selectedCategory) ;
+      filtered = filtered.filter(s => s.category === selectedCategory) ,
     }
 
     // Sort services
     switch(sortBy) {
       case 'price':
-        return filtered.sort((a, b) => a.price - b.price) ;
+        return filtered.sort((a, b) => a.price - b.price) ,
       case 'innovation':
         return filtered.sort((a, b) => {
-          const innovationLevels = { 'Revolutionary': 3, 'Cutting - Edge': 2, 'Advanced': 1 };
-          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0) ;
-        }) ;
+          const innovationLevels = { 'Revolutionary': 3, 'Cutting - Edge': 2, 'Advanced': 1 },
+          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0) ,
+        }) ,
       case 'roi':
         return filtered.sort((a, b) => {
-          const aROI = parseInt(a.roi.split ('-') [0]) ;
-          const bROI = parseInt(b.roi.split ('-') [0]) ;
-          return bROI - aROI;
-        }) ;
-      default:
-        return filtered;
+          const aROI = parseInt(a.roi.split ('-') [0]) ,
+          const bROI = parseInt(b.roi.split ('-') [0]) ,
+          return bROI - aROI,
+        }) ,
+      default: return filtered
     }
-  }, [query, selectedCategory, sortBy]) ;
+  }, [query, selectedCategory, sortBy]) ,
 
-  const featuredServices = SERVICES_2027.filter(s => s.innovationLevel === 'Revolutionary') .slice(0, 3) ;
+  const featuredServices = SERVICES_2027.filter(s => s.innovationLevel === 'Revolutionary') .slice(0, 3) ,
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text-white">
       <SEO
@@ -323,7 +322,7 @@ const Services2027: React.FC = () : JSX.Element => {
             viewport={{ once: true }}
             className="bg-gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 border border-purple - 400 / 30 rounded-3xl p - 12 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
               Ready for the Future?
             </h2>
             <p className="text-xl text-gray - 300 mb-8 max - w-3xl mx -auto">
@@ -346,5 +345,5 @@ const Services2027: React.FC = () : JSX.Element => {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},

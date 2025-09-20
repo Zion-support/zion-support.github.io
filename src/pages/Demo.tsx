@@ -1,63 +1,39 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Play, Pause, Square, RotateCcw, Settings, Download, Share2, Eye, EyeOff, Maximize2, Minimize2 } from 'lucide-react';
-import SEO from '../components/SEO';
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Play, Pause, Square, RotateCcw, Settings, Download, Share2, Eye, EyeOff, Maximize2, Minimize2 } from "lucide-react";
+import { SEO } from "../components/SEO";
 export default function Demo() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false),
+  const [currentTime, setCurrentTime] = useState(0),
   const [duration, setDuration] = useState(120);
   const [showControls, setShowControls] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
-
   const demos = [
     {
-      id: 1,
-      title: 'AI Business Intelligence Dashboard',
-      description: 'Real-time analytics and insights powered by AI',
-      duration: '2:30',
-      thumbnail: '/demos/ai-bi-dashboard.jpg',
-      category: 'AI & Analytics'
-    },
+      id: 1,title: 'AI Business Intelligence Dashboard',description: 'Real-time analytics and insights powered by AI',duration: '2:30',thumbnail: '/demos/ai-bi-dashboard.jpg',category: 'AI & Analytics'
+    };
     {
-      id: 2,
-      title: 'Cybersecurity Threat Detection',
-      description: 'AI-powered security monitoring and response',
-      duration: '1:45',
-      thumbnail: '/demos/cybersecurity.jpg',
-      category: 'Security'
-    },
+      id: 2,title: 'Cybersecurity Threat Detection',description: 'AI-powered security monitoring and response',duration: '1:45',thumbnail: '/demos/cybersecurity.jpg',category: 'Security'
+    };
     {
-      id: 3,
-      title: 'Digital Twin Platform',
-      description: 'IoT and AI integration for smart operations',
-      duration: '3:15',
-      thumbnail: '/demos/digital-twin.jpg',
-      category: 'IoT & AI'
-    },
+      id: 3,title: 'Digital Twin Platform',description: 'IoT and AI integration for smart operations',duration: '3:15',thumbnail: '/demos/digital-twin.jpg',category: 'IoT & AI'
+    };
     {
-      id: 4,
-      title: 'AI Content Generation',
-      description: 'Automated content creation and optimization',
-      duration: '2:00',
-      thumbnail: '/demos/ai-content.jpg',
-      category: 'Content AI'
+      id: 4,title: 'AI Content Generation',description: 'Automated content creation and optimization',duration: '2:00',thumbnail: '/demos/ai-content.jpg',category: 'Content AI'
     }
   ];
-
   const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+    setIsPlaying(!isPlaying),
+  },
 
   const handleTimeUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCurrentTime(parseInt(e.target.value));
+    setCurrentTime(parseInt(e.target.value))
   };
-
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
-  };
+    const secs = seconds % 60,
+    return `${mins}:${secs.toString().padStart(2, '0')}`,
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -250,7 +226,7 @@ export default function Demo() {
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to See More?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -269,21 +245,13 @@ export default function Demo() {
 
       <style>{`
         .slider::-webkit-slider-thumb {
-          appearance: none;
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #3b82f6;
-          cursor: pointer;
+          appearance: none,height: 20px,width: 20px;
+          border-radius: 50%,background: #3b82f6,cursor: pointer
         }
         
-        .slider::-moz-range-thumb {
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #3b82f6;
-          cursor: pointer;
-          border: none;
+        .slider: :-moz-range-thumb {
+          height: 20px,width: 20px;
+          border-radius: 50%,background: #3b82f6,cursor: pointer,border: none
         }
       `}</style>
     </div>

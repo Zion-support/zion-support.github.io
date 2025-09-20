@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Star, ArrowRight, CheckCircle, 
   Brain, Atom, Rocket, Shield, 
@@ -20,23 +20,23 @@ import {
   Flame, Battery, Power, Wifi, Bluetooth, Radio,
   Antenna, Signal, Compass, Navigation, Map, Globe2,
   DollarSign, CreditCard, Package, MessageCircle
-} from 'lucide-react';
-import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
+} from 'lucide-react',
+import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions',
+import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const InnovativeMicroSaasShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
-  const allServices = [...innovativeMicroSaasSolutions, ...cuttingEdgeAIServices];
+  const allServices = [...innovativeMicroSaasSolutions, ...cuttingEdgeAIServices],
 
   const categories = [
     { id: 'all', name: '🚀 All Solutions', icon: Globe, count: allServices.length },
@@ -57,97 +57,97 @@ const InnovativeMicroSaasShowcase: React.FC = () => {
     { id: 'AI Healthcare', name: '🏥 AI Healthcare', icon: Stethoscope, count: allServices.filter(s => s.category === 'AI Healthcare').length },
     { id: 'AI Neural Interfaces', name: '🧬 AI Neural Interfaces', icon: Dna, count: allServices.filter(s => s.category === 'AI Neural Interfaces').length },
     { id: 'AI Quantum Computing', name: '⚛️ AI Quantum Computing', icon: Atom, count: allServices.filter(s => s.category === 'AI Quantum Computing').length }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Content Marketing':
-        return <Palette className="w-6 h-6 text-pink-400" />;
+        return <Palette className="w-6 h-6 text-pink-400" />,
       case 'Business Operations':
-        return <Building className="w-6 h-6 text-blue-400" />;
+        return <Building className="w-6 h-6 text-blue-400" />,
       case 'Marketing Automation':
-        return <TrendingUp className="w-6 h-6 text-green-400" />;
+        return <TrendingUp className="w-6 h-6 text-green-400" />,
       case 'Customer Success':
-        return <Users className="w-6 h-6 text-purple-400" />;
+        return <Users className="w-6 h-6 text-purple-400" />,
       case 'Sales Automation':
-        return <DollarSign className="w-6 h-6 text-yellow-400" />;
+        return <DollarSign className="w-6 h-6 text-yellow-400" />,
       case 'Financial Technology':
-        return <CreditCard className="w-6 h-6 text-emerald-400" />;
+        return <CreditCard className="w-6 h-6 text-emerald-400" />,
       case 'Human Resources':
-        return <Users className="w-6 h-6 text-indigo-400" />;
+        return <Users className="w-6 h-6 text-indigo-400" />,
       case 'Supply Chain Management':
-        return <Package className="w-6 h-6 text-orange-400" />;
+        return <Package className="w-6 h-6 text-orange-400" />,
       case 'Customer Support':
-        return <MessageCircle className="w-6 h-6 text-red-400" />;
+        return <MessageCircle className="w-6 h-6 text-red-400" />,
       case 'AI Consciousness':
-        return <Brain className="w-6 h-6 text-violet-400" />;
+        return <Brain className="w-6 h-6 text-violet-400" />,
       case 'AI Emotional Intelligence':
-        return <Heart className="w-6 h-6 text-rose-400" />;
+        return <Heart className="w-6 h-6 text-rose-400" />,
       case 'AI Creativity':
-        return <Palette className="w-6 h-6 text-cyan-400" />;
+        return <Palette className="w-6 h-6 text-cyan-400" />,
       case 'AI Psychology':
-        return <Brain className="w-6 h-6 text-teal-400" />;
+        return <Brain className="w-6 h-6 text-teal-400" />,
       case 'AI Business Management':
-        return <Building className="w-6 h-6 text-sky-400" />;
+        return <Building className="w-6 h-6 text-sky-400" />,
       case 'AI Healthcare':
-        return <Stethoscope className="w-6 h-6 text-lime-400" />;
+        return <Stethoscope className="w-6 h-6 text-lime-400" />,
       case 'AI Neural Interfaces':
-        return <Dna className="w-6 h-6 text-fuchsia-400" />;
+        return <Dna className="w-6 h-6 text-fuchsia-400" />,
       case 'AI Quantum Computing':
-        return <Atom className="w-6 h-6 text-amber-400" />;
+        return <Atom className="w-6 h-6 text-amber-400" />,
       default:
-        return <Zap className="w-6 h-6 text-gray-400" />;
+        return <Zap className="w-6 h-6 text-gray-400" />
     }
-  };
+  },
 
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Content Marketing':
-        return 'border-pink-500/30 bg-pink-500/10';
+        return 'border-pink-500/30 bg-pink-500/10',
       case 'Business Operations':
-        return 'border-blue-500/30 bg-blue-500/10';
+        return 'border-blue-500/30 bg-blue-500/10',
       case 'Marketing Automation':
-        return 'border-green-500/30 bg-green-500/10';
+        return 'border-green-500/30 bg-green-500/10',
       case 'Customer Success':
-        return 'border-purple-500/30 bg-purple-500/10';
+        return 'border-purple-500/30 bg-purple-500/10',
       case 'Sales Automation':
-        return 'border-yellow-500/30 bg-yellow-500/10';
+        return 'border-yellow-500/30 bg-yellow-500/10',
       case 'Financial Technology':
-        return 'border-emerald-500/30 bg-emerald-500/10';
+        return 'border-emerald-500/30 bg-emerald-500/10',
       case 'Human Resources':
-        return 'border-indigo-500/30 bg-indigo-500/10';
+        return 'border-indigo-500/30 bg-indigo-500/10',
       case 'Supply Chain Management':
-        return 'border-orange-500/30 bg-orange-500/10';
+        return 'border-orange-500/30 bg-orange-500/10',
       case 'Customer Support':
-        return 'border-red-500/30 bg-red-500/10';
+        return 'border-red-500/30 bg-red-500/10',
       case 'AI Consciousness':
-        return 'border-violet-500/30 bg-violet-500/10';
+        return 'border-violet-500/30 bg-violet-500/10',
       case 'AI Emotional Intelligence':
-        return 'border-rose-500/30 bg-rose-500/10';
+        return 'border-rose-500/30 bg-rose-500/10',
       case 'AI Creativity':
-        return 'border-cyan-500/30 bg-cyan-500/10';
+        return 'border-cyan-500/30 bg-cyan-500/10',
       case 'AI Psychology':
-        return 'border-teal-500/30 bg-teal-500/10';
+        return 'border-teal-500/30 bg-teal-500/10',
       case 'AI Business Management':
-        return 'border-sky-500/30 bg-sky-500/10';
+        return 'border-sky-500/30 bg-sky-500/10',
       case 'AI Healthcare':
-        return 'border-lime-500/30 bg-lime-500/10';
+        return 'border-lime-500/30 bg-lime-500/10',
       case 'AI Neural Interfaces':
-        return 'border-fuchsia-500/30 bg-fuchsia-500/10';
+        return 'border-fuchsia-500/30 bg-fuchsia-500/10',
       case 'AI Quantum Computing':
-        return 'border-amber-500/30 bg-amber-500/10';
+        return 'border-amber-500/30 bg-amber-500/10',
       default:
-        return 'border-gray-500/30 bg-gray-500/10';
+        return 'border-gray-500/30 bg-gray-500/10'
     }
-  };
+  },
 
   return (
     <>
@@ -192,17 +192,17 @@ const InnovativeMicroSaasShowcase: React.FC = () => {
               className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-40"
               style={{
                 left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
               animate={{
                 y: [0, -50, 0],
                 opacity: [0.4, 0.8, 0.4],
-                scale: [1, 1.5, 1],
+                scale: [1, 1.5, 1]
               }}
               transition={{
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: Math.random() * 2
               }}
             />
           ))}
@@ -482,7 +482,7 @@ const InnovativeMicroSaasShowcase: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  ),
+},
 
-export default InnovativeMicroSaasShowcase;
+export default InnovativeMicroSaasShowcase,

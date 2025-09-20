@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Cost‑Aware Agent Operations | Zion Tech Group';
+  title: 'AI 2026: Cost‑Aware Agent Operations | Zion Tech Group',
   description:,
-    'Reduce AI operating costs 30–70% with governed model routing, caching, and evaluation‑driven optimization.',
-};
+    'Reduce AI operating costs 30–70% with governed model routing, caching, and evaluation‑driven optimization.'
+},
 export default function CostAwareAgentOperationsPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -52,5 +52,5 @@ export default function CostAwareAgentOperationsPage() {,
         <Link href="/content" className="text-emerald-700 hover:underline">Content Hub</Link>,
       </div>,
     </main>,
-  ),}
+  )}
 ,

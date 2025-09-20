@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Brain,
@@ -10,72 +10,72 @@ import {,
   Shield,
   Zap,
   Target,
-  TrendingUp;
-  Users;
-  Globe;
-  Rocket;
-  Star;
-  ChevronRight;
-  Play;
-  CheckCircle;
-  ArrowRight,
-} from 'lucide-react';
+  TrendingUp,
+  Users,
+  Globe,
+  Rocket,
+  Star,
+  ChevronRight,
+  Play,
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react',
 const AI2025_2026UltimateTechnologyShowcase = () => {,
-  const [activeTabsetActiveTab] = useState('ai-2025');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-2025'),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const technologies = {,
     'ai-2025': {,
-      title: 'AI 2025 Revolutionary Breakthroughs';
-      subtitle: 'Transform Your Business with Next-Generation AI Solutions';
+      title: 'AI 2025 Revolutionary Breakthroughs',
+      subtitle: 'Transform Your Business with Next-Generation AI Solutions',
       features: [,
         {,
-          icon: Brain;
-          title: 'Neural Consciousness AI';
-          description: 'Advanced AI systems with self-awareness and emotional intelligence';
-          benefits: ['300% faster decision making'95% accuracy in 'predictionsReal-time adaptation'],};
+          icon: Brain,
+          title: 'Neural Consciousness AI',
+          description: 'Advanced AI systems with self-awareness and emotional intelligence',
+          benefits: ['300% faster decision making'95% accuracy in 'predictionsReal-time adaptation']},
         {,
-          icon: Cpu;
-          title: 'Quantum-Neural Fusion';
-          description: 'Revolutionary computing that combines quantum and neural processing';
-          benefits: ['10x processing 'speedUnlimited 'scalability', 'Zero latency responses'],
-        };
+          icon: Cpu,
+          title: 'Quantum-Neural Fusion',
+          description: 'Revolutionary computing that combines quantum and neural processing',
+          benefits: ['10x processing 'speedUnlimited 'scalabilityZero latency responses']
+        },
         {,
-          icon: Database;
-          title: 'Autonomous Data Intelligence';
-          description: 'Self-managing data systems that optimize and secure themselves';
-          benefits: ['99.9% 'uptimeAuto-'optimization', 'Predictive maintenance'],
+          icon: Database,
+          title: 'Autonomous Data Intelligence',
+          description: 'Self-managing data systems that optimize and secure themselves',
+          benefits: ['99.9% 'uptimeAuto-'optimizationPredictive maintenance']
         }
-      ],
-    };
+      ]
+    },
     'ai-2026': {,
-      title: 'AI 2026 Future Vision';
-      subtitle: 'Prepare for the Next Decade of AI Innovation';
+      title: 'AI 2026 Future Vision',
+      subtitle: 'Prepare for the Next Decade of AI Innovation',
       features: [,
         {,
-          icon: Globe;
-          title: 'Global AI Ecosystem';
-          description: 'Worldwide AI network connecting businesses and individuals';
-          benefits: ['Global 'connectivityCross-platform 'integration', 'Universal AI access'],
-        };
+          icon: Globe,
+          title: 'Global AI Ecosystem',
+          description: 'Worldwide AI network connecting businesses and individuals',
+          benefits: ['Global 'connectivityCross-platform 'integrationUniversal AI access']
+        },
         {,
-          icon: Rocket;
-          title: 'Space-Age AI Computing';
-          description: 'AI systems designed for space exploration and interplanetary communication';
-          benefits: ['Space-grade 'reliabilityInterplanetary 'communication', 'Zero-gravity optimization'],
-        };
+          icon: Rocket,
+          title: 'Space-Age AI Computing',
+          description: 'AI systems designed for space exploration and interplanetary communication',
+          benefits: ['Space-grade 'reliabilityInterplanetary 'communicationZero-gravity optimization']
+        },
         {,
-          icon: Star;
-          title: 'Conscious AI Beings';
-          description: 'AI entities with full consciousness and creative capabilities';
-          benefits: ['Creative problem 'solvingEmotional 'intelligence', 'Autonomous innovation'],
+          icon: Star,
+          title: 'Conscious AI Beings',
+          description: 'AI entities with full consciousness and creative capabilities',
+          benefits: ['Creative problem 'solvingEmotional 'intelligenceAutonomous innovation']
         }
-      ],
+      ]
     }
-  };
-  const currentTech = technologies[activeTab as keyof typeof technologies];
+  },
+  const currentTech = technologies[activeTab as keyof typeof technologies],
   return (,
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -88,14 +88,14 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full",
               style={{,
-                left: `${Math.random() * 100,}%`;
-                top: `${Math.random() * 100,}%`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
-                opacity: [010];
-                scale: [010],}}
-                duration: 3;
-                repeat: Infinity;
-                delay: Math.random() * 3,}}
+                opacity: [010],
+                scale: [010]}}
+                duration: 3,
+                repeat: Infinity,
+                delay: Math.random() * 3}}
             />,
           ))}
         </div>,
@@ -116,7 +116,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
             Experience the future of artificial intelligence with our revolutionary 2025-2026 technology suite.,
             Transform your business with cutting-edge AI solutions that were once science fiction.,
           </p>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             <button,
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-2xl transition-all duration-300",
@@ -132,7 +132,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
             </button>,
           </div>,
         </div>,
-        {/* Tab Navigation */,}
+        {/* Tab Navigation */}
         <div,
           className="flex justify-center mb-12",
         >,
@@ -142,7 +142,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
               className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${,
                 activeTab === 'ai-2025',
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg',
-                  : 'text-gray-300 hover: text-white',}`}
+                  : 'text-gray-300 hover: text-white'}`}
             >,
               AI 2025,
             </button>,
@@ -151,7 +151,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
               className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${,
                 activeTab === 'ai-2026',
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg',
-                  : 'text-gray-300 hover: text-white',}`}
+                  : 'text-gray-300 hover: text-white'}`}
             >,
               AI 2026,
             </button>,
@@ -164,7 +164,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
           >,
             <div className="text-center mb-12">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">,
-                {currentTech.title,}
+                {currentTech.title}
               </h2>,
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">,
                 {currentTech.subtitle}
@@ -173,14 +173,14 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
             <div className="grid md: grid-cols-3 gap-8">,
               {currentTech.features.map((featureindex) => (,
                 <div,
-                  key={feature.title,}
+                  key={feature.title}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover: border-purple-400/50 transition-all duration-300 group",
                 >,
                   <div className="flex items-center mb-6">,
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">,
                       <feature.icon className="w-8 h-8 text-white" />,
                     </div>,
-                    <h3 className="text-2xl font-bold text-white">{feature.title,}</h3>,
+                    <h3 className="text-2xl font-bold text-white">{feature.title}</h3>,
                   </div>,
                   <p className="text-gray-300 mb-6 text-lg leading-relaxed">,
                     {feature.description}
@@ -190,8 +190,7 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
                       <div key={benefitIndex} className="flex items-center">,
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />,
                         <span className="text-gray-300">{benefit}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
               ))}
@@ -208,21 +207,20 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
           </div>,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,
             {[,
-              { number: '500+'label: 'Enterprise Clients' ,};
-              { number: '99.9%'label: 'Uptime Guarantee' ,};
-              { number: '300%'label: 'ROI Increase' ,};
-              { number: '24/7'label: 'AI Support' ,}
+              { number: '500+'label: 'Enterprise Clients' },
+              { number: '99.9%'label: 'Uptime Guarantee' },
+              { number: '300%'label: 'ROI Increase' },
+              { number: '24/7'label: 'AI Support' }
             ].map((statindex) => (,
               <div,
                 key={stat.label}
                 className="text-center",
               >,
                 <div className="text-4xl md: text-5xl font-bold text-white mb-2">,
-                  {stat.number,}
+                  {stat.number}
                 </div>,
                 <div className="text-gray-300">{stat.label}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Call to Action */}
@@ -254,6 +252,6 @@ const AI2025_2026UltimateTechnologyShowcase = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default AI2025_2026UltimateTechnologyShowcase;
+  )},
+export default AI2025_2026UltimateTechnologyShowcase,
 </div></div></div></div></div></div>,

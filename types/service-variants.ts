@@ -103,4 +103,4 @@ export type ServiceVariant =
   | 'education-futuristic'
   | 'real-estate-futuristic'
   | 'industrial-futuristic'
-  | 'neural-futuristic';
+  | 'neural-futuristic',

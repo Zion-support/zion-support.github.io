@@ -1,26 +1,26 @@
 
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { useTranslation } from "react-i18next";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useCart } from "@/context/CartContext";
-import { Heart, MessageSquare, ShoppingCart } from "lucide-react";
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useTranslation } from "react-i18next",
+import { useFavorites } from "@/hooks/useFavorites",
+import { useCart } from "@/context/CartContext",
+import { Heart, MessageSquare, ShoppingCart } from "lucide-react",
 
 interface MainNavigationProps {
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
+  isAdmin?: boolean,
+  unreadCount?: number,
+  className?: string,
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { count } = useFavorites();
-  const location = useLocation();
-  const { t } = useTranslation();
-  const { items } = useCart();
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const { count } = useFavorites(),
+  const location = useLocation(),
+  const { t } = useTranslation(),
+  const { items } = useCart(),
+  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0),
 
   const baseLinks = [
     {
@@ -53,9 +53,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     }
-  ];
+  ],
 
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
+  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),
   
   // Add authenticated-only links
   if (isAuthenticated) {
@@ -64,7 +64,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: t('nav.dashboard'),
       href: '/dashboard',
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
-    });
+    }),
   }
   
   // Add admin-only links
@@ -74,7 +74,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: t('nav.analytics'),
       href: '/analytics',
       matches: (path: string) => path.startsWith('/analytics')
-    });
+    }),
   }
   
   return (
@@ -165,5 +165,5 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         </li>
       </ul>
     </nav>
-  );
+  ),
 }

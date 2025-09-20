@@ -1,3 +1,3 @@
 const GreenIT: React.FC = () => {,
-  return (),};
-export default GreenIT;
+  return ()},
+export default GreenIT,

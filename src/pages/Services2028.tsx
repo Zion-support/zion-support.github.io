@@ -1,65 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Star, Sparkles, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, ChevronDown, CheckCircle, ExternalLink } from 'lucide-react';
-import SEO from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
-import { COMPREHENSIVE_IT_SERVICES_2028 } from '../data/comprehensiveITServices2028';
-import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide2028';
-
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, Filter, Star, Sparkles, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, ChevronDown, CheckCircle, ExternalLink } from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028";
+import { COMPREHENSIVE_IT_SERVICES_2028 } from "../data/comprehensiveITServices2028";
+import { COMPREHENSIVE_PRICING_2028 } from "../data/comprehensivePricingGuide2028";
 export default function Services2028() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
+  const [sortBy, setSortBy] = useState('featured'),
 
   // Combine all services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2028,
     ...COMPREHENSIVE_IT_SERVICES_2028
-  ];
+  ],
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],
 
   // Filter services based on search and filters
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
     
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'low' && service.price < 2000) ||
                         (selectedPriceRange === 'medium' && service.price >= 2000 && service.price < 5000) ||
-                        (selectedPriceRange === 'high' && service.price >= 5000);
+                        (selectedPriceRange === 'high' && service.price >= 5000),
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice,
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'price-high':
         return b.price - a.price;
       case 'rating':
         return b.rating - a.rating;
       case 'name':
         return a.title.localeCompare(b.title);
-      default:
-        return b.featured ? 1 : -1;
+      default: return b.featured ? 1 : -1
     }
   });
-
   const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    website: "https://ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709"
+    phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"
   };
-
   return (
     <div className="min-h-screen bg-cyber-black">
       {/* Futuristic Background */}
@@ -69,8 +62,8 @@ export default function Services2028() {
             key={i}
             className="matrix-rain"
             style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 20}s`,
+              left: `${Math.random() * 100}%`;
+              animationDelay: `${Math.random() * 20}s`;
               animationDuration: `${15 + Math.random() * 10}s`
             }}
           >
@@ -82,8 +75,8 @@ export default function Services2028() {
             key={i}
             className="quantum-particles"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`;
+              top: `${Math.random() * 100}%`;
               animationDelay: `${Math.random() * 6}s`
             }}
           />

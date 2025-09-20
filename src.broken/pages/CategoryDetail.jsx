@@ -1,17 +1,17 @@
-import { useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom',
 export default function Page() {
 }
     // Cast to specify the expected route param type since useParams may be untyped
-    const { slug } = useParams () ;
-    const navigate = useNavigate () ;
-    const [isLoading, setIsLoading] = useState(true);
-    const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+    const { slug } = useParams () ,
+    const navigate = useNavigate () ,
+    const [isLoading, setIsLoading] = useState(true),
+    const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
     const [category, setCategory] = useState({
         title: "",
         description: "",
         icon: <Bot className="w-6 h-6"/>
-    });
-    const innovationCounterRef = useRef(0) ;
+    }),
+    const innovationCounterRef = useRef(0) ,
     // Map of category slugs to their display data
     const categoryData = {
   'services': {
@@ -75,20 +75,20 @@ export default function Page() {
             description: "Enterprise AI integrations and services",
             icon: <Briefcase className="w-6 h-6"/>
 
-    };
+    },
     useEffect(() => {
-        setIsLoading(true) ;
+        setIsLoading(true) ,
         // Find the category data based on slug
         const currentCategory = categoryData[slug] || {
             title: slug?.split('-') .map(word => word.charAt (0) .toUpperCase () + word.slice(1) ) .join(' ') || "Category",
             description: "Explore our collection in this category",
             icon: <Bot className="w-6 h-6"/>
-        };
-        setCategory(currentCategory) ;
-        innovationCounterRef.current = 0;
+        },
+        setCategory(currentCategory) ,
+        innovationCounterRef.current = 0,
         // Filter listings by category
-        const categoryTitle = currentCategory.title;
-        const filteredListings = MARKETPLACE_LISTINGS.filter(listing => listing.category.toLowerCase () === categoryTitle.toLowerCase () ) ;
+        const categoryTitle = currentCategory.title,
+        const filteredListings = MARKETPLACE_LISTINGS.filter(listing => listing.category.toLowerCase () === categoryTitle.toLowerCase () ) ,
         // If we don't have real listings for this category, generate placeholder listings
         const listingsToShow = filteredListings.length > 0 ? filteredListings :
             Array(4) .fill(null) .map((_, index) => ({
@@ -98,34 +98,34 @@ export default function Page() {
                 category: currentCategory.title,
                 price: Math.floor(Math.random () * 500) + 50,
                 currency: "$",
-                tags[`${slug}`, "ai", "tool"],;
+                tags[`${slug}`, "ai", "tool"],
                 author: {
                     name: `Provider ${index + 1}`,
                     id: `author-${index + 1}`,
                     avatarUrl: null
                 },
-                images[`/placeholder.svg`],;
+                images[`/placeholder.svg`],
                 createdAt: new Date () .toISOString () ,
                 rating: Math.floor(Math.random () * 5) + 1,
-                reviewCount: Math.floor(Math.random () * 100) }) ) ;
-        setListings(listingsToShow) ;
-        setIsLoading(false) }, [slug]) ;
+                reviewCount: Math.floor(Math.random () * 100) }) ) ,
+        setListings(listingsToShow) ,
+        setIsLoading(false) }, [slug]) ,
     useEffect(() => {
-        if(slug !== 'innovation') return;
+        if(slug !== 'innovation') return,
         const interval = setInterval(() => {
-            innovationCounterRef.current += 1;
+            innovationCounterRef.current += 1,
             setListings((prev) => [generateInnovationListing(innovationCounterRef.current) ,
-                ...prev,
-            ]) }, 120000) ; // every 2 minutes
-        return () => clearInterval(interval) }, [slug]) ;
+                ...prev
+            ]) }, 120000) , // every 2 minutes
+        return () => clearInterval(interval) }, [slug]) ,
     // Handle requesting a quote
     const handleRequestQuote = (listingId) => {
-        const listing = listings.find(item => item.id === listingId) ;
+        const listing = listings.find(item => item.id === listingId) ,
         if(listing) {
             toast({
                 title: "Quote Requested",
                 description: `Your quote request for ${listing.title} has been sent.`
-            }) ;
+            }) ,
             // Navigate to the quote request page with the listing information
             router("/request - quote", {
                 state: {
@@ -138,7 +138,7 @@ export default function Page() {
                     }
                 }
             }) }
-    };
+    },
     return (<>
 
       <div className="min - h-screen bg-zion -blue">

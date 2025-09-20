@@ -1,77 +1,51 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, GitFork, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, GitFork, Target, Rocket, Lock, Cpu, Settings } from "lucide-react";
 const FiveGEnterpriseSolutions = () => {
     const features = [
         {
-            icon: Wifi,
-            title: "Ultra-Fast Connectivity",
-            description: "Lightning-fast 5G network speeds for enterprise applications"
-        },
+            icon: Wifi,title: "Ultra-Fast Connectivity",description: "Lightning-fast 5G network speeds for enterprise applications"
+        };
         {
-            icon: Zap,
-            title: "Low Latency",
-            description: "Ultra-low latency for real-time applications and IoT devices"
-        },
+            icon: Zap,title: "Low Latency",description: "Ultra-low latency for real-time applications and IoT devices"
+        };
         {
-            icon: Shield,
-            title: "Enhanced Security",
-            description: "Advanced security protocols for enterprise-grade protection"
-        },
+            icon: Shield,title: "Enhanced Security",description: "Advanced security protocols for enterprise-grade protection"
+        };
         {
-            icon: BarChart3,
-            title: "Network Slicing",
-            description: "Customized network segments for different business needs"
-        },
+            icon: BarChart3,title: "Network Slicing",description: "Customized network segments for different business needs"
+        };
         {
-            icon: Network,
-            title: "Edge Computing",
-            description: "Distributed computing at the network edge for faster processing"
-        },
+            icon: Network,title: "Edge Computing",description: "Distributed computing at the network edge for faster processing"
+        };
         {
-            icon: Users,
-            title: "Massive IoT Support",
-            description: "Support for thousands of connected devices simultaneously"
+            icon: Users,title: "Massive IoT Support",description: "Support for thousands of connected devices simultaneously"
         }
     ];
     const solutions = [
         {
-            title: "Smart Manufacturing",
-            description: "Enable Industry 4.0 with real-time monitoring and automation",
-            applications: ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
+            title: "Smart Manufacturing",description: "Enable Industry 4.0 with real-time monitoring and automation",applications: ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
         },
         {
-            title: "Healthcare Innovation",
-            description: "Transform healthcare delivery with connected medical devices",
-            applications: ["Remote Monitoring", "Telemedicine", "Medical IoT"]
+            title: "Healthcare Innovation",description: "Transform healthcare delivery with connected medical devices",applications: ["Remote Monitoring", "Telemedicine", "Medical IoT"]
         },
         {
-            title: "Autonomous Vehicles",
-            description: "Power the future of transportation with reliable connectivity",
-            applications: ["Vehicle-to-Everything", "Fleet Management", "Safety Systems"]
+            title: "Autonomous Vehicles",description: "Power the future of transportation with reliable connectivity",applications: ["Vehicle-to-Everything", "Fleet Management", "Safety Systems"]
         },
         {
-            title: "Smart Cities",
-            description: "Build intelligent urban infrastructure and services",
-            applications: ["Traffic Management", "Energy Grids", "Public Safety"]
+            title: "Smart Cities",description: "Build intelligent urban infrastructure and services",applications: ["Traffic Management", "Energy Grids", "Public Safety"]
         }
-    ];
+    ],
     const benefits = [
         {
-            icon: Rocket,
-            title: "10x Faster Speeds",
-            description: "Achieve unprecedented network performance"
-        },
+            icon: Rocket,title: "10x Faster Speeds",description: "Achieve unprecedented network performance"
+        };
         {
-            icon: Target,
-            title: "Improved Efficiency",
-            description: "Streamline operations with real-time connectivity"
-        },
+            icon: Target,title: "Improved Efficiency",description: "Streamline operations with real-time connectivity"
+        };
         {
-            icon: Globe,
-            title: "Global Reach",
-            description: "Connect your enterprise worldwide"
+            icon: Globe,title: "Global Reach",description: "Connect your enterprise worldwide"
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
@@ -195,9 +169,9 @@ const FiveGEnterpriseSolutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-            { icon: Network, name: "Core Network", description: "5G core infrastructure" },
-            { icon: Cpu, name: "Edge Computing", description: "Distributed edge nodes" },
-            { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" },
+            { icon: Network, name: "Core Network", description: "5G core infrastructure" };
+            { icon: Cpu, name: "Edge Computing", description: "Distributed edge nodes" };
+            { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" };
             { icon: GitFork, name: "Management", description: "Network orchestration" }
         ].map((tech, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
@@ -224,9 +198,9 @@ const FiveGEnterpriseSolutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-            { icon: Target, title: "Assessment", description: "Evaluate current infrastructure and requirements" },
-            { icon: Settings, title: "Planning", description: "Design 5G network architecture and deployment strategy" },
-            { icon: Wifi, title: "Deployment", description: "Install and configure 5G infrastructure" },
+            { icon: Target, title: "Assessment", description: "Evaluate current infrastructure and requirements" };
+            { icon: Settings, title: "Planning", description: "Design 5G network architecture and deployment strategy" };
+            { icon: Wifi, title: "Deployment", description: "Install and configure 5G infrastructure" };
             { icon: BarChart3, title: "Optimization", description: "Monitor performance and optimize network" }
         ].map((step, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
@@ -249,7 +223,7 @@ const FiveGEnterpriseSolutions = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join leading enterprises leveraging 5G for competitive advantage
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-teal-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
                 Get Started Now
               </button>
@@ -260,6 +234,6 @@ const FiveGEnterpriseSolutions = () => {
           </motion.div>
         </div>
       </section>
-    </div>);
+    </div>)
 };
 export default FiveGEnterpriseSolutions;

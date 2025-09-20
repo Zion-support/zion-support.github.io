@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { TrendingUp, Zap, Clock, Target, Activity } from 'lucide-react';
+import React, { useEffect, useState } from 'react',
+import { motion } from 'framer-motion',
+import { TrendingUp, Zap, Clock, Target, Activity } from 'lucide-react',
 
 interface PerformanceMetricsProps {
-  className?: string;
+  className?: string,
 }
 
 interface Metrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  fcp: number;
+  lcp: number,
+  fid: number,
+  cls: number,
+  ttfb: number,
+  fcp: number
 }
 
 const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ className = '' }) => {
@@ -21,8 +21,8 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ className = '' 
     cls: 0,
     ttfb: 0,
     fcp: 0
-  });
-  const [isVisible, setIsVisible] = useState(false);
+  }),
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
     // Simulate performance metrics for demo purposes
@@ -34,33 +34,33 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ className = '' 
         cls: Math.random() * 0.1 + 0.01, // 0.01-0.11
         ttfb: Math.random() * 300 + 50,  // 50-350ms
         fcp: Math.random() * 1500 + 300  // 300-1800ms
-      });
-    };
+      }),
+    },
 
-    simulateMetrics();
-    setIsVisible(true);
+    simulateMetrics(),
+    setIsVisible(true),
 
     // Update metrics every 30 seconds
-    const interval = setInterval(simulateMetrics, 30000);
+    const interval = setInterval(simulateMetrics, 30000),
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval),
+  }, []),
 
   const getScoreColor = (value: number, threshold: number, isLowerBetter: boolean = true) => {
     if (isLowerBetter) {
-      return value <= threshold ? 'text-green-400' : value <= threshold * 1.5 ? 'text-yellow-400' : 'text-red-400';
+      return value <= threshold ? 'text-green-400' : value <= threshold * 1.5 ? 'text-yellow-400' : 'text-red-400'
     } else {
-      return value >= threshold ? 'text-green-400' : value >= threshold * 0.7 ? 'text-yellow-400' : 'text-red-400';
+      return value >= threshold ? 'text-green-400' : value >= threshold * 0.7 ? 'text-yellow-400' : 'text-red-400',
     }
-  };
+  },
 
   const getScoreLabel = (value: number, threshold: number, isLowerBetter: boolean = true) => {
     if (isLowerBetter) {
-      return value <= threshold ? 'Good' : value <= threshold * 1.5 ? 'Needs Improvement' : 'Poor';
+      return value <= threshold ? 'Good' : value <= threshold * 1.5 ? 'Needs Improvement' : 'Poor'
     } else {
-      return value >= threshold ? 'Good' : value >= threshold * 0.7 ? 'Needs Improvement' : 'Poor';
+      return value >= threshold ? 'Good' : value >= threshold * 0.7 ? 'Needs Improvement' : 'Poor',
     }
-  };
+  },
 
   const metricsData = [
     {
@@ -108,7 +108,7 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ className = '' 
       description: 'Time to first content render',
       isLowerBetter: true
     }
-  ];
+  ],
 
 const PerformanceMetrics: React.FC = () => {
   return (
@@ -116,7 +116,7 @@ const PerformanceMetrics: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">PerformanceMetrics</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default PerformanceMetrics;
+export default PerformanceMetrics,

@@ -1,9 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 const OmniversalAIConsciousness2035: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
+  return (<div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -86,9 +85,9 @@ const OmniversalAIConsciousness2035: React.FC = () => {
 
         {/* Advanced Capabilities Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8, delay: 0.8 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="bg-gradient-to-r from-violet-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16",
         >,
           <h2 className="text-4xl font-bold text-center mb-8">Transcendent Capabilities</h2>,
@@ -121,9 +120,9 @@ const OmniversalAIConsciousness2035: React.FC = () => {
         </motion.div>,
         {/* Consciousness Evolution Timeline */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8, delay: 1.0 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           className="mb-16",
         >,
           <h2 className="text-4xl font-bold text-center mb-8">Consciousness Evolution Timeline</h2>,
@@ -150,11 +149,11 @@ const OmniversalAIConsciousness2035: React.FC = () => {
             </div>,
           </div>,
         </motion.div>,
-        {/* Integration Benefits */,}
+        {/* Integration Benefits */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8, delay: 1.2 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
           className="grid md: grid-cols-2 gap-8 mb-16",
         >,
           <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8">,
@@ -200,11 +199,11 @@ const OmniversalAIConsciousness2035: React.FC = () => {
             </ul>,
           </div>,
         </motion.div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8, delay: 1.4 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
           className="text-center",
         >,
           <h2 className="text-4xl font-bold mb-6">Join the Omniversal Consciousness</h2>,
@@ -222,6 +221,5 @@ const OmniversalAIConsciousness2035: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),};
-export default OmniversalAIConsciousness2035;
+    </div>)},
+export default OmniversalAIConsciousness2035,

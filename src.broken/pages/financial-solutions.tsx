@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -6,61 +6,55 @@ export default function Page() {
       description:
         'Cloud financial operations optimization for cost management and efficiency.',
       icon: Calculator,
-      features: ['Cost optimization',
-        'Resource management',
-        'Budget planning',
-        'ROI analysis',
-      ],
+      features: ['Cost optimizationResource management',
+        'Budget planningROI analysis'
+      ]
     },
     {
       title: 'Cloud FinOps Optimizer',
       description:
         'Comprehensive cloud financial operations management and optimization.',
       icon: Cloud,
-      features: ['Cloud cost management',
-        'Resource optimization',
-        'Budget tracking',
-        'Efficiency metrics',
-      ],
+      features: ['Cloud cost managementResource optimization',
+        'Budget trackingEfficiency metrics'
+      ]
     },
     {
       title: 'AI Compliance Assistant',
       description:
         'Automated compliance monitoring and reporting for financial regulations.',
       icon: Lock,
-      features: ['Regulatory compliance',
-        'Automated reporting',
-        'Audit trails',
-        'Risk monitoring',
-      ],
-    },
-  ];
+      features: ['Regulatory complianceAutomated reporting',
+        'Audit trailsRisk monitoring'
+      ]
+    }
+  ],
 
   const benefits = [{
       title: 'Risk Mitigation',
       description:
         'Advanced AI algorithms identify and mitigate financial risks',
-      icon: Shield,
+      icon: Shield
     },
     {
       title: 'Cost Optimization',
       description:
         'Intelligent systems optimize financial operations and reduce costs',
-      icon: TrendingUp,
+      icon: TrendingUp
     },
     {
       title: 'Compliance Assurance',
       description:
         'Automated compliance monitoring ensures regulatory adherence',
-      icon: Lock,
+      icon: Lock
     },
     {
       title: 'Data - Driven Decisions',
       description:
         'AI - powered insights enable better financial decision - making',
-      icon: Brain,
-    },
-  ];
+      icon: Brain
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Header */}
@@ -195,7 +189,7 @@ export default function Page() {
           <p className="text-xl text-gray - 300 mb-8 max - w-2xl mx -auto">
             Let's discuss how our financial solutions can optimize your
             operations and drive growth.</p>
-          <div className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div className="flex flex - col sm: flex - row gap-4 justify -center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:scale -105"
@@ -211,6 +205,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},
 

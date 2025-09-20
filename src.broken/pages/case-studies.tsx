@@ -1,10 +1,10 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-    technologies: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'Terraform'],
+    technologies: ['AWSDocker', 'KubernetesJenkins', 'Terraform'],
     duration: '8 months',
     roi: '250%',
-    image: '/images / case - study - 2.jpg',
+    image: '/images / case - study - 2.jpg'
   },
   {
     id: 3,
@@ -13,21 +13,19 @@ export default function Page() {
     industry: 'Finance',
     challenge: 'Scattered data sources and lack of real - time insights',
     solution: 'Centralized data warehouse with real - time analytics dashboard',
-    results: ['Real - time data insights',
-      '30% improvement in decision making',
-      'Automated reporting system',
-      'Predictive analytics capabilities',
+    results: ['Real - time data insights30% improvement in decision making',
+      'Automated reporting systemPredictive analytics capabilities'
     ],
     metrics: {
       dataProcessing: 'Real - time',
       decisionMaking: '30% better',
       reporting: 'Automated',
-      predictions: '90% accuracy',
+      predictions: '90% accuracy'
     },
-    technologies: ['Big Data', 'Apache Spark', 'Tableau', 'Python', 'SQL'],
+    technologies: ['Big DataApache Spark', 'TableauPython', 'SQL'],
     duration: '10 months',
     roi: '400%',
-    image: '/images / case - study - 2.jpg',
+    image: '/images / case - study - 2.jpg'
   },
   {
     id: 4,
@@ -37,38 +35,34 @@ export default function Page() {
     challenge:
       'Increasing cyber threats and regulatory compliance requirements',
     solution: 'Comprehensive security framework with SOC2 compliance',
-    results: ['Zero security breaches',
-      'SOC2 Type II compliance achieved',
-      'Advanced threat detection',
-      'Employee security training',
+    results: ['Zero security breachesSOC2 Type II compliance achieved',
+      'Advanced threat detectionEmployee security training'
     ],
     metrics: {
       breaches: '0',
       compliance: 'SOC2 Type II',
       threatDetection: '99.9%',
-      training: '100% staff',
+      training: '100% staff'
     },
-    technologies: ['Cybersecurity',
-      'SOC2',
-      'Threat Detection',
-      'Compliance',
-      'Training',
+    technologies: ['CybersecuritySOC2',
+      'Threat DetectionCompliance',
+      'Training'
     ],
     duration: '12 months',
     roi: '200%',
-    image: '/images / case - study - 4.jpg',
-  },
-];
+    image: '/images / case - study - 4.jpg'
+  }
+],
 
 const CaseStudies = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
+  const [selectedIndustry, setSelectedIndustry] = useState('All'),
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState(null),
 
-  const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking'];
+  const industries = ['AllTechnology', 'HealthcareFinance', 'Banking'],
 
   const filteredCaseStudies = selectedIndustry === 'All'
       ? caseStudies
-      : caseStudies.filter(study => study.industry === selectedIndustry) ;
+      : caseStudies.filter(study => study.industry === selectedIndustry) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Hero Section */}
@@ -198,7 +192,7 @@ const CaseStudies = () => {
               Let's discuss how our technology solutions can transform your
               business and create measurable results like these case studies.</p>
 
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - blue - 600 to - cyan - 600 text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-blue - 500 / 25 transition - all duration - 300 transform hover:scale -105"
@@ -215,6 +209,6 @@ const CaseStudies = () => {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

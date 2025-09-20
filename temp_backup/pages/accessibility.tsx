@@ -1,6 +1,6 @@
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import MainLayout from '../src/components/layout/MainLayout',
+import { motion } from 'framer-motion',
 import {
   Accessibility,
   Eye,
@@ -14,7 +14,7 @@ import {
   Shield,
   Zap,
   Heart
-} from 'lucide-react';
+} from 'lucide-react',
 
 const accessibilityFeatures = [
   {
@@ -98,7 +98,7 @@ const accessibilityFeatures = [
       "Customizable interface"
     ]
   }
-];
+],
 
 const complianceStandards = [
   {
@@ -125,7 +125,7 @@ const complianceStandards = [
     status: "Compliant",
     icon: Globe
   }
-];
+],
 
 export default function AccessibilityPage() {
   const accessibilityFeatures = [
@@ -134,10 +134,8 @@ export default function AccessibilityPage() {
       description: 'Our website is fully compatible with screen readers and assistive technologies',
       icon: Ear,
       features: [
-        'Semantic HTML structure',
-        'Alt text for all images',
-        'Proper heading hierarchy',
-        'ARIA labels and descriptions'
+        'Semantic HTML structureAlt text for all images',
+        'Proper heading hierarchyARIA labels and descriptions'
       ]
     },
     {
@@ -145,10 +143,8 @@ export default function AccessibilityPage() {
       description: 'Complete website functionality accessible via keyboard only',
       icon: Hand,
       features: [
-        'Tab navigation support',
-        'Skip links for main content',
-        'Focus indicators',
-        'Keyboard shortcuts'
+        'Tab navigation supportSkip links for main content',
+        'Focus indicatorsKeyboard shortcuts'
       ]
     },
     {
@@ -156,10 +152,8 @@ export default function AccessibilityPage() {
       description: 'High contrast and customizable visual elements for better visibility',
       icon: Eye,
       features: [
-        'High contrast color schemes',
-        'Resizable text up to 200%',
-        'Color-blind friendly palettes',
-        'Clear visual hierarchy'
+        'High contrast color schemesResizable text up to 200%',
+        'Color-blind friendly palettesClear visual hierarchy'
       ]
     },
     {
@@ -167,13 +161,11 @@ export default function AccessibilityPage() {
       description: 'Clear, simple language and intuitive navigation for all users',
       icon: Brain,
       features: [
-        'Plain language content',
-        'Consistent navigation',
-        'Clear error messages',
-        'Logical content flow'
+        'Plain language contentConsistent navigation',
+        'Clear error messagesLogical content flow'
       ]
     }
-  ];
+  ],
 
   const complianceStandards = [
     {
@@ -200,7 +192,7 @@ export default function AccessibilityPage() {
       status: 'Compliant',
       icon: CheckCircle
     }
-  ];
+  ],
 
   const accessibilityTools = [
     {
@@ -223,7 +215,7 @@ export default function AccessibilityPage() {
       description: 'Regular testing with users with disabilities',
       icon: Users
     }
-  ];
+  ],
 
   const accessibilityCommitments = [
     {
@@ -246,7 +238,7 @@ export default function AccessibilityPage() {
       description: 'Ongoing monitoring to ensure continued compliance with standards',
       icon: Shield
     }
-  ];
+  ],
 
 const accessibility: React.FC = () => {
   return (
@@ -263,8 +255,8 @@ const accessibility: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default NeuralRealityEngine2035;
+export default NeuralRealityEngine2035,

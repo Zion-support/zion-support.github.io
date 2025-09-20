@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
+import { Link } from "react-router-dom";
 import { 
-  Search, 
+  Search,
   Filter, 
   Grid, 
   List, 
@@ -179,328 +179,213 @@ import {
   Cockatoo,
   Canary,
   Finch
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function SearchPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState<any[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [searchResults, setSearchResults] = useState<any[]>([]),
+  const [isSearching, setIsSearching] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedType, setSelectedType] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [popularSearches, setPopularSearches] = useState<string[]>([]);
-
   const categories = [
-    { id: 'all', name: 'All Categories', count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', count: 0 },
-    { id: 'cloud', name: 'Cloud Solutions', count: 0 },
-    { id: 'security', name: 'Security & Compliance', count: 0 },
-    { id: 'data', name: 'Data & Analytics', count: 0 },
-    { id: 'development', name: 'Development Tools', count: 0 },
-    { id: 'hardware', name: 'Hardware & Equipment', count: 0 },
-    { id: 'services', name: 'Services', count: 0 },
-    { id: 'blog', name: 'Blog Posts', count: 0 },
+    { id: 'all', name: 'All Categories', count: 0 };
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 0 };
+    { id: 'cloud', name: 'Cloud Solutions', count: 0 };
+    { id: 'security', name: 'Security & Compliance', count: 0 };
+    { id: 'data', name: 'Data & Analytics', count: 0 };
+    { id: 'development', name: 'Development Tools', count: 0 };
+    { id: 'hardware', name: 'Hardware & Equipment', count: 0 };
+    { id: 'services', name: 'Services', count: 0 };
+    { id: 'blog', name: 'Blog Posts', count: 0 };
     { id: 'documentation', name: 'Documentation', count: 0 }
   ];
-
   const types = [
-    { id: 'all', name: 'All Types', count: 0 },
-    { id: 'software', name: 'Software', count: 0 },
-    { id: 'service', name: 'Services', count: 0 },
-    { id: 'hardware', name: 'Hardware', count: 0 },
-    { id: 'article', name: 'Articles', count: 0 },
-    { id: 'guide', name: 'Guides', count: 0 },
+    { id: 'all', name: 'All Types', count: 0 };
+    { id: 'software', name: 'Software', count: 0 };
+    { id: 'service', name: 'Services', count: 0 };
+    { id: 'hardware', name: 'Hardware', count: 0 };
+    { id: 'article', name: 'Articles', count: 0 };
+    { id: 'guide', name: 'Guides', count: 0 };
     { id: 'case-study', name: 'Case Studies', count: 0 }
   ];
-
   // Mock search data - in a real app, this would come from an API
   const mockSearchData = [
     // AI & Machine Learning
     {
-      id: 'ai-chatbot',
-      title: 'AI Chatbot Platform',
-      category: 'ai-ml',
-      type: 'software',
-      icon: Bot,
-      description: 'Intelligent chatbot platform with natural language processing capabilities for customer service automation.',
-      content: 'Our AI chatbot platform leverages advanced natural language processing to provide human-like conversations. Features include multi-language support, sentiment analysis, and seamless integration with existing systems.',
-      tags: ['AI', 'Chatbot', 'NLP', 'Automation', 'Customer Service'],
-      url: '/marketplace/ai-chatbot',
-      rating: 4.8,
-      reviews: 156,
-      date: '2024-01-15',
-      author: 'Zion Tech Team',
-      readTime: '5 min read'
-    },
+      id: 'ai-chatbot',title: 'AI Chatbot Platform',category: 'ai-ml',type: 'software',icon: Bot,description: 'Intelligent chatbot platform with natural language processing capabilities for customer service automation.',content: 'Our AI chatbot platform leverages advanced natural language processing to provide human-like conversations. Features include multi-language support, sentiment analysis, and seamless integration with existing systems.',
+      tags: ['AIChatbot', 'NLPAutomation', 'Customer Service'],
+      url: '/marketplace/ai-chatbot',rating: 4.8,reviews: 156,date: '2024-01-15',author: 'Zion Tech Team',readTime: '5 min read'
+    };
     {
-      id: 'ml-pipeline',
-      title: 'Machine Learning Pipeline Automation',
-      category: 'ai-ml',
-      type: 'software',
-      icon: BarChart3,
-      description: 'Automated machine learning pipeline for data scientists and ML engineers.',
-      content: 'Streamline your machine learning workflows with our automated pipeline solution. Features include autoML capabilities, model versioning, A/B testing, and performance monitoring.',
-      tags: ['Machine Learning', 'Automation', 'Data Science', 'MLOps', 'Pipeline'],
-      url: '/marketplace/ml-pipeline',
-      rating: 4.9,
-      reviews: 89,
-      date: '2024-01-10',
-      author: 'AI Team',
-      readTime: '8 min read'
-    },
+      id: 'ml-pipeline',title: 'Machine Learning Pipeline Automation',category: 'ai-ml',type: 'software',icon: BarChart3,description: 'Automated machine learning pipeline for data scientists and ML engineers.',content: 'Streamline your machine learning workflows with our automated pipeline solution. Features include autoML capabilities, model versioning, A/B testing, and performance monitoring.',
+      tags: ['Machine LearningAutomation', 'Data ScienceMLOps', 'Pipeline'],
+      url: '/marketplace/ml-pipeline',rating: 4.9,reviews: 89,date: '2024-01-10',author: 'AI Team',readTime: '8 min read'
+    };
     // Cloud Solutions
     {
-      id: 'cloud-migration',
-      title: 'Cloud Migration Service',
-      category: 'cloud',
-      type: 'service',
-      icon: Cloud,
-      description: 'Professional cloud migration and optimization services for enterprise organizations.',
-      content: 'Our expert team provides comprehensive cloud migration services including infrastructure assessment, migration planning, data migration, and ongoing optimization.',
-      tags: ['Cloud Migration', 'AWS', 'Azure', 'GCP', 'DevOps', 'Enterprise'],
-      url: '/services/cloud-migration',
-      rating: 4.9,
-      reviews: 67,
-      date: '2024-01-08',
-      author: 'Cloud Team',
-      readTime: '12 min read'
-    },
+      id: 'cloud-migration',title: 'Cloud Migration Service',category: 'cloud',type: 'service',icon: Cloud,description: 'Professional cloud migration and optimization services for enterprise organizations.',content: 'Our expert team provides comprehensive cloud migration services including infrastructure assessment, migration planning, data migration, and ongoing optimization.',
+      tags: ['Cloud MigrationAWS', 'AzureGCP', 'DevOpsEnterprise'],
+      url: '/services/cloud-migration',rating: 4.9,reviews: 67,date: '2024-01-08',author: 'Cloud Team',readTime: '12 min read'
+    };
     // Security & Compliance
     {
-      id: 'threat-detection',
-      title: 'Advanced Threat Detection System',
-      category: 'security',
-      type: 'software',
-      icon: Shield,
-      description: 'AI-powered threat detection and response system for enterprise security.',
-      content: 'Protect your organization with our advanced threat detection system that uses machine learning to identify and respond to security threats in real-time.',
-      tags: ['Cybersecurity', 'Threat Detection', 'AI Security', 'SOC', 'Enterprise'],
-      url: '/marketplace/threat-detection',
-      rating: 4.9,
-      reviews: 178,
-      date: '2024-01-12',
-      author: 'Security Team',
-      readTime: '10 min read'
-    },
+      id: 'threat-detection',title: 'Advanced Threat Detection System',category: 'security',type: 'software',icon: Shield,description: 'AI-powered threat detection and response system for enterprise security.',content: 'Protect your organization with our advanced threat detection system that uses machine learning to identify and respond to security threats in real-time.',tags: ['CybersecurityThreat Detection', 'AI SecuritySOC', 'Enterprise'],
+      url: '/marketplace/threat-detection',rating: 4.9,reviews: 178,date: '2024-01-12',author: 'Security Team',readTime: '10 min read'
+    };
     // Data & Analytics
     {
-      id: 'data-warehouse',
-      title: 'Enterprise Data Warehouse Solution',
-      category: 'data',
-      type: 'software',
-      icon: Database,
-      description: 'Scalable data warehouse with advanced analytics and business intelligence capabilities.',
-      content: 'Transform your data into actionable insights with our enterprise data warehouse solution. Features include real-time processing, advanced analytics, and multi-cloud support.',
-      tags: ['Data Warehouse', 'Big Data', 'Analytics', 'Business Intelligence', 'Enterprise'],
-      url: '/marketplace/data-warehouse',
-      rating: 4.7,
-      reviews: 92,
-      date: '2024-01-05',
-      author: 'Data Team',
-      readTime: '15 min read'
-    },
+      id: 'data-warehouse',title: 'Enterprise Data Warehouse Solution',category: 'data',type: 'software',icon: Database,description: 'Scalable data warehouse with advanced analytics and business intelligence capabilities.',content: 'Transform your data into actionable insights with our enterprise data warehouse solution. Features include real-time processing, advanced analytics, and multi-cloud support.',
+      tags: ['Data WarehouseBig Data', 'AnalyticsBusiness Intelligence', 'Enterprise'],
+      url: '/marketplace/data-warehouse',rating: 4.7,reviews: 92,date: '2024-01-05',author: 'Data Team',readTime: '15 min read'
+    };
     // Development Tools
     {
-      id: 'code-generator',
-      title: 'AI-Powered Code Generator',
-      category: 'development',
-      type: 'software',
-      icon: Code,
-      description: 'Intelligent code generation and assistance tool for developers.',
-      content: 'Boost your productivity with our AI-powered code generator that provides intelligent code completion, bug detection, and documentation generation.',
-      tags: ['Code Generation', 'AI', 'Development', 'Productivity', 'IDE Integration'],
-      url: '/marketplace/code-generator',
-      rating: 4.8,
-      reviews: 234,
-      date: '2024-01-18',
-      author: 'Dev Team',
-      readTime: '6 min read'
-    },
+      id: 'code-generator',title: 'AI-Powered Code Generator',category: 'development',type: 'software',icon: Code,description: 'Intelligent code generation and assistance tool for developers.',content: 'Boost your productivity with our AI-powered code generator that provides intelligent code completion, bug detection, and documentation generation.',
+      tags: ['Code GenerationAI', 'DevelopmentProductivity', 'IDE Integration'],
+      url: '/marketplace/code-generator',rating: 4.8,reviews: 234,date: '2024-01-18',author: 'Dev Team',readTime: '6 min read'
+    };
     // Blog Posts
     {
-      id: 'ai-trends-2024',
-      title: 'Top AI Trends to Watch in 2024',
-      category: 'ai-ml',
-      type: 'article',
-      icon: TrendingUp,
-      description: 'Explore the most significant artificial intelligence trends that will shape the technology landscape in 2024.',
-      content: 'As we move into 2024, artificial intelligence continues to evolve at an unprecedented pace. From generative AI to autonomous systems, discover the key trends that will drive innovation and transformation across industries.',
-      tags: ['AI Trends', '2024', 'Technology', 'Innovation', 'Future'],
-      url: '/blog/ai-trends-2024',
-      rating: 4.7,
-      reviews: 45,
-      date: '2024-01-20',
-      author: 'AI Research Team',
-      readTime: '12 min read'
-    },
+      id: 'ai-trends-2024',title: 'Top AI Trends to Watch in 2024',category: 'ai-ml',type: 'article',icon: TrendingUp,description: 'Explore the most significant artificial intelligence trends that will shape the technology landscape in 2024.',content: 'As we move into 2024, artificial intelligence continues to evolve at an unprecedented pace. From generative AI to autonomous systems, discover the key trends that will drive innovation and transformation across industries.',
+      tags: ['AI Trends2024', 'TechnologyInnovation', 'Future'],
+      url: '/blog/ai-trends-2024',rating: 4.7,reviews: 45,date: '2024-01-20',author: 'AI Research Team',readTime: '12 min read'
+    };
     {
-      id: 'cloud-security-best-practices',
-      title: 'Cloud Security Best Practices for 2024',
-      category: 'security',
-      type: 'guide',
-      icon: Shield,
-      description: 'Comprehensive guide to implementing robust cloud security measures in modern enterprise environments.',
-      content: 'Learn the essential cloud security best practices that every organization should implement to protect their data and infrastructure in 2024.',
-      tags: ['Cloud Security', 'Best Practices', 'Enterprise', 'Cybersecurity', 'Guide'],
-      url: '/blog/cloud-security-best-practices-2024',
-      rating: 4.8,
-      reviews: 78,
-      date: '2024-01-17',
-      author: 'Security Team',
-      readTime: '18 min read'
-    },
+      id: 'cloud-security-best-practices',title: 'Cloud Security Best Practices for 2024',category: 'security',type: 'guide',icon: Shield,description: 'Comprehensive guide to implementing robust cloud security measures in modern enterprise environments.',content: 'Learn the essential cloud security best practices that every organization should implement to protect their data and infrastructure in 2024.',tags: ['Cloud SecurityBest Practices', 'EnterpriseCybersecurity', 'Guide'],
+      url: '/blog/cloud-security-best-practices-2024',rating: 4.8,reviews: 78,date: '2024-01-17',author: 'Security Team',readTime: '18 min read'
+    };
     // Case Studies
     {
-      id: 'manufacturing-ai-case-study',
-      title: 'AI Transformation in Manufacturing: A Case Study',
-      category: 'ai-ml',
-      type: 'case-study',
-      icon: Factory,
-      description: 'How a Fortune 500 manufacturing company achieved 40% efficiency improvement through AI implementation.',
-      content: 'Discover how we helped a leading manufacturing company implement AI solutions to optimize production processes, reduce costs, and improve overall efficiency.',
-      tags: ['Case Study', 'Manufacturing', 'AI Implementation', 'Efficiency', 'ROI'],
-      url: '/case-studies/manufacturing-ai-transformation',
-      rating: 4.9,
-      reviews: 23,
-      date: '2024-01-14',
-      author: 'Case Study Team',
-      readTime: '20 min read'
+      id: 'manufacturing-ai-case-study',title: 'AI Transformation in Manufacturing: A Case Study',category: 'ai-ml',type: 'case-study',icon: Factory,description: 'How a Fortune 500 manufacturing company achieved 40% efficiency improvement through AI implementation.',content: 'Discover how we helped a leading manufacturing company implement AI solutions to optimize production processes, reduce costs, and improve overall efficiency.',
+      tags: ['Case StudyManufacturing', 'AI ImplementationEfficiency', 'ROI'],
+      url: '/case-studies/manufacturing-ai-transformation',rating: 4.9,reviews: 23,date: '2024-01-14',author: 'Case Study Team',readTime: '20 min read'
     }
   ];
-
   useEffect(() => {
     // Load recent searches from localStorage
-    const saved = localStorage.getItem('recentSearches');
+    const saved = localStorage.getItem('recentSearches'),
     if (saved) {
-      setRecentSearches(JSON.parse(saved));
+      setRecentSearches(JSON.parse(saved)),
     }
 
     // Set popular searches
     setPopularSearches([
-      'AI solutions',
-      'Cloud migration',
-      'Cybersecurity',
-      'Data analytics',
-      'Machine learning',
-      'DevOps services',
-      'Green IT',
-      'Digital transformation'
-    ]);
-  }, []);
+      'AI solutionsCloud migration',
+      'CybersecurityData analytics',
+      'Machine learningDevOps services',
+      'Green ITDigital transformation'
+    ]),
+  }, []),
 
   const performSearch = async (query: string) => {
     if (!query.trim()) {
       setSearchResults([]);
-      return;
+      return
     }
 
-    setIsSearching(true);
+    setIsSearching(true),
     
     // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 500)),
     
     // Filter mock data based on search query
     const filtered = mockSearchData.filter(item => {
-      const searchTerm = query.toLowerCase();
+      const searchTerm = query.toLowerCase(),
       return (
         item.title.toLowerCase().includes(searchTerm) ||
         item.description.toLowerCase().includes(searchTerm) ||
         item.content.toLowerCase().includes(searchTerm) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-      );
-    });
+      ),
+    }),
 
     // Apply category and type filters
-    let results = filtered;
+    let results = filtered,
     if (selectedCategory !== 'all') {
-      results = results.filter(item => item.category === selectedCategory);
+      results = results.filter(item => item.category === selectedCategory),
     }
     if (selectedType !== 'all') {
-      results = results.filter(item => item.type === selectedType);
+      results = results.filter(item => item.type === selectedType),
     }
 
-    setSearchResults(results);
-    setIsSearching(false);
+    setSearchResults(results),
+    setIsSearching(false),
 
     // Save to recent searches
     if (query.trim() && !recentSearches.includes(query.trim())) {
-      const newRecent = [query.trim(), ...recentSearches.slice(0, 4)];
-      setRecentSearches(newRecent);
-      localStorage.setItem('recentSearches', JSON.stringify(newRecent));
+      const newRecent = [query.trim(), ...recentSearches.slice(0, 4)],
+      setRecentSearches(newRecent),
+      localStorage.setItem('recentSearches', JSON.stringify(newRecent)),
     }
-  };
+  },
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    performSearch(searchQuery);
-  };
+    performSearch(searchQuery)
+  },
 
   const handleQuickSearch = (query: string) => {
     setSearchQuery(query);
-    performSearch(query);
-  };
+    performSearch(query)
+  },
 
   const toggleItemExpansion = (itemId: string) => {
-    setExpandedItem(expandedItem === itemId ? null : itemId);
+    setExpandedItem(expandedItem === itemId ? null : itemId)
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
-      case 'cloud': return 'bg-blue-500/20 text-blue-400';
-      case 'security': return 'bg-red-500/20 text-red-400';
-      case 'data': return 'bg-green-500/20 text-green-400';
-      case 'development': return 'bg-orange-500/20 text-orange-400';
-      case 'hardware': return 'bg-gray-500/20 text-gray-400';
-      case 'services': return 'bg-cyan-500/20 text-cyan-400';
-      case 'blog': return 'bg-pink-500/20 text-pink-400';
-      case 'documentation': return 'bg-indigo-500/20 text-indigo-400';
-      default: return 'bg-slate-500/20 text-slate-400';
+      case 'cloud': return 'bg-blue-500/20 text-blue-400',
+      case 'security': return 'bg-red-500/20 text-red-400',
+      case 'data': return 'bg-green-500/20 text-green-400',
+      case 'development': return 'bg-orange-500/20 text-orange-400',
+      case 'hardware': return 'bg-gray-500/20 text-gray-400',
+      case 'services': return 'bg-cyan-500/20 text-cyan-400',
+      case 'blog': return 'bg-pink-500/20 text-pink-400',
+      case 'documentation': return 'bg-indigo-500/20 text-indigo-400',
+      default: return 'bg-slate-500/20 text-slate-400'
     }
   };
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
-      case 'service': return 'bg-green-500/20 text-green-400';
-      case 'hardware': return 'bg-orange-500/20 text-orange-400';
-      case 'article': return 'bg-purple-500/20 text-purple-400';
-      case 'guide': return 'bg-cyan-500/20 text-cyan-400';
-      case 'case-study': return 'bg-pink-500/20 text-pink-400';
-      default: return 'bg-slate-500/20 text-slate-400';
+      case 'service': return 'bg-green-500/20 text-green-400',
+      case 'hardware': return 'bg-orange-500/20 text-orange-400',
+      case 'article': return 'bg-purple-500/20 text-purple-400',
+      case 'guide': return 'bg-cyan-500/20 text-cyan-400',
+      case 'case-study': return 'bg-pink-500/20 text-pink-400',
+      default: return 'bg-slate-500/20 text-slate-400'
     }
   };
-
   const renderStars = (rating: number) => {
     const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
+    const fullStars = Math.floor(rating),
+    const hasHalfStar = rating % 1 !== 0,
     
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />);
+    for (let i = 0, i < fullStars, i++) {
+      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />),
     }
     
     if (hasHalfStar) {
-      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />);
+      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />),
     }
     
-    const emptyStars = 5 - Math.ceil(rating);
-    for (let i = 0; i < emptyStars; i++) {
-      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />);
+    const emptyStars = 5 - Math.ceil(rating),
+    for (let i = 0, i < emptyStars, i++) {
+      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />),
     }
     
-    return stars;
-  };
+    return stars,
+  },
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
+      year: 'numeric',month: 'short',day: 'numeric'
     });
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -590,7 +475,7 @@ export default function SearchPage() {
                     <button
                       key={index}
                       onClick={() => handleQuickSearch(search)}
-                      className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 text-green-400 rounded-lg hover:from-green-500/30 hover:to-blue-500/30 hover:border-green-400/50 transition-all duration-200"
+                      className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 text-green-400 rounded-lg hover: from-green-500/30 hover:to-blue-500/30 hover:border-green-400/50 transition-all duration-200"
                     >
                       {search}
                     </button>
@@ -607,10 +492,10 @@ export default function SearchPage() {
                       key={category.id}
                       onClick={() => {
                         setSelectedCategory(category.id);
-                        setSearchQuery(category.name);
-                        performSearch(category.name);
+                        setSearchQuery(category.name),
+                        performSearch(category.name),
                       }}
-                      className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-xl hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-left"
+                      className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-xl hover: border-green-400/50 transition-all duration-300 hover:scale-105 text-left"
                     >
                       <h4 className="text-lg font-bold text-white mb-2">{category.name}</h4>
                       <p className="text-gray-300 text-sm">Explore {category.name.toLowerCase()} solutions and resources</p>
@@ -646,9 +531,9 @@ export default function SearchPage() {
                     value={selectedCategory}
                     onChange={(e) => {
                       setSelectedCategory(e.target.value);
-                      performSearch(searchQuery);
+                      performSearch(searchQuery),
                     }}
-                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
@@ -662,7 +547,7 @@ export default function SearchPage() {
                     value={selectedType}
                     onChange={(e) => {
                       setSelectedType(e.target.value);
-                      performSearch(searchQuery);
+                      performSearch(searchQuery),
                     }}
                     className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >

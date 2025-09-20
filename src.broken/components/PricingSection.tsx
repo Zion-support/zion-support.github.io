@@ -5,8 +5,8 @@
  */
 function PricingSection () {
 
-      icon: Shield;
-    };
+      icon: Shield
+    },
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
         <motion.div
@@ -16,8 +16,8 @@ function PricingSection () {
 =======
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
 
-      icon: Shield};
-  ];
+      icon: Shield},
+  ],
 const pricingTiers = [{
 
     name: "Starter","
@@ -64,12 +64,12 @@ const pricingTiers = [{
       "Unlimited Storage","
       "Custom Analytics","
       "White-label Solutions","
-      "Advanced Security",;"
-      "Custom Development",;"
-      "SLA Guarantee";
-    ],;
-    popular: false,;"
-    color: "from-green-500 to-emerald-500"};];
+      "Advanced Security","
+      "Custom Development","
+      "SLA Guarantee",
+    ],
+    popular: false,"
+    color: "from-green-500 to-emerald-500"},],
 
 export function PricingSection() {
   return ("
@@ -147,8 +147,8 @@ export function PricingSection() {
                   }`}
 
                   Get Started
-                </Link>;
-              </motion.div>;) }) }
+                </Link>,
+              </motion.div>,) }) }
         </div>
 
         <motion.div "
@@ -177,15 +177,15 @@ export function PricingSection() {
             Need a custom solution? Contact us for a personalized quote.</p>
           <Link"
             to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover: bg-blue-500 hover:text-white transition-all duration-200"
           >
             Contact Sales Team"
-            <span className="text-sm">→</span>;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default PricingSection;
-export default PricingSection;
+            <span className="text-sm">→</span>,
+          </Link>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default PricingSection,
+export default PricingSection,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

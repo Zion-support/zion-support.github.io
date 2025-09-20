@@ -1,41 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy } from 'lucide-react';
-import SEO from '@/components/SEO';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy } from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function InterviewAssessmentAI() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Candidate Evaluation",
-      description: "Advanced machine learning algorithms assess candidates objectively and consistently"
+      icon: Brain,title: "AI-Powered Candidate Evaluation",description: "Advanced machine learning algorithms assess candidates objectively and consistently"
+    };
+    {
+      icon: Video,title: "Video Interview Analysis",description: "Analyze facial expressions, tone, and communication skills in real-time"
     },
     {
-      icon: Video,
-      title: "Video Interview Analysis",
-      description: "Analyze facial expressions, tone, and communication skills in real-time"
-    },
+      icon: Target,title: "Skills Assessment",description: "Comprehensive evaluation of technical and soft skills"
+    };
     {
-      icon: Target,
-      title: "Skills Assessment",
-      description: "Comprehensive evaluation of technical and soft skills"
-    },
+      icon: BarChart3,title: "Predictive Performance Analytics",description: "Forecast candidate success and cultural fit with high accuracy"
+    };
     {
-      icon: BarChart3,
-      title: "Predictive Performance Analytics",
-      description: "Forecast candidate success and cultural fit with high accuracy"
-    },
+      icon: Shield,title: "Bias Elimination",description: "Remove unconscious bias and ensure fair evaluation processes"
+    };
     {
-      icon: Shield,
-      title: "Bias Elimination",
-      description: "Remove unconscious bias and ensure fair evaluation processes"
-    },
-    {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Conduct assessments anytime, anywhere with automated scheduling"
+      icon: Clock,title: "24/7 Availability",description: "Conduct assessments anytime, anywhere with automated scheduling"
     }
-  ];
+  ],
 
   const benefits = [
     "Reduce hiring time by 60-80%",
@@ -44,35 +31,25 @@ export default function InterviewAssessmentAI() {
     "Save 15+ hours per hire on interviews",
     "Increase diversity in hiring by 30-50%",
     "Reduce turnover by 25-40%"
-  ];
+  ],
 
   const assessmentTypes = [
     {
-      title: "Technical Skills Assessment",
-      description: "Comprehensive evaluation of programming, problem-solving, and technical knowledge",
-      duration: "45-90 minutes",
-      price: "From $150/candidate"
-    },
+      title: "Technical Skills Assessment",description: "Comprehensive evaluation of programming, problem-solving, and technical knowledge",
+      duration: "45-90 minutes",price: "From $150/candidate"
+    };
     {
-      title: "Behavioral & Cultural Fit",
-      description: "AI analysis of personality traits, communication, and cultural alignment",
-      duration: "30-60 minutes",
-      price: "From $100/candidate"
-    },
+      title: "Behavioral & Cultural Fit",description: "AI analysis of personality traits, communication, and cultural alignment",
+      duration: "30-60 minutes",price: "From $100/candidate"
+    };
     {
-      title: "Leadership Assessment",
-      description: "Evaluation of leadership potential, decision-making, and team management",
-      duration: "60-120 minutes",
-      price: "From $200/candidate"
-    },
+      title: "Leadership Assessment",description: "Evaluation of leadership potential, decision-making, and team management",
+      duration: "60-120 minutes",price: "From $200/candidate"
+    };
     {
-      title: "Full Assessment Suite",
-      description: "Complete evaluation covering all aspects of candidate suitability",
-      duration: "2-3 hours",
-      price: "From $350/candidate"
+      title: "Full Assessment Suite",description: "Complete evaluation covering all aspects of candidate suitability",duration: "2-3 hours",price: "From $350/candidate"
     }
   ];
-
   const industries = [
     "Technology & Software",
     "Healthcare & Life Sciences",
@@ -80,7 +57,7 @@ export default function InterviewAssessmentAI() {
     "Manufacturing & Engineering",
     "Retail & E-commerce",
     "Consulting & Professional Services"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -153,7 +130,7 @@ export default function InterviewAssessmentAI() {
               Advanced AI Technology for Better Hiring
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered assessment platform combines natural language processing, 
+              Our AI-powered assessment platform combines natural language processing;
               computer vision, and machine learning to deliver objective candidate evaluations.
             </p>
           </motion.div>
@@ -320,7 +297,7 @@ export default function InterviewAssessmentAI() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover: bg-purple-400/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950
@@ -330,5 +307,5 @@ export default function InterviewAssessmentAI() {
         </div>
       </section>
     </div>
-  );
+  )
 }

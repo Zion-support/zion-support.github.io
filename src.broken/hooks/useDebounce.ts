@@ -1,5 +1,5 @@
-// Hook for useDebounce;
+// Hook for useDebounce,
 export const useUseDebounce: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

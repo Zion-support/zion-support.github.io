@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {,
-  title: 'Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact';
-  description: 'Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.';
-  keywords: ['enterprise AI agentsAI automation', 'business transformationAI productivity', 'autonomous workflows'],
-};
+  title: 'Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact',
+  description: 'Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.',
+  keywords: ['enterprise AI agentsAI automationbusiness transformationAI productivity', 'autonomous workflows']
+},
 export default function EnterpriseAIAgents2025() {,
   return (,
     <ErrorBoundary>,
@@ -47,7 +47,7 @@ export default function EnterpriseAIAgents2025() {,
             </div>,
           </div>,
         </section>,
-        {/* Article Content */,}
+        {/* Article Content */}
         <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
           <div className="prose prose-lg max-w-none">,
             <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">,
@@ -195,7 +195,7 @@ export default function EnterpriseAIAgents2025() {,
             </div>,
           </div>,
         </article>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className="bg-gray-50 py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>,
@@ -216,5 +216,4 @@ export default function EnterpriseAIAgents2025() {,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),}
+    </ErrorBoundary>)}

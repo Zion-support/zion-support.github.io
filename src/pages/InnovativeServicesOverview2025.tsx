@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Shield, 
   Cloud, 
   Rocket, 
@@ -23,83 +23,48 @@ import {
   Target,
   Zap,
   Globe
-} from 'lucide-react';
-
+} from "lucide-react";
 const InnovativeServicesOverview2025 = () => {
   const serviceCategories = [
     {
-      id: 'ai-customer-success',
-      title: 'AI Customer Success Platform',
-      icon: Users,
-      color: 'from-blue-500 to-purple-600',
-      description: 'Transform customer success with AI-powered insights and automation',
-      price: 'From $1,200/month',
-      features: ['AI-powered insights', 'Predictive analytics', 'Automated workflows'],
-      path: '/services/ai-customer-success-platform',
-      benefits: ['Reduce churn by 40%', 'Increase CLV by 35%', 'Automate 70% of tasks']
+      id: 'ai-customer-success',title: 'AI Customer Success Platform',icon: Users,color: 'from-blue-500 to-purple-600',description: 'Transform customer success with AI-powered insights and automation',price: 'From $1,200/month',
+      features: ['AI-powered insightsPredictive analytics', 'Automated workflows'],
+      path: '/services/ai-customer-success-platform',benefits: ['Reduce churn by 40%Increase CLV by 35%', 'Automate 70% of tasks']
     },
     {
-      id: 'ai-supply-chain',
-      title: 'AI Supply Chain Optimization',
-      icon: Truck,
-      color: 'from-green-500 to-blue-600',
-      description: 'Revolutionize supply chain operations with AI intelligence',
-      price: 'From $1,800/month',
-      features: ['Demand forecasting', 'Route optimization', 'Risk management'],
-      path: '/services/ai-supply-chain-optimization',
-      benefits: ['Reduce costs by 35%', 'Improve delivery by 40%', 'Minimize disruptions']
+      id: 'ai-supply-chain',title: 'AI Supply Chain Optimization',icon: Truck,color: 'from-green-500 to-blue-600',description: 'Revolutionize supply chain operations with AI intelligence',price: 'From $1,800/month',
+      features: ['Demand forecastingRoute optimization', 'Risk management'],
+      path: '/services/ai-supply-chain-optimization',benefits: ['Reduce costs by 35%Improve delivery by 40%', 'Minimize disruptions']
     },
     {
-      id: 'ai-financial-compliance',
-      title: 'AI Financial Compliance Platform',
-      icon: Shield,
-      color: 'from-purple-500 to-indigo-600',
-      description: 'Automate financial compliance with AI-powered risk assessment',
-      price: 'From $2,200/month',
-      features: ['AI risk assessment', 'Automated monitoring', 'Real-time alerts'],
-      path: '/services/ai-financial-compliance-platform',
-      benefits: ['Reduce costs by 60%', 'Improve accuracy by 95%', '24/7 monitoring']
+      id: 'ai-financial-compliance',title: 'AI Financial Compliance Platform',icon: Shield,color: 'from-purple-500 to-indigo-600',description: 'Automate financial compliance with AI-powered risk assessment',price: 'From $2,200/month',
+      features: ['AI risk assessmentAutomated monitoring', 'Real-time alerts'],
+      path: '/services/ai-financial-compliance-platform',benefits: ['Reduce costs by 60%Improve accuracy by 95%', '24/7 monitoring']
     },
     {
-      id: 'ai-healthcare-analytics',
-      title: 'AI Healthcare Analytics Platform',
-      icon: Heart,
-      color: 'from-pink-500 to-red-600',
-      description: 'Transform healthcare with AI-powered patient analytics',
-      price: 'From $2,800/month',
-      features: ['Patient analytics', 'Clinical decision support', 'HIPAA compliance'],
-      path: '/services/ai-healthcare-analytics-platform',
-      benefits: ['Improve outcomes by 35%', 'Reduce readmissions by 40%', 'Lower costs by 30%']
+      id: 'ai-healthcare-analytics',title: 'AI Healthcare Analytics Platform',icon: Heart,color: 'from-pink-500 to-red-600',description: 'Transform healthcare with AI-powered patient analytics',price: 'From $2,800/month',
+      features: ['Patient analyticsClinical decision support', 'HIPAA compliance'],
+      path: '/services/ai-healthcare-analytics-platform',benefits: ['Improve outcomes by 35%Reduce readmissions by 40%', 'Lower costs by 30%']
     }
-  ];
+  ],
 
   const additionalServices = [
     {
-      name: 'AI-Powered SEO Platform',
-      description: 'Advanced SEO optimization with machine learning',
-      price: '$1,500/month',
+      name: 'AI-Powered SEO Platform',description: 'Advanced SEO optimization with machine learning',price: '$1,500/month',
       path: '/services/ai-powered-seo'
-    },
+    };
     {
-      name: 'AI Interview Assessment',
-      description: 'Intelligent candidate evaluation and screening',
-      price: '$800/month',
-      path: '/services/interview-assessment-ai'
-    },
+      name: 'AI Interview Assessment',description: 'Intelligent candidate evaluation and screening',price: '$800/month',path: '/services/interview-assessment-ai'
+    };
     {
-      name: 'Zero Trust Network Access',
-      description: 'Enterprise-grade security with zero trust principles',
-      price: '$2,000/month',
+      name: 'Zero Trust Network Access',description: 'Enterprise-grade security with zero trust principles',price: '$2,000/month',
       path: '/services/zero-trust-network-access'
-    },
+    };
     {
-      name: 'AI Workflow Orchestrator',
-      description: 'Intelligent business process automation',
-      price: '$1,800/month',
+      name: 'AI Workflow Orchestrator',description: 'Intelligent business process automation',price: '$1,800/month',
       path: '/services/ai-workflow-orchestrator'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -270,7 +235,7 @@ const InnovativeServicesOverview2025 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
@@ -310,7 +275,6 @@ const InnovativeServicesOverview2025 = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default InnovativeServicesOverview2025;

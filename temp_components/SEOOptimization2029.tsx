@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Search
   TrendingUp
@@ -31,13 +31,13 @@ import {
   Filter,
   SortAsc,
   SortDesc
-} from 'lucide-react';
+} from 'lucide-react',
 
 const SEOOptimization2029 = () => {
-  const [activeMetricsetActiveMetric] = useState('ranking');
-  const [isAnalyzingsetIsAnalyzing] = useState(false);
-  const [analysisProgressetAnalysisProgress] = useState(0);
-  const [currentKeywordsetCurrentKeyword] = useState(0);
+  const [activeMetricsetActiveMetric] = useState('ranking'),
+  const [isAnalyzingsetIsAnalyzing] = useState(false),
+  const [analysisProgressetAnalysisProgress] = useState(0),
+  const [currentKeywordsetCurrentKeyword] = useState(0),
 
   const seoMetrics = {
     ranking: {
@@ -50,12 +50,9 @@ const SEOOptimization2029 = () => {
       unit: '/10',
       description: 'Average ranking score',
       improvements: [
-        'Keyword optimization',
-        'Content quality enhancement',
-        'Technical SEO fixes',
-        'Backlink building',
-        'User experience improvement',
-        'Page speed optimization'
+        'Keyword optimizationContent quality enhancement',
+        'Technical SEO fixesBacklink building',
+        'User experience improvementPage speed optimization'
       ]
     },
     traffic: {
@@ -68,12 +65,9 @@ const SEOOptimization2029 = () => {
       unit: 'visitors/month',
       description: 'Monthly organic visitors',
       improvements: [
-        'Content marketing strategy',
-        'Long-tail keyword targeting',
-        'Featured snippet optimization',
-        'Local SEO enhancement',
-        'Voice search optimization',
-        'Mobile-first indexing'
+        'Content marketing strategyLong-tail keyword targeting',
+        'Featured snippet optimizationLocal SEO enhancement',
+        'Voice search optimizationMobile-first indexing'
       ]
     },
     visibility: {
@@ -86,12 +80,9 @@ const SEOOptimization2029 = () => {
       unit: '%',
       description: 'Search visibility score',
       improvements: [
-        'Schema markup implementation',
-        'Rich snippets optimization',
-        'Image SEO enhancement',
-        'Video SEO strategy',
-        'FAQ optimization',
-        'Knowledge panel targeting'
+        'Schema markup implementationRich snippets optimization',
+        'Image SEO enhancementVideo SEO strategy',
+        'FAQ optimizationKnowledge panel targeting'
       ]
     },
     conversion: {
@@ -104,15 +95,12 @@ const SEOOptimization2029 = () => {
       unit: '%',
       description: 'SEO conversion rate',
       improvements: [
-        'Landing page optimization',
-        'Call-to-action enhancement',
-        'User journey mapping',
-        'A/B testing implementation',
-        'Conversion tracking setup',
-        'Goal configuration'
+        'Landing page optimizationCall-to-action enhancement',
+        'User journey mappingA/B testing implementation',
+        'Conversion tracking setupGoal configuration'
       ]
     }
-  };
+  },
 
   const keywords = [
     {
@@ -151,7 +139,7 @@ const SEOOptimization2029 = () => {
       change: '-1',
       icon: Cpu
     }
-  ];
+  ],
 
   const seoFeatures = [
     {
@@ -182,41 +170,41 @@ const SEOOptimization2029 = () => {
       status: 'Active',
       impact: 'High'
     }
-  ];
+  ],
 
   const realTimeData = [
     { label: 'Organic Traffic'value: '125K'change: '+12%'trend: 'up' },
     { label: 'Average Position'value: '4.2'change: '-0.8'trend: 'up' },
     { label: 'Click-Through Rate'value: '8.5%'change: '+1.2%'trend: 'up' },
     { label: 'Conversion Rate'value: '3.2%'change: '+0.5%'trend: 'up' }
-  ];
+  ],
 
   useEffect(() => {
     if (isAnalyzing) {
       const interval = setInterval(() => {
         setAnalysisProgress(prev => {
           if (prev >= 100) {
-            setIsAnalyzing(false);
-            return 100;
+            setIsAnalyzing(false),
+            return 100,
           }
-          return prev + 3;
-        });
-      }100);
-      return () => clearInterval(interval);
+          return prev + 3,
+        }),
+      }100),
+      return () => clearInterval(interval),
     }
-  }[isAnalyzing]);
+  }[isAnalyzing]),
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentKeyword(prev => (prev + 1) % keywords.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentKeyword(prev => (prev + 1) % keywords.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
 
   const startAnalysis = () => {
-    setIsAnalyzing(true);
-    setAnalysisProgress(0);
-  };
+    setIsAnalyzing(true),
+    setAnalysisProgress(0),
+  },
 
 const SEOOptimization2029: React.FC = () => {
   return (
@@ -224,7 +212,7 @@ const SEOOptimization2029: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">SEOOptimization2029</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default SEOOptimization2029;
+export default SEOOptimization2029,

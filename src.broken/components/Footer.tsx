@@ -64,11 +64,11 @@
                 <li><Link to="/research-development" className="hover:text-zion - cyan transition -colors">R & D</Link></li>
       {/* Bottom Footer */}"
       <div className="bg-zion-blue-darker border-t border-zion-purple/20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">"
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
             <div className="flex items-center space-x-4 text-sm text-zion-slate-light">
               <span>
-                &copy; {currentYear} Zion Tech Group.All rights reserved.</span>"
+                &copy, {currentYear} Zion Tech Group.All rights reserved.</span>"
               <span className="hidden md:inline">•</span>"
               <span className="hidden md:inline">Empowering Innovation</span>
             <div  className="flex items - center space - x-6 text-sm">
@@ -81,20 +81,20 @@
       >"
         <ArrowUp className="w-5 h-5"  />
 =======
-import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { FooterNewsletter } from "@/components/FooterNewsletter",
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
-import Link from "next/link"; // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+import Link from "next/link", // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget",
 
 export default function Page() {
-      return newSet}) };
+      return newSet}) },
 
   // Scroll to top function
   
-  };
+  },
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link } from 'react-router-dom',
 import {
   Twitter,
   Linkedin,
@@ -152,48 +152,48 @@ import {
   Settings,
   Palette,
   ChevronDown
-} from 'lucide-react';
+} from 'lucide-react',
 
 export function Footer() {
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company'])),
 
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
     const handleScroll = () => {
-      const scrollToTopButton = document.getElementById('scroll-to-top');
+      const scrollToTopButton = document.getElementById('scroll-to-top'),
       if (scrollToTopButton) {
         if (window.pageYOffset > 300) {
-          scrollToTopButton.classList.remove('hidden');
+          scrollToTopButton.classList.remove('hidden'),
         } else {
-          scrollToTopButton.classList.add('hidden');
+          scrollToTopButton.classList.add('hidden'),
         }
       }
-    };
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   // Toggle section expansion (for mobile)
   const toggleSection = (title: string) => {
     setExpandedSections(prev => {
-      const newSet = new Set(prev);
+      const newSet = new Set(prev),
       if (newSet.has(title)) {
-        newSet.delete(title);
+        newSet.delete(title)
       } else {
-        newSet.add(title);
+        newSet.add(title),
       }
-      return newSet;
-    });
-  };
+      return newSet,
+    }),
+  },
 
   // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    });
-  };
+    }),
+  },
 
   const footerSections = [
     {
@@ -251,7 +251,7 @@ export function Footer() {
         { name: 'Request Quote', href: '/request-quote' }
       ]
     }
-  ];
+  ],
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -554,10 +554,10 @@ export function Footer() {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-400">
-              <span>&copy; 2025 Zion Tech Group. All rights reserved.</span>
+              <span>&copy, 2025 Zion Tech Group. All rights reserved.</span>
               <div className="flex space-x-6">
                 <Link to="/privacy-policy" className="hover:text-cyan-400 transition-colors">
                   Privacy Policy
@@ -611,14 +611,14 @@ export function Footer() {
       <button
         id="scroll-to-top"
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center z-50 hidden"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center z-50 hidden"
         aria-label="Scroll to top"
       >
         <ArrowUp className="w-5 h-5" />
       </button>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

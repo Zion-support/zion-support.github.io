@@ -1,45 +1,45 @@
-import React, { useEffect, useState, FormEvent, useCallback } from 'react'; // Added useCallback
-// import { Review } from '@/types/reviews'; // Assuming this path is correct from earlier exploration
+import React, { useEffect, useState, FormEvent, useCallback } from 'react', // Added useCallback
+// import { Review } from '@/types/reviews', // Assuming this path is correct from earlier exploration
 // For the purpose of this subtask, let's define a local Review type if the import path is uncertain or to ensure self-containment
 // In a real scenario, this would be imported from the shared types.export interface Review {
-  id: string;
-  rating: number;
-  comment?: string | null; // Ensure this matches your actual type(e.g. review_text)
-  review_text?: string | null; // Alternative field name for comment
-  created_at: string; // Or Date
+  id: string,
+  rating: number,
+  comment?: string | null, // Ensure this matches your actual type(e.g. review_text)
+  review_text?: string | null, // Alternative field name for comment
+  created_at: string, // Or Date
   user?: { // Assuming user is nested and might have a name
-    id: string | number; // User ID could be string or number
-    name?: string | null;
-  } | null;
+    id: string | number, // User ID could be string or number
+    name?: string | null
+  } | null,
   reviewer_profile?: { // Another possible structure for reviewer info
-    display_name?: string | null;
-  } | null;
+    display_name?: string | null,
+  } | null,
   // Add any other fields that your Review type actually has
 }
 
-// import { useAuth } from '@/hooks/useAuth'; // Assuming an auth hook exists
+// import { useAuth } from '@/hooks/useAuth', // Assuming an auth hook exists
 // For now, let's mock a basic useAuth hook if not available to allow component structure
 // In a real scenario, this would come from your actual auth context/hooks
 const useAuth = () => {
   // Replace with actual auth logic
   // For now, simulate a logged-in user for development of this component's structure
-  const [user, setUser] = useState<{ id: string; name: string, isLoggedIn: boolean } | null>({ isLoggedIn: true, id: 'mockUserId', name: 'Mock User' });
+  const [user, setUser] = useState<{ id: string, name: string, isLoggedIn: boolean } | null>({ isLoggedIn: true, id: 'mockUserId', name: 'Mock User' }),
   // useEffect(() => {
   //  // logic to check actual auth status and set user
-  // }, []);
-  return { user, isAuthenticated: user?.isLoggedIn ?? false };
-};
+  // }, []),
+  return { user, isAuthenticated: user?.isLoggedIn ?? false },
+},
 
 // Assuming RatingStars component exists as seen in ProductListingCard.tsx
 // If not, a simple display of rating number will be shown.// For actual stars, you'd import your RatingStars component:
-// import { RatingStars } from '@/components/RatingStars'; // Or its correct path
+// import { RatingStars } from '@/components/RatingStars', // Or its correct path
 
 interface RatingStarsProps {
-  value: number;
-  count?: number; // Optional review count
-  size?: 'sm' | 'md' | 'lg';
-  interactive?: boolean;
-  onRate?: (rating: number) => void;
+  value: number,
+  count?: number, // Optional review count
+  size?: 'sm' | 'md' | 'lg',
+  interactive?: boolean,
+  onRate?: (rating: number) => void
 }
 
 // Placeholder for RatingStars if not available or for simplicity in this subtask
@@ -50,7 +50,7 @@ const RatingStarsDisplay: React.FC<Pick<RatingStarsProps, 'value'>> = ({ value }
     ))}
     <span className="ml-2 text-sm text-gray-600">({value.toFixed(1)})</span>
   </div>
-);
+),
 
 // Placeholder for an interactive star rating input
 const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({ value, onRate }) => (
@@ -66,80 +66,80 @@ const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({
       </button>
     ))}
   </div>
-);
+),
 
 interface ProductReviewsProps {
-  productId: string;
+  productId: string
 }
 
 const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
-  const { user, isAuthenticated } = useAuth();
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { user, isAuthenticated } = useAuth(),
+  const [reviews, setReviews] = useState<Review[]>([]),
+  const [isLoading, setIsLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
-  const [newRating, setNewRating] = useState(0);
-  const [newComment, setNewComment] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
-  const [submitSuccess, setSubmitSuccess] = useState<string | null>(null);
+  const [newRating, setNewRating] = useState(0),
+  const [newComment, setNewComment] = useState(''),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitError, setSubmitError] = useState<string | null>(null),
+  const [submitSuccess, setSubmitSuccess] = useState<string | null>(null),
 
   const fetchReviews = useCallback(async () => { // Wrapped in useCallback
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
     try {
-      const response = await fetch(`/api/reviews/${productId}`);
+      const response = await fetch(`/api/reviews/${productId}`),
       if(!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || `Failed to fetch reviews: ${response.statusText}`);
+        const errorData = await response.json(),
+        throw new Error(errorData.error || `Failed to fetch reviews: ${response.statusText}`),
       }
-      const data: Review[] = await response.json();
-      setReviews(data);
+      const data: Review[] = await response.json(),
+      setReviews(data)
     } catch(err: any) {
-      setError(err.message);
+      setError(err.message)
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  }, [productId]); // productId is a dependency of fetchReviews
+  }, [productId]), // productId is a dependency of fetchReviews
 
   useEffect(() => {
     if(productId) {
-      fetchReviews();
+      fetchReviews(),
     }
-  }, [productId, fetchReviews]); // Added fetchReviews to dependency array
+  }, [productId, fetchReviews]), // Added fetchReviews to dependency array
 
   const handleSubmitReview = async(e: FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if(newRating === 0) {
-      setSubmitError('Please select a rating.');
-      return;
+      setSubmitError('Please select a rating.'),
+      return
     }
-    setIsSubmitting(true);
-    setSubmitError(null);
-    setSubmitSuccess(null);
+    setIsSubmitting(true),
+    setSubmitError(null),
+    setSubmitSuccess(null),
 
     try {
       const response = await fetch('/api/reviews', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId, rating: newRating, comment: newComment }),
-      });
+        body: JSON.stringify({ productId, rating: newRating, comment: newComment })
+      }),
 
       if(!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || `Failed to submit review: ${response.statusText}`);
+        const errorData = await response.json(),
+        throw new Error(errorData.error || `Failed to submit review: ${response.statusText}`),
       }
 
-      setSubmitSuccess('Review submitted successfully! It may take some time to appear.');
-      setNewRating(0);
-      setNewComment('');
-      fetchReviews(); // Refresh reviews list
+      setSubmitSuccess('Review submitted successfully! It may take some time to appear.'),
+      setNewRating(0),
+      setNewComment(''),
+      fetchReviews(), // Refresh reviews list
     } catch(err: any) {
-      setSubmitError(err.message);
+      setSubmitError(err.message)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (<div className="mt-8">
       <h3 className="text-xl font-semibold mb-4">Product Reviews</h3>
@@ -203,7 +203,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
           Please <a href="/login" className="text-blue-500 hover:underline">login</a> to write a review.</p>
       )}
     </div>
-  );
-};
+  ),
+},
 
-export default ProductReviews;
+export default ProductReviews,

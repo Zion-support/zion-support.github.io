@@ -1,152 +1,90 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye as EyeIcon, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon, GitBranch, GitCommit, GitPullRequest, GitMerge, GitCompare, GitBranch as GitBranchIcon, GitCommit as GitCommitIcon, GitPullRequest as GitPullRequestIcon, GitMerge as GitMergeIcon, GitCompare as GitCompareIcon } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye as EyeIcon, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon, GitBranch, GitCommit, GitPullRequest, GitMerge, GitCompare, GitBranch as GitBranchIcon, GitCommit as GitCommitIcon, GitPullRequest as GitPullRequestIcon, GitMerge as GitMergeIcon, GitCompare as GitCompareIcon } from "lucide-react";
 const AICodeReviewSecurityScanner = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Vulnerability Detection',
-      description: 'Advanced machine learning algorithms that analyze code patterns, identify security vulnerabilities, and suggest remediation strategies.',
-      benefits: ['Automated vulnerability scanning', 'Pattern recognition', 'False positive reduction', 'Continuous learning']
+      icon: Brain,title: 'AI-Powered Vulnerability Detection',description: 'Advanced machine learning algorithms that analyze code patterns, identify security vulnerabilities, and suggest remediation strategies.',
+      benefits: ['Automated vulnerability scanningPattern recognition', 'False positive reductionContinuous learning']
     },
     {
-      icon: Shield,
-      title: 'Comprehensive Security Coverage',
-      description: 'Cover all major security vulnerabilities including OWASP Top 10, CWE, and industry-specific security requirements.',
-      benefits: ['OWASP Top 10 coverage', 'CWE compliance', 'Industry standards', 'Custom rule sets']
+      icon: Shield,title: 'Comprehensive Security Coverage',description: 'Cover all major security vulnerabilities including OWASP Top 10, CWE, and industry-specific security requirements.',
+      benefits: ['OWASP Top 10 coverageCWE compliance', 'Industry standardsCustom rule sets']
     },
     {
-      icon: Code,
-      title: 'Multi-Language Support',
-      description: 'Support for all major programming languages including Python, JavaScript, Java, C#, Go, Rust, and more.',
-      benefits: ['25+ programming languages', 'Framework-specific rules', 'Language-specific patterns', 'Cross-language analysis']
+      icon: Code,title: 'Multi-Language Support',description: 'Support for all major programming languages including Python, JavaScript, Java, C#, Go, Rust, and more.',
+      benefits: ['25+ programming languagesFramework-specific rules', 'Language-specific patternsCross-language analysis']
     },
     {
-      icon: Eye,
-      title: 'Real-time Code Analysis',
-      description: 'Continuous monitoring of code changes with instant security feedback during development and CI/CD pipelines.',
-      benefits: ['Real-time scanning', 'CI/CD integration', 'Instant feedback', 'Automated blocking']
+      icon: Eye,title: 'Real-time Code Analysis',description: 'Continuous monitoring of code changes with instant security feedback during development and CI/CD pipelines.',benefits: ['Real-time scanningCI/CD integration', 'Instant feedbackAutomated blocking']
     },
     {
-      icon: AlertTriangle,
-      title: 'Intelligent Risk Scoring',
-      description: 'AI-driven risk assessment that prioritizes vulnerabilities based on severity, exploitability, and business impact.',
-      benefits: ['Risk-based prioritization', 'Business context awareness', 'Exploitability assessment', 'Impact analysis']
+      icon: AlertTriangle,title: 'Intelligent Risk Scoring',description: 'AI-driven risk assessment that prioritizes vulnerabilities based on severity, exploitability, and business impact.',
+      benefits: ['Risk-based prioritizationBusiness context awareness', 'Exploitability assessmentImpact analysis']
     },
     {
-      icon: GitBranch,
-      title: 'Git Integration & Workflow',
-      description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',
-      benefits: ['Pull request scanning', 'Branch protection', 'Automated reviews', 'Workflow integration']
+      icon: GitBranch,title: 'Git Integration & Workflow',description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',
+      benefits: ['Pull request scanningBranch protection', 'Automated reviewsWorkflow integration']
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: 'Developer',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for individual developers',
-      features: [
-        'Up to 10 repositories',
-        'Basic security scanning',
-        'Standard vulnerability database',
-        'Email support',
+      name: 'Developer',price: '$99',period: '/month',description: 'Perfect for individual developers',features: [
+        'Up to 10 repositoriesBasic security scanning';
+        'Standard vulnerability databaseEmail support',
         'Basic reporting'
       ],
-      cta: 'Get Started',
-      popular: false
-    },
+      cta: 'Get Started',popular: false
+    };
     {
-      name: 'Team',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for development teams',
-      features: [
-        'Up to 50 repositories',
-        'Advanced AI scanning',
-        'Full vulnerability database',
-        'Priority support',
-        'Custom rule sets',
-        'API access',
+      name: 'Team',price: '$299',period: '/month',description: 'Ideal for development teams',features: [
+        'Up to 50 repositoriesAdvanced AI scanning';
+        'Full vulnerability databasePriority support',
+        'Custom rule setsAPI access',
         'CI/CD integration'
       ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
+      cta: 'Start Free Trial',popular: true
+    };
     {
-      name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited repositories',
-        'Custom AI models',
-        'White-label solutions',
-        '24/7 dedicated support',
-        'Advanced integrations',
-        'Custom workflows',
+      name: 'Enterprise',price: '$999',period: '/month',description: 'For large organizations',features: [
+        'Unlimited repositoriesCustom AI models';
+        'White-label solutions24/7 dedicated support',
+        'Advanced integrationsCustom workflows',
         'On-premise deployment'
       ],
-      cta: 'Contact Sales',
-      popular: false
+      cta: 'Contact Sales',popular: false
     }
   ];
-
   const useCases = [
     {
-      title: 'Application Development',
-      description: 'Integrate security scanning into your development workflow to catch vulnerabilities before they reach production.',
-      icon: Code,
-      benefits: ['Early vulnerability detection', 'Developer education', 'Secure coding practices', 'Quality assurance']
+      title: 'Application Development',description: 'Integrate security scanning into your development workflow to catch vulnerabilities before they reach production.',icon: Code,benefits: ['Early vulnerability detectionDeveloper education', 'Secure coding practicesQuality assurance']
     },
     {
-      title: 'DevOps & CI/CD',
-      description: 'Automate security checks in your CI/CD pipeline to ensure code quality and security at every stage.',
-      icon: GitBranch,
-      benefits: ['Automated security gates', 'Pipeline integration', 'Quality gates', 'Deployment safety']
+      title: 'DevOps & CI/CD',description: 'Automate security checks in your CI/CD pipeline to ensure code quality and security at every stage.',icon: GitBranch,benefits: ['Automated security gatesPipeline integration', 'Quality gatesDeployment safety']
     },
     {
-      title: 'Code Review Process',
-      description: 'Enhance your code review process with AI-powered security analysis and automated vulnerability detection.',
-      icon: Eye,
-      benefits: ['Automated security reviews', 'Pull request scanning', 'Reviewer assistance', 'Quality improvement']
+      title: 'Code Review Process',description: 'Enhance your code review process with AI-powered security analysis and automated vulnerability detection.',icon: Eye,benefits: ['Automated security reviewsPull request scanning', 'Reviewer assistanceQuality improvement']
     },
     {
-      title: 'Compliance & Auditing',
-      description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',
-      icon: Shield,
-      benefits: ['Regulatory compliance', 'Security audits', 'Documentation', 'Risk assessment']
+      title: 'Compliance & Auditing',description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',icon: Shield,benefits: ['Regulatory complianceSecurity audits', 'DocumentationRisk assessment']
     }
-  ];
+  ],
 
   const vulnerabilityTypes = [
     {
-      title: 'SQL Injection',
-      description: 'Prevent unauthorized database access through malicious SQL queries.',
-      icon: Database,
-      examples: ['Parameterized queries', 'Input validation', 'ORM usage', 'Database permissions']
+      title: 'SQL Injection',description: 'Prevent unauthorized database access through malicious SQL queries.',icon: Database,examples: ['Parameterized queriesInput validation', 'ORM usageDatabase permissions']
     },
     {
-      title: 'Cross-Site Scripting (XSS)',
-      description: 'Protect against malicious script injection in web applications.',
-      icon: Globe,
-      examples: ['Output encoding', 'Content Security Policy', 'Input sanitization', 'HTTPS enforcement']
+      title: 'Cross-Site Scripting (XSS)',description: 'Protect against malicious script injection in web applications.',icon: Globe,examples: ['Output encodingContent Security Policy', 'Input sanitizationHTTPS enforcement']
     },
     {
-      title: 'Authentication Bypass',
-      description: 'Secure authentication mechanisms and prevent unauthorized access.',
-      icon: Lock,
-      examples: ['Multi-factor authentication', 'Session management', 'Password policies', 'Access controls']
+      title: 'Authentication Bypass',description: 'Secure authentication mechanisms and prevent unauthorized access.',icon: Lock,examples: ['Multi-factor authenticationSession management', 'Password policiesAccess controls']
     },
     {
-      title: 'Insecure Dependencies',
-      description: 'Identify and update vulnerable third-party libraries and dependencies.',
-      icon: Package,
-      examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']
+      title: 'Insecure Dependencies',description: 'Identify and update vulnerable third-party libraries and dependencies.',icon: Package,examples: ['Dependency scanningVulnerability databases', 'Update automationLicense compliance']
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -446,7 +384,7 @@ const AICodeReviewSecurityScanner = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >
                 Contact Sales
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -456,7 +394,6 @@ const AICodeReviewSecurityScanner = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AICodeReviewSecurityScanner;

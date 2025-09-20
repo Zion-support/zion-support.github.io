@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function PerformancePage() {
   return (
@@ -16,7 +16,7 @@ export default function PerformancePage() {
           </nav>
           <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Performance</h1>
           <p className="text-white/80 max-w-3xl mb-8">We set strict performance budgets and continuously optimize for speed, reliability, and efficiency.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h2 className="text-lg font-semibold text-green-400 mb-3">Focus Areas</h2>
               <ul className="text-white/80 text-sm space-y-2">
@@ -44,6 +44,6 @@ export default function PerformancePage() {
         </main>
       </div>
     </>
-  );
+  )
 }
 

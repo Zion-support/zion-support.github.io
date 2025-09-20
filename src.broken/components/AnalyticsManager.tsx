@@ -20,56 +20,56 @@ function AnalyticsManager () {
   Target,
   Globe,
   Smartphone,
-  Monitor} from 'lucide-react';
+  Monitor} from 'lucide-react',
 
 interface AnalyticsData {
 
-  pageViews: number;
-  uniqueVisitors: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  topPages: { path: string; views: number 
-}[];
-  userAgents: { device: string; count: number }[];
+  pageViews: number,
+  uniqueVisitors: number,
+  sessionDuration: number,
+  bounceRate: number,
+  conversionRate: number,
+  topPages: { path: string, views: number 
+}[],
+  userAgents: { device: string, count: number }[],
   performance: {
 
-    fcp: number;
-    lcp: number;
-    fid: number;
-    cls: number};
-  events: { name: string; count: number; timestamp: string }[]}
+    fcp: number,
+    lcp: number,
+    fid: number,
+    cls: number},
+  events: { name: string, count: number, timestamp: string }[]}
 interface UserSession {
 
-  id: string;
-  startTime: number;
-  lastActivity: number;
-  pageViews: string[];
-  events: { name: string; timestamp: number; data?: unknown 
-}[];
-  userAgent: string;
+  id: string,
+  startTime: number,
+  lastActivity: number,
+  pageViews: string[],
+  events: { name: string, timestamp: number, data?: unknown 
+}[],
+  userAgent: string,
   referrer: string}
 
 export function AnalyticsManager() {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
-  );
+  ),
   const [currentSession, setCurrentSession] = useState<UserSession | null>(
     null
-  );
-  const [isTracking, setIsTracking] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
+  ),
+  const [isTracking, setIsTracking] = useState(false),
+  const [showAnalytics, setShowAnalytics] = useState(false),
 
   // Initialize analytics tracking
   useEffect(() => {
-    initializeAnalytics();
-    return () => cleanupAnalytics()}, []);
+    initializeAnalytics(),
+    return () => cleanupAnalytics()}, []),
 
     // Create or retrieve session
     
-    localStorage.setItem('zion_session_id', sessionId);
+    localStorage.setItem('zion_session_id', sessionId),
 =======
-      localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
+      localStorage.getItem('zion_session_id') || generateSessionId(),'    localStorage.setItem('zion_session_id', sessionId),
 
     const session: UserSession = {
 
@@ -79,48 +79,48 @@ export function AnalyticsManager() {
       pageViews: [window.location.pathname],
       events: [],
       userAgent: navigator.userAgent,
-      referrer: document.referrer};
+      referrer: document.referrer},
 
-    setCurrentSession(session);
+    setCurrentSession(session),
 
     // Track page view
-    trackPageView(window.location.pathname);
+    trackPageView(window.location.pathname),
 
     // Track user agent
-    trackUserAgent(navigator.userAgent);
+    trackUserAgent(navigator.userAgent),
 
     // Track referrer
     if(document.referrer) {
 
       trackReferrer(document.referrer)}
     // Set up event listeners
-    setupEventListeners();
+    setupEventListeners(),
 
     // Set up performance monitoring
-    setupPerformanceMonitoring();
+    setupPerformanceMonitoring(),
 
     // Set up session tracking
-    setupSessionTracking();
+    setupSessionTracking(),
 
-    // console.log('Analytics initialized for session:', sessionId)}, []);
+    // console.log('Analytics initialized for session:', sessionId)}, []),
 
-    document.removeEventListener('scroll', handleScroll);
-    window.removeEventListener('beforeunload', handleBeforeUnload);
+    document.removeEventListener('scroll', handleScroll),
+    window.removeEventListener('beforeunload', handleBeforeUnload),
 =======
-    document.removeEventListener('click', handleClick);'
-    document.removeEventListener('scroll', handleScroll);'    window.removeEventListener('beforeunload', handleBeforeUnload);
+    document.removeEventListener('click', handleClick),'
+    document.removeEventListener('scroll', handleScroll),'    window.removeEventListener('beforeunload', handleBeforeUnload),
 
     // Save session data
     if(currentSession) {
 
       saveSessionData(currentSession)}
-  }, [currentSession]) };
+  }, [currentSession]) },
 
     // Scroll tracking'
-    document.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('scroll', handleScroll, { passive: true }),
 
     // Page unload tracking'
-    window.addEventListener('beforeunload', handleBeforeUnload)}, []);
+    window.addEventListener('beforeunload', handleBeforeUnload)}, []),
 
     // Track button clicks'    if(target.tagName === 'BUTTON' || target.closest('button')) {
 '
@@ -135,7 +135,7 @@ export function AnalyticsManager() {
 
       trackEvent('link_click', {
 =======
-          : (target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click', {
+          : (target.closest('a') as HTMLAnchorElement),'      trackEvent('link_click', {
 
         href: link.href,
         text: link.textContent || link.innerText})}
@@ -151,60 +151,60 @@ export function AnalyticsManager() {
         type: target.tagName.toLowerCase(),
         name: (target as HTMLInputElement).name,
         id: target.id})}
-  }, []) ;
+  }, []) ,
 
     if(scrollDepth % 25 === 0) {
 
       // Track at 25%, 50%, 75%, 100%'
       trackEvent('scroll_depth', { depth: scrollDepth })}
   }, []) }
-  }, [currentSession]) ;
+  }, [currentSession]) ,
 
         if(fcp) {
 
           trackPerformance('fcp', fcp.startTime)}
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      }),
+      fcpObserver.observe({ entryTypes: ['paint'] }),
 
       // Largest Contentful Paint
 
         if(lcp) {
 
           trackPerformance('lcp', lcp.startTime)}
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }),
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
 
       // First Input Delay
 
         if(fid) {
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      }),
+      fidObserver.observe({ entryTypes: ['first-input'] }),
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;        for (const entry of list.getEntries()) {
+        let clsValue = 0,        for (const entry of list.getEntries()) {
 
           if(!entry.hadRecentInput) {
 
             clsValue += (entry as any).value}
         }
-        trackPerformance('cls', clsValue)});
+        trackPerformance('cls', clsValue)}),
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
   }, []) }
-    }, 30000) ;
+    }, 30000) ,
 
-    return () => clearInterval(activityInterval) }, [currentSession]) ;
+    return () => clearInterval(activityInterval) }, [currentSession]) ,
 
-        trackEvent('page_view', { path });
+        trackEvent('page_view', { path }),
 
         // Send to analytics endpoint'
         sendAnalyticsData('page_view', { path, timestamp: Date.now() })}
     },
     [currentSession]
-  );
+  ),
 
         setCurrentSession(prev =>
           prev
@@ -214,13 +214,13 @@ export function AnalyticsManager() {
                 events: [...prev.events, event],
                 lastActivity: Date.now()}
             : null
-        );
+        ),
 
         // Send to analytics endpoint'
         sendAnalyticsData('event', event)}
     },
     [currentSession]
-  )}, [])}, [])}, []);
+  )}, [])}, [])}, []),
 
         // For now, just log to console'
         // console.log('Analytics Event:', { type, data, sessionId: currentSession?.id })} catch(error) {
@@ -228,7 +228,7 @@ export function AnalyticsManager() {
         // console.error('Failed to send analytics data:', error)}
     },
     [currentSession]
-  );
+  ),
 
         // Send to analytics endpoint'
         await sendAnalyticsData('session_end', session)} catch(error) {
@@ -236,7 +236,7 @@ export function AnalyticsManager() {
         // console.error('Failed to save session data:', error)}
     },
     [sendAnalyticsData]
-  );
+  ),
 
     // Calculate bounce rate(single page view sessions)
     
@@ -252,11 +252,11 @@ export function AnalyticsManager() {
       topPages: currentSession.pageViews.reduce()
         (acc, path) => {
 
-          acc[path] = (acc[path] || 0) + 1;
+          acc[path] = (acc[path] || 0) + 1,
           return acc},
         {} as Record<string, number>
       ),
-      userAgents: [{ device: getDeviceType(currentSession.userAgent), count: 1 },
+      userAgents: [{ device: getDeviceType(currentSession.userAgent), count: 1 }
       ],
       performance: { fcp: 0, lcp: 0, fid: 0, cls: 0 }, // Would be populated from performance tracking
       events: currentSession.events.map(e => ({
@@ -267,14 +267,14 @@ export function AnalyticsManager() {
 
       return 'Tablet'} else {
 
-      return 'Desktop'}  };
+      return 'Desktop'}  },
 
   // Update analytics data when session changes
   useEffect(() => {
     if(currentSession) {
 
       setAnalyticsData(report)}
-  }, [currentSession, generateAnalyticsReport]) ;
+  }, [currentSession, generateAnalyticsReport]) ,
   if(!showAnalytics) {
 
     return ()

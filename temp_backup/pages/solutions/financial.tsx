@@ -1,6 +1,6 @@
-import React from 'react';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
       title: "Financial AI & Machine Learning",
       description: "Advanced AI solutions for financial institutions with predictive analytics and risk assessment",
@@ -29,7 +29,7 @@ import {
       features: ["Real-time reporting", "Predictive analytics", "Regulatory reporting", "Executive dashboards"],
       href: "/services?category=bi"
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -52,7 +52,7 @@ import {
       description: "Advanced financial insights",
       icon: <PieChart className="w-6 h-6" />
     }
-  ];
+  ],
 
 const financial: React.FC = () => {
   return (
@@ -69,7 +69,7 @@ const financial: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default financial;
+export default financial,

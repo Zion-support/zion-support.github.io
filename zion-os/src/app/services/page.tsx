@@ -169,12 +169,12 @@ export default function ServicesPage() {
             <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
               Comprehensive IT infrastructure, cloud solutions, and digital transformation services
 =======
-import Link from 'next/link';
+import Link from 'next/link',
 
 export const metadata = {
   title: 'Services - Zion Tech Group',
-  description: 'Comprehensive AI-powered technology services including automation, autonomous business operations, cybersecurity, quantum computing, and space technology solutions.',
-};
+  description: 'Comprehensive AI-powered technology services including automation, autonomous business operations, cybersecurity, quantum computing, and space technology solutions.'
+},
 
 export default function ServicesPage() {
   const serviceCategories = [
@@ -187,21 +187,21 @@ export default function ServicesPage() {
           description: 'Intelligent process automation and workflow optimization.',
           href: '/ai-automation-services',
           icon: '🤖',
-          features: ['Process Automation', 'Intelligent Workflows', 'Predictive Analytics', 'Machine Learning Models']
+          features: ['Process AutomationIntelligent Workflows', 'Predictive AnalyticsMachine Learning Models']
         },
         {
           name: 'AI Autonomous Business Operations',
           description: 'Self-managing business systems that optimize performance continuously.',
           href: '/ai-autonomous-business-operations',
           icon: '🚀',
-          features: ['Self-Optimizing Systems', 'Real-time Decision Making', 'Scalable Operations', 'Performance Analytics']
+          features: ['Self-Optimizing SystemsReal-time Decision Making', 'Scalable OperationsPerformance Analytics']
         },
         {
           name: 'AI Content Generation',
           description: 'Automated content creation and marketing automation.',
           href: '/ai-content-generator',
           icon: '✍️',
-          features: ['Content Creation', 'Marketing Automation', 'Personalization Engine', 'Creative Studio']
+          features: ['Content CreationMarketing Automation', 'Personalization EngineCreative Studio']
         }
       ]
     },
@@ -214,14 +214,14 @@ export default function ServicesPage() {
           description: 'Comprehensive security solutions for modern enterprises.',
           href: '/advanced-cybersecurity-suite',
           icon: '🛡️',
-          features: ['Threat Detection', 'Zero Trust Security', 'Incident Response', 'Security Analytics']
+          features: ['Threat DetectionZero Trust Security', 'Incident ResponseSecurity Analytics']
         },
         {
           name: 'SOC2 Compliance Automation',
           description: 'Automated compliance management and reporting.',
           href: '/soc2-compliance-automation',
           icon: '📋',
-          features: ['Compliance Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Preparation']
+          features: ['Compliance MonitoringAutomated Reporting', 'Risk AssessmentAudit Preparation']
         }
       ]
     },
@@ -234,14 +234,14 @@ export default function ServicesPage() {
           description: 'Modern infrastructure solutions for enterprise needs.',
           href: '/advanced-it-infrastructure-services',
           icon: '🏗️',
-          features: ['Cloud Architecture', 'DevOps Automation', 'Performance Optimization', 'Scalability Solutions']
+          features: ['Cloud ArchitectureDevOps Automation', 'Performance OptimizationScalability Solutions']
         },
         {
           name: 'AI-Powered IT Asset Management',
           description: 'Intelligent management of IT resources and assets.',
           href: '/ai-powered-it-asset-management',
           icon: '💻',
-          features: ['Asset Tracking', 'Lifecycle Management', 'Cost Optimization', 'Performance Monitoring']
+          features: ['Asset TrackingLifecycle Management', 'Cost OptimizationPerformance Monitoring']
         }
       ]
     },
@@ -254,18 +254,18 @@ export default function ServicesPage() {
           description: 'Quantum solutions for optimization and research.',
           href: '/quantum-services',
           icon: '⚛️',
-          features: ['Quantum Algorithms', 'Optimization Problems', 'Research & Development', 'Quantum Consulting']
+          features: ['Quantum AlgorithmsOptimization Problems', 'Research & DevelopmentQuantum Consulting']
         },
         {
           name: 'Space Technology Solutions',
           description: 'Innovative space technology and infrastructure.',
           href: '/space-tech',
           icon: '🚀',
-          features: ['Satellite Technology', 'Space Infrastructure', 'Innovation Research', 'Technology Partnerships']
+          features: ['Satellite TechnologySpace Infrastructure', 'Innovation ResearchTechnology Partnerships']
         }
       ]
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -298,7 +298,7 @@ export default function ServicesPage() {
       description: 'Lead your industry with pioneering technology solutions.',
       icon: '🌟'
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen">
@@ -849,7 +849,7 @@ export default function ServicesPage() {
 =======
       {/* CTA Section */}
       <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Let's discuss how our services can transform your business and drive unprecedented growth.
@@ -871,6 +871,6 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

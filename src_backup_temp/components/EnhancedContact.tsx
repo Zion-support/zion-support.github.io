@@ -1,1 +1,1 @@
-export default EnhancedContact;
+export default EnhancedContact,

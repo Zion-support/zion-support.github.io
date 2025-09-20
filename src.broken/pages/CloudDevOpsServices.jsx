@@ -1,14 +1,14 @@
-import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin  } from 'lucide-react';
+import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin  } from 'lucide-react',
 
 export default function Page() {
-;
+,
     const getPricingColor = (pricing) => {
         switch(pricing) {
-            case 'Enterprise': return 'text-purple - 400';
-            case 'Professional': return 'text-blue - 400';
-            case 'Standard': return 'text-green - 400';
+            case 'Enterprise': return 'text-purple - 400',
+            case 'Professional': return 'text-blue - 400',
+            case 'Standard': return 'text-green - 400',
             default: return 'text-gray - 400'}
-    };
+    },
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate -900">
       <div className="container mx - auto px-4 py-8">
         {/* Header */}
@@ -130,5 +130,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) };
+    </div>) },
 }}}}

@@ -1,40 +1,40 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Crown, Building, Rocket, Star, Zap, Shield } from 'lucide-react';
-import Link from 'next/link';
+import React, { useState, useCallback, useMemo } from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Crown, Building, Rocket, Star, Zap, Shield } from 'lucide-react',
+import Link from 'next/link',
 
 interface AdvancedService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  type: string;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  category: string,
+  type: string,
   pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom?: string;
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketSize: string;
-  targetAudience: string;
-  competitiveAdvantage: string;
-  contact: string;
-  mobile: string;
-  address: string;
-  website: string;
-  slug: string;
+    starter: string,
+    professional: string,
+    enterprise: string,
+    custom?: string
+  },
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  marketSize: string,
+  targetAudience: string,
+  competitiveAdvantage: string,
+  contact: string,
+  mobile: string,
+  address: string,
+  website: string,
+  slug: string
 }
 
 interface AdvancedServiceCard2025Props {
-  service: AdvancedService;
-  variant?: 'default' | 'quantum' | 'ai' | 'automation' | 'it' | 'emerging' | 'enterprise' | 'premium';
-  theme?: 'quantum' | 'cyber' | 'neon';
-  className?: string;
-  onClick?: () => void;
+  service: AdvancedService,
+  variant?: 'default' | 'quantum' | 'ai' | 'automation' | 'it' | 'emerging' | 'enterprise' | 'premium',
+  theme?: 'quantum' | 'cyber' | 'neon',
+  className?: string,
+  onClick?: () => void
 }
 
 const AdvancedServiceCard2025: React.FC<AdvancedServiceCard2025Props> = ({
@@ -43,8 +43,8 @@ const AdvancedServiceCard2025: React.FC<AdvancedServiceCard2025Props> = ({
   className = '',
   onClick
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false),
 
   // Get variant-specific styles
   const variantStyles = useMemo(() => {
@@ -56,7 +56,7 @@ const AdvancedServiceCard2025: React.FC<AdvancedServiceCard2025Props> = ({
         button: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700',
         text: 'text-cyan-50',
         accent: 'bg-cyan-400'
-      };
+      },
     }
     
     if (variant === 'enterprise') {
@@ -67,7 +67,7 @@ const AdvancedServiceCard2025: React.FC<AdvancedServiceCard2025Props> = ({
         button: 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700',
         text: 'text-purple-50',
         accent: 'bg-purple-400'
-      };
+      },
     }
     
     if (variant === 'ai') {
@@ -78,7 +78,7 @@ const AdvancedServiceCard2025: React.FC<AdvancedServiceCard2025Props> = ({
         button: 'bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700',
         text: 'text-blue-50',
         accent: 'bg-blue-400'
-      };
+      },
     }
     
     // Default variant
@@ -89,27 +89,27 @@ const AdvancedServiceCard2025: React.FC<AdvancedServiceCard2025Props> = ({
       button: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700',
       text: 'text-gray-50',
       accent: 'bg-cyan-400'
-    };
-  }, [variant]);
+    },
+  }, [variant]),
 
   const handleCardClick = useCallback(() => {
     if (onClick) {
-      onClick();
+      onClick(),
     }
-  }, [onClick]);
+  }, [onClick]),
 
   const toggleExpanded = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsExpanded(!isExpanded);
-  }, [isExpanded]);
+    e.stopPropagation(),
+    setIsExpanded(!isExpanded)
+  }, [isExpanded]),
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('AI') || category.includes('Data')) return <Zap className="w-5 h-5 text-blue-400" />;
-    if (category.includes('Security') || category.includes('Compliance')) return <Shield className="w-5 h-5 text-green-400" />;
-    if (category.includes('Infrastructure') || category.includes('Cloud')) return <Building className="w-5 h-5 text-purple-400" />;
-    if (category.includes('Quantum')) return <Star className="w-5 h-5 text-cyan-400" />;
-    return <Rocket className="w-5 h-5 text-cyan-400" />;
-  };
+    if (category.includes('AI') || category.includes('Data')) return <Zap className="w-5 h-5 text-blue-400" />,
+    if (category.includes('Security') || category.includes('Compliance')) return <Shield className="w-5 h-5 text-green-400" />,
+    if (category.includes('Infrastructure') || category.includes('Cloud')) return <Building className="w-5 h-5 text-purple-400" />,
+    if (category.includes('Quantum')) return <Star className="w-5 h-5 text-cyan-400" />,
+    return <Rocket className="w-5 h-5 text-cyan-400" />
+  },
 
 const AdvancedServiceCard2025: React.FC = () => {
   return (
@@ -117,7 +117,7 @@ const AdvancedServiceCard2025: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AdvancedServiceCard2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default AdvancedServiceCard2025;
+export default AdvancedServiceCard2025,

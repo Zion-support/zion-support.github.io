@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface InnovativeITInfrastructureService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureService[] = [
   // Quantum-Secure Cloud Infrastructure
@@ -49,16 +49,11 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     period: '/month',
     description: 'Revolutionary cloud infrastructure platform that implements quantum-resistant encryption algorithms, ensuring data security against future quantum computing threats.',
     features: [
-      'Quantum-resistant encryption algorithms',
-      'Post-quantum cryptography implementation',
-      'Multi-cloud orchestration',
-      'Zero-trust security architecture',
-      'Automated compliance monitoring',
-      'Real-time threat detection',
-      'Quantum key distribution (QKD)',
-      'Hybrid classical-quantum security',
-      'Performance optimization',
-      'Comprehensive monitoring dashboard'
+      'Quantum-resistant encryption algorithmsPost-quantum cryptography implementation',
+      'Multi-cloud orchestrationZero-trust security architecture',
+      'Automated compliance monitoringReal-time threat detection',
+      'Quantum key distribution (QKD)Hybrid classical-quantum security',
+      'Performance optimizationComprehensive monitoring dashboard'
     ],
     popular: true,
     icon: '🔐',
@@ -101,16 +96,11 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     period: '/month',
     description: 'Advanced platform for orchestrating distributed edge computing resources, optimizing workload distribution, and ensuring seamless edge-to-cloud connectivity.',
     features: [
-      'Intelligent workload distribution',
-      'Edge-to-cloud synchronization',
-      'Real-time performance optimization',
-      'Multi-edge location management',
-      'Automated failover and recovery',
-      'Edge security and compliance',
-      'Resource utilization analytics',
-      'Custom edge application deployment',
-      'IoT device integration',
-      'Edge AI model deployment'
+      'Intelligent workload distributionEdge-to-cloud synchronization',
+      'Real-time performance optimizationMulti-edge location management',
+      'Automated failover and recoveryEdge security and compliance',
+      'Resource utilization analyticsCustom edge application deployment',
+      'IoT device integrationEdge AI model deployment'
     ],
     popular: true,
     icon: '🌐',
@@ -153,16 +143,11 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     period: '/month',
     description: 'Revolutionary neuromorphic computing infrastructure that mimics the human brain\'s neural architecture for ultra-efficient AI processing and machine learning workloads.',
     features: [
-      'Brain-inspired neural architecture',
-      'Ultra-low power consumption',
-      'Real-time learning capabilities',
-      'Spiking neural networks',
-      'Adaptive processing algorithms',
-      'Hardware-software co-design',
-      'Scalable neural processing units',
-      'Energy-efficient AI training',
-      'Neuromorphic chip integration',
-      'Advanced neural simulation tools'
+      'Brain-inspired neural architectureUltra-low power consumption',
+      'Real-time learning capabilitiesSpiking neural networks',
+      'Adaptive processing algorithmsHardware-software co-design',
+      'Scalable neural processing unitsEnergy-efficient AI training',
+      'Neuromorphic chip integrationAdvanced neural simulation tools'
     ],
     popular: false,
     icon: '🧠',
@@ -205,16 +190,11 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     period: '/month',
     description: 'Advanced infrastructure platform that seamlessly integrates quantum computing resources with classical computing systems, enabling hybrid algorithms and optimal resource utilization.',
     features: [
-      'Quantum-classical resource orchestration',
-      'Hybrid algorithm optimization',
-      'Quantum error correction',
-      'Classical-quantum synchronization',
-      'Resource allocation optimization',
-      'Performance monitoring and analytics',
-      'Multi-quantum processor support',
-      'Classical computing integration',
-      'Quantum algorithm libraries',
-      'Hybrid workflow automation'
+      'Quantum-classical resource orchestrationHybrid algorithm optimization',
+      'Quantum error correctionClassical-quantum synchronization',
+      'Resource allocation optimizationPerformance monitoring and analytics',
+      'Multi-quantum processor supportClassical computing integration',
+      'Quantum algorithm librariesHybrid workflow automation'
     ],
     popular: true,
     icon: '⚛️',
@@ -257,16 +237,11 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     period: '/month',
     description: 'Revolutionary platform that autonomously manages data center operations, including cooling, power management, security, and resource allocation, with zero human intervention.',
     features: [
-      'Autonomous cooling optimization',
-      'AI-powered power management',
-      'Predictive maintenance automation',
-      'Security threat response',
-      'Resource allocation optimization',
-      'Energy efficiency maximization',
-      'Real-time performance monitoring',
-      'Automated incident response',
-      'Capacity planning automation',
-      'Comprehensive analytics dashboard'
+      'Autonomous cooling optimizationAI-powered power management',
+      'Predictive maintenance automationSecurity threat response',
+      'Resource allocation optimizationEnergy efficiency maximization',
+      'Real-time performance monitoringAutomated incident response',
+      'Capacity planning automationComprehensive analytics dashboard'
     ],
     popular: true,
     icon: '🏢',
@@ -300,5 +275,5 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     rating: 4.9,
     reviews: 18
   }
-];
-export default innovativeITInfrastructureServices2025;
+],
+export default innovativeITInfrastructureServices2025,

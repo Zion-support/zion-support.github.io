@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Atom, 
+  Atom,
   Cpu, 
   Zap, 
   Brain, 
@@ -23,50 +23,33 @@ import {
   Rocket,
   Microscope,
   TestTube
-} from 'lucide-react';
-
+} from "lucide-react";
 const QuantumComputingElite: React.FC = () => {
   const features = [
     {
-      icon: Atom,
-      title: "Quantum Processing Units",
-      description: "Access to 1000+ qubit quantum computers with error correction and quantum advantage algorithms"
-    },
+      icon: Atom,title: "Quantum Processing Units",description: "Access to 1000+ qubit quantum computers with error correction and quantum advantage algorithms"
+    };
     {
-      icon: Brain,
-      title: "AI-Quantum Hybrid Systems",
-      description: "Combines quantum computing with AI for unprecedented computational power and problem-solving"
-    },
+      icon: Brain,title: "AI-Quantum Hybrid Systems",description: "Combines quantum computing with AI for unprecedented computational power and problem-solving"
+    };
     {
-      icon: Zap,
-      title: "Quantum-Classical Integration",
-      description: "Seamless integration between quantum and classical computing resources for optimal performance"
-    },
+      icon: Zap,title: "Quantum-Classical Integration",description: "Seamless integration between quantum and classical computing resources for optimal performance"
+    };
     {
-      icon: Lock,
-      title: "Quantum-Safe Cryptography",
-      description: "Post-quantum cryptography solutions that protect against future quantum attacks"
-    },
+      icon: Lock,title: "Quantum-Safe Cryptography",description: "Post-quantum cryptography solutions that protect against future quantum attacks"
+    };
     {
-      icon: Users,
-      title: "Multi-User Quantum Access",
-      description: "Collaborative quantum computing with real-time sharing and resource optimization"
-    },
+      icon: Users,title: "Multi-User Quantum Access",description: "Collaborative quantum computing with real-time sharing and resource optimization"
+    };
     {
-      icon: Globe,
-      title: "Global Quantum Network",
-      description: "Access to quantum computers across multiple locations and cloud providers"
+      icon: Globe,title: "Global Quantum Network",description: "Access to quantum computers across multiple locations and cloud providers"
     }
   ];
-
   const pricing = [
     {
-      name: "Quantum Starter",
-      price: "$8,500",
-      period: "/month",
-      description: "Perfect for research institutions and startups",
-      features: [
-        "Up to 100 qubit access",
+      name: "Quantum Starter",price: "$8,500",
+      period: "/month",description: "Perfect for research institutions and startups",features: [
+        "Up to 100 qubit access";
         "Basic quantum algorithms",
         "Standard quantum simulators",
         "Email support",
@@ -75,12 +58,9 @@ const QuantumComputingElite: React.FC = () => {
       ]
     },
     {
-      name: "Quantum Professional",
-      price: "$18,000",
-      period: "/month",
-      description: "Ideal for growing businesses and research teams",
-      features: [
-        "Up to 500 qubit access",
+      name: "Quantum Professional",price: "$18,000",
+      period: "/month",description: "Ideal for growing businesses and research teams",features: [
+        "Up to 500 qubit access";
         "Advanced quantum algorithms",
         "Custom quantum circuits",
         "Priority support",
@@ -89,14 +69,11 @@ const QuantumComputingElite: React.FC = () => {
         "Quantum consulting"
       ],
       popular: true
-    },
+    };
     {
-      name: "Quantum Enterprise",
-      price: "$45,000",
-      period: "/month",
-      description: "For large organizations with complex quantum needs",
-      features: [
-        "Unlimited qubit access",
+      name: "Quantum Enterprise",price: "$45,000",
+      period: "/month",description: "For large organizations with complex quantum needs",features: [
+        "Unlimited qubit access";
         "Full quantum suite",
         "Custom quantum development",
         "24/7 dedicated support",
@@ -105,35 +82,28 @@ const QuantumComputingElite: React.FC = () => {
         "On-premise quantum computers"
       ]
     }
-  ];
+  ],
 
   const quantumApplications = [
     {
-      title: "Drug Discovery & Pharmaceuticals",
-      description: "Quantum molecular modeling for faster drug discovery, protein folding, and chemical simulations"
+      title: "Drug Discovery & Pharmaceuticals",description: "Quantum molecular modeling for faster drug discovery, protein folding, and chemical simulations"
     },
     {
-      title: "Financial Modeling & Optimization",
-      description: "Portfolio optimization, risk assessment, and algorithmic trading using quantum algorithms"
+      title: "Financial Modeling & Optimization",description: "Portfolio optimization, risk assessment, and algorithmic trading using quantum algorithms"
     },
     {
-      title: "Machine Learning & AI",
-      description: "Quantum machine learning algorithms for pattern recognition and data analysis"
-    },
+      title: "Machine Learning & AI",description: "Quantum machine learning algorithms for pattern recognition and data analysis"
+    };
     {
-      title: "Cryptography & Security",
-      description: "Quantum-resistant encryption and quantum key distribution for ultra-secure communications"
-    },
+      title: "Cryptography & Security",description: "Quantum-resistant encryption and quantum key distribution for ultra-secure communications"
+    };
     {
-      title: "Supply Chain Optimization",
-      description: "Complex logistics optimization and route planning using quantum algorithms"
-    },
+      title: "Supply Chain Optimization",description: "Complex logistics optimization and route planning using quantum algorithms"
+    };
     {
-      title: "Climate Modeling",
-      description: "Advanced climate simulations and weather forecasting with quantum computing power"
+      title: "Climate Modeling",description: "Advanced climate simulations and weather forecasting with quantum computing power"
     }
   ];
-
   const quantumTechnologies = [
     "Superconducting Qubits",
     "Trapped Ion Qubits",
@@ -143,7 +113,7 @@ const QuantumComputingElite: React.FC = () => {
     "Quantum Annealing",
     "Quantum Error Correction",
     "Quantum Memory Systems"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -201,7 +171,7 @@ const QuantumComputingElite: React.FC = () => {
               Revolutionary Quantum Capabilities
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our quantum computing platform provides access to the most advanced quantum technologies, 
+              Our quantum computing platform provides access to the most advanced quantum technologies;
               enabling breakthroughs in science, technology, and business.
             </p>
           </motion.div>
@@ -434,7 +404,7 @@ const QuantumComputingElite: React.FC = () => {
 
           <div className="text-center">
             <a
-              href="https://ziontechgroup.com/contact"
+              href="https: //ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Quantum Demo
@@ -445,7 +415,7 @@ const QuantumComputingElite: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light">
+      <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
             © 2024 Zion Tech Group. All rights reserved.
@@ -474,7 +444,6 @@ const QuantumComputingElite: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
+  )
 };
-
 export default QuantumComputingElite;

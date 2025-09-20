@@ -2,48 +2,48 @@
 // Cutting-edge, real-world micro SAAS solutions with market data and pricing
 
 export interface ServiceContact {
-  phone: string;
-  email: string;
-  website: string;
+  phone: string,
+  email: string,
+  website: string,
   address: string}
 
 export interface MicroSaasService2026 {
-  id: number;
-  name: string;
-  category: string;
-  pricing: string;
-  description: string;
-  price: number;
-  pricingModel: string;
-  userLimit: string;
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: ServiceContact;
-  marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
-  freeTier: boolean;
-  trialPeriod: string;
-  innovationLevel: string;
+  id: number,
+  name: string,
+  category: string,
+  pricing: string,
+  description: string,
+  price: number,
+  pricingModel: string,
+  userLimit: string,
+  features: string[],
+  benefits: string[],
+  targetAudience: string[],
+  tags: string[],
+  contactInfo: ServiceContact,
+  marketPrice: string,
+  competitors: string[],
+  roi: string,
+  setupTime: string,
+  integrations: string[],
+  freeTier: boolean,
+  trialPeriod: string,
+  innovationLevel: string,
   contactInfo: {
 
-    phone: string;
-    email: string;
-    website: string};  technicalSpecs?: {
+    phone: string,
+    email: string,
+    website: string},  technicalSpecs?: {
 
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[]};
-  competitors?: string[];
-  marketSize?: string;
-;
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026[] = [;
+    technology: string[],
+    integrations: string[],
+    apiEndpoints: number,
+    uptime: string,
+    security: string[]},
+  competitors?: string[],
+  marketSize?: string,
+,
+export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026[] = [,
   // AI-Powered Cybersecurity & Threat Intelligence
   {
 
@@ -1349,12 +1349,12 @@ export const innovativeMicroSaasServices2026: MicroSaasService2026[] = [{
     complianceFeatures: ["GDPR", "CCPA", "SOC 2", "Copyright compliance", "Brand safety"],"
     scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"]
   }
-];
+],
 
-// Additional specialized services for 2026;
+// Additional specialized services for 2026,
 export 
     contactInfo: {"
-      phone: "+1 302 464 0950",;"
-      email: "kleber@ziontechgroup.com",;"
-      website: "https://ziontechgroup.com"}};];
+      phone: "+1 302 464 0950","
+      email: "kleber@ziontechgroup.com","
+      website: "https://ziontechgroup.com"}},],
 "

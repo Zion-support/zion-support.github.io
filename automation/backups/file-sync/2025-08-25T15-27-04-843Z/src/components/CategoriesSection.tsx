@@ -1,8 +1,8 @@
 
-import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Star, Zap, Globe, Shield } from "lucide-react";
-import { motion } from "framer-motion";
+import { GradientHeading } from "./GradientHeading",
+import { Link } from "react-router-dom",
+import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Star, Zap, Globe, Shield } from "lucide-react",
+import { motion } from "framer-motion",
 
 const categories = [
   {
@@ -44,8 +44,8 @@ const categories = [
     bgColor: "bg-zion-purple-light/10",
     borderColor: "border-zion-purple-light/20",
     features: ["Latest Tech", "AI Solutions", "Future Ready"]
-  },
-];
+  }
+],
 
 const specialServices = [
   {
@@ -66,10 +66,10 @@ const specialServices = [
     icon: <Star className="w-5 h-5" />,
     description: "Professional development"
   }
-];
+],
 
 interface CategoriesSectionProps {
-  showTitle?: boolean;
+  showTitle?: boolean,
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
@@ -82,7 +82,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -91,7 +91,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       y: 0,
       transition: { duration: 0.5 }
     }
-  };
+  },
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
@@ -100,7 +100,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       scale: 1,
       transition: { duration: 0.4 }
     }
-  };
+  },
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
@@ -207,7 +207,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           <Link 
             to="/categories" 
-            className="group inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors pb-1 hover:text-zion-cyan-light"
+            className="group inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-light transition-colors pb-1 hover:text-zion-cyan-light"
           >
             <span className="font-medium">View All Categories</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -215,5 +215,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

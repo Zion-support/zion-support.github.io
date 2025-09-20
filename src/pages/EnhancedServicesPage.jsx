@@ -1,69 +1,68 @@
-import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from 'lucide-react';
-import SEO from '@/components/SEO';
+import React, { useState } from "react";
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from "@/data/enhancedServices";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 export default function EnhancedServicesPage() {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+    const [searchTerm, setSearchTerm] = useState(''),
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
     const filteredServices = ENHANCED_SERVICES.filter(service => {
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
         const matchesCategory = selectedCategory === 'all' ||
-            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
+            service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
         const matchesPrice = selectedPriceRange === 'all' ||
             (selectedPriceRange === 'basic' && service.price <= 2000) ||
             (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
-            (selectedPriceRange === 'enterprise' && service.price > 8000);
-        return matchesSearch && matchesCategory && matchesPrice;
-    });
+            (selectedPriceRange === 'enterprise' && service.price > 8000),
+        return matchesSearch && matchesCategory && matchesPrice,
+    }),
     const getCategoryIcon = (category) => {
         switch (category.toLowerCase()) {
             case 'ai automation':
             case 'ai & machine learning':
-                return <Brain className="w-5 h-5"/>;
+                return <Brain className="w-5 h-5"/>,
             case 'cloud management':
             case 'cloud & infrastructure':
-                return <Cloud className="w-5 h-5"/>;
+                return <Cloud className="w-5 h-5"/>,
             case 'cybersecurity':
             case 'security framework':
-                return <Shield className="w-5 h-5"/>;
+                return <Shield className="w-5 h-5"/>,
             case 'data engineering':
             case 'data & analytics':
-                return <Database className="w-5 h-5"/>;
+                return <Database className="w-5 h-5"/>,
             case 'business intelligence':
-                return <TrendingUp className="w-5 h-5"/>;
+                return <TrendingUp className="w-5 h-5"/>,
             case 'developer tools':
             case 'development & devops':
-                return <Code className="w-5 h-5"/>;
+                return <Code className="w-5 h-5"/>,
             case 'digital transformation':
-                return <Zap className="w-5 h-5"/>;
+                return <Zap className="w-5 h-5"/>,
             case 'healthcare technology':
-                return <Heart className="w-5 h-5"/>;
+                return <Heart className="w-5 h-5"/>,
             case 'financial technology':
                 return <DollarSign className="w-5 h-5"/>;
             case 'blockchain':
                 return <Link className="w-5 h-5"/>;
             case 'quantum computing':
                 return <Zap className="w-5 h-5"/>;
-            default:
-                return <Code className="w-5 h-5"/>;
+            default: return <Code className="w-5 h-5"/>
         }
     };
     const getPriceRange = (price) => {
         if (price <= 2000)
-            return 'basic';
+            return 'basic',
         if (price <= 8000)
-            return 'professional';
-        return 'enterprise';
-    };
+            return 'professional',
+        return 'enterprise',
+    },
     return (<div className="min-h-screen bg-background">
       <SEO title="Enhanced IT & AI Services - Zion Tech Group" description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness." keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group" canonical="https://ziontechgroup.com/enhanced-services"/>
 

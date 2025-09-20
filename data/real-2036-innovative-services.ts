@@ -7,28 +7,21 @@ export const real2036InnovativeServices = [
     price: '$2,499',
     period: 'month',
     features: [
-      'Autonomous workflow optimization',
-      'Predictive process analytics',
-      'Self-healing automation',
-      'Intelligent decision engine',
-      'Continuous learning algorithms',
-      'Real-time performance monitoring'
+      'Autonomous workflow optimizationPredictive process analytics',
+      'Self-healing automationIntelligent decision engine',
+      'Continuous learning algorithmsReal-time performance monitoring'
     ],
     popular: true,
     category: 'AI & Automation',
     icon: '🤖',
     marketPrice: '$3,000-5,000/month',
     benefits: [
-      'Reduce manual work by 85%',
-      'Improve process efficiency by 60%',
-      '24/7 autonomous operation',
-      'Scalable across all departments'
+      'Reduce manual work by 85%Improve process efficiency by 60%',
+      '24/7 autonomous operationScalable across all departments'
     ],
     useCases: [
-      'Customer service automation',
-      'Supply chain optimization',
-      'Financial process automation',
-      'HR workflow management'
+      'Customer service automationSupply chain optimization',
+      'Financial process automationHR workflow management'
     ]
   },
   {
@@ -39,28 +32,21 @@ export const real2036InnovativeServices = [
     price: '$4,999',
     period: 'month',
     features: [
-      'Quantum-AI hybrid algorithms',
-      'Quantum machine learning',
-      'Complex optimization solving',
-      'Quantum neural networks',
-      'Real-time quantum simulation',
-      'Hybrid classical-quantum processing'
+      'Quantum-AI hybrid algorithmsQuantum machine learning',
+      'Complex optimization solvingQuantum neural networks',
+      'Real-time quantum simulationHybrid classical-quantum processing'
     ],
     popular: true,
     category: 'Quantum & AI',
     icon: '⚛️🧠',
     marketPrice: '$6,000-10,000/month',
     benefits: [
-      '1000x faster computation for complex problems',
-      'Unprecedented AI model training speed',
-      'Breakthrough optimization capabilities',
-      'Future-proof quantum advantage'
+      '1000x faster computation for complex problemsUnprecedented AI model training speed',
+      'Breakthrough optimization capabilitiesFuture-proof quantum advantage'
     ],
     useCases: [
-      'Drug discovery and molecular modeling',
-      'Financial portfolio optimization',
-      'Climate change modeling',
-      'Advanced AI model training'
+      'Drug discovery and molecular modelingFinancial portfolio optimization',
+      'Climate change modelingAdvanced AI model training'
     ]
   },
   {
@@ -71,28 +57,21 @@ export const real2036InnovativeServices = [
     price: '$8,999',
     period: 'month',
     features: [
-      'Autonomous space navigation',
-      'AI-powered resource detection',
-      'Robotic mining operations',
-      'Real-time space analytics',
-      'Resource optimization algorithms',
-      'Space mission planning'
+      'Autonomous space navigationAI-powered resource detection',
+      'Robotic mining operationsReal-time space analytics',
+      'Resource optimization algorithmsSpace mission planning'
     ],
     popular: false,
     category: 'Space Technology',
     icon: '🚀⛏️',
     marketPrice: '$10,000-20,000/month',
     benefits: [
-      'Access to unlimited space resources',
-      'Revolutionary resource extraction',
-      'Space exploration advancement',
-      'Sustainable resource acquisition'
+      'Access to unlimited space resourcesRevolutionary resource extraction',
+      'Space exploration advancementSustainable resource acquisition'
     ],
     useCases: [
-      'Asteroid mining operations',
-      'Lunar resource extraction',
-      'Space station resource management',
-      'Interplanetary resource planning'
+      'Asteroid mining operationsLunar resource extraction',
+      'Space station resource managementInterplanetary resource planning'
     ]
   },
   {
@@ -103,28 +82,21 @@ export const real2036InnovativeServices = [
     price: '$3,999',
     period: 'month',
     features: [
-      'AI-powered 3D content generation',
-      'Virtual world creation tools',
-      'Intelligent NPC development',
-      'Virtual economy management',
-      'Cross-platform compatibility',
-      'Real-time collaboration tools'
+      'AI-powered 3D content generationVirtual world creation tools',
+      'Intelligent NPC developmentVirtual economy management',
+      'Cross-platform compatibilityReal-time collaboration tools'
     ],
     popular: true,
     category: 'Metaverse & AI',
     icon: '🌐🎮',
     marketPrice: '$5,000-8,000/month',
     benefits: [
-      '10x faster metaverse development',
-      'AI-generated immersive content',
-      'Scalable virtual world creation',
-      'Professional-grade tools'
+      '10x faster metaverse developmentAI-generated immersive content',
+      'Scalable virtual world creationProfessional-grade tools'
     ],
     useCases: [
-      'Virtual event platforms',
-      'Educational metaverses',
-      'Virtual retail experiences',
-      'Social virtual worlds'
+      'Virtual event platformsEducational metaverses',
+      'Virtual retail experiencesSocial virtual worlds'
     ]
   },
   {
@@ -135,28 +107,21 @@ export const real2036InnovativeServices = [
     price: '$6,999',
     period: 'month',
     features: [
-      'Non-invasive neural sensors',
-      'AI signal processing',
-      'Real-time brain-computer communication',
-      'Accessibility applications',
-      'Gaming integration',
-      'Medical research tools'
+      'Non-invasive neural sensorsAI signal processing',
+      'Real-time brain-computer communicationAccessibility applications',
+      'Gaming integrationMedical research tools'
     ],
     popular: false,
     category: 'Neural Technology',
     icon: '🧠💻',
     marketPrice: '$8,000-15,000/month',
     benefits: [
-      'Revolutionary human-computer interaction',
-      'Accessibility breakthrough',
-      'Medical research advancement',
-      'Future of computing interface'
+      'Revolutionary human-computer interactionAccessibility breakthrough',
+      'Medical research advancementFuture of computing interface'
     ],
     useCases: [
-      'Assistive technology',
-      'Gaming and entertainment',
-      'Medical research',
-      'Human augmentation'
+      'Assistive technologyGaming and entertainment',
+      'Medical researchHuman augmentation'
     ]
   },
   {
@@ -167,28 +132,21 @@ export const real2036InnovativeServices = [
     price: '$5,999',
     period: 'month',
     features: [
-      'Quantum bioinformatics algorithms',
-      'Genetic data processing',
-      'Drug discovery optimization',
-      'Biological simulation tools',
-      'Quantum genetic analysis',
-      'Bio-quantum hybrid computing'
+      'Quantum bioinformatics algorithmsGenetic data processing',
+      'Drug discovery optimizationBiological simulation tools',
+      'Quantum genetic analysisBio-quantum hybrid computing'
     ],
     popular: true,
     category: 'Quantum & Biology',
     icon: '🧬⚛️',
     marketPrice: '$7,000-12,000/month',
     benefits: [
-      '100x faster genetic analysis',
-      'Revolutionary drug discovery',
-      'Advanced bioinformatics',
-      'Quantum advantage in biology'
+      '100x faster genetic analysisRevolutionary drug discovery',
+      'Advanced bioinformaticsQuantum advantage in biology'
     ],
     useCases: [
-      'Pharmaceutical research',
-      'Genetic medicine',
-      'Biological research',
-      'Personalized medicine'
+      'Pharmaceutical researchGenetic medicine',
+      'Biological researchPersonalized medicine'
     ]
   },
   {
@@ -199,28 +157,21 @@ export const real2036InnovativeServices = [
     price: '$7,999',
     period: 'month',
     features: [
-      'Consciousness simulation engine',
-      'Ethical AI frameworks',
-      'Consciousness evolution tracking',
-      'AI personality development',
-      'Ethical decision algorithms',
-      'Consciousness metrics'
+      'Consciousness simulation engineEthical AI frameworks',
+      'Consciousness evolution trackingAI personality development',
+      'Ethical decision algorithmsConsciousness metrics'
     ],
     popular: false,
     category: 'AI Consciousness',
     icon: '🌟🤖',
     marketPrice: '$10,000-20,000/month',
     benefits: [
-      'Pioneering AI consciousness research',
-      'Ethical AI development',
-      'Breakthrough in AGI',
-      'Future of artificial intelligence'
+      'Pioneering AI consciousness researchEthical AI development',
+      'Breakthrough in AGIFuture of artificial intelligence'
     ],
     useCases: [
-      'AI research and development',
-      'Ethical AI training',
-      'Consciousness studies',
-      'AGI development'
+      'AI research and developmentEthical AI training',
+      'Consciousness studiesAGI development'
     ]
   },
   {
@@ -231,28 +182,21 @@ export const real2036InnovativeServices = [
     price: '$4,499',
     period: 'month',
     features: [
-      'Quantum key distribution',
-      'Quantum-resistant cryptography',
-      'Quantum network security',
-      'Unbreakable encryption',
-      'Quantum communication protocols',
-      'Real-time security monitoring'
+      'Quantum key distributionQuantum-resistant cryptography',
+      'Quantum network securityUnbreakable encryption',
+      'Quantum communication protocolsReal-time security monitoring'
     ],
     popular: true,
     category: 'Quantum Security',
     icon: '🔐⚛️',
     marketPrice: '$6,000-10,000/month',
     benefits: [
-      'Unbreakable security',
-      'Future-proof cryptography',
-      'Quantum network protection',
-      'Military-grade security'
+      'Unbreakable securityFuture-proof cryptography',
+      'Quantum network protectionMilitary-grade security'
     ],
     useCases: [
-      'Government communications',
-      'Financial institutions',
-      'Healthcare data protection',
-      'Critical infrastructure'
+      'Government communicationsFinancial institutions',
+      'Healthcare data protectionCritical infrastructure'
     ]
   },
   {
@@ -263,28 +207,21 @@ export const real2036InnovativeServices = [
     price: '$3,499',
     period: 'month',
     features: [
-      'AI-powered learning algorithms',
-      'Computer vision integration',
-      'Natural language processing',
-      'Autonomous navigation',
-      'Task optimization',
-      'Multi-robot coordination'
+      'AI-powered learning algorithmsComputer vision integration',
+      'Natural language processingAutonomous navigation',
+      'Task optimizationMulti-robot coordination'
     ],
     popular: true,
     category: 'AI & Robotics',
     icon: '🤖🦾',
     marketPrice: '$4,500-8,000/month',
     benefits: [
-      'Fully autonomous operation',
-      'Continuous learning and improvement',
-      'Scalable robotic workforce',
-      '24/7 operational capability'
+      'Fully autonomous operationContinuous learning and improvement',
+      'Scalable robotic workforce24/7 operational capability'
     ],
     useCases: [
-      'Manufacturing automation',
-      'Warehouse operations',
-      'Service robotics',
-      'Agricultural automation'
+      'Manufacturing automationWarehouse operations',
+      'Service roboticsAgricultural automation'
     ]
   },
   {
@@ -295,28 +232,21 @@ export const real2036InnovativeServices = [
     price: '$9,999',
     period: 'month',
     features: [
-      'Quantum market analysis',
-      'Portfolio optimization',
-      'Risk assessment algorithms',
-      'Real-time trading signals',
-      'Quantum risk management',
-      'High-frequency trading optimization'
+      'Quantum market analysisPortfolio optimization',
+      'Risk assessment algorithmsReal-time trading signals',
+      'Quantum risk managementHigh-frequency trading optimization'
     ],
     popular: true,
     category: 'Quantum Finance',
     icon: '💰⚛️',
     marketPrice: '$12,000-25,000/month',
     benefits: [
-      'Quantum advantage in trading',
-      'Optimal portfolio performance',
-      'Advanced risk management',
-      'Competitive trading edge'
+      'Quantum advantage in tradingOptimal portfolio performance',
+      'Advanced risk managementCompetitive trading edge'
     ],
     useCases: [
-      'Hedge fund operations',
-      'Investment banking',
-      'Portfolio management',
-      'Risk assessment'
+      'Hedge fund operationsInvestment banking',
+      'Portfolio managementRisk assessment'
     ]
   }
-];
+],

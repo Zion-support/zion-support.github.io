@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="mb-16">
@@ -73,15 +73,11 @@ export default function Page() {
             <h2 className="text-4xl font - bold text-white text-center mb-12">
               Assistant Capabilities
             </h2>
-            <div className="grid md:grid - cols - 4 gap-6">
-              {['Email Management',
-                'Calendar Scheduling',
-                'Task Organization',
-                'Information Search',
-                'Document Creation',
-                'Data Analysis',
-                'Communication',
-                'Reminders',
+            <div className="grid md: grid - cols - 4 gap-6">
+              {['Email ManagementCalendar Scheduling',
+                'Task OrganizationInformation Search',
+                'Document CreationData Analysis',
+                'CommunicationReminders'
               ].map (task => (<div
                   key={task}
                   className="bg-white / 5 rounded-lg p - 4 text-center border border-white / 10"
@@ -135,7 +131,7 @@ export default function Page() {
               Experience the future of personal assistance with AI that never
               stops helping
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-pink - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Get Started
               </button>
@@ -146,5 +142,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

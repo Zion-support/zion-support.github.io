@@ -1,6 +1,6 @@
-import React from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import ProposalGenerator from '../../components/governance/ProposalGenerator';
+import React from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import ProposalGenerator from '../../components/governance/ProposalGenerator',
 
 export default function UNBridgePage() {
   return (
@@ -11,5 +11,5 @@ export default function UNBridgePage() {
         <ProposalGenerator />
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

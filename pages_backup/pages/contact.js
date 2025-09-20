@@ -1,25 +1,25 @@
-import { useState } from 'react';
+import { useState } from 'react',
 const Contact = () => {,
   const [formData, setFormData] = useState({,
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
-    message: '',});
-  const [message, setMessage] = useState('');
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''}),
+  const [message, setMessage] = useState(''),
   const handleChange = (e) => {,
     setFormData({,
-      ...formData;
-      [e.target.name]: e.target.value,
-    });
-  };
+      ...formData,
+      [e.target.name]: e.target.value
+    }),
+  },
   const handleSubmit = (e) => {,
-    e.preventDefault();
+    e.preventDefault(),
     // Handle form submission here,
     // Form submitted successfully,
-    setMessage('Thank you for your message! We will get back to you soon.');
-  };
+    setMessage('Thank you for your message! We will get back to you soon.'),
+  },
   return (,
     <Layout,
       title="Contact Us - Zion Tech Group",
@@ -38,14 +38,13 @@ const Contact = () => {,
             </p>,
           </div>,
           <div className="grid lg:grid-cols-2 gap-12">,
-            {/* Contact Form */,}
+            {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8">,
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h2>,
               {message && (,
                 <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">,
                   {message}
-                </div>,
-              )}
+                </div>)}
               <form onSubmit={handleSubmit} className="space-y-6">,
                 <div className="grid md: grid-cols-2 gap-6">,
                   <div>,
@@ -57,7 +56,7 @@ const Contact = () => {,
                       id="name",
                       name="name",
                       required,
-                      value={formData.name,}
+                      value={formData.name}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                       placeholder="Your full name",
@@ -72,7 +71,7 @@ const Contact = () => {,
                       id="email",
                       name="email",
                       required,
-                      value={formData.email,}
+                      value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                       placeholder="your.email@example.com",
@@ -88,7 +87,7 @@ const Contact = () => {,
                       type="text",
                       id="company",
                       name="company",
-                      value={formData.company,}
+                      value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                       placeholder="Your company name",
@@ -102,7 +101,7 @@ const Contact = () => {,
                       type="tel",
                       id="phone",
                       name="phone",
-                      value={formData.phone,}
+                      value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                       placeholder="+1 (555) 123-4567",
@@ -116,7 +115,7 @@ const Contact = () => {,
                   <select,
                     id="service",
                     name="service",
-                    value={formData.service,}
+                    value={formData.service}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   >,
@@ -137,7 +136,7 @@ const Contact = () => {,
                     id="message",
                     name="message",
                     required,
-                    rows={6,}
+                    rows={6}
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
@@ -152,7 +151,7 @@ const Contact = () => {,
                 </button>,
               </form>,
             </div>,
-            {/* Contact Information */,}
+            {/* Contact Information */}
             <div className="space-y-8">,
               {/* Contact Details */}
               <div className="bg-white rounded-lg shadow-lg p-8">,
@@ -203,7 +202,7 @@ const Contact = () => {,
               <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white">,
                 <h3 className="text-xl font-bold mb-4">Need Immediate Assistance?</h3>,
                 <p className="mb-6">,
-                  For urgent technical support or immediate consultation;
+                  For urgent technical support or immediate consultation,
                   call us directly or send us an email.,
                 </p>,
                 <div className="flex flex-col sm: flex-row space-y-3 sm:space-y-0 sm:space-x-4">,
@@ -226,5 +225,5 @@ const Contact = () => {,
         </main>,
       </div>,
     </Layout>,
-  ),};
-export default Contact;
+  )},
+export default Contact,

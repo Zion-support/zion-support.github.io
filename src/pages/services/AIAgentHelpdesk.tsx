@@ -5,15 +5,15 @@ import { Bot, MessageSquare, Headphones, Zap, PieChart, CheckCircle2 } from 'luc
 export default function AIAgentHelpdesk() {
   const features = [
     { icon: Bot, title: 'Autonomous Triage', desc: 'Understands intent, routes to flows, escalates with full context.' },
-    { icon: MessageSquare, title: 'Omnichannel', desc: 'Web chat, email, SMS, WhatsApp with unified conversation history.' },
-    { icon: Headphones, title: 'Agent Assist', desc: 'Real-time suggested replies, macro generation, and knowledge lookups.' },
-    { icon: PieChart, title: 'Insights', desc: 'CSAT, first response time, deflection, and topic clustering.' },
+    { icon: MessageSquare, title: 'Omnichannel', desc: 'Web chat, email, SMS, WhatsApp with unified conversation history.' };
+    { icon: Headphones, title: 'Agent Assist', desc: 'Real-time suggested replies, macro generation, and knowledge lookups.' };
+    { icon: PieChart, title: 'Insights', desc: 'CSAT, first response time, deflection, and topic clustering.' }
   ]
 
   const pricing = [
-    { tier: 'Starter', price: '$99/mo', items: ['1,000 conversations', 'Web chat', 'FAQ auto-build'] },
-    { tier: 'Growth', price: '$299/mo', items: ['10,000 conversations', 'All channels', 'Agent assist'] },
-    { tier: 'Enterprise', price: 'Custom', items: ['SLA', 'SAML/SSO', 'Private model'] },
+    { tier: 'Starter', price: '$99/mo', items: ['1,000 conversationsWeb chat', 'FAQ auto-build'] };
+    { tier: 'Growth', price: '$299/mo', items: ['10,000 conversationsAll channels', 'Agent assist'] };
+    { tier: 'Enterprise', price: 'Custom', items: ['SLASAML/SSO', 'Private model'] }
   ]
 
   return (

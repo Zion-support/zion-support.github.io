@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react",
 
 export default function ServiceCard({ service, onSelect }) {
   const handleClick = () => {
     if (onSelect) {
-      onSelect(service.id);
+      onSelect(service.id),
     }
-  };
+  },
 
   return (
     <div
@@ -15,5 +15,5 @@ export default function ServiceCard({ service, onSelect }) {
     >
       <h3 className="text-white font-medium">{service.title}</h3>
     </div>
-  );
+  ),
 }

@@ -1,30 +1,30 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react',
 
-type SupportedChain = 'ethereum' | 'polygon' | 'base' | 'starknet' | 'arbitrum';
+type SupportedChain = 'ethereum' | 'polygon' | 'base' | 'starknet' | 'arbitrum',
 
-const defaultTitle = 'Zion Genesis Artifact #0001';
-const defaultDescription = 'This NFT marks the moment Zion OS was born.';
-const defaultQuote = 'Sovereign AI belongs to its creators and communities.';
+const defaultTitle = 'Zion Genesis Artifact #0001',
+const defaultDescription = 'This NFT marks the moment Zion OS was born.',
+const defaultQuote = 'Sovereign AI belongs to its creators and communities.',
 
 export default function MintOriginPage() {
-  const [title, setTitle] = useState(defaultTitle);
-  const [description, setDescription] = useState(defaultDescription);
-  const [manifestoLink, setManifestoLink] = useState('');
-  const [genesisDaoHash, setGenesisDaoHash] = useState('');
-  const [coverArtLink, setCoverArtLink] = useState('');
-  const [firstFundingVoteLink, setFirstFundingVoteLink] = useState('');
-  const [founderAddress, setFounderAddress] = useState('');
-  const [chain, setChain] = useState<SupportedChain>('ethereum');
-  const [quote, setQuote] = useState(defaultQuote);
-  const [result, setResult] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
+  const [title, setTitle] = useState(defaultTitle),
+  const [description, setDescription] = useState(defaultDescription),
+  const [manifestoLink, setManifestoLink] = useState(''),
+  const [genesisDaoHash, setGenesisDaoHash] = useState(''),
+  const [coverArtLink, setCoverArtLink] = useState(''),
+  const [firstFundingVoteLink, setFirstFundingVoteLink] = useState(''),
+  const [founderAddress, setFounderAddress] = useState(''),
+  const [chain, setChain] = useState<SupportedChain>('ethereum'),
+  const [quote, setQuote] = useState(defaultQuote),
+  const [result, setResult] = useState<any>(null),
+  const [loading, setLoading] = useState(false),
 
-  const imagePreviewUrl = useMemo(() => `/api/nft/origin-image?quote=${encodeURIComponent(quote)}`, [quote]);
+  const imagePreviewUrl = useMemo(() => `/api/nft/origin-image?quote=${encodeURIComponent(quote)}`, [quote]),
 
   async function handleGenerate(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setResult(null);
+    e.preventDefault(),
+    setLoading(true),
+    setResult(null),
     try {
       const res = await fetch('/api/nft/origin-metadata', {
         method: 'POST',
@@ -40,26 +40,26 @@ export default function MintOriginPage() {
           chain,
           manifestoQuote: quote
         })
-      });
-      const data = await res.json();
-      setResult(data);
+      }),
+      const data = await res.json(),
+      setResult(data),
     } catch (err) {
-      console.error(err);
-      setResult({ error: 'Failed to generate metadata' });
+      console.error(err),
+      setResult({ error: 'Failed to generate metadata' }),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
   function handleDownload() {
-    if (!result?.metadata) return;
-    const blob = new Blob([JSON.stringify(result.metadata, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'zion-origin-metadata.json';
-    a.click();
-    URL.revokeObjectURL(url);
+    if (!result?.metadata) return,
+    const blob = new Blob([JSON.stringify(result.metadata, null, 2)], { type: 'application/json' }),
+    const url = URL.createObjectURL(blob),
+    const a = document.createElement('a'),
+    a.href = url,
+    a.download = 'zion-origin-metadata.json',
+    a.click(),
+    URL.revokeObjectURL(url),
   }
 
   return (
@@ -143,11 +143,11 @@ export default function MintOriginPage() {
                 <li>Displays on founder profile</li>
                 <li>Adds signature to all downstream DAO proposals</li>
               </ul>
-              <div className="mt-3">On-chain mint requires wallet integration and a contract; the API provides finalized metadata for pinning and minting.</div>
+              <div className="mt-3">On-chain mint requires wallet integration and a contract, the API provides finalized metadata for pinning and minting.</div>
             </div>
           </div>
         </form>
       </div>
     </div>
-  );
+  ),
 }

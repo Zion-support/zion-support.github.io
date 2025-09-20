@@ -1,46 +1,46 @@
 
-import React from 'react';
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import React from 'react',
+import Link from 'next/link',
+import Layout from '../components/Layout',
 import {,
-  ArrowRight;
-  Brain;
-  Cloud;
-  Shield;
-  Zap;
-  Database;
-  Server;
-  Lock;
-  BarChart3;
-  Users;
-  Globe;
-  Code;
-  CheckCircle;
-  Star;
-  TrendingUp;
-  Clock;
-  Award;
-  Mail;
-  Calendar;
-  Settings;
-  Eye;
-  MessageSquare;
-  Palette;
-  Bot;
-  Cpu;
-  Link2;
-  Wifi;
-  HardDrive;
-  Monitor;
-  Activity;
-  Terminal;
-  CreditCard;
-  Smartphone,
-} from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+  ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Database,
+  Server,
+  Lock,
+  BarChart3,
+  Users,
+  Globe,
+  Code,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Clock,
+  Award,
+  Mail,
+  Calendar,
+  Settings,
+  Eye,
+  MessageSquare,
+  Palette,
+  Bot,
+  Cpu,
+  Link2,
+  Wifi,
+  HardDrive,
+  Monitor,
+  Activity,
+  Terminal,
+  CreditCard,
+  Smartphone
+} from 'lucide-react',
+import PageTransition from '../src/components/PageTransition',
 export default function Services() {,
-	const title = 'Services — Zion Tech Group';
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
+	const title = 'Services — Zion Tech Group',
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.',
 	return (,
 		<Layout>,
 			<PageTransition>,
@@ -65,7 +65,7 @@ export default function Services() {,
 			<section className='py-16 sm: py-24'>,
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>,
 					<div className='grid gap-6 lg:grid-cols-2'>,
-						{/* AI Autonomous Systems */,}
+						{/* AI Autonomous Systems */}
 						<div id='ai' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-blue-300'>,
 							<div className='flex items-center gap-x-3 mb-6'>,
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors'>,
@@ -112,7 +112,7 @@ export default function Services() {,
 								</Link>,
 							</div>,
 						</div>,
-						{/* Cloud Platforms */,}
+						{/* Cloud Platforms */}
 						<div id='cloud' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-green-300'>,
 							<div className='flex items-center gap-x-3 mb-6'>,
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors'>,
@@ -159,7 +159,7 @@ export default function Services() {,
 								</Link>,
 							</div>,
 						</div>,
-						{/* Cybersecurity */,}
+						{/* Cybersecurity */}
 						<div id='cybersecurity' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300'>,
 							<div className='flex items-center gap-x-3 mb-6'>,
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors'>,
@@ -206,7 +206,7 @@ export default function Services() {,
 								</Link>,
 							</div>,
 						</div>,
-						{/* Micro SaaS */,}
+						{/* Micro SaaS */}
 						<div id='saas' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300'>,
 							<div className='flex items-center gap-x-3 mb-6'>,
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors'>,
@@ -256,7 +256,7 @@ export default function Services() {,
 					</div>,
 				</div>,
 			</section>,
-			{/* Expanded Service Catalog */,}
+			{/* Expanded Service Catalog */}
 			<section className='py-16 sm: py-24 bg-white'>,
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>,
 					<div className='mx-auto max-w-4xl text-center mb-14'>,
@@ -265,7 +265,7 @@ export default function Services() {,
 							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms.,
 							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes.,
 							Explore our full capabilities at{' '}
-							<a href='https: //ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' ',}
+							<a href='https: //ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' '}
 							Check our latest additions in the{' '}
 							<Link href='/additional-services' className='text-blue-600 hover: text-blue-500 underline font-semibold'>Expanded Services Catalog</Link>.,
 						</p>,
@@ -306,7 +306,7 @@ export default function Services() {,
 						</p>,
 					</div>,
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-						{/* AI Services */,}
+						{/* AI Services */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Brain className='h-5 w-5 text-blue-600' />,
@@ -352,7 +352,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-emerald-600 hover: text-emerald-500'>Learn more →</Link>,
 							</div>,
 						</div>,
-						{/* IT & Cloud */,}
+						{/* IT & Cloud */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Cloud className='h-5 w-5 text-green-600' />,
@@ -398,7 +398,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-orange-600 hover: text-orange-500'>Book intro →</Link>,
 							</div>,
 						</div>,
-						{/* AI Services - Additional */,}
+						{/* AI Services - Additional */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Brain className='h-5 w-5 text-violet-600' />,
@@ -447,7 +447,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-yellow-600 hover:text-yellow-500'>Start testing →</Link>,
 							</div>,
 						</div>,
-						{/* Micro SaaS */,}
+						{/* Micro SaaS */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Code className='h-5 w-5 text-rose-600' />,
@@ -493,7 +493,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-teal-600 hover:text-teal-500'>Book a walkthrough →</Link>,
 							</div>,
 						</div>,
-						{/* Additional IT Services */,}
+						{/* Additional IT Services */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Server className='h-5 w-5 text-lime-600' />,
@@ -542,7 +542,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-amber-600 hover:text-amber-500'>Monitor now →</Link>,
 							</div>,
 						</div>,
-						{/* Advanced AI Services */,}
+						{/* Advanced AI Services */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Eye className='h-5 w-5 text-blue-600' />,
@@ -644,7 +644,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-emerald-600 hover: text-emerald-500'>Start free trial →</Link>,
 							</div>,
 						</div>,
-						{/* Advanced IT Services */,}
+						{/* Advanced IT Services */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Cpu className='h-5 w-5 text-blue-600' />,
@@ -746,7 +746,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Analyze feedback →</Link>,
 							</div>,
 						</div>,
-						{/* Innovative Micro SaaS Services */,}
+						{/* Innovative Micro SaaS Services */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Activity className='h-5 w-5 text-blue-600' />,
@@ -850,12 +850,12 @@ export default function Services() {,
 						</div>,
 					</div>,
 					<div className='mt-10 text-center text-sm text-gray-500'>,
-						Need something custom? Visit our website at{' ',}
-						<a href='https: //ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a>{' ',}
-						or contact us directly: Email{' ',}
-						<a href='mailto: kleber@ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup.com</a>{' ',}
+						Need something custom? Visit our website at{' '}
+						<a href='https: //ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a>{' '}
+						or contact us directly: Email{' '}
+						<a href='mailto: kleber@ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup.com</a>{' '}
 						| Phone{' '}
-						<a href='tel: +13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>{' ',}
+						<a href='tel: +13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>{' '}
 						| Address: 364 E Main St STE 1008, Middletown DE 19709,
 					</div>,
 				</div>,
@@ -871,7 +871,7 @@ export default function Services() {,
 						</p>,
 					</div>,
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-						{/* AI Content Creation Tools */,}
+						{/* AI Content Creation Tools */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Brain className='h-5 w-5 text-blue-600' />,
@@ -889,7 +889,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-blue-600 hover: text-blue-500'>Start free trial →</Link>,
 							</div>,
 						</div>,
-						{/* Email Automation Platform */,}
+						{/* Email Automation Platform */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Mail className='h-5 w-5 text-green-600' />,
@@ -907,7 +907,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-green-600 hover:text-green-500'>Automate now →</Link>,
 							</div>,
 						</div>,
-						{/* AI Email Responder */,}
+						{/* AI Email Responder */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Zap className='h-5 w-5 text-purple-600' />,
@@ -925,7 +925,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Try demo →</Link>,
 							</div>,
 						</div>,
-						{/* Customer Support Platform */,}
+						{/* Customer Support Platform */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Users className='h-5 w-5 text-orange-600' />,
@@ -943,7 +943,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-orange-600 hover: text-orange-500'>Setup support →</Link>,
 							</div>,
 						</div>,
-						{/* Event Management Dashboard */,}
+						{/* Event Management Dashboard */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Calendar className='h-5 w-5 text-red-600' />,
@@ -961,7 +961,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-red-600 hover:text-red-500'>Plan events →</Link>,
 							</div>,
 						</div>,
-						{/* Workflow Automation Engine */,}
+						{/* Workflow Automation Engine */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Settings className='h-5 w-5 text-indigo-600' />,
@@ -1005,7 +1005,7 @@ export default function Services() {,
 					</div>,
 				</div>,
 			</section>,
-			{/* Advanced IT Services Section */,}
+			{/* Advanced IT Services Section */}
 			<section className='py-24 sm: py-32 bg-white'>,
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>,
 					<div className='mx-auto max-w-3xl text-center mb-16'>,
@@ -1016,7 +1016,7 @@ export default function Services() {,
 						</p>,
 					</div>,
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-						{/* DevOps Automation Platform */,}
+						{/* DevOps Automation Platform */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Server className='h-5 w-5 text-blue-600' />,
@@ -1034,7 +1034,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-blue-600 hover: text-blue-500'>Get started →</Link>,
 							</div>,
 						</div>,
-						{/* Infrastructure Monitoring */,}
+						{/* Infrastructure Monitoring */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<BarChart3 className='h-5 w-5 text-green-600' />,
@@ -1052,7 +1052,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-green-600 hover:text-green-500'>Monitor now →</Link>,
 							</div>,
 						</div>,
-						{/* API Management */,}
+						{/* API Management */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Globe className='h-5 w-5 text-purple-600' />,
@@ -1070,7 +1070,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-purple-600 hover: text-purple-500'>Manage APIs →</Link>,
 							</div>,
 						</div>,
-						{/* Database Optimization */,}
+						{/* Database Optimization */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Database className='h-5 w-5 text-orange-600' />,
@@ -1088,7 +1088,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-orange-600 hover: text-orange-500'>Optimize DB →</Link>,
 							</div>,
 						</div>,
-						{/* Security Assessment */,}
+						{/* Security Assessment */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Shield className='h-5 w-5 text-red-600' />,
@@ -1106,7 +1106,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-red-600 hover: text-red-500'>Secure now →</Link>,
 							</div>,
 						</div>,
-						{/* Cloud Migration */,}
+						{/* Cloud Migration */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Cloud className='h-5 w-5 text-indigo-600' />,
@@ -1150,7 +1150,7 @@ export default function Services() {,
 					</div>,
 				</div>,
 			</section>,
-			{/* Micro SaaS Solutions Section */,}
+			{/* Micro SaaS Solutions Section */}
 			<section className='py-24 sm: py-32 bg-gradient-to-br from-purple-50 to-pink-50'>,
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>,
 					<div className='mx-auto max-w-3xl text-center mb-16'>,
@@ -1161,7 +1161,7 @@ export default function Services() {,
 						</p>,
 					</div>,
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-						{/* Project Management Suite */,}
+						{/* Project Management Suite */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Users className='h-5 w-5 text-blue-600' />,
@@ -1179,7 +1179,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-blue-600 hover: text-blue-500'>Start free trial →</Link>,
 							</div>,
 						</div>,
-						{/* Analytics Platform */,}
+						{/* Analytics Platform */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<BarChart3 className='h-5 w-5 text-green-600' />,
@@ -1197,7 +1197,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-green-600 hover:text-green-500'>Analyze data →</Link>,
 							</div>,
 						</div>,
-						{/* Customer Feedback Platform */,}
+						{/* Customer Feedback Platform */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Star className='h-5 w-5 text-purple-600' />,
@@ -1215,7 +1215,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Analyze feedback →</Link>,
 							</div>,
 						</div>,
-						{/* Inventory Management */,}
+						{/* Inventory Management */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Database className='h-5 w-5 text-orange-600' />,
@@ -1233,7 +1233,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Manage inventory →</Link>,
 							</div>,
 						</div>,
-						{/* HR Management System */,}
+						{/* HR Management System */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<Users className='h-5 w-5 text-red-600' />,
@@ -1251,7 +1251,7 @@ export default function Services() {,
 								<Link href='/contact' className='text-red-600 hover: text-red-500'>Manage HR →</Link>,
 							</div>,
 						</div>,
-						{/* Financial Management */,}
+						{/* Financial Management */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white'>,
 							<div className='flex items-center gap-3 mb-3'>,
 								<TrendingUp className='h-5 w-5 text-indigo-600' />,
@@ -1295,7 +1295,7 @@ export default function Services() {,
 					</div>,
 				</div>,
 			</section>,
-			{/* Process Section */,}
+			{/* Process Section */}
 			<section className='py-24 sm: py-32 bg-gray-50'>,
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>,
 					<div className='mx-auto max-w-2xl lg:text-center mb-16'>,
@@ -1338,7 +1338,7 @@ export default function Services() {,
 					</div>,
 				</div>,
 			</section>,
-			{/* Pricing & Market Positioning Section */,}
+			{/* Pricing & Market Positioning Section */}
 			<section className='py-24 sm: py-32 bg-gray-50'>,
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>,
 					<div className='mx-auto max-w-2xl text-center mb-16'>,
@@ -1483,7 +1483,7 @@ export default function Services() {,
 					</div>,
 				</div>,
 			</section>,
-			{/* CTA Section */,}
+			{/* CTA Section */}
 			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>,
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>,
 					<div className='mx-auto max-w-2xl text-center'>,
@@ -1515,5 +1515,5 @@ export default function Services() {,
 			</section>,
 		</PageTransition>,
 		</Layout>,
-	),}
+	)}
 ,

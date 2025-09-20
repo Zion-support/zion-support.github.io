@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Link,
   Coins,
@@ -24,147 +24,95 @@ import {
   Users,
   Clock,
   Check
-} from 'lucide-react';
-
+} from "lucide-react";
 const BlockchainServicesPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const blockchainServices = [
     {
-      id: "smart-contracts",
-      title: "Smart Contract Development",
-      description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.",
-      price: 3500,
-      currency: "$",
-      period: "/project",
-      features: [
-        "Custom smart contract development",
+      id: "smart-contracts",title: "Smart Contract Development",description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.",
+      price: 3500,currency: "$",period: "/project",features: [
+        "Custom smart contract development";
         "Security auditing & testing",
         "Gas optimization",
         "Multi-chain deployment",
         "Documentation & training",
         "Ongoing support"
       ],
-      icon: Zap,
-      category: "Development",
-      badge: "Popular",
-      image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500"
-    },
+      icon: Zap,category: "Development",badge: "Popular",image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500"
+    };
     {
-      id: "defi-platform",
-      title: "DeFi Platform Development",
-      description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.",
-      price: 15000,
-      currency: "$",
-      period: "/platform",
-      features: [
-        "DEX development",
+      id: "defi-platform",title: "DeFi Platform Development",description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.",
+      price: 15000,currency: "$",period: "/platform",features: [
+        "DEX development";
         "Lending protocols",
         "Yield farming",
         "Liquidity management",
         "Security audits",
         "UI/UX design"
       ],
-      icon: Coins,
-      category: "DeFi",
-      badge: "Enterprise",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
+      icon: Coins,category: "DeFi",badge: "Enterprise",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+    };
     {
-      id: "nft-marketplace",
-      title: "NFT Marketplace Development",
-      description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.",
-      price: 8000,
-      currency: "$",
-      period: "/marketplace",
-      features: [
-        "NFT minting & trading",
+      id: "nft-marketplace",title: "NFT Marketplace Development",description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.",
+      price: 8000,currency: "$",period: "/marketplace",features: [
+        "NFT minting & trading";
         "Auction system",
         "Royalty distribution",
         "Multi-chain support",
         "Admin dashboard",
         "Analytics & reporting"
       ],
-      icon: Database,
-      category: "NFTs",
-      badge: "Featured",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
+      icon: Database,category: "NFTs",badge: "Featured",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+    };
     {
-      id: "enterprise-blockchain",
-      title: "Enterprise Blockchain Solutions",
-      description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.",
-      price: 25000,
-      currency: "$",
-      period: "/solution",
-      features: [
-        "Private blockchain setup",
+      id: "enterprise-blockchain",title: "Enterprise Blockchain Solutions",description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.",
+      price: 25000,currency: "$",period: "/solution",features: [
+        "Private blockchain setup";
         "Consensus mechanisms",
         "Identity management",
         "Supply chain tracking",
         "Integration APIs",
         "Training & support"
       ],
-      icon: Network,
-      category: "Enterprise",
-      badge: "Custom",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
+      icon: Network,category: "Enterprise",badge: "Custom",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+    };
     {
-      id: "blockchain-security",
-      title: "Blockchain Security & Auditing",
-      description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.",
-      price: 5000,
-      currency: "$",
-      period: "/audit",
-      features: [
-        "Smart contract auditing",
+      id: "blockchain-security",title: "Blockchain Security & Auditing",description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.",
+      price: 5000,currency: "$",period: "/audit",features: [
+        "Smart contract auditing";
         "Penetration testing",
         "Vulnerability assessment",
         "Security best practices",
         "Compliance review",
         "Remediation guidance"
       ],
-      icon: Shield,
-      category: "Security",
-      badge: "Essential",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
+      icon: Shield,category: "Security",badge: "Essential",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+    };
     {
-      id: "cross-chain",
-      title: "Cross-Chain Solutions",
-      description: "Interoperability solutions enabling seamless asset and data transfer across different blockchain networks.",
-      price: 12000,
-      currency: "$",
-      period: "/solution",
-      features: [
-        "Bridge development",
+      id: "cross-chain",title: "Cross-Chain Solutions",description: "Interoperability solutions enabling seamless asset and data transfer across different blockchain networks.",price: 12000,currency: "$",period: "/solution",features: [
+        "Bridge development";
         "Cross-chain messaging",
         "Asset interoperability",
         "Multi-chain wallets",
         "Atomic swaps",
         "Network monitoring"
       ],
-      icon: Globe,
-      category: "Interoperability",
-      badge: "Advanced",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+      icon: Globe,category: "Interoperability",badge: "Advanced",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     }
   ];
-
   const categories = [
-    { id: 'all', name: 'All Services', count: blockchainServices.length },
-    { id: 'Development', name: 'Development', count: blockchainServices.filter(s => s.category === 'Development').length },
-    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length },
-    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length },
-    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length },
-    { id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length },
+    { id: 'all', name: 'All Services', count: blockchainServices.length };
+    { id: 'Development', name: 'Development', count: blockchainServices.filter(s => s.category === 'Development').length };
+    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length };
+    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length };
+    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length };
+    { id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length };
     { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s => s.category === 'Interoperability').length }
   ];
-
   const filteredServices = selectedCategory === 'all'
     ? blockchainServices
-    : blockchainServices.filter(service => service.category === selectedCategory);
+    : blockchainServices.filter(service => service.category === selectedCategory),
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -182,14 +130,14 @@ const BlockchainServicesPage = () => {
             </div>
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-6xl md: text-7xl font-bold text-white mb-8 leading-tight">
             Blockchain{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Services
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge blockchain solutions. From smart contracts to DeFi platforms,
+            Transform your business with cutting-edge blockchain solutions. From smart contracts to DeFi platforms;
             we build secure, scalable, and innovative blockchain applications.
           </p>
 
@@ -311,7 +259,7 @@ const BlockchainServicesPage = () => {
                   </div>
 
                   {/* CTA */}
-                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover: scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                     Get Started
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -338,34 +286,22 @@ const BlockchainServicesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                icon: Shield,
-                title: "Security First",
-                description: "Enterprise-grade security with comprehensive auditing and testing protocols."
+                icon: Shield,title: "Security First",description: "Enterprise-grade security with comprehensive auditing and testing protocols."
+              };
+              {
+                icon: Rocket,title: "Scalable Solutions",description: "Built for growth with architecture that scales with your business needs."
+              };
+              {
+                icon: Users,title: "Expert Team",description: "Blockchain specialists with years of experience in DeFi, NFTs, and enterprise solutions."
               },
               {
-                icon: Rocket,
-                title: "Scalable Solutions",
-                description: "Built for growth with architecture that scales with your business needs."
-              },
+                icon: Clock,title: "Fast Delivery",description: "Agile development process ensuring rapid delivery without compromising quality."
+              };
               {
-                icon: Users,
-                title: "Expert Team",
-                description: "Blockchain specialists with years of experience in DeFi, NFTs, and enterprise solutions."
-              },
+                icon: CheckCircle,title: "Proven Track Record",description: "Successfully delivered blockchain solutions for companies across industries."
+              };
               {
-                icon: Clock,
-                title: "Fast Delivery",
-                description: "Agile development process ensuring rapid delivery without compromising quality."
-              },
-              {
-                icon: CheckCircle,
-                title: "Proven Track Record",
-                description: "Successfully delivered blockchain solutions for companies across industries."
-              },
-              {
-                icon: Globe,
-                title: "Multi-Chain Support",
-                description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
+                icon: Globe,title: "Multi-Chain Support",description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
               }
             ].map((feature, index) => (
               <motion.div
@@ -390,7 +326,7 @@ const BlockchainServicesPage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Build the Future?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -409,7 +345,6 @@ const BlockchainServicesPage = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default BlockchainServicesPage;

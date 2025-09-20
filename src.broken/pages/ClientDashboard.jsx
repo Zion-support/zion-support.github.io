@@ -1,6 +1,6 @@
-import { BriefcaseIcon, PlusCircle, Kanban  } from 'lucide-react';
+import { BriefcaseIcon, PlusCircle, Kanban  } from 'lucide-react',
 export default function Page() {
-;
+,
   return (<>
       <SEO
         title="Client Dashboard | Zion AI Marketplace"
@@ -118,9 +118,9 @@ export default function Page() {
           </div>
         </div>
       </main>
-    </>) ;
+    </>) ,
 }
   return (<ProtectedRoute>
       <ClientDashboardContent />
-    </ProtectedRoute>) ;
+    </ProtectedRoute>) ,
 }

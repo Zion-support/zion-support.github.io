@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function WebsitePerformanceOptimization() {,
   return (,
     <>,
@@ -39,7 +39,6 @@ export default function WebsitePerformanceOptimization() {,
           </div>,
         </section>,
       </main>,
-    </>,
-  ),
+    </>)
 }
 ,

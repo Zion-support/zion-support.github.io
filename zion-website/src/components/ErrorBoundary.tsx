@@ -1,56 +1,56 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+'use client',
+import React, { Component, ErrorInfo, ReactNode } from 'react',
 interface Props {,
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void,}
+  children: ReactNode,
+  fallback?: ReactNode,
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 ,
 interface State {,
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo,
+  hasError: boolean,
+  error?: Error,
+  errorInfo?: ErrorInfo
 }
 ,
 class ErrorBoundary extends Component<Props, State> {,
   constructor(props: Props) {,
-    super(props);
-    this.state = { hasError: false ,};
+    super(props),
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 ,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    this.setState({ error, errorInfo });
+    this.setState({ error, errorInfo }),
     // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {,
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo),
     }
 ,
     // Send error to analytics/monitoring service,
-    this.props.onError?.(error, errorInfo);
+    this.props.onError?.(error, errorInfo),
     // Send error to API,
     fetch('/api/errors', {,
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' ,};
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({,
         error: {,
-          message: error.message;
-          stack: error.stack;
-          name: error.name,};
+          message: error.message,
+          stack: error.stack,
+          name: error.name},
         errorInfo: {,
-          componentStack: errorInfo.componentStack,};
-        url: typeof window !== 'undefined' ? window.location.href : '';
-        timestamp: new Date().toISOString();
-        userAgent: typeof window !== 'undefined' ? navigator.userAgent : '',}),
-    }).catch(console.error);
+          componentStack: errorInfo.componentStack},
+        url: typeof window !== 'undefined' ? window.location.href : '',
+        timestamp: new Date().toISOString(),
+        userAgent: typeof window !== 'undefined' ? navigator.userAgent : ''})
+    }).catch(console.error),
   }
 ,
   render() {,
     if (this.state.hasError) {,
       if (this.props.fallback) {,
-        return this.props.fallback;
+        return this.props.fallback,
       }
 ,
       return (,
@@ -82,7 +82,7 @@ class ErrorBoundary extends Component<Props, State> {,
                     Error Details (Development),
                   </summary>,
                   <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">,
-                    {this.state.error.message,}
+                    {this.state.error.message}
                     {'\n'}
                     {this.state.error.stack}
                   </pre>,
@@ -91,11 +91,11 @@ class ErrorBoundary extends Component<Props, State> {,
             </div>,
           </div>,
         </div>,
-      );
+      ),
     }
 ,
-    return this.props.children;
+    return this.props.children,
   }
 }
 ,
-export default ErrorBoundary;
+export default ErrorBoundary,

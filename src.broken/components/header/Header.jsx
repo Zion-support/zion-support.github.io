@@ -1,39 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { Link  } from 'react-router-dom';
+import React, { useState, useEffect } from 'react',
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-      : undefined);
+      : undefined),
 
-  const headerStyle = effectiveTheme;
+  const headerStyle = effectiveTheme,
     ? {
 
         backgroundColor: effectiveTheme.backgroundColor,
         color: effectiveTheme.textColor,
         borderColor: `${effectiveTheme.primaryColor}20`}
-    : {};
+    : {},
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const handleSubmit = e => {
 
-    e.preventDefault();
+    e.preventDefault(),
     if(query.trim()) {
 `
-      navigate(`/search?q=${encodeURIComponent(query)}`);
-      setQuery('');
+      navigate(`/search?q=${encodeURIComponent(query)}`),
+      setQuery(''),
     }
-  };
+  },
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    setIsMobileMenuOpen(!isMobileMenuOpen),
+  },
 
   return ()
     <header`
@@ -44,7 +44,7 @@ export default function Page() {
       style={headerStyle}
     >
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
+      <div className="absolute inset-0 bg-[url("data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
 
       {/* Glowing border effect */}"
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
@@ -69,8 +69,8 @@ export default function Page() {
               onChange={setQuery}
               onSelectSuggestion={text => {
 `
-                navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery('');
+                navigate(`/search?q=${encodeURIComponent(text)}`),
+                setQuery(''),
               }}
               searchSuggestions={searchSuggestions}
             />"
@@ -114,8 +114,8 @@ export default function Page() {
               onChange={setQuery}
               onSelectSuggestion={text => {
 `
-                navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery('');
+                navigate(`/search?q=${encodeURIComponent(text)}`),
+                setQuery(''),
               }}
               searchSuggestions={searchSuggestions}"
               placeholder="Search services, talent, equipment..."
@@ -265,6 +265,6 @@ export default function Page() {
       {/* Neon glow effect */}"
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60" />
     </header>
-  );
+  ),
 }
 '"`

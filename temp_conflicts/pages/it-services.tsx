@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Cpu, Brain, Rocket, Shield, Zap, Target, Atom, 
   Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
@@ -11,7 +11,7 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Wrench
-} from 'lucide-react';
+} from 'lucide-react',
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -19,7 +19,7 @@ const ITServicesPage: React.FC = () => {
       id: 'enterprise-it',
       name: 'Enterprise IT Solutions',
       description: 'Comprehensive enterprise infrastructure and management',
-      features: ['Infrastructure Management', 'Cloud Migration', 'Security Implementation', 'Performance Optimization'],
+      features: ['Infrastructure ManagementCloud Migration', 'Security ImplementationPerformance Optimization'],
       price: '$2,999',
       period: 'month',
       popular: true,
@@ -29,7 +29,7 @@ const ITServicesPage: React.FC = () => {
       id: 'cybersecurity',
       name: 'Cybersecurity Services',
       description: 'Advanced security solutions for modern threats',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Security Training'],
+      features: ['Threat DetectionVulnerability Assessment', 'Incident ResponseSecurity Training'],
       price: '$2,499',
       period: 'month',
       popular: false,
@@ -39,7 +39,7 @@ const ITServicesPage: React.FC = () => {
       id: 'cloud-solutions',
       name: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and services',
-      features: ['Cloud Architecture', 'Migration Services', 'Optimization', 'Multi-cloud Management'],
+      features: ['Cloud ArchitectureMigration Services', 'OptimizationMulti-cloud Management'],
       price: '$1,999',
       period: 'month',
       popular: false,
@@ -49,7 +49,7 @@ const ITServicesPage: React.FC = () => {
       id: 'devops-automation',
       name: 'DevOps Automation',
       description: 'Streamlined development and operations',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automation'],
+      features: ['CI/CD PipelinesInfrastructure as Code', 'MonitoringAutomation'],
       price: '$1,799',
       period: 'month',
       popular: false,
@@ -59,7 +59,7 @@ const ITServicesPage: React.FC = () => {
       id: 'data-management',
       name: 'Data Management',
       description: 'Comprehensive data solutions and analytics',
-      features: ['Data Strategy', 'Analytics Platform', 'Governance', 'Business Intelligence'],
+      features: ['Data StrategyAnalytics Platform', 'GovernanceBusiness Intelligence'],
       price: '$2,299',
       period: 'month',
       popular: false,
@@ -69,13 +69,13 @@ const ITServicesPage: React.FC = () => {
       id: 'network-infrastructure',
       name: 'Network Infrastructure',
       description: 'Robust networking and connectivity solutions',
-      features: ['Network Design', 'Security Implementation', 'Performance Monitoring', 'Scalability'],
+      features: ['Network DesignSecurity Implementation', 'Performance MonitoringScalability'],
       price: '$1,599',
       period: 'month',
       popular: false,
       icon: <Network className="w-8 h-8" />
     }
-  ];
+  ],
 
   const itCapabilities = [
     {
@@ -108,7 +108,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Robust networking infrastructure',
       icon: <Network className="w-6 h-6" />
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -280,7 +280,7 @@ const ITServicesPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Partner with us to build a robust, scalable, and secure technology foundation for your business
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a 
                   href="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
@@ -299,8 +299,8 @@ const ITServicesPage: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default ITServicesPage;
+export default ITServicesPage,
 

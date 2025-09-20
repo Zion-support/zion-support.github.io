@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, CheckCircle, Clock, Star, Users import { Link  } from 'react-router-dom';
+import { ArrowRight, Calendar, CheckCircle, Clock, Star, Users import { Link  } from 'react-router-dom',
 
 export default function Page() {
             <Card className="bg-zion - blue - dark border-zion -purple / 20">

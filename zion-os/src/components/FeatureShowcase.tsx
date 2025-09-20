@@ -1,14 +1,14 @@
 // @ts-nocheck,
   const getColorClasses = (color: Feature["color"]) => {,
     const colorMap = {,
-      blue: "from-blue-500 to-blue-600";
-      purple: "from-purple-500 to-purple-600";
-      green: "from-green-500 to-green-600";
-      red: "from-red-500 to-red-600";
-      yellow: "from-yellow-500 to-yellow-600";
-      indigo: "from-indigo-500 to-indigo-600",} as const;
-    return colorMap[color] || "from-blue-500 to-blue-600";
-  };
+      blue: "from-blue-500 to-blue-600",
+      purple: "from-purple-500 to-purple-600",
+      green: "from-green-500 to-green-600",
+      red: "from-red-500 to-red-600",
+      yellow: "from-yellow-500 to-yellow-600",
+      indigo: "from-indigo-500 to-indigo-600"} as const,
+    return colorMap[color] || "from-blue-500 to-blue-600",
+  },
               >,
                 <div className="flex items-start space-x-4">,
                   <div className={`w-12 h-12 bg-gradient-to-r ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>,

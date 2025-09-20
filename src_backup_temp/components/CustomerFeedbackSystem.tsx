@@ -1,2 +1,2 @@
 
-export default CustomerFeedbackSystem;
+export default CustomerFeedbackSystem,

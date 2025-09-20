@@ -1,4 +1,4 @@
-import React from 'react';
-  );
-};
-export default EnhancedFooter;
+import React from 'react',
+  ),
+},
+export default EnhancedFooter,

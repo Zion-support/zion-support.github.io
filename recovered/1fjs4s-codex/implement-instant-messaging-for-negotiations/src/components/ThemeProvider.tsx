@@ -16,14 +16,14 @@ type ThemeProviderState = {
 
 const initialState: ThemeProviderState = {
   theme: "system",
-  setTheme: () => null,
+  setTheme: () => null
 }
 
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
 export function ThemeProvider({
   children,
-  defaultTheme = "system",
+  defaultTheme = "system"
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
     () => (safeStorage.getItem("theme") as Theme) || defaultTheme
@@ -51,7 +51,7 @@ export function ThemeProvider({
     setTheme: (theme: Theme) => {
       safeStorage.setItem("theme", theme)
       setTheme(theme)
-    },
+    }
   }
 
   return (

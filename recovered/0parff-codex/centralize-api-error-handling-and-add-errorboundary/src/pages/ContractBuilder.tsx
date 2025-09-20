@@ -1,9 +1,9 @@
 
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Footer } from '@/components/Footer';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { Footer } from '@/components/Footer',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',
 
 function ContractBuilderPage() {
   return (
@@ -21,7 +21,7 @@ function ContractBuilderPage() {
         <Footer />
       </>
     </ProtectedRoute>
-  );
+  ),
 }
 
-export default ContractBuilderPage;
+export default ContractBuilderPage,

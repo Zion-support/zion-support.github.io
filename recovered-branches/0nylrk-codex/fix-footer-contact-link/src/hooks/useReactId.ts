@@ -7,13 +7,13 @@ import * as React from "react",
  */,
 export function useReactId(): string {,
   if (typeof (React as any).useId === "function") {,
-    return (React as any).useId(),
+    return (React as any).useId()
   }
 ,
   const idRef = React.useRef<string | null>(null),
   if (idRef.current === null) {,
-    idRef.current = Math.random().toString(36).slice(2),
+    idRef.current = Math.random().toString(36).slice(2)
   }
-  return idRef.current,
+  return idRef.current
 }
 ,

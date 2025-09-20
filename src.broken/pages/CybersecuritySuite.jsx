@@ -1,4 +1,4 @@
-import { Check, Shield, AlertTriangle, Eye import { Link  } from 'react-router-dom';
+import { Check, Shield, AlertTriangle, Eye import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -11,7 +11,7 @@ export default function Page() {
             description: "Rapid incident response with automated playbooks and expert security team support.",
             icon: <Shield className="h-8 w-8 text-zion -purple"/>
 
-    ];
+    ],
     const complianceFrameworks = ["GDPR(General Data Protection Regulation) ",
         "HIPAA(Health Insurance Portability and Accountability Act) ",
         "SOC 2(System and Organization Controls) ",
@@ -20,7 +20,7 @@ export default function Page() {
         "NIST Cybersecurity Framework",
         "CIS Controls",
         "FedRAMP(Federal Risk and Authorization Management Program) "
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - b from - zion - blue - dark via - zion - slate to -background">
       <SEO title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes.Starting at $199 / month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com / cybersecurity - suite"/>
 

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const InnovationPage: React.FC = () => {
   const innovationAreas = [
@@ -31,7 +31,7 @@ const InnovationPage: React.FC = () => {
         { name: 'Security Scanning', status: 'active', impact: 'critical', description: 'Automated vulnerability detection' }
       ]
     }
-  ];
+  ],
 
   const recentInnovations = [
     {
@@ -58,7 +58,7 @@ const InnovationPage: React.FC = () => {
       status: 'operational',
       impact: 'high'
     }
-  ];
+  ],
 
   const upcomingInnovations = [
     {
@@ -79,30 +79,30 @@ const InnovationPage: React.FC = () => {
       timeline: 'Q4 2025',
       status: 'development'
     }
-  ];
+  ],
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active': return 'text-green-400';
-      case 'launched': return 'text-blue-400';
-      case 'deployed': return 'text-cyan-400';
-      case 'operational': return 'text-green-400';
-      case 'research': return 'text-yellow-400';
-      case 'planning': return 'text-purple-400';
-      case 'development': return 'text-orange-400';
-      default: return 'text-gray-400';
+      case 'active': return 'text-green-400',
+      case 'launched': return 'text-blue-400',
+      case 'deployed': return 'text-cyan-400',
+      case 'operational': return 'text-green-400',
+      case 'research': return 'text-yellow-400',
+      case 'planning': return 'text-purple-400',
+      case 'development': return 'text-orange-400',
+      default: return 'text-gray-400'
     }
-  };
+  },
 
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case 'critical': return 'bg-red-500/20 text-red-400';
-      case 'high': return 'bg-orange-500/20 text-orange-400';
-      case 'medium': return 'bg-yellow-500/20 text-yellow-400';
-      case 'low': return 'bg-blue-500/20 text-blue-400';
-      default: return 'bg-gray-500/20 text-gray-400';
+      case 'critical': return 'bg-red-500/20 text-red-400',
+      case 'high': return 'bg-orange-500/20 text-orange-400',
+      case 'medium': return 'bg-yellow-500/20 text-yellow-400',
+      case 'low': return 'bg-blue-500/20 text-blue-400',
+      default: return 'bg-gray-500/20 text-gray-400'
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
@@ -255,7 +255,7 @@ const InnovationPage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
             href="/reports"
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
+            className="px-6 py-3 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
             All Reports
           </Link>
@@ -274,7 +274,7 @@ const InnovationPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default InnovationPage;
+export default InnovationPage,

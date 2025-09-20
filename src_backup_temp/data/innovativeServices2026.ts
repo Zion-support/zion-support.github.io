@@ -1,551 +1,499 @@
-export type InnovativeService = {, "id": "string, "title": string, "description": string, "category": 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation', "price": string, "billing": 'month' | 'project' | 'hour' | 'year', "features": string[], "benefits": string[], "useCases": string[], "targetMarket": string[], "ctaLabel": string, "href": string, external?: boolean, featured?: boolean, marketSize?: string, roi?: string, implementationTime?: string, supportLevel?: string, compliance?: string[], integrations?: string[], api?: boolean, mobile?: boolean, enterprise?: boolean, startup?: boolean, smb?: boolean"}, export const "innovativeServices2026": "InnovativeService[] = [, { "id": 'ai-powered-customer-churn-predictor'","title": 'AI-Powered Customer Churn Predictor',"description": 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',"category": 'Micro SaaS',"price": '$299',"billing": 'month',features[, 'Real-time churn risk scoringBehavioral pattern analysis','Predictive analytics dashboardAutomated retention campaigns','CRM integration (Salesforce,HubSpot)Custom retention strategies','ROI tracking and reporting' ], benefits[, 'Reduce churn by up to 40%Increase customer lifetime value','Optimize retention spendProactive customer success' ], useCases[, 'SaaS subscription businessesE-commerce platforms','Subscription box servicesDigital content providers' ], targetMarket['SaaS CompaniesE-commerce','Subscription ServicesDigital Media'], "ctaLabel": 'Start Free Trial',"href": '"https": "featured": 'true',"marketSize": '$2.5B',"roi": '300%',"implementationTime": '2-4 weeks',"supportLevel": '24/7',compliance['GDPRCCPA','SOC 2'], integrations['SalesforceHubSpot','StripeShopify'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'intelligent-inventory-optimization',"title": 'Intelligent Inventory Optimization',"description": 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',"category": 'Micro SaaS',"price": '$199',"billing": 'month',features[, 'Demand forecasting with 90% accuracyReal-time inventory tracking','Automated reorder pointsMulti-location management','Supplier performance analyticsSeasonal trend analysis','Cost optimization recommendations' ], benefits[, 'Reduce inventory costs by 25%Eliminate stockouts','Improve cash flowOptimize warehouse space' ], useCases[, 'Retail chainsE-commerce warehouses','Manufacturing companiesDistribution centers' ], targetMarket['RetailE-commerce','ManufacturingLogistics'], "ctaLabel": 'Optimize Inventory',"href": '"https": "featured": 'true',"marketSize": '$3.8B',"roi": '250%',"implementationTime": '3-5 weeks',"supportLevel": 'Business hours + emergency',compliance['ISO 9001FDA','GMP'], integrations['SAPOracle','NetSuiteQuickBooks'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'false',"smb": 'true' },{ "id": 'smart-energy-consumption-monitor',"title": 'Smart Energy Consumption Monitor',"description": 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',"category": 'Micro SaaS',"price": '$149',"billing": 'month',features[, 'Real-time energy consumption trackingSmart device identification','Anomaly detection alertsEnergy efficiency recommendations','Carbon footprint calculationCost analysis and forecasting','Mobile app monitoring' ], benefits[, 'Reduce energy bills by 35%Improve sustainability score','Comply with green regulationsEnhance corporate social responsibility' ], useCases[, 'Office buildingsManufacturing facilities','Retail storesData centers' ], targetMarket['Commercial Real EstateManufacturing','RetailData Centers'], "ctaLabel": 'Monitor Energy',"href": '"https": "featured": 'true',"marketSize": '$1.9B',"roi": '200%',"implementationTime": '1-2 weeks',"supportLevel": '24/7 monitoring',compliance['LEEDISO 50001','Energy Star'], integrations['Building Management SystemsSmart Meters','Solar Panels'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'automated-compliance-monitor',"title": 'Automated Compliance Monitor',"description": 'Continuous compliance monitoring for GDPR,HIPAA,SOC 2,and other regulatory frameworks with automated reporting.',"category": 'Micro SaaS',"price": '$399',"billing": 'month',features[, 'Multi-framework compliance monitoringAutomated evidence collection','Real-time compliance scoringAutomated audit reports','Policy template libraryEmployee training tracking','Incident response automation' ], benefits[, 'Reduce compliance costs by 50%Eliminate audit surprises','Maintain continuous complianceProtect against fines and penalties' ], useCases[, 'Healthcare organizationsFinancial services','Technology companiesGovernment contractors' ], targetMarket['HealthcareFinance','TechnologyGovernment'], "ctaLabel": 'Ensure Compliance',"href": '"https": "featured": 'true',"marketSize": '$4.2B',"roi": '400%',"implementationTime": '4-6 weeks',"supportLevel": '24/7 + compliance experts',compliance['GDPRHIPAA','SOC 2PCI DSS','ISO 27001'], integrations['AWSAzure','GCPJira','ServiceNow'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'autonomous-customer-service-agent',"title": 'Autonomous Customer Service Agent',"description": 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',"category": 'AI Solutions',"price": '$1,299',"billing": 'month',features[, 'Natural language processingMulti-language support (50+ languages)','Context-aware conversationsSeamless human handoff','Sentiment analysisKnowledge base learning','24/7 availability' ], benefits[, 'Reduce support costs by 60%Improve customer satisfaction by 40%','Handle 10x more inquiriesProvide instant responses' ], useCases[, 'E-commerce customer supportSaaS product support','Banking customer serviceHealthcare patient support' ], targetMarket['E-commerceSaaS','BankingHealthcare','Telecommunications'], "ctaLabel": 'Deploy AI Agent',"href": '"https": "featured": 'true',"marketSize": '$15.7B',"roi": '500%',"implementationTime": '6-8 weeks',"supportLevel": '24/7 + AI specialists',compliance['GDPRCCPA','HIPAA'], integrations['ZendeskIntercom','SlackMicrosoft Teams'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'predictive-maintenance-platform',"title": 'Predictive Maintenance Platform',"description": 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',"category": 'AI Solutions',"price": '$2,499',"billing": 'month',features[, 'Real-time equipment monitoringMachine learning failure prediction','Maintenance scheduling optimizationSpare parts inventory management','Performance analytics dashboardMobile technician app','Integration with CMMS systems' ], benefits[, 'Reduce unplanned downtime by 70%Extend equipment life by 30%','Optimize maintenance costsImprove safety and compliance' ], useCases[, 'Manufacturing plantsPower plants','Oil and gas facilitiesTransportation fleets' ], targetMarket['ManufacturingEnergy','Oil & GasTransportation','Utilities'], "ctaLabel": 'Predict Maintenance',"href": '"https": "featured": 'true',"marketSize": '$8.9B',"roi": '350%',"implementationTime": '8-12 weeks',"supportLevel": '24/7 + field engineers',compliance['ISO 55001OSHA','API'], integrations['SAPMaximo','OracleSiemens Mindsphere'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'false',"smb": 'true' },{ "id": 'ai-powered-fraud-detection',"title": 'AI-Powered Fraud Detection',"description": 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',"category": 'AI Solutions',"price": '$3,999',"billing": 'month',features[, 'Real-time transaction monitoringBehavioral pattern analysis','Multi-channel fraud detectionAutomated risk scoring','False positive reductionCompliance reporting','Machine learning model updates' ], benefits[, 'Reduce fraud losses by 80%Improve detection accuracy','Reduce false positives by 60%Comply with regulatory requirements' ], useCases[, 'Credit card transactionsOnline banking','E-commerce paymentsInsurance claims' ], targetMarket['BankingE-commerce','InsurancePayment Processors'], "ctaLabel": 'Detect Fraud',"href": '"https": "featured": 'true',"marketSize": '$12.3B',"roi": '600%',"implementationTime": '10-14 weeks',"supportLevel": '24/7 + security experts',compliance['PCI DSSSOC 2','ISO 27001GDPR'], integrations['StripePayPal','SquareBanking APIs'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'cloud-migration-accelerator',"title": 'Cloud Migration Accelerator',"description": 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',"category": 'IT Services',"price": '$15,000',"billing": 'project',features[, 'Cloud readiness assessmentMigration strategy planning','Zero-downtime migrationPerformance optimization','Cost optimization analysisSecurity and compliance setup','Post-migration support' ], benefits[, 'Reduce migration time by 50%Ensure zero business disruption','Optimize cloud costsImprove scalability and performance' ], useCases[, 'Legacy system modernizationData center consolidation','Application modernizationDisaster recovery setup' ], targetMarket['EnterpriseMid-market','GovernmentHealthcare'], "ctaLabel": 'Start Migration',"href": '"https": "featured": 'true',"marketSize": '$68.4B',"roi": '200%',"implementationTime": '8-16 weeks',"supportLevel": '24/7 + migration specialists',compliance['SOC 2ISO 27001','HIPAAFedRAMP'], integrations['AWSAzure','GCPVMware','OpenStack'], "api": 'false',"mobile": 'false',"enterprise": 'true',"startup": 'false',"smb": 'true' },{ "id": 'cybersecurity-posture-assessment',"title": 'Cybersecurity Posture Assessment',"description": 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',"category": 'IT Services',"price": '$8,500',"billing": 'project',features[, 'Vulnerability assessmentPenetration testing','Security architecture reviewCompliance gap analysis','Risk assessment reportRemediation roadmap','Security training recommendations' ], benefits[, 'Identify security gapsReduce cyber risk','Comply with regulationsImprove security posture' ], useCases[, 'Security auditsCompliance assessments','Merger and acquisition due diligenceAnnual security reviews' ], targetMarket['EnterpriseMid-market','HealthcareFinance'], "ctaLabel": 'Assess Security',"href": '"https": "featured": 'true',"marketSize": '$45.2B',"roi": '300%',"implementationTime": '4-6 weeks',"supportLevel": 'Business hours + emergency',compliance['ISO 27001NIST','SOC 2PCI DSS'], integrations['Security toolsSIEM systems','Vulnerability scanners'], "api": 'false',"mobile": 'false',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'digital-transformation-consulting',"title": 'Digital Transformation Consulting',"description": 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',"category": 'IT Services',"price": '$25,000',"billing": 'project',features[, 'Digital maturity assessmentTransformation roadmap development','Change management strategyTechnology architecture design','Process optimizationTalent development planning','ROI measurement framework' ], benefits[, 'Accelerate digital transformationImprove operational efficiency','Enhance customer experienceIncrease competitive advantage' ], useCases[, 'Digital strategy developmentProcess digitization','Customer experience transformationOperational excellence initiatives' ], targetMarket['EnterpriseMid-market','GovernmentHealthcare'], "ctaLabel": 'Transform Digitally',"href": '"https": "featured": 'true',"marketSize": '$89.7B',"roi": '250%',"implementationTime": '12-24 weeks',"supportLevel": 'Business hours + strategic support',compliance['Industry standardsBest practices'], integrations['Enterprise systemsCloud platforms','Digital tools'], "api": 'false',"mobile": 'false',"enterprise": 'true',"startup": 'false',"smb": 'true' },{ "id": 'quantum-computing-as-a-service',"title": 'Quantum Computing as a Service',"description": 'Access to quantum computing resources for complex optimization problems and scientific research.',"category": 'Quantum Computing',"price": '$5,999',"billing": 'month',features[, 'Quantum algorithm developmentQuantum hardware access','Hybrid classical-quantum computingQuantum error correction','Performance optimizationResearch collaboration tools','Educational resources' ], benefits[, 'Solve previously intractable problemsAccelerate research and development','Gain quantum advantageFuture-proof your technology stack' ], useCases[, 'Drug discoveryFinancial modeling','Logistics optimizationCryptography research' ], targetMarket['Research InstitutionsPharmaceutical','FinanceTechnology'], "ctaLabel": 'Access Quantum',"href": '"https": "featured": 'true',"marketSize": '$1.2B',"roi": '400%',"implementationTime": '6-8 weeks',"supportLevel": 'Business hours + quantum experts',compliance['Research standardsData security'], integrations['Classical computingCloud platforms','Research tools'], "api": 'true',"mobile": 'false',"enterprise": 'true',"startup": 'false',"smb": 'false' },{ "id": 'blockchain-supply-chain-tracking',"title": 'Blockchain Supply Chain Tracking',"description": 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',"category": 'Blockchain & Web3',"price": '$2,999',"billing": 'month',features[, 'Real-time supply chain trackingSmart contract automation','Compliance documentationQuality assurance tracking','Sustainability metricsMulti-stakeholder access','Mobile app for field workers' ], benefits[, 'Improve supply chain transparencyReduce fraud and counterfeiting','Ensure complianceBuild consumer trust' ], useCases[, 'Food safety trackingPharmaceutical supply chain','Luxury goods authenticationSustainable sourcing verification' ], targetMarket['Food & BeveragePharmaceutical','Luxury GoodsManufacturing'], "ctaLabel": 'Track Supply Chain',"href": '"https": "featured": 'true',"marketSize": '$3.4B',"roi": '300%',"implementationTime": '8-12 weeks',"supportLevel": '24/7 + blockchain experts',compliance['FDAEU regulations','Industry standards'], integrations['ERP systemsIoT devices','Mobile apps'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'metaverse-commerce-platform',"title": 'Metaverse Commerce Platform',"description": 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',"category": 'Metaverse & AR/VR',"price": '$4,999',"billing": 'month',features[, '3D virtual storefrontsDigital asset marketplace','AR/VR shopping experiencesVirtual try-on capabilities','Cryptocurrency paymentsSocial commerce features','Analytics and insights' ], benefits[, 'Create immersive shopping experiencesReach global audiences','Reduce physical infrastructure costsInnovate customer engagement' ], useCases[, 'Fashion retailReal estate virtual tours','Automotive showroomsEntertainment venues' ], targetMarket['RetailReal Estate','AutomotiveEntertainment'], "ctaLabel": 'Enter Metaverse',"href": '"https": "featured": 'true',"marketSize": '$5.8B',"roi": '350%',"implementationTime": '12-16 weeks',"supportLevel": 'Business hours + metaverse experts',compliance['Digital rightsPrivacy regulations'], integrations['E-commerce platformsPayment gateways','Social media'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": "true ], export const serviceCategories = [, { "name": 'Micro SaaS'","description": 'Scalable software solutions for specific business needs',"services": "innovativeServices2026.filter(s => s.category === 'Micro SaaS') "},{ "name": 'AI Solutions',"description": 'Advanced artificial intelligence and machine learning solutions',"services": "innovativeServices2026.filter(s => s.category === 'AI Solutions') "},{ "name": 'IT Services',"description": 'Comprehensive IT consulting and implementation services',"services": "innovativeServices2026.filter(s => s.category === 'IT Services') "},"services": "innovativeServices2026.filter(s => ['Quantum Computing'",'Blockchain & Web3Metaverse & AR/VR'].includes(s.category))}, {, "name": 'Emerging Technologies', "description": 'Cutting-edge technologies shaping the future', "services": "innovativeServices2026.filter(s => ['Quantum Computing'",'Blockchain & Web3Metaverse & AR/VR'].includes(s.category))}, ], export default innovativeServices2026}};
-export type InnovativeService = {, id: string, title: string, description: string, category: &apos,Micro SaaS&apos, | &apos,IT Services&apos, | &apos,AI Solutions&apos, | &apos,Cybersecurity&apos, | &apos,Data & Analytics&apos, | &apos,Cloud & DevOps&apos, | &apos,Quantum Computing&apos, | &apos,Blockchain & Web3&apos, | &apos,IoT & Edge&apos, | &apos,Green Tech&apos, | &apos,Space Tech&apos, | &apos,BioTech & Health&apos, | &apos,FinTech & DeFi&apos, | &apos,Metaverse & AR/VR&apos, | &apos,Autonomous Systems&apos, | &apos,Sustainability&apos, | &apos,Digital Transformation&apos,&apos, price: string,&apos,&apos, billing: &apos,month&apos, | &apos,project&apos, | &apos,hour&apos, | &apos,year&apos, features: string[], benefits: string[], useCases: string[], targetMarket: string[], ctaLabel: string, href: string, external?: boolean, featured?: boolean, marketSize?: string, roi?: string, implementationTime?: string, supportLevel?: string, compliance?: string[], integrations?: string[], api?: boolean, mobile?: boolean, enterprise?: boolean, startup?: boolean, smb?: boolean}, export const innovativeServices2026: InnovativeService[] = [, { id: &apos,ai-powered-customer-churn-predictor&apos,title: &apos,AI-Powered Customer Churn Predictor&apos,description: &apos,Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.&apos,category: &apos,Micro SaaS&apos,price: &apos,$299&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time churn risk scoring&apos,&apos,Behavioral pattern analysis&apos,&apos,Predictive analytics dashboard&apos,&apos,Automated retention campaigns&apos,&apos,CRM integration (Salesforce,HubSpot)&apos,&apos,Custom retention strategies&apos,&apos,ROI tracking and reporting&apos, ],benefits[,&apos,&apos, &apos,Reduce churn by up to 40%&apos,&apos,Increase customer lifetime value&apos,&apos,Optimize retention spend&apos,&apos,Proactive customer success&apos, ],useCases[,&apos,&apos, &apos,SaaS subscription businesses&apos,&apos,E-commerce platforms&apos,&apos,Subscription box services&apos,&apos,Digital content providers&apos, ],targetMarket[&apos,SaaS Companies&apos,&apos,E-commerce&apos,&apos,Subscription Services&apos,&apos,Digital Media&apos,],ctaLabel: &apos,Start Free Trial&apos,href: &apos,https: featured: true,marketSize: &apos,$2.5B&apos,roi: &apos,300%&apos,implementationTime: &apos,2-4 weeks&apos,supportLevel: &apos,24/7&apos,compliance[&apos,GDPR&apos,&apos,CCPA&apos,&apos,SOC 2&apos,],integrations[&apos,Salesforce&apos,&apos,HubSpot&apos,&apos,Stripe&apos,&apos,Shopify&apos,],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: &apos,intelligent-inventory-optimization&apos,title: &apos,Intelligent Inventory Optimization&apos,description: &apos,AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.&apos,category: &apos,Micro SaaS&apos,price: &apos,$199&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Demand forecasting with 90% accuracy&apos,&apos,Real-time inventory tracking&apos,&apos,Automated reorder points&apos,&apos,Multi-location management&apos,&apos,Supplier performance analytics&apos,&apos,Seasonal trend analysis&apos,&apos,Cost optimization recommendations&apos, ],benefits[,&apos,&apos, &apos,Reduce inventory costs by 25%&apos,&apos,Eliminate stockouts&apos,&apos,Improve cash flow&apos,&apos,Optimize warehouse space&apos, ],useCases[,&apos,&apos, &apos,Retail chains&apos,&apos,E-commerce warehouses&apos,&apos,Manufacturing companies&apos,&apos,Distribution centers&apos, ],targetMarket[&apos,Retail&apos,&apos,E-commerce&apos,&apos,Manufacturing&apos,&apos,Logistics&apos,],ctaLabel: &apos,Optimize Inventory&apos,href: &apos,https: featured: true,marketSize: &apos,$3.8B&apos,roi: &apos,250%&apos,implementationTime: &apos,3-5 weeks&apos,supportLevel: &apos,Business hours + emergency&apos,compliance[&apos,ISO 9001&apos,&apos,FDA&apos,&apos,GMP&apos,],integrations[&apos,SAP&apos,&apos,Oracle&apos,&apos,NetSuite&apos,&apos,QuickBooks&apos,],api: true,mobile: true,enterprise: true,startup: false,smb: true ,},{ id: &apos,smart-energy-consumption-monitor&apos,title: &apos,Smart Energy Consumption Monitor&apos,description: &apos,IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.&apos,category: &apos,Micro SaaS&apos,price: &apos,$149&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time energy consumption tracking&apos,&apos,Smart device identification&apos,&apos,Anomaly detection alerts&apos,&apos,Energy efficiency recommendations&apos,&apos,Carbon footprint calculation&apos,&apos,Cost analysis and forecasting&apos,&apos,Mobile app monitoring&apos, ],benefits[,&apos,&apos, &apos,Reduce energy bills by 35%&apos,&apos,Improve sustainability score&apos,&apos,Comply with green regulations&apos,&apos,Enhance corporate social responsibility&apos, ],useCases[,&apos,&apos, &apos,Office buildings&apos,&apos,Manufacturing facilities&apos,&apos,Retail stores&apos,&apos,Data centers&apos, ],targetMarket[&apos,Commercial Real Estate&apos,&apos,Manufacturing&apos,&apos,Retail&apos,&apos,Data Centers&apos,],ctaLabel: &apos,Monitor Energy&apos,href: &apos,https: featured: true,marketSize: &apos,$1.9B&apos,roi: &apos,200%&apos,implementationTime: &apos,1-2 weeks&apos,supportLevel: &apos,24/7 monitoring&apos,compliance[&apos,LEED&apos,&apos,ISO 50001&apos,&apos,Energy Star&apos,],integrations[&apos,Building Management Systems&apos,&apos,Smart Meters&apos,&apos,Solar Panels&apos,],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: &apos,automated-compliance-monitor&apos,title: &apos,Automated Compliance Monitor&apos,description: &apos,Continuous compliance monitoring for GDPR,HIPAA,SOC 2,and other regulatory frameworks with automated reporting.&apos,category: &apos,Micro SaaS&apos,price: &apos,$399&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Multi-framework compliance monitoring&apos,&apos,Automated evidence collection&apos,&apos,Real-time compliance scoring&apos,&apos,Automated audit reports&apos,&apos,Policy template library&apos,&apos,Employee training tracking&apos,&apos,Incident response automation&apos, ],benefits[,&apos,&apos, &apos,Reduce compliance costs by 50%&apos,&apos,Eliminate audit surprises&apos,&apos,Maintain continuous compliance&apos,&apos,Protect against fines and penalties&apos, ],useCases[,&apos,&apos, &apos,Healthcare organizations&apos,&apos,Financial services&apos,&apos,Technology companies&apos,&apos,Government contractors&apos, ],targetMarket[&apos,Healthcare&apos,&apos,Finance&apos,&apos,Technology&apos,&apos,Government&apos,],ctaLabel: &apos,Ensure Compliance&apos,href: &apos,https: featured: true,marketSize: &apos,$4.2B&apos,roi: &apos,400%&apos,implementationTime: &apos,4-6 weeks&apos,supportLevel: &apos,24/7 + compliance experts&apos,compliance[&apos,GDPR&apos,&apos,HIPAA&apos,&apos,SOC 2&apos,&apos,PCI DSS&apos,&apos,ISO 27001&apos,],integrations[&apos,AWS&apos,&apos,Azure&apos,&apos,GCP&apos,&apos,Jira&apos,&apos,ServiceNow&apos,],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: &apos,autonomous-customer-service-agent&apos,title: &apos,Autonomous Customer Service Agent&apos,description: &apos,AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.&apos,category: &apos,AI Solutions&apos,price: &apos,$1,299&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Natural language processing&apos,&apos,Multi-language support (50+ languages)&apos,&apos,Context-aware conversations&apos,&apos,Seamless human handoff&apos,&apos,Sentiment analysis&apos,&apos,Knowledge base learning&apos,&apos,24/7 availability&apos, ],benefits[,&apos,&apos, &apos,Reduce support costs by 60%&apos,&apos,Improve customer satisfaction by 40%&apos,&apos,Handle 10x more inquiries&apos,&apos,Provide instant responses&apos, ],useCases[,&apos,&apos, &apos,E-commerce customer support&apos,&apos,SaaS product support&apos,&apos,Banking customer service&apos,&apos,Healthcare patient support&apos, ],targetMarket[&apos,E-commerce&apos,&apos,SaaS&apos,&apos,Banking&apos,&apos,Healthcare&apos,&apos,Telecommunications&apos,],ctaLabel: &apos,Deploy AI Agent&apos,href: &apos,https: featured: true,marketSize: &apos,$15.7B&apos,roi: &apos,500%&apos,implementationTime: &apos,6-8 weeks&apos,supportLevel: &apos,24/7 + AI specialists&apos,compliance[&apos,GDPR&apos,&apos,CCPA&apos,&apos,HIPAA&apos,],integrations[&apos,Zendesk&apos,&apos,Intercom&apos,&apos,Slack&apos,&apos,Microsoft Teams&apos,],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: &apos,predictive-maintenance-platform&apos,title: &apos,Predictive Maintenance Platform&apos,description: &apos,IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.&apos,category: &apos,AI Solutions&apos,price: &apos,$2,499&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time equipment monitoring&apos,&apos,Machine learning failure prediction&apos,&apos,Maintenance scheduling optimization&apos,&apos,Spare parts inventory management&apos,&apos,Performance analytics dashboard&apos,&apos,Mobile technician app&apos,&apos,Integration with CMMS systems&apos, ],benefits[,&apos,&apos, &apos,Reduce unplanned downtime by 70%&apos,&apos,Extend equipment life by 30%&apos,&apos,Optimize maintenance costs&apos,&apos,Improve safety and compliance&apos, ],useCases[,&apos,&apos, &apos,Manufacturing plants&apos,&apos,Power plants&apos,&apos,Oil and gas facilities&apos,&apos,Transportation fleets&apos, ],targetMarket[&apos,Manufacturing&apos,&apos,Energy&apos,&apos,Oil & Gas&apos,&apos,Transportation&apos,&apos,Utilities&apos,],ctaLabel: &apos,Predict Maintenance&apos,href: &apos,https: featured: true,marketSize: &apos,$8.9B&apos,roi: &apos,350%&apos,implementationTime: &apos,8-12 weeks&apos,supportLevel: &apos,24/7 + field engineers&apos,compliance[&apos,ISO 55001&apos,&apos,OSHA&apos,&apos,API&apos,],integrations[&apos,SAP&apos,&apos,Maximo&apos,&apos,Oracle&apos,&apos,Siemens Mindsphere&apos,],api: true,mobile: true,enterprise: true,startup: false,smb: true ,},{ id: &apos,ai-powered-fraud-detection&apos,title: &apos,AI-Powered Fraud Detection&apos,description: &apos,Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.&apos,category: &apos,AI Solutions&apos,price: &apos,$3,999&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time transaction monitoring&apos,&apos,Behavioral pattern analysis&apos,&apos,Multi-channel fraud detection&apos,&apos,Automated risk scoring&apos,&apos,False positive reduction&apos,&apos,Compliance reporting&apos,&apos,Machine learning model updates&apos, ],benefits[,&apos,&apos, &apos,Reduce fraud losses by 80%&apos,&apos,Improve detection accuracy&apos,&apos,Reduce false positives by 60%&apos,&apos,Comply with regulatory requirements&apos, ],useCases[,&apos,&apos, &apos,Credit card transactions&apos,&apos,Online banking&apos,&apos,E-commerce payments&apos,&apos,Insurance claims&apos, ],targetMarket[&apos,Banking&apos,&apos,E-commerce&apos,&apos,Insurance&apos,&apos,Payment Processors&apos,],ctaLabel: &apos,Detect Fraud&apos,href: &apos,https: featured: true,marketSize: &apos,$12.3B&apos,roi: &apos,600%&apos,implementationTime: &apos,10-14 weeks&apos,supportLevel: &apos,24/7 + security experts&apos,compliance[&apos,PCI DSS&apos,&apos,SOC 2&apos,&apos,ISO 27001&apos,&apos,GDPR&apos,],integrations[&apos,Stripe&apos,&apos,PayPal&apos,&apos,Square&apos,&apos,Banking APIs&apos,],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: &apos,cloud-migration-accelerator&apos,title: &apos,Cloud Migration Accelerator&apos,description: &apos,End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.&apos,category: &apos,IT Services&apos,price: &apos,$15,000&apos,billing: &apos,project&apos,features[,&apos,&apos, &apos,Cloud readiness assessment&apos,&apos,Migration strategy planning&apos,&apos,Zero-downtime migration&apos,&apos,Performance optimization&apos,&apos,Cost optimization analysis&apos,&apos,Security and compliance setup&apos,&apos,Post-migration support&apos, ],benefits[,&apos,&apos, &apos,Reduce migration time by 50%&apos,&apos,Ensure zero business disruption&apos,&apos,Optimize cloud costs&apos,&apos,Improve scalability and performance&apos, ],useCases[,&apos,&apos, &apos,Legacy system modernization&apos,&apos,Data center consolidation&apos,&apos,Application modernization&apos,&apos,Disaster recovery setup&apos, ],targetMarket[&apos,Enterprise&apos,&apos,Mid-market&apos,&apos,Government&apos,&apos,Healthcare&apos,],ctaLabel: &apos,Start Migration&apos,href: &apos,https: featured: true,marketSize: &apos,$68.4B&apos,roi: &apos,200%&apos,implementationTime: &apos,8-16 weeks&apos,supportLevel: &apos,24/7 + migration specialists&apos,compliance[&apos,SOC 2&apos,&apos,ISO 27001&apos,&apos,HIPAA&apos,&apos,FedRAMP&apos,],integrations[&apos,AWS&apos,&apos,Azure&apos,&apos,GCP&apos,&apos,VMware&apos,&apos,OpenStack&apos,],api: false,mobile: false,enterprise: true,startup: false,smb: true ,},{ id: &apos,cybersecurity-posture-assessment&apos,title: &apos,Cybersecurity Posture Assessment&apos,description: &apos,Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.&apos,category: &apos,IT Services&apos,price: &apos,$8,500&apos,billing: &apos,project&apos,features[,&apos,&apos, &apos,Vulnerability assessment&apos,&apos,Penetration testing&apos,&apos,Security architecture review&apos,&apos,Compliance gap analysis&apos,&apos,Risk assessment report&apos,&apos,Remediation roadmap&apos,&apos,Security training recommendations&apos, ],benefits[,&apos,&apos, &apos,Identify security gaps&apos,&apos,Reduce cyber risk&apos,&apos,Comply with regulations&apos,&apos,Improve security posture&apos, ],useCases[,&apos,&apos, &apos,Security audits&apos,&apos,Compliance assessments&apos,&apos,Merger and acquisition due diligence&apos,&apos,Annual security reviews&apos, ],targetMarket[&apos,Enterprise&apos,&apos,Mid-market&apos,&apos,Healthcare&apos,&apos,Finance&apos,],ctaLabel: &apos,Assess Security&apos,href: &apos,https: featured: true,marketSize: &apos,$45.2B&apos,roi: &apos,300%&apos,implementationTime: &apos,4-6 weeks&apos,supportLevel: &apos,Business hours + emergency&apos,compliance[&apos,ISO 27001&apos,&apos,NIST&apos,&apos,SOC 2&apos,&apos,PCI DSS&apos,],integrations[&apos,Security tools&apos,&apos,SIEM systems&apos,&apos,Vulnerability scanners&apos,],api: false,mobile: false,enterprise: true,startup: true,smb: true ,},{ id: &apos,digital-transformation-consulting&apos,title: &apos,Digital Transformation Consulting&apos,description: &apos,Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.&apos,category: &apos,IT Services&apos,price: &apos,$25,000&apos,billing: &apos,project&apos,features[,&apos,&apos, &apos,Digital maturity assessment&apos,&apos,Transformation roadmap development&apos,&apos,Change management strategy&apos,&apos,Technology architecture design&apos,&apos,Process optimization&apos,&apos,Talent development planning&apos,&apos,ROI measurement framework&apos, ],benefits[,&apos,&apos, &apos,Accelerate digital transformation&apos,&apos,Improve operational efficiency&apos,&apos,Enhance customer experience&apos,&apos,Increase competitive advantage&apos, ],useCases[,&apos,&apos, &apos,Digital strategy development&apos,&apos,Process digitization&apos,&apos,Customer experience transformation&apos,&apos,Operational excellence initiatives&apos, ],targetMarket[&apos,Enterprise&apos,&apos,Mid-market&apos,&apos,Government&apos,&apos,Healthcare&apos,],ctaLabel: &apos,Transform Digitally&apos,href: &apos,https: featured: true,marketSize: &apos,$89.7B&apos,roi: &apos,250%&apos,implementationTime: &apos,12-24 weeks&apos,supportLevel: &apos,Business hours + strategic support&apos,compliance[&apos,Industry standards&apos,&apos,Best practices&apos,],integrations[&apos,Enterprise systems&apos,&apos,Cloud platforms&apos,&apos,Digital tools&apos,],api: false,mobile: false,enterprise: true,startup: false,smb: true ,},{ id: &apos,quantum-computing-as-a-service&apos,title: &apos,Quantum Computing as a Service&apos,description: &apos,Access to quantum computing resources for complex optimization problems and scientific research.&apos,category: &apos,Quantum Computing&apos,price: &apos,$5,999&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Quantum algorithm development&apos,&apos,Quantum hardware access&apos,&apos,Hybrid classical-quantum computing&apos,&apos,Quantum error correction&apos,&apos,Performance optimization&apos,&apos,Research collaboration tools&apos,&apos,Educational resources&apos, ],benefits[,&apos,&apos, &apos,Solve previously intractable problems&apos,&apos,Accelerate research and development&apos,&apos,Gain quantum advantage&apos,&apos,Future-proof your technology stack&apos, ],useCases[,&apos,&apos, &apos,Drug discovery&apos,&apos,Financial modeling&apos,&apos,Logistics optimization&apos,&apos,Cryptography research&apos, ],targetMarket[&apos,Research Institutions&apos,&apos,Pharmaceutical&apos,&apos,Finance&apos,&apos,Technology&apos,],ctaLabel: &apos,Access Quantum&apos,href: &apos,https: featured: true,marketSize: &apos,$1.2B&apos,roi: &apos,400%&apos,implementationTime: &apos,6-8 weeks&apos,supportLevel: &apos,Business hours + quantum experts&apos,compliance[&apos,Research standards&apos,&apos,Data security&apos,],integrations[&apos,Classical computing&apos,&apos,Cloud platforms&apos,&apos,Research tools&apos,],api: true,mobile: false,enterprise: true,startup: false,smb: false ,},{ id: &apos,blockchain-supply-chain-tracking&apos,title: &apos,Blockchain Supply Chain Tracking&apos,description: &apos,End-to-end supply chain transparency using blockchain technology for traceability and compliance.&apos,category: &apos,Blockchain & Web3&apos,price: &apos,$2,999&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time supply chain tracking&apos,&apos,Smart contract automation&apos,&apos,Compliance documentation&apos,&apos,Quality assurance tracking&apos,&apos,Sustainability metrics&apos,&apos,Multi-stakeholder access&apos,&apos,Mobile app for field workers&apos, ],benefits[,&apos,&apos, &apos,Improve supply chain transparency&apos,&apos,Reduce fraud and counterfeiting&apos,&apos,Ensure compliance&apos,&apos,Build consumer trust&apos, ],useCases[,&apos,&apos, &apos,Food safety tracking&apos,&apos,Pharmaceutical supply chain&apos,&apos,Luxury goods authentication&apos,&apos,Sustainable sourcing verification&apos, ],targetMarket[&apos,Food & Beverage&apos,&apos,Pharmaceutical&apos,&apos,Luxury Goods&apos,&apos,Manufacturing&apos,],ctaLabel: &apos,Track Supply Chain&apos,href: &apos,https: featured: true,marketSize: &apos,$3.4B&apos,roi: &apos,300%&apos,implementationTime: &apos,8-12 weeks&apos,supportLevel: &apos,24/7 + blockchain experts&apos,compliance[&apos,FDA&apos,&apos,EU regulations&apos,&apos,Industry standards&apos,],integrations[&apos,ERP systems&apos,&apos,IoT devices&apos,&apos,Mobile apps&apos,],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: &apos,metaverse-commerce-platform&apos,title: &apos,Metaverse Commerce Platform&apos,description: &apos,Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.&apos,category: &apos,Metaverse & AR/VR&apos,price: &apos,$4,999&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,3D virtual storefronts&apos,&apos,Digital asset marketplace&apos,&apos,AR/VR shopping experiences&apos,&apos,Virtual try-on capabilities&apos,&apos,Cryptocurrency payments&apos,&apos,Social commerce features&apos,&apos,Analytics and insights&apos, ],benefits[,&apos,&apos, &apos,Create immersive shopping experiences&apos,&apos,Reach global audiences&apos,&apos,Reduce physical infrastructure costs&apos,&apos,Innovate customer engagement&apos, ],useCases[,&apos,&apos, &apos,Fashion retail&apos,&apos,Real estate virtual tours&apos,&apos,Automotive showrooms&apos,&apos,Entertainment venues&apos, ],targetMarket[&apos,Retail&apos,&apos,Real Estate&apos,&apos,Automotive&apos,&apos,Entertainment&apos,],ctaLabel: &apos,Enter Metaverse&apos,href: &apos,https: featured: true,marketSize: &apos,$5.8B&apos,roi: &apos,350%&apos,implementationTime: &apos,12-16 weeks&apos,supportLevel: &apos,Business hours + metaverse experts&apos,compliance[&apos,Digital rights&apos,&apos,Privacy regulations&apos,],integrations[&apos,E-commerce platforms&apos,&apos,Payment gateways&apos,&apos,Social media&apos,],api: true,mobile: true,enterprise: true,startup: true,smb: true ], export const serviceCategories = [, { name: &apos,Micro SaaS&apos,description: &apos,Scalable software solutions for specific business needs&apos,services: innovativeServices2026.filter(s => s.category === &apos,Micro SaaS&apos) },{ name: &apos,AI Solutions&apos,description: &apos,Advanced artificial intelligence and machine learning solutions&apos,services: innovativeServices2026.filter(s => s.category === &apos,AI Solutions&apos) },{ name: &apos,IT Services&apos,description: &apos,Comprehensive IT consulting and implementation services&apos,services: innovativeServices2026.filter(s => s.category === &apos,IT Services&apos,)&apos},services: innovativeServices2026.filter(s => [&apos,Quantum Computing&apos,&apos,Blockchain & Web3&apos,&apos,Metaverse & AR/VR&apos,].includes(s.category))},&apos, {,&apos,&apos, name: &apos,Emerging Technologies&apos,description: &apos,Cutting-edge technologies shaping the future&apos,services: innovativeServices2026.filter(s => [&apos,Quantum Computing&apos,&apos,Blockchain & Web3&apos,&apos,Metaverse & AR/VR&apos,].includes(s.category))}], export default innovativeServices2026}},&apos,&apos;
-export type InnovativeService = {;
-  "id": string;
-  title: string;
-  description: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation;
-  price: string,',';
-  billing: 'month' | 'project' | 'hour' | 'year';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetMarket: string[];
-  ctaLabel: string;
-  href: string;
-  external?: boolean;
-  featured?: boolean;
-  marketSize?: string;
-  roi?: string;
-  implementationTime?: string;
-  supportLevel?: string;
-  compliance?: string[];
-  integrations?: string[];
-  api?: boolean;
-  mobile?: boolean;
-  enterprise?: boolean;
-  startup?: boolean;
-  smb?: boolean};
-export const "innovativeServices2026": InnovativeService[] = [;
+export type InnovativeService = {, "id": "string, "title": string, "description": string, "category": 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation', "price": string, "billing": 'month' | 'project' | 'hour' | 'year', "features": string[], "benefits": string[], "useCases": string[], "targetMarket": string[], "ctaLabel": string, "href": string, external?: boolean, featured?: boolean, marketSize?: string, roi?: string, implementationTime?: string, supportLevel?: string, compliance?: string[], integrations?: string[], api?: boolean, mobile?: boolean, enterprise?: boolean, startup?: boolean, smb?: boolean"}, export const "innovativeServices2026": "InnovativeService[] = [, { "id": 'ai-powered-customer-churn-predictor'","title": 'AI-Powered Customer Churn Predictor',"description": 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',"category": 'Micro SaaS',"price": '$299',"billing": 'month',features[, 'Real-time churn risk scoringBehavioral pattern analysisPredictive analytics dashboardAutomated retention campaigns','CRM integration (Salesforce,HubSpot)Custom retention strategiesROI tracking and reporting' ], benefits[, 'Reduce churn by up to 40%Increase customer lifetime valueOptimize retention spendProactive customer success' ], useCases[, 'SaaS subscription businessesE-commerce platformsSubscription box servicesDigital content providers' ], targetMarket['SaaS CompaniesE-commerceSubscription ServicesDigital Media'], "ctaLabel": 'Start Free Trial',"href": '"https": "featured": 'true',"marketSize": '$2.5B',"roi": '300%',"implementationTime": '2-4 weeks',"supportLevel": '24/7',compliance['GDPRCCPASOC 2'], integrations['SalesforceHubSpotStripeShopify'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'intelligent-inventory-optimization',"title": 'Intelligent Inventory Optimization',"description": 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',"category": 'Micro SaaS',"price": '$199',"billing": 'month',features[, 'Demand forecasting with 90% accuracyReal-time inventory trackingAutomated reorder pointsMulti-location management','Supplier performance analyticsSeasonal trend analysisCost optimization recommendations' ], benefits[, 'Reduce inventory costs by 25%Eliminate stockoutsImprove cash flowOptimize warehouse space' ], useCases[, 'Retail chainsE-commerce warehousesManufacturing companiesDistribution centers' ], targetMarket['RetailE-commerceManufacturingLogistics'], "ctaLabel": 'Optimize Inventory',"href": '"https": "featured": 'true',"marketSize": '$3.8B',"roi": '250%',"implementationTime": '3-5 weeks',"supportLevel": 'Business hours + emergency',compliance['ISO 9001FDAGMP'], integrations['SAPOracleNetSuiteQuickBooks'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'false',"smb": 'true' },{ "id": 'smart-energy-consumption-monitor',"title": 'Smart Energy Consumption Monitor',"description": 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',"category": 'Micro SaaS',"price": '$149',"billing": 'month',features[, 'Real-time energy consumption trackingSmart device identificationAnomaly detection alertsEnergy efficiency recommendations','Carbon footprint calculationCost analysis and forecastingMobile app monitoring' ], benefits[, 'Reduce energy bills by 35%Improve sustainability scoreComply with green regulationsEnhance corporate social responsibility' ], useCases[, 'Office buildingsManufacturing facilitiesRetail storesData centers' ], targetMarket['Commercial Real EstateManufacturingRetailData Centers'], "ctaLabel": 'Monitor Energy',"href": '"https": "featured": 'true',"marketSize": '$1.9B',"roi": '200%',"implementationTime": '1-2 weeks',"supportLevel": '24/7 monitoring',compliance['LEEDISO 50001Energy Star'], integrations['Building Management SystemsSmart MetersSolar Panels'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'automated-compliance-monitor',"title": 'Automated Compliance Monitor',"description": 'Continuous compliance monitoring for GDPR,HIPAA,SOC 2,and other regulatory frameworks with automated reporting.',"category": 'Micro SaaS',"price": '$399',"billing": 'month',features[, 'Multi-framework compliance monitoringAutomated evidence collectionReal-time compliance scoringAutomated audit reports','Policy template libraryEmployee training trackingIncident response automation' ], benefits[, 'Reduce compliance costs by 50%Eliminate audit surprisesMaintain continuous complianceProtect against fines and penalties' ], useCases[, 'Healthcare organizationsFinancial servicesTechnology companiesGovernment contractors' ], targetMarket['HealthcareFinanceTechnologyGovernment'], "ctaLabel": 'Ensure Compliance',"href": '"https": "featured": 'true',"marketSize": '$4.2B',"roi": '400%',"implementationTime": '4-6 weeks',"supportLevel": '24/7 + compliance experts',compliance['GDPRHIPAASOC 2PCI DSS','ISO 27001'], integrations['AWSAzureGCPJira','ServiceNow'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'autonomous-customer-service-agent',"title": 'Autonomous Customer Service Agent',"description": 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',"category": 'AI Solutions',"price": '$1,299',"billing": 'month',features[, 'Natural language processingMulti-language support (50+ languages)Context-aware conversationsSeamless human handoff','Sentiment analysisKnowledge base learning24/7 availability' ], benefits[, 'Reduce support costs by 60%Improve customer satisfaction by 40%Handle 10x more inquiriesProvide instant responses' ], useCases[, 'E-commerce customer supportSaaS product supportBanking customer serviceHealthcare patient support' ], targetMarket['E-commerceSaaSBankingHealthcare','Telecommunications'], "ctaLabel": 'Deploy AI Agent',"href": '"https": "featured": 'true',"marketSize": '$15.7B',"roi": '500%',"implementationTime": '6-8 weeks',"supportLevel": '24/7 + AI specialists',compliance['GDPRCCPAHIPAA'], integrations['ZendeskIntercomSlackMicrosoft Teams'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'predictive-maintenance-platform',"title": 'Predictive Maintenance Platform',"description": 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',"category": 'AI Solutions',"price": '$2,499',"billing": 'month',features[, 'Real-time equipment monitoringMachine learning failure predictionMaintenance scheduling optimizationSpare parts inventory management','Performance analytics dashboardMobile technician appIntegration with CMMS systems' ], benefits[, 'Reduce unplanned downtime by 70%Extend equipment life by 30%Optimize maintenance costsImprove safety and compliance' ], useCases[, 'Manufacturing plantsPower plantsOil and gas facilitiesTransportation fleets' ], targetMarket['ManufacturingEnergyOil & GasTransportation','Utilities'], "ctaLabel": 'Predict Maintenance',"href": '"https": "featured": 'true',"marketSize": '$8.9B',"roi": '350%',"implementationTime": '8-12 weeks',"supportLevel": '24/7 + field engineers',compliance['ISO 55001OSHAAPI'], integrations['SAPMaximoOracleSiemens Mindsphere'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'false',"smb": 'true' },{ "id": 'ai-powered-fraud-detection',"title": 'AI-Powered Fraud Detection',"description": 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',"category": 'AI Solutions',"price": '$3,999',"billing": 'month',features[, 'Real-time transaction monitoringBehavioral pattern analysisMulti-channel fraud detectionAutomated risk scoring','False positive reductionCompliance reportingMachine learning model updates' ], benefits[, 'Reduce fraud losses by 80%Improve detection accuracyReduce false positives by 60%Comply with regulatory requirements' ], useCases[, 'Credit card transactionsOnline bankingE-commerce paymentsInsurance claims' ], targetMarket['BankingE-commerceInsurancePayment Processors'], "ctaLabel": 'Detect Fraud',"href": '"https": "featured": 'true',"marketSize": '$12.3B',"roi": '600%',"implementationTime": '10-14 weeks',"supportLevel": '24/7 + security experts',compliance['PCI DSSSOC 2ISO 27001GDPR'], integrations['StripePayPalSquareBanking APIs'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'cloud-migration-accelerator',"title": 'Cloud Migration Accelerator',"description": 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',"category": 'IT Services',"price": '$15,000',"billing": 'project',features[, 'Cloud readiness assessmentMigration strategy planningZero-downtime migrationPerformance optimization','Cost optimization analysisSecurity and compliance setupPost-migration support' ], benefits[, 'Reduce migration time by 50%Ensure zero business disruptionOptimize cloud costsImprove scalability and performance' ], useCases[, 'Legacy system modernizationData center consolidationApplication modernizationDisaster recovery setup' ], targetMarket['EnterpriseMid-marketGovernmentHealthcare'], "ctaLabel": 'Start Migration',"href": '"https": "featured": 'true',"marketSize": '$68.4B',"roi": '200%',"implementationTime": '8-16 weeks',"supportLevel": '24/7 + migration specialists',compliance['SOC 2ISO 27001HIPAAFedRAMP'], integrations['AWSAzureGCPVMware','OpenStack'], "api": 'false',"mobile": 'false',"enterprise": 'true',"startup": 'false',"smb": 'true' },{ "id": 'cybersecurity-posture-assessment',"title": 'Cybersecurity Posture Assessment',"description": 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',"category": 'IT Services',"price": '$8,500',"billing": 'project',features[, 'Vulnerability assessmentPenetration testingSecurity architecture reviewCompliance gap analysis','Risk assessment reportRemediation roadmapSecurity training recommendations' ], benefits[, 'Identify security gapsReduce cyber riskComply with regulationsImprove security posture' ], useCases[, 'Security auditsCompliance assessmentsMerger and acquisition due diligenceAnnual security reviews' ], targetMarket['EnterpriseMid-marketHealthcareFinance'], "ctaLabel": 'Assess Security',"href": '"https": "featured": 'true',"marketSize": '$45.2B',"roi": '300%',"implementationTime": '4-6 weeks',"supportLevel": 'Business hours + emergency',compliance['ISO 27001NISTSOC 2PCI DSS'], integrations['Security toolsSIEM systemsVulnerability scanners'], "api": 'false',"mobile": 'false',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'digital-transformation-consulting',"title": 'Digital Transformation Consulting',"description": 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',"category": 'IT Services',"price": '$25,000',"billing": 'project',features[, 'Digital maturity assessmentTransformation roadmap developmentChange management strategyTechnology architecture design','Process optimizationTalent development planningROI measurement framework' ], benefits[, 'Accelerate digital transformationImprove operational efficiencyEnhance customer experienceIncrease competitive advantage' ], useCases[, 'Digital strategy developmentProcess digitizationCustomer experience transformationOperational excellence initiatives' ], targetMarket['EnterpriseMid-marketGovernmentHealthcare'], "ctaLabel": 'Transform Digitally',"href": '"https": "featured": 'true',"marketSize": '$89.7B',"roi": '250%',"implementationTime": '12-24 weeks',"supportLevel": 'Business hours + strategic support',compliance['Industry standardsBest practices'], integrations['Enterprise systemsCloud platformsDigital tools'], "api": 'false',"mobile": 'false',"enterprise": 'true',"startup": 'false',"smb": 'true' },{ "id": 'quantum-computing-as-a-service',"title": 'Quantum Computing as a Service',"description": 'Access to quantum computing resources for complex optimization problems and scientific research.',"category": 'Quantum Computing',"price": '$5,999',"billing": 'month',features[, 'Quantum algorithm developmentQuantum hardware accessHybrid classical-quantum computingQuantum error correction','Performance optimizationResearch collaboration toolsEducational resources' ], benefits[, 'Solve previously intractable problemsAccelerate research and developmentGain quantum advantageFuture-proof your technology stack' ], useCases[, 'Drug discoveryFinancial modelingLogistics optimizationCryptography research' ], targetMarket['Research InstitutionsPharmaceuticalFinanceTechnology'], "ctaLabel": 'Access Quantum',"href": '"https": "featured": 'true',"marketSize": '$1.2B',"roi": '400%',"implementationTime": '6-8 weeks',"supportLevel": 'Business hours + quantum experts',compliance['Research standardsData security'], integrations['Classical computingCloud platformsResearch tools'], "api": 'true',"mobile": 'false',"enterprise": 'true',"startup": 'false',"smb": 'false' },{ "id": 'blockchain-supply-chain-tracking',"title": 'Blockchain Supply Chain Tracking',"description": 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',"category": 'Blockchain & Web3',"price": '$2,999',"billing": 'month',features[, 'Real-time supply chain trackingSmart contract automationCompliance documentationQuality assurance tracking','Sustainability metricsMulti-stakeholder accessMobile app for field workers' ], benefits[, 'Improve supply chain transparencyReduce fraud and counterfeitingEnsure complianceBuild consumer trust' ], useCases[, 'Food safety trackingPharmaceutical supply chainLuxury goods authenticationSustainable sourcing verification' ], targetMarket['Food & BeveragePharmaceuticalLuxury GoodsManufacturing'], "ctaLabel": 'Track Supply Chain',"href": '"https": "featured": 'true',"marketSize": '$3.4B',"roi": '300%',"implementationTime": '8-12 weeks',"supportLevel": '24/7 + blockchain experts',compliance['FDAEU regulationsIndustry standards'], integrations['ERP systemsIoT devicesMobile apps'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": 'true' },{ "id": 'metaverse-commerce-platform',"title": 'Metaverse Commerce Platform',"description": 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',"category": 'Metaverse & AR/VR',"price": '$4,999',"billing": 'month',features[, '3D virtual storefrontsDigital asset marketplaceAR/VR shopping experiencesVirtual try-on capabilities','Cryptocurrency paymentsSocial commerce featuresAnalytics and insights' ], benefits[, 'Create immersive shopping experiencesReach global audiencesReduce physical infrastructure costsInnovate customer engagement' ], useCases[, 'Fashion retailReal estate virtual toursAutomotive showroomsEntertainment venues' ], targetMarket['RetailReal EstateAutomotiveEntertainment'], "ctaLabel": 'Enter Metaverse',"href": '"https": "featured": 'true',"marketSize": '$5.8B',"roi": '350%',"implementationTime": '12-16 weeks',"supportLevel": 'Business hours + metaverse experts',compliance['Digital rightsPrivacy regulations'], integrations['E-commerce platformsPayment gatewaysSocial media'], "api": 'true',"mobile": 'true',"enterprise": 'true',"startup": 'true',"smb": "true ], export const serviceCategories = [, { "name": 'Micro SaaS'","description": 'Scalable software solutions for specific business needs',"services": "innovativeServices2026.filter(s => s.category === 'Micro SaaS') "},{ "name": 'AI Solutions',"description": 'Advanced artificial intelligence and machine learning solutions',"services": "innovativeServices2026.filter(s => s.category === 'AI Solutions') "},{ "name": 'IT Services',"description": 'Comprehensive IT consulting and implementation services',"services": "innovativeServices2026.filter(s => s.category === 'IT Services') "},"services": "innovativeServices2026.filter(s => ['Quantum Computing'",'Blockchain & Web3Metaverse & AR/VR'].includes(s.category))}, {, "name": 'Emerging Technologies', "description": 'Cutting-edge technologies shaping the future', "services": "innovativeServices2026.filter(s => ['Quantum Computing'",'Blockchain & Web3Metaverse & AR/VR'].includes(s.category))} ], export default innovativeServices2026}},
+export type InnovativeService = {, id: string, title: string, description: string, category: &apos,Micro SaaS&apos, | &apos,IT Services&apos, | &apos,AI Solutions&apos, | &apos,Cybersecurity&apos, | &apos,Data & Analytics&apos, | &apos,Cloud & DevOps&apos, | &apos,Quantum Computing&apos, | &apos,Blockchain & Web3&apos, | &apos,IoT & Edge&apos, | &apos,Green Tech&apos, | &apos,Space Tech&apos, | &apos,BioTech & Health&apos, | &apos,FinTech & DeFi&apos, | &apos,Metaverse & AR/VR&apos, | &apos,Autonomous Systems&apos, | &apos,Sustainability&apos, | &apos,Digital Transformation&apos,&apos, price: string,&apos,&apos, billing: &apos,month&apos, | &apos,project&apos, | &apos,hour&apos, | &apos,year&apos, features: string[], benefits: string[], useCases: string[], targetMarket: string[], ctaLabel: string, href: string, external?: boolean, featured?: boolean, marketSize?: string, roi?: string, implementationTime?: string, supportLevel?: string, compliance?: string[], integrations?: string[], api?: boolean, mobile?: boolean, enterprise?: boolean, startup?: boolean, smb?: boolean}, export const innovativeServices2026: InnovativeService[] = [, { id: &apos,ai-powered-customer-churn-predictor&apos,title: &apos,AI-Powered Customer Churn Predictor&apos,description: &apos,Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.&apos,category: &apos,Micro SaaS&apos,price: &apos,$299&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time churn risk scoring&apos,&apos,Behavioral pattern analysis&apos,&apos,Predictive analytics dashboard&apos,&apos,Automated retention campaigns&apos,&apos,CRM integration (Salesforce,HubSpot)&apos,&apos,Custom retention strategies&apos,&apos,ROI tracking and reporting&apos ],benefits[,&apos,&apos, &apos,Reduce churn by up to 40%&apos,&apos,Increase customer lifetime value&apos,&apos,Optimize retention spend&apos,&apos,Proactive customer success&apos ],useCases[,&apos,&apos, &apos,SaaS subscription businesses&apos,&apos,E-commerce platforms&apos,&apos,Subscription box services&apos,&apos,Digital content providers&apos ],targetMarket[&apos,SaaS Companies&apos,&apos,E-commerce&apos,&apos,Subscription Services&apos,&apos,Digital Media&apos],ctaLabel: &apos,Start Free Trial&apos,href: &apos,https: featured: true,marketSize: &apos,$2.5B&apos,roi: &apos,300%&apos,implementationTime: &apos,2-4 weeks&apos,supportLevel: &apos,24/7&apos,compliance[&apos,GDPR&apos,&apos,CCPA&apos,&apos,SOC 2&apos],integrations[&apos,Salesforce&apos,&apos,HubSpot&apos,&apos,Stripe&apos,&apos,Shopify&apos],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: &apos,intelligent-inventory-optimization&apos,title: &apos,Intelligent Inventory Optimization&apos,description: &apos,AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.&apos,category: &apos,Micro SaaS&apos,price: &apos,$199&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Demand forecasting with 90% accuracy&apos,&apos,Real-time inventory tracking&apos,&apos,Automated reorder points&apos,&apos,Multi-location management&apos,&apos,Supplier performance analytics&apos,&apos,Seasonal trend analysis&apos,&apos,Cost optimization recommendations&apos ],benefits[,&apos,&apos, &apos,Reduce inventory costs by 25%&apos,&apos,Eliminate stockouts&apos,&apos,Improve cash flow&apos,&apos,Optimize warehouse space&apos ],useCases[,&apos,&apos, &apos,Retail chains&apos,&apos,E-commerce warehouses&apos,&apos,Manufacturing companies&apos,&apos,Distribution centers&apos ],targetMarket[&apos,Retail&apos,&apos,E-commerce&apos,&apos,Manufacturing&apos,&apos,Logistics&apos],ctaLabel: &apos,Optimize Inventory&apos,href: &apos,https: featured: true,marketSize: &apos,$3.8B&apos,roi: &apos,250%&apos,implementationTime: &apos,3-5 weeks&apos,supportLevel: &apos,Business hours + emergency&apos,compliance[&apos,ISO 9001&apos,&apos,FDA&apos,&apos,GMP&apos],integrations[&apos,SAP&apos,&apos,Oracle&apos,&apos,NetSuite&apos,&apos,QuickBooks&apos],api: true,mobile: true,enterprise: true,startup: false,smb: true },{ id: &apos,smart-energy-consumption-monitor&apos,title: &apos,Smart Energy Consumption Monitor&apos,description: &apos,IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.&apos,category: &apos,Micro SaaS&apos,price: &apos,$149&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time energy consumption tracking&apos,&apos,Smart device identification&apos,&apos,Anomaly detection alerts&apos,&apos,Energy efficiency recommendations&apos,&apos,Carbon footprint calculation&apos,&apos,Cost analysis and forecasting&apos,&apos,Mobile app monitoring&apos ],benefits[,&apos,&apos, &apos,Reduce energy bills by 35%&apos,&apos,Improve sustainability score&apos,&apos,Comply with green regulations&apos,&apos,Enhance corporate social responsibility&apos ],useCases[,&apos,&apos, &apos,Office buildings&apos,&apos,Manufacturing facilities&apos,&apos,Retail stores&apos,&apos,Data centers&apos ],targetMarket[&apos,Commercial Real Estate&apos,&apos,Manufacturing&apos,&apos,Retail&apos,&apos,Data Centers&apos],ctaLabel: &apos,Monitor Energy&apos,href: &apos,https: featured: true,marketSize: &apos,$1.9B&apos,roi: &apos,200%&apos,implementationTime: &apos,1-2 weeks&apos,supportLevel: &apos,24/7 monitoring&apos,compliance[&apos,LEED&apos,&apos,ISO 50001&apos,&apos,Energy Star&apos],integrations[&apos,Building Management Systems&apos,&apos,Smart Meters&apos,&apos,Solar Panels&apos],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: &apos,automated-compliance-monitor&apos,title: &apos,Automated Compliance Monitor&apos,description: &apos,Continuous compliance monitoring for GDPR,HIPAA,SOC 2,and other regulatory frameworks with automated reporting.&apos,category: &apos,Micro SaaS&apos,price: &apos,$399&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Multi-framework compliance monitoring&apos,&apos,Automated evidence collection&apos,&apos,Real-time compliance scoring&apos,&apos,Automated audit reports&apos,&apos,Policy template library&apos,&apos,Employee training tracking&apos,&apos,Incident response automation&apos ],benefits[,&apos,&apos, &apos,Reduce compliance costs by 50%&apos,&apos,Eliminate audit surprises&apos,&apos,Maintain continuous compliance&apos,&apos,Protect against fines and penalties&apos ],useCases[,&apos,&apos, &apos,Healthcare organizations&apos,&apos,Financial services&apos,&apos,Technology companies&apos,&apos,Government contractors&apos ],targetMarket[&apos,Healthcare&apos,&apos,Finance&apos,&apos,Technology&apos,&apos,Government&apos],ctaLabel: &apos,Ensure Compliance&apos,href: &apos,https: featured: true,marketSize: &apos,$4.2B&apos,roi: &apos,400%&apos,implementationTime: &apos,4-6 weeks&apos,supportLevel: &apos,24/7 + compliance experts&apos,compliance[&apos,GDPR&apos,&apos,HIPAA&apos,&apos,SOC 2&apos,&apos,PCI DSS&apos,&apos,ISO 27001&apos],integrations[&apos,AWS&apos,&apos,Azure&apos,&apos,GCP&apos,&apos,Jira&apos,&apos,ServiceNow&apos],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: &apos,autonomous-customer-service-agent&apos,title: &apos,Autonomous Customer Service Agent&apos,description: &apos,AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.&apos,category: &apos,AI Solutions&apos,price: &apos,$1,299&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Natural language processing&apos,&apos,Multi-language support (50+ languages)&apos,&apos,Context-aware conversations&apos,&apos,Seamless human handoff&apos,&apos,Sentiment analysis&apos,&apos,Knowledge base learning&apos,&apos,24/7 availability&apos ],benefits[,&apos,&apos, &apos,Reduce support costs by 60%&apos,&apos,Improve customer satisfaction by 40%&apos,&apos,Handle 10x more inquiries&apos,&apos,Provide instant responses&apos ],useCases[,&apos,&apos, &apos,E-commerce customer support&apos,&apos,SaaS product support&apos,&apos,Banking customer service&apos,&apos,Healthcare patient support&apos ],targetMarket[&apos,E-commerce&apos,&apos,SaaS&apos,&apos,Banking&apos,&apos,Healthcare&apos,&apos,Telecommunications&apos],ctaLabel: &apos,Deploy AI Agent&apos,href: &apos,https: featured: true,marketSize: &apos,$15.7B&apos,roi: &apos,500%&apos,implementationTime: &apos,6-8 weeks&apos,supportLevel: &apos,24/7 + AI specialists&apos,compliance[&apos,GDPR&apos,&apos,CCPA&apos,&apos,HIPAA&apos],integrations[&apos,Zendesk&apos,&apos,Intercom&apos,&apos,Slack&apos,&apos,Microsoft Teams&apos],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: &apos,predictive-maintenance-platform&apos,title: &apos,Predictive Maintenance Platform&apos,description: &apos,IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.&apos,category: &apos,AI Solutions&apos,price: &apos,$2,499&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time equipment monitoring&apos,&apos,Machine learning failure prediction&apos,&apos,Maintenance scheduling optimization&apos,&apos,Spare parts inventory management&apos,&apos,Performance analytics dashboard&apos,&apos,Mobile technician app&apos,&apos,Integration with CMMS systems&apos ],benefits[,&apos,&apos, &apos,Reduce unplanned downtime by 70%&apos,&apos,Extend equipment life by 30%&apos,&apos,Optimize maintenance costs&apos,&apos,Improve safety and compliance&apos ],useCases[,&apos,&apos, &apos,Manufacturing plants&apos,&apos,Power plants&apos,&apos,Oil and gas facilities&apos,&apos,Transportation fleets&apos ],targetMarket[&apos,Manufacturing&apos,&apos,Energy&apos,&apos,Oil & Gas&apos,&apos,Transportation&apos,&apos,Utilities&apos],ctaLabel: &apos,Predict Maintenance&apos,href: &apos,https: featured: true,marketSize: &apos,$8.9B&apos,roi: &apos,350%&apos,implementationTime: &apos,8-12 weeks&apos,supportLevel: &apos,24/7 + field engineers&apos,compliance[&apos,ISO 55001&apos,&apos,OSHA&apos,&apos,API&apos],integrations[&apos,SAP&apos,&apos,Maximo&apos,&apos,Oracle&apos,&apos,Siemens Mindsphere&apos],api: true,mobile: true,enterprise: true,startup: false,smb: true },{ id: &apos,ai-powered-fraud-detection&apos,title: &apos,AI-Powered Fraud Detection&apos,description: &apos,Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.&apos,category: &apos,AI Solutions&apos,price: &apos,$3,999&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time transaction monitoring&apos,&apos,Behavioral pattern analysis&apos,&apos,Multi-channel fraud detection&apos,&apos,Automated risk scoring&apos,&apos,False positive reduction&apos,&apos,Compliance reporting&apos,&apos,Machine learning model updates&apos ],benefits[,&apos,&apos, &apos,Reduce fraud losses by 80%&apos,&apos,Improve detection accuracy&apos,&apos,Reduce false positives by 60%&apos,&apos,Comply with regulatory requirements&apos ],useCases[,&apos,&apos, &apos,Credit card transactions&apos,&apos,Online banking&apos,&apos,E-commerce payments&apos,&apos,Insurance claims&apos ],targetMarket[&apos,Banking&apos,&apos,E-commerce&apos,&apos,Insurance&apos,&apos,Payment Processors&apos],ctaLabel: &apos,Detect Fraud&apos,href: &apos,https: featured: true,marketSize: &apos,$12.3B&apos,roi: &apos,600%&apos,implementationTime: &apos,10-14 weeks&apos,supportLevel: &apos,24/7 + security experts&apos,compliance[&apos,PCI DSS&apos,&apos,SOC 2&apos,&apos,ISO 27001&apos,&apos,GDPR&apos],integrations[&apos,Stripe&apos,&apos,PayPal&apos,&apos,Square&apos,&apos,Banking APIs&apos],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: &apos,cloud-migration-accelerator&apos,title: &apos,Cloud Migration Accelerator&apos,description: &apos,End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.&apos,category: &apos,IT Services&apos,price: &apos,$15,000&apos,billing: &apos,project&apos,features[,&apos,&apos, &apos,Cloud readiness assessment&apos,&apos,Migration strategy planning&apos,&apos,Zero-downtime migration&apos,&apos,Performance optimization&apos,&apos,Cost optimization analysis&apos,&apos,Security and compliance setup&apos,&apos,Post-migration support&apos ],benefits[,&apos,&apos, &apos,Reduce migration time by 50%&apos,&apos,Ensure zero business disruption&apos,&apos,Optimize cloud costs&apos,&apos,Improve scalability and performance&apos ],useCases[,&apos,&apos, &apos,Legacy system modernization&apos,&apos,Data center consolidation&apos,&apos,Application modernization&apos,&apos,Disaster recovery setup&apos ],targetMarket[&apos,Enterprise&apos,&apos,Mid-market&apos,&apos,Government&apos,&apos,Healthcare&apos],ctaLabel: &apos,Start Migration&apos,href: &apos,https: featured: true,marketSize: &apos,$68.4B&apos,roi: &apos,200%&apos,implementationTime: &apos,8-16 weeks&apos,supportLevel: &apos,24/7 + migration specialists&apos,compliance[&apos,SOC 2&apos,&apos,ISO 27001&apos,&apos,HIPAA&apos,&apos,FedRAMP&apos],integrations[&apos,AWS&apos,&apos,Azure&apos,&apos,GCP&apos,&apos,VMware&apos,&apos,OpenStack&apos],api: false,mobile: false,enterprise: true,startup: false,smb: true },{ id: &apos,cybersecurity-posture-assessment&apos,title: &apos,Cybersecurity Posture Assessment&apos,description: &apos,Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.&apos,category: &apos,IT Services&apos,price: &apos,$8,500&apos,billing: &apos,project&apos,features[,&apos,&apos, &apos,Vulnerability assessment&apos,&apos,Penetration testing&apos,&apos,Security architecture review&apos,&apos,Compliance gap analysis&apos,&apos,Risk assessment report&apos,&apos,Remediation roadmap&apos,&apos,Security training recommendations&apos ],benefits[,&apos,&apos, &apos,Identify security gaps&apos,&apos,Reduce cyber risk&apos,&apos,Comply with regulations&apos,&apos,Improve security posture&apos ],useCases[,&apos,&apos, &apos,Security audits&apos,&apos,Compliance assessments&apos,&apos,Merger and acquisition due diligence&apos,&apos,Annual security reviews&apos ],targetMarket[&apos,Enterprise&apos,&apos,Mid-market&apos,&apos,Healthcare&apos,&apos,Finance&apos],ctaLabel: &apos,Assess Security&apos,href: &apos,https: featured: true,marketSize: &apos,$45.2B&apos,roi: &apos,300%&apos,implementationTime: &apos,4-6 weeks&apos,supportLevel: &apos,Business hours + emergency&apos,compliance[&apos,ISO 27001&apos,&apos,NIST&apos,&apos,SOC 2&apos,&apos,PCI DSS&apos],integrations[&apos,Security tools&apos,&apos,SIEM systems&apos,&apos,Vulnerability scanners&apos],api: false,mobile: false,enterprise: true,startup: true,smb: true },{ id: &apos,digital-transformation-consulting&apos,title: &apos,Digital Transformation Consulting&apos,description: &apos,Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.&apos,category: &apos,IT Services&apos,price: &apos,$25,000&apos,billing: &apos,project&apos,features[,&apos,&apos, &apos,Digital maturity assessment&apos,&apos,Transformation roadmap development&apos,&apos,Change management strategy&apos,&apos,Technology architecture design&apos,&apos,Process optimization&apos,&apos,Talent development planning&apos,&apos,ROI measurement framework&apos ],benefits[,&apos,&apos, &apos,Accelerate digital transformation&apos,&apos,Improve operational efficiency&apos,&apos,Enhance customer experience&apos,&apos,Increase competitive advantage&apos ],useCases[,&apos,&apos, &apos,Digital strategy development&apos,&apos,Process digitization&apos,&apos,Customer experience transformation&apos,&apos,Operational excellence initiatives&apos ],targetMarket[&apos,Enterprise&apos,&apos,Mid-market&apos,&apos,Government&apos,&apos,Healthcare&apos],ctaLabel: &apos,Transform Digitally&apos,href: &apos,https: featured: true,marketSize: &apos,$89.7B&apos,roi: &apos,250%&apos,implementationTime: &apos,12-24 weeks&apos,supportLevel: &apos,Business hours + strategic support&apos,compliance[&apos,Industry standards&apos,&apos,Best practices&apos],integrations[&apos,Enterprise systems&apos,&apos,Cloud platforms&apos,&apos,Digital tools&apos],api: false,mobile: false,enterprise: true,startup: false,smb: true },{ id: &apos,quantum-computing-as-a-service&apos,title: &apos,Quantum Computing as a Service&apos,description: &apos,Access to quantum computing resources for complex optimization problems and scientific research.&apos,category: &apos,Quantum Computing&apos,price: &apos,$5,999&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Quantum algorithm development&apos,&apos,Quantum hardware access&apos,&apos,Hybrid classical-quantum computing&apos,&apos,Quantum error correction&apos,&apos,Performance optimization&apos,&apos,Research collaboration tools&apos,&apos,Educational resources&apos ],benefits[,&apos,&apos, &apos,Solve previously intractable problems&apos,&apos,Accelerate research and development&apos,&apos,Gain quantum advantage&apos,&apos,Future-proof your technology stack&apos ],useCases[,&apos,&apos, &apos,Drug discovery&apos,&apos,Financial modeling&apos,&apos,Logistics optimization&apos,&apos,Cryptography research&apos ],targetMarket[&apos,Research Institutions&apos,&apos,Pharmaceutical&apos,&apos,Finance&apos,&apos,Technology&apos],ctaLabel: &apos,Access Quantum&apos,href: &apos,https: featured: true,marketSize: &apos,$1.2B&apos,roi: &apos,400%&apos,implementationTime: &apos,6-8 weeks&apos,supportLevel: &apos,Business hours + quantum experts&apos,compliance[&apos,Research standards&apos,&apos,Data security&apos],integrations[&apos,Classical computing&apos,&apos,Cloud platforms&apos,&apos,Research tools&apos],api: true,mobile: false,enterprise: true,startup: false,smb: false },{ id: &apos,blockchain-supply-chain-tracking&apos,title: &apos,Blockchain Supply Chain Tracking&apos,description: &apos,End-to-end supply chain transparency using blockchain technology for traceability and compliance.&apos,category: &apos,Blockchain & Web3&apos,price: &apos,$2,999&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,Real-time supply chain tracking&apos,&apos,Smart contract automation&apos,&apos,Compliance documentation&apos,&apos,Quality assurance tracking&apos,&apos,Sustainability metrics&apos,&apos,Multi-stakeholder access&apos,&apos,Mobile app for field workers&apos ],benefits[,&apos,&apos, &apos,Improve supply chain transparency&apos,&apos,Reduce fraud and counterfeiting&apos,&apos,Ensure compliance&apos,&apos,Build consumer trust&apos ],useCases[,&apos,&apos, &apos,Food safety tracking&apos,&apos,Pharmaceutical supply chain&apos,&apos,Luxury goods authentication&apos,&apos,Sustainable sourcing verification&apos ],targetMarket[&apos,Food & Beverage&apos,&apos,Pharmaceutical&apos,&apos,Luxury Goods&apos,&apos,Manufacturing&apos],ctaLabel: &apos,Track Supply Chain&apos,href: &apos,https: featured: true,marketSize: &apos,$3.4B&apos,roi: &apos,300%&apos,implementationTime: &apos,8-12 weeks&apos,supportLevel: &apos,24/7 + blockchain experts&apos,compliance[&apos,FDA&apos,&apos,EU regulations&apos,&apos,Industry standards&apos],integrations[&apos,ERP systems&apos,&apos,IoT devices&apos,&apos,Mobile apps&apos],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: &apos,metaverse-commerce-platform&apos,title: &apos,Metaverse Commerce Platform&apos,description: &apos,Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.&apos,category: &apos,Metaverse & AR/VR&apos,price: &apos,$4,999&apos,billing: &apos,month&apos,features[,&apos,&apos, &apos,3D virtual storefronts&apos,&apos,Digital asset marketplace&apos,&apos,AR/VR shopping experiences&apos,&apos,Virtual try-on capabilities&apos,&apos,Cryptocurrency payments&apos,&apos,Social commerce features&apos,&apos,Analytics and insights&apos ],benefits[,&apos,&apos, &apos,Create immersive shopping experiences&apos,&apos,Reach global audiences&apos,&apos,Reduce physical infrastructure costs&apos,&apos,Innovate customer engagement&apos ],useCases[,&apos,&apos, &apos,Fashion retail&apos,&apos,Real estate virtual tours&apos,&apos,Automotive showrooms&apos,&apos,Entertainment venues&apos ],targetMarket[&apos,Retail&apos,&apos,Real Estate&apos,&apos,Automotive&apos,&apos,Entertainment&apos],ctaLabel: &apos,Enter Metaverse&apos,href: &apos,https: featured: true,marketSize: &apos,$5.8B&apos,roi: &apos,350%&apos,implementationTime: &apos,12-16 weeks&apos,supportLevel: &apos,Business hours + metaverse experts&apos,compliance[&apos,Digital rights&apos,&apos,Privacy regulations&apos],integrations[&apos,E-commerce platforms&apos,&apos,Payment gateways&apos,&apos,Social media&apos],api: true,mobile: true,enterprise: true,startup: true,smb: true ], export const serviceCategories = [, { name: &apos,Micro SaaS&apos,description: &apos,Scalable software solutions for specific business needs&apos,services: innovativeServices2026.filter(s => s.category === &apos,Micro SaaS&apos) },{ name: &apos,AI Solutions&apos,description: &apos,Advanced artificial intelligence and machine learning solutions&apos,services: innovativeServices2026.filter(s => s.category === &apos,AI Solutions&apos) },{ name: &apos,IT Services&apos,description: &apos,Comprehensive IT consulting and implementation services&apos,services: innovativeServices2026.filter(s => s.category === &apos,IT Services&apos)&apos},services: innovativeServices2026.filter(s => [&apos,Quantum Computing&apos,&apos,Blockchain & Web3&apos,&apos,Metaverse & AR/VR&apos].includes(s.category))},&apos, {,&apos,&apos, name: &apos,Emerging Technologies&apos,description: &apos,Cutting-edge technologies shaping the future&apos,services: innovativeServices2026.filter(s => [&apos,Quantum Computing&apos,&apos,Blockchain & Web3&apos,&apos,Metaverse & AR/VR&apos].includes(s.category))}], export default innovativeServices2026}},&apos,&apos,
+export type InnovativeService = {,
+  "id": string,
+  title: string,
+  description: string,
+  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation,
+  price: string,,
+  billing: 'month' | 'project' | 'hour' | 'year',
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetMarket: string[],
+  ctaLabel: string,
+  href: string,
+  external?: boolean,
+  featured?: boolean,
+  marketSize?: string,
+  roi?: string,
+  implementationTime?: string,
+  supportLevel?: string,
+  compliance?: string[],
+  integrations?: string[],
+  api?: boolean,
+  mobile?: boolean,
+  enterprise?: boolean,
+  startup?: boolean,
+  smb?: boolean},
+export const "innovativeServices2026": InnovativeService[] = [,
   // MICRO SAAS SERVICES,
   {,
-    id: 'ai-powered-customer-churn-predictor';
-    "title": 'AI-Powered Customer Churn Predictor';
-    "description": 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.';
-    "category": 'Micro SaaS';
-    "price": '$299';
-    "billing": 'month';
-    features[,;
-      'Real-time churn risk scoring';
-      'Behavioral pattern analysisPredictive analytics dashboard';
-      'Automated retention campaignsCRM integration (Salesforce, HubSpot)';
-      'Custom retention strategiesROI tracking and reporting',
-    ];
-    benefits[,',Reduce churn by up to 40%';
-      'Increase customer lifetime valueOptimize retention spend';
-      'Proactive customer success',
-    ];
-    useCases[,;
-      'SaaS subscription businesses';
-      'E-commerce platformsSubscription box services';
-      'Digital content providers',
-    ];
-    targetMarket['SaaS CompaniesE-commerce', 'Subscription ServicesDigital Media'];
-    "ctaLabel": 'Start Free Trial';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$2.5B';
-    "roi": '300%';
-    "implementationTime": '2-4 weeks';
-    "supportLevel": '24/7';
-    compliance['GDPRCCPA', 'SOC 2'];
-    integrations['SalesforceHubSpot', 'StripeShopify'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": true;
-    "smb": true,
-  };
+    id: 'ai-powered-customer-churn-predictor',
+    "title": 'AI-Powered Customer Churn Predictor',
+    "description": 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',
+    "category": 'Micro SaaS',
+    "price": '$299',
+    "billing": 'month',
+    features[,
+      'Real-time churn risk scoringBehavioral pattern analysisPredictive analytics dashboard',
+      'Automated retention campaignsCRM integration (Salesforce, HubSpot)Custom retention strategiesROI tracking and reporting'
+    ],
+    benefits[,',Reduce churn by up to 40%Increase customer lifetime valueOptimize retention spend',
+      'Proactive customer success'
+    ],
+    useCases[,
+      'SaaS subscription businessesE-commerce platformsSubscription box services',
+      'Digital content providers'
+    ],
+    targetMarket['SaaS CompaniesE-commerceSubscription ServicesDigital Media'],
+    "ctaLabel": 'Start Free Trial',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$2.5B',
+    "roi": '300%',
+    "implementationTime": '2-4 weeks',
+    "supportLevel": '24/7',
+    compliance['GDPRCCPASOC 2'],
+    integrations['SalesforceHubSpotStripeShopify'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": true,
+    "smb": true
+  },
   {,
-    "id": 'intelligent-inventory-optimization';
-    "title": 'Intelligent Inventory Optimization';
-    "description": 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.';
-    "category": 'Micro SaaS';
-    "price": '$199';
-    "billing": 'month';
-    features[,;
-      'Demand forecasting with 90% accuracy';
-      'Real-time inventory trackingAutomated reorder points';
-      'Multi-location managementSupplier performance analytics';
-      'Seasonal trend analysisCost optimization recommendations',
-    ];
-    benefits[,',Reduce inventory costs by 25%';
-      'Eliminate stockoutsImprove cash flow';
-      'Optimize warehouse space',
-    ];
-    useCases[,;
-      'Retail chains';
-      'E-commerce warehousesManufacturing companies';
-      'Distribution centers',
-    ];
-    targetMarket['RetailE-commerce', 'ManufacturingLogistics'];
-    "ctaLabel": 'Optimize Inventory';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$3.8B';
-    "roi": '250%';
-    "implementationTime": '3-5 weeks';
-    "supportLevel": 'Business hours + emergency';
-    compliance['ISO 9001FDA', 'GMP'];
-    integrations['SAPOracle', 'NetSuiteQuickBooks'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": false;
-    "smb": true,
-  };
+    "id": 'intelligent-inventory-optimization',
+    "title": 'Intelligent Inventory Optimization',
+    "description": 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',
+    "category": 'Micro SaaS',
+    "price": '$199',
+    "billing": 'month',
+    features[,
+      'Demand forecasting with 90% accuracyReal-time inventory trackingAutomated reorder points',
+      'Multi-location managementSupplier performance analyticsSeasonal trend analysisCost optimization recommendations'
+    ],
+    benefits[,',Reduce inventory costs by 25%Eliminate stockoutsImprove cash flow',
+      'Optimize warehouse space'
+    ],
+    useCases[,
+      'Retail chainsE-commerce warehousesManufacturing companies',
+      'Distribution centers'
+    ],
+    targetMarket['RetailE-commerceManufacturingLogistics'],
+    "ctaLabel": 'Optimize Inventory',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$3.8B',
+    "roi": '250%',
+    "implementationTime": '3-5 weeks',
+    "supportLevel": 'Business hours + emergency',
+    compliance['ISO 9001FDAGMP'],
+    integrations['SAPOracleNetSuiteQuickBooks'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": false,
+    "smb": true
+  },
   {,
-    "id": 'smart-energy-consumption-monitor';
-    "title": 'Smart Energy Consumption Monitor';
-    "description": 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.';
-    "category": 'Micro SaaS';
-    "price": '$149';
-    "billing": 'month';
-    features[,;
-      'Real-time energy consumption tracking';
-      'Smart device identificationAnomaly detection alerts';
-      'Energy efficiency recommendationsCarbon footprint calculation';
-      'Cost analysis and forecastingMobile app monitoring',
-    ];
-    benefits[,',Reduce energy bills by 35%';
-      'Improve sustainability scoreComply with green regulations';
-      'Enhance corporate social responsibility',
-    ];
-    useCases[,;
-      'Office buildings';
-      'Manufacturing facilitiesRetail stores';
-      'Data centers',
-    ];
-    targetMarket['Commercial Real EstateManufacturing', 'RetailData Centers'];
-    "ctaLabel": 'Monitor Energy';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$1.9B';
-    "roi": '200%';
-    "implementationTime": '1-2 weeks';
-    "supportLevel": '24/7 monitoring';
-    compliance['LEEDISO 50001', 'Energy Star'];
-    integrations['Building Management SystemsSmart Meters', 'Solar Panels'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": true;
-    "smb": true,
-  };
+    "id": 'smart-energy-consumption-monitor',
+    "title": 'Smart Energy Consumption Monitor',
+    "description": 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',
+    "category": 'Micro SaaS',
+    "price": '$149',
+    "billing": 'month',
+    features[,
+      'Real-time energy consumption trackingSmart device identificationAnomaly detection alerts',
+      'Energy efficiency recommendationsCarbon footprint calculationCost analysis and forecastingMobile app monitoring'
+    ],
+    benefits[,',Reduce energy bills by 35%Improve sustainability scoreComply with green regulations',
+      'Enhance corporate social responsibility'
+    ],
+    useCases[,
+      'Office buildingsManufacturing facilitiesRetail stores',
+      'Data centers'
+    ],
+    targetMarket['Commercial Real EstateManufacturingRetailData Centers'],
+    "ctaLabel": 'Monitor Energy',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$1.9B',
+    "roi": '200%',
+    "implementationTime": '1-2 weeks',
+    "supportLevel": '24/7 monitoring',
+    compliance['LEEDISO 50001Energy Star'],
+    integrations['Building Management SystemsSmart MetersSolar Panels'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": true,
+    "smb": true
+  },
   {,
-    "id": 'automated-compliance-monitor';
-    "title": 'Automated Compliance Monitor';
-    "description": 'Continuous compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory frameworks with automated reporting.';
-    "category": 'Micro SaaS';
-    "price": '$399';
-    "billing": 'month';
-    features[,;
-      'Multi-framework compliance monitoring';
-      'Automated evidence collectionReal-time compliance scoring';
-      'Automated audit reportsPolicy template library';
-      'Employee training trackingIncident response automation',
-    ];
-    benefits[,',Reduce compliance costs by 50%';
-      'Eliminate audit surprisesMaintain continuous compliance';
-      'Protect against fines and penalties',
-    ];
-    useCases[,;
-      'Healthcare organizations';
-      'Financial servicesTechnology companies';
-      'Government contractors',
-    ];
-    targetMarket['HealthcareFinance', 'TechnologyGovernment'];
-    "ctaLabel": 'Ensure Compliance';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$4.2B';
-    "roi": '400%';
-    "implementationTime": '4-6 weeks';
-    "supportLevel": '24/7 + compliance experts';
-    compliance['GDPRHIPAA', 'SOC 2PCI DSS', 'ISO 27001'];
-    integrations['AWSAzure', 'GCPJira', 'ServiceNow'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": true;
-    "smb": true,
-  };
+    "id": 'automated-compliance-monitor',
+    "title": 'Automated Compliance Monitor',
+    "description": 'Continuous compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory frameworks with automated reporting.',
+    "category": 'Micro SaaS',
+    "price": '$399',
+    "billing": 'month',
+    features[,
+      'Multi-framework compliance monitoringAutomated evidence collectionReal-time compliance scoring',
+      'Automated audit reportsPolicy template libraryEmployee training trackingIncident response automation'
+    ],
+    benefits[,',Reduce compliance costs by 50%Eliminate audit surprisesMaintain continuous compliance',
+      'Protect against fines and penalties'
+    ],
+    useCases[,
+      'Healthcare organizationsFinancial servicesTechnology companies',
+      'Government contractors'
+    ],
+    targetMarket['HealthcareFinanceTechnologyGovernment'],
+    "ctaLabel": 'Ensure Compliance',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$4.2B',
+    "roi": '400%',
+    "implementationTime": '4-6 weeks',
+    "supportLevel": '24/7 + compliance experts',
+    compliance['GDPRHIPAASOC 2PCI DSS', 'ISO 27001'],
+    integrations['AWSAzureGCPJira', 'ServiceNow'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": true,
+    "smb": true
+  },
   // AI SOLUTIONS,
   {,
-    "id": 'autonomous-customer-service-agent';
-    "title": 'Autonomous Customer Service Agent';
-    "description": 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.';
-    "category": 'AI Solutions';
-    "price": '$1,299';
-    "billing": 'month';
-    features[,;
-      'Natural language processing';
-      'Multi-language support (50+ languages)Context-aware conversations';
-      'Seamless human handoffSentiment analysis';
-      'Knowledge base learning24/7 availability',
-    ];
-    benefits[,',Reduce support costs by 60%';
-      'Improve customer satisfaction by 40%Handle 10x more inquiries';
-      'Provide instant responses',
-    ];
-    useCases[,;
-      'E-commerce customer support';
-      'SaaS product supportBanking customer service';
-      'Healthcare patient support',
-    ];
-    targetMarket['E-commerceSaaS', 'BankingHealthcare', 'Telecommunications'];
-    "ctaLabel": 'Deploy AI Agent';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$15.7B';
-    "roi": '500%';
-    "implementationTime": '6-8 weeks';
-    "supportLevel": '24/7 + AI specialists';
-    compliance['GDPRCCPA', 'HIPAA'];
-    integrations['ZendeskIntercom', 'SlackMicrosoft Teams'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": true;
-    "smb": true,
-  };
+    "id": 'autonomous-customer-service-agent',
+    "title": 'Autonomous Customer Service Agent',
+    "description": 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',
+    "category": 'AI Solutions',
+    "price": '$1,299',
+    "billing": 'month',
+    features[,
+      'Natural language processingMulti-language support (50+ languages)Context-aware conversations',
+      'Seamless human handoffSentiment analysisKnowledge base learning24/7 availability'
+    ],
+    benefits[,',Reduce support costs by 60%Improve customer satisfaction by 40%Handle 10x more inquiries',
+      'Provide instant responses'
+    ],
+    useCases[,
+      'E-commerce customer supportSaaS product supportBanking customer service',
+      'Healthcare patient support'
+    ],
+    targetMarket['E-commerceSaaSBankingHealthcare', 'Telecommunications'],
+    "ctaLabel": 'Deploy AI Agent',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$15.7B',
+    "roi": '500%',
+    "implementationTime": '6-8 weeks',
+    "supportLevel": '24/7 + AI specialists',
+    compliance['GDPRCCPAHIPAA'],
+    integrations['ZendeskIntercomSlackMicrosoft Teams'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": true,
+    "smb": true
+  },
   {,
-    "id": 'predictive-maintenance-platform';
-    "title": 'Predictive Maintenance Platform';
-    "description": 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.';
-    "category": 'AI Solutions';
-    "price": '$2,499';
-    "billing": 'month';
-    features[,;
-      'Real-time equipment monitoring';
-      'Machine learning failure predictionMaintenance scheduling optimization';
-      'Spare parts inventory managementPerformance analytics dashboard';
-      'Mobile technician appIntegration with CMMS systems',
-    ];
-    benefits[,',Reduce unplanned downtime by 70%';
-      'Extend equipment life by 30%Optimize maintenance costs';
-      'Improve safety and compliance',
-    ];
-    useCases[,;
-      'Manufacturing plants';
-      'Power plantsOil and gas facilities';
-      'Transportation fleets',
-    ];
-    targetMarket['ManufacturingEnergy', 'Oil & GasTransportation', 'Utilities'];
-    "ctaLabel": 'Predict Maintenance';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$8.9B';
-    "roi": '350%';
-    "implementationTime": '8-12 weeks';
-    "supportLevel": '24/7 + field engineers';
-    compliance['ISO 55001OSHA', 'API'];
-    integrations['SAPMaximo', 'OracleSiemens Mindsphere'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": false;
-    "smb": true,
-  };
+    "id": 'predictive-maintenance-platform',
+    "title": 'Predictive Maintenance Platform',
+    "description": 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',
+    "category": 'AI Solutions',
+    "price": '$2,499',
+    "billing": 'month',
+    features[,
+      'Real-time equipment monitoringMachine learning failure predictionMaintenance scheduling optimization',
+      'Spare parts inventory managementPerformance analytics dashboardMobile technician appIntegration with CMMS systems'
+    ],
+    benefits[,',Reduce unplanned downtime by 70%Extend equipment life by 30%Optimize maintenance costs',
+      'Improve safety and compliance'
+    ],
+    useCases[,
+      'Manufacturing plantsPower plantsOil and gas facilities',
+      'Transportation fleets'
+    ],
+    targetMarket['ManufacturingEnergyOil & GasTransportation', 'Utilities'],
+    "ctaLabel": 'Predict Maintenance',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$8.9B',
+    "roi": '350%',
+    "implementationTime": '8-12 weeks',
+    "supportLevel": '24/7 + field engineers',
+    compliance['ISO 55001OSHAAPI'],
+    integrations['SAPMaximoOracleSiemens Mindsphere'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": false,
+    "smb": true
+  },
   {,
-    "id": 'ai-powered-fraud-detection';
-    "title": 'AI-Powered Fraud Detection';
-    "description": 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.';
-    "category": 'AI Solutions';
-    "price": '$3,999';
-    "billing": 'month';
-    features[,;
-      'Real-time transaction monitoring';
-      'Behavioral pattern analysisMulti-channel fraud detection';
-      'Automated risk scoringFalse positive reduction';
-      'Compliance reportingMachine learning model updates',
-    ];
-    benefits[,',Reduce fraud losses by 80%';
-      'Improve detection accuracyReduce false positives by 60%';
-      'Comply with regulatory requirements',
-    ];
-    useCases[,;
-      'Credit card transactions';
-      'Online bankingE-commerce payments';
-      'Insurance claims',
-    ];
-    targetMarket['BankingE-commerce', 'InsurancePayment Processors'];
-    "ctaLabel": 'Detect Fraud';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$12.3B';
-    "roi": '600%';
-    "implementationTime": '10-14 weeks';
-    "supportLevel": '24/7 + security experts';
-    compliance['PCI DSSSOC 2', 'ISO 27001GDPR'];
-    integrations['StripePayPal', 'SquareBanking APIs'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": true;
-    "smb": true,
-  };
+    "id": 'ai-powered-fraud-detection',
+    "title": 'AI-Powered Fraud Detection',
+    "description": 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',
+    "category": 'AI Solutions',
+    "price": '$3,999',
+    "billing": 'month',
+    features[,
+      'Real-time transaction monitoringBehavioral pattern analysisMulti-channel fraud detection',
+      'Automated risk scoringFalse positive reductionCompliance reportingMachine learning model updates'
+    ],
+    benefits[,',Reduce fraud losses by 80%Improve detection accuracyReduce false positives by 60%',
+      'Comply with regulatory requirements'
+    ],
+    useCases[,
+      'Credit card transactionsOnline bankingE-commerce payments',
+      'Insurance claims'
+    ],
+    targetMarket['BankingE-commerceInsurancePayment Processors'],
+    "ctaLabel": 'Detect Fraud',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$12.3B',
+    "roi": '600%',
+    "implementationTime": '10-14 weeks',
+    "supportLevel": '24/7 + security experts',
+    compliance['PCI DSSSOC 2ISO 27001GDPR'],
+    integrations['StripePayPalSquareBanking APIs'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": true,
+    "smb": true
+  },
   // IT SERVICES,
   {,
-    "id": 'cloud-migration-accelerator';
-    "title": 'Cloud Migration Accelerator';
-    "description": 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.';
-    "category": 'IT Services';
-    "price": '$15,000';
-    "billing": 'project';
-    features[,;
-      'Cloud readiness assessment';
-      'Migration strategy planningZero-downtime migration';
-      'Performance optimizationCost optimization analysis';
-      'Security and compliance setupPost-migration support',
-    ];
-    benefits[,',Reduce migration time by 50%';
-      'Ensure zero business disruptionOptimize cloud costs';
-      'Improve scalability and performance',
-    ];
-    useCases[,;
-      'Legacy system modernization';
-      'Data center consolidationApplication modernization';
-      'Disaster recovery setup',
-    ];
-    targetMarket['EnterpriseMid-market', 'GovernmentHealthcare'];
-    "ctaLabel": 'Start Migration';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$68.4B';
-    "roi": '200%';
-    "implementationTime": '8-16 weeks';
-    "supportLevel": '24/7 + migration specialists';
-    compliance['SOC 2ISO 27001', 'HIPAAFedRAMP'];
-    integrations['AWSAzure', 'GCPVMware', 'OpenStack'];
-    "api": false;
-    "mobile": false;
-    "enterprise": true;
-    "startup": false;
-    "smb": true,
-  };
+    "id": 'cloud-migration-accelerator',
+    "title": 'Cloud Migration Accelerator',
+    "description": 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',
+    "category": 'IT Services',
+    "price": '$15,000',
+    "billing": 'project',
+    features[,
+      'Cloud readiness assessmentMigration strategy planningZero-downtime migration',
+      'Performance optimizationCost optimization analysisSecurity and compliance setupPost-migration support'
+    ],
+    benefits[,',Reduce migration time by 50%Ensure zero business disruptionOptimize cloud costs',
+      'Improve scalability and performance'
+    ],
+    useCases[,
+      'Legacy system modernizationData center consolidationApplication modernization',
+      'Disaster recovery setup'
+    ],
+    targetMarket['EnterpriseMid-marketGovernmentHealthcare'],
+    "ctaLabel": 'Start Migration',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$68.4B',
+    "roi": '200%',
+    "implementationTime": '8-16 weeks',
+    "supportLevel": '24/7 + migration specialists',
+    compliance['SOC 2ISO 27001HIPAAFedRAMP'],
+    integrations['AWSAzureGCPVMware', 'OpenStack'],
+    "api": false,
+    "mobile": false,
+    "enterprise": true,
+    "startup": false,
+    "smb": true
+  },
   {,
-    "id": 'cybersecurity-posture-assessment';
-    "title": 'Cybersecurity Posture Assessment';
-    "description": 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.';
-    "category": 'IT Services';
-    "price": '$8,500';
-    "billing": 'project';
-    features[,;
-      'Vulnerability assessment';
-      'Penetration testingSecurity architecture review';
-      'Compliance gap analysisRisk assessment report';
-      'Remediation roadmapSecurity training recommendations',
-    ];
-    benefits[,',Identify security gaps';
-      'Reduce cyber riskComply with regulations';
-      'Improve security posture',
-    ];
-    useCases[,;
-      'Security audits';
-      'Compliance assessmentsMerger and acquisition due diligence';
-      'Annual security reviews',
-    ];
-    targetMarket['EnterpriseMid-market', 'HealthcareFinance'];
-    "ctaLabel": 'Assess Security';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$45.2B';
-    "roi": '300%';
-    "implementationTime": '4-6 weeks';
-    "supportLevel": 'Business hours + emergency';
-    compliance['ISO 27001NIST', 'SOC 2PCI DSS'];
-    integrations['Security toolsSIEM systems', 'Vulnerability scanners'];
-    "api": false;
-    "mobile": false;
-    "enterprise": true;
-    "startup": true;
-    "smb": true,
-  };
+    "id": 'cybersecurity-posture-assessment',
+    "title": 'Cybersecurity Posture Assessment',
+    "description": 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',
+    "category": 'IT Services',
+    "price": '$8,500',
+    "billing": 'project',
+    features[,
+      'Vulnerability assessmentPenetration testingSecurity architecture review',
+      'Compliance gap analysisRisk assessment reportRemediation roadmapSecurity training recommendations'
+    ],
+    benefits[,',Identify security gapsReduce cyber riskComply with regulations',
+      'Improve security posture'
+    ],
+    useCases[,
+      'Security auditsCompliance assessmentsMerger and acquisition due diligence',
+      'Annual security reviews'
+    ],
+    targetMarket['EnterpriseMid-marketHealthcareFinance'],
+    "ctaLabel": 'Assess Security',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$45.2B',
+    "roi": '300%',
+    "implementationTime": '4-6 weeks',
+    "supportLevel": 'Business hours + emergency',
+    compliance['ISO 27001NISTSOC 2PCI DSS'],
+    integrations['Security toolsSIEM systemsVulnerability scanners'],
+    "api": false,
+    "mobile": false,
+    "enterprise": true,
+    "startup": true,
+    "smb": true
+  },
   {,
-    "id": 'digital-transformation-consulting';
-    "title": 'Digital Transformation Consulting';
-    "description": 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.';
-    "category": 'IT Services';
-    "price": '$25,000';
-    "billing": 'project';
-    features[,;
-      'Digital maturity assessment';
-      'Transformation roadmap developmentChange management strategy';
-      'Technology architecture designProcess optimization';
-      'Talent development planningROI measurement framework',
-    ];
-    benefits[,',Accelerate digital transformation';
-      'Improve operational efficiencyEnhance customer experience';
-      'Increase competitive advantage',
-    ];
-    useCases[,;
-      'Digital strategy development';
-      'Process digitizationCustomer experience transformation';
-      'Operational excellence initiatives',
-    ];
-    targetMarket['EnterpriseMid-market', 'GovernmentHealthcare'];
-    "ctaLabel": 'Transform Digitally';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$89.7B';
-    "roi": '250%';
-    "implementationTime": '12-24 weeks';
-    "supportLevel": 'Business hours + strategic support';
-    compliance['Industry standardsBest practices'];
-    integrations['Enterprise systemsCloud platforms', 'Digital tools'];
-    "api": false;
-    "mobile": false;
-    "enterprise": true;
-    "startup": false;
-    "smb": true,
-  };
+    "id": 'digital-transformation-consulting',
+    "title": 'Digital Transformation Consulting',
+    "description": 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',
+    "category": 'IT Services',
+    "price": '$25,000',
+    "billing": 'project',
+    features[,
+      'Digital maturity assessmentTransformation roadmap developmentChange management strategy',
+      'Technology architecture designProcess optimizationTalent development planningROI measurement framework'
+    ],
+    benefits[,',Accelerate digital transformationImprove operational efficiencyEnhance customer experience',
+      'Increase competitive advantage'
+    ],
+    useCases[,
+      'Digital strategy developmentProcess digitizationCustomer experience transformation',
+      'Operational excellence initiatives'
+    ],
+    targetMarket['EnterpriseMid-marketGovernmentHealthcare'],
+    "ctaLabel": 'Transform Digitally',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$89.7B',
+    "roi": '250%',
+    "implementationTime": '12-24 weeks',
+    "supportLevel": 'Business hours + strategic support',
+    compliance['Industry standardsBest practices'],
+    integrations['Enterprise systemsCloud platformsDigital tools'],
+    "api": false,
+    "mobile": false,
+    "enterprise": true,
+    "startup": false,
+    "smb": true
+  },
   // EMERGING TECHNOLOGIES,
   {,
-    "id": 'quantum-computing-as-a-service';
-    "title": 'Quantum Computing as a Service';
-    "description": 'Access to quantum computing resources for complex optimization problems and scientific research.';
-    "category": 'Quantum Computing';
-    "price": '$5,999';
-    "billing": 'month';
-    features[,;
-      'Quantum algorithm development';
-      'Quantum hardware accessHybrid classical-quantum computing';
-      'Quantum error correctionPerformance optimization';
-      'Research collaboration toolsEducational resources',
-    ];
-    benefits[,',Solve previously intractable problems';
-      'Accelerate research and developmentGain quantum advantage';
-      'Future-proof your technology stack',
-    ];
-    useCases[,;
-      'Drug discovery';
-      'Financial modelingLogistics optimization';
-      'Cryptography research',
-    ];
-    targetMarket['Research InstitutionsPharmaceutical', 'FinanceTechnology'];
-    "ctaLabel": 'Access Quantum';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$1.2B';
-    "roi": '400%';
-    "implementationTime": '6-8 weeks';
-    "supportLevel": 'Business hours + quantum experts';
-    compliance['Research standardsData security'];
-    integrations['Classical computingCloud platforms', 'Research tools'];
-    "api": true;
-    "mobile": false;
-    "enterprise": true;
-    "startup": false;
-    "smb": false,
-  };
+    "id": 'quantum-computing-as-a-service',
+    "title": 'Quantum Computing as a Service',
+    "description": 'Access to quantum computing resources for complex optimization problems and scientific research.',
+    "category": 'Quantum Computing',
+    "price": '$5,999',
+    "billing": 'month',
+    features[,
+      'Quantum algorithm developmentQuantum hardware accessHybrid classical-quantum computing',
+      'Quantum error correctionPerformance optimizationResearch collaboration toolsEducational resources'
+    ],
+    benefits[,',Solve previously intractable problemsAccelerate research and developmentGain quantum advantage',
+      'Future-proof your technology stack'
+    ],
+    useCases[,
+      'Drug discoveryFinancial modelingLogistics optimization',
+      'Cryptography research'
+    ],
+    targetMarket['Research InstitutionsPharmaceuticalFinanceTechnology'],
+    "ctaLabel": 'Access Quantum',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$1.2B',
+    "roi": '400%',
+    "implementationTime": '6-8 weeks',
+    "supportLevel": 'Business hours + quantum experts',
+    compliance['Research standardsData security'],
+    integrations['Classical computingCloud platformsResearch tools'],
+    "api": true,
+    "mobile": false,
+    "enterprise": true,
+    "startup": false,
+    "smb": false
+  },
   {,
-    "id": 'blockchain-supply-chain-tracking';
-    "title": 'Blockchain Supply Chain Tracking';
-    "description": 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.';
-    "category": 'Blockchain & Web3';
-    "price": '$2,999';
-    "billing": 'month';
-    features[,;
-      'Real-time supply chain tracking';
-      'Smart contract automationCompliance documentation';
-      'Quality assurance trackingSustainability metrics';
-      'Multi-stakeholder accessMobile app for field workers',
-    ];
-    benefits[,',Improve supply chain transparency';
-      'Reduce fraud and counterfeitingEnsure compliance';
-      'Build consumer trust',
-    ];
-    useCases[,;
-      'Food safety tracking';
-      'Pharmaceutical supply chainLuxury goods authentication';
-      'Sustainable sourcing verification',
-    ];
-    targetMarket['Food & BeveragePharmaceutical', 'Luxury GoodsManufacturing'];
-    "ctaLabel": 'Track Supply Chain';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$3.4B';
-    "roi": '300%';
-    "implementationTime": '8-12 weeks';
-    "supportLevel": '24/7 + blockchain experts';
-    compliance['FDAEU regulations', 'Industry standards'];
-    integrations['ERP systemsIoT devices', 'Mobile apps'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": true;
-    "smb": true,
-  };
+    "id": 'blockchain-supply-chain-tracking',
+    "title": 'Blockchain Supply Chain Tracking',
+    "description": 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',
+    "category": 'Blockchain & Web3',
+    "price": '$2,999',
+    "billing": 'month',
+    features[,
+      'Real-time supply chain trackingSmart contract automationCompliance documentation',
+      'Quality assurance trackingSustainability metricsMulti-stakeholder accessMobile app for field workers'
+    ],
+    benefits[,',Improve supply chain transparencyReduce fraud and counterfeitingEnsure compliance',
+      'Build consumer trust'
+    ],
+    useCases[,
+      'Food safety trackingPharmaceutical supply chainLuxury goods authentication',
+      'Sustainable sourcing verification'
+    ],
+    targetMarket['Food & BeveragePharmaceuticalLuxury GoodsManufacturing'],
+    "ctaLabel": 'Track Supply Chain',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$3.4B',
+    "roi": '300%',
+    "implementationTime": '8-12 weeks',
+    "supportLevel": '24/7 + blockchain experts',
+    compliance['FDAEU regulationsIndustry standards'],
+    integrations['ERP systemsIoT devicesMobile apps'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": true,
+    "smb": true
+  },
   {,
-    "id": 'metaverse-commerce-platform';
-    "title": 'Metaverse Commerce Platform';
-    "description": 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.';
-    "category": 'Metaverse & AR/VR';
-    "price": '$4,999';
-    "billing": 'month';
-    features[,;
-      '3D virtual storefronts';
-      'Digital asset marketplaceAR/VR shopping experiences';
-      'Virtual try-on capabilitiesCryptocurrency payments';
-      'Social commerce featuresAnalytics and insights',
-    ];
-    benefits[,',Create immersive shopping experiences';
-      'Reach global audiencesReduce physical infrastructure costs';
-      'Innovate customer engagement',
-    ];
-    useCases[,;
-      'Fashion retail';
-      'Real estate virtual toursAutomotive showrooms';
-      'Entertainment venues',
-    ];
-    targetMarket['RetailReal Estate', 'AutomotiveEntertainment'];
-    "ctaLabel": 'Enter Metaverse';
-    "href": 'https://ziontechgroup.com/contact';
-    "featured": true;
-    "marketSize": '$5.8B';
-    "roi": '350%';
-    "implementationTime": '12-16 weeks';
-    "supportLevel": 'Business hours + metaverse experts';
-    compliance['Digital rightsPrivacy regulations'];
-    integrations['E-commerce platformsPayment gateways', 'Social media'];
-    "api": true;
-    "mobile": true;
-    "enterprise": true;
-    "startup": true;
-    "smb": true,
-];
-export const serviceCategories = [;
+    "id": 'metaverse-commerce-platform',
+    "title": 'Metaverse Commerce Platform',
+    "description": 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',
+    "category": 'Metaverse & AR/VR',
+    "price": '$4,999',
+    "billing": 'month',
+    features[,
+      '3D virtual storefrontsDigital asset marketplaceAR/VR shopping experiences',
+      'Virtual try-on capabilitiesCryptocurrency paymentsSocial commerce featuresAnalytics and insights'
+    ],
+    benefits[,',Create immersive shopping experiencesReach global audiencesReduce physical infrastructure costs',
+      'Innovate customer engagement'
+    ],
+    useCases[,
+      'Fashion retailReal estate virtual toursAutomotive showrooms',
+      'Entertainment venues'
+    ],
+    targetMarket['RetailReal EstateAutomotiveEntertainment'],
+    "ctaLabel": 'Enter Metaverse',
+    "href": 'https: //ziontechgroup.com/contact',
+    "featured": true,
+    "marketSize": '$5.8B',
+    "roi": '350%',
+    "implementationTime": '12-16 weeks',
+    "supportLevel": 'Business hours + metaverse experts',
+    compliance['Digital rightsPrivacy regulations'],
+    integrations['E-commerce platformsPayment gatewaysSocial media'],
+    "api": true,
+    "mobile": true,
+    "enterprise": true,
+    "startup": true,
+    "smb": true
+],
+export const serviceCategories = [,
   {,
-    name: 'Micro SaaS';
-    "description": 'Scalable software solutions for specific business needs';
-    "services": innovativeServices2026.filter(s  => s.category === 'Micro SaaS'),
-  };
+    name: 'Micro SaaS',
+    "description": 'Scalable software solutions for specific business needs',
+    "services": innovativeServices2026.filter(s  => s.category === 'Micro SaaS')
+  },
   {,
-    "name": 'AI Solutions';
-    "description": 'Advanced artificial intelligence and machine learning solutions';
-    "services": innovativeServices2026.filter(s  => s.category === 'AI Solutions'),
-  };
+    "name": 'AI Solutions',
+    "description": 'Advanced artificial intelligence and machine learning solutions',
+    "services": innovativeServices2026.filter(s  => s.category === 'AI Solutions')
+  },
   {,
-    "name": 'IT Services';
-    "description": 'Comprehensive IT consulting and implementation services';
-    "services": innovativeServices2026.filter(s  => s.category === 'IT Services')',
-  };
-    "services": innovativeServices2026.filter(s  => ['Quantum ComputingBlockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))},';
-  {,;
-    "name": 'Emerging Technologies';
-    "description": 'Cutting-edge technologies shaping the future';
-    "services": innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))}];
-export default innovativeServices2026}},;
-export type InnovativeService = {, id: string, title: string, description: string, category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation', price: string, billing: 'month' | 'project' | 'hour' | 'year', features: string[], benefits: string[], useCases: string[], targetMarket: string[], ctaLabel: string, href: string, external?: boolean, featured?: boolean, marketSize?: string, roi?: string, implementationTime?: string, supportLevel?: string, compliance?: string[], integrations?: string[], api?: boolean, mobile?: boolean, enterprise?: boolean, startup?: boolean, smb?: boolean}, export const innovativeServices2026: InnovativeService[] = [, { id: 'ai-powered-customer-churn-predictor',title: 'AI-Powered Customer Churn Predictor',description: 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',category: 'Micro SaaS',price: '$299',billing: 'month',features[, 'Real-time churn risk scoringBehavioral pattern analysis','Predictive analytics dashboardAutomated retention campaigns','CRM integration (Salesforce,HubSpot)Custom retention strategies','ROI tracking and reporting' ], benefits[, 'Reduce churn by up to 40%Increase customer lifetime value','Optimize retention spendProactive customer success' ], useCases[, 'SaaS subscription businessesE-commerce platforms','Subscription box servicesDigital content providers' ], targetMarket['SaaS CompaniesE-commerce','Subscription ServicesDigital Media'], ctaLabel: 'Start Free Trial',href: 'https: featured: 'true',marketSize: '$2.5B',roi: '300%',implementationTime: '2-4 weeks',supportLevel: '24/7',compliance['GDPRCCPA','SOC 2'], integrations['SalesforceHubSpot','StripeShopify'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' ,},{ id: 'intelligent-inventory-optimization',title: 'Intelligent Inventory Optimization',description: 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',category: 'Micro SaaS',price: '$199',billing: 'month',features[, 'Demand forecasting with 90% accuracyReal-time inventory tracking','Automated reorder pointsMulti-location management','Supplier performance analyticsSeasonal trend analysis','Cost optimization recommendations' ], benefits[, 'Reduce inventory costs by 25%Eliminate stockouts','Improve cash flowOptimize warehouse space' ], useCases[, 'Retail chainsE-commerce warehouses','Manufacturing companiesDistribution centers' ], targetMarket['RetailE-commerce','ManufacturingLogistics'], ctaLabel: 'Optimize Inventory',href: 'https: featured: 'true',marketSize: '$3.8B',roi: '250%',implementationTime: '3-5 weeks',supportLevel: 'Business hours + emergency',compliance['ISO 9001FDA','GMP'], integrations['SAPOracle','NetSuiteQuickBooks'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'false',smb: 'true' ,},{ id: 'smart-energy-consumption-monitor',title: 'Smart Energy Consumption Monitor',description: 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',category: 'Micro SaaS',price: '$149',billing: 'month',features[, 'Real-time energy consumption trackingSmart device identification','Anomaly detection alertsEnergy efficiency recommendations','Carbon footprint calculationCost analysis and forecasting','Mobile app monitoring' ], benefits[, 'Reduce energy bills by 35%Improve sustainability score','Comply with green regulationsEnhance corporate social responsibility' ], useCases[, 'Office buildingsManufacturing facilities','Retail storesData centers' ], targetMarket['Commercial Real EstateManufacturing','RetailData Centers'], ctaLabel: 'Monitor Energy',href: 'https: featured: 'true',marketSize: '$1.9B',roi: '200%',implementationTime: '1-2 weeks',supportLevel: '24/7 monitoring',compliance['LEEDISO 50001','Energy Star'], integrations['Building Management SystemsSmart Meters','Solar Panels'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' ,},{ id: 'automated-compliance-monitor',title: 'Automated Compliance Monitor',description: 'Continuous compliance monitoring for GDPR,HIPAA,SOC 2,and other regulatory frameworks with automated reporting.',category: 'Micro SaaS',price: '$399',billing: 'month',features[, 'Multi-framework compliance monitoringAutomated evidence collection','Real-time compliance scoringAutomated audit reports','Policy template libraryEmployee training tracking','Incident response automation' ], benefits[, 'Reduce compliance costs by 50%Eliminate audit surprises','Maintain continuous complianceProtect against fines and penalties' ], useCases[, 'Healthcare organizationsFinancial services','Technology companiesGovernment contractors' ], targetMarket['HealthcareFinance','TechnologyGovernment'], ctaLabel: 'Ensure Compliance',href: 'https: featured: 'true',marketSize: '$4.2B',roi: '400%',implementationTime: '4-6 weeks',supportLevel: '24/7 + compliance experts',compliance['GDPRHIPAA','SOC 2PCI DSS','ISO 27001'], integrations['AWSAzure','GCPJira','ServiceNow'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' ,},{ id: 'autonomous-customer-service-agent',title: 'Autonomous Customer Service Agent',description: 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',category: 'AI Solutions',price: '$1,299',billing: 'month',features[, 'Natural language processingMulti-language support (50+ languages)','Context-aware conversationsSeamless human handoff','Sentiment analysisKnowledge base learning','24/7 availability' ], benefits[, 'Reduce support costs by 60%Improve customer satisfaction by 40%','Handle 10x more inquiriesProvide instant responses' ], useCases[, 'E-commerce customer supportSaaS product support','Banking customer serviceHealthcare patient support' ], targetMarket['E-commerceSaaS','BankingHealthcare','Telecommunications'], ctaLabel: 'Deploy AI Agent',href: 'https: featured: 'true',marketSize: '$15.7B',roi: '500%',implementationTime: '6-8 weeks',supportLevel: '24/7 + AI specialists',compliance['GDPRCCPA','HIPAA'], integrations['ZendeskIntercom','SlackMicrosoft Teams'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' ,},{ id: 'predictive-maintenance-platform',title: 'Predictive Maintenance Platform',description: 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',category: 'AI Solutions',price: '$2,499',billing: 'month',features[, 'Real-time equipment monitoringMachine learning failure prediction','Maintenance scheduling optimizationSpare parts inventory management','Performance analytics dashboardMobile technician app','Integration with CMMS systems' ], benefits[, 'Reduce unplanned downtime by 70%Extend equipment life by 30%','Optimize maintenance costsImprove safety and compliance' ], useCases[, 'Manufacturing plantsPower plants','Oil and gas facilitiesTransportation fleets' ], targetMarket['ManufacturingEnergy','Oil & GasTransportation','Utilities'], ctaLabel: 'Predict Maintenance',href: 'https: featured: 'true',marketSize: '$8.9B',roi: '350%',implementationTime: '8-12 weeks',supportLevel: '24/7 + field engineers',compliance['ISO 55001OSHA','API'], integrations['SAPMaximo','OracleSiemens Mindsphere'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'false',smb: 'true' ,},{ id: 'ai-powered-fraud-detection',title: 'AI-Powered Fraud Detection',description: 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',category: 'AI Solutions',price: '$3,999',billing: 'month',features[, 'Real-time transaction monitoringBehavioral pattern analysis','Multi-channel fraud detectionAutomated risk scoring','False positive reductionCompliance reporting','Machine learning model updates' ], benefits[, 'Reduce fraud losses by 80%Improve detection accuracy','Reduce false positives by 60%Comply with regulatory requirements' ], useCases[, 'Credit card transactionsOnline banking','E-commerce paymentsInsurance claims' ], targetMarket['BankingE-commerce','InsurancePayment Processors'], ctaLabel: 'Detect Fraud',href: 'https: featured: 'true',marketSize: '$12.3B',roi: '600%',implementationTime: '10-14 weeks',supportLevel: '24/7 + security experts',compliance['PCI DSSSOC 2','ISO 27001GDPR'], integrations['StripePayPal','SquareBanking APIs'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' ,},{ id: 'cloud-migration-accelerator',title: 'Cloud Migration Accelerator',description: 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',category: 'IT Services',price: '$15,000',billing: 'project',features[, 'Cloud readiness assessmentMigration strategy planning','Zero-downtime migrationPerformance optimization','Cost optimization analysisSecurity and compliance setup','Post-migration support' ], benefits[, 'Reduce migration time by 50%Ensure zero business disruption','Optimize cloud costsImprove scalability and performance' ], useCases[, 'Legacy system modernizationData center consolidation','Application modernizationDisaster recovery setup' ], targetMarket['EnterpriseMid-market','GovernmentHealthcare'], ctaLabel: 'Start Migration',href: 'https: featured: 'true',marketSize: '$68.4B',roi: '200%',implementationTime: '8-16 weeks',supportLevel: '24/7 + migration specialists',compliance['SOC 2ISO 27001','HIPAAFedRAMP'], integrations['AWSAzure','GCPVMware','OpenStack'], api: 'false',mobile: 'false',enterprise: 'true',startup: 'false',smb: 'true' ,},{ id: 'cybersecurity-posture-assessment',title: 'Cybersecurity Posture Assessment',description: 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',category: 'IT Services',price: '$8,500',billing: 'project',features[, 'Vulnerability assessmentPenetration testing','Security architecture reviewCompliance gap analysis','Risk assessment reportRemediation roadmap','Security training recommendations' ], benefits[, 'Identify security gapsReduce cyber risk','Comply with regulationsImprove security posture' ], useCases[, 'Security auditsCompliance assessments','Merger and acquisition due diligenceAnnual security reviews' ], targetMarket['EnterpriseMid-market','HealthcareFinance'], ctaLabel: 'Assess Security',href: 'https: featured: 'true',marketSize: '$45.2B',roi: '300%',implementationTime: '4-6 weeks',supportLevel: 'Business hours + emergency',compliance['ISO 27001NIST','SOC 2PCI DSS'], integrations['Security toolsSIEM systems','Vulnerability scanners'], api: 'false',mobile: 'false',enterprise: 'true',startup: 'true',smb: 'true' ,},{ id: 'digital-transformation-consulting',title: 'Digital Transformation Consulting',description: 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',category: 'IT Services',price: '$25,000',billing: 'project',features[, 'Digital maturity assessmentTransformation roadmap development','Change management strategyTechnology architecture design','Process optimizationTalent development planning','ROI measurement framework' ], benefits[, 'Accelerate digital transformationImprove operational efficiency','Enhance customer experienceIncrease competitive advantage' ], useCases[, 'Digital strategy developmentProcess digitization','Customer experience transformationOperational excellence initiatives' ], targetMarket['EnterpriseMid-market','GovernmentHealthcare'], ctaLabel: 'Transform Digitally',href: 'https: featured: 'true',marketSize: '$89.7B',roi: '250%',implementationTime: '12-24 weeks',supportLevel: 'Business hours + strategic support',compliance['Industry standardsBest practices'], integrations['Enterprise systemsCloud platforms','Digital tools'], api: 'false',mobile: 'false',enterprise: 'true',startup: 'false',smb: 'true' ,},{ id: 'quantum-computing-as-a-service',title: 'Quantum Computing as a Service',description: 'Access to quantum computing resources for complex optimization problems and scientific research.',category: 'Quantum Computing',price: '$5,999',billing: 'month',features[, 'Quantum algorithm developmentQuantum hardware access','Hybrid classical-quantum computingQuantum error correction','Performance optimizationResearch collaboration tools','Educational resources' ], benefits[, 'Solve previously intractable problemsAccelerate research and development','Gain quantum advantageFuture-proof your technology stack' ], useCases[, 'Drug discoveryFinancial modeling','Logistics optimizationCryptography research' ], targetMarket['Research InstitutionsPharmaceutical','FinanceTechnology'], ctaLabel: 'Access Quantum',href: 'https: featured: 'true',marketSize: '$1.2B',roi: '400%',implementationTime: '6-8 weeks',supportLevel: 'Business hours + quantum experts',compliance['Research standardsData security'], integrations['Classical computingCloud platforms','Research tools'], api: 'true',mobile: 'false',enterprise: 'true',startup: 'false',smb: 'false' ,},{ id: 'blockchain-supply-chain-tracking',title: 'Blockchain Supply Chain Tracking',description: 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',category: 'Blockchain & Web3',price: '$2,999',billing: 'month',features[, 'Real-time supply chain trackingSmart contract automation','Compliance documentationQuality assurance tracking','Sustainability metricsMulti-stakeholder access','Mobile app for field workers' ], benefits[, 'Improve supply chain transparencyReduce fraud and counterfeiting','Ensure complianceBuild consumer trust' ], useCases[, 'Food safety trackingPharmaceutical supply chain','Luxury goods authenticationSustainable sourcing verification' ], targetMarket['Food & BeveragePharmaceutical','Luxury GoodsManufacturing'], ctaLabel: 'Track Supply Chain',href: 'https: featured: 'true',marketSize: '$3.4B',roi: '300%',implementationTime: '8-12 weeks',supportLevel: '24/7 + blockchain experts',compliance['FDAEU regulations','Industry standards'], integrations['ERP systemsIoT devices','Mobile apps'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' ,},{ id: 'metaverse-commerce-platform',title: 'Metaverse Commerce Platform',description: 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',category: 'Metaverse & AR/VR',price: '$4,999',billing: 'month',features[, '3D virtual storefrontsDigital asset marketplace','AR/VR shopping experiencesVirtual try-on capabilities','Cryptocurrency paymentsSocial commerce features','Analytics and insights' ], benefits[, 'Create immersive shopping experiencesReach global audiences','Reduce physical infrastructure costsInnovate customer engagement' ], useCases[, 'Fashion retailReal estate virtual tours','Automotive showroomsEntertainment venues' ], targetMarket['RetailReal Estate','AutomotiveEntertainment'], ctaLabel: 'Enter Metaverse',href: 'https: featured: 'true',marketSize: '$5.8B',roi: '350%',implementationTime: '12-16 weeks',supportLevel: 'Business hours + metaverse experts',compliance['Digital rightsPrivacy regulations'], integrations['E-commerce platformsPayment gateways','Social media'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: true ], export const serviceCategories = [, { name: 'Micro SaaS',description: 'Scalable software solutions for specific business needs',services: innovativeServices2026.filter(s => s.category === 'Micro SaaS') ,},{ name: 'AI Solutions',description: 'Advanced artificial intelligence and machine learning solutions',services: innovativeServices2026.filter(s => s.category === 'AI Solutions') ,},{ name: 'IT Services',description: 'Comprehensive IT consulting and implementation services',services: innovativeServices2026.filter(s => s.category === 'IT Services') ,},services: innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3','Metaverse & AR/VR'].includes(s.category))}, {, name: 'Emerging Technologies', description: 'Cutting-edge technologies shaping the future', services: innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3','Metaverse & AR/VR'].includes(s.category))}, ], export default innovativeServices2026}};
-export type InnovativeService = {, id: string, title: string, description: string, category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation, price: string,',', billing: 'month' | 'project' | 'hour' | 'year', features: string[], benefits: string[], useCases: string[], targetMarket: string[], ctaLabel: string, href: string, external?: boolean, featured?: boolean, marketSize?: string, roi?: string, implementationTime?: string, supportLevel?: string, compliance?: string[], integrations?: string[], api?: boolean, mobile?: boolean, enterprise?: boolean, startup?: boolean, smb?: boolean}, export const innovativeServices2026: InnovativeService[] = [, { id: 'ai-powered-customer-churn-predictor',title: 'AI-Powered Customer Churn Predictor',description: 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',category: 'Micro SaaS',price: '$299',billing: 'month',features[, 'Real-time churn risk scoring','Behavioral pattern analysisPredictive analytics dashboard','Automated retention campaignsCRM integration (Salesforce,HubSpot)','Custom retention strategiesROI tracking and reporting' ],benefits[,',Reduce churn by up to 40%','Increase customer lifetime valueOptimize retention spend','Proactive customer success' ],useCases[, 'SaaS subscription businesses','E-commerce platformsSubscription box services','Digital content providers' ],targetMarket['SaaS CompaniesE-commerce','Subscription ServicesDigital Media'],ctaLabel: 'Start Free Trial',href: 'https: featured: true,marketSize: '$2.5B',roi: '300%',implementationTime: '2-4 weeks',supportLevel: '24/7',compliance['GDPRCCPA','SOC 2'],integrations['SalesforceHubSpot','StripeShopify'],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: 'intelligent-inventory-optimization',title: 'Intelligent Inventory Optimization',description: 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',category: 'Micro SaaS',price: '$199',billing: 'month',features[, 'Demand forecasting with 90% accuracy','Real-time inventory trackingAutomated reorder points','Multi-location managementSupplier performance analytics','Seasonal trend analysisCost optimization recommendations' ],benefits[,',Reduce inventory costs by 25%','Eliminate stockoutsImprove cash flow','Optimize warehouse space' ],useCases[, 'Retail chains','E-commerce warehousesManufacturing companies','Distribution centers' ],targetMarket['RetailE-commerce','ManufacturingLogistics'],ctaLabel: 'Optimize Inventory',href: 'https: featured: true,marketSize: '$3.8B',roi: '250%',implementationTime: '3-5 weeks',supportLevel: 'Business hours + emergency',compliance['ISO 9001FDA','GMP'],integrations['SAPOracle','NetSuiteQuickBooks'],api: true,mobile: true,enterprise: true,startup: false,smb: true ,},{ id: 'smart-energy-consumption-monitor',title: 'Smart Energy Consumption Monitor',description: 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',category: 'Micro SaaS',price: '$149',billing: 'month',features[, 'Real-time energy consumption tracking','Smart device identificationAnomaly detection alerts','Energy efficiency recommendationsCarbon footprint calculation','Cost analysis and forecastingMobile app monitoring' ],benefits[,',Reduce energy bills by 35%','Improve sustainability scoreComply with green regulations','Enhance corporate social responsibility' ],useCases[, 'Office buildings','Manufacturing facilitiesRetail stores','Data centers' ],targetMarket['Commercial Real EstateManufacturing','RetailData Centers'],ctaLabel: 'Monitor Energy',href: 'https: featured: true,marketSize: '$1.9B',roi: '200%',implementationTime: '1-2 weeks',supportLevel: '24/7 monitoring',compliance['LEEDISO 50001','Energy Star'],integrations['Building Management SystemsSmart Meters','Solar Panels'],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: 'automated-compliance-monitor',title: 'Automated Compliance Monitor',description: 'Continuous compliance monitoring for GDPR,HIPAA,SOC 2,and other regulatory frameworks with automated reporting.',category: 'Micro SaaS',price: '$399',billing: 'month',features[, 'Multi-framework compliance monitoring','Automated evidence collectionReal-time compliance scoring','Automated audit reportsPolicy template library','Employee training trackingIncident response automation' ],benefits[,',Reduce compliance costs by 50%','Eliminate audit surprisesMaintain continuous compliance','Protect against fines and penalties' ],useCases[, 'Healthcare organizations','Financial servicesTechnology companies','Government contractors' ],targetMarket['HealthcareFinance','TechnologyGovernment'],ctaLabel: 'Ensure Compliance',href: 'https: featured: true,marketSize: '$4.2B',roi: '400%',implementationTime: '4-6 weeks',supportLevel: '24/7 + compliance experts',compliance['GDPRHIPAA','SOC 2PCI DSS','ISO 27001'],integrations['AWSAzure','GCPJira','ServiceNow'],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: 'autonomous-customer-service-agent',title: 'Autonomous Customer Service Agent',description: 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',category: 'AI Solutions',price: '$1,299',billing: 'month',features[, 'Natural language processing','Multi-language support (50+ languages)Context-aware conversations','Seamless human handoffSentiment analysis','Knowledge base learning24/7 availability' ],benefits[,',Reduce support costs by 60%','Improve customer satisfaction by 40%Handle 10x more inquiries','Provide instant responses' ],useCases[, 'E-commerce customer support','SaaS product supportBanking customer service','Healthcare patient support' ],targetMarket['E-commerceSaaS','BankingHealthcare','Telecommunications'],ctaLabel: 'Deploy AI Agent',href: 'https: featured: true,marketSize: '$15.7B',roi: '500%',implementationTime: '6-8 weeks',supportLevel: '24/7 + AI specialists',compliance['GDPRCCPA','HIPAA'],integrations['ZendeskIntercom','SlackMicrosoft Teams'],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: 'predictive-maintenance-platform',title: 'Predictive Maintenance Platform',description: 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',category: 'AI Solutions',price: '$2,499',billing: 'month',features[, 'Real-time equipment monitoring','Machine learning failure predictionMaintenance scheduling optimization','Spare parts inventory managementPerformance analytics dashboard','Mobile technician appIntegration with CMMS systems' ],benefits[,',Reduce unplanned downtime by 70%','Extend equipment life by 30%Optimize maintenance costs','Improve safety and compliance' ],useCases[, 'Manufacturing plants','Power plantsOil and gas facilities','Transportation fleets' ],targetMarket['ManufacturingEnergy','Oil & GasTransportation','Utilities'],ctaLabel: 'Predict Maintenance',href: 'https: featured: true,marketSize: '$8.9B',roi: '350%',implementationTime: '8-12 weeks',supportLevel: '24/7 + field engineers',compliance['ISO 55001OSHA','API'],integrations['SAPMaximo','OracleSiemens Mindsphere'],api: true,mobile: true,enterprise: true,startup: false,smb: true ,},{ id: 'ai-powered-fraud-detection',title: 'AI-Powered Fraud Detection',description: 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',category: 'AI Solutions',price: '$3,999',billing: 'month',features[, 'Real-time transaction monitoring','Behavioral pattern analysisMulti-channel fraud detection','Automated risk scoringFalse positive reduction','Compliance reportingMachine learning model updates' ],benefits[,',Reduce fraud losses by 80%','Improve detection accuracyReduce false positives by 60%','Comply with regulatory requirements' ],useCases[, 'Credit card transactions','Online bankingE-commerce payments','Insurance claims' ],targetMarket['BankingE-commerce','InsurancePayment Processors'],ctaLabel: 'Detect Fraud',href: 'https: featured: true,marketSize: '$12.3B',roi: '600%',implementationTime: '10-14 weeks',supportLevel: '24/7 + security experts',compliance['PCI DSSSOC 2','ISO 27001GDPR'],integrations['StripePayPal','SquareBanking APIs'],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: 'cloud-migration-accelerator',title: 'Cloud Migration Accelerator',description: 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',category: 'IT Services',price: '$15,000',billing: 'project',features[, 'Cloud readiness assessment','Migration strategy planningZero-downtime migration','Performance optimizationCost optimization analysis','Security and compliance setupPost-migration support' ],benefits[,',Reduce migration time by 50%','Ensure zero business disruptionOptimize cloud costs','Improve scalability and performance' ],useCases[, 'Legacy system modernization','Data center consolidationApplication modernization','Disaster recovery setup' ],targetMarket['EnterpriseMid-market','GovernmentHealthcare'],ctaLabel: 'Start Migration',href: 'https: featured: true,marketSize: '$68.4B',roi: '200%',implementationTime: '8-16 weeks',supportLevel: '24/7 + migration specialists',compliance['SOC 2ISO 27001','HIPAAFedRAMP'],integrations['AWSAzure','GCPVMware','OpenStack'],api: false,mobile: false,enterprise: true,startup: false,smb: true ,},{ id: 'cybersecurity-posture-assessment',title: 'Cybersecurity Posture Assessment',description: 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',category: 'IT Services',price: '$8,500',billing: 'project',features[, 'Vulnerability assessment','Penetration testingSecurity architecture review','Compliance gap analysisRisk assessment report','Remediation roadmapSecurity training recommendations' ],benefits[,',Identify security gaps','Reduce cyber riskComply with regulations','Improve security posture' ],useCases[, 'Security audits','Compliance assessmentsMerger and acquisition due diligence','Annual security reviews' ],targetMarket['EnterpriseMid-market','HealthcareFinance'],ctaLabel: 'Assess Security',href: 'https: featured: true,marketSize: '$45.2B',roi: '300%',implementationTime: '4-6 weeks',supportLevel: 'Business hours + emergency',compliance['ISO 27001NIST','SOC 2PCI DSS'],integrations['Security toolsSIEM systems','Vulnerability scanners'],api: false,mobile: false,enterprise: true,startup: true,smb: true ,},{ id: 'digital-transformation-consulting',title: 'Digital Transformation Consulting',description: 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',category: 'IT Services',price: '$25,000',billing: 'project',features[, 'Digital maturity assessment','Transformation roadmap developmentChange management strategy','Technology architecture designProcess optimization','Talent development planningROI measurement framework' ],benefits[,',Accelerate digital transformation','Improve operational efficiencyEnhance customer experience','Increase competitive advantage' ],useCases[, 'Digital strategy development','Process digitizationCustomer experience transformation','Operational excellence initiatives' ],targetMarket['EnterpriseMid-market','GovernmentHealthcare'],ctaLabel: 'Transform Digitally',href: 'https: featured: true,marketSize: '$89.7B',roi: '250%',implementationTime: '12-24 weeks',supportLevel: 'Business hours + strategic support',compliance['Industry standardsBest practices'],integrations['Enterprise systemsCloud platforms','Digital tools'],api: false,mobile: false,enterprise: true,startup: false,smb: true ,},{ id: 'quantum-computing-as-a-service',title: 'Quantum Computing as a Service',description: 'Access to quantum computing resources for complex optimization problems and scientific research.',category: 'Quantum Computing',price: '$5,999',billing: 'month',features[, 'Quantum algorithm development','Quantum hardware accessHybrid classical-quantum computing','Quantum error correctionPerformance optimization','Research collaboration toolsEducational resources' ],benefits[,',Solve previously intractable problems','Accelerate research and developmentGain quantum advantage','Future-proof your technology stack' ],useCases[, 'Drug discovery','Financial modelingLogistics optimization','Cryptography research' ],targetMarket['Research InstitutionsPharmaceutical','FinanceTechnology'],ctaLabel: 'Access Quantum',href: 'https: featured: true,marketSize: '$1.2B',roi: '400%',implementationTime: '6-8 weeks',supportLevel: 'Business hours + quantum experts',compliance['Research standardsData security'],integrations['Classical computingCloud platforms','Research tools'],api: true,mobile: false,enterprise: true,startup: false,smb: false ,},{ id: 'blockchain-supply-chain-tracking',title: 'Blockchain Supply Chain Tracking',description: 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',category: 'Blockchain & Web3',price: '$2,999',billing: 'month',features[, 'Real-time supply chain tracking','Smart contract automationCompliance documentation','Quality assurance trackingSustainability metrics','Multi-stakeholder accessMobile app for field workers' ],benefits[,',Improve supply chain transparency','Reduce fraud and counterfeitingEnsure compliance','Build consumer trust' ],useCases[, 'Food safety tracking','Pharmaceutical supply chainLuxury goods authentication','Sustainable sourcing verification' ],targetMarket['Food & BeveragePharmaceutical','Luxury GoodsManufacturing'],ctaLabel: 'Track Supply Chain',href: 'https: featured: true,marketSize: '$3.4B',roi: '300%',implementationTime: '8-12 weeks',supportLevel: '24/7 + blockchain experts',compliance['FDAEU regulations','Industry standards'],integrations['ERP systemsIoT devices','Mobile apps'],api: true,mobile: true,enterprise: true,startup: true,smb: true ,},{ id: 'metaverse-commerce-platform',title: 'Metaverse Commerce Platform',description: 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',category: 'Metaverse & AR/VR',price: '$4,999',billing: 'month',features[, '3D virtual storefronts','Digital asset marketplaceAR/VR shopping experiences','Virtual try-on capabilitiesCryptocurrency payments','Social commerce featuresAnalytics and insights' ],benefits[,',Create immersive shopping experiences','Reach global audiencesReduce physical infrastructure costs','Innovate customer engagement' ],useCases[, 'Fashion retail','Real estate virtual toursAutomotive showrooms','Entertainment venues' ],targetMarket['RetailReal Estate','AutomotiveEntertainment'],ctaLabel: 'Enter Metaverse',href: 'https: featured: true,marketSize: '$5.8B',roi: '350%',implementationTime: '12-16 weeks',supportLevel: 'Business hours + metaverse experts',compliance['Digital rightsPrivacy regulations'],integrations['E-commerce platformsPayment gateways','Social media'],api: true,mobile: true,enterprise: true,startup: true,smb: true ], export const serviceCategories = [, { name: 'Micro SaaS',description: 'Scalable software solutions for specific business needs',services: innovativeServices2026.filter(s => s.category === 'Micro SaaS') ,},{ name: 'AI Solutions',description: 'Advanced artificial intelligence and machine learning solutions',services: innovativeServices2026.filter(s => s.category === 'AI Solutions') ,},{ name: 'IT Services',description: 'Comprehensive IT consulting and implementation services',services: innovativeServices2026.filter(s => s.category === 'IT Services')',},services: innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3','Metaverse & AR/VR'].includes(s.category))},', {, name: 'Emerging Technologies',description: 'Cutting-edge technologies shaping the future',services: innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3','Metaverse & AR/VR'].includes(s.category))}], export default innovativeServices2026}},',';
+    "name": 'IT Services',
+    "description": 'Comprehensive IT consulting and implementation services',
+    "services": innovativeServices2026.filter(s  => s.category === 'IT Services')'
+  },
+    "services": innovativeServices2026.filter(s  => ['Quantum ComputingBlockchain & Web3Metaverse & AR/VR'].includes(s.category))},',
+  {,
+    "name": 'Emerging Technologies',
+    "description": 'Cutting-edge technologies shaping the future',
+    "services": innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3Metaverse & AR/VR'].includes(s.category))}],
+export default innovativeServices2026}},
+export type InnovativeService = {, id: string, title: string, description: string, category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation', price: string, billing: 'month' | 'project' | 'hour' | 'year', features: string[], benefits: string[], useCases: string[], targetMarket: string[], ctaLabel: string, href: string, external?: boolean, featured?: boolean, marketSize?: string, roi?: string, implementationTime?: string, supportLevel?: string, compliance?: string[], integrations?: string[], api?: boolean, mobile?: boolean, enterprise?: boolean, startup?: boolean, smb?: boolean}, export const innovativeServices2026: InnovativeService[] = [, { id: 'ai-powered-customer-churn-predictor',title: 'AI-Powered Customer Churn Predictor',description: 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',category: 'Micro SaaS',price: '$299',billing: 'month',features[, 'Real-time churn risk scoringBehavioral pattern analysisPredictive analytics dashboardAutomated retention campaigns','CRM integration (Salesforce,HubSpot)Custom retention strategiesROI tracking and reporting' ], benefits[, 'Reduce churn by up to 40%Increase customer lifetime valueOptimize retention spendProactive customer success' ], useCases[, 'SaaS subscription businessesE-commerce platformsSubscription box servicesDigital content providers' ], targetMarket['SaaS CompaniesE-commerceSubscription ServicesDigital Media'], ctaLabel: 'Start Free Trial',href: 'https: featured: 'true',marketSize: '$2.5B',roi: '300%',implementationTime: '2-4 weeks',supportLevel: '24/7',compliance['GDPRCCPASOC 2'], integrations['SalesforceHubSpotStripeShopify'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' },{ id: 'intelligent-inventory-optimization',title: 'Intelligent Inventory Optimization',description: 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',category: 'Micro SaaS',price: '$199',billing: 'month',features[, 'Demand forecasting with 90% accuracyReal-time inventory trackingAutomated reorder pointsMulti-location management','Supplier performance analyticsSeasonal trend analysisCost optimization recommendations' ], benefits[, 'Reduce inventory costs by 25%Eliminate stockoutsImprove cash flowOptimize warehouse space' ], useCases[, 'Retail chainsE-commerce warehousesManufacturing companiesDistribution centers' ], targetMarket['RetailE-commerceManufacturingLogistics'], ctaLabel: 'Optimize Inventory',href: 'https: featured: 'true',marketSize: '$3.8B',roi: '250%',implementationTime: '3-5 weeks',supportLevel: 'Business hours + emergency',compliance['ISO 9001FDAGMP'], integrations['SAPOracleNetSuiteQuickBooks'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'false',smb: 'true' },{ id: 'smart-energy-consumption-monitor',title: 'Smart Energy Consumption Monitor',description: 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',category: 'Micro SaaS',price: '$149',billing: 'month',features[, 'Real-time energy consumption trackingSmart device identificationAnomaly detection alertsEnergy efficiency recommendations','Carbon footprint calculationCost analysis and forecastingMobile app monitoring' ], benefits[, 'Reduce energy bills by 35%Improve sustainability scoreComply with green regulationsEnhance corporate social responsibility' ], useCases[, 'Office buildingsManufacturing facilitiesRetail storesData centers' ], targetMarket['Commercial Real EstateManufacturingRetailData Centers'], ctaLabel: 'Monitor Energy',href: 'https: featured: 'true',marketSize: '$1.9B',roi: '200%',implementationTime: '1-2 weeks',supportLevel: '24/7 monitoring',compliance['LEEDISO 50001Energy Star'], integrations['Building Management SystemsSmart MetersSolar Panels'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' },{ id: 'automated-compliance-monitor',title: 'Automated Compliance Monitor',description: 'Continuous compliance monitoring for GDPR,HIPAA,SOC 2,and other regulatory frameworks with automated reporting.',category: 'Micro SaaS',price: '$399',billing: 'month',features[, 'Multi-framework compliance monitoringAutomated evidence collectionReal-time compliance scoringAutomated audit reports','Policy template libraryEmployee training trackingIncident response automation' ], benefits[, 'Reduce compliance costs by 50%Eliminate audit surprisesMaintain continuous complianceProtect against fines and penalties' ], useCases[, 'Healthcare organizationsFinancial servicesTechnology companiesGovernment contractors' ], targetMarket['HealthcareFinanceTechnologyGovernment'], ctaLabel: 'Ensure Compliance',href: 'https: featured: 'true',marketSize: '$4.2B',roi: '400%',implementationTime: '4-6 weeks',supportLevel: '24/7 + compliance experts',compliance['GDPRHIPAASOC 2PCI DSS','ISO 27001'], integrations['AWSAzureGCPJira','ServiceNow'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' },{ id: 'autonomous-customer-service-agent',title: 'Autonomous Customer Service Agent',description: 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',category: 'AI Solutions',price: '$1,299',billing: 'month',features[, 'Natural language processingMulti-language support (50+ languages)Context-aware conversationsSeamless human handoff','Sentiment analysisKnowledge base learning24/7 availability' ], benefits[, 'Reduce support costs by 60%Improve customer satisfaction by 40%Handle 10x more inquiriesProvide instant responses' ], useCases[, 'E-commerce customer supportSaaS product supportBanking customer serviceHealthcare patient support' ], targetMarket['E-commerceSaaSBankingHealthcare','Telecommunications'], ctaLabel: 'Deploy AI Agent',href: 'https: featured: 'true',marketSize: '$15.7B',roi: '500%',implementationTime: '6-8 weeks',supportLevel: '24/7 + AI specialists',compliance['GDPRCCPAHIPAA'], integrations['ZendeskIntercomSlackMicrosoft Teams'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' },{ id: 'predictive-maintenance-platform',title: 'Predictive Maintenance Platform',description: 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',category: 'AI Solutions',price: '$2,499',billing: 'month',features[, 'Real-time equipment monitoringMachine learning failure predictionMaintenance scheduling optimizationSpare parts inventory management','Performance analytics dashboardMobile technician appIntegration with CMMS systems' ], benefits[, 'Reduce unplanned downtime by 70%Extend equipment life by 30%Optimize maintenance costsImprove safety and compliance' ], useCases[, 'Manufacturing plantsPower plantsOil and gas facilitiesTransportation fleets' ], targetMarket['ManufacturingEnergyOil & GasTransportation','Utilities'], ctaLabel: 'Predict Maintenance',href: 'https: featured: 'true',marketSize: '$8.9B',roi: '350%',implementationTime: '8-12 weeks',supportLevel: '24/7 + field engineers',compliance['ISO 55001OSHAAPI'], integrations['SAPMaximoOracleSiemens Mindsphere'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'false',smb: 'true' },{ id: 'ai-powered-fraud-detection',title: 'AI-Powered Fraud Detection',description: 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',category: 'AI Solutions',price: '$3,999',billing: 'month',features[, 'Real-time transaction monitoringBehavioral pattern analysisMulti-channel fraud detectionAutomated risk scoring','False positive reductionCompliance reportingMachine learning model updates' ], benefits[, 'Reduce fraud losses by 80%Improve detection accuracyReduce false positives by 60%Comply with regulatory requirements' ], useCases[, 'Credit card transactionsOnline bankingE-commerce paymentsInsurance claims' ], targetMarket['BankingE-commerceInsurancePayment Processors'], ctaLabel: 'Detect Fraud',href: 'https: featured: 'true',marketSize: '$12.3B',roi: '600%',implementationTime: '10-14 weeks',supportLevel: '24/7 + security experts',compliance['PCI DSSSOC 2ISO 27001GDPR'], integrations['StripePayPalSquareBanking APIs'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' },{ id: 'cloud-migration-accelerator',title: 'Cloud Migration Accelerator',description: 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',category: 'IT Services',price: '$15,000',billing: 'project',features[, 'Cloud readiness assessmentMigration strategy planningZero-downtime migrationPerformance optimization','Cost optimization analysisSecurity and compliance setupPost-migration support' ], benefits[, 'Reduce migration time by 50%Ensure zero business disruptionOptimize cloud costsImprove scalability and performance' ], useCases[, 'Legacy system modernizationData center consolidationApplication modernizationDisaster recovery setup' ], targetMarket['EnterpriseMid-marketGovernmentHealthcare'], ctaLabel: 'Start Migration',href: 'https: featured: 'true',marketSize: '$68.4B',roi: '200%',implementationTime: '8-16 weeks',supportLevel: '24/7 + migration specialists',compliance['SOC 2ISO 27001HIPAAFedRAMP'], integrations['AWSAzureGCPVMware','OpenStack'], api: 'false',mobile: 'false',enterprise: 'true',startup: 'false',smb: 'true' },{ id: 'cybersecurity-posture-assessment',title: 'Cybersecurity Posture Assessment',description: 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',category: 'IT Services',price: '$8,500',billing: 'project',features[, 'Vulnerability assessmentPenetration testingSecurity architecture reviewCompliance gap analysis','Risk assessment reportRemediation roadmapSecurity training recommendations' ], benefits[, 'Identify security gapsReduce cyber riskComply with regulationsImprove security posture' ], useCases[, 'Security auditsCompliance assessmentsMerger and acquisition due diligenceAnnual security reviews' ], targetMarket['EnterpriseMid-marketHealthcareFinance'], ctaLabel: 'Assess Security',href: 'https: featured: 'true',marketSize: '$45.2B',roi: '300%',implementationTime: '4-6 weeks',supportLevel: 'Business hours + emergency',compliance['ISO 27001NISTSOC 2PCI DSS'], integrations['Security toolsSIEM systemsVulnerability scanners'], api: 'false',mobile: 'false',enterprise: 'true',startup: 'true',smb: 'true' },{ id: 'digital-transformation-consulting',title: 'Digital Transformation Consulting',description: 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',category: 'IT Services',price: '$25,000',billing: 'project',features[, 'Digital maturity assessmentTransformation roadmap developmentChange management strategyTechnology architecture design','Process optimizationTalent development planningROI measurement framework' ], benefits[, 'Accelerate digital transformationImprove operational efficiencyEnhance customer experienceIncrease competitive advantage' ], useCases[, 'Digital strategy developmentProcess digitizationCustomer experience transformationOperational excellence initiatives' ], targetMarket['EnterpriseMid-marketGovernmentHealthcare'], ctaLabel: 'Transform Digitally',href: 'https: featured: 'true',marketSize: '$89.7B',roi: '250%',implementationTime: '12-24 weeks',supportLevel: 'Business hours + strategic support',compliance['Industry standardsBest practices'], integrations['Enterprise systemsCloud platformsDigital tools'], api: 'false',mobile: 'false',enterprise: 'true',startup: 'false',smb: 'true' },{ id: 'quantum-computing-as-a-service',title: 'Quantum Computing as a Service',description: 'Access to quantum computing resources for complex optimization problems and scientific research.',category: 'Quantum Computing',price: '$5,999',billing: 'month',features[, 'Quantum algorithm developmentQuantum hardware accessHybrid classical-quantum computingQuantum error correction','Performance optimizationResearch collaboration toolsEducational resources' ], benefits[, 'Solve previously intractable problemsAccelerate research and developmentGain quantum advantageFuture-proof your technology stack' ], useCases[, 'Drug discoveryFinancial modelingLogistics optimizationCryptography research' ], targetMarket['Research InstitutionsPharmaceuticalFinanceTechnology'], ctaLabel: 'Access Quantum',href: 'https: featured: 'true',marketSize: '$1.2B',roi: '400%',implementationTime: '6-8 weeks',supportLevel: 'Business hours + quantum experts',compliance['Research standardsData security'], integrations['Classical computingCloud platformsResearch tools'], api: 'true',mobile: 'false',enterprise: 'true',startup: 'false',smb: 'false' },{ id: 'blockchain-supply-chain-tracking',title: 'Blockchain Supply Chain Tracking',description: 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',category: 'Blockchain & Web3',price: '$2,999',billing: 'month',features[, 'Real-time supply chain trackingSmart contract automationCompliance documentationQuality assurance tracking','Sustainability metricsMulti-stakeholder accessMobile app for field workers' ], benefits[, 'Improve supply chain transparencyReduce fraud and counterfeitingEnsure complianceBuild consumer trust' ], useCases[, 'Food safety trackingPharmaceutical supply chainLuxury goods authenticationSustainable sourcing verification' ], targetMarket['Food & BeveragePharmaceuticalLuxury GoodsManufacturing'], ctaLabel: 'Track Supply Chain',href: 'https: featured: 'true',marketSize: '$3.4B',roi: '300%',implementationTime: '8-12 weeks',supportLevel: '24/7 + blockchain experts',compliance['FDAEU regulationsIndustry standards'], integrations['ERP systemsIoT devicesMobile apps'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: 'true' },{ id: 'metaverse-commerce-platform',title: 'Metaverse Commerce Platform',description: 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',category: 'Metaverse & AR/VR',price: '$4,999',billing: 'month',features[, '3D virtual storefrontsDigital asset marketplaceAR/VR shopping experiencesVirtual try-on capabilities','Cryptocurrency paymentsSocial commerce featuresAnalytics and insights' ], benefits[, 'Create immersive shopping experiencesReach global audiencesReduce physical infrastructure costsInnovate customer engagement' ], useCases[, 'Fashion retailReal estate virtual toursAutomotive showroomsEntertainment venues' ], targetMarket['RetailReal EstateAutomotiveEntertainment'], ctaLabel: 'Enter Metaverse',href: 'https: featured: 'true',marketSize: '$5.8B',roi: '350%',implementationTime: '12-16 weeks',supportLevel: 'Business hours + metaverse experts',compliance['Digital rightsPrivacy regulations'], integrations['E-commerce platformsPayment gatewaysSocial media'], api: 'true',mobile: 'true',enterprise: 'true',startup: 'true',smb: true ], export const serviceCategories = [, { name: 'Micro SaaS',description: 'Scalable software solutions for specific business needs',services: innovativeServices2026.filter(s => s.category === 'Micro SaaS') },{ name: 'AI Solutions',description: 'Advanced artificial intelligence and machine learning solutions',services: innovativeServices2026.filter(s => s.category === 'AI Solutions') },{ name: 'IT Services',description: 'Comprehensive IT consulting and implementation services',services: innovativeServices2026.filter(s => s.category === 'IT Services') },services: innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3Metaverse & AR/VR'].includes(s.category))}, {, name: 'Emerging Technologies', description: 'Cutting-edge technologies shaping the future', services: innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3Metaverse & AR/VR'].includes(s.category))} ], export default innovativeServices2026}},
+export type InnovativeService = {, id: string, title: string, description: string, category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation, price: string,, billing: 'month' | 'project' | 'hour' | 'year', features: string[], benefits: string[], useCases: string[], targetMarket: string[], ctaLabel: string, href: string, external?: boolean, featured?: boolean, marketSize?: string, roi?: string, implementationTime?: string, supportLevel?: string, compliance?: string[], integrations?: string[], api?: boolean, mobile?: boolean, enterprise?: boolean, startup?: boolean, smb?: boolean}, export const innovativeServices2026: InnovativeService[] = [, { id: 'ai-powered-customer-churn-predictor',title: 'AI-Powered Customer Churn Predictor',description: 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',category: 'Micro SaaS',price: '$299',billing: 'month',features[, 'Real-time churn risk scoringBehavioral pattern analysisPredictive analytics dashboard','Automated retention campaignsCRM integration (Salesforce,HubSpot)Custom retention strategiesROI tracking and reporting' ],benefits[,',Reduce churn by up to 40%Increase customer lifetime valueOptimize retention spend','Proactive customer success' ],useCases[, 'SaaS subscription businessesE-commerce platformsSubscription box services','Digital content providers' ],targetMarket['SaaS CompaniesE-commerceSubscription ServicesDigital Media'],ctaLabel: 'Start Free Trial',href: 'https: featured: true,marketSize: '$2.5B',roi: '300%',implementationTime: '2-4 weeks',supportLevel: '24/7',compliance['GDPRCCPASOC 2'],integrations['SalesforceHubSpotStripeShopify'],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: 'intelligent-inventory-optimization',title: 'Intelligent Inventory Optimization',description: 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',category: 'Micro SaaS',price: '$199',billing: 'month',features[, 'Demand forecasting with 90% accuracyReal-time inventory trackingAutomated reorder points','Multi-location managementSupplier performance analyticsSeasonal trend analysisCost optimization recommendations' ],benefits[,',Reduce inventory costs by 25%Eliminate stockoutsImprove cash flow','Optimize warehouse space' ],useCases[, 'Retail chainsE-commerce warehousesManufacturing companies','Distribution centers' ],targetMarket['RetailE-commerceManufacturingLogistics'],ctaLabel: 'Optimize Inventory',href: 'https: featured: true,marketSize: '$3.8B',roi: '250%',implementationTime: '3-5 weeks',supportLevel: 'Business hours + emergency',compliance['ISO 9001FDAGMP'],integrations['SAPOracleNetSuiteQuickBooks'],api: true,mobile: true,enterprise: true,startup: false,smb: true },{ id: 'smart-energy-consumption-monitor',title: 'Smart Energy Consumption Monitor',description: 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',category: 'Micro SaaS',price: '$149',billing: 'month',features[, 'Real-time energy consumption trackingSmart device identificationAnomaly detection alerts','Energy efficiency recommendationsCarbon footprint calculationCost analysis and forecastingMobile app monitoring' ],benefits[,',Reduce energy bills by 35%Improve sustainability scoreComply with green regulations','Enhance corporate social responsibility' ],useCases[, 'Office buildingsManufacturing facilitiesRetail stores','Data centers' ],targetMarket['Commercial Real EstateManufacturingRetailData Centers'],ctaLabel: 'Monitor Energy',href: 'https: featured: true,marketSize: '$1.9B',roi: '200%',implementationTime: '1-2 weeks',supportLevel: '24/7 monitoring',compliance['LEEDISO 50001Energy Star'],integrations['Building Management SystemsSmart MetersSolar Panels'],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: 'automated-compliance-monitor',title: 'Automated Compliance Monitor',description: 'Continuous compliance monitoring for GDPR,HIPAA,SOC 2,and other regulatory frameworks with automated reporting.',category: 'Micro SaaS',price: '$399',billing: 'month',features[, 'Multi-framework compliance monitoringAutomated evidence collectionReal-time compliance scoring','Automated audit reportsPolicy template libraryEmployee training trackingIncident response automation' ],benefits[,',Reduce compliance costs by 50%Eliminate audit surprisesMaintain continuous compliance','Protect against fines and penalties' ],useCases[, 'Healthcare organizationsFinancial servicesTechnology companies','Government contractors' ],targetMarket['HealthcareFinanceTechnologyGovernment'],ctaLabel: 'Ensure Compliance',href: 'https: featured: true,marketSize: '$4.2B',roi: '400%',implementationTime: '4-6 weeks',supportLevel: '24/7 + compliance experts',compliance['GDPRHIPAASOC 2PCI DSS','ISO 27001'],integrations['AWSAzureGCPJira','ServiceNow'],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: 'autonomous-customer-service-agent',title: 'Autonomous Customer Service Agent',description: 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',category: 'AI Solutions',price: '$1,299',billing: 'month',features[, 'Natural language processingMulti-language support (50+ languages)Context-aware conversations','Seamless human handoffSentiment analysisKnowledge base learning24/7 availability' ],benefits[,',Reduce support costs by 60%Improve customer satisfaction by 40%Handle 10x more inquiries','Provide instant responses' ],useCases[, 'E-commerce customer supportSaaS product supportBanking customer service','Healthcare patient support' ],targetMarket['E-commerceSaaSBankingHealthcare','Telecommunications'],ctaLabel: 'Deploy AI Agent',href: 'https: featured: true,marketSize: '$15.7B',roi: '500%',implementationTime: '6-8 weeks',supportLevel: '24/7 + AI specialists',compliance['GDPRCCPAHIPAA'],integrations['ZendeskIntercomSlackMicrosoft Teams'],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: 'predictive-maintenance-platform',title: 'Predictive Maintenance Platform',description: 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',category: 'AI Solutions',price: '$2,499',billing: 'month',features[, 'Real-time equipment monitoringMachine learning failure predictionMaintenance scheduling optimization','Spare parts inventory managementPerformance analytics dashboardMobile technician appIntegration with CMMS systems' ],benefits[,',Reduce unplanned downtime by 70%Extend equipment life by 30%Optimize maintenance costs','Improve safety and compliance' ],useCases[, 'Manufacturing plantsPower plantsOil and gas facilities','Transportation fleets' ],targetMarket['ManufacturingEnergyOil & GasTransportation','Utilities'],ctaLabel: 'Predict Maintenance',href: 'https: featured: true,marketSize: '$8.9B',roi: '350%',implementationTime: '8-12 weeks',supportLevel: '24/7 + field engineers',compliance['ISO 55001OSHAAPI'],integrations['SAPMaximoOracleSiemens Mindsphere'],api: true,mobile: true,enterprise: true,startup: false,smb: true },{ id: 'ai-powered-fraud-detection',title: 'AI-Powered Fraud Detection',description: 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',category: 'AI Solutions',price: '$3,999',billing: 'month',features[, 'Real-time transaction monitoringBehavioral pattern analysisMulti-channel fraud detection','Automated risk scoringFalse positive reductionCompliance reportingMachine learning model updates' ],benefits[,',Reduce fraud losses by 80%Improve detection accuracyReduce false positives by 60%','Comply with regulatory requirements' ],useCases[, 'Credit card transactionsOnline bankingE-commerce payments','Insurance claims' ],targetMarket['BankingE-commerceInsurancePayment Processors'],ctaLabel: 'Detect Fraud',href: 'https: featured: true,marketSize: '$12.3B',roi: '600%',implementationTime: '10-14 weeks',supportLevel: '24/7 + security experts',compliance['PCI DSSSOC 2ISO 27001GDPR'],integrations['StripePayPalSquareBanking APIs'],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: 'cloud-migration-accelerator',title: 'Cloud Migration Accelerator',description: 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',category: 'IT Services',price: '$15,000',billing: 'project',features[, 'Cloud readiness assessmentMigration strategy planningZero-downtime migration','Performance optimizationCost optimization analysisSecurity and compliance setupPost-migration support' ],benefits[,',Reduce migration time by 50%Ensure zero business disruptionOptimize cloud costs','Improve scalability and performance' ],useCases[, 'Legacy system modernizationData center consolidationApplication modernization','Disaster recovery setup' ],targetMarket['EnterpriseMid-marketGovernmentHealthcare'],ctaLabel: 'Start Migration',href: 'https: featured: true,marketSize: '$68.4B',roi: '200%',implementationTime: '8-16 weeks',supportLevel: '24/7 + migration specialists',compliance['SOC 2ISO 27001HIPAAFedRAMP'],integrations['AWSAzureGCPVMware','OpenStack'],api: false,mobile: false,enterprise: true,startup: false,smb: true },{ id: 'cybersecurity-posture-assessment',title: 'Cybersecurity Posture Assessment',description: 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',category: 'IT Services',price: '$8,500',billing: 'project',features[, 'Vulnerability assessmentPenetration testingSecurity architecture review','Compliance gap analysisRisk assessment reportRemediation roadmapSecurity training recommendations' ],benefits[,',Identify security gapsReduce cyber riskComply with regulations','Improve security posture' ],useCases[, 'Security auditsCompliance assessmentsMerger and acquisition due diligence','Annual security reviews' ],targetMarket['EnterpriseMid-marketHealthcareFinance'],ctaLabel: 'Assess Security',href: 'https: featured: true,marketSize: '$45.2B',roi: '300%',implementationTime: '4-6 weeks',supportLevel: 'Business hours + emergency',compliance['ISO 27001NISTSOC 2PCI DSS'],integrations['Security toolsSIEM systemsVulnerability scanners'],api: false,mobile: false,enterprise: true,startup: true,smb: true },{ id: 'digital-transformation-consulting',title: 'Digital Transformation Consulting',description: 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',category: 'IT Services',price: '$25,000',billing: 'project',features[, 'Digital maturity assessmentTransformation roadmap developmentChange management strategy','Technology architecture designProcess optimizationTalent development planningROI measurement framework' ],benefits[,',Accelerate digital transformationImprove operational efficiencyEnhance customer experience','Increase competitive advantage' ],useCases[, 'Digital strategy developmentProcess digitizationCustomer experience transformation','Operational excellence initiatives' ],targetMarket['EnterpriseMid-marketGovernmentHealthcare'],ctaLabel: 'Transform Digitally',href: 'https: featured: true,marketSize: '$89.7B',roi: '250%',implementationTime: '12-24 weeks',supportLevel: 'Business hours + strategic support',compliance['Industry standardsBest practices'],integrations['Enterprise systemsCloud platformsDigital tools'],api: false,mobile: false,enterprise: true,startup: false,smb: true },{ id: 'quantum-computing-as-a-service',title: 'Quantum Computing as a Service',description: 'Access to quantum computing resources for complex optimization problems and scientific research.',category: 'Quantum Computing',price: '$5,999',billing: 'month',features[, 'Quantum algorithm developmentQuantum hardware accessHybrid classical-quantum computing','Quantum error correctionPerformance optimizationResearch collaboration toolsEducational resources' ],benefits[,',Solve previously intractable problemsAccelerate research and developmentGain quantum advantage','Future-proof your technology stack' ],useCases[, 'Drug discoveryFinancial modelingLogistics optimization','Cryptography research' ],targetMarket['Research InstitutionsPharmaceuticalFinanceTechnology'],ctaLabel: 'Access Quantum',href: 'https: featured: true,marketSize: '$1.2B',roi: '400%',implementationTime: '6-8 weeks',supportLevel: 'Business hours + quantum experts',compliance['Research standardsData security'],integrations['Classical computingCloud platformsResearch tools'],api: true,mobile: false,enterprise: true,startup: false,smb: false },{ id: 'blockchain-supply-chain-tracking',title: 'Blockchain Supply Chain Tracking',description: 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',category: 'Blockchain & Web3',price: '$2,999',billing: 'month',features[, 'Real-time supply chain trackingSmart contract automationCompliance documentation','Quality assurance trackingSustainability metricsMulti-stakeholder accessMobile app for field workers' ],benefits[,',Improve supply chain transparencyReduce fraud and counterfeitingEnsure compliance','Build consumer trust' ],useCases[, 'Food safety trackingPharmaceutical supply chainLuxury goods authentication','Sustainable sourcing verification' ],targetMarket['Food & BeveragePharmaceuticalLuxury GoodsManufacturing'],ctaLabel: 'Track Supply Chain',href: 'https: featured: true,marketSize: '$3.4B',roi: '300%',implementationTime: '8-12 weeks',supportLevel: '24/7 + blockchain experts',compliance['FDAEU regulationsIndustry standards'],integrations['ERP systemsIoT devicesMobile apps'],api: true,mobile: true,enterprise: true,startup: true,smb: true },{ id: 'metaverse-commerce-platform',title: 'Metaverse Commerce Platform',description: 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',category: 'Metaverse & AR/VR',price: '$4,999',billing: 'month',features[, '3D virtual storefrontsDigital asset marketplaceAR/VR shopping experiences','Virtual try-on capabilitiesCryptocurrency paymentsSocial commerce featuresAnalytics and insights' ],benefits[,',Create immersive shopping experiencesReach global audiencesReduce physical infrastructure costs','Innovate customer engagement' ],useCases[, 'Fashion retailReal estate virtual toursAutomotive showrooms','Entertainment venues' ],targetMarket['RetailReal EstateAutomotiveEntertainment'],ctaLabel: 'Enter Metaverse',href: 'https: featured: true,marketSize: '$5.8B',roi: '350%',implementationTime: '12-16 weeks',supportLevel: 'Business hours + metaverse experts',compliance['Digital rightsPrivacy regulations'],integrations['E-commerce platformsPayment gatewaysSocial media'],api: true,mobile: true,enterprise: true,startup: true,smb: true ], export const serviceCategories = [, { name: 'Micro SaaS',description: 'Scalable software solutions for specific business needs',services: innovativeServices2026.filter(s => s.category === 'Micro SaaS') },{ name: 'AI Solutions',description: 'Advanced artificial intelligence and machine learning solutions',services: innovativeServices2026.filter(s => s.category === 'AI Solutions') },{ name: 'IT Services',description: 'Comprehensive IT consulting and implementation services',services: innovativeServices2026.filter(s => s.category === 'IT Services')'},services: innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3Metaverse & AR/VR'].includes(s.category))},', {, name: 'Emerging Technologies',description: 'Cutting-edge technologies shaping the future',services: innovativeServices2026.filter(s => ['Quantum ComputingBlockchain & Web3Metaverse & AR/VR'].includes(s.category))}], export default innovativeServices2026}},',',

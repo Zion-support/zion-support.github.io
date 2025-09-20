@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
   Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
   Brain, Atom, Rocket, Shield, Cpu, Database, Cloud,
   Palette, Heart, Target, Sparkles, Eye, TrendingUp
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  label: string;
-  href?: string;
-  children?: NavigationItem[];
-  icon?: React.ReactNode;
-  description?: string;
-  badge?: string;
+  label: string,
+  href?: string,
+  children?: NavigationItem[],
+  icon?: React.ReactNode,
+  description?: string,
+  badge?: string
 }
 
 const navigationItems: NavigationItem[] = [
@@ -197,7 +197,7 @@ const navigationItems: NavigationItem[] = [
       }
     ]
   }
-];
+],
 
 const UltraFuturisticNavigation2025: React.FC = () => {
   return (
@@ -205,7 +205,7 @@ const UltraFuturisticNavigation2025: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2025;
+export default UltraFuturisticNavigation2025,

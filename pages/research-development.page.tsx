@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
 import {
   FlaskConical,
   Brain,
@@ -39,7 +39,7 @@ import {
   Atom,
   Satellite,
   Telescope
-} from 'lucide-react';
+} from 'lucide-react',
 
 const researchAreas = [
   {
@@ -49,12 +49,9 @@ const researchAreas = [
     description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.',
     color: 'from-purple-500 to-indigo-600',
     focus: [
-      'Deep Learning Architectures',
-      'Natural Language Processing',
-      'Computer Vision & Image Recognition',
-      'Reinforcement Learning',
-      'AI Ethics & Responsible AI',
-      'Edge AI & Federated Learning'
+      'Deep Learning ArchitecturesNatural Language Processing',
+      'Computer Vision & Image RecognitionReinforcement Learning',
+      'AI Ethics & Responsible AIEdge AI & Federated Learning'
     ],
     publications: 15,
     patents: 8,
@@ -67,12 +64,9 @@ const researchAreas = [
     description: 'Exploring quantum computing applications and developing quantum-resistant cryptographic solutions.',
     color: 'from-blue-500 to-cyan-600',
     focus: [
-      'Quantum Algorithms',
-      'Quantum Cryptography',
-      'Quantum Machine Learning',
-      'Quantum Error Correction',
-      'Post-Quantum Cryptography',
-      'Quantum Sensing'
+      'Quantum AlgorithmsQuantum Cryptography',
+      'Quantum Machine LearningQuantum Error Correction',
+      'Post-Quantum CryptographyQuantum Sensing'
     ],
     publications: 8,
     patents: 5,
@@ -85,12 +79,9 @@ const researchAreas = [
     description: 'Developing next-generation security solutions to protect against evolving cyber threats.',
     color: 'from-red-500 to-pink-600',
     focus: [
-      'Threat Intelligence',
-      'Zero-Trust Security',
-      'Privacy-Preserving Technologies',
-      'Blockchain Security',
-      'IoT Security',
-      'AI-Powered Security'
+      'Threat IntelligenceZero-Trust Security',
+      'Privacy-Preserving TechnologiesBlockchain Security',
+      'IoT SecurityAI-Powered Security'
     ],
     publications: 22,
     patents: 12,
@@ -103,12 +94,9 @@ const researchAreas = [
     description: 'Researching distributed computing paradigms and intelligent edge systems for real-time processing.',
     color: 'from-yellow-500 to-orange-600',
     focus: [
-      'Edge AI & Machine Learning',
-      '5G & 6G Networks',
-      'IoT Security & Privacy',
-      'Edge Computing Optimization',
-      'Real-time Data Processing',
-      'Smart City Technologies'
+      'Edge AI & Machine Learning5G & 6G Networks',
+      'IoT Security & PrivacyEdge Computing Optimization',
+      'Real-time Data ProcessingSmart City Technologies'
     ],
     publications: 18,
     patents: 9,
@@ -121,12 +109,9 @@ const researchAreas = [
     description: 'Advancing data analytics methodologies and developing tools for extracting meaningful insights from complex datasets.',
     color: 'from-green-500 to-emerald-600',
     focus: [
-      'Big Data Processing',
-      'Predictive Analytics',
-      'Data Visualization',
-      'Statistical Modeling',
-      'Real-time Analytics',
-      'Data Privacy & Ethics'
+      'Big Data ProcessingPredictive Analytics',
+      'Data VisualizationStatistical Modeling',
+      'Real-time AnalyticsData Privacy & Ethics'
     ],
     publications: 25,
     patents: 15,
@@ -139,18 +124,15 @@ const researchAreas = [
     description: 'Researching cloud computing architectures and developing scalable, resilient cloud solutions.',
     color: 'from-indigo-500 to-purple-600',
     focus: [
-      'Microservices Architecture',
-      'Container Orchestration',
-      'Serverless Computing',
-      'Multi-cloud Strategies',
-      'Cloud Security',
-      'DevOps Automation'
+      'Microservices ArchitectureContainer Orchestration',
+      'Serverless ComputingMulti-cloud Strategies',
+      'Cloud SecurityDevOps Automation'
     ],
     publications: 20,
     patents: 10,
     projects: 16
   }
-];
+],
 
 const researchProjects = [
   {
@@ -159,14 +141,12 @@ const researchProjects = [
     area: 'AI & ML',
     status: 'Active',
     description: 'Developing machine learning algorithms to detect and respond to cybersecurity threats in real-time.',
-    team: ['Dr. Sarah Chen', 'AI Researcher', 'Security Expert'],
+    team: ['Dr. Sarah ChenAI Researcher', 'Security Expert'],
     duration: '18 months',
     funding: '$500,000',
     outcomes: [
-      'Real-time threat detection system',
-      '95% accuracy in threat classification',
-      '3 pending patents',
-      '5 research publications'
+      'Real-time threat detection system95% accuracy in threat classification',
+      '3 pending patents5 research publications'
     ],
     icon: Brain,
     color: 'from-purple-500 to-indigo-600'
@@ -177,14 +157,12 @@ const researchProjects = [
     area: 'Quantum Computing',
     status: 'Active',
     description: 'Researching and developing cryptographic algorithms that remain secure against quantum computing attacks.',
-    team: ['Dr. Michael Rodriguez', 'Quantum Researcher', 'Cryptographer'],
+    team: ['Dr. Michael RodriguezQuantum Researcher', 'Cryptographer'],
     duration: '24 months',
     funding: '$750,000',
     outcomes: [
-      'Post-quantum cryptographic framework',
-      '2 patent applications',
-      '3 research publications',
-      'Industry collaboration established'
+      'Post-quantum cryptographic framework2 patent applications',
+      '3 research publicationsIndustry collaboration established'
     ],
     icon: Atom,
     color: 'from-blue-500 to-cyan-600'
@@ -195,14 +173,12 @@ const researchProjects = [
     area: 'Edge Computing',
     status: 'Active',
     description: 'Developing intelligent edge computing solutions for real-time manufacturing process optimization.',
-    team: ['Dr. Emily Wang', 'Edge Computing Expert', 'Manufacturing Specialist'],
+    team: ['Dr. Emily WangEdge Computing Expert', 'Manufacturing Specialist'],
     duration: '12 months',
     funding: '$300,000',
     outcomes: [
-      'Edge AI platform prototype',
-      '30% efficiency improvement',
-      '2 research publications',
-      'Industry partnership formed'
+      'Edge AI platform prototype30% efficiency improvement',
+      '2 research publicationsIndustry partnership formed'
     ],
     icon: Zap,
     color: 'from-yellow-500 to-orange-600'
@@ -213,14 +189,12 @@ const researchProjects = [
     area: 'Data Science',
     status: 'Completed',
     description: 'Researching techniques for analyzing sensitive data while preserving individual privacy.',
-    team: ['Dr. James Brown', 'Data Scientist', 'Privacy Expert'],
+    team: ['Dr. James BrownData Scientist', 'Privacy Expert'],
     duration: '15 months',
     funding: '$400,000',
     outcomes: [
-      'Privacy-preserving analytics framework',
-      '4 research publications',
-      '1 patent granted',
-      'Open-source toolkit released'
+      'Privacy-preserving analytics framework4 research publications',
+      '1 patent grantedOpen-source toolkit released'
     ],
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-600'
@@ -231,14 +205,12 @@ const researchProjects = [
     area: 'Cloud-Native',
     status: 'Active',
     description: 'Developing security-first cloud architecture patterns for enterprise applications.',
-    team: ['Dr. Lisa Garcia', 'Cloud Architect', 'Security Researcher'],
+    team: ['Dr. Lisa GarciaCloud Architect', 'Security Researcher'],
     duration: '20 months',
     funding: '$600,000',
     outcomes: [
-      'Security architecture framework',
-      '3 research publications',
-      '2 patent applications',
-      'Enterprise pilot program'
+      'Security architecture framework3 research publications',
+      '2 patent applicationsEnterprise pilot program'
     ],
     icon: Cloud,
     color: 'from-indigo-500 to-purple-600'
@@ -249,25 +221,23 @@ const researchProjects = [
     area: 'AI & ML',
     status: 'Active',
     description: 'Researching ethical considerations in AI development and deployment.',
-    team: ['Dr. David Kim', 'AI Ethicist', 'Social Scientist'],
+    team: ['Dr. David KimAI Ethicist', 'Social Scientist'],
     duration: '16 months',
     funding: '$350,000',
     outcomes: [
-      'AI ethics framework',
-      'Responsible AI guidelines',
-      '4 research publications',
-      'Industry standards contribution'
+      'AI ethics frameworkResponsible AI guidelines',
+      '4 research publicationsIndustry standards contribution'
     ],
     icon: Brain,
     color: 'from-purple-500 to-indigo-600'
   }
-];
+],
 
 const publications = [
   {
     id: 1,
     title: 'Advanced Neural Network Architectures for Cybersecurity',
-    authors: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],
+    authors: ['Dr. Sarah ChenDr. Michael Rodriguez'],
     journal: 'IEEE Transactions on Cybersecurity',
     year: 2027,
     citations: 45,
@@ -277,7 +247,7 @@ const publications = [
   {
     id: 2,
     title: 'Quantum-Resistant Cryptographic Protocols: A Comprehensive Survey',
-    authors: ['Dr. Michael Rodriguez', 'Dr. Emily Wang'],
+    authors: ['Dr. Michael RodriguezDr. Emily Wang'],
     journal: 'Cryptography and Security',
     year: 2027,
     citations: 32,
@@ -287,7 +257,7 @@ const publications = [
   {
     id: 3,
     title: 'Edge Computing Optimization for Real-Time AI Applications',
-    authors: ['Dr. Emily Wang', 'Dr. James Brown'],
+    authors: ['Dr. Emily WangDr. James Brown'],
     journal: 'Edge Computing Systems',
     year: 2026,
     citations: 28,
@@ -297,7 +267,7 @@ const publications = [
   {
     id: 4,
     title: 'Privacy-Preserving Machine Learning: Techniques and Applications',
-    authors: ['Dr. James Brown', 'Dr. Lisa Garcia'],
+    authors: ['Dr. James BrownDr. Lisa Garcia'],
     journal: 'Data Privacy and Security',
     year: 2026,
     citations: 56,
@@ -307,20 +277,20 @@ const publications = [
   {
     id: 5,
     title: 'Security-First Cloud Architecture Patterns',
-    authors: ['Dr. Lisa Garcia', 'Dr. David Kim'],
+    authors: ['Dr. Lisa GarciaDr. David Kim'],
     journal: 'Cloud Computing Security',
     year: 2026,
     citations: 38,
     area: 'Cloud-Native',
     abstract: 'This paper introduces security-first design patterns for cloud-native applications...'
   }
-];
+],
 
 const patents = [
   {
     id: 1,
     title: 'Adaptive Threat Detection System Using Machine Learning',
-    inventors: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],
+    inventors: ['Dr. Sarah ChenDr. Michael Rodriguez'],
     filingDate: '2026-08-15',
     status: 'Granted',
     patentNumber: 'US 11,234,567',
@@ -340,7 +310,7 @@ const patents = [
   {
     id: 3,
     title: 'Edge Computing Resource Optimization Method',
-    inventors: ['Dr. Emily Wang', 'Dr. James Brown'],
+    inventors: ['Dr. Emily WangDr. James Brown'],
     filingDate: '2026-05-10',
     status: 'Granted',
     patentNumber: 'US 11,123,456',
@@ -367,44 +337,44 @@ const patents = [
     area: 'Cloud-Native',
     description: 'A security architecture pattern for cloud-native applications.'
   }
-];
+],
 
 export default function ResearchDevelopment() {
-  const [selectedArea, setSelectedArea] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedArea, setSelectedArea] = useState('All'),
+  const [selectedStatus, setSelectedStatus] = useState('All'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
-  const areas = ['All', ...researchAreas.map(area => area.name)];
-  const statuses = ['All', 'Active', 'Completed', 'Planning'];
+  const areas = ['All', ...researchAreas.map(area => area.name)],
+  const statuses = ['AllActive', 'CompletedPlanning'],
 
   const filteredProjects = researchProjects.filter(project => {
-    const matchesArea = selectedArea === 'All' || project.area === selectedArea;
-    const matchesStatus = selectedStatus === 'All' || project.status === selectedStatus;
+    const matchesArea = selectedArea === 'All' || project.area === selectedArea,
+    const matchesStatus = selectedStatus === 'All' || project.status === selectedStatus,
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase());
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    return matchesArea && matchesStatus && matchesSearch;
-  });
+    return matchesArea && matchesStatus && matchesSearch,
+  }),
 
   const getAreaIcon = (areaName: string) => {
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.icon : FlaskConical;
-  };
+    const area = researchAreas.find(a => a.name === areaName),
+    return area ? area.icon : FlaskConical
+  },
 
   const getAreaColor = (areaName: string) => {
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.color : 'from-gray-500 to-slate-600';
-  };
+    const area = researchAreas.find(a => a.name === areaName),
+    return area ? area.color : 'from-gray-500 to-slate-600'
+  },
 
   const getStatusBadge = (status: string) => {
     if (status === 'Active') {
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
+      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>
     } else if (status === 'Completed') {
-      return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>;
+      return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>,
     } else {
-      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>;
+      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>,
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -497,7 +467,7 @@ export default function ResearchDevelopment() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchAreas.map((area, index) => {
-              const IconComponent = area.icon;
+              const IconComponent = area.icon,
               return (
                 <motion.div
                   key={area.id}
@@ -540,7 +510,7 @@ export default function ResearchDevelopment() {
                     </div>
                   </div>
                 </motion.div>
-              );
+              ),
             })}
           </div>
         </div>
@@ -562,8 +532,8 @@ export default function ResearchDevelopment() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => {
-              const IconComponent = getAreaIcon(project.area);
-              const areaColor = getAreaColor(project.area);
+              const IconComponent = getAreaIcon(project.area),
+              const areaColor = getAreaColor(project.area),
               return (
                 <motion.div
                   key={project.id}
@@ -637,7 +607,7 @@ export default function ResearchDevelopment() {
                   <div className="flex items-center justify-between">
                     <Link
                       href={`/research-development/projects/${project.id}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                      className="inline-flex items-center text-zion-cyan hover: text-zion-cyan-light transition-colors duration-300"
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -648,7 +618,7 @@ export default function ResearchDevelopment() {
                     </div>
                   </div>
                 </motion.div>
-              );
+              )
             })}
           </div>
         </div>
@@ -684,7 +654,7 @@ export default function ResearchDevelopment() {
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-3">
                       <span className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
-                        {pub.authors.join(', ')}
+                        {pub.authors.join()}
                       </span>
                       <span className="flex items-center gap-1">
                         <BookOpen className="w-4 h-4" />
@@ -814,7 +784,7 @@ export default function ResearchDevelopment() {
               Partner with Zion Tech Group on cutting-edge research projects, 
               explore licensing opportunities, or join our research initiatives.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
@@ -833,5 +803,5 @@ export default function ResearchDevelopment() {
         </div>
       </section>
     </div>
-  );
+  )
 }

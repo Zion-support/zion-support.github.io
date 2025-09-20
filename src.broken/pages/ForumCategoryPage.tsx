@@ -1,20 +1,20 @@
 
-import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { Suspense } from "react";
-import { Button } from "@/components/ui/button";
-import CreatePostButton from "@/components/community/CreatePostButton";
-import { Input } from "@/components/ui/input";
-import { SEO } from "@/components/SEO";
-import PostCard from "@/components/community/PostCard";
-import { ForumCategoryInfo } from "@/types/community";
-import { usePostsByCategory } from "@/hooks/usePostsByCategory";
-import NotFound from "./NotFound";
-import { useAuth } from "@/hooks/useAuth";
-import { useCommunity } from "@/context";
-import { useToast } from "@/hooks/use-toast";
-import { useFollowedCategories } from "@/hooks/useFollowedCategories";
-import { logInfo } from '@/utils/productionLogger';
+import { useState } from "react",
+import { useParams, Link } from "react-router-dom",
+import { Suspense } from "react",
+import { Button } from "@/components/ui/button",
+import CreatePostButton from "@/components/community/CreatePostButton",
+import { Input } from "@/components/ui/input",
+import { SEO } from "@/components/SEO",
+import PostCard from "@/components/community/PostCard",
+import { ForumCategoryInfo } from "@/types/community",
+import { usePostsByCategory } from "@/hooks/usePostsByCategory",
+import NotFound from "./NotFound",
+import { useAuth } from "@/hooks/useAuth",
+import { useCommunity } from "@/context",
+import { useToast } from "@/hooks/use-toast",
+import { useFollowedCategories } from "@/hooks/useFollowedCategories",
+import { logInfo } from '@/utils/productionLogger',
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 
 // Mock category data
@@ -54,7 +54,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
-};
+},
 
 
 const iconMap = {
@@ -63,26 +63,26 @@ const iconMap = {
   "Code": Code,
   "FileText": FileText,
   "Megaphone": Megaphone
-};
+},
 
 function CategoryContent({
   categoryId,
   category,
   IconComponent,
-  user,
+  user
 }: {
-  categoryId: string;
-  category: ForumCategoryInfo;
-  IconComponent: React.ComponentType<any>;
-  user: any;
+  categoryId: string,
+  category: ForumCategoryInfo,
+  IconComponent: React.ComponentType<any>,
+  user: any
 }) {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(""),
   const {
     data: posts = [],
     isPending: loading,
-    error,
-  } = usePostsByCategory(categoryId);
-  const errorMessage = error instanceof Error ? error.message : null;
+    error
+  } = usePostsByCategory(categoryId),
+  const errorMessage = error instanceof Error ? error.message : null,
 
   const filteredPosts = searchQuery
     ? posts.filter((post) =>
@@ -90,10 +90,10 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-    : posts;
+    : posts,
 
   const canCreatePost =
-    categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
+    categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin"),
 
   return (
     <div className="container py-8">
@@ -150,19 +150,19 @@ function CategoryContent({
         </div>
       )}
     </div>
-  );
+  ),
 }
 
 export default function ForumCategoryPage() {
-  const { categoryId } = useParams();
-  const { user } = useAuth();
+  const { categoryId } = useParams(),
+  const { user } = useAuth(),
 
   if (!categoryId || !categoriesInfo[categoryId]) {
-    return <NotFound />;
+    return <NotFound />,
   }
 
-  const category = categoriesInfo[categoryId];
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
+  const category = categoriesInfo[categoryId],
+  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
 
   return (
     <>
@@ -182,5 +182,5 @@ export default function ForumCategoryPage() {
         />
       </Suspense>
     </>
-  );
+  ),
 }

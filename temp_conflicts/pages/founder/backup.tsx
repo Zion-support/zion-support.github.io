@@ -1,5 +1,5 @@
-import React from 'react';
-import AdminVaultPage from '../admin/vault';
+import React from 'react',
+import AdminVaultPage from '../admin/vault',
 
 export default function FounderBackup() {
   return (
@@ -10,5 +10,5 @@ export default function FounderBackup() {
         <p className="text-sm text-gray-500">Summarize the most critical 10 items a Zion OS founder should back up to recover global protocol control in the event of loss or migration.</p>
       </div>
     </div>
-  );
+  ),
 }

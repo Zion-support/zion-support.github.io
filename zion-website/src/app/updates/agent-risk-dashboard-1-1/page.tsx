@@ -27,6 +27,5 @@ export default function AgentRiskDashboard11Page() {,
           <a href="/updates" className="text-sm font-semibold leading-6 text-blue-400 hover: text-blue-300">Back to updates →</a>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}
 ,

@@ -1,4 +1,4 @@
-import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap  } from 'lucide-react';
+import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap  } from 'lucide-react',
 
 export default function Page() {
       <section className="py-20 px-6 bg-gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan relative overflow-hidden">
@@ -27,8 +27,7 @@ export default function Page() {
               <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick={ () => document.getElementById('comparison - tool') ?.scrollIntoView({ behavior: 'smooth' }) }>
                 Start Comparing < ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Service Comparison Help',
-  '_blank') }>
+              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Service Comparison Help_blank') }>
                 Get Expert Help
               </Button>
             </div>
@@ -174,13 +173,11 @@ export default function Page() {
               Our expert team is here to help you navigate through our services
               and find the perfect solution for your business needs.</p>
             <div className="flex flex - col sm:flex - row gap-4 justify -center">
-              <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Service Selection Help',
-  '_blank') }>
+              <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Service Selection Help_blank') }>
                 <Users className="w-5 h-5 mr-2"/>
                 Get Expert Consultation
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('tel:+13024640950',
-  '_blank') }>
+              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('tel:+13024640950_blank') }>
                 <Zap className="w-5 h-5 mr-2"/>
                 Call Now
               </Button>
@@ -188,5 +185,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}

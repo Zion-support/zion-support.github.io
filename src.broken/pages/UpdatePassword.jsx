@@ -1,68 +1,68 @@
-import { useForm } from 'react - hook -form';
+import { useForm } from 'react - hook -form',
 export default function Page() {
-) ;
+) ,
     useEffect(() => {
         // Extract access token from URL hash
-        const hashParams = new URLSearchParams(location.hash.substring (1) ) ;
-        const token = hashParams.get("access_token") ;
+        const hashParams = new URLSearchParams(location.hash.substring (1) ) ,
+        const token = hashParams.get("access_token") ,
         if(token) {
             setAccessToken(token) }
         else {
             setError("No access token found.Please request a new password reset link.") }
         // Clean up auth state to prevent issues
-        cleanupAuthState () }, [location]) ;
+        cleanupAuthState () }, [location]) ,
     // Form submission handler
     const onSubmit = async(data) => {
         if(!accessToken) {
-            setError("No access token found.Please request a new password reset link.") ;
+            setError("No access token found.Please request a new password reset link.") ,
             return}
-        setIsLoading(true) ;
+        setIsLoading(true) ,
         try {
             // Set the session with the access token
             await supabase.auth.setSession({
                 access_token: accessToken,
-                refresh_token: '',
-            }) ;
+                refresh_token: ''
+            }) ,
             // Update the password
             const { error } = await supabase.auth.updateUser({
-                password: data.password,
-            }) ;
+                password: data.password
+            }) ,
             if(error) {
                 toast({
                     title: "Password update failed",
                     description: error.message,
-                    variant: "destructive",
-                }) ;
-                setError(error.message) ;
+                    variant: "destructive"
+                }) ,
+                setError(error.message) ,
                 return}
             // Show success message and clean up auth state
-            setSuccess(true) ;
+            setSuccess(true) ,
             toast({
                 title: "Password updated successfully",
-                description: "You can now log in with your new password.",
-            }) ;
+                description: "You can now log in with your new password."
+            }) ,
             // Clean auth state and redirect after a delay
-            cleanupAuthState () ;
+            cleanupAuthState () ,
             setTimeout(() => {
-                router("/login") ;
-            }, 3000) ;
+                router("/login") ,
+            }, 3000) ,
         }
         catch(error) {
-            // // // // // // // console.error("Password update error:", error) ;
+            // // // // // // // console.error("Password update error:", error) ,
             toast({
                 title: "Password update failed",
                 description: error.message || "An unexpected error occurred",
-                variant: "destructive",
-            }) ;
+                variant: "destructive"
+            }) ,
             setError(error.message || "An unexpected error occurred") }
         finally {
             setIsLoading(false) }
-    };
+    },
     const onInvalid = (errors) => {
-        const firstError = Object.keys(errors) [0];
+        const firstError = Object.keys(errors) [0],
         if(firstError) {
             form.setFocus(firstError) }
-    };
+    },
     return (<>
 
       <div className="flex min - h-screen bg-zion -blue">

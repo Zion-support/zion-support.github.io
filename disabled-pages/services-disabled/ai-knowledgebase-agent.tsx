@@ -1,5 +1,5 @@
-import { Helmet  } from 'react-helmet-async.ts';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet  } from 'react-helmet-async.ts',
+import { Link  } from 'react-router-dom.ts',
 export default function AIKnowledgebaseAgent(...args: any[]): any {,
   return (,
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">,
@@ -29,6 +29,5 @@ export default function AIKnowledgebaseAgent(...args: any[]): any {,
           <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>,
         </div>,
       </main>,
-    </div>,
-  ),}
+    </div>)}
 ,

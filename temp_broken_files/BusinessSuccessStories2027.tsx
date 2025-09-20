@@ -1,145 +1,145 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Users,
   Award,
   DollarSign,
   Clock,
-  Target;
-  ChevronLeft;
-  ChevronRight;
-  Play;
-  BarChart3;
-  Zap;
-  Brain;
-  Rocket;
-  Shield;
-  Globe;
-  Star;
-  Quote;
-  ArrowRight;
-  CheckCircle,
-} from 'lucide-react';
+  Target,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  BarChart3,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Globe,
+  Star,
+  Quote,
+  ArrowRight,
+  CheckCircle
+} from 'lucide-react',
 const BusinessSuccessStories2027 = () => {,
-  const [currentStorysetCurrentStory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isPlayingsetIsPlaying] = useState(false);
+  const [currentStorysetCurrentStory] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isPlayingsetIsPlaying] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const successStories = [,
     {,
-      id: 1;
-      company: 'TechCorp Global';
-      industry: 'Technology';
-      logo: 'TC';
-      color: 'from-blue-600 to-purple-600';
-      challenge: 'Manual processes causing 40% efficiency loss';
-      solution: 'Implemented AI-powered automation suite';
+      id: 1,
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      logo: 'TC',
+      color: 'from-blue-600 to-purple-600',
+      challenge: 'Manual processes causing 40% efficiency loss',
+      solution: 'Implemented AI-powered automation suite',
       results: {,
-        efficiency: '+400%';
-        costSavings: '$2.3M';
-        timeSaved: '15,000 hours';
-        roi: '850%',};
+        efficiency: '+400%',
+        costSavings: '$2.3M',
+        timeSaved: '15,000 hours',
+        roi: '850%'},
       testimonial: {,
-        name: 'Sarah Chen';
-        role: 'CEO';
-        content: 'The transformation has been extraordinary. We\'ve achieved levels of efficiency we never thought possible.';
-        rating: 5,};
+        name: 'Sarah Chen',
+        role: 'CEO',
+        content: 'The transformation has been extraordinary. We\'ve achieved levels of efficiency we never thought possible.',
+        rating: 5},
       metrics: [,
-        { label: 'Process 'Automationvalue: '95%'icon: Zap ,};
-        { label: 'Error 'Reductionvalue: '98%'icon: Shield ,};
-        { label: 'Customer 'Satisfactionvalue: '99.2%'icon: Users ,};
-        { label: 'Revenue 'Growthvalue: '+340%'icon: TrendingUp ,}
-      ];
-      timeline: [,
-        { month: 'Month 1'milestone: 'Initial AI 'Integrationstatus: 'completed' ,};
-        { month: 'Month 3'milestone: 'First Automation 'Wavestatus: 'completed' ,};
-        { month: 'Month 6'milestone: 'Full System 'Deploymentstatus: 'completed' ,};
-        { month: 'Month 12'milestone: '850% ROI 'Achievedstatus: 'completed' ,}
+        { label: 'Process 'Automationvalue: '95%'icon: Zap },
+        { label: 'Error 'Reductionvalue: '98%'icon: Shield },
+        { label: 'Customer 'Satisfactionvalue: '99.2%'icon: Users },
+        { label: 'Revenue 'Growthvalue: '+340%'icon: TrendingUp }
       ],
-    };
+      timeline: [,
+        { month: 'Month 1'milestone: 'Initial AI 'Integrationstatus: 'completed' },
+        { month: 'Month 3'milestone: 'First Automation 'Wavestatus: 'completed' },
+        { month: 'Month 6'milestone: 'Full System 'Deploymentstatus: 'completed' },
+        { month: 'Month 12'milestone: '850% ROI 'Achievedstatus: 'completed' }
+      ]
+    },
     {,
-      id: 2;
-      company: 'InnovateLabs';
-      industry: 'Research & Development';
-      logo: 'IL';
-      color: 'from-green-600 to-teal-600';
-      challenge: 'Research bottlenecks limiting innovation speed';
-      solution: 'Deployed quantum AI processing for complex analysis';
+      id: 2,
+      company: 'InnovateLabs',
+      industry: 'Research & Development',
+      logo: 'IL',
+      color: 'from-green-600 to-teal-600',
+      challenge: 'Research bottlenecks limiting innovation speed',
+      solution: 'Deployed quantum AI processing for complex analysis',
       results: {,
-        efficiency: '+600%';
-        costSavings: '$1.8M';
-        timeSaved: '8,500 hours';
-        roi: '720%',};
+        efficiency: '+600%',
+        costSavings: '$1.8M',
+        timeSaved: '8,500 hours',
+        roi: '720%'},
       testimonial: {,
-        name: 'Dr. Michael Rodriguez';
-        role: 'CTO';
-        content: 'Our research capabilities have been revolutionized. We\'re solving problems that used to take months in days.';
-        rating: 5,};
+        name: 'Dr. Michael Rodriguez',
+        role: 'CTO',
+        content: 'Our research capabilities have been revolutionized. We\'re solving problems that used to take months in days.',
+        rating: 5},
       metrics: [,
-        { label: 'Research 'Speedvalue: '+600%'icon: Brain ,};
-        { label: 'Data 'Processingvalue: '1000x 'fastericon: BarChart3 ,};
-        { label: 'Breakthrough 'Ratevalue: '+450%'icon: Rocket ,};
-        { label: 'Patent 'Applicationsvalue: '+280%'icon: Award ,}
-      ];
-      timeline: [,
-        { month: 'Month 1'milestone: 'Quantum AI 'Setupstatus: 'completed' ,};
-        { month: 'Month 2'milestone: 'First 'Breakthroughstatus: 'completed' ,};
-        { month: 'Month 4'milestone: 'Full 'Integrationstatus: 'completed' ,};
-        { month: 'Month 8'milestone: '720% ROI 'Achievedstatus: 'completed' ,}
+        { label: 'Research 'Speedvalue: '+600%'icon: Brain },
+        { label: 'Data 'Processingvalue: '1000x 'fastericon: BarChart3 },
+        { label: 'Breakthrough 'Ratevalue: '+450%'icon: Rocket },
+        { label: 'Patent 'Applicationsvalue: '+280%'icon: Award }
       ],
-    };
+      timeline: [,
+        { month: 'Month 1'milestone: 'Quantum AI 'Setupstatus: 'completed' },
+        { month: 'Month 2'milestone: 'First 'Breakthroughstatus: 'completed' },
+        { month: 'Month 4'milestone: 'Full 'Integrationstatus: 'completed' },
+        { month: 'Month 8'milestone: '720% ROI 'Achievedstatus: 'completed' }
+      ]
+    },
     {,
-      id: 3;
-      company: 'FutureTech Industries';
-      industry: 'Manufacturing';
-      logo: 'FT';
-      color: 'from-orange-600 to-red-600';
-      challenge: 'Production delays and quality control issues';
-      solution: 'Neural interface system for predictive maintenance';
+      id: 3,
+      company: 'FutureTech Industries',
+      industry: 'Manufacturing',
+      logo: 'FT',
+      color: 'from-orange-600 to-red-600',
+      challenge: 'Production delays and quality control issues',
+      solution: 'Neural interface system for predictive maintenance',
       results: {,
-        efficiency: '+350%';
-        costSavings: '$3.1M';
-        timeSaved: '22,000 hours';
-        roi: '920%',};
+        efficiency: '+350%',
+        costSavings: '$3.1M',
+        timeSaved: '22,000 hours',
+        roi: '920%'},
       testimonial: {,
-        name: 'Emily Watson';
-        role: 'Operations Director';
-        content: 'The predictive capabilities are incredible. We\'ve virtually eliminated unplanned downtime.';
-        rating: 5,};
+        name: 'Emily Watson',
+        role: 'Operations Director',
+        content: 'The predictive capabilities are incredible. We\'ve virtually eliminated unplanned downtime.',
+        rating: 5},
       metrics: [,
-        { label: ''Uptimevalue: '99.8%'icon: Clock ,};
-        { label: 'Quality 'Scorevalue: '99.9%'icon: Award ,};
-        { label: 'Maintenance 'Costvalue: '-75%'icon: DollarSign ,};
-        { label: 'Production 'Outputvalue: '+350%'icon: Target ,}
-      ];
-      timeline: [,
-        { month: 'Month 1'milestone: 'Neural Interface 'Installationstatus: 'completed' ,};
-        { month: 'Month 2'milestone: 'Predictive Model 'Trainingstatus: 'completed' ,};
-        { month: 'Month 4'milestone: 'Full Production 'Integrationstatus: 'completed' ,};
-        { month: 'Month 10'milestone: '920% ROI 'Achievedstatus: 'completed' ,}
+        { label: ''Uptimevalue: '99.8%'icon: Clock },
+        { label: 'Quality 'Scorevalue: '99.9%'icon: Award },
+        { label: 'Maintenance 'Costvalue: '-75%'icon: DollarSign },
+        { label: 'Production 'Outputvalue: '+350%'icon: Target }
       ],
+      timeline: [,
+        { month: 'Month 1'milestone: 'Neural Interface 'Installationstatus: 'completed' },
+        { month: 'Month 2'milestone: 'Predictive Model 'Trainingstatus: 'completed' },
+        { month: 'Month 4'milestone: 'Full Production 'Integrationstatus: 'completed' },
+        { month: 'Month 10'milestone: '920% ROI 'Achievedstatus: 'completed' }
+      ]
     }
-  ];
-  const currentStoryData = successStories[currentStory];
+  ],
+  const currentStoryData = successStories[currentStory],
   const nextStory = () => {,
-    setCurrentStory((prev) => (prev + 1) % successStories.length);
-  };
+    setCurrentStory((prev) => (prev + 1) % successStories.length),
+  },
   const prevStory = () => {,
-    setCurrentStory((prev) => (prev - 1 + successStories.length) % successStories.length);
-  };
+    setCurrentStory((prev) => (prev - 1 + successStories.length) % successStories.length),
+  },
   useEffect(() => {,
     if (isPlaying) {,
-      const interval = setInterval(nextStory5000);
-      return () => clearInterval(interval);
+      const interval = setInterval(nextStory5000),
+      return () => clearInterval(interval),
     }
-  }[isPlaying]);
+  }[isPlaying]),
   const getStatusIcon = (status) => {,
-    return <CheckCircle className="w-4 h-4 text-green-400" />;
-  };
+    return <CheckCircle className="w-4 h-4 text-green-400" />,
+  },
   return (,
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -148,9 +148,8 @@ const BusinessSuccessStories2027 = () => {,
         <div,
           className="absolute top-0 left-0 w-full h-full",
             background: [,
-              'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.2) 0%transparent 50%)';
-              'radial-gradient(circle at 40% 80%rgba(1202192550.2) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
-            ],
+              'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.2) 0%transparent 50%)radial-gradient(circle at 40% 80%rgba(1202192550.2) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)'
+            ]
           }}
         />,
       </div>,
@@ -177,7 +176,7 @@ const BusinessSuccessStories2027 = () => {,
             revolutionary AI and automation solutions. Real storiesreal resultsreal transformation.,
           </p>,
         </div>,
-        {/* Story Navigation */,}
+        {/* Story Navigation */}
         <div,
           className="flex justify-center mb-8",
         >,
@@ -191,10 +190,10 @@ const BusinessSuccessStories2027 = () => {,
             <div className="flex gap-2">,
               {successStories.map((_index) => (,
                 <button,
-                  key={index,}
+                  key={index}
                   onClick={() => setCurrentStory(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${,
-                    index === currentStory ? 'bg-purple-400' : 'bg-white/30',
+                    index === currentStory ? 'bg-purple-400' : 'bg-white/30'
                   }`}
                 />,
               ))}
@@ -206,9 +205,9 @@ const BusinessSuccessStories2027 = () => {,
               <ChevronRight className="w-6 h-6 text-white" />,
             </button>,
             <button,
-              onClick={() => setIsPlaying(!isPlaying),}
+              onClick={() => setIsPlaying(!isPlaying)}
               className={`p-3 rounded-full transition-all duration-300 ${,
-                isPlaying ? 'bg-purple-600' : 'bg-white/10',
+                isPlaying ? 'bg-purple-600' : 'bg-white/10'
               }`}
             >,
               <Play className={`w-6 h-6 text-white ${isPlaying ? 'animate-pulse' : ''}`} />,
@@ -231,7 +230,7 @@ const BusinessSuccessStories2027 = () => {,
               </div>,
             </div>,
             <div className="grid lg: grid-cols-2 gap-8">,
-              {/* Challenge & Solution */,}
+              {/* Challenge & Solution */}
               <div>,
                 <div className="mb-6">,
                   <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">,
@@ -258,8 +257,7 @@ const BusinessSuccessStories2027 = () => {,
                     </div>,
                     <div className="flex items-center gap-1">,
                       {[...Array(currentStoryData.testimonial.rating)].map((_i) => (,
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />,
-                      ))}
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />))}
                     </div>,
                   </div>,
                 </div>,
@@ -297,8 +295,7 @@ const BusinessSuccessStories2027 = () => {,
                         <span className="text-gray-300">{metric.label}</span>,
                       </div>,
                       <span className="text-white font-semibold">{metric.value}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
@@ -310,7 +307,7 @@ const BusinessSuccessStories2027 = () => {,
               </h4>,
               <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
                 {currentStoryData.timeline.map((itemindex) => (,
-                  <div key={index,} className="p-4 rounded-lg bg-white/5 border border-white/10">,
+                  <div key={index} className="p-4 rounded-lg bg-white/5 border border-white/10">,
                     <div className="flex items-center gap-2 mb-2">,
                       {getStatusIcon(item.status)}
                       <span className="text-sm font-semibold text-white">{item.month}</span>,
@@ -346,5 +343,5 @@ const BusinessSuccessStories2027 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default BusinessSuccessStories2027;
+  )},
+export default BusinessSuccessStories2027,

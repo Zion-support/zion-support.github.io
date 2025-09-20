@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function AutomationHealthPage() {
   const automationSystems = [
@@ -87,7 +87,7 @@ export default function AutomationHealthPage() {
         errors: 2
       }
     }
-  ];
+  ],
 
   const overallMetrics = {
     totalSystems: automationSystems.length,
@@ -98,25 +98,25 @@ export default function AutomationHealthPage() {
     totalAutomations: 227,
     totalPages: 2960,
     totalComponents: 12
-  };
+  },
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'healthy': return 'text-green-400 border-green-400/30 bg-green-500/20';
-      case 'warning': return 'text-yellow-400 border-yellow-400/30 bg-yellow-500/20';
-      case 'critical': return 'text-red-400 border-red-400/30 bg-red-500/20';
-      default: return 'text-gray-400 border-gray-400/30 bg-gray-500/20';
+      case 'healthy': return 'text-green-400 border-green-400/30 bg-green-500/20',
+      case 'warning': return 'text-yellow-400 border-yellow-400/30 bg-yellow-500/20',
+      case 'critical': return 'text-red-400 border-red-400/30 bg-red-500/20',
+      default: return 'text-gray-400 border-gray-400/30 bg-gray-500/20'
     }
-  };
+  },
 
   const getPerformanceColor = (performance: string) => {
     switch (performance) {
-      case 'excellent': return 'text-green-400';
-      case 'good': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
+      case 'excellent': return 'text-green-400',
+      case 'good': return 'text-yellow-400',
+      case 'poor': return 'text-red-400',
+      default: return 'text-gray-400'
     }
-  };
+  },
 
   return (
     <>
@@ -326,5 +326,5 @@ export default function AutomationHealthPage() {
         </main>
       </div>
     </>
-  );
+  ),
 }

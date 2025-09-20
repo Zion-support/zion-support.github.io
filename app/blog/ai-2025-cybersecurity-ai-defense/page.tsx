@@ -1,12 +1,12 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
-import { CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import SEO from '../../../components/SEO',
+import Link from 'next/link',
+import { CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline',
 export const metadata = {,
-  title: 'AI-Powered Cybersecurity: Next-Generation Defense Against Advanced Threats';
-  description: 'Explore how AI is revolutionizing cybersecurity with autonomous threat detection, predictive analytics, and real-time response capabilities.';
-  keywords: 'AI cybersecurity, threat detection, autonomous security, predictive analytics, cybersecurity AI, security automation',
-};
+  title: 'AI-Powered Cybersecurity: Next-Generation Defense Against Advanced Threats',
+  description: 'Explore how AI is revolutionizing cybersecurity with autonomous threat detection, predictive analytics, and real-time response capabilities.',
+  keywords: 'AI cybersecurity, threat detection, autonomous security, predictive analytics, cybersecurity AI, security automation'
+},
 export default function AICybersecurityDefense() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -47,7 +47,7 @@ export default function AICybersecurityDefense() {,
         <div className="prose prose-lg max-w-none">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Cybersecurity Landscape is Evolving</h2>,
           <p className="text-lg text-gray-700 mb-6">,
-            Traditional cybersecurity approaches are no longer sufficient against modern threats. With 4.4 billion cyber attacks detected in 2024 alone;
+            Traditional cybersecurity approaches are no longer sufficient against modern threats. With 4.4 billion cyber attacks detected in 2024 alone,
             organizations need AI-powered solutions that can adapt, learn, and respond faster than human operators ever could.,
           </p>,
           <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">,
@@ -202,7 +202,7 @@ export default function AICybersecurityDefense() {,
             </div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white p-8 rounded-lg mb-8">,
           <h3 className="text-2xl font-bold mb-4">Strengthen Your Cybersecurity with AI</h3>,
           <p className="text-xl mb-6 opacity-90">,
@@ -224,7 +224,7 @@ export default function AICybersecurityDefense() {,
             </Link>,
           </div>,
         </div>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <div className="border-t pt-8">,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Content</h3>,
           <div className="grid md: grid-cols-3 gap-6">,
@@ -261,5 +261,4 @@ export default function AICybersecurityDefense() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

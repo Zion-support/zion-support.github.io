@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Search, 
+  Search,
   Filter, 
   Star, 
   Zap, 
@@ -28,18 +28,17 @@ import {
   Clock,
   DollarSign,
   BarChart3
-} from 'lucide-react';
-import { INNOVATIVE_SERVICES_2028 } from '../data/innovativeServices2028';
-
+} from "lucide-react";
+import { INNOVATIVE_SERVICES_2028 } from "../data/innovativeServices2028";
 const UltimateServicesShowcase2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [sortBy, setSortBy] = useState('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))],
 
   // Filter and sort services
   const filteredServices = INNOVATIVE_SERVICES_2028
@@ -55,17 +54,15 @@ const UltimateServicesShowcase2028: React.FC = () => {
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.price - b.price;
+          return a.price - b.price,
         case 'category':
-          return a.category.localeCompare(b.category);
+          return a.category.localeCompare(b.category),
         case 'innovation':
-          return a.innovationLevel === 'revolutionary' ? 1 : -1;
+          return a.innovationLevel === 'revolutionary' ? 1 : -1,
         case 'name':
-        default:
-          return a.title.localeCompare(b.title);
+        default: return a.title.localeCompare(b.title)
       }
     });
-
   const getCategoryIcon = (category: string) => {
     const icons: Record<string, React.ReactNode> = {
       'AI & Enterprise': <Brain className="w-5 h-5" />,
@@ -78,43 +75,35 @@ const UltimateServicesShowcase2028: React.FC = () => {
       'Project Management': <Rocket className="w-5 h-5" />,
       'Customer Support': <Users className="w-5 h-5" />,
       'Marketing Automation': <TrendingUp className="w-5 h-5" />
-    };
-    return icons[category] || <Sparkles className="w-5 h-5" />;
-  };
+    },
+    return icons[category] || <Sparkles className="w-5 h-5" />,
+  },
 
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'revolutionary':
         return 'from-purple-500 to-pink-500';
       case 'cutting-edge':
-        return 'from-blue-500 to-cyan-500';
-      default:
-        return 'from-green-500 to-emerald-500';
+        return 'from-blue-500 to-cyan-500',
+      default: return 'from-green-500 to-emerald-500'
     }
   };
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
+      y: 0,opacity: 1,transition: {
+        duration: 0.5,ease: "easeOut"
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Futuristic Animated Background */}
@@ -129,17 +118,14 @@ const UltimateServicesShowcase2028: React.FC = () => {
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 1, 0.3],
-                scale: [0.5, 1.5, 0.5],
+                scale: [0.5, 1.5, 0.5]
               }}
               transition={{
-                duration: 6 + i * 0.2,
-                repeat: Infinity,
-                delay: i * 0.1,
-                ease: "easeInOut"
+                duration: 6 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
               }}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -489,7 +475,6 @@ const UltimateServicesShowcase2028: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default UltimateServicesShowcase2028;

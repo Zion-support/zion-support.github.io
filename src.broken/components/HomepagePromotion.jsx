@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -10,7 +10,7 @@ export default function Page() {
 
                 staggerChildren: 0.2
 
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -25,10 +25,10 @@ export default function Page() {
 
                 duration: 0.6
 
-    };"
-    return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
+    },"
+    return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">,
       {/* Background Elements */}"
-      <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;"
+      <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>,"
       <div className="absolute inset-0 bg-quantum-mesh"></div>
 
       {/* Floating Elements */}"
@@ -164,5 +164,5 @@ export default function Page() {
     </section>)}
 '"
 =======
-import React from 'react';
+import React from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

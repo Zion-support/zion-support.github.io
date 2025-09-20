@@ -1,5 +1,5 @@
-import React from 'react';
-export default Security;
+import React from 'react',
+export default Security,
 
 const Security: React.FC = () => (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify -center">
     <div className="text-center text-white">
@@ -7,4 +7,4 @@ const Security: React.FC = () => (<div className="min - h-screen bg-gradient - t
       <p className="text-xl text-gray -300">
         Our commitment to security and compliance.</p>
     </div>
-  </div>) ;
+  </div>) ,

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Shield,
   Lock,
@@ -25,185 +25,120 @@ import {
   Clock,
   BarChart3,
   CreditCard
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function CybersecuritySolutions() {
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
-
   const securityServices = [
     {
-      icon: Shield,
-      title: "Threat Detection & Response",
-      description: "Advanced security monitoring and incident response to protect against cyber threats",
-      features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
+      icon: Shield,title: "Threat Detection & Response",description: "Advanced security monitoring and incident response to protect against cyber threats",features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
       color: "from-zion-red to-zion-orange"
-    },
+    };
     {
-      icon: Lock,
-      title: "Identity & Access Management",
-      description: "Secure authentication and authorization systems for your organization",
-      features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],
+      icon: Lock,title: "Identity & Access Management",description: "Secure authentication and authorization systems for your organization",features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],
       color: "from-zion-blue to-zion-cyan"
-    },
+    };
     {
-      icon: Eye,
-      title: "Security Auditing & Compliance",
-      description: "Comprehensive security assessments and compliance management",
-      features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],
+      icon: Eye,title: "Security Auditing & Compliance",description: "Comprehensive security assessments and compliance management",features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],
       color: "from-zion-purple to-zion-pink"
-    },
+    };
     {
-      icon: Network,
-      title: "Network Security",
-      description: "Protect your network infrastructure with advanced security measures",
-      features: ["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],
+      icon: Network,title: "Network Security",description: "Protect your network infrastructure with advanced security measures",features: ["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],
       color: "from-zion-green to-zion-emerald"
-    },
+    };
     {
-      icon: Database,
-      title: "Data Protection",
-      description: "Safeguard sensitive data with encryption and backup solutions",
-      features: ["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],
+      icon: Database,title: "Data Protection",description: "Safeguard sensitive data with encryption and backup solutions",features: ["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],
       color: "from-zion-yellow to-zion-orange"
-    },
+    };
     {
-      icon: Cloud,
-      title: "Cloud Security",
-      description: "Secure your cloud infrastructure and applications",
-      features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
+      icon: Cloud,title: "Cloud Security",description: "Secure your cloud infrastructure and applications",features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
       color: "from-zion-indigo to-zion-purple"
     }
   ];
-
   const threatTypes = [
-    { id: 'all', name: 'All Threats', icon: Shield },
-    { id: 'malware', name: 'Malware', icon: Bug },
-    { id: 'phishing', name: 'Phishing', icon: Target },
-    { id: 'ransomware', name: 'Ransomware', icon: Lock },
-    { id: 'ddos', name: 'DDoS Attacks', icon: Network },
+    { id: 'all', name: 'All Threats', icon: Shield };
+    { id: 'malware', name: 'Malware', icon: Bug };
+    { id: 'phishing', name: 'Phishing', icon: Target };
+    { id: 'ransomware', name: 'Ransomware', icon: Lock };
+    { id: 'ddos', name: 'DDoS Attacks', icon: Network };
     { id: 'insider', name: 'Insider Threats', icon: Users }
   ];
-
   const securityThreats = [
     {
-      title: "Advanced Persistent Threats (APTs)",
-      description: "Sophisticated, long-term cyber attacks targeting specific organizations",
-      type: "malware",
-      impact: "High",
-      solutions: ["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],
+      title: "Advanced Persistent Threats (APTs)",description: "Sophisticated, long-term cyber attacks targeting specific organizations",
+      type: "malware",impact: "High",solutions: ["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],
       icon: Target
-    },
+    };
     {
-      title: "Ransomware Attacks",
-      description: "Malicious software that encrypts data and demands payment for decryption",
-      type: "ransomware",
-      impact: "Critical",
-      solutions: ["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],
+      title: "Ransomware Attacks",description: "Malicious software that encrypts data and demands payment for decryption",type: "ransomware",impact: "Critical",solutions: ["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],
       icon: Lock
-    },
+    };
     {
-      title: "Social Engineering",
-      description: "Manipulation tactics to trick users into revealing sensitive information",
-      type: "phishing",
-      impact: "Medium",
-      solutions: ["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],
+      title: "Social Engineering",description: "Manipulation tactics to trick users into revealing sensitive information",type: "phishing",impact: "Medium",solutions: ["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],
       icon: Users
-    },
+    };
     {
-      title: "Distributed Denial of Service",
-      description: "Overwhelming systems with traffic to disrupt services",
-      type: "ddos",
-      impact: "Medium",
-      solutions: ["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],
+      title: "Distributed Denial of Service",description: "Overwhelming systems with traffic to disrupt services",type: "ddos",impact: "Medium",solutions: ["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],
       icon: Network
-    },
+    };
     {
-      title: "Insider Threats",
-      description: "Security risks from employees or contractors with access to systems",
-      type: "insider",
-      impact: "High",
-      solutions: ["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],
+      title: "Insider Threats",description: "Security risks from employees or contractors with access to systems",type: "insider",impact: "High",solutions: ["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],
       icon: Shield
-    },
+    };
     {
-      title: "Zero-Day Exploits",
-      description: "Unknown vulnerabilities exploited before security patches are available",
-      type: "malware",
-      impact: "Critical",
-      solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
+      title: "Zero-Day Exploits",description: "Unknown vulnerabilities exploited before security patches are available",type: "malware",impact: "Critical",solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
       icon: Bug
     }
   ];
-
   const complianceFrameworks = [
     {
-      name: "SOC 2 Type II",
-      description: "Service Organization Control 2 compliance for data security",
-      requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],
+      name: "SOC 2 Type II",description: "Service Organization Control 2 compliance for data security",requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],
       icon: ShieldCheck
-    },
+    };
     {
-      name: "ISO 27001",
-      description: "International standard for information security management",
-      requirements: ["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],
+      name: "ISO 27001",description: "International standard for information security management",requirements: ["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],
       icon: CheckCircle
-    },
+    };
     {
-      name: "GDPR",
-      description: "General Data Protection Regulation for EU data privacy",
-      requirements: ["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],
+      name: "GDPR",description: "General Data Protection Regulation for EU data privacy",requirements: ["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],
       icon: Lock
-    },
+    };
     {
-      name: "HIPAA",
-      description: "Health Insurance Portability and Accountability Act",
-      requirements: ["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],
+      name: "HIPAA",description: "Health Insurance Portability and Accountability Act",requirements: ["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],
       icon: Database
-    },
+    };
     {
-      name: "PCI DSS",
-      description: "Payment Card Industry Data Security Standard",
-      requirements: ["Card Data Protection", "Network Security", "Access Control", "Monitoring"],
+      name: "PCI DSS",description: "Payment Card Industry Data Security Standard",requirements: ["Card Data Protection", "Network Security", "Access Control", "Monitoring"],
       icon: CreditCard
-    },
+    };
     {
-      name: "NIST Cybersecurity Framework",
-      description: "U.S. government framework for cybersecurity risk management",
-      requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],
+      name: "NIST Cybersecurity Framework",description: "U.S. government framework for cybersecurity risk management",requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],
       icon: BarChart3
     }
   ];
-
   const securityMetrics = [
-    { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },
-    { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },
-    { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },
+    { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" };
+    { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" };
+    { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" };
     { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" }
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 };
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
+      opacity: 1,y: 0,transition: { duration: 0.6 }
     }
   };
-
   const filteredThreats = selectedThreat === 'all'
     ? securityThreats
-    : securityThreats.filter(threat => threat.type === selectedThreat);
+    : securityThreats.filter(threat => threat.type === selectedThreat),
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -267,7 +202,7 @@ export default function CybersecuritySolutions() {
               Comprehensive Security Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our cybersecurity solutions provide end-to-end protection for your digital assets,
+              Our cybersecurity solutions provide end-to-end protection for your digital assets;
               ensuring business continuity and regulatory compliance.
             </p>
           </motion.div>
@@ -343,7 +278,7 @@ export default function CybersecuritySolutions() {
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedThreat === threat.id
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
-                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
+                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover: bg-zion-slate-dark hover:text-white border border-zion-red/20'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -531,28 +466,16 @@ export default function CybersecuritySolutions() {
           >
             {[
               {
-                step: "01",
-                title: "Security Assessment",
-                description: "Evaluate current security posture and identify vulnerabilities",
-                icon: Eye
-              },
+                step: "01",title: "Security Assessment",description: "Evaluate current security posture and identify vulnerabilities",icon: Eye
+              };
               {
-                step: "02",
-                title: "Strategy Development",
-                description: "Design comprehensive security roadmap and policies",
-                icon: Target
-              },
+                step: "02",title: "Strategy Development",description: "Design comprehensive security roadmap and policies",icon: Target
+              };
               {
-                step: "03",
-                title: "Implementation",
-                description: "Deploy security solutions and configure protection systems",
-                icon: Shield
-              },
+                step: "03",title: "Implementation",description: "Deploy security solutions and configure protection systems",icon: Shield
+              };
               {
-                step: "04",
-                title: "Monitoring & Maintenance",
-                description: "Continuous security monitoring and regular updates",
-                icon: Monitor
+                step: "04",title: "Monitoring & Maintenance",description: "Continuous security monitoring and regular updates",icon: Monitor
               }
             ].map((phase, index) => (
               <motion.div
@@ -605,7 +528,7 @@ export default function CybersecuritySolutions() {
               >
                 Security Assessment
               </motion.button>
-              <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover: bg-zion-red hover:text-white transition-all duration-300">
                 Download Security Guide
               </button>
             </div>
@@ -613,5 +536,5 @@ export default function CybersecuritySolutions() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
-, []) ;
+, []) ,
     const generateReport = (issues) => {
 
-        const totalPages = 79; // From analysis report
-        const pagesWithIssues = issues.length;
-        const criticalIssues = issues.filter(i => i.severity === 'high').length;
-        const mediumIssues = issues.filter(i => i.severity === 'medium').length;
-        const lowIssues = issues.filter(i => i.severity === 'low').length;
+        const totalPages = 79, // From analysis report
+        const pagesWithIssues = issues.length,
+        const criticalIssues = issues.filter(i => i.severity === 'high').length,
+        const mediumIssues = issues.filter(i => i.severity === 'medium').length,
+        const lowIssues = issues.filter(i => i.severity === 'low').length,
         setReport({
 
             totalPages,
@@ -19,73 +19,73 @@ export default function Page() {
             averageContentLength: 5000, // Sample data
             pagesWithImages: 45, // Sample data
             pagesWithMetaDescriptions: 32, // Sample data
-            lastUpdated: new Date () }) };
+            lastUpdated: new Date () }) },
     const startAnalysis = async () => {
-        setIsAnalyzing(true) ;
+        setIsAnalyzing(true) ,
         // Simulate content analysis
-        await new Promise(resolve => setTimeout (resolve, 3000) ) ;
-        setIsAnalyzing(false) };
+        await new Promise(resolve => setTimeout (resolve, 3000) ) ,
+        setIsAnalyzing(false) },
     const getSeverityIcon = (severity) => {
 
         switch(severity) {
 
             case 'high':
-                return <AlertTriangle className="w-4 h-4 text-red-400"/>;
+                return <AlertTriangle className="w-4 h-4 text-red-400"/>,
             case 'medium':"
-                return <AlertTriangle className="w-4 h-4 text-yellow-400"/>;
+                return <AlertTriangle className="w-4 h-4 text-yellow-400"/>,
             case 'low':"
-                return <Info className="w-4 h-4 text-blue-400"/>;
+                return <Info className="w-4 h-4 text-blue-400"/>,
             default:"
                 return <Info className="w-4 h-4 text-gray-400"/>}
-    };
+    },
     const getSeverityColor = (severity) => {
 
         switch(severity) {
 
             case 'high':'
-                return 'text-red-400';
+                return 'text-red-400',
             case 'medium':'
-                return 'text-yellow-400';
+                return 'text-yellow-400',
             case 'low':'
-                return 'text-blue-400';
+                return 'text-blue-400',
             default:'
                 return 'text-gray-400'}
-    };
+    },
     const getStatusColor = (status) => {
 
         switch(status) {
 
             case 'resolved':'
-                return 'text-green-400';
+                return 'text-green-400',
             case 'in_progress':'
-                return 'text-yellow-400';
+                return 'text-yellow-400',
             case 'open':'
-                return 'text-red-400';
+                return 'text-red-400',
             default:'
                 return 'text-gray-400'}
-    };
+    },
     const filteredIssues = contentIssues.filter(issue => {
 
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesFilter && matchesSearch});
+            issue.description.toLowerCase().includes(searchTerm.toLowerCase()),
+        return matchesFilter && matchesSearch}),
     const getIssueTypeLabel = (type) => {
 
         switch(type) {
 
             case 'missing_title':'
-                return 'Missing Title';
+                return 'Missing Title',
             case 'missing_meta':'
-                return 'Missing Meta Description';
+                return 'Missing Meta Description',
             case 'no_headings':'
-                return 'No Headings';
+                return 'No Headings',
             case 'minimal_content':'
-                return 'Minimal Content';
+                return 'Minimal Content',
             case 'no_images':'
-                return 'No Images';
+                return 'No Images',
             default:
                 return type}
-    };
+    },
     return (<>
       {/* Floating Action Button */}"
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>"
@@ -249,7 +249,7 @@ export default function Page() {
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap">`
                             <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>
-                              {issue.status.replace('_',).charAt(0).toUpperCase() + issue.status.replace('_',).slice(1)}
+                              {issue.status.replace('_').charAt(0).toUpperCase() + issue.status.replace('_').slice(1)}
                             </span>
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap">"
@@ -312,6 +312,6 @@ export default function Page() {
             </div>
           </motion.div>
         </motion.div>)}
-    </>)};
-export default ContentQualityAnalyzer;
+    </>)},
+export default ContentQualityAnalyzer,
 }}}}}}'"`

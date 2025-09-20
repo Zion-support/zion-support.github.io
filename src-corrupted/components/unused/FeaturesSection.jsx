@@ -1,2 +1,2 @@
 
-export default FeaturesSection;
+export default FeaturesSection,

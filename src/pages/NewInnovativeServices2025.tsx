@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
+  Brain,
   GitFork, 
   Shield, 
   Users, 
@@ -115,91 +115,57 @@ import {
   Gamepad2 as Gamepad2Icon3,
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function NewInnovativeServices2025() {
   const featuredServices = [
     {
-      title: "AI Workflow Orchestrator",
-      description: "Transform business processes with AI-powered workflow automation and intelligent orchestration",
-      icon: WorkflowIcon,
-      category: "AI & Automation",
-      price: "From $299/month",
-      features: ["AI-powered process optimization", "Visual workflow designer", "Automated execution", "Performance analytics"],
-      link: "/services/ai-workflow-orchestrator",
-      color: "from-zion-cyan to-zion-purple",
-      popular: true
-    },
+      title: "AI Workflow Orchestrator",description: "Transform business processes with AI-powered workflow automation and intelligent orchestration",icon: WorkflowIcon,category: "AI & Automation",price: "From $299/month",features: ["AI-powered process optimization", "Visual workflow designer", "Automated execution", "Performance analytics"],
+      link: "/services/ai-workflow-orchestrator",color: "from-zion-cyan to-zion-purple",popular: true
+    };
     {
-      title: "AI Data Governance Platform",
-      description: "Secure, govern, and manage data with AI-powered compliance automation and intelligent protection",
-      icon: Shield,
-      category: "Data & Security",
-      price: "From $499/month",
-      features: ["AI-powered data discovery", "Advanced access control", "Data lineage tracking", "Compliance automation"],
-      link: "/services/ai-data-governance-platform",
-      color: "from-zion-purple to-zion-cyan",
-      popular: false
-    },
+      title: "AI Data Governance Platform",description: "Secure, govern, and manage data with AI-powered compliance automation and intelligent protection",
+      icon: Shield,category: "Data & Security",price: "From $499/month",features: ["AI-powered data discovery", "Advanced access control", "Data lineage tracking", "Compliance automation"],
+      link: "/services/ai-data-governance-platform",color: "from-zion-purple to-zion-cyan",popular: false
+    };
     {
-      title: "AI Customer Experience Analytics",
-      description: "Transform customer insights into actionable intelligence with AI-powered analytics and personalization",
-      icon: Brain,
-      category: "Customer Experience",
-      price: "From $399/month",
-      features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],
-      link: "/services/ai-customer-experience-analytics",
-      color: "from-zion-cyan to-zion-purple",
-      popular: false
+      title: "AI Customer Experience Analytics",description: "Transform customer insights into actionable intelligence with AI-powered analytics and personalization",icon: Brain,category: "Customer Experience",price: "From $399/month",features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],
+      link: "/services/ai-customer-experience-analytics",color: "from-zion-cyan to-zion-purple",popular: false
     }
   ];
-
   const serviceCategories = [
     {
-      name: "AI & Machine Learning",
-      icon: Brain,
-      description: "Cutting-edge AI solutions for business transformation",
-      services: [
-        "AI Workflow Orchestrator",
+      name: "AI & Machine Learning",icon: Brain,description: "Cutting-edge AI solutions for business transformation",services: [
+        "AI Workflow Orchestrator";
         "AI Data Governance Platform",
         "AI Customer Experience Analytics",
         "AI Project Management",
         "AI Financial Analytics"
       ],
       color: "from-zion-cyan to-zion-purple"
-    },
+    };
     {
-      name: "Data & Analytics",
-      icon: BarChart3,
-      description: "Advanced data solutions for informed decision-making",
-      services: [
-        "Data Governance Platform",
+      name: "Data & Analytics",icon: BarChart3,description: "Advanced data solutions for informed decision-making",services: [
+        "Data Governance Platform";
         "Customer Experience Analytics",
         "Business Intelligence",
         "Predictive Analytics",
         "Data Quality Management"
       ],
       color: "from-zion-purple to-zion-cyan"
-    },
+    };
     {
-      name: "Security & Compliance",
-      icon: Shield,
-      description: "Enterprise-grade security and compliance solutions",
-      services: [
-        "Data Governance Platform",
+      name: "Security & Compliance",icon: Shield,description: "Enterprise-grade security and compliance solutions",services: [
+        "Data Governance Platform";
         "Zero Trust Network Access",
         "Security Headers & CSP",
         "DSR Privacy Portal",
         "AI Cybersecurity Platform"
       ],
       color: "from-zion-cyan to-zion-green"
-    },
+    };
     {
-      name: "Business Process Automation",
-      icon: WorkflowIcon,
-      description: "Streamline operations with intelligent automation",
-      services: [
-        "AI Workflow Orchestrator",
+      name: "Business Process Automation",icon: WorkflowIcon,description: "Streamline operations with intelligent automation",services: [
+        "AI Workflow Orchestrator";
         "AI Project Management",
         "Customer Support Automation",
         "Email Automation",
@@ -208,30 +174,20 @@ export default function NewInnovativeServices2025() {
       color: "from-zion-purple to-zion-orange"
     }
   ];
-
   const benefits = [
     {
-      icon: TrendingUp,
-      title: "Increased Efficiency",
-      description: "Automate repetitive tasks and optimize workflows for 30-90% efficiency gains"
+      icon: TrendingUp,title: "Increased Efficiency",description: "Automate repetitive tasks and optimize workflows for 30-90% efficiency gains"
+    };
+    {
+      icon: DollarSign,title: "Cost Reduction",description: "Reduce operational costs through intelligent automation and process optimization"
+    };
+    {
+      icon: Users,title: "Enhanced Customer Experience",description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty"
     },
     {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      description: "Reduce operational costs through intelligent automation and process optimization"
-    },
-    {
-      icon: Users,
-      title: "Enhanced Customer Experience",
-      description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty"
-    },
-    {
-      icon: Shield,
-      title: "Improved Security",
-      description: "Advanced security measures and compliance automation protect your business and data"
+      icon: Shield,title: "Improved Security",description: "Advanced security measures and compliance automation protect your business and data"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       {/* Futuristic Animated Background */}
@@ -494,7 +450,7 @@ export default function NewInnovativeServices2025() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/50">
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-zion-slate-800/50">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -515,5 +471,5 @@ export default function NewInnovativeServices2025() {
         </section>
       </div>
     </div>
-  );
+  )
 }

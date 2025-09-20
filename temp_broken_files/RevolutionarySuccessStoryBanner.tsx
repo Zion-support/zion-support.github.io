@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 export default function RevolutionarySuccessStoryBanner() {,
   return (,
@@ -10,22 +10,22 @@ export default function RevolutionarySuccessStoryBanner() {,
       <div className="absolute inset-0 bg-black/10"></div>,
       {/* Floating Success Icons */}
       <div,
-          y: [0-10];
-          rotate: [050],}}
-          duration: 3;
-          repeat: Infinity;
-          ease: "easeInOut",}}
+          y: [0-10],
+          rotate: [050]}}
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut"}}
         className="absolute top-6 right-6 text-4xl",
       >,
         🎯,
       </div>,
       <div,
-          y: [010];
-          rotate: [0-50],}}
-          duration: 4;
-          repeat: Infinity;
-          ease: "easeInOut";
-          delay: 1,}}
+          y: [010],
+          rotate: [0-50]}}
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1}}
         className="absolute bottom-6 left-6 text-4xl",
       >,
         💰,
@@ -94,7 +94,7 @@ export default function RevolutionarySuccessStoryBanner() {,
             </a>,
           </div>,
         </div>,
-        {/* Success Metrics Bar */,}
+        {/* Success Metrics Bar */}
         <div,
           className="mt-8 bg-white/20 rounded-full h-3 overflow-hidden",
         >,
@@ -114,5 +114,5 @@ const function RevolutionarySuccessStoryBanner() { = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default function RevolutionarySuccessStoryBanner() {;)
+  )},
+export default function RevolutionarySuccessStoryBanner() {,)

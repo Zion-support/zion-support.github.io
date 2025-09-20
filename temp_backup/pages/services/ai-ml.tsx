@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, Cpu, Database, Zap, Shield, Rocket, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function AIMLServicesPage() {
   const services = [
@@ -42,14 +42,14 @@ export default function AIMLServicesPage() {
       icon: Rocket,
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "500+", label: "AI Models Deployed", icon: Brain },
     { number: "99.9%", label: "Accuracy Rate", icon: CheckCircle },
     { number: "24/7", label: "AI Monitoring", icon: Clock },
     { number: "2500%", label: "Average ROI", icon: TrendingUp }
-  ];
+  ],
 
 const ai-ml: React.FC = () => {
   return (
@@ -66,7 +66,7 @@ const ai-ml: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-ml;
+export default ai-ml,

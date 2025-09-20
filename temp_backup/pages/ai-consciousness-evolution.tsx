@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Star, Users, Target } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Target, Users, Globe, Star, ArrowRight } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
+import { Brain, Zap, Star, Users, Target } from 'lucide-react',
+import { motion } from 'framer-motion',
+import { Brain, Zap, Target, Users, Globe, Star, ArrowRight } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function AIConsciousnessEvolution() {
   return (
@@ -22,6 +22,6 @@ export default function AIConsciousnessEvolution() {
         </div>
       </div>
     </div>
-  );
-};
-export default UltimateTechRevolution2035;
+  ),
+},
+export default UltimateTechRevolution2035,

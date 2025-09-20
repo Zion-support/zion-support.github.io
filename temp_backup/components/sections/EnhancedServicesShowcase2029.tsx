@@ -1,13 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Star, Zap, Crown, Gem, Brain, 
   Atom, Rocket, Globe, Cpu, Database, Shield
-} from 'lucide-react';
-import { cuttingEdge2029Services } from '../../data/2029-cutting-edge-innovations';
-import { emergingTech2029Services } from '../../data/2029-emerging-tech-services';
-import { microSaas2029Services } from '../../data/2029-micro-saas-innovations';
+} from 'lucide-react',
+import { cuttingEdge2029Services } from '../../data/2029-cutting-edge-innovations',
+import { emergingTech2029Services } from '../../data/2029-emerging-tech-services',
+import { microSaas2029Services } from '../../data/2029-micro-saas-innovations',
 
 export default function EnhancedServicesShowcase2029() {
   const containerVariants = {
@@ -18,7 +18,7 @@ export default function EnhancedServicesShowcase2029() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -29,7 +29,7 @@ export default function EnhancedServicesShowcase2029() {
         duration: 0.6
       }
     }
-  };
+  },
 
   const categories = [
     {
@@ -53,7 +53,7 @@ export default function EnhancedServicesShowcase2029() {
       services: microSaas2029Services.slice(0, 4),
       description: 'Practical business solutions'
     }
-  ];
+  ],
 
 const EnhancedServicesShowcase2029: React.FC = () => {
   return (
@@ -61,7 +61,7 @@ const EnhancedServicesShowcase2029: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedServicesShowcase2029</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedServicesShowcase2029;
+export default EnhancedServicesShowcase2029,

@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Sparkles,
@@ -8,26 +8,26 @@ import {,
   Brain,
   Zap,
   TrendingUp,
-  X;
-  Star;
-  Rocket;
-  Target,
-} from 'lucide-react';
+  X,
+  Star,
+  Rocket,
+  Target
+} from 'lucide-react',
 const AIInnovationShowcase2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
   useEffect(() => {,
     // Check if banner was previously dismissed,
-    const dismissed = localStorage.getItem('ai-innovation-banner-dismissed');
+    const dismissed = localStorage.getItem('ai-innovation-banner-dismissed'),
     if (!dismissed) {,
-      setIsVisible(true);
+      setIsVisible(true),
     }
-  }[]);
+  }[]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-    localStorage.setItem('ai-innovation-banner-'dismissedtrue');
-  };
-  if (isDismissed || !isVisible) return null;
+    setIsDismissed(true),
+    localStorage.setItem('ai-innovation-banner-'dismissedtrue'),
+  },
+  if (isDismissed || !isVisible) return null,
   return (,
     <div>,
       <div,
@@ -35,7 +35,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {,
       >,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex items-center justify-between py-4">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div className="flex items-center gap-4">,
               <div className="flex items-center gap-2">,
                 <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">,
@@ -77,7 +77,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {,
                 <ArrowRight className="w-4 h-4" />,
               </a>,
               <button,
-                onClick={handleDismiss,}
+                onClick={handleDismiss}
                 className="p-2 text-white/60 hover: text-white hover:bg-white/10 rounded-full transition-all duration-300",
                 aria-label="Dismiss banner",
               >,
@@ -85,7 +85,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Mobile Features */,}
+          {/* Mobile Features */}
           <div className="md: hidden pb-4">,
             <div className="flex items-center justify-center gap-4 text-white/80">,
               <div className="flex items-center gap-1">,
@@ -106,26 +106,25 @@ const AIInnovationShowcase2025PromotionBanner = () => {,
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">,
           <div,
-              x: [0100];
-              opacity: [0.30.60.3],}}
-              duration: 4;
-              repeat: Infinity;
-              ease: "linear",}}
+              x: [0100],
+              opacity: [0.30.60.3]}}
+              duration: 4,
+              repeat: Infinity,
+              ease: "linear"}}
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl",
           />,
           <div,
-              x: [0-100];
-              opacity: [0.20.50.2],}}
-              duration: 6;
-              repeat: Infinity;
-              ease: "linear";
-              delay: 2,}}
+              x: [0-100],
+              opacity: [0.20.50.2]}}
+              duration: 6,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 2}}
             className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl",
           />,
         </div>,
       </div>,
-    </div>,
-  );
-};
-export default AIInnovationShowcase2025PromotionBanner;
+    </div>),
+},
+export default AIInnovationShowcase2025PromotionBanner,
 </div></div>,

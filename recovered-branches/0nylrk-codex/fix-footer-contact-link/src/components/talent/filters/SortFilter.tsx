@@ -1,9 +1,9 @@
 
 import {,
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
   return (,
     <div className="mb-6">,
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">,
@@ -21,6 +21,5 @@ import {,
           <SelectItem value="price-high">Price: High to Low</SelectItem>,
         </SelectContent>,
       </Select>,
-    </div>,
-  ),}
+    </div>)}
 ,

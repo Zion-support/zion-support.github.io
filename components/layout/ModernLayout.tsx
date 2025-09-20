@@ -1,18 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import ModernHeader from './ModernHeader';
-import ModernFooter from './ModernFooter';
+import React from 'react',
+import Head from 'next/head',
+import ModernHeader from './ModernHeader',
+import ModernFooter from './ModernFooter',
 
 interface ModernLayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
+  children: React.ReactNode,
+  title?: string,
+  description?: string,
+  keywords?: string,
+  canonical?: string
 }
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({ 
-  children, 
+  children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
@@ -97,7 +97,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <ModernFooter />
       </div>
     </>
-  );
-};
+  ),
+},
 
-export default ModernLayout;
+export default ModernLayout,

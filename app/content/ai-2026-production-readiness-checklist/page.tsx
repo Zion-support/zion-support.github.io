@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Production Readiness Checklist for Autonomous Agents | Zion Tech Group';
-  description: 'A practical, actionable checklist to prepare autonomous agent systems for reliable, secure, and observable production deployments.',
-};
+  title: 'AI 2026: Production Readiness Checklist for Autonomous Agents | Zion Tech Group',
+  description: 'A practical, actionable checklist to prepare autonomous agent systems for reliable, secure, and observable production deployments.'
+},
 export default function ProductionReadinessChecklist2026() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -55,6 +55,5 @@ export default function ProductionReadinessChecklist2026() {,
           <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Request Launch Review</Link>,
         </footer>,
       </article>,
-    </div>,
-  ),}
+    </div>)}
 ,

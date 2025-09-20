@@ -1,21 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react',
+import { motion } from 'framer-motion',
 
 interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  opacity: number;
-  color: string;
+  x: number,
+  y: number,
+  vx: number,
+  vy: number,
+  size: number,
+  opacity: number,
+  color: string
 }
 
 interface NeonGrid {
-  x: number;
-  y: number;
-  opacity: number;
-  scale: number;
+  x: number,
+  y: number,
+  opacity: number,
+  scale: number
 }
 
 const UltraFuturisticAnimatedBackground: React.FC = () => {
@@ -24,7 +24,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticAnimatedBackground</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticAnimatedBackground;
+export default UltraFuturisticAnimatedBackground,

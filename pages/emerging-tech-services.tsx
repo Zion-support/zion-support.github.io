@@ -1,12 +1,12 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState } from 'react';
-import { EMERGING_TECH_SERVICES_2027 } from '../data/emergingTechServices2027';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useState } from 'react',
+import { EMERGING_TECH_SERVICES_2027 } from '../data/emergingTechServices2027',
 
 const EmergingTechServices: NextPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<string>('innovation');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [sortBy, setSortBy] = useState<string>('innovation'),
 
   const categories = [
     { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },
@@ -15,45 +15,44 @@ const EmergingTechServices: NextPage = () => {
     { id: 'Biotechnology', name: 'Biotechnology', color: 'from-green-500 to-teal-600' },
     { id: 'Advanced AI', name: 'Advanced AI', color: 'from-orange-500 to-red-600' },
     { id: 'Energy Technology', name: 'Energy Technology', color: 'from-yellow-500 to-orange-600' }
-  ];
+  ],
 
   const filteredServices = EMERGING_TECH_SERVICES_2027.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.pricing.monthly - b.pricing.monthly;
+        return a.pricing.monthly - b.pricing.monthly,
       case 'innovation':
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1,
       case 'roi':
-        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
-      default:
-        return 0;
+        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]),
+      default: return 0
     }
-  });
+  }),
 
   const getInnovationColor = (level: string) => {
     switch (level) {
-      case 'Revolutionary': return 'from-red-500 to-pink-600';
-      case 'Breakthrough': return 'from-purple-500 to-indigo-600';
-      case 'Advanced': return 'from-blue-500 to-cyan-600';
-      default: return 'from-gray-500 to-gray-600';
+      case 'Revolutionary': return 'from-red-500 to-pink-600',
+      case 'Breakthrough': return 'from-purple-500 to-indigo-600',
+      case 'Advanced': return 'from-blue-500 to-cyan-600',
+      default: return 'from-gray-500 to-gray-600'
     }
-  };
+  },
 
   const getBadgeColor = (badge: string) => {
     switch (badge) {
-      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
-      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
-      default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
+      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600',
+      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600',
+      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600',
+      default: return 'bg-gradient-to-r from-gray-500 to-gray-600'
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
@@ -265,7 +264,7 @@ const EmergingTechServices: NextPage = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss how our revolutionary emerging technology services can transform your business and give you a competitive advantage in the digital age.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
@@ -282,7 +281,7 @@ const EmergingTechServices: NextPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default EmergingTechServices;
+export default EmergingTechServices,

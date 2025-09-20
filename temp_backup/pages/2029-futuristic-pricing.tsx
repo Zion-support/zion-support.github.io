@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Star, TrendingUp, Target,
@@ -11,13 +11,13 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Phone, Mail, MapPin,
   Check, X
-} from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services';
-import { quantumSpace2029Services } from '../data/2029-quantum-space-services';
-import { biotechEmerging2029Services } from '../data/2029-biotech-emerging-services';
-import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services';
+} from 'lucide-react',
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
+import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services',
+import { quantumSpace2029Services } from '../data/2029-quantum-space-services',
+import { biotechEmerging2029Services } from '../data/2029-biotech-emerging-services',
+import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services',
 
 export default function Futuristic2029Pricing() {
   const contactInfo = {
@@ -25,14 +25,14 @@ export default function Futuristic2029Pricing() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const allServices = [
     ...futuristic2029AIServices,
     ...quantumSpace2029Services,
     ...biotechEmerging2029Services,
     ...enterpriseIT2029Services
-  ];
+  ],
 
   const pricingTiers = [
     {
@@ -41,10 +41,8 @@ export default function Futuristic2029Pricing() {
       period: '/month',
       description: 'Perfect for small organizations and research institutions',
       features: [
-        'Basic service access',
-        'Standard support',
-        'Core features',
-        'Documentation access',
+        'Basic service accessStandard support',
+        'Core featuresDocumentation access',
         'Email support'
       ],
       color: 'from-blue-600 to-cyan-600',
@@ -56,12 +54,9 @@ export default function Futuristic2029Pricing() {
       period: '/month',
       description: 'Ideal for growing companies and research teams',
       features: [
-        'Advanced service access',
-        'Priority support',
-        'All features',
-        'Custom integrations',
-        'Phone & email support',
-        'Training sessions',
+        'Advanced service accessPriority support',
+        'All featuresCustom integrations',
+        'Phone & email supportTraining sessions',
         'API access'
       ],
       color: 'from-purple-600 to-pink-600',
@@ -73,19 +68,15 @@ export default function Futuristic2029Pricing() {
       period: '/month',
       description: 'For large organizations requiring maximum capabilities',
       features: [
-        'Full service access',
-        '24/7 dedicated support',
-        'Custom development',
-        'White-label options',
-        'Dedicated account manager',
-        'On-site training',
-        'Custom compliance',
-        'SLA guarantees'
+        'Full service access24/7 dedicated support',
+        'Custom developmentWhite-label options',
+        'Dedicated account managerOn-site training',
+        'Custom complianceSLA guarantees'
       ],
       color: 'from-red-600 to-orange-600',
       popular: false
     }
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -112,7 +103,7 @@ export default function Futuristic2029Pricing() {
       color: 'from-red-600 to-orange-600',
       services: enterpriseIT2029Services
     }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -122,7 +113,7 @@ export default function Futuristic2029Pricing() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -133,7 +124,7 @@ export default function Futuristic2029Pricing() {
         duration: 0.5
       }
     }
-  };
+  },
 
 const 2029-futuristic-pricing: React.FC = () => {
   return (
@@ -150,7 +141,7 @@ const 2029-futuristic-pricing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2029-futuristic-pricing;
+export default 2029-futuristic-pricing,

@@ -1,14 +1,14 @@
-import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube  } from 'lucide-react';
+import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube  } from 'lucide-react',
 export default function Page() {
- from '@/components / ui / badge';
- from '@/components / ui / button';
- from '@/components / ui / card';
- from '@/components / ui / input';
- from '../data/advancedAIServices';
- from '../data/innovativeITInfrastructure';
- from '../data/innovativeMicroSaasServices';
- from '../data/iotEdgeComputingServices';
-;
+ from '@/components / ui / badge',
+ from '@/components / ui / button',
+ from '@/components / ui / card',
+ from '@/components / ui / input',
+ from '../data/advancedAIServices',
+ from '../data/innovativeITInfrastructure',
+ from '../data/innovativeMicroSaasServices',
+ from '../data/iotEdgeComputingServices',
+,
     const getCategoryIcon = (category) => {
         const categoryIcons = {
   'AI & Analytics': <Brain className="h-5 w-5"/>,

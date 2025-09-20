@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const BlockchainTechnologyInModernBusinessSolutionsChat = () => {
   return (
@@ -16,7 +16,7 @@ const BlockchainTechnologyInModernBusinessSolutionsChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default BlockchainTechnologyInModernBusinessSolutionsChat;
+export default BlockchainTechnologyInModernBusinessSolutionsChat,

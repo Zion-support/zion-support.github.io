@@ -9,8 +9,7 @@
         {resume.basic_info.summary && (,
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">,
             {resume.basic_info.summary}
-          </p>,
-        )}
+          </p>)}
 ,
         {resume.skills && resume.skills.length > 0 && (,
           <div className="flex flex-wrap gap-1 mt-2">,
@@ -21,16 +20,14 @@
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs",
               >,
                 {skill.name}
-              </Badge>,
-            ))}
+              </Badge>))}
             {resume.skills.length > 5 && (,
               <Badge,
                 variant="outline",
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs",
               >,
                 +{resume.skills.length - 5} more,
-              </Badge>,
-            )}
+              </Badge>)}
           </div>,
         )}
 ,

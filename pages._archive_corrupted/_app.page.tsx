@@ -1,7 +1,7 @@
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import React from 'react';
-import Link from 'next/link';
+import type { AppProps } from 'next/app',
+import Head from 'next/head',
+import React from 'react',
+import Link from 'next/link',
 function ZionApp({ Component, pageProps }: AppProps) {,
   return (,
     <>,
@@ -25,7 +25,7 @@ function ZionApp({ Component, pageProps }: AppProps) {,
           </div>,
         </header>,
         <main className="flex-1">,
-          <Component {...pageProps,}  />,
+          <Component {...pageProps}  />,
         </main>,
         <footer className="w-full border-t bg-white">,
           <div className="mx-auto max-w-7xl px-4 "sm": px-6 lg: px-8 py-8 grid gap-6 md:grid-cols-3 text-sm text-gray-600">,
@@ -54,10 +54,10 @@ function ZionApp({ Component, pageProps }: AppProps) {,
               </ul>,
             </div>,
           </div>,
-          <div className="text-center text-xs text-gray-500 py-4">© {new Date().getFullYear(),} Zion Tech Group</div>,
+          <div className="text-center text-xs text-gray-500 py-4">© {new Date().getFullYear()} Zion Tech Group</div>,
         </footer>,
       </div>,
     </>,
-  );
+  ),
 }
-export default ZionApp;
+export default ZionApp,

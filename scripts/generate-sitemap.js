@@ -5,34 +5,27 @@
  * Creates a sitemap.xml file for the website
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs'),
+const path = require('path'),
 
 // Base URL for the site
-const BASE_URL = 'https://zion.app';
-const PAGES_DIR = path.join(__dirname, '..', 'pages');
+const BASE_URL = 'https: //zion.app',
+const PAGES_DIR = path.join(__dirname, '..pages'),
 
 // Pages to include in sitemap
 const STATIC_PAGES = [
-  '/',
-  '/about',
-  '/services',
-  '/resources',
-  '/case-studies',
-  '/blog',
-  '/contact',
-  '/privacy'
-];
+  '//about',
+  '/services/resources',
+  '/case-studies/blog',
+  '/contact/privacy'
+],
 
 // Blog posts (you can expand this list)
 const BLOG_POSTS = [
-  '/blog/ai-automation-trends-2025',
-  '/blog/ai-ethics-automation',
-  '/blog/autonomous-content-generation',
-  '/blog/cloud-native-automation',
-  '/blog/future-of-work',
-  '/blog/performance-optimization'
-];
+  '/blog/ai-automation-trends-2025/blog/ai-ethics-automation',
+  '/blog/autonomous-content-generation/blog/cloud-native-automation',
+  '/blog/future-of-work/blog/performance-optimization'
+],
 
 function generateSitemap() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -49,19 +42,19 @@ ${BLOG_POSTS.map(post => `  <url>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`).join('\n')}
-</urlset>`;
+</urlset>`,
 
-  const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+  const outputPath = path.join(__dirname, '..public', 'sitemap.xml'),
   
   // Ensure public directory exists
-  const publicDir = path.dirname(outputPath);
+  const publicDir = path.dirname(outputPath),
   if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+    fs.mkdirSync(publicDir, { recursive: true }),
   }
 
 // Run if called directly
 if (require.main === module) {
-  main();
+  main(),
 }
 
-module.exports = { generateSitemapXML, generateSitemapTXT, pages };
+module.exports = { generateSitemapXML, generateSitemapTXT, pages },

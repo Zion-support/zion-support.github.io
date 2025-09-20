@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Sparkles,
   Zap,
@@ -8,53 +8,53 @@ import {,
   Rocket,
   Star,
   ArrowRight,
-  Play;
-  Globe;
-  Shield;
-  Target;
-  Lightbulb;
-  TrendingUp;
-  Users;
-  Code,
-} from 'lucide-react';
+  Play,
+  Globe,
+  Shield,
+  Target,
+  Lightbulb,
+  TrendingUp,
+  Users,
+  Code
+} from 'lucide-react',
 const RevolutionaryTechShowcase2026Banner = () => {,
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentSlide((prev) => (prev + 1) % 3),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
   const slides = [,
     {,
-      title: "Neural Interface Revolution";
-      subtitle: "Direct Brain-Computer Integration";
-      description: "Experience the future of human-computer interaction with direct neural interfaces that enable thought-controlled computing.";
-      icon: Brain;
-      color: "from-purple-600 to-blue-600";
-      stats: "2.3M+ Users";
-      features: ["Thought Control"Real-time Processing"Zero Latency"],};
+      title: "Neural Interface Revolution",
+      subtitle: "Direct Brain-Computer Integration",
+      description: "Experience the future of human-computer interaction with direct neural interfaces that enable thought-controlled computing.",
+      icon: Brain,
+      color: "from-purple-600 to-blue-600",
+      stats: "2.3M+ Users",
+      features: ["Thought Control"Real-time Processing"Zero Latency"]},
     {,
-      title: "Quantum AI Fusion";
-      subtitle: "Exponential Processing Power";
-      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.";
-      icon: Zap;
-      color: "from-green-600 to-teal-600";
-      stats: "10,000x Faster";
-      features: ["Quantum Algorithms"Parallel Processing"Infinite Scalability"],};
+      title: "Quantum AI Fusion",
+      subtitle: "Exponential Processing Power",
+      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.",
+      icon: Zap,
+      color: "from-green-600 to-teal-600",
+      stats: "10,000x Faster",
+      features: ["Quantum Algorithms"Parallel Processing"Infinite Scalability"]},
     {,
-      title: "Synthetic Intelligence";
-      subtitle: "Consciousness-Level AI";
-      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.";
-      icon: Rocket;
-      color: "from-orange-600 to-red-600";
-      stats: "99.9% Accuracy";
-      features: ["Self-Learning"Creative Problem Solving"Emotional Intelligence"],}
-  ];
-  const currentSlideData = slides[currentSlide];
-  if (!isVisible) return null;
+      title: "Synthetic Intelligence",
+      subtitle: "Consciousness-Level AI",
+      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.",
+      icon: Rocket,
+      color: "from-orange-600 to-red-600",
+      stats: "99.9% Accuracy",
+      features: ["Self-Learning"Creative Problem Solving"Emotional Intelligence"]}
+  ],
+  const currentSlideData = slides[currentSlide],
+  if (!isVisible) return null,
   return (,
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">,
       {/* Animated Background */}
@@ -82,14 +82,14 @@ const RevolutionaryTechShowcase2026Banner = () => {,
             defining the next decade of human progress.,
           </p>,
         </div>,
-        {/* Main Showcase */,}
+        {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">,
           {/* Slide Content */}
             <div,
               key={currentSlide}
               className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center",
             >,
-              {/* Content */,}
+              {/* Content */}
               <div>,
                 <div className="flex items-center gap-3 mb-6">,
                   <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.color}`}>,
@@ -104,7 +104,7 @@ const RevolutionaryTechShowcase2026Banner = () => {,
                   </div>,
                 </div>,
                 <h4 className="text-4xl md: text-5xl font-bold text-white mb-6">,
-                  {currentSlideData.title,}
+                  {currentSlideData.title}
                 </h4>,
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">,
                   {currentSlideData.description}
@@ -113,12 +113,11 @@ const RevolutionaryTechShowcase2026Banner = () => {,
                 <div className="grid grid-cols-1 sm: grid-cols-3 gap-4 mb-8">,
                   {currentSlideData.features.map((featureindex) => (,
                     <div,
-                      key={index,}
+                      key={index}
                       className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center",
                     >,
                       <div className="text-white font-semibold">{feature}</div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Action Buttons */}
                 <div className="flex flex-col sm: flex-row gap-4">,
@@ -132,7 +131,7 @@ const RevolutionaryTechShowcase2026Banner = () => {,
                   </button>,
                 </div>,
               </div>,
-              {/* Visual */,}
+              {/* Visual */}
               <div className="relative">,
                 <div className={`relative bg-gradient-to-br ${currentSlideData.color} rounded-3xl p-8 aspect-square flex items-center justify-center`}>,
                   <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>,
@@ -161,7 +160,7 @@ const RevolutionaryTechShowcase2026Banner = () => {,
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${,
                   currentSlide === index,
                     ? 'bg-gradient-to-r from-purple-400 to-blue-400 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',}`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
               />,
             ))}
           </div>,
@@ -172,10 +171,10 @@ const RevolutionaryTechShowcase2026Banner = () => {,
         >,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">,
             {[,
-              { icon: Userslabel: "Active Users"value: "50M+" ,};
-              { icon: Globelabel: "Countries"value: "180+" ,};
-              { icon: Codelabel: "Technologies"value: "500+" ,};
-              { icon: Starlabel: "Success Rate"value: "99.9%" ,}
+              { icon: Userslabel: "Active Users"value: "50M+" },
+              { icon: Globelabel: "Countries"value: "180+" },
+              { icon: Codelabel: "Technologies"value: "500+" },
+              { icon: Starlabel: "Success Rate"value: "99.9%" }
             ].map((statindex) => (,
               <div,
                 key={index}
@@ -186,12 +185,11 @@ const RevolutionaryTechShowcase2026Banner = () => {,
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-gray-300 text-sm">{stat.label}</div>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default RevolutionaryTechShowcase2026Banner;
+  ),
+},
+export default RevolutionaryTechShowcase2026Banner,

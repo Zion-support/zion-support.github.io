@@ -1,3 +1,3 @@
 declare module 'class-variance-authority' {
-  export type VariantProps<T> = any;
+  export type VariantProps<T> = any,
 }

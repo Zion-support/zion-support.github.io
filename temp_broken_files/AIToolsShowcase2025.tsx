@@ -11,7 +11,7 @@
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                 selectedCategory === category,
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25',
-                  : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                  : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
             >,
               {category}
           ))}
@@ -23,27 +23,25 @@
           <div>,
             {filteredTools.map((toolindex) => (,
               <div,
-                key={tool.id,}
+                key={tool.id}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300",
-                onMouseEnter={() => setHoveredTool(tool.id),}
+                onMouseEnter={() => setHoveredTool(tool.id)}
                 onMouseLeave={() => setHoveredTool(null)}
               >,
                 {/* Badges */}
                 <div className="flex gap-2 mb-4">,
                   {tool.isNew && (,
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-medium">,
-                      NEW,
-                  )}
+                      NEW)}
                   {tool.isPopular && (,
                     <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">,
-                      POPULAR,
-                  )}
+                      POPULAR)}
                 {/* Icon */}
                 <div className="text-purple-400 mb-4 group-hover: scale-110 transition-transform duration-300">,
-                  {tool.icon,}
+                  {tool.icon}
                 {/* Content */}
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors duration-300">,
-                  {tool.name,}
+                  {tool.name}
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">,
                   {tool.description}
                 {/* Features */}
@@ -62,7 +60,7 @@
                         className={`w-4 h-4 ${,
                           i < Math.floor(tool.rating),
                             ? 'text-yellow-400 fill-current',
-                            : 'text-gray-600',
+                            : 'text-gray-600'
                         }`}
                       />,
                     ))}
@@ -73,10 +71,10 @@
                   <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover: shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2 group">,
                     Try Now,
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />,
-                {/* Hover Effect */,}
+                {/* Hover Effect */}
                 <div,
                   className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl opacity-0 group-hover: opacity-100 transition-opacity duration-300",
-                    opacity: hoveredTool === tool.id ? 1 : 0,}}
+                    opacity: hoveredTool === tool.id ? 1 : 0}}
                 />,
               </div>,
             ))}
@@ -97,7 +95,7 @@
                 Start Free Trial,
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">,
                 View All Tools,
-import React from "react";
+import React from "react",
 const function AIToolsShowcase2025() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -111,7 +109,7 @@ const function AIToolsShowcase2025() { = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-};
-export default function AIToolsShowcase2025() {;
+  )
+},
+export default function AIToolsShowcase2025() {,
 }

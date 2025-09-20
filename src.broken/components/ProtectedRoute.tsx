@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-import { Navigate, useLocation  } from 'react-router-dom';
+import { Navigate, useLocation  } from 'react-router-dom',
 
-import React from 'react';
+import React from 'react',
 export function SupportChatbot() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
+  ),
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
@@ -17,43 +17,43 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
-  const { user, isLoading } = useAuth();
-  const currentLocation = useLocation();
-  const { tenant } = useWhitelabel();
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
+  const { user, isLoading } = useAuth(),
+  const currentLocation = useLocation(),
+  const { tenant } = useWhitelabel(),
+  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id),
   
-  const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
+  const isCheckingPermissions = isLoading || isCheckingTenantAdmin,
 
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
-    </div>;
+    </div>,
   }
 
   // Redirect to login if not authenticated
   if (!user) {
-    const next = encodeURIComponent(currentLocation.pathname + currentLocation.search);
-    return <Navigate to={`/login?next=${next}`} />;
+    const next = encodeURIComponent(currentLocation.pathname + currentLocation.search),
+    return <Navigate to={`/login?next=${next}`} />,
   }
 
   // Check for admin access if required
   if (adminOnly) {
-    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin);
+    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin),
     
     if (!hasAdminAccess) {
-      return <Navigate to="/unauthorized" />;
+      return <Navigate to="/unauthorized" />,
     }
   }
   
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
-    return <Navigate to="/unauthorized" />;
+    return <Navigate to="/unauthorized" />,
   }
 
-  return <>{children}</>;
-};
+  return <>{children}</>,
+},
 
-export default ProtectedRoute;
+export default ProtectedRoute,
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

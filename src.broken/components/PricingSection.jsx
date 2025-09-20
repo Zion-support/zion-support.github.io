@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
+import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [import { motion  } from 'framer-motion',
 
 ,
     {
@@ -53,7 +53,7 @@ import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building
         popular: false,"
         cta: "Contact Sales"
 
-];
+],
 const addons = [{
 "
         name: "AI Model Training",
@@ -81,14 +81,14 @@ const addons = [{
         icon: <Users className="w-6 h-6"/>,"
         features["Custom dashboards", "Advanced reporting", "Data export options"]
     }
-];
+],
 export function PricingSection() {
 
-    const [billingPeriod, setBillingPeriod] = useState('month');
-    const [selectedPlan, setSelectedPlan] = useState(null);
+    const [billingPeriod, setBillingPeriod] = useState('month'),
+    const [selectedPlan, setSelectedPlan] = useState(null),
     const getDiscountedPrice = (price) => {
 
-        return billingPeriod === 'year' ? Math.round(price * 10) : price};
+        return billingPeriod === 'year' ? Math.round(price * 10) : price},
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -100,7 +100,7 @@ export function PricingSection() {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
 
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -116,7 +116,7 @@ export function PricingSection() {
                 duration: 0.6,"
                 ease: "easeOut"
 
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

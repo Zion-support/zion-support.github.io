@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
 import { 
-  Shield, 
+  Shield,
   FileText, 
   Target, 
   Zap, 
@@ -24,42 +24,28 @@ import {
   Calendar,
   AlertTriangle,
   Trash
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function DSRPortal() {
   const features = [
     {
-      icon: Shield,
-      title: "Data Subject Rights Management",
-      description: "Comprehensive management of GDPR, CCPA, and other privacy regulation rights."
+      icon: Shield,title: "Data Subject Rights Management",description: "Comprehensive management of GDPR, CCPA, and other privacy regulation rights."
     },
     {
-      icon: FileText,
-      title: "Automated Request Processing",
-      description: "AI-powered processing of data subject requests with intelligent routing."
-    },
+      icon: FileText,title: "Automated Request Processing",description: "AI-powered processing of data subject requests with intelligent routing."
+    };
     {
-      icon: Target,
-      title: "Data Discovery & Mapping",
-      description: "Automated discovery and mapping of personal data across systems."
-    },
+      icon: Target,title: "Data Discovery & Mapping",description: "Automated discovery and mapping of personal data across systems."
+    };
     {
-      icon: Zap,
-      title: "Compliance Workflows",
-      description: "Streamlined workflows for handling privacy requests and compliance tasks."
-    },
+      icon: Zap,title: "Compliance Workflows",description: "Streamlined workflows for handling privacy requests and compliance tasks."
+    };
     {
-      icon: BarChart3,
-      title: "Compliance Analytics",
-      description: "Real-time insights into privacy compliance and request processing metrics."
-    },
+      icon: BarChart3,title: "Compliance Analytics",description: "Real-time insights into privacy compliance and request processing metrics."
+    };
     {
-      icon: Lock,
-      title: "Secure Data Handling",
-      description: "Enterprise-grade security for sensitive personal data processing."
+      icon: Lock,title: "Secure Data Handling",description: "Enterprise-grade security for sensitive personal data processing."
     }
   ];
-
   const benefits = [
     "Ensure 100% GDPR and CCPA compliance with automated workflows",
     "Reduce response time to data subject requests by 80-90%",
@@ -67,64 +53,46 @@ export default function DSRPortal() {
     "Streamline data discovery and mapping processes by 70%",
     "Improve audit trail and compliance reporting efficiency",
     "Enhance customer trust through transparent data handling"
-  ];
+  ],
 
   const dataRights = [
     {
-      right: "Right to Access",
-      description: "Provide individuals with access to their personal data",
-      icon: Eye
-    },
+      right: "Right to Access",description: "Provide individuals with access to their personal data",icon: Eye
+    };
     {
-      right: "Right to Rectification",
-      description: "Allow individuals to correct inaccurate personal data",
-      icon: FileText
-    },
+      right: "Right to Rectification",description: "Allow individuals to correct inaccurate personal data",icon: FileText
+    };
     {
-      right: "Right to Erasure",
-      description: "Process requests to delete personal data (right to be forgotten)",
-      icon: Trash
-    },
+      right: "Right to Erasure",description: "Process requests to delete personal data (right to be forgotten)",icon: Trash
+    };
     {
-      right: "Right to Portability",
-      description: "Provide personal data in a structured, machine-readable format",
+      right: "Right to Portability",description: "Provide personal data in a structured, machine-readable format",
       icon: Download
-    },
+    };
     {
-      right: "Right to Restriction",
-      description: "Limit processing of personal data in certain circumstances",
-      icon: Lock
-    },
+      right: "Right to Restriction",description: "Limit processing of personal data in certain circumstances",icon: Lock
+    };
     {
-      right: "Right to Object",
-      description: "Allow individuals to object to processing of their data",
-      icon: AlertTriangle
+      right: "Right to Object",description: "Allow individuals to object to processing of their data",icon: AlertTriangle
     }
   ];
-
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Customer data management, order history, and preference handling"
+      industry: "E-commerce",description: "Customer data management, order history, and preference handling"
     },
     {
-      industry: "Financial Services",
-      description: "Account data, transaction history, and financial information management"
+      industry: "Financial Services",description: "Account data, transaction history, and financial information management"
     },
     {
-      industry: "Healthcare",
-      description: "Patient data, medical records, and health information privacy"
+      industry: "Healthcare",description: "Patient data, medical records, and health information privacy"
     },
     {
-      industry: "Technology & SaaS",
-      description: "User data, application usage, and service-related information"
+      industry: "Technology & SaaS",description: "User data, application usage, and service-related information"
     },
     {
-      industry: "Education",
-      description: "Student data, academic records, and educational service information"
+      industry: "Education",description: "Student data, academic records, and educational service information"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -390,7 +358,7 @@ export default function DSRPortal() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-indigo-400/30 text-indigo-300 font-semibold rounded-lg hover:bg-indigo-400/10 transition-all duration-300"
+                className="px-8 py-4 border border-indigo-400/30 text-indigo-300 font-semibold rounded-lg hover: bg-indigo-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -399,5 +367,5 @@ export default function DSRPortal() {
         </div>
       </section>
     </div>
-  );
+  )
 }

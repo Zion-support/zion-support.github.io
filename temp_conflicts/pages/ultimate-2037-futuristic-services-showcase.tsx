@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import Layout from '../components/layout/Layout';
-import UltraFuturisticServiceCard2037 from '../components/ui/UltraFuturisticServiceCard2037';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Layout from '../components/layout/Layout',
+import UltraFuturisticServiceCard2037 from '../components/ui/UltraFuturisticServiceCard2037',
+import { motion } from 'framer-motion',
 import { 
   Brain, Shield, Zap, Target, Atom, Star, 
   Globe, Cpu, Lock, Cloud,
   Search, Filter
-} from 'lucide-react';
-import { real2036Q1Additions } from '../data/real-2036-q1-additions';
-import { real2036Q2Additions } from '../data/real-2036-q2-additions';
+} from 'lucide-react',
+import { real2036Q1Additions } from '../data/real-2036-q1-additions',
+import { real2036Q2Additions } from '../data/real-2036-q2-additions',
 
 const Ultimate2037FuturisticServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
 
-  const allServices = [...real2036Q1Additions, ...real2036Q2Additions];
+  const allServices = [...real2036Q1Additions, ...real2036Q2Additions],
   
   const categories = [
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length, color: 'from-cyan-500 to-blue-500' },
@@ -25,48 +25,47 @@ const Ultimate2037FuturisticServicesShowcase: React.FC = () => {
     { id: 'cybersecurity', name: 'Security', icon: <Shield className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length, color: 'from-red-500 to-orange-500' },
     { id: 'edge', name: 'Edge AI', icon: <Cpu className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Edge')).length, color: 'from-green-500 to-emerald-500' },
     { id: 'neuromorphic', name: 'Neuromorphic',         icon: <Brain className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Neuromorphic')).length, color: 'from-pink-500 to-rose-500' }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-      service.name.toLowerCase().includes(selectedCategory.toLowerCase());
+      service.name.toLowerCase().includes(selectedCategory.toLowerCase()),
     
     const matchesSearch = searchQuery === '' || 
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),
     
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch,
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) || b.customers - a.customers;
-      default:
-        return 0;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) || b.customers - a.customers,
+      default: return 0
     }
-  });
+  }),
 
   const getServiceVariant = (service: { category: string }) => {
-    if (service.category.includes('Quantum')) return 'quantum';
-    if (service.category.includes('Automation')) return 'automation';
-    if (service.category.includes('Security') || service.category.includes('Cybersecurity')) return 'cybersecurity';
-    if (service.category.includes('Edge')) return 'edge';
-    if (service.category.includes('Neuromorphic')) return 'neuromorphic';
-    return 'ai';
-  };
+    if (service.category.includes('Quantum')) return 'quantum',
+    if (service.category.includes('Automation')) return 'automation',
+    if (service.category.includes('Security') || service.category.includes('Cybersecurity')) return 'cybersecurity',
+    if (service.category.includes('Edge')) return 'edge',
+    if (service.category.includes('Neuromorphic')) return 'neuromorphic',
+    return 'ai',
+  },
 
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
-  const latestServices = allServices.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()).slice(0, 6);
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
+  const latestServices = allServices.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()).slice(0, 6),
 
   return (
     <Layout>
@@ -146,7 +145,7 @@ const Ultimate2037FuturisticServicesShowcase: React.FC = () => {
                 className="px-10 py-5 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Services Showcase Inquiry', '_blank')}
+                onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Services Showcase Inquiry_blank')}
               >
                 Contact Sales
               </motion.button>
@@ -402,7 +401,7 @@ const Ultimate2037FuturisticServicesShowcase: React.FC = () => {
                   className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Services Showcase - Get Started', '_blank')}
+                  onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Services Showcase - Get Started_blank')}
                 >
                   Get Started Today
                 </motion.button>
@@ -410,7 +409,7 @@ const Ultimate2037FuturisticServicesShowcase: React.FC = () => {
                   className="px-10 py-5 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open('tel:+13024640950', '_blank')}
+                  onClick={() => window.open('tel:+13024640950_blank')}
                 >
                   Call +1 302 464 0950
                 </motion.button>
@@ -420,7 +419,7 @@ const Ultimate2037FuturisticServicesShowcase: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  ),
+},
 
-export default Ultimate2037FuturisticServicesShowcase;
+export default Ultimate2037FuturisticServicesShowcase,

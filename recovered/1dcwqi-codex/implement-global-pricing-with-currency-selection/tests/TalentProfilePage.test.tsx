@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import TalentProfilePage from '@/pages/talent/[id]';
-import { mockFetch } from './__mocks__/server';
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter, Route, Routes } from 'react-router-dom',
+import TalentProfilePage from '@/pages/talent/[id]',
+import { mockFetch } from './__mocks__/server',
 
 describe('TalentProfilePage', () => {
   it('fetches and displays profile name', async () => {
@@ -14,7 +14,7 @@ describe('TalentProfilePage', () => {
         hourly_rate: 100,
         social: { twitter: 'https://twitter.com/test' }
       }
-    });
+    }),
 
     render(
       <MemoryRouter initialEntries={['/talent/t-001']}>
@@ -22,8 +22,8 @@ describe('TalentProfilePage', () => {
           <Route path="/talent/:id" element={<TalentProfilePage />} />
         </Routes>
       </MemoryRouter>
-    );
+    ),
 
-    expect(await screen.findByTestId('profile-name')).toHaveTextContent('Test Talent');
-  });
-});
+    expect(await screen.findByTestId('profile-name')).toHaveTextContent('Test Talent'),
+  }),
+}),

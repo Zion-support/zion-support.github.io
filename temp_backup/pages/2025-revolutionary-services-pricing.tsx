@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Zap, Star, Globe, Lock, Cloud, Database,
   DollarSign, Users, Crown, Sparkles
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import all our revolutionary services
-import { advancedAIAutonomousEcosystemServices2025 } from '../data/2025-advanced-ai-autonomous-ecosystem-services';
-import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
-import { revolutionaryMicroSaasInnovations2025 } from '../data/2025-revolutionary-micro-saas-innovations';
-import { emergingTechnologyBreakthroughs2025 } from '../data/2025-emerging-technology-breakthroughs';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+import { advancedAIAutonomousEcosystemServices2025 } from '../data/2025-advanced-ai-autonomous-ecosystem-services',
+import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations',
+import { revolutionaryMicroSaasInnovations2025 } from '../data/2025-revolutionary-micro-saas-innovations',
+import { emergingTechnologyBreakthroughs2025 } from '../data/2025-emerging-technology-breakthroughs',
+import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions',
 
 // Combine all services
 const allRevolutionaryServices = [
@@ -22,7 +22,7 @@ const allRevolutionaryServices = [
   ...revolutionaryMicroSaasInnovations2025,
   ...emergingTechnologyBreakthroughs2025,
   ...specializedEnterpriseSolutions2025
-];
+],
 
 const pricingTiers = [
   {
@@ -31,12 +31,9 @@ const pricingTiers = [
     icon: <Target className="w-8 h-8" />,
     color: 'from-green-500 to-emerald-500',
     features: [
-      'Basic service access',
-      'Standard support',
-      'Core features',
-      'Community forum access',
-      'Basic analytics',
-      'Email support'
+      'Basic service accessStandard support',
+      'Core featuresCommunity forum access',
+      'Basic analyticsEmail support'
     ],
     popular: false
   },
@@ -46,14 +43,10 @@ const pricingTiers = [
     icon: <Users className="w-8 h-8" />,
     color: 'from-blue-500 to-purple-500',
     features: [
-      'All Starter features',
-      'Advanced features',
-      'Priority support',
-      'Team collaboration',
-      'Advanced analytics',
-      'Phone & email support',
-      'Custom integrations',
-      'Training sessions'
+      'All Starter featuresAdvanced features',
+      'Priority supportTeam collaboration',
+      'Advanced analyticsPhone & email support',
+      'Custom integrationsTraining sessions'
     ],
     popular: true
   },
@@ -63,14 +56,10 @@ const pricingTiers = [
     icon: <Crown className="w-8 h-8" />,
     color: 'from-purple-500 to-pink-500',
     features: [
-      'All Professional features',
-      'Custom development',
-      'Dedicated support manager',
-      'SLA guarantees',
-      'Custom integrations',
-      'On-site training',
-      'White-label options',
-      'Custom AI model training',
+      'All Professional featuresCustom development',
+      'Dedicated support managerSLA guarantees',
+      'Custom integrationsOn-site training',
+      'White-label optionsCustom AI model training',
       '24/7 priority support'
     ],
     popular: false
@@ -81,53 +70,48 @@ const pricingTiers = [
     icon: <Sparkles className="w-8 h-8" />,
     color: 'from-cyan-500 to-blue-500',
     features: [
-      'Everything in Enterprise',
-      'Custom architecture',
-      'Dedicated development team',
-      'Custom AI models',
-      'Exclusive features',
-      'Source code access',
-      'Custom deployment',
-      'Strategic partnership'
+      'Everything in EnterpriseCustom architecture',
+      'Dedicated development teamCustom AI models',
+      'Exclusive featuresSource code access',
+      'Custom deploymentStrategic partnership'
     ],
     popular: false
   }
-];
+],
 
-const ServicePricingCard = ({ service, tier }: { service: any; tier: string }) => {
+const ServicePricingCard = ({ service, tier }: { service: any, tier: string }) => {
   const getPricing = (tier: string) => {
     switch (tier) {
       case 'Starter':
-        return service.pricing.starter;
+        return service.pricing.starter,
       case 'Professional':
-        return service.pricing.professional || service.pricing.starter;
+        return service.pricing.professional || service.pricing.starter,
       case 'Enterprise':
-        return service.pricing.enterprise || service.pricing.professional || service.pricing.starter;
+        return service.pricing.enterprise || service.pricing.professional || service.pricing.starter,
       case 'Custom':
-        return service.pricing.custom || 'Contact for pricing';
+        return service.pricing.custom || 'Contact for pricing',
       default:
-        return service.pricing.starter;
+        return service.pricing.starter
     }
-  };
+  },
 
   const getFeatures = (tier: string) => {
-    const baseFeatures = service.features.slice(0, 4);
-    const advancedFeatures = service.features.slice(4, 8);
-    const enterpriseFeatures = service.features.slice(8, 12);
+    const baseFeatures = service.features.slice(0, 4),
+    const advancedFeatures = service.features.slice(4, 8),
+    const enterpriseFeatures = service.features.slice(8, 12),
 
     switch (tier) {
       case 'Starter':
-        return baseFeatures;
+        return baseFeatures,
       case 'Professional':
-        return [...baseFeatures, ...advancedFeatures];
+        return [...baseFeatures, ...advancedFeatures],
       case 'Enterprise':
-        return [...baseFeatures, ...advancedFeatures, ...enterpriseFeatures];
+        return [...baseFeatures, ...advancedFeatures, ...enterpriseFeatures],
       case 'Custom':
-        return service.features;
-      default:
-        return baseFeatures;
+        return service.features,
+      default: return baseFeatures
     }
-  };
+  },
 
 const 2025-revolutionary-services-pricing: React.FC = () => {
   return (
@@ -144,7 +128,7 @@ const 2025-revolutionary-services-pricing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2025-revolutionary-services-pricing;
+export default 2025-revolutionary-services-pricing,

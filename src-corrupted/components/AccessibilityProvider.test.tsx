@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react',
 const AccessibilityProvider.test: React.FC = () => {,
   return (,
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
       <h3 className="text-xl font-bold mb-4">AccessibilityProvider.test</h3>,
       <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
-export default AccessibilityProvider.test;
+    </div>)},
+export default AccessibilityProvider.test,

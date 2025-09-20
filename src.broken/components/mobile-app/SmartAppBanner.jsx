@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
+import React, { useState, useEffect } from 'react',
+import { safeStorage } from '@/utils/safeStorage',
 
 export default function Page() {
-, [isMobile, delay]);
+, [isMobile, delay]),
   const dismissBanner = () => {
-    setIsVisible(false);
-    safeStorage.setItem('smartBannerDismissed',true');
-  };
+    setIsVisible(false),
+    safeStorage.setItem('smartBannerDismissed',true'),
+  },
   const resetBanner = () => {
 
-    safeStorage.removeItem('smartBannerDismissed');
-    setIsVisible(true);
-  };
+    safeStorage.removeItem('smartBannerDismissed'),
+    setIsVisible(true),
+  },
   // Only render on mobile devices
   if(!isMobile || !isVisible) {
 
@@ -23,11 +23,11 @@ export default function Page() {
         </button>{' '}
         (development only)
       </div>
-    ) : null;
+    ) : null,
   }
   // Detect iOS or Android
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   return ("
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">"
       <div className="flex items-center">"
@@ -70,6 +70,6 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
-};
+  ),
+},
 '"

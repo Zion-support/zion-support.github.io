@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Zap, Brain, Shield, Clock, Users, Settings, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredProcessAutomation: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredProcessAutomation: React.FC = () => {
       title: 'Multi-department Support',
       description: 'Process automation across various departments and functions'
     }
-  ];
+  ],
 
   const automationCapabilities = [
     {
       area: 'Workflow Automation',
-      capabilities: ['Process mapping', 'Task automation', 'Decision routing', 'Exception handling'],
+      capabilities: ['Process mappingTask automation', 'Decision routingException handling'],
       improvement: '90% efficiency',
       automation: 'Advanced'
     },
     {
       area: 'Intelligent Routing',
-      capabilities: ['Smart task assignment', 'Priority optimization', 'Resource allocation', 'Load balancing'],
+      capabilities: ['Smart task assignmentPriority optimization', 'Resource allocationLoad balancing'],
       improvement: 'Real-time routing',
       routing: 'Intelligent'
     },
     {
       area: 'Process Optimization',
-      capabilities: ['Bottleneck identification', 'Performance analysis', 'Continuous improvement', 'Efficiency metrics'],
+      capabilities: ['Bottleneck identificationPerformance analysis', 'Continuous improvementEfficiency metrics'],
       improvement: '85% improvement',
       optimization: 'Continuous'
     },
     {
       area: 'Integration & APIs',
-      capabilities: ['System integration', 'API management', 'Data synchronization', 'Workflow orchestration'],
+      capabilities: ['System integrationAPI management', 'Data synchronizationWorkflow orchestration'],
       improvement: 'Seamless integration',
       integration: 'Comprehensive'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Finance & Accounting',
       description: 'Automated invoice processing, expense management, and financial reporting',
-      benefits: ['Invoice automation', 'Expense processing', 'Financial reporting', 'Compliance automation']
+      benefits: ['Invoice automationExpense processing', 'Financial reportingCompliance automation']
     },
     {
       title: 'Human Resources',
       description: 'Automated recruitment, onboarding, and employee lifecycle management',
-      benefits: ['Recruitment automation', 'Onboarding workflows', 'Performance management', 'Leave processing']
+      benefits: ['Recruitment automationOnboarding workflows', 'Performance managementLeave processing']
     },
     {
       title: 'Customer Service',
       description: 'Automated customer support, ticket routing, and issue resolution',
-      benefits: ['Ticket automation', 'Customer routing', 'Issue resolution', 'Support optimization']
+      benefits: ['Ticket automationCustomer routing', 'Issue resolutionSupport optimization']
     },
     {
       title: 'Operations & Manufacturing',
       description: 'Automated production planning, quality control, and supply chain management',
-      benefits: ['Production automation', 'Quality control', 'Supply chain optimization', 'Inventory management']
+      benefits: ['Production automationQuality control', 'Supply chain optimizationInventory management']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredProcessAutomation: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with process automation',
       features: [
-        'Basic process automation features',
-        'Single department support',
-        'Standard workflows',
-        'Email support',
+        'Basic process automation featuresSingle department support',
+        'Standard workflowsEmail support',
         'Basic reporting'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredProcessAutomation: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced automation needs',
       features: [
-        'Advanced process automation features',
-        'Multi-department support',
-        'Custom development',
-        'Priority support',
-        'Advanced reporting',
-        'API access',
+        'Advanced process automation featuresMulti-department support',
+        'Custom developmentPriority support',
+        'Advanced reportingAPI access',
         'Workflow orchestration'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredProcessAutomation: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex automation requirements',
       features: [
-        'Custom automation development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom automation developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredProcessAutomation: React.FC = () => {
       position: "Automation Director",
       company: "Advanced Process Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredProcessAutomation: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Automate with AI-Powered Process Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredProcessAutomation: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredProcessAutomation;
+export default AIPoweredProcessAutomation,

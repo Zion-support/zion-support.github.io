@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 const QuantumReality2027: React.FC = () => {
   return (
@@ -226,7 +226,7 @@ const QuantumReality2027: React.FC = () => {
             Join us in exploring the quantum frontier and be part of the most revolutionary technological advancement in human history
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-4 rounded-lg hover: shadow-2xl transition-all duration-300 font-semibold text-lg">
               Enter Quantum World
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
@@ -236,8 +236,8 @@ const QuantumReality2027: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default QuantumReality2027;
+export default QuantumReality2027,

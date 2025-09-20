@@ -1,16 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2026 Manufacturing Automation: $50M Success Story';
-  description: 'How a Fortune 500 manufacturer achieved $50M in annual savings through AI-driven automation, predictive maintenance, and intelligent quality control.';
-  keywords: ['manufacturing AIpredictive maintenance', 'quality controlautomation', 'AI case studymanufacturing 2026'],
-};
+  title: 'AI 2026 Manufacturing Automation: $50M Success Story',
+  description: 'How a Fortune 500 manufacturer achieved $50M in annual savings through AI-driven automation, predictive maintenance, and intelligent quality control.',
+  keywords: ['manufacturing AIpredictive maintenancequality controlautomation', 'AI case studymanufacturing 2026']
+},
 export default function AI2026ManufacturingAutomationSuccess() {,
   return (,
     <div className="min-h-screen bg-white">,
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-2 text-sm text-green-600 mb-4">,
             <span>Case Study</span>,
@@ -180,7 +180,7 @@ export default function AI2026ManufacturingAutomationSuccess() {,
             </div>,
           </div>,
         </section>,
-        {/* Technical Architecture */,}
+        {/* Technical Architecture */}
         <section className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Technical Architecture</h2>,
           <div className="bg-gray-50 rounded-xl p-8">,
@@ -275,7 +275,7 @@ export default function AI2026ManufacturingAutomationSuccess() {,
             </div>,
           </div>,
         </section>,
-        {/* Lessons Learned */,}
+        {/* Lessons Learned */}
         <section className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Lessons Learned</h2>,
           <div className="grid md: grid-cols-2 gap-8">,
@@ -323,7 +323,7 @@ export default function AI2026ManufacturingAutomationSuccess() {,
             </div>,
           </div>,
         </section>,
-        {/* Future Roadmap */,}
+        {/* Future Roadmap */}
         <section className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Roadmap</h2>,
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-8">,
@@ -353,7 +353,7 @@ export default function AI2026ManufacturingAutomationSuccess() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="mb-12">,
           <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">,
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Manufacturing Operations?</h2>,
@@ -376,7 +376,7 @@ export default function AI2026ManufacturingAutomationSuccess() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className="mb-12">,
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h2>,
           <div className="grid md: grid-cols-2 gap-6">,
@@ -392,4 +392,4 @@ export default function AI2026ManufacturingAutomationSuccess() {,
         </section>,
       </div>,
     </div>,
-  ),}
+  )}

@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List, Star, Phone, Mail, MapPin,
   Brain, Atom, Shield, Target, Rocket,
   Check, Heart, Building,
   Zap, Globe, Users, TrendingUp, Cloud, Database
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new innovative 2038 services
-import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services';
-import { innovative2038ITInfrastructureServices } from '../data/innovative-2038-it-infrastructure-services';
+import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services',
+import { innovative2038ITInfrastructureServices } from '../data/innovative-2038-it-infrastructure-services',
 
 // Combine all services
 const allInnovative2038Services = [
   ...innovative2038CuttingEdgeServices,
   ...innovative2038ITInfrastructureServices
-];
+],
 
 // Contact information
 const contactInfo = {
@@ -25,21 +25,21 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const Innovative2038CuttingEdgeShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   // Filter services based on search and category
   const filteredServices = allInnovative2038Services.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
   // Get unique categories
   const categories = [
@@ -64,7 +64,7 @@ const Innovative2038CuttingEdgeShowcase: React.FC = () => {
     { id: 'AI Infrastructure Monitoring', name: 'AI Monitoring', icon: <Target className="w-5 h-5" />, color: 'from-blue-500 to-cyan-500' },
     { id: 'Quantum Storage & Optimization', name: 'Quantum Storage', icon: <Database className="w-5 h-5" />, color: 'from-purple-500 to-pink-500' },
     { id: 'Autonomous Cloud Migration', name: 'Autonomous Migration', icon: <Globe className="w-5 h-5" />, color: 'from-yellow-500 to-orange-500' }
-  ];
+  ],
 
   return (
     <Layout>
@@ -73,12 +73,9 @@ const Innovative2038CuttingEdgeShowcase: React.FC = () => {
           pageTitle: "Innovative 2038 Cutting-Edge Services Showcase | Zion Tech Group",
           pageDescription: "Discover our revolutionary 2038 cutting-edge services including AI holographic meetings, quantum drug discovery, autonomous legal assistance, and more. Transform your business with next-generation technology.",
           pageKeywords: [
-            '2038 services',
-            'cutting-edge technology',
-            'AI holographic',
-            'quantum computing',
-            'autonomous systems',
-            'space technology',
+            '2038 servicescutting-edge technology',
+            'AI holographicquantum computing',
+            'autonomous systemsspace technology',
             'Zion Tech Group'
           ]
         }}
@@ -410,7 +407,7 @@ const Innovative2038CuttingEdgeShowcase: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  ),
+},
 
-export default Innovative2038CuttingEdgeShowcase;
+export default Innovative2038CuttingEdgeShowcase,

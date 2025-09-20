@@ -1,25 +1,25 @@
 
-import React from "react";
+import React from "react",
 export function UsageOverview() {,
   // Mock usage data,
   const usage = {,
     jobPosts: {,
-      used: 32;
-      total: 100;
-      percentage: 32,};
+      used: 32,
+      total: 100,
+      percentage: 32},
     interviews: {,
-      used: 45;
-      total: 150;
-      percentage: 30,};
+      used: 45,
+      total: 150,
+      percentage: 30},
     messaging: {,
-      used: 1250;
-      total: 5000;
-      percentage: 25,};
+      used: 1250,
+      total: 5000,
+      percentage: 25},
     storage: {,
-      used: 2.4;
-      total: 10;
-      percentage: 24,}
-  };
+      used: 2.4,
+      total: 10,
+      percentage: 24}
+  },
   return (,
     <Card>,
       <CardHeader>,
@@ -83,6 +83,6 @@ export function UsageOverview() {,
         </Tabs>,
       </CardContent>,
     </Card>,
-  );
+  ),
 }
 ,

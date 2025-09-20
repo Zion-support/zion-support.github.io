@@ -1,24 +1,24 @@
 <<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { supabase } from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
 
 interface PricingSuggestionAnalytics {
-  totalSuggestions: number;
-  acceptanceRate: number;
-  averagePriceGap: number;
-  suggestionsByCategory: { category: string; count: number; acceptanceRate: number }[];
+  totalSuggestions: number,
+  acceptanceRate: number,
+  averagePriceGap: number,
+  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
   recentSuggestions: {
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
-    actualValue?: number;
-    accepted: boolean;
-    createdAt: string;
-    type: 'client' | 'talent';
-  }[];
-  isLoading: boolean;
-  error: string | null;
+    id: string,
+    userId: string,
+    suggestedMin: number,
+    suggestedMax: number,
+    actualValue?: number,
+    accepted: boolean,
+    createdAt: string,
+    type: 'client' | 'talent'
+  }[],
+  isLoading: boolean,
+  error: string | null
 }
 
 export function usePricingSuggestionAnalytics(days = 30) {
@@ -30,7 +30,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     recentSuggestions: [],
     isLoading: true,
     error: null
-  });
+  }),
 
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
@@ -38,7 +38,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
         const mockData = {
@@ -50,7 +50,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
             { category: 'design', count: 65, acceptanceRate: 0.82 },
             { category: 'marketing', count: 42, acceptanceRate: 0.64 },
             { category: 'content', count: 18, acceptanceRate: 0.56 },
-            { category: 'data', count: 11, acceptanceRate: 0.78 },
+            { category: 'data', count: 11, acceptanceRate: 0.78 }
           ],
           recentSuggestions: Array(10).fill(null).map((_, i) => ({
             id: `suggestion-${i}`,
@@ -60,44 +60,44 @@ export function usePricingSuggestionAnalytics(days = 30) {
             actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
             accepted: Math.random() > 0.25,
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
-            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',
+            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'
           }))
-        };
+        },
 
         setAnalytics({
           ...mockData,
           isLoading: false,
           error: null
-        });
+        }),
 
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
-        //   .gte('created_at', `now() - interval '${days} days'`);
+        //   .gte('created_at', `now() - interval '${days} days'`),
         
-        // if (error) throw error;
+        // if (error) throw error,
         // Process data and setAnalytics({...})
 
       } catch (error) {
-        console.error("Error fetching pricing suggestion analytics:", error);
+        console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
           isLoading: false,
           error: "Failed to load pricing analytics data."
-        });
+        }),
       }
-    };
+    },
 
-    fetchAnalytics();
-  }, [days]);
+    fetchAnalytics(),
+  }, [days]),
 
-  return analytics;
+  return analytics,
 }
 =======
-// Hook for usePricingSuggestionAnalytics;
+// Hook for usePricingSuggestionAnalytics,
 export const useUsePricingSuggestionAnalytics: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,78 +1,78 @@
 <<<<<<< HEAD
 
 export default function Page() {
-const ComprehensiveServicesShowcase: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
+const ComprehensiveServicesShowcase: React.FC = () => {,
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all'),
+  const [searchTerm, setSearchTerm] = useState<string>(''),
 
-    return levels}, [allServices]);
-  };
+    return levels}, [allServices]),
+  },
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}
-                href="https://ziontechgroup.com"
+                href="https: //ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-zion-blue hover:text-zion-cyan transition-colors"
 =======
-const ComprehensiveServicesShowcase: React.FC = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');'  const [searchTerm, setSearchTerm] = useState<string>('');
+const ComprehensiveServicesShowcase: React.FC = () => {,'
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),'
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all'),'  const [searchTerm, setSearchTerm] = useState<string>(''),
   // Combine all services
   const allServices: Service[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
-  ];
+  ],
   // Get unique categories'
   
-    return cats}, [allServices]) ;
+    return cats}, [allServices]) ,
   // Get unique innovation levels
-  const innovationLevels = useMemo(() => {;'
-    const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];    return levels}, [allServices]);
+  const innovationLevels = useMemo(() => {,'
+    const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))],    return levels}, [allServices]),
   // Filter services
   
-    return allServices.filter(service => {;
+    return allServices.filter(service => {,
       
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]),
   
-      case 'AI & Customer Experience':;
-      case 'AI & Supply Chain':;
-      case 'AI & Legal Tech':;
-      case 'AI & Healthcare':;
-      case 'AI & Financial Services':;
-      case 'AI & Content Marketing':;"
-        return <Brain className="h-6 w-6"  />;
+      case 'AI & Customer Experience':,
+      case 'AI & Supply Chain':,
+      case 'AI & Legal Tech':,
+      case 'AI & Healthcare':,
+      case 'AI & Financial Services':,
+      case 'AI & Content Marketing':,"
+        return <Brain className="h-6 w-6"  />,
       case 'Cybersecurity & AI':'
       case 'Cybersecurity & Quantum':"
-        return <Shield className="h-6 w-6"  />;
+        return <Shield className="h-6 w-6"  />,
       case 'Blockchain & Supply Chain':"
-        return <Database className="h-6 w-6"  />;
+        return <Database className="h-6 w-6"  />,
       case 'IoT & Edge Computing':"
-        return <Network className="h-6 w-6"  />;
+        return <Network className="h-6 w-6"  />,
       case 'Quantum Computing':"
-        return <Cpu className="h-6 w-6"  />;
+        return <Cpu className="h-6 w-6"  />,
       case 'AR/VR & Immersive Tech':"
-        return <Eye className="h-6 w-6"  />;
+        return <Eye className="h-6 w-6"  />,
       case '5G & Telecommunications':"
-        return <Globe className="h-6 w-6"  />;
+        return <Globe className="h-6 w-6"  />,
       case 'Space Technology':"
-        return <Rocket className="h-6 w-6"  />;
+        return <Rocket className="h-6 w-6"  />,
       case 'Neuromorphic Computing':"
-        return <Brain className="h-6 w-6"  />;
+        return <Brain className="h-6 w-6"  />,
       case 'Digital Twin & Simulation':"
-        return <Settings className="h-6 w-6"  />;
+        return <Settings className="h-6 w-6"  />,
       case 'Synthetic Biology':"
-        return <Target className="h-6 w-6"  />;
+        return <Target className="h-6 w-6"  />,
       case 'Brain-Computer Interface':"
-        return <Brain className="h-6 w-6"  />;
+        return <Brain className="h-6 w-6"  />,
       case 'Sustainability & Energy':"
-        return <Zap className="h-6 w-6"  />;
+        return <Zap className="h-6 w-6"  />,
       case 'Autonomous Vehicles & Fleet Management':"
-        return <Rocket className="h-6 w-6"  />;
+        return <Rocket className="h-6 w-6"  />,
       default:"
-        return <Star className="h-6 w-6"  />};
-  };'        return 'bg-gradient-to-r from-gray-600 to-slate-600'}
-  };
+        return <Star className="h-6 w-6"  />},
+  },'        return 'bg-gradient-to-r from-gray-600 to-slate-600'}
+  },
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}"
@@ -88,7 +88,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover: bg-zion-cyan-light transition-colors"
 
                 Get Started"
                 <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
@@ -100,10 +100,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
               </Link>
             </div>
           </div>
-        </div>;
+        </div>,
       </section>
       {/* Contact Information Banner */}"
-      <section className="bg-white border-b border-gray-200">;"
+      <section className="bg-white border-b border-gray-200">,"
         <div className="container mx-auto px-4 py-6">"
           <div className="flex flex-wrap items-center justify-center gap-8 text-gray-700">"
             <div className="flex items-center gap-2">"
@@ -131,7 +131,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
         </div>
       </section>
       {/* Filters Section */}"
-      <section className="bg-white py-8 border-b border-gray-200">;"
+      <section className="bg-white py-8 border-b border-gray-200">,"
         <div className="container mx-auto px-4">"
           <div className="flex flex-wrap items-center justify-between gap-4">
             {/* Search */}"
@@ -178,7 +178,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
         </div>
       </section>
       {/* Services Grid */}"
-      <section className="py-16">;"
+      <section className="py-16">,"
         <div className="container mx-auto px-4">"
           <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index)  => (
@@ -237,9 +237,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                   </div>
                 </div>
                 {/* Service Details */}"
-                <div className="p-6">;
+                <div className="p-6">,
                   {/* Market Price & ROI */}"
-                  <div className="grid grid-cols-2 gap-4 mb-6">;"
+                  <div className="grid grid-cols-2 gap-4 mb-6">,"
                     <div className="text-center p-3 bg-gray-50 rounded-lg">"
                       <div className="text-sm text-gray-500">Market Price</div>"
                       <div className="font-semibold text-gray-900">{service.marketPrice}</div>
@@ -248,7 +248,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                       <div className="text-sm text-gray-500">ROI</div>"
                       <div className="font-semibold text-green-700">{service.roi}</div>
                     </div>
-                  </div>;
+                  </div>,
                   {/* Features */}"
                   <div className="mb-6">"
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">"
@@ -307,15 +307,15 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                     </Link>
                   </div>
                 </div>
-              </motion.div>) ) };
-          </div>;
-          {filteredServices.length === 0 && (;"
-            <div className="text-center py-16">;"
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={() => {;
-                  setSelectedCategory('all');
-                  setSelectedInnovationLevel('all');
+              </motion.div>) ) },
+          </div>,
+          {filteredServices.length === 0 && (,"
+            <div className="text-center py-16">,"
+              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>,
+              <button,
+                onClick={() => {,
+                  setSelectedCategory('all'),
+                  setSelectedInnovationLevel('all'),
                   setSearchTerm('')}}"                className="text-zion-cyan hover:text-zion-cyan-light font-medium"
               >
                 Clear all filters
@@ -324,9 +324,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
         </div>
       </section>
       {/* Call to Action Section */}"
-      <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">;"
+      <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">,"
         <div className="container mx-auto px-4 text-center">"
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>"
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -343,10 +343,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-colors"
 "
               <Phone className="mr-2 h-5 w-5"  />              Call Now
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) };
+            </a>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) },
 export default ComprehensiveServicesShowcase}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

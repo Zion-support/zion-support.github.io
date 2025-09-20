@@ -1,18 +1,18 @@
 export interface RealMarketService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
+    mobile: string,
+    email: string,
+    address: string
+  },
 }
 export const realMarketServices: RealMarketService[] = [
   {
@@ -46,12 +46,9 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',
     features: [
-      'Self‑serve returns portal',
-      'Label generation and tracking',
-      'Exchange/repair workflows',
-      'Return reasons and defect analytics',
-      'Email/SMS notifications',
-      'Warehouse and RMA integrations'
+      'Self‑serve returns portalLabel generation and tracking',
+      'Exchange/repair workflowsReturn reasons and defect analytics',
+      'Email/SMS notificationsWarehouse and RMA integrations'
     ],
     popular: true,
     icon: '📦',
@@ -64,11 +61,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–3 days',
     category: 'E‑commerce',
     realService: true,
-    technology: ['Shopify', 'WooCommerce', 'Stripe', 'Shippo'],
-    integrations: ['Shopify', 'WooCommerce', 'Shippo', 'UPS/FedEx'],
-    useCases: ['Reduce refunds', 'Increase exchanges', 'Shorten RMA cycle'],
+    technology: ['ShopifyWooCommerce', 'StripeShippo'],
+    integrations: ['ShopifyWooCommerce', 'ShippoUPS/FedEx'],
+    useCases: ['Reduce refundsIncrease exchanges', 'Shorten RMA cycle'],
     roi: 'Reduce return handling time by 40% and logistics costs by 10–20%.',
-    competitors: ['Loop', 'Returnly', 'Happy Returns'],
+    competitors: ['LoopReturnly', 'Happy Returns'],
     marketSize: '$9B returns tech',
     growthRate: '18% YoY',
     variant: 'growth-futuristic' as any,
@@ -93,12 +90,9 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',
     features: [
-      'Sequence builder and templates',
-      'Reply/booking detection and stops',
-      'Inbox rotation and throttling',
-      'A/B testing for subject lines',
-      'Warmup and reputation checks',
-      'CRM sync and webhooks'
+      'Sequence builder and templatesReply/booking detection and stops',
+      'Inbox rotation and throttlingA/B testing for subject lines',
+      'Warmup and reputation checksCRM sync and webhooks'
     ],
     popular: true,
     icon: '📨',
@@ -111,11 +105,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'Growth & Marketing',
     realService: true,
-    technology: ['Next.js', 'IMAP/SMTP', 'Calendars'],
-    integrations: ['HubSpot', 'Pipedrive', 'Google/Outlook'],
-    useCases: ['Lead nurturing', 'Onboarding nudges', 'Renewal reminders'],
+    technology: ['Next.jsIMAP/SMTP', 'Calendars'],
+    integrations: ['HubSpotPipedrive', 'Google/Outlook'],
+    useCases: ['Lead nurturingOnboarding nudges', 'Renewal reminders'],
     roi: 'Lift reply rates by 15–35% and shorten sales cycles.',
-    competitors: ['Mailshake', 'Lemlist', 'Apollo'],
+    competitors: ['MailshakeLemlist', 'Apollo'],
     marketSize: '$6B sales engagement',
     growthRate: '20% YoY',
     variant: 'growth-futuristic' as any,
@@ -140,12 +134,9 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',
     features: [
-      'High‑accuracy transcription',
-      'Speaker diarization',
-      'Summaries and chaptering',
-      'Topic and keyword extraction',
-      'Clip generator for social',
-      'Embeds and RSS sync'
+      'High‑accuracy transcriptionSpeaker diarization',
+      'Summaries and chapteringTopic and keyword extraction',
+      'Clip generator for socialEmbeds and RSS sync'
     ],
     popular: true,
     icon: '🎙️',
@@ -158,11 +149,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: 'Same day',
     category: 'Creator Tools',
     realService: true,
-    technology: ['ASR', 'NLP', 'FFmpeg'],
-    integrations: ['Spotify for Podcasters', 'Buzzsprout', 'Riverside'],
+    technology: ['ASRNLP', 'FFmpeg'],
+    integrations: ['Spotify for PodcastersBuzzsprout', 'Riverside'],
     useCases: ['SEO, accessibility, repurposing clips'],
     roi: 'Cut post‑production time by 50–70% and improve SEO traffic.',
-    competitors: ['Descript', 'Castmagic', 'Capsho'],
+    competitors: ['DescriptCastmagic', 'Capsho'],
     marketSize: '$2B podcast tooling',
     growthRate: '19% YoY',
     variant: 'ai-futuristic' as any,
@@ -187,12 +178,9 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',
     features: [
-      'Drag‑and‑drop templates',
-      'Case study generator',
-      'Contact and booking forms',
-      'Testimonials and logos',
-      'Basic SEO and analytics',
-      'Custom domains'
+      'Drag‑and‑drop templatesCase study generator',
+      'Contact and booking formsTestimonials and logos',
+      'Basic SEO and analyticsCustom domains'
     ],
     popular: false,
     icon: '🖼️',
@@ -205,11 +193,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '15 minutes',
     category: 'Creator Tools',
     realService: true,
-    technology: ['Next.js', 'Forms', 'SEO'],
-    integrations: ['Calendly', 'HubSpot', 'GA4'],
-    useCases: ['Showcase work', 'Capture leads', 'Book meetings'],
+    technology: ['Next.jsForms', 'SEO'],
+    integrations: ['CalendlyHubSpot', 'GA4'],
+    useCases: ['Showcase workCapture leads', 'Book meetings'],
     roi: 'Increase inbound leads by 10–25% with polished case studies.',
-    competitors: ['Webflow', 'Squarespace', 'Wix'],
+    competitors: ['WebflowSquarespace', 'Wix'],
     marketSize: '$4B creator sites',
     growthRate: '11% YoY',
     variant: 'growth-futuristic' as any,
@@ -234,29 +222,26 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',
     features: [
-      'Contacts and notes',
-      'Reminders and tasks',
-      'Simple pipeline stages',
-      'Email/SMS nudges',
-      'Import/export and tags',
-      'Mobile‑friendly UI'
+      'Contacts and notesReminders and tasks',
+      'Simple pipeline stagesEmail/SMS nudges',
+      'Import/export and tagsMobile‑friendly UI'
     ],
     popular: true,
     icon: '📇',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/local-micro-crm',
-    marketPosition: 'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
+    marketPosition: 'Tooled for simplicity, avoids enterprise CRM bloat and costs.',
     targetAudience: 'Local service businesses',
     trialDays: 14,
     setupTime: 'Same day',
     category: 'CRM',
     realService: true,
-    technology: ['Next.js', 'SQLite/Postgres'],
-    integrations: ['Gmail/Outlook', 'Twilio'],
-    useCases: ['Track customers', 'Follow‑ups', 'Close more deals'],
-    roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.',
-    competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
+    technology: ['Next.jsSQLite/Postgres'],
+    integrations: ['Gmail/OutlookTwilio'],
+    useCases: ['Track customersFollow‑ups', 'Close more deals'],
+    roi: 'Reduce no‑shows and lost leads, +10–20% revenue lift.',
+    competitors: ['HubSpot StarterPipedrive Essentials'],
     marketSize: '$20B SMB CRM',
     growthRate: '10% YoY',
     variant: 'analytics-futuristic' as any,
@@ -279,31 +264,28 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Generate and score email subjects with live benchmarks',
     price: '$29',
     period: '/month',
-    description: 'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.',
+    description: 'Create and score subject lines using language models and historical performance data, export to ESPs and run quick A/B tests.',
     features: [
-      'AI suggestions and variants',
-      'Tone and length tuning',
-      'Performance benchmarks',
-      'ESP export and A/B tests',
-      'Spam words and preview',
-      'Team review workflow'
+      'AI suggestions and variantsTone and length tuning',
+      'Performance benchmarksESP export and A/B tests',
+      'Spam words and previewTeam review workflow'
     ],
     popular: false,
     icon: '🧪',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
-    marketPosition: 'Focused assistant vs. general copy tools; fast iteration for marketers.',
+    marketPosition: 'Focused assistant vs. general copy tools, fast iteration for marketers.',
     targetAudience: 'Growth and lifecycle marketers',
     trialDays: 7,
     setupTime: 'Same day',
     category: 'AI & Marketing',
     realService: true,
-    technology: ['NLP/LLM', 'ESP APIs'],
-    integrations: ['Mailchimp', 'Klaviyo', 'SendGrid'],
-    useCases: ['Boost open rates', 'Faster copy iteration'],
+    technology: ['NLP/LLMESP APIs'],
+    integrations: ['MailchimpKlaviyo', 'SendGrid'],
+    useCases: ['Boost open ratesFaster copy iteration'],
     roi: 'Improve opens by 5–15% and reduce time‑to‑send.',
-    competitors: ['Copy.ai', 'Jasper', 'Headline analyzers'],
+    competitors: ['Copy.aiJasper', 'Headline analyzers'],
     marketSize: '$3B marketing AI',
     growthRate: '24% YoY',
     variant: 'ai-futuristic' as any,
@@ -328,29 +310,26 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
     features: [
-      'Cycle time and WIP analysis',
-      'Review depth and latency',
-      'Flaky test detection',
-      'Repo hotspots and ownership',
-      'Team scorecards and alerts',
-      'Jira/Linear linkage'
+      'Cycle time and WIP analysisReview depth and latency',
+      'Flaky test detectionRepo hotspots and ownership',
+      'Team scorecards and alertsJira/Linear linkage'
     ],
     popular: true,
     icon: '🧩',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/dev-workflow-analytics',
-    marketPosition: 'Actionable insights without surveillance; focused on flow metrics.',
+    marketPosition: 'Actionable insights without surveillance, focused on flow metrics.',
     targetAudience: 'Engineering teams and platform leads',
     trialDays: 14,
     setupTime: '3 days',
     category: 'Dev Productivity',
     realService: true,
-    technology: ['GitHub/GitLab APIs', 'CI logs'],
-    integrations: ['GitHub', 'GitLab', 'Jira', 'Linear'],
-    useCases: ['Improve code review', 'Reduce cycle time', 'Stabilize CI'],
+    technology: ['GitHub/GitLab APIsCI logs'],
+    integrations: ['GitHubGitLab', 'JiraLinear'],
+    useCases: ['Improve code reviewReduce cycle time', 'Stabilize CI'],
     roi: 'Shorten cycle time by 10–25% and cut flaky tests.',
-    competitors: ['LinearB', 'Swarmia', 'Velocity'],
+    competitors: ['LinearBSwarmia', 'Velocity'],
     marketSize: '$5B dev analytics',
     growthRate: '21% YoY',
     variant: 'analytics-futuristic' as any,
@@ -375,17 +354,15 @@ export const realMarketServices: RealMarketService[] = [
     period: '/device/month',
     description: 'Baseline mobile device and app management with policy templates, compliance rules, and reporting integrated with Microsoft 365.',
     features: [
-      'Zero‑touch enrollment (ABM/DEP, Android Enterprise)',
-      'Compliance and conditional access',
-      'App protection policies',
-      'Baseline reports and alerts'
+      'Zero‑touch enrollment (ABM/DEP, Android Enterprise)Compliance and conditional access',
+      'App protection policiesBaseline reports and alerts'
     ],
     popular: false,
     icon: '📱',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/mobile-device-management',
-    marketPosition: 'SMB-focused MDM starter; complements Intune and Apple Business Manager.',
+    marketPosition: 'SMB-focused MDM starter, complements Intune and Apple Business Manager.',
     targetAudience: 'IT, MSPs, security teams',
     trialDays: 7,
     setupTime: '1–2 days',
@@ -420,10 +397,8 @@ export const realMarketServices: RealMarketService[] = [
     period: '/user/month',
     description: 'Multi‑speaker transcription, action item extraction, and automatic creation of Jira/GitHub issues with summaries and owners.',
     features: [
-      'Speaker‑aware transcription',
-      'Action extraction and owners',
-      'Jira/GitHub ticket creation',
-      'Meeting recap emails'
+      'Speaker‑aware transcriptionAction extraction and owners',
+      'Jira/GitHub ticket creationMeeting recap emails'
     ],
     popular: false,
     icon: '📝',
@@ -439,7 +414,7 @@ export const realMarketServices: RealMarketService[] = [
     technology: ['OpenAI STT, Embeddings, Jira/GitHub APIs'],
     integrations: ['Google Meet, Zoom, Jira, GitHub'],
     useCases: ['Reduce manual note‑taking, Faster follow‑ups, Better accountability'],
-    roi: 'Save hours/week per team; fewer missed actions.',
+    roi: 'Save hours/week per team, fewer missed actions.',
     competitors: ['Supernormal, Tactiq + custom flows'],
     marketSize: '$3B productivity AI',
     growthRate: '25% YoY',
@@ -465,10 +440,8 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Continuously scans your flags for stale keys, dead code, missing cleanups, and risky rollout patterns. Auto‑opens PRs with fixes.',
     features: [
-      'Stale and orphan flag detection',
-      'Env parity and drift checks',
-      'Experiment hygiene scoring',
-      'Auto‑PR cleanup scripts'
+      'Stale and orphan flag detectionEnv parity and drift checks',
+      'Experiment hygiene scoringAuto‑PR cleanup scripts'
     ],
     popular: false,
     icon: '🚩',
@@ -484,7 +457,7 @@ export const realMarketServices: RealMarketService[] = [
     technology: ['Static analysis, SDK hooks, CI'],
     integrations: ['LaunchDarkly, Flagsmith, Split.io'],
     useCases: ['Reduce tech debt, Safer rollouts, Faster cleanups'],
-    roi: 'Cut incidents from stale flags; improve developer velocity.',
+    roi: 'Cut incidents from stale flags, improve developer velocity.',
     competitors: ['Native vendor hygiene, manual audits'],
     marketSize: '$2B experimentation',
     growthRate: '18% YoY',
@@ -502,4 +475,4 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.5,
     reviews: 7
   }
-];
+],

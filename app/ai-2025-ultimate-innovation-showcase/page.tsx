@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025 Ultimate Innovation Showcase - Revolutionary Breakthroughs';
-  description: 'Discover the most revolutionary AI innovations of 2025 that are transforming industries and creating unprecedented opportunities for businesses worldwide.';
-  keywords: ['AI 2025artificial intelligence', 'innovationbreakthrough', 'technology trendsbusiness transformation'],
-};
+  title: 'AI 2025 Ultimate Innovation Showcase - Revolutionary Breakthroughs',
+  description: 'Discover the most revolutionary AI innovations of 2025 that are transforming industries and creating unprecedented opportunities for businesses worldwide.',
+  keywords: ['AI 2025artificial intelligenceinnovationbreakthrough', 'technology trendsbusiness transformation']
+},
 export default function AI2025UltimateInnovationShowcase() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">,
@@ -16,7 +16,7 @@ export default function AI2025UltimateInnovationShowcase() {,
         url="/ai-2025-ultimate-innovation-showcase",
       />,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 rounded-full px-6 py-2 mb-6">,
             <span className="text-sm font-medium">🚀 ULTIMATE INNOVATION SHOWCASE 2025</span>,
@@ -25,7 +25,7 @@ export default function AI2025UltimateInnovationShowcase() {,
             AI 2025 Ultimate Innovation,
           </h1>,
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">,
-            Witness the most revolutionary AI breakthroughs that are reshaping the future of business;
+            Witness the most revolutionary AI breakthroughs that are reshaping the future of business,
             technology, and human potential in 2025.,
           </p>,
         </div>,
@@ -35,7 +35,7 @@ export default function AI2025UltimateInnovationShowcase() {,
             <div className="text-4xl mb-4">🧠</div>,
             <h3 className="text-2xl font-bold mb-4">Neural Consciousness AI</h3>,
             <p className="text-gray-300 mb-6">,
-              Revolutionary AI systems that demonstrate self-awareness and emotional intelligence;
+              Revolutionary AI systems that demonstrate self-awareness and emotional intelligence,
               transforming human-AI collaboration.,
             </p>,
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">,
@@ -46,7 +46,7 @@ export default function AI2025UltimateInnovationShowcase() {,
             <div className="text-4xl mb-4">⚡</div>,
             <h3 className="text-2xl font-bold mb-4">Quantum AI Processing</h3>,
             <p className="text-gray-300 mb-6">,
-              Quantum-enhanced AI algorithms that process information at unprecedented speeds;
+              Quantum-enhanced AI algorithms that process information at unprecedented speeds,
               solving complex problems in seconds.,
             </p>,
             <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">,
@@ -57,7 +57,7 @@ export default function AI2025UltimateInnovationShowcase() {,
             <div className="text-4xl mb-4">🌐</div>,
             <h3 className="text-2xl font-bold mb-4">Autonomous Business Ecosystems</h3>,
             <p className="text-gray-300 mb-6">,
-              Self-managing business systems that optimize operations, predict market changes;
+              Self-managing business systems that optimize operations, predict market changes,
               and make strategic decisions autonomously.,
             </p>,
             <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">,
@@ -72,7 +72,7 @@ export default function AI2025UltimateInnovationShowcase() {,
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6">,
               <h3 className="text-xl font-bold mb-3">Global Enterprise Transformation</h3>,
               <p className="text-gray-200 mb-4">,
-                Fortune 500 company achieved 500% ROI increase through our AI automation solutions;
+                Fortune 500 company achieved 500% ROI increase through our AI automation solutions,
                 reducing operational costs by $50M annually.,
               </p>,
               <div className="text-2xl font-bold text-yellow-300">$50M+ Saved</div>,
@@ -110,5 +110,4 @@ export default function AI2025UltimateInnovationShowcase() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

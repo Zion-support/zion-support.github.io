@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { useNavigate } from "react-router-dom",
 
 export function ITServiceRequestHero() {
-  const [location, setLocation] = useState("");
-  const navigate = useNavigate();
+  const [location, setLocation] = useState(""),
+  const navigate = useNavigate(),
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (location.trim()) {
-      navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
+      navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`),
     }
-  };
+  },
 
   return (
     <section className="bg-zion-blue-dark py-16 md:py-24 border-b border-zion-purple/20">
@@ -44,5 +44,5 @@ export function ITServiceRequestHero() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

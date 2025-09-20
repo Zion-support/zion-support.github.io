@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
 
 export default function IndustrySolutionsPage() {
   return (
@@ -10,5 +10,5 @@ export default function IndustrySolutionsPage() {
         <p className="text-gray-300">Explore solutions tailored for healthcare, finance, manufacturing, retail, and more.</p>
       </div>
     </div>
-  );
+  ),
 }

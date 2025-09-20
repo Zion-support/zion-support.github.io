@@ -1,20 +1,20 @@
-import { Elements } from '@stripe / react - stripe -js';
+import { Elements } from '@stripe / react - stripe -js',
 export default function Page() {
- from '@/utils / getStripe';
+ from '@/utils / getStripe',
  finally {
-        setIsLoading(false) ;
+        setIsLoading(false) ,
       }
-    };
-    fetchProduct () ;
-  }, [id]) ;
+    },
+    fetchProduct () ,
+  }, [id]) ,
   if(isLoading) {
-    return < div className="p - 6 text-white">Loading...</div>;
+    return < div className="p - 6 text-white">Loading...</div>,
   }
   if(error && !product) {
-    return < div className="p - 6 text-white">Failed to load product.</div>;
+    return < div className="p - 6 text-white">Failed to load product.</div>,
   }
   if(!product) {
-    return < div className="p - 6 text-white">Loading...</div>;
+    return < div className="p - 6 text-white">Loading...</div>,
   }
   return (<div className="container max - w-2xl py-10 space - y-6">
       <h1 className="text-3xl font -bold">Checkout</h1>
@@ -36,5 +36,5 @@ export default function Page() {
         </Elements>) }
       {!intent && (<p className="text-xs text-zion - slate - light text-center">
           Use test card 4242 - 4242 - 4242 - 4242 with future date and CVC.</p>) }
-    </div>) ;
+    </div>) ,
 }

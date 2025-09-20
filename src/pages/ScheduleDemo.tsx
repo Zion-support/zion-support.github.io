@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Calendar, 
+  Calendar,
   Clock, 
   Users, 
   Video, 
@@ -28,137 +28,75 @@ import {
   PhoneCall,
   Mail as MailIcon,
   ExternalLink
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function ScheduleDemo() {
   const [selectedService, setSelectedService] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    attendees: 1,
-    message: ''
+    firstName: '',lastName: '',email: '',company: '',phone: '',attendees: 1,message: ''
   });
-
   const demoServices = [
     {
-      id: 'ai-platform',
-      name: 'AI Platform Demo',
-      description: 'Experience our comprehensive AI platform with real-time demonstrations',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      duration: '45 min',
-      features: ['AI Model Training', 'Real-time Analytics', 'Custom Workflows', 'Integration Examples'],
+      id: 'ai-platform',name: 'AI Platform Demo',description: 'Experience our comprehensive AI platform with real-time demonstrations',icon: Brain,color: 'from-purple-500 to-pink-500',duration: '45 min',features: ['AI Model TrainingReal-time Analytics', 'Custom WorkflowsIntegration Examples'],
       popular: true
-    },
+    };
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity Solutions',
-      description: 'See our advanced security platform in action with threat simulation',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      duration: '60 min',
-      features: ['Threat Detection', 'Incident Response', 'Compliance Dashboard', 'Security Analytics'],
+      id: 'cybersecurity',name: 'Cybersecurity Solutions',description: 'See our advanced security platform in action with threat simulation',icon: Shield,color: 'from-red-500 to-orange-500',duration: '60 min',features: ['Threat DetectionIncident Response', 'Compliance DashboardSecurity Analytics'],
       popular: false
-    },
+    };
     {
-      id: 'cloud-infrastructure',
-      name: 'Cloud Infrastructure',
-      description: 'Explore our cloud-native solutions and DevOps automation',
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      duration: '50 min',
-      features: ['Multi-cloud Management', 'DevOps Automation', 'Cost Optimization', 'Performance Monitoring'],
+      id: 'cloud-infrastructure',name: 'Cloud Infrastructure',description: 'Explore our cloud-native solutions and DevOps automation',icon: Cloud,color: 'from-blue-500 to-cyan-500',duration: '50 min',features: ['Multi-cloud ManagementDevOps Automation', 'Cost OptimizationPerformance Monitoring'],
       popular: true
-    },
+    };
     {
-      id: 'quantum-computing',
-      name: 'Quantum Computing',
-      description: 'Discover quantum algorithms and quantum-classical hybrid solutions',
-      icon: Cpu,
-      color: 'from-indigo-500 to-purple-500',
-      duration: '75 min',
-      features: ['Quantum Algorithms', 'Hybrid Solutions', 'Performance Benchmarks', 'Use Case Examples'],
+      id: 'quantum-computing',name: 'Quantum Computing',description: 'Discover quantum algorithms and quantum-classical hybrid solutions',icon: Cpu,color: 'from-indigo-500 to-purple-500',duration: '75 min',features: ['Quantum AlgorithmsHybrid Solutions', 'Performance BenchmarksUse Case Examples'],
       popular: false
-    },
+    };
     {
-      id: 'data-analytics',
-      name: 'Data Analytics Platform',
-      description: 'Visualize and analyze your data with our advanced analytics tools',
-      icon: Globe,
-      color: 'from-green-500 to-emerald-500',
-      duration: '40 min',
-      features: ['Real-time Dashboards', 'Predictive Analytics', 'Data Visualization', 'Custom Reports'],
+      id: 'data-analytics',name: 'Data Analytics Platform',description: 'Visualize and analyze your data with our advanced analytics tools',icon: Globe,color: 'from-green-500 to-emerald-500',duration: '40 min',features: ['Real-time DashboardsPredictive Analytics', 'Data VisualizationCustom Reports'],
       popular: false
-    },
+    };
     {
-      id: 'custom-solution',
-      name: 'Custom Solution Demo',
-      description: 'Tailored demonstration based on your specific business needs',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
-      duration: '60 min',
-      features: ['Custom Workflows', 'Integration Planning', 'ROI Analysis', 'Implementation Roadmap'],
+      id: 'custom-solution',name: 'Custom Solution Demo',description: 'Tailored demonstration based on your specific business needs',icon: Zap,color: 'from-yellow-500 to-orange-500',duration: '60 min',features: ['Custom WorkflowsIntegration Planning', 'ROI AnalysisImplementation Roadmap'],
       popular: false
     }
   ];
-
   const availableTimes = [
-    '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
-    '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM',
-    '4:00 PM', '4:30 PM', '5:00 PM'
+    '9:00 AM9:30 AM', '10:00 AM10:30 AM', '11: 00 AM11:30 AM';
+    '1:00 PM1:30 PM', '2:00 PM2:30 PM', '3: 00 PM3:30 PM';
+    '4:00 PM4:30 PM', '5: 00 PM'
   ];
-
   const demoBenefits = [
     {
-      title: 'Personalized Experience',
-      description: 'Tailored demonstrations based on your business needs and use cases',
-      icon: User,
-      color: 'text-blue-400'
-    },
+      title: 'Personalized Experience',description: 'Tailored demonstrations based on your business needs and use cases',icon: User,color: 'text-blue-400'
+    };
     {
-      title: 'Expert Guidance',
-      description: 'Learn from our certified professionals with deep industry expertise',
-      icon: Star,
-      color: 'text-yellow-400'
-    },
+      title: 'Expert Guidance',description: 'Learn from our certified professionals with deep industry expertise',icon: Star,color: 'text-yellow-400'
+    };
     {
-      title: 'Interactive Sessions',
-      description: 'Ask questions and explore features in real-time during the demo',
-      icon: MessageSquare,
-      color: 'text-green-400'
-    },
+      title: 'Interactive Sessions',description: 'Ask questions and explore features in real-time during the demo',icon: MessageSquare,color: 'text-green-400'
+    };
     {
-      title: 'Follow-up Support',
-      description: 'Comprehensive follow-up materials and next steps after your demo',
-      icon: CheckCircle,
-      color: 'text-cyan-400'
+      title: 'Follow-up Support',description: 'Comprehensive follow-up materials and next steps after your demo',icon: CheckCircle,color: 'text-cyan-400'
     }
   ];
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     console.log('Demo request submitted:', {
-      service: selectedService,
-      date: selectedDate,
-      time: selectedTime,
+      service: selectedService,date: selectedDate,time: selectedTime;
       ...formData
-    });
-  };
+    }),
+  },
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    })),
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -520,7 +458,7 @@ export default function ScheduleDemo() {
             className="text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-8">Need Immediate Assistance?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="p-4 bg-slate-700/30 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center">
                   <Phone className="w-8 h-8 text-cyan-400" />
@@ -564,5 +502,5 @@ export default function ScheduleDemo() {
         </div>
       </section>
     </div>
-  );
+  )
 }

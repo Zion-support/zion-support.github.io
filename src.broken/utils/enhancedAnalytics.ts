@@ -66,9 +66,9 @@ class EnhancedAnalytics {
     // Track page visibility changes
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
-        this.trackEvent('engagement', 'page_hidden', 'visibility_change')
+        this.trackEvent('engagementpage_hidden', 'visibility_change')
       } else {
-        this.trackEvent('engagement', 'page_visible', 'visibility_change')
+        this.trackEvent('engagementpage_visible', 'visibility_change')
         this.session.lastActivity = Date.now()
       }
     })
@@ -80,7 +80,7 @@ class EnhancedAnalytics {
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth
         if (scrollDepth % 25 === 0) { // Track at 25%, 50%, 75%, 100%
-          this.trackEvent('engagement', 'scroll_depth', `${scrollDepth}%`)
+          this.trackEvent('engagementscroll_depth', `${scrollDepth}%`)
         }
       }
     })
@@ -89,7 +89,7 @@ class EnhancedAnalytics {
     setInterval(() => {
       const timeOnPage = Date.now() - this.session.startTime
       if (timeOnPage > 0 && timeOnPage % 30000 === 0) { // Every 30 seconds
-        this.trackEvent('engagement', 'time_on_page', `${Math.round(timeOnPage / 1000)}s`)
+        this.trackEvent('engagementtime_on_page', `${Math.round(timeOnPage / 1000)}s`)
       }
     }, 1000)
 
@@ -99,7 +99,7 @@ class EnhancedAnalytics {
       if (target.tagName === 'A' || target.closest('button')) {
         const linkText = target.textContent?.trim() || 'Unknown'
         const href = (target as HTMLAnchorElement).href || 'No URL'
-        this.trackEvent('interaction', 'click', linkText, undefined, href)
+        this.trackEvent('interactionclick', linkText, undefined, href)
       }
     })
 
@@ -107,7 +107,7 @@ class EnhancedAnalytics {
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement
       const formName = form.name || form.id || 'Unknown Form'
-      this.trackEvent('interaction', 'form_submit', formName)
+      this.trackEvent('interactionform_submit', formName)
     })
 
     // Track search queries
@@ -115,7 +115,7 @@ class EnhancedAnalytics {
       const target = event.target as HTMLInputElement
       if (target.type === 'search' || target.placeholder?.toLowerCase().includes('search')) {
         if (target.value.length > 2) {
-          this.trackEvent('interaction', 'search_input', target.value)
+          this.trackEvent('interactionsearch_input', target.value)
         }
       }
     })
@@ -177,7 +177,7 @@ class EnhancedAnalytics {
   }
 
   trackButtonClick(buttonName: string, location?: string): void {
-    this.trackEvent('interaction', 'button_click', buttonName, undefined, location)
+    this.trackEvent('interactionbutton_click', buttonName, undefined, location)
   }
 
   trackConversion(conversionType: string, value?: number): void {
@@ -204,7 +204,7 @@ class EnhancedAnalytics {
       await fetch(this.apiEndpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(event)
       })

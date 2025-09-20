@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function Select({ children, className = '', value, onValueChange, disabled = false }) {,
   const baseClasses = `,
     flex h-10 w-full items-center justify-between rounded-md border,
@@ -6,7 +6,7 @@ export function Select({ children, className = '', value, onValueChange, disable
     text-white placeholder: text-zion-slate-light/50,
     focus:outline-none focus:ring-2 focus:ring-zion-cyan,
     focus:border-transparent transition-colors,
-  `;
+  `,
   return (,
     <select,
       className={`${baseClasses} ${className}`} ,
@@ -15,8 +15,7 @@ export function Select({ children, className = '', value, onValueChange, disable
       disabled={disabled}
     >,
       {children}
-    </select>,
-  );
+    </select>),
 }
 ,
 export function SelectItem({ children, value, className = '', ...props }) {,
@@ -27,22 +26,20 @@ export function SelectItem({ children, value, className = '', ...props }) {,
         rounded-sm px-3 py-2 text-sm text-white outline-none,
         hover: bg-zion-blue/20 focus:bg-zion-blue/20,
         focus:text-white transition-colors,
-        ${className,}
+        ${className}
       `} ,
       data-value={value} ,
       {...props}
     >,
       {children}
-    </div>,
-  );
+    </div>),
 }
 ,
 export function SelectValue({ placeholder }) {,
   return (,
     <span className="text-sm text-zion-slate-light">,
       {placeholder || 'Select an option'}
-    </span>,
-  );
+    </span>),
 }
 ,
 export function SelectTrigger({ children, className = '', ...props }) {,
@@ -54,13 +51,12 @@ export function SelectTrigger({ children, className = '', ...props }) {,
         text-white placeholder: text-zion-slate-light/50,
         focus:outline-none focus:ring-2 focus:ring-zion-cyan,
         focus:border-transparent transition-colors cursor-pointer,
-        ${className,}
+        ${className}
       `} ,
       {...props}
     >,
       {children}
-    </button>,
-  );
+    </button>),
 }
 ,
 export function SelectContent({ children, className = '' }) {,
@@ -73,7 +69,6 @@ export function SelectContent({ children, className = '' }) {,
       `}
     >,
       {children}
-    </div>,
-  );
+    </div>),
 }
 ,

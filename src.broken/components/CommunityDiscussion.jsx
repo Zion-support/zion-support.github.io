@@ -1,13 +1,13 @@
 <<<<<<< HEAD
-import React, { useState } from "react";
-import { Avatar, AvatarFallback } from '@/components / ui / avatar';
+import React, { useState } from "react",
+import { Avatar, AvatarFallback } from '@/components / ui / avatar',
 export default function Page() {
- from '@/components/ui/textarea';"
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';"
-import { Card, CardContent } from '@/components/ui/card';"
-import { Separator } from '@/components/ui/separator';
+ from '@/components/ui/textarea',"
+import { Avatar, AvatarFallback } from '@/components/ui/avatar',"
+import { Card, CardContent } from '@/components/ui/card',"
+import { Separator } from '@/components/ui/separator',
 export default function Page() {
-;"
+,"
     return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">"
       <div className="flex items-center gap-3 mb-4">"
         <MessageCircle aria-hidden="true" size={28} className="text-zion-cyan"/>"
@@ -64,7 +64,7 @@ export default function Page() {
       </div>"
       <div className="mt-8 text-xs text-zion-slate-dark text-center">
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>
-    </div>)};
+    </div>)},
 '"
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

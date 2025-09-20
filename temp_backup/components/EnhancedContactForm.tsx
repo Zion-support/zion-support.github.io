@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Send, 
+  Send,
   CheckCircle, 
   AlertCircle, 
   User, 
@@ -13,25 +13,25 @@ import {
   Star,
   Clock,
   Shield
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface ContactFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  company: string;
-  website: string;
-  service: string;
-  budget: string;
-  timeline: string;
-  message: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
+  firstName: string,
+  lastName: string,
+  email: string,
+  phone: string,
+  company: string,
+  website: string,
+  service: string,
+  budget: string,
+  timeline: string,
+  message: string,
+  priority: 'low' | 'medium' | 'high' | 'urgent'
 }
 
 interface ContactFormProps {
-  onSubmit?: (data: ContactFormData) => void;
-  className?: string;
+  onSubmit?: (data: ContactFormData) => void,
+  className?: string
 }
 
 const EnhancedContactForm: React.FC<ContactFormProps> = ({
@@ -50,98 +50,98 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
     timeline: '',
     message: '',
     priority: 'medium'
-  });
+  }),
 
-  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [currentStep, setCurrentStep] = useState(1);
-  const [isValidating, setIsValidating] = useState(false);
+  const [errors, setErrors] = useState<Partial<ContactFormData>>({}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
+  const [currentStep, setCurrentStep] = useState(1),
+  const [isValidating, setIsValidating] = useState(false),
 
-  const formRef = useRef<HTMLFormElement>(null);
-  const firstInputRef = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null),
+  const firstInputRef = useRef<HTMLInputElement>(null),
 
-  const totalSteps = 3;
+  const totalSteps = 3,
 
   // Focus first input on mount
   useEffect(() => {
     if (firstInputRef.current) {
-      firstInputRef.current.focus();
+      firstInputRef.current.focus(),
     }
-  }, []);
+  }, []),
 
   // Validate form data
   const validateForm = (): boolean => {
-    const newErrors: Partial<ContactFormData> = {};
+    const newErrors: Partial<ContactFormData> = {},
 
     // Required field validation
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
+    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required',
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required',
+    if (!formData.email.trim()) newErrors.email = 'Email is required',
+    if (!formData.message.trim()) newErrors.message = 'Message is required',
 
     // Email validation
     if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Please enter a valid email address',
     }
 
     // Phone validation (optional but if provided, must be valid)
     if (formData.phone && !/^[\+]?[1-9][\d]{0,15}$/.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
-      newErrors.phone = 'Please enter a valid phone number';
+      newErrors.phone = 'Please enter a valid phone number',
     }
 
     // Website validation (optional but if provided, must be valid)
     if (formData.website && !/^https?:\/\/.+/.test(formData.website)) {
-      newErrors.website = 'Please enter a valid website URL (include http:// or https://)';
+      newErrors.website = 'Please enter a valid website URL (include http: // or https://)'
     }
-    if (!formData.company.trim()) newErrors.company = 'Company name is required';
-    if (!formData.service) newErrors.service = 'Please select a service';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
+    if (!formData.company.trim()) newErrors.company = 'Company name is required',
+    if (!formData.service) newErrors.service = 'Please select a service',
+    if (!formData.message.trim()) newErrors.message = 'Message is required',
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    setErrors(newErrors),
+    return Object.keys(newErrors).length === 0,
+  },
 
   // Handle input changes
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({ ...prev, [field]: value })),
     
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
+      setErrors(prev => ({ ...prev, [field]: undefined })),
     }
-  };
+  },
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     
-    setIsValidating(true);
-    const isValid = validateForm();
-    setIsValidating(false);
+    setIsValidating(true),
+    const isValid = validateForm(),
+    setIsValidating(false),
 
     if (!isValid) {
       // Scroll to first error
-      const firstErrorField = Object.keys(errors)[0];
+      const firstErrorField = Object.keys(errors)[0],
       if (firstErrorField) {
-        const errorElement = document.querySelector(`[name="${firstErrorField}"]`);
-        errorElement?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const errorElement = document.querySelector(`[name="${firstErrorField}"]`),
+        errorElement?.scrollIntoView({ behavior: 'smooth', block: 'center' }),
       }
-      return;
+      return,
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000)),
       
       if (onSubmit) {
-        onSubmit(formData);
+        onSubmit(formData),
       }
       
-      setIsSubmitted(true);
-      setCurrentStep(1);
+      setIsSubmitted(true),
+      setCurrentStep(1),
       
       // Reset form after successful submission
       setTimeout(() => {
@@ -156,16 +156,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
           timeline: '',
           message: '',
           priority: 'medium'
-        });
-        setIsSubmitted(false);
-      }, 5000);
+        }),
+        setIsSubmitted(false),
+      }, 5000),
       
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Form submission error:', error),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   // Next step validation
   const handleNextStep = () => {
@@ -175,55 +175,47 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
           firstName: !formData.firstName ? 'First name is required' : undefined,
           lastName: !formData.lastName ? 'Last name is required' : undefined,
           email: !formData.email ? 'Email is required' : undefined
-        });
-        return;
+        }),
+        return,
       }
     }
     
     if (currentStep < totalSteps) {
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1),
     }
-  };
+  },
 
   // Previous step
   const handlePrevStep = () => {
     if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
+      setCurrentStep(currentStep - 1),
     }
-  };
+  },
 
   // Get step progress percentage
-  const getStepProgress = () => (currentStep / totalSteps) * 100;
+  const getStepProgress = () => (currentStep / totalSteps) * 100,
 
   // Service options
   const serviceOptions = [
-    'AI Consciousness Evolution',
-    'Quantum Cybersecurity',
-    'Autonomous Systems',
-    'Space Technology',
-    'Cloud Infrastructure',
-    'Custom Solution',
+    'AI Consciousness EvolutionQuantum Cybersecurity',
+    'Autonomous SystemsSpace Technology',
+    'Cloud InfrastructureCustom Solution',
     'Other'
-  ];
+  ],
 
   // Budget options
   const budgetOptions = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+',
-    'To be discussed'
-  ];
+    'Under $10,000$10,000 - $50,000',
+    '$50,000 - $100,000$100,000 - $500,000',
+    '$500,000+To be discussed'
+  ],
 
   // Timeline options
   const timelineOptions = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Extended (6+ months)',
+    'Immediate (1-2 weeks)Quick (1-2 months)',
+    'Standard (3-6 months)Extended (6+ months)',
     'Flexible'
-  ];
+  ],
 
   if (isSubmitted) {
     return (
@@ -322,12 +314,12 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
           type="tel"
           value={formData.phone}
           onChange={(e) => handleInputChange('phone', e.target.value)}
-          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus: ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
           placeholder="+1 (555) 123-4567"
         />
       </div>
     </motion.div>
-  );
+  ),
 
   const renderStep2 = () => (
     <motion.div
@@ -404,9 +396,9 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
         <label className="block text-sm font-medium text-gray-300 mb-2">
           Preferred Contact Method
         </label>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-4">
           {contactMethods.map((method) => {
-            const Icon = method.icon;
+            const Icon = method.icon,
             return (
               <label
                 key={method.value}
@@ -427,12 +419,12 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                 <Icon className="w-5 h-5 mr-3 text-cyan-400" />
                 <span className="text-sm font-medium">{method.label}</span>
               </label>
-            );
+            ),
           })}
         </div>
       </div>
     </motion.div>
-  );
+  ),
 
   const renderStep3 = () => (
     <motion.div
@@ -501,7 +493,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
         )}
       </div>
     </motion.div>
-  );
+  ),
 
 const EnhancedContactForm: React.FC = () => {
   return (
@@ -509,7 +501,7 @@ const EnhancedContactForm: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedContactForm</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedContactForm;
+export default EnhancedContactForm,

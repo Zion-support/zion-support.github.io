@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   BarChart3, 
   TrendingUp, 
   Zap, 
@@ -24,110 +24,74 @@ import {
   Filter,
   Download,
   Share2
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIBusinessIntelligence() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced machine learning algorithms that automatically discover patterns and insights in your data.'
+      icon: Brain,title: 'AI-Powered Analytics',description: 'Advanced machine learning algorithms that automatically discover patterns and insights in your data.'
+    };
+    {
+      icon: BarChart3,title: 'Real-time Dashboards',description: 'Interactive visualizations that update in real-time, providing instant insights into your business performance.'
     },
     {
-      icon: BarChart3,
-      title: 'Real-time Dashboards',
-      description: 'Interactive visualizations that update in real-time, providing instant insights into your business performance.'
-    },
+      icon: TrendingUp,title: 'Predictive Modeling',description: 'Forecast future trends and outcomes using historical data and advanced statistical models.'
+    };
     {
-      icon: TrendingUp,
-      title: 'Predictive Modeling',
-      description: 'Forecast future trends and outcomes using historical data and advanced statistical models.'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically, saving time and ensuring consistency across your organization.'
+      icon: Zap,title: 'Automated Reporting',description: 'Generate comprehensive reports automatically, saving time and ensuring consistency across your organization.'
     }
-  ];
+  ],
 
   const capabilities = [
     {
-      title: 'Data Integration',
-      description: 'Connect to any data source - databases, APIs, cloud services, and more',
-      icon: Database,
-      benefits: ['Unified data view', 'Real-time synchronization', 'Multiple format support']
+      title: 'Data Integration',description: 'Connect to any data source - databases, APIs, cloud services, and more',
+      icon: Database,benefits: ['Unified data viewReal-time synchronization', 'Multiple format support']
     },
     {
-      title: 'Advanced Analytics',
-      description: 'Leverage machine learning for deep insights and pattern recognition',
-      icon: Brain,
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis']
+      title: 'Advanced Analytics',description: 'Leverage machine learning for deep insights and pattern recognition',icon: Brain,benefits: ['Predictive analyticsAnomaly detection', 'Trend analysis']
     },
     {
-      title: 'Visualization',
-      description: 'Create stunning, interactive charts and dashboards',
-      icon: BarChart3,
-      benefits: ['Custom dashboards', 'Interactive charts', 'Mobile responsive']
+      title: 'Visualization',description: 'Create stunning, interactive charts and dashboards',
+      icon: BarChart3,benefits: ['Custom dashboardsInteractive charts', 'Mobile responsive']
     },
     {
-      title: 'Natural Language Query',
-      description: 'Ask questions in plain English and get instant answers',
-      icon: Search,
-      benefits: ['Easy to use', 'Fast results', 'No technical knowledge required']
+      title: 'Natural Language Query',description: 'Ask questions in plain English and get instant answers',icon: Search,benefits: ['Easy to useFast results', 'No technical knowledge required']
     }
-  ];
+  ],
 
   const useCases = [
     {
-      industry: 'Retail',
-      description: 'Customer behavior analysis, inventory optimization, and sales forecasting',
-      icon: Users,
-      metrics: ['Customer Lifetime Value', 'Inventory Turnover', 'Sales Growth']
+      industry: 'Retail',description: 'Customer behavior analysis, inventory optimization, and sales forecasting',
+      icon: Users,metrics: ['Customer Lifetime ValueInventory Turnover', 'Sales Growth']
     },
     {
-      industry: 'Finance',
-      description: 'Risk assessment, fraud detection, and portfolio optimization',
-      icon: Shield,
-      metrics: ['Risk Score', 'Fraud Detection Rate', 'Portfolio Performance']
+      industry: 'Finance',description: 'Risk assessment, fraud detection, and portfolio optimization',
+      icon: Shield,metrics: ['Risk ScoreFraud Detection Rate', 'Portfolio Performance']
     },
     {
-      industry: 'Healthcare',
-      description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',
-      icon: Activity,
-      metrics: ['Patient Outcomes', 'Resource Utilization', 'Treatment Success Rate']
+      industry: 'Healthcare',description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',
+      icon: Activity,metrics: ['Patient OutcomesResource Utilization', 'Treatment Success Rate']
     },
     {
-      industry: 'Manufacturing',
-      description: 'Predictive maintenance, quality control, and production optimization',
-      icon: Target,
-      metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency']
+      industry: 'Manufacturing',description: 'Predictive maintenance, quality control, and production optimization',
+      icon: Target,metrics: ['Equipment UptimeQuality Score', 'Production Efficiency']
     }
-  ];
+  ],
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: 'Increased Revenue',
-      description: 'Identify new opportunities and optimize existing processes to drive growth'
-    },
+      icon: TrendingUp,title: 'Increased Revenue',description: 'Identify new opportunities and optimize existing processes to drive growth'
+    };
     {
-      icon: Zap,
-      title: 'Improved Efficiency',
-      description: 'Automate routine tasks and streamline operations across your organization'
-    },
+      icon: Zap,title: 'Improved Efficiency',description: 'Automate routine tasks and streamline operations across your organization'
+    };
     {
-      icon: Eye,
-      title: 'Better Insights',
-      description: 'Gain deeper understanding of your business with AI-powered analytics'
-    },
+      icon: Eye,title: 'Better Insights',description: 'Gain deeper understanding of your business with AI-powered analytics'
+    };
     {
-      icon: Shield,
-      title: 'Risk Mitigation',
-      description: 'Identify and address potential issues before they impact your business'
+      icon: Shield,title: 'Risk Mitigation',description: 'Identify and address potential issues before they impact your business'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -350,7 +314,7 @@ export default function AIBusinessIntelligence() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI Business Intelligence is transforming industries across the globe, 
+              AI Business Intelligence is transforming industries across the globe;
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
@@ -443,24 +407,16 @@ export default function AIBusinessIntelligence() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-                step: '01',
-                title: 'Assessment',
-                description: 'Evaluate your current data infrastructure and BI needs'
-              },
+                step: '01',title: 'Assessment',description: 'Evaluate your current data infrastructure and BI needs'
+              };
               {
-                step: '02',
-                title: 'Design',
-                description: 'Create a comprehensive AI BI architecture and implementation plan'
-              },
+                step: '02',title: 'Design',description: 'Create a comprehensive AI BI architecture and implementation plan'
+              };
               {
-                step: '03',
-                title: 'Development',
-                description: 'Build and configure your AI BI solution with custom dashboards'
-              },
+                step: '03',title: 'Development',description: 'Build and configure your AI BI solution with custom dashboards'
+              };
               {
-                step: '04',
-                title: 'Deployment',
-                description: 'Launch your solution and provide training and ongoing support'
+                step: '04',title: 'Deployment',description: 'Launch your solution and provide training and ongoing support'
               }
             ].map((phase, index) => (
               <motion.div
@@ -497,7 +453,7 @@ export default function AIBusinessIntelligence() {
               process and drive unprecedented business growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover: from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
                 Start Your AI BI Journey
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
@@ -508,5 +464,5 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
     </div>
-  );
+  )
 }

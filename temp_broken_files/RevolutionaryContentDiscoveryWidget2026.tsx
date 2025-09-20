@@ -1,148 +1,148 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Search,
   Filter,
   Grid,
   List,
-  Star;
-  Clock;
-  TrendingUp;
-  BookOpen;
-  Brain;
-  Zap;
-  Cpu;
-  Eye;
-  ChevronDown;
-  X;
-  CheckCircle;
-  Sparkles;
-  Target;
-  Lightbulb;
-  ArrowRight;
-  Play;
-  Users;
-  BarChart3,
-} from 'lucide-react';
+  Star,
+  Clock,
+  TrendingUp,
+  BookOpen,
+  Brain,
+  Zap,
+  Cpu,
+  Eye,
+  ChevronDown,
+  X,
+  CheckCircle,
+  Sparkles,
+  Target,
+  Lightbulb,
+  ArrowRight,
+  Play,
+  Users,
+  BarChart3
+} from 'lucide-react',
 const RevolutionaryContentDiscoveryWidget2026 = () => {,
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [viewModesetViewMode] = useState('grid');
-  const [sortBysetSortBy] = useState('trending');
-  const [isFilterOpensetIsFilterOpen] = useState(false);
-  const [filteredContentsetFilteredContent] = useState([]);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [searchQuerysetSearchQuery] = useState(''),
+  const [selectedCategorysetSelectedCategory] = useState('all'),
+  const [viewModesetViewMode] = useState('grid'),
+  const [sortBysetSortBy] = useState('trending'),
+  const [isFilterOpensetIsFilterOpen] = useState(false),
+  const [filteredContentsetFilteredContent] = useState([]),
+  const [isVisiblesetIsVisible] = useState(false),
   const categories = [,
-    { id: ''allname: 'All 'Contenticon: Gridcolor: 'from-gray-600 to-gray-800' ,};
-    { id: 'ai-'breakthroughsname: 'AI 'Breakthroughsicon: Braincolor: 'from-purple-600 to-pink-600' ,};
-    { id: ''automationname: ''Automationicon: Zapcolor: 'from-blue-600 to-cyan-600' ,};
-    { id: ''quantumname: 'Quantum 'Computingicon: Cpucolor: 'from-indigo-600 to-purple-600' ,};
-    { id: ''predictionsname: 'Future 'Predictionsicon: Eyecolor: 'from-emerald-600 to-teal-600' ,};
-    { id: ''tutorialsname: ''Tutorialsicon: BookOpencolor: 'from-orange-600 to-red-600' ,};
-    { id: 'case-'studiesname: 'Case 'Studiesicon: BarChart3color: 'from-green-600 to-emerald-600' ,}
-  ];
+    { id: ''allname: 'All 'Contenticon: Gridcolor: 'from-gray-600 to-gray-800' },
+    { id: 'ai-'breakthroughsname: 'AI 'Breakthroughsicon: Braincolor: 'from-purple-600 to-pink-600' },
+    { id: ''automationname: ''Automationicon: Zapcolor: 'from-blue-600 to-cyan-600' },
+    { id: ''quantumname: 'Quantum 'Computingicon: Cpucolor: 'from-indigo-600 to-purple-600' },
+    { id: ''predictionsname: 'Future 'Predictionsicon: Eyecolor: 'from-emerald-600 to-teal-600' },
+    { id: ''tutorialsname: ''Tutorialsicon: BookOpencolor: 'from-orange-600 to-red-600' },
+    { id: 'case-'studiesname: 'Case 'Studiesicon: BarChart3color: 'from-green-600 to-emerald-600' }
+  ],
   const sortOptions = [,
-    { id: ''trendingname: ''Trendingicon: TrendingUp ,};
-    { id: ''newestname: ''Newesticon: Clock ,};
-    { id: ''ratingname: 'Highest 'Ratedicon: Star ,};
-    { id: ''popularname: 'Most 'Popularicon: Users ,}
-  ];
+    { id: ''trendingname: ''Trendingicon: TrendingUp },
+    { id: ''newestname: ''Newesticon: Clock },
+    { id: ''ratingname: 'Highest 'Ratedicon: Star },
+    { id: ''popularname: 'Most 'Popularicon: Users }
+  ],
   const sampleContent = [,
     {,
-      id: 1;
-      title: 'Quantum-Neural Fusion Technology';
-      description: 'Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.';
-      category: 'ai-breakthroughs';
-      image: '/api/placeholder/400/300';
-      readTime: '8 min read';
-      difficulty: 'Advanced';
-      rating: 4.9;
-      views: 15420;
-      author: 'Dr. Sarah Chen';
-      publishedAt: '2026-01-15';
-      tags: [AI', 'Quantum 'ComputingNeural 'Networks', 'Breakthrough'];
-      featured: true,};
+      id: 1,
+      title: 'Quantum-Neural Fusion Technology',
+      description: 'Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.',
+      category: 'ai-breakthroughs',
+      image: '/api/placeholder/400/300',
+      readTime: '8 min read',
+      difficulty: 'Advanced',
+      rating: 4.9,
+      views: 15420,
+      author: 'Dr. Sarah Chen',
+      publishedAt: '2026-01-15',
+      tags: [AIQuantum 'ComputingNeural 'NetworksBreakthrough'],
+      featured: true},
     {,
-      id: 2;
-      title: 'Autonomous Business Operations';
-      description: 'Complete business process automation with AI-powered decision making and intelligent optimization.';
-      category: 'automation';
-      image: '/api/placeholder/400/300';
-      readTime: '12 min read';
-      difficulty: 'Intermediate';
-      rating: 4.7;
-      views: 12850;
-      author: 'Michael Rodriguez';
-      publishedAt: '2026-01-14';
-      tags: [Automation', 'BusinessAI', 'Process Optimization'];
-      featured: false,};
+      id: 2,
+      title: 'Autonomous Business Operations',
+      description: 'Complete business process automation with AI-powered decision making and intelligent optimization.',
+      category: 'automation',
+      image: '/api/placeholder/400/300',
+      readTime: '12 min read',
+      difficulty: 'Intermediate',
+      rating: 4.7,
+      views: 12850,
+      author: 'Michael Rodriguez',
+      publishedAt: '2026-01-14',
+      tags: [AutomationBusinessAI', 'Process Optimization'],
+      featured: false},
     {,
-      id: 3;
-      title: 'AI Singularity Timeline 2030-2035';
-      description: 'Comprehensive analysis of when and how AI will achieve technological singularity.';
-      category: 'predictions';
-      image: '/api/placeholder/400/300';
-      readTime: '18 min read';
-      difficulty: 'Expert';
-      rating: 4.8;
-      views: 22100;
-      author: 'Prof. Alex Thompson';
-      publishedAt: '2026-01-13';
-      tags: ['AI 'SingularityFuture 'Predictions', 'Technology'Analysis'];
-      featured: true,};
+      id: 3,
+      title: 'AI Singularity Timeline 2030-2035',
+      description: 'Comprehensive analysis of when and how AI will achieve technological singularity.',
+      category: 'predictions',
+      image: '/api/placeholder/400/300',
+      readTime: '18 min read',
+      difficulty: 'Expert',
+      rating: 4.8,
+      views: 22100,
+      author: 'Prof. Alex Thompson',
+      publishedAt: '2026-01-13',
+      tags: ['AI 'SingularityFuture 'PredictionsTechnology'Analysis'],
+      featured: true},
     {,
-      id: 4;
-      title: 'Quantum Machine Learning Algorithms';
-      description: 'Machine learning algorithms optimized for quantum computing systems with exponential speedup.';
-      category: 'quantum';
-      image: '/api/placeholder/400/300';
-      readTime: '15 min read';
-      difficulty: 'Expert';
-      rating: 4.9;
-      views: 18750;
-      author: 'Dr. Elena Volkov';
-      publishedAt: '2026-01-12';
-      tags: ['Quantum 'ComputingMachine 'Learning', 'Algorithms'Performance'];
-      featured: false,};
+      id: 4,
+      title: 'Quantum Machine Learning Algorithms',
+      description: 'Machine learning algorithms optimized for quantum computing systems with exponential speedup.',
+      category: 'quantum',
+      image: '/api/placeholder/400/300',
+      readTime: '15 min read',
+      difficulty: 'Expert',
+      rating: 4.9,
+      views: 18750,
+      author: 'Dr. Elena Volkov',
+      publishedAt: '2026-01-12',
+      tags: ['Quantum 'ComputingMachine 'LearningAlgorithms'Performance'],
+      featured: false},
     {,
-      id: 5;
-      title: 'Neural Interface Implementation Guide';
-      description: 'Step-by-step guide to implementing direct brain-computer interfaces for enhanced human-AI collaboration.';
-      category: 'tutorials';
-      image: '/api/placeholder/400/300';
-      readTime: '25 min read';
-      difficulty: 'Advanced';
-      rating: 4.6;
-      views: 9650;
-      author: 'Dr. James Park';
-      publishedAt: '2026-01-11';
-      tags: ['Neural 'InterfaceTutorial', 'ImplementationBCI'];
-      featured: false,};
+      id: 5,
+      title: 'Neural Interface Implementation Guide',
+      description: 'Step-by-step guide to implementing direct brain-computer interfaces for enhanced human-AI collaboration.',
+      category: 'tutorials',
+      image: '/api/placeholder/400/300',
+      readTime: '25 min read',
+      difficulty: 'Advanced',
+      rating: 4.6,
+      views: 9650,
+      author: 'Dr. James Park',
+      publishedAt: '2026-01-11',
+      tags: ['Neural 'InterfaceTutorialImplementationBCI'],
+      featured: false},
     {,
-      id: 6;
-      title: 'Enterprise AI Transformation Case Study';
-      description: 'How Fortune 500 companies achieved 300% ROI through comprehensive AI implementation strategies.';
-      category: 'case-studies';
-      image: '/api/placeholder/400/300';
-      readTime: '20 min read';
-      difficulty: 'Intermediate';
-      rating: 4.8;
-      views: 14200;
-      author: 'Lisa Wang';
-      publishedAt: '2026-01-10';
-      tags: ['Case 'StudyEnterprise', 'ROIAI Implementation'];
-      featured: true,}
-  ];
+      id: 6,
+      title: 'Enterprise AI Transformation Case Study',
+      description: 'How Fortune 500 companies achieved 300% ROI through comprehensive AI implementation strategies.',
+      category: 'case-studies',
+      image: '/api/placeholder/400/300',
+      readTime: '20 min read',
+      difficulty: 'Intermediate',
+      rating: 4.8,
+      views: 14200,
+      author: 'Lisa Wang',
+      publishedAt: '2026-01-10',
+      tags: ['Case 'StudyEnterpriseROIAI Implementation'],
+      featured: true}
+  ],
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   useEffect(() => {,
-    let filtered = sampleContent;
+    let filtered = sampleContent,
     // Filter by category,
     if (selectedCategory !== 'all') {,
-      filtered = filtered.filter(item => item.category === selectedCategory);
+      filtered = filtered.filter(item => item.category === selectedCategory),
     }
 ,
     // Filter by search query,
@@ -151,42 +151,42 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      );
+      ),
     }
 ,
     // Sort content,
     switch (sortBy) {,
       case 'newest':,
-        filtered.sort((ab) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
-        break;
+        filtered.sort((ab) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()),
+        break,
       case 'rating':,
-        filtered.sort((ab) => b.rating - a.rating);
-        break;
+        filtered.sort((ab) => b.rating - a.rating),
+        break,
       case 'popular':,
-        filtered.sort((ab) => b.views - a.views);
-        break;
+        filtered.sort((ab) => b.views - a.views),
+        break,
       case 'trending':,
       default: // Keep original order for trending,
-        break,}
+        break}
 ,
-    setFilteredContent(filtered);
-  }[searchQueryselectedCategorysortBy]);
+    setFilteredContent(filtered),
+  }[searchQueryselectedCategorysortBy]),
   const getDifficultyColor = (difficulty: string) => {,
     switch (difficulty) {,
-      case 'Beginner': return 'bg-green-100 text-green-800';
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
-      case 'Advanced': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800',}
-  };
-  if (!isVisible) return null;
+      case 'Beginner': return 'bg-green-100 text-green-800',
+      case 'Intermediate': return 'bg-yellow-100 text-yellow-800',
+      case 'Advanced': return 'bg-orange-100 text-orange-800',
+      case 'Expert': return 'bg-red-100 text-red-800',
+      default: return 'bg-gray-100 text-gray-800'}
+  },
+  if (!isVisible) return null,
   return (,
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5" />,
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-12",
         >,
@@ -205,12 +205,12 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
             articlestutorialsand insights tailored to your interests.,
           </p>,
         </div>,
-        {/* Search and Filters */,}
+        {/* Search and Filters */}
         <div,
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20",
         >,
           <div className="flex flex-col lg: flex-row gap-4">,
-            {/* Search Bar */,}
+            {/* Search Bar */}
             <div className="flex-1 relative">,
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />,
               <input,
@@ -221,7 +221,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent",
               />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="relative">,
               <select,
                 value={selectedCategory}
@@ -229,10 +229,9 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
                 className="appearance-none bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white pr-8 focus: outline-none focus:ring-2 focus:ring-purple-500",
               >,
                 {categories.map(category => (,
-                  <option key={category.id,} value={category.id} className="bg-slate-800 text-white">,
+                  <option key={category.id} value={category.id} className="bg-slate-800 text-white">,
                     {category.name}
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />,
             </div>,
@@ -244,10 +243,9 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
                 className="appearance-none bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white pr-8 focus: outline-none focus:ring-2 focus:ring-purple-500",
               >,
                 {sortOptions.map(option => (,
-                  <option key={option.id,} value={option.id} className="bg-slate-800 text-white">,
+                  <option key={option.id} value={option.id} className="bg-slate-800 text-white">,
                     {option.name}
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />,
             </div>,
@@ -256,14 +254,14 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
               <button,
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-md transition-colors ${,
-                  viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover: text-white',}`}
+                  viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover: text-white'}`}
               >,
                 <Grid className="w-5 h-5" />,
               </button>,
               <button,
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded-md transition-colors ${,
-                  viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover: text-white',}`}
+                  viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover: text-white'}`}
               >,
                 <List className="w-5 h-5" />,
               </button>,
@@ -275,18 +273,18 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
           className={`grid gap-6 ${,
             viewMode === 'grid',
               ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-              : 'grid-cols-1',}`}
+              : 'grid-cols-1'}`}
         >,
           <div>,
             {filteredContent.map((itemindex) => (,
               <div,
                 key={item.id}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${,
-                  viewMode === 'list' ? 'flex' : '',}`}
+                  viewMode === 'list' ? 'flex' : ''}`}
               >,
                 {/* Image */}
                 <div className={`relative overflow-hidden ${,
-                  viewMode === 'list' ? 'w-48 h-32 flex-shrink-0' : 'h-48',
+                  viewMode === 'list' ? 'w-48 h-32 flex-shrink-0' : 'h-48'
                 }`}>,
                   <img,
                     src={item.image}
@@ -294,15 +292,14 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
                     className="w-full h-full object-cover group-hover: scale-110 transition-transform duration-500",
                   />,
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />,
-                  {/* Featured Badge */,}
+                  {/* Featured Badge */}
                   {item.featured && (,
                     <div className="absolute top-3 left-3">,
                       <span className="px-2 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-medium rounded-full flex items-center">,
                         <Star className="w-3 h-3 mr-1 fill-current" />,
                         Featured,
                       </span>,
-                    </div>,
-                  )}
+                    </div>)}
                   {/* Category Badge */}
                   <div className="absolute top-3 right-3">,
                     <span className="px-2 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">,
@@ -316,7 +313,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
                     </div>,
                   </div>,
                 </div>,
-                {/* Content */,}
+                {/* Content */}
                 <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>,
                   <div className="flex items-center justify-between mb-3">,
                     <span className={`px-2 py-1 text-xs font-medium rounded-full ${getDifficultyColor(item.difficulty)}`}>,
@@ -328,7 +325,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
                     </div>,
                   </div>,
                   <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">,
-                    {item.title,}
+                    {item.title}
                   </h3>,
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">,
                     {item.description}
@@ -341,8 +338,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
                         className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full",
                       >,
                         {tag}
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">,
@@ -368,7 +364,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
                   </a>,
                 </div>,
               </div>,
-            )),}
+            ))}
           </div>,
         </div>,
         {/* No Results */}
@@ -383,15 +379,15 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
             </p>,
             <button,
               onClick={() => {,
-                setSearchQuery(', ');
-                setSelectedCategory('all');
+                setSearchQuery(),
+                setSelectedCategory('all'),
               }}
               className="px-6 py-3 bg-purple-600 text-white rounded-lg hover: bg-purple-500 transition-colors",
             >,
               Clear Filters,
             </button>,
           </div>,
-        ),}
+        )}
         {/* Bottom CTA */}
         <div,
           className="text-center mt-16",
@@ -424,6 +420,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default RevolutionaryContentDiscoveryWidget2026;
+  )},
+export default RevolutionaryContentDiscoveryWidget2026,
 </div></div></div>,

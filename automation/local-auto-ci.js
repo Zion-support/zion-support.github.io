@@ -1,30 +1,30 @@
 
 class Script {,
   constructor() {,
-    this.isRunning = false;
+    this.isRunning = false,
   }
 ,
   async start() {,
-    this.isRunning = true;
-    console.log('Starting Script...');
+    this.isRunning = true,
+    console.log('Starting Script...'),
     try {,
-      const winston = require('winston');
+      const winston = require('winston'),
 const logger = winston.createLogger({,
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(,
-    winston.format.timestamp();
-    winston.format.errors({ stack: true ,});
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
     winston.format.json(),
-  );
-  defaultMeta: { service: 'automation-script' ,};
+  ),
+  defaultMeta: { service: 'automation-script' },
   transports: [,
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' ,});
-    new winston.transports.File({ filename: 'logs/combined.log' ,}),
-  ],
-});
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' })
+  ]
+}),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple(),}));
+    format: winston.format.simple()})),
 }
 ,
 const { execSync, spawnSync } = require('child_process'),
@@ -36,28 +36,28 @@ const TEST_COMMAND = npm test', // Change if your main test command is different
 const WAIT_MINUTES = 10,
 function log(message)  {,
   const timestamp = new Date().toISOString(),
-const logMessage = `[${timestamp}] ${message}`;
-  logger.info(logMessage);
-  fs.appendFileSync(LOG_FILE, logMessage + \n');
+const logMessage = `[${timestamp}] ${message}`,
+  logger.info(logMessage),
+  fs.appendFileSync(LOG_FILE, logMessage + \n'),
 }
 ,
 async function mainLoop()  {,
   while (true) {,
-    log('--- Running tests ---');
-    let testFailed = false;
+    log('--- Running tests ---'),
+    let testFailed = false,
     try {,
-      execSync(TEST_COMMAND, { stdio: 'inherit' ,});
-      log('Tests passed.');
+      execSync(TEST_COMMAND, { stdio: 'inherit' }),
+      log('Tests passed.'),
     } catch (err) {,
-      log('Tests failed. Running auto-fix...');
-      testFailed = true;
+      log('Tests failed. Running auto-fix...'),
+      testFailed = true,
       try {,
-        execSync(`node ${AUTO_FIX_SCRIPT}`, { stdio: 'inherit' ,});
-        log('Auto-fix script completed.');
+        execSync(`node ${AUTO_FIX_SCRIPT}`, { stdio: 'inherit' }),
+        log('Auto-fix script completed.'),
       } catch (fixErr) {,
-        log('Auto-fix script failed: + fixErr.message),}
+        log('Auto-fix script failed: + fixErr.message)}
     }
-    log(`Waiting ${WAIT_MINUTES} minutes before next run...`);
+    log(`Waiting ${WAIT_MINUTES} minutes before next run...`),
     await new Promise((res) =>,
 const timeoutId =,
 const timeoutId =,
@@ -105,135 +105,135 @@ const timeoutId =,
 const timeoutId =,
 const timeoutId =,
 const timeoutId =,
-const timeoutId = setTimeout(res,                                                WAIT_MINUTES * 60 * 1000);
+const timeoutId = setTimeout(res,                                                WAIT_MINUTES * 60 * 1000),
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-);
+),
   }
 }
 ,
-mainLoop();
+mainLoop(),
     } catch (error) {,
-      console.error('Error in Script:', error);
-      throw error;
+      console.error('Error in Script:', error),
+      throw error,
     }
   }
 ,
   stop() {,
-    this.isRunning = false;
-    console.log('Stopping Script...');
+    this.isRunning = false,
+    console.log('Stopping Script...'),
   }
 }
 ,
 // Start the script,
 if (require.main === module) {,
-  const script = new Script();
+  const script = new Script(),
   script.start().catch(error => {,
-    console.error('Failed to start Script:', error);
-    process.exit(1);
-  });
+    console.error('Failed to start Script:', error),
+    process.exit(1),
+  }),
 }
 ,
-module.exports = Script;
+module.exports = Script,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {,
-  console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+  console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0);
-});
+  process.exit(0),
+}),
 process.on('SIGTERM', () => {,
-  console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+  console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0);
-});
+  process.exit(0),
+}),

@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from "react",
 export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <section className="space-y-6">
@@ -17,5 +17,5 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
       </div>
       {children}
     </section>
-  );
+  ),
 }

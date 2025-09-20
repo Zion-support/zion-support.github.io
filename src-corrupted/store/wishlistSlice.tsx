@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function Wishlistslice(props: any) {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -8,6 +8,5 @@ export default function Wishlistslice(props: any) {,
           This is a placeholder component for wishlistslice.,
         </p>,
       </div>,
-    </div>,
-  ),}
+    </div>)}
 ,

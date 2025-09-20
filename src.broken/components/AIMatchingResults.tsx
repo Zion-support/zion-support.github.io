@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { MatchResultItem } from "@/lib/ai-matchmaking";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
+import Skeleton from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
 
 interface AIMatchingResultsProps {
-  matches: MatchResultItem[];
-  onSelectMatch?: (match: MatchResultItem) => void;
-  isLoading?: boolean;
-  projectDescription?: string;
-  // serviceType?: string; // Removed as _serviceType was unused
+  matches: MatchResultItem[],
+  onSelectMatch?: (match: MatchResultItem) => void,
+  isLoading?: boolean,
+  projectDescription?: string,
+  // serviceType?: string, // Removed as _serviceType was unused
 }
 
 export function AIMatchingResults({
@@ -23,7 +23,7 @@ export function AIMatchingResults({
   projectDescription = "",
   // serviceType: _serviceType = "" // Removed
 }: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("all"),
   
   // Group matches by category
   const categories = {
@@ -31,15 +31,15 @@ export function AIMatchingResults({
     talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
     services: matches.filter(match => match.category.toLowerCase().includes("service")),
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
-  };
+  },
   
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase();
-    if (lowerCategory.includes("talent")) return User;
-    if (lowerCategory.includes("equipment")) return Monitor;
-    return BriefcaseIcon;
-  };
+    const lowerCategory = category.toLowerCase(),
+    if (lowerCategory.includes("talent")) return User,
+    if (lowerCategory.includes("equipment")) return Monitor,
+    return BriefcaseIcon
+  },
   
   if (isLoading) {
     return (
@@ -51,7 +51,7 @@ export function AIMatchingResults({
           <Skeleton className="h-[120px] w-full" />
         </div>
       </div>
-    );
+    ),
   }
   
   if (matches.length === 0) {
@@ -71,7 +71,7 @@ export function AIMatchingResults({
           )}
         </CardContent>
       </Card>
-    );
+    ),
   }
   
   return (
@@ -96,7 +96,7 @@ export function AIMatchingResults({
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
               items.map((match) => {
-                const CategoryIcon = getCategoryIcon(match.category);
+                const CategoryIcon = getCategoryIcon(match.category),
                 return (
                   <Card 
                     key={match.id}
@@ -153,7 +153,7 @@ export function AIMatchingResults({
                       </div>
                     </div>
                   </Card>
-                );
+                ),
               })
             ) : (
               <div className="text-center py-8 text-zion-slate-light">
@@ -164,5 +164,5 @@ export function AIMatchingResults({
         ))}
       </Tabs>
     </div>
-  );
+  ),
 }

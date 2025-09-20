@@ -1,3 +1,3 @@
 const HowItWorksSection: React.FC = () => {,
-  return (),};
-export default HowItWorksSection;
+  return ()},
+export default HowItWorksSection,

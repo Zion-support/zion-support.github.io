@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 const Blueprint20250818131415: React.FC = () => {
   return (
@@ -55,7 +55,7 @@ const Blueprint20250818131415: React.FC = () => {
             <div className="text-center text-gray-400">
               <p>This blueprint is a living document updated quarterly</p>
               <p className="mt-2">
-                <a href="/reports" className="text-blue-400 hover:text-blue-300">
+                <a href="/reports" className="text-blue-400 hover: text-blue-300">
                   View All Reports →
                 </a>
               </p>
@@ -64,7 +64,7 @@ const Blueprint20250818131415: React.FC = () => {
         </footer>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default Blueprint20250818131415;
+export default Blueprint20250818131415,

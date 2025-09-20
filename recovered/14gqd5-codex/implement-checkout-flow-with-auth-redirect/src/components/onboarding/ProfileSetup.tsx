@@ -1,32 +1,32 @@
 
-import { useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { User, Mail, AtSign, GraduationCap } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { User, Mail, AtSign, GraduationCap } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage
+} from "@/components/ui/form",
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters"),
-});
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")
+}),
 
-type ProfileFormValues = z.infer<typeof profileSchema>;
+type ProfileFormValues = z.infer<typeof profileSchema>,
 
 interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void;
-  userType: string;
+  onComplete: (data: ProfileFormValues) => void,
+  userType: string
 }
 
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
@@ -35,22 +35,21 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     defaultValues: {
       displayName: "",
       bio: "",
-      headline: "",
-    },
-  });
+      headline: ""
+    }
+  }),
 
   const getTypeLabel = () => {
     switch (userType) {
-      case "serviceProvider":
-        return "Service Provider";
+      case "serviceProvider": return "Service Provider",
       case "talent":
-        return "Talent";
+        return "Talent",
       case "client":
-        return "Client";
+        return "Client",
       default:
-        return "User";
+        return "User"
     }
-  };
+  },
 
   return (
     <div className="space-y-6">
@@ -133,12 +132,12 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
           >
             Complete Profile
           </Button>
         </form>
       </Form>
     </div>
-  );
+  )
 }

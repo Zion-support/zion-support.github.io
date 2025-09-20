@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function DataPlatformAccelerator() {,
   return (,
     <>,
@@ -42,7 +42,6 @@ export default function DataPlatformAccelerator() {,
           </div>,
         </section>,
       </main>,
-    </>,
-  ),
+    </>)
 }
 ,

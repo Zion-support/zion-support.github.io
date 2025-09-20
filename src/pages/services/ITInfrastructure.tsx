@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Server,
   Shield,
@@ -12,47 +12,28 @@ import {
   Cpu,
   HardDrive,
   Check
-} from 'lucide-react';
-
+} from "lucide-react";
 const ITInfrastructure = () => {
   const services = [
     {
-      icon: <Server className="w-8 h-8" />,
-      title: "Server Infrastructure",
-      description: "Enterprise-grade server solutions with high availability and performance optimization.",
-      features: ["Load balancing", "Auto-scaling", "High availability", "Performance monitoring"]
+      icon: <Server className="w-8 h-8" />,title: "Server Infrastructure",description: "Enterprise-grade server solutions with high availability and performance optimization.",features: ["Load balancing", "Auto-scaling", "High availability", "Performance monitoring"]
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud Infrastructure",
-      description: "Multi-cloud infrastructure management and optimization services.",
-      features: ["Multi-cloud strategy", "Cost optimization", "Security compliance", "Migration support"]
+      icon: <Cloud className="w-8 h-8" />,title: "Cloud Infrastructure",description: "Multi-cloud infrastructure management and optimization services.",features: ["Multi-cloud strategy", "Cost optimization", "Security compliance", "Migration support"]
     },
     {
-      icon: <Database className="w-8 h-8" />,
-      title: "Database Management",
-      description: "Comprehensive database infrastructure and management solutions.",
-      features: ["Performance tuning", "Backup & recovery", "Security hardening", "Monitoring"]
+      icon: <Database className="w-8 h-8" />,title: "Database Management",description: "Comprehensive database infrastructure and management solutions.",features: ["Performance tuning", "Backup & recovery", "Security hardening", "Monitoring"]
     },
     {
-      icon: <Network className="w-8 h-8" />,
-      title: "Network Infrastructure",
-      description: "Robust network design and implementation for enterprise environments.",
-      features: ["Network design", "Security implementation", "Performance optimization", "24/7 monitoring"]
+      icon: <Network className="w-8 h-8" />,title: "Network Infrastructure",description: "Robust network design and implementation for enterprise environments.",features: ["Network design", "Security implementation", "Performance optimization", "24/7 monitoring"]
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Security Infrastructure",
-      description: "Advanced security infrastructure and threat protection systems.",
-      features: ["Firewall management", "Intrusion detection", "Vulnerability assessment", "Incident response"]
+      icon: <Shield className="w-8 h-8" />,title: "Security Infrastructure",description: "Advanced security infrastructure and threat protection systems.",features: ["Firewall management", "Intrusion detection", "Vulnerability assessment", "Incident response"]
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Performance Optimization",
-      description: "Infrastructure performance tuning and optimization services.",
-      features: ["Performance analysis", "Capacity planning", "Optimization strategies", "Continuous monitoring"]
+      icon: <Zap className="w-8 h-8" />,title: "Performance Optimization",description: "Infrastructure performance tuning and optimization services.",features: ["Performance analysis", "Capacity planning", "Optimization strategies", "Continuous monitoring"]
     }
-  ];
+  ],
 
   const benefits = [
     "99.9% uptime guarantee",
@@ -61,7 +42,7 @@ const ITInfrastructure = () => {
     "Security-first approach",
     "Cost optimization",
     "Compliance ready"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-zion-slate-dark">
@@ -198,7 +179,7 @@ const ITInfrastructure = () => {
               Let our experts help you build a robust, scalable, and secure infrastructure
               that drives your business forward.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
                 Get Started Today
               </button>
@@ -210,7 +191,6 @@ const ITInfrastructure = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default ITInfrastructure;

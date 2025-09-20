@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -31,7 +31,7 @@ export default function Page() {
       icon: <Smartphone className="h-6 w-6 text-zion -purple" />,
       link: "/mobile - launch"
     }
-  ];
+  ],
 
   return (<div className="min - h-screen bg-zion - blue text-white">
       <SEO
@@ -92,11 +92,11 @@ export default function Page() {
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
-    </div>) };
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
-};
+    </div>) },
+            </a>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) ,
+},
 

@@ -1,30 +1,30 @@
 
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector";
-import { RolePicker } from "../components/onboarding/RolePicker";
-import { SignUpForm } from "../components/onboarding/SignUpForm";
+import React, { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",
+import { RolePicker } from "../components/onboarding/RolePicker",
+import { SignUpForm } from "../components/onboarding/SignUpForm",
 
-type OnboardingStep = "language" | "role" | "signup";
+type OnboardingStep = "language" | "role" | "signup",
 
 export function MobileOnboarding() {
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
+  const navigate = useNavigate(),
   
   const goToNextStep = () => {
     if (currentStep === "language") {
-      setCurrentStep("role");
+      setCurrentStep("role"),
     } else if (currentStep === "role") {
-      setCurrentStep("signup");
+      setCurrentStep("signup"),
     } else {
-      navigate("/mobile");
+      navigate("/mobile"),
     }
-  };
+  },
   
   const handleRoleSelect = () => {
-    setCurrentStep("signup");
-  };
+    setCurrentStep("signup"),
+  },
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -75,5 +75,5 @@ export function MobileOnboarding() {
         )}
       </div>
     </div>
-  );
+  ),
 }

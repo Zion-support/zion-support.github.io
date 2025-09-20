@@ -18,10 +18,10 @@ function CaseStudiesSection () {
   ArrowRight,
   Star,
   CheckCircle'
-} from 'lucide-react';
+} from 'lucide-react',
 
-      color: 'from-purple-500 to-pink-500'};
-  ];
+      color: 'from-purple-500 to-pink-500'},
+  ],
 const caseStudies = [{
 
     id: 1,
@@ -63,13 +63,13 @@ const caseStudies = [{
     challenge: "Lack of transparency in food supply chain","
     solution: "Implemented blockchain-based tracking system",
     results: ["
-      "100% supply chain visibility",;"
-      "Reduced fraud by 99%",;"
-      "Improved customer trust by 80%";
-    ],;"
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",;"
-    color: "from-green-500 to-emerald-500"};
-];
+      "100% supply chain visibility","
+      "Reduced fraud by 99%","
+      "Improved customer trust by 80%",
+    ],"
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400","
+    color: "from-green-500 to-emerald-500"},
+],
 =======
 
 export function CaseStudiesSection() {
@@ -195,7 +195,7 @@ export function CaseStudiesSection() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link"
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
@@ -211,17 +211,17 @@ export function CaseStudiesSection() {
                 <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
             </div>
           </div>
-        </motion.div>;
-      </div>;
-    </section>;) };
+        </motion.div>,
+      </div>,
+    </section>,) },
 
-export default CaseStudiesSection;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default CaseStudiesSection;
-export default CaseStudiesSection;
+export default CaseStudiesSection,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default CaseStudiesSection,
+export default CaseStudiesSection,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,51 +1,51 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, TrendingUp, Clock, DollarSign, ArrowRight, ExternalLink, Phone, Mail, MapPin, Zap, Brain, Rocket, Globe, Cpu, Lock, Eye, Shield, Target, Users, Award } from 'lucide-react';
-import Button from './Button';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Star, TrendingUp, Clock, DollarSign, ArrowRight, ExternalLink, Phone, Mail, MapPin, Zap, Brain, Rocket, Globe, Cpu, Lock, Eye, Shield, Target, Users, Award } from 'lucide-react',
+import Button from './Button',
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 interface UltraFuturisticServiceCardProps {
-  service: Service;
+  service: Service
 }
 
 const categoryIcons: { [key: string]: React.ReactNode } = {
@@ -65,5 +65,5 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Quantum IoT': <Cpu className="w-4 h-4" />,
   'Autonomous Vehicles': <Rocket className="w-4 h-4" />,
   'Smart Energy': <Zap className="w-4 h-4" />
-};
-export default UltraFuturisticServiceCard;
+},
+export default UltraFuturisticServiceCard,

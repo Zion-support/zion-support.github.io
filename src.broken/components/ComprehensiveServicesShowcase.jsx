@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { comprehensiveMicroSaasServices2025 } from '../../data / 2025 - comprehensive - micro - saas -services';
+import React, { useState } from 'react',
+import { comprehensiveMicroSaasServices2025 } from '../../data / 2025 - comprehensive - micro - saas -services',
 export default function Page() {
- from '../../data/2025-expanded-innovative-services';"
-import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';"
-import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+ from '../../data/2025-expanded-innovative-services',"
+import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations',"
+import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations',
 export default function Page() {
 ,
         { id: 'ai-sales-crm', name: 'AI Sales & CRM', count: allServices.filter(s => s.category.includes('Sales') || s.category.includes('CRM')).length },
@@ -44,14 +44,14 @@ export default function Page() {
         { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length },
         { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },
         { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
-    ];
+    ],
     const filteredServices = selectedCategory === 'all'
         ? allServices
         : allServices.filter(service => {
 
-            const category = categories.find(c => c.id === selectedCategory);
+            const category = categories.find(c => c.id === selectedCategory),
             if(!category)
-                return true;
+                return true,
             // Handle special category mappings
             const categoryMappings = {
 '"

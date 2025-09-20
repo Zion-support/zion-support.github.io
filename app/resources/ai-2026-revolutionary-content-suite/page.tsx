@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026 Revolutionary Content Suite - Zion Tech Group';
-  description: 'Complete collection of AI 2026 content covering autonomous systems, quantum AI, cybersecurity, and business transformation strategies.';
-  keywords: ['AI 2026Autonomous Systems', 'Quantum AICybersecurity', 'Business TransformationAI Implementation'],
-};
+  title: 'AI 2026 Revolutionary Content Suite - Zion Tech Group',
+  description: 'Complete collection of AI 2026 content covering autonomous systems, quantum AI, cybersecurity, and business transformation strategies.',
+  keywords: ['AI 2026Autonomous SystemsQuantum AICybersecurity', 'Business TransformationAI Implementation']
+},
 export default function AI2026RevolutionaryContentSuite() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">,
@@ -50,12 +50,12 @@ export default function AI2026RevolutionaryContentSuite() {,
           </div>,
         </div>,
       </section>,
-      {/* Content Overview */,}
+      {/* Content Overview */}
       <section id="content-overview" className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Complete Content Collection</h2>,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">,
-            {/* Autonomous Systems */,}
+            {/* Autonomous Systems */}
             <div className="bg-gradient-to-r from-purple-800 to-blue-800 rounded-3xl p-8 border border-purple-500 border-opacity-30">,
               <div className="flex items-center mb-6">,
                 <div className="text-5xl mr-4">🤖</div>,
@@ -89,7 +89,7 @@ export default function AI2026RevolutionaryContentSuite() {,
                 Read Complete Guide →,
               </Link>,
             </div>,
-            {/* Quantum AI */,}
+            {/* Quantum AI */}
             <div className="bg-gradient-to-r from-green-800 to-emerald-800 rounded-3xl p-8 border border-green-500 border-opacity-30">,
               <div className="flex items-center mb-6">,
                 <div className="text-5xl mr-4">⚛️</div>,
@@ -123,7 +123,7 @@ export default function AI2026RevolutionaryContentSuite() {,
                 Explore Quantum AI →,
               </Link>,
             </div>,
-            {/* Cybersecurity */,}
+            {/* Cybersecurity */}
             <div className="bg-gradient-to-r from-red-800 to-pink-800 rounded-3xl p-8 border border-red-500 border-opacity-30">,
               <div className="flex items-center mb-6">,
                 <div className="text-5xl mr-4">🛡️</div>,
@@ -157,7 +157,7 @@ export default function AI2026RevolutionaryContentSuite() {,
                 Secure Your Business →,
               </Link>,
             </div>,
-            {/* Success Stories */,}
+            {/* Success Stories */}
             <div className="bg-gradient-to-r from-yellow-800 to-orange-800 rounded-3xl p-8 border border-yellow-500 border-opacity-30">,
               <div className="flex items-center mb-6">,
                 <div className="text-5xl mr-4">🏆</div>,
@@ -194,7 +194,7 @@ export default function AI2026RevolutionaryContentSuite() {,
           </div>,
         </div>,
       </section>,
-      {/* Statistics Section */,}
+      {/* Statistics Section */}
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Proven Results</h2>,
@@ -218,7 +218,7 @@ export default function AI2026RevolutionaryContentSuite() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-cyan-500 to-blue-600">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>,
@@ -241,5 +241,4 @@ export default function AI2026RevolutionaryContentSuite() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

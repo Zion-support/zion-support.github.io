@@ -6,8 +6,8 @@ import Head from 'next/head',
 export default function ErrorPage() {,
   return (,
     <>,
-      <Head>;
-        <title>Authentication Error - Zion Tech Marketplace</title>;
+      <Head>,
+        <title>Authentication Error - Zion Tech Marketplace</title>,
         <meta name=&quot,description&quot, content=&quot,Authentication error page&quot, />,
       </Head>,
       <div className=&quot,min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark: from-gray-900 dark:to-gray-800 p-4&quot>,
@@ -70,12 +70,11 @@ export default function ErrorPage() {,
           </CardContent>,
         </Card>,
       </div>,
-    </>,
-  ),} catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    </>)} catch (error) {,
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
-,
+
 }
 }
 ,

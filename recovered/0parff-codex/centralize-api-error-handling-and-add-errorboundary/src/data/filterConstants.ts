@@ -12,7 +12,7 @@ export const COMMON_SKILLS = [
   "DevOps",
   "Cloud Architecture",
   "TensorFlow"
-];
+],
 
 // Regions
 export const REGIONS = [
@@ -22,4 +22,4 @@ export const REGIONS = [
   "South America",
   "Middle East",
   "Africa"
-];
+],

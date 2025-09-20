@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Rocket, Sparkles, Brain, Atom, Cpu, Building, Calculator, DollarSign, Grid, ArrowRight, Play, Target, Zap } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Star, Rocket, Sparkles, Brain, Atom, Cpu, Building, Calculator, DollarSign, Grid, ArrowRight, Play, Target, Zap } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function Showcase() {
   return (
@@ -18,6 +18,6 @@ export default function Showcase() {
         </div>
       </div>
     </div>
-  );
-};
-export default showcase;
+  ),
+},
+export default showcase,

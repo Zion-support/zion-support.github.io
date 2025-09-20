@@ -1,4 +1,4 @@
 declare module 'zod' {
-  const z: any;
-  export = z;
+  const z: any,
+  export = z
 }

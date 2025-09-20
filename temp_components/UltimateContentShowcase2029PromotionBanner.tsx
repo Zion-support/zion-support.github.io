@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Star
   ArrowRight
@@ -30,23 +30,23 @@ import {
   Bookmark,
   Share2,
   Download
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltimateContentShowcase2029PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentSlidesetCurrentSlide] = useState(0),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-advance slides
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }4000);
+      setCurrentSlide((prev) => (prev + 1) % 3),
+    }4000),
 
-    return () => clearInterval(interval);
-  }[]);
+    return () => clearInterval(interval),
+  }[]),
 
   const slides = [
     {
@@ -73,7 +73,7 @@ const UltimateContentShowcase2029PromotionBanner = () => {
       color: "from-green-500 to-emerald-500",
       stats: "2.5M views • 178K likes"
     }
-  ];
+  ],
 
   const features = [
     "Revolutionary AI Breakthroughs",
@@ -82,9 +82,9 @@ const UltimateContentShowcase2029PromotionBanner = () => {
     "Autonomous Systems Evolution",
     "Future Technology Predictions",
     "Interactive Content Discovery"
-  ];
+  ],
 
-  if (isDismissed) return null;
+  if (isDismissed) return null,
 
 const UltimateContentShowcase2029PromotionBanner: React.FC = () => {
   return (
@@ -92,7 +92,7 @@ const UltimateContentShowcase2029PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltimateContentShowcase2029PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltimateContentShowcase2029PromotionBanner;
+export default UltimateContentShowcase2029PromotionBanner,

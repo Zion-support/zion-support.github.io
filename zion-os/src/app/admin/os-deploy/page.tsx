@@ -1,22 +1,22 @@
-"use client";
+"use client",
 
-import { useState } from "react";
-import { FeatureKeys } from "@/lib/zod";
-import LoadingSpinner from "@/app/components/LoadingSpinner";
+import { useState } from "react",
+import { FeatureKeys } from "@/lib/zod",
+import LoadingSpinner from "@/app/components/LoadingSpinner",
 
 export default function AdminDeployPage() {
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
-  const [messageType, setMessageType] = useState<'success' | 'error'>('success');
+  const [loading, setLoading] = useState(false),
+  const [message, setMessage] = useState<string | null>(null),
+  const [messageType, setMessageType] = useState<'success' | 'error'>('success'),
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setLoading(true);
-    setMessage(null);
+    event.preventDefault(),
+    setLoading(true),
+    setMessage(null),
     
-    const formData = new FormData(event.currentTarget);
-    const features: Record<string, boolean> = {};
-    FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on"));
+    const formData = new FormData(event.currentTarget),
+    const features: Record<string, boolean> = {},
+    FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),
 
       const payload = {
         instanceName: String(formData.get("instanceName") || ""),
@@ -34,49 +34,49 @@ export default function AdminDeployPage() {
           sovereignTreasury: formData.get("sovereignTreasury") === "on",
           dualGovernance: formData.get("dualGovernance") === "on",
           aiModeration: formData.get("aiModeration") === "on",
-          affiliatePanel: formData.get("affiliatePanel") === "on",
-        },
-      };
+          affiliatePanel: formData.get("affiliatePanel") === "on"
+        }
+      },
 
     try {
-      const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) });
-      const data = await res.json();
+      const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) }),
+      const data = await res.json(),
       
       if (!res.ok) {
-        setMessageType('error');
-        setMessage(data.error || "Deployment failed");
-        return;
+        setMessageType('error'),
+        setMessage(data.error || "Deployment failed"),
+        return,
       }
       
-      setMessageType('success');
-      setMessage(`✅ Deployment queued successfully! ID: ${data.deploymentId}`);
-      (event.target as HTMLFormElement).reset();
+      setMessageType('success'),
+      setMessage(`✅ Deployment queued successfully! ID: ${data.deploymentId}`),
+      (event.target as HTMLFormElement).reset(),
     } catch (error) {
-      setMessageType('error');
-      setMessage("Network error occurred. Please try again.");
+      setMessageType('error'),
+      setMessage("Network error occurred. Please try again."),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
   const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
-      case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />;
-      case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />;
-      case "LAW": return <Shield className="w-5 h-5 text-purple-400" />;
-      case "GOV": return <Users className="w-5 h-5 text-red-400" />;
-      default: return <Globe className="w-5 h-5 text-gray-400" />;
+      case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />,
+      case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />,
+      case "LAW": return <Shield className="w-5 h-5 text-purple-400" />,
+      case "GOV": return <Users className="w-5 h-5 text-red-400" />,
+      default: return <Globe className="w-5 h-5 text-gray-400" />
     }
-  };
+  },
 
   const getGovernanceIcon = (type: string) => {
     switch (type) {
-      case "ADMIN": return <Crown className="w-5 h-5 text-yellow-400" />;
-      case "DAO_LITE": return <Users className="w-5 h-5 text-blue-400" />;
-      case "DAO_FULL": return <Zap className="w-5 h-5 text-purple-400" />;
-      default: return <Crown className="w-5 h-5 text-gray-400" />;
+      case "ADMIN": return <Crown className="w-5 h-5 text-yellow-400" />,
+      case "DAO_LITE": return <Users className="w-5 h-5 text-blue-400" />,
+      case "DAO_FULL": return <Zap className="w-5 h-5 text-purple-400" />,
+      default: return <Crown className="w-5 h-5 text-gray-400" />
     }
-  };
+  },
 
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
@@ -432,45 +432,45 @@ export default function AdminDeployPage() {
         </form>
       </div>
     </div>
-  );
+  ),
 }
 
 function labelFor(key: string) {
   switch (key) {
-    case "marketplace": return "Marketplace";
-    case "zion_gpt": return "ZionGPT Core";
-    case "resume_ai": return "Resume AI";
-    case "token_rewards": return "Token System";
-    case "onchain_contracts": return "Smart Contracts";
-    case "kyc_aml": return "KYC/AML";
-    case "dao_voting": return "DAO Voting";
-    case "incubator_grants": return "Incubator";
-    case "academy": return "Zion Academy";
-    case "partner_api": return "Partner API";
-    case "regional_dashboards": return "Regional Dashboards";
-    case "vendor_plugin": return "Vendor Plugin";
-    case "web3_login": return "Web3 Login";
-    case "multi_currency": return "Multi-Currency";
-    default: return key;
+    case "marketplace": return "Marketplace",
+    case "zion_gpt": return "ZionGPT Core",
+    case "resume_ai": return "Resume AI",
+    case "token_rewards": return "Token System",
+    case "onchain_contracts": return "Smart Contracts",
+    case "kyc_aml": return "KYC/AML",
+    case "dao_voting": return "DAO Voting",
+    case "incubator_grants": return "Incubator",
+    case "academy": return "Zion Academy",
+    case "partner_api": return "Partner API",
+    case "regional_dashboards": return "Regional Dashboards",
+    case "vendor_plugin": return "Vendor Plugin",
+    case "web3_login": return "Web3 Login",
+    case "multi_currency": return "Multi-Currency",
+    default: return key
   }
 }
 
 function getFeatureDescription(key: string) {
   switch (key) {
-    case "marketplace": return "Jobs, talent, and project marketplace";
-    case "zion_gpt": return "Core AI intelligence system";
-    case "resume_ai": return "AI-powered resume and proposal builder";
-    case "token_rewards": return "Token system with rewards";
-    case "onchain_contracts": return "Smart contract builder";
-    case "kyc_aml": return "Identity verification and compliance";
-    case "dao_voting": return "Proposal and voting system";
-    case "incubator_grants": return "Startup incubation and funding";
-    case "academy": return "Educational platform";
-    case "partner_api": return "API access for partners";
-    case "regional_dashboards": return "Regional and institutional views";
-    case "vendor_plugin": return "White-label vendor solutions";
-    case "web3_login": return "Web3 authentication and DID";
-    case "multi_currency": return "Multi-currency support";
-    default: return "Core platform feature";
+    case "marketplace": return "Jobs, talent, and project marketplace",
+    case "zion_gpt": return "Core AI intelligence system",
+    case "resume_ai": return "AI-powered resume and proposal builder",
+    case "token_rewards": return "Token system with rewards",
+    case "onchain_contracts": return "Smart contract builder",
+    case "kyc_aml": return "Identity verification and compliance",
+    case "dao_voting": return "Proposal and voting system",
+    case "incubator_grants": return "Startup incubation and funding",
+    case "academy": return "Educational platform",
+    case "partner_api": return "API access for partners",
+    case "regional_dashboards": return "Regional and institutional views",
+    case "vendor_plugin": return "White-label vendor solutions",
+    case "web3_login": return "Web3 authentication and DID",
+    case "multi_currency": return "Multi-currency support",
+    default: return "Core platform feature"
   }
 }

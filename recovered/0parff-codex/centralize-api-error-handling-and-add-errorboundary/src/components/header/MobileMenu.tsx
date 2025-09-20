@@ -1,22 +1,22 @@
 
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom",
+import { useLocation } from "react-router-dom",
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { useTranslation } from "react-i18next",
 
 export interface MobileMenuProps {
-  unreadCount?: number;
-  onClose: () => void;
+  unreadCount?: number,
+  onClose: () => void
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { t } = useTranslation();
+  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const { t } = useTranslation(),
 
   const baseItems = [
     {
@@ -59,7 +59,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith('/dashboard'),
       authRequired: true
     }
-  ];
+  ],
 
   const navItems = baseItems.map(item => ({
     ...item,
@@ -67,12 +67,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       item.key === 'explore'
         ? t('general.explore')
         : t(`nav.${item.key}`)
-  }));
+  })),
 
   // Filter items based on auth status
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
-  );
+  ),
 
   return (
     <div className="py-6">
@@ -109,5 +109,5 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
         ))}
       </nav>
     </div>
-  );
+  ),
 }

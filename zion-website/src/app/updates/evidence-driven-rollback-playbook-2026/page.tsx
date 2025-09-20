@@ -25,6 +25,5 @@ export default function Page() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}
 ,

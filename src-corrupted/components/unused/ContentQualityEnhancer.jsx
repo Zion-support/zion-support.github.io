@@ -1,2 +1,2 @@
 
-export default ContentQualityEnhancer;
+export default ContentQualityEnhancer,

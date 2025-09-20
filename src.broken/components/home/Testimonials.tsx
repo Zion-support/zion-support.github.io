@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-  y: 20 ;
+  y: 20 
 
 }}
-  y: 0 ;
+  y: 0 
 
 }}
-  delay: 0.4 ;
+  delay: 0.4 
 
 }}
 =======
@@ -113,15 +113,15 @@
 
           <button
             onClick={nextTestimonial}"
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover: bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             
 "
-            <ChevronRight className="w-6 h-6"  />          </button>;
+            <ChevronRight className="w-6 h-6"  />          </button>,
         </div>
 
         {/* Dots Indicator */}"
-        <div className="flex justify-center mt-8 space-x-2">;
-          {testimonials.map(_: unknown, index: unknown ;
+        <div className="flex justify-center mt-8 space-x-2">,
+          {testimonials.map(_: unknown, index: unknown ,
             <button
               key={index}
               onClick={(: unknown goToTestimonial(index)}
@@ -152,7 +152,7 @@
           viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">"
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-2xl mx-auto">"
             <div className="text-center">"
               <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>"
               <div className="text-zion-slate-light text-sm">Client Satisfaction</div>
@@ -168,12 +168,12 @@
             <div className="text-center">"
               <div className="text-3xl font-bold text-zion-cyan mb-2">50+</div>"
               <div className="text-zion-slate-light text-sm">Expert Engineers</div>
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )};
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,
+  )},
 
 export default Testimonials}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

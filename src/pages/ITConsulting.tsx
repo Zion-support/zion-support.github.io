@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  ArrowRight, 
+  ArrowRight,
   CheckCircle, 
   Cloud, 
   Shield, 
@@ -14,101 +14,62 @@ import {
   Rocket,
   Globe,
   Lock
-} from 'lucide-react';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 const features = [
   {
-    icon: Brain,
-    title: 'Strategic Expertise',
-    description: 'Deep industry knowledge and strategic thinking to guide your technology decisions.',
-    color: 'from-blue-500 to-cyan-500'
-  },
+    icon: Brain,title: 'Strategic Expertise',description: 'Deep industry knowledge and strategic thinking to guide your technology decisions.',color: 'from-blue-500 to-cyan-500'
+  };
   {
-    icon: Users,
-    title: 'Experienced Team',
-    description: 'Certified consultants with decades of combined experience in enterprise IT.',
-    color: 'from-purple-500 to-pink-500'
-  },
+    icon: Users,title: 'Experienced Team',description: 'Certified consultants with decades of combined experience in enterprise IT.',color: 'from-purple-500 to-pink-500'
+  };
   {
-    icon: Target,
-    title: 'Results-Driven',
-    description: 'Focus on measurable outcomes and ROI for every consulting engagement.',
-    color: 'from-green-500 to-emerald-500'
-  },
+    icon: Target,title: 'Results-Driven',description: 'Focus on measurable outcomes and ROI for every consulting engagement.',color: 'from-green-500 to-emerald-500'
+  };
   {
-    icon: Shield,
-    title: 'Security First',
-    description: 'Security and compliance built into every solution and recommendation.',
-    color: 'from-red-500 to-orange-500'
-  },
+    icon: Shield,title: 'Security First',description: 'Security and compliance built into every solution and recommendation.',color: 'from-red-500 to-orange-500'
+  };
   {
-    icon: Zap,
-    title: 'Rapid Implementation',
-    description: 'Quick turnaround times without compromising quality or thoroughness.',
-    color: 'from-yellow-500 to-orange-500'
-  },
+    icon: Zap,title: 'Rapid Implementation',description: 'Quick turnaround times without compromising quality or thoroughness.',color: 'from-yellow-500 to-orange-500'
+  };
   {
-    icon: Cloud,
-    title: 'Cloud-Native',
-    description: 'Modern cloud-first approach for scalable and flexible solutions.',
-    color: 'from-indigo-500 to-purple-500'
+    icon: Cloud,title: 'Cloud-Native',description: 'Modern cloud-first approach for scalable and flexible solutions.',color: 'from-indigo-500 to-purple-500'
   }
 ];
-
 const consultingServices = [
   {
-    icon: Brain,
-    title: 'Technology Strategy',
-    description: 'Comprehensive technology roadmaps aligned with your business objectives and growth plans.'
-  },
+    icon: Brain,title: 'Technology Strategy',description: 'Comprehensive technology roadmaps aligned with your business objectives and growth plans.'
+  };
   {
-    icon: Cloud,
-    title: 'Cloud Migration',
-    description: 'Strategic planning and execution of cloud migration initiatives for optimal performance and cost.'
-  },
+    icon: Cloud,title: 'Cloud Migration',description: 'Strategic planning and execution of cloud migration initiatives for optimal performance and cost.'
+  };
   {
-    icon: Shield,
-    title: 'Security Assessment',
-    description: 'Thorough security audits and recommendations to protect your digital assets and ensure compliance.'
-  },
+    icon: Shield,title: 'Security Assessment',description: 'Thorough security audits and recommendations to protect your digital assets and ensure compliance.'
+  };
   {
-    icon: BarChart3,
-    title: 'Performance Optimization',
-    description: 'Identify and resolve performance bottlenecks to improve user experience and operational efficiency.'
-  },
+    icon: BarChart3,title: 'Performance Optimization',description: 'Identify and resolve performance bottlenecks to improve user experience and operational efficiency.'
+  };
   {
-    icon: Rocket,
-    title: 'Digital Transformation',
-    description: 'End-to-end digital transformation consulting to modernize your business processes and technology stack.'
-  },
+    icon: Rocket,title: 'Digital Transformation',description: 'End-to-end digital transformation consulting to modernize your business processes and technology stack.'
+  };
   {
-    icon: Globe,
-    title: 'Infrastructure Design',
-    description: 'Scalable and resilient infrastructure architecture designed for your specific business requirements.'
-  },
+    icon: Globe,title: 'Infrastructure Design',description: 'Scalable and resilient infrastructure architecture designed for your specific business requirements.'
+  };
   {
-    icon: Lock,
-    title: 'Compliance & Governance',
-    description: 'Ensure your technology solutions meet industry standards and regulatory requirements.'
-  },
+    icon: Lock,title: 'Compliance & Governance',description: 'Ensure your technology solutions meet industry standards and regulatory requirements.'
+  };
   {
-    icon: Users,
-    title: 'Team Training',
-    description: 'Comprehensive training programs to upskill your team and maximize technology adoption.'
+    icon: Users,title: 'Team Training',description: 'Comprehensive training programs to upskill your team and maximize technology adoption.'
   }
 ];
-
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0 };
   visible: {
-    opacity: 1,
-    transition: {
+    opacity: 1,transition: {
       staggerChildren: 0.1
     }
   }
 };
-
 export default function ITConsulting() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -276,7 +237,7 @@ export default function ITConsulting() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Technology Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -302,5 +263,5 @@ export default function ITConsulting() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,5 +1,5 @@
 
-import Head from 'next/head';
+import Head from 'next/head',
 
 const DataAnalyticsImplementation = () => {
   return (
@@ -14,7 +14,7 @@ const DataAnalyticsImplementation = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default DataAnalyticsImplementation;
+export default DataAnalyticsImplementation,
