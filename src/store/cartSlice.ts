@@ -14,5 +14,3 @@ quantity: 1;
 image: action.payload.image;
 });
 }
-}
-});

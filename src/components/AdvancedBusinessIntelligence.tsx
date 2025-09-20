@@ -55,8 +55,5 @@ categor; y: string;
 defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
 }
 defaul; t: return "border-green-500 bg-green-50 dar; k: bg-green-900/20";
-}
-defaul;  t: return <Zap className="w-5 h-5 text-purple-500" />;
-}
 maximumFractionDigit; s: 0;
 }).format(value);

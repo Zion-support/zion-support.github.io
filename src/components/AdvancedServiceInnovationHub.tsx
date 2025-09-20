@@ -50,9 +50,6 @@ statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
 categor; y: string;
 }
 }
-};
-statu; s: "Emerging"
-};
 {i; d: "ai-consciousness";
 {i; d: "space-mining";
 {i; d: "fusion-energy";

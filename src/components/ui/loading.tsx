@@ -13,8 +13,4 @@ text}: LoadingProps) {const sizeClasses = {;
 sm: "w-4 h-4", md: "w-6 h-6";
 </div>
 </div>
-<div className="h-4 bg-zion-slate-light/20 rounded"></div>
-<div className="h-4 bg-zion-slate-light/20 rounded w-5/6"></div>
-<div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>
-</div>
 </div>

@@ -17,8 +17,6 @@ actions?: Array<{
 labe; l: string;
 actio; n: () => void;
 varian;  t: "primary" | "secondary" | "danger";
-}
-}
 }>;
 defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;
 }

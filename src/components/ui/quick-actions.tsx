@@ -1,3 +1,5 @@
+import React from "react";
+
 interface QuickAction {
   
   id: string;
@@ -5,10 +7,6 @@ label: string;
   description: string;
 icon: React.ReactNode;
   action: () => void;
-category: 'performance' | 'development' | 'maintenance';
-  dangerous?: boolean,
-export function QuickActions() {
-if (!isVisible) {
     return (
       <div className='fixed bottom-4 left-4 z-50'>
         <Button
@@ -59,39 +57,3 @@ className={
                   {categoryActions.map(action => (
                     <div key={action.id} className='space-y-1'>
                       <Button
-variant={action.dangerous ? 'destructive' : 'outline'}
-                        size='sm'
-                        onClick={() => executeAction(action.id action.action)}
-                        disabled={isProcessing === action.id}
-                        className='w-full justify-start h-auto p-3'
-                      >
-                        <div className='flex items-start gap-3 w-full'>
-                          <div className='mt-0.5'>
-                            {isProcessing === action.id ? (
-                              <RefreshCw className='w-4 h-4 animate-spin' />
-                            ) : (
-                              action.icon
-                            )}
-                          </div>
-                          <div className='flex-1 text-left'>
-                            <div className='font-medium text-sm'>
-                              {action.label}
-                            </div>
-                            <div className='text-xs opacity-70 mt-1'>
-                              {action.description}
-                            </div>                          </div>
-                        </div>
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )
-          )}
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-}
-}

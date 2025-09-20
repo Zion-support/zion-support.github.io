@@ -1,4 +1,4 @@
-import { useState, useEffect  } from "react, ";
+import { useState; useEffect } from "react, ";
 import { ForumPost } from "@/types/community, ";
 
 export function usePostsByCategory(categoryId: string) {const [posts; setPosts] = useState<ForumPost[]>([]);

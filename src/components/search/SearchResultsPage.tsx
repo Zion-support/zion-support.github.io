@@ -3,16 +3,6 @@ interface SearchResult {
   id: string;
 title: string;
   description: string;
-type: 'product' | 'talent' | 'blog' | 'service';
-  category?: string;
-  url?: string;
-  image?: string;
-  price?: number;
-  currency?: string;
-  rating?: number;
-  tags?: string[];
-  date?: string,
-interface SearchFilters {
   
   types: string[];
 category: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState; useCallback; useEffect } from "react;";
-import { motion, AnimatePresence  } from "framer-motion, ";
+import { motion; AnimatePresence } from "framer-motion, ";
 import { Eye;
 Type;
 Volume2;
@@ -9,7 +9,8 @@ Settings;
 X;
 Check;
 AlertTriangle;
-Info} from "lucide-react, ";
+Info;
+} from "lucide-react, ";
 
 export interface AccessibilitySettings {;
 highContrast: boolean;
@@ -31,18 +32,7 @@ timestamp: Date.now()
 };
 focusIndicator: true;
 keyboardNavigation: true;
-};
-type: "info" as const;
---border-color: #ffffff;
-}
---font-size-2xl: 32px;
-}
-transition-duration: 0.01ms !important;
-}
 outline-offset: 2px !important;
-}
-outline-offset: 2px !important;
-}
 white-space: nowrap;
 border: 0;
 }

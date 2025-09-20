@@ -21,25 +21,5 @@ id: string;
 type: "user" | "assistant";
 content: string;
 timestamp: Date;
-status: "sending" | "sent" | "error";
-metadata?: {
-confidence?: number;
-suggestions?: string[];
-}
-relatedTopics?: string[];}
-};
-}
-
-interface AIChatAssistantProps {
-  
-enabled?: boolean;
-className?: string;
-onMessageSend?: (message: string) => void;
 onAssistantResponse?: (response: string) => void;
-}
-}
-};
-confidence: 0.85 + Math.random() * 0.1;
-suggestions: randomResponse.suggestions;
-}
 timestamp: new Date();

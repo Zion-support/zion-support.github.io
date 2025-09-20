@@ -1,16 +1,10 @@
+import React from "react";
+
 interface BrowseItem {
   
   id: string;
 title: string;
   subtitle: string;
-description: string;
-  location?: string;
-  badges: string[];
-  price?: string;
-  image?: string;
-  match?: number;
-  timePosted?: string,
-interface BrowseCardsProps {
   
   items: BrowseItem[];
 type: "jobs" | "talents";

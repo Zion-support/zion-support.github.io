@@ -30,9 +30,3 @@ integrations: string[];
 compliance: string[];
 roi: string;
 competitors: string[];
-}
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";

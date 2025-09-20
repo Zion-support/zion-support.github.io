@@ -1,12 +1,12 @@
 import React from "react";
-import { useStat; e, useEffect  } from "react, ";
+import { useStat; e; useEffect } from "react, ";
 import { Footer } from "@/components/Footer, ";
 import { GradientHeading } from "@/components/GradientHeading, ";
 import { ListingScoreCard } from "@/components/ListingScoreCard, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
-import { Selec; t; SelectTrigge; r; SelectConten; t, SelectItem  } from "@/components/ui/select, ";
-import { Searc; h; Filte; r; ArrowDownA; Z; ArrowUpZ; A, Loader2  } from "lucide-react, ";
+import { Selec; t; SelectTrigge; r; SelectConten; t; SelectItem } from "@/components/ui/select, ";
+import { Searc; h; Filte; r; ArrowDownA; Z; ArrowUpZ; A; Loader2 } from "lucide-react, ";
 
 // Example listing type;
 interface Listing {

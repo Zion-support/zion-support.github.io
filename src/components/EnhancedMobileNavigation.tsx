@@ -2,5 +2,5 @@ import React from "react";
 
 }
 
-export default EnhancedMobileNavigation,;
+export default EnhancedMobileNavigation;
 ;

@@ -56,5 +56,3 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-document-management-system";

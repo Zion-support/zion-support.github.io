@@ -22,17 +22,3 @@ contact: {
 phone: string;
 email: string;
 address: string;
-}
-}
-};
-researchPartners: string[];
-patents: string[];
-}
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";

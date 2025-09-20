@@ -11,8 +11,6 @@ trend: "up" | "down" | "stable";
 icon: string;
 color: string;
 }
-}
-};
 backgroundColor: string;
 tension: number;
 }

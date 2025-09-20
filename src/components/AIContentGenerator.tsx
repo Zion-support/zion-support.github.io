@@ -16,22 +16,22 @@ setIsGenerating(false);
 };
 
 return (
-<div className="p-6 bg-gray-900 min-h-screen">;
+<div className="p-6 bg-gray-900 min-h-screen">
 <motion.div;
 initial={{ opacity: 0; y: 20 }}
 animate={{ opacity: 1; y: 0 }}
 className="max-w-4xl mx-auto"
 >;
-<h1 className="text-3xl font-bold text-white mb-8">AI Content Generator</h1>;
+<h1 className="text-3xl font-bold text-white mb-8">AI Content Generator</h1>
 
-<div className="bg-gray-800 p-6 rounded-lg mb-8">;
+<div className="bg-gray-800 p-6 rounded-lg mb-8">
 <input;
 type="text"
 value={topic}
 onChange={(e) => setTopic(e.target.value)}
 placeholder="Enter your topic...";
 className="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 mb-4"
-/>;
+/>
 <button;
 onClick={generateContent}
 disabled={isGenerating || !topic}
@@ -50,9 +50,3 @@ className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 
 </div>
 )}
 </motion.div>;
-</div>
-);
-};
-
-export default AIContentGenerator;
-<//div><///div>;

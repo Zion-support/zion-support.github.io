@@ -42,6 +42,3 @@ website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-creative-director"
 };
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-code-review"
-}

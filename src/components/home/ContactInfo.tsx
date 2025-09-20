@@ -1,31 +1,6 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
-import React from "react;";
-import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
-import { Button } from "@/components/ui/button, ";
-import { Badge } from "@/components/ui/badge, ";
-import { Link } from "react-router-dom, ";
-import { FuturisticCard, NeonText  } from "@/components/ui/FuturisticBackground, ";
-import { Phone;
-Mail;
-MapPin;
-Globe;
-Clock;
-Users;
-Shield;
-Zap;
-ExternalLink} from "lucide-react, ";
-
-export function ContactInfo() {const contactMethods = [;
-{;
-title: "Phone Support";
-description: "Speak directly with our technical experts";
 icon: <Phone className="h-8 w-8 text-zion-cyan" />;
 value: "+1 302 464 0950";
 action: "tel:+13024640950";

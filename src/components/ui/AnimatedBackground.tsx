@@ -9,7 +9,7 @@ className?: string;}
 export function AnimatedBackground({ variant = "hero", className = "" }: AnimatedBackgroundProps) {
 if (variant === "hero") {
 return (
-<div className={`absolute inset-0 overflow-hidden ${className}`}>;
+<div className={`absolute inset-0 overflow-hidden ${className}`}>
 {/* Animated gradient background */}
 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 animate-pulse"></div>
 
@@ -42,7 +42,7 @@ return (
 
 if (variant === "section") {
 return (
-<div className={`absolute inset-0 overflow-hidden ${className}`}>;
+<div className={`absolute inset-0 overflow-hidden ${className}`}>
 {/* Subtle animated background */}
 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-blue-500/5 animate-pulse"></div>
 
@@ -62,7 +62,7 @@ return (
 
 if (variant === "card") {
 return (
-<div className={`absolute inset-0 overflow-hidden rounded-lg ${className}`}>;
+<div className={`absolute inset-0 overflow-hidden rounded-lg ${className}`}>
 {/* Card glow effect */}
 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-cyan-500/5 to-blue-500/10 animate-pulse"></div>
 
@@ -87,32 +87,10 @@ return null;
 
 export function NeonBorder({ className = "", children }: { className?: string; children: React.ReactNode }) {
 return (
-<div className={`relative ${className}`}>;
+<div className={`relative ${className}`}>
 {/* Neon border effect */}
 <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-lg blur-sm opacity-50"></div>
 <div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">;
-import React, { useEffect; useRef } from "react";
-
-interface AnimatedBackgroundProps {
-  
-className?: string;
-}
-variant?: "grid" | "particles" | "waves" | "matrix";}
-};
-export function AnimatedBackground({ className = "", variant = "grid" }: AnimatedBackgroundProps) {;
-const canvasRef = useRef<HTMLCanvasElement>(null);
-
-useEffect(() => {
-const canvas = canvasRef.current;
-if (!canvas) return;
-
-const ctx = canvas.getContext("2d");
-if (!ctx) return;
-
-let animationFrameId: number;
-let particles: Array<{
-x: number;
-y: number;
 vx: number;
 vy: number;
 size: number;

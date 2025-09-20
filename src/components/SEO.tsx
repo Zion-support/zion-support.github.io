@@ -22,6 +22,3 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <meta name="twitter:description" content={description} />
 </>
   );
-};
-
-export default SEO;

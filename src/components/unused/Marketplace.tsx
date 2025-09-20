@@ -71,14 +71,6 @@ currency: "USD";
 rating: 4.9;
 reviewCount: 127;
 image: "/images/marketplace/ai-business-manager.jpg";
-features: [
-"Autonomous decision making";
-"Business process automation",
-"Real-time analytics",
-"Multi-tenant support",
-"API integration";
-],
-tags: ["AI", "Business Automation", "Enterprise", "Cloud"],
 featured: true;
 new: false;
 discount: 25;

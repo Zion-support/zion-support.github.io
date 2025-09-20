@@ -1,3 +1,5 @@
+import React from "react";
+
 interface AIEnhancementPanelProps {
   
   title: string;
@@ -87,23 +89,3 @@ variant='ghost'
             </div>
             <div className='relative'>
               <Textarea
-value={generatedContent}
-                onChange={e => setGeneratedContent(e.target.value)}
-                className='min-h-[200px]'              />
-            </div>
-          </div>
-        )}
-      </CardContent>
-      {generatedContent && (
-        <CardFooter className='flex justify-between'>
-          {onClose && (
-            <Button variant='outline' onClick={onClose}>
-              Cancel
-            </Button>
-          )}
-          <Button onClick={handleApply}>Apply to Form</Button>
-        </CardFooter>
-      )}
-    </Card>
-  )
-}

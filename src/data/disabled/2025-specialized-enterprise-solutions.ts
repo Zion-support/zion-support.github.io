@@ -32,27 +32,3 @@ mobile: string;
 email: string;
 address: string;
 website: string;
-}
-}
-};
-industryFocus: string[];
-complianceStandards: string[];
-}
-address: "364 E Main St STE 1008 Middletown DE 19709";
-website: "https://ziontechgroup.com"};
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";
-website: "https://ziontechgroup.com"};
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";
-website: "https://ziontechgroup.com"};
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";
-website: "https://ziontechgroup.com"};
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";
-website: "https://ziontechgroup.com"};
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";
-website: "https://ziontechgroup.com"};
-realImplementation: true;

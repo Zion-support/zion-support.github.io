@@ -52,5 +52,3 @@ export default function RootLayout() {
 </ThemeProvider>;
 </body>;
 </html>;
-)
-}<//html><///html>;

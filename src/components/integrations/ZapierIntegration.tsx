@@ -125,4 +125,3 @@ Zion account.
       </Card>
     </div>
   )
-}

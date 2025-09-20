@@ -34,16 +34,3 @@ primaryGoal; s: string[];
 challenge; s: string[];
 }
 }
-};
-emai; l: string;
-}
-}
-};
-timeToValu; e: string;
-}
-{i; d: "quantum-computing-service";
-{i; d: "blockchain-supply-chain";
-defaul;  t: return "bg-gray-100 text-gray-800";
-}
-defaul;  t: return "bg-gray-100 text-gray-800";
-}

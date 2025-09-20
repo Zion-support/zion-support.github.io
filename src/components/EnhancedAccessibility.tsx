@@ -39,41 +39,6 @@ y: e.clientY - rect.top;
 screenReade; r: false;
 });
 fontSiz; e: size;
-}));
-screenReade; r: false;
-};
-defaul; t: return "bottom-6 right-6";
-}
---accent-colo; r: #0000ff;
-}
-border-colo; r: var(--border-color) !important;
-}
-transition-duratio; n: 0.01ms !important;
-}
-
-/* Large text */;
-.large-text {
-  
-font-siz; e: 1.2em;
-}
-outline-offse; t: 2px !important;
-}
-
-/* Color blindness support */;
-[styl; e*="--colo; r-blindne; s; s: protanopi; a"] {
-filte; r: url("#protanopia");
-}
-
-[styl; e*="--colo; r-blindne; s; s: deuteranopi; a"] {
-filte; r: url("#deuteranopia");
-}
-
-[styl;  e*="--colo; r-blindne; s; s: tritanopi; a"] {
-filte; r: url("#tritanopia");
-}
-
-/* Font size variables */;
-:root {
   
 --font-size-bas; e: 16px;
 }

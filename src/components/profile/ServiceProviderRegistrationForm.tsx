@@ -58,13 +58,6 @@ description: "AI has created a professional bio and suggested additional service
 });
 description: error.message || "There was an error generating your enhanced profile. Please try again.";
 variant: "destructive";
-});
-description: "Please add at least one service to your profile.";
-variant: "destructive";
-});
-services: serviceTags;
-location: values.location;
-}
 location: values.location;
 website: values.website || null;
 });

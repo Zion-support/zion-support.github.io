@@ -1,3 +1,5 @@
+import React from "react";
+
 }
 export function AIEnhancementButton({if (showActions) {
     return (
@@ -42,26 +44,3 @@ type="button"
   }
   return (
     <Button
-type="button"
-      variant = {variant}
-      size = {size}
-      className={`gap-1 ${className}`}
-      onClick = {handleEnhance}
-      disabled = {isEnhancing}
-    >
-      {isEnhancing ? (
-        <Loader2 className="h-4 w-4 animate-spin" />
-      ) : (
-        <Sparkles className="h-4 w-4" />
-      )}
-      <span className="text-xs">{buttonText}</span>
-    </Button>
-  )
-};"
-<Button type="button" variant="ghost" size="sm" onClick={
-  handleAccept "
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) "
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) "
-}return (<Button) : (<Sparkles className=" h-4 w-4" />)
-}</Button>)
-}"}

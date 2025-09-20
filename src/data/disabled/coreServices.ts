@@ -24,11 +24,6 @@ email: string;
 website: string;
 }
 }
-};
-email: "kleber@ziontechgroup.com";
-aiScore: 95;
-featured: true;
-};
 {id: "cloud-infrastructure-pro";
 title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";
 email: "kleber@ziontechgroup.com";

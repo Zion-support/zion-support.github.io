@@ -1,4 +1,4 @@
-import { Routes, Route  } from "react-router-dom";
+import { Routes; Route } from "react-router-dom";
 price: number;
 currency: string;
 pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project" | "usage-based" | "freemium";
@@ -41,18 +41,6 @@ address: string;
 competitors: string[];
 }
 competitors: string[];
-}
-freeTrialDays: number;
-demoUrl: string;
-}
-timeToValue: "1-2 weeks"
-},
-freeTrialDays: 14;
-demoUrl: "https://demo.ziontechgroup.com/web3-automation"
-},
-scalability: string;
-uptime: string;
-}
 uptime: "99.9% SLA"
 },
 enterprise: 1299;
@@ -81,21 +69,6 @@ timeToValue: "3-4 weeks"
 },
 freeTrialDays: 21;
 demoUrl: "https://demo.ziontechgroup.com/edge-iot"
-},
-freeTrialDays: 14;
-demoUrl: "https://demo.ziontechgroup.com/metaverse-hub"
-},
-freeTrialDays: 30;
-demoUrl: "https://demo.ziontechgroup.com/green-tech"
-},
-freeTrialDays: 14;
-demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh"
-},
-customization: string;
-support: string;
-}
-}
-
 },
 support: "24/7 email and chat support"
 },

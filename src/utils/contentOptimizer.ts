@@ -10,15 +10,6 @@ seoScore: number;
 issues: ContentIssue[];
 suggestions: ContentSuggestion[];
 }
-}
-}
-imageCount: number;
-linkCount: number;
-}): ContentIssue[] {
-location: "Page structure"
-});
-location: "Content body"
-});
 description: "No images found. Images improve user engagement and SEO";
 description: "Content lacks proper heading structure for organization";
 location: "Content optimization"

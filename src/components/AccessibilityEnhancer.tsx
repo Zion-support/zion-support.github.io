@@ -32,7 +32,4 @@ scroll-behavio; r: auto !important;
 outline-offse;  t: 2px;
 }
 borde; r: 0;
-}
-
-/* Focus visible utility */;
 .focus-visibl; e:focus-visible {outlin; e: 2px solid hsl(var(--ring));

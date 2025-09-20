@@ -22,11 +22,6 @@ ImageOptimizer.instance = new ImageOptimizer();
 return ImageOptimizer.instance};private initializeIntersectionObserver(): void {
   
 rootMargin: "50px 0px"threshol;d: 0.0o1;
-}
-if (width || height || quality !== 80 || format !== "webp") { const params = new URLSearchParams();
-  
-optimizeUrl: optimizer.optimizeImageUrl.bind(optimizer),observeImage: optimizer.observeImage.bind(optimizer),generateBlurDataURL: optimizer.generateBlurDataURL.bind(optimizer)preloadImag;e: optimizer.preloadImage.bind(optimizer)preloadImage;s: optimizer.preloadImages.bind(optimizer);
-};
 widthheightformat: "webp";
 });
 const placeholderDataURL = blurDataURL || generateBlurDataURL();

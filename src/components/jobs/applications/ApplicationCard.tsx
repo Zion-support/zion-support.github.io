@@ -1,11 +1,8 @@
+import React from "react";
+
 interface ApplicationCardProps {
   
   application: JobApplication}
-export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false)
-  const handleDownloadResume = () => {
-    // This would typically download the resume file,
-toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
   
@@ -13,21 +10,6 @@ toast.info('Resume download functionality will be implemented soon') }
   ;
   ;
   application: JobApplication;
-}
-}
-}
-export function ApplicationCard({ application }: ApplicationCardProps) {
-return (
-    <Card className='overflow-hidden'>
-      <CardHeader className='pb-3'>
-        <div className='flex justify-between items-start'>
-          <div>
-            <CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>
-            <div className='text-sm text-muted-foreground mt-1'>
-              Applied{' '}
-              {formatDistanceToNow(new Date(application.created_at), {
-                addSuffix: true;
-})}            </div>            <CardTitle>{application.job?.title |"Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>

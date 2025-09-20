@@ -38,39 +38,10 @@ return () => clearTimeout(timer);
 
 if (!isInView) {
 return (
-<div ref={ref} className={`min-h-[200;  p; x] ${classNam; e}`}>;
+<div ref={ref} className={`min-h-[200;  p; x] ${classNam; e}`}>
 <EnhancedLoading;
 variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
 />;
-</div>
-);
-}
-
-if (!isLoaded) {
-return (
-<div className={`min-h-[200;  p; x] ${classNam; e}`}>;
-<EnhancedLoading;
-variant={loadingVariant}
-text={loadingText}
-size={loadingSize}
 />;
-</div>
-);
-}
-
-return (<motion.div;
-initial={{ opacit;  y: 0;
-y: 20 }}
-animate={{ opacit; y: 1;
-y: 0 }}
-transition={{ duratio; n: 0.6 }}
-className={className}
->;
-{children}
-</motion.div>;
-);
-};
-
-export default LazyWrapper;<//motion.div><///motion.div>

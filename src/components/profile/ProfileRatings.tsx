@@ -1,11 +1,6 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
 import React from "react";
 import { useState, useEffect } from "react";
 import { Star } from "lucide-react";

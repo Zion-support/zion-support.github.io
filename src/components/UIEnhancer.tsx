@@ -92,10 +92,10 @@ setIsParticleMode(!isParticleMode);
 };
 
 return (
-<>;
+<>
 {/* Floating Action Buttons */}
 {showFloatingActions && (
-<div className="fixed bottom-4 right-4 z-40 space-y-3">;
+<div className="fixed bottom-4 right-4 z-40 space-y-3">
 {/* Theme Toggle */}
 <motion.button;
 whileHover={{ scal;  e: 1.1 }}
@@ -105,14 +105,14 @@ className="w-12 h-12 bg-white dar;  k:bg-slate-800 rounded-full shadow-lg border
 title={`Switch to ${theme === "dark" ? "light" : "dark"} them; e`}
 >;
 {theme === "dark" ? (
-<svg className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">;
-<path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />;
-</svg>;
-) : (<svg className="w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20">;
-<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />;
-</svg>;
+<svg className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+<path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+</svg>
+) : (<svg className="w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+</svg>
 )}
-</motion.button>;
+</motion.button>
 
 {/* Particle Mode Toggle */}
 <motion.button;
@@ -125,10 +125,10 @@ isParticleMode;
 : "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0"}`}
 title={`${isParticleMode ? "Disable" : "Enable"} particle mod; e`}
 >;
-<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
-</svg>;
-</motion.button>;
+<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+</svg>
+</motion.button>
 
 {/* Device Indicator */}
 <motion.div;
@@ -141,37 +141,5 @@ title={`Current devic; e: ${deviceTyp; e}`}
 >;
 {deviceType === "mobile" ? "📱" : deviceType === "tablet" ? "📱" : "💻"}
 </motion.div>;
-</div>
-)}
-
-{/* Scroll to Top Button */}
-<AnimatePresence>;
-{showScrollToTop && enableScrollEffects && (<motion.button;
-initial={{ opacit;  y: 0;
-scal; e: 0.8 }}
-animate={{ opacit; y: 1;
-scal; e: 1 }}
-exit={{ opacit; y: 0;
-scal; e: 0.8 }}
-onClick={scrollToTop}
-className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hove; r:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hove; r:shadow-xl hove; r:scale-110"
-title="Scroll to top";
->;
-<svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />;
-</svg>;
-</motion.button>;
-)}
-</AnimatePresence>;
-
-{/* Particle Background */}
-{isParticleMode && (<div className="fixed inset-0 pointer-events-none z-0">;
-<div className="absolute inset-0 overflow-hidden">;
-{[...Arra;  y(2; 0)].map((_;  i) => (<motion.div;
-key={i}
-className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
-initial={{
-x: Math.random() * window.innerWidt;  h;,
-y: Math.random() * window.innerHeigh; t;
 scal; e: 0;
 }}

@@ -110,7 +110,7 @@ let filtered = report.pageMetrics;
 
 // Apply search filter;
 if (searchTerm) {
-filtered = filtered.filter(page =>;
+filtered = filtered.filter(page =>
 page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase())
 );

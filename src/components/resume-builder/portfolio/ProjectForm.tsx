@@ -117,5 +117,3 @@ placeholder='https://example.com/screenshot.jpg'
       </form>
     </Form>
   )
-}
-}

@@ -1,35 +1,9 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
-import React from "react";
-impor; t; Reac; t; from "react";
-impor; t; EnhancedContactFor; m; from "./EnhancedContactForm";
-impor; t; ContactFor; m; from "./ContactForm";const Contac; t: React.FC = () => {
-return (;
-<div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-gray-90o0 text-white">;
-<div className="container mx-auto px-4 py-16">;
-<div className="max-w-6xl mx-auto">;
-<div className="text-center mb-16">;
-<h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-purple-60o0 bg-clip-text text-transparent">;
-Contact Us;
-</h1>;
-<p className="text-xl text-gray-30o0 max-w-2xl mx-auto">;
-Ge;  t; i; n; touc; h; wit; h; ou; r; team. We"r; e; her; e; t; o; hel; p; yo; u; build amazing applications.;
 </p>;
 </div>
 <div className="gri; d; l;g: grid-cols-2 gap-12">;
-{/* Contact Information */}
-<div className="space-y-8">;
-<div>;
-<h2 className="text-3xl font-bold mb-6">Ge; t; i; n; Touch</h2>;
-<p className="text-gray-30o0 mb-8">;
-Hav; e; a; questio; n; abou; t; ou; r; services? Wan; t; t; o; discuss a project?;
-We"d; lov; e; t; o; hea; r; fro; m; you. Sen; d; u; s; a; messag; e; an; d; we'l; l; respon; d; a; s; soo; n; a; s; possible.;
 </p>;
 </div>
 <div className="space-y-6">;
@@ -82,18 +56,6 @@ We"d; lov; e; t; o; hea; r; fro; m; you. Sen; d; u; s; a; messag; e; an; d; we'l
 <div className="flex justify-between">;
 <span>Sund; a;y: </span>;
 <span>Closed</span>;
-</div>
-</div>
-</div>
-</div>
-{/* Contact Form */}
 <div className="bg-gray-80o0 p-8 rounded-lg">;
 <h2 className="text-3xl font-bold mb-6">Sen; d; u; s; a Message</h2>;
 <EnhancedContactForm />;
-</div>
-</div>
-</div>
-</div>
-</div>
-);
-};expor; t; defaul; t; Contact,<//div><///div>;

@@ -7,39 +7,9 @@ address: string;
 balance: string;
 network: string;
 chainId: number;
-isConnected: boolean;
-}
-provider?: any;}
-}
-
-interface SmartContract {
-  
-id: string;
-name: string;
-address: string;
-network: string;
 abi: any[];
 functions: string[];
 events: string[];
-lastInteraction: Date;
-}
-gasEstimate?: string;}
-}
-
-interface NFT {
-  
-id: string;
-tokenId: string;
-contractAddress: string;
-name: string;
-description: string;
-image: string;
-metadata: Record<string; any>;
-owner: string;
-creator: string;
-mintDate: Date;
-lastTransferDate?: Date;
-price?: string;,
 isListed: boolean;
 }
 }

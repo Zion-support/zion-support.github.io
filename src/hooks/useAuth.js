@@ -136,4 +136,3 @@ export function useAuth() {
         register,
         isAuthenticated: !!user;
         isAdmin: user?.role === 'admin'};
-}

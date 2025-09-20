@@ -11,22 +11,6 @@ categor; y: string;
 timestam; p: Date;
 }
 metadata?: Record<strin; g; any>;}
-};
-interface ChartConfig {
-  
-typ; e: "bar" | "line" | "pie" | "area" | "scatter";
-titl; e: string;
-descriptio; n: string;
-dat; a: ChartData[];
-confi; g: {
-color; s: string[];
-showLegen; d: boolean;
-showGri; d: boolean;
-animat; e: boolean;
-responsiv; e: boolean;
-}
-}
-};
 responsiv; e: true;
 });
 defaul;  t: return renderBarChart();

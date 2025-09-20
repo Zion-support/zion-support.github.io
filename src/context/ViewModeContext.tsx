@@ -6,6 +6,4 @@ interface ViewModeContextValue {
   
 viewMode: ViewMode;
 setViewMode: (mode: ViewMode) => void;
-}
-}
 };

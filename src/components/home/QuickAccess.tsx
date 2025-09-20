@@ -1,15 +1,6 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
-import React from "react";
-
-export const QuickAccess: any = () => {
-return (
 <div className="py-16 bg-white">;
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <div className="text-center mb-12">;
@@ -32,10 +23,6 @@ return (
 <div className="bg-gradient-to-r from-orange-500 to-red-500 p-6 rounded-xl text-white hover:scale-105 transition-transform block text-center">;
 <div className="text-2xl mb-3">☁️</div>
 <h3 className="text-lg font-semibold mb-2">Cloud</h3>;
-</div>
-</div>
-</div>
-</div>
 ),;
 };<//div><///div>;
 interface QuickAccessProps {
@@ -43,4 +30,3 @@ interface QuickAccessProps {
   className?: string;
 }
   style?: React.CSSProperties}
-export function QuickAccess({ className style }: QuickAccessProps) {

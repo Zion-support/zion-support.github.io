@@ -23,14 +23,3 @@ phone: string;
 email: string;
 website: string;
 }
-}
-};
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";

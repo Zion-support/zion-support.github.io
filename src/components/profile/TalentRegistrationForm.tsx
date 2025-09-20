@@ -40,31 +40,11 @@ enhancedProfile: true;
 });
 title: "More information needed";
 description: "Please provide at least a detailed bio before generating enhanced content.";
-});
-skills: skillTags;
-location: formData.location;
-}
-title: "Enhanced Profile Generated";
-description: "AI has created a professional bio and suggested additional skills for your profile.";
-});
 description: error.message || "There was an error generating your enhanced profile. Please try again.";
 variant: "destructive";
 });
 case "other": return "bg-gray-500/20 hover: bg-gray-500/30 text-gray-500";
 default: return "bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple";
-}
-description: "Please add at least one skill to your profile.";
-variant: "destructive";
-});
-skills: skillTags;
-location: values.location;
-}
-title: "Profile Created Successfully";
-description: "Your talent profile has been published and is now visible in the directory.";
-});
-description: error.message || "There was an error creating your profile. Please try again.";
-variant: "destructive";
-});
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";,
 import { zodResolver } from "@hookform/resolvers/zod";,

@@ -15,19 +15,5 @@ seoScore: number;
 overallScore: number;
 issues: string[];
 recommendations: string[];
-}
-}
-}
 pageMetrics: ContentQualityMetrics[];
 summary: string;
-}
-}
-}
-metaDescriptionLength: number;
-hasStructuredData: boolean;
-}): number {
-  
-metaDescriptionLength: number;
-hasStructuredData: boolean;
-}): string[] {
-pageMetrics: [];

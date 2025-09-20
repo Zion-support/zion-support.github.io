@@ -8,4 +8,3 @@ interface State {error?: Error}
 }      )
     }
     return this.props.children
-}

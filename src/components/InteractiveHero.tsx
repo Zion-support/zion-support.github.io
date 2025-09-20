@@ -24,11 +24,6 @@ labe; l: string;
 colo; r: string;
 }>;
 staggerChildre; n: 0.2;
-}
-eas; e: "easeOut" as const;
-}
-eas; e: "easeInOut" as const;
-}
 </div>
 scal; e: isHovered ? 2 : 1;
 }}

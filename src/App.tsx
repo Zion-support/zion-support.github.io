@@ -1,18 +1,6 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
-import * as React from "react";
-import { Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "./components/ThemeProvider";
-import ErrorBoundary from "./components/ErrorBoundary";
-
-// Simple components
-const Home: any = () => (
 <div className="min-h-screen bg-gray-900 text-white p-8">;
 <h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>;
 <p className="text-xl">Advanced AI; Quantum Computing & Technology Solutions</p>;

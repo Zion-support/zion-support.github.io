@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e, useCallback  } from "react, ";
-import { motio; n, AnimatePresence  } from "framer-motion, ";
+import { useStat; e; useCallback } from "react, ";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Walle; t;
 Smartphon; e;
 Coin; s;
@@ -15,7 +15,8 @@ RefreshC; w;
 Loader; 2;
 CheckCircl; e;
 XCircl; e;
-AlertTriangle} from "lucide-react, ";
+AlertTriangle;
+} from "lucide-react, ";
 import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 

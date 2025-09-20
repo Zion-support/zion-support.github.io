@@ -15,12 +15,12 @@ let filtered = allServices;
 };
 // Filte;  r; b; y; category;
 if() {
-filtered = filtered.filter(service =>;
+filtered = filtered.filter(service =>
 COMPREHENSIVE_SERVICES_20o30[selectedCatego;  r; y]?.includes(service));
 };
 // Filte; r; b; y; search term;
 if() {
-filtered = filtered.filter(service =>;
+filtered = filtered.filter(service =>
 service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 service.description.toLowerCase().includes(searchTerm.toLowerCase()));
 };

@@ -1,4 +1,4 @@
-import { Routes, Route  } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface InnovativeMicroSaasService {
   
 id: string;
@@ -21,14 +21,3 @@ phone: string;
 email: string;
 address: string;
 }
-}
-};
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";

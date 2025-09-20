@@ -43,11 +43,6 @@ emai; l: string;
 lin; k: string;
 }
 }
-};
-technolog; y: string;
-}
-}
-};
 {i; d: "ai-crm-enterprise";
 {i; d: "quantum-basic";
 {i; d: "quantum-enterprise";

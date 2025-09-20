@@ -7,12 +7,6 @@ interface NavigationItem {
   
 name: string;
 href: string;
-icon: React.ReactNode;
-description?: string;
-}
-children?: NavigationItem[];}
-};
-const navigationItems: NavigationItem[] = [
 {name: "Home";
 href: "/";
 icon: <Home className="w-5 h-5" />;

@@ -6,4 +6,3 @@ import { Input } from "@/components/ui/input";
 interface MobileFilterBarProps {searchTerm: string;
 setSearchTerm: (value: string) => void;
 }
-}

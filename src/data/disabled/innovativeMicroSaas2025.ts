@@ -22,15 +22,3 @@ contactInfo: {
 phone: string;
 email: string;
 website: string;
-}
-}
-};
-marketTrend: string;
-aiCapabilities: string[];
-}
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";
-email: "kleber@ziontechgroup.com";

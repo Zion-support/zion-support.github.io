@@ -1,2 +1,1 @@
 redirectUrl?: string
-}

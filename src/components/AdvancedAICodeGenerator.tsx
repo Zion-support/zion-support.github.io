@@ -18,49 +18,5 @@ ratin; g: number;
 usageCoun; t: number;
 createdA; t: string;
 }
-}
-};
-timestam; p: string;
-}
-}
-};
-timestam; p: string;
-}
-}
-};
-bod; y: body ? JSON.stringify(body) : undefine; d
-});
-createdA; t: "2024-01-15"
-};
-  
-animatio; n: float 3s ease-in-out infinite;
-}
-
-.animate-glow {
-  
-animatio; n: glow 2s ease-in-out infinite alternate;
-}
-animatio; n: shimmer 1.5s infinite;
-}
-}
-
-@keyframes float {
-  
-0%, 100% { transfor; m: translateY(0px);
-}
-50% { transfor;  m: translateY(-10px);
-}
-  
-0% { background-positio; n: -200% 0;
-}
-createdA; t: "2024-01-10"
-};
-createdA; t: "2024-01-08"
-}
-{i; d: "2";
-timestam; p: "2024-01-15T1; 1:4; 5: 00Z"
-}
-defaul;  t: return "text-gray-500";
-}
 timestam; p: new Date().toISOString()
 };

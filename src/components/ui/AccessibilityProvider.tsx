@@ -10,11 +10,4 @@ toggleReducedMotion: () => void;
 toggleLargeText: () => void;
 focusTrap: (element: HTMLElement | null) => void;
 announceToScreenReader: (message: string) => void;
-}
-}
-};
-  
-children: ReactNode;
-}
-}
 };

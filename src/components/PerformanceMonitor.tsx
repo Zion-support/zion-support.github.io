@@ -14,6 +14,3 @@ export const PerformanceMonitor = () => {
       });
     }
   }, []);
-
-  return null;
-};

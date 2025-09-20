@@ -13,22 +13,3 @@ yearly: string;
 enterprise: string;
 setup: string;
 }
-}
-};
-address: string;
-website: string;
-};
-address: "364 E Main St STE 1008 Middletown DE 19709";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";
-enterprise: "Custom pricing";

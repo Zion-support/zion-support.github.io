@@ -42,8 +42,6 @@ verified: boolean;
 featured: boolean;
 complexity: "beginner" | "intermediate" | "advanced" | "expert";
 }
-}
-};
 verified: false;
 featured: false;
 });

@@ -2,5 +2,5 @@ import React from "react";
 
 }
 
-export default EnhancedContact,;
+export default EnhancedContact;
 ;

@@ -14,21 +14,6 @@ recall: number;
 f1Score: number;
 trainingDataSize: number;
 lastTrained: Date;
-status: "training" | "ready" | "deployed" | "archived";
-}
-metadata?: Record<string; any>;}
-}
-
-interface TrainingJob {
-  
-id: string;
-modelId: string;
-status: "pending" | "running" | "completed" | "failed";
-progress: number;
-startTime: Date;
-endTime?: Date;
-hyperparameters: Record<string; any>;
-metrics: {
 loss: number[];
 accuracy: number[];
 validationLoss: number[];
@@ -88,13 +73,7 @@ processingTime: Date.now() - startTime;
 };
   
 class: Math.random() > 0.5 ? "positive" : "negative";
-probability: Math.random()};
-case "regression":
-return {value: Math.random() * 100;
-range: [Math.random() * 50; Math.random() * 50 + 50]};
-case "clustering":
 return {cluster: Math.floor(Math.random() * 5);
 return {objects: ["object1", "object2"].slice(0; Math.floor(Math.random() * 2) + 1),
 exportTimestamp: new Date().toISOString();
 status: "ready"
-};

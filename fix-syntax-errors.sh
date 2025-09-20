@@ -1,20 +1,30 @@
 #!/bin/bash
 
-echo "Fixing syntax errors in components..."
+# Fix common syntax errors in TypeScript/React files
 
-# Fix duplicate "use client" directives
-find components -name "*.tsx" -exec sed -i 's/"use client";\s*'"'"'use client'"'"';/'"'"'use client'"'"';/g' {} \;
+echo "Fixing syntax errors in TypeScript/React files..."
 
-# Fix malformed React imports
-find components -name "*.tsx" -exec sed -i 's/import React{ useStateuseEffect }/import React, { useState, useEffect }/g' {} \;
+# Fix semicolons in JSX (replace `>;` with `>` and `;` with proper syntax)
+find src -name "*.tsx" -type f -exec sed -i 's/\(<[^>]*\)>;/\1>/g' {} \;
+find src -name "*.tsx" -type f -exec sed -i 's/\(<\/[^>]*\)>;/\1>/g' {} \;
 
-# Fix malformed motion imports
-find components -name "*.tsx" -exec sed -i 's/import { motionAnimatePresence }/import { motion, AnimatePresence }/g' {} \;
+# Fix trailing semicolons in JSX attributes
+find src -name "*.tsx" -type f -exec sed -i 's/\([^>]\)>;/\1>/g' {} \;
 
-# Fix missing commas in object properties
-find components -name "*.tsx" -exec sed -i 's/\([a-zA-Z_][a-zA-Z0-9_]*\)'\''\([a-zA-Z_][a-zA-Z0-9_]*\)/'\''\1'\'', '\''\2/g' {} \;
+# Fix interface syntax (remove trailing commas before semicolons)
+find src -name "*.tsx" -type f -exec sed -i 's/\([^;]\),;/\1;/g' {} \;
+find src -name "*.ts" -type f -exec sed -i 's/\([^;]\),;/\1;/g' {} \;
 
-# Fix missing commas in icon imports
-find components -name "*.tsx" -exec sed -i 's/\([a-zA-Z_][a-zA-Z0-9_]*\)\n\([a-zA-Z_][a-zA-Z0-9_]*\)/\1,\n\2/g' {} \;
+# Fix function parameter syntax
+find src -name "*.tsx" -type f -exec sed -i 's/\([^,]\),;/\1;/g' {} \;
+find src -name "*.ts" -type f -exec sed -i 's/\([^,]\),;/\1;/g' {} \;
 
-echo "Syntax errors fixed!"
+# Fix array syntax
+find src -name "*.tsx" -type f -exec sed -i 's/\([^,]\),;/\1;/g' {} \;
+find src -name "*.ts" -type f -exec sed -i 's/\([^,]\),;/\1;/g' {} \;
+
+# Fix React Fragment syntax
+find src -name "*.tsx" -type f -exec sed -i 's/<>;/<>/g' {} \;
+find src -name "*.tsx" -type f -exec sed -i 's/<\/>;/<\/>/g' {} \;
+
+echo "Syntax fixes completed!"

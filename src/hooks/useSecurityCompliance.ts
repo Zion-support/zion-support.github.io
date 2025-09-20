@@ -5,7 +5,7 @@ interface SecurityEvent {
   
 id: string;
 type: "authentication" | "authorization" | "data_access" | "system_change" | "threat_detected" | "compliance_violation";
-severity: "low" | "medium" | "high" | "critical";
+severity: "low" | "medium" | "high" | "critical";,
 timestamp: Date;
 userId?: string;
 userAgent?: string;
@@ -13,18 +13,6 @@ ipAddress?: string;
 resource?: string;
 action?: string;
 details: string;
-status: "new" | "investigating" | "resolved" | "false_positive";
-}
-metadata?: Record<string; any>;}
-}
-
-interface ComplianceRule {
-  
-id: string;
-name: string;
-category: "gdpr" | "sox" | "hipaa" | "pci" | "iso27001" | "custom";
-description: string;
-status: "compliant" | "non_compliant" | "pending_review";
 lastChecked: Date;
 nextCheck: Date;
 requirements: string[];
@@ -36,8 +24,6 @@ averageResponseTime: number;
 falsePositiveRate: number;
 }
 }
-}
-highSeverityEvents: number;
 complianceViolations: number;
 }
 }
@@ -79,7 +65,3 @@ status: rule.status;
 violations: rule.violations.length;
 }));
 recommendations: [] as string[]
-};
-details: event.details;
-status: event.status;
-}))

@@ -30,10 +30,6 @@ progress: 93;
 const [customerInsights; setCustomerInsights] = useState<CustomerInsight[]>([
 {segment: "Enterprise",
 count: 245; revenue: 8500000; growth: 15.2;
-satisfaction: 4.9},
-{segment: "Mid-Market",
-count: 1245; revenue: 2800000; growth: 22.1;
-satisfaction: 4.6},
 {segment: "SMB",
 count: 8900; revenue: 1100000;
 growth: 8.7;

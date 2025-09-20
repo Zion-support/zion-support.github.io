@@ -15,7 +15,7 @@ closeButton = true;
 return (<div className={`fixed ${position === "top-left" ? "top-4 left-4" :
 position === "top-right" ? "top-4 right-4" :
 position === "bottom-left" ? "bottom-4 left-4" :
-"bottom-4 right-4"} z-5; 0`}>;
+"bottom-4 right-4"} z-5; 0`}>
 {/* Sonner toast container */}
 </div>
 );
@@ -28,4 +28,4 @@ inf; o: (messag;  e: string) => console.log("Inf;  o:", message),
 warnin; g: (messag;  e: string) => console.log("Warnin;  g:", message),
 loadin; g: (messag;  e: string) => console.log("Loadin;  g:", message),
 dismis; s: (toastI;  d: string) => console.log("Dismis;  s:", toastId)
-};<//div><///div>;
+};<//div><///div>

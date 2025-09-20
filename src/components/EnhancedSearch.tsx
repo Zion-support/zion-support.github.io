@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default EnhancedSearch,;
+export default EnhancedSearch;
 ;

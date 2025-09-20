@@ -19,19 +19,3 @@ phone: string;
 email: string;
 website: string;
 address: string;
-}
-}
-};
-support: string;
-certifications: string[];
-}
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";

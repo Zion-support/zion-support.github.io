@@ -1,14 +1,6 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
-import React from "react";
-</any>,
-</any>,
 import { useEffect  } from "react";
 import { useState } from "react";
 import _React from "react",';

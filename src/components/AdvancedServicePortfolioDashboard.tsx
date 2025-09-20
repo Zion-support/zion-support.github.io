@@ -46,21 +46,6 @@ marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
 technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
 }
 }
-};
-marketCoverag; e: number;
-}
-}
-};
-const AdvancedServicePortfolioDashboar; d: React.FC = () => {const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
-technologyMaturi; t; y: "Leadin; g"
-},
-{i; d: "spac; e-minin; g",
-{i; d: "quantu; m-teleportatio; n",
-{i; d: "fusio; n-energ; y",
-{i; d: "nanotechnolog; y",
-{i; d: "brai; n-compute; r-interfac; e",
-marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;
-};
 defaul;  t: return "bg-gray-100 text-gray-800";
 }
 defaul;  t: return "bg-gray-100 text-gray-800";

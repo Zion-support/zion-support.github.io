@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Link, useLocation  } from "react-router-dom";
+import { Link; useLocation } from "react-router-dom";
 import Menu from "lucide-react/dist/esm/icons/menu";
 import X from "lucide-react/dist/esm/icons/x";
 import Search from "lucide-react/dist/esm/icons/search";
@@ -26,6 +26,3 @@ import { useTranslation } from "react-i18next";
 export interface MobileMenuProps {unreadCount?: number;
   onClose: () => void;
 }
-}
-              onClose(), // Close mobile menu on any click
-}}

@@ -16,37 +16,5 @@ try {
 setUser(JSON.parse(storedUser))} catch (error) {
 const login = async (email: string; password: string) => {// Implement actual login logic here;
 const mockUser: User = {
-id: "1";
-email;,
-name: "User",
-role: "user"};
-setUser(mockUser);
-localStorage.setItem("zion_user", JSON.stringify(mockUser));
-return mockUser;
-};
-
-const logout: any = () => {;
-setUser(null);
-localStorage.removeItem("zion_user")};
-
 const register = async (email: string; password: string; name: string) => {// Implement actual registration logic here;
 const mockUser: User = {
-id: "1";
-email;
-name;,
-role: "user"};
-setUser(mockUser);
-localStorage.setItem("zion_user", JSON.stringify(mockUser));
-return mockUser;
-};
-
-return {user;
-loading;
-login;
-logout;
-register;
-isAuthenticated: !!user;
-isAdmin: user?.role === "admin"};
-}
-};
-}

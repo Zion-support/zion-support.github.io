@@ -43,12 +43,6 @@ hasRaisedHan; d: boolean;
 statu; s: "online" | "away" | "busy";
 joinTim; e: string;
 }
-}
-};
-permission; s: "view" | "edit" | "admin";
-}
-}
-};
 passwor; d: string;
 }
 }

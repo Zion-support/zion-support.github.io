@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton, ";
 
 export function HomePageSkeleton() {
 return (
-<div className="min-h-screen bg-background">;
+<div className="min-h-screen bg-background">
 {/* Hero Section Skeleton */}
 <section className="relative overflow-hidden py-20 md:py-32">;
 <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
@@ -31,10 +31,6 @@ return (
 <Skeleton className="h-5 w-20 mx-auto mb-1 bg-white/20" />;
 <Skeleton className="h-3 w-16 mx-auto mb-2 bg-white/20" />;
 <Skeleton className="h-3 w-12 mx-auto bg-white/20" />;
-</div>
-))}
-</div>
-</div>
 </section>;
 
 {/* Feature CTA Skeleton */}
@@ -52,10 +48,6 @@ return (
 <Skeleton className="h-4 w-3/4 mb-2 bg-white/20" />;
 <Skeleton className="h-4 w-1/2 mb-4 bg-white/20" />;
 <Skeleton className="h-10 w-32 bg-white/20" />;
-</div>
-))}
-</div>
-</div>
 </section>;
 
 {/* Categories Section Skeleton */}
@@ -71,10 +63,6 @@ return (
 <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4 bg-white/20" />;
 <Skeleton className="h-6 w-24 mx-auto mb-2 bg-white/20" />;
 <Skeleton className="h-4 w-20 mx-auto bg-white/20" />;
-</div>
-))}
-</div>
-</div>
 </section>;
 
 {/* Benefits Section Skeleton */}
@@ -91,10 +79,6 @@ return (
 <Skeleton className="h-6 w-32 mx-auto mb-3 bg-white/20" />;
 <Skeleton className="h-4 w-full mb-2 bg-white/20" />;
 <Skeleton className="h-4 w-3/4 mx-auto bg-white/20" />;
-</div>
-))}
-</div>
-</div>
 </section>;
 
 {/* Newsletter Section Skeleton */}
@@ -108,6 +92,3 @@ return (
 </div>
 </div>
 </section>;
-</div>
-);
-}<//div><///div>;

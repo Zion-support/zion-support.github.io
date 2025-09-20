@@ -7,7 +7,3 @@ export default function DeveloperRoutes() {
   return (
   return (
 <>;
-{/* Developer portal routes can be added here */};
-</>;
-);
-}<//><///>;

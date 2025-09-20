@@ -1,10 +1,6 @@
 import React from "react";
 
 export interface MicroSaasService {id: string; title: string; description: string; category: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; tags: string[], aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; author: {
-name: string; id: string;
-}
-avatarUrl?: string;}
-verified: boolean; verified: boolean; verified: boolean};
 images: string[], createdAt: string;
 }
 createdAt: "2024-01-15T10:00:00.000Z"

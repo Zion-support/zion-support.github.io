@@ -5,23 +5,6 @@ targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
 contactInfo: {}
-phone: string; email: string; website: string};
-technology: string[], integrations: string[];
-compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;
-}
-betaAccess: true;
-},
-betaAccess: true;
-},
-betaAccess: false;
-},
-betaAccess: true;
-},
-betaAccess: true;
-},
-export interface ServiceContact {}
-phone: string; email: string; website: string; address: string}
-
 export interface NextGenService {id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];
 benefits: string[], targetAudience: string[];
 tags: string[], contactInfo: ServiceContact; marketPrice: string; technologyStack: string[];

@@ -14,10 +14,6 @@ message: "Rate; limit; exceeded"timestamp: Date.now()retryCoun;t: 0;
 tag;s: string[];
 }
 ...fetchOptionssignal: controller.signal;
-});clearTimeout(timeoutId)
-// Handle non-2xx responses;
-if (!response.ok) {
-throw; new; ApiError({
 message: `HTTP ${response.status}: ${response.statusText}`,status: response.status;statusText: response.statusTexttimestam;p: Date.now(),retryCount: attempt;
 });
 data;status: response.status;statusText: response.statusTextheader;s: response.headerstimestam;p: Date.now();

@@ -3,10 +3,6 @@ import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
   
   author: BlogAuthor;
-}
-}
-}
-export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null;
   return (
     <div className;

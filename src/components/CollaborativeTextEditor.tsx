@@ -21,29 +21,6 @@ length?: number;
 timestam; p: Date;
 userI; d: string;
 versio; n: number;
-}
-}
-};
-tex; t: string;
-}
-}
-};
-resolutio; n: "pending" | "accepted" | "rejected";
-}>;
-forma; t: "txt" | "md" | "html") => void;
-}
-}
-};
-enableUserBehaviorTrackin; g: true;
-});
-conflict; s: []
-});
-messageRetentio; n: 1000;
-});
-versio; n: prev.version + 1;
-};
-change; s: [...pre; v.chang; e; s; chan; g; e]
-};
 versio; n: editorState.version + 1;
 });
 } catch (error) {trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {

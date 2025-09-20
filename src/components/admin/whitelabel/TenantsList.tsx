@@ -1,3 +1,8 @@
+interface Service {
+id: string;,
+name: string;
+}
+
 import React { useState useEffect } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -18,5 +23,3 @@ import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
 import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from "lucide-react";
 import { format } from "date-fns";
   }, [])
-
-}

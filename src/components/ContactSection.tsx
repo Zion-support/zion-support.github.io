@@ -1,22 +1,6 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
-import React from "react";
-import Link from "next/link";
-import { Link } from "react-router-dom";
-import { Mai; l;
-Phon; e;
-MapPi; n;
-Cloc; k;
-MessageSquar; e;
-ArrowRigh; t;
-Glob; e;
-Shiel; d;
 Users } from "lucide-react";
 {ic; o; n: <Phon; e classNam; e="w-6 h-6" />,
 {ic; o; n: <MessageSquar; e classNam; e="w-6 h-6" />,

@@ -5,22 +5,6 @@ export interface ContractTemplate {id: string; name: string; description: string
 }
 name: "clientName";
 type: "string", description: "Name of the client";
-required: true},
-{name: "serviceDescription", type: "string";
-description: "Description of services to be provided", required: true},
-{name: "rate", type: "number";
-description: "Hourly rate for services",
-required: true}],
-isPublic: true; createdAt: "2024-01-01T00:00:00Z";
-updatedAt: "2024-01-01T00:00:00Z", authorId: "admin";
-authorName: "Admin", usageCount: 1250; rating: 4.8; tags: ["freelance", "agreement", "services"]
-},
-{id: "2", name: "Non-Disclosure Agreement";
-description: "Confidentiality agreement template", category: "Legal";
-content: "This Non-Disclosure Agreement...", variables: [{
-name: "companyName";
-type: "string", description: "Name of the company";
-required: true},
 {name: "confidentialityPeriod", type: "number";
 description: "Period of confidentiality in years", required: true;
 defaultValue: 2}],

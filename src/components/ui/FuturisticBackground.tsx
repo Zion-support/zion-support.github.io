@@ -47,10 +47,5 @@ animation: "shimmer 3s ease-in-out infinite"
 }}
 @keyframes neon-pulse {from {
   
-text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;}
-to {text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}
-transform: translateX(-100%);
-}
-100% {
 transform: translateX(100%);
 }

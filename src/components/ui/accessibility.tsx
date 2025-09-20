@@ -36,11 +36,6 @@ border: 0;
 }
 --zion-purple-light: #cc33ff;
 }
-
-[data-color-blind="protanopia"] {
-filter: url("#protanopia-filter");
-}
-
 [data-color-blind="deuteranopia"] {
 filter: url("#deuteranopia-filter");
 }

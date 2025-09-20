@@ -26,10 +26,3 @@ email: string;
 website: string;
 address: string;
 }
-}
-};
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";
-website: "https://ziontechgroup.com";

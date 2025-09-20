@@ -1,3 +1,5 @@
+import React from "react";
+
 export function GlobalServiceSection() {
   return (
     <section className='py-20 bg-zion-blue' id='global-services'>
@@ -12,36 +14,3 @@ solutions for businesses of all sizes
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service index) => (
             <div
-key={index}
-              className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'
-            >
-              <div className='text-zion-cyan mb-4'>{service.icon}</div>
-              <h3 className='text-xl font-bold text-white mb-2'>
-                {service.title}
-              </h3>
-              <p className='text-zion-slate-light mb-4'>
-                {service.description}
-              </p>            </div>
-          ))}
-        </div>
-        <div className='flex justify-center mt-12'>
-          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service index) => (
-            <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
-              <div className="text-zion-cyan mb-4">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-              <p className="text-zion-slate-light mb-4">{service.description}</p>
-          ))}
-        </div>
-        <div className='flex justify-center mt-12'>
-          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">
-          <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
-            Get Your Free Commercial Proposal
-          </Button>
-        </div>
-      </div>
-    </section>
-  )
-}

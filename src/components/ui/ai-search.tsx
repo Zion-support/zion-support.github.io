@@ -35,8 +35,6 @@ lastUpdated: string;
 verified: boolean;
 featured: boolean;
 }
-}
-};
 verified: boolean;
 featured: boolean;
 }
@@ -56,18 +54,7 @@ rating: 0;
 location: [];
 verified: false;
 featured: false;
-});
-const [results; setResults] = useState<SearchResult[]>([]);
-const [suggestions; setSuggestions] = useState<string[]>([]);
-const [_selectedResult; setSelectedResult] = useState<SearchResult | null>(null);
-verified: true;
-featured: true;
-}
 verified: true;
 featured: false;
-}
-verified: true;
-featured: true;
-}
 url: window.location.href;
 });

@@ -28,19 +28,5 @@ maxLength?: number;
 custom?: (valu;  e: string) => string | null;
 }
 }
-};
-interface FormData {[k; e; y: stri; n; g]: string | boolean;};
-isTouche; d: boolean;
-}
-}
-};
-enableUserBehaviorTrackin; g: true;
-});
-isTouche; d: false;
-};
-isTouche; d: true;
-}
-isTouche; d: true;
-}
 defaul;  t: return <User className="w-4 h-4" />;
 }

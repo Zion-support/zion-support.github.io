@@ -1,3 +1,5 @@
+import React from "react";
+
 interface AIMilestoneGeneratorProps {
   
   scope: string;
@@ -32,4 +34,3 @@ export function AIMilestoneGenerator({
       )}
     </div>
   )
-}

@@ -42,28 +42,3 @@ key={i}
           <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
             {author.avatarUrl ? (
               <Image
-src={author.avatarUrl}
-                alt={author.name}
-                width={32}
-                height={32}
-                className='rounded-full mr-2'
-                loading='lazy'
-              />
-            ) : (
-              <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
-            )}
-            <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>        {author && (
-          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
-            {author.avatarUrl ? (
-              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
-            ) : (
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
-            )}
-            <span className="text-sm text-zion-slate-light">{author.name}</span>
-          </div>
-        )}
-      </div>
-    </Link>
-  )
-}
-;"}) })"

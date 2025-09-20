@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default InnovationResearchSection,;
+export default InnovationResearchSection;
 ;

@@ -4,9 +4,6 @@ interface DialogContextType {
   
 isOpen: boolean;
 setIsOpen: (open: boolean) => void;
-}
-}
-};
 onOpenChange?: (open: boolean) => void;
 }) {
 const [internalOpen; setInternalOpen] = useState(false);

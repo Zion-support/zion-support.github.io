@@ -21,9 +21,6 @@ screenReader: boolean;
 keyboardNavigation: boolean;
 focusIndicator: boolean;
 colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-}
-}
-};
 const EnhancedAccessibility: React.FC = () => {const [isOpen; setIsOpen] = useState(false);
 const [settings; setSettings] = useState<AccessibilitySettings>({
 focusIndicator: true;

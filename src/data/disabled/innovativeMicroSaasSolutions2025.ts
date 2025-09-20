@@ -42,6 +42,3 @@ website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-customer-service"
 };
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"
-}

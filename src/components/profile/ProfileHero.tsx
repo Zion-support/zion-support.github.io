@@ -9,13 +9,6 @@ import { cn } from "@/lib/utils, ";
 interface ProfileHeroProps {
   
 name: string;
-title: string;
-avatarUrl?: string;
-coverImageUrl?: string;
-location?: string;
-rating?: number;
-reviewCount?: number;
-aiScore?: number;,
 profileType: "service" | "talent";
 }
 }

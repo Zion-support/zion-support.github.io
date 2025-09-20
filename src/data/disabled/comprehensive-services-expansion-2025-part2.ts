@@ -17,13 +17,6 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$249-799/m
 freeTier: true; trialPeriod: "14 days"
 }
 responseTime: "30 minutes", sla: "99.99% uptime";
-certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
-deliveryTime: "8-10 weeks", support: "24/7"
-};
-{id: 2; name: "Quantum-Safe Cryptography";
-category: "Cryptography", description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";
-responseTime: "4 hours", sla: "99.9% uptime";
-certifications: ["Cryptography", "Security", "Quantum Computing"],
 deliveryTime: "12-16 weeks", support: "Business hours"
 }
 responseTime: "6 hours", sla: "99.5% uptime";

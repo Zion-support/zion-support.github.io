@@ -42,6 +42,3 @@ website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/retail-iot"
 };
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/edge-ai"
-}

@@ -27,7 +27,7 @@ onChange={onChange}
 disabled={disabled}
 >;
 {children}
-</select>;
+</select>
 );
 }
 

@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default ServicesOverview,;
+export default ServicesOverview;
 ;

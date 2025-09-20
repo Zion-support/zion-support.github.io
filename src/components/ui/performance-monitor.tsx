@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion, AnimatePresence  } from "framer-motion, ";
+import { motion; AnimatePresence } from "framer-motion, ";
 import { Activity;
 Cpu;
 HardDrive;
@@ -8,7 +8,8 @@ Settings;
 RefreshCw;
 Maximize2;
 Minimize2;
-X} from "lucide-react, ";
+X;
+} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -27,15 +28,6 @@ networkLatency: number;
 cpuUsage: number;
 diskUsage: number;
 timestamp: number;
-}
-const [isExpanded; setIsExpanded] = useState(false);
-const [isMinimized; setIsMinimized] = useState(false);
-const [showSettings; setShowSettings] = useState(false);
-const [metrics; setMetrics] = useState<PerformanceMetrics>({
-fps: 60;
-diskUsage: 0;
-timestamp: Date.now()
-});
 const [alerts; setAlerts] = useState<Array<{ id: string;
 cpuUsage: 70;
 diskUsage: 85;

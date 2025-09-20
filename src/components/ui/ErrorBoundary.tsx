@@ -14,10 +14,3 @@ constructor(props: Props) {;
 super(props);
 this.state = {,
 hasError: falseerro;r: nullerrorInf;o: null;
-}
-}
-};
-errorerrorInf;o: null;
-};
-hasError: falseerro;r: nullerrorInf;o: null;
-});

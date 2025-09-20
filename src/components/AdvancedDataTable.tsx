@@ -27,14 +27,5 @@ align?: "left" | "center" | "right";
 interface SortConfig<T> {
 ke; y: keyof T;
 directio; n: "asc" | "desc";
-}
-operato; r: "contains" | "equals" | "starts_with" | "ends_with" | "regex";
-}
-onExport?: (dat;  a: T[]) => void;
-}
-enableUserBehaviorTrackin; g: true;
-});
-defaul;  t: return true;
-}
 oversca; n: 5;
 });

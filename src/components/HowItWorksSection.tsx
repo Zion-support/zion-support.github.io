@@ -1,13 +1,6 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
-import React from "react";
-
 export const HowItWorksSection: any = () => {return (
 <div className="py-16 bg-white">;
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -43,10 +36,6 @@ export const HowItWorksSection: any = () => {return (
 </div>
 <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>;
 <p className="text-gray-600">Ongoing maintenance and continuous optimization</p>;
-</div>
-</div>
-</div>
-</div>
 )};
 <//div><///div>;
 import React from 'react';

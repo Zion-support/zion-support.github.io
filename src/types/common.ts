@@ -25,20 +25,9 @@ field: keyof T;
 direction: "asc" | "desc";
 onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;
 };
-selection?: {
-selected: string[];
-onSelectionChang;e: (selecte;d: string[]) => void;
-};export; interface; ChartDataPoint {
-  
-onClic;k: () => void;
-};
-en;d: Date;
-};
 priceRange?: {
 min: number;
 ma;x: number;
-};
-onClic;k: () => void;
 };
 onClic;k: () => void;
 };export; interface; KeyboardShortcut {

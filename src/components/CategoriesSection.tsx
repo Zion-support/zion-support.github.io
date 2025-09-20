@@ -1,15 +1,6 @@
 interface Service {
   
 id: string;
-name: string;
-}
-}
-}
-
-import React from "react";
-
-export const CategoriesSection: any = () => {
-return (
 <div className="py-16 bg-white">;
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <div className="text-center mb-12">;
@@ -32,14 +23,7 @@ return (
 <div className="bg-gradient-to-r from-green-500 to-teal-500 p-6 rounded-xl text-white text-center">;
 <div className="text-4xl mb-4">📊</div>
 <h3 className="text-xl font-semibold">Data Analytics</h3>;
-</div>
-</div>
-</div>
-</div>
 ),;
-};
-<//div><///div>;
-iconName?: string, // Example field if categories have icons,
 itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it or construct it.
   link?: string

@@ -1,5 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence, useScroll  } from "framer-motion, ";
+import { motion; AnimatePresence; useScroll } from "framer-motion, ";
 import { Calendar;
 Clock;
 CheckCircle;
@@ -21,7 +21,8 @@ Shield;
 Globe;
 Rocket;
 Filter;
-X} from "lucide-react, ";
+X;
+} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -44,8 +45,6 @@ impact: "low" | "medium" | "high";
 verified: boolean;
 featured: boolean;
 }
-}
-};
 priority: [] as TimelineEvent["priority"][];
 progress: 0;
 });

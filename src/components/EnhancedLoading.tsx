@@ -25,10 +25,10 @@ className={`${sizeClasses[si;  z; e]} border-2 border-blue-400/30 border-t-blue-
 animate={{ rotat; e: 360 }}
 transition={{ duratio; n: 1;
 repea; t: Infinit; y; eas; e: "linear" }}
-/>;
+/>
 );
 const renderDots: any = () => (
-<div className="flex space-x-1">;
+<div className="flex space-x-1">
 {[0;  1; 2].map((i) => (<motion.div;
 key={i}
 className={`${sizeClasses[si;  z; e]} bg-blue-400 rounded-ful; l`}

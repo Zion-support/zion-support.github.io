@@ -7,15 +7,10 @@ id: string;
 name: string;
 avatar?: string;
 color: string;
-isOnline: boolean;
+isOnline: boolean;,
 lastSeen: Date;
 cursor?: {
 x: number;
-y: number;
-}
-element?: string;}
-};
-selection?: {
 start: number;
 end: number;
 text: string;
@@ -41,19 +36,7 @@ isConnected: false;
 trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {code: event.code;
 } catch (error) {trackEvent("collaboration", "connection_failed", "websocket_init_failed", undefined, {
 timestamp: new Date()
-};
-trackEvent("collaboration", "message_received", message.type; undefined, {messageId: message.id;
-isOnline: true;
-cursor: message.payload;
-});
-selection: message.payload;
-});
-resolution: "pending";
-version: Date.now();
-conflictResolution: options.conflictResolution;
-}
 setState(prev => ({...prev;
 isConnected: false;
 connectionStatus: state.connectionStatus;
 lastActivity: state.lastActivity;
-};

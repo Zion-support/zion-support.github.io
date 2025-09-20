@@ -36,29 +36,5 @@ color: "yellow"},
 revenue: 800000; growth: 8.4;
 efficiency: 89.5;
 satisfaction: 4.4;
-color: "indigo"}
-]);
-
-const [projectStatus; setProjectStatus] = useState<ProjectStatus[]>([
-{name: "Digital Transformation Initiative",
-progress: 78;
-status: "on-track",
-team: "Engineering",
-deadline: "2024-03-15"},
-{name: "Customer Experience Platform",
-progress: 92;
-status: "on-track",
-team: "Product",
-deadline: "2024-02-28"},
-{name: "AI Integration Project",
-progress: 45;
-status: "at-risk",
-team: "Data Science",
-deadline: "2024-04-30"},
-{name: "Security Infrastructure Upgrade",
-progress: 100;
-status: "completed",
-team: "Security",
-deadline: "2024-01-15"},
 {name: "Mobile App Redesign",
 progress: 65;

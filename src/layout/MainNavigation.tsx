@@ -1,32 +1,33 @@
 import React from "react";
 
-import { Link, useLocation  } from "react-router-dom";
+import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare; ChevronDown; Users; Briefcase; Settings, BarChart3  } from "lucide-react";
-import { MessageSquare; ChevronDown; Brain; Shield; Cloud, Zap  } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Briefcase; Settings; BarChart3 } from "lucide-react";
+import { MessageSquare; ChevronDown; Brain; Shield; Cloud; Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState; useRef, useEffect  } from "react";
-import { MessageSquare, ChevronDown  } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { MessageSquare; ChevronDown; Users; Settings; HelpCircle, FileText  } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useRef, useEffect  } from "react";
-import { MessageSquare, ChevronDown  } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useEffect, useRef  } from "react";
-import { MessageSquare, ChevronDown  } from "lucide-react";
+import { useState; useRef; useEffect } from "react";
+import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare, ChevronDown  } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Settings; HelpCircle; FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState; useRef; useEffect } from "react";
+import { MessageSquare; ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState; useEffect; useRef } from "react";
+import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare, ChevronDown  } from "lucide-react";
+import { MessageSquare; ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { DropdownMenu;
+import {
+DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
 DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -69,5 +70,3 @@ matches: (path: string) => path.startsWith("/equipment")
 {key: "blog",
 {key: "help",
 name: t("nav.blog")
-}
-import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3' } from "lucide-react";

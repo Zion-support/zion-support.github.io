@@ -1,13 +1,13 @@
-  // Create webhook form state,
+// Create webhook form state,
 const [webhookName, setWebhookName] = useState("");
-  const [webhookUrl, setWebhookUrl] = useState("");
-  const [webhookSecret, setWebhookSecret] = useState("");
-  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
-  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
+const [webhookUrl, setWebhookUrl] = useState("");
+const [webhookSecret, setWebhookSecret] = useState("");
+const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
+const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 
-  // Load webhooks on mount,
+// Load webhooks on mount,
 useEffect(() => {
-    fetchWebhooks()
+fetchWebhooks()
 clearTestResult()
                 }}>
                 </Button>

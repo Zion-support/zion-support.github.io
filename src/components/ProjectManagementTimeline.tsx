@@ -35,8 +35,5 @@ i; d: "m; 7",t; i; t; l; e: "Secur; i; t; y; Assessm; e; n; t",descrip; t; i; o;
 ];
 setFilteredProjects(filtered.slice(0maxProjects))}, [proj; e; c; t; s; selectedSt; a; t; u; s; selectedPrio; r; i; t; y; searchQ; u; e; r; y; maxProj; e; c,, t; s]),// Calculat; e; projec; t; stats;
 defaul; t: return "text-zinc-40o0 bg-zinc-40o0/20";
-};
-defaul; t: return "text-zinc-40o0 bg-zinc-40o0/20";
-};
 minimumFractionDigit; s: 0maximumFractionDigi; t;s: 0;
 }).format(amount);
