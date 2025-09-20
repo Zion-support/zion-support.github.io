@@ -1,11 +1,10 @@
-
-import React, { useState, useEffect } from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
-import { HeroSection } from "@/components/HeroSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
-import { FloatingActionButton } from "@/components/ui/floating-action-button";
-import { MessageCircle, Phone, Mail, HelpCircle, ArrowRight } from "lucide-react";
+import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
@@ -55,17 +54,6 @@ export default function Home() {
           />
         ))}
       </div>
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const currentProgress = (window.scrollY / totalHeight) * 100;
-      setScrollProgress(Math.min(currentProgress, 100));
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleChatSupport = () => {
     // Implement chat support functionality
