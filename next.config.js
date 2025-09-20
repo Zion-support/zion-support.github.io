@@ -1,54 +1,37 @@
+
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
   
-  // Disable static optimization for problematic pages
+  // Disable static optimization temporarily to fix build issues
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
   
-  // Configure page directory
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  // Disable static generation temporarily - removed invalid option
 
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
   
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
+
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
+    formats: ['image/webp', 'image/avif'],
   },
 
-  // Ignore build errors to allow deployment with syntax issues
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // Force static export
-  generateBuildId: async () => {
-    return 'build-' + Date.now()
-  },
-  
-  // Skip static generation for problematic pages
-  skipTrailingSlashRedirect: true,
-  skipMiddlewareUrlNormalize: true,
-  
-  // Force disable TypeScript checking
+  // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, 'src'),
-    };
-    
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
@@ -70,6 +53,19 @@ const nextConfig = {
     }
 
     return config;
+  },
+
+  // Ignore build errors to allow deployment with syntax issues
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Force static export even with TypeScript errors
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
   },
 };
 

@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import Head from 'next/head';
 
 interface SEOProps {
   title?: string;
@@ -6,32 +7,29 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   url?: string;
-  canonical?: string;
 }
 
-export function SEO({ 
-  title = "Zion Holdings - AI-Powered Solutions", 
-  description = "Leading provider of AI-powered business solutions and services",
-  keywords = "AI, artificial intelligence, business solutions, automation",
-  image = "/og-image.jpg",
-  url = "https://zion.app",
-  canonical
-}: SEOProps) {
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group',
+  description = 'Leading AI and technology solutions',
+  keywords = 'AI, technology, innovation',
+  image = '/images/og-image.jpg',
+  url = 'https://ziontechgroup.com'
+}) => {
   return (
-    <>
+    <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      {url && <meta property="og:url" content={url} />}
-      {title && <meta property="og:title" content={title} />}
-      {description && <meta property="og:description" content={description} />}
-      {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={canonical || url} />
-      {image && <meta property="og:image" content={image} />}
+      <meta name="keywords" content={keywords} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-    </>
+    </Head>
   );
-}
+};

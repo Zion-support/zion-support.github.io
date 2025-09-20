@@ -1,26 +1,44 @@
-import React from "react";
-import React from "react";
-import { Phone,,, ShieldCheck,,, Clock,,  } from 'lucide-react'
+import React from 'react';
+import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
+import { Phone, ShieldCheck, Clock } from 'lucide-react';
+
 export default function ITSupportPage() {
   const benefits = [
-    {import React from "react"
-import { ServiceLandingTemplate,,  } from "@/components/services/ServiceLandingTemplate"
-import React from "react"
-export default function ITSupportPage() {
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock technical assistance',
+      icon: <Clock className="h-6 w-6" />
+    },
+    {
+      title: 'Secure Solutions',
+      description: 'Enterprise-grade security protocols',
+      icon: <ShieldCheck className="h-6 w-6" />
+    },
+    {
+      title: 'Direct Contact',
+      description: 'Direct access to our support team',
+      icon: <Phone className="h-6 w-6" />
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'John Smith',
+      role: 'IT Manager',
+      text: 'Excellent support and quick response times.',
+      avatar: '/images/avatars/john.jpg'
+    }
+  ];
+
+  return (
     <ServiceLandingTemplate
-title="IT Support Services"
-      subtitle="Reliable assistance to keep your business technology operating smoothly."
-      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
-      description="From troubleshooting to onsite repairs Zion provides comprehensive IT support designed for businesses of all sizes."
-      benefits = {benefits,}
-      testimonials = {testimonials,}
-      ctaText="Get IT Support"
-      ctaLink="/request-quote"
-    />
-  )      benefits={benefits}
+      title="IT Support Services"
+      subtitle="Professional IT Support for Your Business"
+      description="Comprehensive IT support services to keep your business running smoothly with 24/7 assistance and enterprise-grade security."
+      benefits={benefits}
       testimonials={testimonials}
-      ctaText="Get IT Support"
-      ctaLink="/request-quote"
+      ctaText="Get Support"
+      ctaLink="/contact"
     />
-  )
+  );
 }

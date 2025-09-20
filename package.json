@@ -10,9 +10,8 @@
   "scripts": {
     "sitemap": "node scripts/generate-sitemap.mjs",
     "dev": "next dev",
-    "build": "NODE_OPTIONS=\"--openssl-legacy-provider\" next build",
+    "build": "next build",
     "export": "next build",
-    "build:netlify": "bash scripts/netlify-build.sh",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
@@ -60,11 +59,7 @@
     "format:check": "prettier --check .",
     "security:audit": "npm audit --audit-level=moderate",
     "deps:update": "npm update",
-    "deps:outdated": "npm outdated",
-    "performance": "node -e \"console.log('Performance monitoring enabled')\"",
-    "security": "node -e \"console.log('Security validation enabled')\"",
-    "accessibility": "node -e \"console.log('Accessibility features enabled')\"",
-    "seo": "node -e \"console.log('SEO optimization enabled')\""
+    "deps:outdated": "npm outdated"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -132,17 +127,17 @@
     "jspdf-autotable": "^3.8.1",
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.536.0",
-    "next": "^14.2.10",
+    "next": "^15.5.3",
     "next-themes": "^0.2.1",
     "node-cron": "^4.2.1",
     "notistack": "^3.0.0",
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
-    "react": "^18.3.1",
+    "react": "^18.2.0",
     "react-datepicker": "^8.4.0",
     "react-day-picker": "^8.10.0",
-    "react-dom": "^18.3.1",
+    "react-dom": "^18.2.0",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.4",
     "react-hook-form": "^7.50.1",
@@ -175,14 +170,9 @@
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.3",
-    "@types/node": "^20.19.17",
-<<<<<<< HEAD
-    "@types/react": "^17.0.88",
-    "@types/react-dom": "^17.0.26",
-=======
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
->>>>>>> bfc0bc1a6431dd9eb681f7e85a91e0d95815205e
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
@@ -191,7 +181,7 @@
     "cssnano": "^7.1.1",
     "cypress": "^15.2.0",
     "cypress-real-events": "^1.12.0",
-    "eslint": "8.56.0",
+    "eslint": "^9.36.0",
     "eslint-config-next": "^15.5.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
@@ -217,8 +207,8 @@
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "overrides": {
     "glob": "^11.0.3"
