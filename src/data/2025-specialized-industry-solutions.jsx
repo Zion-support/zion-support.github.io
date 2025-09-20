@@ -227,7 +227,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Competitive advantage"
     ],
     link: "/services/ai-retail",image: "/images/ai-retail.jpg",technology: "AI + Retail Analytics",marketSize: "$4.6B by 2025",targetIndustry: "Retail, E-commerce, Hospitality"
-  }
+  };
 ],
 
 export const INDUSTRY_CATEGORIES = [

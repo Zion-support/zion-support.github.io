@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 interface AccessibilitySettings {
   highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
-}
+};
 
 export default function AccessibilityEnhancer({ children }: { children: React.ReactNode }) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -218,4 +218,4 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
       {children}
     </>
   );
-}
+};

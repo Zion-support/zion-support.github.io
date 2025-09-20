@@ -522,4 +522,4 @@ export default function AIPoweredContractAnalysis() {
       </section>
     </div>
   )
-}
+};

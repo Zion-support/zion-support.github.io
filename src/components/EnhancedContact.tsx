@@ -14,11 +14,10 @@ import {
 } from "lucide-react";
 interface ContactFormData {
   name: string,email: string,phone: string,company: string,service: string,message: string
-}
+};
 
 interface ContactFormErrors {
   [key: string]: string
-}
 
 export function EnhancedContact() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -154,7 +153,7 @@ export function EnhancedContact() {
         </div>
       </motion.div>
     )
-  }
+  };
 ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
@@ -414,4 +413,3 @@ export function EnhancedContact() {
       </div>
     </div>
   );
-}

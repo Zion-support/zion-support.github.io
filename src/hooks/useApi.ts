@@ -3,11 +3,10 @@ interface UseApiOptions {
   immediate?: boolean,
   retries?: number,
   retryDelay?: number,
-}
+};
 
 interface UseApiResult<T> {
   data: T | null,loading: boolean,error: Error | null,refetch: () => void
-}
 
 export function useApi<T>(
   url: string,options: UseApiOptions = {}
@@ -58,4 +57,3 @@ export function useApi<T>(
     error;
     refetch: fetchData
   };
-}

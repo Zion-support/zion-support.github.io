@@ -9,7 +9,7 @@ export interface EmergingTechService2030 {
     technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[]
   },
   competitors: string[],marketSize: string,aiCapabilities: string[],complianceFeatures: string[],scalabilityFeatures: string[]
-}
+};
 
 export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   {
@@ -335,7 +335,7 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     marketSize: "$65.8 billion by 2030",aiCapabilities: ["Neural pattern recognition", "Cognitive enhancement", "Learning algorithms", "Memory optimization", "Emotional intelligence"],
     complianceFeatures: ["Medical device regulations", "Neural privacy", "Ethical guidelines", "Safety standards", "Human rights protection"],
     scalabilityFeatures: ["Multi-user support", "Global neural network", "Collaborative computing", "Neural scaling", "Ethical AI controls"]
-  }
+  };
 ],
 
 export default EMERGING_TECH_SERVICES_2030;

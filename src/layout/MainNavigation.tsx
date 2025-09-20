@@ -21,7 +21,7 @@ import {
 interface NavigationLink {
   key: string,href: string,name: string,matches: (path: string) => boolean;
   children?: NavigationLink[]
-}
+};
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {
   isAdmin?: boolean,
@@ -256,4 +256,3 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       </AnimatePresence>
     </nav>
   );
-}

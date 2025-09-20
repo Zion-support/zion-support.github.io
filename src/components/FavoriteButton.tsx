@@ -3,7 +3,7 @@ import { Heart } from "lucide-react";
 interface FavoriteButtonProps {
   itemId: string,itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string
-}
+};
 
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {
   const [isFavorited, setIsFavorited] = useState(false);
@@ -38,4 +38,3 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       />
     </button>
   );
-}

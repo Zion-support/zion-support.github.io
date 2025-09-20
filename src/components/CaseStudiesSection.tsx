@@ -34,7 +34,7 @@ const caseStudies = [
       "Improved customer trust by 80%"
     ],
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",color: "from-green-500 to-emerald-500"
-  }
+  };
 ];
 export function CaseStudiesSection() {
   return (
@@ -147,4 +147,4 @@ export function CaseStudiesSection() {
       </div>
     </section>
   )
-}
+};

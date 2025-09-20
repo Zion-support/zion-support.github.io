@@ -333,4 +333,4 @@ export default function PricingGuide() {
         </div>
       </div>
     </div>)
-}
+};

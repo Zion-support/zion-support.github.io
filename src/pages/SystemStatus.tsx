@@ -4,13 +4,12 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, G
 import SEO from "../components/SEO";
 interface ServiceStatus {
   id: string,name: string,status: 'operational' | 'degraded' | 'outage' | 'maintenance',uptime: number,responseTime: number,lastUpdated: string,description: string,icon: React.ComponentType<any>
-}
+};
 
 interface Incident {
   id: string,title: string,description: string,status: 'investigating' | 'identified' | 'monitoring' | 'resolved',severity: 'low' | 'medium' | 'high' | 'critical',startTime: string;
   endTime?: string,
   affectedServices: string[]
-}
 ;
 const services: ServiceStatus[] = [
   {
@@ -31,12 +30,12 @@ const services: ServiceStatus[] = [
   },
   {
     id: 'analytics',name: 'Analytics Platform',status: 'operational',uptime: 99.89,responseTime: 95,lastUpdated: '2025-08-27T16:48:00Z',description: 'Data analytics and reporting systems',icon: BarChart3
-  }
+  };
 ];
 const incidents: Incident[] = [
   {
     id: 'inc-001',title: 'Scheduled Maintenance - Database Optimization',description: 'Routine database maintenance to improve performance and reliability.',status: 'monitoring',severity: 'low',startTime: '2025-08-27T14:00:00Z',affectedServices: ['databaseanalytics'],endTime: '2025-08-27T16:00:00Z'
-  }
+  };
 ];
 const getStatusColor = (status: ServiceStatus['status']) => {
   switch (status) {
@@ -49,8 +48,7 @@ const getStatusColor = (status: ServiceStatus['status']) => {
     case 'maintenance':
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
-  }
-};
+  };
 const getStatusIcon = (status: ServiceStatus['status']) => {
   switch (status) {
     case 'operational':
@@ -62,8 +60,7 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
     case 'maintenance':
       return Clock;
     default: return Clock
-  }
-};
+  };
 const getSeverityColor = (severity: Incident['severity']) => {
   switch (severity) {
     case 'low':
@@ -75,8 +72,7 @@ const getSeverityColor = (severity: Incident['severity']) => {
     case 'critical':
       return 'text-red-400 bg-red-400/10 border-red-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
-  }
-};
+  };
 export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
 
@@ -390,4 +386,3 @@ export default function SystemStatus() {
       </div>
     </motion.div>
   )
-}

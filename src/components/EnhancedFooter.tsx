@@ -304,6 +304,6 @@ export function EnhancedFooter() {
       <div className="absolute top-1/3 left-10 w-1 h-1 bg-blue-400 rounded-full opacity-80 animate-pulse delay-2000"></div>
     </footer>
   );
-}
+};
 
 export default EnhancedFooter;

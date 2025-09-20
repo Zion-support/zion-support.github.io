@@ -26,17 +26,17 @@ interface ChatMessage {
     relatedServices?: string[],
     estimatedResponseTime?: number
   },
-}
+};
 
 interface AIChatbotSystemProps {
   showHeader?: boolean,
   showSettings?: boolean,
   maxMessages?: number,
-  autoScroll?: boolean,
+  autoScroll?: boolean
 }
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-  showHeader = true;
+  showHeader = true,
   showSettings = true,
   autoScroll = true
 }) => {
@@ -55,10 +55,17 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {,
-        id: 'welcome',content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with: \n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {,
-          confidence: 0.95,suggestions: ['Tell me about your servicesGet a quote', 'Technical supportContact information'],
-          relatedServices: ['AI ConsultingCloud Solutions', 'Digital Transformation'],
+      const welcomeMessage: ChatMessage = {
+        id: 'welcome',
+        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with: \n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
+        sender: 'bot',
+        timestamp: new Date(),
+        type: 'text',
+        status: 'sent',
+        metadata: {
+          confidence: 0.95,
+          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
+          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
           estimatedResponseTime: 2
         }
       };
@@ -71,13 +78,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [messages, autoScroll]),
+  }, [messages, autoScroll]);
 
   // Simulate AI response
   const simulateAIResponse = async (userMessage: string) => {
     setIsTyping(true);
     // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
 
     const responses = [
       {
@@ -460,4 +467,3 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       </AnimatePresence>
     </>
   );
-};

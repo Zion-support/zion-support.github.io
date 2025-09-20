@@ -10,7 +10,7 @@ export default function Help() {
       </div>
     </div>
   );
-}
+};
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -423,4 +423,3 @@ export default function Help() {
       </section>
     </div>
   )
-}

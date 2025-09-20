@@ -13,7 +13,7 @@ export interface AdditionalService {
 	icon?: string, // emoji or simple text icon
 	popular?: boolean,
 	launchDate?: string
-}
+};
 
 export const additionalEnhancedServices: AdditionalService[] = [
 	// AI Services

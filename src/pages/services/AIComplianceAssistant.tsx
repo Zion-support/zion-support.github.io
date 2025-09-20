@@ -367,5 +367,5 @@ export default function AIComplianceAssistant() {
       </section>
     </div>
   )
-}
+};
 

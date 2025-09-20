@@ -128,5 +128,5 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     marketPrice: "$3,500-8,000",
     competitors: ["Kong", "Apigee", "AWS API Gateway"],
     roi: "400% within 6 months",setupTime: "3-5 weeks",integrations: ["OAuth", "JWT", "LDAP", "Monitoring Tools", "Analytics Platforms", "CI/CD Pipelines"]
-  }
+  };
 ];

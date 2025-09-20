@@ -174,7 +174,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
         name: "Enterprise",price: 7999,features: ["Custom AI Development", "Full Financial Integration", "24/7 Support", "Custom Compliance", "Dedicated Team"]
       }
     ]
-  }
+  };
 ],
 
 // Export pricing categories for easier access

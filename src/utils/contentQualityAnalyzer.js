@@ -296,5 +296,5 @@ export class ContentQualityAnalyzer {
     clearCache() {
         this.analyzedPages.clear();
     }
-}
+};
 export default ContentQualityAnalyzer;

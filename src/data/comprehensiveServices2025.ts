@@ -3,24 +3,20 @@
 
 export interface ServiceContact {
   phone: string,email: string,website: string,address: string
-}
+};
 
 export interface MicroSaasService {
   id: number,name: string,category: string,pricing: string,description: string,price: number,pricingModel: string,userLimit: string,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,competitors: string[],roi: string,setupTime: string,integrations: string[],freeTier: boolean,trialPeriod: string,innovationLevel: string,marketSize: string,growthRate: string
-}
 
 export interface ITService {
   id: number,name: string,category: string,description: string,hourlyRate: number,projectRate: number,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,responseTime: string,sla: string,certifications: string[],deliveryTime: string,support: string,innovationLevel: string,marketSize: string,compliance: string[]
-}
 
 export interface AIService {
   id: number,name: string,category: string,description: string,pricing: string,price: number,pricingModel: string,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,aiModels: string[],accuracy: string,trainingData: string,compliance: string[],aiScore: number,useCases: string[],innovationLevel: string,marketSize: string,ethicalAI: string[]
-}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {,
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"
-};
 // Revolutionary Micro SAAS Services 2025
 export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -318,7 +314,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     contactInfo: zionContact,marketPrice: "$400-800/month",competitors: ["Zendesk", "Intercom", "Freshdesk"],
     roi: "250-450% within 5 months",setupTime: "1-2 weeks",integrations: ["Slack", "Microsoft Teams", "Zapier", "Shopify", "WooCommerce"],
     freeTier: true,trialPeriod: "30 days",innovationLevel: "Advanced",marketSize: "$28 billion",growthRate: "27% annually"
-  }
+  };
 ];
 // Advanced IT Infrastructure Services 2025
 export const advancedITInfrastructureServices2025: ITService[] = [
@@ -406,7 +402,7 @@ export const advancedITInfrastructureServices2025: ITService[] = [
     tags: ["AI", "Asset Management", "IT Management", "Optimization", "Compliance"],
     contactInfo: zionContact,marketPrice: "$150-250/hour",responseTime: "4-6 hours",sla: "99% system availability",certifications: ["ITIL", "COBIT", "ISO 20000"],
     deliveryTime: "3-6 weeks",support: "Business hours + emergency support",innovationLevel: "Advanced",marketSize: "$45 billion",compliance: ["SOX", "ISO 27001", "ITIL"]
-  }
+  };
 ],
 
 // Revolutionary AI Services 2025
@@ -516,11 +512,10 @@ export const revolutionaryAIServices2025: AIService[] = [
       "Ethical AI development"
     ],
     innovationLevel: "Revolutionary",marketSize: "$20 billion",ethicalAI: ["AI safety", "Ethical guidelines", "Transparency", "Human oversight"]
-  }
+  };
 ],
 
 // Export all services
 export const allServices2025 = {
   microSaas: revolutionaryMicroSaasServices2025,itInfrastructure: advancedITInfrastructureServices2025,ai: revolutionaryAIServices2025
-};
 export default allServices2025;

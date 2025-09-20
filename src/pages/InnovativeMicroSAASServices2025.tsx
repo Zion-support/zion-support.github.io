@@ -612,4 +612,4 @@ export default function InnovativeMicroSAASServices2025() {
       </AnimatePresence>
     </div>
   );
-}
+};

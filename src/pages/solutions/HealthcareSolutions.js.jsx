@@ -186,4 +186,4 @@ export default function HealthcareSolutions() {
         </div>
       </section>
     </div>)
-}
+};

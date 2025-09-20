@@ -110,7 +110,7 @@ export const comprehensiveServices = [
       'Software licensingAdvanced training'
     ],
     popular: false,icon: '🎧',responseTime: '2 hours',sla: '95% first-call resolution'
-  }
+  };
 ];
 export const serviceCategories = [
   {
@@ -130,7 +130,7 @@ export const serviceCategories = [
   },
   {
     name: 'Support',description: 'Help desk and user support services',icon: '🎧',services: comprehensiveServices.filter(s => s.category === 'Support')
-  }
+  };
 ];
 export const pricingTiers = [
   {
@@ -165,7 +165,7 @@ export const pricingTiers = [
       'Unlimited usersCustom SLAs',
       '1-hour response time'
     ]
-  }
+  };
 ],
 
 export const getServiceById = (id) => {
@@ -210,17 +210,16 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
     recommendations = recommendations.filter(service =>
       ['SupportData', 'NetworkingSecurity'].includes(service.category)
     ),
-  }
+  };
 
   // Filter by budget
   if (budget === 'low') {
     recommendations = recommendations.filter(service => service.basePrice <= 1500);
   } else if (budget === 'medium') {
     recommendations = recommendations.filter(service => service.basePrice <= 3000);
-  }
+  };
 ;
   return recommendations;
-};
 // Service categories for filtering
 export const SERVICE_CATEGORIES = [
   { label: 'Infrastructure', value: 'infrastructure' };

@@ -10,11 +10,10 @@ export interface UltimateZionService {
   };
   marketSize?: string,
   innovationLevel: string
-}
+};
 ;
 const contactInfo = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
-};
 export const ultimateZionServices2025: UltimateZionService[] = [
   // QUANTUM COMPUTING & AI SERVICES
   {
@@ -405,6 +404,6 @@ export const ultimateZionServices2025: UltimateZionService[] = [
       apiEndpoints: 300,uptime: '99.9%',security: ['SOC 2FedRAMP', 'Data encryptionSecure authentication', 'Audit logging']
     },
     marketSize: '$25.2 billion by 2027',innovationLevel: 'Revolutionary'
-  }
+  };
 ];
 export default ultimateZionServices2025;

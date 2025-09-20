@@ -34,7 +34,7 @@ const features = [
   },
   {
     icon: Cloud,title: 'Cloud-Native',description: 'Modern cloud-first approach for scalable and flexible solutions.',color: 'from-indigo-500 to-purple-500'
-  }
+  };
 ];
 const consultingServices = [
   {
@@ -60,7 +60,7 @@ const consultingServices = [
   },
   {
     icon: Users,title: 'Team Training',description: 'Comprehensive training programs to upskill your team and maximize technology adoption.'
-  }
+  };
 ];
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -68,7 +68,7 @@ const containerVariants = {
     opacity: 1,transition: {,
       staggerChildren: 0.1
     }
-  }
+  };
 };
 export default function ITConsulting() {
   return (
@@ -264,4 +264,3 @@ export default function ITConsulting() {
       </section>
     </div>
   )
-}

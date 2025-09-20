@@ -9,7 +9,7 @@ export interface ComprehensiveITService2029 {
   marketSize?: string,
   demoUrl?: string,
   documentationUrl?: string,
-}
+};
 
 export const COMPREHENSIVE_IT_SERVICES_2029: ComprehensiveITService2029[] = [
   // Cloud Infrastructure & DevOps
@@ -446,6 +446,6 @@ export const COMPREHENSIVE_IT_SERVICES_2029: ComprehensiveITService2029[] = [
     },
     competitors: ["AWS Professional Services", "Azure Consulting", "Google Cloud Consulting"],
     marketSize: "$35.2B (Cloud Migration Services)",demoUrl: "https://ziontechgroup.com/demo/cloud-migration-strategy",documentationUrl: "https://ziontechgroup.com/docs/cloud-migration-strategy"
-  }
+  };
 ];
 export default COMPREHENSIVE_IT_SERVICES_2029;

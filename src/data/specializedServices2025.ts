@@ -2,7 +2,7 @@ export interface SpecializedService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,marketPrice: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,innovationLevel: string,contactInfo: {,
     phone: string,email: string,website: string
   };
-}
+};
 
 export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
   // AI-Powered Education Platform
@@ -255,6 +255,6 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     estimatedDelivery: "16-24 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-edge",contactInfo: {,
       phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
     }
-  }
+  };
 ];
 export default SPECIALIZED_SERVICES_2025;

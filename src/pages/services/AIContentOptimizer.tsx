@@ -340,4 +340,4 @@ export default function AIContentOptimizer() {
       </section>
     </div>
   )
-}
+};

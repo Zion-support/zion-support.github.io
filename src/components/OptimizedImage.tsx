@@ -15,7 +15,7 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
   onError?: () => void;
-}
+};
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -159,6 +159,5 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       )}
     </div>
   );
-};
 
 export default OptimizedImage;

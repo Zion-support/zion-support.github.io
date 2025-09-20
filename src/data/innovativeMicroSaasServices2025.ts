@@ -9,7 +9,7 @@ export interface InnovativeMicroSaasService {
   marketSize?: string,
   demoUrl?: string,
   documentationUrl?: string,
-}
+};
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -502,6 +502,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     },
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
     marketSize: "$15.8B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-content",documentationUrl: "https://ziontechgroup.com/docs/ai-content"
-  }
+  };
 ];
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;

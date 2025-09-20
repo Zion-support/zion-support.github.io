@@ -57,7 +57,7 @@ interface TeamMember {
   github?: string,
   website?: string,
   email: string,image: string,featured: boolean,leadership: boolean,achievements: string[]
-}
+};
 ;
 const Team: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -580,5 +580,4 @@ const Team: React.FC = () => {
       </section>
     </div>
   )
-};
 export default Team;

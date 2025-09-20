@@ -3,7 +3,7 @@ import { api, ApiResponse } from "@/services/api";
 interface User {
   id: number,name: string,email: string;
   createdAt?: string
-}
+};
 ;
 const ApiDemo: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -173,5 +173,4 @@ const ApiDemo: React.FC = () => {
       </div>
     </div>
   )
-};
 export default ApiDemo;

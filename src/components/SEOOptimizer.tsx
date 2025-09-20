@@ -21,28 +21,24 @@ import {
 } from "lucide-react";
 interface SEOAnalysis {
   score: number,issues: SEOIssue[],suggestions: SEOSuggestion[],metrics: SEOMetrics,lastUpdated: Date
-}
+};
 
 interface SEOIssue {
   id: string,type: 'error' | 'warning' | 'info',title: string,description: string,impact: 'high' | 'medium' | 'low',fixable: boolean,category: 'content' | 'technical' | 'performance' | 'accessibility'
-}
 
 interface SEOSuggestion {
   id: string,title: string,description: string,priority: 'high' | 'medium' | 'low',effort: 'low' | 'medium' | 'high',estimatedImpact: number
-}
 
 interface SEOMetrics {
   pageSpeed: number,mobileFriendliness: number,accessibility: number,bestPractices: number,seoScore: number,coreWebVitals: {,
     lcp: number,fid: number,cls: number
   };
-}
 
 interface SEOOptimizerProps {
   url?: string,
   autoAnalyze?: boolean,
   showDetails?: boolean,
   onAnalysisComplete?: (analysis: SEOAnalysis) => void
-}
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
@@ -168,7 +164,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         </button>
       </div>
     )
-  }
+  };
 ;
   return (
     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
@@ -452,4 +448,3 @@ export const useSEOOptimization = () => {
     isOptimizing;
     optimizePage
   };
-};

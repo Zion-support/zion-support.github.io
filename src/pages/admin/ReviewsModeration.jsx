@@ -80,9 +80,8 @@ function ReviewsModerationContent() {
       </main>
       
     </>);
-}
+};
 export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>);
-}

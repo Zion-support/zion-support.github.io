@@ -43,5 +43,5 @@ export const logPerformanceMetrics = () => {
   const metrics = getPerformanceMetrics();
   if (metrics) {
 
-  }
+  };
 };

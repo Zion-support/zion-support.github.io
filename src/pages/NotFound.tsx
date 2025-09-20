@@ -48,7 +48,7 @@ const popularCategories = [
       { name: 'Space Technology', path: '/services/space-tech' },
       { name: 'AI Quantum Hybrid', path: '/services/ai-quantum-hybrid-platform' }
     ]
-  }
+  };
 ];
 export default function NotFound() {
   return (
@@ -242,4 +242,4 @@ export default function NotFound() {
       </section>
     </motion.div>
   )
-}
+};

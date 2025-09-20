@@ -267,7 +267,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Instant settlements"
     ],
     link: "/services/crypto-payments",image: "/images/crypto-payments.jpg",technology: "Blockchain + Crypto + Payments",marketSize: "$3.4B by 2025",targetIndustry: "E-commerce, Online Services, Gaming"
-  }
+  };
 ],
 
 export const INNOVATIVE_CATEGORIES = [

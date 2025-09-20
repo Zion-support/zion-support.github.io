@@ -300,7 +300,7 @@ export default function AIBusinessIntelligence() {
       </section>
     </div>
   )
-}
+};
 
 // Missing icon component
 const CheckCircle = ({ className }: { className?: string }) => (

@@ -20,13 +20,14 @@ const Blog = lazy(() => import('./pages/Blog'));
 
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
-  defaultOptions: {,
+  defaultOptions: {
     queries: {
       staleTime: 5 * 60 * 1000, // 5 minutes
       cacheTime: 10 * 60 * 1000, // 10 minutes
-      retry: 3,retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000)
+      retry: 3,
+      retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000)
     },
-    mutations: {,
+    mutations: {
       retry: 1
     }
   }

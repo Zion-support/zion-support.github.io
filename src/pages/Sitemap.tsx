@@ -52,13 +52,12 @@ import {
 import { SEO } from "@/components/SEO";
 interface SitemapSection {
   title: string,icon: React.ComponentType<any>,description: string,links: SitemapLink[]
-}
+};
 
 interface SitemapLink {
   name: string,path: string;
   description?: string,
   featured?: boolean
-}
 ;
 const Sitemap: React.FC = () => {
   const sitemapSections: SitemapSection[] = [
@@ -384,5 +383,4 @@ const Sitemap: React.FC = () => {
       </section>
     </div>
   )
-};
 export default Sitemap;

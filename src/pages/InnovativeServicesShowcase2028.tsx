@@ -371,4 +371,4 @@ export default function InnovativeServicesShowcase2028() {
       </div>
     </div>
   );
-}
+};

@@ -7,7 +7,7 @@ interface BundleInfo {
   gzipSize: number;
   chunks: string[];
   modules: ModuleInfo[];
-}
+};
 
 interface ModuleInfo {
   name: string;

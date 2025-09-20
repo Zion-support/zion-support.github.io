@@ -69,7 +69,6 @@ export const getVarietyScore = (password) => {
   if (hasSpecialChars(password)) score++,
 
   return score,
-};
 
 /**
  * Check for common patterns (penalty)
@@ -86,7 +85,7 @@ export const getPatternPenalty = (password) => {
     if (password[i] === password[i + 1] && password[i] === password[i + 2]) {
       penalty += 2,
     }
-  }
+  };
 
   // Check for sequential characters
   for (let i = 0, i < password.length - 2, i++) {
@@ -97,7 +96,7 @@ export const getPatternPenalty = (password) => {
     if (char2 === char1 + 1 && char3 === char2 + 1) {
       penalty += 1,
     }
-  }
+  };
 
   // Check for common keyboard patterns
   const keyboardPatterns = ['qwertyasdfgh', 'zxcvbn123456', 'abcdef'],
@@ -108,7 +107,6 @@ export const getPatternPenalty = (password) => {
   }),
 
   return penalty,
-};
 
 /**
  * Calculate password strength score
@@ -129,14 +127,13 @@ export const calculatePasswordScore = (password) => {
   // Bonus for longer passwords
   if (password.length > 12) {
     score += 10,
-  }
+  };
 
   // Penalty for patterns
   score -= getPatternPenalty(password);
 
   // Ensure score is between 0 and 100
   return Math.max(0, Math.min(100, score)),
-};
 
 /**
  * Get password strength level
@@ -151,7 +148,6 @@ export const getPasswordStrength = (password) => {
   if (score >= 40) return 'Moderate',
   if (score >= 20) return 'Weak',
   return 'Very Weak',
-};
 
 /**
  * Get password strength color
@@ -166,7 +162,6 @@ export const getPasswordStrengthColor = (password) => {
   if (score >= 40) return 'text-yellow-600';
   if (score >= 20) return 'text-orange-600';
   return 'text-red-600';
-};
 /**
  * Get password requirements status
  * @param {string} password - Password to check
@@ -197,23 +192,23 @@ export const validatePassword = (password, requirements = {}) => {
 
   if (password.length < minLength) {
     errors.push(`Password must be at least ${minLength} characters long`);
-  }
+  };
 ;
   if (requireLowercase && !hasLowercase(password)) {
     errors.push('Password must contain at least one lowercase letter');
-  }
+  };
 ;
   if (requireUppercase && !hasUppercase(password)) {
     errors.push('Password must contain at least one uppercase letter');
-  }
+  };
 ;
   if (requireNumbers && !hasNumbers(password)) {
     errors.push('Password must contain at least one number');
-  }
+  };
 ;
   if (requireSpecial && !hasSpecialChars(password)) {
     errors.push('Password must contain at least one special character');
-  }
+  };
 ;
   return {
     isValid: errors.length === 0;
@@ -233,30 +228,29 @@ export const generatePasswordSuggestions = (password) => {
 
   if (!requirements.lowercase) {
     suggestions.push('Add lowercase letters to increase variety');
-  }
+  };
 ;
   if (!requirements.uppercase) {
     suggestions.push('Add uppercase letters to increase variety');
-  }
+  };
 ;
   if (!requirements.numbers) {
     suggestions.push('Add numbers to increase variety');
-  }
+  };
 ;
   if (!requirements.special) {
     suggestions.push('Add special characters to increase variety');
-  }
+  };
 ;
   if (password.length < 12) {
     suggestions.push('Consider using a longer password (12+ characters)'),
-  }
+  };
 ;
   if (getPatternPenalty(password) > 0) {
     suggestions.push('Avoid common patterns and repeated characters');
-  }
+  };
 ;
   return suggestions,
-};
 
 /**
  * Get password strength indicator data
@@ -292,7 +286,6 @@ export const isCommonPassword = (password) => {
   ],
 
   return commonPasswords.includes(password.toLowerCase()),
-};
 
 /**
  * Get comprehensive password analysis
@@ -317,4 +310,3 @@ export const analyzePassword = (password) => {
     isCommon;
     timestamp: new Date().toISOString()
   };
-};

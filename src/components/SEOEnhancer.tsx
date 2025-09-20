@@ -13,7 +13,7 @@ interface SEOEnhancerProps {
   enableAnalytics?: boolean;
   enableSitemap?: boolean;
   className?: string;
-}
+};
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion - Tech & AI Marketplace',
@@ -197,6 +197,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       </Helmet>
     </div>
   );
-};
 
 export default SEOEnhancer;

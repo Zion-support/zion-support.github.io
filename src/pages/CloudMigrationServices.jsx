@@ -343,4 +343,4 @@ export default function CloudMigrationServices() {
         </div>
       </section>
     </div>)
-}
+};

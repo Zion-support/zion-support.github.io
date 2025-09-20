@@ -8,7 +8,7 @@ export interface HealthcareAIService2028 {
   competitors?: string[],
   marketSize?: string,
   regulatoryCompliance?: string[],
-}
+};
 
 export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] = [
   // AI-Powered Medical Imaging Analysis
@@ -259,7 +259,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     },
     competitors: ["Optum", "Cerner", "Epic Systems", "Allscripts"],
     marketSize: "$78.9 billion by 2028",regulatoryCompliance: ["HIPAA", "SOC 2", "GDPR", "ISO 27001"]
-  }
+  };
 ],
 
 export default SPECIALIZED_HEALTHCARE_AI_SERVICES_2028;

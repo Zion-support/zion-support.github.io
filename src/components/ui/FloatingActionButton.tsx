@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, MessageCircle, Phone, Mail, ArrowUp, X } from "lucide-react";
 interface FloatingActionButtonProps {
   className?: string,
-}
+};
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,4 +97,3 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       </AnimatePresence>
     </div>
   );
-};
