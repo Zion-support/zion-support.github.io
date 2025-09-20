@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Notifications.tsx
 import React { useState useEffect } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/Notifications.tsx
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from "lucide-react";
@@ -7,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
-========
 import { Bell,, Check,, X,, AlertCircle,, Info, CheckCircle,  } from 'lucide-react';
 import { Badge,  } from '@/components/ui/badge';
 import { Button,  } from '@/components/ui/button';
@@ -209,7 +207,6 @@ export default function Notifications() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Notifications</h1>
         <p className="text-lg text-gray-600">Your notifications...</p>
       </div>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Notifications.tsx
     </div>
   );
 }

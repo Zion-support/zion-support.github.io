@@ -6,7 +6,6 @@ import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react'
 
 import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services'
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const service = useMemo(() => {
     if (!slug) return undefined
     const all: any[] = ([] as any[])
@@ -117,9 +116,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const services = getAllServices()
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '')
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   let service: Service | undefined = services.find((s) => {
     if (!s.link) return false

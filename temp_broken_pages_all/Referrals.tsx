@@ -1,8 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_pages_all/Referrals.tsx
 
 <<<<<<<< HEAD:temp_broken_pages_all/Referrals.tsx
-<<<<<<< HEAD:temp_broken_pages_all/Referrals.tsx
 import { useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useReferrals } from "@/hooks/useReferrals";
@@ -25,7 +23,10 @@ CardHeader;
 , CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useRouter } from "next/router"; // Changed from useNavigate,
+<<<<<<< HEAD
 ========
+=======
+>>>>>>> pr-22703
 import { useEffect, ,  } from 'react';
 import { useAuth, ,  } from '@/hooks/useAuth';
 import { useReferrals, ,  } from '@/hooks/useReferrals';
@@ -150,9 +151,11 @@ export default function Referrals() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Referrals.tsx
 }
 =======
+}
 import { SEO } from "@/components/SEO";
 
 export default function Referrals() {
@@ -174,4 +177,4 @@ export default function Referrals() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Referrals.tsx
+>>>>>>> pr-22703

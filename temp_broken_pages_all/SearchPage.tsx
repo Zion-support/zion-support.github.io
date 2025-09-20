@@ -1,13 +1,15 @@
-<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
+>>>>>>> pr-22703
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useRouterReady, useRouteChange } from "@/hooks/useRouterReady";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";,
 import { generateSearchSuggestions } from "@/data/marketplaceData";,
 import { SearchSuggestion } from "@/types/search";
-========
 import { useEffect, useState,  } from "react";
 import { useRouter, ,  } from 'next/router';
 import { useRouterReady,, useRouteChange, ,  } from '@/hooks/useRouterReady';
@@ -286,6 +288,7 @@ export default function SearchPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SearchPage.tsx
 =======
 import React from 'react';
@@ -310,4 +313,4 @@ export default function SearchPage() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/SearchPage.tsx
+>>>>>>> pr-22703

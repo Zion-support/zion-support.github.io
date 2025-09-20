@@ -1,6 +1,9 @@
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
+>>>>>>> pr-22703
 import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
@@ -13,7 +16,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
-========
 import { useState, useEffect,  } from "react",
 import { useRouter,  } from "next/router",
 import { supabase,  } from "@/integrations/supabase/client",
@@ -106,6 +108,7 @@ href = {profileData.linkedin_url}
                 )}
               </div>
             </div>
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { SEO } from "@/components/SEO";
@@ -123,14 +126,13 @@ export default function ProfileDetail() {
           <div className="text-center">
             <h1 className="text-3xl font-bold text-white mb-4">ProfileDetail</h1>
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/ProfileDetail.tsx
+>>>>>>> pr-22703
           </div>
         </div>
       </div>
     </>
   );
 }
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 }, [profileId]);
 <p>Error: {error ;
 }</p> </div>) ;
@@ -166,6 +168,7 @@ export default function ProfileDetail() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProfileDetail.tsx
 =======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/ProfileDetail.tsx
+>>>>>>> pr-22703

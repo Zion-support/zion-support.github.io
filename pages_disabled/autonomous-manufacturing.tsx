@@ -6,7 +6,6 @@ import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function AutonomousManufacturingPage() {
-=======
   const service = {
     name: 'Autonomous Manufacturing Solutions',
     description: 'Revolutionary AI-powered manufacturing automation that transforms production efficiency and quality control.',
@@ -69,9 +68,7 @@ export default function AutonomousManufacturingPage() {
                   <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
-=======
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{(service.rating || 4.5).toFixed(1)}</div>
-=======
                 <div className="flex items-center text-yellow-400">
                   <Star className="w-4 h-4 mr-1" />
                   {service.rating.toFixed(1)}
@@ -83,11 +80,9 @@ export default function AutonomousManufacturingPage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
-=======
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>+1 (555) 123-4567</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>contact@ziontechgroup.com</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span>123 Innovation Drive, Tech City, TC 12345</span></div>
-=======
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-cyan-400" />
                   <span>{service.contactInfo.mobile}</span>

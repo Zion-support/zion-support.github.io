@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
 import React { useState useEffect } from "react";
 import Link from 'next/link';
 <<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
@@ -10,7 +9,6 @@ import { SEO } from "@/components/SEO";,
 import { ProtectedRoute } from "@/components/ProtectedRoute";,
 import { Project, ProjectStatus } from "@/types/projects";,
 import { Button } from "@/components/ui/button";
-========
 import { useRouter, ,  } from 'next/router';
 import { format,  } from "date-fns",
 import { useAuth,  } from "@/hooks/useAuth",
@@ -626,4 +624,3 @@ export default function ProjectDetails() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProjectDetails.tsx

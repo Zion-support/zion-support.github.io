@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-interface Service {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 id: string;,
 name: string;
 }
@@ -21,14 +17,22 @@ console.log(`${name} took ${end - start} milliseconds`);
 };
 
 export const debounce = <T extends (...args: any[]) => any>(;,
+<<<<<<< HEAD
+func: T; wait: number): ((...args: Parameters<T>) => void) => {let timeout: globalThis.Timeout;
+=======
 func: T, wait: number): ((...args: Parameters<T>) => void) => {let timeout: globalThis.Timeout;
+>>>>>>> pr-22703
 return (...args: Parameters<T>) => {
 clearTimeout(timeout);
 timeout = setTimeout(() => func(...args), wait)};
 };
 
 export const throttle = <T extends (...args: any[]) => any>(;,
+<<<<<<< HEAD
+func: T; limit: number): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
+=======
 func: T, limit: number): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
+>>>>>>> pr-22703
 return (...args: Parameters<T>) => {
 if (!inThrottle) {
 func(...args);
@@ -40,8 +44,15 @@ setTimeout(() => (inThrottle = false), limit)}
 export const getPerformanceMetrics: any = () => {;
 const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
 const paint = performance.getEntriesByType("paint");
+<<<<<<< HEAD
+return {
+loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+return {,
+loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
+=======
 return {,
 loadTime: navigation.loadEventEnd - navigation.loadEventStart, domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
+>>>>>>> pr-22703
 firstPaint: paint.find(entry => entry.name === "first-paint")?.startTime || 0; firstContentfulPaint: paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0};
 };
 
@@ -50,7 +61,4 @@ const metrics = getPerformanceMetrics();
 console.log("Performance Metrics:", metrics)};
 // TypeScript file;
 export const placeholder = "placeholder";
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

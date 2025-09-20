@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-export interface LinkValidationResult {url: string, status: "valid" | "broken" | "external" | "protocol";
-parentPage?: string;
-suggestedFix?: string;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 }
 httpStatus?: number;}
 error?: string}
@@ -12,6 +6,14 @@ error?: string}
 export interface LinkFix {originalUrl: string, newUrl: string, type: "redirect" | "update" | "remove" | "external";
 }
 }
+<<<<<<< HEAD
+httpStatus?: number;
+error?: string}
+
+export interface LinkFix {
+originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";,
+=======
+>>>>>>> pr-22703
 reason: string}
 
 export class LinkValidator {
@@ -99,6 +101,8 @@ private static readonly BROKEN_LINK_MAPPINGS: Record<string, string> = {
 "/5g-private-network-solutions/": "/services/5g-solutions",
 "/accessibility-auditor/": "/services/accessibility",
 "/accessibility-scanner/": "/services/accessibility";
+<<<<<<< HEAD
+=======
 };
 
 static validateLink(url: string, parentPage?: string): LinkValidationResult {// Check for protocol links;
@@ -125,6 +129,7 @@ url;
 status: "broken";
 parentPage;,
 suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"
+>>>>>>> pr-22703
 };
 }
 
@@ -144,7 +149,13 @@ reason: "Broken internal link with available redirect mapping"}));
 
 static isExternalLink(url: string): boolean {try {
 const urlObj = new URL(url, "https: //ziontechgroup.com");
+<<<<<<< HEAD
+return !urlObj.hostname.includes("ziontechgroup.com")} catch {// If it"s a relative URL; it"s internal;
+return !urlObj.hostname.includes("ziontechgroup.com")} catch {
+// If it"s a relative URL; it"s internal;
+=======
 return !urlObj.hostname.includes("ziontechgroup.com")} catch {// If it"s a relative URL, it"s internal;
+>>>>>>> pr-22703
 return false}
 }
 
@@ -160,9 +171,5 @@ ${redirects}`;
 static generateSitemapExclusions(): string[] {return Object.keys(this.BROKEN_LINK_MAPPINGS)}
 }
 
-<<<<<<< HEAD
-export const linkValidator = new LinkValidator();
-=======
 export const linkValidator = new LinkValidator();
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

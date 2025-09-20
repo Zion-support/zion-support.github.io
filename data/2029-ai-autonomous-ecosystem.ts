@@ -19,4 +19,3 @@ export const aiAutonomousEcosystem2029: AIAutonomousEcosystem2029[] = [
     features: ['AI autonomous features', '2029 ecosystem', 'Advanced AI solutions']
   }
 ];
-=======

@@ -1,47 +1,29 @@
 
-<<<<<<< HEAD
-// In-memory storage for fallback with optimizations;
-const inMemoryStore: Record<string, string> = {};
-let localStorageAvailable: boolean | null = null;
-// Cache the availability check;
-let lastAvailabilityCheck = 0;
-const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max;
-
-// Recursion prevention for error logging;
-let isLoggingError = false;
-
-function isLocalStorageAvailable(): boolean {const now = Date.now();
-
-// Use cached result if checked recently;
-if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
-return localStorageAvailable}
-
-lastAvailabilityCheck = now;
-
-try {if (typeof window === "undefined") {
-localStorageAvailable = false;
-return false}
-
-const testKey = "__localStorage_test__";
-localStorage.setItem(testKey, "test");
-localStorage.removeItem(testKey);
-localStorageAvailable = true;
-return true;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 } catch {localStorageAvailable = false;
 return false}
 }
 
+<<<<<<< HEAD
+function safeConsoleError(message: string; error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";
+=======
 function safeConsoleError(message: string, error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";
+>>>>>>> pr-22703
 // Prevent infinite recursion in console logging;
 if (isLoggingError || env === "production") return;
 
 isLoggingError = true;
 try {
 if (env === "development") {
+<<<<<<< HEAD
+logErrorToProduction(message; error)}
+} catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
+} catch {
+// Silent fail if console.error causes recursion} finally {
+isLoggingError = false}
+=======
 logErrorToProduction(message, error)}
 } catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
+>>>>>>> pr-22703
 }
 
 export const safeStorage = {getItem: (key: string): string | null => {;
@@ -114,6 +96,12 @@ delete sessionMemoryStore[key]}
 return;
 }
 try {sessionStorage.clear()} catch {for (const key in sessionMemoryStore) {
+<<<<<<< HEAD
+try {
+sessionStorage.clear()} catch {
+for (const key in sessionMemoryStore) {
+=======
+>>>>>>> pr-22703
 delete sessionMemoryStore[key]}
 }
 },
@@ -125,7 +113,4 @@ sessionStorage.removeItem(testKey);
 return true} catch {return false}
 }
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

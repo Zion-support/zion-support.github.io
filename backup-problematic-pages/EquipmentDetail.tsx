@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-pages/EquipmentDetail.tsx
 <<<<<<<< HEAD:backup-problematic-pages/EquipmentDetail.tsx
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from "lucide-react";
 import { toast } from "@/hooks/use-toast";,
@@ -10,7 +9,6 @@ import { equipmentListings } from "@/data/equipmentData";
 import { ProductListing } from "@/types/listings";
 import { motion } from "framer-motion";
 import { useCurrency } from "@/hooks/useCurrency";
-========
 import { ShoppingCart,, Star,, Truck,, Shield,, RotateCcw,, Clock,, AlertTriangle, ArrowLeft,  } from 'lucide-react'
 import { toast,  } from "@/hooks/use-toast",
 import { useAuth,  } from "@/hooks/useAuth",
@@ -33,7 +31,6 @@ function convertProductListingToEquipmentDetails(
 }
   return {}
         }}
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
@@ -44,7 +41,6 @@ export default function EquipmentDetail() {
         title="EquipmentDetail - Zion Tech Group"
         description="Page description"
         keywords="keywords"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/EquipmentDetail.tsx
       />
       <div className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4">
@@ -54,7 +50,6 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:backup-problematic-pages/EquipmentDetail.tsx
 </>
   )
 }finally {
@@ -102,8 +97,6 @@ export default function EquipmentDetail() {
     </div>
   );
 }
-=======
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/EquipmentDetail.tsx

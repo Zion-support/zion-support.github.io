@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React from "react";
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 
 export interface SEOData {
+<<<<<<< HEAD
 title: string;,
 description: string;,
 keywords: string[];
@@ -20,6 +17,45 @@ severity: "high" | "medium" | "low";,
 suggestedFix: string;
 }
 }
+}
+severity: "high" | "medium" | "low";,
+suggestedFix: string;}
+
+export class SEOOptimizer {
+private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
+"/": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services. Transform your business with Zion Tech Group.",
+"/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.",
+"/ai-solutions": "Advanced AI solutions including autonomous systems; machine learning; and intelligent automation. Drive innovation with our cutting-edge AI technology.",
+"/about": "Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.",
+"/contact": "Get in touch with Zion Tech Group. Contact our expert team for technology solutions; consultations; and partnership opportunities.",
+"/pricing": "Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.",
+"/careers": "Join the Zion Tech Group team. Explore exciting career opportunities in technology; AI; and innovation.",
+"/blog": "Latest insights; industry trends; and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.",
+"/news": "Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations; partnerships; and industry developments.",
+"/services/ai-autonomous-systems": "Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.",
+"/services/quantum-technology": "Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.",
+"/services/cybersecurity": "Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.",
+"/services/it-infrastructure": "Robust IT infrastructure solutions. Scalable; secure; and high-performance technology foundations for your business.",
+"/services/micro-saas-solutions": "Innovative micro SaaS solutions designed for modern businesses. Scalable; cost-effective software-as-a-service platforms.",
+"/solutions/enterprise": "Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.",
+"/solutions/healthcare": "Healthcare technology solutions. Secure; compliant; and innovative IT services for the healthcare industry.";
+};
+
+private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
+=======
+  title: string;
+  description: string;
+  keywords: string[];
+  ogImage?: string;
+  canonicalUrl?: string;
+  structuredData?: object;
+}
+
+export interface ContentQualityIssue {
+  page: string;
+  issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
+  severity: "high" | "medium" | "low";
+  suggestedFix: string;
 }
 
 export class SEOOptimizer {
@@ -43,6 +79,7 @@ private static readonly DEFAULT_META_DESCRIPTIONS: Record<string, string> = {
 };
 
 private static readonly KEYWORD_MAPPINGS: Record<string, string[]> = {
+>>>>>>> pr-22703
 "/": ["AI marketplace", "tech services", "artificial intelligence", "IT services", "AI developers", "technology marketplace", "AI solutions", "machine learning", "digital transformation", "micro SaaS", "quantum computing", "blockchain", "cybersecurity", "edge computing", "metaverse"],
 "/services": ["AI services", "cybersecurity", "cloud infrastructure", "IT solutions", "digital transformation", "automation", "machine learning", "blockchain", "quantum computing"],
 "/ai-solutions": ["artificial intelligence", "AI automation", "machine learning", "deep learning", "neural networks", "AI systems", "intelligent automation", "AI platforms"],
@@ -97,7 +134,11 @@ return `${formattedSegment} - ${baseTitle}`;
 
 static generateDescription(path: string): string {
 return this.DEFAULT_META_DESCRIPTIONS[path] ||;
+<<<<<<< HEAD
+"Professional technology solutions and services. Expert IT consulting; AI development; and digital transformation services for modern businesses.";
+=======
 "Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.";
+>>>>>>> pr-22703
 }
 
 static generateKeywords(path: string): string[] {
@@ -174,73 +215,77 @@ suggestedFix: "Add a descriptive title tag with relevant keywords"});
 }
 
 // Check for missing meta description;
-if (!content.includes("name="description"")) {issues.push({
-page;
-issue: "missing-description"
-severity: "high"
-suggestedFix: "Add a meta description tag with compelling content"});
+if (!content.includes("name=\"description\"")) {
+  issues.push({
+    page,
+    issue: "missing-description",
+    severity: "high",
+    suggestedFix: "Add a meta description tag with compelling content"
+  });
 }
 
-// Check for short meta description;
+// Check for short meta description
 const descMatch = content.match(/name="description" content="([^"]+)"/);
-if (descMatch && descMatch[1].length < 120) {issues.push({
-page;
-issue: "short-description"
-severity: "medium"
-suggestedFix: "Expand meta description to 120-160 characters for better SEO"});
+if (descMatch && descMatch[1].length < 120) {
+  issues.push({
+    page,
+    issue: "short-description",
+    severity: "medium",
+    suggestedFix: "Expand meta description to 120-160 characters for better SEO"
+  });
 }
 
-// Check for missing headings;
-if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {issues.push({
-page;
-issue: "no-headings"
-severity: "medium"
-suggestedFix: "Add proper heading structure (H1, H2; H3) for better content organization"});
+// Check for missing headings
+if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {
+  issues.push({
+    page,
+    issue: "no-headings",
+    severity: "medium",
+    suggestedFix: "Add proper heading structure (H1, H2, H3) for better content organization"
+  });
 }
 
-// Check for minimal content;
+// Check for minimal content
 const textContent = content.replace(/<[^>]*>/g, "").trim();
-if (textContent.length < 300) {issues.push({
-page;
-issue: "minimal-content"
-severity: "medium"
-suggestedFix: "Add more relevant content to improve user experience and SEO value"});
+if (textContent.length < 300) {
+  issues.push({
+    page,
+    issue: "minimal-content",
+    severity: "medium",
+    suggestedFix: "Add more relevant content to improve user experience and SEO value"
+  });
 }
 
 return issues;
 }
 
 static generateMetaTags(seoData: SEOData): string {
-return `;
-<title>${seoData.title}</title>;
-<meta name="description" content="${seoData.description}" />;
-<meta name="keywords" content="${seoData.keywords.join(", ")}" />;
-<link rel="canonical" href="${seoData.canonicalUrl}" />;
+  return `
+<title>${seoData.title}</title>
+<meta name="description" content="${seoData.description}" />
+<meta name="keywords" content="${seoData.keywords.join(", ")}" />
+<link rel="canonical" href="${seoData.canonicalUrl}" />
 
-<!-- Open Graph -->;
-<meta property="og:title" content="${seoData.title}" />;
-<meta property="og:description" content="${seoData.description}" />;
-<meta property="og:type" content="website" />;
-<meta property="og:url" content="${seoData.canonicalUrl}" />;
-<meta property="og:image" content="${seoData.ogImage || "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}" />;
+<!-- Open Graph -->
+<meta property="og:title" content="${seoData.title}" />
+<meta property="og:description" content="${seoData.description}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="${seoData.canonicalUrl}" />
+<meta property="og:image" content="${seoData.ogImage || "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}" />
 
-<!-- Twitter -->;
-<meta name="twitter:card" content="summary_large_image" />;
-<meta name="twitter:title" content="${seoData.title}" />;
-<meta name="twitter:description" content="${seoData.description}" />;
-<meta name="twitter:image" content="${seoData.ogImage || "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}" />;
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${seoData.title}" />
+<meta name="twitter:description" content="${seoData.description}" />
+<meta name="twitter:image" content="${seoData.ogImage || "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}" />
 
-<!-- Structured Data -->;
-<script type="application/ld+json">;
-${JSON.stringify(seoData.structuredData, null; 2)}
-</script>;
+<!-- Structured Data -->
+<script type="application/ld+json">
+${JSON.stringify(seoData.structuredData, null, 2)}
+</script>
 `;
 }
 }
 
-<<<<<<< HEAD
-export const seoOptimizer = new SEOOptimizer();
-=======
 export const seoOptimizer = new SEOOptimizer();
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

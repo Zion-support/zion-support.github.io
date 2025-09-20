@@ -1,14 +1,19 @@
 
-<<<<<<< HEAD
-interface PerformanceMetric {name: string, startTime: number;
-=======
 interface PerformanceMetric {name: string; startTime: number;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 }
 endTime?: number;}
+<<<<<<< HEAD
+interface PerformanceMetric {
+name: string; startTime: number;
+endTime?: number;
+duration?: number}
+
+class PerformanceMonitor {private metrics: Map<string; PerformanceMetric> = new Map();
+=======
 duration?: number}
 
 class PerformanceMonitor {private metrics: Map<string, PerformanceMetric> = new Map();
+>>>>>>> pr-22703
 private observers: PerformanceObserver[] = [];
 
 constructor() {
@@ -35,6 +40,11 @@ this.logMetric("FID", entry.processingStart - entry.startTime)});
 fidObserver.observe({ entryTypes: ["first-input"] });
 this.observers.push(fidObserver);
 } catch (error) {console.warn("FID observer failed:", error)}
+<<<<<<< HEAD
+} catch (error) {
+console.warn("FID observer failed:", error)}
+=======
+>>>>>>> pr-22703
 
 // Cumulative Layout Shift;
 try {const clsObserver = new PerformanceObserver((list) => {;
@@ -48,13 +58,6 @@ this.logMetric("CLS", clsValue);
 });
 clsObserver.observe({ entryTypes: ["layout-shift"] });
 this.observers.push(clsObserver);
-<<<<<<< HEAD
-} catch (error) {console.warn("CLS observer failed: " error)}
-}
-}
-
-startTiming(name: string): void {const metric: PerformanceMetric = {
-=======
 } catch (error) {console.warn("CLS observer failed: ", error)}
 name;
 } catch (error) {
@@ -64,7 +67,6 @@ console.warn("CLS observer failed:", error)}
 
 startTiming(name: string): void {
 const metric: PerformanceMetric = {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 name;,
 startTime: performance.now()};
 this.metrics.set(name, metric);
@@ -87,12 +89,21 @@ return duration;
 }
 
 measureFunction<T extends (...args: any[]) => any>(
+<<<<<<< HEAD
+name: string; func: T): (...args: Parameters<T>) => ReturnType<T> {return (...args: Parameters<T>): ReturnType<T> => {
+=======
 name: string, func: T): (...args: Parameters<T>) => ReturnType<T> {return (...args: Parameters<T>): ReturnType<T> => {
+>>>>>>> pr-22703
 this.startTiming(name);
 try {
 const result = func(...args);
 this.endTiming(name);
 return result} catch (error) {this.endTiming(name);
+<<<<<<< HEAD
+return result} catch (error) {
+this.endTiming(name);
+=======
+>>>>>>> pr-22703
 throw error}
 };
 }
@@ -105,6 +116,11 @@ try {
 const result = await asyncFunc();
 this.endTiming(name);
 return result} catch (error) {this.endTiming(name);
+<<<<<<< HEAD
+return result} catch (error) {
+this.endTiming(name);
+=======
+>>>>>>> pr-22703
 throw error}
 }
 
@@ -144,9 +160,5 @@ cleanup: performanceMonitor.cleanup.bind(performanceMonitor);
 };
 };
 
-<<<<<<< HEAD
-export default performanceMonitor;
-=======
 export default performanceMonitor;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

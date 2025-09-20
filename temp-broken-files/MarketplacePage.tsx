@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/MarketplacePage.tsx
-<<<<<<< HEAD:temp_broken_pages_all/MarketplacePage.tsx
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from "lucide-react";
 import { NextSeo } from "@/components/NextSeo";
 import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScroll";
@@ -12,7 +11,6 @@ import Spinner from '@/components/ui/spinner';
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { INITIAL_MARKETPLACE_PRODUCTS } from "@/data/initialMarketplaceProducts";
 import { useCurrency } from "@/hooks/useCurrency";
-========
 import { ArrowUp,, Filter,, SortAsc,, Sparkles,, TrendingUp,, Star,, ShoppingCart,, AlertTriangle, RefreshCw,  } from 'lucide-react'
 import { NextSeo, ,  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination, ,  } from '@/hooks/useInfiniteScroll';
@@ -96,5 +94,4 @@ export default function MarketplacePage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MarketplacePage.tsx
 }

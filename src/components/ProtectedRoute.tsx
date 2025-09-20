@@ -1,6 +1,6 @@
 
+<<<<<<< HEAD
 import React from "react";
-
 interface ProtectedRouteProps {
   children: React.ReactNode;
 }
@@ -10,3 +10,7 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
   // In a real implementation, this would check authentication status
   return <>{children}</>;
 }
+=======
+};
+
+>>>>>>> pr-22703

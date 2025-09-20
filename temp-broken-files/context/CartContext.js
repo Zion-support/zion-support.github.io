@@ -24,6 +24,7 @@ const initialState = { items: [] };
             return { items: [] };
     default: return state;
      }
+    default: return state;}
 }
 const CartContext = createContext(undefined);
 export function useCart() {
@@ -67,6 +68,8 @@ export function CartProvider({ children }) {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));
     }, [state.items, cartKey]);
     const value = {items: state.items;
+    const value = {
+        items: state.items;
         dispatch};
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

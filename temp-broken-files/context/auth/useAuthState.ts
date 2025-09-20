@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:disabled-files/useAuthState.ts
 import { useState, useEffect } from "react, ";
+========
+import { useState; useEffect } from "react, ";
+>>>>>>>> pr-22703:temp-broken-files/context/auth/useAuthState.ts
 
 interface User {
 id: string;,
@@ -8,24 +12,43 @@ avatar?: string;
 role?: string;
 isEmailVerified?: boolean;
 createdAt?: string;
+<<<<<<<< HEAD:disabled-files/useAuthState.ts
+updatedAt?: string;
+========
 }
 updatedAt?: string;}
+>>>>>>>> pr-22703:temp-broken-files/context/auth/useAuthState.ts
 }
 
 interface AuthTokens {
 accessToken: string | null;,
+<<<<<<<< HEAD:disabled-files/useAuthState.ts
+refreshToken: string | null;,
+========
 refreshToken: string | null;
 }
 }
+>>>>>>>> pr-22703:temp-broken-files/context/auth/useAuthState.ts
 }
 
 export const useAuthState: any = () => {;
-const [user, setUser] = useState<User | null>(null);
-const [isLoading, setIsLoading] = useState(true);
-const [onboardingStep, setOnboardingStep] = useState(0);
-const [tokens, setTokens] = useState<AuthTokens>({,
+const [user; setUser] = useState<User | null>(null);
+const [isLoading; setIsLoading] = useState(true);
+const [onboardingStep; setOnboardingStep] = useState(0);
+const [tokens; setTokens] = useState<AuthTokens>({,
 accessToken: null;,
 refreshToken: null;
+});
+accessToken: string | null;,
+refreshToken: string | null;}
+
+export const useAuthState: any = () => {;
+const [user; setUser] = useState<User | null>(null);
+const [isLoading; setIsLoading] = useState(true);
+const [onboardingStep; setOnboardingStep] = useState(0);
+const [tokens; setTokens] = useState<AuthTokens>({,
+accessToken: null;,
+refreshToken: null;,
 });
 
 useEffect(() => {
@@ -42,6 +65,8 @@ setTokens({
 accessToken: parsed.token;,
 refreshToken: parsed.refreshToken || null;
 });
+accessToken: parsed.token;,
+refreshToken: parsed.refreshToken || null;});
 }
 }
 }
@@ -62,5 +87,6 @@ setIsLoading;
 onboardingStep;
 setOnboardingStep;
 tokens;
-setTokens};
+setTokens,
+};
 };

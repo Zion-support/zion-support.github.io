@@ -1,10 +1,13 @@
 
-<<<<<<< HEAD
-let nodeSentry: any;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 try {// Optional dependency for server-side logging;
 nodeSentry = require("@sentry/node")} catch {nodeSentry = null}
+<<<<<<< HEAD
+try {
+// Optional dependency for server-side logging;
+nodeSentry = require("@sentry/node")} catch {
+nodeSentry = null}
+=======
+>>>>>>> pr-22703
 
 export function captureException(error: unknown) {
 if (process.env.NODE_ENV === "development") {
@@ -13,9 +16,13 @@ if (typeof console !== "undefined") {
 }
 } else {if (typeof window !== "undefined" && (window as any).Sentry?.captureException) {
 (window as any).Sentry.captureException(error)} else if (nodeSentry?.captureException) {nodeSentry.captureException(error)}
-}
-}
 <<<<<<< HEAD
+} else {
+if (typeof window !== "undefined" && (window as any).Sentry?.captureException) {
+(window as any).Sentry.captureException(error)} else if (nodeSentry?.captureException) {
+nodeSentry.captureException(error)}
 =======
+>>>>>>> pr-22703
+}
+}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

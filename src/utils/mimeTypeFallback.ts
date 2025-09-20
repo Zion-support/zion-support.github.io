@@ -1,29 +1,4 @@
 
-<<<<<<< HEAD
-/**;
-* MIME Type Fallback Utility;
-* Handles fallback for unsupported MIME types and resource loading;
-*/;
-
-class MimeTypeFallback {private supportedTypes: Set<string> = new Set([
-"text/html",
-"text/css",
-"text/javascript",
-"application/javascript",
-"application/json",
-"image/jpeg",
-"image/png",
-"image/gif",
-"image/webp",
-"image/svg+xml";
-]);
-
-/**;
-* Check if a MIME type is supported;
-*/;
-isSupported(type: string): boolean {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 return this.supportedTypes.has(type)}
 
 /**;
@@ -44,7 +19,11 @@ return typeMap[type] || "application/octet-stream";
 /**;
 * Handle resource loading with fallback;
 */;
+<<<<<<< HEAD
+async loadResource(url: string; type: string): Promise<any> {
+=======
 async loadResource(url: string, type: string): Promise<any> {
+>>>>>>> pr-22703
 try {
 const response = await fetch(url);
 const contentType = response.headers.get("content-type") || type;
@@ -70,6 +49,11 @@ script.src = url;
 script.async = true;
 script.type = "text/javascript";
 return script} else {const link = document.createElement("link");
+<<<<<<< HEAD
+return script} else {
+const link = document.createElement("link");
+=======
+>>>>>>> pr-22703
 link.rel = "stylesheet";
 link.href = url;
 link.type = "text/css";
@@ -93,9 +77,5 @@ document.head.appendChild(element);
 
 // Create singleton instance;
 const mimeTypeFallback = new MimeTypeFallback();
-<<<<<<< HEAD
-export default mimeTypeFallback;
-=======
 export default mimeTypeFallback;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

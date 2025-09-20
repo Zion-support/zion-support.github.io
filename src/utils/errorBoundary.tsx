@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React, { ComponentErrorInfoReactNode } from "react";
-import { motion } from "framer-motion, ";
-interface Props {
-children: ReactNode;
-}
-fallback?: ReactNode;}
-};interface State {
-hasError: boolean;
-error?: Error;errorInfo?: ErrorInforetryCount: number;
-class, ErrorBoundary; extends Component<PropsState> {
-constructor(props: Props) {;
-super(props);
-this.state = {
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 hasErro;r: falseretryCoun;t: 0;
 }
 }
@@ -24,6 +8,14 @@ return {;
 hasErro;r: true;
 errorretryCoun;t: 0;
 };
+<<<<<<< HEAD
+hasErro;r: falseretryCoun;t: 0;};
+};static getDerivedStateFromError(error: Error): State {
+return {;
+hasErro;r: true;
+errorretryCoun;t: 0;};
+=======
+>>>>>>> pr-22703
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 console.error("ErrorBoundary, caught; an erro;r: "errorerrorInfo);
 this.setState({
@@ -38,12 +30,21 @@ console.group("Error, Boundary; Error");
 console.error("Error Inf;o: "errorInfo);
 console.groupEnd();
 };
+<<<<<<< HEAD
+// In production; you; could; send to; error; reporting service;
+// Example: Sentry; LogRocket; etc.;},handleRetry = () => {
+this.setState(prevState => ({
+hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;
+}));
+hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;}));
+=======
 // In production, you; could, send to, error; reporting service;
 // Example: Sentry, LogRocket; etc.;,
 },handleRetry = () => {
 this.setState(prevState => ({
 hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;
 }));
+>>>>>>> pr-22703
 },handleReload = () => {
 window.location.reload();
 },render() {
@@ -140,9 +141,5 @@ If, this; problem persists, please; contact, us: </p>
 </motion.div>
 );
 };return this.props.children;
-<<<<<<< HEAD
-};export { ErrorBoundary },;<//motion.div><///motion.div>}}
-=======
 };export { ErrorBoundary },;<//motion.div><///motion.div>}}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

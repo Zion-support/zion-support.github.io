@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-export interface ContentAnalysis {
-page: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;
-readabilityScore: number;
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 seoScore: number;,
 issues: ContentIssue[];,
 suggestions: ContentSuggestion[];
@@ -51,6 +41,8 @@ wordCount;
 headingCount;
 imageCount;
 linkCount;
+<<<<<<< HEAD
+=======
 });
 
 const suggestions = this.generateSuggestions(issues, page);
@@ -198,6 +190,7 @@ type: "missing-keywords";,
 severity: "medium";,
 description: `Missing important keywords: ${missingKeywords.join(", ")}`
 location: "Content optimization"
+>>>>>>> pr-22703
 });
 }
 
@@ -231,6 +224,11 @@ break;
 
 case "poor-structure":
 suggestions.push({type: "improve-structure";
+<<<<<<< HEAD
+priority: "high";
+description: "Reorganize content with proper headings and logical flow";
+=======
+>>>>>>> pr-22703
 priority: "high";,
 description: "Reorganize content with proper headings and logical flow";,
 example: "Use H1 for main title, H2 for major sections, H3 for subsections"});
@@ -388,9 +386,5 @@ return `${baseDescription} ${pageKeywords}. Transform your business with Zion Te
 }
 }
 
-<<<<<<< HEAD
-export const contentOptimizer = new ContentOptimizer();
-=======
 export const contentOptimizer = new ContentOptimizer();
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

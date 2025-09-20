@@ -1,65 +1,54 @@
-<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-}
-
-export function formatPhoneNumber(phoneNumber: string): string {
-const cleaned = phoneNumber.replace(/\D/g, "");
-const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
-if (match) {
-return `(${match[1]}) ${match[2]}-${match[3]}`;
-}
-return phoneNumber;
-}
-
-=======
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// Utility function to format currency
+export function formatCurrency(amount: number, currency: string = "USD"): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+  }).format(amount);
+}
+
+// Utility function to format date
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
   });
 }
 
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency
-  }).format(amount);
+// Utility function to truncate text
+export function truncateText(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength) + "...";
 }
 
-export function formatPhoneNumber(phoneNumber: string): string {
-  const cleaned = phoneNumber.replace(/\D/g, "");
-  const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
-  if (match) {
-    return `(${match[1]}) ${match[2]}-${match[3]}`;
-  }
-  return phoneNumber;
+// Utility function to generate random ID
+export function generateId(): string {
+  return Math.random().toString(36).substr(2, 9);
 }
 
+// Utility function to debounce
 export function debounce<T extends (...args: any[]) => any>(
-  func: T, 
+  func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: globalThis.Timeout;
+  let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 }
 
+// Utility function to throttle
 export function throttle<T extends (...args: any[]) => any>(
-  func: T, 
+  func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
@@ -67,8 +56,7 @@ export function throttle<T extends (...args: any[]) => any>(
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() => (inThrottle = false), limit);
     }
   };
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { User,, Mail,, MapPin, CreditCard,  } from 'lucide-react'
+import { isProdDomain,  } from '@/utils/getStripe';
+=======
 import React, { useState } from 'react';
 import { User, Mail, MapPin, CreditCard } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
@@ -7,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { isProdDomain } from "@/utils/getStripe";
 
+>>>>>>> pr-22703
 interface GuestCheckoutModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -126,5 +131,10 @@ export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestC
         </form>
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
+  )
+}
+=======
   );
+>>>>>>> pr-22703
 }

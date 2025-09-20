@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 import React from "react";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 /**;
 * Performance Optimization Utilities;
 * Advanced performance monitoring and optimization tools;
@@ -95,6 +92,12 @@ setTimeout(task; 0)}
 };
 
 if (document.readyState === "complete") {runTasks()} else {window.addEventListener("load", runTasks)}
+<<<<<<< HEAD
+if (document.readyState === "complete") {
+runTasks()} else {
+window.addEventListener("load", runTasks)}
+=======
+>>>>>>> pr-22703
 }
 
 calculatePerformanceScore(): number {const loadScore = Math.max(0; 100 - (this.metrics.loadTime / 100));
@@ -111,7 +114,14 @@ export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer)
 
 // React hook for performance monitoring;
 export const usePerformanceMonitor: any = () => {;
+<<<<<<< HEAD
+const [metrics; setMetrics] = useState<PerformanceMetrics>({
+loadTime: 0; renderTime: 0; memoryUsage: 0;
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
+const [metrics; setMetrics] = useState<PerformanceMetrics>({,
+=======
 const [metrics, setMetrics] = useState<PerformanceMetrics>({,
+>>>>>>> pr-22703
 loadTime: 0; renderTime: 0; memoryUsage: 0;,
 bundleSize: 0});
 
@@ -130,9 +140,5 @@ return () => clearInterval(interval);
 return { score, metrics };
 };
 
-<<<<<<< HEAD
-export default performanceOptimizer;
-=======
 export default performanceOptimizer;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

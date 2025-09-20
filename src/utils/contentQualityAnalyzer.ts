@@ -1,18 +1,4 @@
 
-<<<<<<< HEAD
-export interface ContentQualityMetrics {
-pageUrl: string;
-title: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;
-metaDescriptionLength: number;
-hasStructuredData: boolean;
-readabilityScore: number;
-seoScore: number;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 overallScore: number;,
 issues: string[];,
 recommendations: string[];
@@ -172,6 +158,11 @@ linkCount: number;,
 metaDescriptionLength: number;,
 hasStructuredData: boolean;
 }): number {
+<<<<<<< HEAD
+metaDescriptionLength: number;,
+hasStructuredData: boolean;}): number {
+=======
+>>>>>>> pr-22703
 let score = 0;
 let maxScore = 0;
 
@@ -243,6 +234,11 @@ linkCount: number;,
 metaDescriptionLength: number;,
 hasStructuredData: boolean;
 }): string[] {
+<<<<<<< HEAD
+metaDescriptionLength: number;,
+hasStructuredData: boolean;}): string[] {
+=======
+>>>>>>> pr-22703
 const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
 issues.push("Title is too short (should be 30-60 characters)");
@@ -325,6 +321,11 @@ totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
 pagesWithIssues: 0;
+<<<<<<< HEAD
+topIssues: [];
+pageMetrics: [];
+=======
+>>>>>>> pr-22703
 topIssues: [];,
 pageMetrics: [];,
 summary: "No pages analyzed yet"};
@@ -406,9 +407,5 @@ this.analyzedPages.clear();
 }
 }
 
-<<<<<<< HEAD
-export default ContentQualityAnalyzer;
-=======
 export default ContentQualityAnalyzer;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

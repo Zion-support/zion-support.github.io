@@ -1,15 +1,20 @@
 
 <<<<<<< HEAD
+=======
 interface ResourceError {
 url: string;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
+>>>>>>> pr-22703
 type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
 timestamp: number;
 }
 }
 }
+<<<<<<< HEAD
+error: string;,
+timestamp: number;}
+=======
+>>>>>>> pr-22703
 
 class ResourceMonitor {
 private errors: ResourceError[] = [];
@@ -121,12 +126,20 @@ this.handleRetry(url);
 }
 
 private handleSlowResource(entry: PerformanceResourceTiming) {
+<<<<<<< HEAD
+const resourceError: ResourceError = {,
+url: entry.name;,
+type: this.getResourceTypeFromUrl(entry.name),
+error: `Slow resource: ${entry.duration}ms`,
+timestamp: Date.now()};
+=======
 const resourceError: ResourceError = {
 url: entry.name;,
 type: this.getResourceTypeFromUrl(entry.name)
 error: `Slow resource: ${entry.duration}ms`
 timestamp: Date.now()
 };
+>>>>>>> pr-22703
 
 this.errors.push(resourceError);
 }
@@ -162,6 +175,10 @@ total: this.errors.length;,
 byType: {} as Record<string, number>,
 recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
 };
+<<<<<<< HEAD
+recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;};
+=======
+>>>>>>> pr-22703
 
 this.errors.forEach(error => {
 summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
@@ -173,9 +190,9 @@ return summary;
 
 // Create singleton instance;
 const resourceMonitor = new ResourceMonitor();
-<<<<<<< HEAD
 export default resourceMonitor;
+<<<<<<< HEAD
 =======
 export default resourceMonitor;
+>>>>>>> pr-22703
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

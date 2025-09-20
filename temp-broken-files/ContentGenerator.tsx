@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/pages/ContentGenerator.tsx
-import React from 'react';
-
-=======
 import React { useState useEffect } from 'react',
 import { Header,  } from "@/components/Header",
 import { Button,  } from "@/components/ui/button",
@@ -19,7 +15,6 @@ import { useAuth,  } from "@/hooks/useAuth",
 import { ScrollArea,  } from "@/components/ui/scroll-area";
 import { useRouter, ,  } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> pr-22690:temp-broken-files/ContentGenerator.tsx
 export default function ContentGenerator() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

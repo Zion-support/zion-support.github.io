@@ -12,6 +12,7 @@ export function LanguageProvider({ children }) {;
       learn_more: 'Learn More';
       contact_us: 'Contact Us';
     },
+      contact_us: 'Contact Us';},
     es: {
       welcome: 'Bienvenido';
       get_started: 'Comenzar';
@@ -19,6 +20,7 @@ export function LanguageProvider({ children }) {;
       contact_us: 'Contáctanos';
     },
   };
+      contact_us: 'Contáctanos';}};
 
   const t = (key) => translations[language]?.[key] || key;
   const isRTL = language === 'ar' || language === 'he';

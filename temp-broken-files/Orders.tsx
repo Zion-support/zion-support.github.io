@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 } from '@/components/ui/table';
 <<<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +12,6 @@ import { Table;
 , TableHeader;
 , TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-========
 import { Badge,  } from '@/components/ui/badge';
 import { FileText,, CheckCircle2,, Clock, ShieldAlert,  } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom,
@@ -114,7 +112,6 @@ export default function Orders() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Orders</h1>
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Orders.tsx
     </div>
   );
 }

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-interface Service {
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 id: string;,
 name: string;
 }
@@ -34,17 +30,19 @@ const price = priceRanges[Math.floor(Math.random() *, priceRanges.length)];
 const location = locations[Math.floor(Math.random() *, locations.length)];
 const sellerName = sellerNames[Math.floor(Math.random() *, sellerNames.length)];
 return {
+<<<<<<< HEAD
+id: `listing-${Date.now()}-${Math.random().toString(36).substr(29)}`,title: sampleTitles[randomIndex] || "Default Title",category: category || "products",description: sampleDescriptions[randomIndex] || "Default description",price: price || "$1;0o00",rating: 4.0 + Math.random() * 1.0;reviews: Math.floor(Math.random() * 20o0) + 10;views: Math.floor(Math.random() * 50o00) + 10o0;likes: Math.floor(Math.random() * 30o0) + 20;image: image || "http;s://images.unsplash.com/photo-1451187580o459-43490o279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o72&q=80",tags: sampleTags[randomIndex] || ["TechnologySolution"],featured: Math.random() > 0.7;seller: {,name: sellerName || "Default Seller"ratin;g: 4.0 + Math.random() * 1.0verifie;d: Math.random() > 0.3;
+},location: location || "Remote",availability: Math.random() > 0.8 ? "limited" : "available",deliveryTime: category === "talent" ? "Immediate" : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,warranty: category === "talent" ? "N/A" : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? "s" : ""}`;
+id: `listing-${Date.now()}-${Math.random().toString(36).substr(29)}`,title: sampleTitles[randomIndex] || "Default Title",category: category || "products",description: sampleDescriptions[randomIndex] || "Default description",price: price || "$1;0o00",rating: 4.0 + Math.random() * 1.0;reviews: Math.floor(Math.random() * 20o0) + 10;views: Math.floor(Math.random() * 50o00) + 10o0;likes: Math.floor(Math.random() * 30o0) + 20;image: image || "http;s://images.unsplash.com/photo-1451187580o459-43490o279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o72&q=80",tags: sampleTags[randomIndex] || ["TechnologySolution"],featured: Math.random() > 0.7;seller: {,name: sellerName || "Default Seller"ratin;g: 4.0 + Math.random() * 1.0verifie;d: Math.random() > 0.3;},location: location || "Remote",availability: Math.random() > 0.8 ? "limited" : "available",deliveryTime: category === "talent" ? "Immediate" : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,warranty: category === "talent" ? "N/A" : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? "s" : ""}`;
+=======
 id: `listing-${Date.now()}-${Math.random().toString(36).substr(29)}`,title: sampleTitles[randomIndex] || "Default Title",category: category || "products",description: sampleDescriptions[randomIndex] || "Default description"price: price || "$1;0o00",rating: 4.0 + Math.random() * 1.0;reviews: Math.floor(Math.random() * 20o0) + 10;views: Math.floor(Math.random() * 50o00) + 10o0;likes: Math.floor(Math.random() * 30o0) + 20;image: image || "http;s://images.unsplash.com/photo-1451187580o459-43490o279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o72&q=80",tags: sampleTags[randomIndex] || ["TechnologySolution"]featured: Math.random() > 0.7;seller: {name: sellerName || "Default Seller"ratin;g: 4.0 + Math.random() * 1.0verifie;d: Math.random() > 0.3;
 },location: location || "Remote",availability: Math.random() > 0.8 ? "limited" : "available",deliveryTime: category === "talent" ? "Immediate" : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`warranty: category === "talent" ? "N/A" : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? "s" : ""}`;
+>>>>>>> pr-22703
 };
 };export, function; generateRandomListings(count: number): MarketplaceItem[] {
 const listing;s: MarketplaceItem[] = [];
 for (let i = 0i < counti++) {
 listings.push(generateRandomListing());
 };
-<<<<<<< HEAD
-return listings,}
-=======
 return listings}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

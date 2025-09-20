@@ -1,17 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_pages_all/HiringTracker.tsx
 
 <<<<<<<< HEAD:temp_broken_pages_all/HiringTracker.tsx
-<<<<<<< HEAD:temp_broken_pages_all/HiringTracker.tsx
 import { useState } from "react";,
 import { useRouter } from "next/router";,
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";,
 import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";,
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
+
+=======
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
-========
 import { useState,  } from "react",
 import { useRouter,  } from "next/router",
 import { KanbanBoard,  } from "@/components/hiring-tracker/KanbanBoard",
@@ -67,6 +67,7 @@ defaultValue='kanban'
 </>
   )
 }
+>>>>>>> pr-22703
 export default function HiringTracker() {
   return (
   return (
@@ -84,9 +85,11 @@ export default function HiringTracker() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/HiringTracker.tsx
 }
 =======
+}
 import { SEO } from "@/components/SEO";
 
 export default function HiringTracker() {
@@ -108,4 +111,4 @@ export default function HiringTracker() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/HiringTracker.tsx
+>>>>>>> pr-22703

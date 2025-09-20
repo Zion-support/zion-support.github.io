@@ -46,7 +46,11 @@ const { res, data } = await loginUser(email, password); // Calls /api/auth/login
 // Check for specific "Email not confirmed" error first;
 if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
 toast({
+<<<<<<<< HEAD:disabled-files/AuthProvider.tsx
+title: "Login Failed";
+========
 title: "Login Failed";,
+>>>>>>>> pr-22703:temp-broken-files/context/auth/AuthProvider.tsx
 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";,
 variant: "destructive";
 });
@@ -207,4 +211,8 @@ return (
 {children}
 </AuthContext.Provider>
 );
+<<<<<<<< HEAD:disabled-files/AuthProvider.tsx
+};<//AuthContext.Provider><///AuthContext.Provider>;
+========
 };<//AuthContext.Provider><///AuthContext.Provider>
+>>>>>>>> pr-22703:temp-broken-files/context/auth/AuthProvider.tsx

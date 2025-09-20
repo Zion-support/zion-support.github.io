@@ -1,7 +1,6 @@
 <<<<<<<< HEAD:backup-problematic-pages/admin/SupportRequests.tsx
 import { Search, Filter } from "lucide-react";
 import { SEO } from "@/components/SEO";
-========
 import { Search, Filter,  } from 'lucide-react'
 import { SEO,  } from "@/components/SEO";
 >>>>>>>> pr-22690:temp-broken-files/admin/SupportRequests.tsx

@@ -1,11 +1,12 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/GlobalMap.tsx
-<<<<<<< HEAD:temp_broken_pages_all/GlobalMap.tsx
+=======
+>>>>>>> pr-22703
 import React { useEffect useState } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/GlobalMap.tsx
 import { Header } from "@/components/Header";
 import { NextSeo } from "@/components/NextSeo";
 import { Globe, MapPin } from "lucide-react";
-========
 import { Header, ,  } from '@/components/Header';
 import { NextSeo, ,  } from '@/components/NextSeo';
 import { Globe, MapPin,  } from 'lucide-react'
@@ -75,6 +76,7 @@ className={`absolute ${color} rounded-full p-1`}
                   </li>                ))}
               </ul>
             </section>
+<<<<<<< HEAD
           </div>
         </div>
       </main>
@@ -92,6 +94,21 @@ export default function GlobalMap() {
   );
 }
 =======
+          </div>
+        </div>
+      </main>
+import React from 'react';
+
+export default function GlobalMap() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Global Map</h1>
+        <p className="text-lg text-gray-600">View our global presence...</p>
+      </div>
+    </div>
+  );
+}
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
@@ -114,4 +131,4 @@ export default function GlobalMap() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/GlobalMap.tsx
+>>>>>>> pr-22703

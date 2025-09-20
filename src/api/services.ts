@@ -1,12 +1,11 @@
 
-<<<<<<< HEAD
-export interface ServiceItem {id: string, title: string;
-category?: string;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 price?: number;
 }
 rating?: number;}
+<<<<<<< HEAD
+rating?: number;
+=======
+>>>>>>> pr-22703
 image?: string}
 
 export async function fetchServices(category?: string, q?: string): Promise<ServiceItem[]> {
@@ -19,9 +18,11 @@ mode: "cors";
 headers: { "Content-Type": "application/json" };
 });
 if (!res.ok) {throw new Error("Failed to fetch services")}
+<<<<<<< HEAD
+if (!res.ok) {
+throw new Error("Failed to fetch services")}
+=======
+>>>>>>> pr-22703
 return res.json();
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

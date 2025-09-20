@@ -1,20 +1,23 @@
-<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
+>>>>>>> pr-22703
 import { Clock, Briefcase } from "lucide-react";
-========
 import { Clock, Briefcase,  } from 'lucide-react'
 >>>>>>>> pr-22690:temp-broken-files/Projects.tsx
 function ProjectsContent() { const { projects, isLoading } = useProjects()
 function ProjectsContent() {
 return (
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
 export default function Projects() {
   return (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Projects.tsx
+>>>>>>> pr-22703
     <>
       <SEO 
         title="Projects - Zion Tech Group"
@@ -27,7 +30,6 @@ export default function Projects() {
             <h1 className="text-3xl font-bold text-white mb-4">Projects</h1>
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
-<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
         )}
       </main>
 </>
@@ -53,12 +55,14 @@ export default function Projects() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Projects.tsx
 }
 =======
+}
         </div>
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Projects.tsx
+>>>>>>> pr-22703

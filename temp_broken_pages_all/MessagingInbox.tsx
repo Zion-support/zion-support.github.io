@@ -1,5 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
-<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
+=======
+>>>>>>> pr-22703
 import React { useEffect useState } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import { MessageSquare, Video } from "lucide-react";
@@ -12,6 +14,8 @@ import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from "next/router"; // Changed from react-router-dom
 
+<<<<<<< HEAD
+=======
 import React { useEffect useState } from 'react';
 import { MessageSquare, Video } from "lucide-react";
 import { useMessaging } from "@/context/MessagingContext";
@@ -22,7 +26,6 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
-========
 import { MessageSquare, Video,  } from 'lucide-react';
 import { useMessaging,  } from '@/context/MessagingContext';
 import { ProtectedRoute,  } from '@/components/ProtectedRoute';
@@ -85,10 +88,10 @@ conversations = {conversations}
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
+>>>>>>> pr-22703
 export default function MessagingInbox() {
   return (
     <>
@@ -102,14 +105,12 @@ export default function MessagingInbox() {
           <div className="text-center">
             <h1 className="text-3xl font-bold text-white mb-4">MessagingInbox</h1>
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/MessagingInbox.tsx
           </div>
         </div>
       </div>
     </>
   );
 }
-<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 loadData () ;
 }, [fetchConversations]);
 }const roomId = `msg-$ {activeConversation.id ;
@@ -143,6 +144,7 @@ export default function MessagingInbox() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MessagingInbox.tsx
 =======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/MessagingInbox.tsx
+>>>>>>> pr-22703
