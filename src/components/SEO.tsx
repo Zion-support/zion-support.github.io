@@ -161,7 +161,7 @@ export const SEO: React.FC<SEOProps> = ({
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "United States"
-    }
+    },
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "37.7749",
@@ -176,15 +176,15 @@ export const SEO: React.FC<SEOProps> = ({
         "Thursday",
         "Friday"
       ],
-      "opens": "09: 00";
-      "closes": "18: 00"
-    };
+      "opens": "09:00",
+      "closes": "18:00"
+    },
     "priceRange": "$$",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services"
     }
-  },
+  };
 
   // Combine structured data
   const combinedStructuredData = [
@@ -192,41 +192,41 @@ export const SEO: React.FC<SEOProps> = ({
     websiteStructuredData,
     localBusinessStructuredData,
     ...(structuredData ? [structuredData] : [])
-  ],
+  ];
 
   // Additional meta tags for better SEO
   const enhancedAdditionalMeta = [
     ...additionalMeta,
     { name: 'robots', content: `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}` },
-    { name: 'author', content: author };
-    { name: 'language', content: 'English' };
-    { name: 'revisit-after', content: '7 days' };
-    { name: 'distribution', content: 'global' };
-    { name: 'rating', content: 'general' };
-    { name: 'theme-color', content: '#06b6d4' };
-    { name: 'msapplication-TileColor', content: '#06b6d4' };
-    { name: 'apple-mobile-web-app-capable', content: 'yes' };
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' };
-    { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' };
-    { name: 'application-name', content: 'Zion Tech Group' };
-    { name: 'format-detection', content: 'telephone=no' };
-    ...(tags.map(tag => ({ name: 'article:tag', content: tag })));
-    ...(section ? [{ name: 'article:section', content: section }] : []);
-    ...(publishedTime ? [{ name: 'article:published_time', content: publishedTime }] : []);
+    { name: 'author', content: author },
+    { name: 'language', content: 'English' },
+    { name: 'revisit-after', content: '7 days' },
+    { name: 'distribution', content: 'global' },
+    { name: 'rating', content: 'general' },
+    { name: 'theme-color', content: '#06b6d4' },
+    { name: 'msapplication-TileColor', content: '#06b6d4' },
+    { name: 'apple-mobile-web-app-capable', content: 'yes' },
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+    { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
+    { name: 'application-name', content: 'Zion Tech Group' },
+    { name: 'format-detection', content: 'telephone=no' },
+    ...(tags.map(tag => ({ name: 'article:tag', content: tag }))),
+    ...(section ? [{ name: 'article:section', content: section }] : []),
+    ...(publishedTime ? [{ name: 'article:published_time', content: publishedTime }] : []),
     ...(modifiedTime ? [{ name: 'article:modified_time', content: modifiedTime }] : [])
   ];
   // Additional links for better SEO and performance
   const enhancedAdditionalLinks = [
     ...additionalLinks,
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' };
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com' };
-    { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' };
-    { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' };
-    { rel: 'manifest', href: '/manifest.json' };
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' };
-    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' };
-    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' };
-    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' };
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+    { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+    { rel: 'manifest', href: '/manifest.json' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
     { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#06b6d4' }
   ];
   // Performance optimization
@@ -235,60 +235,62 @@ export const SEO: React.FC<SEOProps> = ({
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontLinks = [
-        'https: //fonts.googleapis.com/css2?family=Orbitron:wght@400,500,600,700,800,900&display=swaphttps: //fonts.googleapis.com/css2?family=Rajdhani:wght@300,400,500,600,700&display=swap'
-      ],
+        'https://fonts.googleapis.com/css2?family=Orbitron:wght@400,500,600,700,800,900&display=swap',
+        'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300,400,500,600,700&display=swap'
+      ];
 
       fontLinks.forEach(href => {
-        const link = document.createElement('link'),
-        link.rel = 'preload',
-        link.href = href,
-        link.as = 'style',
-        document.head.appendChild(link)
-      }),
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = href;
+        link.as = 'style';
+        document.head.appendChild(link);
+      });
 
       // Preload critical images
       const criticalImages = [
-        '/images/zion-tech-group-logo.png/images/hero-background.jpg'
-      ],
+        '/images/zion-tech-group-logo.png',
+        '/images/hero-background.jpg'
+      ];
 
       criticalImages.forEach(src => {
-        const link = document.createElement('link'),
-        link.rel = 'preload',
-        link.href = src,
-        link.as = 'image',
-        document.head.appendChild(link),
-      }),
-    },
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
+        document.head.appendChild(link);
+      });
+    };
 
     // Add resource hints
     const addResourceHints = () => {
       const hints = [
-        { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' };
+        { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' },
         { rel: 'dns-prefetch', href: '//cdn.jsdelivr.net' }
       ];
       hints.forEach(hint => {
-        const link = document.createElement('link'),
-        link.rel = hint.rel,
-        link.href = hint.href,
-        document.head.appendChild(link),
-      }),
-    },
+        const link = document.createElement('link');
+        link.rel = hint.rel;
+        link.href = hint.href;
+        document.head.appendChild(link);
+      });
+    };
 
     // Initialize optimizations
-    preloadCriticalResources(),
-    addResourceHints(),
+    preloadCriticalResources();
+    addResourceHints();
 
     // Cleanup function
     return () => {
       // Remove any dynamically added resource hints
-      const dynamicLinks = document.querySelectorAll('link[rel="preload"], link[rel="preconnect"], link[rel="dns-prefetch"]'),
+      const dynamicLinks = document.querySelectorAll('link[rel="preload"], link[rel="preconnect"], link[rel="dns-prefetch"]');
       dynamicLinks.forEach(link => {
         if (link.getAttribute('data-dynamic')) {
-          link.remove(),
+          link.remove();
         }
-      }),
-    },
-  }, []),
+      });
+    };
+  }, []);
 
   return (
     <Helmet>
@@ -350,8 +352,8 @@ export const SEO: React.FC<SEOProps> = ({
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
-  )
-},
+  );
+};
 
 export function HomePageSEO() {
   return (
@@ -361,7 +363,7 @@ export function HomePageSEO() {
       keywords="AI services, quantum computing services, IT infrastructure, cybersecurity services, cloud computing, business automation, machine learning services"
       type="website"
       structuredData={{
-        "@context": "https: //schema.org";
+        "@context": "https://schema.org",
         "@type": "Service",
         "name": "Technology Services",
         "provider": {
@@ -372,7 +374,7 @@ export function HomePageSEO() {
         "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
       }}
     />
-  ),
+  );
 }
 
 export function ContactPageSEO() {
@@ -383,7 +385,7 @@ export function ContactPageSEO() {
       keywords="contact Zion Tech Group, AI consulting, quantum computing consulting, IT consulting, digital transformation consulting"
       type="website"
       structuredData={{
-        "@context": "https: //schema.org";
+        "@context": "https://schema.org",
         "@type": "ContactPage",
         "name": "Contact Zion Tech Group",
         "description": "Get in touch with Zion Tech Group for technology consulting and solutions",
@@ -399,18 +401,23 @@ export function ContactPageSEO() {
         }
       }}
     />
-  ),
+  );
 }
 
 export function BlogPostSEO({ 
   title, 
   description, 
-  author;
-  publishedDate;
-  image;
+  author,
+  publishedDate,
+  image,
   slug 
 }: {
-  title: string,description: string,author: string,publishedDate: string,image: string,slug: string
+  title: string;
+  description: string;
+  author: string;
+  publishedDate: string;
+  image: string;
+  slug: string;
 }) {
   return (
     <SEO
@@ -420,7 +427,7 @@ export function BlogPostSEO({
       url={`https://ziontechgroup.com/blog/${slug}`}
       type="article"
       structuredData={{
-        "@context": "https://schema.org";
+        "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": title,
         "description": description,
@@ -434,9 +441,9 @@ export function BlogPostSEO({
           "name": "Zion Tech Group",
           "logo": {
             "@type": "ImageObject",
-            "url": "https: //ziontechgroup.com/images/zion-tech-group-logo.png"
+            "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
           }
-        };
+        },
         "datePublished": publishedDate,
         "dateModified": publishedDate,
         "mainEntityOfPage": {
