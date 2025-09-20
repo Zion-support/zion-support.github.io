@@ -6,6 +6,55 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI & Technology Solutions',
   description: 'Leading technology solutions provider specializing in AI, automation, and digital transformation.',
+  keywords: ['AI solutions', 'technology consulting', 'digital transformation', 'automation', 'analytics'],
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://zion.app'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Leading technology solutions provider specializing in AI, automation, and digital transformation.',
+    url: 'https://zion.app',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: 'https://zion.app/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI & Technology Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Leading technology solutions provider specializing in AI, automation, and digital transformation.',
+    images: ['https://zion.app/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 }
 
 function Header() {
@@ -167,9 +216,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Basic security headers */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        
+        {/* Preload critical resources */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      </head>
       <body>
         <Header />
-        <main>{children}</main>
+        <main id="main-content" role="main">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
