@@ -48,10 +48,8 @@ export const SEO: React.FC<SEOProps> = ({
   const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg';
   const defaultOgUrl = ogUrl || window.location.href;
   const defaultCanonicalUrl = canonicalUrl || window.location.href;
-  
   // Enhanced title with brand
   const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  
   // Enhanced description
   const enhancedDescription = description.length > 160 
     ? `${description.substring(0, 157)}...` 
@@ -252,7 +250,6 @@ export const SEO: React.FC<SEOProps> = ({
         '/images/zion-tech-group-logo.png',
         '/images/hero-background.jpg'
       ];
-
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -279,7 +276,6 @@ export const SEO: React.FC<SEOProps> = ({
     // Initialize optimizations
     preloadCriticalResources();
     addResourceHints();
-
     // Cleanup function
     return () => {
       // Remove any dynamically added resource hints
@@ -426,8 +422,8 @@ export function BlogPostSEO({
       image={image}
       url={`https://ziontechgroup.com/blog/${slug}`}
       type="article"
-      structuredData={{
-        "@context": "https://schema.org",
+        structuredData={{
+          "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": title,
         "description": description,
