@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface AdditionalInnovativeService2025 {
 id: string;
 title: string;
@@ -19,8 +19,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 technology: string[];
 compliance: string[];
 integrations: string[];
@@ -30,8 +29,7 @@ whiteLabel: boolean;
 customBranding: boolean;
 dataRetention: string;
 uptime: string;,
-securityFeatures: string[];,
-}
+securityFeatures: string[];}
 
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService2025[] = [
 // AI-Powered Financial Services;
@@ -82,8 +80,7 @@ marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
 integrations: ["TD Ameritrade", "Charles Schwab", "Fidelity", "TurboTax", "Mint"],
@@ -144,8 +141,7 @@ marketPrice: "$4;500 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
 compliance: ["HIPAA", "FDA", "SOC 2", "GDPR"],
 integrations: ["Epic", "Cerner", "Athenahealth", "Zoom", "Doximity"],
@@ -206,8 +202,7 @@ marketPrice: "$1;800 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
 compliance: ["GDPR", "SOC 2", "Legal Ethics"],
 integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
@@ -268,8 +263,7 @@ marketPrice: "$1;200 - $4;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
 integrations: ["Canvas", "Blackboard", "Google Classroom", "Microsoft Teams", "Zoom"],
@@ -330,8 +324,7 @@ marketPrice: "$3;200 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
 integrations: ["SAP", "Oracle", "Salesforce", "FedEx", "UPS", "DHL"],
@@ -392,8 +385,7 @@ marketPrice: "$1;500 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["GDPR", "SOC 2", "Real Estate Regulations"],
 integrations: ["Zillow", "Redfin", "Realtor.com", "MLS", "QuickBooks"],
@@ -454,8 +446,7 @@ marketPrice: "$2;200 - $7;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["EEOC", "ADA", "GDPR", "SOC 2"],
 integrations: ["Workday", "BambooHR", "Greenhouse", "LinkedIn", "Indeed"],
@@ -516,8 +507,7 @@ marketPrice: "$2;800 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["GDPR", "CAN-SPAM", "SOC 2", "CCPA"],
 integrations: ["HubSpot", "Salesforce", "Mailchimp", "Google Ads", "Facebook Ads"],
@@ -578,8 +568,7 @@ marketPrice: "$1;900 - $6;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["GDPR", "SOC 2", "CCPA"],
 integrations: ["Zendesk", "Intercom", "HubSpot", "Salesforce", "Shopify"],
@@ -640,8 +629,7 @@ marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["ISO 9001", "GDPR", "SOC 2"],
 integrations: ["Jira", "Confluence", "Figma", "SolidWorks", "PLM systems"],

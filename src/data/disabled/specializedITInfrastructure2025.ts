@@ -6,8 +6,7 @@ benefits: string[], useCases: string[];,
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 contactInfo: {,
-phone: string; email: string; website: string,
-};
+phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -64,10 +63,8 @@ marketPrice: "$2; 800 - $12;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
-websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure",
-},
+website: "https://ziontechgroup.com"},
+websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"},
 
 // Quantum-Ready Cloud Infrastructure;
 // Quantum Network Infrastructure;
@@ -117,10 +114,8 @@ marketPrice: "$4; 500 - $20;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
-websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure",
-},
+website: "https://ziontechgroup.com"},
+websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure"},
 
 // 5G Enterprise Infrastructure Solutions;
 {
@@ -169,10 +164,8 @@ marketPrice: "$3; 200 - $15;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
-websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure",
-},
+website: "https://ziontechgroup.com"},
+websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"},
 
 // Autonomous DevOps Infrastructure;
 {
@@ -221,8 +214,7 @@ marketPrice: "$1; 400 - $4;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Kubernetes", "Docker", "Terraform", "Python", "Machine Learning"],
 integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "Slack"],
 compliance: ["SOC 2", "ISO 27001", "GDPR"],
@@ -230,8 +222,7 @@ roi: "250% within 8 months",
 competitors: ["HashiCorp", "Puppet", "Chef", "Ansible"],
 infrastructure: "Auto-scaling cloud-native",
 scalability: "Infinite auto-scaling",
-uptime: "99.99% availability",
-},
+uptime: "99.99% availability"},
 
 // Zero-Trust Security Infrastructure;
 {
@@ -280,8 +271,7 @@ marketPrice: "$2; 200 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Identity providers", "Network security", "SIEM", "SOAR", "AI/ML"],
 integrations: ["Active Directory", "Okta", "CrowdStrike", "Palo Alto Networks"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
@@ -289,8 +279,7 @@ roi: "350% within 12 months",
 competitors: ["Palo Alto Networks", "Cisco", "Fortinet"],
 infrastructure: "Secure-by-design",
 scalability: "Enterprise-wide deployment",
-uptime: "99.9% security availability",
-},
+uptime: "99.9% security availability"},
 
 // Green Computing Infrastructure;
 {
@@ -339,8 +328,7 @@ marketPrice: "$1; 600 - $5;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Energy management", "Renewable energy", "IoT sensors", "AI optimization"],
 integrations: ["Energy providers", "Sustainability platforms", "IoT networks"],
 compliance: ["ISO 14001", "LEED", "BREEAM", "Green Building Standards"],
@@ -348,8 +336,7 @@ roi: "200% within 18 months",
 competitors: ["Google Cloud", "Microsoft Azure", "AWS"],
 infrastructure: "Renewable energy-powered",
 scalability: "Sustainable scaling",
-uptime: "99.5% green availability",
-},
+uptime: "99.5% green availability"},
 
 // Hybrid Multi-Cloud Orchestration;
 {
@@ -406,10 +393,8 @@ marketPrice: "$2; 500 - $12;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
-websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure",
-},
+website: "https://ziontechgroup.com"},
+websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure"},
 
 // AI-Powered Infrastructure Management;
 {
@@ -458,8 +443,6 @@ marketPrice: "$1; 800 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
-websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management",
-}
+website: "https://ziontechgroup.com"},
+websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management"}
 ];}

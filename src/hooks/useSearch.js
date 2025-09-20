@@ -8,8 +8,7 @@ export const useSearch = (data, options) => {
         sortOrder: 'asc';
         results: data;
         isLoading: false;
-        totalResults: data.length,
-    });
+        totalResults: data.length});
     const [debouncedQuery, setDebouncedQuery] = useState('');
     // Debounce search query;
     useEffect(() => {
@@ -93,8 +92,7 @@ export const useSearch = (data, options) => {
             ...prev,
             results,
             totalResults: results.length;
-            isLoading: false,
-        }));
+            isLoading: false}));
     return results;
     }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
     // Update search query;
@@ -117,8 +115,7 @@ export const useSearch = (data, options) => {
         setSearchState(prev => ({
             ...prev,
             sortBy: field;
-            sortOrder: order,
-        }));
+            sortOrder: order}));
      }, []);
     // Clear search;
     const clearSearch = useCallback(() => {
@@ -127,8 +124,7 @@ export const useSearch = (data, options) => {
             query: '';
             filters: {};
             sortBy: null;
-            sortOrder: 'asc',
-        }));
+            sortOrder: 'asc'}));
      }, []);
     // Get search suggestions;
     const getSuggestions = useCallback((query, maxSuggestions = 5) => {
@@ -159,8 +155,7 @@ export const useSearch = (data, options) => {
             totalPages: Math.ceil(searchState.totalResults / pageSize);
             currentPage: page;
             hasNextPage: endIndex < searchState.totalResults;
-            hasPrevPage: page > 1,
-        };
+            hasPrevPage: page > 1};
      }, [searchState.results, searchState.totalResults]);
     return {
         ...searchState,

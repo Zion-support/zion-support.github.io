@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion, ";
 import { Lin; k;
 ExternalLin; k;
@@ -9,8 +9,7 @@ RefreshC; w;
 BarChart; 3;
 Glob; e;
 Shiel; d;
-Zap;
-} from "lucide-react, ";
+Zap} from "lucide-react, ";
 
 interface LinkStatus {
 ur; l: string;
@@ -27,8 +26,7 @@ healthyLink; s: number;
 brokenLink; s: number;
 externalLink; s: number;
 averageResponseTim; e: number;
-lastUpdate; d: Date;,
-};
+lastUpdate; d: Date;};
 const LinkHealthMonito; r: React.FC = () => {
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [isMonitori; n; g; setIsMonitori; n; g] = useState(false);
@@ -44,10 +42,8 @@ stat; u; s: "broke; n",
 statusCo; d; e: 4; 0; 4;
 responseTi; m; e: 12; 0; 0;
 lastCheck; e; d: ne; w Dat; e(),
-parentPa; g; e: "Homepag; e",
-};
-linkTe; x; t: "LinkedI; n",
-},
+parentPa; g; e: "Homepag; e"};
+linkTe; x; t: "LinkedI; n"},
 {
 u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",
 stat; u; s: "externa; l",
@@ -55,8 +51,7 @@ statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 8; 0; 0;
 lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Homepag; e",
-linkTe; x; t: "Twitte; r",
-},
+linkTe; x; t: "Twitte; r"},
 {
 u; r; l: "t; e; l:+1 30; 2 46; 4 095; 0",
 stat; u; s: "health; y",
@@ -64,8 +59,7 @@ statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 5; 0;
 lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Contac; t",
-linkTe; x; t: "Phon; e Numbe; r",
-},
+linkTe; x; t: "Phon; e Numbe; r"},
 {
 u; r; l: "mail; t; o:klebe; r@ziontechgrou; p.co; m",
 stat; u; s: "health; y",
@@ -73,8 +67,7 @@ statusCo; d; e: 2; 0; 0;
 responseTi; m; e: 5; 0;
 lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Contac; t",
-linkTe; x; t: "Emai; l",
-}
+linkTe; x; t: "Emai; l"}
 ];
 
 useEffect(() => {
@@ -95,8 +88,7 @@ healthyLink; s;
 brokenLink; s;
 externalLink; s;
 averageResponseTim; e: avgResponseTim; e;
-lastUpdate; d: new Date(),
-});
+lastUpdate; d: new Date()});
 };
 
 const startMonitoring = async () => {;
@@ -114,8 +106,7 @@ case "broken":
 return <AlertTriangle className="w-4 h-4 text-red-400" />;
 case "external":
 return <ExternalLink className="w-4 h-4 text-blue-400" />;
-defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;,
-}
+defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;}
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -126,8 +117,7 @@ case "broken":
 return "text-red-400";
 case "external":
 return "text-blue-400";
-defaul;  t: return "text-yellow-400";,
-}
+defaul;  t: return "text-yellow-400";}
 };
 
 const filteredLinks = linkStatuses.filter(link => {;
@@ -216,8 +206,7 @@ onClick={() => setSelectedFilter("all")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
 selectedFilter === "all";
 ? "bg-cyan-500 text-white";
-: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
-}`}
+: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 All Links;
 </button>;
@@ -226,8 +215,7 @@ onClick={() => setSelectedFilter("broken")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
 selectedFilter === "broken";
 ? "bg-red-500 text-white";
-: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
-}`}
+: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Broken;
 </button>;
@@ -236,8 +224,7 @@ onClick={() => setSelectedFilter("external")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
 selectedFilter === "external";
 ? "bg-blue-500 text-white";
-: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
-}`}
+: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 External;
 </button>;
@@ -246,8 +233,7 @@ onClick={() => setSelectedFilter("healthy")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
 selectedFilter === "healthy";
 ? "bg-green-500 text-white";
-: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
-}`}
+: "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Healthy;
 </button>;

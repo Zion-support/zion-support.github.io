@@ -50,8 +50,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "Natural Language Processing", "Computer Vision"],
         integrations: ["ERP Systems", "CRM Platforms", "Supply Chain Systems", "Financial Systems", "IoT Platforms"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -72,8 +71,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Handles unlimited operations and processes";
         deployment: "Cloud-native with on-premise options";
         marketTrend: "Autonomous systems market growing 45% annually";
-        competitiveAdvantage: "Only platform enabling fully autonomous business operations",
-    };
+        competitiveAdvantage: "Only platform enabling fully autonomous business operations"};
     // Quantum AI Platform;
     {
         id: "quantum-ai-platform";
@@ -125,8 +123,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Qiskit", "Cirq", "PennyLane", "TensorFlow", "PyTorch", "Quantum Algorithms"],
         integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket", "Research Tools"],
         compliance: ["Research ethics", "Data privacy", "Export controls", "Academic standards"],
@@ -147,8 +144,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Scalable to 1000+ qubits";
         deployment: "Hybrid cloud and quantum hardware";
         marketTrend: "Quantum AI market expected to reach $2B by 2030";
-        competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities",
-    };
+        competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities"};
     // Space Technology Solutions;
     {
         id: "space-technology-solutions";
@@ -200,8 +196,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["AI/ML", "Satellite Communications", "Big Data Analytics", "Cloud Computing", "IoT", "Space Protocols"],
         integrations: ["Ground stations", "Satellite control systems", "Data processing centers", "Communication networks"],
         compliance: ["ITAR", "Space regulations", "International treaties", "Security clearances"],
@@ -222,8 +217,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Manages 1000+ satellites";
         deployment: "Hybrid ground and space infrastructure";
         marketTrend: "Space technology market growing 50% annually";
-        competitiveAdvantage: "Most comprehensive space operations platform with AI integration",
-    };
+        competitiveAdvantage: "Most comprehensive space operations platform with AI integration"};
     // Biotechnology AI Platform;
     {
         id: "biotechnology-ai-platform";
@@ -275,8 +269,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Deep Learning", "Bioinformatics", "Molecular Modeling", "Data Analytics"],
         integrations: ["Lab management systems", "Clinical trial platforms", "Regulatory databases", "Research tools"],
         compliance: ["FDA", "HIPAA", "GCP", "Research ethics", "Data privacy"],
@@ -297,8 +290,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Handles 1000+ research projects";
         deployment: "Cloud-based with secure research environment";
         marketTrend: "Biotech AI market growing 35% annually";
-        competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery",
-    };
+        competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery"};
     // Autonomous Vehicle Platform;
     {
         id: "autonomous-vehicle-platform";
@@ -350,8 +342,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "5G Networks", "Edge Computing"],
         integrations: ["Fleet management systems", "GPS and mapping", "Weather services", "Regulatory databases"],
         compliance: ["Vehicle safety standards", "Transportation regulations", "Industry-specific compliance"],
@@ -372,8 +363,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Manages 1000+ autonomous vehicles";
         deployment: "Hybrid cloud and edge computing";
         marketTrend: "Autonomous vehicle market growing 40% annually";
-        competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems",
-    };
+        competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems"};
     // AI Robotics Platform;
     {
         id: "ai-robotics-platform";
@@ -425,8 +415,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "Edge Computing", "Safety Systems"],
         integrations: ["Manufacturing systems", "Quality control platforms", "Safety monitoring", "Industrial protocols"],
         compliance: ["Industrial safety standards", "Quality regulations", "Industry-specific compliance"],
@@ -447,8 +436,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Manages 500+ robots";
         deployment: "Hybrid cloud and edge deployment";
         marketTrend: "AI robotics market growing 30% annually";
-        competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features",
-    };
+        competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features"};
     // Smart City Infrastructure Platform;
     {
         id: "smart-city-infrastructure-platform";
@@ -500,8 +488,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["IoT", "AI/ML", "Big Data Analytics", "Cloud Computing", "Edge Computing", "5G Networks"],
         integrations: ["City management systems", "Utility platforms", "Transportation systems", "Public safety networks"],
         compliance: ["Government standards", "Data privacy", "Security requirements", "Urban regulations"],
@@ -522,8 +509,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Manages city-wide infrastructure";
         deployment: "Hybrid cloud and edge infrastructure";
         marketTrend: "Smart city market growing 25% annually";
-        competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization",
-    };
+        competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization"};
     // Advanced Cybersecurity Platform;
     {
         id: "advanced-cybersecurity-platform";
@@ -575,8 +561,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Zero-Trust Architecture", "AI/ML", "Behavioral Analytics", "Threat Intelligence", "Security Orchestration"],
         integrations: ["Identity management", "Network security", "Endpoint protection", "Cloud security", "SIEM systems"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
@@ -597,8 +582,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Protects 100,000+ endpoints",
         deployment: "Cloud-native with on-premise options";
         marketTrend: "Zero-trust security market growing 35% annually";
-        competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration",
-    }
+        competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration"}
 ];
     export const COMPREHENSIVE_INNOVATIVE_CATEGORIES_2025 = [
     "AI & Automation",

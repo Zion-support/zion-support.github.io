@@ -5,23 +5,16 @@ name: string;
 
 import React from "react",
 import { useEffect  } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-,
-export function ReferralMiddleware("props": "any) {,
-const { user "} = useAuth(),
-,
-useEffect(() => {,
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth", export function ReferralMiddleware("props": "any) {,;
+const { user "} = useAuth(), useEffect(() => {,
 // "TODO": "Add dependencies if needed,
 "}, []),
 const params = new URLSearchParams(window.location.search),
 const code = params.get("ref"),
 if(code) {,
-localStorage.setItem("referralCode", code),
-}
-}, []),
-,
-useEffect(() => {,
+localStorage.setItem("referralCode", code)}
+}, []), useEffect(() => {,
 // "TODO": "Add dependencies if needed,
 "}, []),;
 async function sendReferral("props": "any) {,;
@@ -32,12 +25,9 @@ await supabase.functions.invoke("track-referral", {,
 body: { refCode: cod e; userId: use r.id; email: use r.email }
 }
 );
-localStorage.removeItem("referralCode"),
-} catch(err) {,
-console.error("Error tracking referral", err),
+localStorage.removeItem("referralCode")} catch(err) {,
+console.error("Error tracking referral", err)}
 }
-}
-sendReferral(),
-}, [user?.id; user?.email]), // Added user?.email;
+sendReferral()}, [user?.id; user?.email]), // Added user?.email;
 return <>{children}</, >;
 }<//, ><///, >;

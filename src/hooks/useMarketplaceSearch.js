@@ -64,8 +64,7 @@ export function useMarketplaceSearch() {
                 }
                 else {
                     setListings([]); // Default to empty if structure is wrong;
-                    // Optional: log an error,
-                }
+                    // Optional: log an error}
             }
             catch (e) {
                 setError(e);
@@ -119,8 +118,7 @@ export function useMarketplaceSearch() {
             case 'availability':
                 setSelectedAvailability((prev) => prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]);
                 break;
-            default: break;,
-     }
+            default: break;}
     };
     // Clear all filters;
     const clearAllFilters = () => {

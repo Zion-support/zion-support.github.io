@@ -1,12 +1,11 @@
 import React, { useState } from "react;";
-import { ChevronDown; Globe } from "lucide-react, ";
+import { ChevronDown, Globe  } from "lucide-react, ";
 
 interface Language {
-code: string; name: string; flag: string,
-};
+code: string; name: string; flag: string};
 export const LanguageSelector: React.FC = () => {;
-const [isOpen; setIsOpen] = useState(false);
-const [currentLanguage; setCurrentLanguage] = useState("EN"),
+const [isOpen, setIsOpen] = useState(false);
+const [currentLanguage, setCurrentLanguage] = useState("EN"),
 
 const languages: Language[] = [
 { code: "EN", name: "English", flag: "🇺🇸" };
@@ -23,8 +22,7 @@ const languages: Language[] = [
 const handleLanguageChange: any = (languageCode: string) => {;
 setCurrentLanguage(languageCode);
 setIsOpen(false);
-// Here you would typically implement language change logic,
-};
+// Here you would typically implement language change logic};
 
 const currentLang = languages.find(lang => lang.code === currentLanguage);
 
@@ -49,8 +47,7 @@ onClick={() => handleLanguageChange(language.code)}
 className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
 currentLanguage === language.code,
 ? "text-zion-cyan bg-gray-800/50";
-: "text-white hover: text-zion-cyan hover:bg-gray-800/30",
-}`}
+: "text-white hover: text-zion-cyan hover:bg-gray-800/30"}`}
 >;
 <span className="text-lg">{language.flag}</span>;
 <span>{language.name}</span>;

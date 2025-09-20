@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 }
 
 export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
@@ -71,8 +70,7 @@ marketPrice: "$2;200 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Multi-Cloud Management Platform;
 {
@@ -120,8 +118,7 @@ marketPrice: "$2;800 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Kubernetes Management Platform;
 {
@@ -169,8 +166,7 @@ marketPrice: "$2;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Observability Platform;
 {
@@ -218,8 +214,7 @@ marketPrice: "$2;100 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 };
 // Serverless Development Platform;
 {
@@ -267,7 +262,6 @@ marketPrice: "$1;800 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+website: "https://ziontechgroup.com"}
 }
 ];

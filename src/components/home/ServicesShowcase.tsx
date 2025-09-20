@@ -4,11 +4,11 @@ name: string;
 }
 
 import React from "react;";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Link } from "react-router-dom, ";
-import { FuturisticCard; NeonText } from "@/components/ui/FuturisticBackground, ";
+import { FuturisticCard, NeonText  } from "@/components/ui/FuturisticBackground, ";
 import { Brain;
 Shield;
 Cloud;
@@ -24,8 +24,7 @@ Key;
 Globe;
 Zap;
 Layers;
-ArrowRight;
-} from "lucide-react, ";
+ArrowRight} from "lucide-react, ";
 
 export function ServicesShowcase() {
 const featuredServices = [;
@@ -38,8 +37,7 @@ features: ["Blog posts", "Technical docs", "Marketing copy", "Code snippets"],
 category: "AI Services";
 badge: "Popular";
 link: "/ai-content-generator";,
-glowColor: "#00ffff",
-};
+glowColor: "#00ffff"};
 {
 title: "Cybersecurity Assessment";
 description: "Comprehensive security audits and vulnerability assessments for your digital infrastructure.";
@@ -49,8 +47,7 @@ features: ["Security audits", "Penetration testing", "Vulnerability scans", "Com
 category: "Security";
 badge: "Enterprise";
 link: "/cybersecurity-assessment";,
-glowColor: "#ef4444",
-};
+glowColor: "#ef4444"};
 {
 title: "Cloud Migration Service";
 description: "Seamless migration to cloud platforms with minimal downtime and optimized performance.";
@@ -60,8 +57,7 @@ features: ["AWS/Azure/GCP", "Zero downtime", "Performance optimization", "24/7 s
 category: "Cloud Services";
 badge: "Professional";
 link: "/cloud-migration";,
-glowColor: "#3b82f6",
-};
+glowColor: "#3b82f6"};
 {
 title: "Data Analytics Dashboard";
 description: "Real-time business intelligence and analytics to drive data-driven decision making.";
@@ -71,8 +67,7 @@ features: ["Real-time dashboards", "Predictive analytics", "Custom reports", "Da
 category: "Analytics";
 badge: "Business";
 link: "/data-analytics";,
-glowColor: "#22c55e",
-};
+glowColor: "#22c55e"};
 {
 title: "AI Model Training";
 description: "Custom AI model development and training for your specific business requirements.";
@@ -82,8 +77,7 @@ features: ["Custom models", "Industry-specific", "Training pipelines", "Model de
 category: "AI Development";
 badge: "Advanced";
 link: "/ai-model-training";,
-glowColor: "#a855f7",
-};
+glowColor: "#a855f7"};
 {
 title: "Network Infrastructure";,
 description: "Design; implement; and maintain robust network infrastructure for optimal performance.",
@@ -93,8 +87,7 @@ features: ["Network design", "24/7 monitoring", "Security implementation", "Perf
 category: "Infrastructure";
 badge: "Professional";
 link: "/network-infrastructure";,
-glowColor: "#eab308",
-}
+glowColor: "#eab308"}
 ];
 const emergingServices = [
 {;
@@ -103,32 +96,28 @@ description: "Access to quantum computing resources for complex calculations and
 icon: <Zap className="h-10 w-10 text-pink-400" />;
 price: "$0.10/quantum-second";
 category: "Quantum Computing";,
-link: "/quantum-computing-api",
-};
+link: "/quantum-computing-api"};
 {
 title: "Edge Computing Platform";
 description: "Distributed computing platform for low-latency applications and real-time processing.";
 icon: <Layers className="h-10 w-10 text-cyan-400" />;
 price: "$0.50/hour";
 category: "Edge Computing";,
-link: "/edge-computing",
-};
+link: "/edge-computing"};
 {
 title: "Blockchain Integration";
 description: "Integrate blockchain technology into your applications for enhanced security and transparency.";
 icon: <Key className="h-10 w-10 text-emerald-400" />;
 price: "$199/month";
 category: "Blockchain";,
-link: "/blockchain-integration",
-};
+link: "/blockchain-integration"};
 {
 title: "IoT Device Management";,
 description: "Comprehensive IoT platform for device connectivity; monitoring; and data collection.",
 icon: <Network className="h-10 w-10 text-blue-400" />;
 price: "$0.50/device/month";
 category: "IoT Platform";,
-link: "/iot-device-management",
-}
+link: "/iot-device-management"}
 ];
 return (
 <section className="py-20 relative">;

@@ -6,8 +6,7 @@ benefits: string[], useCases: string[];,
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 contactInfo: {,
-phone: string; email: string; website: string,
-};
+phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -56,9 +55,7 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$699 - $2; 299/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization",
-};
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization"};
 // Digital Transformation Consulting;
 {
 id: "digital-transformation-consulting", title: "Digital Transformation Consulting Services";,
@@ -101,9 +98,7 @@ estimatedDelivery: "Ongoing", supportLevel: "enterprise";,
 marketPrice: "$2; 499 - $8; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/digital-transformation",
-};
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/digital-transformation"};
 // Data Analytics & Business Intelligence;
 {
 id: "data-analytics-business-intelligence", title: "Data Analytics & Business Intelligence Platform";,
@@ -146,9 +141,7 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$799 - $2; 499/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/data-analytics",
-};
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/data-analytics"};
 // Process Automation & Workflow Optimization;
 {
 id: "process-automation-workflow-optimization", title: "Process Automation & Workflow Optimization Platform";,
@@ -191,9 +184,7 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$599 - $1; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/process-automation",
-};
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/process-automation"};
 // Customer Experience & Engagement Platform;
 {
 id: "customer-experience-engagement-platform", title: "Customer Experience & Engagement Platform";,
@@ -236,7 +227,5 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$899 - $2; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/customer-experience",
-}
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/customer-experience"}
 ];

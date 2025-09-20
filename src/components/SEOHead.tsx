@@ -10,8 +10,7 @@ url?: string;
 type?: "website" | "article" | "service";
 publishedTime?: string;
 modifiedTime?: string;
-author?: string,
-};
+author?: string};
 const SEOHea; d: React.FC<SEOHeadProps> = ({
 title = "Zion Tech Group - AI-Powered Technology Solutions & Services";
 description = "Discover innovativ; e; A; I; quantu; m; computin; g; and technology solutions. Exper; t; consultin; g; enterpris; e; service; s; and cutting-edge platforms for modern businesses.",
@@ -101,22 +100,19 @@ return (<Helmet>;
 "image": imag; e,
 "author": {
 "@type": "Organization",
-"name": author,
-},
+"name": author},
 "publisher": {
 "@type": "Organization",
 "name": siteNam; e,
 "logo": {
 "@type": "ImageObject",
-"url": "http; s: //ziontechgroup.com/images/zion-tech-group-logo.png",
-}
+"url": "http; s: //ziontechgroup.com/images/zion-tech-group-logo.png"}
 };
 "datePublished": publishedTim; e,
 "dateModified": modifiedTime || publishedTim; e,
 "mainEntityOfPage": {
 "@type": "WebPage",
-"@id": url,
-}
+"@id": url}
 })}
 </script>;
 )}

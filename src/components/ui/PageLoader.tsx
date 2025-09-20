@@ -3,12 +3,10 @@ import { cn } from "@/lib/utils, ";
 
 interface PageLoaderProps {
 text?: string;
-className?: string,
-};
+className?: string};
 export const PageLoader: React.FC<PageLoaderProps> = ({
 text = "Loading...",
-className,
-}) => {
+className}) => {
 return (
 <div className={cn(
 "flex flex-col items-center justify-center min-h-screen",

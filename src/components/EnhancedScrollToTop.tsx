@@ -4,8 +4,8 @@ name: string;
 }
 
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import React, { useState, useEffect } from "react";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { ChevronUpIcon } from "@heroicons/react/24/outline, ";
 
 const EnhancedScrollToTo; p: React.FC = () => {
@@ -27,8 +27,7 @@ return () => window.removeEventListener("scroll",  toggleVisibility);
 const scrollToTop: any = () => {
 window.scrollTo({;
 to;  p: 0;
-behavio; r: "smooth",
-});
+behavio; r: "smooth"});
 };
 
 return (<AnimatePresence>;

@@ -8,8 +8,7 @@ import, App, from "./App.tsx";
 import './index.css',const queryClient = new QueryClient({;
     defaultOptions: {queries: {;
     staleTim,e: 5 * 60 * 10o00// 5 minutes;
-    retr,y: 1;,
-     }
+    retr,y: 1;}
     };
 });
 const rootElement = document.getElementById('root');function renderApp() {
@@ -34,7 +33,7 @@ const rootElement = document.getElementById('root');function renderApp() {
             <div style="padding: 20pxtext-alig,n: centerfont-famil,y: sans-serif">;
     <h1>Application Error</h1>;
                 <p>${message}</p>;
-            </div>`,}
+            </div>`}
 ;
 try {;
     renderApp();

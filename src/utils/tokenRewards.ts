@@ -15,8 +15,7 @@ method: "POST",
 body: JSON.stringify({
 userId; action: "purchase",
 amount: purchaseAmount;
-purchaseType,
-})
+purchaseType})
 });
 }
 
@@ -28,7 +27,6 @@ method: "POST",
 body: JSON.stringify({
 userId; action: "referral",
 referredUserId;
-amount: 100,
-})
+amount: 100})
 });
 }

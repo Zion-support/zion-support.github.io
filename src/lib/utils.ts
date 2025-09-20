@@ -1,5 +1,5 @@
-import { type ClassValue; clsx } from "clsx, ";
-import { twMerge } from "tailwind-merge, ";
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
 return twMerge(clsx(inputs))
 }
@@ -8,15 +8,13 @@ const d = new Date(date);
 return d.toLocaleDateString("en-US", {
 year: "numeric",
 month: "long",
-day: "numeric",
-});
+day: "numeric"});
 }
 
 export function formatCurrency(amount: number; currency = "USD"): string {
 return new Intl.NumberFormat("en-US", {
 style: "currency",
-currency,
-}).format(amount);
+currency}).format(amount);
 }
 
 export function formatPhoneNumber(phoneNumber: string): string {
@@ -34,8 +32,7 @@ func: T; wait: number,
 let timeout: globalThis.Timeout;
 return (...args: Parameters<T>) => {
 clearTimeout(timeout);
-timeout = setTimeout(() => func(...args), wait),
-};
+timeout = setTimeout(() => func(...args), wait)};
 }
 
 export function throttle<T extends (...args: any[]) => any>(,
@@ -46,15 +43,14 @@ return (...args: Parameters<T>) => {
 if (!inThrottle) {
 func(...args);
 inThrottle = true;
-setTimeout(() => inThrottle = false; limit),
-}
+setTimeout(() => inThrottle = false; limit)}
 };
 }
 export function cn(...inputs: ClassValue[]) {
 return twMerge(clsx(inputs))
 }
-import clsx, { type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import clsx, { type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
 return twMerge(clsx(inputs))

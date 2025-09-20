@@ -50,8 +50,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB", "AWS IoT", "MQTT"],
         integrations: ["SAP", "Oracle", "Maximo", "ServiceNow", "Siemens MindSphere", "GE Predix"],
         compliance: ["ISO 55001", "OSHA", "ISO 27001", "SOC 2"],
@@ -59,8 +58,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["Uptake", "C3.ai", "PTC", "Siemens", "GE Digital"],
         marketTrend: "Growing at 30% annually with Industry 4.0 adoption";
         innovationLevel: "Cutting-edge AI/ML with real-time IoT integration";
-        uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions",
-    };
+        uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"};
     // Quantum Machine Learning Platform;
     {
         id: "quantum-machine-learning-platform";
@@ -112,8 +110,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Qiskit", "PennyLane", "Cirq", "Python", "React", "TensorFlow", "PyTorch"],
         integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
         compliance: ["ISO 27001", "FedRAMP", "SOC 2", "NIST"],
@@ -121,8 +118,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["IBM Quantum", "Google Quantum", "D-Wave", "Rigetti", "Xanadu"],
         marketTrend: "Explosive growth with 500% annual increase in quantum computing adoption";
         innovationLevel: "Pioneering quantum-classical hybrid approaches";
-        uniqueValue: "First commercial platform combining quantum computing with practical ML applications",
-    };
+        uniqueValue: "First commercial platform combining quantum computing with practical ML applications"};
     // Autonomous Drone Fleet Management;
     {
         id: "autonomous-drone-fleet-management";
@@ -174,8 +170,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "ROS", "React", "Node.js", "MongoDB", "AWS", "Computer Vision"],
         integrations: ["DJI SDK", "Parrot SDK", "Weather APIs", "GIS systems", "ERP systems"],
         compliance: ["FAA Part 107", "ISO 27001", "SOC 2", "GDPR"],
@@ -183,8 +178,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["DroneDeploy", "PrecisionHawk", "AirMap", "Kitty Hawk"],
         marketTrend: "Rapid growth with 40% annual increase in commercial drone adoption";
         innovationLevel: "Leading-edge autonomous fleet management with AI optimization";
-        uniqueValue: "First comprehensive platform for multi-drone autonomous operations",
-    };
+        uniqueValue: "First comprehensive platform for multi-drone autonomous operations"};
     // Blockchain-Based Digital Identity Platform;
     {
         id: "blockchain-digital-identity-platform";
@@ -236,8 +230,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB", "IPFS"],
         integrations: ["Okta", "Auth0", "Salesforce", "Microsoft Azure", "AWS Cognito"],
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "NIST"],
@@ -245,8 +238,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["Microsoft Identity", "Okta", "Auth0", "Sovrin", "uPort"],
         marketTrend: "Growing rapidly with increasing focus on privacy and security";
         innovationLevel: "Cutting-edge blockchain identity with zero-knowledge proofs";
-        uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features",
-    };
+        uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features"};
     // AI-Powered Legal Document Analysis;
     {
         id: "ai-legal-document-analysis";
@@ -298,8 +290,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "Claude", "React", "Node.js", "MongoDB", "Python", "TensorFlow"],
         integrations: ["DocuSign", "Adobe Sign", "Microsoft Office", "Salesforce", "Clio"],
         compliance: ["GDPR", "SOC 2", "ISO 27001", "Legal industry standards"],
@@ -307,8 +298,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["Kira Systems", "Luminance", "eBrevia", "LawGeex", "ContractPodAi"],
         marketTrend: "Growing at 35% annually with increasing legal tech adoption";
         innovationLevel: "Advanced AI with legal domain expertise";
-        uniqueValue: "First comprehensive legal document analysis platform with risk scoring",
-    };
+        uniqueValue: "First comprehensive legal document analysis platform with risk scoring"};
     // Sustainable Energy Management Platform;
     {
         id: "sustainable-energy-management";
@@ -360,8 +350,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "React", "Node.js", "MongoDB", "AWS", "IoT", "Machine Learning"],
         integrations: ["Solar monitoring systems", "Smart meters", "Building management systems", "ERP systems"],
         compliance: ["ISO 14001", "LEED", "BREEAM", "ESG standards"],
@@ -369,8 +358,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         marketTrend: "Rapid growth with increasing focus on sustainability and ESG";
         innovationLevel: "Advanced AI-powered sustainability optimization";
-        uniqueValue: "First comprehensive platform combining energy management with ESG compliance",
-    };
+        uniqueValue: "First comprehensive platform combining energy management with ESG compliance"};
     // Advanced Cybersecurity Threat Intelligence;
     {
         id: "advanced-cybersecurity-threat-intelligence";
@@ -422,8 +410,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "React", "Node.js", "MongoDB", "TensorFlow", "Elasticsearch", "Kafka"],
         integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Cloud security platforms"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
@@ -431,8 +418,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["CrowdStrike", "Palo Alto Networks", "FireEye", "Recorded Future"],
         marketTrend: "Growing at 25% annually with increasing cyber threats";
         innovationLevel: "Advanced AI with real-time threat intelligence";
-        uniqueValue: "First AI-powered platform combining threat detection with automated response",
-    };
+        uniqueValue: "First AI-powered platform combining threat detection with automated response"};
     // Smart City IoT Management Platform;
     {
         id: "smart-city-iot-management";
@@ -484,8 +470,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "React", "Node.js", "MongoDB", "AWS IoT", "MQTT", "5G"],
         integrations: ["Traffic systems", "Utility networks", "Public safety systems", "GIS platforms"],
         compliance: ["ISO 27001", "NIST", "GDPR", "Local government standards"],
@@ -493,8 +478,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["Cisco", "Siemens", "IBM", "Microsoft", "Oracle"],
         marketTrend: "Rapid growth with increasing smart city initiatives globally";
         innovationLevel: "Comprehensive IoT platform for urban infrastructure management";
-        uniqueValue: "First integrated platform managing all aspects of smart city operations",
-    };
+        uniqueValue: "First integrated platform managing all aspects of smart city operations"};
     // AI-Powered Healthcare Diagnostics;
     {
         id: "ai-healthcare-diagnostics";
@@ -546,8 +530,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "MongoDB", "AWS"],
         integrations: ["PACS systems", "EHR platforms", "Telemedicine systems", "Medical devices"],
         compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -555,8 +538,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Siemens Healthineers"],
         marketTrend: "Growing at 40% annually with increasing AI adoption in healthcare";
         innovationLevel: "Advanced AI with medical domain expertise";
-        uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support",
-    };
+        uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support"};
     // Quantum-Safe Communication Platform;
     {
         id: "quantum-safe-communication";
@@ -608,8 +590,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Post-quantum algorithms", "React", "Node.js", "MongoDB", "WebRTC", "Signal Protocol"],
         integrations: ["Slack", "Microsoft Teams", "Zoom", "Slack", "Email systems"],
         compliance: ["NIST", "ISO 27001", "SOC 2", "FedRAMP", "GDPR"],
@@ -617,7 +598,6 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
         competitors: ["Signal", "Wickr", "ProtonMail", "Quantum Xchange"],
         marketTrend: "Emerging market with increasing quantum computing threats";
         innovationLevel: "Pioneering post-quantum cryptography implementation";
-        uniqueValue: "First commercial platform implementing NIST-approved post-quantum algorithms",
-    }
+        uniqueValue: "First commercial platform implementing NIST-approved post-quantum algorithms"}
 ];
     export default ADVANCED_INNOVATIVE_SERVICES;

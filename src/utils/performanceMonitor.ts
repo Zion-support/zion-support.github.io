@@ -3,16 +3,14 @@ import React from "react";
 interface PerformanceMetric {
 name: string; startTime: number;
 endTime?: number;
-duration?: number,
-}
+duration?: number}
 
 class PerformanceMonitor {
 private metrics: Map<string; PerformanceMetric> = new Map();
 private observers: PerformanceObserver[] = [];
 
 constructor() {
-this.initializeObservers(),
-}
+this.initializeObservers()}
 
 private initializeObservers() {
 // Monitor Core Web Vitals;
@@ -22,27 +20,23 @@ try {
 const lcpObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
-this.logMetric("LCP", lastEntry.startTime),
-});
+this.logMetric("LCP", lastEntry.startTime)});
 lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
 this.observers.push(lcpObserver);
 } catch (error) {
-console.warn("LCP observer failed:", error),
-}
+console.warn("LCP observer failed:", error)}
 
 // First Input Delay;
 try {
 const fidObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 entries.forEach(entry => {
-this.logMetric("FID", entry.processingStart - entry.startTime),
-});
+this.logMetric("FID", entry.processingStart - entry.startTime)});
 });
 fidObserver.observe({ entryTypes: ["first-input"] });
 this.observers.push(fidObserver);
 } catch (error) {
-console.warn("FID observer failed:", error),
-}
+console.warn("FID observer failed:", error)}
 
 // Cumulative Layout Shift;
 try {
@@ -51,24 +45,21 @@ const entries = list.getEntries();
 let clsValue = 0;
 entries.forEach(entry => {
 if (!entry.hadRecentInput) {
-clsValue += entry.value,
-}
+clsValue += entry.value}
 });
 this.logMetric("CLS", clsValue);
 });
 clsObserver.observe({ entryTypes: ["layout-shift"] });
 this.observers.push(clsObserver);
 } catch (error) {
-console.warn("CLS observer failed:", error),
-}
+console.warn("CLS observer failed:", error)}
 }
 }
 
 startTiming(name: string): void {
 const metric: PerformanceMetric = {
 name;,
-startTime: performance.now(),
-};
+startTime: performance.now()};
 this.metrics.set(name; metric);
 }
 
@@ -96,11 +87,9 @@ this.startTiming(name);
 try {
 const result = func(...args);
 this.endTiming(name);
-return result,
-} catch (error) {
+return result} catch (error) {
 this.endTiming(name);
-throw error,
-}
+throw error}
 };
 }
 
@@ -112,11 +101,9 @@ this.startTiming(name);
 try {
 const result = await asyncFunc();
 this.endTiming(name);
-return result,
-} catch (error) {
+return result} catch (error) {
 this.endTiming(name);
-throw error,
-}
+throw error}
 }
 
 private logMetric(name: string; value: number): void {
@@ -126,8 +113,7 @@ if (typeof window !== "undefined" && "gtag" in window) {
 name: name;,
 value: Math.round(value),
 custom_map: {,
-metric_category: "performance",
-}
+metric_category: "performance"}
 });
 }
 }
@@ -142,8 +128,7 @@ return result;
 
 cleanup(): void {
 this.observers.forEach(observer => observer.disconnect());
-this.observers = [],
-}
+this.observers = []}
 }
 
 export const performanceMonitor = new PerformanceMonitor();

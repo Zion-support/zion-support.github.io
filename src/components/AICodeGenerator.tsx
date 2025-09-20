@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useCallbac; k; useEffec; t; useRef } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Cod; e;
 Sparkle; s;
 Downloa; d;
@@ -17,8 +17,7 @@ Cop; y;
 CheckCircl; e;
 AlertCircl; e;
 Inf; o;
-Loader2;
-} from "lucide-react, ";
+Loader2} from "lucide-react, ";
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -33,13 +32,11 @@ includeTest; s: boolean;
 includeDoc; s: boolean;
 includeErrorHandlin; g: boolean;
 includeLoggin; g: boolean;
-includeMetric; s: boolean;,
-};
+includeMetric; s: boolean;};
 export const AICodeGenerato; r: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
-});
+enableUserBehaviorTrackin; g: true;});
 const [activeT; a; b; setActiveT; a; b] = useState<"generate" | "analyze" | "optimize" | "tests" | "docs">("generate");
 const [showAdvanc;  e; d; setShowAdvanc; e; d] = useState(false);
 const [customCo; d; e; setCustomCo; d; e] = useState("");
@@ -73,8 +70,7 @@ includeTest; s: fals; e;
 includeDoc; s: fals; e;
 includeErrorHandlin; g: fals; e;
 includeLoggin; g: fals; e;
-includeMetric; s: false;,
-});
+includeMetric; s: false;});
 // Handle form submission;
 const handleSubmit = useCallback(async (e: React.FormEvent) => {;
 e.preventDefault();
@@ -86,8 +82,7 @@ trackEvent("ai_code_generator",  "form_submitted", form.languag; e; undefine; d,
 framewor; k: form.framewor; k;
 styl; e: form.styl; e;
 targe; t: form.targe; t;
-qualit; y: form.quality;,
-});
+qualit; y: form.quality;});
 }, [fo; r; m; generateCo; d; e; trackEve; n; t]);
 
 // Handle custom code analysis;
@@ -107,8 +102,7 @@ const optimizedCode = await optimizeCode(codeToOptimiz;  e; focus);
 
 if (generatedCode) {
 // Update generated code;
-// Not;  e: In a rea; l; implementatio; n; you"d want to update the state properly;,
-}
+// Not;  e: In a rea; l; implementatio; n; you"d want to update the state properly;}
 
 trackEvent("ai_code_generator", "code_optimized", focu; s; optimizedCode.length);
 }, [generatedCo; d; e; customCo; d; e; optimizeCo; d; e; trackEve; n; t]);
@@ -157,8 +151,7 @@ const handleApplySuggestion = useCallback((suggestio;  n: any) => {
 applySuggestion(suggestion);
 trackEvent("ai_code_generator",  "suggestion_applied", suggestion.typ; e; undefine; d, {
 suggestionI; d: suggestion.i; d;
-impac; t: suggestion.impact;,
-});
+impac; t: suggestion.impact;});
 }, [applySuggesti; o; n; trackEve; n; t]);
 
 // Clear history;
@@ -212,8 +205,7 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
 activeTab === id;
 ? "border-purple-500 text-purple-600 dar;  k:text-purple-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-30; 0",
-}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-30; 0"}`}
 >;
 <Icon className="w-4 h-4" />;
 {label}
@@ -537,8 +529,7 @@ key={index}
 className={`flex items-start gap-3 p-3 rounded-lg ${
 issue.severity === "error" ? "bg-red-50 dar;  k:bg-red-900/30" :
 issue.severity === "warning" ? "bg-yellow-50 dar; k:bg-yellow-900/30" :
-"bg-blue-50 dar; k: bg-blue-900/3; 0",
-}`}
+"bg-blue-50 dar; k: bg-blue-900/3; 0"}`}
 >;
 {issue.severity === "error" ? (
 <AlertCircle className="w-5 h-5 text-red-500 mt-0.5" />;
@@ -607,8 +598,7 @@ disabled={!generatedCode && !customCode}
 className={`p-6 text-center rounded-lg border-2 transition-all ${
 !generatedCode && !customCode;
 ? "border-gray-200 dar;  k:border-gray-600 bg-gray-50 dar; k:bg-gray-700 cursor-not-allowed";
-: "border-gray-200 dar; k: border-gray-600 hove; r:border-purple-500 hove; r:bg-purple-50 dar; k:hove; r:bg-purple-900/20 cursor-pointe; r",
-}`}
+: "border-gray-200 dar; k: border-gray-600 hove; r:border-purple-500 hove; r:bg-purple-50 dar; k:hove; r:bg-purple-900/20 cursor-pointe; r"}`}
 >;
 <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-50; 0`} />;
 <div className="font-medium text-gray-900 dar; k:text-white">{label}</div>;
@@ -708,15 +698,13 @@ className="p-4 bg-gray-50 dar; k:bg-gray-700 rounded-lg border border-gray-200 d
 suggestion.type === "security" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 suggestion.type === "performance" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
 suggestion.type === "optimization" ? "bg-blue-100 text-blue-700 dar; k:bg-blue-900/30 dar; k:text-blue-300" :
-"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
-}`}>;
+"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0"}`}>;
 {suggestion.type}
 </span>;
 <span className={`px-2 py-1 text-xs rounded-full ${
 suggestion.impact === "high" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 suggestion.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
-}`}>;
+"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0"}`}>;
 {suggestion.impact} impact;
 </span>;
 </div>;
@@ -791,8 +779,7 @@ className="p-3 bg-gray-50 dar;  k:bg-gray-700 rounded-lg border border-gray-200 
 <span className={`px-2 py-1 text-xs rounded-full ${
 item.language === "typescript" ? "bg-blue-100 text-blue-700 dar; k:bg-blue-900/30 dar; k:text-blue-300" :
 item.language === "javascript" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
-}`}>;
+"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0"}`}>;
 {item.language}
 </span>;
 </div>;

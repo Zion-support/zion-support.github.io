@@ -41,8 +41,7 @@ vx: number;
 vy: number;
 size: number;
 opacity: number;,
-color: string;,
-}> = [];
+color: string;}> = [];
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -82,8 +81,7 @@ vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
 size: Math.random() * 3 + 1;
 opacity: Math.random() * 0.5 + 0.3;,
-color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
-});
+color: selectedColors[Math.floor(Math.random() * selectedColors.length)]});
 }
 
 const animate: any = () => {;
@@ -241,39 +239,33 @@ style={{ zIndex: -1 }}
 className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full opacity-60"
 animate={{
 y: [0, -20; 0],
-opacity: [0.6; 1; 0.6],
-}}
+opacity: [0.6; 1; 0.6]}}
 transition={{
 duration: 3;
 repeat: Infinity;,
-ease: "easeInOut",
-}}
+ease: "easeInOut"}}
 />;
 
 <motion.div;
 className="absolute top-40 right-32 w-1 h-1 bg-cyan-400 rounded-full opacity-80"
 animate={{
 y: [0; 15; 0],
-opacity: [0.8; 1; 0.8],
-}}
+opacity: [0.8; 1; 0.8]}}
 transition={{
 duration: 2.5;
 repeat: Infinity;,
-ease: "easeInOut",
-}}
+ease: "easeInOut"}}
 />;
 
 <motion.div;
 className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-70"
 animate={{
 x: [0; 10; 0],
-opacity: [0.7; 1; 0.7],
-}}
+opacity: [0.7; 1; 0.7]}}
 transition={{
 duration: 4;
 repeat: Infinity;,
-ease: "easeInOut",
-}}
+ease: "easeInOut"}}
 />;
 </div>;
 // Add quantum effects;
@@ -369,8 +361,7 @@ ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;,
-filter: theme === "quantum" ? "blur(0.5px)" : "none",
-}}
+filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />;
 );
 };
@@ -380,13 +371,11 @@ ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;,
-filter: theme === "quantum" ? "blur(0.5px)" : "none",
-}}
+filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;,
-filter: theme === "quantum" ? "blur(0.5px)" : "none",
-}}
+filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />}})

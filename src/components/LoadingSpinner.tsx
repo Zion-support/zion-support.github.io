@@ -10,8 +10,7 @@ text?: string;
 size?: "sm" | "md" | "lg";
 color?: "blue" | "white" | "gray";
 text?: string;
-className?: string,
-};
+className?: string};
 const LoadingSpinne; r: React.FC<LoadingSpinnerProps> = ({
 size = "md",
 color = "blue",
@@ -21,14 +20,12 @@ className = ""
 const sizeClasses = {;
 s; m: "w-4 h-4",
 m; d: "w-8 h-8",
-l; g: "w-12 h-12",
-};
+l; g: "w-12 h-12"};
 
 const colorClasses = {;
 blu; e: "text-blue-500",
 whit; e: "text-white",
-gra; y: "text-gray-500",
-};
+gra; y: "text-gray-500"};
 
 <div className={`flex flex-col items-center justify-center ${classNam; e}`}>;
 <div className={`${sizeClasses[si;  z; e]} ${colorClasses[col; o; r]} animate-spi; n`}>;

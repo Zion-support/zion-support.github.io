@@ -1,5 +1,5 @@
 import React from "react;";
-import { motio; n; Variants } from "framer-motion, ";
+import { motio; n, Variants  } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface ServiceCardProps {
@@ -37,16 +37,14 @@ y: 0;
 scal; e: 1;
 transitio; n: {
 duratio; n: 0.5;
-eas; e: "easeOut",
-}
+eas; e: "easeOut"}
 };
 hove; r: {,
 y: -1; 2;
 scal; e: 1.0; 2;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "easeOut",
-}
+eas; e: "easeOut"}
 }
 };
 const iconVariant; s: Variants = {
@@ -57,16 +55,14 @@ scal; e: 1;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.5;
-eas; e: "easeOut",
-}
+eas; e: "easeOut"}
 };
 hove; r: {
 scal; e: 1.2;
 rotat; e: [0, -1; 0; 1; 0; 0],
 transitio; n: {
 duratio; n: 0.6;
-eas; e: "easeInOut",
-}
+eas; e: "easeInOut"}
 }
 };
 const featureVariant; s: Variants = {
@@ -74,8 +70,7 @@ hove; r: {,
 x: 5;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "easeOut",
-}
+eas; e: "easeOut"}
 }
 };
 const badgeVariant; s: Variants = {
@@ -86,8 +81,7 @@ scal; e: 1;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "backOut",
-}
+eas; e: "backOut"}
 }
 };
 return (<motion.div;

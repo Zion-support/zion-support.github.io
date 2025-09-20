@@ -39,22 +39,19 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             transitio, n: {
                 typ, e: "spring",
     stiffnes, s: 26, 0,
-                dampin, g: 20,
-            }
+                dampin, g: 20}
         },
         hove, r: {
             scal, e: 1.1,
     transitio, n: {
-                duratio, n: 0.2,
-            }
+                duratio, n: 0.2}
         }
     };
     const expandVariants = {
         hidde, n: {
             scal, e: 0.8,
     opacit, y: 0,
-            y: 20,
-        },
+            y: 20},
         visibl, e: {
             scal, e: 1,
     opacit, y: 1,
@@ -62,8 +59,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     transitio, n: {
                 typ, e: "spring",
     stiffnes, s: 30, 0,
-                dampin, g: 25,
-            }
+                dampin, g: 25}
         }
     };
     if (!isVisible)
@@ -109,8 +105,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 right-6';
             case 'top-left':
                 return 'top-6 left-6';
-            defaul,  t: return 'bottom-6 right-6';,
-        }
+            defaul,  t: return 'bottom-6 right-6';}
     };
     const getExpandedPositionClasses = () => {
         switch (position) {
@@ -120,8 +115,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 right-6';
             case 'top-left':
                 return 'top-6 left-6';
-            defaul,  t: return 'bottom-6 right-6';,
-        }
+            defaul,  t: return 'bottom-6 right-6';}
     };
     if (variant === 'minimal') {
         return (<AnimatePresence>

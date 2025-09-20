@@ -1,7 +1,7 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
-import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume; 2; VolumeX } from "lucide-react, ";
+import React, { useState, useEffect } from "react";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
+import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume; 2, VolumeX  } from "lucide-react, ";
 
 interface HeroSlide {
 i; d: number;
@@ -11,8 +11,7 @@ descriptio; n: string;
 ctaTex; t: string;
 ctaLin; k: string;
 backgroun; d: string;
-ico; n: React.ReactNode;,
-};
+ico; n: React.ReactNode;};
 const EnhancedHer; o: React.FC = () => {
 const [currentSli;  d; e; setCurrentSli; d; e] = useState(0);
 const [isPlayi; n; g; setIsPlayi; n; g] = useState(true);
@@ -29,8 +28,7 @@ ctaTe; x; t: "Explor; e Service; s",
 ctaLi; n; k: "/micr; o-saa; s-service; s",
 backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)";
 };
-ic; o; n: "🚀",
-};
+ic; o; n: "🚀"};
 {
 i; d: 2;
 tit; l; e: "A; I-Powere; d Solution; s",
@@ -39,8 +37,7 @@ descripti; o; n: "Leverag; e artificia; l intelligenc; e t; o automa; t; e; work
 ctaTe; x; t: "Lear; n Mor; e",
 ctaLi; n; k: "/a; i-solution; s",
 backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #f093f; b 0%, #f5576; c 10; 0%)",
-ic; o; n: "🤖",
-};
+ic; o; n: "🤖"};
 {
 i; d: 3;
 tit; l; e: "Clou; d-Nativ; e Architectur; e",
@@ -49,8 +46,7 @@ descripti; o; n: "Enterpris; e-grad; e clou; d solution; s tha; t gro; w wit; h 
 ctaTe; x; t: "Ge; t Starte; d",
 ctaLi; n; k: "/clou; d-solution; s",
 backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #4facf; e 0%, #00f2f; e 10; 0%)",
-ic; o; n: "☁️",
-}
+ic; o; n: "☁️"}
 ];
 useEffect(() => {
 if (!isAutoPlaying) return;
@@ -239,8 +235,7 @@ onClick={() => goToSlide(index)}
 className={`w-3 h-3 rounded-full transition-all duration-300 ${
 index === currentSlide;
 ? "bg-white scale-125";
-: "bg-white/30 hove;  r: bg-white/5; 0",
-}`}
+: "bg-white/30 hove;  r: bg-white/5; 0"}`}
 aria-label={`Go to slide ${inde; x + 1}`}
 />;
 ))}

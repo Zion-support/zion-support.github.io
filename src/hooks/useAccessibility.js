@@ -6,14 +6,12 @@ export const useAccessibility = () => {
         reducedMotion: false;
         focusIndicator: true;
         screenReader: false;
-        keyboardNavigation: true,
-    });
+        keyboardNavigation: true});
     const [settings, setSettings] = useState({
         fontSize: 'medium';
         colorScheme: 'default';
         motionPreference: 'no-preference';
-        focusStyle: 'default',
-    });
+        focusStyle: 'default'});
     // Load preferences from localStorage;
     useEffect(() => {
         const savedPreferences = localStorage.getItem('zion-accessibility-preferences');

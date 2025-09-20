@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Brai; n;
 Pla; y;
 Squar; e;
@@ -17,8 +17,7 @@ XCircl; e;
 Loader; 2;
 Plu; s;
 Ey; e;
-Trash2;
-} from "lucide-react, ";
+Trash2} from "lucide-react, ";
 import { useMachineLearning } from "../hooks/useMachineLearning, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -28,8 +27,7 @@ className?: string;
 export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
-});
+enableUserBehaviorTrackin; g: true;});
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "models" | "training" | "predictions" | "analytics">("overview");
 const [showCreateMod;  e; l; setShowCreateMod; e; l] = useState(false);
 const [showImportMod; e; l; setShowImportMod; e; l] = useState(false);
@@ -53,19 +51,16 @@ importModel;
 const [newModelFo; r; m; setNewModelFo; r; m] = useState({
 nam;  e: "";
 typ; e: "classification" a; s; cons; t;
-framewor; k: "tensorflow" as const;,
-});
+framewor; k: "tensorflow" as const;});
 const [predictionFo; r; m; setPredictionFo; r; m] = useState({
 modelI;  d: "";
-inpu; t: "",
-});
+inpu; t: ""});
 const handleCreateModel = useCallback(() => {
 if (newModelForm.name.trim()) {
 createModel({;
 nam;  e: newModelForm.nam; e;
 typ; e: newModelForm.typ; e;
-framewor; k: newModelForm.framework;,
-});
+framewor; k: newModelForm.framework;});
 setNewModelForm({ nam;  e: "";
 typ; e: "classification", framewor; k: "tensorflow" });
 setShowCreateModel(false);
@@ -78,8 +73,7 @@ const hyperparameters = {;
 learningRat; e: 0.00; 1;
 batchSiz; e: 3; 2;
 epoch; s: 10; 0;
-optimize; r: "adam",
-};
+optimize; r: "adam"};
 try {
 await startTraining(modelI;  d; hyperparameters);
 trackEvent("ml",  "dashboard", "training_started");
@@ -152,8 +146,7 @@ case "deployed": return "text-green-600 bg-green-100";
 case "ready": return "text-blue-600 bg-blue-100";
 case "training": return "text-yellow-600 bg-yellow-100";
 case "archived": return "text-gray-600 bg-gray-100";
-defaul;  t: return "text-gray-600 bg-gray-100";,
-}
+defaul;  t: return "text-gray-600 bg-gray-100";}
 };
 
 const getJobStatusColor: any = (statu; s: string) => {
@@ -162,8 +155,7 @@ case "running": return "text-blue-600 bg-blue-100";
 case "completed": return "text-green-600 bg-green-100";
 case "failed": return "text-red-600 bg-red-100";
 case "pending": return "text-yellow-600 bg-yellow-100";
-defaul;  t: return "text-gray-600 bg-gray-100";,
-}
+defaul;  t: return "text-gray-600 bg-gray-100";}
 };
 
 const getModelTypeIcon: any = (typ; e: string) => {
@@ -174,8 +166,7 @@ case "clustering": return <Activity className="w-4 h-4" />;
 case "nlp": return <Brain className="w-4 h-4" />;
 case "computer_vision": return <Eye className="w-4 h-4" />;
 case "recommendation": return <Zap className="w-4 h-4" />;
-defaul;  t: return <Brain className="w-4 h-4" />;,
-}
+defaul;  t: return <Brain className="w-4 h-4" />;}
 };
 
 return (
@@ -234,8 +225,7 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
 activeTab === id;
 ? "border-purple-500 text-purple-600 dar;  k:text-purple-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
-}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"}`}
 >;
 <Icon className="w-4 h-4" />;
 <span>{label}</span>;

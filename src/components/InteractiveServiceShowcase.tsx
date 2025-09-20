@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
+import { motio; n; AnimatePresenc; e, Variants  } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface Service {
@@ -14,15 +14,13 @@ feature; s: string[];
 isPopular?: boolean;
 isNew?: boolean;
 colo; r: string;
-hre; f: string;,
-};
+hre; f: string;};
 const InteractiveServiceShowcas; e: React.FC = () => {
 const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
 const [hoveredServi; c; e; setHoveredServi; c; e] = useState<string | null>(null);
 
 const categories = [;
-{ i;  d: "al; l",
-};
+{ i;  d: "al; l"};
 na; m; e: "Al; l Service; s", ic; o; n: "🚀";
 cou; n; t: 3; 5 },
 { i; d: "a; i",
@@ -52,8 +50,7 @@ catego; r; y: "a; i",
 featur; e; s: ["Strategi; c Plannin; g", "Implementatio; n Roadma; p", "RO; I Analysi; s", "Tea; m Trainin; g"],
 isPopula; r: tru; e;
 colo; r: "from-zion-cyan to-zion-blue";
-hre; f: "/services/ai",
-};
+hre; f: "/services/ai"};
 {
 i; d: "quantum-ai";
 titl; e: "Quantum AI Fusion Platform";
@@ -64,8 +61,7 @@ categor; y: "quantum";
 feature; s: ["Quantu; m Algorithm; s", "A; I Integratio; n", "Performanc; e Optimizatio; n", "Scalabl; e Architectur; e"],
 isNe; w: tru; e;
 colo; r: "from-zion-purple to-zion-cyan";
-hre; f: "/services/quantum",
-};
+hre; f: "/services/quantum"};
 {
 i; d: "neuromorphic";
 titl; e: "Neuromorphic Computing Platform";
@@ -75,8 +71,7 @@ pric; e: "From $3; 5;000",
 categor; y: "ai";
 feature; s: ["Neura; l Network; s", "Efficien; t Processin; g", "Scalabl; e Architectur; e", "Lo; w Powe; r Consumptio; n"],
 colo; r: "from-zion-blue to-zion-cyan";
-hre; f: "/services/ai",
-};
+hre; f: "/services/ai"};
 {
 i; d: "edge-ai";
 titl; e: "Edge AI Orchestration Platform";
@@ -86,8 +81,7 @@ pric; e: "From $1; 5;000",
 categor; y: "cloud";
 feature; s: ["Edg; e Deploymen; t", "Loa; d Balancin; g", "Rea; l-tim; e Processin; g", "Io; T Integratio; n"],
 colo; r: "from-zion-cyan to-zion-green";
-hre; f: "/services/cloud",
-};
+hre; f: "/services/cloud"};
 {
 i; d: "federated-learning";
 titl; e: "Federated Learning Platform";
@@ -97,8 +91,7 @@ pric; e: "From $2; 0;000",
 categor; y: "security";
 feature; s: ["Dat; a Privac; y", "Distribute; d Trainin; g", "Secur; e Communicatio; n", "Complianc; e Read; y"],
 colo; r: "from-zion-green to-zion-cyan";
-hre; f: "/services/security",
-};
+hre; f: "/services/security"};
 {
 i; d: "ai-ethics";
 titl; e: "AI Ethics & Governance Platform";
@@ -108,8 +101,7 @@ pric; e: "From $1; 8;000",
 categor; y: "ai";
 feature; s: ["Ethica; l Guideline; s", "Complianc; e Tool; s", "Audi; t Trail; s", "Ris; k Assessmen; t"],
 colo; r: "from-zion-yellow to-zion-orange";
-hre; f: "/services/ai",
-};
+hre; f: "/services/ai"};
 {
 i; d: "quantum-security";
 titl; e: "Quantum-Safe Security Suite";
@@ -120,8 +112,7 @@ categor; y: "security";
 feature; s: ["Pos; t-Quantu; m Cryptograph; y", "Quantu; m Ke; y Distributio; n", "Threa; t Detectio; n", "Zer; o Trus; t"],
 isNe; w: tru; e;
 colo; r: "from-zion-purple to-zion-red";
-hre; f: "/services/security",
-};
+hre; f: "/services/security"};
 {
 i; d: "cloud-automation";
 titl; e: "Cloud Infrastructure Automation";
@@ -131,8 +122,7 @@ pric; e: "From $1; 2;000",
 categor; y: "automation";
 feature; s: ["Infrastructur; e a; s Cod; e", "Aut; o-scalin; g", "Cos; t Optimizatio; n", "Monitorin; g"],
 colo; r: "from-zion-orange to-zion-yellow";
-hre; f: "/services/automation",
-}
+hre; f: "/services/automation"}
 ];
 const filteredServices = activeCategory === "all" ;
 ? services;
@@ -143,8 +133,7 @@ hidde; n: { opacit; y: 0 };
 visibl; e: {
 opacit; y: 1;
 transitio; n: {
-staggerChildre; n: 0.1;,
-}
+staggerChildre; n: 0.1;}
 }
 };
 const itemVariant; s: Variants = {
@@ -155,8 +144,7 @@ y: 0;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.5;
-eas; e: "easeOut",
-}
+eas; e: "easeOut"}
 }
 };
 const categoryVariant; s: Variants = {
@@ -167,8 +155,7 @@ scal; e: 1;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "easeOut",
-}
+eas; e: "easeOut"}
 }
 };
 return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">;
@@ -211,8 +198,7 @@ onClick={() => setActiveCategory(category.id)}
 className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${
 activeCategory === category.id;
 ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25";
-: "bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hove;  r: bg-white/20 hove; r:border-zion-cyan/5; 0",
-}`}
+: "bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hove;  r: bg-white/20 hove; r:border-zion-cyan/5; 0"}`}
 >;
 <span className="text-xl">{category.icon}</span>;
 <span>{category.name}</span>;

@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -29,8 +28,7 @@ technologyStack: string[];
 complianceStandards: string[];
 integrationCapabilities: string[];
 roiMetrics: string[];,
-competitiveAdvantages: string[];,
-}
+competitiveAdvantages: string[];}
 
 export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] = [
 // AI-Powered Financial Compliance Automation;
@@ -86,8 +84,7 @@ marketPrice: "$8;500 - $25;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-financial-compliance-automation-2025";,
 technologyStack: ["GPT-5", "Claude 3.5 Sonnet", "Regulatory APIs", "Machine Learning", "Blockchain"],
 complianceStandards: ["SOX", "Basel III", "Dodd-Frank", "GDPR", "PCI DSS", "SOC2"],
@@ -149,8 +146,7 @@ marketPrice: "$6;500 - $20;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-resistant-blockchain-identity-2025";,
 technologyStack: ["Quantum-Resistant Algorithms", "Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
 complianceStandards: ["eIDAS", "GDPR", "SOC2", "ISO 27001", "NIST", "W3C DID"],
@@ -212,8 +208,7 @@ marketPrice: "$7;500 - $22;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain-optimization-2025";,
 technologyStack: ["Machine Learning", "Predictive Analytics", "IoT Sensors", "Cloud Computing", "Big Data Analytics"],
 complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "SOC2", "ISO 9001"],
@@ -275,8 +270,7 @@ marketPrice: "$5;500 - $18;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/edge-computing-ai-platform-2025";,
 technologyStack: ["TensorFlow Lite", "ONNX Runtime", "Edge ML Frameworks", "Container Technology", "Kubernetes"],
 complianceStandards: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "NIST"],
@@ -338,8 +332,7 @@ marketPrice: "$4;500 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-legal-document-analysis-2025";,
 technologyStack: ["Natural Language Processing", "Machine Learning", "Document AI", "Legal Databases", "Cloud Computing"],
 complianceStandards: ["GDPR", "SOC2", "ISO 27001", "Legal Industry Standards", "Data Privacy"],
@@ -401,8 +394,7 @@ marketPrice: "$15;000 - $50;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-machine-learning-platform-2025";,
 technologyStack: ["Quantum Computing", "Qiskit", "Cirq", "PennyLane", "Classical ML Frameworks"],
 complianceStandards: ["ISO 27001", "SOC2", "Research Standards", "Data Security", "Intellectual Property"],
@@ -464,8 +456,7 @@ marketPrice: "$9;500 - $30;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics-2025";,
 technologyStack: ["Deep Learning", "Computer Vision", "Natural Language Processing", "Medical AI Models", "Cloud Computing"],
 complianceStandards: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC2", "GDPR"],
@@ -527,8 +518,7 @@ marketPrice: "$12;000 - $35;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/autonomous-cybersecurity-operations-2025";,
 technologyStack: ["AI/ML", "Threat Intelligence", "Security Orchestration", "Behavioral Analytics", "Cloud Security"],
 complianceStandards: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
@@ -590,8 +580,7 @@ marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-marketing-automation-2025";,
 technologyStack: ["Machine Learning", "Predictive Analytics", "Marketing APIs", "CRM Integration", "Data Analytics"],
 complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Marketing Compliance"],
@@ -653,8 +642,7 @@ marketPrice: "$8;000 - $25;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";,
 technologyStack: ["Quantum Key Distribution", "Post-Quantum Algorithms", "Encryption", "Secure Protocols", "Quantum Hardware"],
 complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC2", "ISO 27001", "Government Standards"],

@@ -1,19 +1,17 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface ComprehensiveMicroSaasService {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 contactInfo: {,
-phone: string; email: string; website: string,
-};
+phone: string; email: string; website: string};
 technology: string[], integrations: string[];,
 compliance: string[], roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
 websiteUrl?: string;,
-marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string;,
-}
+marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string;}
 
 export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasService[] = [
 // AI-Powered Business Intelligence & Analytics;
@@ -60,15 +58,13 @@ estimatedDelivery: "2-3 weeks", supportLevel: "enterprise";,
 marketPrice: "$599 - $2; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis", "AWS"],
+website: "https://ziontechgroup.com"}, technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis", "AWS"],
 integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Microsoft Power BI"],
 compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"],
 roi: "600% within 6 months", competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
 demoUrl: "https://ziontechgroup.com/demo/ai-business-intelligence", caseStudies: ["Fortune 500 company 40% revenue increase", "Startup 3x faster market entry"],
 marketTrend: "Growing demand for AI-powered business intelligence with 35% annual growth", industryFocus: ["Technology", "Finance", "Healthcare", "Retail", "Manufacturing"],
-scalability: "Enterprise-grade with unlimited users and data", customizationLevel: "Highly customizable with white-label options",
-};
+scalability: "Enterprise-grade with unlimited users and data", customizationLevel: "Highly customizable with white-label options"};
 // AI-Powered Customer Experience Platform;
 {
 id: "ai-customer-experience-platform", title: "AI Customer Experience Platform - Personalized Customer Journeys";,
@@ -113,15 +109,13 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$449 - $1; 800/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB", "Redis"],
+website: "https://ziontechgroup.com"}, technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB", "Redis"],
 integrations: ["Shopify", "WooCommerce", "Zendesk", "Intercom", "Mailchimp", "Klaviyo"],
 compliance: ["GDPR", "CCPA", "SOC 2", "PCI DSS"],
 roi: "500% within 8 months", competitors: ["Segment", "Amplitude", "Mixpanel", "Hotjar"],
 demoUrl: "https://ziontechgroup.com/demo/ai-customer-experience", caseStudies: ["E-commerce 65% conversion increase", "SaaS 80% customer satisfaction improvement"],
 marketTrend: "Rapid adoption of AI-powered CX platforms with 40% market growth", industryFocus: ["E-commerce", "SaaS", "Retail", "Financial Services", "Healthcare"],
-scalability: "Handles millions of customer interactions", customizationLevel: "Fully customizable customer journey workflows",
-};
+scalability: "Handles millions of customer interactions", customizationLevel: "Fully customizable customer journey workflows"};
 // AI-Powered Supply Chain & Logistics Optimization;
 {
 id: "ai-supply-chain-optimizer-pro", title: "AI Supply Chain Optimizer Pro - Intelligent Logistics Management";,
@@ -166,15 +160,13 @@ estimatedDelivery: "3-4 weeks", supportLevel: "enterprise";,
 marketPrice: "$799 - $3; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis", "AWS"],
+website: "https://ziontechgroup.com"}, technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis", "AWS"],
 integrations: ["SAP", "Oracle", "NetSuite", "Shopify", "WMS systems", "TMS platforms"],
 compliance: ["ISO 9001", "SOC 2", "GDPR", "Supply chain regulations"],
 roi: "700% within 12 months", competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder"],
 demoUrl: "https://ziontechgroup.com/demo/ai-supply-chain", caseStudies: ["Manufacturing 40% cost reduction", "Retail 50% inventory optimization"],
 marketTrend: "Growing demand for AI-powered supply chain solutions with 45% annual growth", industryFocus: ["Manufacturing", "Retail", "Logistics", "E-commerce", "Healthcare"],
-scalability: "Enterprise-grade with multi-company support", customizationLevel: "Industry-specific optimization algorithms",
-};
+scalability: "Enterprise-grade with multi-company support", customizationLevel: "Industry-specific optimization algorithms"};
 // AI-Powered Financial Technology Platform;
 {
 id: "ai-fintech-platform-elite", title: "AI FinTech Platform Elite - Intelligent Financial Solutions";,
@@ -219,15 +211,13 @@ estimatedDelivery: "3-4 weeks", supportLevel: "enterprise";,
 marketPrice: "$699 - $2; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis", "Blockchain"],
+website: "https://ziontechgroup.com"}, technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis", "Blockchain"],
 integrations: ["Plaid", "Stripe", "QuickBooks", "Xero", "Bank APIs", "Trading platforms"],
 compliance: ["SOC 2", "PCI DSS", "GDPR", "Financial regulations", "SEC compliance"],
 roi: "800% within 10 months", competitors: ["Robinhood", "Wealthfront", "Betterment", "Acorns"],
 demoUrl: "https://ziontechgroup.com/demo/ai-fintech", caseStudies: ["Investment firm 35% return improvement", "Bank 60% fraud reduction"],
 marketTrend: "Explosive growth in AI-powered FinTech with 50% annual market expansion", industryFocus: ["Financial Services", "Banking", "Investment", "Insurance", "Real Estate"],
-scalability: "Banking-grade infrastructure with unlimited scalability", customizationLevel: "White-label solutions for financial institutions",
-};
+scalability: "Banking-grade infrastructure with unlimited scalability", customizationLevel: "White-label solutions for financial institutions"};
 // AI-Powered Healthcare & Medical Solutions;
 {
 id: "ai-healthcare-solutions-suite", title: "AI Healthcare Solutions Suite - Intelligent Medical Technology";,
@@ -272,15 +262,13 @@ estimatedDelivery: "4-5 weeks", supportLevel: "enterprise";,
 marketPrice: "$899 - $4; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Python", "TensorFlow", "Computer Vision", "React", "PostgreSQL", "HIPAA-compliant cloud"],
+website: "https://ziontechgroup.com"}, technology: ["Python", "TensorFlow", "Computer Vision", "React", "PostgreSQL", "HIPAA-compliant cloud"],
 integrations: ["EMR systems", "PACS systems", "Lab systems", "Pharmacy systems", "Insurance platforms"],
 compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485", "Medical device regulations"],
 roi: "900% within 15 months", competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare"],
 demoUrl: "https://ziontechgroup.com/demo/ai-healthcare", caseStudies: ["Hospital 40% diagnostic accuracy improvement", "Clinic 50% workflow optimization"],
 marketTrend: "Rapid adoption of AI in healthcare with 60% annual growth", industryFocus: ["Healthcare", "Medical Technology", "Pharmaceuticals", "Research", "Insurance"],
-scalability: "Enterprise healthcare infrastructure with multi-institution support", customizationLevel: "Specialized medical AI models for different specialties",
-};
+scalability: "Enterprise healthcare infrastructure with multi-institution support", customizationLevel: "Specialized medical AI models for different specialties"};
 // AI-Powered Education & Learning Platform;
 {
 id: "ai-education-learning-platform", title: "AI Education & Learning Platform - Intelligent Learning Solutions";,
@@ -325,15 +313,13 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$399 - $1; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB", "AWS"],
+website: "https://ziontechgroup.com"}, technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB", "AWS"],
 integrations: ["LMS platforms", "Student information systems", "Content management systems", "Video platforms", "Assessment tools"],
 compliance: ["FERPA", "COPPA", "GDPR", "SOC 2", "Educational standards"],
 roi: "500% within 8 months", competitors: ["Coursera", "Udemy", "Khan Academy", "Duolingo"],
 demoUrl: "https://ziontechgroup.com/demo/ai-education", caseStudies: ["University 45% student success improvement", "School district 50% administrative efficiency"],
 marketTrend: "Growing demand for AI-powered education with 55% annual growth", industryFocus: ["Education", "Corporate Training", "Online Learning", "EdTech", "Professional Development"],
-scalability: "Multi-institution platform with unlimited student support", customizationLevel: "Customizable learning paths and curriculum design",
-};
+scalability: "Multi-institution platform with unlimited student support", customizationLevel: "Customizable learning paths and curriculum design"};
 // AI-Powered Cybersecurity & Threat Intelligence;
 {
 id: "ai-cybersecurity-threat-intelligence", title: "AI Cybersecurity & Threat Intelligence - Advanced Security Solutions";,
@@ -378,15 +364,13 @@ estimatedDelivery: "3-4 weeks", supportLevel: "enterprise";,
 marketPrice: "$649 - $2; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Machine Learning", "Deep Learning", "React", "Python", "PostgreSQL", "Security frameworks"],
+website: "https://ziontechgroup.com"}, technology: ["Machine Learning", "Deep Learning", "React", "Python", "PostgreSQL", "Security frameworks"],
 integrations: ["SIEM systems", "EDR platforms", "Firewall systems", "Identity management", "Cloud security platforms"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry-specific regulations"],
 roi: "700% within 10 months", competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco Security"],
 demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity", caseStudies: ["Financial institution 90% threat reduction", "Healthcare 85% security improvement"],
 marketTrend: "High demand for AI-powered cybersecurity with 65% annual growth", industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
-scalability: "Enterprise-grade security infrastructure with unlimited scalability", customizationLevel: "Industry-specific security frameworks and compliance",
-};
+scalability: "Enterprise-grade security infrastructure with unlimited scalability", customizationLevel: "Industry-specific security frameworks and compliance"};
 // AI-Powered Marketing & Advertising Platform;
 {
 id: "ai-marketing-advertising-platform", title: "AI Marketing & Advertising Platform - Intelligent Marketing Solutions";,
@@ -431,15 +415,13 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$549 - $2; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB", "Marketing APIs"],
+website: "https://ziontechgroup.com"}, technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB", "Marketing APIs"],
 integrations: ["Google Ads", "Facebook Ads", "Mailchimp", "HubSpot", "Salesforce", "Shopify"],
 compliance: ["GDPR", "CCPA", "SOC 2", "Marketing compliance"],
 roi: "600% within 6 months", competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
 demoUrl: "https://ziontechgroup.com/demo/ai-marketing", caseStudies: ["E-commerce 70% marketing ROI increase", "Agency 5x client results improvement"],
 marketTrend: "Growing adoption of AI in marketing with 50% annual growth", industryFocus: ["E-commerce", "SaaS", "Retail", "B2B", "Agencies"],
-scalability: "Multi-client platform with unlimited campaign support", customizationLevel: "Custom marketing workflows and automation rules",
-};
+scalability: "Multi-client platform with unlimited campaign support", customizationLevel: "Custom marketing workflows and automation rules"};
 // AI-Powered Human Resources & Talent Management;
 {
 id: "ai-hr-talent-management-suite", title: "AI HR & Talent Management Suite - Intelligent People Management";,
@@ -484,15 +466,13 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$499 - $1; 800/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB", "HR systems"],
+website: "https://ziontechgroup.com"}, technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB", "HR systems"],
 integrations: ["ATS platforms", "LMS systems", "Payroll systems", "Performance management", "Employee portals"],
 compliance: ["EEOC", "GDPR", "SOC 2", "HR compliance", "Labor laws"],
 roi: "550% within 8 months", competitors: ["BambooHR", "Workday", "Greenhouse", "Lever"],
 demoUrl: "https://ziontechgroup.com/demo/ai-hr-talent", caseStudies: ["Tech company 60% hiring efficiency improvement", "Enterprise 45% retention increase"],
 marketTrend: "Growing demand for AI-powered HR solutions with 45% annual growth", industryFocus: ["Technology", "Healthcare", "Finance", "Manufacturing", "Professional Services"],
-scalability: "Multi-company platform with enterprise HR capabilities", customizationLevel: "Customizable HR workflows and compliance frameworks",
-};
+scalability: "Multi-company platform with enterprise HR capabilities", customizationLevel: "Customizable HR workflows and compliance frameworks"};
 // AI-Powered Legal Technology & Compliance;
 {
 id: "ai-legal-technology-compliance", title: "AI Legal Technology & Compliance - Intelligent Legal Solutions";,
@@ -537,15 +517,13 @@ estimatedDelivery: "3-4 weeks", supportLevel: "enterprise";,
 marketPrice: "$749 - $3; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["NLP", "Machine Learning", "React", "Python", "PostgreSQL", "Legal databases"],
+website: "https://ziontechgroup.com"}, technology: ["NLP", "Machine Learning", "React", "Python", "PostgreSQL", "Legal databases"],
 integrations: ["Document management systems", "Case management platforms", "Legal research databases", "Compliance platforms", "Client portals"],
 compliance: ["SOC 2", "GDPR", "Legal industry standards", "Data privacy regulations"],
 roi: "800% within 12 months", competitors: ["LexisNexis", "Westlaw", "ContractPodAi", "Kira Systems"],
 demoUrl: "https://ziontechgroup.com/demo/ai-legal-technology", caseStudies: ["Law firm 70% efficiency improvement", "Corporate legal 60% cost reduction"],
 marketTrend: "Rapid adoption of AI in legal technology with 55% annual growth", industryFocus: ["Legal Services", "Financial Services", "Healthcare", "Technology", "Manufacturing"],
-scalability: "Enterprise legal platform with multi-firm support", customizationLevel: "Industry-specific legal workflows and compliance frameworks",
-};
+scalability: "Enterprise legal platform with multi-firm support", customizationLevel: "Industry-specific legal workflows and compliance frameworks"};
 // AI-Powered Real Estate & Property Management;
 {
 id: "ai-real-estate-property-management", title: "AI Real Estate & Property Management - Intelligent Property Solutions";,
@@ -590,15 +568,13 @@ estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
 marketPrice: "$399 - $1; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "PostgreSQL", "Real estate APIs"],
+website: "https://ziontechgroup.com"}, technology: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "PostgreSQL", "Real estate APIs"],
 integrations: ["Property management systems", "MLS platforms", "Payment processors", "Maintenance platforms", "Marketing platforms"],
 compliance: ["SOC 2", "GDPR", "Real estate regulations", "Financial compliance"],
 roi: "600% within 10 months", competitors: ["AppFolio", "Buildium", "Yardi", "RealPage"],
 demoUrl: "https://ziontechgroup.com/demo/ai-real-estate", caseStudies: ["Property management company 40% efficiency improvement", "Investor 35% return increase"],
 marketTrend: "Growing adoption of AI in real estate with 40% annual growth", industryFocus: ["Real Estate", "Property Management", "Investment", "Development", "Brokerage"],
-scalability: "Multi-property platform with unlimited portfolio support", customizationLevel: "Customizable property workflows and reporting",
-};
+scalability: "Multi-property platform with unlimited portfolio support", customizationLevel: "Customizable property workflows and reporting"};
 // AI-Powered Manufacturing & Industrial IoT;
 {
 id: "ai-manufacturing-industrial-iot", title: "AI Manufacturing & Industrial IoT - Intelligent Manufacturing Solutions";,
@@ -643,14 +619,12 @@ estimatedDelivery: "4-5 weeks", supportLevel: "enterprise";,
 marketPrice: "$899 - $3; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, technology: ["Machine Learning", "IoT", "Computer Vision", "React", "Python", "Industrial protocols"],
+website: "https://ziontechgroup.com"}, technology: ["Machine Learning", "IoT", "Computer Vision", "React", "Python", "Industrial protocols"],
 integrations: ["MES systems", "ERP platforms", "SCADA systems", "IoT devices", "Quality management systems"],
 compliance: ["ISO 9001", "ISO 14001", "SOC 2", "Manufacturing standards", "Safety regulations"],
 roi: "900% within 15 months", competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation"],
 demoUrl: "https://ziontechgroup.com/demo/ai-manufacturing", caseStudies: ["Manufacturing plant 40% efficiency improvement", "Factory 50% downtime reduction"],
 marketTrend: "Rapid adoption of AI in manufacturing with 60% annual growth", industryFocus: ["Manufacturing", "Automotive", "Aerospace", "Electronics", "Food & Beverage"],
-scalability: "Enterprise manufacturing platform with multi-facility support", customizationLevel: "Industry-specific manufacturing workflows and IoT integration",
-}
+scalability: "Enterprise manufacturing platform with multi-facility support", customizationLevel: "Industry-specific manufacturing workflows and IoT integration"}
 ];
 export default COMPREHENSIVE_MICRO_SAAS_SERVICES_2025;

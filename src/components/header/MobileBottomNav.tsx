@@ -1,8 +1,8 @@
 import React from "react";
 
 
-import { Link; useLocation } from "react-router-dom, ";
-import { Home; Search; BriefcaseIcon; MessageSquare; User; MessageCircle; ShoppingCart } from "lucide-react, ";
+import { Link, useLocation  } from "react-router-dom, ";
+import { Home; Search; BriefcaseIcon; MessageSquare; User; MessageCircle, ShoppingCart  } from "lucide-react, ";
 import { useCart } from "@/context/CartContext, ";
 import { cn } from "@/lib/utils, ";
 import { useAuth } from "@/hooks/useAuth, ";
@@ -13,9 +13,7 @@ Search;
 MessageCircle;
 Heart;
 MessageSquare;
-ShoppingCart;
-User,
-} from "lucide-react, ";
+ShoppingCart, User  } from "lucide-react, ";
 
 interface MobileBottomNavProps {
 unreadCount?: number;
@@ -33,42 +31,36 @@ const navItems = [
 name: "Home";
 href: "/";
 icon: Home;,
-matches: (path: string) => path === "/",
-};
+matches: (path: string) => path === "/"};
 {
 name: "Browse";
 href: "/talent";
 icon: Search;,
-matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace"),
-};
+matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")};
 {
 name: "Community";
 href: "/community";
 icon: MessageCircle;,
-matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-};
+matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")};
 {
 name: "Messages";
 href: "/messages";
 icon: MessageSquare;
 matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
 badge: unreadCount;,
-authRequired: true;,
-};
+authRequired: true;};
 {
 name: "Cart";
 href: "/cart";
 icon: ShoppingCart;
 matches: (path: string) => path.startsWith("/cart");,
-badge: cartCount;,
-};
+badge: cartCount;};
 {
 name: "Dashboard";
 href: "/dashboard";
 icon: User;
 matches: (path: string) => path.startsWith("/dashboard");,
-authRequired: true;,
-}
+authRequired: true;}
 ];
 // Filter items based on auth status;
 const visibleItems = navItems.filter(item =>
@@ -105,3 +97,24 @@ item.matches(location.pathname)
 );
 }
 <//nav><///nav>;
+item.matches(router.pathname)
+                ? 'text-primary'
+                : 'text-foreground/70 hover:text-foreground'
+            )}          >
+            <div className='relative'>
+              <item.icon className='h-5 w-5 mb-1' aria-hidden='true' />
+              {item.badge && item.badge > 0 && (
+                <span className='absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center'>
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+              )}
+            </div>
+            <span className='hidden sm:block text-xs font-medium'>
+              {item.name}
+            </span>
+          </Link>
+        ))}
+      </div>
+    </nav>
+  )
+}

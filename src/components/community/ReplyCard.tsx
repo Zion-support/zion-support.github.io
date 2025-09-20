@@ -5,8 +5,7 @@ interface ReplyCardProps {
 reply: ForumReply;
 className?: string;
 onMarkAnswer?: () => void;
-canMarkAnswer?: boolean,
-};
+canMarkAnswer?: boolean};
 export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
 return (
 <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}>;
@@ -46,3 +45,12 @@ Mark as Answer,
 </div>;
 );
 }<//div><///div>;
+import { formatDistanceToNow } from "date-fns",
+import { ThumbsUp, ThumbsDownCheckCircle } from 'lucide-react'
+import { Card, CardContent, CardFooterCardHeader } from "@/components/ui/card",
+import { Avatar, AvatarFallbackAvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",;
+import { ForumReply } from "@/types/community";
+import { cn } from "@/lib/utils";
+interface ReplyCardProps {

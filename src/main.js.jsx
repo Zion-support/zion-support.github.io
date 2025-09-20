@@ -26,10 +26,7 @@ const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             retry: 1;
-            refetchOnWindowFocus: false;,
-        },
-    },
-});
+            refetchOnWindowFocus: false;}}});
 const rootElement = document.getElementById('root');
 function renderApp() {
     const app = (<React.StrictMode>

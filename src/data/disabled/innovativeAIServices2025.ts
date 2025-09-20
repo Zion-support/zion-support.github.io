@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -29,8 +28,7 @@ technologyStack: string[];
 complianceStandards: string[];
 integrationCapabilities: string[];
 roiMetrics: string[];,
-competitiveAdvantages: string[];,
-}
+competitiveAdvantages: string[];}
 
 export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
 // AI-Powered Autonomous Customer Service;
@@ -86,8 +84,7 @@ marketPrice: "$6;800 - $20;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";,
 technologyStack: ["GPT-5", "Claude 3.5", "Natural Language Processing", "Machine Learning", "API Integration"],
 complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Data Privacy"],
@@ -149,8 +146,7 @@ marketPrice: "$7;200 - $22;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance-2025";,
 technologyStack: ["Machine Learning", "IoT Sensors", "Data Analytics", "Cloud Computing", "Edge Computing"],
 complianceStandards: ["ISO 27001", "SOC2", "Industry Standards", "Data Security"],
@@ -212,8 +208,7 @@ marketPrice: "$4;200 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-content-creation-studio-2025";,
 technologyStack: ["GPT-5", "DALL-E 3", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
 complianceStandards: ["Copyright Compliance", "Content Guidelines", "Data Privacy", "Brand Safety"],
@@ -275,8 +270,7 @@ marketPrice: "$15;000 - $50;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-financial-trading-platform-2025";,
 technologyStack: ["Machine Learning", "Deep Learning", "Financial APIs", "Real-time Data", "Cloud Computing"],
 complianceStandards: ["SEC", "FINRA", "SOX", "GDPR", "Financial Regulations"],
@@ -338,8 +332,7 @@ marketPrice: "$18;000 - $60;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-healthcare-research-platform-2025";,
 technologyStack: ["Deep Learning", "Natural Language Processing", "Bioinformatics", "Cloud Computing", "Data Analytics"],
 complianceStandards: ["HIPAA", "FDA", "GCP", "ISO 27001", "Research Ethics"],
@@ -401,8 +394,7 @@ marketPrice: "$8;500 - $25;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-energy-optimization-platform-2025";,
 technologyStack: ["Machine Learning", "IoT Sensors", "Energy Management", "Cloud Computing", "Data Analytics"],
 complianceStandards: ["Energy Regulations", "Environmental Standards", "ISO 50001", "Data Security"],
@@ -464,8 +456,7 @@ marketPrice: "$7;800 - $22;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain-risk-management-2025";,
 technologyStack: ["Machine Learning", "Predictive Analytics", "Risk Modeling", "Data Analytics", "Cloud Computing"],
 complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "Industry Standards", "Risk Management"],
@@ -527,8 +518,7 @@ marketPrice: "$5;500 - $18;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-legal-research-analysis-2025";,
 technologyStack: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Document AI", "Cloud Computing"],
 complianceStandards: ["Legal Standards", "Data Privacy", "Confidentiality", "Professional Ethics"],
@@ -590,8 +580,7 @@ marketPrice: "$3;800 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-creative-design-studio-2025";,
 technologyStack: ["Generative AI", "Computer Vision", "Design Algorithms", "Creative AI", "Cloud Computing"],
 complianceStandards: ["Copyright Compliance", "Design Standards", "Brand Guidelines", "Quality Assurance"],

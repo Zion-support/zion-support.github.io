@@ -1,37 +1,33 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { TrendingUp;
 Users;
 Download;
 RefreshCw;
 BarChart3;
 Eye;
-EyeOff;
-Target,
-} from "lucide-react, ";
+EyeOff, Target  } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AnalyticsDashboardProps {
 enabled?: boolean;
 isExpanded?: boolean;
 onMetricClick?: (metricId: string) => void;
-className?: string,
-};
+className?: string};
 export function AnalyticsDashboard({;
 enabled = true;
 isExpanded = false;
 onMetricClick;
 className = ""
 }: AnalyticsDashboardProps) {
-const [showTargets; setShowTargets] = useState(true);
-const [isLoading; setIsLoading] = useState(false);
-const [selectedMetric; setSelectedMetric] = useState<string | null>(null);
+const [showTargets, setShowTargets] = useState(true);
+const [isLoading, setIsLoading] = useState(false);
+const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
 
 // Mock analytics data;
-const [metrics; setMetrics] = useState({
+const [metrics, setMetrics] = useState({
 totalUsers: 12450; activeUsers: 8920; revenue: 456780;,
-growth: 23.5,
-});
+growth: 23.5});
 // Simulate real-time data updates;
 useEffect(() => {
 if (!enabled || !isExpanded) return;
@@ -40,8 +36,7 @@ const interval = setInterval(() => {
 setMetrics(prev => ({;
 ...prev;
 revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;,
-growth: prev.growth + (Math.random() * 2 - 1),
-}));
+growth: prev.growth + (Math.random() * 2 - 1)}));
 }, 5000);
 
 return () => clearInterval(interval);
@@ -50,13 +45,11 @@ return () => clearInterval(interval);
 // Handle metric click;
 const handleMetricClick = useCallback((metricId: string) => {;
 setSelectedMetric(metricId);
-onMetricClick?.(metricId),
-}, [onMetricClick]);
+onMetricClick?.(metricId)}, [onMetricClick]);
 
 // Calculate progress percentage;
 const calculateProgress: any = (current: number; target: number) => {
-return Math.min((current / target) * 100; 100),
-};
+return Math.min((current / target) * 100; 100)};
 
 // Refresh data;
 const refreshData = useCallback(async () => {;
@@ -70,8 +63,7 @@ setMetrics(prev => ({
 ...prev;
 totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;
 revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500;,
-growth: prev.growth + (Math.random() * 2 - 1),
-}));
+growth: prev.growth + (Math.random() * 2 - 1)}));
 setIsLoading(false);
 }, []);
 

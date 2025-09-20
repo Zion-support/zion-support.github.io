@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface SpecializedIndustrySolution2025 {
 id: string;
 title: string;
@@ -21,16 +21,14 @@ innovationLevel: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 technicalSpecs?: {
 technology: string[];
 integrations: string[];
 apiEndpoints: number;
 uptime: string;
 security: string[];,
-compliance: string[];,
-};
+compliance: string[];};
 competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
@@ -89,8 +87,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Deep Learning", "Computer Vision", "Python", "React", "PostgreSQL", "DICOM"],
 integrations: ["Epic", "Cerner", "PACS systems", "Lab systems", "Patient portals"],
@@ -156,8 +153,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "Redis"],
 integrations: ["Core banking systems", "Payment gateways", "CRM platforms", "Analytics tools"],
@@ -167,8 +163,7 @@ security: ["PCI DSS compliance", "Encryption", "Multi-factor authentication"],
 compliance: ["PCI DSS", "SOC 2", "ISO 27001", "Financial regulations"];
 },
 competitors: ["FICO", "LexisNexis", "Experian", "TransUnion"],
-demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection",
-};
+demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection"};
 // Manufacturing & Industry 4.0;
 {
 id: "smart-manufacturing-platform";
@@ -221,8 +216,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["IoT platforms", "Machine Learning", "Python", "React", "PostgreSQL", "MQTT"],
 integrations: ["SCADA systems", "ERP platforms", "MES systems", "PLC controllers"],
@@ -232,8 +226,7 @@ security: ["Industrial security", "Network segmentation", "Access controls"],
 compliance: ["ISO 27001", "NIST", "Industry standards"];
 },
 competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
-demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing",
-};
+demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing"};
 // Retail & E-commerce;
 {
 id: "ai-retail-optimization-platform";
@@ -286,8 +279,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["POS systems", "E-commerce platforms", "CRM systems", "Analytics tools"],
@@ -297,8 +289,7 @@ security: ["Data encryption", "Access controls", "PCI compliance"],
 compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"];
 },
 competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
-demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization",
-};
+demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"};
 // Transportation & Logistics;
 {
 id: "autonomous-logistics-platform";
@@ -351,8 +342,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["GPS systems", "Fleet management", "WMS systems", "Analytics platforms"],
@@ -362,8 +352,7 @@ security: ["Data encryption", "Access controls", "Real-time monitoring"],
 compliance: ["Industry standards", "Data privacy", "Security protocols"];
 },
 competitors: ["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
-demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics",
-};
+demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics"};
 // Energy & Utilities;
 {
 id: "smart-energy-management-platform";
@@ -416,8 +405,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
 integrations: ["SCADA systems", "Smart meters", "Building management", "Analytics platforms"],
@@ -427,8 +415,7 @@ security: ["Grid security", "Data encryption", "Access controls"],
 compliance: ["NERC CIP", "ISO 27001", "Industry standards"];
 },
 competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-demoUrl: "https://ziontechgroup.com/demo/smart-energy-management",
-};
+demoUrl: "https://ziontechgroup.com/demo/smart-energy-management"};
 // Education & EdTech;
 {
 id: "ai-education-platform";
@@ -481,8 +468,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["LMS platforms", "Student information systems", "Content management", "Analytics tools"],
@@ -492,8 +478,7 @@ security: ["Data encryption", "Access controls", "Student privacy"],
 compliance: ["FERPA", "COPPA", "GDPR", "Data privacy"];
 },
 competitors: ["Blackboard", "Canvas", "Moodle", "Google Classroom"],
-demoUrl: "https://ziontechgroup.com/demo/ai-education-platform",
-};
+demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"};
 // Real Estate & Property Management;
 {
 id: "smart-property-management-platform";
@@ -546,8 +531,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["IoT sensors", "Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
 integrations: ["Building management systems", "IoT platforms", "Payment systems", "Analytics tools"],
@@ -557,8 +541,7 @@ security: ["Data encryption", "Access controls", "Tenant privacy"],
 compliance: ["Data privacy", "Industry standards", "Security protocols"];
 },
 competitors: ["Yardi", "RealPage", "AppFolio", "Buildium"],
-demoUrl: "https://ziontechgroup.com/demo/smart-property-management",
-};
+demoUrl: "https://ziontechgroup.com/demo/smart-property-management"};
 // Legal & Compliance;
 {
 id: "ai-legal-compliance-platform";
@@ -611,8 +594,7 @@ innovationLevel: "Cutting-edge";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technicalSpecs: {,
 technology: ["Machine Learning", "NLP", "Python", "React", "Node.js", "PostgreSQL"],
 integrations: ["Legal databases", "Document management", "CRM systems", "Analytics tools"],
@@ -622,6 +604,5 @@ security: ["Data encryption", "Access controls", "Audit logging"],
 compliance: ["SOC 2", "ISO 27001", "Legal industry standards"];
 },
 competitors: ["Thomson Reuters", "LexisNexis", "Westlaw", "Bloomberg Law"],
-demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance",
-}
+demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance"}
 ];

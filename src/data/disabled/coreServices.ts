@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];,
@@ -79,8 +78,7 @@ marketPrice: "$399 - $1200/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["Python", "React", "Node.js", "OpenAI API", "PostgreSQL"],
 integrations: ["WordPress", "Shopify", "Mailchimp", "HubSpot", "Google Analytics"],
 compliance: ["GDPR", "Data Privacy", "Content Guidelines"],
@@ -89,8 +87,7 @@ image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800";
 rating: 4.9;
 reviewCount: 156;
 aiScore: 95;,
-featured: true;,
-};
+featured: true;};
 {
 id: "cloud-infrastructure-pro";
 title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";,
@@ -136,8 +133,7 @@ marketPrice: "$599 - $2000/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["AWS", "Docker", "Kubernetes", "Terraform", "Ansible"],
 integrations: ["GitHub", "Jenkins", "Slack", "PagerDuty", "Datadog"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
@@ -146,8 +142,7 @@ image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800";
 rating: 4.8;
 reviewCount: 89;
 aiScore: 88;,
-featured: true;,
-};
+featured: true;};
 {
 id: "cybersecurity-shield";
 title: "Cybersecurity Shield - Advanced Security Solutions";,
@@ -193,8 +188,7 @@ marketPrice: "$299 - $800/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Penetration Testing"],
 integrations: ["Active Directory", "Office 365", "Slack", "Jira", "ServiceNow"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
@@ -203,8 +197,7 @@ image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800";
 rating: 4.7;
 reviewCount: 234;
 aiScore: 92;,
-featured: true;,
-}
+featured: true;}
 ];
 export const SERVICE_CATEGORIES = [;
 { label: "AI & Content Management", value: "ai-content" };
@@ -231,5 +224,4 @@ enterprise: { name: "Enterprise", multiplier: 2.5 }
 export const CONTACT_INFO = {;
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};

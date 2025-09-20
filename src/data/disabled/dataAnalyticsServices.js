@@ -45,8 +45,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Predictive Analytics Platform;
     {
@@ -94,8 +93,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Data Governance Platform;
     {
@@ -143,8 +141,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Customer Analytics Platform;
     {
@@ -192,8 +189,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Business Intelligence Dashboard;
     {
@@ -241,7 +237,6 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

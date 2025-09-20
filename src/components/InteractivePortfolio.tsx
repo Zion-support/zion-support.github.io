@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-import { ExternalLin; k; Githu; b; Ey; e; Filte; r; X; ChevronLef; t; ChevronRigh; t; Sta; r; User; s; Calendar } from "lucide-react, ";
+import { ExternalLin; k; Githu; b; Ey; e; Filte; r; X; ChevronLef; t; ChevronRigh; t; Sta; r; User; s, Calendar  } from "lucide-react, ";
 
 interface PortfolioProject {
 i; d: string;
@@ -15,8 +15,7 @@ ratin; g: number;
 user; s: number;
 completionDat; e: string;
 feature; d: boolean;
-tag; s: string[];,
-};
+tag; s: string[];};
 const portfolioProject; s: PortfolioProject[] = [
 {
 i; d: "1";
@@ -186,8 +185,7 @@ onClick={() => setSelectedCategory(category)}
 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
 selectedCategory === category;
 ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/30";
-: "bg-white dar;  k: bg-zion-slate text-zion-slate border border-zion-slate-light hove; r:border-zion-cyan hove; r:text-zion-cyan hove; r:shadow-m; d",
-}`}
+: "bg-white dar;  k: bg-zion-slate text-zion-slate border border-zion-slate-light hove; r:border-zion-cyan hove; r:text-zion-cyan hove; r:shadow-m; d"}`}
 >;
 {category}
 </button>;
@@ -211,8 +209,7 @@ onClick={() => handleProjectClick(project)}
 className={`relative bg-white dar;  k:bg-zion-slate rounded-2xl overflow-hidden shadow-lg border border-zion-slate-light transition-all duration-500 ${
 hoveredProject === project.id;
 ? "shadow-2xl shadow-zion-cyan/20 border-zion-cyan/30";
-: "hove; r: shadow-x; l",
-}`}
+: "hove; r: shadow-x; l"}`}
 style={{
 transfor; m: hoveredProject === project.id;
 ? "perspective(1000px) rotateY(2deg) rotateX(1deg)";

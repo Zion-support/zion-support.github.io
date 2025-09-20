@@ -13,13 +13,11 @@ variant = "matrix"
 const sizeClasses = {;
 smal; l: "w-8 h-8";
 mediu; m: "w-16 h-16";
-larg; e: "w-24 h-24",
-};
+larg; e: "w-24 h-24"};
 const textSizes = {;
 smal; l: "text-sm";
 mediu; m: "text-lg";
-larg; e: "text-xl",
-};
+larg; e: "text-xl"};
 const renderLoader: any = () => {
 switch (variant) {
 case "matrix":

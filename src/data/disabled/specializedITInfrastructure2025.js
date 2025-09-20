@@ -47,8 +47,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kubernetes", "Docker", "Python", "Node.js", "Edge hardware"],
         integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "5G networks"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry 4.0"],
@@ -56,8 +55,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
         infrastructure: "Distributed edge nodes";
         scalability: "Auto-scaling edge clusters";
-        uptime: "99.9% edge availability",
-    };
+        uptime: "99.9% edge availability"};
     // Quantum-Ready Cloud Infrastructure;
     {
         id: "quantum-ready-cloud-infrastructure";
@@ -106,8 +104,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Qiskit", "Cirq", "Python", "Quantum hardware", "Cloud platforms"],
         integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum"],
         compliance: ["ISO 27001", "SOC 2", "Quantum security standards"],
@@ -115,8 +112,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
         infrastructure: "Hybrid quantum-classical";
         scalability: "Quantum resource scaling";
-        uptime: "99.5% quantum availability",
-    };
+        uptime: "99.5% quantum availability"};
     // Autonomous DevOps Infrastructure;
     {
         id: "autonomous-devops-infrastructure";
@@ -165,8 +161,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kubernetes", "Docker", "Terraform", "Python", "Machine Learning"],
         integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "Slack"],
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
@@ -174,8 +169,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["HashiCorp", "Puppet", "Chef", "Ansible"],
         infrastructure: "Auto-scaling cloud-native";
         scalability: "Infinite auto-scaling";
-        uptime: "99.99% availability",
-    };
+        uptime: "99.99% availability"};
     // Zero-Trust Security Infrastructure;
     {
         id: "zero-trust-security-infrastructure";
@@ -224,8 +218,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Identity providers", "Network security", "SIEM", "SOAR", "AI/ML"],
         integrations: ["Active Directory", "Okta", "CrowdStrike", "Palo Alto Networks"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
@@ -233,8 +226,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["Palo Alto Networks", "Cisco", "Fortinet"],
         infrastructure: "Secure-by-design";
         scalability: "Enterprise-wide deployment";
-        uptime: "99.9% security availability",
-    };
+        uptime: "99.9% security availability"};
     // Green Computing Infrastructure;
     {
         id: "green-computing-infrastructure";
@@ -283,8 +275,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Energy management", "Renewable energy", "IoT sensors", "AI optimization"],
         integrations: ["Energy providers", "Sustainability platforms", "IoT networks"],
         compliance: ["ISO 14001", "LEED", "BREEAM", "Green Building Standards"],
@@ -292,8 +283,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["Google Cloud", "Microsoft Azure", "AWS"],
         infrastructure: "Renewable energy-powered";
         scalability: "Sustainable scaling";
-        uptime: "99.5% green availability",
-    };
+        uptime: "99.5% green availability"};
     // Hybrid Multi-Cloud Orchestration;
     {
         id: "hybrid-multi-cloud-orchestration";
@@ -342,8 +332,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kubernetes", "Terraform", "Ansible", "Python", "Cloud APIs"],
         integrations: ["AWS", "Azure", "Google Cloud", "On-premises systems"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
@@ -351,6 +340,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["HashiCorp", "VMware", "Red Hat"],
         infrastructure: "Multi-cloud distributed";
         scalability: "Cross-cloud scaling";
-        uptime: "99.9% orchestration availability",
-    }
+        uptime: "99.9% orchestration availability"}
 ];

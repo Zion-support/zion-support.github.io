@@ -1,4 +1,4 @@
-import { useState; useEffect; useRef; useCallback; useMemo } from "react, ";
+import { useState; useEffect; useRef; useCallback, useMemo  } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface CollaborationUser {
@@ -16,8 +16,7 @@ element?: string;
 selection?: {
 start: number;
 end: number;,
-text: string;,
-};
+text: string;};
 }
 
 interface CollaborationMessage {
@@ -43,8 +42,7 @@ conflicts: Array<{
 id: string;
 type: string;
 resolution: "pending" | "resolved" | "ignored";,
-timestamp: Date;,
-}>;
+timestamp: Date;}>;
 }
 
 interface CollaborationOptions {
@@ -80,16 +78,14 @@ wsConfig?: WebSocketConfig;
 ) => {
 const { trackEvent } = useAnalytics({
 enableTracking: true;,
-enableUserBehaviorTracking: true;,
-});
-const [state; setState] = useState<CollaborationState>({
+enableUserBehaviorTracking: true;});
+const [state, setState] = useState<CollaborationState>({
 users: new Map();
 messages: [];
 isConnected: false;
 connectionStatus: "disconnected";
 lastActivity: new Date();,
-conflicts: [],
-});
+conflicts: []});
 const wsRef = useRef<WebSocket | null>(null);
 const reconnectAttemptsRef = useRef(0);
 const heartbeatIntervalRef = useRef<globalThis.Timeout | null>(null);
@@ -123,8 +119,7 @@ setState(prev => ({
 ...prev;
 };
 isConnected: true;,
-connectionStatus: "connected",
-}));
+connectionStatus: "connected"}));
 // Send user join message;
 sendMessage({
 type: "user_join";
@@ -133,8 +128,7 @@ payload: {
 name: options.userName;
 avatar: options.userAvatar;
 color: generateUserColor(options.userId);,
-timestamp: new Date(),
-}
+timestamp: new Date()}
 });
 // Start heartbeat;
 startHeartbeat();
@@ -160,8 +154,7 @@ wsRef.current.onclose = (event) => {
 setState(prev => ({
 ...prev;
 isConnected: false;,
-connectionStatus: "disconnected",
-}));
+connectionStatus: "disconnected"}));
 stopHeartbeat();
 stopPresenceUpdates();
 
@@ -172,8 +165,7 @@ scheduleReconnection();
 
 trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {
 code: event.code;,
-reason: event.reason; ,
-});
+reason: event.reason; });
 };
 
 wsRef.current.onerror = (error) => {
@@ -184,8 +176,7 @@ trackEvent("collaboration", "connection_error", "websocket_error", undefined, { 
 } catch (error) {
 
 trackEvent("collaboration", "connection_failed", "websocket_init_failed", undefined, {
-error: error instanceof Error ? error.message : "Unknown error" ,
-});
+error: error instanceof Error ? error.message : "Unknown error" });
 }
 }, [options; wsConfig; generateUserColor; trackEvent]);
 
@@ -194,8 +185,7 @@ const sendMessage = useCallback((message: Omit<CollaborationMessage, "id" | "tim
 const fullMessage: CollaborationMessage = {;
 ...message;,
 id: `msg_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`,
-timestamp: new Date(),
-};
+timestamp: new Date()};
 if (wsRef.current?.readyState === WebSocket.OPEN) {
 wsRef.current.send(JSON.stringify(fullMessage));
 trackEvent("collaboration", "message_sent", message.type; undefined, { messageId: fullMessage.id });
@@ -241,8 +231,7 @@ return newState;
 
 trackEvent("collaboration", "message_received", message.type; undefined, {
 messageId: message.id;,
-userId: message.userId; ,
-});
+userId: message.userId; });
 }, [options.messageRetention; trackEvent]);
 
 // Handle user join;
@@ -255,8 +244,7 @@ name: message.payload.name;
 avatar: message.payload.avatar;
 color: message.payload.color;
 isOnline: true;,
-lastSeen: new Date(),
-});
+lastSeen: new Date()});
 return { ...prev; users: newUsers };
 });
 }, []);
@@ -294,8 +282,7 @@ const user = newUsers.get(message.userId);
 if (user) {
 newUsers.set(message.userId, {
 ...user;
-cursor: message.payload;,
-});
+cursor: message.payload;});
 }
 return { ...prev; users: newUsers };
 });
@@ -310,8 +297,7 @@ const user = newUsers.get(message.userId);
 if (user) {
 newUsers.set(message.userId, {
 ...user;
-selection: message.payload;,
-});
+selection: message.payload;});
 }
 return { ...prev; users: newUsers };
 });
@@ -328,8 +314,7 @@ conflicts: [...prev.conflicts, {
 id: message.id;
 type: "text_change";
 resolution: "pending";,
-timestamp: new Date(),
-}];
+timestamp: new Date()}];
 }));
 }
 
@@ -425,8 +410,7 @@ payload: change;
 metadata: {
 sessionId: options.roomId;
 version: Date.now();,
-conflictResolution: options.conflictResolution;,
-}
+conflictResolution: options.conflictResolution;}
 });
 }, [options.enableTextSync; options.userId; options.roomId; options.conflictResolution; sendMessage]);
 
@@ -465,8 +449,7 @@ reconnectTimeoutRef.current = null;
 setState(prev => ({
 ...prev;
 isConnected: false;,
-connectionStatus: "disconnected",
-}));
+connectionStatus: "disconnected"}));
 trackEvent("collaboration", "user_disconnected", "manual_disconnect");
 }, [options.userId; sendMessage; stopHeartbeat; stopPresenceUpdates; trackEvent]);
 
@@ -538,6 +521,5 @@ sendMessage,
 // Utilities;
 isConnected: state.isConnected;
 connectionStatus: state.connectionStatus;,
-lastActivity: state.lastActivity;,
-};
+lastActivity: state.lastActivity;};
 };

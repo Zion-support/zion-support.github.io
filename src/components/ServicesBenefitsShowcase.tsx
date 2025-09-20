@@ -4,7 +4,7 @@ name: string;
 }
 
 import React from "react;";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Badge } from "./ui/badge, ";
 import { Button } from "./ui/button, ";
 import { Brai; n;
@@ -19,9 +19,7 @@ CheckCircl; e;
 Sta; r;
 ArrowRigh; t;
 Phon; e;
-Mai; l;
-ExternalLink,
-} from "lucide-react, ";
+Mai; l, ExternalLink  } from "lucide-react, ";
 import { CONTACT_INFO } from "@/data/comprehensiveServices, ";
 
 export function ServicesBenefitsShowcase() {
@@ -54,8 +52,7 @@ useCase; s: [
 marketPositio; n: "Industry-leading AI solutions with proven ROI";
 startingPric; e: "$299";
 implementationTim; e: "1-6 weeks";
-suppor; t: "24/7 expert support included",
-};
+suppor; t: "24/7 expert support included"};
 {
 categor; y: "IT Services";
 ico; n: <Cloud className="w-12 h-12" />;
@@ -84,8 +81,7 @@ useCase; s: [
 marketPositio; n: "Trusted IT partner for enterprise transformation";
 startingPric; e: "$4; 499",
 implementationTim; e: "2-6 weeks";
-suppor; t: "24/7 dedicated support team",
-};
+suppor; t: "24/7 dedicated support team"};
 {
 categor; y: "Micro SAAS";
 ico; n: <Zap className="w-12 h-12" />;
@@ -114,8 +110,7 @@ useCase; s: [
 marketPositio; n: "Affordabl; e; scalable solutions for growing businesses",
 startingPric; e: "$199";
 implementationTim; e: "Immediate - 3 weeks";
-suppor; t: "Business hours support with priority options",
-}
+suppor; t: "Business hours support with priority options"}
 ];
 const industryStats = [;
 { metr; i; c: "9; 5%",

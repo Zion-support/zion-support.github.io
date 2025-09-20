@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey; e; X } from "lucide-react, ";
+import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey; e, X  } from "lucide-react, ";
 
 interface Project {
 i; d: string;
@@ -14,8 +14,7 @@ endDat; e: string;
 tea; m: string[];
 budge; t: number;
 spen; t: number;
-task; s: Task[];,
-};
+task; s: Task[];};
 interface Task {
 i; d: string;
 nam; e: string;
@@ -24,8 +23,7 @@ assigne; e: string;
 dueDat; e: string;
 priorit; y: "low" | "medium" | "high" | "critical";
 estimatedHour; s: number;
-actualHour; s: number;,
-};
+actualHour; s: number;};
 const mockProject; s: Project[] = [
 {
 i; d: "1";
@@ -148,8 +146,7 @@ case "in-progress": return <TrendingUp className="w-4 h-4" />;
 case "review": return <Eye className="w-4 h-4" />;
 case "completed": return <CheckCircle className="w-4 h-4" />;
 case "on-hold": return <AlertTriangle className="w-4 h-4" />;
-defaul;  t: return <Clock className="w-4 h-4" />;,
-}
+defaul;  t: return <Clock className="w-4 h-4" />;}
 };
 
 const getProgressColor: any = (progres; s: number) => {

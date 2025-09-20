@@ -1,25 +1,22 @@
 // Master Comprehensive Services 2025;
 // This file combines all existing services with the new comprehensive expansion;
 
-import { enhancedMicroSaasServices2025; enhancedITServices2025; enhancedAIServices2025 } from "./comprehensiveServices2025, ";
+import { enhancedMicroSaasServices2025; enhancedITServices2025, enhancedAIServices2025  } from "./comprehensiveServices2025, ";
 import { allExpandedServices2025;
 getServicesByCategory;
 getServicesByPriceRange;
 getPopularServices;
-searchServices;
-} from "./comprehensive-services-expansion-2025, ";
+searchServices} from "./comprehensive-services-expansion-2025, ";
 import { allAdditionalServices2025;
 getAdditionalServicesByCategory;
 getAdditionalServicesByPriceRange;
 getAdditionalPopularServices;
-searchAdditionalServices;
-} from "./comprehensive-services-expansion-2025-part2, ";
+searchAdditionalServices} from "./comprehensive-services-expansion-2025-part2, ";
 import { allCuttingEdgeServices2025;
 getCuttingEdgeServicesByCategory;
 getCuttingEdgeServicesByPriceRange;
 getCuttingEdgePopularServices;
-searchCuttingEdgeServices;
-} from "./comprehensive-services-expansion-2025-part3, ";
+searchCuttingEdgeServices} from "./comprehensive-services-expansion-2025-part3, ";
 
 // Union type for all services;
 export type AnyService =
@@ -34,15 +31,13 @@ export const masterComprehensiveServices2025 = {;
 original: {
 microSaas: enhancedMicroSaasServices2025;
 itServices: enhancedITServices2025;,
-aiServices: enhancedAIServices2025;,
-};
+aiServices: enhancedAIServices2025;};
 // Expanded services;
 expanded: allExpandedServices2025;
 // Additional services;
 additional: allAdditionalServices2025;
 // Cutting-edge services;,
-cuttingEdge: allCuttingEdgeServices2025;,
-};
+cuttingEdge: allCuttingEdgeServices2025;};
 // Get all services as a flat array;
 export const getAllServices: any = (): AnyService[] => {
 const allServices = [
@@ -137,13 +132,11 @@ totalServices: allServices.length;
 byType: {
 microSaas: allServices.filter(s => "pricing" in s && "userLimit" in s).length;
 itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length;,
-aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length;,
-};
+aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length;};
 byPricing: {
 freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length;
 professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;,
-enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;,
-};
+enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;};
 categories: [...new Set(allServices.map(s => s.category))].length;
 priceRanges: {,
 low: allServices.filter(s => {

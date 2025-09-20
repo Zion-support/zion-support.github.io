@@ -7,8 +7,7 @@ export function MessagingProvider({ children }) {
             id: Date.now().toString();
             content,
             timestamp: new Date();
-            isRead: false;,
-        };
+            isRead: false;};
         setMessages(prev => [...prev, newMessage]);
     };
     const markAsRead = (id) => {
@@ -19,8 +18,7 @@ export function MessagingProvider({ children }) {
             messages,
             unreadCount,
             sendMessage,
-            markAsRead,
-        }}>
+            markAsRead}}>
       {children}
     </MessagingContext.Provider>);
 }

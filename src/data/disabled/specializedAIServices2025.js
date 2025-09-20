@@ -47,8 +47,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "DALL-E 3", "Stable Diffusion", "Python", "TensorFlow"],
         integrations: ["Canva", "Adobe Creative Suite", "Shopify", "WordPress", "Social platforms"],
         compliance: ["GDPR", "SOC 2", "Content safety"],
@@ -56,8 +55,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Midjourney", "Runway ML", "Synthesia"],
         aiModel: "GPT-4 + DALL-E 3 + Stable Diffusion";
         trainingData: "Multi-billion parameter models";
-        accuracy: "95%+ content quality score",
-    };
+        accuracy: "95%+ content quality score"};
     // AI-Powered Predictive Healthcare Analytics;
     {
         id: "ai-powered-predictive-healthcare-analytics";
@@ -106,8 +104,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["TensorFlow", "PyTorch", "Python", "Apache Spark", "Kubernetes"],
         integrations: ["Epic", "Cerner", "HL7 FHIR", "DICOM", "EMR systems"],
         compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -115,8 +112,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
         aiModel: "Custom healthcare ML models";
         trainingData: "De-identified patient data";
-        accuracy: "92% prediction accuracy",
-    };
+        accuracy: "92% prediction accuracy"};
     // Autonomous Financial Trading AI;
     {
         id: "autonomous-financial-trading-ai";
@@ -165,8 +161,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "PyTorch", "QuantLib", "Real-time APIs"],
         integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
         compliance: ["SEC", "FINRA", "SOX", "GDPR", "SOC 2"],
@@ -174,8 +169,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Quantopian", "Alpaca", "Interactive Brokers"],
         aiModel: "Custom financial ML models";
         trainingData: "Historical market data + news sentiment";
-        accuracy: "87% prediction accuracy",
-    };
+        accuracy: "87% prediction accuracy"};
     // AI-Powered Supply Chain Optimization;
     {
         id: "ai-powered-supply-chain-optimization";
@@ -224,8 +218,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "Apache Spark", "Kubernetes", "IoT platforms"],
         integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
@@ -233,8 +226,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Flexport", "FourKites", "Project44"],
         aiModel: "Custom supply chain ML models";
         trainingData: "Historical supply chain data";
-        accuracy: "89% optimization accuracy",
-    };
+        accuracy: "89% optimization accuracy"};
     // AI-Powered Legal Research Assistant;
     {
         id: "ai-powered-legal-research-assistant";
@@ -283,8 +275,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "BERT", "Python", "NLP libraries", "Legal databases"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "PracticePanther", "Legal databases"],
         compliance: ["GDPR", "SOC 2", "Legal ethics", "Data privacy"],
@@ -292,8 +283,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Casetext", "ROSS Intelligence", "Harvey AI"],
         aiModel: "GPT-4 + Custom legal models";
         trainingData: "Legal documents + case law";
-        accuracy: "94% legal accuracy",
-    };
+        accuracy: "94% legal accuracy"};
     // AI-Powered Educational Personalization;
     {
         id: "ai-powered-educational-personalization";
@@ -342,8 +332,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "NLP", "Learning analytics", "Cloud platforms"],
         integrations: ["LMS systems", "Google Classroom", "Canvas", "Moodle", "Zoom"],
         compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
@@ -351,6 +340,5 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Knewton", "DreamBox", "Carnegie Learning"],
         aiModel: "Custom educational ML models";
         trainingData: "Educational content + student data";
-        accuracy: "91% learning prediction accuracy",
-    }
+        accuracy: "91% learning prediction accuracy"}
 ];

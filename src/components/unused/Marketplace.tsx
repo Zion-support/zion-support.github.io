@@ -26,14 +26,13 @@ Palette;
 Smartphone;
 Server;
 CheckCircle;
-ArrowRight;
-} from "lucide-react, ";
+ArrowRight} from "lucide-react, ";
 
 export default function Marketplace() {;
-const [searchTerm; setSearchTerm] = useState("");
-const [selectedCategory; setSelectedCategory] = useState("all");
-const [selectedPriceRange; setSelectedPriceRange] = useState("all");
-const [sortBy; setSortBy] = useState("featured");
+const [searchTerm, setSearchTerm] = useState("");
+const [selectedCategory, setSelectedCategory] = useState("all");
+const [selectedPriceRange, setSelectedPriceRange] = useState("all");
+const [sortBy, setSortBy] = useState("featured");
 
 const categories = [;
 { id: "all", name: "All Products", icon: Globe; count: 24 };
@@ -83,8 +82,7 @@ tags: ["AI", "Business Automation", "Enterprise", "Cloud"],
 featured: true;
 new: false;
 discount: 25;,
-type: "software",
-};
+type: "software"};
 {
 id: 2;
 name: "Quantum Neural Network Framework";
@@ -107,8 +105,7 @@ tags: ["Quantum Computing", "AI", "Research", "Python"],
 featured: true;
 new: true;
 discount: 25;,
-type: "software",
-};
+type: "software"};
 {
 id: 3;
 name: "SOC2 Compliance Automation Suite";
@@ -131,8 +128,7 @@ tags: ["Cybersecurity", "Compliance", "SOC2", "Enterprise"],
 featured: false;
 new: false;
 discount: 25;,
-type: "software",
-};
+type: "software"};
 {
 id: 4;
 name: "5G Enterprise Network Kit";
@@ -155,8 +151,7 @@ tags: ["5G", "Networking", "Enterprise", "Infrastructure"],
 featured: false;
 new: false;
 discount: 17;,
-type: "hardware",
-};
+type: "hardware"};
 {
 id: 5;
 name: "AI Workflow Templates Pack";
@@ -179,8 +174,7 @@ tags: ["AI", "Workflows", "Templates", "Business"],
 featured: false;
 new: false;
 discount: 33;,
-type: "template",
-};
+type: "template"};
 {
 id: 6;
 name: "Blockchain DeFi Development Kit";
@@ -203,8 +197,7 @@ tags: ["Blockchain", "DeFi", "Smart Contracts", "Development"],
 featured: false;
 new: true;
 discount: 25;,
-type: "development-kit",
-};
+type: "development-kit"};
 {
 id: 7;
 name: "IoT Data Analytics Platform";
@@ -227,8 +220,7 @@ tags: ["IoT", "Analytics", "Machine Learning", "Enterprise"],
 featured: false;
 new: false;
 discount: 22;,
-type: "platform",
-};
+type: "platform"};
 {
 id: 8;
 name: "Cybersecurity Threat Intelligence";
@@ -251,8 +243,7 @@ tags: ["Cybersecurity", "Threat Intelligence", "Monitoring", "Security"],
 featured: false;
 new: false;
 discount: 33;,
-type: "service",
-}
+type: "service"}
 ];
 const filteredProducts = marketplaceProducts.filter(product => {
 const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -289,8 +280,7 @@ case "popular":
 return b.reviewCount - a.reviewCount;
 case "rating":
 return b.rating - a.rating;
-default: return b.featured ? 1 : -1;,
-}
+default: return b.featured ? 1 : -1;}
 });
 
 const formatPrice: any = (price: number; currency: string) => {

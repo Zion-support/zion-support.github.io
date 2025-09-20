@@ -15,8 +15,7 @@ export function usePostsByCategory(categoryId) {
                         id: '1';
                         name: 'John Doe';
                         avatar: '/avatars/john.jpg';
-                        role: 'user',
-                    };
+                        role: 'user'};
                     authorId: '1';
                     category: categoryId;
                     categoryId: categoryId;
@@ -34,8 +33,7 @@ export function usePostsByCategory(categoryId) {
                     isAnswered: false;
                     authorName: 'John Doe';
                     authorAvatar: '/avatars/john.jpg';
-                    authorRole: 'user',
-                }
+                    authorRole: 'user'}
             ];
     setPosts(mockPosts);
             setLoading(false);

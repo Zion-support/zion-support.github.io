@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface InnovativeMicroSaasService {
 id: string;
 name: string;
@@ -18,8 +18,7 @@ website: string;
 contact: {
 phone: string;
 email: string;,
-address: string;,
-};
+address: string;};
 trialDays: number;
 setupTime: string;
 competitors: string[];
@@ -73,8 +72,7 @@ website: "https://ziontechgroup.com/quantum-ai-research-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "1-2 weeks";,
 competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
@@ -128,8 +126,7 @@ website: "https://ziontechgroup.com/edge-ai-iot-orchestrator";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;
 setupTime: "2-4 weeks";,
 competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
@@ -183,8 +180,7 @@ website: "https://ziontechgroup.com/decentralized-ai-marketplace";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;
 setupTime: "1-2 days";,
 competitors: ["Ocean Protocol", "SingularityNET", "Fetch.ai", "Numerai"],
@@ -238,8 +234,7 @@ website: "https://ziontechgroup.com/green-ai-optimizer";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "3-6 weeks";,
 competitors: ["Watershed", "Normative", "Persefoni", "CarbonChain"],
@@ -293,8 +288,7 @@ website: "https://ziontechgroup.com/ai-healthcare-diagnostics-pro";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;
 setupTime: "4-8 weeks";,
 competitors: ["Aidoc", "Zebra Medical Vision", "Enlitic", "Butterfly Network"],
@@ -348,8 +342,7 @@ website: "https://ziontechgroup.com/ai-financial-intelligence-suite";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "2-4 weeks";,
 competitors: ["Palantir", "SAS", "IBM Watson", "Oracle Financial Services"],
@@ -403,8 +396,7 @@ website: "https://ziontechgroup.com/ai-cybersecurity-defense-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;
 setupTime: "2-3 weeks";,
 competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
@@ -458,8 +450,7 @@ website: "https://ziontechgroup.com/ai-logistics-optimization-engine";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "3-5 weeks";,
 competitors: ["Flexport", "Convoy", "FourKites", "Project44"],
@@ -513,8 +504,7 @@ website: "https://ziontechgroup.com/ai-education-personalization-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;
 setupTime: "1-2 weeks";,
 competitors: ["Duolingo", "Khan Academy", "Coursera", "edX"],

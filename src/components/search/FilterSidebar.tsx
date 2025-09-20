@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import React from "react",
+import React from "react",;
 const FilterSidebar: React.FC = () => {
 ,
 return (,
@@ -13,3 +13,7 @@ return (,
 },
 </div>)},
 export default FilterSidebar,;<//div><///div>
+import React from 'react';
+interface FilterSidebarProps {
+  className?: string;
+  children?: React.ReactNode}

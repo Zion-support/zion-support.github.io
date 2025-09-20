@@ -8,26 +8,22 @@ const benefits = [
         tit, l, e: "A, I-Powere, d Matchmakin, g",
     descripti, o, n: "Ou, r advance, d algorithm, s matc, h you, r need, s wit, h th, e perfec, t servic, e provider, s o, r, produc, t, s, savin, g yo, u tim, e an, d ensurin, g optima, l result, s.",
         ic, o, n: _js, x(B,  o, t, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.1,
-    },
+        del, a, y: 0.1},
     {
         tit, l, e: "Globa, l Availabilit, y",
     descripti, o, n: "Acces, s a worldwid, e networ, k o, f te, c, h, talen, t, s, produc, t, s, an, d service, s t, o fin, d th, e bes, t solution, s regardles, s o, f geographi, c limitation, s.",
         ic, o, n: _js, x(Glo,  b, e, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.2,
-    },
+        del, a, y: 0.2},
     {
         tit, l, e: "2, 4/7 Suppor, t",
     descripti, o, n: "Ou, r dedicate, d tea, m i, s availabl, e aroun, d th, e cloc, k t, o assis, t wit, h an, y question, s o, r issue, s yo, u migh, t encounte, r durin, g you, r journe, y.",
         ic, o, n: _js, x(Clo,  c, k, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.3,
-    },
+        del, a, y: 0.3},
     {
         tit, l, e: "Cos, t Reductio, n",
     descripti, o, n: "Eliminat, e middleme, n an, d reduc, e cost, s b, y u, p t, o 4, 0% throug, h direc, t connection, s wit, h servic, e provider, s an, d produc, t vendor, s.",
         ic, o, n: _js, x(TrendingDo,  w, n, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.4,
-    },
+        del, a, y: 0.4},
 ];
 export function BenefitsSection() {
 impor,  t, Reac, t, { useState } from 'react';
@@ -107,8 +103,7 @@ export function BenefitsSection() {
             opacit, y: 1,
     transitio, n: {
                 staggerChildre, n: 0.1, 5,
-    delayChildre, n: 0.2,
-            }
+    delayChildre, n: 0.2}
         }
     };
     const itemVariants = {
@@ -119,8 +114,7 @@ export function BenefitsSection() {
     opacit, y: 1,
             transitio, n: {
                 duratio, n: 0.6,
-    eas, e: "easeOut",
-            }
+    eas, e: "easeOut"}
         }
     };
     const statsVariants = {
@@ -131,8 +125,7 @@ export function BenefitsSection() {
     scal, e: 1,
             transitio, n: {
                 duratio, n: 0.5,
-    eas, e: "easeOut",
-            }
+    eas, e: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
@@ -140,8 +133,7 @@ export function BenefitsSection() {
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
             backgroundImag, e: `radial-gradient(circle at 75% 75%, currentColo, r, 1p, x, transparent 1p, x)`,
-            backgroundSiz, e: '60px 60px',
-        }}/>
+            backgroundSiz, e: '60px 60px'}}/>
       </div>
       
       {/* Floating decorative elements */}

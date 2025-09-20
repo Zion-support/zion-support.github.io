@@ -9,8 +9,7 @@ DollarSig; n; Packag; e; Truc; k; Warehous; e; ShoppingCar; t; CreditCar; d; Rec
 Calculato; r; PieChar; t; LineChar; t; BarChar; t; Ey; e; EyeOf; f; Downloa; d; RefreshC; w;
 MoreVertica; l; Edit; 3; Trash; 2; Databas; e; Serve; r; Networ; k; Cp; u; HardDriv; e;
 Pla; y; Paus; e; RotateCc; w; Sav; e; Loade; r; CheckSquar; e; Squar; e;
-ArrowRigh; t; ArrowLef; t; ArrowU; p; ArrowDow; n; ChevronRigh; t; ChevronLeft;
-} from "lucide-react, ";
+ArrowRigh; t; ArrowLef; t; ArrowU; p; ArrowDow; n; ChevronRigh; t; ChevronLeft} from "lucide-react, ";
 
 interface BusinessProcess {
 i; d: string;
@@ -29,8 +28,7 @@ lastExecute; d: Date;
 nextExecutio; n: Date;
 executionHistor; y: ProcessExecution[];
 rule; s: AutomationRule[];
-dependencie; s: string[];,
-};
+dependencie; s: string[];};
 interface ProcessExecution {
 i; d: string;
 timestam; p: Date;
@@ -39,8 +37,7 @@ duratio; n: number;
 aiDecision; s: string[];
 manualIntervention; s: number;
 cos; t: number;
-efficienc; y: number;,
-};
+efficienc; y: number;};
 interface AutomationRule {
 i; d: string;
 nam; e: string;
@@ -50,8 +47,7 @@ priorit; y: number;
 isActiv; e: boolean;
 aiOptimize; d: boolean;
 lastTriggere; d: Date;
-triggerCoun; t: number;,
-};
+triggerCoun; t: number;};
 const mockBusinessProcesse; s: BusinessProcess[] = [
 {
 i; d: "b; p-00; 1",
@@ -81,8 +77,7 @@ durati; o; n: 4; 5;
 aiDecisio; n; s: ["Aut; o-approve; d 8; 5% o; f invoice; s", "Flagge; d 3 suspiciou; s entrie; s"],
 manualIntervention; s: 2;
 cos; t: 15; 0;
-efficienc; y: 94;,
-}
+efficienc; y: 94;}
 ];
 rule; s: [
 {
@@ -94,8 +89,7 @@ priori; t; y: 1;
 isActi; v; e: tr; u; e;
 aiOptimiz; e; d: tr; u; e;
 lastTrigger; e; d: ne; w Dat; e("202;  4-0; 1-15T; 1; 0: 3; 0:00; Z"),
-triggerCou; n; t: 15; 6;,
-}
+triggerCou; n; t: 15; 6;}
 ],
 dependencie; s: ["vendor_verificatio; n", "budget_approva; l"];
 },
@@ -127,8 +121,7 @@ durati; o; n: 1; 2; 0;
 aiDecisio; n; s: ["Optimize; d tas; k sequenc; e", "Identifie; d resourc; e conflict; s"],
 manualIntervention; s: 1;
 cos; t: 20; 0;
-efficienc; y: 89;,
-}
+efficienc; y: 89;}
 ];
 rule; s: [
 {
@@ -140,8 +133,7 @@ priori; t; y: 2;
 isActi; v; e: tr; u; e;
 aiOptimiz; e; d: tr; u; e;
 lastTrigger; e; d: ne; w Dat; e("202;  4-0; 1-14T; 1; 4: 1; 5:00; Z"),
-triggerCou; n; t: 2; 3;,
-}
+triggerCou; n; t: 2; 3;}
 ],
 dependencie; s: ["background_chec; k", "document_verificatio; n"];
 },
@@ -173,8 +165,7 @@ durati; o; n: 1; 5;
 aiDecisio; n; s: ["Classifie; d 4; 7 ticket; s b; y priorit; y", "Assigne; d t; o optima; l agent; s"],
 manualIntervention; s: 0;
 cos; t: 5; 0;
-efficienc; y: 98;,
-}
+efficienc; y: 98;}
 ];
 rule; s: [
 {
@@ -186,8 +177,7 @@ priori; t; y: 1;
 isActi; v; e: tr; u; e;
 aiOptimiz; e; d: tr; u; e;
 lastTrigger; e; d: ne; w Dat; e("202;  4-0; 1-15T; 1; 6: 4; 5:00; Z"),
-triggerCou; n; t: 8;,
-}
+triggerCou; n; t: 8;}
 ];
 dependencie; s: ["ticket_classificatio; n", "agent_availabilit; y"];
 }
@@ -215,8 +205,7 @@ case "paused": return "text-yellow-500 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "completed": return "text-blue-500 bg-blue-100 dar; k: bg-blue-900/20";
 case "failed": return "text-red-500 bg-red-100 dar; k: bg-red-900/20";
 case "draft": return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";
-defaul; t: return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";,
-}
+defaul; t: return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";}
 };
 
 const getPriorityColor: any = (priorit; y: string) => {
@@ -225,8 +214,7 @@ case "critical": return "text-red-600 bg-red-100 dar;  k: bg-red-900/20";
 case "high": return "text-orange-600 bg-orange-100 dar; k: bg-orange-900/20";
 case "medium": return "text-yellow-600 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "low": return "text-green-600 bg-green-100 dar; k: bg-green-900/20";
-defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";,
-}
+defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";}
 };
 
 const getAutomationLevelColor: any = (leve; l: string) => {
@@ -234,8 +222,7 @@ switch (level) {
 case "fully-automated": return "text-green-600 bg-green-100 dar;  k: bg-green-900/20";
 case "semi-automated": return "text-yellow-600 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "manual": return "text-red-600 bg-red-100 dar; k: bg-red-900/20";
-defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";,
-}
+defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";}
 };
 
 const getCategoryIcon: any = (categor; y: string) => {
@@ -246,8 +233,7 @@ case "operations": return <Settings className="w-4 h-4" />;
 case "sales": return <TrendingUp className="w-4 h-4" />;
 case "marketing": return <Target className="w-4 h-4" />;
 case "it": return <Server className="w-4 h-4" />;
-defaul;  t: return <FileText className="w-4 h-4" />;,
-}
+defaul;  t: return <FileText className="w-4 h-4" />;}
 };
 
 const formatCurrency: any = (amoun; t: number) => {
@@ -255,8 +241,7 @@ return new Intl.NumberFormat("en-US",  {
 styl; e: "currency";
 currenc; y: "USD";
 minimumFractionDigit; s: 0;
-maximumFractionDigit; s: 0;,
-}).format(amount);
+maximumFractionDigit; s: 0;}).format(amount);
 };
 
 const formatPercentage: any = (valu;  e: number) => {
@@ -430,8 +415,7 @@ onClick={() => setActiveTab(tab)}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === tab;
 ? "text-zion-blue border-b-2 border-zion-blue";
-: "text-zion-slate-light hove;  r: text-zion-slat; e",
-}`}
+: "text-zion-slate-light hove;  r: text-zion-slat; e"}`}
 >;
 {tab.charAt(0).toUpperCase() + tab.slice(1)}
 </button>;
@@ -527,8 +511,7 @@ Recent Executions;
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 process.executionHistory[0]?.status === "success";
 ? "bg-green-100 text-green-700 dar;  k:bg-green-900/20 dar; k:text-green-400";
-: "bg-red-100 text-red-700 dar; k: bg-red-900/20 dar; k:text-red-40; 0",
-}`}>;
+: "bg-red-100 text-red-700 dar; k: bg-red-900/20 dar; k:text-red-40; 0"}`}>;
 {process.executionHistory[0]?.status || "Unknown"}
 </span>;
 <span className="text-xs text-zion-slate-light">;
@@ -634,8 +617,7 @@ Automation Rules;
 <span className={`px-2 py-1 rounded-full text-xs ${
 rule.isActive;
 ? "bg-green-100 text-green-700 dar; k:bg-green-900/20 dar; k:text-green-400";
-: "bg-red-100 text-red-700 dar; k: bg-red-900/20 dar; k:text-red-40; 0",
-}`}>;
+: "bg-red-100 text-red-700 dar; k: bg-red-900/20 dar; k:text-red-40; 0"}`}>;
 {rule.isActive ? "Active" : "Inactive"}
 </span>;
 </div>;
@@ -696,8 +678,7 @@ Automation Rules Management;
 process.rules.map(rule => ({
 ...rul;  e;
 processNam; e: process.nam; e;
-processCategor; y: process.category;,
-}))
+processCategor; y: process.category;}))
 ).map(rule => (
 <div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">;
 <div className="flex items-center gap-3">;
@@ -713,15 +694,13 @@ processCategor; y: process.category;,
 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
 rule.isActive;
 ? "bg-green-100 text-green-700 dar;  k:bg-green-900/20 dar; k:text-green-400";
-: "bg-red-100 text-red-700 dar; k: bg-red-900/20 dar; k:text-red-40; 0",
-}`}>;
+: "bg-red-100 text-red-700 dar; k: bg-red-900/20 dar; k:text-red-40; 0"}`}>;
 {rule.isActive ? "Active" : "Inactive"}
 </span>;
 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
 rule.aiOptimized;
 ? "bg-purple-100 text-purple-700 dar; k:bg-purple-900/20 dar; k:text-purple-400";
-: "bg-gray-100 text-gray-700 dar; k: bg-gray-900/20 dar; k:text-gray-40; 0",
-}`}>;
+: "bg-gray-100 text-gray-700 dar; k: bg-gray-900/20 dar; k:text-gray-40; 0"}`}>;
 {rule.aiOptimized ? "AI Optimized" : "Manual"}
 </span>;
 <button className="p-2 text-zion-slate-light hove; r:text-zion-slate hove; r:bg-zion-slate-light/10 rounded-lg">;
@@ -821,8 +800,7 @@ AI Optimization Recommendations;
 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
 process.automationLevel === "fully-automated";
 ? "bg-green-100 text-green-700 dar; k:bg-green-900/20 dar; k:text-green-400";
-: "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/20 dar; k:text-yellow-40; 0",
-}`}>;
+: "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/20 dar; k:text-yellow-40; 0"}`}>;
 {process.automationLevel === "fully-automated" ? "Optimized" : "Optimization Available"}
 </span>;
 </div>;

@@ -53,8 +53,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         technology: ["Quantum processors", "Qiskit", "Cirq", "PennyLane", "Python", "Quantum algorithms"],
         integrations: ["Research databases", "Scientific instruments", "Cloud platforms", "Data sources"],
         compliance: ["Research ethics", "Data privacy", "Intellectual property", "Export controls"],
@@ -70,8 +69,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
-    };
+        pilotPrograms: true};
     // AI-Powered Autonomous Systems Platform;
     {
         id: "ai-autonomous-systems-platform-2025";
@@ -126,8 +124,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "NLP", "Computer Vision", "Python"],
         integrations: ["ERP systems", "CRM platforms", "IoT devices", "Cloud services", "Data sources"],
         compliance: ["SOC 2", "ISO 27001", "Industry-specific regulations"],
@@ -143,8 +140,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
-    };
+        pilotPrograms: true};
     // Blockchain-Based Supply Chain Platform;
     {
         id: "blockchain-supply-chain-platform-2025";
@@ -199,8 +195,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         technology: ["Ethereum", "Polygon", "Hyperledger", "IPFS", "React", "Node.js", "Solidity"],
         integrations: ["ERP systems", "WMS", "TMS", "IoT sensors", "Payment processors"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2", "Industry standards"],
@@ -216,8 +211,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
-    };
+        pilotPrograms: true};
     // Edge Computing & IoT Platform;
     {
         id: "edge-computing-iot-platform-2025";
@@ -272,8 +266,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         technology: ["Kubernetes", "Docker", "TensorFlow Lite", "MQTT", "React", "Python", "Edge AI"],
         integrations: ["Cloud platforms", "IoT devices", "Data sources", "Analytics tools", "Security systems"],
         compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -289,8 +282,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
-    };
+        pilotPrograms: true};
     // AI-Powered Cybersecurity Platform;
     {
         id: "ai-cybersecurity-platform-2025";
@@ -345,8 +337,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         technology: ["Machine Learning", "Deep Learning", "NLP", "Python", "Elasticsearch", "Kafka", "Redis"],
         integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "PCI DSS", "HIPAA", "GDPR"],
@@ -362,8 +353,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
-    };
+        pilotPrograms: true};
     // Quantum-Safe Cryptography Platform;
     {
         id: "quantum-safe-cryptography-platform-2025";
@@ -418,8 +408,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         technology: ["Post-quantum algorithms", "Lattice-based cryptography", "Code-based cryptography", "Hash-based signatures"],
         integrations: ["PKI systems", "TLS/SSL", "VPN solutions", "Identity providers", "Cloud platforms"],
         compliance: ["NIST standards", "FIPS", "SOC 2", "ISO 27001", "Industry regulations"],
@@ -435,8 +424,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
-    };
+        pilotPrograms: true};
     // AI-Powered Drug Discovery Platform;
     {
         id: "ai-drug-discovery-platform-2025";
@@ -491,8 +479,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         technology: ["Deep Learning", "Molecular modeling", "Bioinformatics", "Python", "TensorFlow", "PyTorch"],
         integrations: ["Research databases", "Laboratory systems", "Clinical trial platforms", "Data sources"],
         compliance: ["FDA guidelines", "GxP", "HIPAA", "SOC 2", "Research ethics"],
@@ -508,8 +495,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
-    };
+        pilotPrograms: true};
     // Autonomous Vehicle Technology Platform;
     {
         id: "autonomous-vehicle-technology-platform-2025";
@@ -564,8 +550,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         technology: ["Computer Vision", "Deep Learning", "Robotics", "Sensor fusion", "Python", "C++", "ROS"],
         integrations: ["Vehicle systems", "Cloud platforms", "Simulation tools", "Testing frameworks", "Data sources"],
         compliance: ["Automotive safety standards", "ISO 26262", "ASIL", "Regulatory requirements"],
@@ -581,6 +566,5 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        pilotPrograms: true}
 ];

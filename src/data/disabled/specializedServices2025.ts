@@ -1,8 +1,7 @@
 import React from "react";
 
 export; interface; SpecializedService {
-id: string;title: string;description: string;category: string;subcategory: string;price: number;marketPrice: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;,
-};
+id: string;title: string;description: string;category: string;subcategory: string;price: number;marketPrice: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;};
 };export; const; SPECIALIZED_SERVICES_20o25: SpecializedService[] = [;
 // AI-Powered; Education; Platform;
 {
@@ -14,8 +13,7 @@ i;d: "ai-education-platform",title: "AI; Education; Platform",description: "Inte
 "K-12 education","Higher education","Corporate training","Language learning""Skills development";
 ,  ],targetAudience: [;
 "Educational institutions","Corporate; training; departments","Online; learning; platforms","Tutoring services""Educational; content; creators";
-,  ],tags: ["AI", "Education", "Personalized Learning",, "EdTech""Analytics"],estimatedDelivery: "6-10 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";,
-};
+,  ],tags: ["AI", "Education", "Personalized Learning", "EdTech""Analytics"],estimatedDelivery: "6-10 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 // Quantum; Cryptography; Platform;
 {
@@ -27,8 +25,7 @@ id: "quantum-cryptography-platform",title: "Quantum; Cryptography; Platform",des
 "Government communications","Financial; services; security","Healthcare; data; protection","Military communications""Critical; infrastructure; security";
 ,  ],targetAudience: [;
 "Government agencies","Financial institutions","Healthcare organizations","Defense contractors""Critical; infrastructure; operators";
-,  ],tags: ["Quantum Computing", "Cryptography", "Security",, "QKD""Post-Quantum"],estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";,
-};
+,  ],tags: ["Quantum Computing", "Cryptography", "Security", "QKD""Post-Quantum"],estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 // AI-Powered; Manufacturing; Platform;
 {
@@ -40,8 +37,7 @@ id: "ai-manufacturing-platform",title: "AI; Manufacturing; Platform",description
 "Automotive manufacturing","Electronics production","Food; and; beverage","Pharmaceutical manufacturing""Aerospace manufacturing";
 ,  ],targetAudience: [;
 "Manufacturing companies","Industrial facilities","Production managers","Quality; control; teams""Operations directors";
-,  ],tags: ["AI", "Manufacturing", "IoT", "Predictive Maintenance""Quality; Control"],estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";,
-};
+,  ],tags: ["AI", "Manufacturing", "IoT", "Predictive Maintenance""Quality; Control"],estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 // Blockchain; Identity; Management;
 {
@@ -53,8 +49,7 @@ id: "blockchain-identity-management",title: "Blockchain; Identity; Management",d
 "Digital banking","Healthcare identity","Government services","E-commerce verification""Supply; chain; identity";
 ,  ],targetAudience: [;
 "Financial institutions","Healthcare organizations","Government agencies","E-commerce platforms""Identity; verification; services";
-,  ],tags: ["Blockchain", "Digital Identity", "Zero-Knowledge Proofs",, "Authentication""Privacy"],estimatedDelivery: "8-12 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";,
-};
+,  ],tags: ["Blockchain", "Digital Identity", "Zero-Knowledge Proofs", "Authentication""Privacy"],estimatedDelivery: "8-12 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 // AI-Powered; Real; Estate Platform;
 {
@@ -66,8 +61,7 @@ id: "ai-real-estate-platform",title: "AI; Real; Estate Platform",description: "I
 "Property investment","Real; estate; development","Property management","Market analysis""Tenant management";
 ,  ],targetAudience: [;
 "Real; estate; investors","Property developers","Property managers","Real; estate; agents""Investment firms";
-,  ],tags: ["AI", "Real Estate", "Property Management",, "Investment""Analytics"],estimatedDelivery: "6-10 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";,
-};
+,  ],tags: ["AI", "Real Estate", "Property Management", "Investment""Analytics"],estimatedDelivery: "6-10 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 // Quantum; Internet; Infrastructure;
 {
@@ -79,8 +73,7 @@ id: "quantum-internet-infrastructure",title: "Quantum; Internet; Infrastructure"
 "Government networks","Financial networks","Research institutions","Defense communications""Critical infrastructure";
 ,  ],targetAudience: [;
 "Government agencies","Telecommunications companies","Research institutions","Defense contractors""Technology companies";
-,  ],tags: ["Quantum Internet", "Infrastructure", "Networking",, "Security""Innovation"],estimatedDelivery: "16-24 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";,
-};
+,  ],tags: ["Quantum Internet", "Infrastructure", "Networking", "Security""Innovation"],estimatedDelivery: "16-24 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 ];
 export; default; SPECIALIZED_SERVICES_20o25,

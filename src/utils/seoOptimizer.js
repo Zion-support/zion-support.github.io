@@ -87,8 +87,7 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https: //ziontechgroup.com";
-                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-            }
+                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}
         };
     // Add specific structured data based on page type;
         if (path === '/') {
@@ -136,8 +135,7 @@ export class SEOOptimizer {
                 page,
                 issue: 'missing-title';
                 severity: 'high';
-                suggestedFix: 'Add a descriptive title tag with relevant keywords',
-            });
+                suggestedFix: 'Add a descriptive title tag with relevant keywords'});
      }
         // Check for missing meta description;
         if (!content.includes('name="description"')) {
@@ -145,8 +143,7 @@ export class SEOOptimizer {
                 page,
                 issue: 'missing-description';
                 severity: 'high';
-                suggestedFix: 'Add a meta description tag with compelling content',
-            });
+                suggestedFix: 'Add a meta description tag with compelling content'});
      }
         // Check for short meta description;
         const descMatch = content.match(/name="description" content="([^"]+)"/);
@@ -155,8 +152,7 @@ export class SEOOptimizer {
                 page,
                 issue: 'short-description';
                 severity: 'medium';
-                suggestedFix: 'Expand meta description to 120-160 characters for better SEO',
-            });
+                suggestedFix: 'Expand meta description to 120-160 characters for better SEO'});
      }
         // Check for missing headings;
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
@@ -174,8 +170,7 @@ export class SEOOptimizer {
                 page,
                 issue: 'minimal-content';
                 severity: 'medium';
-                suggestedFix: 'Add more relevant content to improve user experience and SEO value',
-            });
+                suggestedFix: 'Add more relevant content to improve user experience and SEO value'});
      }
         return issues;
     }

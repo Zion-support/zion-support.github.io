@@ -20,8 +20,7 @@ marketPrice: string;
 contactInfo: {
 phone: string;
 email: string;,
-website: string;,
-};
+website: string;};
 aiScore?: number;
 rating?: number;
 reviewCount?: number;
@@ -91,8 +90,7 @@ marketPrice: "$899 - $2;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 98;
 rating: 4.9;
 reviewCount: 156;
@@ -157,8 +155,7 @@ marketPrice: "$1;299 - $4;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 97;
 rating: 4.8;
 reviewCount: 89;
@@ -223,8 +220,7 @@ marketPrice: "$699 - $2;499/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 95;
 rating: 4.7;
 reviewCount: 134;
@@ -289,8 +285,7 @@ marketPrice: "$599 - $1;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 93;
 rating: 4.6;
 reviewCount: 78;
@@ -355,8 +350,7 @@ marketPrice: "$799 - $2;799/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 96;
 rating: 4.8;
 reviewCount: 167;
@@ -421,8 +415,7 @@ marketPrice: "$2;499 - $9;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 99;
 rating: 4.9;
 reviewCount: 45;
@@ -487,8 +480,7 @@ marketPrice: "$899 - $3;499/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 94;
 rating: 4.7;
 reviewCount: 112;
@@ -553,8 +545,7 @@ marketPrice: "$649 - $2;199/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 95;
 rating: 4.8;
 reviewCount: 203;
@@ -619,8 +610,7 @@ marketPrice: "$1;099 - $3;999/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-};
+website: "https://ziontechgroup.com"};
 aiScore: 96;
 rating: 4.8;
 reviewCount: 178;

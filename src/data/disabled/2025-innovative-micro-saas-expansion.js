@@ -36,8 +36,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '1-2 weeks';
         competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
@@ -90,8 +89,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '2-4 weeks';
         competitors: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn'],
@@ -144,8 +142,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '1-2 days';
         competitors: ['Ocean Protocol', 'SingularityNET', 'Fetch.ai', 'Numerai'],
@@ -198,8 +195,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '3-6 weeks';
         competitors: ['Watershed', 'Normative', 'Persefoni', 'CarbonChain'],
@@ -252,8 +248,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 45;
         setupTime: '4-8 weeks';
         competitors: ['Aidoc', 'Zebra Medical Vision', 'Enlitic', 'Butterfly Network'],
@@ -306,8 +301,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '2-4 weeks';
         competitors: ['Palantir', 'SAS', 'IBM Watson', 'Oracle Financial Services'],
@@ -360,8 +354,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '2-3 weeks';
         competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
@@ -414,8 +407,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '3-5 weeks';
         competitors: ['Flexport', 'Convoy', 'FourKites', 'Project44'],
@@ -468,8 +460,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '1-2 weeks';
         competitors: ['Duolingo', 'Khan Academy', 'Coursera', 'edX'],

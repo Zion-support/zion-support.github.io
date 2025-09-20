@@ -22,8 +22,7 @@ const initialState = { items: [] };
             return { items: state.items.filter(i => i.id !== action.payload) };
     case 'CLEAR_CART':
             return { items: [] };
-    default: return state;,
-     }
+    default: return state;}
 }
 const CartContext = createContext(undefined);
 export function useCart() {
@@ -68,7 +67,6 @@ export function CartProvider({ children }) {
     }, [state.items, cartKey]);
     const value = {
         items: state.items;
-        dispatch,
-    };
+        dispatch};
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

@@ -47,10 +47,8 @@ export const CUTTING_EDGE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/autonomous-ai-research",
-    };
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/autonomous-ai-research"};
     // AI Consciousness Evolution Platform;
     {
         id: "ai-consciousness-evolution-platform";
@@ -99,10 +97,8 @@ export const CUTTING_EDGE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution",
-    };
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution"};
     // AI Autonomous Business Manager;
     {
         id: "ai-autonomous-business-manager";
@@ -151,10 +147,8 @@ export const CUTTING_EDGE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/ai-business-manager",
-    };
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/ai-business-manager"};
     // AI Autonomous Creative Director;
     {
         id: "ai-autonomous-creative-director";
@@ -203,10 +197,8 @@ export const CUTTING_EDGE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/ai-creative-director",
-    };
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/ai-creative-director"};
     // AI Autonomous Code Review System;
     {
         id: "ai-autonomous-code-review-system";
@@ -255,8 +247,6 @@ export const CUTTING_EDGE_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
-        websiteUrl: "https://ziontechgroup.com/ai-code-review",
-    }
+            website: "https://ziontechgroup.com"};
+        websiteUrl: "https://ziontechgroup.com/ai-code-review"}
 ];

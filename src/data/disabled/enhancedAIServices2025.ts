@@ -4,8 +4,7 @@ export interface ServiceContact {
 phone: string;
 email: string;
 website: string;,
-address: string;,
-}
+address: string;}
 
 export interface AIService {
 id: number;
@@ -40,8 +39,7 @@ integrationTime: string;
 scalability: string;
 realTimeProcessing: boolean;
 multilingualSupport: boolean;,
-industrySpecific: boolean;,
-}
+industrySpecific: boolean;}
 
 // Enhanced AI Services for 2025;
 export const enhancedAIServices2025: AIService[] = [
@@ -77,8 +75,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-vision-pro";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$0.05-0.15 per API call";,
 competitors: ["Google Vision AI", "AWS Rekognition", "Azure Computer Vision"],
 aiModels: ["YOLO v8", "ResNet", "EfficientNet", "Custom trained models"],
@@ -99,8 +96,7 @@ integrationTime: "2-4 hours";
 scalability: "Millions of requests/day";
 realTimeProcessing: true;
 multilingualSupport: true;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 2;
 name: "NLP Genius";
@@ -133,8 +129,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/nlp-genius";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$199-599/month";,
 competitors: ["OpenAI GPT", "Google Cloud NLP", "AWS Comprehend"],
 aiModels: ["BERT", "GPT-4", "T5", "Custom trained models"],
@@ -155,8 +150,7 @@ integrationTime: "4-8 hours";
 scalability: "Unlimited requests";
 realTimeProcessing: true;
 multilingualSupport: true;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 3;
 name: "Predictive Analytics Pro";
@@ -189,8 +183,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/predictive-analytics-pro";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$999-2999/month";,
 competitors: ["SAS", "IBM SPSS", "RapidMiner"],
 aiModels: ["Random Forest", "XGBoost", "Neural Networks", "Custom algorithms"],
@@ -211,8 +204,7 @@ integrationTime: "2-4 weeks";
 scalability: "Enterprise-grade";
 realTimeProcessing: true;
 multilingualSupport: false;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 4;
 name: "AI Chatbot Studio";
@@ -245,8 +237,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-chatbot-studio";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$49-199/month";,
 competitors: ["Dialogflow", "IBM Watson", "Microsoft Bot Framework"],
 aiModels: ["GPT-4", "BERT", "Custom trained models"],
@@ -267,8 +258,7 @@ integrationTime: "2-4 hours";
 scalability: "Unlimited conversations";
 realTimeProcessing: true;
 multilingualSupport: true;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 5;
 name: "AI Content Creator";
@@ -301,8 +291,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-content-creator";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$0.10-0.25 per word";,
 competitors: ["Jasper", "Copy.ai", "Writesonic"],
 aiModels: ["GPT-4", "Claude", "Custom trained models"],
@@ -323,8 +312,7 @@ integrationTime: "1-2 hours";
 scalability: "Unlimited words";
 realTimeProcessing: true;
 multilingualSupport: true;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 6;
 name: "AI Data Scientist";
@@ -357,8 +345,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-data-scientist";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1499-4999/month";,
 competitors: ["DataRobot", "H2O.ai", "Google AutoML"],
 aiModels: ["AutoML", "Custom algorithms", "Pre-trained models"],
@@ -379,8 +366,7 @@ integrationTime: "1-2 weeks";
 scalability: "Enterprise-grade";
 realTimeProcessing: true;
 multilingualSupport: false;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 7;
 name: "AI Voice Assistant";
@@ -413,8 +399,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-voice-assistant";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$299-899/month";,
 competitors: ["Google Speech-to-Text", "AWS Polly", "Azure Speech"],
 aiModels: ["Whisper", "Tacotron", "Custom trained models"],
@@ -435,8 +420,7 @@ integrationTime: "4-8 hours";
 scalability: "Unlimited requests";
 realTimeProcessing: true;
 multilingualSupport: true;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 8;
 name: "AI Recommendation Engine";
@@ -469,8 +453,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-recommendation-engine";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$0.001-0.005 per recommendation";,
 competitors: ["Amazon Personalize", "Google Recommendations", "Azure Personalizer"],
 aiModels: ["Collaborative filtering", "Content-based", "Deep learning", "Custom algorithms"],
@@ -491,8 +474,7 @@ integrationTime: "1-2 weeks";
 scalability: "Millions of recommendations";
 realTimeProcessing: true;
 multilingualSupport: false;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 9;
 name: "AI Fraud Detection";
@@ -525,8 +507,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-fraud-detection";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$799-2499/month";,
 competitors: ["Sift", "Signifyd", "Forter"],
 aiModels: ["Neural networks", "Random forest", "Custom algorithms"],
@@ -547,8 +528,7 @@ integrationTime: "2-4 weeks";
 scalability: "Enterprise-grade";
 realTimeProcessing: true;
 multilingualSupport: false;,
-industrySpecific: true;,
-};
+industrySpecific: true;};
 {
 id: 10;
 name: "AI Process Automation";
@@ -581,8 +561,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-process-automation";,
-address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$399-1299/month";,
 competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
 aiModels: ["Decision trees", "Neural networks", "Custom algorithms"],
@@ -603,7 +582,6 @@ integrationTime: "2-4 weeks";
 scalability: "Enterprise-grade";
 realTimeProcessing: true;
 multilingualSupport: false;,
-industrySpecific: true;,
-}
+industrySpecific: true;}
 ];
 export default enhancedAIServices2025;

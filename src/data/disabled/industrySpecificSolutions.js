@@ -52,8 +52,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         industryExpertise: 98;
         rating: 4.9;
         reviewCount: 234;
@@ -123,8 +122,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         industryExpertise: 96;
         rating: 4.8;
         reviewCount: 189;
@@ -194,8 +192,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         industryExpertise: 97;
         rating: 4.9;
         reviewCount: 156;
@@ -265,8 +262,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         industryExpertise: 94;
         rating: 4.8;
         reviewCount: 267;
@@ -336,8 +332,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         industryExpertise: 95;
         rating: 4.8;
         reviewCount: 134;
@@ -407,8 +402,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         industryExpertise: 93;
         rating: 4.7;
         reviewCount: 189;

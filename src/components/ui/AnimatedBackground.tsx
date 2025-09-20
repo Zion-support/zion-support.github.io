@@ -112,8 +112,7 @@ y: number;
 vx: number;
 vy: number;
 size: number;,
-opacity: number;,
-}> = [];
+opacity: number;}> = [];
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -131,8 +130,7 @@ y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 0.5;
 vy: (Math.random() - 0.5) * 0.5;
 size: Math.random() * 2 + 1;,
-opacity: Math.random() * 0.5 + 0.1,
-});
+opacity: Math.random() * 0.5 + 0.1});
 }
 };
 
@@ -320,8 +318,7 @@ style={{
 left: `${Math.random() * 100}%`,
 top: `${Math.random() * 100}%`,
 animationDelay: `${Math.random() * 2}s`,
-animationDuration: `${2 + Math.random() * 2}s`,
-}}
+animationDuration: `${2 + Math.random() * 2}s`}}
 />;
 ))}
 </div>;
@@ -340,8 +337,7 @@ className={`relative ${className}`}
 style={{
 background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
 padding: borderWidth;,
-borderRadius: "inherit",
-}}
+borderRadius: "inherit"}}
 >;
 <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">;
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-blue-500 rounded-lg blur-sm opacity-50"></div>;

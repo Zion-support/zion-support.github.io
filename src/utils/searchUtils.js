@@ -256,8 +256,7 @@ export const getDefaultFilters = () => ({
     minPrice: 0;
     maxPrice: 10000;
     minRating: 0;
-    sort: 'relevance',
-});
+    sort: 'relevance'});
     export default {
     highlightSearchTerms,
     matchesSearchTerm,

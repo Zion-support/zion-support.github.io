@@ -3,19 +3,15 @@ import { motion } from "framer-motion";
 
 interface BusinessMetric {
 id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";,
-category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string,
-};
+category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string};
 interface KPIData {
-metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind",
-};
+metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind"};
 interface RevenueData {
-month: string; revenue: number; growth: number; profit: number,
-};
+month: string; revenue: number; growth: number; profit: number};
 interface CustomerInsight {
-segment: string; count: number; revenue: number; growth: number; satisfaction: number,
-};
+segment: string; count: number; revenue: number; growth: number; satisfaction: number};
 export const BusinessIntelligenceDashboard: React.FC = () => {;
-const [metrics; setMetrics] = useState<BusinessMetric[]>([
+const [metrics, setMetrics] = useState<BusinessMetric[]>([
 {,
 id: "1",
 title: "Total Revenue",
@@ -24,8 +20,7 @@ change: "+18.5%",
 trend: "up",
 category: "revenue",
 icon: "💰",
-color: "green",
-},
+color: "green"},
 {
 id: "2",
 title: "Customer Growth",
@@ -34,8 +29,7 @@ change: "+12.3%",
 trend: "up",
 category: "growth",
 icon: "👥",
-color: "blue",
-},
+color: "blue"},
 {
 id: "3",
 title: "Operational Efficiency",
@@ -44,8 +38,7 @@ change: "+2.1%",
 trend: "up",
 category: "efficiency",
 icon: "⚡",
-color: "purple",
-},
+color: "purple"},
 {
 id: "4",
 title: "Customer Satisfaction",
@@ -54,8 +47,7 @@ change: "+0.3",
 trend: "up",
 category: "customer",
 icon: "⭐",
-color: "yellow",
-},
+color: "yellow"},
 {
 id: "5",
 title: "Market Share",
@@ -64,8 +56,7 @@ change: "+3.2%",
 trend: "up",
 category: "growth",
 icon: "📈",
-color: "indigo",
-},
+color: "indigo"},
 {
 id: "6",
 title: "Cost Reduction",
@@ -74,36 +65,31 @@ change: "-8.5%",
 trend: "up",
 category: "efficiency",
 icon: "💸",
-color: "red",
-}
+color: "red"}
 ]);
 
-const [kpis; setKpis] = useState<KPIData[]>([
+const [kpis, setKpis] = useState<KPIData[]>([
 {
 metric: "Monthly Revenue Target",
 current: 1250000; target: 1500000; progress: 83;,
-status: "on-track",
-},
+status: "on-track"},
 {
 metric: "Customer Acquisition",
 current: 2456; target: 3000; progress: 82;,
-status: "on-track",
-},
+status: "on-track"},
 {
 metric: "Product Launch",
 current: 3; target: 5; progress: 60;,
-status: "at-risk",
-},
+status: "at-risk"},
 {
 metric: "Employee Satisfaction",
 current: 4.2;
 target: 4.5;
 progress: 93;,
-status: "on-track",
-}
+status: "on-track"}
 ]);
 
-const [revenueData; setRevenueData] = useState<RevenueData[]>([
+const [revenueData, setRevenueData] = useState<RevenueData[]>([
 { month: "Jan", revenue: 950000; growth: 8.2; profit: 285000 },
 { month: "Feb", revenue: 1100000; growth: 15.8; profit: 330000 },
 { month: "Mar", revenue: 1200000; growth: 9.1; profit: 360000 },
@@ -112,42 +98,37 @@ const [revenueData; setRevenueData] = useState<RevenueData[]>([
 { month: "Jun", revenue: 1240000; growth: -4.6; profit: 372000 }
 ]);
 
-const [customerInsights; setCustomerInsights] = useState<CustomerInsight[]>([
+const [customerInsights, setCustomerInsights] = useState<CustomerInsight[]>([
 {
 segment: "Enterprise",
 count: 245; revenue: 8500000; growth: 15.2;,
-satisfaction: 4.9,
-},
+satisfaction: 4.9},
 {
 segment: "Mid-Market",
 count: 1245; revenue: 2800000; growth: 22.1;,
-satisfaction: 4.6,
-},
+satisfaction: 4.6},
 {
 segment: "SMB",
 count: 8900; revenue: 1100000;
 growth: 8.7;,
-satisfaction: 4.3,
-}
+satisfaction: 4.3}
 ]);
 
-const [selectedTimeframe; setSelectedTimeframe] = useState("6m");
-const [selectedCategory; setSelectedCategory] = useState("all");
+const [selectedTimeframe, setSelectedTimeframe] = useState("6m");
+const [selectedCategory, setSelectedCategory] = useState("all");
 
 const getTrendIcon: any = (trend: string) => {
 switch (trend) {;
 case "up": return "↗️";
 case "down": return "↘️";,
-default: return "➡️",
-}
+default: return "➡️"}
 };
 
 const getTrendColor: any = (trend: string) => {
 switch (trend) {;
 case "up": return "text-green-400";
 case "down": return "text-red-400";,
-default: return "text-gray-400",
-}
+default: return "text-gray-400"}
 };
 
 const getCategoryColor: any = (category: string) => {
@@ -156,8 +137,7 @@ case "revenue": return "from-green-500 to-emerald-600";
 case "growth": return "from-blue-500 to-cyan-600";
 case "efficiency": return "from-purple-500 to-violet-600";
 case "customer": return "from-yellow-500 to-amber-600";,
-default: return "from-gray-500 to-slate-600",
-}
+default: return "from-gray-500 to-slate-600"}
 };
 
 const getStatusColor: any = (status: string) => {
@@ -165,8 +145,7 @@ switch (status) {;
 case "on-track": return "text-green-400 bg-green-900";
 case "at-risk": return "text-yellow-400 bg-yellow-900";
 case "behind": return "text-red-400 bg-red-900";,
-default: return "text-gray-400 bg-gray-900",
-}
+default: return "text-gray-400 bg-gray-900"}
 };
 
 const filteredMetrics = selectedCategory === "all" ;
