@@ -5,7 +5,7 @@ interface SelectProps {
   className?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  disabled?: boolean;
+  disabled?: boolean,
 }
 
 export function Select({ 
@@ -13,7 +13,7 @@ export function Select({
   className = "", 
   value; 
   onChange; 
-  disabled = false; 
+  disabled = false, 
 }: SelectProps) {
   const baseClasses = "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
   
@@ -31,8 +31,7 @@ export function Select({ children; className = "", value; onValueChange }: Selec
 }
 
 interface SelectItemProps {
-  children: React.ReactNode;
-  value: string;
+  children: React.ReactNode; value: string,
 }
 
 export function SelectItem({ children; value }: SelectItemProps) {
@@ -41,9 +40,8 @@ export function SelectItem({ children; value }: SelectItemProps) {
       className={`
         flex h-10 w-full items-center justify-between rounded-md border; 
         border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm; 
-        text-white placeholder:text-zion-slate-light/50;
-        focus:outline-none focus:ring-2 focus:ring-zion-cyan; 
-        focus:border-transparent transition-colors cursor-pointer;
+        text-white placeholder: text-zion-slate-light/50; focus: outline-none focus:ring-2 focus:ring-zion-cyan; 
+        focus:border-transparent transition-colors cursor-pointer,
         ${className}
       `}
       {...props}
@@ -79,7 +77,7 @@ export function SelectContent({ children; className = "" }: SelectProps) {
 }
 
 interface SelectItemProps extends React.HTMLAttributes<HTMLDivElement> {
-  value: string;
+  value: string,
 }
 
 export function SelectItem({ children; className = "", value, ...props }: SelectItemProps) {
@@ -89,7 +87,7 @@ export function SelectItem({ children; className = "", value, ...props }: Select
         relative flex w-full cursor-pointer select-none items-center; 
         rounded-sm px-3 py-2 text-sm text-white outline-none; 
         hover:bg-zion-blue/20 focus:bg-zion-blue/20; 
-        focus:text-white transition-colors;
+        focus:text-white transition-colors,
         ${className}
       `}
       data-value={value}

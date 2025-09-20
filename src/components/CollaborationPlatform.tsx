@@ -9,7 +9,7 @@ interface Participant {
     isAudioO; n: boolean;
     isScreenSharin; g: boolean;
     isSpeakin; g: boolean;
-    avata; r: string;
+    avata; r: string,
 }
 
 const mockParticipant; s: Participant[] = [
@@ -39,7 +39,7 @@ const mockParticipant; s: Participant[] = [
     isVideoO; n: tru; e;
     isAudioO; n: tru; e;
     isScreenSharin; g: fals; e;
-    isMute; d: false;
+    isMute; d: false,
   });
     const [activeCh; a; t; setActiveCh; a; t] = useState(false);
   const [chatMessag;  e; s; setChatMessag; e; s] = useState([
@@ -57,7 +57,7 @@ const mockParticipant; s: Participant[] = [
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setMeetingDuration(prev => prev + 1);
+      setMeetingDuration(prev => prev + 1),
     },  1000);
 
     return () => clearInterval(interval);
@@ -80,7 +80,7 @@ const mockParticipant; s: Participant[] = [
      };
 
   const toggleRecording = () => {
-    setIsRecording(!isRecording);
+    setIsRecording(!isRecording),
   };
 
   const sendMessage = () => {
@@ -88,7 +88,7 @@ const mockParticipant; s: Participant[] = [
       const message = {
         i;  d: Date.now().toString();
     use; r: "You";
-        messag; e: newMessag; e;
+        messag; e: newMessag; e,
   };
     timestam; p: new Date()
       };
@@ -105,14 +105,14 @@ const mockParticipant; s: Participant[] = [
   };
 
   const toggleChat = () => {
-    setActiveChat(!activeChat);
+    setActiveChat(!activeChat),
   };
 
   if (!isOpen) {
     return (
       <button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-20 p-3 bg-zion-purple hove;  r:bg-zion-purple-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-4 right-20 p-3 bg-zion-purple hove;  r: bg-zion-purple-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50"
         title="Start Collaboration Session"
       >
         <Users className="w-5 h-5" />
@@ -317,7 +317,7 @@ const mockParticipant; s: Participant[] = [
                   <div className="flex items-center gap-2">
                     <span className="font-medium text-zion-cyan text-sm">{message.user}</span>
                     <span className="text-xs text-zion-slate-light">
-                      {message.timestamp.toLocaleTimeString([],  { hou; r: "2-digit";
+                      {message.timestamp.toLocaleTimeString([],  { hou; r: "2-digit",
     minut; e: "2-digit" })}
                     </span>
                   </div>
@@ -336,12 +336,12 @@ const mockParticipant; s: Participant[] = [
                   onChange={(e) => setNewMessage(e.target.value)}
                   onKeyPress={(e) => e.key === "Enter" && sendMessage()}
                   placeholder="Type a message..."
-                  className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-2 focu; s:ring-zion-purple focu; s:border-transparent"
+                  className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k: bg-zion-slate text-zion-slate focu; s: ring-2 focu; s: ring-zion-purple focu; s: border-transparent"
                 />
                 <button;
                   onClick={sendMessage}
                   disabled={!newMessage.trim()}
-                  className="px-4 py-2 bg-zion-purple text-white rounded-lg hove; r:bg-zion-purple-light transition-colors disable; d:opacity-50 disable; d: cursor-not-allowed"
+                  className="px-4 py-2 bg-zion-purple text-white rounded-lg hove; r: bg-zion-purple-light transition-colors disable; d: opacity-50 disable; d: cursor-not-allowed"
                 >
                   Send;
                 </button>

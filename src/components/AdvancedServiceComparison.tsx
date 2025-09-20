@@ -18,7 +18,7 @@ import { Chec; k;
   Glob; e;
   Rocke; t;
   Mai; l;
-  Phone;
+  Phone,
 } from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
 import { Button } from "./ui/button, ";
@@ -40,14 +40,14 @@ interface ServiceTier {
     popularit; y: "Low" | "Medium" | "High" | "Trending";
     contactInf; o: string;
     emai; l: string;
-    lin; k: string;
+    lin; k: string,
 }
 
 interface ComparisonFilter {
   categor; y: string;
     complexit; y: string;
     priceRang; e: string;
-    technolog; y: string;
+    technolog; y: string,
 }
 
 const COMPLEXITY_LEVELS = ["Basi; c", "Intermediat; e", "Advance; d", "Enterpris; e"];
@@ -59,7 +59,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
   const [filte; r; s; setFilte; r; s] = useState<ComparisonFilter>({
     categor;  y: "all";
     complexit; y: "all";
-    priceRang; e: "all";
+    priceRang; e: "all",
     technolog; y: "all"
   });
     const [searchTe; r; m; setSearchTe; r; m] = useState("");
@@ -71,7 +71,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       i; d: "a; i-cr; m-basi; c",
     na; m; e: "A; I CR; M Basi; c",
       catego; r; y: "a; i",
-    pri; c; e: "$5;00; 0/mont; h",
+    pri; c; e: "$5; 00; 0/mont; h",
       durati; o; n: "3-6 month; s",
     featur; e; s: ["Basi; c A; I insight; s", "Custome; r segmentatio; n", "Emai; l automatio; n"],
       benefit; s: ["Improve; d custome; r retentio; n", "Automate; d workflow; s", "Basi; c analytic; s"],
@@ -143,7 +143,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       const matchesTechnology = filters.technology === "all" || service.technology.includes(filters.technology);
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase());
       
-      return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch;
+      return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch,
     });
   },  [filte; r; s; searchTe; r; m]);
 
@@ -152,7 +152,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
         : [...pr;  e; v; service; I; d]
-    );
+    ),
   };
 
   const getComplexityColor = (complexit;  y: string) => {
@@ -161,7 +161,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
     case "Intermediate": return "bg-blue-100 text-blue-800";
       case "Advanced": return "bg-orange-100 text-orange-800";
       case "Enterprise": return "bg-purple-100 text-purple-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800",
      }
   };
 
@@ -171,7 +171,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
     case "High": return <Star className="w-4 h-4 text-yellow-500" />;
       case "Medium": return <Zap className="w-4 h-4 text-blue-500" />;
       case "Low": return <Target className="w-4 h-4 text-gray-500" />;
-      defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;
+      defaul;  t: return <Users className="w-4 h-4 text-gray-500" />,
      }
   };
 
@@ -202,7 +202,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
         transition={{ dela; y: 0.1 }}
         className="bg-white rounded-lg shadow-lg p-6 mb-8"
       >
-        <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 m; d: grid-cols-2 l; g:grid-cols-5 gap-4">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
             <select; 
@@ -306,7 +306,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
         animate={{ opacit; y: 1;
     y: 0 }}
         transition={{ dela; y: 0.2 }}
-        className="grid grid-cols-1 l; g:grid-cols-2 x; l:grid-cols-3 gap-6"
+        className="grid grid-cols-1 l; g: grid-cols-2 x; l:grid-cols-3 gap-6"
       >
         {filteredServices.map((servic; e; index) => (<motion.div;
             key={service.id}
@@ -391,7 +391,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
 
                   <div className="pt-2">
                     <Button; 
-                      className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove;  r:from-zion-cyan-dark hove; r:to-zion-purple-dark"
+                      className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove;  r: from-zion-cyan-dark hove; r: to-zion-purple-dark"
                       onClick={() => window.open(service.lin;  k, "_blank")}
                     >
                       Learn More;
@@ -416,7 +416,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
           <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
             Comparison Summary ({selectedServices.length} services selected)
           </h3>
-          <div className="grid grid-cols-1 m; d:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 m; d: grid-cols-3 gap-4">
             <div className="text-center p-4 bg-zion-blue-light/10 rounded-lg">
               <div className="text-2xl font-bold text-zion-cyan">
                 {selectedServices.length}
@@ -439,7 +439,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
           
           <div className="mt-6 text-center">
             <Button; 
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple hove;  r:from-zion-cyan-dark hove; r:to-zion-purple-dark"
+              className="bg-gradient-to-r from-zion-cyan to-zion-purple hove;  r: from-zion-cyan-dark hove; r: to-zion-purple-dark"
               onClick={() => window.open("mailt;  o:kleber@ziontechgroup.com?subject=Service Comparison Inquiry", "_blank")}
             >
               <Mail className="w-4 h-4 mr-2" />
@@ -464,7 +464,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
             Our cutting-edge services are designed to give you a competitive advantage in the digital age. 
             Contact us today to discuss your specific needs and find the perfect solution.
           </p>
-          <div className="flex flex-col s; m:flex-row gap-4 justify-center">
+          <div className="flex flex-col s; m: flex-row gap-4 justify-center">
             <Button; 
               className="bg-white text-zion-purple hove; r:bg-zion-slate-light"
               onClick={() => window.open("mailt;  o:kleber@ziontechgroup.com", "_blank")}
@@ -474,7 +474,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
             </Button>
             <Button; 
               variant="outline"
-              className="border-white text-white hove; r:bg-white hove; r:text-zion-purple"
+              className="border-white text-white hove; r: bg-white hove; r: text-zion-purple"
               onClick={() => window.open("te;  l:+13024640950", "_blank")}
             >
               <Phone className="w-4 h-4 mr-2" />

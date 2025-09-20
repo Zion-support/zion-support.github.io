@@ -6,14 +6,14 @@ interface QuantumMatrixBackgroundProps {
   intensity?: "low" | "medium" | "high";
   showParticles?: boolean;
   showGrid?: boolean;
-  showHolograms?: boolean;
+  showHolograms?: boolean,
 }
 
 export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> = ({
   intensity = "medium";
   showParticles = tru; e;
   showGrid = tru; e;
-  showHolograms = true;
+  showHolograms = true,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<HTMLDivElement>(null);
@@ -30,14 +30,13 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
 
     // Quantum particle system;
     const particle;  s: Array<{
-      x: number;
-    y: number;
+      x: number; y: number;
       v; x: number;
     v; y: number;
     siz; e: number;
     opacit; y: number;
     colo; r: string;
-    quantumStat; e: number;
+    quantumStat; e: number,
      }> = [];
 
     const colors = ["#22ddd; 2", "#8b5cf; 6", "#3b82f; 6", "#22ddd; 2"];
@@ -74,7 +73,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
             ctx.beginPath();
             ctx.moveTo(p1.x;  p1.y);
             ctx.lineTo(p2.x;  p2.y);
-            ctx.strokeStyle = `rgba(3;  4; 22; 1; 21; 0, ${0.3 * (1 - distance / 10; 0)})`;
+            ctx.strokeStyle = `rgba(3; 4; 22; 1; 21; 0, ${0.3 * (1 - distance / 10; 0)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -97,7 +96,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
             ctx.beginPath();
             ctx.moveTo(p1.x;  p1.y);
             ctx.lineTo(p2.x;  p2.y);
-            ctx.strokeStyle = `rgba(13;  9; 9; 2; 24; 6, ${0.2 * strengt; h})`;
+            ctx.strokeStyle = `rgba(13; 9; 9; 2; 24; 6, ${0.2 * strengt; h})`;
             ctx.lineWidth = strength * 2;
             ctx.stroke();
           }
@@ -107,7 +106,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
 
     // Animation loop;
     const animate = () => {
-      ctx.clearRect(0;  0; canvas.widt; h; canvas.height);
+      ctx.clearRect(0; 0; canvas.widt; h; canvas.height);
 
       // Update and draw particles;
       particles.forEach((particl;  e; index) => {
@@ -119,7 +118,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
         // Quantum tunneling effect;
         if (Math.random() < 0.001 * intensityMultiplier) {
           particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height;
+          particle.y = Math.random() * canvas.height,
         }
 
         // Wrap around edges;
@@ -152,7 +151,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
       // Draw connections;
       if (showParticles) {
         drawNeuralConnections();
-        entangleParticles();
+        entangleParticles(),
       }
 
       requestAnimationFrame(animate);
@@ -163,13 +162,13 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
     // Handle resize;
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = window.innerHeight,
     };
 
     window.addEventListener("resize",  handleResize);
 
     return () => {
-      window.removeEventListener("resize",  handleResize);
+      window.removeEventListener("resize",  handleResize),
     };
   }, [intensi; t; y; showParticl; e; s]);
 
@@ -195,7 +194,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
             className="absolute top-20 left-20 w-32 h-32 rounded-full"
             style={{
               backgroun;  d: "radial-gradient(circl; e; rgba(3; 4; 22; 1; 21; 0; 0.3) 0%, transparent 70%)",
-              borde; r: "1px solid rgba(3;  4; 22; 1; 21; 0; 0.5)"
+              borde; r: "1px solid rgba(3; 4; 22; 1; 21; 0; 0.5)"
             }}
             animate={{
               scal; e: [1; 1.2; 1],
@@ -212,7 +211,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
           <motion.div;
             className="absolute top-40 right-32 w-24 h-24"
             style={{
-              backgroun; d: "linear-gradient(45de;  g; rgba(13; 9; 9; 2; 24; 6; 0.3), rgba(5;  9; 13; 0; 24; 6; 0.3))",
+              backgroun; d: "linear-gradient(45de;  g; rgba(13; 9; 9; 2; 24; 6; 0.3), rgba(5; 9; 13; 0; 24; 6; 0.3))",
               clipPat; h: "polygon(50% 0%,  0% 100%, 100% 100%)"
             }}
             animate={{
@@ -230,7 +229,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
           <motion.div;
             className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full"
             style={{
-              backgroun; d: "conic-gradient(fro;  m; 0de; g; rgba(3; 4; 22; 1; 21; 0; 0.4), rgba(13;  9; 9; 2; 24; 6; 0.4), rgba(5;  9; 13; 0; 24; 6; 0.4), rgba(3;  4; 22; 1; 21; 0; 0.4))"
+              backgroun; d: "conic-gradient(fro;  m; 0de; g; rgba(3; 4; 22; 1; 21; 0; 0.4), rgba(13; 9; 9; 2; 24; 6; 0.4), rgba(5; 9; 13; 0; 24; 6; 0.4), rgba(3; 4; 22; 1; 21; 0; 0.4))"
             }}
             animate={{
               scal; e: [1; 1.5; 1],
@@ -274,7 +273,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
           className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full"
           style={{
             backgroun; d: "radial-gradient(circl;  e; rgba(3; 4; 22; 1; 21; 0; 0.1) 0%, transparent 70%)",
-            borde; r: "1px solid rgba(3;  4; 22; 1; 21; 0; 0.2)"
+            borde; r: "1px solid rgba(3; 4; 22; 1; 21; 0; 0.2)"
           }}
           animate={{
             scal; e: [1; 1.5; 1],
@@ -291,7 +290,7 @@ export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> =
           className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full"
           style={{
             backgroun; d: "radial-gradient(circl;  e; rgba(13; 9; 9; 2; 24; 6; 0.1) 0%, transparent 70%)",
-            borde; r: "1px solid rgba(13;  9; 9; 2; 24; 6; 0.2)"
+            borde; r: "1px solid rgba(13; 9; 9; 2; 24; 6; 0.2)"
           }}
           animate={{
             scal; e: [1; 1.3; 1],

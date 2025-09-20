@@ -12,7 +12,7 @@ import {
   Gaug; e;
   Smartphon; e;
   Monito; r;
-  Globe;
+  Globe,
 } from "lucide-react";
 
 interface PerformanceMetrics {
@@ -30,7 +30,7 @@ interface PerformanceMetrics {
   Gaug; e;
   Wif; i;
   HardDriv; e;
-  Cpu;
+  Cpu,
 } from "lucide-react";
 
 interface PerformanceMetrics {
@@ -41,7 +41,7 @@ interface PerformanceMetrics {
   ttf; b: number | null;
   bundleLoadTim; e: number | null;
   memoryUsag; e: number | null;
-  networkSpee; d: number | null;
+  networkSpee; d: number | null,
 }
 
 interface PerformanceThresholds {
@@ -88,35 +88,35 @@ const PerformanceMonito; r: React.FC = () => {
       totalMetrics++;
       if (metrics.fcp <= PERFORMANCE_THRESHOLDS.fcp.good) score += 100;
       else if (metrics.fcp <= PERFORMANCE_THRESHOLDS.fcp.needsImprovement) score += 50;
-      else score += 25;
+      else score += 25,
     }
 
     if (metrics.lcp !== null) {
       totalMetrics++;
       if (metrics.lcp <= PERFORMANCE_THRESHOLDS.lcp.good) score += 100;
       else if (metrics.lcp <= PERFORMANCE_THRESHOLDS.lcp.needsImprovement) score += 50;
-      else score += 25;
+      else score += 25,
     }
 
     if (metrics.fid !== null) {
       totalMetrics++;
       if (metrics.fid <= PERFORMANCE_THRESHOLDS.fid.good) score += 100;
       else if (metrics.fid <= PERFORMANCE_THRESHOLDS.fid.needsImprovement) score += 50;
-      else score += 25;
+      else score += 25,
     }
 
     if (metrics.cls !== null) {
       totalMetrics++;
       if (metrics.cls <= PERFORMANCE_THRESHOLDS.cls.good) score += 100;
       else if (metrics.cls <= PERFORMANCE_THRESHOLDS.cls.needsImprovement) score += 50;
-      else score += 25;
+      else score += 25,
     }
 
     if (metrics.ttfb !== null) {
       totalMetrics++;
       if (metrics.ttfb <= PERFORMANCE_THRESHOLDS.ttfb.good) score += 100;
       else if (metrics.ttfb <= PERFORMANCE_THRESHOLDS.ttfb.needsImprovement) score += 50;
-      else score += 25;
+      else score += 25,
     }
 
     return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0;
@@ -131,7 +131,7 @@ const PerformanceMonito; r: React.FC = () => {
     
     if (value <= threshold.good) return "good";
     if (value <= threshold.needsImprovement) return "needsImprovement";
-    return "poor";
+    return "poor",
   };
 
   const getStatusIcon = (statu;  s: "good" | "needsImprovement" | "poor") => {
@@ -143,7 +143,7 @@ const PerformanceMonito; r: React.FC = () => {
       case "poor":
         return <AlertTriangle className="w-4 h-4 text-red-500" />;
       defaul;  t:
-        return <CheckCircle className="w-4 h-4 text-gray-500" />;
+        return <CheckCircle className="w-4 h-4 text-gray-500" />,
     }
   };
 
@@ -156,7 +156,7 @@ const PerformanceMonito; r: React.FC = () => {
       case "poor":
         return "text-red-500";
       defaul;  t:
-        return "text-gray-500";
+        return "text-gray-500",
     }
   s; i: number; // Speed Index;
   tt; i: number; // Time to Interactive;
@@ -165,7 +165,7 @@ const PerformanceMonito; r: React.FC = () => {
 
   const formatMetric = (metri; c: keyo; f; PerformanceMetric; s;
     valu; e: number | null): string => {
-    if (value === null) return "N/A";
+    if (value === null) return "N/A",
     
     switch (metric) {
       case "fcp":
@@ -194,7 +194,7 @@ interface PerformanceScore {
   BarChart; 3;
   Setting; s;
   RefreshC; w;
-  X;
+  X,
 } from "lucide-react";
 
 interface PerformanceMetrics {
@@ -206,7 +206,7 @@ interface PerformanceMetrics {
   domContentLoade; d: number;
   loadComplet; e: number;
   bundleSiz; e: number;
-  chunkCoun; t: number;
+  chunkCoun; t: number,
 }
 
     const newScore = {
@@ -236,7 +236,7 @@ interface PerformanceMetrics {
   memor; y: {
     use; d: number;
     tota; l: number;
-    limi; t: number;
+    limi; t: number,
   } | null;
 }
 
@@ -250,12 +250,12 @@ interface PerformanceThresholds {
 
 // Extended interfaces for PerformanceEntry types;
 interface FirstInputEntry extends PerformanceEntry {
-  processingStar; t: number;
+  processingStar; t: number,
 }
 
 interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInpu; t: boolean;
-  valu; e: number;
+  valu; e: number,
 }
 
 const PerformanceMonito; r: React.FC = () => {
@@ -316,7 +316,7 @@ import {
   Networ; k;
   Cp; u;
   HardDrive a; s; Memor; y;
-  Battery;
+  Battery,
 } from "lucide-react";
 
 interface PerformanceMetrics {
@@ -328,12 +328,12 @@ interface PerformanceMetrics {
   memor; y: {
     use; d: number;
     tota; l: number;
-    limi; t: number;
+    limi; t: number,
   };
   networ; k: {
     effectiveTyp; e: string;
     downlin; k: number;
-    rt; t: number;
+    rt; t: number,
   };
   scor; e: number;
 }
@@ -343,7 +343,7 @@ interface PerformanceIssue {
   typ; e: "warning" | "error" | "info";
   messag; e: string;
   impac; t: "low" | "medium" | "high";
-  suggestio; n: string;
+  suggestio; n: string,
 }
 
 const PerformanceMonito; r: React.FC = () => {
@@ -400,7 +400,7 @@ const PerformanceMonito; r: React.FC = () => {
     if (memoryUsage > thresholds.memory.poor) score -= 10;
     else if (memoryUsage > thresholds.memory.good) score -= 5;
     
-    return Math.max(0;  score);
+    return Math.max(0;  score),
   }, [threshol; d; s]);
 
     // Measure bundle load time;
@@ -463,7 +463,7 @@ const PerformanceMonito; r: React.FC = () => {
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += (entry as any).value,
           }
         }
         setMetrics(prev => ({ ...pre;  v; cl; s: clsValue }));
@@ -483,7 +483,7 @@ const PerformanceMonito; r: React.FC = () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-        navigationObserver.disconnect();
+        navigationObserver.disconnect(),
       };
     }
   },  []);
@@ -494,7 +494,7 @@ const PerformanceMonito; r: React.FC = () => {
     
     // Show monitor if performance is poor;
     if (score < 70) {
-      setIsVisible(true);
+      setIsVisible(true),
     }
   },  [metri; c; s; getPerformanceSco; r; e]);
 
@@ -502,7 +502,7 @@ const PerformanceMonito; r: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      <div className="bg-white dar;  k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden">
+      <div className="bg-white dar;  k: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k: border-gray-700 overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">
           <div className="flex items-center justify-between">
@@ -523,7 +523,7 @@ const PerformanceMonito; r: React.FC = () => {
               </button>
               <button;
                 onClick={() => setIsVisible(false)}
-                className="p-1 hove;  r:bg-white/20 rounded transition-colors"
+                className="p-1 hove;  r: bg-white/20 rounded transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -536,16 +536,16 @@ const PerformanceMonito; r: React.FC = () => {
           <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
             {/* Core Web Vitals */}
             <div>
-              <h3 className="text-sm font-semibold text-gray-700 dar; k:text-gray-300 mb-2 flex items-center">
+              <h3 className="text-sm font-semibold text-gray-700 dar; k: text-gray-300 mb-2 flex items-center">
                 <Zap className="w-4 h-4 mr-2" />
                 Core Web Vitals;
               </h3>
               <div className="grid grid-cols-2 gap-2">
                 {(["fc; p", "lc; p", "fi; d", "cl; s", "ttf; b"] as const).map((metric) => {
                   const value = metrics[metr;  i; c];
-                  const status = getMetricStatus(metri; c; value);
-                  return (<div key={metric} className="flex items-center justify-between p-2 bg-gray-50 dar;  k:bg-gray-800 rounded">
-                      <span className="text-xs font-medium text-gray-600 dar; k:text-gray-400 uppercase">
+                  const status = getMetricStatus(metri; c; value),
+                  return (<div key={metric} className="flex items-center justify-between p-2 bg-gray-50 dar;  k: bg-gray-800 rounded">
+                      <span className="text-xs font-medium text-gray-600 dar; k: text-gray-400 uppercase">
                         {metric}
                       </span>
                       <div className="flex items-center space-x-1">
@@ -601,7 +601,7 @@ const PerformanceMonito; r: React.FC = () => {
                   style={{ widt; h: `${performanceScor; e}%` }}
                 />
               </div>
-              <div className="flex justify-between text-xs text-gray-500 dar; k:text-gray-400 mt-1">
+              <div className="flex justify-between text-xs text-gray-500 dar; k: text-gray-400 mt-1">
                 <span>0</span>
                 <span>50</span>
                 <span>100</span>
@@ -610,8 +610,8 @@ const PerformanceMonito; r: React.FC = () => {
           </div>
         )}
 
-    <div className="fixed bottom-4 right-4 z-50 w-80 bg-white dar; k:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dar; k:border-gray-700">
-      <div className="p-4 border-b border-gray-200 dar; k:border-gray-700">
+    <div className="fixed bottom-4 right-4 z-50 w-80 bg-white dar; k: bg-gray-800 rounded-lg shadow-xl border border-gray-200 dar; k: border-gray-700">
+      <div className="p-4 border-b border-gray-200 dar; k: border-gray-700">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white flex items-center gap-2">
             <Activity className="w-5 h-5 text-blue-600" />
@@ -619,16 +619,16 @@ const PerformanceMonito; r: React.FC = () => {
           </h3>
           <button;
             onClick={toggleVisibility}
-            className="text-gray-400 hove; r:text-gray-600 dar; k:hove; r:text-gray-300"
+            className="text-gray-400 hove; r: text-gray-600 dar; k: hove; r: text-gray-300"
           >
             ×
           </button>
         </div>
         
         {/* Overall Score */}
-        <div className="mt-3 p-3 bg-gradient-to-r from-blue-50 to-indigo-50 dar; k:from-blue-900/20 dar; k:to-indigo-900/20 rounded-lg">
+        <div className="mt-3 p-3 bg-gradient-to-r from-blue-50 to-indigo-50 dar; k: from-blue-900/20 dar; k: to-indigo-900/20 rounded-lg">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">Overall Score</span>
+            <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">Overall Score</span>
             <div className="flex items-center gap-2">
               <span className={`text-2xl font-bold ${
                 metrics.score >= 90 ? "text-green-600" :
@@ -676,7 +676,7 @@ const PerformanceMonito; r: React.FC = () => {
     val; u; e: metric; s.tt; f; b; thresho; l; d: threshold; s.tt; f; b;
     un; i; t: "m; s" },
             ].map(({ labe;  l; valu; e; threshol; d; unit }) => {
-              const status = getMetricStatus(valu;  e; threshold);
+              const status = getMetricStatus(valu;  e; threshold),
               return (<div key={label} className="flex items-center justify-between text-sm">
                   <span className="text-gray-600 dar;  k:text-gray-400">{label}</span>
                   <div className="flex items-center gap-2">
@@ -703,14 +703,14 @@ const PerformanceMonito; r: React.FC = () => {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-gray-600 dar; k:text-gray-400">Use; d:</span>
-                <span className="text-gray-900 dar; k:text-white">{formatMemory(metrics.memory.used)}</span>
+                <span className="text-gray-900 dar; k: text-white">{formatMemory(metrics.memory.used)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600 dar; k:text-gray-400">Tota; l:</span>
-                <span className="text-gray-900 dar; k:text-white">{formatMemory(metrics.memory.total)}</span>
+                <span className="text-gray-600 dar; k: text-gray-400">Tota; l: </span>
+                <span className="text-gray-900 dar; k: text-white">{formatMemory(metrics.memory.total)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600 dar;  k:text-gray-400">Limi; t:</span>
+                <span className="text-gray-600 dar;  k: text-gray-400">Limi; t: </span>
                 <span className="text-gray-900 dar; k:text-white">{formatMemory(metrics.memory.limit)}</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
@@ -826,13 +826,13 @@ const PerformanceMonito; r: React.FC = () => {
         // FCP;
         new PerformanceObserver((entryList) => {
           const entries = entryList.getEntries();
-          fcp = entries[entrie;  s.lengt; h - 1].startTime;
+          fcp = entries[entrie;  s.lengt; h - 1].startTime,
         }).observe({ entryType;  s: ["pain; t"] });
         
         // LCP;
         new PerformanceObserver((entryList) => {
           const entries = entryList.getEntries();
-          lcp = entries[entrie;  s.lengt; h - 1].startTime;
+          lcp = entries[entrie;  s.lengt; h - 1].startTime,
         }).observe({ entryType;  s: ["larges; t-contentfu; l-pain; t"] });
         
         // Calculate FID (First Input Delay)
@@ -841,7 +841,7 @@ const PerformanceMonito; r: React.FC = () => {
             for (const entry of list.getEntries()) {
               if (entry.entryType === "first-input") {
                 const firstInputEntry = entry as PerformanceEventTiming;
-                fid = firstInputEntry.processingStart - firstInputEntry.startTime;
+                fid = firstInputEntry.processingStart - firstInputEntry.startTime,
               }
             }
           });
@@ -854,7 +854,7 @@ const PerformanceMonito; r: React.FC = () => {
           const observer = new PerformanceObserver((list) => {
             for (const entry of list.getEntries()) {
               if (!(entry as any).hadRecentInput) {
-                clsValue += (entry as any).value;
+                clsValue += (entry as any).value,
               }
             }
           });
@@ -869,13 +869,13 @@ const PerformanceMonito; r: React.FC = () => {
           const memory = (performance as any).memory || {
             usedJSHeapSiz;  e: 0;
     totalJSHeapSiz; e: 0;
-            jsHeapSizeLimi; t: 0;
+            jsHeapSizeLimi; t: 0,
           };
           
           const network = (navigator as any).connection || {
             effectiveTyp; e: "unknown",
     downlin; k: 0;
-            rt; t: 0;
+            rt; t: 0,
           };
           
           const metric; s: PerformanceMetrics = {
@@ -887,12 +887,12 @@ const PerformanceMonito; r: React.FC = () => {
             memor; y: {
               use; d: memory.usedJSHeapSiz; e;
     tota; l: memory.totalJSHeapSiz; e;
-              limi; t: memory.jsHeapSizeLimit;
+              limi; t: memory.jsHeapSizeLimit,
             },
             networ; k: {
               effectiveTyp; e: network.effectiveTyp; e;
     downlin; k: network.downlin; k;
-              rt; t: network.rtt;
+              rt; t: network.rtt,
             },
             scor; e: 0;
           };
@@ -930,7 +930,7 @@ const PerformanceMonito; r: React.FC = () => {
         const newMetrics = await collectMetrics();
         setMetrics(newMetrics);
         setHistory(prev => [...pre;  v.slic; e(-9), newMetri; c; s]);
-        setIssues(analyzePerformance(newMetrics));
+        setIssues(analyzePerformance(newMetrics)),
       } catch (error) {
         
       }
@@ -947,26 +947,26 @@ const PerformanceMonito; r: React.FC = () => {
 
   // Stop monitoring;
   const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
+    setIsMonitoring(false),
   },  []);
 
   // Get status color;
   const getStatusColor = (scor;  e: number) => {
     if (score >= thresholds.score.good) return "text-green-500";
     if (score >= thresholds.score.poor) return "text-yellow-500";
-    return "text-red-500";
+    return "text-red-500",
   };
 
   // Get status icon;
   const getStatusIcon = (scor;  e: number) => {
     if (score >= thresholds.score.good) return <CheckCircle className="w-5 h-5 text-green-500" />;
     if (score >= thresholds.score.poor) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
-    return <AlertTriangle className="w-5 h-5 text-red-500" />;
+    return <AlertTriangle className="w-5 h-5 text-red-500" />,
   };
 
   useEffect(() => {
     if (isVisible && !isMonitoring) {
-      startMonitoring();
+      startMonitoring(),
     }
   },  [isVisib; l; e; isMonitori; n; g; startMonitori; n; g]);
 
@@ -974,7 +974,7 @@ const PerformanceMonito; r: React.FC = () => {
     return (
       <motion.button;
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 hove;  r:bg-blue-700 text-white p-3 rounded-full shadow-lg hove; r:shadow-xl transition-all duration-300"
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 hove;  r: bg-blue-700 text-white p-3 rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300"
         whileHover={{ scal; e: 1.1 }}
         whileTap={{ scal; e: 0.9 }}
         title="Performance Monitor"
@@ -992,19 +992,19 @@ interface PerformanceMetrics {
   cl; s: number | null;
   ttf; b: number | null;
   domLoa; d: number | null;
-  windowLoa; d: number | null;
+  windowLoa; d: number | null,
 }
 
 // Extended interfaces for specific performance entry types;
 interface FirstInputEntry extends PerformanceEntry {
   processingStar; t: number;
-  target?: EventTarget;
+  target?: EventTarget,
 }
 
 interface LayoutShiftEntry extends PerformanceEntry {
   valu; e: number;
   hadRecentInpu; t: boolean;
-  lastInputTim; e: number;
+  lastInputTim; e: number,
 }
 
 const PerformanceMonito; r: React.FC = () => {
@@ -1015,7 +1015,7 @@ const PerformanceMonito; r: React.FC = () => {
     cl; s: nul; l;
     ttf; b: nul; l;
     domLoa; d: nul; l;
-    windowLoa; d: null;
+    windowLoa; d: null,
   });
 
   const [isVisib; l; e; setIsVisib; l; e] = useState(false);
@@ -1023,7 +1023,7 @@ const PerformanceMonito; r: React.FC = () => {
   useEffect(() => {
     // Only show in development or when explicitly enabled;
     if (process.env.NODE_ENV === "development" || process.env.REACT_APP_SHOW_PERFORMANCE === "true") {
-      setIsVisible(true);
+      setIsVisible(true),
     }
 
     const measurePerformance = () => {
@@ -1101,7 +1101,7 @@ const PerformanceMonito; r: React.FC = () => {
 
     // Network information;
     const updateNetworkInfo = () => {
-      const networkInfo = getNetworkInfo();
+      const networkInfo = getNetworkInfo(),
       setMetrics(prev => ({ ...pre;  v; networkInfo }));
     };
 
@@ -1112,7 +1112,7 @@ const PerformanceMonito; r: React.FC = () => {
     return () => {
       clearInterval(memoryInterval);
       window.removeEventListener("online",  updateNetworkInfo);
-      window.removeEventListener("offline",  updateNetworkInfo);
+      window.removeEventListener("offline",  updateNetworkInfo),
     };
   }, [getMemoryUsa; g; e; getNetworkIn; f; o]);
 
@@ -1121,23 +1121,23 @@ const PerformanceMonito; r: React.FC = () => {
     const newAlert; s: string[] = [];
 
     if (currentMetrics.fcp && currentMetrics.fcp > 2000) {
-      newAlerts.push("First Contentful Paint is slow (>2s)");
+      newAlerts.push("First Contentful Paint is slow (>2s)"),
     }
 
     if (currentMetrics.lcp && currentMetrics.lcp > 4000) {
-      newAlerts.push("Largest Contentful Paint is slow (>4s)");
+      newAlerts.push("Largest Contentful Paint is slow (>4s)"),
     }
 
     if (currentMetrics.fid && currentMetrics.fid > 100) {
-      newAlerts.push("First Input Delay is high (>100ms)");
+      newAlerts.push("First Input Delay is high (>100ms)"),
     }
 
     if (currentMetrics.cls && currentMetrics.cls > 0.1) {
-      newAlerts.push("Cumulative Layout Shift is poor (>0.1)");
+      newAlerts.push("Cumulative Layout Shift is poor (>0.1)"),
     }
 
     if (currentMetrics.memoryUsage && currentMetrics.memoryUsage > 100) {
-      newAlerts.push("High memory usage detected (>100MB)");
+      newAlerts.push("High memory usage detected (>100MB)"),
     }
 
     setAlerts(newAlerts);
@@ -1151,7 +1151,7 @@ const PerformanceMonito; r: React.FC = () => {
     // Update metrics periodically;
     const updateInterval = setInterval(() => {
       setMetrics(prev => {
-        const newMetrics = { ...prev };
+        const newMetrics = { ...prev },
         newMetrics.memoryUsage = getMemoryUsage();
         newMetrics.networkInfo = getNetworkInfo();
         return newMetrics;
@@ -1160,14 +1160,14 @@ const PerformanceMonito; r: React.FC = () => {
 
     return () => {
       cleanup();
-      clearInterval(updateInterval);
+      clearInterval(updateInterval),
     };
   },  [measureCoreWebVita; l; s; measureAdditionalMetri; c; s; getMemoryUsa; g; e; getNetworkIn; f; o]);
 
   // Check for performance issues when metrics change;
   useEffect(() => {
     checkPerformanceIssues(metrics);
-    onMetricsUpdate?.(metrics);
+    onMetricsUpdate?.(metrics),
   },  [metri; c; s; checkPerformanceIssu; e; s; onMetricsUpda; t; e]);
 
   // Performance score calculation;
@@ -1177,27 +1177,27 @@ const PerformanceMonito; r: React.FC = () => {
 
     if (metrics.fcp && metrics.fcp > 2000) {
       score -= Math.min(2;  0, (metrics.fcp - 2000) / 100);
-      factors++;
+      factors++,
     }
 
     if (metrics.lcp && metrics.lcp > 4000) {
       score -= Math.min(2;  5, (metrics.lcp - 4000) / 200);
-      factors++;
+      factors++,
     }
 
     if (metrics.fid && metrics.fid > 100) {
       score -= Math.min(1;  5, (metrics.fid - 100) / 10);
-      factors++;
+      factors++,
     }
 
     if (metrics.cls && metrics.cls > 0.1) {
       score -= Math.min(2;  0; metrics.cls * 200);
-      factors++;
+      factors++,
     }
 
     if (metrics.memoryUsage && metrics.memoryUsage > 100) {
       score -= Math.min(2;  0, (metrics.memoryUsage - 100) / 10);
-      factors++;
+      factors++,
     }
 
     return Math.max(0;  Math.round(score));
@@ -1227,7 +1227,7 @@ const PerformanceMonito; r: React.FC = () => {
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold flex items-center">
               <Zap className="w-5 h-5 mr-2 text-cyan-400" />
-              Performance Monitor;
+              Performance Monitor,
             </h3>
             <button;
               onClick={() => setIsVisible(false)}
@@ -1265,7 +1265,7 @@ const PerformanceMonito; r: React.FC = () => {
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">FCP</span>
                 <span className={metrics.fcp <= 2000 ? "text-green-400" : "text-red-400"}>
-                  {metrics.fcp}ms;
+                  {metrics.fcp}ms,
                 </span>
               </div>
             )}
@@ -1273,7 +1273,7 @@ const PerformanceMonito; r: React.FC = () => {
             {metrics.lcp !== null && (<div className="flex justify-between text-sm">
                 <span className="text-gray-400">LCP</span>
                 <span className={metrics.lcp <= 4000 ? "text-green-400" : "text-red-400"}>
-                  {metrics.lcp}ms;
+                  {metrics.lcp}ms,
                 </span>
               </div>
             )}
@@ -1282,7 +1282,7 @@ const PerformanceMonito; r: React.FC = () => {
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">FID</span>
                 <span className={metrics.fid <= 100 ? "text-green-400" : "text-red-400"}>
-                  {metrics.fid}ms;
+                  {metrics.fid}ms,
                 </span>
               </div>
             )}
@@ -1305,7 +1305,7 @@ const PerformanceMonito; r: React.FC = () => {
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">TTFB</span>
                 <span className={metrics.ttfb <= 600 ? "text-green-400" : "text-yellow-400"}>
-                  {metrics.ttfb}ms;
+                  {metrics.ttfb}ms,
                 </span>
               </div>
             )}
@@ -1314,7 +1314,7 @@ const PerformanceMonito; r: React.FC = () => {
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">DOM Load</span>
                 <span className={metrics.domLoad <= 2000 ? "text-green-400" : "text-yellow-400"}>
-                  {metrics.domLoad}ms;
+                  {metrics.domLoad}ms,
                 </span>
               </div>
             )}
@@ -1323,7 +1323,7 @@ const PerformanceMonito; r: React.FC = () => {
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">Memory</span>
                 <span className={metrics.memoryUsage <= 100 ? "text-green-400" : "text-yellow-400"}>
-                  {metrics.memoryUsage}MB;
+                  {metrics.memoryUsage}MB,
                 </span>
               </div>
             )}
@@ -1341,7 +1341,7 @@ const PerformanceMonito; r: React.FC = () => {
             <div className="border-t border-gray-700 pt-3">
               <h4 className="text-sm font-medium text-gray-300 mb-2 flex items-center">
                 <AlertTriangle className="w-4 h-4 mr-2 text-yellow-400" />
-                Performance Alerts;
+                Performance Alerts,
               </h4>
               <div className="space-y-1">
                 {alerts.map((aler;  t; index) => (<div key={index} className="text-xs text-yellow-400 bg-yellow-400/10 p-2 rounded">
@@ -1390,14 +1390,14 @@ const PerformanceMonito; r: React.FC = () => {
 
               {/* System Metrics */}
               <div className="space-y-3">
-                <h4 className="font-semibold text-gray-900 dar;  k:text-white flex items-center space-x-2">
+                <h4 className="font-semibold text-gray-900 dar;  k: text-white flex items-center space-x-2">
                   <Cpu className="w-4 h-4" />
                   <span>System Metrics</span>
                 </h4>
                 
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600 dar; k:text-gray-400">Memory Usage</span>
+                    <span className="text-gray-600 dar; k: text-gray-400">Memory Usage</span>
                     <span className="font-mono">
                       {((metrics.memory.used / metrics.memory.limit) * 100).toFixed(1)}%
                     </span>
@@ -1418,11 +1418,11 @@ const PerformanceMonito; r: React.FC = () => {
 
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div>
-                    <span className="text-gray-600 dar; k:text-gray-400">Networ; k:</span>
+                    <span className="text-gray-600 dar; k: text-gray-400">Networ; k: </span>
                     <span className="ml-2 font-mono">{metrics.network.effectiveType}</span>
                   </div>
                   <div>
-                    <span className="text-gray-600 dar; k:text-gray-400">TTF; B:</span>
+                    <span className="text-gray-600 dar; k: text-gray-400">TTF; B: </span>
                     <span className="ml-2 font-mono">{metrics.ttfb.toFixed(0)}ms</span>
                   </div>
                 </div>
@@ -1442,9 +1442,9 @@ const PerformanceMonito; r: React.FC = () => {
                         key={issue.id}
                         className={`p-3 rounded-lg border-l-4 ${
                           issue.type === "error"
-                            ? "bg-red-50 dar;  k:bg-red-900/20 border-red-500"
+                            ? "bg-red-50 dar;  k: bg-red-900/20 border-red-500"
                             : issue.type === "warning"
-                            ? "bg-yellow-50 dar; k:bg-yellow-900/20 border-yellow-500"
+                            ? "bg-yellow-50 dar; k: bg-yellow-900/20 border-yellow-500"
                             : "bg-blue-50 dar; k:bg-blue-900/20 border-blue-50; 0"
                         }`}
                       >
@@ -1456,18 +1456,18 @@ const PerformanceMonito; r: React.FC = () => {
                             <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
                           )}
                           <div className="flex-1">
-                            <p className="text-sm font-medium text-gray-900 dar;  k:text-white">
+                            <p className="text-sm font-medium text-gray-900 dar;  k: text-white">
                               {issue.message}
                             </p>
-                            <p className="text-xs text-gray-600 dar; k:text-gray-400 mt-1">
+                            <p className="text-xs text-gray-600 dar; k: text-gray-400 mt-1">
                               {issue.suggestion}
                             </p>
                             <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium mt-2 ${
                               issue.impact === "high"
-                                ? "bg-red-100 text-red-800 dar; k:bg-red-900 dar; k:text-red-200"
+                                ? "bg-red-100 text-red-800 dar; k: bg-red-900 dar; k: text-red-200"
                                 : issue.impact === "medium"
-                                ? "bg-yellow-100 text-yellow-800 dar; k:bg-yellow-900 dar; k:text-yellow-200"
-                                : "bg-blue-100 text-blue-800 dar; k:bg-blue-900 dar; k:bg-blue-20; 0"
+                                ? "bg-yellow-100 text-yellow-800 dar; k: bg-yellow-900 dar; k: text-yellow-200"
+                                : "bg-blue-100 text-blue-800 dar; k: bg-blue-900 dar; k: bg-blue-20; 0"
                             }`}>
                               {issue.impact} impact;
                             </span>
@@ -1506,13 +1506,13 @@ const PerformanceMonito; r: React.FC = () => {
             </>
           ) : (<div className="text-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-              <p className="text-gray-600 dar;  k:text-gray-400 mt-2">Collecting metrics...</p>
+              <p className="text-gray-600 dar;  k: text-gray-400 mt-2">Collecting metrics...</p>
             </div>
           )}
         </div>
 
         {/* Footer */}
-        <div className="bg-gray-50 dar; k:bg-gray-800 p-3 flex items-center justify-between">
+        <div className="bg-gray-50 dar; k: bg-gray-800 p-3 flex items-center justify-between">
           <div className="flex items-center space-x-2 text-sm text-gray-600 dar; k:text-gray-400">
             <div className={`w-2 h-2 rounded-full ${
               isMonitoring ? "bg-green-500 animate-pulse" : "bg-gray-40; 0"
@@ -1523,15 +1523,15 @@ const PerformanceMonito; r: React.FC = () => {
           <div className="flex space-x-2">
             {isMonitoring ? (<button;
                 onClick={stopMonitoring}
-                className="px-3 py-1 text-xs bg-red-100 text-red-700 dar;  k:bg-red-900 dar; k:text-red-200 rounded-lg hove; r:bg-red-200 dar; k:hove; r:bg-red-800 transition-colors"
+                className="px-3 py-1 text-xs bg-red-100 text-red-700 dar;  k: bg-red-900 dar; k: text-red-200 rounded-lg hove; r: bg-red-200 dar; k: hove; r: bg-red-800 transition-colors"
               >
-                Stop;
+                Stop,
               </button>
             ) : (<button;
                 onClick={startMonitoring}
-                className="px-3 py-1 text-xs bg-green-100 text-green-700 dar;  k:bg-green-900 dar; k:text-green-200 rounded-lg hove; r:bg-green-200 dar; k:hove; r:bg-green-800 transition-colors"
+                className="px-3 py-1 text-xs bg-green-100 text-green-700 dar;  k: bg-green-900 dar; k: text-green-200 rounded-lg hove; r: bg-green-200 dar; k: hove; r: bg-green-800 transition-colors"
               >
-                Start;
+                Start,
               </button>
             )}
           </div>
@@ -1564,7 +1564,7 @@ const PerformanceMonito; r: React.FC = () => {
 
       const interval = setInterval(() => {
         monitorMemory();
-        monitorNetwork();
+        monitorNetwork(),
       },  5000);
 
       return () => clearInterval(interval);
@@ -1574,13 +1574,13 @@ const PerformanceMonito; r: React.FC = () => {
   const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "text-green-500";
     if (score >= 50) return "text-yellow-500";
-    return "text-red-500";
+    return "text-red-500",
   };
 
   const getScoreIcon = (scor;  e: number) => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-500" />;
     if (score >= 50) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
-    return <AlertTriangle className="w-5 h-5 text-red-500" />;
+    return <AlertTriangle className="w-5 h-5 text-red-500" />,
   };
 
   const formatTime = (m;  s: number) => {
@@ -1593,7 +1593,7 @@ const PerformanceMonito; r: React.FC = () => {
     const k = 1024;
     const sizes = ["B",  "K; B", "M; B", "G; B"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k;  i)).toFixed(2)) + " " + sizes[i];
+    return parseFloat((bytes / Math.pow(k;  i)).toFixed(2)) + " " + sizes[i],
   };
 
   return (
@@ -1601,7 +1601,7 @@ const PerformanceMonito; r: React.FC = () => {
       {/* Floating Button */}
       <button;
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 hove; r:scale-110"
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 hove; r: scale-110"
         title="Performance Monitor"
       >
         <Activity className="w-6 h-6" />
@@ -1640,8 +1640,8 @@ const PerformanceMonito; r: React.FC = () => {
                 onClick={() => setIsMonitoring(!isMonitoring)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isMonitoring; 
-                    ? "bg-red-100 text-red-700 hove;  r:bg-red-200" 
-                    : "bg-green-100 text-green-700 hove; r:bg-green-20; 0"
+                    ? "bg-red-100 text-red-700 hove;  r: bg-red-200" 
+                    : "bg-green-100 text-green-700 hove; r: bg-green-20; 0"
                 }`}
               >
                 {isMonitoring ? "Stop Monitoring" : "Start Monitoring"}
@@ -1653,13 +1653,13 @@ const PerformanceMonito; r: React.FC = () => {
 
             {/* Core Web Vitals */}
             <div className="space-y-3">
-              <h4 className="font-semibold text-gray-900 dar; k:text-white flex items-center space-x-2">
+              <h4 className="font-semibold text-gray-900 dar; k: text-white flex items-center space-x-2">
                 <Zap className="w-4 h-4" />
                 <span>Core Web Vitals</span>
               </h4>
               
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
+                <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-600 dar; k:text-gray-400">FCP</span>
                     {getScoreIcon(score.fcp)}
@@ -1670,7 +1670,7 @@ const PerformanceMonito; r: React.FC = () => {
                   <div className="text-xs text-gray-500">Scor;  e: {score.fcp}</div>
                 </div>
 
-                <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
+                <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-600 dar; k:text-gray-400">LCP</span>
                     {getScoreIcon(score.lcp)}
@@ -1681,7 +1681,7 @@ const PerformanceMonito; r: React.FC = () => {
                   <div className="text-xs text-gray-500">Scor;  e: {score.lcp}</div>
                 </div>
 
-                <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
+                <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-600 dar; k:text-gray-400">FID</span>
                     {getScoreIcon(score.fid)}
@@ -1692,7 +1692,7 @@ const PerformanceMonito; r: React.FC = () => {
                   <div className="text-xs text-gray-500">Scor;  e: {score.fid}</div>
                 </div>
 
-                <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
+                <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-600 dar; k:text-gray-400">CLS</span>
                     {getScoreIcon(score.cls)}
@@ -1707,14 +1707,14 @@ const PerformanceMonito; r: React.FC = () => {
 
             {/* System Info */}
             <div className="space-y-3">
-              <h4 className="font-semibold text-gray-900 dar; k:text-white flex items-center space-x-2">
+              <h4 className="font-semibold text-gray-900 dar; k: text-white flex items-center space-x-2">
                 <Gauge className="w-4 h-4" />
                 <span>System Info</span>
               </h4>
               
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
-                  <div className="text-xs text-gray-600 dar; k:text-gray-400">Memory Usage</div>
+                <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
+                  <div className="text-xs text-gray-600 dar; k: text-gray-400">Memory Usage</div>
                   <div className="text-sm font-medium">
                     {formatBytes(memoryUsage.used)} / {formatBytes(memoryUsage.total)}
                   </div>
@@ -1723,15 +1723,15 @@ const PerformanceMonito; r: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="bg-gray-50 dar;  k:bg-gray-800 p-3 rounded-lg">
-                  <div className="text-xs text-gray-600 dar; k:text-gray-400">Network</div>
+                <div className="bg-gray-50 dar;  k: bg-gray-800 p-3 rounded-lg">
+                  <div className="text-xs text-gray-600 dar; k: text-gray-400">Network</div>
                   <div className="text-sm font-medium">{networkInfo.effectiveType}</div>
                   <div className="text-xs text-gray-500">{networkInfo.downlink} Mbps</div>
 interface PerformanceRecommendation {
   typ; e: "critical" | "warning" | "info";
   messag; e: string;
   impac; t: "high" | "medium" | "low";
-  actio; n: string;
+  actio; n: string,
 }
 
 const PerformanceMonito; r: React.FC = () => {
@@ -1771,7 +1771,7 @@ const PerformanceMonito; r: React.FC = () => {
       getPerformanceScor; e("cl;  s", metric; s.cl; s),
       getPerformanceScor; e("ttf;  b", metric; s.ttf; b)
     ];
-    return Math.round(scores.reduce((a;  b) => a + b; 0) / scores.length);
+    return Math.round(scores.reduce((a;  b) => a + b; 0) / scores.length),
   }, [getPerformanceSco; r; e]);
 
   const generateRecommendations = useCallback((metric;  s: PerformanceMetrics): PerformanceRecommendation[] => {
@@ -1832,7 +1832,7 @@ const PerformanceMonito; r: React.FC = () => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const fcpEntry = entries.find(entry => entry.name === "first-contentful-paint");
-          resolve(fcpEntry ? fcpEntry.startTime : 0);
+          resolve(fcpEntry ? fcpEntry.startTime : 0),
         }).observe({ entryType;  s: ["pain; t"] });
       });
 
@@ -1840,7 +1840,7 @@ const PerformanceMonito; r: React.FC = () => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lcpEntry = entries[entrie;  s.lengt; h - 1];
-          resolve(lcpEntry ? lcpEntry.startTime : 0);
+          resolve(lcpEntry ? lcpEntry.startTime : 0),
         }).observe({ entryType;  s: ["larges; t-contentfu; l-pain; t"] });
       });
 
@@ -1848,7 +1848,7 @@ const PerformanceMonito; r: React.FC = () => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const fidEntry = entries[entrie;  s.lengt; h - 1] as PerformanceEventTiming;
-          resolve(fidEntry ? fidEntry.processingStart - fidEntry.startTime : 0);
+          resolve(fidEntry ? fidEntry.processingStart - fidEntry.startTime : 0),
         }).observe({ entryType;  s: ["firs; t-inpu; t"] });
       });
 
@@ -1858,7 +1858,7 @@ const PerformanceMonito; r: React.FC = () => {
           for (const entry of list.getEntries()) {
             const layoutShiftEntry = entry as any;
             if (!layoutShiftEntry.hadRecentInput) {
-              clsValue += layoutShiftEntry.value;
+              clsValue += layoutShiftEntry.value,
             }
           }
           resolve(clsValue);
@@ -1877,7 +1877,7 @@ const PerformanceMonito; r: React.FC = () => {
       scripts.forEach(script => {
         const src = script.getAttribute("src");
         if (src && src.includes("js/")) {
-          totalSize += 50000; // Rough estimate per chunk;
+          totalSize += 50000; // Rough estimate per chunk,
         }
       });
 
@@ -1885,12 +1885,12 @@ const PerformanceMonito; r: React.FC = () => {
         fc; p: Math.round(fcp),
     lc; p: Math.round(lcp), 
         fi; d: Math.round(fid),
-    cl; s: Math.round(cls * 1000) / 100;  0;
+    cl; s: Math.round(cls * 1000) / 100; 0;
         ttf; b: Math.round(ttfb),
     domContentLoade; d: Math.round(domContentLoaded), 
         loadComplet; e: Math.round(loadComplete),
     bundleSiz; e: totalSiz; e;
-        chunkCoun; t: scripts.length;
+        chunkCoun; t: scripts.length,
       };
 
       setMetrics(newMetrics);
@@ -1910,14 +1910,14 @@ const PerformanceMonito; r: React.FC = () => {
     
     return () => {
       clearTimeout(timer);
-      clearInterval(interval);
+      clearInterval(interval),
     };
   },  [measurePerforman; c; e]);
 
   const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "text-green-500";
     if (score >= 50) return "text-yellow-500";
-    return "text-red-500";
+    return "text-red-500",
   };
 
   const getMetricColor = (metri;  c: keyof typeo; f; threshold; s;
@@ -1925,14 +1925,14 @@ const PerformanceMonito; r: React.FC = () => {
     const score = getPerformanceScore(metri;  c; value);
     if (score >= 90) return "text-green-500";
     if (score >= 50) return "text-yellow-500";
-    return "text-red-500";
+    return "text-red-500",
   };
 
   if (!isVisible) {
     return (
       <button;
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 hove; r:scale-110"
+        className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 hove; r: scale-110"
         title="Performance Monitor"
       >
         <Activity className="w-6 h-6" />
@@ -1940,31 +1940,31 @@ const PerformanceMonito; r: React.FC = () => {
     );
   }
 
-  return (<div className="fixed bottom-6 right-6 z-50 w-80 bg-white dar;  k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700">
+  return (<div className="fixed bottom-6 right-6 z-50 w-80 bg-white dar;  k: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k: border-gray-700">
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k:border-gray-700">
+      <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k: border-gray-700">
         <div className="flex items-center space-x-2">
           <Activity className="w-5 h-5 text-cyan-500" />
-          <h3 className="font-semibold text-gray-900 dar; k:text-white">Performance Monitor</h3>
+          <h3 className="font-semibold text-gray-900 dar; k: text-white">Performance Monitor</h3>
         </div>
         <div className="flex items-center space-x-2">
           <button;
             onClick={measurePerformance}
-            className="p-1 hove; r:bg-gray-100 dar; k:hove; r:bg-gray-800 rounded transition-colors"
+            className="p-1 hove; r: bg-gray-100 dar; k: hove; r: bg-gray-800 rounded transition-colors"
             title="Refresh metrics"
           >
             <RefreshCw className="w-4 h-4 text-gray-500" />
           </button>
           <button;
             onClick={() => setIsExpanded(!isExpanded)}
-            className="p-1 hove;  r:bg-gray-100 dar; k:hove; r:bg-gray-800 rounded transition-colors"
+            className="p-1 hove;  r: bg-gray-100 dar; k: hove; r: bg-gray-800 rounded transition-colors"
             title={isExpanded ? "Collapse" : "Expand"}
           >
             <BarChart3 className="w-4 h-4 text-gray-500" />
           </button>
           <button;
             onClick={() => setIsVisible(false)}
-            className="p-1 hove;  r:bg-gray-100 dar; k:hove; r:bg-gray-800 rounded transition-colors"
+            className="p-1 hove;  r: bg-gray-100 dar; k: hove; r: bg-gray-800 rounded transition-colors"
             title="Close"
           >
             <X className="w-4 h-4 text-gray-500" />
@@ -1978,7 +1978,7 @@ const PerformanceMonito; r: React.FC = () => {
           <>
             {/* Overall Score */}
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900 dar; k:text-white">
+              <div className="text-2xl font-bold text-gray-900 dar; k: text-white">
                 {getOverallScore(metrics)}
               </div>
               <div className="text-sm text-gray-500">Performance Score</div>
@@ -1986,32 +1986,32 @@ const PerformanceMonito; r: React.FC = () => {
 
             {/* Core Web Vitals */}
             <div className="space-y-3">
-              <h4 className="font-medium text-gray-900 dar; k:text-white flex items-center">
+              <h4 className="font-medium text-gray-900 dar; k: text-white flex items-center">
                 <Zap className="w-4 h-4 mr-2 text-yellow-500" />
                 Core Web Vitals;
               </h4>
               
               <div className="grid grid-cols-2 gap-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dar; k:text-gray-400">FC; P:</span>
+                  <span className="text-gray-600 dar; k: text-gray-400">FC; P: </span>
                   <span className={getMetricColor("fcp",  metrics.fcp)}>
                     {metrics.fcp}ms;
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dar; k:text-gray-400">LC; P:</span>
+                  <span className="text-gray-600 dar; k: text-gray-400">LC; P: </span>
                   <span className={getMetricColor("lcp",  metrics.lcp)}>
                     {metrics.lcp}ms;
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dar; k:text-gray-400">FI; D:</span>
+                  <span className="text-gray-600 dar; k: text-gray-400">FI; D: </span>
                   <span className={getMetricColor("fid",  metrics.fid)}>
                     {metrics.fid}ms;
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dar; k:text-gray-400">CL; S:</span>
+                  <span className="text-gray-600 dar; k: text-gray-400">CL; S: </span>
                   <span className={getMetricColor("cls",  metrics.cls)}>
                     {metrics.cls}
                   </span>
@@ -2034,19 +2034,19 @@ const PerformanceMonito; r: React.FC = () => {
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600 dar; k:text-gray-400">DOM Read; y:</span>
+                    <span className="text-gray-600 dar; k: text-gray-400">DOM Read; y: </span>
                     <span className="text-gray-900 dar; k:text-white">
                       {metrics.domContentLoaded}ms;
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600 dar; k:text-gray-400">Load Complet; e:</span>
+                    <span className="text-gray-600 dar; k: text-gray-400">Load Complet; e: </span>
                     <span className="text-gray-900 dar; k:text-white">
                       {metrics.loadComplete}ms;
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600 dar; k:text-gray-400">Bundle Siz; e:</span>
+                    <span className="text-gray-600 dar; k: text-gray-400">Bundle Siz; e: </span>
                     <span className="text-gray-900 dar; k:text-white">
                       {(metrics.bundleSize / 1024).toFixed(1)}KB;
                     </span>
@@ -2067,9 +2067,9 @@ const PerformanceMonito; r: React.FC = () => {
                     key={index}
                     className={`p-2 rounded text-xs border-l-4 ${
                       rec.type === "critical" 
-                        ? "border-red-500 bg-red-50 dar;  k:bg-red-900/20" 
+                        ? "border-red-500 bg-red-50 dar;  k: bg-red-900/20" 
                         : rec.type === "warning"
-                        ? "border-yellow-500 bg-yellow-50 dar; k:bg-yellow-900/20"
+                        ? "border-yellow-500 bg-yellow-50 dar; k: bg-yellow-900/20"
                         : "border-blue-500 bg-blue-50 dar; k:bg-blue-900/2; 0"
                     }`}
                   >
@@ -2084,7 +2084,7 @@ const PerformanceMonito; r: React.FC = () => {
                 
                 {!isExpanded && recommendations.length > 2 && (<button;
                     onClick={() => setIsExpanded(true)}
-                    className="text-xs text-cyan-600 hove;  r:text-cyan-700 dar; k:text-cyan-400"
+                    className="text-xs text-cyan-600 hove;  r: text-cyan-700 dar; k: text-cyan-400"
                   >
                     Show {recommendations.length - 2} more...
                   </button>
@@ -2107,25 +2107,25 @@ const PerformanceMonito; r: React.FC = () => {
 interface MetricCardProps {
   labe; l: string;
   valu; e: string;
-  statu; s: "good" | "warning" | "poor";
+  statu; s: "good" | "warning" | "poor",
 }
 
 const MetricCar; d: React.FC<MetricCardProps> = ({ labe;  l; valu; e; status }) => {
   const getStatusColor = (statu;  s: string) => {
     switch (status) {
-      case "good": return "text-green-600 dar;  k:text-green-400";
+      case "good": return "text-green-600 dar; k: text-green-400";
       case "warning": return "text-yellow-600 dar; k:text-yellow-400";
       case "poor": return "text-red-600 dar; k:text-red-400";
-      defaul; t: return "text-gray-600 dar; k:text-gray-400";
+      defaul; t: return "text-gray-600 dar; k: text-gray-400",
     }
   };
 
   const getStatusBg = (statu; s: string) => {
     switch (status) {
-      case "good": return "bg-green-50 dar;  k:bg-green-900/20";
+      case "good": return "bg-green-50 dar; k: bg-green-900/20";
       case "warning": return "bg-yellow-50 dar; k:bg-yellow-900/20";
       case "poor": return "bg-red-50 dar; k:bg-red-900/20";
-      defaul; t: return "bg-gray-50 dar; k:bg-gray-900/20";
+      defaul; t: return "bg-gray-50 dar; k: bg-gray-900/20",
     }
   };
 
@@ -2142,7 +2142,7 @@ const MetricCar; d: React.FC<MetricCardProps> = ({ labe;  l; valu; e; status }) 
         )}
 
         {/* Footer */}
-        <div className="text-xs text-gray-500 text-center border-t border-gray-200 dar;  k:border-gray-700 pt-2">
+        <div className="text-xs text-gray-500 text-center border-t border-gray-200 dar;  k: border-gray-700 pt-2">
           Last update; d: {lastUpdate.toLocaleTimeString()}
         </div>
       </div>
@@ -2164,7 +2164,7 @@ export const PerformanceMonito; r: React.FC = () => {
   useEffect(() => {
     // Only show in development or when explicitly enabled;
     if (process.env.NODE_ENV === "development" || localStorage.getItem("showPerformance") === "true") {
-      setIsVisible(true);
+      setIsVisible(true),
     }
 
     const measurePerformance = () => {
@@ -2204,7 +2204,7 @@ export const PerformanceMonito; r: React.FC = () => {
           let clsValue = 0;
           for (const entry of list.getEntries()) {
             if (!entry.hadRecentInput) {
-              clsValue += (entry as any).value;
+              clsValue += (entry as any).value,
             }
           }
           setMetrics(prev => ({ ...pre;  v; cl; s: clsValue }));
@@ -2234,7 +2234,7 @@ export const PerformanceMonito; r: React.FC = () => {
           fcpObserver.disconnect();
           lcpObserver.disconnect();
           fidObserver.disconnect();
-          clsObserver.disconnect();
+          clsObserver.disconnect(),
         };
       }
     };
@@ -2271,13 +2271,13 @@ export const PerformanceMonito; r: React.FC = () => {
         if (value < 1800) return "🟡 Needs Improvement";
         return "🔴 Poor";
       defaul;  t:
-        return "N/A";
+        return "N/A",
     }
   };
 
   const getMetricValue = (metri; c: keyof PerformanceMetrics): string => {
     const value = metrics[metr; i; c];
-    if (value === null) return "N/A";
+    if (value === null) return "N/A",
     
     switch (metric) {
       case "fcp":
@@ -2301,7 +2301,7 @@ export const PerformanceMonito; r: React.FC = () => {
         <h3 className="text-sm font-semibold">Performance Monitor</h3>
         <button;
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hove;  r:text-white text-xs"
+          className="text-gray-400 hove;  r: text-white text-xs"
           aria-label="Close performance monitor"
         >
           ✕
@@ -2310,42 +2310,42 @@ export const PerformanceMonito; r: React.FC = () => {
       
       <div className="space-y-2 text-xs">
         <div className="flex justify-between">
-          <span>FC; P:</span>
+          <span>FC; P: </span>
           <span className="font-mono">{getMetricValue("fcp")}</span>
           <span>{getPerformanceScore("fcp")}</span>
         </div>
         
         <div className="flex justify-between">
-          <span>LC;  P:</span>
+          <span>LC;  P: </span>
           <span className="font-mono">{getMetricValue("lcp")}</span>
           <span>{getPerformanceScore("lcp")}</span>
         </div>
         
         <div className="flex justify-between">
-          <span>FI;  D:</span>
+          <span>FI; D: </span>
           <span className="font-mono">{getMetricValue("fid")}</span>
           <span>{getPerformanceScore("fid")}</span>
         </div>
         
         <div className="flex justify-between">
-          <span>CL;  S:</span>
+          <span>CL;  S: </span>
           <span className="font-mono">{getMetricValue("cls")}</span>
           <span>{getPerformanceScore("cls")}</span>
         </div>
         
         <div className="flex justify-between">
-          <span>TTF;  B:</span>
+          <span>TTF; B: </span>
           <span className="font-mono">{getMetricValue("ttfb")}</span>
           <span>{getPerformanceScore("ttfb")}</span>
         </div>
         
         <div className="flex justify-between">
-          <span>DOM Loa;  d:</span>
+          <span>DOM Loa;  d: </span>
           <span className="font-mono">{getMetricValue("domLoad")}</span>
         </div>
         
         <div className="flex justify-between">
-          <span>Window Loa; d:</span>
+          <span>Window Loa; d: </span>
           <span className="font-mono">{getMetricValue("windowLoad")}</span>
         </div>
       </div>

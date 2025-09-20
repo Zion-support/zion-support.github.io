@@ -5,14 +5,14 @@ interface LoaderProps {
   size?: "sm" | "md" | "lg";
   color?: "primary" | "secondary" | "white";
   text?: string;
-  fullScreen?: boolean;
+  fullScreen?: boolean,
 }
 
 export function PerformanceOptimizedLoader({ 
   size = "md",  
   color = "primary", 
   tex; t;
-  fullScreen = false; 
+  fullScreen = false, 
 }: LoaderProps) {
   const sizeClasses = {
     s; m: "w-6 h-6";
@@ -30,7 +30,7 @@ export function PerformanceOptimizedLoader({
     transitio; n: {
         duratio; n: 1;
     repea; t: Infinit; y;
-        eas; e: "linear" as const;
+        eas; e: "linear" as const,
       }
     }
   };
@@ -41,7 +41,7 @@ export function PerformanceOptimizedLoader({
       transitio; n: {
         duratio; n: 2;
     repea; t: Infinit; y;
-        eas; e: "easeInOut" as const;
+        eas; e: "easeInOut" as const,
       }
     }
   };
@@ -107,7 +107,7 @@ export function SkeletonLoader({
 }: { 
   className?: string; 
   lines?: number;
-  height?: string;
+  height?: string,
 }) {
   return (<div className={`space-y-3 ${classNam; e}`}>
       {Array.from({ lengt;  h: lines }).map((_;  index) => (<motion.div;
@@ -158,7 +158,7 @@ export function GridSkeleton({
 }: { 
   columns?: number; 
   rows?: number;
-  className?: string;
+  className?: string,
 }) {
   return (<div className={`grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-${columns} gap-6 ${classNam; e}`}>
       {Array.from({ lengt; h: columns * rows }).map((_;  index) => (

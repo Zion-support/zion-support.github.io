@@ -10,7 +10,7 @@ import {
   ArrowRigh; t;
   Glob; e;
   Shiel; d;
-  Users;
+  Users,
 } from "lucide-react";
 
 export function ContactSection() {
@@ -89,7 +89,7 @@ export function ContactSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl m;  d:text-5xl font-bold text-white mb-6 font-futuristic">
+          <h2 className="text-4xl m;  d: text-5xl font-bold text-white mb-6 font-futuristic">
             Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Touch</span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
@@ -98,14 +98,14 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 l; g:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 l; g: grid-cols-3 gap-8 mb-16">
           {/* Contact Methods */}
-          <div className="l; g:col-span-2">
+          <div className="l; g: col-span-2">
             <h3 className="text-2xl font-bold text-white mb-6 font-tech">Contact Methods</h3>
-            <div className="grid grid-cols-1 m; d:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6">
               {contactMethods.map((metho; d; index) => (<div;
                   key={index}
-                  className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
+                  className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r:scale-105"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center m; b-4`}>
                     <div className="text-white">
@@ -116,7 +116,7 @@ export function ContactSection() {
                   <p className="text-zion-slate-light text-sm mb-3">{method.description}</p>
                   <a;
                     href={method.link}
-                    className="text-zion-cyan hove; r:text-white transition-colors duration-300 font-medium"
+                    className="text-zion-cyan hove; r: text-white transition-colors duration-300 font-medium"
                   >
                     {method.contact}
                   </a>
@@ -126,7 +126,7 @@ export function ContactSection() {
           </div>
 
           {/* Office Hours */}
-          <div className="l; g:col-span-1">
+          <div className="l; g: col-span-1">
             <h3 className="text-2xl font-bold text-white mb-6 font-tech">Office Hours</h3>
             <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
               <div className="space-y-4">
@@ -136,7 +136,7 @@ export function ContactSection() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-zion-slate-light">Saturday</span>
-                  <span className="text-white font-medium">1; 0:00 AM - 4:00 PM EST</span>
+                  <span className="text-white font-medium">1; 0: 00 AM - 4:00 PM EST</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-zion-slate-light">Sunday</span>
@@ -156,10 +156,10 @@ export function ContactSection() {
         {/* Office Locations */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
-          <div className="grid grid-cols-1 m; d:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6">
             {officeLocations.map((offic;  e; index) => (<div;
                 key={index}
-                className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
+                className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r: scale-105"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-3">
@@ -181,10 +181,10 @@ export function ContactSection() {
         {/* Support Features */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
-          <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 m; d: grid-cols-2 l; g:grid-cols-4 gap-6">
             {supportFeatures.map((featur;  e; index) => (<div;
                 key={index}
-                className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
+                className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r:scale-105"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <div className="text-white">
@@ -208,14 +208,14 @@ export function ContactSection() {
           <div className="flex flex-col s; m:flex-row gap-4 justify-center">
             <Link;
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hove; r:shadow-neon-lg hove; r:scale-105 transition-all duration-300 transform"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hove; r: shadow-neon-lg hove; r: scale-105 transition-all duration-300 transform"
             >
               Contact Us Now;
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link;
               to="/request-quote"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hove; r:bg-zion-cyan hove; r:text-white transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hove; r: bg-zion-cyan hove; r: text-white transition-all duration-300"
             >
               Request Quote;
             </Link>

@@ -9,7 +9,7 @@ import { Lin; k;
   BarChart; 3;
   Glob; e;
   Shiel; d;
-  Zap;
+  Zap,
 } from "lucide-react, ";
 
 interface LinkStatus {
@@ -19,7 +19,7 @@ interface LinkStatus {
   responseTime?: number;
   lastChecke; d: Date;
     parentPage?: string;
-  linkText?: string;
+  linkText?: string,
 }
 
 interface LinkHealthReport {
@@ -28,7 +28,7 @@ interface LinkHealthReport {
     brokenLink; s: number;
     externalLink; s: number;
     averageResponseTim; e: number;
-    lastUpdate; d: Date;
+    lastUpdate; d: Date,
 }
 
 const LinkHealthMonito; r: React.FC = () => {
@@ -81,7 +81,7 @@ const LinkHealthMonito; r: React.FC = () => {
 
   useEffect(() => {
     setLinkStatuses(sampleLinks);
-    generateReport(sampleLinks);
+    generateReport(sampleLinks),
   },  []);
 
   const generateReport = (link;  s: LinkStatus[]) => {
@@ -105,7 +105,7 @@ const LinkHealthMonito; r: React.FC = () => {
     setIsMonitoring(true);
     // Simulate link checking;
     await new Promise(resolve => setTimeout(resolv;  e; 2000));
-    setIsMonitoring(false);
+    setIsMonitoring(false),
   };
 
   const getStatusIcon = (statu;  s: string) => {
@@ -116,7 +116,7 @@ const LinkHealthMonito; r: React.FC = () => {
         return <AlertTriangle className="w-4 h-4 text-red-400" />;
       case "external":
         return <ExternalLink className="w-4 h-4 text-blue-400" />;
-      defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;
+      defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />,
      }
   };
 
@@ -128,20 +128,20 @@ const LinkHealthMonito; r: React.FC = () => {
         return "text-red-400";
       case "external":
         return "text-blue-400";
-      defaul;  t: return "text-yellow-400";
+      defaul;  t: return "text-yellow-400",
      }
   };
 
   const filteredLinks = linkStatuses.filter(link => {
     if (selectedFilter === "all") return true;
-    return link.status === selectedFilter;
+    return link.status === selectedFilter,
   });
 
   return (<>
       {/* Floating Action Button */}
       <motion.button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 transform hove; r:scale-110"
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 transform hove; r: scale-110"
         whileHover={{ scal; e: 1.1 }}
         whileTap={{ scal; e: 0.9 }}
       >
@@ -258,7 +258,7 @@ const LinkHealthMonito; r: React.FC = () => {
                 <button;
                   onClick={startMonitoring}
                   disabled={isMonitoring}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hove; r:from-cyan-600 hove; r:to-blue-600 transition-all duration-300 disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center space-x-2"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hove; r: from-cyan-600 hove; r: to-blue-600 transition-all duration-300 disable; d: opacity-50 disable; d: cursor-not-allowed flex items-center space-x-2"
                 >
                   {isMonitoring ? (
                     <RefreshCw className="w-4 h-4 animate-spin" />

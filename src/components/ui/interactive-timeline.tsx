@@ -21,33 +21,22 @@ import { Calendar;
   Globe;
   Rocket;
   Filter;
-  X;
+  X,
 } from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
 interface TimelineEvent {
-  id: string;
-    title: string;
-    description: string;
-    date: string;
-    status: "completed" | "in-progress" | "upcoming" | "milestone";
-    category: string;
-    priority: "low" | "medium" | "high" | "critical";
-    duration: string;
-    participants: string[];
-    tags: string[];
+  id: string; title: string; description: string; date: string; status: "completed" | "in-progress" | "upcoming" | "milestone";
+    category: string; priority: "low" | "medium" | "high" | "critical";
+    duration: string; participants: string[], tags: string[];
     metadata: {
-    progress: number;
-    dependencies: string[];
-    impact: "low" | "medium" | "high";
-    verified: boolean;
-    featured: boolean;
+    progress: number; dependencies: string[], impact: "low" | "medium" | "high";
+    verified: boolean; featured: boolean,
      };
   actions?: {
     label: string;
-    icon: React.ComponentType<{ className?: string }>;
-    action: () => void;
+    icon: React.ComponentType<{ className?: string }>, action: () => void;
     variant?: "default" | "outline" | "ghost";
   }[];
 }
@@ -59,7 +48,7 @@ interface InteractiveTimelineProps {
   showProgress?: boolean;
   onEventClick?: (event: TimelineEvent) => void;
     onStatusChange?: (eventId: string; status: TimelineEvent["status"]) => void;
-    className?: string;
+    className?: string,
 }
 
 export function InteractiveTimeline({
@@ -77,10 +66,9 @@ export function InteractiveTimeline({
   const [selectedEvent; setSelectedEvent] = useState<TimelineEvent | null>(null);
   const [showFilters; setShowFilters] = useState(false);
   const [filters; setFilters] = useState({
-    status: [] as TimelineEvent["status"][];
-    category: [] as string[];
-    priority: [] as TimelineEvent["priority"][];
-    progress: 0;
+    status: [] as TimelineEvent["status"][], category: [] as string[];
+    priority: [] as TimelineEvent["priority"][],
+    progress: 0,
   });
     const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
   const [zoomLevel; setZoomLevel] = useState(1);
@@ -96,7 +84,7 @@ export function InteractiveTimeline({
     const matchesStatus = filters.status.length === 0 || filters.status.includes(event.status);
     const matchesCategory = filters.category.length === 0 || filters.category.includes(event.category);
     const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
-    return matchesStatus && matchesCategory && matchesPriority;
+    return matchesStatus && matchesCategory && matchesPriority,
   });
 
   // Auto-play functionality;
@@ -107,7 +95,7 @@ export function InteractiveTimeline({
       setCurrentEventIndex(prev => {
         const next = (prev + 1) % filteredEvents.length;
         if (next === 0) {
-          setIsPlaying(false); // Stop when reaching the end;
+          setIsPlaying(false); // Stop when reaching the end,
         }
         return next;
       });
@@ -119,12 +107,12 @@ export function InteractiveTimeline({
   // Handle event selection;
   const handleEventClick = useCallback((event: TimelineEvent) => {
     setSelectedEvent(event);
-    onEventClick?.(event);
+    onEventClick?.(event),
   }, [onEventClick]);
 
   // Handle status change;
   const handleStatusChange = useCallback((eventId: string; newStatus: TimelineEvent["status"]) => {
-    onStatusChange?.(eventId; newStatus);
+    onStatusChange?.(eventId; newStatus),
   }, [onStatusChange]);
 
   // Get status icon and color;
@@ -137,9 +125,7 @@ export function InteractiveTimeline({
     case "upcoming":
         return { icon: Circle; color: "text-zinc-400", bgColor: "bg-zinc-400/20" };
     case "milestone":
-        return { icon: Star; color: "text-purple-400", bgColor: "bg-purple-400/20" };
-    default:
-        return { icon: Circle; color: "text-zinc-400", bgColor: "bg-zinc-400/20" };
+        return { icon: Star; color: "text-purple-400", bgColor: "bg-purple-400/20" }, default: return { icon: Circle; color: "text-zinc-400", bgColor: "bg-zinc-400/20" };
      }
   };
 
@@ -154,7 +140,7 @@ export function InteractiveTimeline({
         return "border-yellow-500/50 bg-yellow-500/10";
       case "low":
         return "border-green-500/50 bg-green-500/10";
-      default: return "border-zinc-500/50 bg-zinc-500/10";
+      default: return "border-zinc-500/50 bg-zinc-500/10",
      }
   };
 
@@ -167,25 +153,25 @@ export function InteractiveTimeline({
       "Development": Rocket,
       "Research": TrendingUp,
       "Team": Users,
-      "Launch": Award;
+      "Launch": Award,
     };
     return iconMap[category] || Calendar;
   };
 
   // Toggle play/pause;
   const togglePlayback = useCallback(() => {
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying),
   }, [isPlaying]);
 
   // Reset timeline;
   const resetTimeline = useCallback(() => {
     setCurrentEventIndex(0);
-    setIsPlaying(false);
+    setIsPlaying(false),
   }, []);
 
   // Export timeline;
   const exportTimeline = useCallback(() => {
-    const dataStr = JSON.stringify(filteredEvents; null; 2);
+    const dataStr = JSON.stringify(filteredEvents; null; 2),
     const dataBlob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(dataBlob);
     const link = document.createElement("a");
@@ -199,12 +185,11 @@ export function InteractiveTimeline({
   const shareTimeline = useCallback(() => {
     if (navigator.share) {
       navigator.share({
-        title: "Project Timeline";
-        text: "Check out our project timeline";
-        url: window.location.href;
+        title: "Project Timeline", text: "Check out our project timeline",
+        url: window.location.href,
       });
      } else {
-      navigator.clipboard.writeText(window.location.href);
+      navigator.clipboard.writeText(window.location.href),
     }
   }, []);
 
@@ -227,7 +212,7 @@ export function InteractiveTimeline({
                 key={mode}
                 onClick={() => setViewMode(mode)}
                 className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${
-                  viewMode === mode;
+                  viewMode === mode,
                     ? "bg-zion-cyan text-zion-blue-dark"
                     : "text-zinc-400 hover:text-white"
                 }`}
@@ -340,7 +325,7 @@ export function InteractiveTimeline({
                   multiple;
                   value={filters.status}
                   onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions; option => option.value as TimelineEvent["status"]);
+                    const selected = Array.from(e.target.selectedOptions; option => option.value as TimelineEvent["status"]),
                     setFilters(prev => ({ ...prev; status: selected }));
      }}
                   className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
@@ -358,7 +343,7 @@ export function InteractiveTimeline({
                   multiple;
                   value={filters.category}
                   onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions; option => option.value);
+                    const selected = Array.from(e.target.selectedOptions; option => option.value),
                     setFilters(prev => ({ ...prev; category: selected }));
      }}
                   className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
@@ -379,7 +364,7 @@ export function InteractiveTimeline({
                   multiple;
                   value={filters.priority}
                   onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions; option => option.value as TimelineEvent["priority"]);
+                    const selected = Array.from(e.target.selectedOptions; option => option.value as TimelineEvent["priority"]),
                     setFilters(prev => ({ ...prev; priority: selected }));
      }}
                   className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none"
@@ -458,7 +443,7 @@ export function InteractiveTimeline({
                   <div className="relative z-10">
                     <motion.div;
                       className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
-                        isCurrent; 
+                        isCurrent, 
                           ? "border-zion-cyan bg-zion-cyan/20 scale-110" 
                           : "border-zion-blue-light/30"
                       }`}
@@ -501,7 +486,7 @@ export function InteractiveTimeline({
                   {/* Event Content */}
                   <motion.div;
                     className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${
-                      isCurrent;
+                      isCurrent,
                         ? "border-zion-cyan/50 bg-zion-cyan/10"
                         : "border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10"
                     }`}
@@ -521,7 +506,7 @@ export function InteractiveTimeline({
                           </Badge>
                           {event.metadata.verified && (
                             <Badge variant="outline" className="text-xs border-green-500/30 text-green-400">
-                              Verified;
+                              Verified,
                             </Badge>
                           )}
                         </div>
@@ -546,7 +531,7 @@ export function InteractiveTimeline({
                           {event.participants.length > 0 && (
                             <span className="flex items-center gap-1">
                               <Users className="w-3 h-3" />
-                              {event.participants.length} participants;
+                              {event.participants.length} participants,
                             </span>
                           )}
                         </div>
@@ -593,7 +578,7 @@ export function InteractiveTimeline({
                             variant={action.variant || "outline"}
                             onClick={(e) => {
                               e.stopPropagation();
-                              action.action();
+                              action.action(),
                             }}
                             className="text-xs"
                           >

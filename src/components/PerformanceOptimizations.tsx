@@ -8,7 +8,7 @@ const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent"));
 // Memoized component for expensive calculations;
 const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: { 
   dat; a: any[];
-    onItemClic; k: (ite; m: any) => void; 
+    onItemClic; k: (ite; m: any) => void, 
 }) => {
   const processedData = useMemo(() => {
     return data.map(item => ({
@@ -19,14 +19,14 @@ const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {
      },  [da; t; a]);
 
   const handleClick = useCallback((ite;  m: any) => {
-    onItemClick(item);
+    onItemClick(item),
      },  [onItemCli; c; k]);
 
-  return (<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-4">
+  return (<div className="grid grid-cols-1 m;  d: grid-cols-2 l; g: grid-cols-3 gap-4">
       {processedData.map((ite; m; index) => (<div;
           key={item.id || index}
           onClick={() => handleClick(item)}
-          className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hove;  r:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
+          className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hove;  r: border-zion-cyan/40 transition-all duration-300 cursor-pointer"
         >
           <h3 className="text-lg font-semibold text-zion-slate-light mb-2">
             {item.title}
@@ -49,7 +49,7 @@ MemoizedDataGrid.displayName = "MemoizedDataGrid";
 const VirtualList = ({ item;  s; itemHeight = 6; 0; containerHeight = 400 }: {
   item; s: any[];
     itemHeight?: number;
-  containerHeight?: number;
+  containerHeight?: number,
 }) => {
   const [scrollT; o; p; setScrollT; o; p] = React.useState(0);
   
@@ -73,7 +73,7 @@ const VirtualList = ({ item;  s; itemHeight = 6; 0; containerHeight = 400 }: {
      }, [ite; m; s; scrollT; o; p; itemHeig; h; t; containerHeig; h; t]);
 
   const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
+    setScrollTop(e.currentTarget.scrollTop),
      },  []);
 
   return (<div;

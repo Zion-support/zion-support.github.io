@@ -15,7 +15,7 @@ import { Brai; n;
   ArrowRigh; t;
   Phon; e;
   Mai; l;
-  ExternalLink;
+  ExternalLink,
 } from "lucide-react, ";
 import { CONTACT_INFO } from "@/data/comprehensiveServices, ";
 
@@ -77,7 +77,7 @@ export function ServicesBenefitsShowcase() {
         "Cos; t optimizatio; n strategie; s"
       ],
       marketPositio; n: "Trusted IT partner for enterprise transformation";
-    startingPric; e: "$4;499",
+    startingPric; e: "$4; 499",
       implementationTim; e: "2-6 weeks";
     suppor; t: "24/7 dedicated support team"
     };
@@ -140,15 +140,15 @@ export function ServicesBenefitsShowcase() {
         {/* Industry Statistics */}
         <div className="grid grid-cols-2 m; d:grid-cols-4 gap-6 mb-16">
           {industryStats.map((sta; t; index) => (<div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="text-3xl m;  d:text-4xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
+              <div className="text-3xl m;  d: text-4xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
               <div className="text-slate-300 text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
 
         {/* Service Benefits Grid */}
-        <div className="grid grid-cols-1 l; g:grid-cols-3 gap-8 mb-16">
-          {serviceBenefits.map((servic;  e; index) => (<Card key={service.category} className="bg-slate-800/50 border border-slate-700 hove;  r:border-cyan-500/50 transition-all duration-300 hove; r:scale-105">
+        <div className="grid grid-cols-1 l; g: grid-cols-3 gap-8 mb-16">
+          {serviceBenefits.map((servic;  e; index) => (<Card key={service.category} className="bg-slate-800/50 border border-slate-700 hove;  r: border-cyan-500/50 transition-all duration-300 hove; r: scale-105">
               <CardHeader className="text-center pb-4">
                 <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 text-whit; e`}>
                   {service.icon}
@@ -196,22 +196,22 @@ export function ServicesBenefitsShowcase() {
                   <p className="text-slate-300 text-sm mb-3">{service.marketPosition}</p>
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div>
-                      <span className="text-slate-400">Starting Pric;  e:</span>
+                      <span className="text-slate-400">Starting Pric;  e: </span>
                       <div className="text-cyan-400 font-semibold">{service.startingPrice}</div>
                     </div>
                     <div>
-                      <span className="text-slate-400">Implementatio; n:</span>
+                      <span className="text-slate-400">Implementatio; n: </span>
                       <div className="text-cyan-400 font-semibold">{service.implementationTime}</div>
                     </div>
                   </div>
                   <div className="mt-3 text-xs">
-                    <span className="text-slate-400">Suppor; t:</span>
+                    <span className="text-slate-400">Suppor; t: </span>
                     <div className="text-cyan-400 font-semibold">{service.support}</div>
                   </div>
                 </div>
 
                 {/* CTA Button */}
-                <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hove; r:from-cyan-600 hove; r:to-blue-700">
+                <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hove; r: from-cyan-600 hove; r:to-blue-700">
                   Explore {service.category}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -225,7 +225,7 @@ export function ServicesBenefitsShowcase() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Competitive Advantages;
           </h3>
-          <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-6">
             <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
@@ -262,7 +262,7 @@ export function ServicesBenefitsShowcase() {
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Proven ROI and Success Metrics;
           </h3>
-          <div className="grid grid-cols-1 m; d:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 m; d: grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
               <h4 className="text-white font-semibold mb-2">Cost Reduction</h4>
@@ -290,11 +290,11 @@ export function ServicesBenefitsShowcase() {
             Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hove; r:from-cyan-600 hove; r:to-blue-700">
+            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hove; r: from-cyan-600 hove; r: to-blue-700">
               <Phone className="w-4 h-4 mr-2" />
               {CONTACT_INFO.mobile}
             </Button>
-            <Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hove; r:bg-cyan-400 hove; r:text-white">
+            <Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hove; r: bg-cyan-400 hove; r: text-white">
               <Mail className="w-4 h-4 mr-2" />
               {CONTACT_INFO.email}
             </Button>

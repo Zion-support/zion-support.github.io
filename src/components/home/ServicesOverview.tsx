@@ -4,7 +4,7 @@ import { ArrowRightCheckCircleSparkles } from "lucide-react, ";
 import; React; from "react";
 import { Link } from "react-router-dom, ";
 interface Service {
-  category: stringico;n: React.ComponentType<{ className?: string }>,color: string;items: string[];
+  category: stringico;n: React.ComponentType<{ className?: string }>,color: string; items: string[];
     description?: string;
 };interface ServicesOverviewProps {
   services: Service[ ];
@@ -23,14 +23,14 @@ const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
             <Sparkles className="w-4 h-4 text-zion-cyan mr-2" />;
             <span className="text-zion-cyan text-sm font-medium">Innovation First</span>;
           </div>;
-          <h2 id="services-heading" className="text-4xl md: text-5xl l;g: text-6xl font-bold text-white mb-6">;
+          <h2 id="services-heading" className="text-4xl md: text-5xl l; g: text-6xl font-bold text-white mb-6">;
     Our <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Services</span>;
           </h2>;
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">;
             Comprehensive; technology; solutions designed; to; drive innovation; and; growth across; all; industries;
           </p>;
         </motion.div>;
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 l;g: gap-12">;
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 l; g: gap-12">,
     {services.map((serviceindex) => (;
             <motion.div;
               key={service.category}
@@ -40,13 +40,13 @@ const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
               transition={{ duration: 0.8dela;y: index * 0.1 }};
     viewport={{ once: true }};
     whileHover={{
-                y: -5transitio;n: { duratio;n: 0.3 }
+                y: -5transitio; n: { duratio;n: 0.3 }
               }}
             >;
     {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0" />;
     {/* Service; icon; with enhanced styling */}
-              <div className={`relative w-20 h-20 bg-gradient-to-br ${service.color} rounded-2xl; flex; items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0 shadow-lg group-hove;r:shadow-xl group-hove;r: shadow-zion-cyan/30`}>;
+              <div className={`relative w-20 h-20 bg-gradient-to-br ${service.color} rounded-2xl; flex; items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0 shadow-lg group-hove; r: shadow-xl group-hove;r: shadow-zion-cyan/30`}>,
     {React.createElement(service.icon{ className: "w-10 h-10 text-white""aria-hidden": "true" })}
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-30o0" />;
@@ -55,9 +55,9 @@ const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
     {service.category}
               </h3>;
               {service.description && (;
-                <p className="relative text-zion-slate-light mb-6 leading-relaxed group-hover: text-zion-slate-light/90 transition-colors duration-30o0">;
+                <p className="relative text-zion-slate-light mb-6 leading-relaxed group-hover: text-zion-slate-light/90 transition-colors duration-30o0">,
     {service.description}
-                </p>;
+                </p>,
               )}
 ;
               <ul className="relative space-y-3 mb-6">;
@@ -72,12 +72,12 @@ const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
                   >;
     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover: scale-110 transition-transform duration-30o0" aria-hidden="true" />;
     <span className="text-sm">{item}</span>;
-                  </motion.li>;
+                  </motion.li>,
                 ))}
               </ul>
               <Link;
                 to={`/services/${service.category.toLowerCase().replace(/\s+/g"-")}`}
-                className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover: from-zion-blue hove;r:to-zion-purple transition-all duration-30o0; transform; hover: scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focu;s:ring-offset-2 focu;s: ring-offset-zion-slate-dark";
+                className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover: from-zion-blue hove; r: to-zion-purple transition-all duration-30o0; transform; hover: scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focu; s: ring-offset-2 focu;s: ring-offset-zion-slate-dark";
     aria-label={`Learn; more; about ${service.category} services`}
               >;
                 Explore {service.category}

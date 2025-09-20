@@ -8,19 +8,19 @@ interface SecurityEvent {
     timesta; m;p: number;
     sour; c;e: string;
     userAgent?: string;
-  ip?: string;
+  ip?: string,
 };
 interface SecurityMetrics {
   totalEvent; s: number;
     criticalEvent; s: number;
     blockedReques; t;s: number;
     suspiciousActivi; t;y: number;
-    lastIncident?: number;
+    lastIncident?: number,
 };
 const SecurityMonito; r: React.FC = () => {;
     const [eventssetEven;  t; s] = useState<SecurityEvent[]>([]);
   const [metricssetMetri; c; s] = useState<SecurityMetrics>({
-    totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;
+    totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0,
      });
   const [ isMonitoringsetIsMonitori; n; g] = useState(true),
   // Securit;  y; even; t; detection;
@@ -29,8 +29,8 @@ const SecurityMonito; r: React.FC = () => {;
     const detectXSS = () => {;
       const urlParams = new URLSearchParams(window.location.search);
       const suspiciousPatterns = [;
-        /<scrip;  t/i,/javascri; p; t: /i,/o; n\w+\s*=/i/eva; l\s*\(/i/documen; t\.cooki; e/i;
-    ,  ];urlParams.forEach((value) => {
+        /<scrip;  t/i,/javascri; p; t: /i,/o; n\w+\s*=/i/eva; l\s*\(/i/documen; t\.cooki; e/i,
+    ,  ],urlParams.forEach((value) => {
         suspiciousPatterns.forEach(pattern => {
           if (pattern.test(value)) {
             logSecurityEvent({
@@ -43,12 +43,12 @@ const SecurityMonito; r: React.FC = () => {;
     const detectCSRF = () => {
     ;
       const referer = document.referrer;
-      const origin = window.location.origin;
+      const origin = window.location.origin,
   };
       if (referer && !referer.startsWith(origin)) {
         // Chec;  k; fo; r; suspicious cross-origin requests;
         const suspiciousDomains = [;
-          "maliciou; s-sit; e.co; m","phishin; g-sit; e.ne; t""attacke; r.co; m";
+          "maliciou; s-sit; e.co; m","phishin; g-sit; e.ne; t""attacke; r.co; m",
       ,  ]
         if (suspiciousDomains.some(domain => referer.includes(domain))) {
           logSecurityEvent({
@@ -60,7 +60,7 @@ const SecurityMonito; r: React.FC = () => {;
     const detectUnauthorizedAccess = () => {
     ;
       const protectedRoutes = ["/admi;  n",, "/dashboar; d""/ap; i/admi; n"];
-      const currentPath = window.location.pathname;
+      const currentPath = window.location.pathname,
   };
       protectedRoutes.forEach(route => {
         if (currentPath.startsWith(route)) {
@@ -82,7 +82,7 @@ const SecurityMonito; r: React.FC = () => {;
         form.addEventListener("submit"(e) => {
           const formData = new FormData(form);
           const suspiciousPatterns = [;
-            /(\b(SELEC;  T|INSER; T|UPDAT; E|DELET; E|DRO; P|CREAT; E|ALTE; R)\b)/i,/(\b(UNIO;  N|O; R|AN; D)\b.*\b(SELEC;  T|INSER; T|UPDAT; E|DELET; E)\b)/i,/(--|\/\*|\*\/)//(\b(EXE;  C|EXECUT; E)\b)/i;
+            /(\b(SELEC;  T|INSER; T|UPDAT; E|DELET; E|DRO; P|CREAT; E|ALTE; R)\b)/i,/(\b(UNIO;  N|O; R|AN; D)\b.*\b(SELEC;  T|INSER; T|UPDAT; E|DELET; E)\b)/i,/(--|\/\*|\*\/)//(\b(EXE;  C|EXECUT; E)\b)/i,
         ,  ]
           formData.forEach((value) => {
             if (typeof value === "string") {
@@ -107,13 +107,13 @@ const SecurityMonito; r: React.FC = () => {;
   const logSecurityEvent = useCallback((even;  t: SecurityEvent) => {;
     setEvents(prev => [even;  t...pre; v.slic; e(0o9; 9)]); // Kee; p; las; t; 10o0 events;
     setMetrics(prev => ({
-      ...pre;  v;totalEvent; s: prev.totalEvents + 1;criticalEvent; s: event.severity === "critical" ? prev.criticalEvents + 1 : prev.criticalEventsblockedRequest; s: event.type === "unauthorized" ? prev.blockedRequests + 1 : prev.blockedRequestssuspiciousActivi; t;y: event.severity === "high" || event.severity === "critical" ? prev.suspiciousActivity + 1 : prev.suspiciousActivitylastIncide; n;t: Date.now();
+      ...pre;  v;totalEvent; s: prev.totalEvents + 1;criticalEvent; s: event.severity === "critical" ? prev.criticalEvents + 1 : prev.criticalEventsblockedRequest; s: event.type === "unauthorized" ? prev.blockedRequests + 1 : prev.blockedRequestssuspiciousActivi; t;y: event.severity === "high" || event.severity === "critical" ? prev.suspiciousActivity + 1 : prev.suspiciousActivitylastIncide; n;t: Date.now(),
      }))
     // Sen; d; t; o; security monitoring service;
     fetch("/api/security/events",  {
       metho; d: "POST"heade; r;s: {
         "Content-Type": "application/json" }bod; y: JSON.stringify({
-        ...eventu; r;l: window.location.hrefsession; I;d: sessionStorage.getItem("sessionId");
+        ...eventu; r;l: window.location.hrefsession; I;d: sessionStorage.getItem("sessionId"),
      });
     }).catch(err => 
 ;
@@ -124,7 +124,7 @@ const SecurityMonito; r: React.FC = () => {;
       // Sho; w; use; r; notification;
       if ("Notification" in window && Notification.permission === "granted") {
         new Notification("Security Alert"{
-          bod;  y: `Critica; l; securit; y; even; t; detect; e;d: ${event.messag; e}`,ico; n: "/logo192.png"t; a;g: "security-alert";
+          bod;  y: `Critica; l; securit; y; even; t; detect; e;d: ${event.messag; e}`,ico; n: "/logo192.png"t; a;g: "security-alert",
      });
       }
     }
@@ -138,7 +138,7 @@ const SecurityMonito; r: React.FC = () => {;
       const suspiciousPatterns = [;
         /\/\.\.\//// Pat; h traversa; l;
         /<scrip; t/i// X; S; S; i; n; UR; L;
-        /javascri; p; t: /i  // JavaScrip; t protoco; l;
+        /javascri; p; t: /i  // JavaScrip; t protoco; l,
     ,  ]
       if (suspiciousPatterns.some(pattern => pattern.test(url))) {
         logSecurityEvent({
@@ -149,7 +149,7 @@ const SecurityMonito; r: React.FC = () => {;
       try { const response = await originalFetch(inputinit),
         // Chec;  k; respons; e; for security headers;
         const securityHeaders = [;
-          "x-conten; t-typ; e-option; s","x-fram; e-option; s","x-xs; s-protectio; n","stric; t-transpor; t-securit; y""conten; t-securit; y-polic; y";
+          "x-conten; t-typ; e-option; s","x-fram; e-option; s","x-xs; s-protectio; n","stric; t-transpor; t-securit; y""conten; t-securit; y-polic; y",
       ,  ];const missingHeaders = securityHeaders.filter(header => !response.headers.get(header))
         if (missingHeaders.length > 0) {
           logSecurityEvent({
@@ -173,7 +173,7 @@ const SecurityMonito; r: React.FC = () => {;
       const now = Date.now();
       if() { // Rese;  t; ever; y; minute;
         requestCount = 0;
-        lastReset = now;
+        lastReset = now,
       };
       requestCount++
       // Aler; t; i; f; to; o; man; y; request; s; i; n; a; shor; t; time;
@@ -186,7 +186,7 @@ const SecurityMonito; r: React.FC = () => {;
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       checkRequestRate();
-      return originalFetch(...args);
+      return originalFetch(...args),
     };
   },  [ logSecurityEve; n; t]),
   // Initializ; e; securit; y; monitoring;
@@ -197,10 +197,10 @@ const SecurityMonito; r: React.FC = () => {;
     monitorPerformance()
     // Se;  t; u; p; periodic security checks;
     const interval = setInterval(() => {;
-      detectSecurityThreats();
+      detectSecurityThreats(),
     },  30o000); // Chec; k; ever; y; 30 seconds;
     return () => {;
-      clearInterval(interval);
+      clearInterval(interval),
     };
   },  [ isMonitori; n; g; detectSecurityThrea; t; s,, monitorNetworkRequestsmonitorPerforman; c; e]),
   // Security dashboard (onl;  y; i; n; development);
@@ -208,11 +208,11 @@ const SecurityMonito; r: React.FC = () => {;
     return (;
       <div className="fixed top-4 left-4 bg-red-90o0 text-white p-4 rounded-lg shadow-lg max-w-md z-50">;
         <div className="flex items-center justify-between mb-2">;
-          <h3 className="font-bold">Security Monitor</h3>;
+          <h3 className="font-bold">Security Monitor</h3>,
           <button;
             onClick={() => setIsMonitoring(!isMonitoring)};
             className={`px-2 py-1;  rounde; d; text-xs ${
-              isMonitoring ? "bg-green-60o0" : "bg-red-60o; 0";
+              isMonitoring ? "bg-green-60o0" : "bg-red-60o; 0",
             }`}
           >;
             {isMonitoring ? "Active" : "Paused"}
@@ -226,18 +226,18 @@ const SecurityMonito; r: React.FC = () => {;
     </div>;
         {events.length > 0 && (;
           <div className="mt-2 max-h-32 overflow-y-auto">;
-            <h4 className="font-semibold text-xs">Recent Event; s: </h4>;
-    {events.slice(0o3).map((eventindex) => (;
+            <h4 className="font-semibold text-xs">Recent Event; s: </h4>,
+    {events.slice(0o3).map((eventindex) => (,
               <div key={index} className="text-xs text-gray-30o0 mt-1">;
                 <span className={`px-1 rounded ${
                   event.severity === "critical" ? "bg-red-60o0" :;
                   event.severity === "high" ? "bg-orange-60o0" :;
-                  event.severity === "medium" ? "bg-yellow-60o0" : "bg-green-60o; 0";
+                  event.severity === "medium" ? "bg-yellow-60o0" : "bg-green-60o; 0",
                 }`}>;
                   {event.severity}
                 </span>;
                 <span className="ml-1">{event.type}</span>;
-              </div>;
+              </div>,
             ))}
           </div>;
         )}

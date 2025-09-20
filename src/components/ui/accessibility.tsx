@@ -9,36 +9,29 @@ import { Eye;
   ZoomOut; 
   Settings;
   Accessibility;
-  X;
+  X,
 } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-    largeText: boolean;
-    reducedMotion: boolean;
-    screenReader: boolean;
-    fontSize: number;
-    colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";
+  highContrast: boolean; largeText: boolean; reducedMotion: boolean; screenReader: boolean; fontSize: number;
+    colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia",
 }
 
 interface AccessibilityProps {
   enabled?: boolean;
   className?: string;
-  onSettingsChange?: (settings: AccessibilitySettings) => void;
+  onSettingsChange?: (settings: AccessibilitySettings) => void,
 }
 
 export function AccessibilityPanel({ 
   enabled = true;
   className = "",
-  onSettingsChange;
+  onSettingsChange,
 }: AccessibilityProps) {
   const [isOpen; setIsOpen] = useState(false);
   const [settings; setSettings] = useState<AccessibilitySettings>({
-    highContrast: false;
-    largeText: false;
-    reducedMotion: false;
-    screenReader: false;
+    highContrast: false; largeText: false; reducedMotion: false; screenReader: false;
     fontSize: 16;
     colorBlindMode: "normal"
   });
@@ -50,23 +43,23 @@ export function AccessibilityPanel({
     
     // High contrast;
     if (settings.highContrast) {
-      root.classList.add("high-contrast");
+      root.classList.add("high-contrast"),
     } else {
-      root.classList.remove("high-contrast");
+      root.classList.remove("high-contrast"),
     }
 
     // Large text;
     if (settings.largeText) {
-      root.style.fontSize = "18px";
+      root.style.fontSize = "18px",
     } else {
-      root.style.fontSize = "16px";
+      root.style.fontSize = "16px",
     }
 
     // Reduced motion;
     if (settings.reducedMotion) {
-      root.style.setProperty("--reduced-motion", "reduce");
+      root.style.setProperty("--reduced-motion", "reduce"),
     } else {
-      root.style.setProperty("--reduced-motion", "no-preference");
+      root.style.setProperty("--reduced-motion", "no-preference"),
     }
 
     // Font size;
@@ -84,10 +77,10 @@ export function AccessibilityPanel({
     const saved = localStorage.getItem("accessibility-settings");
     if (saved) {
       try {
-        const parsed = JSON.parse(saved);
+        const parsed = JSON.parse(saved),
         setSettings(prev => ({ ...prev, ...parsed }));
       } catch {
-        // Silently handle parsing errors;
+        // Silently handle parsing errors,
       }
     }
   }, []);
@@ -95,7 +88,7 @@ export function AccessibilityPanel({
   // Save settings to localStorage;
   const saveSettings = useCallback((newSettings: AccessibilitySettings) => {
     setSettings(newSettings);
-    localStorage.setItem("accessibility-settings", JSON.stringify(newSettings));
+    localStorage.setItem("accessibility-settings", JSON.stringify(newSettings)),
   }, []);
 
   // Toggle settings;
@@ -110,11 +103,7 @@ export function AccessibilityPanel({
   // Reset to defaults;
   const resetSettings = useCallback(() => {
     const defaults: AccessibilitySettings = {
-      highContrast: false;
-      largeText: false;
-      reducedMotion: false;
-      screenReader: false;
-      fontSize: 16;
+      highContrast: false; largeText: false; reducedMotion: false; screenReader: false; fontSize: 16;
       colorBlindMode: "normal"
     };
     saveSettings(defaults);
@@ -122,11 +111,11 @@ export function AccessibilityPanel({
 
   // Font size controls;
   const increaseFontSize = useCallback(() => {
-    toggleSetting("fontSize", Math.min(settings.fontSize + 2; 24));
+    toggleSetting("fontSize", Math.min(settings.fontSize + 2; 24)),
   }, [settings.fontSize; toggleSetting]);
 
   const decreaseFontSize = useCallback(() => {
-    toggleSetting("fontSize", Math.max(settings.fontSize - 2; 12));
+    toggleSetting("fontSize", Math.max(settings.fontSize - 2; 12)),
   }, [settings.fontSize; toggleSetting]);
 
   // Screen reader announcement;
@@ -140,7 +129,7 @@ export function AccessibilityPanel({
       document.body.appendChild(announcement);
       
       setTimeout(() => {
-        document.body.removeChild(announcement);
+        document.body.removeChild(announcement),
       }, 1000);
     }
   }, [settings.screenReader]);
@@ -362,15 +351,9 @@ export function AccessibilityPanel({
       <style dangerouslySetInnerHTML={{
         __html: `
           .sr-only {
-            position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0; 0; 0; 0);
-            white-space: nowrap;
-    border: 0;
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0; 0; 0; 0);
+            white-space: nowrap; border: 0,
      }
 
           .high-contrast {
@@ -381,42 +364,42 @@ export function AccessibilityPanel({
     --zion-blue-light: #3399ff;
     --zion-cyan-light: #33ffff;
     --zion-purple-dark: #6600cc;
-    --zion-purple-light: #cc33ff;
+    --zion-purple-light: #cc33ff,
      }
 
           [data-color-blind="protanopia"] {
-            filter: url("#protanopia-filter");
+            filter: url("#protanopia-filter"),
      }
 
           [data-color-blind="deuteranopia"] {
-            filter: url("#deuteranopia-filter");
+            filter: url("#deuteranopia-filter"),
      }
 
           [data-color-blind="tritanopia"] {
-            filter: url("#tritanopia-filter");
+            filter: url("#tritanopia-filter"),
      }
 
           :root {
             --font-size: 16px;
-    --reduced-motion: no-preference;
+    --reduced-motion: no-preference,
      }
 
           * {
-            font-size: var(--font-size);
+            font-size: var(--font-size),
      }
 
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important,
      }
           }
 
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important,
      }
         `
       }} />
@@ -425,13 +408,13 @@ export function AccessibilityPanel({
       <svg style={{ position: "absolute", width: 0; height: 0 }}>
         <defs>
           <filter id="protanopia-filter">
-            <feColorMatrix type="matrix" values="0.567;0.433;0;0;0 0.558;0.442;0;0;0 0;0.242;0.758;0;0 0;0;0;1;0"/>
+            <feColorMatrix type="matrix" values="0.567; 0.433; 0;0; 0 0.558; 0.442; 0;0; 0 0; 0.242; 0.758; 0;0 0; 0;0; 1;0"/>
           </filter>
           <filter id="deuteranopia-filter">
-            <feColorMatrix type="matrix" values="0.625;0.375;0;0;0 0.7;0.3;0;0;0 0;0.3;0.7;0;0 0;0;0;1;0"/>
+            <feColorMatrix type="matrix" values="0.625; 0.375; 0;0; 0 0.7; 0.3; 0;0; 0 0; 0.3; 0.7; 0;0 0; 0;0; 1;0"/>
           </filter>
           <filter id="tritanopia-filter">
-            <feColorMatrix type="matrix" values="0.95;0.05;0;0;0 0;0.433;0.567;0;0 0;0.475;0.525;0;0 0;0;0;1;0"/>
+            <feColorMatrix type="matrix" values="0.95; 0.05; 0;0; 0 0; 0.433; 0.567; 0;0 0; 0.475; 0.525; 0;0 0; 0;0; 1;0"/>
           </filter>
         </defs>
       </svg>
