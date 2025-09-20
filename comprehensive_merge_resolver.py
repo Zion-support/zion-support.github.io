@@ -78,10 +78,12 @@ def resolve_file_conflicts(filepath):
             content = f.read()
         
         # Check for conflict markers
-        if '            print(f"Found conflict markers in {filepath}")
+        if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
+            print(f"Found conflict markers in {filepath}")
             
             # Remove conflict markers and keep both versions
-            content = re.sub(r'            content = re.sub(r'            content = re.sub(r'            
+            content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> .*?\n', r'\1', content, flags=re.DOTALL)
+            
             # Write back the cleaned content
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(content)
