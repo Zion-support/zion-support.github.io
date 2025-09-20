@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  title?: string,
+  description?: string,
+  keywords?: string,
+  image?: string,
+  url?: string,
+  type?: string,
+  author?: string,
+  publishedTime?: string,
+  modifiedTime?: string,
+  section?: string,
+  tags?: string[],
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -28,15 +28,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   useEffect(() => {
     // Update document title
-    document.title = title;
+    document.title = title,
 
     // Update meta description
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords);
-    updateMetaTag('author', author);
+    updateMetaTag('description', description),
+    updateMetaTag('keywords', keywords),
+    updateMetaTag('author', author),
 
     // Update Open Graph tags
-    updateMetaTag('og:title', title, 'property');
+    updateMetaTag('og:title', title, 'property'),
     updateMetaTag('og:description', description, 'property');
     updateMetaTag('og:image', image, 'property');
     updateMetaTag('og:url', url, 'property');
@@ -81,6 +81,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       section,
       tags
     });
+
   }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
 
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
@@ -144,7 +145,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ...(data.publishedTime && { "datePublished": data.publishedTime }),
       ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
       ...(data.section && { "articleSection": data.section }),
-      ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join(', ') })
+      ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join() })
     };
 
     const script = document.createElement('script');

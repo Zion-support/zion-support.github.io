@@ -109,8 +109,7 @@ export default function Services() {
         return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title);
-      default: 
-        return 0;
+      default: return 0
     }
   });
   // Pagination logic
