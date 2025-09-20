@@ -12,7 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
 // import { useCurrency } from '@/hooks/useCurrency';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction as logError } from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety;
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
@@ -38,7 +38,7 @@ const EquipmentPage: React.FC = () => {
   const [showFilters, setShowFilters] = useState(false);
   // const { currency, formatPrice } = useCurrency();
   const formatPrice = (price, currency) => `${currency}${price.toLocaleString()}`;
-  const { logError } = logErrorToProduction();
+  // logError is now imported directly
 
   // Loading state
   if (loading && equipment.length === 0) {

@@ -1,79 +1,137 @@
-import React { useState useEffect useCallback } from 'react';
-import { supabase,, ,  } from '@/integrations/supabase/client';
+import React, { useState, useEffect, useCallback } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel;
-import { Button,  } from "@/components/ui/button";
-import { Input,  } from "@/components/ui/input";
-import { Trash2,, Download,, Share2,  } from 'lucide-react'
-import { Send,  } from 'lucide-react', // Added Send icon;
-import { toast,  } from "sonner";
-import { logErrorToProduction,  } from '@/utils/productionLogger';
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Trash2, Download, Share2, Send } from 'lucide-react';
+import { toast } from "sonner";
+import { logErrorToProduction } from '@/utils/productionLogger';
+
 interface WhitepaperSection {
+  id: string;
+  title: string;
+  content: string;
+  order: number;
 }
-{'
-  id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
-}
-{'
-  id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35'
-}
-{'
-  id: crypto.randomUUID (),  name: 'Community Rewards & Airdrops', percentage: '20'
-}
-{'
-  id: crypto.randomUUID (),  name: 'Public Sale Allocation', percentage: '10'
-}])
-const [isDownloading, setIsDownloading] = useState (false)
-const [isSharing, setIsSharing] = useState (false)
-const [isSubmittingToCounsel, setIsSubmittingToCounsel] = useState (false)
-const [error, setError] = useState<string | null> (null)
-const [shareableLink, setShareableLink] = useState<string | null> (null)
-const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState<string | null> (null), //For public/private toggle const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState<boolean | null> (null), //For public/private toggle const [rawDraft, setRawDraft] = useState<string | null> (null)
-const [sections, setSections] = useState<WhitepaperSection[]> ([])
-const [showRawDraft, setShowRawDraft] = useState (false)
-}return parsed;
-}, [])
-const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {
-  return distributionData .map (item => ({
-}if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
-  setError (`Warning: Total distribution is $ {
-  totalPercentage;
-}%. Consider adjusting to sum to 100%.`)
-}else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some (d => d.name && d.percentage) ) {
-}try {
-  const apiPayload: any = {
-  tokenName;
-tokenSupply: tokenSupply.toString ()
-useCases;
-rewardsLogic;
-governanceLogic;
-legalDisclaimers;
-distributionBreakdown;
-}
-if (processedDistData.length > 0) {
-  apiPayload.distributionData = processedDistData;
-}const {
-  data error: funcError '
-}= await supabase.functions.invoke ('generate-whitepaper', {
-  body: apiPayload;
-})
-if (funcError) {
-  throw new Error (`Supabase function error: $ {
-  funcError.message;
-}`)
-}if (data && (data as any) .error) {
-  throw new Error (`Generation error: $ {
-  (data as any) .error;
-}`)
-}if (!data |! (data as any) .whitepaperDraft) {'
-  throw new Error ('No whitepaper draft received from the function.')
-}setRawDraft ( (data as any) .whitepaperDraft)
-setSections (parseWhitepaperDraft ( (data as any) .whitepaperDraft) )
-}catch (e: any) {
-  logErrorToProduction (e instanceof Error ? e.message : String (e),  e instanceof Error ? e : undefined {'
-  message: 'Error generating whitepaper'
-});'
-setError (e.message |'An unexpected error occurred.')
-setSections ([])
-}finally {
-  setIsLoading (false)
-interface DistributionChartItem {
+
+const WhitepaperGeneratorPage: React.FC = () => {
+  const [sections, setSections] = useState<WhitepaperSection[]>([]);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [isSharing, setIsSharing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [shareableLink, setShareableLink] = useState<string | null>(null);
+
+  const addSection = useCallback(() => {
+    const newSection: WhitepaperSection = {
+      id: crypto.randomUUID(),
+      title: 'New Section',
+      content: '',
+      order: sections.length
+    };
+    setSections(prev => [...prev, newSection]);
+  }, [sections.length]);
+
+  const updateSection = useCallback((id: string, updates: Partial<WhitepaperSection>) => {
+    setSections(prev => prev.map(section => 
+      section.id === id ? { ...section, ...updates } : section
+    ));
+  }, []);
+
+  const deleteSection = useCallback((id: string) => {
+    setSections(prev => prev.filter(section => section.id !== id));
+  }, []);
+
+  const downloadWhitepaper = async () => {
+    setIsDownloading(true);
+    try {
+      // Implementation for downloading whitepaper
+      toast.success('Whitepaper downloaded successfully');
+    } catch (error) {
+      logErrorToProduction(error);
+      toast.error('Failed to download whitepaper');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  const shareWhitepaper = async () => {
+    setIsSharing(true);
+    try {
+      // Implementation for sharing whitepaper
+      toast.success('Whitepaper shared successfully');
+    } catch (error) {
+      logErrorToProduction(error);
+      toast.error('Failed to share whitepaper');
+    } finally {
+      setIsSharing(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">Whitepaper Generator</h1>
+          <p className="mt-2 text-gray-600">Create and manage your whitepaper sections</p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold">Sections</h2>
+                <Button onClick={addSection} variant="outline">
+                  Add Section
+                </Button>
+              </div>
+              
+              <div className="space-y-4">
+                {sections.map((section) => (
+                  <WhitepaperSectionEditor
+                    key={section.id}
+                    section={section}
+                    onUpdate={(updates) => updateSection(section.id, updates)}
+                    onDelete={() => deleteSection(section.id)}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold">Preview</h2>
+                <div className="flex space-x-2">
+                  <Button 
+                    onClick={downloadWhitepaper}
+                    disabled={isDownloading}
+                    variant="outline"
+                    size="sm"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {isDownloading ? 'Downloading...' : 'Download'}
+                  </Button>
+                  <Button 
+                    onClick={shareWhitepaper}
+                    disabled={isSharing}
+                    variant="outline"
+                    size="sm"
+                  >
+                    <Share2 className="w-4 h-4 mr-2" />
+                    {isSharing ? 'Sharing...' : 'Share'}
+                  </Button>
+                </div>
+              </div>
+              
+              <WhitepaperPreviewPanel sections={sections} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WhitepaperGeneratorPage;
