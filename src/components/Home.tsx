@@ -44,7 +44,8 @@ const Home: React.FC = () => {
       description: "Next-generation quantum computing solutions.",
       icon: "⚛️",
       features: ["Quantum Algorithms", "Quantum Simulation", "Optimization", "Research & Development"],
-      gradient: "from-indigo-500 to-purple-500",price: "Starting at $10,000/month"
+      gradient: "from-indigo-500 to-purple-500",
+      price: "Starting at $10,000/month"
     },
     {
       title: "Blockchain",
@@ -191,15 +192,20 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
-                      title: "Zion AI Platform 2.0 Released",date: "September 20, 2025",
-                      excerpt: "Revolutionary new features including advanced quantum computing integration and enhanced AI capabilities.",category: "Product Update"
-                    };
+                      title: "Zion AI Platform 2.0 Released",
+                      date: "September 20, 2025",
+                      excerpt: "Revolutionary new features including advanced quantum computing integration and enhanced AI capabilities.",
+                      category: "Product Update"
+                    },
                     {
-                      title: "Partnership with SpaceX Announced",date: "September 18, 2025",
-                      excerpt: "Collaborating on next-generation space technology solutions for commercial and research applications.",category: "Partnership"
-                    };
+                      title: "Partnership with SpaceX Announced",
+                      date: "September 18, 2025",
+                      excerpt: "Collaborating on next-generation space technology solutions for commercial and research applications.",
+                      category: "Partnership"
+                    },
                     {
-                      title: "Quantum Computing Breakthrough",date: "September 15, 2025",
+                      title: "Quantum Computing Breakthrough",
+                      date: "September 15, 2025",
                       excerpt: "Our research team achieves 99.9% quantum error correction, paving the way for practical quantum applications.",
                       category: "Research"
                     }
@@ -237,16 +243,22 @@ const Home: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
-                      name: "Sarah Johnson",role: "CTO, TechCorp",
-                      content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",rating: 5
-                    };
+                      name: "Sarah Johnson",
+                      role: "CTO, TechCorp",
+                      content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",
+                      rating: 5
+                    },
                     {
-                      name: "Michael Chen",role: "CEO, InnovateLab",
-                      content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",rating: 5
-                    };
+                      name: "Michael Chen",
+                      role: "CEO, InnovateLab",
+                      content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",
+                      rating: 5
+                    },
                     {
-                      name: "Emily Rodriguez",role: "VP Engineering, SpaceTech",
-                      content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",rating: 5
+                      name: "Emily Rodriguez",
+                      role: "VP Engineering, SpaceTech",
+                      content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",
+                      rating: 5
                     }
                   ].map((testimonial, index) => (
                     <div
