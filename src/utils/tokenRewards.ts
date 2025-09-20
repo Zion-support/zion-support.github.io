@@ -1,4 +1,4 @@
-import { apiClient } from "../services/apiClient";
+import { apiClient } from "./apiClient";
 
 export async function rewardOnboarding(userId: string, action: string, amount: number) {
   await apiClient("/functions/v1/token-manager/earn", {
@@ -8,8 +8,8 @@ export async function rewardOnboarding(userId: string, action: string, amount: n
 }
 
 export async function earnTokensForPurchase(
-  userId: string,
-  purchaseAmount: number,
+  userId: string, 
+  purchaseAmount: number, 
   purchaseType: string
 ): Promise<void> {
   await apiClient("/functions/v1/token-manager/earn", {
@@ -24,7 +24,7 @@ export async function earnTokensForPurchase(
 }
 
 export async function earnTokensForReferral(
-  userId: string,
+  userId: string, 
   referredUserId: string
 ): Promise<void> {
   await apiClient("/functions/v1/token-manager/earn", {
@@ -36,5 +36,4 @@ export async function earnTokensForReferral(
       amount: 100,
     })
   });
-}
 }

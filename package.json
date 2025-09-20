@@ -117,7 +117,7 @@
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "fuse.js": "^7.0.0",
-    "glob": "^11.0.3",
+    "glob": "^10.4.5",
     "https": "^1.0.0",
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^7.2.0",
@@ -170,9 +170,9 @@
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.3",
-    "@types/node": "^20.19.17",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
@@ -211,10 +211,10 @@
     "react-dom": "^18.2.0"
   },
   "overrides": {
-    "glob": "^11.0.3"
+    "glob": "^10.4.5"
   },
   "resolutions": {
-    "glob": "^11.0.3",
+    "glob": "^10.4.5",
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
   }
 }
