@@ -1,6 +1,0 @@
-interface Service {
-name: string;
-}
-}
-}
-
