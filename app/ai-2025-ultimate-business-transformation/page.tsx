@@ -3,15 +3,9 @@ import Link from 'next/link'
 import SEO from '../../components/SEO';
 
 export const metadata = {
-<<<<<<< HEAD
-  title: 'AI 2025 Ultimate Business Transformation Guide'
-  description: 'Discover the revolutionary AI technologies and strategies that will transform your business in 2025. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage.'
-  keywords: ['AI transformationbusiness AIAI implementationdigital transformation', 'AI ROI2025 AI trends']
-=======
   title: 'AI 2025 Ultimate Business Transformation Guide',
   description: 'Discover the revolutionary AI technologies and strategies that will transform your business in 2025. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage.',
   keywords: ['AI transformation', 'business AI', 'AI implementation', 'digital transformation', 'AI ROI', '2025 AI trends']
->>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
 }
 
 export default function AI2025UltimateBusinessTransformationPage() {
@@ -24,7 +18,6 @@ export default function AI2025UltimateBusinessTransformationPage() {
         url="/ai-2025-ultimate-business-transformation"
       />
       <div>
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
           <div>
@@ -245,10 +238,6 @@ export default function AI2025UltimateBusinessTransformationPage() {
             </div>
           </div>
         </section>
-=======
-        <h1>AI 2025 Ultimate Business Transformation</h1>
-        <p>Coming soon...</p>
->>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
       </div>
     </div>
   )

@@ -1,18 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
-import Card from '../../components/ui/Card';
+// import Card from '../../components/ui/Card';
 
 export const metadata = {
-<<<<<<< HEAD
-  title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence'
-  description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.'
-  keywords: ['AI 2026artificial intelligence breakthroughmachine learning revolutionneural networks', 'quantum AI']
-=======
   title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence',
   description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.',
   keywords: ['AI 2026', 'artificial intelligence breakthrough', 'machine learning revolution', 'neural networks', 'quantum AI']
->>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
 }
 
 export default function AI2026BreakthroughRevolution() {
@@ -24,7 +18,6 @@ export default function AI2026BreakthroughRevolution() {
         keywords="AI 2026, artificial intelligence breakthrough, machine learning revolution, neural networks, quantum AI"
         url="/ai-2026-breakthrough-revolution"
       />
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div>
@@ -61,7 +54,7 @@ export default function AI2026BreakthroughRevolution() {
         <div>
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary AI Breakthroughs</h2>
           <div>
-            <Card className="bg-gradient-to-br from-purple-800 to-blue-800 p-8 border-0">
+            <div className="bg-gradient-to-br from-purple-800 to-blue-800 p-8 border-0 rounded-lg">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Neural Networks</h3>
               <p>
@@ -73,8 +66,8 @@ export default function AI2026BreakthroughRevolution() {
                 <li>• Quantum entanglement optimization</li>
                 <li>• Real-time pattern recognition</li>
               </ul>
-            </Card>
-            <Card className="bg-gradient-to-br from-blue-800 to-indigo-800 p-8 border-0">
+            </div>
+            <div className="bg-gradient-to-br from-blue-800 to-indigo-800 p-8 border-0 rounded-lg">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold mb-4">Autonomous Business Systems</h3>
               <p>
@@ -86,8 +79,8 @@ export default function AI2026BreakthroughRevolution() {
                 <li>• Self-optimizing algorithms</li>
                 <li>• Predictive resource management</li>
               </ul>
-            </Card>
-            <Card className="bg-gradient-to-br from-indigo-800 to-purple-800 p-8 border-0">
+            </div>
+            <div className="bg-gradient-to-br from-indigo-800 to-purple-800 p-8 border-0 rounded-lg">
               <div className="text-4xl mb-4">🔮</div>
               <h3 className="text-2xl font-bold mb-4">Predictive Intelligence</h3>
               <p>
@@ -99,7 +92,7 @@ export default function AI2026BreakthroughRevolution() {
                 <li>• Multi-dimensional analysis</li>
                 <li>• Real-time adaptation</li>
               </ul>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -201,13 +194,6 @@ export default function AI2026BreakthroughRevolution() {
           </div>
         </div>
       </section>
-    </div>)}
-=======
-      <div>
-        <h1>AI 2026 Breakthrough Revolution</h1>
-        <p>Coming soon...</p>
-      </div>
     </div>
   )
 }
->>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
