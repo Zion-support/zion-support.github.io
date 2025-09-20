@@ -1,25 +1,25 @@
 #!/bin/bash
 
-# Script to merge remaining PRs that have actual differences
+# Script to merge open PRs
 set -e
 
-echo "🚀 Starting merge of remaining PRs with actual differences..."
+echo "🚀 Starting merge of open PRs..."
 echo "⏰ Started at: $(date)"
 
 # Create backup branch
-BACKUP_BRANCH="remaining-pr-merge-backup-$(date +%Y%m%d-%H%M%S)"
+BACKUP_BRANCH="pr-merge-backup-$(date +%Y%m%d-%H%M%S)"
 echo "🔒 Creating backup branch: $BACKUP_BRANCH"
 git checkout -b "$BACKUP_BRANCH"
 git push origin "$BACKUP_BRANCH"
 git checkout main
 
-# Function to merge a branch if it has differences
-merge_branch_if_different() {
+# Function to merge a branch
+merge_branch() {
     local branch="$1"
     local pr_number="$2"
     local pr_title="$3"
     
-    echo "🔄 Checking branch $branch (PR #$pr_number): $pr_title"
+    echo "🔄 Attempting to merge $branch (PR #$pr_number): $pr_title"
     
     # Fetch the latest version of the branch
     git fetch origin "$branch" >/dev/null 2>&1
@@ -78,41 +78,47 @@ merge_branch_if_different() {
     fi
 }
 
-# Try to find branches that might correspond to the open PRs
-echo "🔍 Looking for branches with actual differences..."
+# PR data from the JSON file
+# PR #9269: Expand services and deploy updates
+# PR #9268: Analyze, improve, and deploy ziontechgroup app  
+# PR #9267: Expand services and deploy updates
+# PR #9266: Analyze, improve, and deploy ziontechgroup app
+# PR #9264: Expand services and deploy updates
+# PR #9259: Analyze, improve, and deploy ziontechgroup app
 
-# Get all remote branches
-ALL_BRANCHES=$(git branch -r | grep -v "origin/main" | sed 's/origin\///' | head -50)
+# Since we don't have the exact branch names, let's try to find them
+echo "🔍 Looking for PR branches..."
 
+# Try to find branches that might be related to these PRs
+POSSIBLE_BRANCHES=$(git branch -r | grep -E "(cursor|pr|9269|9268|9267|9266|9264|9259)" | head -20)
+
+echo "📋 Found potential branches:"
+echo "$POSSIBLE_BRANCHES"
+
+# Process each potential branch
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
-PROCESSED=0
 
-for branch in $ALL_BRANCHES; do
-    PROCESSED=$((PROCESSED + 1))
+for branch in $POSSIBLE_BRANCHES; do
+    # Remove origin/ prefix
+    clean_branch=$(echo "$branch" | sed 's/origin\///')
     
-    echo "🔄 Processing branch $PROCESSED: $branch"
+    echo "🔄 Processing branch: $clean_branch"
     
-    if merge_branch_if_different "$branch" "unknown" "Unknown PR"; then
+    if merge_branch "$clean_branch" "unknown" "Unknown PR"; then
         SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-        echo "✅ Successfully processed $branch"
+        echo "✅ Successfully processed $clean_branch"
     else
         FAILED_MERGES=$((FAILED_MERGES + 1))
-        echo "❌ Failed to process $branch"
+        echo "❌ Failed to process $clean_branch"
     fi
     
     echo "---"
-    
-    # Push changes every 5 successful merges
-    if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
-        echo "💾 Pushing progress to remote..."
-        git push origin main
-    fi
 done
 
-# Push final changes if there were successful merges
+# Push changes if there were successful merges
 if [ $SUCCESSFUL_MERGES -gt 0 ]; then
-    echo "💾 Pushing final changes to remote..."
+    echo "💾 Pushing changes to remote..."
     git push origin main
 fi
 
@@ -122,6 +128,5 @@ echo "🎉 Merge process completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   📋 Total processed: $PROCESSED"
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
