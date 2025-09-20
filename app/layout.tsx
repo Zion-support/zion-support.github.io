@@ -68,53 +68,62 @@ function Header() {
         >
           Zion Tech Group
         </Link>
-        <div className="flex items-center space-x-6">
+        <div className="hidden md:flex space-x-6">
           <Link
-            href="/services"
+            href="/content-showcase"
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
           >
-            Services
+            Content Library
           </Link>
           <Link
-            href="/about"
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
+            href="/ai-2025"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
-            About
+            AI Solutions
+          </Link>
+          <Link
+            href="/automation"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Automation
+          </Link>
+          <Link
+            href="/success-stories"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Success Stories
           </Link>
           <Link
             href="/contact"
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Contact
           </Link>
-          <Link
-            href="/blog"
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
-          >
-            Blog
-          </Link>
         </div>
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors focus-visible:focus"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </nav>
     </header>
   )
 }
-
 function Footer() {
   return (
-    <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="border-t border-gray-200 mt-10 py-12 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
+            <h3 className="font-semibold text-gray-900 mb-4">Services</h3>
             <div className="space-y-2">
               <Link
-                href="/services"
-                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
-              >
-                All Services
-              </Link>
-              <Link
-                href="/ai-solutions"
+                href="/ai-2025"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
                 AI Solutions
@@ -126,27 +135,39 @@ function Footer() {
                 Automation
               </Link>
               <Link
-                href="/analytics"
+                href="/autonomous-systems-2026"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Analytics
+                Autonomous Systems
+              </Link>
+              <Link
+                href="/tools"
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                AI Tools
               </Link>
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
+            <h3 className="font-semibold text-gray-900 mb-4">Company</h3>
             <div className="space-y-2">
               <Link
-                href="/about"
+                href="/"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                About Us
+                Home
               </Link>
               <Link
-                href="/careers"
+                href="/content-showcase"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Careers
+                Content Library
+              </Link>
+              <Link
+                href="/success-stories"
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Success Stories
               </Link>
               <Link
                 href="/contact"
@@ -157,51 +178,50 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
+            <h3 className="font-semibold text-gray-900 mb-4">Resources</h3>
             <div className="space-y-2">
               <Link
-                href="/blog"
+                href="/tools/ai-roi-calculator"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Blog
+                ROI Calculator
               </Link>
               <Link
-                href="/case-studies"
+                href="/tools/ai-readiness-assessment"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Case Studies
+                Readiness Assessment
               </Link>
-              <Link
-                href="/whitepapers"
+              <a
+                href="https://ziontechgroup.com"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Whitepapers
-              </Link>
+                Main Site
+              </a>
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Connect</h3>
-            <div className="space-y-2">
-              <Link
-                href="https://linkedin.com/company/ziontechgroup"
-                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </Link>
-              <Link
-                href="https://twitter.com/ziontechgroup"
-                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </Link>
+            <h3 className="font-semibold text-gray-900 mb-4">Contact Info</h3>
+            <div className="space-y-2 text-gray-600">
+              <div>Mobile: +1 302 464 0950</div>
+              <div>
+                Email: <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="hover:text-blue-600 transition-colors focus-visible:focus"
+                >
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div>
+                Address: 364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </div>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-gray-200 text-center text-gray-600">
+        <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
         </div>
       </div>
@@ -221,14 +241,22 @@ export default function RootLayout({
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="DENY" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
         
         {/* Preload critical resources */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </head>
-      <body>
+      <body className="min-h-screen bg-white">
         <Header />
-        <main id="main-content" role="main">
+        <main id="main-content" role="main" className="flex-1">
           {children}
         </main>
         <Footer />

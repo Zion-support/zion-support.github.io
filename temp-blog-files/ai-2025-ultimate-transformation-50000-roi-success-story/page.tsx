@@ -1,8 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-<<<<<<< HEAD:app/case-studies/ai-2025-ultimate-transformation-50000-roi-success-story/page.tsx
-import { ArrowLeftIcon; CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
 export const metadata: Metadata = {
   title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story'
   description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.'
@@ -13,18 +12,6 @@ export const metadata: Metadata = {
     type: 'article'
     publishedTime: '2025-01-14T00:00:00.000Z'
     authors: ['Zion Tech Group']
-=======
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
-export const metadata: Metadata = {
-  title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story',
-  description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
-  keywords: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations'],
-  openGraph: {
-    title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story',
-    description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
-    type: 'article',
-    publishedTime: '2025-01-14T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/ai-2025-ultimate-transformation-50000-roi-success-story/page.tsx
     tags: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations']
   }
@@ -184,7 +171,7 @@ export default function CaseStudy() {
               <div>
                 <div className="text-3xl font-black text-green-600 mb-2">50,000%</div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">Net ROI</div>
-                <div className="text-sm text-gray-600">50,000% return on investment</div>;
+                <div className="text-sm text-gray-600">50,000% return on investment</div>
               </div>
               <div>
                 <div className="text-3xl font-black text-blue-600 mb-2">2.3 months</div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import SEO from '../../components/SEO';
+import SEO from '../../components/SEO'
 export const metadata: Metadata = {
   title: 'AI Automation Success Story: 500% ROI Achievement | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.',

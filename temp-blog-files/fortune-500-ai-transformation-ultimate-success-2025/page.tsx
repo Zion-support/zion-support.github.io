@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-<<<<<<< HEAD:app/case-studies/fortune-500-ai-transformation-ultimate-success-2025/page.tsx
   title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months'
   description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.'
   keywords: ['Fortune 500AI transformationcase studyROI', 'manufacturingautomation']
@@ -11,15 +10,6 @@ export const metadata: Metadata = {
     description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.'
     type: 'article'
     publishedTime: '2025-01-15T00:00:00.000Z'
-=======
-  title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months',
-  description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
-  keywords: ['Fortune 500AI transformationcase studyROI', 'manufacturingautomation'],
-  openGraph: {
-    title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months',
-    description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
-    type: 'article',
-    publishedTime: '2025-01-15T00:00:00.000Z',
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/fortune-500-ai-transformation-ultimate-success-2025/page.tsx
     authors: ['Zion Tech Group']}
 }

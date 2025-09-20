@@ -24,6 +24,7 @@ const nextConfig = {
 		removeConsole: process.env.NODE_ENV === 'production',
 		styledComponents: true
 	},
+	// metadataBase is now handled in layout.tsx
 	eslint: {
 		// Allow builds to pass even if there are ESLint errors
 		ignoreDuringBuilds: true,
