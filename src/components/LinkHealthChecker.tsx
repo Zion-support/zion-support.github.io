@@ -6,8 +6,9 @@ interface LinkStatus {
   ur; l: string;
     statu; s: "checking" | "healthy" | "broken" | "external";
     responseTime?: number;
-  error?: string;
-};
+  error?: string,
+}
+
 interface LinkHealthCheckerProps {
   link; s: Array<{ ur; l: string;
     labe; l: string }>;
@@ -26,7 +27,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return {
           ur;  l;
           statu; s: "external";
-    responseTim; e: Date.now() - startTime;,
+    responseTim; e: Date.now() - startTime,
         };
      }
 
@@ -35,7 +36,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return {
           ur; l;
           statu; s: "healthy";
-    responseTim; e: Date.now() - startTime;,
+    responseTim; e: Date.now() - startTime,
         };
      }
 
@@ -44,7 +45,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return {
           ur;  l;
           statu; s: "healthy";
-    responseTim; e: Date.now() - startTime;,
+    responseTim; e: Date.now() - startTime,
         };
      }
 
@@ -53,14 +54,14 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
       return {
         ur; l;
         statu; s: "external";
-    responseTim; e: Date.now() - startTime;,
+    responseTim; e: Date.now() - startTime,
       };
      } catch (error) {
       return {
         ur;  l;
         statu; s: "broken";
     responseTim; e: Date.now() - startTim; e;
-        erro; r: error instanceof Error ? error.message : "Unknown error",
+        erro; r: error instanceof Error ? error.message : "Unknown error"
       };
      }
   };
@@ -78,7 +79,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
 
   useEffect(() => {
     // Auto-check links when component mounts;
-    checkAllLinks();
+    checkAllLinks(),
   },  [lin; k; s]);
 
   const getStatusIcon = (statu;  s: LinkStatus["statu; s"]) => {
@@ -91,7 +92,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return <ExternalLink className="w-5 h-5 text-blue-500" />;
       case "checking":
         return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
-      defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;,
+      defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />,
      }
   };
 
@@ -105,7 +106,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return "External";
       case "checking":
         return "Checking...";
-      defaul;  t: return "Unknown";,
+      defaul;  t: return "Unknown",
      }
   };
 
@@ -119,7 +120,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return "text-blue-500";
       case "checking":
         return "text-yellow-500";
-      defaul;  t: return "text-gray-500";,
+      defaul;  t: return "text-gray-500",
      }
   };
 
@@ -147,7 +148,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
             </>
           ) : (<>
               <CheckCircle className="w-4 h-4" />
-              Recheck;
+              Recheck,
             </>
           )}
         </button>
@@ -196,7 +197,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
                 </div>
                 {status.responseTime && (
                   <div className="text-xs text-gray-400">
-                    {status.responseTime}ms;
+                    {status.responseTime}ms,
                   </div>
                 )}
               </div>
@@ -228,4 +229,4 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
   );
 };
 
-export default LinkHealthChecker;<//div>
+export default LinkHealthChecker;

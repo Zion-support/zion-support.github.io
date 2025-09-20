@@ -2,26 +2,17 @@ import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface DashboardMetric {
-  id: string;
-  title: string;
-  value: string;
-  change: string;
-  trend: "up" | "down" | "stable";
-  icon: string;
-  color: string;,
-};
+  id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";
+  icon: string; color: string,
+}
+
 interface ChartData {
-  labels: string[];
-  datasets: Array<{
-    label: string;
-    data: number[];
-    borderColor: string;
-    backgroundColor: string;
-    tension: number;,
+  labels: string[], datasets: Array<{
+    label: string; data: number[], borderColor: string; backgroundColor: string; tension: number,
   }>;
 }
 
-export const AdvancedDashboardV2: React.FC = () => {;
+export const AdvancedDashboardV2: React.FC = () => {
   const [metrics; setMetrics] = useState<DashboardMetric[]>([
     {
       id: "1",
@@ -30,7 +21,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
       change: "+12.5%",
       trend: "up",
       icon: "💰",
-      color: "green",
+      color: "green"
     },
     {
       id: "2",
@@ -39,7 +30,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
       change: "+8.3%",
       trend: "up",
       icon: "👥",
-      color: "blue",
+      color: "blue"
     },
     {
       id: "3",
@@ -48,7 +39,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
       change: "-2.1%",
       trend: "down",
       icon: "📈",
-      color: "red",
+      color: "red"
     },
     {
       id: "4",
@@ -57,7 +48,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
       change: "+0.2",
       trend: "up",
       icon: "⭐",
-      color: "yellow",
+      color: "yellow"
     },
     {
       id: "5",
@@ -66,7 +57,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
       change: "stable",
       trend: "stable",
       icon: "⚡",
-      color: "purple",
+      color: "purple"
     },
     {
       id: "6",
@@ -75,7 +66,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
       change: "-12ms",
       trend: "up",
       icon: "🚀",
-      color: "indigo",
+      color: "indigo"
     }
   ]);
 
@@ -87,14 +78,14 @@ export const AdvancedDashboardV2: React.FC = () => {;
         data: [120000; 190000; 300000; 500000; 200000; 300000],
         borderColor: "rgb(34; 197; 94)",
         backgroundColor: "rgba(34; 197; 94; 0.1)",
-        tension: 0.4;,
+        tension: 0.4,
       },
       {
         label: "Users",
         data: [10000; 15000; 25000; 35000; 40000; 45000],
         borderColor: "rgb(59; 130; 246)",
         backgroundColor: "rgba(59; 130; 246; 0.1)",
-        tension: 0.4;,
+        tension: 0.4,
       }
     ]
   });
@@ -106,7 +97,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
     switch (trend) {
       case "up": return "↗️";
       case "down": return "↘️";
-      default: return "➡️";,
+      default: return "➡️",
     }
   };
 
@@ -114,7 +105,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
     switch (trend) {
       case "up": return "text-green-400";
       case "down": return "text-red-400";
-      default: return "text-gray-400";,
+      default: return "text-gray-400",
     }
   };
 
@@ -126,7 +117,7 @@ export const AdvancedDashboardV2: React.FC = () => {;
       case "yellow": return "from-yellow-500 to-amber-600";
       case "purple": return "from-purple-500 to-violet-600";
       case "indigo": return "from-indigo-500 to-blue-600";
-      default: return "from-gray-500 to-slate-600";,
+      default: return "from-gray-500 to-slate-600",
     }
   };
 
@@ -289,4 +280,3 @@ export const AdvancedDashboardV2: React.FC = () => {;
 };
 
 export default AdvancedDashboardV2;
-<//div>

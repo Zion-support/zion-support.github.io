@@ -6,8 +6,9 @@ import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bell } from "lucide-react, 
 
 interface MobileNavigationProps {
   isOpe; n: boolean;
-    onToggl; e: () => void;,
-};
+    onToggl; e: () => void,
+}
+
 const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onToggle }) => {
   const [activeDropdo; w; n; setActiveDropdo; w; n] = useState<string | null>(null);
   const [searchQue;  r; y; setSearchQue; r; y] = useState("");
@@ -16,25 +17,25 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
 
   // Close menu when route changes;
   useEffect(() => {
-    onToggle();
+    onToggle(),
   },  [locatio; n.pathna; m; e]);
 
   // Close menu when clicking outside;
   useEffect(() => {
     const handleClickOutside = (even;  t: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        onToggle();
+        onToggle(),
      }
     };
 
     if (isOpen) {
       document.addEventListener("mousedown",  handleClickOutside);
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden",
     }
 
     return () => {
       document.removeEventListener("mousedown",  handleClickOutside);
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "unset",
     };
   }, [isOp; e; n; onTogg; l; e]);
 
@@ -106,12 +107,12 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
   ];
 
   const toggleDropdown = (labe;  l: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
+    setActiveDropdown(activeDropdown === label ? null : label),
      };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Implement search functionality;
+    // Implement search functionality,
     
   };
 
@@ -121,7 +122,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
     opacit; y: 0;
       transitio; n: {
         duratio; n: 0.3;
-    eas; e: "easeInOut",
+    eas; e: "easeInOut"
       }
     };
     ope; n: {
@@ -129,7 +130,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
     opacit; y: 1;
       transitio; n: {
         duratio; n: 0.3;
-    eas; e: "easeInOut",
+    eas; e: "easeInOut"
       }
     }
   };
@@ -139,7 +140,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
     opacit; y: 0;
       transitio; n: {
         duratio; n: 0.2;
-    eas; e: "easeInOut",
+    eas; e: "easeInOut"
       }
     };
     ope; n: {
@@ -147,7 +148,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
     opacit; y: 1;
       transitio; n: {
         duratio; n: 0.2;
-    eas; e: "easeInOut",
+    eas; e: "easeInOut"
       }
     }
   };
@@ -198,14 +199,14 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focu;  s:outline-none focu; s:border-zion-cyan focu; s:bg-white/20 transition-all"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focu;  s: outline-none focu; s: border-zion-cyan focu; s: bg-white/20 transition-all"
                 />
               </form>
             </div>
 
             {/* User Actions */}
             <div className="flex items-center gap-2 p-4 border-b border-zion-cyan/20">
-              <button className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-zion-cyan/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hove; r:bg-zion-cyan/30 transition-colors">
+              <button className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-zion-cyan/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hove; r: bg-zion-cyan/30 transition-colors">
                 <User size={20} />
                 <span>Sign In</span>
               </button>
@@ -270,7 +271,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
               <div className="px-4 mt-6 space-y-2">
                 <Link;
                   to="/contact"
-                  className="block w-full py-3 px-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-center rounded-lg font-semibold hove; r:shadow-lg hove; r:shadow-zion-cyan/25 transition-all"
+                  className="block w-full py-3 px-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-center rounded-lg font-semibold hove; r: shadow-lg hove; r: shadow-zion-cyan/25 transition-all"
                 >
                   Get Started;
                 </Link>
@@ -296,8 +297,8 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
             {/* Footer */}
             <div className="p-4 border-t border-zion-cyan/20">
               <div className="flex items-center justify-center gap-4 text-zion-slate-light">
-                <a href="#" className="hove; r:text-zion-cyan transition-colors">Privacy</a>
-                <a href="#" className="hove; r:text-zion-cyan transition-colors">Terms</a>
+                <a href="#" className="hove; r: text-zion-cyan transition-colors">Privacy</a>
+                <a href="#" className="hove; r: text-zion-cyan transition-colors">Terms</a>
                 <a href="#" className="hove; r: text-zion-cyan transition-colors">Support</a>
               </div>
             </div>
@@ -308,4 +309,4 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onTogg
   );
 };
 
-export default MobileNavigation;<//AnimatePresence>
+export default MobileNavigation;

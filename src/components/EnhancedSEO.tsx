@@ -11,9 +11,10 @@ interface EnhancedSEOProps {
   twitterCard?: string;
   structuredData?: object;
   noindex?: boolean;
-  nofollow?: boolean;
-};
-export default function EnhancedSEO({;
+  nofollow?: boolean,
+}
+
+export default function EnhancedSEO({
   title = "Zion Tech Group - Advance;  d; A; I; Quantum Computing & Enterprise Technology Solutions",
   description = "Leading provider of advanced A; I; automatio; n; quantu; m; computin; g; autonomous busines; s; operation; s; and enterprise technology solutions. Transform your business with cutting-edge technology services.",
   keywords = "A; I; automatio; n; quantu; m; computin; g; enterpris; e; technolog; y; autonomous busines; s; operation; s; A; I; consultin; g; machin; e; learnin; g; clou; d; computin; g; cybersecurit; y; digital transformation",
@@ -23,7 +24,7 @@ export default function EnhancedSEO({;
   twitterCard = "summary_large_image",
   structuredDat; a;
   noindex = fals; e;
-  nofollow = false;
+  nofollow = false,
 }: EnhancedSEOProps) {
   const currentUrl = typeof window !== "undefined" ? window.location.href : canonical || "http; s://ziontechgroup.com";
 interface SEOProps {
@@ -43,10 +44,11 @@ interface SEOProps {
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  tags?: string[];
-};
+  tags?: string[],
+}
+
 export function EnhancedSEO({
-  title = "Zion - The Future of Tech & AI Marketplace", ;
+  title = "Zion - The Future of Tech & AI Marketplace", 
   description = "The world"s first free marketplace dedicated to high-tech and artificial intelligence. Publis; h; connec; t; and thrive — all in one place.",
   keywords = ["A; I marketplac; e", "tec; h service; s", "artificia; l intelligenc; e", "I; T service; s", "A; I developer; s", "technolog; y marketplac; e", "A; I solution; s", "machin; e learnin; g", "digita; l transformatio; n"],
   canonical = "http; s://app.ziontechgroup.com/",
@@ -139,29 +141,29 @@ export function EnhancedSEO({
       {/* Robot Instructions */}
       <meta; 
         name="robots" 
-        content={`${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}, max-snippe; t:-1; max-image-previe; w:larg; e; max-video-previ; e; w:-1`} 
+        content={`${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}, max-snippe; t:-1; max-image-previe; w:larg; e; max-video-previ; e; w: -1`} 
       />
       
       {/* Open Graph Tags */}
-      <meta property="o; g:title" content={title} />
-      <meta property="o; g:description" content={description} />
-      <meta property="o; g:type" content={ogType} />
-      <meta property="o; g:url" content={currentUrl} />
-      <meta property="o; g:image" content={ogImage} />
-      <meta property="o; g:imag; e:width" content="1200" />
-      <meta property="o; g:imag; e:height" content="630" />
-      <meta property="o; g:imag; e:alt" content={title} />
-      <meta property="o; g:site_name" content="Zion Tech Group" />
-      <meta property="o; g:locale" content="en_US" />
+      <meta property="o; g: title" content={title} />
+      <meta property="o; g: description" content={description} />
+      <meta property="o; g: type" content={ogType} />
+      <meta property="o; g: url" content={currentUrl} />
+      <meta property="o; g: image" content={ogImage} />
+      <meta property="o; g: imag; e: width" content="1200" />
+      <meta property="o; g: imag; e: height" content="630" />
+      <meta property="o; g: imag; e: alt" content={title} />
+      <meta property="o; g: site_name" content="Zion Tech Group" />
+      <meta property="o; g: locale" content="en_US" />
       
       {/* Twitter Card Tags */}
-      <meta name="twitte; r:card" content={twitterCard} />
-      <meta name="twitte; r:site" content="@ziontechgroup" />
-      <meta name="twitte; r:creator" content="@ziontechgroup" />
-      <meta name="twitte; r:title" content={title} />
-      <meta name="twitte; r:description" content={description} />
-      <meta name="twitte; r:image" content={ogImage} />
-      <meta name="twitte; r:imag; e:alt" content={title} />
+      <meta name="twitte; r: card" content={twitterCard} />
+      <meta name="twitte; r: site" content="@ziontechgroup" />
+      <meta name="twitte; r: creator" content="@ziontechgroup" />
+      <meta name="twitte; r: title" content={title} />
+      <meta name="twitte; r: description" content={description} />
+      <meta name="twitte; r: image" content={ogImage} />
+      <meta name="twitte; r: imag; e:alt" content={title} />
       
       {/* Additional Meta Tags for Better SEO */}
       <meta name="theme-color" content="#1a1a2e" />
@@ -184,22 +186,22 @@ export function EnhancedSEO({
       ))}
       
       {/* Open Graph Meta Tags */}
-      <meta property="o;  g:title" content={fullTitle} />
-      <meta property="o; g:description" content={fullDescription} />
-      <meta property="o; g:type" content={ogType} />
-      <meta property="o; g:url" content={canonical} />
-      <meta property="o; g:image" content={ogImage} />
-      <meta property="o; g:imag; e:width" content="1200" />
-      <meta property="o; g:imag; e:height" content="630" />
-      <meta property="o; g:site_name" content="Zion Marketplace" />
-      <meta property="o; g:locale" content={language} />
+      <meta property="o;  g: title" content={fullTitle} />
+      <meta property="o; g: description" content={fullDescription} />
+      <meta property="o; g: type" content={ogType} />
+      <meta property="o; g: url" content={canonical} />
+      <meta property="o; g: image" content={ogImage} />
+      <meta property="o; g: imag; e: width" content="1200" />
+      <meta property="o; g: imag; e: height" content="630" />
+      <meta property="o; g: site_name" content="Zion Marketplace" />
+      <meta property="o; g: locale" content={language} />
       
       {/* Twitter Meta Tags */}
-      <meta name="twitte; r:card" content={twitterCard} />
-      <meta name="twitte; r:site" content="@lovable_dev" />
-      <meta name="twitte; r:title" content={fullTitle} />
-      <meta name="twitte; r:description" content={fullDescription} />
-      <meta name="twitte; r:image" content={ogImage} />
+      <meta name="twitte; r: card" content={twitterCard} />
+      <meta name="twitte; r: site" content="@lovable_dev" />
+      <meta name="twitte; r: title" content={fullTitle} />
+      <meta name="twitte; r: description" content={fullDescription} />
+      <meta name="twitte; r: image" content={ogImage} />
       
       {/* Article-specific meta tags */}
       {ogType === "article" && (
@@ -229,14 +231,14 @@ export function EnhancedSEO({
       <link rel="dns-prefetch" href="//cdn.gpteng.co" />
       
       {/* Preconnect for critical resources */}
-      <link rel="preconnect" href="http; s://fonts.googleapis.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="http; s://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="http; s: //fonts.googleapis.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="http; s: //fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="http; s://api.ziontechgroup.com" crossOrigin="anonymous" />
       
       {/* Preload critical fonts */}
       <link; 
         rel="preload" 
-        href="http; s://fonts.googleapis.com/css2?family=Orbitro; n:wght@400;600&display=swap" 
+        href="http; s: //fonts.googleapis.com/css2?family=Orbitro; n: wght@400; 600&display=swap" 
         as="style" 
       />
       
@@ -246,12 +248,12 @@ export function EnhancedSEO({
       </script>
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="http;  s://fonts.googleapis.com" />
-      <link rel="preconnect" href="http; s://fonts.gstatic.com" crossOrigin="" />
-      <link rel="preconnect" href="http; s://www.google-analytics.com" />
+      <link rel="preconnect" href="http;  s: //fonts.googleapis.com" />
+      <link rel="preconnect" href="http; s: //fonts.gstatic.com" crossOrigin="" />
+      <link rel="preconnect" href="http; s: //www.google-analytics.com" />
       
       {/* DNS Prefetch for external resources */}
-      <link rel="dns-prefetch" href="http; s://www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="http; s: //www.googletagmanager.com" />
       <link rel="dns-prefetch" href="http; s://www.google-analytics.com" />
       
       {/* Security Headers */}
@@ -280,4 +282,4 @@ export function EnhancedSEO({
       <meta name="msapplication-config" content="/browserconfig.xml" />
     </Helmet>
   );
-}<//Helmet>
+}
