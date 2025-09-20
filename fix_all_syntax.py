@@ -2,59 +2,81 @@
 
 import os
 import re
-import glob
 
-def fix_all_syntax():
-    """Fix all syntax errors in the codebase"""
+def fix_file(file_path):
+    """Fix syntax errors in a TypeScript/JSX file"""
+    if not os.path.exists(file_path):
+        print(f"File not found: {file_path}")
+        return False
     
-    # Find all TypeScript/JavaScript files
-    files = glob.glob("**/*.{ts,tsx,js,jsx}", recursive=True)
-    # Filter out node_modules and .next directories
-    files = [f for f in files if not f.startswith('node_modules') and not f.startswith('.next')]
+    with open(file_path, 'r') as f:
+        content = f.read()
     
-    print(f"Found {len(files)} files to process")
+    original_content = content
     
-    for file_path in files:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            original_content = content
-            
-            # Fix double commas in imports
-            content = re.sub(r',\s*,', ',', content)
-            content = re.sub(r',\s*\)', ')', content)
-            content = re.sub(r'\(\s*,', '(', content)
-            
-            # Fix missing function declarations
-            if content.strip().startswith('return (') and 'function' not in content:
-                content = 'export default function Component() {\n' + content + '\n}'
-            
-            # Fix missing imports
-            if 'import React' not in content and ('from "react"' in content or 'from \'react\'' in content):
-                content = 'import React from "react";\n' + content
-            
-            # Fix trailing commas in objects and arrays
-            content = re.sub(r',\s*}', '}', content)
-            content = re.sub(r',\s*]', ']', content)
-            
-            # Fix missing semicolons
-            content = re.sub(r'}\s*$', '};\n', content, flags=re.MULTILINE)
-            
-            # Fix JSX syntax issues
-            content = re.sub(r'<(\w+),\s*', r'<\1 ', content)
-            content = re.sub(r',\s*>', '>', content)
-            
-            # Fix missing closing tags
-            content = re.sub(r'<(\w+)\s*$', r'<\1>', content, flags=re.MULTILINE)
-            
-            if content != original_content:
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(content)
-                print(f"Fixed {file_path}")
-                
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
+    # Fix semicolons in JSX elements
+    content = re.sub(r';\s*</', '</', content)
+    content = re.sub(r';\s*/>', '/>', content)
+    
+    # Fix semicolons in object properties
+    content = re.sub(r';\s*},', '},', content)
+    content = re.sub(r';\s*}\s*];', '}\n];', content)
+    
+    # Fix missing function declarations
+    if 'export default function' not in content and 'const ' in content and '= () =>' in content:
+        # This is likely a component that needs proper function declaration
+        content = content.replace('const ', 'export default function ')
+        content = content.replace('= () =>', '() {')
+        content = content.replace('};', '}')
+    
+    # Fix JSX return statements
+    if 'return (' in content and not content.strip().startswith('export default function'):
+        # Add function declaration if missing
+        if 'const ' in content and '= () =>' in content:
+            content = content.replace('const ', 'export default function ')
+            content = content.replace('= () =>', '() {')
+            content = content.replace('};', '}')
+    
+    # Fix missing imports
+    if 'useState' in content and 'import { useState }' not in content:
+        content = 'import { useState } from \'react\';\n' + content
+    
+    # Fix missing React import
+    if 'React.FC' in content and 'import React' not in content:
+        content = 'import React from \'react\';\n' + content
+    
+    # Fix JSX syntax issues
+    content = re.sub(r'(\w+):\s*string;,\s*', r'\1: string;\n', content)
+    
+    # Fix component structure
+    if 'return (' in content and ');' in content:
+        content = re.sub(r'\);\s*$', ')\n}', content)
+    
+    if content != original_content:
+        with open(file_path, 'w') as f:
+            f.write(content)
+        print(f"Fixed: {file_path}")
+        return True
+    else:
+        print(f"No changes needed: {file_path}")
+        return False
+
+def main():
+    # Files that need fixing
+    files_to_fix = [
+        '/workspace/src/pages/Blog.tsx',
+        '/workspace/src/pages/BlogPost.tsx',
+        '/workspace/src/pages/DeveloperPortal.tsx',
+        '/workspace/src/pages/Home.tsx',
+        '/workspace/src/pages/NotFound.tsx'
+    ]
+    
+    fixed_count = 0
+    for file_path in files_to_fix:
+        if fix_file(file_path):
+            fixed_count += 1
+    
+    print(f"\nFixed {fixed_count} files")
 
 if __name__ == "__main__":
-    fix_all_syntax()
+    main()

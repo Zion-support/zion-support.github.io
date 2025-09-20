@@ -33,7 +33,7 @@ date: '2025-01-12',
 readTime: '7 min read',
 category: 'Quantum Computing',
 href: '/blog/quantum-computing-breakthrough',
-image: '⚛️';
+  image: '⚛️'
 },
 {
 title: 'Automation Revolution: Transforming Enterprise Operations',
@@ -42,7 +42,7 @@ date: '2025-01-10',
 readTime: '6 min read',
 category: 'Automation',
 href: '/blog/automation-revolution',
-image: '⚙️';
+  image: '⚙️'
 },
 {
 title: 'AI Ethics: Building Responsible Technology',
@@ -51,7 +51,7 @@ date: '2025-01-08',
 readTime: '8 min read',
 category: 'Ethics',
 href: '/blog/ai-ethics',
-image: '⚖️';
+  image: '⚖️'
 },
 {
 title: 'Digital Transformation: A Complete Guide',
@@ -60,7 +60,7 @@ date: '2025-01-05',
 readTime: '10 min read',
 category: 'Digital Transformation',
 href: '/blog/digital-transformation-guide',
-image: '🚀';
+  image: '🚀'
 },
 {
 title: 'Machine Learning in Production: Best Practices',
@@ -69,27 +69,22 @@ date: '2025-01-03',
 readTime: '9 min read',
 category: 'Machine Learning',
 href: '/blog/ml-production-best-practices',
-image: '🧠';
-}
+image: '🧠'}
 ];
 
-const categories = ['All', 'AI', 'Quantum Computing', 'Automation', 'Ethics', 'Digital Transformation', 'Machine Learning']
+const categories = ['All', 'AI', 'Quantum Computing', 'Automation', 'Ethics', 'Digital Transformation', 'Machine Learning'];
 
-return (;
-<div className="min-h-screen bg-gray-900 text-white">;
-{/* Hero Section */}
-<section className="bg-gradient-to-br from-blue-900 to-purple-900 py-20">;
+export default function Blog() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 to-purple-900 py-20">
 <div className="container mx-auto px-4">;
 <div className="max-w-4xl mx-auto text-center">;
 <h1 className="text-5xl lg:text-6xl font-bold mb-6">;
-Technology <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Insights</span>;
-</h1>;
+Technology <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Insights</span></h1>;
 <p className="text-xl text-gray-300 mb-8">;
-Stay ahead of the curve with expert insights, trends, and innovations in AI, quantum computing, and technology.;
-</p>;
-</div>;
-</div>;
-</section>;
+Stay ahead of the curve with expert insights, trends, and innovations in AI, quantum computing, and technology.</p></div></div></section>;
 
 {/* Categories */}
 <section className="py-8 bg-gray-800/30">;
@@ -107,9 +102,7 @@ category === 'All';
 {category}
 </button>;
 ))}
-</div>;
-</div>;
-</section>;
+</div></div></section>;
 
 {/* Featured Post */}
 <section className="py-20">;
@@ -119,37 +112,25 @@ category === 'All';
 <div className="p-8">;
 <div className="flex items-center space-x-4 mb-4">;
 <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Featured</span>;
-<span className="text-gray-400 text-sm">AI</span>;
-</div>;
+<span className="text-gray-400 text-sm">AI</span></div>;
 <h2 className="text-3xl font-bold mb-4">;
-The Future of AI: 2025 Predictions and Beyond;
-</h2>;
+The Future of AI: 2025 Predictions and Beyond</h2>;
 <p className="text-gray-300 mb-6 text-lg">;
 Exploring the revolutionary AI technologies that will reshape industries in 2025 and beyond.;
-From advanced neural networks to autonomous systems, discover what's coming next.;
-</p>;
+From advanced neural networks to autonomous systems, discover what's coming next.</p>;
 <div className="flex items-center space-x-4 text-sm text-gray-400 mb-6">;
 <span>January 15, 2025</span>;
 <span>•</span>;
-<span>5 min read</span>;
-</div>;
+<span>5 min read</span></div>;
 <Link;
 href="/blog/ai-2025-predictions";
 className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold"
 >;
 Read More;
 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />;
-</svg>;
-</Link>;
-</div>;
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg></Link></div>;
 <div className="bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-8xl">;
-🤖;
-</div>;
-</div>;
-</div>;
-</div>;
-</section>;
+🤖</div></div></div></div></section>;
 
 {/* Blog Posts Grid */}
 <section className="py-20 bg-gray-800/30">;
@@ -165,8 +146,7 @@ Read More;
 <div className="flex items-center space-x-4 mb-3">;
 <span className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm font-semibold">;
 {post.category}
-</span>;
-</div>;
+</span></div>;
 <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">;
 {post.title}
 </h3>;
@@ -175,15 +155,9 @@ Read More;
 </p>;
 <div className="flex items-center justify-between text-sm text-gray-400">;
 <span>{post.date}</span>;
-<span>{post.readTime}</span>;
-</div>;
-</div>;
-</div>;
-</Link>;
+<span>{post.readTime}</span></div></div></div></Link>;
 ))}
-</div>;
-</div>;
-</section>;
+</div></div></section>;
 
 {/* Newsletter Signup */}
 <section className="py-20">;
@@ -191,8 +165,7 @@ Read More;
 <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center">;
 <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>;
 <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
-Get the latest insights, trends, and innovations delivered directly to your inbox.;
-</p>;
+Get the latest insights, trends, and innovations delivered directly to your inbox.</p>;
 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
 <input;
 type="email"
@@ -200,12 +173,6 @@ placeholder="Enter your email";
 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white focus:outline-none"
 />;
 <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">;
-Subscribe;
-</button>;
-</div>;
-</div>;
-</div>;
-</section>;
-</div>;
+Subscribe</button></div></div></div></section></div>;
 );
 }
