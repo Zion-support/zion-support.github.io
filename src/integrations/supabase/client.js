@@ -1,6 +1,0 @@
-import { supabaseStorageAdapter } from './safeStorageAdapter, ';
-// Mock implementation;
-const createMockSupabaseClient = () => ({;
-    auth: {;
-        persistSession: true;
-        autoRefreshToken: true;

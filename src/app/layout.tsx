@@ -1,53 +1,53 @@
-import React from "react";
 import type { Metadata } from "next"
-import { Inter  } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/ThemeProvider"
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
-;
-const inter = Inter({ subsets: ["latin"] });
-;
-export const metadata: Metadata = {;,
-title: "Zion Tech Group - Innovative Technology Solutions";,
-description: "Leading provider of AI; cloud; cybersecurity; and digital transformation solutions. Transform your business with cutting-edge technology.",
-keywords: "AI solutions; cloud computing; cybersecurity; digital transformation; technology consulting",
-authors: [{ name: "Zion Tech Group" }];
-creator: "Zion Tech Group";,
-publisher: "Zion Tech Group";,
-robots: "index; follow",
-openGraph: {
-type: "website";
-locale: "en_US";
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Zion Tech Group - Innovative Technology Solutions",
-  description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions. Transform your business with cutting-edge technology.",
+  title: "Zion Holdings - AI-Powered Solutions",
+  description: "Leading provider of AI-powered business solutions and innovative technology services",
   keywords: "AI solutions, cloud computing, cybersecurity, digital transformation, technology consulting",
-  authors: [{ name: "Zion Tech Group" }],
-  creator: "Zion Tech Group",
-  publisher: "Zion Tech Group",
+  authors: [{ name: "Zion Holdings" }],
+  creator: "Zion Holdings",
+  publisher: "Zion Holdings",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ziontechgroup.com",
-    title: "Zion Tech Group - Innovative Technology Solutions",
-    description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions.",
-    siteName: "Zion Tech Group",
+    url: "https://zion.app",
+    title: "Zion Holdings - AI-Powered Solutions",
+    description: "Leading provider of AI-powered business solutions and innovative technology services",
+    siteName: "Zion Holdings",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zion Tech Group - Innovative Technology Solutions",
-    description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions.",
+    title: "Zion Holdings - AI-Powered Solutions",
+    description: "Leading provider of AI-powered business solutions and innovative technology services",
   },
   viewport: "width=device-width, initial-scale=1",
   themeColor: "#0ea5e9",
-};
+}
 
 export default function RootLayout({
   children,
 }: {
+<<<<<<< HEAD
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <div className="min-h-screen bg-background">
+          <main className="flex-1">
+            {children}
+          </main>
+        </div>
+      </body>
+    </html>
+  )
+}
+=======
 return (
 <html lang="en" suppressHydrationWarning>;
 <body className={inter.className}>;
@@ -66,3 +66,7 @@ return (
 </html>;
 )
 }<//html><///html>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-1975
+>>>>>>> 9c334060803f415d6d017f9e5353d20ebc0b1d26

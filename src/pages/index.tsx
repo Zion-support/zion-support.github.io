@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 
 export default function Home() {
@@ -29,9 +30,38 @@ export default function Home() {
                 Visit Marketplace
               </a>
             </div>
+=======
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+            Welcome to Zion AI
+          </h1>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover cutting-edge AI solutions, machine learning services, and innovative technology solutions to transform your business.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/services" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Explore Services
+            </a>
+            <a 
+              href="/about" 
+              className="bg-transparent border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Learn More
+            </a>
+>>>>>>> 9c334060803f415d6d017f9e5353d20ebc0b1d26
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
