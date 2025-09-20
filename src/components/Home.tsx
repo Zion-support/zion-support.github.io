@@ -1,56 +1,65 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
+
+  const handleScroll = useCallback(() => {
+    setScrollY(window.scrollY);
+  }, []);
 
   useEffect(() => {
     setIsLoaded(true);
-    
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [handleScroll]);
 
-  const services = [
+  const services = useMemo(() => [
     {
       title: "AI Services",
       description: "Cutting-edge artificial intelligence solutions for your business needs.",
       icon: "🤖",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       title: "Micro SaaS",
       description: "Scalable micro software-as-a-service solutions.",
       icon: "⚡",
-      features: ["Rapid Deployment", "Scalable Architecture", "API Integration", "Cloud Native"]
+      features: ["Rapid Deployment", "Scalable Architecture", "API Integration", "Cloud Native"],
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "IT Services",
       description: "Comprehensive IT support and consulting services.",
       icon: "💻",
-      features: ["Infrastructure Management", "Security Solutions", "Cloud Migration", "24/7 Support"]
+      features: ["Infrastructure Management", "Security Solutions", "Cloud Migration", "24/7 Support"],
+      gradient: "from-green-500 to-emerald-500"
     },
     {
       title: "Quantum Computing",
       description: "Next-generation quantum computing solutions.",
       icon: "⚛️",
-      features: ["Quantum Algorithms", "Quantum Simulation", "Optimization", "Research & Development"]
+      features: ["Quantum Algorithms", "Quantum Simulation", "Optimization", "Research & Development"],
+      gradient: "from-indigo-500 to-purple-500"
     },
     {
       title: "Blockchain",
       description: "Decentralized solutions and smart contracts.",
       icon: "🔗",
-      features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Web3 Integration"]
+      features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Web3 Integration"],
+      gradient: "from-orange-500 to-red-500"
     },
     {
       title: "Space Technology",
       description: "Advanced aerospace and satellite solutions.",
       icon: "🚀",
-      features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"]
+      features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
+      gradient: "from-sky-500 to-blue-500"
     }
-  ];
+  ], []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
@@ -110,19 +119,28 @@ const Home: React.FC = () => {
                   {services.map((service, index) => (
                     <div
                       key={service.title}
-                      className={`bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-1000 delay-${index * 100} ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      className={`group bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer transition-all duration-1000 delay-${index * 100} ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      onMouseEnter={() => setHoveredService(index)}
+                      onMouseLeave={() => setHoveredService(null)}
                     >
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-2xl font-bold mb-4 text-purple-300">{service.title}</h3>
-                      <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      <div className={`text-4xl mb-4 transition-transform duration-300 ${hoveredService === index ? 'scale-110' : ''}`}>
+                        {service.icon}
+                      </div>
+                      <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent transition-all duration-300`}>
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-300 mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                        {service.description}
+                      </p>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-gray-400 flex items-center">
-                            <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                          <li key={featureIndex} className="text-gray-400 flex items-center group-hover:text-gray-300 transition-colors duration-300">
+                            <span className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-3 transition-all duration-300 ${hoveredService === index ? 'scale-125' : ''}`}></span>
                             {feature}
                           </li>
                         ))}
                       </ul>
+                      <div className={`mt-6 h-1 bg-gradient-to-r ${service.gradient} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
                     </div>
                   ))}
                 </div>
@@ -156,10 +174,59 @@ const Home: React.FC = () => {
             </div>
           </section>
 
+          {/* Testimonials Section */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className={`transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  What Our Clients Say
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {[
+                    {
+                      name: "Sarah Johnson",
+                      role: "CTO, TechCorp",
+                      content: "Zion's AI solutions transformed our operations completely. The results exceeded our expectations.",
+                      rating: 5
+                    },
+                    {
+                      name: "Michael Chen",
+                      role: "CEO, InnovateLab",
+                      content: "Their quantum computing expertise gave us a competitive edge we never thought possible.",
+                      rating: 5
+                    },
+                    {
+                      name: "Emily Rodriguez",
+                      role: "VP Engineering, SpaceTech",
+                      content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",
+                      rating: 5
+                    }
+                  ].map((testimonial, index) => (
+                    <div
+                      key={index}
+                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
+                    >
+                      <div className="flex mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i} className="text-yellow-400 text-xl">★</span>
+                        ))}
+                      </div>
+                      <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                      <div className="border-t border-purple-500/30 pt-4">
+                        <div className="font-semibold text-purple-300">{testimonial.name}</div>
+                        <div className="text-sm text-gray-400">{testimonial.role}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* CTA Section */}
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className={`transition-all duration-1000 delay-900 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
                 <p className="text-xl text-gray-300 mb-12">
                   Join hundreds of companies already using our cutting-edge technology solutions

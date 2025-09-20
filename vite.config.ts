@@ -108,55 +108,23 @@ export default defineConfig({
     target: 'esnext',
     outDir: 'dist',
     // Performance optimizations
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    minify: 'esbuild',
+    // Chunk size warnings
+    chunkSizeWarningLimit: 2000,
     // Code splitting optimizations
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Simplified chunking for better build performance
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'react-vendor';
             }
-            if (id.includes('@radix-ui')) {
-              return 'ui-vendor';
-            }
-            if (id.includes('framer-motion')) {
-              return 'animation-vendor';
-            }
-            if (id.includes('lucide-react')) {
-              return 'icons-vendor';
-            }
-            if (id.includes('axios') || id.includes('js-cookie') || id.includes('uuid')) {
-              return 'utils-vendor';
-            }
             return 'vendor';
-          }
-          // Page chunks for lazy loading
-          if (id.includes('/src/pages/')) {
-            const pageName = id.split('/src/pages/')[1]?.split('/')[0];
-            if (pageName) {
-              return `page-${pageName}`;
-            }
-          }
-          // Component chunks
-          if (id.includes('/src/components/')) {
-            const componentName = id.split('/src/components/')[1]?.split('/')[0];
-            if (componentName) {
-              return `component-${componentName}`;
-            }
           }
         },
       },
     },
-    // Chunk size warnings
-    chunkSizeWarningLimit: 1000,
     // Source maps for production debugging
     sourcemap: false,
   },

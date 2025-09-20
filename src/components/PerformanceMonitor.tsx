@@ -30,7 +30,8 @@ export default function PerformanceMonitor() {
     const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
 
     // Measure render time
-    const renderTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0;
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const renderTime = navigationEntry?.loadEventEnd || 0;
 
     // Measure network latency (simplified)
     const networkLatency = performance.getEntriesByType('resource')

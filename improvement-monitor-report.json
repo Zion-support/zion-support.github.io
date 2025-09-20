@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-09-20T04:58:12.499Z",
+  "security": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "totalVulnerabilities": 0,
+    "status": "secure"
+  },
+  "performance": {
+    "totalBundleSize": 327210,
+    "totalBundleSizeKB": 320,
+    "assetCount": 17,
+    "largestAsset": {
+      "name": "react-vendor-BXitPoZA.js",
+      "path": "/workspace/dist/assets/react-vendor-BXitPoZA.js",
+      "size": 142342
+    },
+    "status": "optimized"
+  },
+  "build": {
+    "status": "success",
+    "message": "Build completed successfully"
+  },
+  "dependencies": {
+    "totalDependencies": 104,
+    "hasTypeModule": true,
+    "nodeVersion": ">=20.x",
+    "packageManager": "yarn@4.9.4+sha512.7b1cb0b62abba6a537b3a2ce00811a843bea02bcf53138581a6ae5b1bf563f734872bd47de49ce32a9ca9dcaff995aa789577ffb16811da7c603dcf69e73750b",
+    "status": "healthy"
+  },
+  "recommendations": [
+    {
+      "category": "Monitoring",
+      "priority": "low",
+      "recommendation": "Set up continuous monitoring",
+      "action": "Implement automated testing and monitoring pipeline"
+    }
+  ]
+}

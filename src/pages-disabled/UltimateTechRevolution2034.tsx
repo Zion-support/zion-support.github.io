@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const UltimateTechRevolution2034: React.FC = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -64,12 +64,15 @@ const UltimateTechRevolution2034: React.FC = () => {
       impact: "Transcendent",
       icon: "⏰",
       color: "from-orange-600 to-red-600"
-    };
+    }
+  ];
+
   const stats = [
     { label: "Revolutions Deployed", value: "∞", icon: "🚀" },
     { label: "Reality Dimensions", value: "∞", icon: "🌌" },
     { label: "Consciousness Level", value: "∞", icon: "🧠" },
-    { label: "Time Control Precision", value: "0.000001s", icon: "⏱️" };
+    { label: "Time Control Precision", value: "0.000001s", icon: "⏱️" }
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
