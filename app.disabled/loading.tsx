@@ -7,5 +7,9 @@ export default function Loading() {
         <p className="text-gray-400">Preparing the future...</p>
       </div>
     </div>
+<<<<<<< HEAD:app/loading.tsx
+  )
+=======
   );
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/loading.tsx
 }

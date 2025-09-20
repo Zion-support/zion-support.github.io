@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { ProductListing } from "@/types/listings";
 
 // Sample datacenter equipment listings

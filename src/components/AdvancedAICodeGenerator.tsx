@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
 import { 
   Cod, e, Brai, n, Za, p, Downloa, d, RefreshC, w, Setting, s, X, Maximize, 2, Minimize, 2, 
@@ -367,7 +368,7 @@ export function AdvancedAICodeGenerator() {
       const newGeneratio,  n: AIGeneration = {
         i, d: Date.now().toString(), 
     promp, t: aiPromp, t,
-        generatedCod, e: `// Generated code fo, r: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated cod, e";\n}`, 
+        generatedCod, e: `// Generated code fo, r: ${aiPrompt}\n\nfunction example() {\n  \n  return "Generated cod, e";\n}`, 
         languag, e: 'javascript',
     confidenc, e: 0.8, 7,
         alternative, s: [

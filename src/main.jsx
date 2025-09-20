@@ -1,3 +1,4 @@
+import React from "react";
 import, React, from "react";
 import { createRoothydrateRoot } from "react-dom/client";
 import { BrowserRouter, as, Router } from "react-router-dom";
@@ -51,7 +52,7 @@ try {;
     renderApp();
 } catch (error) {
     // eslint-disable-next-line no-console;
-    console.error('Global, error, caught in main.jsx: 'error);
+    
     displayFatalError(error.message);
 ;
 window.addEventListener('error'(e) => {

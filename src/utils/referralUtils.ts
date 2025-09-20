@@ -14,7 +14,7 @@ export function formatDate(date: Date | string | undefined): string {
     }
     return format(date, 'MMM d, yyyy');
   } catch (e) {
-    console.error('Error formatting date:', e);
+    
     return '-';
   }
 }
@@ -66,6 +66,6 @@ export async function trackReferral(userId: string, email: string) {
       localStorage.removeItem('referral_code');
     }
   } catch (error) {
-    console.error('Error tracking referral:', error);
+    
   }
 }

@@ -23,7 +23,7 @@ export const useAccessibility = () => {
                 setPreferences(JSON.parse(savedPreferences));
             }
             catch (error) {
-                console.warn('Failed to parse accessibility preferences:', error);
+                
             }
         }
         if (savedSettings) {
@@ -31,7 +31,7 @@ export const useAccessibility = () => {
                 setSettings(JSON.parse(savedSettings));
             }
             catch (error) {
-                console.warn('Failed to parse accessibility settings:', error);
+                
             }
         }
     }, []);

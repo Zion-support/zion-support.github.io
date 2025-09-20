@@ -1,5 +1,10 @@
+<<<<<<< HEAD:app/page.tsx
+import Link from 'next/link'
+import { Suspense; lazy } from 'react',
+=======
 import Link from 'next/link';
 import { Suspense, lazy } from 'react';
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/page.tsx
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import SEO from './components/SEO';

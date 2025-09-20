@@ -6,7 +6,7 @@ export interface RetryOptions {
 export async function retry<T>(fn: () => Promise<T>, options: RetryOptions = {}): Promise<T> {
   const { retries = 3, minTimeout = 500 } = options;
   let attempt = 0;
-  while (true) {
+  while (true) { // Intentional infinite loop }
     try {
       return await fn();
     } catch (err) {

@@ -4,7 +4,11 @@ export const metadata = {
   title: "Solutions | Zion Tech Group";
   description: "Professional solutions for your business needs.";
   keywords: "solutions, business, technology"
+<<<<<<< HEAD:app/solutions/page.tsx
+}
+=======
 };
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/solutions/page.tsx
 
 export default function SolutionsPage() {
   return (

@@ -1,3 +1,45 @@
+<<<<<<< HEAD:app/blog/ai-2026-guardrails-in-production/page.tsx
+import Link from 'next/link'
+export const metadata = {
+  title: 'AI 2026: Guardrails in Production',
+  description: 'Operational guardrails for safe, observable, and efficient autonomous systems in production.'
+}
+export default function Page() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+      <article className="prose prose-purple max-w-none">
+        <p className="text-sm text-purple-700 font-semibold">New • September 2025</p>
+        <h1>AI 2026: Guardrails in Production</h1>
+        <p>
+          Establish end-to-end safeguards for agents with policy-as-code, real-time evals, and,
+          isolation domains. This article provides a practical checklist to harden production,
+          systems without slowing down delivery.,
+        </p>
+        <h2>Operational Controls</h2>
+        <ul>
+          <li>Risk tiers mapped to permissions and tool sandboxes</li>
+          <li>Runtime evaluators on critical actions and data boundaries</li>
+          <li>Incident playbooks and automatic rollback triggers</li>
+          <li>Continuous verification with golden paths and shadow traffic</li>
+        </ul>
+        <div>
+          <h3 className="font-semibold text-indigo-900">Related guides</h3>
+          <ul className="list-disc pl-5 text-indigo-900">
+            <li>
+              <Link href="/content/ai-2026-production-safety-checklist" className="text-indigo-700 underline">Production Safety Checklist</Link>
+            </li>
+            <li>
+              <Link href="/blog/ai-2026-agent-observability-blueprint" className="text-indigo-700 underline">Agent Observability Blueprint</Link>
+            </li>
+            <li>
+              <Link href="/content/ai-2026-secure-tooling-permissions-blueprint" className="text-indigo-700 underline">Secure Tooling Permissions</Link>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </main>)
+}
+=======
 import Link from 'next/link';
 export const metadata = {
   title: 'AI 2026: Guardrails in Production';
@@ -39,3 +81,4 @@ export default function Page() {;
     </main>);
 }
 ;
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/blog/ai-2026-guardrails-in-production/page.tsx

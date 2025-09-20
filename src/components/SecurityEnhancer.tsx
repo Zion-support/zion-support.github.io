@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useCallba, c, k, useEffe, c, t, useRefuseState } from "react";
 interface SecurityEvent {
   i, d: stri, n, g,;
@@ -83,7 +84,7 @@ expor, t, cons, t, SecurityEnhanc, e, r: React.FC = () => {;
     };
     // Lo,  g, t, o, console in development;
     if() {
-      console.warn('Security Even,  t: 'securityEvent);
+      
     };
     // Stor, e, securit, y, even, t, locall, y, instea, d, o, f, sendin, g, t, o, non-existent API;
     try {
@@ -97,7 +98,7 @@ expor, t, cons, t, SecurityEnhanc, e, r: React.FC = () => {;
       };
       localStorage.setItem('security-events'JSON.stringify(events)), ;
     } catch() {
-      console.warn('Erro,  r, storin, g, security event locall, y: 'error);
+      
     };
   }, [generateEve, n, t,, I, d]),;
   // Sen, d, even, t, to security service;
@@ -117,10 +118,10 @@ expor, t, cons, t, SecurityEnhanc, e, r: React.FC = () => {;
       localStorage.setItem('security-events'JSON.stringify(events)), ;
       // Lo, g, even, t, for debugging (remov, e, i, n, production);
       if() {
-        console.log('Securit,  y, even, t, stored locall, y: 'event);
+        
       };
     } catch() {
-      console.warn('Erro,  r, storin, g, security event locall, y: 'error);
+      
     };
   }, []),;
   // XSS Protection;

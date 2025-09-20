@@ -59,7 +59,7 @@ class PerformanceOptimizer {
     wait: number;
   ): (...args: Parameters<T>) => void {
     let timeou,;
-    t: NodeJS.Timeout;
+    t: globalThis.Timeout;
     return (...arg,;
   s: Parameters<T>) => {;
       clearTimeout(timeout);
@@ -122,7 +122,7 @@ class PerformanceOptimizer {
     // Tree, shaking, optimization;
     if() {
       // Remove, unused, code;
-      console.log('Production mode: Tree, shaking, enabled');
+      
     };
   };
 ;

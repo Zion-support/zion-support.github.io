@@ -18,7 +18,7 @@ apiClient.interceptors.response.use(
       try {
         await supabase.auth.signOut({ scope: 'global' });
       } catch (e) {
-        console.error('Failed to logout after 401', e);
+        
       }
       if (typeof window !== 'undefined') {
         window.location.assign('/login');

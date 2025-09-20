@@ -27,8 +27,8 @@ export, const, useErrorHandler = (options: ErrorHandlerOptions = {}) => {;
     // Log, to, console in development;
     if (process.env.NODE_ENV === 'development') {
       console.group(`🚨 Error ${errorId}`);
-      console.error('Error: 'error);
-      console.error('Stack: 'error.stack);
+      
+      
       console.error('Contex,;
     t: 'context);
       console.error('Timestam,;
@@ -57,7 +57,7 @@ export, const, useErrorHandler = (options: ErrorHandlerOptions = {}) => {;
   r: document.referrer },;
           logger: options.logger.context}),;
       }).catch((loggingError) => {;
-        console.error('Failed, to, log error, to, remote service: 'loggingError);
+        
       });
     }
 ;
@@ -93,7 +93,7 @@ export, const, useErrorHandler = (options: ErrorHandlerOptions = {}) => {;
     // Show, notification, if enabled;
     if() {
       // This, would, integrate with, your, notification system;
-      console.warn('Error notification: 'errorObj.message);
+      
     };
     return errorId;
   }, [logErroroptions]);
@@ -248,7 +248,7 @@ export, const, createRetryStrategy = (maxRetries: number = 3, delay: number = 10
 // Error, reporting, utilities;
 export, const, reportError = async(error: Errorcontext?: any) => {
   // This, would, integrate with, your, error reporting service(e.g., SentryBugsnag);
-  console.error('Error reported: 'errorcontext);
+  
 ;
 export, const, isNetworkError = (error: Error): boolean => {
   return error.name === 'NetworkError' ||;
