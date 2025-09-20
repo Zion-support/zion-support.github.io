@@ -41,7 +41,13 @@ const benefits = [
 ];
 
 function Careers() {
-  const jobs = CAREER_JOBS;
+  const jobs = CAREER_JOBS.reduce((acc, job) => {
+    if (!acc[job.department]) {
+      acc[job.department] = [];
+    }
+    acc[job.department].push(job);
+    return acc;
+  }, {});
   const applyEmail = 'careers@ziontechgroup.com';
 
 return (

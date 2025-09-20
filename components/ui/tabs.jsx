@@ -1,36 +1,8 @@
 import React, { useState, createContext, useContext } from 'react';
 
-interface TabsContextType {
-  activeTab: string;
-  setActiveTab: (value: string) => void;
-}
+const TabsContext = createContext();
 
-const TabsContext = createContext<TabsContextType | undefined>(undefined);
-
-interface TabsProps {
-  defaultValue?: string;
-  children: React.ReactNode;
-  className?: string;
-}
-
-interface TabsListProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-interface TabsTriggerProps {
-  value: string;
-  children: React.ReactNode;
-  className?: string;
-}
-
-interface TabsContentProps {
-  value: string;
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function Tabs({ defaultValue, children, className = '' }: TabsProps) {
+export function Tabs({ defaultValue, children, className = '' }) {
   const [activeTab, setActiveTab] = useState(defaultValue || '');
   
   return (
@@ -42,7 +14,7 @@ export function Tabs({ defaultValue, children, className = '' }: TabsProps) {
   );
 }
 
-export function TabsList({ children, className = '' }: TabsListProps) {
+export function TabsList({ children, className = '' }) {
   return (
     <div className={`inline-flex h-10 items-center justify-center rounded-md bg-gray-100 p-1 ${className}`}>
       {children}
@@ -50,7 +22,7 @@ export function TabsList({ children, className = '' }: TabsListProps) {
   );
 }
 
-export function TabsTrigger({ value, children, className = '' }: TabsTriggerProps) {
+export function TabsTrigger({ value, children, className = '' }) {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
   
@@ -69,7 +41,7 @@ export function TabsTrigger({ value, children, className = '' }: TabsTriggerProp
   );
 }
 
-export function TabsContent({ value, children, className = '' }: TabsContentProps) {
+export function TabsContent({ value, children, className = '' }) {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
   
