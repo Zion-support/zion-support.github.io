@@ -31,7 +31,7 @@ export class ObjectUtils {
     for (const key in source) {
       if (source.hasOwnProperty(key)) {
         if (typeof source[key] === "object" && source[key] !== null && !Array.isArray(source[key])) {
-          result[key] = this.deepMerge(result[key] || {}, source[key]);
+          result[key] = this.deepMerge(result[key] || ({} as any), source[key]);
         } else {
           result[key] = source[key] as T[Extract<keyof T, string>];
         }
@@ -41,7 +41,7 @@ export class ObjectUtils {
     return result;
   }
 
-  public static pick<T, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
+  public static pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
     const result = {} as Pick<T, K>;
     for (const key of keys) {
       if (key in obj) {
@@ -68,7 +68,7 @@ export class ObjectUtils {
   }
 
   public static entries<T extends Record<string, any>>(obj: T): [keyof T, T[keyof T]][];
-  public static entries<T>(obj: T): [string, any][] {
+  public static entries<T extends Record<string, any>>(obj: T): [string, any][] {
     return Object.entries(obj);
   }
 
@@ -171,7 +171,7 @@ export class ObjectUtils {
   public static set<T extends Record<string, any>>(obj: T, path: string, value: any): T {
     const keys = path.split(".");
     const result = this.deepClone(obj);
-    let current = result;
+    let current: any = result;
     
     for (let i = 0; i < keys.length - 1; i++) {
       const key = keys[i];
@@ -230,13 +230,13 @@ export class ObjectUtils {
         
         for (let i = 0; i < keys.length - 1; i++) {
           const k = keys[i];
-          if (!(k in current) || typeof current[k] !== "object" || current[k] === null) {
-            current[k] = {};
+          if (!(k in current) || typeof (current as any)[k] !== "object" || (current as any)[k] === null) {
+            (current as any)[k] = {};
           }
-          current = current[k];
+          current = (current as any)[k];
         }
         
-        current[keys[keys.length - 1]] = obj[key];
+        (current as any)[keys[keys.length - 1]] = obj[key];
       }
     }
     

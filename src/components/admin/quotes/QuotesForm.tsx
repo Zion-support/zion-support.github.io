@@ -5,7 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { Calendar } from '@/components/ui/calendar';
+// import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { CalendarIcon, Save, X } from 'lucide-react';
 import { format } from 'date-fns';
@@ -189,12 +189,13 @@ export const QuotesForm: React.FC<QuotesFormProps> = ({
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0">
-                <Calendar
+                {/* <Calendar
                   mode="single"
                   selected={formData.validUntil}
-                  onSelect={(date) => date && handleInputChange('validUntil', date)}
+                  onSelect={(date: any) => date && handleInputChange('validUntil', date)}
                   initialFocus
-                />
+                /> */}
+                <div className="p-4">Calendar component temporarily disabled</div>
               </PopoverContent>
             </Popover>
             {errors.validUntil && (

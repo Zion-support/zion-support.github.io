@@ -34,7 +34,7 @@ class PerformanceMonitor {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach(entry => {
-            this.logMetric("FID", entry.processingStart - entry.startTime);
+            this.logMetric("FID", (entry as any).processingStart - entry.startTime);
           });
         });
         fidObserver.observe({ entryTypes: ["first-input"] });
@@ -169,7 +169,7 @@ class PerformanceAnalyzer {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         this.metrics.TTFB = navigation.responseStart - navigation.requestStart;
-        this.metrics.FCP = navigation.domContentLoadedEventStart - navigation.navigationStart;
+        this.metrics.FCP = navigation.domContentLoadedEventStart - navigation.fetchStart;
       }
     }
   }
@@ -222,7 +222,7 @@ class PerformanceAnalyzer {
 
   private getFID(): number | undefined {
     const entries = performance.getEntriesByType("first-input");
-    return entries.length > 0 ? entries[0].processingStart - entries[0].startTime : undefined;
+    return entries.length > 0 ? (entries[0] as any).processingStart - entries[0].startTime : undefined;
   }
 
   private getCLS(): number | undefined {

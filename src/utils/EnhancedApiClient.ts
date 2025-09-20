@@ -13,9 +13,10 @@ interface RequestOptions {
   timeout?: number;
   retries?: number;
   cacheKey?: string;
-  cache?: boolean;
+  cache?: RequestCache;
   cacheTTL?: number;
   tags?: string[];
+  headers?: Record<string, string>;
 }
 
 interface ApiResponse<T = any> {
@@ -51,35 +52,53 @@ class EnhancedApiClient {
   }
 
   async get<T = any>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.request<T>(url, { method: 'GET', ...options });
+    const { headers, ...restOptions } = options;
+    return this.request<T>(url, { 
+      method: 'GET', 
+      headers: {
+        'Content-Type': 'application/json',
+        ...headers
+      },
+      ...restOptions 
+    });
   }
 
   async post<T = any>(url: string, data?: any, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    const { headers, ...restOptions } = options;
     return this.request<T>(url, {
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
       headers: {
         'Content-Type': 'application/json',
-        ...options.headers
+        ...headers
       },
-      ...options
+      ...restOptions
     });
   }
 
   async put<T = any>(url: string, data?: any, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    const { headers, ...restOptions } = options;
     return this.request<T>(url, {
       method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
       headers: {
         'Content-Type': 'application/json',
-        ...options.headers
+        ...headers
       },
-      ...options
+      ...restOptions
     });
   }
 
   async delete<T = any>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.request<T>(url, { method: 'DELETE', ...options });
+    const { headers, ...restOptions } = options;
+    return this.request<T>(url, { 
+      method: 'DELETE', 
+      headers: {
+        'Content-Type': 'application/json',
+        ...headers
+      },
+      ...restOptions 
+    });
   }
 
   private async request<T = any>(
@@ -90,7 +109,7 @@ class EnhancedApiClient {
     const cacheKey = options.cacheKey || `${options.method || 'GET'}:${fullUrl}`;
     
     // Check cache first
-    if (this.config.cacheEnabled && (options.cache !== false)) {
+    if (this.config.cacheEnabled && (options.cache !== 'no-cache')) {
       const cached = this.cache.get(cacheKey);
       if (cached) {
         return { ...cached, cached: true };
@@ -103,7 +122,13 @@ class EnhancedApiClient {
     }
 
     // Create new request promise
-    const requestPromise = this.executeRequest<T>(fullUrl, options, cacheKey);
+    const requestPromise = this.executeRequest<T>(fullUrl, options, {
+      timeout: options.timeout || this.config.timeout,
+      retries: options.retries || this.config.retries,
+      cacheKey,
+      cache: options.cache === 'no-cache' ? false : true,
+      cacheTTL: options.cacheTTL || this.config.cacheTTL
+    });
     this.requestQueue.set(cacheKey, requestPromise);
 
     try {
