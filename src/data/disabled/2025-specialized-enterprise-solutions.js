@@ -1,4 +1,4 @@
-export const specializedEnterpriseSolutions2025 = [
+export const specializedEnterpriseSolutions2025 = [;
     // FINTECH & DIGITAL BANKING SOLUTIONS;
     {id: 'quantum-fintech-platform';
         name: 'Quantum Fintech Platform';

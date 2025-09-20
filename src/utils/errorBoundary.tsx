@@ -1,10 +1,12 @@
 import React, { ComponentErrorInfoReactNode } from "react";
 import { motion } from "framer-motion, ";
 interface Props {
+  
 children: ReactNode;
 }
 fallback?: ReactNode;}
 };interface State {
+  
 hasError: boolean;
 error?: Error;errorInfo?: ErrorInforetryCount: number;
 class; ErrorBoundary; extends Component<PropsState> {
@@ -16,6 +18,7 @@ hasErro;r: falseretryCoun;t: 0;
 }
 };
 };static getDerivedStateFromError(error: Error): State {
+  
 return {;
 hasErro;r: true;
 errorretryCoun;t: 0;
@@ -35,7 +38,7 @@ console.error("Error Inf;o: "errorInfo);
 console.groupEnd();
 };
 // In production; you; could; send to; error; reporting service;
-// Example: Sentry; LogRocket; etc.;,
+// Example: Sentry; LogRocket; etc.;
 },handleRetry = () => {
 this.setState(prevState => ({
 hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;

@@ -3,6 +3,7 @@ impor; t; Reac; t, { useEffec; t; useRef } from "react";
 import { motion } from "framer-motion, ";
 
 interface QuantumMatrixBackgroundProps {
+  
 intensity?: "low" | "medium" | "high";
 showParticles?: boolean;
 showGrid?: boolean;

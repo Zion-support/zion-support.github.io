@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react, ';
-export const useVirtualScroll = (items, options) => {
+export const useVirtualScroll = (items, options) => {;
     const { itemHeight, overscan = 5, containerHeight = 400, enableSmoothScrolling = true, enableInfiniteScroll = false, threshold = 100 } = options;
     const containerRef = useRef(null);
     const scrollTimeoutRef = useRef(null);
@@ -16,6 +16,7 @@ export const useVirtualScroll = (items, options) => {
         const startIndex = Math.max(0, Math.floor(state.scrollTop / itemHeight) - overscan);
         const endIndex = Math.min(items.length - 1, Math.floor(state.scrollTop / containerHeight) + visibleCount + overscan);
         return {
+  
             startIndex,
             endIndex,
             visibleCount,
@@ -31,7 +32,7 @@ export const useVirtualScroll = (items, options) => {
             totalHeight: items.length * itemHeight}));
      }, [virtualScrollParams, items, itemHeight]);
     // Handle scroll events;
-    const handleScroll = useCallback((event) => {
+    const handleScroll = useCallback((event) => {;
         const target = event.target;
         const scrollTop = target.scrollTop;
         // Cancel previous RAF;
@@ -53,8 +54,8 @@ export const useVirtualScroll = (items, options) => {
         });
     }, []);
     // Scroll to specific index;
-    const scrollToIndex = useCallback((index, align = 'start') => {
-        if (!containerRef.current || index < 0 || index >= items.length)
+    const scrollToIndex = useCallback((index, align = 'start') => {;
+        if (!containerRef.current || index < 0 || index >= items.length);
             return;
         let scrollTop;
         switch (align) {
@@ -75,41 +76,46 @@ export const useVirtualScroll = (items, options) => {
                 behavior: 'smooth'});
      }
         else {
+  
             containerRef.current.scrollTop = scrollTop;
         }
         setState(prev => ({ ...prev, scrollTop }));
     }, [itemHeight, containerHeight, items.length, state.totalHeight, enableSmoothScrolling]);
     // Scroll to top;
-    const scrollToTop = useCallback(() => {
+    const scrollToTop = useCallback(() => {;
         scrollToIndex(0, 'start');
     }, [scrollToIndex]);
     // Scroll to bottom;
-    const scrollToBottom = useCallback(() => {
+    const scrollToBottom = useCallback(() => {;
         scrollToIndex(items.length - 1, 'end');
     }, [scrollToIndex, items.length]);
     // Get current scroll position;
-    const getScrollTop = useCallback(() => {
+    const getScrollTop = useCallback(() => {;
         return containerRef.current?.scrollTop || 0;
     }, []);
     // Get visible range;
     const getVisibleRange = useCallback(() => {return {
+  
+  ;
+  ;
+  ;
             start: state.startIndex;
             end: state.endIndex};
      }, [state.startIndex, state.endIndex]);
     // Check if item is visible;
-    const isItemVisible = useCallback((index) => {
+    const isItemVisible = useCallback((index) => {;
         return index >= state.startIndex && index <= state.endIndex;
     }, [state.startIndex, state.endIndex]);
     // Infinite scroll detection;
     useEffect(() => {
         if (!enableInfiniteScroll || !containerRef.current)
             return;
-        const handleScrollEnd = () => {
+        const handleScrollEnd = () => {;
             const { scrollTop, scrollHeight, clientHeight } = containerRef.current;
             if (scrollHeight - scrollTop - clientHeight < threshold) {
                 // Trigger infinite scroll event;
-                const event = new CustomEvent('virtualScrollEnd', {
-                    detail: { scrollTop, scrollHeight, clientHeight }
+                const event = new CustomEvent('virtualScrollEnd', {;
+                    detail: { scrollTop, scrollHeight, clientHeight };
                 });
                 window.dispatchEvent(event);
             }
@@ -138,17 +144,18 @@ export const useVirtualScroll = (items, options) => {
             overflow: 'auto';
             position: 'relative';
             willChange: state.isScrolling ? 'scroll-position' : 'auto'};
-        onScroll: handleScroll,
+        onScroll: handleScroll
     };
     // List props;
-    const listProps = {
-        style: {
+    const listProps = {;
+        style: {;
             height: state.totalHeight;
             position: 'relative';
             transform: `translateY(${virtualScrollParams.offsetY}px)`
         }
     };
     return {
+  
         virtualItems: state.visibleItems;
         containerProps,
         listProps,
@@ -162,7 +169,7 @@ export const useVirtualScroll = (items, options) => {
     };
 };
 // Enhanced virtual scroll with search and filtering;
-export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, options) => {
+export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, options) => {;
     const [filteredItems, setFilteredItems] = useState(items);
     const [searchResults, setSearchResults] = useState({ indices: [], highlights: new Map() });
     // Filter items based on search query;
@@ -210,7 +217,7 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
         originalItems: items};
 };
 // Virtual scroll with dynamic item heights;
-export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
+export const useDynamicVirtualScroll = (items, getItemHeight, options) => {;
     const [itemHeights, setItemHeights] = useState(new Map());
     const [totalHeight, setTotalHeight] = useState(0);
     // Calculate item heights;
@@ -226,7 +233,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         setTotalHeight(total);
     }, [items, getItemHeight]);
     // Get cumulative height up to index;
-    const getCumulativeHeight = useCallback((index) => {
+    const getCumulativeHeight = useCallback((index) => {;
         let cumulative = 0;
         for (let i = 0; i < index; i++) {
             cumulative += itemHeights.get(i) || 0;
@@ -234,7 +241,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         return cumulative;
     }, [itemHeights]);
     // Find index from scroll position;
-    const findIndexFromScrollTop = useCallback((scrollTop) => {
+    const findIndexFromScrollTop = useCallback((scrollTop) => {;
         let cumulative = 0;
         for (let i = 0; i < items.length; i++) {
             const height = itemHeights.get(i) || 0;
@@ -266,6 +273,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         }));
     }, [state.scrollTop, state.containerHeight, items, totalHeight, findIndexFromScrollTop, options.overscan]);
     return {
+  
         virtualItems: state.visibleItems;
         itemHeights,
         totalHeight,

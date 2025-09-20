@@ -9,6 +9,7 @@ import { ContractPreview } from "./components/ContractPreview";,
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
+  
 }
 export function ContractBuilder({isOpen;
   onClose;

@@ -3,6 +3,7 @@ import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface InterviewRequestFormProps {
+  
   talent: TalentProfile;
 onClose: () => void;
   userDetails?: UserProfile
@@ -184,6 +185,7 @@ placeholder="Share what you'd like to discuss in this interview"
 })
 toast ({
 }finally {
+  
   setIsSubmitting (false)
 }"
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"

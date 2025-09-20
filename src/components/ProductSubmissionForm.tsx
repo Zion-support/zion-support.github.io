@@ -61,7 +61,7 @@ categor; y: "";
 vide; o: undefine; d;
 mode; l: undefine; d;
 tag; s: "";
-},
+}
 });
 
 // Handle image upload preview;
@@ -168,26 +168,27 @@ throw new Error(updateError.message);
 import React from "react";;
 import { useForm, ControllerRenderProps } from "react-hook-form";,
 import { zodResolver } from "@hookform/resolvers/zod";,
-import z from "zod",;
+import z from "zod";
 import { supabase } from "@/integrations/supabase/client";,
 import { useAuth } from "@/hooks/useAuth";,
 import { useToast } from "@/hooks/use-toast";,
 import { useRouter } from "next/router";
-import Image from 'next/image', // Import next/image,;
+import Image from 'next/image', // Import next/image;
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
+  
           }}
         />
       </TabsContent>
     </Tabs>
   )
   const file = e.target.files?.[0]
-if (file) {
-  reader.onloadend = () => {
-  setImagePreview (reader.result as string)
-}
-reader.readAsDataURL (file)
-}
+if (file) {;
+  reader.onloadend = () => {;
+  setImagePreview (reader.result as string);
+};
+reader.readAsDataURL (file);
+};
 };
 ;
 // Upload video if provided;
@@ -216,9 +217,9 @@ if (updateError) {throw new Error(updateError.message);
   return}setIsSubmitting (true)
 author: {",
 name: user.displayName |"Anonymous Creator"
-id: user.id}
-}
-
+id: user.id};
+};
+;
 // Upload model if provided;
 if (values.model) {
 const modelPath = `product_models/${productRecord.id}/${values.model.nam; e}`;
@@ -258,6 +259,7 @@ descriptio; n: error instanceof Error ? error.message : "An unknown error occurr
 varian; t: "destructive";
 });
 } finally {
+  
 setIsSubmitting(false);
 }
 };
@@ -471,22 +473,28 @@ data: productRecord error: productError '
 let imagePublicUrl: string | undefined;'
 //If we have an image upload it .from ('products') .upload (imagePath values.image)
 //Get the public window.URL for the image const {
+  
   data: publicUrlData '
 }= supabase.storage.from ('products') .getPublicUrl (imagePath)
 imagePublicUrl = publicUrlData.publicUrl
 //Update the product with the image window.URL const {
+  
   error: updateError '
 }= await supabase .from ('product listings') .from ('products') .upload (videoPath values.video)
 const {
+  
   data: publicUrlData '
 }= supabase.storage.from ('products') .getPublicUrl (videoPath)
 const {
+  
   error: updateError '
 }= await supabase .from ('product listings') .from ('products') .upload (modelPath values.model)
 const {
+  
   data: publicUrlData '
 }= supabase.storage.from ('products') .getPublicUrl (modelPath)
 const {
+  
   error: updateError '
 }= await supabase .from ('product listings')
 }//Send listing to moderation service try {'
@@ -497,6 +505,7 @@ const {
 }catch (error) {
   toast ({
 }finally {
+  
   setIsSubmitting (false)
 }
 }className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList>

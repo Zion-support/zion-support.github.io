@@ -2,6 +2,7 @@
 import React from "react";
 import { Quote } from "lucide-react";
 import {
+  
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -51,8 +52,8 @@ src={testimonial.image}
             <CarouselPrevious />
             <CarouselNext />
           </div>
-        </Carousel>
-      </div>
-    </section>
+        </Carousel>;
+      </div>;
+    </section>;
   );
 };

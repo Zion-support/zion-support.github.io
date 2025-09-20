@@ -1,4 +1,4 @@
-import React { useState useEffect } from 'react',;
+import React { useState useEffect } from 'react';
 import { Header } from "@/components/Header";,
 import { SEO } from "@/components/SEO";,
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";,
@@ -14,6 +14,8 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";,
 import { useTranslationService } from "@/hooks/useTranslationService";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function TranslationManager() {
-
+  return (
+  return (
+  return (
 }
 }

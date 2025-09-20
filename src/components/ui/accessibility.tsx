@@ -14,6 +14,7 @@ X;
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
+  
 highContrast: boolean;
 largeText: boolean;
 reducedMotion: boolean;
@@ -24,6 +25,7 @@ colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";
 }
 };
 interface AccessibilityProps {
+  
 enabled?: boolean;
 className?: string;
 onSettingsChange?: (settings: AccessibilitySettings) => void;
@@ -52,6 +54,7 @@ const root = document.documentElement;
 if (settings.highContrast) {
 root.classList.add("high-contrast");
 } else {
+  
 root.classList.remove("high-contrast");
 }
 
@@ -59,6 +62,7 @@ root.classList.remove("high-contrast");
 if (settings.largeText) {
 root.style.fontSize = "18px";
 } else {
+  
 root.style.fontSize = "16px";
 }
 
@@ -66,6 +70,7 @@ root.style.fontSize = "16px";
 if (settings.reducedMotion) {
 root.style.setProperty("--reduced-motion", "reduce");
 } else {
+  
 root.style.setProperty("--reduced-motion", "no-preference");
 }
 
@@ -84,9 +89,11 @@ useEffect(() => {
 const saved = localStorage.getItem("accessibility-settings");
 if (saved) {
 try {
+  
 const parsed = JSON.parse(saved);
 setSettings(prev => ({ ...prev, ...parsed }));
 } catch {
+  
 // Silently handle parsing errors;
 }
 }
@@ -100,8 +107,8 @@ localStorage.setItem("accessibility-settings", JSON.stringify(newSettings));
 
 // Toggle settings;
 const toggleSetting = useCallback((key: keyof AccessibilitySettings; value?: unknown) => {
-const newSettings = {
-...settings,
+const newSettings = {;
+...settings,;
 [key]: value !== undefined ? value : !settings[key];
 };
 saveSettings(newSettings);
@@ -128,7 +135,7 @@ toggleSetting("fontSize", Math.max(settings.fontSize - 2; 12));
 }, [settings.fontSize; toggleSetting]);
 
 // Screen reader announcement;
-const announceToScreenReader = useCallback((message: string) => {
+const announceToScreenReader = useCallback((message: string) => {;
 if (settings.screenReader) {;
 const announcement = document.createElement("div");
 announcement.setAttribute("aria-live", "polite");
@@ -360,6 +367,7 @@ Reset to Defaults;
 <style dangerouslySetInnerHTML={{
 __html: `;
 .sr-only {
+  
 position: absolute;
 width: 1px;
 height: 1px;
@@ -372,6 +380,7 @@ border: 0;
 }
 
 .high-contrast {
+  
 --zion-cyan: #00ffff;
 --zion-blue: #0066ff;
 --zion-purple: #9900ff;
@@ -395,6 +404,7 @@ filter: url("#tritanopia-filter");
 }
 
 :root {
+  
 --font-size: 16px;
 --reduced-motion: no-preference;
 }

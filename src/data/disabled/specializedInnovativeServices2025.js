@@ -1,5 +1,5 @@
 // Specialized Innovative Services for 2025;
-export const specializedInnovativeServices2025 = [
+export const specializedInnovativeServices2025 = [;
     {id: 1;
         name: "Digital Twin & Simulation Platform";
         category: "Digital Twins";
@@ -39,7 +39,7 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-system Support", "Cloud-based Rendering", "Real-time Processing"],
         estimatedDelivery: "8-12 weeks";
         supportLevel: "premium";
-        innovationScore: 9.1,
+        innovationScore: 9.1
     };
     {id: 2;
         name: "Federated Learning & Privacy-Preserving AI";
@@ -80,7 +80,7 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-organization Support", "Global Collaboration", "Scalable Training"],
         estimatedDelivery: "10-14 weeks";
         supportLevel: "enterprise";
-        innovationScore: 9.3,
+        innovationScore: 9.3
     };
     {id: 3;
         name: "Neuromorphic Computing Platform";
@@ -121,7 +121,7 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-processor Support", "Distributed Computing", "Scalable Neural Networks"],
         estimatedDelivery: "16-20 weeks";
         supportLevel: "enterprise";
-        innovationScore: 9.5,
+        innovationScore: 9.5
     };
     {id: 4;
         name: "Holographic Display & 3D Visualization";
@@ -162,7 +162,7 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-display Support", "Network Distribution", "Content Scaling"],
         estimatedDelivery: "12-16 weeks";
         supportLevel: "premium";
-        innovationScore: 9.2,
+        innovationScore: 9.2
     };
     {id: 5;
         name: "Ambient Intelligence & Smart Environment";
@@ -203,7 +203,7 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-location Support", "Sensor Network Scaling", "Geographic Expansion"],
         estimatedDelivery: "14-18 weeks";
         supportLevel: "enterprise";
-        innovationScore: 9.0,
+        innovationScore: 9.0
     };
     {id: 6;
         name: "Swarm Robotics & Autonomous Systems";
@@ -244,7 +244,7 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-robot Support", "Task Complexity Scaling", "Geographic Expansion"],
         estimatedDelivery: "16-20 weeks";
         supportLevel: "enterprise";
-        innovationScore: 9.4,
+        innovationScore: 9.4
     };
     {id: 7;
         name: "Bio-Inspired Computing & Evolutionary Algorithms";
@@ -285,7 +285,7 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Multi-problem Support", "Algorithm Scaling", "Distributed Computing"],
         estimatedDelivery: "10-14 weeks";
         supportLevel: "premium";
-        innovationScore: 8.8,
+        innovationScore: 8.8
     };
     {id: 8;
         name: "Quantum Machine Learning & AI";
@@ -326,7 +326,7 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Quantum Hardware Scaling", "Algorithm Complexity", "Multi-qubit Support"],
         estimatedDelivery: "18-24 weeks";
         supportLevel: "enterprise";
-        innovationScore: 9.6,
+        innovationScore: 9.6
     }
 ];
     export default specializedInnovativeServices2025;

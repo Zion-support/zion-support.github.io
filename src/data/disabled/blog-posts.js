@@ -1,4 +1,4 @@
-export const BLOG_POSTS = [
+export const BLOG_POSTS = [;
     {id: '1';
         title: 'The Future of AI in Technology';
         slug: 'future-of-ai-in-technology';
@@ -16,7 +16,7 @@ export const BLOG_POSTS = [
         category: 'Artificial Intelligence';
         readTime: 8;
         featuredImage: '/blog/ai-future.jpg';
-        isFeatured: true,
+        isFeatured: true
     };
     {id: '2';
         title: 'Building Scalable Web Applications';
@@ -35,6 +35,6 @@ export const BLOG_POSTS = [
         category: 'Web Development';
         readTime: 12;
         featuredImage: '/blog/scalable-web.jpg';
-        isFeatured: false,
+        isFeatured: false
     }
 ];

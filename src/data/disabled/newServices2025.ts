@@ -1,6 +1,7 @@
 import React from "react";
 
 export; interface; NewService {
+  
 id: string;title: string;description: string;category: string;
 subcategory?: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[]tag;s: string[]marketPric;e: string;
 };export; const; NEW_SERVICES_20o25: NewService[] = [;

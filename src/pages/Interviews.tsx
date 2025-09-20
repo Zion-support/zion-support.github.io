@@ -1,5 +1,5 @@
 
-import React { useEffect useState } from "react",;
+import React { useEffect useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";,
 import { Interview } from "@/types/interview";,
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
@@ -111,6 +111,8 @@ attention.
 </>
   )
 export default function Interviews() {
+  return (
+  return (
   return (
     <ProtectedRoute>
       <InterviewsContent />

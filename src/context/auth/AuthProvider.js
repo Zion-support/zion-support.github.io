@@ -12,7 +12,7 @@ import { safeStorage } from "@/utils/safeStorage, ";
 import { toast } from "@/hooks/use-toast, "; // Import toast;
 import { useDispatch } from 'react-redux, ';
 import { addItem } from '@/store/cartSlice, ';
-export const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {;
     const { user, setUser, isLoading, setIsLoading, onboardingStep, setOnboardingStep, tokens, setTokens } = useAuthState();
     const navigate = useNavigate();
     const location = useLocation();
@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
     const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
     const { login: loginImpl, signup: signupImpl, logout, resetPassword, updateProfile, loginWithGoogle, loginWithFacebook, loginWithTwitter, loginWithWeb3 } = useAuthOperations(setUser, setIsLoading);
     // Wrapper for login to match the AuthContextType interface;
-    const login = async (email, password) => {
+    const login = async (email, password) => {;
         const { res, data } = await loginUser(email, password); // Calls /api/auth/login;
         // Check for specific "Email not confirmed" error first;
         if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
@@ -67,6 +67,10 @@ export const AuthProvider = ({ children }) => {
     // Register via backend and persist auth info;
     const register = async (name, email, password) => {
         try {
+  
+  ;
+  ;
+  ;
             const { res, data } = await registerUser(name, email, password);
             if (!res.ok || !data?.token || !data?.user) {
                 return { error: data?.message || 'Registration failed' };
@@ -81,7 +85,7 @@ export const AuthProvider = ({ children }) => {
      }
     };
     // Wrapper for signup to match the AuthContextType interface;
-    const signup = async (email, password, userData) => {
+    const signup = async (email, password, userData) => {;
         const result = await signupImpl({ email, password, display_name: userData });
     if (!result?.error) {
             const loginResult = await login(email, password);
@@ -101,6 +105,7 @@ export const AuthProvider = ({ children }) => {
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
             if (session?.user) {
                 try {
+  
                     const { data: profile, error } = await getFromProfiles()
                         .select('*')
                         .eq('id', session.user.id)
@@ -139,6 +144,7 @@ export const AuthProvider = ({ children }) => {
                 }
             }
             else {
+  
                 setUser(false);
                 // Show logout toast when user logs out;
                 if (event === 'SIGNED_OUT') {
@@ -151,9 +157,9 @@ export const AuthProvider = ({ children }) => {
             subscription.unsubscribe();
         };
     }, [navigate]);
-    const authContextValue = {
-        user,
-        isLoading,
+    const authContextValue = {;
+        user,;
+        isLoading,;
         isAuthenticated: !!user;
         login,
         register,

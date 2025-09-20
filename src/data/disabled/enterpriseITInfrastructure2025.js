@@ -1,4 +1,4 @@
-export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
+export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [;
     // Enterprise Infrastructure Services;
     {id: 'enterprise-hybrid-cloud-platform';
         title: 'Enterprise Hybrid Cloud Infrastructure Platform';
@@ -49,7 +49,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Multi-cloud APIs'],
         compliance: ['SOC2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'GDPR'],
         integrations: ['AWS', 'Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud', 'VMware'],
-        sla: '99.99% uptime guarantee',
+        sla: '99.99% uptime guarantee'
     };
     {id: 'next-generation-data-center-solutions';
         title: 'Next-Generation Data Center & Edge Computing Solutions';
@@ -100,7 +100,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Edge Computing', '5G Networks', 'AI/ML', 'Software-Defined Networking', 'Green Computing'],
         compliance: ['SOC2', 'ISO 27001', 'Tier IV Data Center', 'Energy Star', 'LEED'],
         integrations: ['Cloud platforms', 'Network providers', 'Content delivery networks', 'IoT platforms'],
-        sla: '99.995% uptime guarantee',
+        sla: '99.995% uptime guarantee'
     };
     {id: 'enterprise-network-security-fabric';
         title: 'Enterprise Network Security Fabric & Zero Trust Architecture';
@@ -151,7 +151,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Zero Trust', 'AI/ML', 'Behavioral Analytics', 'Network Segmentation', 'SASE'],
         compliance: ['SOC2', 'ISO 27001', 'NIST', 'PCI DSS', 'HIPAA'],
         integrations: ['SIEM systems', 'EDR platforms', 'Identity providers', 'Network infrastructure'],
-        sla: '99.9% uptime guarantee',
+        sla: '99.9% uptime guarantee'
     };
     {id: 'enterprise-performance-optimization-suite';
         title: 'Enterprise Performance Optimization & Monitoring Suite';
@@ -202,7 +202,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['APM', 'Infrastructure Monitoring', 'AI/ML', 'Big Data Analytics', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific standards'],
         integrations: ['Application platforms', 'Cloud providers', 'Monitoring tools', 'Alerting systems'],
-        sla: '99.9% uptime guarantee',
+        sla: '99.9% uptime guarantee'
     };
     {id: 'enterprise-disaster-recovery-platform';
         title: 'Enterprise Disaster Recovery & Business Continuity Platform';
@@ -253,7 +253,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Backup & Replication', 'Cloud Storage', 'Network Optimization', 'Automation', 'Monitoring'],
         compliance: ['SOC2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'Industry-specific regulations'],
         integrations: ['Storage systems', 'Cloud providers', 'Network infrastructure', 'Monitoring tools'],
-        sla: '99.99% recovery time guarantee',
+        sla: '99.99% recovery time guarantee'
     };
     {id: 'enterprise-integration-hub';
         title: 'Enterprise Integration Hub & API Management Platform';
@@ -304,7 +304,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['API Gateway', 'ESB', 'Data Integration', 'Workflow Automation', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific standards'],
         integrations: ['ERP systems', 'CRM platforms', 'Database systems', 'Cloud services', 'Legacy systems'],
-        sla: '99.9% uptime guarantee',
+        sla: '99.9% uptime guarantee'
     };
     {id: 'enterprise-compliance-automation-suite';
         title: 'Enterprise Compliance Automation & Governance Suite';
@@ -355,7 +355,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['AI/ML', 'Automation', 'Big Data Analytics', 'Workflow Management', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific regulations'],
         integrations: ['GRC systems', 'Risk management platforms', 'Audit tools', 'Compliance databases'],
-        sla: '99.9% uptime guarantee',
+        sla: '99.9% uptime guarantee'
     };
     {id: 'enterprise-scalability-solutions';
         title: 'Enterprise Scalability & Auto-Scaling Solutions';
@@ -406,7 +406,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Auto-scaling', 'Load Balancing', 'Performance Monitoring', 'AI/ML', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'Performance standards', 'Industry-specific requirements'],
         integrations: ['Cloud providers', 'Application platforms', 'Monitoring tools', 'Load balancers'],
-        sla: '99.9% uptime guarantee',
+        sla: '99.9% uptime guarantee'
     }
 ];
     export default ENTERPRISE_IT_INFRASTRUCTURE_2025;

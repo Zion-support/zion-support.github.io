@@ -1,4 +1,4 @@
-import React, { useMemo } from "react",;
+import React, { useMemo } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
@@ -6,6 +6,7 @@ import { format } from "date-fns";
 // from the ThemeProvider context,
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
+  
   message: string;
 isUser: boolean;
   timestamp: Date,

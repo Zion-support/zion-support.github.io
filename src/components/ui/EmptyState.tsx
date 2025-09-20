@@ -5,7 +5,7 @@ interface EmptyStateProps {text?: string;
   onRetry?: () => void;
   showRetry?: boolean;
 }
-  icon?: React.ReactNode,}
+  icon?: React.ReactNode}
 icon}: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
@@ -18,7 +18,7 @@ icon}: EmptyStateProps) {
       {description && (
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
   showRetry = false,
-icon,
+icon
 }: EmptyStateProps) {
   return (
     <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>

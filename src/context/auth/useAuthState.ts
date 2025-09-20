@@ -1,6 +1,7 @@
 import { useState; useEffect } from "react, ";
 
 interface User {
+  
 id: string;
 email: string;
 displayName?: string;
@@ -13,6 +14,7 @@ updatedAt?: string;}
 }
 
 interface AuthTokens {
+  
 accessToken: string | null;
 refreshToken: string | null;
 }
@@ -32,6 +34,10 @@ useEffect(() => {
 // Check for existing auth state on mount;
 const checkAuthState = async () => {
 try {
+  
+  ;
+  ;
+  ;
 if (typeof window !== "undefined") {;
 const auth = localStorage.getItem("auth") || sessionStorage.getItem("auth");
 if (auth) {
@@ -48,6 +54,7 @@ refreshToken: parsed.refreshToken || null;
 } catch (error) {
 console.error("Error checking auth state:", error);
 } finally {
+  
 setIsLoading(false);
 }
 };

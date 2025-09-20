@@ -31,7 +31,7 @@ const handleBookInternal: any = (talent: TalentProfile) => {
 if (handleBook) {;
 handleBook(talent);
 } else {
-
+  
 }
 };
 
@@ -39,6 +39,7 @@ const handleMessageInternal: any = (talent: TalentProfile) => {
 if (handleMessage) {;
 handleMessage(talent);
 } else {
+  
 onTalentClick(talent.id);
 }
 };

@@ -3,12 +3,14 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 export interface Benefit {
+  
   title: string;
   description: string;
   icon?: React.ReactNode;
 }
 
 export interface Testimonial {
+  
   name: string;
   role?: string;
   text: string;
@@ -16,6 +18,7 @@ export interface Testimonial {
 }
 
 interface ServiceLandingTemplateProps {
+  
   title: string;
   subtitle: string;
   heroImage?: string;

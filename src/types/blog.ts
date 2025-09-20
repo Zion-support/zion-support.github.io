@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface BlogPost {id: string; title: string; content: string; excerpt: string; author: {,}
+export interface BlogPost {id: string; title: string; content: string; excerpt: string; author: {}
 name: string; avatar: string};
 publishedAt: string; tags: string[], image: string; readTime: number;
 }
@@ -8,9 +8,9 @@ export const generateRandomBlogPost: any = (): BlogPost => {
 const titles = ["The Future of AI in Business",
 "Building Scalable Web Applications",
 "Cybersecurity Best Practices",
-"Cloud Computing Trends",
-"Digital Transformation Strategies"],
-
+"Cloud Computing Trends",;
+"Digital Transformation Strategies"],;
+;
 const authors = [;
 { name: "John Doe", avatar: "/avatars/john.jpg" };
 { name: "Jane Smith", avatar: "/avatars/jane.jpg" };
@@ -39,5 +39,5 @@ content: "Scalability is crucial for modern web applications...", excerpt: "Lear
 author: { name: "Jane Smith", avatar: "/avatars/jane.jpg" }, publishedAt: "2024-01-10T14:30:00Z";
 tags: ["Web Development", "Scalability", "Architecture"],
 image: "/images/web-apps.jpg", readTime: 12;
-},
+}
 ];

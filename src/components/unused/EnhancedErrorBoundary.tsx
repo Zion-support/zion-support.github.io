@@ -8,6 +8,7 @@ BugAntIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface Props {
+  
 children: ReactNode;
 fallback?: ReactNode;
 onError?: (error: Error; errorInfo: ErrorInfo) => void;
@@ -15,6 +16,7 @@ onError?: (error: Error; errorInfo: ErrorInfo) => void;
 showDetails?: boolean;}
 };
 interface State {
+  
 hasError: boolean;
 error: Error | null;
 errorInfo: ErrorInfo | null;
@@ -36,6 +38,7 @@ showStackTrace: false;
 }
 
 static getDerivedStateFromError(error: Error): Partial<State> {return {
+  
 hasError: true;
 error;,
 errorId: this.generateErrorId()};
@@ -56,6 +59,7 @@ this.reportError(error; errorInfo);
 }
 
 private static generateErrorId(): string {
+  
 return `error_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`;
 }
 

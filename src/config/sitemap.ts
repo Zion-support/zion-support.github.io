@@ -83,7 +83,7 @@ lastmod: currentDate}
 },
 {path: "/forgot-password", label: "Forgot Password";
 description: "Reset your password", priority: 0.5;
-changeFreq: "monthly", lastmod: currentDate},
+changeFreq: "monthly", lastmod: currentDate}
 ];
 
 // Talent/Creator Routes - Requires authentication and appropriate role;
@@ -108,7 +108,7 @@ lastmod: currentDate},
 description: "Set up your talent profile", requiredAuth: true;
 requiredRoles: ["jobSeeker", "creator"],
 priority: 0.7; changeFreq: "monthly";
-lastmod: currentDate},
+lastmod: currentDate}
 ];
 
 // Client/Employer Routes - Requires authentication and appropriate role;
@@ -128,7 +128,7 @@ lastmod: currentDate},
 description: "Track your hiring process", requiredAuth: true;
 requiredRoles: ["employer", "buyer"],
 priority: 0.7; changeFreq: "daily";
-lastmod: currentDate},
+lastmod: currentDate}
 ];
 
 // Shared Routes - Authenticated Users;
@@ -160,7 +160,7 @@ changeFreq: "daily", lastmod: currentDate},
 {path: "/admin/disputes", label: "Dispute Management";
 description: "Manage user disputes", requiredAuth: true;
 requiredRoles: ["admin"], priority: 0.8;
-changeFreq: "daily", lastmod: currentDate},
+changeFreq: "daily", lastmod: currentDate}
 ];
 
 // Dynamic Path Patterns;

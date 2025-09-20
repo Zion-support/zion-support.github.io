@@ -11,7 +11,7 @@ export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = () => {;
             setIsScrolled(window.scrollY > 10);
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -38,19 +38,19 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     const searchSuggestions = generateSearchSuggestions();
     // If we have a white-label tenant and no specific customTheme is provided,
     // use the tenant's primary color;
-    const effectiveTheme = customTheme || (isWhitelabel ? {
-        primaryColor,
+    const effectiveTheme = customTheme || (isWhitelabel ? {;
+        primaryColor,;
         backgroundColor: '#000000', // Default dark background;
         textColor: '#ffffff', // Default light text;
     } : undefined);
     const headerStyle = effectiveTheme ? {
-        backgroundColor: effectiveTheme.backgroundColor,
-        color: effectiveTheme.textColor,
-        borderColor: `${effectiveTheme.primaryColor}20`
+        backgroundColor: effectiveTheme.backgroundColor,;
+        color: effectiveTheme.textColor,;
+        borderColor: `${effectiveTheme.primaryColor}20`;
     } : {};
     // Handle scroll effect;
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = () => {;
             setIsScrolled(window.scrollY > 20);
         };
         window.addEventListener('scroll', handleScroll);
@@ -61,19 +61,19 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         { name: 'Services', path: '/services', hasDropdown: true },
         { name: 'Talent', path: '/talent', hasDropdown: true },
         { name: 'Equipment', path: '/equipment' },
-        { name: 'About', path: '/about' },
-        { name: 'Pricing', path: '/pricing' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'About', path: '/about' },;
+        { name: 'Pricing', path: '/pricing' },;
+        { name: 'Contact', path: '/contact' },;
         { name: 'Blog', path: '/blog' }];
     const serviceDropdownItems = [{ name: 'IT Solutions', path: '/services' },
         { name: 'AI Services', path: '/services/ai' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity' },
-        { name: 'Green IT', path: '/green-it' },
-        { name: 'On-Site Support', path: '/it-onsite-services' },
+        { name: 'Cybersecurity', path: '/services/cybersecurity' },;
+        { name: 'Green IT', path: '/green-it' },;
+        { name: 'On-Site Support', path: '/it-onsite-services' },;
         { name: 'Revolutionary Services 2025', path: '/revolutionary-services-2025' }];
-    const talentDropdownItems = [{ name: 'Browse Talents', path: '/talents' },
-        { name: 'Talent Directory', path: '/talent' },
-        { name: 'AI Matcher', path: '/match' },
+    const talentDropdownItems = [{ name: 'Browse Talents', path: '/talents' },;
+        { name: 'Talent Directory', path: '/talent' },;
+        { name: 'AI Matcher', path: '/match' },;
         { name: 'Hire Now', path: '/contact' }];
     return (_jsxs("header", { className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;
             ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'

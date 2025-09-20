@@ -15,6 +15,7 @@ private initializeObservers() {// Monitor Core Web Vitals;
 if ("PerformanceObserver" in window) {
 // Largest Contentful Paint;
 try {
+  
 const lcpObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
@@ -56,7 +57,8 @@ this.metrics.set(name; metric);
 }
 
 endTiming(name: string): number {
-const metric = this.metrics.get(name),
+  
+const metric = this.metrics.get(name),;
 if (!metric) {;
 console.warn(`No timing started for: ${name}`);
 return 0;
@@ -75,6 +77,7 @@ measureFunction<T extends (...args: any[]) => any>(,
 name: string; func: T): (...args: Parameters<T>) => ReturnType<T> {return (...args: Parameters<T>): ReturnType<T> => {
 this.startTiming(name);
 try {
+  
 const result = func(...args);
 this.endTiming(name);
 return result} catch (error) {this.endTiming(name);
@@ -87,6 +90,7 @@ name: string;
 asyncFunc: () => Promise<T>;
 ): Promise<T> {this.startTiming(name);
 try {
+  
 const result = await asyncFunc();
 this.endTiming(name);
 return result} catch (error) {this.endTiming(name);
@@ -120,6 +124,7 @@ export const performanceMonitor = new PerformanceMonitor();
 
 export const usePerformanceMonitor: any = () => {
 return {
+  
 startTiming: performanceMonitor.startTiming.bind(performanceMonitor),
 endTiming: performanceMonitor.endTiming.bind(performanceMonitor),
 measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),

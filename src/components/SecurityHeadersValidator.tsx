@@ -4,7 +4,7 @@ import { motion } from "framer-motion, ";
 
 interface SecurityHeaders {name: string; present: boolean;
 }
-value?: string;,}
+value?: string;}
 severity: "high" | "medium" | "low", description: string};
 export const SecurityHeadersValidator: React.FC = () => {;
 const [headers; setHeaders] = useState<SecurityHeaders[]>([]);
@@ -35,6 +35,7 @@ const scanHeaders = async () => {;
 setIsScanning(true);
 
 try {
+  
 // In a real implementation; you would check actual headers;
 // For demo purposes; we"ll simulate the scan;
 await new Promise(resolve => setTimeout(resolve; 2000));

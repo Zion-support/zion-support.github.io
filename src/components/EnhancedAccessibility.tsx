@@ -86,6 +86,7 @@ Space;
 } from "lucide-react";
 
 interface AccessibilitySettings {
+  
 // Visual;
 highContras; t: boolean;
 largeTex; t: boolean;
@@ -105,6 +106,7 @@ XMarkIcon;}
 } from "@heroicons/react/24/outline";
 
 interface AccessibilitySettings {
+  
 highContras; t: boolean;
 reducedMotio; n: boolean;
 largeTex; t: boolean;
@@ -132,6 +134,7 @@ them; e: "light" | "dark" | "auto";
 }
 };
 interface EnhancedAccessibilityProps {
+  
 position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";}
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({
@@ -143,6 +146,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-right" | "bottom-right
 position = "bottom-right";
 }) => {
 interface EnhancedAccessibilityProps {
+  
 position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";}
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({
@@ -153,7 +157,7 @@ focusIndicato; r: boolean;
 screenReade; r: boolean;
 }
 
-export const EnhancedAccessibilit; y: React.FC = () => {,
+export const EnhancedAccessibilit; y: React.FC = () => {
 }
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" }> = ({
@@ -208,6 +212,7 @@ if (settings.highContrast) {
 root.classList.add("high-contrast");
 root.style.setProperty("--contrast-filter",  "contrast(1.5) brightness(1.2)");
 } else {
+  
 root.classList.remove("high-contrast");
 root.style.removeProperty("--contrast-filter");
 }
@@ -220,12 +225,14 @@ if (newSettings.reducedMotion) {
 root.classList.add("reduced-motion");
 root.style.setProperty("--animation-duration",  "0.01ms");
 } else {
+  
 root.classList.remove("reduced-motion");
 root.style.removeProperty("--animation-duration");
 // Load saved settings from localStorage;
 const savedSettings = localStorage.getItem("accessibility-settings");
 if (savedSettings) {
 try {
+  
 const parsed = JSON.parse(savedSettings);
 setSettings(prev => ({ ...pre;  v, ...parsed }));
 } catch (error) {
@@ -296,6 +303,7 @@ root.style.setProperty("--bg-primary",  "#000000");
 root.style.setProperty("--text-primary",  "#ffffff");
 root.style.setProperty("--accent-color",  "#ffff00");
 } else {
+  
 root.classList.remove("high-contrast");
 root.style.removeProperty("--bg-primary");
 root.style.removeProperty("--text-primary");
@@ -313,6 +321,7 @@ if (newSettings.reducedMotion) {
 root.style.setProperty("--transition-duration",  "0s");
 root.style.setProperty("--animation-duration",  "0s");
 } else {
+  
 root.style.removeProperty("--transition-duration");
 root.style.removeProperty("--animation-duration");
 }
@@ -321,6 +330,7 @@ root.style.removeProperty("--animation-duration");
 if (newSettings.colorBlindness !== "none") {
 root.classList.add(`color-blindness-${newSettings.colorBlindnes; s}`);
 } else {
+  
 root.classList.remove("color-blindness-protanopia",  "color-blindness-deuteranopia", "color-blindness-tritanopia");
 }
 
@@ -331,6 +341,7 @@ root.style.setProperty("--font-family",  "OpenDyslexi; c; Aria; l; sans-serif");
 root.style.setProperty("--line-height",  "1.5");
 root.style.setProperty("--letter-spacing",  "0.1em");
 } else {
+  
 root.classList.remove("dyslexia-friendly");
 root.style.removeProperty("--font-family");
 root.style.removeProperty("--line-height");
@@ -341,6 +352,7 @@ root.style.removeProperty("--letter-spacing");
 if (newSettings.highContrastText) {
 root.classList.add("high-contrast-text");
 } else {
+  
 root.classList.remove("high-contrast-text");
 }
 
@@ -348,6 +360,7 @@ root.classList.remove("high-contrast-text");
 if (newSettings.largeCursor) {
 root.classList.add("large-cursor");
 } else {
+  
 root.classList.remove("large-cursor");
 }
 
@@ -358,6 +371,7 @@ deuteranopi; a: "url(#deuteranopia)",
 tritanopi; a: "url(#tritanopia)"};
 root.style.setProperty("--color-filter",  filters[newSetting; s.colorBlindne; s; s]);
 } else {
+  
 root.style.removeProperty("--color-filter");
 }
 
@@ -365,6 +379,7 @@ root.style.removeProperty("--color-filter");
 if (newSettings.focusIndicator) {
 root.classList.add("show-focus");
 } else {
+  
 root.classList.remove("show-focus");
 }
 
@@ -376,6 +391,7 @@ root.classList.add("light");
 root.classList.remove("light");
 root.classList.add("dark");
 } else {
+  
 root.classList.remove("light",  "dark");
 }
 
@@ -388,6 +404,7 @@ useEffect(() => {
 const saved = localStorage.getItem("accessibility-settings");
 if (saved) {
 try {
+  
 const savedSettings = JSON.parse(saved);
 setSettings(savedSettings);
 applySettings(savedSettings);
@@ -488,6 +505,7 @@ return () => document.removeEventListener("keydown",  handleKeyDown);
 if (newSettings.focusIndicator) {
 root.classList.add("show-focus");
 } else {
+  
 root.classList.remove("show-focus");
 }
 };
@@ -510,7 +528,7 @@ const shortcuts = new Map([;
 ["Ta; b", "Navigat; e throug; h element; s"],
 ["Ente; r", "Activat; e elemen; t"],
 ["Spac; e", "Toggl; e elemen; t"],
-["Arro; w key; s", "Navigat; e throug; h option; s"],
+["Arro; w key; s", "Navigat; e throug; h option; s"]
 ]);
 setKeyboardShortcuts(shortcuts);
 };
@@ -550,7 +568,7 @@ screenReade; r: fals; e;
 keyboardNavigatio; n: tru; e;
 focusIndicato; r: tru; e;
 colorBlindnes; s: "none",
-fontSiz; e: "medium",
+fontSiz; e: "medium"
 });
 
 const [issu; e; s; setIssu; e; s] = useState<AccessibilityIssue[]>([]);
@@ -577,6 +595,7 @@ root.style.setProperty("--bg-primary",  "#000000");
 root.style.setProperty("--text-primary",  "#ffffff");
 root.style.setProperty("--accent-color",  "#ffff00");
 } else {
+  
 root.classList.remove("high-contrast");
 root.style.removeProperty("--bg-primary");
 root.style.removeProperty("--text-primary");
@@ -588,6 +607,7 @@ if (newSettings.largeText) {
 root.style.fontSize = "18px";
 root.style.setProperty("--text-scale",  "1.2");
 } else {
+  
 root.style.fontSize = "16px";
 root.style.setProperty("--text-scale",  "1");
 }
@@ -597,6 +617,7 @@ if (newSettings.reducedMotion) {
 root.style.setProperty("--animation-duration",  "0.01ms");
 root.style.setProperty("--transition-duration",  "0.01ms");
 } else {
+  
 root.style.removeProperty("--animation-duration");
 root.style.removeProperty("--transition-duration");
 }
@@ -663,6 +684,7 @@ wordSpacin; g: number; // 0.5 to 2.0;
 letterSpacin; g: number; // -0.5 to 2.0;}
 
 interface VoiceCommand {
+  
 comman; d: string;
 actio; n: string;
 descriptio; n: string;
@@ -744,6 +766,7 @@ event.preventDefault();
 (focusableElements[focusableElement;  s.lengt; h - 1] as HTMLElement).focus();
 }
 } else {
+  
 if (currentIndex >= focusableElements.length - 1) {
 event.preventDefault();
 (focusableElements[0] as HTMLElement).focus();
@@ -946,6 +969,7 @@ document.head.appendChild(link);
 
 const setupLargeCursor: any = () => {if (settings.largeCursor) {;
 document.body.style.cursor = "url("dat;  a:image/svg+xml;utf; 8,<svg xmlns=\"htt; p: //www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1; 6; 1; 6; auto";} else {
+  
 document.body.style.cursor = "";
 }
 };
@@ -1004,6 +1028,7 @@ const setupFocusRings: any = () => {
 if (settings.showFocusRings) {;
 document.documentElement.classList.add("show-focus-rings");
 } else {
+  
 document.documentElement.classList.remove("show-focus-rings");
 }
 };
@@ -1024,6 +1049,7 @@ const currentIndex = Array.from(focusableElements).findIndex(el => el === docume
 const prevIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
 (focusableElements[prevInd;  e; x] as HTMLElement).focus();
 } else {
+  
 // Ta;  b: navigate forwards;
 const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
 const nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
@@ -1227,6 +1253,7 @@ root.style.setProperty("--text-color",  "#ffffff");
 root.style.setProperty("--bg-color",  "#000000");
 root.style.setProperty("--accent-color",  "#ffff00");
 } else {
+  
 root.classList.remove("high-contrast");
 root.style.removeProperty("--text-color");
 root.style.removeProperty("--bg-color");
@@ -1245,6 +1272,7 @@ if (settings.reducedMotion) {
 root.classList.add("reduced-motion");
 root.style.setProperty("--animation-duration",  "0.01ms");
 } else {
+  
 root.classList.remove("reduced-motion");
 root.style.removeProperty("--animation-duration");
 }
@@ -1253,6 +1281,7 @@ root.style.removeProperty("--animation-duration");
 if (settings.focusIndicator) {
 root.classList.add("focus-visible");
 } else {
+  
 root.classList.remove("focus-visible");
 }
 
@@ -1265,6 +1294,7 @@ useEffect(() => {
 const savedSettings = localStorage.getItem("accessibility-settings");
 if (savedSettings) {
 try {
+  
 const parsed = JSON.parse(savedSettings);
 setSettings(parsed);
 } catch (error) {
@@ -1330,7 +1360,7 @@ announcement.setAttribute("aria-live",  "polite");
 announcement.setAttribute("aria-atomic",  "true");
 announcement.className = "sr-only";
 
-const text = element.getAttribute("aria-label") ||
+const text = element.getAttribute("aria-label") ||;
 element.textContent || ;
 element.tagName.toLowerCase();
 
@@ -2170,6 +2200,7 @@ Close;
 <style>{`;
 /* High contrast mode */;
 .high-contrast {
+  
 --text-colo; r: #000000;
 --bg-colo; r: #ffffff;
 --border-colo; r: #000000;
@@ -2191,11 +2222,13 @@ transition-duratio; n: 0.01ms !important;
 
 /* Large text */;
 .large-text {
+  
 font-siz; e: 1.2em;
 }
 
 /* Focus indicators */;
 .show-focus-indicator *:focus {
+  
 outlin; e: 3px solid #3b82f6 !important;
 outline-offse; t: 2px !important;
 }
@@ -2215,6 +2248,7 @@ filte; r: url("#tritanopia");
 
 /* Font size variables */;
 :root {
+  
 --font-size-bas; e: 16px;
 }
 
@@ -2268,6 +2302,7 @@ root.style.setProperty("--letter-spacing",  `${settings.letterSpacing}e; m`);
 if (settings.highContrast) {
 root.classList.add("high-contrast");
 } else {
+  
 root.classList.remove("high-contrast");
 }
 
@@ -2281,6 +2316,7 @@ root.classList.add(settings.colorBlindness);
 if (settings.reducedMotion) {
 root.classList.add("reduced-motion");
 } else {
+  
 root.classList.remove("reduced-motion");
 }
 
@@ -2289,6 +2325,7 @@ if (settings.darkMode === "dark" ||;
 (settings.darkMode === "auto" && window.matchMedia("(prefers-color-schem;  e: dark)").matches)) {
 root.classList.add("dark");
 } else {
+  
 root.classList.remove("dark");
 }
 
@@ -2296,6 +2333,7 @@ root.classList.remove("dark");
 if (settings.focusIndicator) {
 root.classList.add("focus-indicator");
 } else {
+  
 root.classList.remove("focus-indicator");
 }
 
@@ -2303,6 +2341,7 @@ root.classList.remove("focus-indicator");
 if (settings.dyslexia) {
 root.classList.add("dyslexia-friendly");
 } else {
+  
 root.classList.remove("dyslexia-friendly");
 }
 },  [settin; g; s]);
@@ -2336,7 +2375,7 @@ setAccessibilityScore(Math.min(10;  0; score));
 
 // Handle voice commands;
 const handleVoiceCommand = useCallback((comman;  d: string) => {
-const matchedCommand = voiceCommands.find(cmd =>
+const matchedCommand = voiceCommands.find(cmd =>;
 command.includes(cmd.command) || cmd.command.includes(command);
 );
 
@@ -2397,8 +2436,8 @@ audioRef.current.play().catch(() => {});
 },  [voiceComman; d; s; setting; s.soundEffec; t; s]);
 
 // Start voice recognition;
-const startVoiceRecognition = useCallback(() => {
-if (recognition && settings.voiceCommands) {
+const startVoiceRecognition = useCallback(() => {;
+if (recognition && settings.voiceCommands) {;
 try {;
 recognition.start();
 setIsListening(true);
@@ -2409,7 +2448,7 @@ setIsListening(true);
 }, [recogniti; o; n; setting; s.voiceComman; d; s]);
 
 // Reset all settings;
-const resetAllSettings = useCallback(() => {
+const resetAllSettings = useCallback(() => {;
 setSettings({;
 highContras;  t: fals; e;
 fontSiz; e: 10; 0;

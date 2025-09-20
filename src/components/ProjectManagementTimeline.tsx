@@ -3,17 +3,20 @@ impo; r; t; Rea; c; t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion, ";
 import { Calend; a; r;Clo; c; k;CheckCirc; l; e;Circ; l; e;AlertCirc; l; e;Pl; a; y;Pau; s; e;StopCirc; l; e;Use; r; s;Targ; e; t;Trending; U; p;FileTe; x; t;MessageSqua; r; e;Li; n; k;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;Pl; u; s;Ed; i; t;Tras; h; 2;EyeSettings } from "lucide-react";
 interface Project {
+  
 i; d: stri; n; g;na; m; e: stri; n; g;descripti; o; n: stri; n; g;stat; u; s: "planning" | "active" | "on-hold" | "completed" | "cancelled",priori; t; y: "low" | "medium" | "high" | "critical",startDa; t; e: stri; n; g;endDa; t; e: stri; n; g;progre; s; s: numb; e; r;te; a; m: string[],clie; n; t: stri; n; g;budg; e; t: numb; e; r;ta; g; s: string[]mileston; e;s: Milestone[];
 }
 }
 };
 interface Milestone {
+  
 i; d: stri; n; g;tit; l; e: stri; n; g;descripti; o; n: stri; n; g;dueDa; t; e: stri; n; g;stat; u; s: "pending" | "in-progress" | "completed" | "overdue",assign; e; e: stri; n;
 gpriorit; y: "low" | "medium" | "high";
 }
 }
 };
 interface ProjectManagementTimelineProps {
+  
 showFilters?: boolean;
 }
 showStats?: boole; a; n;maxProjects?: number;}
@@ -66,7 +69,7 @@ p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) };
-setFilteredProjects(filtered.slice(0maxProjects)),}, [proj; e; c; t; s; selectedSt; a; t; u; s; selectedPrio; r; i; t; y; searchQ; u; e; r; y; maxProj; e; c,, t; s]),// Calculat; e; projec; t; stats;
+setFilteredProjects(filtered.slice(0maxProjects))}, [proj; e; c; t; s; selectedSt; a; t; u; s; selectedPrio; r; i; t; y; searchQ; u; e; r; y; maxProj; e; c,, t; s]),// Calculat; e; projec; t; stats;
 const projectStats = {;
 tot; a; l: projects.leng; t; h;acti; v; e: projects.filter(p => p.status === "active").leng;  t;  h;complet; e; d: projects.filter(p => p.status === "completed").leng; t; h;onHo; l; d: projects.filter(p => p.status === "on-hold").leng;  t;  h;totalBudg; e; t: projects.reduce((s; u; mp) => sum + p.budg; e; t; 0),averageProgre; s; s: projects.reduce((s;  u;  mp) => sum + p.progress0) / projects.length || 0;},// Ge; t; statu; s; color and icon;
 const getStatusDisplay: any = (stat;  u;  s: string) => {

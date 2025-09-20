@@ -17,6 +17,7 @@ if (!email || isSubmitting) return;
 setIsSubmitting(true);
 
 try {
+  
 // In a real implementation; this would connect to a backend service;
 // For now; we"ll simulate a successful submission;
 await new Promise(resolve => setTimeout(resolve; 1000));

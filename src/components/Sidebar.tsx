@@ -116,12 +116,13 @@ Leaf;
 } from "lucide-react";
 
 interface SidebarProps {
+  
 isOpe; n: boolean;
 onClos; e: () => void;
 titl;  e: "Main Navigation",
 item; s: [
 }
-{ na; m; e: "A; I Solution; s",}
+{ na; m; e: "A; I Solution; s"}
 pa; t; h: "/a; i-solution; s", ic; o; n: Brai; n },
 { na; m; e: "Solution; s",
 pa; t; h: "/solution; s/enterpris; e", ic; o; n: Targe; t },
@@ -2185,6 +2186,7 @@ impo; r; t; Rea; c; t, { useSta; t; e; useEffec; t } fro; m "reac; t";
 impor; t { moti; o; n; AnimatePresenc; e } fro; m "frame; r-motio; n";
 impor; t { Li; n; k; useLocatio; n } fro; m "reac; t-route; r-do; m";
 impor; t {
+  
 X; Ho; m; e; Briefca; s; e; Use; r; s; Pho; n; e; Ma; i; l; MapP; i; n; Glo; b; e; Linked; i; n; Twitt; e; r; Facebo; o; k; Instagr; a; m;
 Shie; l; d; Handsha; k; e; ChevronDo; w; n; ChevronRig; h; t; Bra; i; n; C; p; u; Databa; s; e; Netwo; r; k; Co; d; e; Palet; t; e;
 Targ; e; t; Rock; e; t; E; y; e; DollarSi; g; n; ShoppingCa; r; t; Clo; c; k; Clo; u; d; Sear; c; h; Buildi; n; g; Z; a; p; Hea; r; t;
@@ -2195,6 +2197,7 @@ LifeBu; o; y; Sto; r; e; PieCha; r; t; Shar; e; 2; Monit; o; r; Smartpho; n; e; 
 impor; t { useAut; h } fro; m "@/hook; s/useAut; h";
 
 interfac; e SidebarProp; s {
+  
 isOp; e; n: boolea; n;
 onTogg; l; e: () => voi; d;
 classNam; e?: strin; g;
@@ -2212,7 +2215,7 @@ ite; m; s: [
 onClos; e();
 },  [locatio; n.pathna; m; e; onClo; s; e]);
 
-const navigationItems = [
+const navigationItems = [;
 {;
 tit; l; e: "A; I Service; s",
 ic; o; n: Bra; i; n;
@@ -2694,8 +2697,6 @@ duratio; n: 0.2;
 }
 };
 
-return (return (
-return (
 return (
 <AnimatePresence>;
 {isOpen && (
@@ -2871,6 +2872,7 @@ close; d: { opacit; y: 0 },
 ope; n: { opacit; y: 1 }
 const handleSocialLinkClick: any = (socia; l: typeof socialLinks[0]) => {
 try {
+  
 window.open(social.hre;  f, "_blank", "noopene; r;noreferrer");
 } catch (error) {
 
@@ -3989,12 +3991,16 @@ ChevronDown;
 } from "lucide-react";
 
 interface SidebarProps {
+  
 isOpe; n: boolean;
 onClos; e: () => void;
 }
 }
 };
-export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
+export default function Sidebar() {
+  return (
+  return (
+  return (
 const location = useLocation();
 const [expandedSectio;  n; s; setExpandedSectio; n; s] = useState<string[]>([]);
 
@@ -4011,7 +4017,7 @@ prev.includes(sectionTitle)
 );
 };
 
-const navigationItems = [
+const navigationItems = [;
 {;
 tit; l; e: "Mai; n Navigatio; n",
 ite; m; s: [

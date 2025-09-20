@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface NextGenMicroSaasService2025 {
+  
 id: string;
 title: string;
 description: string;

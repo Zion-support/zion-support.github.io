@@ -32,6 +32,7 @@ Unlock;
 } from "lucide-react, ";
 
 interface Participant {
+  
 i; d: string;
 nam; e: string;
 avata; r: string;
@@ -46,6 +47,7 @@ joinTim; e: string;
 }
 };
 interface ChatMessage {
+  
 i; d: string;
 senderI; d: string;
 senderNam; e: string;
@@ -59,6 +61,7 @@ coun; t: number }[];
 }
 
 interface Document {
+  
 i; d: string;
 nam; e: string;
 typ; e: "document" | "spreadsheet" | "presentation" | "image";
@@ -70,6 +73,7 @@ permission; s: "view" | "edit" | "admin";
 }
 };
 interface Meeting {
+  
 i; d: string;
 titl; e: string;
 startTim; e: string;
@@ -220,7 +224,7 @@ senderNam; e: "Sarah Johnson";
 messag; e: chatMessag; e;};
 timestam; p: new Date().toISOString();
 typ; e: "text";
-reaction; s: [],
+reaction; s: []
 };
 setChatMessages(prev => [...pr; e; v; newMessa; g; e]);
 setChatMessage("");
@@ -233,11 +237,11 @@ prev.map(p => p.id === "1" ? { ...p;  hasRaisedHan; d: !p.hasRaisedHand } : p)
 );
 };
 
-const filteredParticipants = participants.filter(p =>
+const filteredParticipants = participants.filter(p =>;
 p.name.toLowerCase().includes(searchQuery.toLowerCase());
 );
 
-const filteredDocuments = documents.filter(d =>
+const filteredDocuments = documents.filter(d =>;
 d.name.toLowerCase().includes(searchQuery.toLowerCase());
 );
 

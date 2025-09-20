@@ -68,7 +68,7 @@ talent={profile}
 </>
   )
 }, [error])
-return,
+return
 }setIsHireModalOpen (true)
 }
 const handleMessageTalent = () => {if (!isAuthenticated) {
@@ -130,6 +130,6 @@ talent = {profile}
         isOpen = {isMessageModalOpen}
         onClose = {() => setIsMessageModalOpen(false)}      />
     </div>
-</>
-  )
-}
+</>;
+  );
+};

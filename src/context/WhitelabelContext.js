@@ -9,9 +9,9 @@ export function WhitelabelProvider({ children }) {const [isWhitelabel] = useStat
         isWhitelabel,
         primaryColor,
         setPrimaryColor,
-        brandName,
-        setBrandName,
-        logo,
+        brandName,;
+        setBrandName,;
+        logo,;
         setLogo};
     return (_jsx(WhitelabelContext.Provider, { value: value, children: children }));
 }
@@ -36,7 +36,7 @@ const defaultConfig = {companyName: 'Zion Tech Group';
 };
     const WhitelabelContext = createContext(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);
-export const WhitelabelProvider = ({ children, config = {} }) => {
+export const WhitelabelProvider = ({ children, config = {} }) => {;
     const mergedConfig = { ...defaultConfig, ...config };
     return (<WhitelabelContext.Provider value={mergedConfig}>
       {children}

@@ -7,6 +7,7 @@ import { ResultsHeader } from "@/components/talent/ResultsHeader, ";
 import { TalentGrid } from "@/components/talent/TalentGrid, ";
 
 interface TalentResultsProps {
+  
 talents: TalentProfile[];
 totalCount: number;
 isLoading: boolean;

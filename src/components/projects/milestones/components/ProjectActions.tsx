@@ -8,7 +8,7 @@ interface ProjectActionsProps {projectId: string;
 isUnderDispute: boolean;
   disputeId?: string;
   isTalent: boolean;
-onAddMilestone: () => void,
+onAddMilestone: () => void
 }
 export function ProjectActions({}
 onAddMilestone}: ProjectActionsProps) {

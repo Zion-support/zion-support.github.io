@@ -4,7 +4,9 @@ import Login from '@/pages/Login;';
 import Signup from '@/pages/Signup;';
 import ForgotPassword from '@/pages/ForgotPassword;';
 export default function AuthRoutes() {
-    return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "login", element: _jsx(Login, {}) }), _jsx(Route, { path: "signup", element: _jsx(Signup, {}) }), _jsx(Route, { path: "forgot-password", element: _jsx(ForgotPassword, {}) })] }));
+  return (
+  return (
+  return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "login", element: _jsx(Login, {}) }), _jsx(Route, { path: "signup", element: _jsx(Signup, {}) }), _jsx(Route, { path: "forgot-password", element: _jsx(ForgotPassword, {}) })] }));
 }
 import React from 'react;';
 // Next.js routing - no need for react-router-dom;
@@ -25,9 +27,9 @@ const AuthRoutes = () => {
             <div>Dashboard</div>
           </ProtectedRoute>}/>
       
-      <Route path="/settings" element={<ProtectedRoute>
-            <div>Settings</div>
-          </ProtectedRoute>}/>
+      <Route path="/settings" element={<ProtectedRoute>;
+            <div>Settings</div>;
+          </ProtectedRoute>}/>;
     </Routes>);
 };
 export default AuthRoutes;

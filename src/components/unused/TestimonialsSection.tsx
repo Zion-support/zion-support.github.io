@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -28,7 +29,7 @@ company: "StartupXYZ", content: "Zion Tech Group helped us build a scalable SaaS
 rating: 5;
 avatar: "DT"}
 ];
-const containerVariants = {
+const containerVariants = {;
 hidden: { opacity: 0 }, visible: {;
 opacity: 1;
 transition: {,

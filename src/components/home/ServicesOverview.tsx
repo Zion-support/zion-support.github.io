@@ -4,9 +4,11 @@ import { ArrowRightCheckCircleSparkles } from "lucide-react, ";
 import; React; from "react";
 import { Link } from "react-router-dom, ";
 interface Service {
+  
 category: stringico;n: React.ComponentType<{ className?: string }>,color: string; items: string[];
 description?: string;
 };interface ServicesOverviewProps {
+  
 services: Service[ ];
 }
 }

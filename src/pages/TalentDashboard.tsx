@@ -172,6 +172,8 @@ Tracker
   )
 export default function TalentDashboard() {
   return (
+  return (
+  return (
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>

@@ -20,6 +20,7 @@ MapPin;
 } from "lucide-react";
 
 interface MainSidebarProps {
+  
 isOpen: boolean;
 onClose: () => void;
 }
@@ -31,9 +32,9 @@ const location = useLocation();
 const navigationItems = [{
 title: "Main",
 items: [
-{ name: "Home", href: "/", icon: Home },
-{ name: "About", href: "/about", icon: Building },
-{ name: "Contact", href: "/contact", icon: Mail },
+{ name: "Home", href: "/", icon: Home },;
+{ name: "About", href: "/about", icon: Building },;
+{ name: "Contact", href: "/contact", icon: Mail },;
 { name: "Blog", href: "/blog", icon: FileText }];
 },
 {

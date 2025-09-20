@@ -14,15 +14,17 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { Share, Users } from "lucide-react";
 import { useRouter } from "next/router";, // Changed from useNavigate,
-import { Card,
-CardContent
-, CardDescription,;
+import { Card;
+CardContent;
+, CardDescription;
 CardHeader;
 , CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useRouter } from "next/router"; // Changed from useNavigate,
 export default function ReferralsPage() {
-return (
+  return (
+  return (
+  return (
     <div className='container max-w-7xl py-10'>
       <div className='mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4'>
         <div>

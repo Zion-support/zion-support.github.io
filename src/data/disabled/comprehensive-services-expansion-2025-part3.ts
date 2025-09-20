@@ -1,6 +1,7 @@
 import { Routes; Route } from "react-router-dom, ";
 // Interface definitions;
 export interface ServiceContact {
+  
 phone: string;
 email: string;
 website: string;
@@ -10,6 +11,7 @@ address: string;
 }
 
 export interface MicroSaasService {
+  
 id: number;
 name: string;
 category: string;
@@ -35,6 +37,7 @@ trialPeriod: string;
 }
 
 export interface AIService {
+  
 id: number;
 name: string;
 category: string;
@@ -143,7 +146,7 @@ roi: "600% within 24 months";
 setupTime: "6-8 weeks";
 integrations: ["Medical devices", "Research platforms", "Gaming systems", "Assistive tools"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Synthetic Biology Services;
@@ -231,7 +234,7 @@ roi: "400% within 18 months";
 setupTime: "4-6 weeks";
 integrations: ["Manufacturing systems", "Warehouse management", "Healthcare platforms", "Agricultural systems"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Advanced Materials Services;
@@ -275,7 +278,7 @@ roi: "350% within 15 months";
 setupTime: "2-3 weeks";
 integrations: ["CAD systems", "Simulation platforms", "Manufacturing systems", "Research databases"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Advanced Energy Services;
@@ -319,7 +322,7 @@ roi: "800% within 36 months";
 setupTime: "8-12 weeks";
 integrations: ["Grid systems", "Research platforms", "Safety systems", "Energy markets"],
 freeTier: false;
-trialPeriod: "60 days",
+trialPeriod: "60 days"
 }
 ];
 // Advanced Transportation Services;
@@ -363,7 +366,7 @@ roi: "500% within 24 months";
 setupTime: "6-8 weeks";
 integrations: ["Transportation systems", "Energy grids", "Safety systems", "Passenger apps"],
 freeTier: false;
-trialPeriod: "45 days",
+trialPeriod: "45 days"
 }
 ];
 // Advanced Communication Services;
@@ -407,7 +410,7 @@ roi: "600% within 30 months";
 setupTime: "8-12 weeks";
 integrations: ["Communication networks", "Security systems", "Quantum devices", "Enterprise platforms"],
 freeTier: false;
-trialPeriod: "60 days",
+trialPeriod: "60 days"
 }
 ];
 // Advanced Manufacturing Services;
@@ -451,7 +454,7 @@ roi: "400% within 18 months";
 setupTime: "3-4 weeks";
 integrations: ["3D printers", "Design software", "Material suppliers", "Quality systems"],
 freeTier: true;
-trialPeriod: "21 days",
+trialPeriod: "21 days"
 }
 ];
 // Advanced Gaming Services;
@@ -495,7 +498,7 @@ roi: "500% within 15 months";
 setupTime: "2-3 weeks";
 integrations: ["Gaming platforms", "VR systems", "BCI devices", "Social platforms"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Export all cutting-edge services;

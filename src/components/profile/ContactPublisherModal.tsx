@@ -20,6 +20,7 @@ import api from "@/services/apiClient;";
 import { toast } from "@/hooks/use-toast, ";
 
 interface ContactPublisherModalProps {
+  
 isOpen: boolean;
 onClose: () => void;
 publisherName: string;
@@ -59,6 +60,7 @@ const handleSend = async () => {;
 const values = form.getValues();
 setIsSubmitting(true);
 try {
+  
 await api.post("/messages", {
 productId;
 subject: values.subject;
@@ -70,6 +72,7 @@ onClose();
 } catch (err: any) {
 toast.error(err?.message || "Failed to send message");
 } finally {
+  
 setIsSubmitting(false);
 }
 };

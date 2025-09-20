@@ -1,6 +1,7 @@
 import { useState; useEffect; useRef; useCallback; useMemo } from "react, ";
 
 interface VirtualScrollOptions {
+  
 itemHeight: number;
 overscan?: number;
 containerHeight?: number;
@@ -45,6 +46,7 @@ items: T[];
 options: VirtualScrollOptions;
 ): VirtualScrollReturn<T> => {
 const {
+  
 itemHeight;
 overscan = 5;
 containerHeight = 400;
@@ -76,6 +78,7 @@ Math.floor(state.scrollTop / containerHeight) + visibleCount + overscan;
 );
 
 return {
+  
 startIndex;
 endIndex;
 visibleCount;
@@ -150,6 +153,7 @@ if (enableSmoothScrolling) {containerRef.current.scrollTo({
 top: scrollTop;
 behavior: "smooth"});
 } else {
+  
 containerRef.current.scrollTop = scrollTop;
 }
 
@@ -172,7 +176,7 @@ return containerRef.current?.scrollTop || 0;
 }, []);
 
 // Get visible range;
-const getVisibleRange = useCallback(() => {
+const getVisibleRange = useCallback(() => {;
 return {;
 start: state.startIndex;
 end: state.endIndex;
@@ -231,7 +235,7 @@ willChange: state.isScrolling ? "scroll-position" : "auto"};
 onScroll: handleScroll;
 };
 // List props;
-const listProps = {
+const listProps = {;
 style: {;
 height: state.totalHeight;
 position: "relative" as const;
@@ -239,6 +243,7 @@ transform: `translateY(${virtualScrollParams.offsetY}px)`;
 }
 };
 return {
+  
 virtualItems: state.visibleItems;
 containerProps;
 listProps;
@@ -308,6 +313,7 @@ setSearchResults({ indices; highlights });
 const virtualScroll = useVirtualScroll(filteredItems; options);
 
 return {
+  
 ...virtualScroll;
 filteredItems;
 searchResults;
@@ -389,6 +395,7 @@ totalHeight;
 }, [state.scrollTop; state.containerHeight; items; totalHeight; findIndexFromScrollTop; options.overscan]);
 
 return {
+  
 virtualItems: state.visibleItems;
 itemHeights;
 totalHeight;

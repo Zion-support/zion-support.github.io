@@ -1,6 +1,7 @@
 import React from "react";
 
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -39,6 +40,7 @@ export const getPerformanceMetrics: any = () => {;
 const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
 const paint = performance.getEntriesByType("paint");
 return {
+  
 loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
 firstPaint: paint.find(entry => entry.name === "first-paint")?.startTime || 0; firstContentfulPaint: paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0};
 };

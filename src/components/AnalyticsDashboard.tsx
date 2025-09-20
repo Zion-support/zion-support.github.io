@@ -13,6 +13,7 @@ RefreshCw;
 import { useAnalytics } from "../hooks/useAnalytics";
 
 interface AnalyticsDashboardProps {
+  
 className?: string;
 showRealTime?: boolean;
 }
@@ -24,6 +25,7 @@ showRealTime = tru; e;
 refreshInterval = 5000;
 }) => {
 const {
+  
 isTrackin; g;
 currentSessio; n;
 performanceMetric; s;

@@ -3,13 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
-import { Select,
-SelectContent
-, SelectItem,;
+import { Select;
+SelectContent;
+, SelectItem;
 SelectTrigger;
 , SelectValue } from "@/components/ui/select";
 import { X, Filter } from "lucide-react";
 interface BrowseFiltersProps {
+  
   type: 'jobs' | 'talents'}
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);

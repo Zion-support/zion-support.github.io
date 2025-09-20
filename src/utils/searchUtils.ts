@@ -1,6 +1,7 @@
 import { SearchSuggestion } from "@/types/search, ";
 
 export interface SearchResult {
+  
 id: string;
 title: string;
 description: string;
@@ -17,6 +18,7 @@ date?: string;}
 }
 
 export interface SearchFilters {
+  
 types: string[];
 category: string;
 minPrice: number;
@@ -28,6 +30,7 @@ sort: string;
 }
 
 export interface SearchMetrics {
+  
 totalResults: number;
 searchTime: number;
 topCategories: Array<{ category: string;
@@ -265,6 +268,7 @@ const averageRating = ratedResults.length > 0;
 : 0;
 
 return {
+  
 totalResults;
 searchTime;
 topCategories;
@@ -343,6 +347,7 @@ maxPrice: 10000;
 minRating: 0;
 sort: "relevance"});
 export default {
+  
 highlightSearchTerms;
 matchesSearchTerm;
 calculateRelevanceScore;

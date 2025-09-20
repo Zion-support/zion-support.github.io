@@ -5,6 +5,7 @@ import { SEO } from "@/components/SEO";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 import { JobDetailsSkeleton } from "@/components/jobs";
 interface Job {
+  
   id: string;
 title: string;
   description: string;

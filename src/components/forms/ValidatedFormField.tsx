@@ -1,12 +1,14 @@
 import { CheckCircle, AlertCircle, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 interface ValidationRule {
+  
   required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
   custom?: (value: any) => string | null,
 interface ValidatedFormFieldProps {
+  
   name: string;
 label: string;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';

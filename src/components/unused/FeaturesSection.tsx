@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -35,7 +36,7 @@ color: "text-zion-cyan"};
 description: "Round-the-clock technical support and maintenance services",
 color: "text-zion-purple"}
 ];
-const containerVariants = {
+const containerVariants = {;
 hidden: { opacity: 0 }, visible: {;
 opacity: 1;
 transition: {,

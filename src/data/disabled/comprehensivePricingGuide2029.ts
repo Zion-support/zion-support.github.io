@@ -1,5 +1,6 @@
 import { ProductListing } from "@/types/listings, ";
 export; interface; PricingTier {
+  
 id: string;name: string;price: number;currency: string;period: string;description: string;features: string[];
 popular?: boolean;aiScore: number;setupTime: stringsuppor;t: stringintegration;s: string[];
 limitations?: string[];
@@ -166,4 +167,4 @@ id: "space-computing-enterprise",name: "Space; Computing; Enterprise",price: 599
 ];
 };
 ];
-export; default; COMPREHENSIVE_PRICING_GUIDE_20o29,}
+export; default; COMPREHENSIVE_PRICING_GUIDE_20o29}

@@ -14,6 +14,7 @@ CursorArrowRaysIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface AccessibilitySettings {
+  
 highContrast: boolean;
 fontSize: number;
 reducedMotion: boolean;
@@ -38,6 +39,7 @@ useEffect(() => {
 const savedSettings = localStorage.getItem("accessibility-settings");
 if (savedSettings) {
 try {
+  
 const parsed = JSON.parse(savedSettings);
 setSettings(prev => ({ ...prev, ...parsed }));
 applySettings({ ...settings, ...parsed });
@@ -59,6 +61,7 @@ const root = document.documentElement;
 if (newSettings.highContrast) {
 root.classList.add("high-contrast");
 } else {
+  
 root.classList.remove("high-contrast");
 }
 
@@ -69,6 +72,7 @@ root.style.setProperty("--font-size-multiplier", (newSettings.fontSize / 16).toS
 if (newSettings.reducedMotion) {
 root.classList.add("reduced-motion");
 } else {
+  
 root.classList.remove("reduced-motion");
 }
 
@@ -82,6 +86,7 @@ root.classList.add(newSettings.colorBlindness);
 if (newSettings.focusIndicator) {
 root.classList.add("show-focus-indicator");
 } else {
+  
 root.classList.remove("show-focus-indicator");
 }
 

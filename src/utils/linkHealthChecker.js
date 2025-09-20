@@ -1,4 +1,5 @@
 export class LinkHealthChecker {
+  
     config;
     constructor(config = {}) {this.config = {
             timeout: config.timeout || 10000,
@@ -9,16 +10,18 @@ export class LinkHealthChecker {
     async checkLink(url) {
         const startTime = Date.now();
         try {
+  
             const response = await fetch(url, {
-                method: 'HEAD',
-                signal: AbortSignal.timeout(this.config.timeout),
-                headers: {
+                method: 'HEAD',;
+                signal: AbortSignal.timeout(this.config.timeout),;
+                headers: {;
                     'User-Agent': this.config.userAgent;
                 },
-                redirect: this.config.followRedirects ? 'follow' : 'manual',
+                redirect: this.config.followRedirects ? 'follow' : 'manual'
             });
             const responseTime = Date.now() - startTime;
             if (response.ok || response.status < 400) {return {
+  
                     url,
                     status: 'healthy',
                     statusCode: response.status,
@@ -26,17 +29,20 @@ export class LinkHealthChecker {
                     lastChecked: new Date()};
             }
             else {
+  
                 return {
+  
                     url,
                     status: 'unhealthy',
                     statusCode: response.status,
                     responseTime,
                     error: `HTTP ${response.status}: ${response.statusText}`,
-                    lastChecked: new Date(),
+                    lastChecked: new Date()
                 };
             }
         }
         catch (error) {return {
+  
                 url,
                 status: 'error',
                 error: error instanceof Error ? error.message : 'Unknown error',
@@ -47,6 +53,7 @@ export class LinkHealthChecker {
         const results = [];
         for (const url of urls) {
             try {
+  
                 const result = await this.checkLink(url);
                 results.push(result);
             }
@@ -63,6 +70,7 @@ export class LinkHealthChecker {
         let lastError;
         for (let attempt = 1; attempt <= this.config.retries; attempt++) {
             try {
+  
                 const result = await this.checkLink(url);
                 if (result.status === 'healthy') {
                     return result;
@@ -77,10 +85,11 @@ export class LinkHealthChecker {
             }
         }
         return {
+  
             url,
             status: 'error',
             error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-            lastChecked: new Date(),
+            lastChecked: new Date()
         };
     }
     getHealthSummary(results) {
@@ -95,6 +104,7 @@ export class LinkHealthChecker {
             ? responseTimes.reduce((a, b) => a + b, 0) / responseTimes.length;
             : 0;
         return {
+  
             total,
             healthy,
             unhealthy,

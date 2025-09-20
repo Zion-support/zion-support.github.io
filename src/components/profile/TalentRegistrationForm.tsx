@@ -26,9 +26,9 @@ import { useAuth } from "@/hooks/useAuth, ";
 const talentProfileSchema = z.object({
 name: z.string().min(2, "Name must be at least 2 characters long"),
 title: z.string().min(5, "Professional title is required"),
-bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-location: z.string().min(2, "Location is required"),
-skills: z.string().min(2, "Enter at least one skill"),
+bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;
+location: z.string().min(2, "Location is required"),;
+skills: z.string().min(2, "Enter at least one skill"),;
 hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {;
 message: "Hourly rate must be a number";
 }),
@@ -41,6 +41,7 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>;
 type CategoryType = "programming" | "devops" | "platforms" | "softSkills" | "other";
 
 interface CategorizedSkills {
+  
 programming: string[];
 devops: string[];
 platforms: string[];
@@ -50,6 +51,7 @@ other: string[];
 }
 };
 interface EnhancedProfile {
+  
 summary: string;
 categorizedSkills: CategorizedSkills;
 }
@@ -76,7 +78,7 @@ skills: "";
 hourlyRate: "";
 availability: "available";
 enhancedProfile: true;
-},
+}
 });
 
 // Handle adding skill tags;
@@ -125,6 +127,7 @@ return;
 }
 
 try {
+  
 setIsGenerating(true);
 
 // Call the Supabase Edge Function;
@@ -158,6 +161,7 @@ description: error.message || "There was an error generating your enhanced profi
 variant: "destructive";
 });
 } finally {
+  
 setIsGenerating(false);
 }
 };
@@ -202,6 +206,7 @@ default: return "bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple";
 // Send notification email;
 const sendEnhancementNotification = async (userId: string; email: string) => {
 try {
+  
 await supabase.functions.invoke("send-email", {
 body: {
 to: email;
@@ -233,8 +238,8 @@ font-size: 12px;
 };
 
 // Handle form submission;
-const onSubmit = async (values: TalentFormValues) => {
-if (skillTags.length === 0) {
+const onSubmit = async (values: TalentFormValues) => {;
+if (skillTags.length === 0) {;
 toast({;
 title: "Skills required";
 description: "Please add at least one skill to your profile.";
@@ -246,6 +251,7 @@ return;
 setIsSubmitting(true);
 
 try {
+  
 // For actual implementation with Supabase;
 if (!user?.id) {
 throw new Error("User not authenticated");
@@ -257,6 +263,7 @@ let finalSkills = skillTags;
 
 if (values.enhancedProfile && !generatedContent) {
 try {
+  
 const { data: aiData } = await supabase.functions.invoke("talent-profile-enhancer", {
 body: {
 talentData: {
@@ -768,7 +775,7 @@ disabled={isSubmitting}
 );
 }
 <//div><///div>;
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";,
 import { zodResolver } from "@hookform/resolvers/zod";,
 import { z } from "zod";,
@@ -780,6 +787,7 @@ import { Badge } from "@/components/ui/badge";,
 import { Separator } from "@/components/ui/separator";
 import { logWarn, logErrorToProduction } from "@/utils/productionLogger";
 import {
+  
 return (
     <div className='max-w-4xl mx-auto p-4 md:p-6'>
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
@@ -1215,16 +1223,17 @@ type='submit'
     </div>
   )
 }
-//Generate enhanced profile with AI return,
+//Generate enhanced profile with AI return
 }//Call the Supabase Edge Function const {
+  
   data error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {body: {,
 talentData: {
   name: formData.name title: formData.title bio: formData.bio  skills: skillTags location: formData.location})
-}else {'
-  //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')
-setGeneratedContent ({"
-  summary: "Experienced professional with expertise in modern technologies and best practices.",;
+}else {';
+  //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content');
+setGeneratedContent ({";
+  summary: "Experienced professional with expertise in modern technologies and best practices.";
 categorizedSkills: {";
   programming: ["JavaScript", "TypeScript", "React" ];"
 devops: ["Docker", "CI/CD", "AWS" ];"
@@ -1239,6 +1248,7 @@ toast ({
 })
 toast ({
 }finally {
+  
   setIsGenerating (false)
 }
 //Apply generated content to form const applyGeneratedContent = () => {
@@ -1251,9 +1261,9 @@ if (Array.isArray (categorySkills) ) {
 })
 }
 //Get category color //Send notification email const sendEnhancementNotification = async (userId: string email: string) => {
-  try {'
-  await supabase.functions.invoke ('send-email', {
-  body: {'"
+  try {';
+  await supabase.functions.invoke ('send-email', {;
+  body: {'";
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px padding-top: 20px border-top: 1px solid #eee, "> <p style="color: #666  font-size: 12px; ">© $ {
   new Date () .getFullYear ()
 }Zion Marketplace</p>
@@ -1262,12 +1272,15 @@ if (Array.isArray (categorySkills) ) {
   toast ({
   return}setIsSubmitting (true)
 try {
+  
   //For actual implementation with Supabase if (!user?.id) {
   try {
+  
   const {
-  data: aiData '
-}= await supabase.functions.invoke ('talent-profile-enhancer', {body: {,
-talentData: {
+  
+  data: aiData ';
+}= await supabase.functions.invoke ('talent-profile-enhancer', {body: {,;
+talentData: {;
   name: values.name title: values.title bio: values.bio  skills: skillTags location: values.location});'
 //Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {
   if (Array.isArray (categorySkills) ) {
@@ -1275,18 +1288,19 @@ talentData: {
   if (typeof skill === 'string'&& skill) {
 })
 //Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ]
-}//Continue with submission even if enhancement fails,
+}//Continue with submission even if enhancement fails
 }//Send notification email if we have user email if (userEmail && values.enhancedProfile && user?.id) {
   sendEnhancementNotification (user.id userEmail)
 }, 1500)
 //Here would be the actual code to save the profile to Supabase /* const {
+  
   error '
 }= await supabase .from ('talent profiles') .insert ({
   user id: user.id name: values.name title: values.title bio: values.bio summary: finalSummary location: values.location  skills: finalSkills.map (name => ({
   name level: 4;
 }) ), //Default skill level hourly rate: Number (values.hourlyRate)
 availability status: values.availability
-//Other fields would be handled here,
+//Other fields would be handled here
 })
 if (error) throw error
 */ setIsSubmitting (false)
@@ -1323,7 +1337,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
   generatedContent.categorizedSkills && (<div> <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1"> {
   Object.entries (generatedContent.categorizedSkills) .map ( ([category skills]) => (<div key= {
   category "
-}className="flex items-center gap-2"> <Badge className= {
+}className="flex items-center gap-2"> <Badge className={
   `w-fit $ {
   getCategoryColor (category as CategoryType)
 }`

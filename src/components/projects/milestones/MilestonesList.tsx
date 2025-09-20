@@ -10,5 +10,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Plus } from "lucide-react";
 import { EmptyState } from "@/components/ui/empty-state";
 interface MilestonesListProps {
+  
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({

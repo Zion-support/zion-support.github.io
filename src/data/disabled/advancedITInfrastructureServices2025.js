@@ -1,4 +1,4 @@
-export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
+export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [;
     // Edge Computing & 5G Integration;
     {id: "intelligent-edge-computing-platform";
         title: "Intelligent Edge Computing Platform";

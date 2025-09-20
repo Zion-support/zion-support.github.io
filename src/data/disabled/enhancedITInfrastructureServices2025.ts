@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface ITInfrastructureService {
+  
 id: number;
 name: string;
 category: string;

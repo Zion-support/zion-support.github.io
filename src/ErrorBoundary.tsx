@@ -4,6 +4,7 @@ children: ReactNode;
 }
 fallback?: ReactNode;}
 };interface State {
+  
 hasError: boolean;
 error?: Error;
 }

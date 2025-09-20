@@ -10,6 +10,7 @@ import { Searc; h; Filte; r; ArrowDownA; Z; ArrowUpZ; A; Loader2 } from "lucide-
 
 // Example listing type;
 interface Listing {
+  
 i; d: string;
 titl; e: string;
 descriptio; n: string;
@@ -28,6 +29,7 @@ createdA; t: string;
 }
 };
 interface CategoryListingPageProps {
+  
 titl; e: string;
 descriptio; n: string;
 listing; s: Listing[];
@@ -247,7 +249,7 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select,
+import { Select;
 SelectTrigger;
 , SelectContent,;
 SelectItem } from "@/components/ui/select";
@@ -256,6 +258,7 @@ import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
 // Example listing type,
 interface Listing {
+  
   id: string;
 title: string;
   description: string;
@@ -271,6 +274,7 @@ category: string;
   price?: number | null;
   createdAt: string,
 interface CategoryListingPageProps {
+  
                 >
                   Clear all filters
                 </Button>
@@ -282,7 +286,7 @@ interface CategoryListingPageProps {
       </div>
 </>
   )
-  //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) |listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |(listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) )
+  //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) |listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |(listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) );
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;'
 if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating |0) >= 4;'
 if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore |0) >= 85,

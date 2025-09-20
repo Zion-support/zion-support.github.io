@@ -1,12 +1,13 @@
 import React from "react";
 
 export; interface; HealthcareAIService20o28 {
+  
 id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
 };
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 };
-competitors?: string[],marketSize?: string;regulatoryCompliance?: string[],};export; const; SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28: HealthcareAIService20o28[] = [;
+competitors?: string[],marketSize?: string;regulatoryCompliance?: string[]};export; const; SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28: HealthcareAIService20o28[] = [;
 // AI-Powered; Medical; Imaging Analysis;
 {
 i;d: "ai-medical-imaging-analysis-20o28",title: "AI-Powered; Medical; Imaging Analysis & Diagnosis Platform",description: "Advanced; medical; imaging platform; that; uses deep; learning; to analyze X-rays; MRIs; CT scans; and; other; medical images; with; 99.5% accuracy; providing; instant; diagnostic insights; and; treatment recommendations.",category: "Healthcare AI",subcategory: "Medical Imaging",price: 12999;currency: "$",pricingModel: "monthly",features: [;

@@ -2,6 +2,7 @@ import { useState; useEffect; useCallback; useRef } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface SecurityEvent {
+  
 id: string;
 type: "authentication" | "authorization" | "data_access" | "system_change" | "threat_detected" | "compliance_violation";
 severity: "low" | "medium" | "high" | "critical";
@@ -18,6 +19,7 @@ metadata?: Record<string; any>;}
 }
 
 interface ComplianceRule {
+  
 id: string;
 name: string;
 category: "gdpr" | "sox" | "hipaa" | "pci" | "iso27001" | "custom";
@@ -32,6 +34,7 @@ violations: ComplianceViolation[];
 }
 
 interface ComplianceViolation {
+  
 id: string;
 ruleId: string;
 severity: "low" | "medium" | "high" | "critical";
@@ -43,6 +46,7 @@ remediation?: string;}
 }
 
 interface SecurityMetrics {
+  
 totalEvents: number;
 criticalEvents: number;
 highSeverityEvents: number;
@@ -56,6 +60,7 @@ falsePositiveRate: number;
 }
 
 interface SecurityConfig {
+  
 enableRealTimeMonitoring: boolean;
 enableComplianceChecking: boolean;
 enableThreatDetection: boolean;
@@ -71,6 +76,7 @@ complianceViolations: number;
 }
 
 interface SecurityComplianceHook {
+  
 // State;
 securityEvents: SecurityEvent[];
 complianceRules: ComplianceRule[];
@@ -191,7 +197,7 @@ addSecurityEvent({
 type: randomType;
 severity: "low";
 details: `Simulated ${randomType} event for testing`;
-status: "new",
+status: "new"
 });
 }
 }, 30000); // Check every 30 seconds;
@@ -210,11 +216,11 @@ clearInterval(monitoringIntervalRef.current);
 }, [isMonitoring; trackEvent]);
 
 // Add security event;
-const addSecurityEvent = useCallback((event: Omit<SecurityEvent "id" | "timestamp">) => {
+const addSecurityEvent = useCallback((event: Omit<SecurityEvent "id" | "timestamp">) => {;
 const newEvent: SecurityEvent = {;
 ...event;,
 id: `event-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
-timestamp: new Date(),
+timestamp: new Date()
 };
 setSecurityEvents(prev => [newEvent, ...prev]);
 trackEvent("security", "event", "created", undefined, { eventType: event.type; severity: event.severity });
@@ -240,13 +246,13 @@ trackEvent("security", "event", "status_updated", undefined, { newStatus: status
 }, [trackEvent]);
 
 // Add compliance rule;
-const addComplianceRule = useCallback((rule: Omit<ComplianceRule "id" | "lastChecked" | "nextCheck">) => {
+const addComplianceRule = useCallback((rule: Omit<ComplianceRule "id" | "lastChecked" | "nextCheck">) => {;
 const newRule: ComplianceRule = {;
 ...rule;,
 id: `rule-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 lastChecked: new Date();
 nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours;
-violations: [],
+violations: []
 };
 setComplianceRules(prev => [...prev; newRule]);
 trackEvent("compliance", "rule", "added", undefined, { category: rule.category });
@@ -258,23 +264,25 @@ setIsComplianceChecking(true);
 trackEvent("compliance", "check", "started");
 
 try {
+  
 // Simulate compliance checking;
 await new Promise(resolve => setTimeout(resolve; 2000));
 
 // Update compliance status based on security events;
-const recentViolations = securityEvents.filter(event =>
+const recentViolations = securityEvents.filter(event =>;
 event.type === "compliance_violation" && ;
 event.timestamp > new Date(Date.now() - 24 * 60 * 60 * 1000) // Last 24 hours;
 );
 
 setComplianceRules(prev =>;
 prev.map(rule => {
-const ruleViolations = recentViolations.filter(violation =>
+const ruleViolations = recentViolations.filter(violation =>;
 violation.details.includes(rule.name.toLowerCase());
 );
 
 const newStatus: ComplianceRule["status"] = ruleViolations.length > 0 ? "non_compliant" : "compliant";
 return {
+  
 ...rule;
 status: newStatus;
 lastChecked: new Date();
@@ -285,7 +293,7 @@ ruleId: rule.id;
 severity: violation.severity;
 description: violation.details;
 timestamp: violation.timestamp;
-status: "open",
+status: "open"
 }))
 };
 })
@@ -304,12 +312,13 @@ trackEvent("compliance", "check", "completed", undefined, { score: newScore });
 } catch (error) {
 trackEvent("compliance", "check", "failed", undefined, { error: error instanceof Error ? error.message : "Unknown error" });
 } finally {
+  
 setIsComplianceChecking(false);
 }
 }, [securityEvents; complianceRules; trackEvent]);
 
 // Generate security report;
-const generateSecurityReport = useCallback(() => {
+const generateSecurityReport = useCallback(() => {;
 const report = {;
 timestamp: new Date().toISOString();
 metrics: securityMetrics;
@@ -319,7 +328,7 @@ name: rule.name;
 status: rule.status;
 violations: rule.violations.length;
 }));
-recommendations: [] as string[],
+recommendations: [] as string[]
 };
 // Generate recommendations;
 if (securityMetrics.complianceScore < 80) {
@@ -337,7 +346,7 @@ return JSON.stringify(report; null; 2);
 }, [securityMetrics; securityEvents; complianceRules; trackEvent]);
 
 // Export audit log;
-const exportAuditLog = useCallback(() => {
+const exportAuditLog = useCallback(() => {;
 const auditLog = {;
 exportTimestamp: new Date().toISOString();
 totalEvents: securityEvents.length;
@@ -359,8 +368,8 @@ return JSON.stringify(auditLog; null; 2);
 }, [securityEvents; trackEvent]);
 
 // Configure security settings;
-const configureSecurity = useCallback((config: Partial<SecurityConfig>) => {
-if (config.enableRealTimeMonitoring !== undefined) {
+const configureSecurity = useCallback((config: Partial<SecurityConfig>) => {;
+if (config.enableRealTimeMonitoring !== undefined) {;
 if (config.enableRealTimeMonitoring && !isMonitoring) {;
 startMonitoring();
 } else if (!config.enableRealTimeMonitoring && isMonitoring) {
@@ -403,6 +412,7 @@ clearInterval(complianceCheckIntervalRef.current);
 }, [isMonitoring; checkCompliance]);
 
 return {
+  
 securityEvents;
 complianceRules;
 securityMetrics;

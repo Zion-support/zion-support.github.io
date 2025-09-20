@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface InnovativeMicroSaasService {
+  
 id: number;
 name: string;
 category: string;
@@ -94,7 +95,7 @@ useCases: [
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "FedRAMP"],
 scalability: "Unlimited quantum qubits";
-support: "24/7 quantum expert support",
+support: "24/7 quantum expert support"
 };
 {id: 2;
 name: "Neuromorphic Computing Platform";
@@ -154,7 +155,7 @@ useCases: [
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "FDA", "CE"],
 scalability: "Up to 1M neurons";
-support: "Expert neuromorphic support",
+support: "Expert neuromorphic support"
 };
 {id: 3;
 name: "Federated Learning Platform";
@@ -214,7 +215,7 @@ useCases: [
 ],
 compliance: ["GDPR", "HIPAA", "CCPA", "SOC 2", "ISO 27001"],
 scalability: "Unlimited participants";
-support: "Privacy expert support",
+support: "Privacy expert support"
 };
 {id: 4;
 name: "Edge AI Orchestration Platform";
@@ -274,7 +275,7 @@ useCases: [
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST", "IEC 62443"],
 scalability: "Unlimited edge nodes";
-support: "24/7 edge computing support",
+support: "24/7 edge computing support"
 };
 {id: 5;
 name: "AI Ethics & Governance Platform";
@@ -334,7 +335,7 @@ useCases: [
 ],
 compliance: ["GDPR", "CCPA", "AI Act", "NIST AI Risk Management", "ISO 42001"],
 scalability: "Unlimited AI models";
-support: "AI ethics expert support",
+support: "AI ethics expert support"
 };
 {id: 6;
 name: "Blockchain AI Integration Platform";
@@ -394,7 +395,7 @@ useCases: [
 ],
 compliance: ["GDPR", "SOC 2", "ISO 27001", "Blockchain regulations"],
 scalability: "Multi-chain support";
-support: "Blockchain AI expert support",
+support: "Blockchain AI expert support"
 };
 {id: 7;
 name: "Quantum-Safe Cryptography Platform";
@@ -454,7 +455,7 @@ useCases: [
 ],
 compliance: ["NIST PQC", "FIPS 140-3", "SOC 2", "ISO 27001", "FedRAMP"],
 scalability: "Unlimited encryption keys";
-support: "Cryptography expert support",
+support: "Cryptography expert support"
 };
 {id: 8;
 name: "AI-Powered DevOps Platform";
@@ -514,7 +515,7 @@ useCases: [
 ],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
 scalability: "Unlimited repositories";
-support: "DevOps expert support",
+support: "DevOps expert support"
 };
 {id: 9;
 name: "Synthetic Data Generation Platform";
@@ -574,7 +575,7 @@ useCases: [
 ],
 compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
 scalability: "Unlimited data generation";
-support: "Data science expert support",
+support: "Data science expert support"
 };
 {id: 10;
 name: "AI-Powered Customer Experience Platform";
@@ -634,7 +635,7 @@ useCases: [
 ],
 compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
 scalability: "Unlimited customers";
-support: "Customer experience expert support",
+support: "Customer experience expert support"
 }
 ];
 export default innovativeMicroSaasServices2025;

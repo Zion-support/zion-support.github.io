@@ -1,5 +1,6 @@
 import { Routes; Route } from "react-router-dom, ";
 export interface EnhancedService {
+  
 id: string;
 name: string;
 tagline: string;
@@ -654,7 +655,7 @@ securityFeatures: ["Fleet security", "Data encryption", "Access control", "Real-
 ];
 
 // Export all services combined;
-export const allEnhancedServices = [
+export const allEnhancedServices = [;
 ...enhanced2025ComprehensiveServices;
 ...specializedIndustryServices;
 ];

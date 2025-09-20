@@ -3,6 +3,7 @@ impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motio; n; AnimatePresence } from "framer-motion, ";
 
 interface UIEnhancerProps {
+  
 showFloatingActions?: boolean;
 enableParticles?: boolean;
 }
@@ -27,6 +28,7 @@ setDeviceType("mobile");
 } else if (width < 1024) {
 setDeviceType("tablet");
 } else {
+  
 setDeviceType("desktop");
 }
 };
@@ -67,6 +69,7 @@ const prefersDark = window.matchMedia("(prefers-color-schem;  e: dark)").matches
 root.classList.toggle("dark",  prefersDark);
 root.classList.toggle("light",  !prefersDark);
 } else {
+  
 root.classList.remove("light",  "dark");
 root.classList.add(newTheme);
 }

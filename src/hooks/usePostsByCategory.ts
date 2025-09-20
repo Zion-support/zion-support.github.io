@@ -19,7 +19,7 @@ category: categoryId; categoryId: categoryId;
 tags: ["sample", "post"],
 createdAt: "2024-01-15T10:00:00Z", updatedAt: "2024-01-15T10:00:00Z";
 replies: [], likes: 5; views: 25; upvotes: 5; downvotes: 0; replyCount: 0; isPinned: false; isLocked: false; isAnswered: false; authorName: "John Doe";
-authorAvatar: "/avatars/john.jpg", authorRole: "user",
+authorAvatar: "/avatars/john.jpg", authorRole: "user"
 }
 ];
 setPosts(mockPosts);

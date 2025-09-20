@@ -1,4 +1,4 @@
-export const EMERGING_TECH_SERVICES = [
+export const EMERGING_TECH_SERVICES = [;
     // Blockchain Services;
     {id: 'enterprise-blockchain-platform',
         title: 'Zion Enterprise Blockchain Platform',
@@ -60,7 +60,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 156,
         launchDate: '2024-01-01',
         status: 'Active',
-        innovationScore: 92,
+        innovationScore: 92
     },
     // IoT Services;
     {id: 'iot-ecosystem-platform',
@@ -118,7 +118,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 234,
         launchDate: '2023-12-01',
         status: 'Active',
-        innovationScore: 89,
+        innovationScore: 89
     },
     // Edge Computing Services;
     {id: 'edge-computing-orchestrator',
@@ -176,7 +176,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 178,
         launchDate: '2024-02-01',
         status: 'Active',
-        innovationScore: 94,
+        innovationScore: 94
     },
     // 5G Services;
     {id: '5g-network-optimization',
@@ -234,7 +234,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 145,
         launchDate: '2024-01-15',
         status: 'Active',
-        innovationScore: 91,
+        innovationScore: 91
     },
     // AR/VR Services;
     {id: 'ar-vr-enterprise-platform',
@@ -292,7 +292,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 189,
         launchDate: '2023-11-01',
         status: 'Active',
-        innovationScore: 88,
+        innovationScore: 88
     },
     // Robotics Services;
     {id: 'intelligent-robotics-automation',
@@ -351,7 +351,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 67,
         launchDate: '2024-01-01',
         status: 'Active',
-        innovationScore: 95,
+        innovationScore: 95
     },
     // Quantum Computing Services;
     {id: 'quantum-computing-simulation',
@@ -409,7 +409,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 89,
         launchDate: '2024-01-01',
         status: 'Active',
-        innovationScore: 96,
+        innovationScore: 96
     },
     // Biotechnology Services;
     {id: 'ai-biotech-research-platform',
@@ -467,7 +467,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 123,
         launchDate: '2023-12-01',
         status: 'Active',
-        innovationScore: 93,
+        innovationScore: 93
     },
     // Green Technology Services;
     {id: 'sustainable-tech-solutions',
@@ -525,7 +525,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 167,
         launchDate: '2024-01-01',
         status: 'Active',
-        innovationScore: 90,
+        innovationScore: 90
     },
     // Space Technology Services;
     {id: 'space-tech-innovation-platform',
@@ -583,7 +583,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 78,
         launchDate: '2024-02-01',
         status: 'Active',
-        innovationScore: 97,
+        innovationScore: 97
     },
     // NEW EMERGING TECHNOLOGY SERVICES;
     {id: "quantum-machine-learning-platform",
@@ -644,7 +644,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 89,
         launchDate: "2024-03-01",
         status: "Active",
-        innovationScore: 95,
+        innovationScore: 95
     },
     {id: "space-technology-platform",
         title: "Space Technology & Satellite Management Platform",
@@ -704,7 +704,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 67,
         launchDate: "2024-02-15",
         status: "Active",
-        innovationScore: 93,
+        innovationScore: 93
     },
     {id: "brain-computer-interface-platform",
         title: "Brain-Computer Interface Development Platform",
@@ -764,7 +764,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 45,
         launchDate: "2024-01-20",
         status: "Beta",
-        innovationScore: 96,
+        innovationScore: 96
     },
     {id: "autonomous-vehicle-platform",
         title: "Autonomous Vehicle Development Platform",
@@ -824,7 +824,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 78,
         launchDate: "2024-02-01",
         status: "Active",
-        innovationScore: 94,
+        innovationScore: 94
     },
     {id: "quantum-internet-platform",
         title: "Quantum Internet & Communication Platform",
@@ -884,7 +884,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 34,
         launchDate: "2024-01-10",
         status: "Beta",
-        innovationScore: 97,
+        innovationScore: 97
     },
     {id: "ai-consciousness-simulation",
         title: "AI Consciousness Simulation Platform",
@@ -944,7 +944,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 23,
         launchDate: "2024-01-05",
         status: "Beta",
-        innovationScore: 98,
+        innovationScore: 98
     },
     {id: "quantum-financial-modeling",
         title: "Quantum Financial Modeling & Risk Assessment",
@@ -1004,7 +1004,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 56,
         launchDate: "2024-02-20",
         status: "Active",
-        innovationScore: 95,
+        innovationScore: 95
     },
     {id: "autonomous-manufacturing-platform",
         title: "Autonomous Manufacturing & Industry 4.0 Platform",
@@ -1064,7 +1064,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 89,
         launchDate: "2024-01-15",
         status: "Active",
-        innovationScore: 93,
+        innovationScore: 93
     },
     {id: "quantum-drug-discovery",
         title: "Quantum Drug Discovery & Molecular Modeling",
@@ -1124,21 +1124,21 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 67,
         launchDate: "2024-02-25",
         status: "Active",
-        innovationScore: 96,
+        innovationScore: 96
     }
 ];
-export const getEmergingTechServiceByCategory = (category) => {
+export const getEmergingTechServiceByCategory = (category) => {;
     return EMERGING_TECH_SERVICES.filter(service => service.category === category);
 };
-export const getEmergingTechServiceBySubcategory = (subcategory) => {
+export const getEmergingTechServiceBySubcategory = (subcategory) => {;
     return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
 };
-export const getFeaturedEmergingTechServices = () => {
+export const getFeaturedEmergingTechServices = () => {;
     // Return first 8 services since rating property doesn't exist;
     return EMERGING_TECH_SERVICES.slice(0, 8);
 };
-export const getServicesByInnovationScore = (minScore) => {
-    ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
+export const getServicesByInnovationScore = (minScore) => {;
+    ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],;
         integrations;
     ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
         compliance;

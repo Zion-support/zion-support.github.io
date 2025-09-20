@@ -1,4 +1,4 @@
-export const INNOVATIVE_NEW_SERVICES = [
+export const INNOVATIVE_NEW_SERVICES = [;
     // Quantum Computing & Advanced AI Services;
     {id: "quantum-ai-orchestrator";
         title: "Quantum AI Orchestrator Platform";
@@ -795,15 +795,15 @@ export const INNOVATIVE_NEW_SERVICES = [
             website: "https://ziontechgroup.com"}
     }
 ];
-    export const getServicesByCategory = (category) => {
+    export const getServicesByCategory = (category) => {;
     return INNOVATIVE_NEW_SERVICES.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
 };
-export const getServicesByPrice = (minPrice, maxPrice) => {
+export const getServicesByPrice = (minPrice, maxPrice) => {;
     return INNOVATIVE_NEW_SERVICES.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
-export const getServicesByTechnology = (technology) => {
+export const getServicesByTechnology = (technology) => {;
     return INNOVATIVE_NEW_SERVICES.filter(service => service.technicalSpecs?.technology.includes(technology));
 };
-export const getServicesBySupportLevel = (supportLevel) => {
+export const getServicesBySupportLevel = (supportLevel) => {;
     return INNOVATIVE_NEW_SERVICES.filter(service => service.supportLevel === supportLevel);
 };

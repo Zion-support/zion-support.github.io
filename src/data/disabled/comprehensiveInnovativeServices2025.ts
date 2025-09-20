@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface ComprehensiveInnovativeService2025 {
+  
 id: string;
 title: string;
 description: string;
@@ -115,7 +116,7 @@ documentationUrl: "https://ziontechgroup.com/docs/ai-autonomous-systems";
 scalability: "Handles unlimited operations and processes";
 deployment: "Cloud-native with on-premise options";
 marketTrend: "Autonomous systems market growing 45% annually";
-competitiveAdvantage: "Only platform enabling fully autonomous business operations",
+competitiveAdvantage: "Only platform enabling fully autonomous business operations"
 };
 // Quantum AI Platform;
 {id: "quantum-ai-platform";
@@ -188,7 +189,7 @@ documentationUrl: "https://ziontechgroup.com/docs/quantum-ai-platform";
 scalability: "Scalable to 1000+ qubits";
 deployment: "Hybrid cloud and quantum hardware";
 marketTrend: "Quantum AI market expected to reach $2B by 2030";
-competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities",
+competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities"
 };
 // Space Technology Solutions;
 {id: "space-technology-solutions";
@@ -261,7 +262,7 @@ documentationUrl: "https://ziontechgroup.com/docs/space-technology-solutions";
 scalability: "Manages 1000+ satellites";
 deployment: "Hybrid ground and space infrastructure";
 marketTrend: "Space technology market growing 50% annually";
-competitiveAdvantage: "Most comprehensive space operations platform with AI integration",
+competitiveAdvantage: "Most comprehensive space operations platform with AI integration"
 };
 // Biotechnology AI Platform;
 {id: "biotechnology-ai-platform";
@@ -334,7 +335,7 @@ documentationUrl: "https://ziontechgroup.com/docs/biotechnology-ai-platform";
 scalability: "Handles 1000+ research projects";
 deployment: "Cloud-based with secure research environment";
 marketTrend: "Biotech AI market growing 35% annually";
-competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery",
+competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery"
 };
 // Autonomous Vehicle Platform;
 {id: "autonomous-vehicle-platform";
@@ -407,7 +408,7 @@ documentationUrl: "https://ziontechgroup.com/docs/autonomous-vehicle-platform";
 scalability: "Manages 1000+ autonomous vehicles";
 deployment: "Hybrid cloud and edge computing";
 marketTrend: "Autonomous vehicle market growing 40% annually";
-competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems",
+competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems"
 };
 // AI Robotics Platform;
 {id: "ai-robotics-platform";
@@ -480,7 +481,7 @@ documentationUrl: "https://ziontechgroup.com/docs/ai-robotics-platform";
 scalability: "Manages 500+ robots";
 deployment: "Hybrid cloud and edge deployment";
 marketTrend: "AI robotics market growing 30% annually";
-competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features",
+competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features"
 };
 // Smart City Infrastructure Platform;
 {id: "smart-city-infrastructure-platform";
@@ -553,7 +554,7 @@ documentationUrl: "https://ziontechgroup.com/docs/smart-city-infrastructure";
 scalability: "Manages city-wide infrastructure";
 deployment: "Hybrid cloud and edge infrastructure";
 marketTrend: "Smart city market growing 25% annually";
-competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization",
+competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization"
 };
 // Advanced Cybersecurity Platform;
 {id: "advanced-cybersecurity-platform";
@@ -626,7 +627,7 @@ documentationUrl: "https://ziontechgroup.com/docs/advanced-cybersecurity";
 scalability: "Protects 100;000+ endpoints",
 deployment: "Cloud-native with on-premise options";
 marketTrend: "Zero-trust security market growing 35% annually";
-competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration",
+competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration"
 }
 ];
 export const COMPREHENSIVE_INNOVATIVE_CATEGORIES_2025 = [
@@ -634,9 +635,9 @@ export const COMPREHENSIVE_INNOVATIVE_CATEGORIES_2025 = [
 "Quantum Computing",
 "Space Technology",
 "Biotechnology",
-"Autonomous Technology",
-"Industrial AI",
-"Smart Cities",
+"Autonomous Technology",;
+"Industrial AI",;
+"Smart Cities",;
 "Cybersecurity";
 ];
 
@@ -645,8 +646,8 @@ export const COMPREHENSIVE_INNOVATIVE_SUBCATEGORIES_2025 = {
 "Quantum Computing": ["AI Integration", "Optimization", "Simulation", "Cryptography"],
 "Space Technology": ["Satellite Operations", "Space Data", "Communications", "Research"],
 "Biotechnology": ["Drug Discovery", "Clinical Trials", "Research", "Personalized Medicine"],
-"Autonomous Technology": ["Vehicle Systems", "Robotics", "Drones", "Industrial Automation"],
-"Industrial AI": ["Robotics Automation", "Manufacturing", "Quality Control", "Predictive Maintenance"],
-"Smart Cities": ["Infrastructure Management", "Citizen Services", "Transportation", "Sustainability"],
+"Autonomous Technology": ["Vehicle Systems", "Robotics", "Drones", "Industrial Automation"],;
+"Industrial AI": ["Robotics Automation", "Manufacturing", "Quality Control", "Predictive Maintenance"],;
+"Smart Cities": ["Infrastructure Management", "Citizen Services", "Transportation", "Sustainability"],;
 "Cybersecurity": ["Zero-Trust Security", "Threat Detection", "Compliance", "Security Orchestration"];
 };

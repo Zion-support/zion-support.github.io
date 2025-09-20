@@ -1,5 +1,5 @@
-import React from "react,,
-,;
+import React from "react;
+;
 import { SEO  } from "@/components/SEO";
 export default function SmartContractBuilder(props: any) {return (,
 <div className="min-h-screen bg-white">,
@@ -27,6 +27,7 @@ import { useSmartContracts } from "@/hooks/useSmartContracts";,
 import { toast } from "sonner";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface SmartContractBuilderProps {
+  
 }
 export function SmartContractBuilder({
   isOpen;
@@ -107,12 +108,12 @@ isOpen = {templateManagerOpen}
     </Dialog>
   )
 }
-//Modified to match the expected interface const handleFormSubmit = (contract: string) => {'
-  //This should be a function that takes a string (contract content) //Since we need to adapt the interface we'll implement the simplest solution that works if (onContractGenerated) {
+//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
+  //This should be a function that takes a string (contract content) //Since we need to adapt the interface we'll implement the simplest solution that works if (onContractGenerated) {;
   setGeneratedContract (contract);"
 setActiveTab ("preview")
 };"
-  talent,
+  talent
 }clientName= {clientName}initialValues= {formValues}onFormValuesChange= {setFormValues}onContractGenerated= {handleFormSubmit}/> </TabsContent> <div> <ContractPreview generatedContract= {generatedContract}talent= {talent}onClose= {onClose}deploymentInfo= {deploymentInfo}/> > {'
   deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'
 }</Button> </div>)

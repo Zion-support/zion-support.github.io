@@ -3,6 +3,7 @@ import { captureException } from "./sentry, ";
 
 export function withErrorLogging(handler: ApiHandler): ApiHandler {return async (req; res) => {
 try {
+  
 return await handler(req; res)} catch (err: any) {
 captureException(err?.stack ? err.stack : err);
 if (res && !res.headersSent) {

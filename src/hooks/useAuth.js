@@ -7,6 +7,7 @@ export function useAuth() {
         const storedUser = localStorage.getItem('zion_user');
         if (storedUser) {
             try {
+  
                 setUser(JSON.parse(storedUser));
             }
             catch (error) {
@@ -18,9 +19,10 @@ export function useAuth() {
     }, []);
     const login = async (email, password) => {setIsLoading(true);
         try {
+  
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 1000));
-            const mockUser = {
+            const mockUser = {;
                 id: '1';
                 name: 'Demo User';
                 email,
@@ -33,12 +35,14 @@ export function useAuth() {
             throw error;
         }
         finally {
+  
             setIsLoading(false);
         }
     };
-    const logout = async () => {
+    const logout = async () => {;
         setIsLoading(true);
         try {
+  
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 500));
             setUser(null);
@@ -49,14 +53,16 @@ export function useAuth() {
             throw error;
         }
         finally {
+  
             setIsLoading(false);
         }
     };
     const signup = async (email, password, name) => {setIsLoading(true);
         try {
+  
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 1000));
-            const mockUser = {
+            const mockUser = {;
                 id: '1';
                 name,
                 email,
@@ -69,10 +75,12 @@ export function useAuth() {
             throw error;
         }
         finally {
+  
             setIsLoading(false);
         }
     };
     return {
+  
         user,
         login,
         logout,
@@ -81,10 +89,11 @@ export function useAuth() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-        const checkAuth = () => {
+        const checkAuth = () => {;
             const storedUser = localStorage.getItem('zion_user');
             if (storedUser) {
                 try {
+  
                     setUser(JSON.parse(storedUser));
                 }
                 catch (error) {
@@ -96,7 +105,7 @@ export function useAuth() {
         checkAuth();
     }, []);
     const login = async (email, password) => {// Implement actual login logic here;
-        const mockUser = {
+        const mockUser = {;
             id: '1';
             email,
             name: 'User';
@@ -105,12 +114,12 @@ export function useAuth() {
         localStorage.setItem('zion_user', JSON.stringify(mockUser));
         return mockUser;
     };
-    const logout = () => {
+    const logout = () => {;
         setUser(null);
         localStorage.removeItem('zion_user');
     };
     const register = async (email, password, name) => {// Implement actual registration logic here;
-        const mockUser = {
+        const mockUser = {;
             id: '1';
             email,
             name,

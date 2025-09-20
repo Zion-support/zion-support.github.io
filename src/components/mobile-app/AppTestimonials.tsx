@@ -4,7 +4,7 @@ import React from "react";
 import { Star } from "lucide-react, ";
 import { Card; CardContent; CardFooter } from "@/components/ui/card, ";
 
-const testimonials = [
+const testimonials = [;
 {;
 name: "Alex Johnson", role: "AI Developer";
 text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!", rating: 5;

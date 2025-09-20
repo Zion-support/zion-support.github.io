@@ -18,10 +18,10 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1633412802999-5ea7c61b2107?auto=format&fit=crop&w=800&h=500"],
-avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
 },
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
 },
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
@@ -31,7 +31,7 @@ featured: true;
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 95;
-pricingTier: "Professional",
+pricingTier: "Professional"
 },
 {id: "ai-content-generation",
 title: "AI Content Generation Suite Pro",
@@ -53,7 +53,7 @@ featured: true;
 location: "Global",
 availability: "1-2 Weeks",
 aiScore: 96;
-pricingTier: "Starter",
+pricingTier: "Starter"
 },
 {id: "ai-business-intelligence",
 title: "AI-Powered Business Intelligence Platform",
@@ -75,7 +75,7 @@ featured: true;
 location: "Global",
 availability: "4-6 Weeks",
 aiScore: 98;
-pricingTier: "Enterprise",
+pricingTier: "Enterprise"
 },
 // IT Infrastructure & Cloud Services;
 {id: "cloud-migration-expert",
@@ -98,7 +98,7 @@ featured: true;
 location: "Global",
 availability: "3-5 Weeks",
 aiScore: 92;
-pricingTier: "Professional",
+pricingTier: "Professional"
 },
 {id: "cybersecurity-audit",
 title: "Complete Cybersecurity Audit & Implementation",
@@ -120,7 +120,7 @@ featured: true;
 location: "Global",
 availability: "4-8 Weeks",
 aiScore: 97;
-pricingTier: "Enterprise",
+pricingTier: "Enterprise"
 },
 {id: "devops-automation",
 title: "DevOps Automation & CI/CD Suite",
@@ -203,7 +203,7 @@ featured: true;
 location: "Global",
 availability: "3-4 Weeks",
 aiScore: 94;
-pricingTier: "Professional",
+pricingTier: "Professional"
 },
 // Business Process Automation;
 {id: "workflow-automation",
@@ -226,7 +226,7 @@ featured: true;
 location: "Global",
 availability: "2-4 Weeks",
 aiScore: 93;
-pricingTier: "Professional",
+pricingTier: "Professional"
 },
 {id: "customer-support-ai",
 title: "AI-Powered Customer Support Automation",
@@ -248,7 +248,7 @@ featured: true;
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 91;
-pricingTier: "Starter",
+pricingTier: "Starter"
 },
 // E-commerce & Digital Marketing;
 {id: "ecommerce-ai-optimization",
@@ -271,7 +271,7 @@ featured: true;
 location: "Global",
 availability: "3-5 Weeks",
 aiScore: 95;
-pricingTier: "Professional",
+pricingTier: "Professional"
 },
 {id: "digital-marketing-automation",
 title: "Digital Marketing Automation Platform",
@@ -293,7 +293,7 @@ featured: true;
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 92;
-pricingTier: "Starter",
+pricingTier: "Starter"
 },
 // Healthcare & FinTech Solutions;
 {id: "healthcare-ai-diagnostics",
@@ -316,7 +316,7 @@ featured: true;
 location: "Global",
 availability: "8-12 Weeks",
 aiScore: 99;
-pricingTier: "Enterprise",
+pricingTier: "Enterprise"
 },
 {id: "fintech-compliance-security",
 title: "FinTech Compliance & Security Suite",
@@ -338,7 +338,7 @@ featured: true;
 location: "Global",
 availability: "6-10 Weeks",
 aiScore: 96;
-pricingTier: "Enterprise",
+pricingTier: "Enterprise"
 },
 // IoT & Smart Solutions;
 {id: "iot-management-platform",
@@ -361,7 +361,7 @@ featured: true;
 location: "Global",
 availability: "5-8 Weeks",
 aiScore: 94;
-pricingTier: "Professional",
+pricingTier: "Professional"
 },
 {id: "smart-building-automation",
 title: "Smart Building Automation System",
@@ -383,7 +383,7 @@ featured: true;
 location: "Global",
 availability: "4-6 Weeks",
 aiScore: 93;
-pricingTier: "Professional",
+pricingTier: "Professional"
 },
 // Education & Training Solutions;
 {
@@ -461,7 +461,7 @@ featured: true;
 location: "Global",
 availability: "4-7 Weeks",
 aiScore: 95;
-pricingTier: "Professional",
+pricingTier: "Professional"
 },
 {
 id: "vr-ar-training",
@@ -547,7 +547,7 @@ featured: true;
 location: "Global",
 availability: "6-10 Weeks",
 aiScore: 97;
-pricingTier: "Enterprise",
+pricingTier: "Enterprise"
 }
 ];
 
@@ -557,9 +557,9 @@ export const SERVICE_CATEGORIES = [
 "Business Solutions",
 "E-commerce",
 "Digital Marketing",
-"Healthcare",
-"FinTech",
-"IoT Solutions",
+"Healthcare",;
+"FinTech",;
+"IoT Solutions",;
 "Education";
 ];
 
@@ -569,9 +569,9 @@ export const SERVICE_SUBCATEGORIES = {
 "Business Solutions": ["Automation", "Customer Support", "Workflow Management", "Analytics", "Integration"],
 "E-commerce": ["AI Optimization", "Platform Development", "Payment Systems", "Inventory Management", "Customer Experience"],
 "Digital Marketing": ["Automation", "SEO", "Social Media", "Content Strategy", "Analytics"],
-"Healthcare": ["AI Diagnostics", "Patient Management", "Telemedicine", "Medical Imaging", "Clinical Support"],
-"FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],
-"IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
+"Healthcare": ["AI Diagnostics", "Patient Management", "Telemedicine", "Medical Imaging", "Clinical Support"],;
+"FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],;
+"IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],;
 "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"];
 };
 
@@ -750,9 +750,9 @@ color: "from-cyan-500 to-blue-600",
 services: COMPREHENSIVE_SERVICES.filter(s => s.category === "IT Services")},
 {id: "micro-saas",
 name: "Micro SAAS",
-description: "Specialized software-as-a-service solutions for business needs",
-icon: "🚀",
-color: "from-emerald-500 to-green-600",
+description: "Specialized software-as-a-service solutions for business needs",;
+icon: "🚀",;
+color: "from-emerald-500 to-green-600",;
 services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS")};
 ];
 
@@ -764,9 +764,9 @@ price: "$99",
 period: "month",
 description: "Perfect for small businesses and startups",
 features: [
-"Basic features and functionality",
-"Email support",
-"Standard integrations",
+"Basic features and functionality",;
+"Email support",;
+"Standard integrations",;
 "Up to 5 users";
 ];
 },
@@ -803,8 +803,8 @@ features: [
 export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-website: "https://ziontechgroup.com",
-businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
+address: "364 E Main St STE 1008 Middletown DE 19709",;
+website: "https://ziontechgroup.com",;
+businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
 responseTime: "24-48 hours for initial response",;
 };

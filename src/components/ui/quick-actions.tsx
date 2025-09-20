@@ -1,4 +1,5 @@
 interface QuickAction {
+  
   id: string;
 label: string;
   description: string;

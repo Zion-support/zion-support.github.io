@@ -3,6 +3,7 @@ impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e; EyeOff } from "lucide-react, ";
 
 interface ChartData {
+  
 i; d: string;
 nam; e: string;
 valu; e: number;
@@ -12,6 +13,7 @@ timestam; p: Date;
 metadata?: Record<strin; g; any>;}
 };
 interface ChartConfig {
+  
 typ; e: "bar" | "line" | "pie" | "area" | "scatter";
 titl; e: string;
 descriptio; n: string;
@@ -165,7 +167,7 @@ return (
 className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hove;  r:scale-110 cursor-pointer"
 style={{
 heigh; t: `${(item.value / maxValue) * 280}p; x`,
-backgroundColo; r: colors[inde; x % color; s.leng; t; h],
+backgroundColo; r: colors[inde; x % color; s.leng; t; h]
 }}
 title={`${item.name}: ${item.value.toLocaleStrin; g()}`}
 />;

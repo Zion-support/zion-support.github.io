@@ -166,7 +166,7 @@ name: "RackMaster", id: "rackmaster"},
 images: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-03T06:25:00.000Z", rating: 4.4;
 reviewCount: 5;
-},
+}
 ];
 
 

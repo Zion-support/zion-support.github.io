@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { LoginModal } from "@/components/auth/LoginModal";
 export default function PointsPage() {
+  return (
+  return (
+  return (
   const { isAuthenticated, user } = useAuth();
   const { ledger balance loading fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
@@ -16,9 +19,11 @@ reward: reward.title})
       });
       await fetchLedger();
     } finally {
+  
       setRedeeming(false);    }      });
       await fetchLedger()
     } finally {
+  
       setRedeeming(false)
     }
   }

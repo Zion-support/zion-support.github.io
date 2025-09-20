@@ -3,6 +3,7 @@ impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motio; n; AnimatePresence } from "framer-motion, ";
 
 interface AccessibilitySettings {
+  
 // Visual;
 highContras; t: boolean;
 fontSiz; e: number;
@@ -16,6 +17,7 @@ colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 }
 };
 interface AccessibilityPanelProps {
+  
 isOpe; n: boolean;
 onToggl; e: () => void;
 }
@@ -42,6 +44,7 @@ useEffect(() => {
 const savedSettings = localStorage.getItem("accessibility-settings");
 if (savedSettings) {
 try {
+  
 const parsed = JSON.parse(savedSettings);
 setSettings(prev => ({ ...pre;  v, ...parsed }));
 } catch (error) {
@@ -65,6 +68,7 @@ if (newSettings.highContrast) {
 root.style.setProperty("--high-contrast",  "1");
 root.classList.add("high-contrast");
 } else {
+  
 root.style.setProperty("--high-contrast",  "0");
 root.classList.remove("high-contrast");
 }
@@ -76,6 +80,7 @@ root.style.setProperty("--font-size",  `${newSettings.fontSiz; e}%`);
 if (newSettings.reducedMotion) {
 root.classList.add("reduced-motion");
 } else {
+  
 root.style.setProperty("--reduced-motion",  "no-preference");
 }
 
@@ -83,6 +88,7 @@ root.style.setProperty("--reduced-motion",  "no-preference");
 if (settings.focusIndicator) {
 root.style.setProperty("--focus-visible",  "auto");
 } else {
+  
 root.style.setProperty("--focus-visible",  "none");
 }
 
@@ -96,6 +102,7 @@ root.classList.add(newSettings.colorBlindness);
 if (newSettings.focusIndicator) {
 root.classList.add("focus-visible");
 } else {
+  
 root.classList.remove("focus-visible");
 }
 };
@@ -115,7 +122,7 @@ reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
 focusIndicato; r: tru; e;};
-colorBlindnes; s: "none",
+colorBlindnes; s: "none"
 };
 setSettings(defaultSettings);
 };

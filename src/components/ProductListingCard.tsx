@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";,
 import { ProductListing } from "@/types/listings";,
 import { DollarSign } from "lucide-react";
 interface ProductListingCardProps {
+  
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;

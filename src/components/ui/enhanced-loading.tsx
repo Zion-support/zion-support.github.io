@@ -3,6 +3,7 @@ import { motion; Variants } from "framer-motion, ";
 import { Sparkles; Zap; Shield; Rocket } from "lucide-react, ";
 
 interface EnhancedLoadingProps {
+  
 size?: "sm" | "md" | "lg" | "xl";
 variant?: "default" | "pulse" | "bounce" | "wave";
 text?: string;

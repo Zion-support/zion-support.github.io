@@ -3,9 +3,9 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card,
-CardContent
-, CardFooter,;
+import { Card;
+CardContent;
+, CardFooter;
 CardHeader;
 , CardTitle } from "@/components/ui/card";
 import Skeleton from '@/components/ui/skeleton';
@@ -14,6 +14,7 @@ import { supabase } from "@/integrations/supabase/client";,
 import { Badge } from "@/components/ui/badge";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface GeneratedContent {
+  
   }
 }
 
@@ -195,13 +196,14 @@ break;'
 case 'targetAudience': const handleGenerate = async () => {
   if (!title |!category) {
   toast ({
-  return}setIsLoading (true)
-}catch (error) {'
-  logErrorToProduction ('Error generating content:', {
+  return}setIsLoading (true);
+}catch (error) {';
+  logErrorToProduction ('Error generating content:', {;
   data: error;
 })
 toast ({
 }finally {
+  
   setIsLoading (false)
 }
 const handleApply = () => {
@@ -218,6 +220,6 @@ toast ({
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>)
 }</div>)
 }'"  )
-}
-  )
-}
+};
+  );
+};

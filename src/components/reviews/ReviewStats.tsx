@@ -4,7 +4,7 @@ interface ReviewStatsProps {averageRating: number;
 totalReviews: number;
   ratingDistribution?: Record<number number>
 export function ReviewStats({
-  averageRating,
+  averageRating
 }
 totalReviews}
   ratingDistribution}: ReviewStatsProps) {

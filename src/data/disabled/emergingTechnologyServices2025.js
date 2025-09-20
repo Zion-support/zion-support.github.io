@@ -1,4 +1,4 @@
-export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
+export const EMERGING_TECHNOLOGY_SERVICES_2025 = [;
     // Quantum Computing as a Service;
     {id: "quantum-computing-as-a-service-2025";
         title: "Quantum Computing as a Service (QCaaS)";
@@ -68,7 +68,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
+        pilotPrograms: true
     };
     // AI-Powered Autonomous Systems Platform;
     {id: "ai-autonomous-systems-platform-2025";
@@ -139,7 +139,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
+        pilotPrograms: true
     };
     // Blockchain-Based Supply Chain Platform;
     {id: "blockchain-supply-chain-platform-2025";
@@ -210,7 +210,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
+        pilotPrograms: true
     };
     // Edge Computing & IoT Platform;
     {id: "edge-computing-iot-platform-2025";
@@ -281,7 +281,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
+        pilotPrograms: true
     };
     // AI-Powered Cybersecurity Platform;
     {id: "ai-cybersecurity-platform-2025";
@@ -352,7 +352,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
+        pilotPrograms: true
     };
     // Quantum-Safe Cryptography Platform;
     {id: "quantum-safe-cryptography-platform-2025";
@@ -423,7 +423,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
+        pilotPrograms: true
     };
     // AI-Powered Drug Discovery Platform;
     {id: "ai-drug-discovery-platform-2025";
@@ -494,7 +494,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
+        pilotPrograms: true
     };
     // Autonomous Vehicle Technology Platform;
     {id: "autonomous-vehicle-technology-platform-2025";
@@ -565,6 +565,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         trainingIncluded: true;
         maintenanceIncluded: true;
         researchPartnerships: true;
-        pilotPrograms: true,
+        pilotPrograms: true
     }
 ];

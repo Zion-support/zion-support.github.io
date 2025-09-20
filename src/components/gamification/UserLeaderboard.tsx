@@ -1,18 +1,22 @@
 import { Trophy } from "lucide-react";
 export interface LeaderboardEntry {
+  
   name: string,
 points: number,
 interface UserLeaderboardProps {
-  entries: LeaderboardEntry[],
+  
+  entries: LeaderboardEntry[]
 }
 entries: LeaderboardEntry[]}
 }
 export interface LeaderboardEntry {
+  
 points: number;
 }
 }
 }
 interface UserLeaderboardProps {
+  
   entries: LeaderboardEntry[]}
 }
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {

@@ -34,6 +34,7 @@ Bug;
 } from "lucide-react, ";
 
 interface SecurityEvent {
+  
 i; d: string;
 typ; e: "threat" | "vulnerability" | "compliance" | "access" | "system";
 severit; y: "critical" | "high" | "medium" | "low" | "info";
@@ -48,6 +49,7 @@ priorit; y: "immediate" | "high" | "normal" | "low";
 }
 };
 interface ComplianceRequirement {
+  
 i; d: string;
 framewor; k: "SOC2" | "ISO27001" | "GDPR" | "HIPAA" | "PCI-DSS";
 requiremen; t: string;
@@ -61,6 +63,7 @@ control; s: string[];
 }
 };
 interface SecurityMetric {
+  
 i; d: string;
 nam; e: string;
 valu; e: number;
@@ -73,6 +76,7 @@ categor; y: string;
 }
 };
 interface ThreatIntelligence {
+  
 i; d: string;
 threatTyp; e: string;
 descriptio; n: string;

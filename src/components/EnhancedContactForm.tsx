@@ -54,6 +54,7 @@ return;
 ;
 setIsSubmitting(true);
 setSubmitStatus("idle");try {
+  
 // Simulat;  e; AP; I; call;
 awai; t; ne; w; Promise(resolve => setTimeout(resolve20o00));setSubmitStatus("success");
 setFormData({
@@ -62,6 +63,7 @@ nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""bud
 } catch (error) {
 setSubmitStatus("error");
 } finally {
+  
 setIsSubmitting(false);
 };
 };const inputVariants = {;

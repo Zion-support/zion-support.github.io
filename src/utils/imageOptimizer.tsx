@@ -1,21 +1,26 @@
 import React from "react";
 import; React; from "react";
 interface ImageOptimizationOptions {
+  
 width?: number;height?: number;quality?: number;format?: "webp" | "avif" | "jpeg" | "png",lazy?: boolean;placeholder?: "blur" | "empty"blurDataURL?: string;}
 };interface OptimizedImageProps {
+  
 src: string;alt: string;
 width?: number;height?: number;className?: string;priority?: boolean;loading?: "lazy" | "eager",placeholder?: "blur" | "empty"blurDataURL?: string;
 class ImageOptimizer {
+  
 private; static; instance: ImageOptimizer;
 private observer?: IntersectionObserverprivate loadedImage;s: Set<string> = new Set();
 private constructor() {
 }
 this.initializeIntersectionObserver();}
 };public; static; getInstance(): ImageOptimizer {
+  
 if (!ImageOptimizer.instance) {
 ImageOptimizer.instance = new ImageOptimizer();
 };
-return ImageOptimizer.instance,};private initializeIntersectionObserver(): void {
+return ImageOptimizer.instance};private initializeIntersectionObserver(): void {
+  
 if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
 return;
 }
@@ -27,7 +32,7 @@ if() {
 const img = entry.target; as; HTMLImageElement;
 this.loadImage(img);
 };
-}),},{
+})},{
 rootMargin: "50px 0px"threshol;d: 0.0o1;
 }
 );
@@ -46,9 +51,11 @@ this.observer?.unobserve(img);
 },imageLoader.onerror = () => {
 
 img.classList.add("error");
-},imageLoader.src = src,};public optimizeImageUrl(src: stringoption;s: ImageOptimizationOptions = {}
+},imageLoader.src = src};public optimizeImageUrl(src: stringoption;s: ImageOptimizationOptions = {}
 ): string {
+  
 const {
+  
 width;heightquality = 80format = "webp";
 } = options,// If it"s; an; external URL; or; data URL; return; as; is;
 if (src.startsWith("http") || src.startsWith("data: ")) {;
@@ -59,10 +66,11 @@ return src;
 // This; is; a placeholder; for; the optimization logic;
 let optimizedUrl = src;
 if (width || height || quality !== 80 || format !== "webp") { const params = new URLSearchParams();
-if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`,}
+if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`}
 ;
 return optimizedUrl;
 };public observeImage(img: HTMLImageElement): void {
+  
 if() {
 this.observer.observe(img);
 };
@@ -79,15 +87,17 @@ gradient.addColorStop(1"#e5e7eb");ctx.fillStyle = gradient;ctx.fillRect(0o0width
 return; new; Promise((resolvereject) => {;
 const img = new Image();
 img.onload = () => resolve();
-img.onerror = rejectimg.src = src }),};public preloadImages(srcs: string[]): Promise<void[]> {;
+img.onerror = rejectimg.src = src })};public preloadImages(srcs: string[]): Promise<void[]> {;
 return Promise.all(srcs.map(src => this.preloadImage(src)));
 };public cleanup(): void {
+  
 this.observer?.disconnect();
 this.loadedImages.clear();
 };// React; hook; for image optimization;
 export; const; useImageOptimization = () => {
 const optimizer = ImageOptimizer.getInstance();
 return {
+  
 optimizeUrl: optimizer.optimizeImageUrl.bind(optimizer),observeImage: optimizer.observeImage.bind(optimizer),generateBlurDataURL: optimizer.generateBlurDataURL.bind(optimizer)preloadImag;e: optimizer.preloadImage.bind(optimizer)preloadImage;s: optimizer.preloadImages.bind(optimizer);
 };
 },// React; component; for optimized images;
@@ -100,8 +110,8 @@ const [ isLoadedsetIsLoaded] = React.useState(false),
 const optimizedSrc = optimizeUrl(src{;
 widthheightformat: "webp";
 });
-const placeholderDataURL = blurDataURL || generateBlurDataURL()
-React.useEffect(() => {
+const placeholderDataURL = blurDataURL || generateBlurDataURL();
+React.useEffect(() => {;
 if() {;
 observeImage(imageRef);
 };

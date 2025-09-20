@@ -5,6 +5,7 @@ import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
 import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bell } from "lucide-react, ";
 
 interface MobileNavigationProps {
+  
 isOpe; n: boolean;
 onToggl; e: () => void;
 }
@@ -40,7 +41,7 @@ document.body.style.overflow = "unset";
 };
 }, [isOp; e; n; onTogg; l; e]);
 
-const navigationItems = [
+const navigationItems = [;
 {;
 lab; e; l: "Service; s",
 hr; e; f: "/service; s",

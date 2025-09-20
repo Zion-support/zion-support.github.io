@@ -63,6 +63,7 @@ message: fallbackResponse;
 }
 setMessages (prev => [...prev errorMsg])
 }finally {
+  
   setLoading (false)
 setTyping (false)
 }

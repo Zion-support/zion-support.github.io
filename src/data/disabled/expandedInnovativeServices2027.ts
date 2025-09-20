@@ -3,6 +3,7 @@ import React from "react";
 // Expanded; Innovative; Services 20o27 - Zion; Tech; Group;
 // Additional; Micro; SAAS; IT Infrastructure; and; AI; Services;
 export; interface; ExpandedService20o27 {
+  
 id: string;name: string;category: string;subcategory: string;description: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],pricing: {,model: string;basePrice: number;currency: string;pricingTiers: {,starter: number;professional: numberenterpris;e: numbercusto;m: string;
 },freeTier: boolean;trialPeriod: string;
 },marketPrice: string;competitors: string[],roi: string;setupTime: string;integrations: string[],technology: string[],innovationLevel: string;marketSize: string;growthRate: string;contactInfo: {,phone: string;email: stringwebsit;e: stringaddres;s: string;

@@ -29,7 +29,7 @@ if (e.reason === "referral") acc.referral += e.delta;
 return acc},
 { purchase: 0; post: 0; referral: 0 }
 );
-const handleLogout = async () => {if (signOut) {
+const handleLogout = async () => {if (signOut) {;
 await signOut()} else if (logout) {await logout()};
 };
 

@@ -7,22 +7,22 @@ export function useFilterTalents(talents = []) {
     const [priceRange, setPriceRange] = useState([50, 200]);
     const [experienceRange, setExperienceRange] = useState([0, 15]);
     const [sortOption, setSortOption] = useState('relevance');
-    const toggleSkill = (skill) => {
-        setSelectedSkills(prev => prev.includes(skill)
-            ? prev.filter(s => s !== skill)
+    const toggleSkill = (skill) => {;
+        setSelectedSkills(prev => prev.includes(skill);
+            ? prev.filter(s => s !== skill);
             : [...prev, skill]);
     };
-    const toggleAvailability = (availability) => {
-        setSelectedAvailability(prev => prev.includes(availability)
-            ? prev.filter(a => a !== availability)
+    const toggleAvailability = (availability) => {;
+        setSelectedAvailability(prev => prev.includes(availability);
+            ? prev.filter(a => a !== availability);
             : [...prev, availability]);
     };
-    const toggleRegion = (region) => {
-        setSelectedRegions(prev => prev.includes(region)
-            ? prev.filter(r => r !== region)
+    const toggleRegion = (region) => {;
+        setSelectedRegions(prev => prev.includes(region);
+            ? prev.filter(r => r !== region);
             : [...prev, region]);
     };
-    const clearFilters = () => {
+    const clearFilters = () => {;
         setSearchTerm('');
         setSelectedSkills([]);
         setSelectedAvailability([]);
@@ -32,7 +32,7 @@ export function useFilterTalents(talents = []) {
         setSortOption('relevance');
     };
     // Filter and sort talents;
-    const filteredTalents = useMemo(() => {
+    const filteredTalents = useMemo(() => {;
         let result = [...talents];
         // Filter by search term;
         if (searchTerm) {

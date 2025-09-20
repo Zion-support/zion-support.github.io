@@ -22,13 +22,17 @@ import { closeSnackbar } from "notistack, ";
 import { captureException } from "@/utils/sentry, ";
 
 interface ProductCardProps {
+  
 produc; t: Product;
 onBuy?: () => void;
 /** Disable the Buy Now button (e.g. when the checkout route isn"t ready). */;
 }
 buyDisabled?: boolean;}
 };
-export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }: ProductCardProps) {
+export default function ProductCard() {
+  return (
+  return (
+  return (
 const { isAuthenticated } = useAuth();
 const { isWishliste;  d; toggle } = useWishlist();
 const [imageErr; o; r; setImageErr; o; r] = useState(false);
@@ -83,7 +87,7 @@ import { Tooltip;
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from '@/store';
 import { addItem } from "@/store/cartSlice";
-import Image from 'next/image',;
+import Image from 'next/image';
 import React { useState useEffect } from 'react';
 import { useAuth } from "@/context/auth/AuthProvider";
 import { useRouter } from "next/router";

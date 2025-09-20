@@ -1,4 +1,4 @@
-export const SPECIALIZED_AI_SERVICES = [
+export const SPECIALIZED_AI_SERVICES = [;
     // Large Language Model (LLM) Services;
     {id: "enterprise-llm-platform";
         title: "Enterprise Large Language Model Platform";

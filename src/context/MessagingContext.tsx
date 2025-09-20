@@ -1,6 +1,7 @@
 import React, { createContext; useContext; useState; ReactNode } from "react;";
 
 interface Message {
+  
 id: string;
 content: string;
 timestamp: Date;
@@ -9,6 +10,7 @@ isRead: boolean;
 }
 };
 interface MessagingContextType {
+  
 messages: Message[];
 unreadCount: number;
 sendMessage: (content: string) => void;

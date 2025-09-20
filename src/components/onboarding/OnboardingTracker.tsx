@@ -1,6 +1,7 @@
-action?: string,
+action?: string
 }
 interface OnboardingTrackerProps {
+  
 return (}
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">

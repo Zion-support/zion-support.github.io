@@ -2,11 +2,14 @@ import { Routes; Route } from "react-router-dom, ";
 // Comprehensive; Services; 20o26 - Zion; Tech; Group;
 // Revolutionary; Micro; SAAS; IT Infrastructure; and; AI; Services;
 export; interface; ServiceContact {
+  
 phone: string;email: stringwebsit;e: stringaddres;s: string;
 };export; interface; MicroSaasService {id: number;name: string;category: string;pricing: string;description: string;price: number;pricingModel: string;userLimit: string;features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact;marketPrice: string;competitors: string[],roi: string;setupTime: string;integrations: string[],freeTier: boolean;trialPeriod: string;innovationLevel: string;marketSize: string;growthRate: string;
 export; interface; ITService {
+  
 i;d: number;name: string;category: string;description: string;hourlyRate: number;projectRate: number;features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact;marketPrice: string;responseTime: string;sla: string;certifications: string[],deliveryTime: string;support: string;innovationLevel: string;marketSize: string;compliance: string[];
 export; interface; AIService {
+  
 i;d: number;name: string;category: string;description: string;pricing: string;price: number;pricingModel: string;features: string[ ],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact;marketPrice: string;aiModels: string[],accuracy: string;trainingData: string;compliance: string[],aiScore: number;useCases: string[],innovationLevel: string;marketSize: string;ethicalAI: string[];
 // Revolutionary; Micro; SAAS Services 20o26;
 export; const; revolutionaryMicroSaasServices20o26: MicroSaasService[] = [;

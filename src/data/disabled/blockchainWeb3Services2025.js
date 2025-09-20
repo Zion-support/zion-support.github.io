@@ -1,5 +1,5 @@
 // Blockchain & Web3 Services for 2025;
-export const blockchainWeb3Services2025 = [
+export const blockchainWeb3Services2025 = [;
     {id: 1;
         name: "DeFi Pro Suite";
         category: "Decentralized Finance";
@@ -52,7 +52,7 @@ export const blockchainWeb3Services2025 = [
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
-        crossChainCompatibility: true,
+        crossChainCompatibility: true
     };
     {id: 2;
         name: "NFT Studio Pro";
@@ -106,7 +106,7 @@ export const blockchainWeb3Services2025 = [
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
-        crossChainCompatibility: true,
+        crossChainCompatibility: true
     };
     {id: 3;
         name: "Smart Contract Factory";
@@ -160,7 +160,7 @@ export const blockchainWeb3Services2025 = [
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
-        crossChainCompatibility: true,
+        crossChainCompatibility: true
     };
     {id: 4;
         name: "DAO Governance Platform";
@@ -214,7 +214,7 @@ export const blockchainWeb3Services2025 = [
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
-        crossChainCompatibility: true,
+        crossChainCompatibility: true
     };
     {id: 5;
         name: "Cross-Chain Bridge Pro";
@@ -268,7 +268,7 @@ export const blockchainWeb3Services2025 = [
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
-        crossChainCompatibility: true,
+        crossChainCompatibility: true
     };
     {id: 6;
         name: "Web3 Identity Manager";
@@ -322,7 +322,7 @@ export const blockchainWeb3Services2025 = [
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
-        crossChainCompatibility: true,
+        crossChainCompatibility: true
     }
 ];
     export default blockchainWeb3Services2025;

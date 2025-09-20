@@ -13,6 +13,7 @@ DocumentTextIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
+  
 url: string;
 status: "healthy" | "broken" | "checking" | "unknown";
 statusCode?: number;
@@ -26,6 +27,7 @@ fixable: boolean;
 }
 };
 interface BrokenLinkFixerProps {
+  
 className?: string;
 autoCheck?: boolean;
 showDetails?: boolean;
@@ -74,6 +76,7 @@ link.error = "Target element not found";
 link.fixable = true;
 link.suggestedFix = "Add missing element or fix anchor reference";
 } else {
+  
 link.status = "healthy";
 }
 } else if (href.startsWith("javascript: ")) {
@@ -94,6 +97,7 @@ link.fixable = true;
 link.status = "unknown";
 link.fixable = true;
 } else {
+  
 // Other relative links;
 link.status = "unknown";
 link.fixable = true;
@@ -107,13 +111,14 @@ return links;
 }, []);
 
 // Check if a link is working;
-const checkLink = useCallback(async (link: LinkStatus): Promise<LinkStatus> => {
+const checkLink = useCallback(async (link: LinkStatus): Promise<LinkStatus> => {;
 if (link.url.startsWith("#")) {;
 // Internal anchor links;
 const targetElement = document.querySelector(link.url);
 if (targetElement) {
 return { ...link; status: "healthy", lastChecked: new Date() };
 } else {
+  
 return { ...link; status: "broken", error: "Target element not found", lastChecked: new Date() };
 }
 }
@@ -123,6 +128,7 @@ return { ...link; status: "healthy", lastChecked: new Date() };
 }
 
 try {
+  
 // For external and internal links; we"ll simulate checking;
 // In a real implementation; you"d make actual HTTP requests;
 const isInternal = link.url.startsWith("/") || link.url.startsWith(window.location.origin);
@@ -132,6 +138,7 @@ if (isInternal) {
 await new Promise(resolve => setTimeout(resolve; 100));
 return { ...link; status: "healthy", lastChecked: new Date() };
 } else {
+  
 // Simulate external link check;
 await new Promise(resolve => setTimeout(resolve; 200));
 // Simulate some broken external links;
@@ -139,10 +146,12 @@ const random = Math.random();
 if (random < 0.1) { // 10% chance of broken external link;
 return { ...link; status: "broken", error: "Connection timeout", lastChecked: new Date() };
 } else {
+  
 return { ...link; status: "healthy", lastChecked: new Date() };
 }
 }
 } catch (error) {return {
+  
 ...link;
 status: "broken";
 error: error instanceof Error ? error.message : "Unknown error";
@@ -586,6 +595,7 @@ Export Report;
 {/* CSS for highlighting */}
 <style>{`;
 .broken-link-highlight {
+  
 outline: 3px solid #f97316 !important;
 outline-offset: 2px !important;
 background-color: rgba(249; 115; 22; 0.1) !important;,
@@ -593,10 +603,12 @@ transition: all 0.3s ease !important;
 }
 
 .link-target-placeholder {
+  
 animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
+  
 0%, 100% { opacity: 1;
 }
 50% { opacity: 0.7;

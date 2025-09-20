@@ -4,6 +4,10 @@ import { cleanupAuthState } from "@/utils/authUtils, ";
 export const useEmailAuth = (setUser, setIsLoading) => {
     const login = async ({ email, password }) => {
         try {
+  
+  ;
+  ;
+  ;
             setIsLoading(true);
             // Clean up any stale auth state before login;
             cleanupAuthState();
@@ -30,16 +34,22 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return { error };
         }
         finally {
+  
             setIsLoading(false);
         }
     };
     const signup = async (email, password, userData) => {
         try {
+  
+  ;
+  ;
+  ;
             setIsLoading(true);
             // Clean up any stale auth state before signup;
             cleanupAuthState();
             // Attempt to sign out any existing session first to prevent conflicts;
             try {
+  
                 await supabase.auth.signOut({ scope: 'global' });
      }
             catch (err) {
@@ -52,7 +62,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                     // Only store a simple display name in the profile data;
                     data: {
                         display_name: userData?.displayName ?? userData?.name ?? ""};
-                },
+                }
             });
             
             if (error) {
@@ -79,11 +89,16 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return { error };
         }
         finally {
+  
             setIsLoading(false);
         }
     };
     const resetPassword = async (email) => {
         try {
+  
+  ;
+  ;
+  ;
             setIsLoading(true);
             const { error } = await supabase.auth.resetPasswordForEmail(email, {
                 redirectTo: `${window.location.origin}/update-password`;
@@ -112,6 +127,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return { error };
         }
         finally {
+  
             setIsLoading(false);
         }
     };

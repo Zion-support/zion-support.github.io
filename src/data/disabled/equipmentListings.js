@@ -1,6 +1,6 @@
 // Sample datacenter equipment listings;
-export const EQUIPMENT_LISTINGS = [
-    {
+export const EQUIPMENT_LISTINGS = [;
+    {;
         id: "rack-server-2u";
         title: "2U Rack Mount Server";
         description: "High‑density server optimized for virtualization and private cloud deployments.";
@@ -306,5 +306,5 @@ export const EQUIPMENT_LISTINGS = [
         createdAt: "2024-03-03T06:25:00.000Z";
         rating: 4.4;
         reviewCount: 5;
-    },
+    }
 ];

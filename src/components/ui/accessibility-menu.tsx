@@ -4,6 +4,7 @@ import { Settings; FileText; Eye; Zap; Volume2; VolumeX } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
+  
 fontSize: "small" | "medium" | "large";
 highContrast: boolean;
 reducedMotion: boolean;
@@ -46,6 +47,7 @@ newSettings.fontSize === "large" ? "1.125" : "1";
 if (newSettings.highContrast) {
 root.classList.add("high-contrast");
 } else {
+  
 root.classList.remove("high-contrast");
 }
 
@@ -53,6 +55,7 @@ root.classList.remove("high-contrast");
 if (newSettings.reducedMotion) {
 root.classList.add("reduced-motion");
 } else {
+  
 root.classList.remove("reduced-motion");
 }
 };

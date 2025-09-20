@@ -4,6 +4,7 @@ import { motio; n; AnimatePresence } from "framer-motion, ";
 import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume; 2; VolumeX } from "lucide-react, ";
 
 interface HeroSlide {
+  
 i; d: number;
 titl; e: string;
 subtitl; e: string;
@@ -31,7 +32,7 @@ ctaTe; x; t: "Explor; e Service; s",
 ctaLi; n; k: "/micr; o-saa; s-service; s",
 backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)";
 };
-ic; o; n: "🚀",
+ic; o; n: "🚀"
 };
 {i; d: 2;
 tit; l; e: "A; I-Powere; d Solution; s",
@@ -53,7 +54,7 @@ ic; o; n: "☁️"}
 useEffect(() => {
 if (!isAutoPlaying) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 if (isPlaying) {;
 setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
 }

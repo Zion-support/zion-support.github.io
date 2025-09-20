@@ -1,4 +1,4 @@
-import React from 'react',;
+import React from 'react';
 import Link from 'next/link';
 import { useAuth } from "@/hooks/useAuth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";

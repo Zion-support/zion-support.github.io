@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -26,7 +27,7 @@ document.addEventListener("mousedown", handleClickOutside);
 return () => document.removeEventListener("mousedown", handleClickOutside);
 }, []);
 
-const handleLogout = async () => {
+const handleLogout = async () => {;
 try {;
 await logout();
 setIsOpen(false);

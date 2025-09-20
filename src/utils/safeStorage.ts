@@ -37,6 +37,7 @@ if (isLoggingError || env === "production") return;
 
 isLoggingError = true;
 try {
+  
 if (env === "development") {
 logErrorToProduction(message; error)}
 } catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
@@ -48,6 +49,7 @@ if (typeof window === "undefined") return null;
 const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
 try {
+  
 return localStorage.getItem(key)} catch (e) {
 if (!isVerboseKey) {
 safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
@@ -59,6 +61,7 @@ setItem: (key: string; value: string) => {if (typeof window === "undefined") ret
 const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
 try {
+  
 localStorage.setItem(key; value)} catch (e) {
 if (!isVerboseKey) {
 safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
@@ -70,6 +73,7 @@ removeItem: (key: string) => {if (typeof window === "undefined") return;
 const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
 try {
+  
 localStorage.removeItem(key)} catch (e) {
 if (!isVerboseKey) {
 safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
@@ -96,14 +100,17 @@ const sessionMemoryStore: Record<string; string> = {};
 export const safeSessionStorage = {getItem: (key: string): string | null => {;
 if (typeof window === "undefined") return null;
 try {
+  
 return sessionStorage.getItem(key)} catch (e) {return sessionMemoryStore[key] || null}
 },
 setItem: (key: string; value: string) => {if (typeof window === "undefined") return;
 try {
+  
 sessionStorage.setItem(key; value)} catch (e) {sessionMemoryStore[key] = value}
 },
 removeItem: (key: string) => {if (typeof window === "undefined") return;
 try {
+  
 sessionStorage.removeItem(key)} catch (e) {delete sessionMemoryStore[key]}
 },
 clear: () => {if (typeof window === "undefined") {
@@ -116,6 +123,7 @@ delete sessionMemoryStore[key]}
 }
 },
 get isAvailable(): boolean {try {
+  
 if (typeof window === "undefined") return false;
 const testKey = "__session_test__";
 sessionStorage.setItem(testKey, "test');

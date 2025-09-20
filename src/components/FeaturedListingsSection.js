@@ -159,32 +159,32 @@ const featuredListings = [
     tea, m: "6 experts",
         locatio, n: "Remote",
     feature, d: fals, e,
-        technologie, s: ["Pytho, n", "Tablea, u", "PostgreSQ, L", "Apach, e Spar, k", "Reac, t"],
-        highlight, s: ["Rea, l-tim, e Dashboard, s", "Predictiv, e Model, s", "Dat, a Integratio, n", "Custo, m Report, s"]
-    }
+        technologie, s: ["Pytho, n", "Tablea, u", "PostgreSQ, L", "Apach, e Spar, k", "Reac, t"],;
+        highlight, s: ["Rea, l-tim, e Dashboard, s", "Predictiv, e Model, s", "Dat, a Integratio, n", "Custo, m Report, s"];
+    };
 ];
-const categories = [
-    "Al, l", "We, b Developmen, t", "Mobil, e Developmen, t", "Clou, d & DevOp, s", "A, I & Machin, e Learnin, g", "Io, T Solution, s", "Dat, a Analytic, s"
+const categories = [;
+    "Al, l", "We, b Developmen, t", "Mobil, e Developmen, t", "Clou, d & DevOp, s", "A, I & Machin, e Learnin, g", "Io, T Solution, s", "Dat, a Analytic, s";
 ];
 export function FeaturedListingsSection() {
     const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState("All");
     const [hoveredListi, n, g, setHoveredListi, n, g] = useState(null);
     const [showFilte,  r, s, setShowFilte, r, s] = useState(false);
-    const filteredListings = selectedCategory === "All"
+    const filteredListings = selectedCategory === "All";
         ? featuredListings;
         : featuredListings.filter(listing => listing.category === selectedCategory);
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
         visibl, e: {opacit, y: 1,
     transitio, n: {
-                staggerChildre, n: 0.1, 5,
-    delayChildre, n: 0.1}
-        }
+                staggerChildre, n: 0.1, 5,;
+    delayChildre, n: 0.1};
+        };
     };
     ;
-    const renderStars = (rating) => {
-        return Array.from({ lengt,  h: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ★
+    const renderStars = (rating) => {;
+        return Array.from({ lengt,  h: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>;
+        ★;
       </span>));
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">

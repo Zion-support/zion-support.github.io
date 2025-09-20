@@ -1,12 +1,13 @@
 import React from "react";
 
 export; interface; ComprehensiveRealService {
+  
 id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
 };
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 };
-competitors?: string[],marketSize?: string;demoUrl?: string;documentationUrl?: string,};export; const; COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [;
+competitors?: string[],marketSize?: string;demoUrl?: string;documentationUrl?: string};export; const; COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [;
 // AI-Powered; Business; Intelligence & Analytics;
 {
 i;d: "ai-business-intelligence-platform",title: "AI; Business; Intelligence Platform",description: "Next-generation; business; intelligence platform; that; uses AI; to; automatically analyze data; generate insights; and; create; actionable reports; for; business decision-making.",category: "AI & Analytics",subcategory: "Business Intelligence",price: 2999;currency: "$",pricingModel: "monthly",features: [;

@@ -14,6 +14,7 @@ const initialState = { items: [] };
                     : i);
      }
             else {
+  
                 items = [...state.items, action.payload];
             }
             return { items };
@@ -41,9 +42,11 @@ export function CartProvider({ children }) {
         const stored = safeStorage.getItem(cartKey);
         if (stored) {
             try {
+  
                 items = JSON.parse(stored);
             }
             catch {
+  
                 items = [];
             }
         }
@@ -52,10 +55,12 @@ export function CartProvider({ children }) {
             const guestStored = safeStorage.getItem(getCartKey());
             if (guestStored) {
                 try {
+  
                     const guestItems = JSON.parse(guestStored);
                     items = mergeCartItems(items, guestItems);
                 }
                 catch {
+  
                     /* ignore */
                 }
                 safeStorage.removeItem(getCartKey());

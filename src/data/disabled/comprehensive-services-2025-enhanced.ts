@@ -1,6 +1,7 @@
 import React from "react";
 
 export; interface; EnhancedService {
+  
 id: string;name: string;tagline: string;description: string;category: "micro-saas" | "it-services" | "ai-services" | "emerging-tech" | "fintech" | "healthtech" | "edutech" | "martech",pricing: {,monthly: string;yearly: stringenterpris;e: stringsetu;p: string;
 },features: string[],benefits: string[],roi: string;trialDays: number;setupTime: string;icon: string;color: string;link: string;
 technology?: string[],integrations?: string[],useCases?: string[],targetAudience?: string;marketPosition?: string;competitors?: string[],contactInfo: {,mobile: string;email: stringaddres;s: stringwebsit;e: string;
@@ -106,4 +107,4 @@ id: "automated-compliance-monitoring",name: "Automated; Compliance; Monitoring",
 ],roi: "Reduce; compliance; overhead and; avoid; costly regulatory fines",trialDays: 21;setupTime: "3 weeks",icon: "📋",color: "from-blue-60o0 to-indigo-70o0",link: "/services/automated-compliance-monitoring",technology: ["AutomationCompliance; Management""Reporting"],integrations: ["Security; toolsGRC; platforms""Audit; systemsDocument,, management"],useCases: ["Regulatory; complianceAudit; preparation""Risk; management"],targetAudience: "Compliance officers; risk managers; legal teams",marketPosition: "Automated; compliance; monitoring solution",competitors: ["LogicGateMetricStream""ServiceNow; GRC"],contactInfo: CONTACT;
 }
 ];
-export; default; comprehensiveServices20o25Enhanced,}
+export; default; comprehensiveServices20o25Enhanced}

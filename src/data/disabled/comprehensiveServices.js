@@ -1,4 +1,4 @@
-export const COMPREHENSIVE_SERVICES = [
+export const COMPREHENSIVE_SERVICES = [;
     // AI & Machine Learning Services;
     {id: "ai-chatbot-enterprise";
         title: "Enterprise AI Chatbot Development";
@@ -20,7 +20,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "2-3 Weeks";
         aiScore: 95;
-        pricingTier: "Professional",
+        pricingTier: "Professional"
     };
     {id: "ai-content-generation";
         title: "AI Content Generation Suite Pro";
@@ -42,7 +42,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "1-2 Weeks";
         aiScore: 96;
-        pricingTier: "Starter",
+        pricingTier: "Starter"
     };
     {id: "ai-business-intelligence";
         title: "AI-Powered Business Intelligence Platform";
@@ -64,7 +64,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "4-6 Weeks";
         aiScore: 98;
-        pricingTier: "Enterprise",
+        pricingTier: "Enterprise"
     };
     // IT Infrastructure & Cloud Services;
     {id: "cloud-migration-expert";
@@ -87,7 +87,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "3-5 Weeks";
         aiScore: 92;
-        pricingTier: "Professional",
+        pricingTier: "Professional"
     };
     {id: "cybersecurity-audit";
         title: "Complete Cybersecurity Audit & Implementation";
@@ -109,7 +109,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "4-8 Weeks";
         aiScore: 97;
-        pricingTier: "Enterprise",
+        pricingTier: "Enterprise"
     };
     {id: "devops-automation";
         title: "DevOps Automation & CI/CD Suite";
@@ -131,7 +131,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "3-4 Weeks";
         aiScore: 94;
-        pricingTier: "Professional",
+        pricingTier: "Professional"
     };
     // Business Process Automation;
     {id: "workflow-automation";
@@ -154,7 +154,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "2-4 Weeks";
         aiScore: 93;
-        pricingTier: "Professional",
+        pricingTier: "Professional"
     };
     {id: "customer-support-ai";
         title: "AI-Powered Customer Support Automation";
@@ -176,7 +176,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "2-3 Weeks";
         aiScore: 91;
-        pricingTier: "Starter",
+        pricingTier: "Starter"
     };
     // E-commerce & Digital Marketing;
     {id: "ecommerce-ai-optimization";
@@ -199,7 +199,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "3-5 Weeks";
         aiScore: 95;
-        pricingTier: "Professional",
+        pricingTier: "Professional"
     };
     {id: "digital-marketing-automation";
         title: "Digital Marketing Automation Platform";
@@ -221,7 +221,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "2-3 Weeks";
         aiScore: 92;
-        pricingTier: "Starter",
+        pricingTier: "Starter"
     };
     // Healthcare & FinTech Solutions;
     {id: "healthcare-ai-diagnostics";
@@ -244,7 +244,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "8-12 Weeks";
         aiScore: 99;
-        pricingTier: "Enterprise",
+        pricingTier: "Enterprise"
     };
     {id: "fintech-compliance-security";
         title: "FinTech Compliance & Security Suite";
@@ -266,7 +266,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "6-10 Weeks";
         aiScore: 96;
-        pricingTier: "Enterprise",
+        pricingTier: "Enterprise"
     };
     // IoT & Smart Solutions;
     {id: "iot-management-platform";
@@ -289,7 +289,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "5-8 Weeks";
         aiScore: 94;
-        pricingTier: "Professional",
+        pricingTier: "Professional"
     };
     {id: "smart-building-automation";
         title: "Smart Building Automation System";
@@ -311,7 +311,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "4-6 Weeks";
         aiScore: 93;
-        pricingTier: "Professional",
+        pricingTier: "Professional"
     };
     // Education & Training Solutions;
     {
@@ -337,7 +337,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "4-7 Weeks";
         aiScore: 95;
-        pricingTier: "Professional",
+        pricingTier: "Professional"
     };
     {
         id: "vr-ar-training";
@@ -361,7 +361,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "6-10 Weeks";
         aiScore: 97;
-        pricingTier: "Enterprise",
+        pricingTier: "Enterprise"
     }
 ];
     export const SERVICE_CATEGORIES = [
@@ -371,9 +371,9 @@ export const COMPREHENSIVE_SERVICES = [
     "E-commerce",
     "Digital Marketing",
     "Healthcare",
-    "FinTech",
-    "IoT Solutions",
-    "Education"
+    "FinTech",;
+    "IoT Solutions",;
+    "Education";
 ];
 export const SERVICE_SUBCATEGORIES = {
     "AI Services": ["Chatbots & Virtual Assistants", "Content Generation", "Business Intelligence", "Computer Vision", "Natural Language Processing"],
@@ -382,12 +382,12 @@ export const SERVICE_SUBCATEGORIES = {
     "E-commerce": ["AI Optimization", "Platform Development", "Payment Systems", "Inventory Management", "Customer Experience"],
     "Digital Marketing": ["Automation", "SEO", "Social Media", "Content Strategy", "Analytics"],
     "Healthcare": ["AI Diagnostics", "Patient Management", "Telemedicine", "Medical Imaging", "Clinical Support"],
-    "FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],
-    "IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
-    "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"]
+    "FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],;
+    "IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],;
+    "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"];
 };
 export const PRICING_TIERS = {
-    "Starter": { min: 500, max: 2000, label: "Starter ($500 - $2,000)" },
-    "Professional": { min: 2000, max: 5000, label: "Professional ($2,000 - $5,000)" },
-    "Enterprise": { min: 5000, max: 10000, label: "Enterprise ($5,000 - $10,000)" }
+    "Starter": { min: 500, max: 2000, label: "Starter ($500 - $2,000)" },;
+    "Professional": { min: 2000, max: 5000, label: "Professional ($2,000 - $5,000)" },;
+    "Enterprise": { min: 5000, max: 10000, label: "Enterprise ($5,000 - $10,000)" };
 };

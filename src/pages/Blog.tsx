@@ -12,7 +12,7 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 </>
   )
 }, [query])
-//Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory,
+//Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory
 })
 //Get featured posts const featuredPosts = posts.filter (post => post.isFeatured);'
 logInfo ('BlogPage filteredPosts:', {
@@ -62,9 +62,9 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
 }'"  const featuredPosts = blogPosts.filter(post => post.featured)
 }
   const regularPosts = blogPosts.filter(post => !post.featured)
-}
-  return (
-    <>"
+};
+  return (;
+    <>";
       <SEO ;"
         title="Blog - Zion Tech Group | Technology Insights & Industry News";"
         description="Stay updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group"s expert team.";"
@@ -96,6 +96,9 @@ cybersecurity and the latest technology trends shaping our future.
                     {category.name}
                   </span>
 export default function Blog() {
+  return (
+  return (
+  return (
   const blogPosts = [], image: "/api/placeholder/600/400"
   {"
       id: 1 title: "The Future of AI in Enterprise: 2025 Trends and Predictions","
@@ -107,9 +110,9 @@ featured: true}, { id: 2}, {
 title: &quotQuantum Computing Breakthrough: What It Means for Your Business&quot,
 excerpt: &quotUnderstanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
 author: &quotProf. Michael Rodriguez&quot,
-date: &quot2025-01-12&quot,
-readTime: &quot12 min read&quot,
-category: &quotQuantum Computing&quot,
+date: &quot2025-01-12&quot,;
+readTime: &quot12 min read&quot,;
+category: &quotQuantum Computing&quot,;
 tags: [&quotQuantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
@@ -187,9 +190,9 @@ featured: false}
   const featuredPosts = blogPosts.filter(post => post.featured)
 }
   const regularPosts = blogPosts.filter()
-}
-  return (
-    <>"
+};
+  return (;
+    <>";
       <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News&quot;"
         description="&quot;Stay" updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group&apos;s expert team.&quot;"
         keywords="&quot;technology" blog AI insights quantum computing cybersecurity digital transformation tech news&quot>

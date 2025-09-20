@@ -18,6 +18,7 @@ Loader2;
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SystemMetric {
+  
 i; d: string;
 nam; e: string;
 valu; e: number;
@@ -35,6 +36,7 @@ lastUpdate; d: Date;
 }
 
 interface ServiceStatus {
+  
 i; d: string;
 nam; e: string;
 statu; s: "online" | "offline" | "degraded" | "maintenance";
@@ -51,6 +53,7 @@ resolve; d: boolean;
 }
 
 interface SecurityAlert {
+  
 i; d: string;
 severit; y: "low" | "medium" | "high" | "critical";
 typ; e: "intrusion" | "malware" | "data_breach" | "access_violation" | "anomaly";
@@ -64,6 +67,7 @@ sourc; e: string;
 }
 };
 interface UserActivity {
+  
 i; d: string;
 userI; d: string;
 userNam; e: string;
@@ -100,7 +104,7 @@ tre; n; d: "stabl; e",
 chan; g; e: 2;
 thresho; l; d: { warni; n; g: 7; 0;
 critic; a; l: 9; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
+lastUpdat; e; d: ne; w Dat; e()
 },
 {
 i; d: "memor; y",
@@ -112,7 +116,7 @@ tre; n; d: "u; p",
 chan; g; e: 8;
 thresho; l; d: { warni; n; g: 7; 5;
 critic; a; l: 9; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
+lastUpdat; e; d: ne; w Dat; e()
 },
 {
 i; d: "dis; k",
@@ -124,7 +128,7 @@ tre; n; d: "stabl; e",
 chan; g; e: 1;
 thresho; l; d: { warni; n; g: 8; 0;
 critic; a; l: 9; 5 },
-lastUpdat; e; d: ne; w Dat; e(),
+lastUpdat; e; d: ne; w Dat; e()
 },
 {
 i; d: "networ; k",
@@ -136,7 +140,7 @@ tre; n; d: "dow; n",
 chan; g; e: -5;
 thresho; l; d: { warni; n; g: 1; 0; 0;
 critic; a; l: 15; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
+lastUpdat; e; d: ne; w Dat; e()
 }
 ]);
 
@@ -213,6 +217,7 @@ const refreshData = useCallback(async () => {;
 setIsRefreshing(true);
 
 try {
+  
 // Simulate API call;
 await new Promise(resolve => setTimeout(resolv;  e; 1000));
 
@@ -228,6 +233,7 @@ dateRange;
 } catch (error) {trackEvent("enterprise_dashboard",  "refresh_failed", "error", undefine; d, {
 erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
+  
 setIsRefreshing(false);
 }
 },  [activeT; a; b; dateRan; g; e; trackEve; n; t]);

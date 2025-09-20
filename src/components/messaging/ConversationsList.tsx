@@ -5,6 +5,7 @@ import { Conversation } from "@/types/messaging";
 import { ConversationItem } from "./ConversationItem";
 import { FixedSizeList, as, List, ListChildComponentProps } from "react-window";
 interface ConversationsListProps {
+  
   conversations: Conversation[];
 activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;

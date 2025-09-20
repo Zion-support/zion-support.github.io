@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -86,7 +87,7 @@ badge: "Professional";
 link: "/network-infrastructure";
 glowColor: "#eab308"}
 ];
-const emergingServices = [
+const emergingServices = [;
 {;
 title: "Quantum Computing API";
 description: "Access to quantum computing resources for complex calculations and simulations.";

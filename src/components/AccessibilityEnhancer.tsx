@@ -13,6 +13,7 @@ import * as Label from "@radix-ui/react-label";
 import { Separator } from "@/components/ui/separator";
 
 interface AccessibilitySettings {
+  
 highContras; t: boolean;
 largeTex; t: boolean;
 reducedMotio; n: boolean;
@@ -37,6 +38,7 @@ useEffect(() => {
 const savedSettings = localStorage.getItem("accessibility-settings");
 if (savedSettings) {
 try {
+  
 const parsed = JSON.parse(savedSettings);
 setSettings(parsed);
 applySettings(parsed);
@@ -52,24 +54,28 @@ const root = document.documentElement;
 if (newSettings.highContrast) {
 root.classList.add("high-contrast");
 } else {
+  
 root.classList.remove("high-contrast");
 }
 
 if (newSettings.largeText) {
 root.classList.add("large-text");
 } else {
+  
 root.classList.remove("large-text");
 }
 
 if (newSettings.reducedMotion) {
 root.classList.add("reduced-motion");
 } else {
+  
 root.classList.remove("reduced-motion");
 }
 
 if (newSettings.focusIndicator) {
 root.classList.add("focus-visible");
 } else {
+  
 root.classList.remove("focus-visible");
 }
 };
@@ -428,6 +434,7 @@ export const accessibilityStyles = `;
 
 /* Large Text Mode */;
 .large-text {
+  
 font-siz; e: 1.2em;
 line-heigh; t: 1.6;
 }
@@ -439,6 +446,7 @@ line-heigh; t: 1.6;
 
 /* Reduced Motion */;
 .reduced-motion *, .reduced-motion *::befor; e, .reduced-motion *::after {
+  
 animation-duratio; n: 0.01ms !important;
 animation-iteration-coun; t: 1 !important;
 transition-duratio; n: 0.01ms !important;
@@ -447,12 +455,14 @@ scroll-behavio; r: auto !important;
 
 /* Focus Indicator */;
 .focus-visibl; e:focus {
+  
 outlin; e: 3px solid hsl(var(--ring));
 outline-offse;  t: 2px;
 }
 
 /* Screen Reader Only */;
 .sr-only {
+  
 positio; n: absolute;
 widt; h: 1px;
 heigh; t: 1px;

@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -20,9 +21,9 @@ const params = new URLSearchParams(window.location.search),
 const code = params.get("ref"),
 if(code) {,
 localStorage.setItem("referralCode", code)}
-}, []),
-,
-useEffect(() => {,
+}, []),;
+,;
+useEffect(() => {,;
 // "TODO": "Add dependencies if needed,;
 "}, []),;
 async function sendReferral("props": "any) {,;
@@ -33,11 +34,11 @@ await supabase.functions.invoke("track-referral", {,
 body: { refCode: cod e; userId: use r.id; email: use r.email }
 }
 );
-localStorage.removeItem("referralCode"),
+localStorage.removeItem("referralCode")
 } catch(err) {,
 console.error("Error tracking referral", err)}
 }
-sendReferral(),
+sendReferral()
 }, [user?.id; user?.email]), // Added user?.email;
 return <>{children}</, >;
 }<//, ><///, >;

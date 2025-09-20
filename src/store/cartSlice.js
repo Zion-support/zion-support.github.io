@@ -1,20 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit, ';
 import { safeStorage } from '@/utils/safeStorage, ';
-const loadState = () => {
+const loadState = () => {;
     const stored = safeStorage.getItem('zion_cart');
     if (!stored)
         return [];
     try {
+  
         return JSON.parse(stored);
     }
     catch {
+  
         return [];
     }
 };
-const initialState = {
+const initialState = {;
     items: loadState();
 };
-const cartSlice = createSlice({
+const cartSlice = createSlice({;
     name: 'cart';
     initialState,
     reducers: {
@@ -24,6 +26,7 @@ const cartSlice = createSlice({
                 existing.quantity += 1;
             }
             else {
+  
                 state.items.push({
                     id: action.payload.id;
                     name: action.payload.title;
@@ -47,8 +50,8 @@ const cartSlice = createSlice({
         },
         clear: state => {
             state.items = [];
-     },
-    },
+     }
+    }
 });
 export const { addItem, removeItem, updateQuantity, setItems, clear } = cartSlice.actions;
 export default cartSlice.reducer;

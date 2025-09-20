@@ -12,6 +12,7 @@ import { useOnClickOutside } from "@/hooks/useOnClickOutside";
  * SearchBar component props
  */
 interface SearchBarProps {
+  
   /**
    * The current value of the search input
    */
@@ -27,7 +28,7 @@ interface SearchBarProps {
   /**
    * The placeholder text for the search input
    */
-  placeholder?: string,
+  placeholder?: string
 }
 /**
  * SearchBar component that allows users to search for content.

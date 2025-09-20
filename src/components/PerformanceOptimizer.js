@@ -11,10 +11,10 @@ export function PerformanceOptimizer() {
             measurePerformance();
         }
     },  []);
-    const measurePerformance = () => {
-        if ('PerformanceObserver' in window) {
+    const measurePerformance = () => {;
+        if ('PerformanceObserver' in window) {;
             // Measure Core Web Vitals;
-            const observer = new PerformanceObserver((list) => {
+            const observer = new PerformanceObserver((list) => {;
                 const entries = list.getEntries();
                 entries.forEach((entry) => {
                     if (entry.entryType === 'largest-contentful-paint') {
@@ -36,32 +36,32 @@ export function PerformanceOptimizer() {
             }, 1000);
         }
     };
-    const updateMetrics = (ke,  y, value) => {
-        setMetrics(prev => {
-            if (!prev)
+    const updateMetrics = (ke,  y, value) => {;
+        setMetrics(prev => {;
+            if (!prev);
                 return null;
             const newMetrics = Object.assign(Object.assign({},  prev), { [k, e, y]: value });
             // Calculate overall score;
             const scores = [
                 newMetric, s.fc, p < 180, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.fc, p - 180, 0) / 1, 0),
                 newMetric, s.lc, p < 250, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.lc, p - 250, 0) / 2, 5),
-                newMetric, s.fi, d < 10, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.fi, d - 10, 0) / 2),
-                newMetric, s.cl, s < 0.1 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - newMetric, s.cl, s * 100, 0),
-                newMetric, s.ttf, b < 80, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.ttf, b - 80, 0) / 8)
+                newMetric, s.fi, d < 10, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.fi, d - 10, 0) / 2),;
+                newMetric, s.cl, s < 0.1 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - newMetric, s.cl, s * 100, 0),;
+                newMetric, s.ttf, b < 80, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.ttf, b - 80, 0) / 8);
             ];
             newMetrics.overall = Math.round(scores.reduce((a,  b) => a + b, 0) / scores.length);
             return newMetrics;
         });
     };
-    const getScoreColor = (score) => {
-        if (score >= 90)
+    const getScoreColor = (score) => {;
+        if (score >= 90);
             return 'bg-green-500';
         if (score >= 70)
             return 'bg-yellow-500';
         return 'bg-red-500';
     };
-    const getScoreIcon = (score) => {
-        if (score >= 90)
+    const getScoreIcon = (score) => {;
+        if (score >= 90);
             return '✅';
         if (score >= 70)
             return '⏰';
@@ -108,11 +108,11 @@ export function PerformanceOptimizer() {
 }
 impor, t, Reac, t, { useEffec, t, useMem, o, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
-export const PerformanceOptimizer = ({ children }) => {
+export const PerformanceOptimizer = ({ children }) => {;
     const location = useLocation();
     // Preload critical resources;
     useEffect(() => {
-        const preloadCriticalResources = () => {
+        const preloadCriticalResources = () => {;
             // Preload critical CSS;
             const criticalCSS = document.createElement('link');
             criticalCSS.rel = 'preload';
@@ -131,7 +131,7 @@ export const PerformanceOptimizer = ({ children }) => {
     },  []);
     // Optimize images on route change;
     useEffect(() => {
-        const optimizeImages = () => {
+        const optimizeImages = () => {;
             const images = document.querySelectorAll('img');
             images.forEach((img) => {
                 // Add loading="lazy" to images below the fold;
@@ -151,13 +151,14 @@ export const PerformanceOptimizer = ({ children }) => {
             requestIdleCallback(optimizeImages);
         }
         else {
+  
             setTimeout(optimizeImage,  s, 100);
         }
     }, [locatio, n.pathna, m, e]);
     // Memoize expensive computations;
     const optimizedChildren = useMemo(() => childre,  n, [childr, e, n]);
     // Optimize scroll performance;
-    const handleScroll = useCallback(() => {
+    const handleScroll = useCallback(() => {;
         // Throttle scroll events for better performance;
         if (!window.scrollTimeout) {
             window.scrollTimeout = setTimeout(() => {
@@ -186,9 +187,9 @@ export const PerformanceOptimizer = ({ children }) => {
     // Intersection Observer for lazy loading;
     useEffect(() => {
         if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
+            const observer = new IntersectionObserver((entries) => {;
+                entries.forEach((entry) => {;
+                    if (entry.isIntersecting) {;
                         const target = entry.target;
                         if (target.dataset.src) {
                             target.src = target.dataset.src;

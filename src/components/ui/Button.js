@@ -1,4 +1,4 @@
-var __rest = (this && this.__rest) || function (s, e) {
+var __rest = (this && this.__rest) || function (s, e) {;
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
         t[p] = s[p];
@@ -12,7 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
 import { cn } from '@/lib/utils';
-const Button = React.forwardRef((_a, ref) => {
+const Button = React.forwardRef((_a, ref) => {;
     var { className, variant = 'default', size = 'default', asChild = false } = _a, props = __rest(_a, ["className", "variant", "size", "asChild"]);
     const Comp = asChild ? 'span' : 'button';
     return (_jsx(Comp, Object.assign({className: cn('inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50', {
@@ -45,11 +45,11 @@ const buttonVariants = cva("inline-flex items-center justify-center rounded-lg f
             lg: "h-12 px-6 text-base",
             xl: "h-14 px-8 text-lg"},
         fullWidth: {true: "w-full",
-            false: ""},
+            false: ""}
     },
-    defaultVariants: {variant: "default",
-        size: "md",
-        fullWidth: false},
+    defaultVariants: {variant: "default",;
+        size: "md",;
+        fullWidth: false};
 });
 const Button = React.forwardRef(({ className, variant, size, fullWidth, loading = false, leftIcon, rightIcon, children, disabled, ...props }, ref) => {
     return (<button className={cn(buttonVariants({ variant, size, fullWidth, className }))} ref={ref} disabled={disabled || loading} {...props}>
@@ -57,9 +57,9 @@ const Button = React.forwardRef(({ className, variant, size, fullWidth, loading 
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
           </svg>)}
-        {!loading && leftIcon && (<span className="mr-2">{leftIcon}</span>)}
-        {children}
-        {!loading && rightIcon && (<span className="ml-2">{rightIcon}</span>)}
+        {!loading && leftIcon && (<span className="mr-2">{leftIcon}</span>)};
+        {children};
+        {!loading && rightIcon && (<span className="ml-2">{rightIcon}</span>)};
       </button>);
 });
 Button.displayName = "Button";

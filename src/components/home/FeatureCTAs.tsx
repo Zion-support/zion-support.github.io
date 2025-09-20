@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -37,9 +38,10 @@ return (
 ),;
 };<//div><///div>;
 interface FeatureCTAsProps {
+  
   className?: string;
 }
-  style?: React.CSSProperties,}
+  style?: React.CSSProperties}
 export function FeatureCTAs({ className style }: FeatureCTAsProps) {
 className
       )}

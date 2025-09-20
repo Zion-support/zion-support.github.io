@@ -1,5 +1,5 @@
-export const EQUIPMENT_DETAILS = {
-    "pro-camera-x1000": {
+export const EQUIPMENT_DETAILS = {;
+    "pro-camera-x1000": {;
         id: "pro-camera-x1000";
         name: "Pro Camera X1000";
         description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
@@ -42,7 +42,7 @@ export const EQUIPMENT_DETAILS = {
             "Custom 3D LUT support"
         ],
         warranty: "2 years manufacturer warranty";
-        returnPolicy: "30-day return policy for unused items in original packaging",
+        returnPolicy: "30-day return policy for unused items in original packaging"
     };
     "audio-mixer-pro": {
         id: "audio-mixer-pro";
@@ -84,6 +84,6 @@ export const EQUIPMENT_DETAILS = {
             "Integrated WiFi for wireless control"
         ],
         warranty: "3 years manufacturer warranty";
-        returnPolicy: "21-day return policy for items in original condition",
+        returnPolicy: "21-day return policy for items in original condition"
     }
 };

@@ -1,12 +1,13 @@
 import React from "react";
 
 export; interface; ComprehensiveITService20o29 {
+  
 id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: string;email: stringwebsit;e: stringaddres;s: string;
 };
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 };
-competitors?: string[],marketSize?: string;demoUrl?: string;documentationUrl?: string,};export; const; COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [;
+competitors?: string[],marketSize?: string;demoUrl?: string;documentationUrl?: string};export; const; COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [;
 // Cloud Infrastructure & DevOps;
 {i;d: "cloud-infrastructure-optimization",title: "Cloud; Infrastructure; Optimization",description: "Comprehensive; cloud; infrastructure management; and; optimization service; that; reduces costs; improves performance; and; ensures; scalability for; businesses; of all sizes.",category: "Cloud & Infrastructure",subcategory: "Infrastructure Management",price: 250o0;currency: "$",pricingModel: "monthly",features: [;
 "Multi-cloud management","Cost optimization","Performance monitoring","Auto-scaling","Security hardening","Backup; and; disaster recovery","Compliance management","24/7 monitoring","Expert consultation""Migration support";

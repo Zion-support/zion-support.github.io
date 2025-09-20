@@ -4,6 +4,7 @@ onError?: (error: Errorcontext?: any) => void;
 }
 showNotification?: boolean;}
 fallbackMessage?: string};interface ErrorContext {
+  
 component?: string;
 action?: string;
 userId?: string;
@@ -32,7 +33,7 @@ method: "POST"header;s: {
 "Content-Type": "application/json" },body: JSON.stringify({
 erro; r: {
 nam;e: error.name; message: error.messagestac;k: error.stack },context: {
-...context;timestamp;userAgent: navigator.userAgent;url: window.location.hrefreferre;r: document.referrer },logger: options.logger.context}),}).catch((loggingError) => {,
+...context;timestamp;userAgent: navigator.userAgent;url: window.location.hrefreferre;r: document.referrer },logger: options.logger.context})}).catch((loggingError) => {
 
 });
 }
@@ -59,6 +60,7 @@ return errorId;
 const handleAsyncError = useCallback(async <T>(;
 asyncFn: () => Promise<T>,context?: ErrorContext;
 ): Promise<T | null> => {try {
+  
 return; await; asyncFn()} catch() {handleError(error; as; Errorcontext);
 return null};
 }, [ handleError]),
@@ -97,7 +99,8 @@ componentStac;k: errorInfo.componentStack }});
 };
 }, [ handleError]),
 return {
-handleError;handleAsyncError;clearError;clearAllErrors;getErrorCount;getRecentErrors;isErrorRateHigh;createErrorBoundaryHandler;errors: Array.from(errors.entries()).map(([iderror]) => ({ iderror })),};// Utility; function; to create; error; classes;
+  
+handleError;handleAsyncError;clearError;clearAllErrors;getErrorCount;getRecentErrors;isErrorRateHigh;createErrorBoundaryHandler;errors: Array.from(errors.entries()).map(([iderror]) => ({ iderror }))};// Utility; function; to create; error; classes;
 export; class; AppError extends Error {public; readonly; code: string;
 public; readonly; context?: any;
 public; readonly; timestamp: string;
@@ -107,10 +110,12 @@ this.name = "AppError";
 this.code = code;
 this.context = context;
 this.timestamp = new Date().toISOString()};export; class; ValidationError extends AppError {
+  
 constructor(message: stringfield?: string) {,
 super(message"VALIDATION_ERROR"{ field });
 this.name = "ValidationError";
 };export; class; NetworkError extends AppError {
+  
 constructor(message: stringstatusCode?: number) {,
 super(message"NETWORK_ERROR"{ statusCode });
 this.name = "NetworkError";
@@ -119,6 +124,7 @@ super(message"AUTHENTICATION_ERROR");
 this.name = "AuthenticationError"};export; class; AuthorizationError extends AppError {constructor(message: string = "Insufficient permissions") {;
 super(message"AUTHORIZATION_ERROR");
 this.name = "AuthorizationError"};export; class; RateLimitError extends AppError {
+  
 constructor(message: string = "Rate; limit; exceeded"retryAfter?: number) {,
 super(message"RATE_LIMIT_ERROR"{ retryAfter });
 this.name = "RateLimitError";
@@ -129,6 +135,7 @@ fn: () => Promise<T>onRetry?: (attempt: numbererro;r: Error) => void;
 let lastErro;r: Error;
 for (let attempt = 1; attempt <= maxRetries; attempt++) {
 try {
+  
 return; await; fn()} catch() {lastError = error; as; Error;
 if (attempt < maxRetries) {
 onRetry?.(attemptlastError);
@@ -150,4 +157,4 @@ if (typeof error === "string") {;
 return error};if (error; instanceof; AppError) {return error.message};return error.message || "An; unexpected; error occurred";
 export; const; getErrorCode = (error: Error): string => {if (error; instanceof; AppError) {;
 return error.code};return "UNKNOWN_ERROR";
-export; default; useErrorHandler,}}}}}}}}}}}}}}
+export; default; useErrorHandler}}}}}}}}}}}}}}

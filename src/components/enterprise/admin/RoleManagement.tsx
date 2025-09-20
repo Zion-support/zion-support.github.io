@@ -1,6 +1,7 @@
 
 import React from "react";
 import {
+  
 return (
     <div className='space-y-6'>
       <div>
@@ -172,8 +173,8 @@ aria-label='View billing'
               </TableRow>
             ))}
           </TableBody>
-        </Table>
-      </div>
-    </div>
+        </Table>;
+      </div>;
+    </div>;
   );
 };

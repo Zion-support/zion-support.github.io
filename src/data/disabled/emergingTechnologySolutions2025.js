@@ -1,4 +1,4 @@
-export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
+export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [;
     // Blockchain & Web3 Solutions;
     {id: "blockchain-web3-enterprise-platform";
         title: "Blockchain & Web3 Enterprise Platform - Decentralized Business Solutions";
@@ -60,7 +60,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Financial Services", "Manufacturing", "Healthcare", "Supply Chain", "Real Estate"],
         scalability: "Enterprise-grade with multi-chain support";
         customizationLevel: "Custom blockchain solutions and smart contracts";
-        innovationLevel: "Cutting-edge Web3 and blockchain technology",
+        innovationLevel: "Cutting-edge Web3 and blockchain technology"
     };
     // Quantum Computing Solutions;
     {id: "quantum-computing-solutions-platform";
@@ -123,7 +123,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Research", "Pharmaceuticals", "Finance", "Technology", "Government"],
         scalability: "Quantum cloud infrastructure with unlimited computational power";
         customizationLevel: "Custom quantum algorithms and applications";
-        innovationLevel: "Revolutionary quantum computing technology",
+        innovationLevel: "Revolutionary quantum computing technology"
     };
     // Edge Computing & IoT Solutions;
     {id: "edge-computing-iot-platform";
@@ -186,7 +186,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Smart Cities", "Manufacturing", "Healthcare", "Transportation", "Retail"],
         scalability: "Distributed edge infrastructure with unlimited device support";
         customizationLevel: "Custom edge computing solutions and IoT integrations";
-        innovationLevel: "Advanced edge computing and IoT technology",
+        innovationLevel: "Advanced edge computing and IoT technology"
     };
     // 5G & Advanced Connectivity Solutions;
     {id: "5g-advanced-connectivity-platform";
@@ -249,7 +249,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Telecommunications", "Healthcare", "Transportation", "Manufacturing", "Smart Cities"],
         scalability: "Enterprise 5G infrastructure with unlimited device support";
         customizationLevel: "Custom 5G solutions and network configurations";
-        innovationLevel: "Cutting-edge 5G and connectivity technology",
+        innovationLevel: "Cutting-edge 5G and connectivity technology"
     };
     // Augmented Reality & Virtual Reality Solutions;
     {id: "ar-vr-enterprise-platform";
@@ -312,7 +312,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Manufacturing", "Healthcare", "Education", "Retail", "Real Estate"],
         scalability: "Multi-user AR/VR platform with unlimited content support";
         customizationLevel: "Custom AR/VR experiences and training programs";
-        innovationLevel: "Advanced immersive technology solutions",
+        innovationLevel: "Advanced immersive technology solutions"
     };
     // Robotics & Automation Solutions;
     {id: "robotics-automation-platform";
@@ -375,7 +375,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Manufacturing", "Logistics", "Healthcare", "Automotive", "Electronics"],
         scalability: "Enterprise robotics platform with multi-system support";
         customizationLevel: "Custom robotics solutions and automation workflows";
-        innovationLevel: "Advanced robotics and automation technology",
+        innovationLevel: "Advanced robotics and automation technology"
     };
     // Digital Twin & Simulation Solutions;
     {id: "digital-twin-simulation-platform";
@@ -438,7 +438,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Manufacturing", "Infrastructure", "Energy", "Healthcare", "Smart Cities"],
         scalability: "Enterprise digital twin platform with unlimited system support";
         customizationLevel: "Custom digital twin solutions and simulation models";
-        innovationLevel: "Advanced digital twin and simulation technology",
+        innovationLevel: "Advanced digital twin and simulation technology"
     };
     // Green Technology & Sustainability Solutions;
     {id: "green-technology-sustainability-platform";
@@ -501,7 +501,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         industryFocus: ["Manufacturing", "Real Estate", "Energy", "Transportation", "Retail"],
         scalability: "Multi-organization sustainability platform";
         customizationLevel: "Custom sustainability solutions and reporting";
-        innovationLevel: "Advanced green technology and sustainability solutions",
+        innovationLevel: "Advanced green technology and sustainability solutions"
     }
 ];
     export default EMERGING_TECHNOLOGY_SOLUTIONS_2025;

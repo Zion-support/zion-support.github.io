@@ -29,6 +29,7 @@ e.stopPropagation();
 if (onMessage) {
 onMessage(talent);
 } else {
+  
 navigate(`/messages?talentId=${talent.id}`);
 }
 };
@@ -176,4 +177,5 @@ import { RatingStars } from "@/components/RatingStars";
 import { useAuth } from "@/context/auth/AuthProvider";
 import { useCart } from "@/context/CartContext";
 export interface TalentCardProps {
+  
 }

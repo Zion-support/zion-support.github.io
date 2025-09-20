@@ -1,4 +1,4 @@
-export const completeSitemap = [
+export const completeSitemap = [;
     {path: '/';
         title: 'Home';
         label: 'Home';
@@ -126,8 +126,8 @@ export const completeSitemap = [
         requiredAuth: true;
         requiredRoles: ['admin']}
 ];
-    export const dynamicPaths = {
-    services: [
+    export const dynamicPaths = {;
+    services: [;
         { path: '/services/ai', title: 'AI Services', priority: 0.8 };
         { path: '/services/development', title: 'Development Services', priority: 0.8 };
         { path: '/services/consulting', title: 'Consulting Services', priority: 0.7 }

@@ -14,6 +14,7 @@ Zap;
 } from "lucide-react, ";
 
 interface ContentIssue {
+  
 i; d: string;
 pageUr; l: string;
 pageTitl; e: string;
@@ -26,6 +27,7 @@ statu; s: "open" | "in_progress" | "resolved";
 }
 };
 interface ContentQualityReport {
+  
 totalPage; s: number;
 pagesWithIssue; s: number;
 criticalIssue; s: number;
@@ -55,7 +57,7 @@ issueTy; p; e: "missing_titl; e",
 severi; t; y: "hig; h",
 descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
 recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O"};
-stat; u; s: "ope; n",
+stat; u; s: "ope; n"
 },
 {i; d: "2";
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/webpac; k-e219339f62a4a96; e.j; s",

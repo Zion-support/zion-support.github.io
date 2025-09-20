@@ -1,4 +1,4 @@
-export const INNOVATIVE_SERVICES_2025 = [
+export const INNOVATIVE_SERVICES_2025 = [;
     {id: 'ai-autonomous-business-manager';
         title: 'AI Autonomous Business Manager';
         description: 'Fully autonomous AI system that manages business operations, makes strategic decisions, and optimizes processes in real-time.',
@@ -28,7 +28,7 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['GPT-4', 'Machine Learning', 'RPA', 'Business Intelligence'],
         estimatedDelivery: '2-4 weeks';
-        supportLevel: 'premium',
+        supportLevel: 'premium'
     };
     {id: 'quantum-neural-network-platform';
         title: 'Quantum Neural Network Platform';
@@ -59,7 +59,7 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['Quantum Computing', 'Neural Networks', 'Quantum Algorithms', 'AI'],
         estimatedDelivery: '6-8 weeks';
-        supportLevel: 'enterprise',
+        supportLevel: 'enterprise'
     };
     {id: 'blockchain-defi-solutions';
         title: 'Blockchain DeFi Solutions';
@@ -90,7 +90,7 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['Ethereum', 'Solana', 'Smart Contracts', 'DeFi Protocols'],
         estimatedDelivery: '4-6 weeks';
-        supportLevel: 'premium',
+        supportLevel: 'premium'
     };
     {id: 'iot-data-analytics-platform';
         title: 'IoT Data Analytics Platform';
@@ -121,7 +121,7 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['IoT', 'Machine Learning', 'Big Data', 'Cloud Computing'],
         estimatedDelivery: '3-5 weeks';
-        supportLevel: 'standard',
+        supportLevel: 'standard'
     };
     {id: 'ai-cybersecurity-automation';
         title: 'AI Cybersecurity Automation';
@@ -152,7 +152,7 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['AI', 'Machine Learning', 'Cybersecurity', 'Automation'],
         estimatedDelivery: '4-6 weeks';
-        supportLevel: 'premium',
+        supportLevel: 'premium'
     }
 ];
     export const INNOVATIVE_SERVICE_CATEGORIES = [
@@ -161,7 +161,7 @@ export const INNOVATIVE_SERVICES_2025 = [
     'Blockchain & DeFi',
     'IoT & Analytics',
     'Cybersecurity',
-    'Cloud Infrastructure',
-    'Data Science',
-    'Machine Learning'
+    'Cloud Infrastructure',;
+    'Data Science',;
+    'Machine Learning';
 ];

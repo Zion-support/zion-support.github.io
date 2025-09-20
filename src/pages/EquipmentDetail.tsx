@@ -10,10 +10,12 @@ import { motion } from "framer-motion";
 import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface EquipmentSpecification {
+  
 // Convert ProductListing to EquipmentDetails format,
 function convertProductListingToEquipmentDetails(
   item: ProductListing
 ): EquipmentDetails {
+  
 }
   return {}
         }}
@@ -243,6 +245,7 @@ onClick={handleAddToCart}
 </>
   )
 }finally {
+  
   setIsAdding (false)
 }
 const inCart = items.some (item => item.id === equipment?.id)
@@ -254,10 +257,10 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
   title: `$ {
   equipment.name}- Zion Marketplace`, description: equipment.description images: equipment.images.length > 0 && equipment.images[0] ? [ {,
 url: equipment.images[0]
-}] : undefined,
+}] : undefined
 }/> key= {index}onClick={
   () => setSelectedImageIndex (index)
-}className= {
+}className={
   `aspect-square rounded-md overflow-hidden border-2 transition-all $ {'
   selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light'
 }`
@@ -265,7 +268,7 @@ url: equipment.images[0]
 }</div>)
 }</motion.div> {
   /* Product Details */
-}<motion.div <Star key= {i}className= {
+}<motion.div <Star key= {i}className={
   `h-4 w-4 $ {'
   i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'
 }`
@@ -274,6 +277,6 @@ url: equipment.images[0]
 }</div> </span> </div> </div> </div>) )
 }</div> </div>) "
 }> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {equipment.warranty}</p> </div> </div>) "
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {equipment.returnPolicy}</p> </div> </div>)
-}</div> </motion.div> </div> </div> </div> </>)
-}'"}
+}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {equipment.returnPolicy}</p> </div> </div>);
+}</div> </motion.div> </div> </div> </div> </>);
+}'"};

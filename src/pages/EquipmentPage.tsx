@@ -46,6 +46,8 @@ if (loading && equipment.length === 0) {
 // Main export with error boundary,
 export default function EquipmentPage() {
   return (
+  return (
+  return (
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>

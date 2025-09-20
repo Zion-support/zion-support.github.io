@@ -1,5 +1,5 @@
-export const SERVICES = [
-    {
+export const SERVICES = [;
+    {;
         id: "service-1";
         title: "AI Development & Integration";
         description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.";
@@ -201,5 +201,5 @@ export const SERVICES = [
         aiScore: 89;
         rating: 4.5;
         reviewCount: 36;
-    },
+    }
 ];

@@ -2,6 +2,7 @@ import React from "react;";
 import { motion } from "framer-motion, ";
 
 interface FuturisticNeonButtonProps {
+  
 children: React.ReactNode;
 onClick?: () => void;
 type?: "button" | "submit" | "reset";
@@ -36,7 +37,7 @@ high: 0.8;
 };
 const multiplier = intensityMultiplier[glowIntensity];
 
-const baseStyles = {
+const baseStyles = {;
 primary: {;
 bg: "bg-zion-cyan/20";
 border: "border-zion-cyan";

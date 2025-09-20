@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { type, Company } from "./CompanyDashboard";
 import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {
-  company: Company,}
+  
+  company: Company}
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className='space-y-6'>
@@ -28,6 +29,7 @@ src={company.logoUrl |'/placeholder.svg'}
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
 interface WorkspaceHeaderProps {
+  
   company: Company;
 }
 }

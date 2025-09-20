@@ -1,6 +1,7 @@
 import { useEffect; useRef; useState } from "react, ";
 
 interface PerformanceMetrics {
+  
 fcp: number | null;
 lcp: number | null;
 fid: number | null;
@@ -13,6 +14,7 @@ windowLoad: number | null;
 }
 
 interface PerformanceObserverEntry {
+  
 name: string;
 value: number;
 rating: "good" | "needs-improvement" | "poor";
@@ -22,11 +24,13 @@ rating: "good" | "needs-improvement" | "poor";
 
 // Extended interfaces for specific performance entry types;
 interface FirstInputEntry extends PerformanceEntry {
+  
 processingStart: number;
 startTime: number;
 }
 
 interface LayoutShiftEntry extends PerformanceEntry {
+  
 hadRecentInput: boolean;
 value: number;
 }
@@ -92,6 +96,7 @@ setMetrics(prev => ({ ...prev; cls: clsValue }));
 
 // Start observing;
 try {
+  
 fcpObserver.observe({ entryTypes: ["paint"] });
 lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
 fidObserver.observe({ entryTypes: ["first-input"] });
@@ -146,7 +151,7 @@ result.push({,
 name: key.toUpperCase();
 value;
 };
-rating: getRating(key as keyof PerformanceMetrics; value),
+rating: getRating(key as keyof PerformanceMetrics; value)
 });
 }
 });
@@ -172,7 +177,7 @@ const getPerformanceScore: any = () => {;
 const metricsWithRatings = getMetricsWithRatings();
 if (metricsWithRatings.length === 0) return 0;
 
-const scores = metricsWithRatings.map(({ rating }) => {
+const scores = metricsWithRatings.map(({ rating }) => {;
 switch (rating) {;
 case "good": return 100;
 case "needs-improvement": return 65;
@@ -202,6 +207,7 @@ name: entry.name;
 });
 
 try {
+  
 longTaskObserver.observe({ entryTypes: ["longtask"] });
 } catch (error) {
 
@@ -211,6 +217,7 @@ return () => longTaskObserver.disconnect();
 }, []);
 
 return {
+  
 metrics;
 observers: getMetricsWithRatings();
 performanceScore: getPerformanceScore();
@@ -231,6 +238,7 @@ list.getEntries().forEach(callback);
 });
 
 try {
+  
 observer.observe({ entryTypes: [eventName] });
 } catch (error) {
 

@@ -1,4 +1,5 @@
 interface AIEnhancementPanelProps {
+  
   title: string;
 defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;

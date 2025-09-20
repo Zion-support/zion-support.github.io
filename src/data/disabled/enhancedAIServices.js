@@ -1,4 +1,4 @@
-export const ENHANCED_AI_SERVICES = [
+export const ENHANCED_AI_SERVICES = [;
     {id: "ai-chatbot-platform";
         title: "AI Chatbot Platform";
         description: "Intelligent conversational AI platform for customer service, lead generation, and business automation.",
@@ -48,7 +48,7 @@ export const ENHANCED_AI_SERVICES = [
         link: "https://ziontechgroup.com/ai-chatbot-platform";
         badge: "Popular";
         icon: "💬";
-        image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-content-generation-suite";
         title: "AI Content Generation Suite";
@@ -98,7 +98,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-content-generation-suite";
         icon: "✍️";
-        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-image-generation-platform";
         title: "AI Image Generation Platform";
@@ -148,7 +148,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-image-generation-platform";
         icon: "🎨";
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-predictive-analytics";
         title: "AI Predictive Analytics Platform";
@@ -199,7 +199,7 @@ export const ENHANCED_AI_SERVICES = [
         link: "https://ziontechgroup.com/ai-predictive-analytics";
         badge: "Featured";
         icon: "🔮";
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-process-automation";
         title: "AI Process Automation Platform";
@@ -249,7 +249,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-process-automation";
         icon: "⚙️";
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-customer-insights-platform";
         title: "AI Customer Insights Platform";
@@ -299,7 +299,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-customer-insights-platform";
         icon: "👥";
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-voice-assistant-platform";
         title: "AI Voice Assistant Platform";
@@ -349,7 +349,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-voice-assistant-platform";
         icon: "🎤";
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-data-quality-platform";
         title: "AI Data Quality Platform";
@@ -399,7 +399,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-data-quality-platform";
         icon: "🧹";
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-translation-platform";
         title: "AI Translation Platform";
@@ -449,7 +449,7 @@ export const ENHANCED_AI_SERVICES = [
         ],
         link: "https://ziontechgroup.com/ai-translation-platform";
         icon: "🌍";
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"
     };
     {id: "ai-recommendation-engine";
         title: "AI Recommendation Engine";
@@ -500,15 +500,15 @@ export const ENHANCED_AI_SERVICES = [
         link: "https://ziontechgroup.com/ai-recommendation-engine";
         badge: "Premium";
         icon: "🎯";
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"
     }
 ];
-    export const getAIServiceById = (id) => {
+    export const getAIServiceById = (id) => {;
     return ENHANCED_AI_SERVICES.find(service => service.id === id);
 };
-export const getAIServicesByCategory = (category) => {
+export const getAIServicesByCategory = (category) => {;
     return ENHANCED_AI_SERVICES.filter(service => service.category === category);
 };
-export const getAIServiceCategories = () => {
+export const getAIServiceCategories = () => {;
     return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };

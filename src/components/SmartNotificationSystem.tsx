@@ -13,7 +13,7 @@ label: string; action: () => void;
 label: string; action: () => void;
 variant?: "primary" | "secondary" | "danger",
 icon?: React.ComponentType < any>}
-interface SmartNotificationSystemProps {,}
+interface SmartNotificationSystemProps {}
 // Add your props here: any};
 const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {;
 if(!enabled) return null;

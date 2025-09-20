@@ -49,6 +49,7 @@ const { user; logout } = useAuth();
 // Try to access the messaging context; but provide a fallback value if it's not available;
 let unreadCount = 0;
 try {
+  
 const { unreadCount: count } = useMessaging();
 unreadCount = count;
 } catch (error) {
@@ -292,7 +293,7 @@ unreadCount = {unreadCount}
       setCompanyDropdownOpen(false)
       setResourcesDropdownOpen(false)}
   }
-  const closeAllDropdowns = (...args: unknown[]): unknown => {
+  const closeAllDropdowns = (...args: unknown[]): unknown => {;
     setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false)
     setCompanyDropdownOpen(false)
     setResourcesDropdownOpen(false)
@@ -867,5 +868,6 @@ onClick={() => {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>  )
-}
+    </header>  );
+};
+;

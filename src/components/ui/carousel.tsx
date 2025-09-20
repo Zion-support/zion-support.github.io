@@ -23,9 +23,9 @@ canScrollNext: boolean;
 }
 const Carousel = React.forwardRef<
   HTMLDivElement,
-React.HTMLAttributes<HTMLDivElement> & CarouselProps
->(
-  (
+React.HTMLAttributes<HTMLDivElement> & CarouselProps;
+>(;
+  (;
     {orientation = &quot;horizontal&quot;
       opts,
 setApi
@@ -53,9 +53,9 @@ className
     }, [api])
     const scrollNext = React.useCallback(() => {
       api?.scrollNext()
-    }, [api])
-    const handleKeyDown = React.useCallback(
-      (event: React.KeyboardEvent<HTMLDivElement>) => {
+    }, [api]);
+    const handleKeyDown = React.useCallback(;
+      (event: React.KeyboardEvent<HTMLDivElement>) => {;
         if (event.key === &quot;ArrowLeft&quot;) {
           event.preventDefault()
           scrollPrev()
@@ -111,9 +111,9 @@ Carousel.displayName = &quot;Carousel&quot;
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
 React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel()
-  return (
+>(({ className, ...props }, ref) => {;
+  const { carouselRef, orientation } = useCarousel();
+  return (;
     <div ref={carouselRef} className=&quot;overflow-hidden&quot;>
       <div
 ref={ref}
@@ -135,9 +135,9 @@ const CarouselItem = React.forwardRef<
 React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { orientation } = useCarousel()
-  return (
-    <div
-ref={ref}
+  return (;
+    <div;
+ref={ref};
       role=&quot;group&quot;
       aria-roledescription=&quot;slide&quot;
       className={cn(
@@ -150,9 +150,9 @@ ref={ref}
   )
 })
 CarouselItem.displayName = &quot;CarouselItem&quot;
-const CarouselPrevious = React.forwardRef<
-  HTMLButtonElement,
-React.ComponentProps<typeof Button>
+const CarouselPrevious = React.forwardRef<;
+  HTMLButtonElement,;
+React.ComponentProps<typeof Button>;
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
   const { orientation scrollPrev canScrollPrev } = useCarousel()
   return (
@@ -177,9 +177,9 @@ ref={ref}
   )
 })
 CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
-const CarouselNext = React.forwardRef<
-  HTMLButtonElement,
-React.ComponentProps<typeof Button>
+const CarouselNext = React.forwardRef<;
+  HTMLButtonElement,;
+React.ComponentProps<typeof Button>;
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
   const { orientation scrollNext canScrollNext } = useCarousel()
   return (
@@ -205,6 +205,7 @@ ref={ref}
 })
 CarouselNext.displayName = &quot;CarouselNext&quot;
 export {
+  
   type CarouselApi,
 Carousel
   CarouselContent,

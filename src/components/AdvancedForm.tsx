@@ -16,6 +16,7 @@ Building;
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface FormField {
+  
 nam; e: string;
 labe; l: string;
 typ; e: "text" | "email" | "tel" | "textarea" | "select" | "checkbox";
@@ -35,6 +36,7 @@ labe; l: string }[];
 
 interface FormData {[k; e; y: stri; n; g]: string | boolean;};
 interface FormValidation {
+  
 [k; e; y: stri; n; g]: {
 isVali; d: boolean;
 messag; e: string;
@@ -45,6 +47,7 @@ isTouche; d: boolean;
 }
 
 interface AdvancedFormProps {
+  
 field; s: FormField[];
 onSubmi; t: (dat;  a: FormData) => Promise<void>;
 title?: string;
@@ -95,7 +98,7 @@ setValidation(initialValidation);
 
 // Update progress based on filled fields;
 useEffect(() => {
-const filledFields = Object.values(formData).filter(value =>
+const filledFields = Object.values(formData).filter(value =>;
 typeof value === "boolean" ? value : value.toString().trim() !== "";
 ).length;
 
@@ -226,6 +229,7 @@ return;
 setIsSubmitting(true);
 
 try {
+  
 // Track form submission start;
 if (enableAnalytics) {
 trackEvent("form",  "submission_started", "form_submitted");
@@ -257,6 +261,7 @@ erro; r: error instanceof Error ? error.message : "Unknown error" });
 
 
 } finally {
+  
 setIsSubmitting(false);
 }
 },  [formDa; t; a; validati; o; n; isFormVal; i; d; onSubm; i; t; enableAnalyti; c; s; trackEve; n; t; trackConversi; o; n; tit; l; e]);

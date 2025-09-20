@@ -3,9 +3,9 @@ import React { useState useEffect } from "react";
 import { useRouter } from "next/router";
 import { useDisputes } from "@/hooks/useDisputes";
 import { logErrorToProduction } from "@/utils/productionLogger";
-import { Dispute,
-disputeReasonLabels
-, DisputeMessage,;
+import { Dispute;
+disputeReasonLabels;
+, DisputeMessage;
 DisputeStatus;
 , ResolutionType } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,7 @@ CardContent
   CardDescription,
 CardFooter
   CardHeader,
-CardTitle,
+CardTitle
 } from '@/components/ui/card'
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -131,6 +131,7 @@ const handleResolveDispute = async () => {
   if (!disputeId) return,
 if (!resolution.summary) {
 }const success = await resolveDispute (disputeId {
+  
   summary: resolution.summary,
 if (success && dispute) {
   setDispute ({
@@ -140,15 +141,19 @@ resolution type: resolution.resolution type,
 resolved at: new Date () .toISOString ()
 })
 }else {
+  
 }
 const handleSendMessage = async () => {
   if (!disputeId |!message.trim () ) return,
 try {
-}catch (error) {
-  logErrorToProduction ('Error sending message:', {
+  
+  ;
+}catch (error) {;
+  logErrorToProduction ('Error sending message:', {;
   data: error;
 })
 }finally {
+  
   setIsSending (false)
 }
 if (isLoading) {"
@@ -170,7 +175,7 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }</CardContent> </Card>) "
 }</TabsContent> <TabsContent value="messages" className="space-y-6"> <Card> <CardHeader> <CardTitle>Messages</CardTitle> <CardDescription>Communication regarding this dispute</CardDescription> </CardHeader> <CardContent> <div className="space-y-6 max-h-[600px] overflow-y-auto p-2"> {"
   messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note)
-}> <div className= {
+}> <div className={
   `max-w-[80%] $ {'
   isCurrentUser ? 'bg-primary text-primary-foreground' : 'bg-muted'
 }p-4 rounded-lg` "

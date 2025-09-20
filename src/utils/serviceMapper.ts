@@ -5,7 +5,7 @@ export interface Service {id: string; title: string; description: string; catego
 benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 }
-estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; contactInfo: {,}
+estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; contactInfo: {}
 email: string; website: string; phone: string};
 technicalSpecs?: {technology: string[], integrations: string[];
 apiEndpoints: number; uptime: string; security: string[]};

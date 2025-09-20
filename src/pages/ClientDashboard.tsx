@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";,
 import { JobsList } from "@/components/jobs/JobsList";,
 import { Button } from "@/components/ui/button";,
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
-import Link from "next/link",;
+import Link from "next/link";
 import { JobStatus } from "@/types/jobs";,
 import { SEO } from "@/components/SEO";,
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react";
@@ -113,26 +113,28 @@ title="Client Dashboard | Zion AI Marketplace"
 }
 export default function ClientDashboard() {
   return (
+  return (
+  return (
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
   )
 }, [jobs selectedJobId])
-return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8"> <div className= {
+return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8"> <div className={
   `flex flex-col $ {
   !isMobile ? 'md:flex-row md:justify-between md:items-center' : ''
 }mb-8 gap-4`
-}> <div> <h1 className= {
+}> <div> <h1 className={
   `text-$ {'
   isMobile ? '2xl': '3xl'
 }font-bold` "
-}>My Jobs</h1> <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p> </div> <div className= {
+}>My Jobs</h1> <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p> </div> <div className={
   `flex gap-2 $ {'
   isMobile ? 'flex-col': ''
 }` "
-}> <Button variant="outline" asChild className= {'
+}> <Button variant="outline" asChild className={'
   isMobile ? 'w-full justify-center': '' "
-}> <Link href="/hiring-tracker"> <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline </Link> </Button> <Button asChild className= {'
+}> <Link href="/hiring-tracker"> <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline </Link> </Button> <Button asChild className={'
   isMobile ? 'w-full justify-center': '' "
 }> <Link href="/post-job"> <PlusCircle className="h-4 w-4 mr-2" /> Post New Job </Link> </Button> </div> </div> {
   /* New Onboarding Steps */ "
@@ -149,5 +151,7 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
   selectedJobId "
 }/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center"> <p className="text-muted-foreground"> Select a job to see AI-matched talent suggestions </p> </div>)
 }</div> </div> </div> </div> </main> </>)
-}export default function ClientDashboard () {
+}export default function ClientDashboard() {
+  return (
+  return (
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}

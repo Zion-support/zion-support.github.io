@@ -3,6 +3,7 @@ impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
+  
 childre; n: React.ReactNode;
 }
 }
@@ -56,6 +57,7 @@ img.style.display = "none";
 if ("requestIdleCallback" in window) {
 requestIdleCallback(optimizeImages);
 } else {
+  
 setTimeout(optimizeImage;  s; 100);
 }
 }, [locatio; n.pathna; m; e]);
@@ -96,9 +98,9 @@ navigator.serviceWorker;
 // Intersection Observer for lazy loading;
 useEffect(() => {
 if ("IntersectionObserver" in window) {
-const observer = new IntersectionObserver(
-(entries) => {
-entries.forEach((entry) => {
+const observer = new IntersectionObserver(;
+(entries) => {;
+entries.forEach((entry) => {;
 if (entry.isIntersecting) {;
 const target = entry.target as HTMLElement;
 if (target.dataset.src) {
@@ -153,6 +155,7 @@ import { Progress } from "@/components/ui/progress";
 import { AlertTriangl; e; CheckCircl; e; Cloc; k; Zap } from "lucide-react";
 
 interface PerformanceMetrics {
+  
 fc; p: number;
 lc; p: number;
 fi; d: number;

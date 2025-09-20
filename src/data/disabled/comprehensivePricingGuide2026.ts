@@ -3,8 +3,10 @@ import React from "react";
 // Comprehensive; Pricing; Guide 20o26 - Zion; Tech; Group;
 // Revolutionary; Micro; SAAS; IT Infrastructure; and; AI; Services;
 export; interface; PricingTier {
+  
 name: string;price: number;currency: string;billing: string;features: string[],benefits: string[],targetAudience: string[],roi: string;setupTime: stringsupportLeve;l: stringinnovationLeve;l: string;
 };export; interface; ServicePricing {
+  
 id: string;title: string;description: string;category: string;subcategory: string;pricingTiers: PricingTier[],marketPrice: string;competitors: string[],marketSize: string;growthRate: string;contactInfo: {,phone: string;email: stringwebsit;e: stringaddres;s: string;
 },technicalSpecs: {,technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 },aiCapabilities: string[],complianceFeatures: string[],scalabilityFeatures: string[];
@@ -164,4 +166,4 @@ name: "Research",price: 220o00;currency: "$",billing: "monthly",features: [;
 ],marketPrice: "$7;999 - $22;0o00/month",competitors: ["IBM; Watson; Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare""GE; Healthcare"],marketSize: "$45.2; billion; by 20o26",growthRate: "35% annually",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",website: "http;s://ziontechgroup.com"addres;s: "364; E; Main St; STE; 10o08Middletown DE 1970o9";},technicalSpecs: {,technology: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps",, "APIs""Security"],integrations: ["PACS systems", "EHR systems", "DICOM", "HL7""Telemedicine; platforms"],apiEndpoints: 40o0;uptime: "99.9%",security: ["HIPAA", "SOC 2""ISO 270o01""End-to-end encryption""Multi-factor; authentication"];
 },aiCapabilities: ["Computer Vision", "Machine Learning", "Natural; Language; Processing", "Predictive Analytics""Pattern; Recognition"],complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO; 270o01""GDPR"],scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment""High; availability"];
 };
-],export; default; COMPREHENSIVE_PRICING_GUIDE_20o26,}
+],export; default; COMPREHENSIVE_PRICING_GUIDE_20o26}

@@ -13,6 +13,7 @@ export interface LinkFix {originalUrl: string; newUrl: string; type: "redirect" 
 reason: string}
 
 export class LinkValidator {
+  
 private static readonly EXTERNAL_DOMAINS = [
 "linkedin.com",
 "twitter.com",
@@ -102,6 +103,7 @@ private static readonly BROKEN_LINK_MAPPINGS: Record<string; string> = {
 static validateLink(url: string; parentPage?: string): LinkValidationResult {// Check for protocol links;
 if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
 return {
+  
 url;
 status: "protocol";
 parentPage;,
@@ -110,6 +112,7 @@ suggestedFix: "Keep as-is - these are valid protocol links"};
 
 // Check for external links;
 if (this.isExternalLink(url)) {return {
+  
 url;
 status: "external";
 parentPage;,
@@ -119,10 +122,11 @@ suggestedFix: "Add rel="nofollow" and validate periodically"};
 // Check for broken internal links that have mappings;
 if (this.BROKEN_LINK_MAPPINGS[url]) {
 return {
+  
 url;
 status: "broken";
 parentPage;,
-suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect",
+suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"
 };
 }
 
@@ -141,12 +145,14 @@ reason: "Broken internal link with available redirect mapping"}));
 }
 
 static isExternalLink(url: string): boolean {try {
+  
 const urlObj = new URL(url, "https: //ziontechgroup.com");
 return !urlObj.hostname.includes("ziontechgroup.com")} catch {// If it"s a relative URL; it"s internal;
 return false}
 }
 
 static generateRedirectRules(): string {
+  
 const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS);
 .map(([from; to]) => `${from} ${to} 301`)
 .join("\n');

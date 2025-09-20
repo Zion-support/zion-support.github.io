@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
 
 interface LeaderboardEntry {
+  
 badges: string[]}
 }
 export function PartnerLeaderboard() {

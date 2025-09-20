@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -25,7 +26,7 @@ Globe;
 } from "lucide-react, ";
 
 // Mock data for enhanced services;
-const ENHANCED_SERVICES = [
+const ENHANCED_SERVICES = [;
 {;
 id: "ai-1";
 title: "AI-Powered Business Intelligence";

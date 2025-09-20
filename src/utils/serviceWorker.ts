@@ -10,9 +10,9 @@ const API_CACHE = "zion-api-v2.0.0";
 // Cache strategies;
 const CACHE_STRATEGIES = {
 STATIC: "cache-first",
-DYNAMIC: "stale-while-revalidate",
-API: "network-first",
-IMAGES: "cache-first",
+DYNAMIC: "stale-while-revalidate",;
+API: "network-first",;
+IMAGES: "cache-first",;
 FONTS: "cache-first",;
 };
 
@@ -21,9 +21,9 @@ const STATIC_ASSETS = [
 "/index.html",
 "/static/js/bundle.js",
 "/static/css/main.css",
-"/manifest.json",
-"/favicon.ico",
-"/logo192.png",
+"/manifest.json",;
+"/favicon.ico",;
+"/logo192.png",;
 "/logo512.png";
 ];
 
@@ -33,17 +33,17 @@ const DYNAMIC_ROUTES = [
 "/services",
 "/contact",
 "/ai-services",
-"/it-services",
-"/micro-saas",
-"/blog",
+"/it-services",;
+"/micro-saas",;
+"/blog",;
 "/careers";
 ];
 
 // API endpoints to cache;
 const API_ENDPOINTS = [
-"/api/services",
-"/api/contact",
-"/api/blog",
+"/api/services",;
+"/api/contact",;
+"/api/blog",;
 "/api/careers";
 ];
 
@@ -53,7 +53,7 @@ Promise.all([
 caches.open(STATIC_CACHE).then(cache => {
 return cache.addAll(STATIC_ASSETS)}),
 caches.open(DYNAMIC_CACHE).then(cache => {
-return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`)),
+return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`))
 })
 ]).then(() => {return self.skipWaiting()})
 );
@@ -129,6 +129,7 @@ return offlineResponse || new Response("Offline", { status: 503 });
 
 // Network First Strategy;
 async function networkFirst(request: Request; cacheName: string): Promise<Response> {try {
+  
 const networkResponse = await fetch(request);
 if (networkResponse.ok) {
 const cache = await caches.open(cacheName);

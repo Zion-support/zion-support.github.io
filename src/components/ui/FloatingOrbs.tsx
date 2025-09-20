@@ -1,6 +1,7 @@
 import React, { useEffect; useRef } from "react;";
 
 interface FloatingOrbsProps {
+  
 count?: number;
 }
 className?: string;}
@@ -25,6 +26,7 @@ window.addEventListener("resize", resizeCanvas);
 
 // Orb class;
 class Orb {
+  
 x: number;
 y: number;
 radius: number;

@@ -1,6 +1,7 @@
 import React, { createContext; useContext; useEffect; useState; ReactNode } from "react;";
 
 interface AccessibilityContextType {
+  
 isHighContrast: boolean;
 isReducedMotion: boolean;
 isLargeText: boolean;
@@ -23,6 +24,7 @@ return context;
 };
 
 interface AccessibilityProviderProps {
+  
 children: ReactNode;
 }
 }
@@ -67,18 +69,21 @@ const body = document.body;
 if (isHighContrast) {
 body.classList.add("high-contrast");
 } else {
+  
 body.classList.remove("high-contrast");
 }
 
 if (isReducedMotion) {
 body.classList.add("reduced-motion");
 } else {
+  
 body.classList.remove("reduced-motion");
 }
 
 if (isLargeText) {
 body.classList.add("large-text");
 } else {
+  
 body.classList.remove("large-text");
 }
 }, [isHighContrast; isReducedMotion; isLargeText]);
@@ -103,6 +108,7 @@ e.preventDefault();
 lastElement.focus();
 }
 } else {
+  
 if (document.activeElement === lastElement) {
 e.preventDefault();
 firstElement.focus();

@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface InnovativeITService {
+  
 id: string;
 title: string;
 description: string;
@@ -89,7 +90,7 @@ compliance: ["ISO 27001", "SOC 2", "Research ethics", "Data security"],
 roi: "200% within 24 months";
 competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
 marketSize: "$1.9 billion";
-growthRate: "56.7% annually",
+growthRate: "56.7% annually"
 };
 // Edge Computing Infrastructure;
 {id: "edge-computing-infrastructure";
@@ -146,7 +147,7 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "IoT security standards"],
 roi: "280% within 18 months";
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
 marketSize: "$15.7 billion";
-growthRate: "37.4% annually",
+growthRate: "37.4% annually"
 };
 // Zero Trust Security Architecture;
 {id: "zero-trust-security-architecture";
@@ -203,7 +204,7 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
 roi: "320% within 18 months";
 competitors: ["Okta", "Ping Identity", "ForgeRock", "CyberArk", "Palo Alto Networks"],
 marketSize: "$19.6 billion";
-growthRate: "17.4% annually",
+growthRate: "17.4% annually"
 };
 // Multi-Cloud Management Platform;
 {id: "multi-cloud-management-platform";
@@ -260,7 +261,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "Cloud security standards"],
 roi: "250% within 12 months";
 competitors: ["Flexera", "CloudHealth", "CloudCheckr", "RightScale", "Scalr"],
 marketSize: "$6.3 billion";
-growthRate: "28.9% annually",
+growthRate: "28.9% annually"
 };
 // API Management and Governance;
 {id: "api-management-governance";
@@ -317,7 +318,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "API security standards"],
 roi: "300% within 12 months";
 competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management", "MuleSoft"],
 marketSize: "$4.5 billion";
-growthRate: "32.7% annually",
+growthRate: "32.7% annually"
 };
 // DevOps Automation Platform;
 {id: "devops-automation-platform";
@@ -374,7 +375,7 @@ compliance: ["SOC 2", "ISO 27001", "DevOps best practices", "Security standards"
 roi: "350% within 12 months";
 competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "TeamCity"],
 marketSize: "$8.9 billion";
-growthRate: "24.3% annually",
+growthRate: "24.3% annually"
 };
 // Data Mesh Architecture Platform;
 {id: "data-mesh-architecture-platform";
@@ -431,7 +432,7 @@ compliance: ["GDPR", "CCPA", "SOC 2", "Data governance standards"],
 roi: "280% within 18 months";
 competitors: ["DataHub", "Amundsen", "Collibra", "Alation", "Informatica"],
 marketSize: "$12.8 billion";
-growthRate: "21.4% annually",
+growthRate: "21.4% annually"
 };
 // Green IT Infrastructure;
 {id: "green-it-infrastructure";
@@ -488,6 +489,6 @@ compliance: ["ISO 14001", "ISO 50001", "LEED", "Energy Star", "ESG standards"],
 roi: "200% within 18 months";
 competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "Sustainability platforms"],
 marketSize: "$7.6 billion";
-growthRate: "19.2% annually",
+growthRate: "19.2% annually"
 }
 ];

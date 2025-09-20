@@ -14,4 +14,4 @@ state.items = [];
 state.itemCount = 0}
 };
 }),export const { addToWishlistremoveFromWishlistclearWishlist } = wishlistSlice.actions;
-export; default; wishlistSlice.reducer,}
+export; default; wishlistSlice.reducer}

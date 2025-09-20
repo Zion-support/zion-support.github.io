@@ -3,12 +3,12 @@ import cartReducer from './cartSlice;';
 import wishlistReducer from './wishlistSlice;';
 import authReducer from './authSlice;';
 import { safeStorage } from '@/utils/safeStorage, ';
-export const store = configureStore({
-    reducer: {
+export const store = configureStore({;
+    reducer: {;
         cart: cartReducer;
         wishlist: wishlistReducer;
         auth: authReducer;
-    },
+    }
 });
 store.subscribe(() => {
     const state = store.getState();

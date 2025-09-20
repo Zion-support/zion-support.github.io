@@ -1,14 +1,17 @@
 import React from "react";
 
 interface FuturisticHeroProps {
+  
 title: string;
 subtitle: string;
 children?: React.ReactNode;
 }
 className?: string;}
 };
-export default function FuturisticHero({ title; subtitle; children; className = "" }: FuturisticHeroProps) {
-return (
+export default function FuturisticHero() {
+  return (
+  return (
+  return (
 <section className={`relative overflow-hidden ${className}`}>;
 {/* Background effects */}
 <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-cyan-900"></div>
@@ -93,7 +96,7 @@ transition={{ delay: item.delay; duration: 1 }}
 className={`absolute ${item.color} opacity-20`}
 style={{
 left: `${20 + index * 15}%`,
-top: `${30 + (index % 2) * 20}%`,
+top: `${30 + (index % 2) * 20}%`
 }}
 >;
 {item.icon}

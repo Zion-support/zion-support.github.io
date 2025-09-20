@@ -1,5 +1,5 @@
 // Real, market-competitive micro SAAS services and IT solutions;
-export const EXPANDED_SERVICES = [
+export const EXPANDED_SERVICES = [;
     // AI & Machine Learning Services;
     {
         id: "ai-chatbot-enterprise";
@@ -23,7 +23,7 @@ export const EXPANDED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 96,
+        aiScore: 96
     };
     {
         id: "ai-predictive-analytics";
@@ -45,7 +45,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 94,
+        aiScore: 94
     };
     {
         id: "ai-document-processing";
@@ -67,7 +67,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "3-4 Weeks";
-        aiScore: 92,
+        aiScore: 92
     };
     // Cloud & DevOps Services;
     {
@@ -91,7 +91,7 @@ export const EXPANDED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 93,
+        aiScore: 93
     };
     {
         id: "devops-automation-suite";
@@ -113,7 +113,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 78;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 91,
+        aiScore: 91
     };
     {
         id: "kubernetes-management";
@@ -135,7 +135,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 45;
         location: "Global";
         availability: "3-5 Weeks";
-        aiScore: 89,
+        aiScore: 89
     };
     // Cybersecurity Services;
     {
@@ -159,7 +159,7 @@ export const EXPANDED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 95,
+        aiScore: 95
     };
     {
         id: "zero-trust-security";
@@ -181,7 +181,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 93,
+        aiScore: 93
     };
     {
         id: "incident-response-planning";
@@ -203,7 +203,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 90,
+        aiScore: 90
     };
     // Data & Analytics Services;
     {
@@ -227,7 +227,7 @@ export const EXPANDED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 92,
+        aiScore: 92
     };
     {
         id: "real-time-analytics-dashboard";
@@ -249,7 +249,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 56;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 89,
+        aiScore: 89
     };
     {
         id: "data-governance-compliance";
@@ -271,7 +271,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 91,
+        aiScore: 91
     };
     // Web & Mobile Development;
     {
@@ -294,7 +294,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 90,
+        aiScore: 90
     };
     {
         id: "mobile-app-cross-platform";
@@ -316,7 +316,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 78;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 89,
+        aiScore: 89
     };
     {
         id: "ecommerce-platform-custom";
@@ -339,7 +339,7 @@ export const EXPANDED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "10-14 Weeks";
-        aiScore: 93,
+        aiScore: 93
     };
     // Blockchain & Web3 Services;
     {
@@ -362,7 +362,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 91,
+        aiScore: 91
     };
     {
         id: "defi-protocol-development";
@@ -385,7 +385,7 @@ export const EXPANDED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "10-14 Weeks";
-        aiScore: 94,
+        aiScore: 94
     };
     // IoT & Hardware Integration;
     {
@@ -408,7 +408,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 56;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 89,
+        aiScore: 89
     };
     {
         id: "hardware-prototyping";
@@ -430,7 +430,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 78;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 90,
+        aiScore: 90
     };
     // Business Intelligence & Automation;
     {
@@ -453,7 +453,7 @@ export const EXPANDED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 91,
+        aiScore: 91
     };
     {
         id: "erp-system-custom";
@@ -476,11 +476,11 @@ export const EXPANDED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "12-16 Weeks";
-        aiScore: 94,
+        aiScore: 94
     }
 ];
     // Service categories for filtering;
-export const EXPANDED_SERVICE_CATEGORIES = [
+export const EXPANDED_SERVICE_CATEGORIES = [;
     { label: 'AI Development', value: 'ai-development' };
     { label: 'Cloud Services', value: 'cloud-services' };
     { label: 'DevOps', value: 'devops' };
@@ -505,7 +505,7 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
     'mobile-development': ['Cross-platform', 'Native iOS', 'Native Android', 'Backend API', 'Testing'],
     'blockchain': ['Smart Contracts', 'DeFi', 'NFT', 'DAO', 'Security'],
     'iot': ['Platform Development', 'Device Integration', 'Data Analytics', 'Security', 'Cloud Integration'],
-    'hardware': ['Prototyping', 'PCB Design', 'Firmware', 'Testing', 'Manufacturing Support'],
-    'business-automation': ['RPA', 'Workflow Automation', 'Process Optimization', 'Integration', 'Analytics'],
-    'business-solutions': ['ERP', 'CRM', 'HR Systems', 'Financial Systems', 'Project Management']
+    'hardware': ['Prototyping', 'PCB Design', 'Firmware', 'Testing', 'Manufacturing Support'],;
+    'business-automation': ['RPA', 'Workflow Automation', 'Process Optimization', 'Integration', 'Analytics'],;
+    'business-solutions': ['ERP', 'CRM', 'HR Systems', 'Financial Systems', 'Project Management'];
 };

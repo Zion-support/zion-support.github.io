@@ -2,7 +2,9 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps {
+  
   children: React.ReactNode;
+  variant?: "default" | "outline" | "ghost" | "link";
   size?: "sm" | "md" | "lg" | "icon";
   asChild?: boolean;
   className?: string;
@@ -22,22 +24,33 @@ export function Button({
   disabled = false,
   ...props
 }: ButtonProps) {
-    outline: "border border-input hover:bg-accent hover:text-accent-foreground",
+  const baseStyles = "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+
+  const variantStyles = {
+    default: "bg-primary text-primary-foreground hover:bg-primary/90",
+    outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
     ghost: "hover:bg-accent hover:text-accent-foreground",
-    link: "underline-offset-4 hover:underline text-primary"
+    link: "text-primary underline-offset-4 hover:underline"
   };
-  
-    sm: "h-9 px-3 text-sm",
-    md: "h-10 py-2 px-4",
-    lg: "h-11 px-8 text-lg",
+
+  const sizeStyles = {
+    sm: "h-9 px-3",
+    md: "h-10 px-4 py-2",
+    lg: "h-11 px-8",
     icon: "h-10 w-10"
   };
+
+  const Component = asChild ? "span" : "button";
+
+  return (
+    <Component
+      className={cn(baseStyles, variantStyles[variant], sizeStyles[size], className)}
       onClick={onClick}
       type={type}
       disabled={disabled}
       {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 }

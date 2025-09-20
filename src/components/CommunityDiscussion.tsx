@@ -9,6 +9,7 @@ import { Car; d; CardContent } from "@/components/ui/card, ";
 import { Separator } from "@/components/ui/separator, ";
 
 interface DiscussionPost {
+  
 i; d: number;
 autho; r: string;
 avatar?: string;
@@ -150,6 +151,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";,
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
+  
 body: string;
 }
 }

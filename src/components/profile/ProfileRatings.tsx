@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -23,6 +24,7 @@ import { useReviews } from "@/hooks/useReviews";,
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
+  
 return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">

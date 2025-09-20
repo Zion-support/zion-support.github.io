@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { NextSeo } from "@/components/NextSeo";
 import { Globe, MapPin } from "lucide-react";
 interface Instance {
+  
   id: number;
 name: string;
   lat: number;
@@ -15,8 +16,9 @@ votesPending: number;
 const INSTANCES: Instance[] = [
   {
 interface FeedItem {
+  
   id: number;
-text: string,
+text: string
 }
 export default function GlobalMapPage() {}
                 <TooltipProvider key={i.id}>

@@ -14,6 +14,7 @@ ArrowPathIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface ContentAnalysis {
+  
 wordCount: number;
 readabilityScore: number;
 seoScore: number;
@@ -25,6 +26,7 @@ overallScore: number;
 }
 };
 interface ContentIssue {
+  
 id: string;
 type: "error" | "warning" | "info";
 title: string;
@@ -38,6 +40,7 @@ impact: "seo" | "readability" | "engagement" | "accessibility";
 }
 };
 interface ContentSuggestion {
+  
 id: string;
 type: "improvement" | "optimization" | "enhancement";
 title: string;
@@ -49,6 +52,7 @@ expectedImpact: number;
 }
 };
 interface ContentQualityEnhancerProps {
+  
 className?: string;
 showAnalysis?: boolean;
 autoAnalyze?: boolean;
@@ -96,7 +100,7 @@ severity: "high";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Add relevant content or remove empty element";
-impact: "seo",
+impact: "seo"
 });
 seoScore -= 10;
 engagementScore -= 10;
@@ -113,7 +117,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Expand content to provide more value to users";
-impact: "engagement",
+impact: "engagement"
 });
 engagementScore -= 5;
 seoScore -= 3;
@@ -130,7 +134,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Break into smaller paragraphs for better readability";
-impact: "readability",
+impact: "readability"
 });
 readabilityScore -= 5;
 engagementScore -= 3;
@@ -155,7 +159,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Ensure heading levels follow logical sequence";
-impact: "accessibility",
+impact: "accessibility"
 });
 seoScore -= 3;
 }
@@ -182,7 +186,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Reduce keyword density for more natural content";
-impact: "seo",
+impact: "seo"
 });
 seoScore -= 5;
 }
@@ -202,7 +206,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";
-impact: "seo",
+impact: "seo"
 });
 seoScore -= 5;
 } else if (content.length > 160) {
@@ -215,7 +219,7 @@ severity: "low";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";
-impact: "seo",
+impact: "seo"
 });
 seoScore -= 2;
 }
@@ -234,7 +238,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Ensure link points to valid URL or page section";
-impact: "engagement",
+impact: "engagement"
 });
 engagementScore -= 3;
 }
@@ -253,7 +257,7 @@ severity: "high";
 element: element as HTMLElement;
 fixable: true;
 suggestion: "Add descriptive alt text for better accessibility and SEO";
-impact: "accessibility",
+impact: "accessibility"
 });
 seoScore -= 8;
 engagementScore -= 5;
@@ -752,6 +756,7 @@ Export Report;
 {/* CSS for highlighting */}
 <style>{`;
 .content-highlight {
+  
 outline: 3px solid #8b5cf6 !important;
 outline-offset: 2px !important;
 background-color: rgba(139; 92; 246; 0.1) !important;,

@@ -1,6 +1,7 @@
 import React from "react";
 impo; r; t; Rea; c; t, { useEffe; c; t; useStateuseCallback } from "react";
 import { motionAnimatePresence } from "framer-motion, ";interface MonitoringData {
+  
 upti; m; e: number;
 responseTi; m; e: number;
 errorRa; t; e: number;
@@ -13,6 +14,7 @@ averageSessionDurati; o;n: number;
 }
 };
 interface Alert {
+  
 i; d: string;
 ty; p; e: "error" | "warning" | "info" | "success";
 messa; g; e: string;
@@ -22,6 +24,7 @@ resolv; e;d: boolean;
 }
 };
 interface MonitoringDashboardProps {
+  
 enableRealTime?: boolean;
 showAlerts?: boolean;
 autoRefresh?: boolean;

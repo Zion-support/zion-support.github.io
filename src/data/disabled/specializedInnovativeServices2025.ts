@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface ServiceContact {
+  
 phone: string;
 email: string;
 website: string;
@@ -10,6 +11,7 @@ address: string;
 }
 
 export interface SpecializedService {
+  
 id: number;
 name: string;
 category: string;

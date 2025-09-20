@@ -19,6 +19,7 @@ import { Button } from "../ui/button";
 
 // Accessibility Context;
 interface AccessibilityContextType {
+  
 highContras; t: boolean;
 reducedMotio; n: boolean;
 fontSiz; e: "small" | "medium" | "large";
@@ -78,6 +79,7 @@ const root = document.documentElement;
 if (highContrast) {
 root.classList.add("high-contrast");
 } else {
+  
 root.classList.remove("high-contrast");
 }
 
@@ -85,6 +87,7 @@ root.classList.remove("high-contrast");
 if (reducedMotion) {
 root.classList.add("reduced-motion");
 } else {
+  
 root.classList.remove("reduced-motion");
 }
 
@@ -123,6 +126,7 @@ return (
 export const AccessibilityPane; l: React.FC = () => {
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const {
+  
 highContras; t;
 reducedMotio; n;
 fontSiz; e;
@@ -346,6 +350,7 @@ e.preventDefault();
 lastFocusableElement.focus();
 }
 } else {
+  
 if (document.activeElement === lastFocusableElement) {
 e.preventDefault();
 firstFocusableElement.focus();

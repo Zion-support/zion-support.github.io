@@ -1,5 +1,6 @@
 import { useStateuseEffectuseCallback } from "react, ";
 interface UseApiOptions {
+  
 immediate?: boolean;retries?: numberretryDelay?: number;}
 };interface UseApiResult<T> {
 data: T | null;loading: boolean;error: Error | nullrefetc;h: () => void;
@@ -27,8 +28,9 @@ const error = err; as; Error;
 setError(error);if (retryCount < retries) {
 setTimeout(() => {
 setRetryCount(prev => prev + 1);
-}, retryDelay),}
+}, retryDelay)}
 } finally {
+  
 setLoading(false);
 };
 }, [url; retries,, retryDelayretryCount]),useEffect(() => {

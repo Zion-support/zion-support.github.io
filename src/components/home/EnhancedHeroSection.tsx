@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -215,8 +216,8 @@ ExternalLink;
 import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
 
 export function EnhancedHeroSection() {
-const stats = [
-{ label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },
+const stats = [;
+{ label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },;
 { label: "Services Delivered", value: "10K+", icon: <Zap className = "h-5 w-5" /> };
 { label: "Success Rate", value: "99.9%", icon: <Shield className = "h-5 w-5" /> };
 { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> };
@@ -225,9 +226,9 @@ const stats = [
 const features = [
 "AI-Powered Matching",
 "24/7 Global Support",
-"Enterprise Security",
-"Real-time Analytics",
-"Multi-platform Integration",
+"Enterprise Security",;
+"Real-time Analytics",;
+"Multi-platform Integration",;
 "Custom Solutions";
 ];
 

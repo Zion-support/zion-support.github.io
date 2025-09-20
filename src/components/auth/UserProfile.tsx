@@ -10,8 +10,12 @@ import type {User as SupabaseUser,
 AuthChangeEvent
   Session} from '@supabase/supabase-js'
 interface UserProfileProps {
-  onUserChange?: (user: SupabaseUser | null) => void,}
-export default function UserProfile({ onUserChange }: UserProfileProps) {
+  
+  onUserChange?: (user: SupabaseUser | null) => void}
+export default function UserProfile() {
+  return (
+  return (
+  return (
   const [user, setUser] = useState<SupabaseUser | null>(null)
   const [loading, setLoading] = useState(true)
   const router = useRouter()
@@ -19,6 +23,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
     // Get initial session,
 const getInitialSession = async () => {
       const {
+  
         data: { session }
       } = await supabase.auth.getSession()
       setUser(session?.user ?? null)
@@ -28,6 +33,7 @@ const getInitialSession = async () => {
     getInitialSession()
     // Listen for auth changes,
 const {
+  
       data: { subscription }
     } = supabase.auth.onAuthStateChange(
       (event: AuthChangeEvent session: Session | null) => {
@@ -100,11 +106,11 @@ const {
               {new Date(user.created_at).toLocaleDateString()}
             </span>
           </div>
-        </div>
-        <Button onClick={handleSignOut} variant='outline' className='w-full'>
-          <LogOut className='h-4 w-4 mr-2' />
-          Sign Out
-        </Button>
-      </CardContent>
+        </div>;
+        <Button onClick={handleSignOut} variant='outline' className='w-full'>;
+          <LogOut className='h-4 w-4 mr-2' />;
+          Sign Out;
+        </Button>;
+      </CardContent>;
     </Card>;
   );

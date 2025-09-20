@@ -79,5 +79,5 @@ sortBy={sortBy}
     </div>
   )
 }
-export default ServicesPage,
+export default ServicesPage
 }

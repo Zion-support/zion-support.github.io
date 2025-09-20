@@ -6,6 +6,7 @@ import { toast } from "@/hooks/use-toast, ";
 
 
 interface ContactPublisherModalProps {
+  
 isOpe; n: boolean;
 onClos; e: () => void;
 productI;  d: string;
@@ -53,6 +54,7 @@ setError("");
 setIsLoading(true); // Set loading true;
 
 try {
+  
 await sendMessage({ productId },  { sellerId }, { subject }, { message });
 toast.success("Message sent!");
 onClose(); // Close modal;
@@ -64,6 +66,7 @@ toast.error("Failed to send message. Please try again.");
 // Optionall;  y; set a specific error message state if needed;
 // setError("Failed to send message. Please try again.");
 } finally {
+  
 setIsLoading(false); // Set loading false;
 }
 };

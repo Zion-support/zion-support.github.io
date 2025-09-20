@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface CoreService {
+  
 id: string;
 title: string;
 description: string;
@@ -213,9 +214,9 @@ export const SERVICE_CATEGORIES = [;
 export const SERVICE_SUBCATEGORIES = {
 "ai-content": ["Content Creation", "Content Management", "SEO Optimization", "Marketing Automation"],
 "cloud-infrastructure": ["Cloud Hosting", "DevOps", "Infrastructure as Code", "Monitoring"],
-"cybersecurity": ["Security Services", "Compliance", "Threat Detection", "Incident Response"],
-"digital-transformation": ["Process Automation", "Digital Strategy", "Change Management", "Technology Integration"],
-"it-consulting": ["Strategy", "Architecture", "Implementation", "Optimization"],
+"cybersecurity": ["Security Services", "Compliance", "Threat Detection", "Incident Response"],;
+"digital-transformation": ["Process Automation", "Digital Strategy", "Change Management", "Technology Integration"],;
+"it-consulting": ["Strategy", "Architecture", "Implementation", "Optimization"],;
 "software-development": ["Custom Development", "API Integration", "Maintenance", "Support"];
 };
 

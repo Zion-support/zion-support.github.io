@@ -1,5 +1,6 @@
 import { Routes; Route } from "react-router-dom, ";
 export interface ServiceContact {
+  
 phone: string;
 email: string;
 website: string;
@@ -9,6 +10,7 @@ address: string;
 }
 
 export interface MicroSaasService {
+  
 id: number;
 name: string;
 category: string;
@@ -34,6 +36,7 @@ trialPeriod: string;
 }
 
 export interface ITService {
+  
 id: number;
 name: string;
 category: string;
@@ -56,6 +59,7 @@ support: string;
 }
 
 export interface AIService {
+  
 id: number;
 name: string;
 category: string;
@@ -244,7 +248,7 @@ roi: "500% within 12 months";
 setupTime: "20 minutes";
 integrations: ["Ethereum", "Polygon", "BSC", "Arbitrum", "Optimism"],
 freeTier: true;
-trialPeriod: "7 days",
+trialPeriod: "7 days"
 };
 {id: 2;
 name: "NFT Marketplace Builder";
@@ -285,7 +289,7 @@ roi: "400% within 6 months";
 setupTime: "2-3 days";
 integrations: ["Ethereum", "Polygon", "Solana", "Flow", "Tezos"],
 freeTier: false;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Cybersecurity & Compliance Services;
@@ -326,7 +330,7 @@ responseTime: "2 hours";
 sla: "99.9% uptime";
 certifications: ["CISSP", "CISM", "ISO 27001", "SOC 2"],
 deliveryTime: "4-6 weeks";
-support: "24/7",
+support: "24/7"
 };
 {id: 2;
 name: "AI-Powered Threat Hunting";
@@ -364,7 +368,7 @@ responseTime: "1 hour";
 sla: "99.99% uptime";
 certifications: ["GCIH", "GCFA", "CISSP", "CEH"],
 deliveryTime: "6-8 weeks";
-support: "24/7",
+support: "24/7"
 }
 ];
 // Cloud & DevOps Services;
@@ -405,7 +409,7 @@ responseTime: "4 hours";
 sla: "99.5% uptime";
 certifications: ["AWS", "Azure", "GCP", "Kubernetes"],
 deliveryTime: "3-5 weeks";
-support: "Business hours",
+support: "Business hours"
 }
 ];
 // Healthcare & Biotech Services;
@@ -493,7 +497,7 @@ roi: "300% within 18 months";
 setupTime: "2-4 weeks";
 integrations: ["5G networks", "Edge devices", "Cloud platforms", "Legacy systems"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Quantum Computing Services;
@@ -581,7 +585,7 @@ roi: "400% within 12 months";
 setupTime: "1-2 weeks";
 integrations: ["GIS systems", "Weather APIs", "Agricultural platforms", "Environmental databases"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Sustainability & Green Tech Services;
@@ -625,7 +629,7 @@ roi: "200% within 6 months";
 setupTime: "1 week";
 integrations: ["ERP systems", "Energy meters", "Transportation data", "Supply chain platforms"],
 freeTier: true;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Fintech & Digital Banking Services;
@@ -669,7 +673,7 @@ roi: "350% within 8 months";
 setupTime: "2-3 weeks";
 integrations: ["Banking systems", "Credit bureaus", "Alternative data sources", "CRM platforms"],
 freeTier: false;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Education & EdTech Services;
@@ -713,7 +717,7 @@ roi: "250% within 6 months";
 setupTime: "1 week";
 integrations: ["LMS systems", "Video platforms", "Assessment tools", "Communication platforms"],
 freeTier: true;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Real Estate & PropTech Services;
@@ -757,7 +761,7 @@ roi: "300% within 12 months";
 setupTime: "2-3 weeks";
 integrations: ["IoT devices", "Accounting software", "Payment gateways", "Communication tools"],
 freeTier: false;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Logistics & Supply Chain Services;
@@ -801,7 +805,7 @@ roi: "400% within 18 months";
 setupTime: "4-6 weeks";
 integrations: ["ERP systems", "WMS", "TMS", "E-commerce platforms"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Entertainment & Media Services;
@@ -845,7 +849,7 @@ roi: "300% within 6 months";
 setupTime: "1 week";
 integrations: ["Video platforms", "Social media", "CMS systems", "Design tools"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Export all services;

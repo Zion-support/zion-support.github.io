@@ -6,6 +6,7 @@ import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface Conversation {
+  
             )}
             onClick={() => onSelectConversation(conversation.id)}          >
             <div className='flex items-center gap-3 py-3 cursor-pointer'>

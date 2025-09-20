@@ -2,6 +2,7 @@ import React from "react;";
 import { motion } from "framer-motion, ";
 
 interface EnhancedLoadingProps {
+  
 variant?: "spinner" | "dots" | "pulse" | "bars";
 size?: "sm" | "md" | "lg" | "xl";
 text?: string;

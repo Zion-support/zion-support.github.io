@@ -1,5 +1,5 @@
 // Advanced Cybersecurity Services for 2025;
-export const advancedCybersecurityServices2025 = [
+export const advancedCybersecurityServices2025 = [;
     {id: 1;
         name: "Zero Trust Security Mesh";
         category: "Zero Trust Security";
@@ -53,7 +53,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: true;
-        threatIntelligence: true,
+        threatIntelligence: true
     };
     {id: 2;
         name: "AI-Powered Threat Intelligence";
@@ -108,7 +108,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true,
+        threatIntelligence: true
     };
     {id: 3;
         name: "Quantum-Resistant Cryptography";
@@ -163,7 +163,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: false;
         quantumResistant: true;
-        threatIntelligence: false,
+        threatIntelligence: false
     };
     {id: 4;
         name: "Privacy-Preserving Analytics";
@@ -218,7 +218,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: false,
+        threatIntelligence: false
     };
     {id: 5;
         name: "Cloud Security Posture Management";
@@ -273,7 +273,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true,
+        threatIntelligence: true
     };
     {id: 6;
         name: "IoT Security Guardian";
@@ -328,7 +328,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true,
+        threatIntelligence: true
     }
 ];
     export default advancedCybersecurityServices2025;

@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -19,6 +20,7 @@ export default ProjectDetailsFields,;<//div><///div>
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 interface ProjectDetailsFieldsProps {
+  
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>}
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {

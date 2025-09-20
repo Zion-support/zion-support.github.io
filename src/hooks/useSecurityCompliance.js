@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
-export const useSecurityCompliance = (_initialConfig) => {
+export const useSecurityCompliance = (_initialConfig) => {;
     const { trackEvent } = useAnalytics({enableTracking: true;
         enableUserBehaviorTracking: true});
     const [securityEvents, setSecurityEvents] = useState([]);
@@ -17,7 +17,7 @@ export const useSecurityCompliance = (_initialConfig) => {
     const monitoringIntervalRef = useRef();
     const complianceCheckIntervalRef = useRef();
     // Default compliance rules;
-    const defaultComplianceRules = [
+    const defaultComplianceRules = [;
         {id: 'gdpr-data-protection';
             name: 'GDPR Data Protection';
             category: 'gdpr';
@@ -71,8 +71,8 @@ export const useSecurityCompliance = (_initialConfig) => {
         }
     }, [complianceRules.length]);
     // Start real-time security monitoring;
-    const startMonitoring = useCallback(() => {
-        if (isMonitoring)
+    const startMonitoring = useCallback(() => {;
+        if (isMonitoring);
             return;
         setIsMonitoring(true);
         trackEvent('security', 'monitoring', 'started');
@@ -82,23 +82,23 @@ export const useSecurityCompliance = (_initialConfig) => {
             const randomEvent = Math.random();
             if (randomEvent < 0.1) { // 10% chance of event;
                 const eventTypes = [
-                    'authentication',
-                    'data_access',
-                    'system_change'
+                    'authentication',;
+                    'data_access',;
+                    'system_change';
                 ];
                 const randomType = eventTypes[Math.floor(Math.random() * eventTypes.length)];
                 addSecurityEvent({
                     type: randomType;
                     severity: 'low';
                     details: `Simulated ${randomType} event for testing`;
-                    status: 'new',
+                    status: 'new'
                 });
      }
         }, 30000); // Check every 30 seconds;
     }, [isMonitoring, trackEvent]);
     // Stop security monitoring;
-    const stopMonitoring = useCallback(() => {
-        if (!isMonitoring)
+    const stopMonitoring = useCallback(() => {;
+        if (!isMonitoring);
             return;
         setIsMonitoring(false);
         trackEvent('security', 'monitoring', 'stopped');
@@ -109,9 +109,9 @@ export const useSecurityCompliance = (_initialConfig) => {
     // Add security event;
     const addSecurityEvent = useCallback((event) => {
         const newEvent = {
-            ...event,
-            id: `event-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-            timestamp: new Date(),
+            ...event,;
+            id: `event-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,;
+            timestamp: new Date();
         };
     setSecurityEvents(prev => [newEvent, ...prev]);
         trackEvent('security', 'event', 'created', undefined, { eventType: event.type, severity: event.severity });
@@ -126,37 +126,39 @@ export const useSecurityCompliance = (_initialConfig) => {
      }
     }, [trackEvent]);
     // Update event status;
-    const updateEventStatus = useCallback((eventId, status) => {
+    const updateEventStatus = useCallback((eventId, status) => {;
         setSecurityEvents(prev => prev.map(event => event.id === eventId ? { ...event, status } : event));
         trackEvent('security', 'event', 'status_updated', undefined, { newStatus: status });
      }, [trackEvent]);
     // Add compliance rule;
     const addComplianceRule = useCallback((rule) => {
-        const newRule = {
-            ...rule,
-            id: `rule-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+        const newRule = {;
+            ...rule,;
+            id: `rule-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,;
             lastChecked: new Date();
             nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours;
-            violations: [],
+            violations: []
         };
     setComplianceRules(prev => [...prev, newRule]);
         trackEvent('compliance', 'rule', 'added', undefined, { category: rule.category });
      }, [trackEvent]);
     // Check compliance;
-    const checkCompliance = useCallback(async () => {
+    const checkCompliance = useCallback(async () => {;
         setIsComplianceChecking(true);
         trackEvent('compliance', 'check', 'started');
         try {
+  
             // Simulate compliance checking;
             await new Promise(resolve => setTimeout(resolve, 2000));
             // Update compliance status based on security events;
-            const recentViolations = securityEvents.filter(event => event.type === 'compliance_violation' &&
+            const recentViolations = securityEvents.filter(event => event.type === 'compliance_violation' &&;
                 event.timestamp > new Date(Date.now() - 24 * 60 * 60 * 1000) // Last 24 hours;
             );
             setComplianceRules(prev => prev.map(rule => {
                 const ruleViolations = recentViolations.filter(violation => violation.details.includes(rule.name.toLowerCase()));
                 const newStatus = ruleViolations.length > 0 ? 'non_compliant' : 'compliant';
                 return {
+  
                     ...rule,
                     status: newStatus;
                     lastChecked: new Date();
@@ -167,7 +169,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                         severity: violation.severity;
                         description: violation.details;
                         timestamp: violation.timestamp;
-                        status: 'open',
+                        status: 'open'
                     }))
                 };
      }));
@@ -183,11 +185,12 @@ export const useSecurityCompliance = (_initialConfig) => {
             trackEvent('compliance', 'check', 'failed', undefined, { error: error instanceof Error ? error.message : 'Unknown error' });
      }
         finally {
+  
             setIsComplianceChecking(false);
         }
     }, [securityEvents, complianceRules, trackEvent]);
     // Generate security report;
-    const generateSecurityReport = useCallback(() => {const report = {
+    const generateSecurityReport = useCallback(() => {const report = {;
             timestamp: new Date().toISOString();
             metrics: securityMetrics;
             recentEvents: securityEvents.slice(0, 10),
@@ -195,7 +198,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                 name: rule.name;
                 status: rule.status;
                 violations: rule.violations.length}));
-            recommendations: [],
+            recommendations: []
         };
     // Generate recommendations;
         if (securityMetrics.complianceScore < 80) {
@@ -211,7 +214,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         return JSON.stringify(report, null, 2);
     }, [securityMetrics, securityEvents, complianceRules, trackEvent]);
     // Export audit log;
-    const exportAuditLog = useCallback(() => {const auditLog = {
+    const exportAuditLog = useCallback(() => {const auditLog = {;
             exportTimestamp: new Date().toISOString();
             totalEvents: securityEvents.length;
             events: securityEvents.map(event => ({
@@ -230,9 +233,9 @@ export const useSecurityCompliance = (_initialConfig) => {
         return JSON.stringify(auditLog, null, 2);
     }, [securityEvents, trackEvent]);
     // Configure security settings;
-    const configureSecurity = useCallback((config) => {
-        if (config.enableRealTimeMonitoring !== undefined) {
-            if (config.enableRealTimeMonitoring && !isMonitoring) {
+    const configureSecurity = useCallback((config) => {;
+        if (config.enableRealTimeMonitoring !== undefined) {;
+            if (config.enableRealTimeMonitoring && !isMonitoring) {;
                 startMonitoring();
             }
             else if (!config.enableRealTimeMonitoring && isMonitoring) {
@@ -269,6 +272,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         };
     }, [isMonitoring, checkCompliance]);
     return {
+  
         securityEvents,
         complianceRules,
         securityMetrics,

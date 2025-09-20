@@ -3,6 +3,7 @@ import { CartItem } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 
 interface CartState {
+  
 items: CartItem[];
 }
 }
@@ -12,8 +13,10 @@ const loadState: any = (): CartItem[] => {;
 const stored = safeStorage.getItem("zion_cart");
 if (!stored) return [];
 try {
+  
 return JSON.parse(stored) as CartItem[];
 } catch {
+  
 return [];
 }
 };
@@ -37,6 +40,7 @@ const existing = state.items.find(i => i.id === action.payload.id);
 if (existing) {
 existing.quantity += 1;
 } else {
+  
 state.items.push({
 id: action.payload.id;
 name: action.payload.title;
@@ -64,8 +68,8 @@ state.items = action.payload;
 },
 clear: state => {
 state.items = [];
-},
-},
+}
+}
 });
 
 export const { addItem; removeItem; updateQuantity; setItems; clear } =

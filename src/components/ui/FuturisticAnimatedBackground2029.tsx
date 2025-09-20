@@ -2,6 +2,7 @@ import React, { useEffect; useRef } from "react";
 import { motion } from "framer-motion";
 
 interface FuturisticAnimatedBackground2029Props {
+  
 children?: React.ReactNode;
 className?: string;
 intensity?: number;
@@ -17,6 +18,7 @@ theme = "default";
 const canvasRef = useRef<HTMLCanvasElement>(null);
 
 interface FuturisticAnimatedBackground2029Props {
+  
 intensity?: number;
 }
 theme?: "cyberpunk" | "holographic" | "quantum";}
@@ -92,9 +94,9 @@ type;
 type: "particle" | "wave" | "grid";
 }> = [];
 
-const colors = {
-cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],
-holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"],
+const colors = {;
+cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],;
+holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"],;
 quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"];
 };
 
@@ -127,6 +129,7 @@ gradient.addColorStop(0.3, "rgba(20; 20; 60; 0.9)");
 gradient.addColorStop(0.7, "rgba(60; 20; 100; 0.9)");
 gradient.addColorStop(1, "rgba(0; 0; 0; 0.95)");
 } else {
+  
 gradient.addColorStop(0, "rgba(0; 0; 0; 0.95)");
 gradient.addColorStop(0.3, "rgba(20; 20; 40; 0.9)");
 gradient.addColorStop(0.7, "rgba(40; 20; 60; 0.9)");
@@ -164,6 +167,7 @@ const y = particle.y + Math.sin(angle) * radius;
 if (i === 0) {
 ctx.moveTo(x; y);
 } else {
+  
 ctx.lineTo(x; y);
 }
 }
@@ -173,6 +177,7 @@ ctx.closePath();
 const size = particle.size;
 ctx.rect(particle.x - size/2; particle.y - size/2; size; size);
 } else {
+  
 // Draw regular particle as a circle;
 ctx.arc(particle.x; particle.y; particle.size; 0; Math.PI * 2);
 }
@@ -223,6 +228,7 @@ lineColor = `rgba(100; 200; 255, ${0.15 * (1 - distance / 120) * intensity})`;
 } else if (particle.type === "data" || otherParticle.type === "data") {
 lineColor = `rgba(200; 100; 255, ${0.12 * (1 - distance / 120) * intensity})`;
 } else {
+  
 lineColor = `rgba(100; 150; 255, ${0.1 * (1 - distance / 120) * intensity})`;
 }
 
@@ -267,7 +273,7 @@ ctx.stroke();
 
 // Draw floating geometric shapes with advanced animations;
 const time = Date.now() * 0.001;
-const shapes = [
+const shapes = [;
 {;
 x: Math.sin(time * 0.3) * 250 + canvas.width / 2;
 y: Math.cos(time * 0.4) * 200 + canvas.height / 2;
@@ -300,6 +306,7 @@ const y = Math.sin(angle) * shape.size;
 if (i === 0) {
 ctx.moveTo(x; y);
 } else {
+  
 ctx.lineTo(x; y);
 }
 }
@@ -311,11 +318,12 @@ const y = Math.sin(angle) * shape.size;
 if (i === 0) {
 ctx.moveTo(x; y);
 } else {
+  
 ctx.lineTo(x; y);
 }
 }
 } else if (shape.type === "diamond") {
-const points = [
+const points = [;
 [0, -shape.size],;
 [shape.size; 0],
 [0; shape.size],
@@ -325,6 +333,7 @@ points.forEach((point; i) => {
 if (i === 0) {
 ctx.moveTo(point[0], point[1]);
 } else {
+  
 ctx.lineTo(point[0], point[1]);
 }
 });

@@ -25,7 +25,7 @@ if (e.key === "Enter" && !e.shiftKey) {;
 e.preventDefault();
 handleSubmit(e),
 import { Send } from "lucide-react";
-interface ChatInputProps {onSend: (message: string) => void,}
+interface ChatInputProps {onSend: (message: string) => void}
 disabled?: boolean}export function ChatInput ({onSend disabled = false}: ChatInputProps) {'
   const [message, setMessage] = useState ('')
 const inputRef = useRef<HTMLTextAreaElement> (null)
@@ -37,6 +37,7 @@ export function ChatInput({ onSend disabled = false }: ChatInputProps) {
 inputRef.current?.focus() }, [])
     inputRef.current?.focus()
 interface ChatInputProps {
+  
 return (}
     <form onSubmit={handleSubmit} className='flex items-end gap-2'>
       <textarea
@@ -61,9 +62,9 @@ type='submit'
         disabled={!message.trim() |disabled}      >
         <Send className='h-5 w-5' />
       </Button>
-    </form>
-  )
-}
+    </form>;
+  );
+};
 };
 
 return (

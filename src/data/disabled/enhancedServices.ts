@@ -576,9 +576,9 @@ export const ENHANCED_SERVICE_CATEGORIES = [
 { label: "Business Intelligence", value: "business-intelligence" },
 { label: "Development & DevOps", value: "development-devops" },
 { label: "Digital Transformation", value: "digital-transformation" },
-{ label: "Healthcare Technology", value: "healthcare-tech" },
-{ label: "Financial Technology", value: "fintech" },
-{ label: "Blockchain", value: "blockchain" },
+{ label: "Healthcare Technology", value: "healthcare-tech" },;
+{ label: "Financial Technology", value: "fintech" },;
+{ label: "Blockchain", value: "blockchain" },;
 { label: "Quantum Computing", value: "quantum-computing" };
 ];
 
@@ -594,8 +594,8 @@ export const PRICING_TIERS = SERVICE_PRICING_TIERS;
 
 // Contact information;
 export const CONTACT_INFO = {
-mobile: "+1 302 464 0950",
-email: "kleber@ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
+mobile: "+1 302 464 0950",;
+email: "kleber@ziontechgroup.com",;
+address: "364 E Main St STE 1008 Middletown DE 19709",;
 website: "https://ziontechgroup.com",;
 };

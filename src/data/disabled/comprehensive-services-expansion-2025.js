@@ -1,5 +1,5 @@
 // Advanced AI & Machine Learning Services;
-export const advancedAIServices2025 = [
+export const advancedAIServices2025 = [;
     {id: 1;
         name: "QuantumAI Vision Pro";
         category: "Computer Vision";
@@ -122,7 +122,7 @@ export const advancedAIServices2025 = [
     }
 ];
 // Blockchain & Web3 Services;
-export const blockchainWeb3Services2025 = [
+export const blockchainWeb3Services2025 = [;
     {id: 1;
         name: "DeFi Portfolio Manager";
         category: "DeFi";
@@ -162,7 +162,7 @@ export const blockchainWeb3Services2025 = [
         setupTime: "20 minutes";
         integrations: ["Ethereum", "Polygon", "BSC", "Arbitrum", "Optimism"],
         freeTier: true;
-        trialPeriod: "7 days",
+        trialPeriod: "7 days"
     };
     {id: 2;
         name: "NFT Marketplace Builder";
@@ -203,11 +203,11 @@ export const blockchainWeb3Services2025 = [
         setupTime: "2-3 days";
         integrations: ["Ethereum", "Polygon", "Solana", "Flow", "Tezos"],
         freeTier: false;
-        trialPeriod: "14 days",
+        trialPeriod: "14 days"
     }
 ];
     // Cybersecurity & Compliance Services;
-export const cybersecurityServices2025 = [
+export const cybersecurityServices2025 = [;
     {id: 1;
         name: "Zero Trust Security Suite";
         category: "Cybersecurity";
@@ -244,7 +244,7 @@ export const cybersecurityServices2025 = [
         sla: "99.9% uptime";
         certifications: ["CISSP", "CISM", "ISO 27001", "SOC 2"],
         deliveryTime: "4-6 weeks";
-        support: "24/7",
+        support: "24/7"
     };
     {id: 2;
         name: "AI-Powered Threat Hunting";
@@ -282,11 +282,11 @@ export const cybersecurityServices2025 = [
         sla: "99.99% uptime";
         certifications: ["GCIH", "GCFA", "CISSP", "CEH"],
         deliveryTime: "6-8 weeks";
-        support: "24/7",
+        support: "24/7"
     }
 ];
     // Cloud & DevOps Services;
-export const cloudDevOpsServices2025 = [
+export const cloudDevOpsServices2025 = [;
     {id: 1;
         name: "Multi-Cloud Orchestration";
         category: "Cloud Management";
@@ -323,11 +323,11 @@ export const cloudDevOpsServices2025 = [
         sla: "99.5% uptime";
         certifications: ["AWS", "Azure", "GCP", "Kubernetes"],
         deliveryTime: "3-5 weeks";
-        support: "Business hours",
+        support: "Business hours"
     }
 ];
     // Healthcare & Biotech Services;
-export const healthcareBiotechServices2025 = [
+export const healthcareBiotechServices2025 = [;
     {id: 1;
         name: "MedAI Diagnostics";
         category: "Healthcare AI";
@@ -370,7 +370,7 @@ export const healthcareBiotechServices2025 = [
     }
 ];
 // IoT & Edge Computing Services;
-export const iotEdgeServices2025 = [
+export const iotEdgeServices2025 = [;
     {id: 1;
         name: "SmartCity IoT Platform";
         category: "IoT";
@@ -410,11 +410,11 @@ export const iotEdgeServices2025 = [
         setupTime: "2-4 weeks";
         integrations: ["5G networks", "Edge devices", "Cloud platforms", "Legacy systems"],
         freeTier: false;
-        trialPeriod: "30 days",
+        trialPeriod: "30 days"
     }
 ];
     // Quantum Computing Services;
-export const quantumComputingServices2025 = [
+export const quantumComputingServices2025 = [;
     {id: 1;
         name: "Quantum Optimization Engine";
         category: "Quantum Computing";
@@ -457,7 +457,7 @@ export const quantumComputingServices2025 = [
     }
 ];
 // Space & Aerospace Services;
-export const spaceAerospaceServices2025 = [
+export const spaceAerospaceServices2025 = [;
     {id: 1;
         name: "Satellite Data Analytics";
         category: "Space Tech";
@@ -497,11 +497,11 @@ export const spaceAerospaceServices2025 = [
         setupTime: "1-2 weeks";
         integrations: ["GIS systems", "Weather APIs", "Agricultural platforms", "Environmental databases"],
         freeTier: true;
-        trialPeriod: "14 days",
+        trialPeriod: "14 days"
     }
 ];
     // Sustainability & Green Tech Services;
-export const sustainabilityServices2025 = [
+export const sustainabilityServices2025 = [;
     {id: 1;
         name: "Carbon Footprint Tracker";
         category: "Sustainability";
@@ -541,11 +541,11 @@ export const sustainabilityServices2025 = [
         setupTime: "1 week";
         integrations: ["ERP systems", "Energy meters", "Transportation data", "Supply chain platforms"],
         freeTier: true;
-        trialPeriod: "30 days",
+        trialPeriod: "30 days"
     }
 ];
     // Fintech & Digital Banking Services;
-export const fintechServices2025 = [
+export const fintechServices2025 = [;
     {id: 1;
         name: "AI-Powered Credit Scoring";
         category: "Fintech";
@@ -585,11 +585,11 @@ export const fintechServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["Banking systems", "Credit bureaus", "Alternative data sources", "CRM platforms"],
         freeTier: false;
-        trialPeriod: "14 days",
+        trialPeriod: "14 days"
     }
 ];
     // Education & EdTech Services;
-export const educationEdTechServices2025 = [
+export const educationEdTechServices2025 = [;
     {id: 1;
         name: "Adaptive Learning Platform";
         category: "EdTech";
@@ -629,11 +629,11 @@ export const educationEdTechServices2025 = [
         setupTime: "1 week";
         integrations: ["LMS systems", "Video platforms", "Assessment tools", "Communication platforms"],
         freeTier: true;
-        trialPeriod: "30 days",
+        trialPeriod: "30 days"
     }
 ];
     // Real Estate & PropTech Services;
-export const realEstatePropTechServices2025 = [
+export const realEstatePropTechServices2025 = [;
     {id: 1;
         name: "Smart Property Management";
         category: "PropTech";
@@ -673,11 +673,11 @@ export const realEstatePropTechServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["IoT devices", "Accounting software", "Payment gateways", "Communication tools"],
         freeTier: false;
-        trialPeriod: "14 days",
+        trialPeriod: "14 days"
     }
 ];
     // Logistics & Supply Chain Services;
-export const logisticsSupplyChainServices2025 = [
+export const logisticsSupplyChainServices2025 = [;
     {id: 1;
         name: "Supply Chain Intelligence";
         category: "Logistics";
@@ -717,11 +717,11 @@ export const logisticsSupplyChainServices2025 = [
         setupTime: "4-6 weeks";
         integrations: ["ERP systems", "WMS", "TMS", "E-commerce platforms"],
         freeTier: false;
-        trialPeriod: "30 days",
+        trialPeriod: "30 days"
     }
 ];
     // Entertainment & Media Services;
-export const entertainmentMediaServices2025 = [
+export const entertainmentMediaServices2025 = [;
     {id: 1;
         name: "AI Content Creation Studio";
         category: "Media";
@@ -761,7 +761,7 @@ export const entertainmentMediaServices2025 = [
         setupTime: "1 week";
         integrations: ["Video platforms", "Social media", "CMS systems", "Design tools"],
         freeTier: true;
-        trialPeriod: "14 days",
+        trialPeriod: "14 days"
     }
 ];
     // Export all services;
@@ -780,11 +780,11 @@ export const allExpandedServices2025 = {advancedAI: advancedAIServices2025;
     logistics: logisticsSupplyChainServices2025;
     entertainment: entertainmentMediaServices2025};
     // Helper functions;
-export const getServicesByCategory = (category) => {
+export const getServicesByCategory = (category) => {;
     const allServices = Object.values(allExpandedServices2025).flat();
     return allServices.filter(service => service.category === category);
 };
-export const getServicesByPriceRange = (minPrice, maxPrice) => {
+export const getServicesByPriceRange = (minPrice, maxPrice) => {;
     const allServices = Object.values(allExpandedServices2025).flat();
     return allServices.filter(service => {
         if ('price' in service) {
@@ -796,11 +796,11 @@ export const getServicesByPriceRange = (minPrice, maxPrice) => {
         return false;
     });
 };
-export const getPopularServices = (limit = 10) => {
+export const getPopularServices = (limit = 10) => {;
     const allServices = Object.values(allExpandedServices2025).flat();
     return allServices.slice(0, limit);
 };
-export const searchServices = (query) => {
+export const searchServices = (query) => {;
     const allServices = Object.values(allExpandedServices2025).flat();
     const searchTerm = query.toLowerCase();
     return allServices.filter(service => service.name.toLowerCase().includes(searchTerm) ||

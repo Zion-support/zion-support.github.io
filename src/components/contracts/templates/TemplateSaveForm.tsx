@@ -62,9 +62,11 @@ aria-label='Default template'
   )
 setSaving (true)
 try {
+  
   if (editTemplate) {
   await updateTemplate.mutateAsync ({
   <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
+  
   ...field "
 }placeholder="Enter template name" />
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "

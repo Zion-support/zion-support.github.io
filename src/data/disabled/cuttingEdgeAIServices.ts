@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface CuttingEdgeAIService {
+  
 id: string;
 title: string;
 description: string;
@@ -78,7 +79,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/autonomous-ai-research",
+websiteUrl: "https://ziontechgroup.com/autonomous-ai-research"
 };
 // AI Consciousness Evolution Platform;
 {id: "ai-consciousness-evolution-platform";
@@ -128,7 +129,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution",
+websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution"
 };
 // AI Autonomous Business Manager;
 {id: "ai-autonomous-business-manager";
@@ -178,7 +179,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-business-manager",
+websiteUrl: "https://ziontechgroup.com/ai-business-manager"
 };
 // AI Autonomous Creative Director;
 {id: "ai-autonomous-creative-director";
@@ -228,7 +229,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-creative-director",
+websiteUrl: "https://ziontechgroup.com/ai-creative-director"
 };
 // AI Autonomous Code Review System;
 {id: "ai-autonomous-code-review-system";
@@ -278,6 +279,6 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-code-review",
+websiteUrl: "https://ziontechgroup.com/ai-code-review"
 }
 ];

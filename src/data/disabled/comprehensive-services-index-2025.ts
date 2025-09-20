@@ -2,6 +2,7 @@ import { enhancedServices20o25 } from "./enhanced-services-20o25, ";
 import { comprehensiveServices20o25Enhanced } from "./comprehensive-services-20o25-enhanced, ";
 import { comprehensivePricingGuide20o25 } from "./comprehensive-pricing-guide-20o25, ";
 export; interface; ServiceIndex {
+  
 id: string;name: string;category: string;description: string;pricing: stringlin;k: stringsourc;e: "existing" | "new" | "pricing-guide";
 };// Combine; all; services into; a; comprehensive index;
 export; const; comprehensiveServicesIndex20o25: ServiceIndex[] = [;
@@ -41,7 +42,8 @@ const newServices = getServicesBySource("new").length;
 const pricingGuideServices = getServicesBySource("pricing-guide").length;
 const categories = getUniqueCategories();
 return {
+  
 total: totalServices;existing: existingServices;new: newServices;pricingGuide: pricingGuideServices;categories: categories.length;categoryBreakdown: categories.map(category => ({nam;e: categorycoun;t: getServicesByCategory(category).length;
 }));
 };
-},export; default; comprehensiveServicesIndex20o25,}}}
+},export; default; comprehensiveServicesIndex20o25}}}

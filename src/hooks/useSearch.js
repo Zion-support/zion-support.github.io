@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from 'react, ';
-export const useSearch = (data, options) => {
+export const useSearch = (data, options) => {;
     const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options;
     const [searchState, setSearchState] = useState({
         query: '';
@@ -8,19 +8,19 @@ export const useSearch = (data, options) => {
         sortOrder: 'asc';
         results: data;
         isLoading: false;
-        totalResults: data.length,
+        totalResults: data.length
     });
     const [debouncedQuery, setDebouncedQuery] = useState('');
     // Debounce search query;
     useEffect(() => {
-        const timer = setTimeout(() => {
+        const timer = setTimeout(() => {;
             setDebouncedQuery(searchState.query);
         }, debounceMs);
         return () => clearTimeout(timer);
     }, [searchState.query, debounceMs]);
     // Fuzzy search algorithm;
-    const fuzzyMatch = useCallback((text, query) => {
-        if (!query)
+    const fuzzyMatch = useCallback((text, query) => {;
+        if (!query);
             return true;
         const searchText = caseSensitive ? text : text.toLowerCase();
         const searchQuery = caseSensitive ? query : query.toLowerCase();
@@ -36,7 +36,7 @@ export const useSearch = (data, options) => {
         return queryIndex === searchQuery.length;
     }, [fuzzySearch, caseSensitive]);
     // Search and filter data;
-    const processedData = useMemo(() => {
+    const processedData = useMemo(() => {;
         setSearchState(prev => ({ ...prev, isLoading: true }));
     let results = data;
         // Apply search;
@@ -84,6 +84,7 @@ export const useSearch = (data, options) => {
                     comparison = aValue - bValue;
                 }
                 else {
+  
                     comparison = String(aValue).localeCompare(String(bValue));
                 }
                 return searchState.sortOrder === 'asc' ? comparison : -comparison;
@@ -96,39 +97,39 @@ export const useSearch = (data, options) => {
     return results;
     }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
     // Update search query;
-    const setQuery = useCallback((query) => {
+    const setQuery = useCallback((query) => {;
         setSearchState(prev => ({ ...prev, query }));
     }, []);
     // Update filters;
     const setFilter = useCallback((key, value) => {
-        setSearchState(prev => ({
-            ...prev,
-            filters: { ...prev.filters, [key]: value }
+        setSearchState(prev => ({;
+            ...prev,;
+            filters: { ...prev.filters, [key]: value };
         }));
     }, []);
     // Clear all filters;
-    const clearFilters = useCallback(() => {
+    const clearFilters = useCallback(() => {;
         setSearchState(prev => ({ ...prev, filters: {} }));
      }, []);
     // Update sorting;
-    const setSort = useCallback((field, order = 'asc') => {setSearchState(prev => ({
-            ...prev,
+    const setSort = useCallback((field, order = 'asc') => {setSearchState(prev => ({;
+            ...prev,;
             sortBy: field;
             sortOrder: order}));
      }, []);
     // Clear search;
-    const clearSearch = useCallback(() => {
-        setSearchState(prev => ({
-            ...prev,
+    const clearSearch = useCallback(() => {;
+        setSearchState(prev => ({;
+            ...prev,;
             query: '';
             filters: {};
             sortBy: null;
-            sortOrder: 'asc',
+            sortOrder: 'asc'
         }));
      }, []);
     // Get search suggestions;
-    const getSuggestions = useCallback((query, maxSuggestions = 5) => {
-        if (!query || query.length < 2)
+    const getSuggestions = useCallback((query, maxSuggestions = 5) => {;
+        if (!query || query.length < 2);
             return [];
         const suggestions = new Set();
         searchFields.forEach(field => {
@@ -150,6 +151,7 @@ export const useSearch = (data, options) => {
     const getPaginatedResults = useCallback((page, pageSize) => {const startIndex = (page - 1) * pageSize;
         const endIndex = startIndex + pageSize;
         return {
+  
             results: searchState.results.slice(startIndex, endIndex),
             totalPages: Math.ceil(searchState.totalResults / pageSize);
             currentPage: page;
@@ -157,6 +159,7 @@ export const useSearch = (data, options) => {
             hasPrevPage: page > 1};
      }, [searchState.results, searchState.totalResults]);
     return {
+  
         ...searchState,
         setQuery,
         setFilter,

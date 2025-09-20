@@ -132,5 +132,6 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+;

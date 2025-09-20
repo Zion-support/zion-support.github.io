@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface EmergingTechnologyService2025 {
+  
 id: string;
 title: string;
 description: string;

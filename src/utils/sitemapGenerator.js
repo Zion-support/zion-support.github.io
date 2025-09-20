@@ -1,4 +1,5 @@
 export class SitemapGenerator {
+  
     config;
     constructor(config) {
         this.config = {
@@ -17,9 +18,9 @@ export class SitemapGenerator {
         const urlElements = urls.map(url => {
             const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
-        ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
-        ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
-        ${url.priority ? `<priority>${url.priority}</priority>` : ''}
+        ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''};
+        ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''};
+        ${url.priority ? `<priority>${url.priority}</priority>` : ''};
       </url>`;
             return urlElement.replace(/\s+/g, ' ').trim();
         }).join('');
@@ -33,9 +34,9 @@ export class SitemapGenerator {
         const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
     const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
-            return `<sitemap>
-        <loc>${sitemap}</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
+            return `<sitemap>;
+        <loc>${sitemap}</loc>;
+        <lastmod>${new Date().toISOString()}</lastmod>;
       </sitemap>`;
         }).join('');
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
@@ -73,12 +74,12 @@ Crawl-delay: 1`;
      */
     generateJSON() {
         const { baseUrl, urls } = this.config;
-        const jsonSitemap = {
-            baseUrl,
-            urls: urls.map(url => ({
+        const jsonSitemap = {;
+            baseUrl,;
+            urls: urls.map(url => ({;
                 ...url;
                 fullUrl: `${baseUrl}${url.url}`;
-                lastmod: url.lastmod || new Date().toISOString(),
+                lastmod: url.lastmod || new Date().toISOString()
             }))
         };
     return JSON.stringify(jsonSitemap, null, 2);
@@ -93,9 +94,9 @@ Crawl-delay: 1`;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap - Zion Tech Group</title>
-    <meta name="description" content="Complete sitemap of Zion Tech Group website">
-    <style>
+    <title>Sitemap - Zion Tech Group</title>;
+    <meta name="description" content="Complete sitemap of Zion Tech Group website">;
+    <style>;
         body { font-family: Arial, sans-serif; margin: 40px;
     line-height: 1.6;
      }
@@ -199,7 +200,7 @@ Crawl-delay: 1`;
     }
 }
 // Default sitemap configuration for Zion Tech Group;
-export const defaultSitemapConfig = {
+export const defaultSitemapConfig = {;
     baseUrl: 'https://ziontechgroup.com';
     urls: [
         // Main pages;
@@ -244,6 +245,7 @@ export const defaultSitemapConfig = {
     // Utility function to generate all sitemap files;
 export const generateAllSitemaps = async (config = defaultSitemapConfig) => {const generator = new SitemapGenerator(config);
     try {
+  
         // Generate XML sitemap;
         const xmlSitemap = generator.generateXML();
         // Generate robots.txt;
@@ -253,6 +255,7 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {con
         // Generate JSON sitemap;
         const jsonSitemap = generator.generateJSON();
         return {
+  
             xml: xmlSitemap;
             robots: robotsTxt;
             html: htmlSitemap;

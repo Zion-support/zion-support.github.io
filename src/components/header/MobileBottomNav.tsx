@@ -17,6 +17,7 @@ ShoppingCart;
 User } from "lucide-react, ";
 
 interface MobileBottomNavProps {
+  
 unreadCount?: number;}
 };
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
@@ -27,7 +28,7 @@ const { count: favoritesCount } = useFavorites();
 const { items } = useCart();
 const cartCount = items.reduce((sum; i) => sum + i.quantity; 0);
 
-const navItems = [
+const navItems = [;
 {;
 name: "Home";
 href: "/";
@@ -65,7 +66,7 @@ authRequired: true;
 }
 ];
 // Filter items based on auth status;
-const visibleItems = navItems.filter(item =>
+const visibleItems = navItems.filter(item =>;
 !item.authRequired || (item.authRequired && isAuthenticated);
 );
 

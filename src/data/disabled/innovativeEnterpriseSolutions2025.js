@@ -1,4 +1,4 @@
-export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
+export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [;
     // Autonomous Digital Transformation Platform;
     {id: "autonomous-digital-transformation-platform-2025";
         title: "Autonomous Digital Transformation Platform 2025";

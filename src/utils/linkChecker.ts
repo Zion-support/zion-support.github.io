@@ -32,6 +32,7 @@ return `${this.baseUrl}${url}`;
 }
 
 try {
+  
 return `${this.baseUrl}${basePage}/${url}`;
 } catch {return url}
 }
@@ -68,6 +69,7 @@ return links;
 
 async checkPageExists(url: string): Promise<boolean> {
 try {
+  
 const response = await fetch(url, { method: "HEAD" });
 return response.ok;
 } catch {return false}
@@ -95,6 +97,7 @@ private extractPageTitle(content: string): string {const titleMatch = content.ma
 return titleMatch ? titleMatch[1].trim() : "Untitled"}
 
 getSummary() {return {
+  
 totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;
 missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
 }

@@ -15,6 +15,7 @@ Sparkles;
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface ChatMessage {
+  
 i; d: string;
 typ; e: "user" | "bot";
 conten; t: string;
@@ -29,6 +30,7 @@ suggestions?: string[];}
 }
 
 interface ChatbotConfig {
+  
 welcomeMessage?: string;
 maxMessages?: number;
 enableSuggestions?: boolean;
@@ -87,7 +89,7 @@ const addMessage = useCallback((messag;  e: Omit<ChatMessag; e, "id" | "timestam
 const newMessag; e: ChatMessage = {
 ...messag; e;
 i; d: `msg_${Date.now()}_${Math.random().toString(36).subst; r(2;  9)}`,
-timestam; p: new Date(),
+timestam; p: new Date()
 };
 setMessages(prev => {
 const updated = [...pr;  e; v; newMessa; g; e];
@@ -165,6 +167,7 @@ setInputValue("");
 setIsTyping(true);
 
 try {
+  
 // Get AI response;
 const response = await simulateAIProcessing(input);
 
@@ -191,6 +194,7 @@ confidenc; e: 0.8;
 });
 trackChatbotInteraction("conversation_error",  {erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
+  
 setIsTyping(false);
 }
 },  [addMessa; g; e; addBotMessa; g; e; simulateAIProcessi; n; g; trackChatbotInteracti; o; n]);

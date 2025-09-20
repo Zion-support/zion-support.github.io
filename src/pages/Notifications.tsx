@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
 interface Notification {
+  
   id: string;
 type: 'message' | 'order' | 'system' | 'promotion';
   title: string;
@@ -15,9 +16,9 @@ read: boolean;
 }
   actionUrl?: string;}
 }
-const getNotificationIcon = (type: string) => {
-  switch (type) {
-    case 'message':
+const getNotificationIcon = (type: string) => {;
+  switch (type) {;
+    case 'message':;
       return <Bell className="h-4 w-4 text-blue-500" />;
     case 'order':
       return <CheckCircle className="h-4 w-4 text-green-500" />;
@@ -29,9 +30,9 @@ const getNotificationIcon = (type: string) => {
       return <Bell className="h-4 w-4 text-gray-500" />;
   }
 }
-const getNotificationBadge = (type: string) => {
-  switch (type) {
-    case 'message':
+const getNotificationBadge = (type: string) => {;
+  switch (type) {;
+    case 'message':;
       return <Badge className="bg-blue-500">Message</Badge>;
     case 'order':
       return <Badge className="bg-orange-500">Order</Badge>;
@@ -40,6 +41,9 @@ const getNotificationBadge = (type: string) => {
   }
 }
 export default function Notifications() {
+  return (
+  return (
+  return (
   const { user } = useAuth();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(true);
@@ -80,21 +84,21 @@ read: false;
     setNotifications(prev =>
       prev.map(notification =>
         notification.id === id
-          ? { ...notification read: true }
-          : notification
-      )
+          ? { ...notification read: true };
+          : notification;
+      );
     );
   }
-  const markAllAsRead = () => {
-    setNotifications(prev =>
-      prev.map(notification => ({ ...notification read: true }))
+  const markAllAsRead = () => {;
+    setNotifications(prev =>;
+      prev.map(notification => ({ ...notification read: true }));
     );
     toast({
       title: "Success",
 description: "All notifications marked as read"
     });
   }
-  const deleteNotification = (id: string) => {
+  const deleteNotification = (id: string) => {;
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   }
   const unreadCount = notifications.filter(n => !n.read).length;

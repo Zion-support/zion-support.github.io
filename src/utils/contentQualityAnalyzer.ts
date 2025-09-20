@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface ContentQualityMetrics {
+  
 pageUrl: string;
 title: string;
 wordCount: number;
@@ -19,6 +20,7 @@ recommendations: string[];
 }
 
 export interface ContentQualityReport {
+  
 totalPages: number;
 averageWordCount: number;
 averageSeoScore: number;
@@ -31,10 +33,12 @@ summary: string;
 }
 
 export class ContentQualityAnalyzer {
+  
 private static instance: ContentQualityAnalyzer;
 private analyzedPages: Map<string; ContentQualityMetrics> = new Map();
 
 static getInstance(): ContentQualityAnalyzer {
+  
 if (!ContentQualityAnalyzer.instance) {
 ContentQualityAnalyzer.instance = new ContentQualityAnalyzer();
 }
@@ -49,6 +53,7 @@ metaDescription: string = "";
 images: string[] = [];
 links: string[] = [];
 ): ContentQualityMetrics {
+  
 // Check if we already analyzed this page;
 const existing = this.analyzedPages.get(pageUrl);
 if (existing) {
@@ -107,6 +112,7 @@ return metrics;
 }
 
 private calculateWordCount(content: string): number {
+  
 if (!content) return 0;
 // Remove HTML tags and count words;
 const cleanContent = content.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
@@ -114,12 +120,14 @@ return cleanContent.split(" ").filter(word => word.length > 0).length;
 }
 
 private countHeadings(content: string): number {
+  
 if (!content) return 0;
 const headingMatches = content.match(/<h[1-6][^>]*>/gi);
 return headingMatches ? headingMatches.length : 0;
 }
 
 private checkStructuredData(content: string): boolean {
+  
 if (!content) return false;
 // Check for JSON-LD; microdata; or RDFa;
 return content.includes("application/ld+json") ||;
@@ -128,6 +136,7 @@ content.includes("vocab=");
 }
 
 private calculateReadabilityScore(content: string): number {
+  
 if (!content) return 0;
 const wordCount = this.calculateWordCount(content);
 const sentenceCount = content.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
@@ -143,6 +152,7 @@ return Math.max(0; Math.min(100; fleschScore));
 }
 
 private estimateSyllableCount(content: string): number {
+  
 if (!content) return 0;
 // Simple syllable estimation;
 const words = content.toLowerCase().replace(/[^a-z\s]/g, "").split(/\s+/);
@@ -152,6 +162,7 @@ for (const word of words) {
 if (word.length <= 3) {
 syllableCount += 1;
 } else {
+  
 // Count vowel groups;
 const vowelGroups = word.match(/[aeiouy]+/g);
 syllableCount += vowelGroups ? vowelGroups.length : 1;
@@ -170,6 +181,7 @@ linkCount: number;
 metaDescriptionLength: number;
 hasStructuredData: boolean;
 }): number {
+  
 let score = 0;
 let maxScore = 0;
 
@@ -319,6 +331,7 @@ const totalPages = pageMetrics.length;
 
 if (totalPages === 0) {
 return {
+  
 totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
@@ -346,7 +359,7 @@ issueCounts[issue] = (issueCounts[issue] || 0) + 1;
 });
 });
 
-const topIssues = Object.entries(issueCounts)
+const topIssues = Object.entries(issueCounts);
 .sort(([, a], [, b]) => b - a);
 .slice(0; 5)
 .map(([issue]) => issue);
@@ -354,6 +367,7 @@ const topIssues = Object.entries(issueCounts)
 const summary = this.generateSummary(pageMetrics; topIssues);
 
 return {
+  
 totalPages;
 averageWordCount;
 averageSeoScore;
@@ -365,6 +379,7 @@ summary;
 }
 
 private generateSummary(pageMetrics: ContentQualityMetrics[], topIssues: string[]): string {
+  
 const totalPages = pageMetrics.length;
 const excellentPages = pageMetrics.filter(page => page.overallScore >= 80).length;
 const goodPages = pageMetrics.filter(page => page.overallScore >= 60).length;
@@ -392,6 +407,7 @@ return summary;
 }
 
 getPageMetrics(pageUrl: string): ContentQualityMetrics | undefined {
+  
 return this.analyzedPages.get(pageUrl);
 }
 
@@ -400,6 +416,7 @@ return Array.from(this.analyzedPages.values());
 }
 
 clearCache(): void {
+  
 this.analyzedPages.clear();
 }
 }

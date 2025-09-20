@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Card,
-CardContent
-, CardDescription,;
+import { Card;
+CardContent;
+, CardDescription;
 CardHeader;
 , CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -18,7 +18,7 @@ import { useRouter } from "next/router";
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import Link from 'next/link',;
+import Link from 'next/link';
 import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";,
 import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";,
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard";,
@@ -28,7 +28,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router";
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
 export default function Partners() {
-return (
+  return (
+  return (
+  return (
     <div className='container max-w-7xl py-10'>
       <h1>DEBUG: Partners Page - Authenticated View</h1>
       <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>

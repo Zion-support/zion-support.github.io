@@ -92,6 +92,6 @@ if (isLoading) {
 }</div> </div>) "
 }</div> <div className="grid gap-4 md:grid-cols-2" > {appliedMatches.map (match => (<JobMatchesCard key= {
   match.id}match= {match}onApply= {handleApply}onDecline= {handleDecline}showApplied= {true}/>) )
-}</div> </div>)
-}</div>)
-}'"}
+}</div> </div>);
+}</div>);
+}'"};

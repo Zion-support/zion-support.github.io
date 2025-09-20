@@ -7,11 +7,12 @@ name: string;
   description: string;
 icon: React.ElementType,
 interface UserTypeSelectionProps {
+  
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
 selectedType: string | null,
 export function UserTypeSelection({
 }
-  onSelect,}
+  onSelect}
 selectedType}: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {

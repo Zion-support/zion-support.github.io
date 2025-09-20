@@ -3,7 +3,7 @@ interface ReferralLinkProps {referralLink: string;
 onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,
 export function ReferralLink({
-  referralLink,
+  referralLink
 }
 onCopy}
   onShare}: ReferralLinkProps) {
@@ -115,6 +115,6 @@ variant='outline'
           </div>
         </div>
       </CardFooter>
-    </Card>
-  )
-}
+    </Card>;
+  );
+};

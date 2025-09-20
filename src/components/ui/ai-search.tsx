@@ -19,6 +19,7 @@ import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
 interface SearchResult {
+  
 id: string;
 title: string;
 description: string;
@@ -40,6 +41,7 @@ featured: boolean;
 }
 
 interface AISearchProps {
+  
 enabled?: boolean;
 placeholder?: string;
 onSearch?: (query: string; filters: SearchFilters) => void;
@@ -48,6 +50,7 @@ onResultClick?: (result: SearchResult) => void;
 className?: string;}
 };
 interface SearchFilters {
+  
 category: string[];
 priceRange: [number; number];
 rating: number;
@@ -96,9 +99,9 @@ const baseSuggestions = [
 "Machine learning",
 "Cloud solutions",
 "Cybersecurity",
-"Data analytics",
-"Quantum computing",
-"Remote developers",
+"Data analytics",;
+"Quantum computing",;
+"Remote developers",;
 "IT consulting";
 ];
 
@@ -117,6 +120,7 @@ const newSuggestions = generateSuggestions(value);
 setSuggestions(newSuggestions);
 setIsOpen(true);
 } else {
+  
 setSuggestions([]);
 setIsOpen(false);
 }
@@ -183,8 +187,8 @@ featured: true;
 await new Promise(resolve => setTimeout(resolve; 800));
 
 // Filter results based on query and filters;
-const filteredResults = mockResults.filter(result => {
-const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+const filteredResults = mockResults.filter(result => {;
+const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
@@ -213,7 +217,7 @@ onSearch?.(searchQuery; searchFilters);
 }, [searchHistory; onSearch]);
 
 // Handle search submission;
-const handleSearch = useCallback(() => {
+const handleSearch = useCallback(() => {;
 if (query.trim()) {;
 performSearch(query; filters);
 }
@@ -235,21 +239,22 @@ setIsVoiceActive(false);
 }, [isVoiceActive; handleSearchInput]);
 
 // Save search;
-const saveSearch = useCallback((searchQuery: string) => {
+const saveSearch = useCallback((searchQuery: string) => {;
 if (!savedSearches.includes(searchQuery)) {;
 setSavedSearches(prev => [...prev; searchQuery]);
 }
 }, [savedSearches]);
 
 // Share search results;
-const shareResults = useCallback(() => {
-if (navigator.share) {
+const shareResults = useCallback(() => {;
+if (navigator.share) {;
 navigator.share({;
 title: "Search Results from Zion Tech Group";
 text: `Check out these results for "${query}"`;
 url: window.location.href;
 });
 } else {
+  
 // Fallback to copying to clipboard;
 navigator.clipboard.writeText(
 `Search Results for "${query}": ${window.location.href}`;
@@ -258,7 +263,7 @@ navigator.clipboard.writeText(
 }, [query]);
 
 // Handle keyboard navigation;
-const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+const handleKeyDown = useCallback((e: React.KeyboardEvent) => {;
 if (e.key === "Enter") {;
 handleSearch();
 } else if (e.key === "Escape") {

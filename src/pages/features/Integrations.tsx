@@ -1,4 +1,4 @@
-import React, { useEffect } from "react",;
+import React, { useEffect } from "react";
 import { Header } from "@/components/Header";,
 import { SEO } from "@/components/SEO";,
 import { GradientHeading } from "@/components/GradientHeading";,
@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";,
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
-return (
+  return (
+  return (
+  return (
     <>
       <SEO
 title='API & Integrations'

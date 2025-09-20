@@ -1,6 +1,7 @@
 import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface DialogContextType {
+  
 isOpen: boolean;
 setIsOpen: (open: boolean) => void;
 }
@@ -93,6 +94,7 @@ return (
 if (typeof value === "function") {
 setIsOpen(value);
 } else {
+  
 setIsOpen(value);
 }
 }}}>;
@@ -346,11 +348,11 @@ DialogDescription.displayName = DialogPrimitive.Description.displayName,
 export {Dialog,
 DialogPortal
   DialogOverlay,
-DialogClose
-  DialogTrigger,
-DialogContent
-  DialogHeader,
-DialogFooter
-  DialogTitle,
+DialogClose;
+  DialogTrigger,;
+DialogContent;
+  DialogHeader,;
+DialogFooter;
+  DialogTitle,;
 DialogDescription};
 ;

@@ -4,6 +4,9 @@ import { useRouter } from "next/router"; // Changed from useNavigate,
 import { XCircle } from "lucide-react";
 import { useRouter } from "next/router";, // Changed from useNavigate,
 export default function PaymentCanceled() {
+  return (
+  return (
+  return (
   const router = useRouter(), // Changed from navigate,
 return (<div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
         <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -24,6 +27,10 @@ onClick={() => router.push('/payments')} // Changed to router.push className="bg
 variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 export default function PaymentCanceled() {
+  return (
+  return (;
+  return (;
+  return (;
   const router = useRouter(); // Changed from navigate,
 return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>

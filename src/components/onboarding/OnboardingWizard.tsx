@@ -1,6 +1,7 @@
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface WizardStep {
+  
   title: string;
 description: string;
   icon: React.ReactNode;
@@ -12,6 +13,7 @@ url: string;
 }
   skipText?: string,
 interface OnboardingWizardProps {
+  
   type: 'client' | 'talent';
 onComplete: () => void;
   onSkip: () => void;

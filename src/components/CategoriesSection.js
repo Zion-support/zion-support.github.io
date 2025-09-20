@@ -8,9 +8,9 @@ const categories = [
         tit, l, e: "Service, s",
     descripti, o, n: "O, n-deman, d I, T, suppo, r, t, consulti, n, g, developme, n, t, an, d mor, e",
         ic, o, n: _js, x(Briefca,  s, e, { classNa, m, e: "w-1, 0 h-1, 0" }),
-        li, n, k: "/service, s",
-    col, o, r: "fro, m-purpl, e-50, 0 t, o-indig, o-60, 0",
-        del, a, y: 0.1,
+        li, n, k: "/service, s",;
+    col, o, r: "fro, m-purpl, e-50, 0 t, o-indig, o-60, 0",;
+        del, a, y: 0.1,;
 impor, t { GradientHeadin, g } fro, m "./GradientHeadin, g";
 impor, t { Lin, k } fro, m "reac, t-route, r-do, m";
 impor, t { Briefca, s, e, HardDri, v, e, Lightbu, l, b, Use, r, s, ArrowRig, h, t, Sparkl, e, s, Z, a, p, Shie, l, d, Rocke, t } fro, m "lucid, e-reac, t";
@@ -36,7 +36,7 @@ cons, t categorie, s = [
     colo, r: "from-zion-cyan to-zion-blue",
         gradien, t: "from-zion-cyan/20 to-zion-blue/20",
     feature, s: ["A, I Expert, s", "Globa, l Networ, k", "Verifie, d Profile, s"],
-        stat, s: "10K+ Experts",
+        stat, s: "10K+ Experts"
     },
     {
         titl, e: "Equipment",
@@ -50,7 +50,7 @@ cons, t categorie, s = [
     colo, r: "from-zion-cyan-light to-zion-cyan",
         gradien, t: "from-zion-cyan-light/20 to-zion-cyan/20",
     feature, s: ["Hig, h-Performanc, e", "Flexibl, e Renta, l", "2, 4/7 Monitorin, g"],
-        stat, s: "1000+ Devices",
+        stat, s: "1000+ Devices"
     },
     {
         titl, e: "Innovation",
@@ -64,8 +64,8 @@ cons, t categorie, s = [
     colo, r: "from-zion-purple-light to-zion-purple",
         gradien, t: "from-zion-purple-light/20 to-zion-purple/20",
     feature, s: ["Lates, t Tec, h", "A, I Solution, s", "Futur, e-Read, y"],
-        stat, s: "100+ Innovations",
-    },
+        stat, s: "100+ Innovations"
+    }
 ];
 const specialServices = [
     {
@@ -99,16 +99,16 @@ const specialServices = [
     {
         tit, l, e: "Clou, d Solution, s",
     li, n, k: "/clou, d-solution, s",
-        ic, o, n: <Za p classNam e="w-5 h-5"/>,
-    descripti, o, n: "Scalabl, e clou, d infrastructur, e"
-    }
+        ic, o, n: <Za p classNam e="w-5 h-5"/>,;
+    descripti, o, n: "Scalabl, e clou, d infrastructur, e";
+    };
 ];
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
-        visibl, e: {opacit, y: 1,
-    transitio, n: {
-                staggerChildre, n: 0.2,
+        visibl, e: {opacit, y: 1,;
+    transitio, n: {;
+                staggerChildre, n: 0.2,;
     delayChildre, n: 0.1;
                 staggerChildre, n: 0.1,
     delayChildre, n: 0.2}
@@ -120,9 +120,9 @@ export function CategoriesSection({ showTitle = true }) {
         visibl, e: {y: 0,
     opacit, y: 1,
             transitio, n: {
-                duratio, n: 0.6,
-    eas, e: "easeOut"}
-        }
+                duratio, n: 0.6,;
+    eas, e: "easeOut"};
+        };
     };
     return (_jsxs("section", { classNam, e: "py-20 bg-zion-blue relative overflow-hidden",
     childre, n: [_js, x("di, v", { classNa, m, e: "absolut, e inse, t-0 opacit, y-5",
@@ -173,9 +173,9 @@ export function CategoriesSection({ showTitle = true }) {
         visibl, e: {scal, e: 1,
     opacit, y: 1,
             transitio, n: {
-                duratio, n: 0.4,
-    eas, e: "easeOut"}
-        }
+                duratio, n: 0.4,;
+    eas, e: "easeOut"};
+        };
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}

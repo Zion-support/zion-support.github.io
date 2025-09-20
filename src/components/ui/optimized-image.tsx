@@ -1,4 +1,4 @@
-import React { useState useRef useEffect } from 'react',;
+import React { useState useRef useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from "framer-motion";
 import { ImageIcon, AlertTriangle } from "lucide-react";
@@ -25,12 +25,13 @@ alt: string;
   showLoadingProgress?: boolean;
   fill?: boolean;
   blurDataURL?: string;
-  loading?: 'lazy' | 'eager',
+  loading?: 'lazy' | 'eager'
 }
   style?: React.CSSProperties;}
   objectPosition?: string}
 
 interface ImageMetrics {
+  
   loadTime: number;
 fileSize: number;
   format: string;

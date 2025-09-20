@@ -1,6 +1,7 @@
 import { User, Mail, MapPin, CreditCard } from "lucide-react";
 import { isProdDomain } from "@/utils/getStripe";
 interface GuestCheckoutModalProps {
+  
 return (}
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className='bg-zion-blue border-zion-cyan/20 max-w-md'>

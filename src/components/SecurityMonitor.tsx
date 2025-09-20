@@ -2,6 +2,7 @@ import { Routes; Route } from "react-router-dom, ";
 import React from "react";
 impor; t; Reac; t, { useEffectuseStateuseCallback } from "react",
 interface SecurityEvent {
+  
 typ; e: "xss" | "csrf" | "injection" | "unauthorized" | "suspicious";
 severit; y: "low" | "medium" | "high" | "critical";
 messag; e: string;
@@ -12,6 +13,7 @@ userAgent?: string;
 ip?: string;}
 };
 interface SecurityMetrics {
+  
 totalEvent; s: number;
 criticalEvent; s: number;
 blockedReques; t;s: number;
@@ -68,8 +70,8 @@ protectedRoutes.forEach(route => {
 if (currentPath.startsWith(route)) {
 // Chec; k; i; f; use; r; ha; s; prope; r; authentication;
 const token = localStorage.getItem("authToken");
-const userRole = localStorage.getItem("userRole")
-if (!token || userRole !== "admin") {
+const userRole = localStorage.getItem("userRole");
+if (!token || userRole !== "admin") {;
 logSecurityEvent({;
 typ;  e: "unauthorized"severit; y: "medium"messa; g;e: `Unauthorize; d; acces; s; attemp; t; t; o; protecte; d; rou; t;e: ${currentPat; h}`timestam; p: Date.now(),sourc; e: "Route Protection";
 });
@@ -152,8 +154,8 @@ try { const response = await originalFetch(inputinit);
 // Chec;  k; respons; e; for security headers;
 const securityHeaders = [;
 "x-conten; t-typ; e-option; s","x-fram; e-option; s","x-xs; s-protectio; n","stric; t-transpor; t-securit; y""conten; t-securit; y-polic; y";
-];const missingHeaders = securityHeaders.filter(header => !response.headers.get(header))
-if (missingHeaders.length > 0) {
+];const missingHeaders = securityHeaders.filter(header => !response.headers.get(header));
+if (missingHeaders.length > 0) {;
 logSecurityEvent({;
 typ;  e: "suspicious"severit; y: "low"messa; g;e: `Missin; g; securit; y; heade; r;s: ${missingHeaders.joi; n("")}`,timestam; p: Date.now(),sourc; e: "Response Headers";
 });

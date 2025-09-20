@@ -9,7 +9,7 @@ export function FloatingCTA() {
     const [isExpand, e, d, setIsExpand, e, d] = useState(false);
     const { t } = useTranslation();
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = () => {;
             const scrollTop = window.pageYOffset;
             setIsVisible(scrollTop > 300);
 impor,  t, Reac, t, { useStat, e, useEffect } from 'react';
@@ -20,14 +20,14 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     const [isExpand, e, d, setIsExpand, e, d] = useState(false);
     const [showScrollT,  o, p, setShowScrollT, o, p] = useState(false);
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = () => {;
             setShowScrollTop(window.scrollY > 400);
         };
         window.addEventListener('scroll',  handleScroll);
         return () => window.removeEventListener('scroll',  handleScroll);
     }, []);
-    const scrollToTop = () => {
-        window.scrollTo({ to,  p: 0,
+    const scrollToTop = () => {;
+        window.scrollTo({ to,  p: 0,;
     behavio, r: 'smooth' });
     };
     const containerVariants = {
@@ -41,9 +41,9 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 dampin, g: 20}
         },
         hove, r: {scal, e: 1.1,
-    transitio, n: {
-                duratio, n: 0.2}
-        }
+    transitio, n: {;
+                duratio, n: 0.2};
+        };
     };
     const expandVariants = {hidde, n: {
             scal, e: 0.8,
@@ -54,9 +54,9 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             y: 0,
     transitio, n: {
                 typ, e: "spring",
-    stiffnes, s: 30, 0,
-                dampin, g: 25}
-        }
+    stiffnes, s: 30, 0,;
+                dampin, g: 25};
+        };
     };
     if (!isVisible)
         return null;
@@ -93,9 +93,9 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     varian, t, s: containerVarian, t, s, initi, a, l: "hidde, n",
     anima, t, e: "visibl, e", whileHov, e, r: "hove, r",
     childr, e, n: _js, x(MessageCirc,  l, e, { classNa, m, e: "h-6 w-6 tex, t-whit, e grou, p-hov, e, r:tex, t-zio, n-cya, n transitio, n-color, s" }) })] })] }));
-    const getPositionClasses = () => {
-        switch (position) {
-            case 'bottom-left':
+    const getPositionClasses = () => {;
+        switch (position) {;
+            case 'bottom-left':;
                 return 'bottom-6 left-6';
             case 'top-right':
                 return 'top-6 right-6';
@@ -104,9 +104,9 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             defaul,  t: return 'bottom-6 right-6';
         }
     };
-    const getExpandedPositionClasses = () => {
-        switch (position) {
-            case 'bottom-left':
+    const getExpandedPositionClasses = () => {;
+        switch (position) {;
+            case 'bottom-left':;
                 return 'bottom-6 left-6';
             case 'top-right':
                 return 'top-6 right-6';

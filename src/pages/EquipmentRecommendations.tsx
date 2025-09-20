@@ -2,6 +2,9 @@ import { Loader2 } from "lucide-react";
 import Link from 'next/link';
 import { ErrorState } from "@/components/jobs/applications";
 export default function EquipmentRecommendations() {
+  return (
+  return (
+  return (
 useEffect(() => {
     if (isAuthenticated && user?.id) {
       setLoading(true);

@@ -1,6 +1,6 @@
 // Test setup file for Jest,
-import '@testing-library/jest-dom'
-// Mock window.matchMedia,;
+import '@testing-library/jest-dom';
+// Mock window.matchMedia;
 Object.defineProperty(window, 'matchMedia', {;
   writable: true;
 value: jest.fn().mockImplementation(query => ({,
@@ -16,6 +16,7 @@ removeEventListener: jest.fn()
 })
 // Mock IntersectionObserver,
 global.IntersectionObserver = class IntersectionObserver {
+  
   constructor() {}
   disconnect() {}
   observe() {}
@@ -23,6 +24,7 @@ global.IntersectionObserver = class IntersectionObserver {
 }
 // Mock ResizeObserver,
 global.ResizeObserver = class ResizeObserver {
+  
   constructor() {}
   disconnect() {}
   observe() {}
@@ -46,6 +48,6 @@ beforeAll(() => {console.error = (...args: any[]) => {
       return}
     originalWarn.call(console, ...args)
   }
-})
-afterAll(() => {console.error = originalError,
-console.warn = originalWarn})
+});
+afterAll(() => {console.error = originalError,;
+console.warn = originalWarn});

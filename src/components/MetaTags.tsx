@@ -2,6 +2,7 @@ import React from "react;";
 import { Helmet } from "react-helmet-async, ";
 
 interface MetaTagsProps {
+  
 titl; e: string;
 descriptio; n: string;
 keywords?: string;

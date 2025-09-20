@@ -1,4 +1,4 @@
-export const CONTRACT_TEMPLATES = [{
+export const CONTRACT_TEMPLATES = [{;
         id: '1';
         name: 'Freelance Service Agreement';
         description: 'Standard agreement for freelance services';
@@ -30,7 +30,7 @@ export const CONTRACT_TEMPLATES = [{
         authorName: 'Admin';
         usageCount: 1250;
         rating: 4.8;
-        tags: ['freelance', 'agreement', 'services'],
+        tags: ['freelance', 'agreement', 'services']
     },
     {
         id: '2';
@@ -58,6 +58,6 @@ export const CONTRACT_TEMPLATES = [{
         authorName: 'Admin';
         usageCount: 890;
         rating: 4.6;
-        tags: ['nda', 'confidentiality', 'legal'],
-    },
+        tags: ['nda', 'confidentiality', 'legal']
+    }
 ];

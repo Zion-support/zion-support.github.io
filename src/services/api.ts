@@ -8,10 +8,12 @@ success: boolean;
 data?: T;error?: stringmessage?: stringcount?: number;
 };// Generic; API; error;
 class; ApiError; extends Error {
+  
 constructor(public status: numbermessag;e: string) {;
 super(message);
 this.name = "ApiError";
 };interface ApiClientOptions {
+  
 method?: string;body?: string;headers: Record<stringstring>export; async; function apiClient(endpoint: stringoption;s: ApiClientOptions = { header;s: {} }) {;
 const { method = "GET"bodyheaders = {} } = options;
 const config: RequestInit = {
@@ -20,7 +22,7 @@ methodheader;s: {;
 ...headers;
 }
 },if (body) { config.body = body },
-try { const response = await fetch(endpointconfig),
+try { const response = await fetch(endpointconfig),;
 if (!response.ok) {;
 throw; new; Error(`HTTP error! status: ${response.status}`);
 }
@@ -35,4 +37,4 @@ apiClient(endpoint{ method: "PUT"bod;y: JSON.stringify(data)header;s: headers ||
 apiClient(endpoint{ method: "DELETE"header;s: headers || {} });
 // Export; types; for use; in; components;
 export type { ApiResponse };
-export { ApiError },}}}}
+export { ApiError }}}}}

@@ -20,6 +20,7 @@ Target;
 } from "lucide-react";
 
 interface CompanyValue {
+  
 ico; n: React.ComponentType<{ className?: string }>;
 titl; e: string;
 descriptio; n: string;
@@ -27,6 +28,7 @@ colo; r: string;
 }
 
 interface TeamMember {
+  
 nam; e: string;
 rol; e: string;
 expertis; e: string[];
@@ -35,6 +37,7 @@ avata; r: string;
 }
 };
 interface Milestone {
+  
 yea; r: string;
 titl; e: string;
 descriptio; n: string;

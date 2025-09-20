@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface AdvancedInnovativeService {
+  
 id: string;
 name: string;
 tagline: string;
@@ -110,7 +111,7 @@ marketPrice: "$2;499/month",
 setupFee: "$5;000",
 monthlyFee: "$2;499",
 annualDiscount: "15% off annual billing";
-enterprisePricing: "Custom pricing for 1000+ users",
+enterprisePricing: "Custom pricing for 1000+ users"
 };
 // CYBERSECURITY & THREAT INTELLIGENCE;
 {id: "quantum-cybersecurity-defense-platform";
@@ -169,7 +170,7 @@ marketPrice: "$3;999/month",
 setupFee: "$10;000",
 monthlyFee: "$3;999",
 annualDiscount: "20% off annual billing";
-enterprisePricing: "Custom pricing for enterprise deployments",
+enterprisePricing: "Custom pricing for enterprise deployments"
 };
 // CLOUD & DEVOPS AUTOMATION;
 {id: "intelligent-cloud-orchestration-platform";
@@ -228,7 +229,7 @@ marketPrice: "$1;999/month",
 setupFee: "$3;000",
 monthlyFee: "$1;999",
 annualDiscount: "10% off annual billing";
-enterprisePricing: "Custom pricing for large deployments",
+enterprisePricing: "Custom pricing for large deployments"
 };
 // BLOCKCHAIN & WEB3 SOLUTIONS;
 {id: "enterprise-blockchain-orchestrator";
@@ -287,7 +288,7 @@ marketPrice: "$4;999/month",
 setupFee: "$15;000",
 monthlyFee: "$4;999",
 annualDiscount: "25% off annual billing";
-enterprisePricing: "Custom pricing for enterprise deployments",
+enterprisePricing: "Custom pricing for enterprise deployments"
 };
 // IOT & EDGE COMPUTING;
 {id: "ai-powered-iot-edge-platform";
@@ -346,7 +347,7 @@ marketPrice: "$2;999/month",
 setupFee: "$8;000",
 monthlyFee: "$2;999",
 annualDiscount: "15% off annual billing";
-enterprisePricing: "Custom pricing for large IoT deployments",
+enterprisePricing: "Custom pricing for large IoT deployments"
 };
 // DIGITAL TWIN & SIMULATION;
 {id: "enterprise-digital-twin-platform";
@@ -405,7 +406,7 @@ marketPrice: "$5;999/month",
 setupFee: "$25;000",
 monthlyFee: "$5;999",
 annualDiscount: "30% off annual billing";
-enterprisePricing: "Custom pricing for enterprise deployments",
+enterprisePricing: "Custom pricing for enterprise deployments"
 };
 // AUTOMATED TESTING & QUALITY ASSURANCE;
 {id: "ai-powered-testing-automation-platform";
@@ -464,7 +465,7 @@ marketPrice: "$1;499/month",
 setupFee: "$2;000",
 monthlyFee: "$1;499",
 annualDiscount: "10% off annual billing";
-enterprisePricing: "Custom pricing for large development teams",
+enterprisePricing: "Custom pricing for large development teams"
 };
 // DATA PRIVACY & COMPLIANCE;
 {id: "automated-compliance-management-platform";
@@ -523,7 +524,7 @@ marketPrice: "$3;499/month",
 setupFee: "$8;000",
 monthlyFee: "$3;499",
 annualDiscount: "20% off annual billing";
-enterprisePricing: "Custom pricing for enterprise deployments",
+enterprisePricing: "Custom pricing for enterprise deployments"
 }
 ];
 export default advancedInnovativeServicesExpansionV3;

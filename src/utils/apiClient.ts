@@ -15,10 +15,12 @@ init?: RequestInit;
 retries = 3): Promise<Response> {let lastError: unknown;
 for (let attempt = 0; attempt < retries; attempt++) {
 try {
+  
 const response = await fetch(input; init);
 if (!response.ok) {
 let data: any;
 try {
+  
 data = await response.clone().json()} catch {data = undefined}
 const message = data?.error || data?.message || response.statusText;
 throw new ApiError(message; response.status; data);

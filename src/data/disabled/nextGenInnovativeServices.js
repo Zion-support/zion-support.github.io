@@ -1,4 +1,4 @@
-export const NEXT_GEN_INNOVATIVE_SERVICES = [
+export const NEXT_GEN_INNOVATIVE_SERVICES = [;
     {id: "ai-credit-risk-assessment";
         title: "AI-Powered Credit Risk Assessment Platform";
         description: "Advanced credit scoring system using machine learning to analyze alternative data sources and provide real-time credit risk assessments for underserved markets.";
@@ -52,7 +52,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$12.5B global credit scoring market";
         competitiveAdvantage: "Alternative data integration and real-time processing";
         roi: "300% ROI within 6 months";
-        implementationTime: "3-4 weeks",
+        implementationTime: "3-4 weeks"
     };
     {id: "ai-medical-imaging";
         title: "AI Medical Imaging Diagnosis Assistant";
@@ -107,7 +107,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$2.5B AI medical imaging market";
         competitiveAdvantage: "Multi-modality support and regulatory compliance";
         roi: "400% ROI within 12 months";
-        implementationTime: "6-8 weeks",
+        implementationTime: "6-8 weeks"
     };
     {id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
@@ -162,7 +162,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$8.9B supply chain analytics market";
         competitiveAdvantage: "Real-time optimization and multi-echelon inventory management";
         roi: "250% ROI within 8 months";
-        implementationTime: "4-6 weeks",
+        implementationTime: "4-6 weeks"
     };
     {id: "ai-energy-optimization";
         title: "AI Energy Optimization Platform";
@@ -217,7 +217,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$6.8B energy management systems market";
         competitiveAdvantage: "AI-powered predictive optimization and renewable integration";
         roi: "280% ROI within 10 months";
-        implementationTime: "5-7 weeks",
+        implementationTime: "5-7 weeks"
     };
     {id: "ai-legal-document-analysis";
         title: "AI Legal Document Analysis Platform";
@@ -272,7 +272,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$1.2B legal AI market";
         competitiveAdvantage: "Advanced NLP and comprehensive risk assessment";
         roi: "320% ROI within 9 months";
-        implementationTime: "4-5 weeks",
+        implementationTime: "4-5 weeks"
     };
     {id: "ai-real-estate-analytics";
         title: "AI Real Estate Analytics Platform";
@@ -327,7 +327,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$4.2B real estate analytics market";
         competitiveAdvantage: "Multi-market analysis and predictive modeling";
         roi: "260% ROI within 7 months";
-        implementationTime: "3-4 weeks",
+        implementationTime: "3-4 weeks"
     };
     {id: "ai-personalized-learning";
         title: "AI Personalized Learning Platform";
@@ -382,7 +382,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$3.2B adaptive learning market";
         competitiveAdvantage: "Advanced personalization algorithms and comprehensive analytics";
         roi: "240% ROI within 8 months";
-        implementationTime: "4-6 weeks",
+        implementationTime: "4-6 weeks"
     };
     {id: "ai-predictive-maintenance";
         title: "AI Predictive Maintenance Platform";
@@ -437,7 +437,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$7.9B predictive maintenance market";
         competitiveAdvantage: "Advanced ML algorithms and comprehensive IoT integration";
         roi: "350% ROI within 12 months";
-        implementationTime: "6-8 weeks",
+        implementationTime: "6-8 weeks"
     };
     {id: "ai-retail-optimization";
         title: "AI Retail Optimization Platform";
@@ -492,7 +492,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$5.8B retail AI market";
         competitiveAdvantage: "Real-time optimization and comprehensive retail analytics";
         roi: "270% ROI within 9 months";
-        implementationTime: "4-5 weeks",
+        implementationTime: "4-5 weeks"
     };
     {id: "ai-logistics-optimization";
         title: "AI Logistics Optimization Platform";
@@ -547,7 +547,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$4.8B logistics AI market";
         competitiveAdvantage: "Advanced route optimization and real-time fleet management";
         roi: "290% ROI within 10 months";
-        implementationTime: "5-6 weeks",
+        implementationTime: "5-6 weeks"
     };
     {id: "ai-hr-talent-management";
         title: "AI HR Talent Management Platform";
@@ -602,7 +602,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$3.6B HR AI market";
         competitiveAdvantage: "Comprehensive talent lifecycle management and advanced analytics";
         roi: "250% ROI within 8 months";
-        implementationTime: "4-6 weeks",
+        implementationTime: "4-6 weeks"
     };
     {id: "ai-marketing-automation";
         title: "AI Marketing Automation Pro";
@@ -657,6 +657,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$6.4B marketing automation market";
         competitiveAdvantage: "Advanced personalization and comprehensive journey optimization";
         roi: "280% ROI within 8 months";
-        implementationTime: "3-5 weeks",
+        implementationTime: "3-5 weeks"
     }
 ];

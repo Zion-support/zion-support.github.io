@@ -19,6 +19,7 @@ this.config = config}
 * Generate XML sitemap content;
 */;
 generateXML(): string {
+  
 const { baseUrl; urls } = this.config;
 const xmlUrls = urls.map(url => {;
 const lastmod = url.lastmod || new Date().toISOString().split("T")[0];
@@ -42,6 +43,7 @@ ${xmlUrls}
 * Generate robots.txt content;
 */;
 generateRobotsTxt(): string {
+  
 const { baseUrl } = this.config;
 return `User-agent: *;
 Allow: /;

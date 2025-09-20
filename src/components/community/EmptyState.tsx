@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button, ";
 import { Tooltip; TooltipContent; TooltipProvider; TooltipTrigger } from "@/components/ui/tooltip, ";
 
 interface EmptyStateProps {
+  
 title: string;
 subtitle: string;
 cta: string;
@@ -41,10 +42,11 @@ return (
 
 export default EmptyState;
 <//div><///div>;
-import React from 'react',;
+import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from "lucide-react";
 interface EmptyStateProps {
+  
   title: string;
 subtitle: string;
   cta: string;

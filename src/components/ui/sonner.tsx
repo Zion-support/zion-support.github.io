@@ -22,7 +22,7 @@ description: "text-gray-500",
 actionButton:
 "bg-blue-600 text-white",
 cancelButton:
-"bg-gray-200 text-gray-700"},
+"bg-gray-200 text-gray-700"}
 }}
 {...props}
 />;
@@ -41,7 +41,7 @@ description: "text-gray-500",
 actionButton:
 "bg-blue-600 text-white",
 cancelButton:
-"bg-gray-200 text-gray-700"},
+"bg-gray-200 text-gray-700"}
 }}
 {...props}
 /><//Sonner;
@@ -55,7 +55,7 @@ description: "text-gray-500",
 actionButton:
 "bg-blue-600 text-white",
 cancelButton:
-"bg-gray-200 text-gray-700"},
+"bg-gray-200 text-gray-700"}
 }}
 {...props}
 />;

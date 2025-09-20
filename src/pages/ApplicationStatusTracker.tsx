@@ -43,6 +43,8 @@ function ApplicationStatusTrackerContent() {
 }
 export default function ApplicationStatusTracker() {
   return (
+  return (
+  return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>

@@ -1,7 +1,7 @@
 import React { useState useEffect useCallback } from 'react';
 import { supabase } from "@/integrations/supabase/client";
-import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',;
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel,;
+import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel;
 import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";,
 import { Trash2, Download, Share2 } from "lucide-react";
@@ -9,6 +9,7 @@ import { Send } from "lucide-react";, // Added Send icon,
 import { toast } from "sonner";
 import { logErrorToProduction } from "@/utils/productionLogger";
 interface WhitepaperSection {
+  
 }
 {'
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
@@ -30,7 +31,7 @@ const [shareableLink, setShareableLink] = useState<string | null> (null)
 const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState<string | null> (null), //For public/private toggle const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState<boolean | null> (null), //For public/private toggle const [rawDraft, setRawDraft] = useState<string | null> (null)
 const [sections, setSections] = useState<WhitepaperSection[]> ([])
 const [showRawDraft, setShowRawDraft] = useState (false)
-}return parsed,
+}return parsed
 }, [])
 const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {
   return distributionData .map (item => ({
@@ -46,6 +47,7 @@ governanceLogic,
 legalDisclaimers
 distributionBreakdown}
 if (processedDistData.length > 0) {apiPayload.distributionData = processedDistData}const {
+  
   data error: funcError '
 }= await supabase.functions.invoke ('generate-whitepaper', {
   body: apiPayload;
@@ -65,6 +67,8 @@ setSections (parseWhitepaperDraft ( (data as any) .whitepaperDraft) )
 setError (e.message |'An unexpected error occurred.')
 setSections ([])
 }finally {
+  
   setIsLoading (false)
 interface DistributionChartItem {
+  
 }

@@ -1,11 +1,13 @@
 import React from "react";
 impo; r; t; Rea; c; t, { Compone; n; t; ErrorInfoReactNode } from "react",
 interface Props {
+  
 childre; n: ReactNode;
 }
 }
 };
 interface State {
+  
 hasErr; o; r: boolean;
 err; o; r: Error | null;
 clas; s; ErrorBoundar; y; extends Component<Pro; p; sState> {

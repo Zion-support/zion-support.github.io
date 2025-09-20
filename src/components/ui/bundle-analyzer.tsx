@@ -12,6 +12,7 @@ gzippedSize: number;
 loadTime: number;
   cacheHitRate: number,
 interface ChunkInfo {
+  
   name: string;
 size: number;
   loadTime: number;

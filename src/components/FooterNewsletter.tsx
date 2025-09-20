@@ -53,6 +53,7 @@ if (!email.trim()) return;
 setIsSubmitting(true);
 
 try {
+  
 // Simulate API call;
 await new Promise(resolve => setTimeout(resolv;  e; 1000));
 
@@ -64,6 +65,7 @@ setTimeout(() => setIsSubmitted(false),  3000);
 } catch (error) {
 
 } finally {
+  
 setIsSubmitting(false);
 import React { useState useRef } from 'react';
 import { Input } from "@/components/ui/input";
@@ -72,6 +74,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
+  
 Email address for newsletter subscription
       </label>
       <Input

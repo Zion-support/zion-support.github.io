@@ -11,7 +11,9 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from "lucide-react";
 import { logInfo, logWarn } from "@/utils/productionLogger";
 export default function SavedTalentsPage() {
-return (
+  return (
+  return (
+  return (
     <>
       <SEO
 title='Saved Talents | Zion AI Marketplace'
@@ -62,24 +64,29 @@ location,
 availability
 is verified) `)
 }finally {
+  
   setIsLoading (false)
 }
 }, [user])
 }
   try {
+  
   if (!user) {
 }//Remove from saved talents const {
+  
   error '
 }= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId)
 }else {
+  
   //Add to saved talents const {
+  
   error '
 }= await supabase .from ('saved talents') .insert ([ {
   user id: user.id talent id: talentId;
 }])
 if (error) {throw error}data: talentData error: talentError '
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ()
-return,
+return
 }catch (error) {
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined {'
   message: 'Error toggling saved talent'

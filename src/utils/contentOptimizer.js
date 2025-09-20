@@ -1,4 +1,5 @@
 export class ContentOptimizer {
+  
     static MIN_WORD_COUNT = 300;
     static MIN_HEADING_COUNT = 2;
     static MIN_IMAGE_COUNT = 1;
@@ -11,13 +12,14 @@ export class ContentOptimizer {
         const readabilityScore = this.calculateReadabilityScore(content);
         const seoScore = this.calculateSEOScore(content, page);
         const issues = this.identifyIssues(content, page, {
-            wordCount,
-            headingCount,
-            imageCount,
+            wordCount,;
+            headingCount,;
+            imageCount,;
             linkCount;
         });
         const suggestions = this.generateSuggestions(issues, page);
         return {
+  
             page,
             wordCount,
             headingCount,
@@ -66,6 +68,7 @@ export class ContentOptimizer {
                 syllableCount += 1;
             }
             else {
+  
                 // Count vowel groups;
                 const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
@@ -105,7 +108,7 @@ export class ContentOptimizer {
                 type: 'missing-headings';
                 severity: 'high';
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
-                location: 'Page structure',
+                location: 'Page structure'
             });
      }
         // Check for minimal content;
@@ -114,7 +117,7 @@ export class ContentOptimizer {
                 type: 'minimal-content';
                 severity: 'medium';
                 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`;
-                location: 'Content body',
+                location: 'Content body'
             });
      }
         // Check for no images;
@@ -140,7 +143,7 @@ export class ContentOptimizer {
                 type: 'missing-keywords';
                 severity: 'medium';
                 description: `Missing important keywords: ${missingKeywords.join(', ')}`,
-                location: 'Content optimization',
+                location: 'Content optimization'
             });
      }
         return issues;
@@ -236,9 +239,9 @@ export class ContentOptimizer {
         
         <h2>Why Choose Us</h2>
         <p>Competitive advantages and unique selling points.</p>
-        
-        <h2>Get Started</h2>
-        <p>Call-to-action and next steps for potential clients.</p>
+        ;
+        <h2>Get Started</h2>;
+        <p>Call-to-action and next steps for potential clients.</p>;
       `;
             about: `
         <h1>About Zion Tech Group</h1>
@@ -311,7 +314,7 @@ export class ContentOptimizer {
         };
     return templates[contentType] || templates.service;
     }
-    static generateMetaDescription(page, contentType) {const baseDescriptions = {
+    static generateMetaDescription(page, contentType) {const baseDescriptions = {;
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.';
             about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.',
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',

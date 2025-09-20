@@ -22,13 +22,13 @@ import { NotificationProvider } from './context/notifications/NotificationContex
 import { AnalyticsProvider } from './context/AnalyticsContext, ';
 import { ViewModeProvider } from './context/ViewModeContext, ';
 // Initialize a React Query client with global error handling
-const queryClient = new QueryClient({
-    defaultOptions: {
-        queries: {
+const queryClient = new QueryClient({;
+    defaultOptions: {;
+        queries: {;
             retry: 1;
             refetchOnWindowFocus: false;
-        },
-    },
+        }
+    }
 });
 const rootElement = document.getElementById('root');
 function renderApp() {
@@ -52,9 +52,9 @@ function renderApp() {
                 </NotificationProvider>
               </AuthProvider>
             </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
+          </WhitelabelProvider>;
+        </QueryClientProvider>;
+      </HelmetProvider>;
     </React.StrictMode>);
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app);
@@ -76,6 +76,7 @@ function displayFatalError(message) {
     }
 }
 try {
+  
     renderApp();
 }
 catch (error) {

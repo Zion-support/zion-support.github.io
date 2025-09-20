@@ -506,8 +506,8 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
 "web-development": ["PWA", "E-commerce", "CMS", "API Development", "Performance Optimization"],
 "mobile-development": ["Cross-platform", "Native iOS", "Native Android", "Backend API", "Testing"],
 "blockchain": ["Smart Contracts", "DeFi", "NFT", "DAO", "Security"],
-"iot": ["Platform Development", "Device Integration", "Data Analytics", "Security", "Cloud Integration"],
-"hardware": ["Prototyping", "PCB Design", "Firmware", "Testing", "Manufacturing Support"],
-"business-automation": ["RPA", "Workflow Automation", "Process Optimization", "Integration", "Analytics"],
+"iot": ["Platform Development", "Device Integration", "Data Analytics", "Security", "Cloud Integration"],;
+"hardware": ["Prototyping", "PCB Design", "Firmware", "Testing", "Manufacturing Support"],;
+"business-automation": ["RPA", "Workflow Automation", "Process Optimization", "Integration", "Analytics"],;
 "business-solutions": ["ERP", "CRM", "HR Systems", "Financial Systems", "Project Management"];
 };

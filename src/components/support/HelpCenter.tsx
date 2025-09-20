@@ -8,6 +8,9 @@ import { HelpArticleView } from "./HelpArticleView";
 import { HELP_CATEGORIES } from "./help-content";
 import { Search } from "lucide-react";
 export default function HelpCenter() {
+  return (
+  return (
+  return (
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
@@ -19,7 +22,9 @@ export default function HelpCenter() {
     setSelectedArticle(articleId)
   }
 export default function HelpCenter() {
-return (
+  return (
+  return (
+  return (
     <>
       <div className='container mx-auto px-4 py-8'>
         <div className='max-w-4xl mx-auto'>
@@ -213,6 +218,6 @@ className='w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-lig
           </Tabs>
         </div>
       </div>
-</>
-  )
-}
+</>;
+  );
+};

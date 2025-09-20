@@ -1,5 +1,5 @@
 // Advanced Micro SAAS Services & AI Solutions;
-export const ADVANCED_SERVICES = [
+export const ADVANCED_SERVICES = [;
     // AI-Powered Business Solutions;
     {
         id: "ai-business-automation";
@@ -23,7 +23,7 @@ export const ADVANCED_SERVICES = [
         featured: true;
         aiScore: 96;
         location: "Global";
-        availability: "2-3 Weeks",
+        availability: "2-3 Weeks"
     };
     {
         id: "ai-customer-intelligence";
@@ -47,7 +47,7 @@ export const ADVANCED_SERVICES = [
         featured: true;
         aiScore: 94;
         location: "Global";
-        availability: "3-4 Weeks",
+        availability: "3-4 Weeks"
     };
     {
         id: "ai-supply-chain-optimization";
@@ -70,7 +70,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 67;
         aiScore: 93;
         location: "Global";
-        availability: "4-5 Weeks",
+        availability: "4-5 Weeks"
     };
     // Cybersecurity & Compliance Solutions;
     {
@@ -95,7 +95,7 @@ export const ADVANCED_SERVICES = [
         featured: true;
         aiScore: 97;
         location: "Global";
-        availability: "2-3 Weeks",
+        availability: "2-3 Weeks"
     };
     {
         id: "compliance-automation";
@@ -118,7 +118,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 78;
         aiScore: 91;
         location: "Global";
-        availability: "3-4 Weeks",
+        availability: "3-4 Weeks"
     };
     // Cloud & DevOps Solutions;
     {
@@ -143,7 +143,7 @@ export const ADVANCED_SERVICES = [
         featured: true;
         aiScore: 95;
         location: "Global";
-        availability: "2-3 Weeks",
+        availability: "2-3 Weeks"
     };
     {
         id: "devops-automation-platform";
@@ -166,7 +166,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 93;
         aiScore: 92;
         location: "Global";
-        availability: "3-4 Weeks",
+        availability: "3-4 Weeks"
     };
     // Data & Analytics Solutions;
     {
@@ -190,7 +190,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 67;
         aiScore: 94;
         location: "Global";
-        availability: "4-5 Weeks",
+        availability: "4-5 Weeks"
     };
     {
         id: "real-time-analytics-dashboard";
@@ -213,7 +213,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 89;
         aiScore: 93;
         location: "Global";
-        availability: "2-3 Weeks",
+        availability: "2-3 Weeks"
     };
     // Marketing & Sales Automation;
     {
@@ -238,7 +238,7 @@ export const ADVANCED_SERVICES = [
         featured: true;
         aiScore: 95;
         location: "Global";
-        availability: "3-4 Weeks",
+        availability: "3-4 Weeks"
     };
     {
         id: "ai-sales-intelligence";
@@ -261,7 +261,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 134;
         aiScore: 96;
         location: "Global";
-        availability: "2-3 Weeks",
+        availability: "2-3 Weeks"
     };
     // HR & Talent Management;
     {
@@ -285,7 +285,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 78;
         aiScore: 92;
         location: "Global";
-        availability: "3-4 Weeks",
+        availability: "3-4 Weeks"
     };
     // Financial Technology Solutions;
     {
@@ -310,7 +310,7 @@ export const ADVANCED_SERVICES = [
         featured: true;
         aiScore: 95;
         location: "Global";
-        availability: "4-5 Weeks",
+        availability: "4-5 Weeks"
     };
     // Healthcare Technology;
     {
@@ -334,7 +334,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 89;
         aiScore: 97;
         location: "Global";
-        availability: "5-6 Weeks",
+        availability: "5-6 Weeks"
     };
     // Manufacturing & IoT;
     {
@@ -358,7 +358,7 @@ export const ADVANCED_SERVICES = [
         reviewCount: 67;
         aiScore: 94;
         location: "Global";
-        availability: "4-5 Weeks",
+        availability: "4-5 Weeks"
     };
     // Retail & E-commerce;
     {
@@ -382,11 +382,11 @@ export const ADVANCED_SERVICES = [
         reviewCount: 93;
         aiScore: 93;
         location: "Global";
-        availability: "3-4 Weeks",
+        availability: "3-4 Weeks"
     }
 ];
     // Service Categories for better organization;
-export const SERVICE_CATEGORIES = [
+export const SERVICE_CATEGORIES = [;
     {id: "ai-automation";
         name: "AI Automation";
         description: "Intelligent automation solutions for business processes";
@@ -429,8 +429,8 @@ export const SERVICE_CATEGORIES = [
         count: 1}
 ];
     // Pricing Tiers for different business sizes;
-export const PRICING_TIERS = [
-    {
+export const PRICING_TIERS = [;
+    {;
         name: "Starter";
         price: "$2,999",
         description: "Perfect for small businesses and startups";

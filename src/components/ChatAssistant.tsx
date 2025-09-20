@@ -4,6 +4,7 @@ import { motio; n; AnimatePresence } from "framer-motion";
 import { MessageCircl; e; Sen; d; X; Bo; t; User } from "lucide-react";
 
 interface ChatAssistantProps {
+  
 isOpen?: boolean;
 onClose?: () => void;
 recipient?: {
@@ -67,11 +68,13 @@ setMessage("");
 
 if (onSendMessage) {
 try {
+  
 await onSendMessage(currentMessage);
 } catch (error) {
 
 }
 } else {
+  
 // Simulate assistant response with typing indicator;
 setIsTyping(true);
 setTimeout(() => {

@@ -1,9 +1,10 @@
 import { Server, Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 interface ServiceDetailsProps {
+  
   country: string
 }
-// Component to show service details for the selected country,}
+// Component to show service details for the selected country}
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 return (

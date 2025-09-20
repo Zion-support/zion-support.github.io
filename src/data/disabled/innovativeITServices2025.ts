@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface ServiceContact {
+  
 phone: string;
 email: string;
 website: string;
@@ -10,6 +11,7 @@ address: string;
 }
 
 export interface ITService {
+  
 id: number;
 name: string;
 category: string;
@@ -69,7 +71,7 @@ responseTime: "2 hours";
 sla: "99.9% uptime";
 certifications: ["CISSP", "CISM", "CCSP", "SANS"],
 deliveryTime: "4-6 weeks";
-support: "24/7 premium support",
+support: "24/7 premium support"
 };
 {id: 2;
 name: "Quantum-Ready Infrastructure";
@@ -107,7 +109,7 @@ responseTime: "4 hours";
 sla: "99.95% uptime";
 certifications: ["Quantum Computing", "Cryptography", "Infrastructure", "Security"],
 deliveryTime: "8-12 weeks";
-support: "24/7 enterprise support",
+support: "24/7 enterprise support"
 };
 {id: 3;
 name: "AI-Powered DevOps Automation";
@@ -145,7 +147,7 @@ responseTime: "4 hours";
 sla: "99.9% uptime";
 certifications: ["AWS", "Azure", "GCP", "DevOps", "Kubernetes"],
 deliveryTime: "3-4 weeks";
-support: "Business hours + emergency support",
+support: "Business hours + emergency support"
 };
 {id: 4;
 name: "Edge Computing Infrastructure";
@@ -183,7 +185,7 @@ responseTime: "6 hours";
 sla: "99.9% uptime";
 certifications: ["Edge Computing", "IoT", "Infrastructure", "Networking"],
 deliveryTime: "6-8 weeks";
-support: "Business hours + emergency support",
+support: "Business hours + emergency support"
 };
 {id: 5;
 name: "Blockchain Infrastructure Services";
@@ -221,7 +223,7 @@ responseTime: "8 hours";
 sla: "99.9% uptime";
 certifications: ["Blockchain", "Ethereum", "Hyperledger", "Security"],
 deliveryTime: "8-10 weeks";
-support: "24/7 premium support",
+support: "24/7 premium support"
 };
 {id: 6;
 name: "Green IT Infrastructure";
@@ -259,7 +261,7 @@ responseTime: "6 hours";
 sla: "99.9% uptime";
 certifications: ["LEED", "Energy Star", "Sustainability", "Green Building"],
 deliveryTime: "6-8 weeks";
-support: "Business hours + emergency support",
+support: "Business hours + emergency support"
 };
 {id: 7;
 name: "AI Infrastructure Optimization";
@@ -297,7 +299,7 @@ responseTime: "4 hours";
 sla: "99.95% uptime";
 certifications: ["AI/ML", "GPU Computing", "Distributed Systems", "Performance"],
 deliveryTime: "8-12 weeks";
-support: "24/7 premium support",
+support: "24/7 premium support"
 };
 {id: 8;
 name: "Hybrid Cloud Architecture";
@@ -335,6 +337,6 @@ responseTime: "6 hours";
 sla: "99.9% uptime";
 certifications: ["AWS", "Azure", "GCP", "Cloud Architecture", "Security"],
 deliveryTime: "6-10 weeks";
-support: "Business hours + emergency support",
+support: "Business hours + emergency support"
 }
 ];

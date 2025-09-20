@@ -5,8 +5,8 @@ const LanguageContext = createContext(undefined);
 export function LanguageProvider({ children }) {;
   const [language, setLanguage] = useState('en');
 
-  const translations = {
-    en: {
+  const translations = {;
+    en: {;
       welcome: 'Welcome';
       get_started: 'Get Started';
       learn_more: 'Learn More';
@@ -17,7 +17,7 @@ export function LanguageProvider({ children }) {;
       get_started: 'Comenzar';
       learn_more: 'Saber Más';
       contact_us: 'Contáctanos';
-    },
+    }
   };
 
   const t = (key) => translations[language]?.[key] || key;

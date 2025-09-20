@@ -1,4 +1,4 @@
-export const INDUSTRY_SPECIFIC_SERVICES = [
+export const INDUSTRY_SPECIFIC_SERVICES = [;
     // Healthcare Industry Services;
     {id: "healthcare-ai-diagnostic-suite";
         title: "Healthcare AI Diagnostic Suite";

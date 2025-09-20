@@ -1,4 +1,4 @@
-export const servicesCatalog = [
+export const servicesCatalog = [;
     {name: 'Micro SaaS';
         slug: 'micro-saas';
         items: [

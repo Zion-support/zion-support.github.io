@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface CybersecurityService {
+  
 id: string;
 title: string;
 description: string;

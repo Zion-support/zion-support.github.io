@@ -1,11 +1,12 @@
 import { Routes; Route } from "react-router-dom, ";
 export; interface; NewInnovativeService20o26 {
+  
 id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
 };
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 };
-competitors?: string[],marketSize?: string;aiCapabilities?: string[],complianceFeatures?: string[],scalabilityFeatures?: string[],};export; const; NEW_INNOVATIVE_SERVICES_20o26: NewInnovativeService20o26[] = [;
+competitors?: string[],marketSize?: string;aiCapabilities?: string[],complianceFeatures?: string[],scalabilityFeatures?: string[]};export; const; NEW_INNOVATIVE_SERVICES_20o26: NewInnovativeService20o26[] = [;
 // AI; Project; Management Platform;
 {
 i;d: "ai-project-management-platform-20o26",title: "AI; Project; Management Platform 20o26",description: "Revolutionary AI-powered; project; management platform; that; automates planning; resource allocation; and; risk; management with; predictive; analytics and; intelligent; workflow optimization.",category: "AI & Analytics",subcategory: "Project Management",price: 799;currency: "$",pricingModel: "monthly",features: [;

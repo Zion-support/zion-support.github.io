@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface SEOData {
+  
 title: string;
 description: string;
 keywords: string[];
@@ -11,6 +12,7 @@ structuredData?: object;}
 }
 
 export interface ContentQualityIssue {
+  
 page: string;
 issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
 severity: "high" | "medium" | "low";
@@ -20,6 +22,7 @@ suggestedFix: string;
 }
 
 export class SEOOptimizer {
+  
 private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
 "/": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services. Transform your business with Zion Tech Group.",
 "/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.",
@@ -59,6 +62,7 @@ private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
 };
 
 static generateSEOData(path: string): SEOData {
+  
 const title = this.generateTitle(path);
 const description = this.generateDescription(path);
 const keywords = this.generateKeywords(path);
@@ -66,6 +70,7 @@ const canonicalUrl = this.generateCanonicalUrl(path);
 const structuredData = this.generateStructuredData(path);
 
 return {
+  
 title;
 description;
 keywords;
@@ -75,6 +80,7 @@ structuredData;
 }
 
 static generateTitle(path: string): string {
+  
 const baseTitle = "Zion Tech Group";
 if (path === "/") {
 return `${baseTitle} - Revolutionary Technology Solutions`;
@@ -93,6 +99,7 @@ return `${formattedSegment} - ${baseTitle}`;
 }
 
 static generateDescription(path: string): string {
+  
 return this.DEFAULT_META_DESCRIPTIONS[path] ||;
 "Professional technology solutions and services. Expert IT consulting; AI development; and digital transformation services for modern businesses.";
 }
@@ -103,6 +110,7 @@ return this.KEYWORD_MAPPINGS[path] ||;
 }
 
 static generateCanonicalUrl(path: string): string {
+  
 const baseUrl = "https://ziontechgroup.com";
 return `${baseUrl}${path}`;
 }
@@ -114,14 +122,15 @@ static generateStructuredData(path: string): object {const baseData = {
 "description": this.generateDescription(path),
 "url": this.generateCanonicalUrl(path),
 "publisher": {
-"@type": "Organization",
-"name": "Zion Tech Group",
-"url": "https://ziontechgroup.com",
+"@type": "Organization",;
+"name": "Zion Tech Group",;
+"url": "https://ziontechgroup.com",;
 "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"};
 };
 // Add specific structured data based on page type;
 if (path === "/") {
 return {
+  
 ...baseData,
 "@type": "Organization",
 "name": "Zion Tech Group",
@@ -147,6 +156,7 @@ return {
 
 if (path.startsWith("/services/")) {
 return {
+  
 ...baseData,
 "@type": "Service",
 "serviceType": path.split("/").pop()?.replace(/-/g, " "),
@@ -208,6 +218,7 @@ return issues;
 }
 
 static generateMetaTags(seoData: SEOData): string {
+  
 return `;
 <title>${seoData.title}</title>;
 <meta name="description" content="${seoData.description}" />;

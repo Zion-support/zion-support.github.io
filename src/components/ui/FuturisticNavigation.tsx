@@ -5,6 +5,7 @@ Zap; Brain; Shield; Rocket; Star; ChevronDown;
 } from "lucide-react, ";
 
 interface NavigationItem {
+  
 name: string;
 href: string;
 icon: React.ReactNode;

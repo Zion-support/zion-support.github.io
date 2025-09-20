@@ -27,6 +27,7 @@ import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
 interface TimelineEvent {
+  
 id: string;
 title: string;
 description: string;
@@ -55,6 +56,7 @@ variant?: "default" | "outline" | "ghost";
 }
 
 interface InteractiveTimelineProps {
+  
 enabled?: boolean;
 events: TimelineEvent[];
 autoPlay?: boolean;
@@ -105,7 +107,7 @@ return matchesStatus && matchesCategory && matchesPriority;
 useEffect(() => {
 if (!isPlaying || filteredEvents.length === 0) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setCurrentEventIndex(prev => {;
 const next: any = (prev + 1) % filteredEvents.length;
 if (next === 0) {
@@ -198,14 +200,15 @@ URL.revokeObjectURL(url);
 }, [filteredEvents]);
 
 // Share timeline;
-const shareTimeline = useCallback(() => {
-if (navigator.share) {
+const shareTimeline = useCallback(() => {;
+if (navigator.share) {;
 navigator.share({;
 title: "Project Timeline";
 text: "Check out our project timeline";
 url: window.location.href;
 });
 } else {
+  
 navigator.clipboard.writeText(window.location.href);
 }
 }, []);

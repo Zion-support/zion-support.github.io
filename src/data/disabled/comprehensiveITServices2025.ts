@@ -3,7 +3,7 @@ import React from "react";
 export interface ComprehensiveITService {id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];
 targetAudience: string[], tags: string[];
 }
-contactInfo: {,}
+contactInfo: {}
 phone: string; email: string; website: string; address: string};
 technology: string[], technology: string[];
 integrations: string[], compliance: string[];
@@ -81,7 +81,7 @@ marketTrend: "Growing cloud adoption with 45% annual growth",
 industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"],
 scalability: "Enterprise-grade with unlimited scalability",
 customizationLevel: "Custom cloud solutions and migration strategies",
-serviceLevel: "24/7 managed cloud services",
+serviceLevel: "24/7 managed cloud services"
 },
 
 // Cybersecurity & Information Security Services;
@@ -144,7 +144,7 @@ marketTrend: "High demand for cybersecurity with 65% annual growth",
 industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
 scalability: "Enterprise security infrastructure with unlimited protection",
 customizationLevel: "Custom security frameworks and compliance solutions",
-serviceLevel: "24/7 security monitoring and response",
+serviceLevel: "24/7 security monitoring and response"
 },
 
 // DevOps & CI/CD Pipeline Services;
@@ -207,7 +207,7 @@ marketTrend: "Growing DevOps adoption with 55% annual growth",
 industryFocus: ["Technology", "Finance", "Healthcare", "E-commerce", "SaaS"],
 scalability: "Enterprise DevOps platform with unlimited pipeline support",
 customizationLevel: "Custom DevOps workflows and automation rules",
-serviceLevel: "24/7 DevOps support and monitoring",
+serviceLevel: "24/7 DevOps support and monitoring"
 },
 
 // Data Management & Analytics Services;
@@ -254,7 +254,7 @@ targetAudience: [
 tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
 estimatedDelivery: "6-10 weeks",
 supportLevel: "premium",
-marketPrice: "$1; 299 - $5; 000/month",
+marketPrice: "$1; 299 - $5; 000/month"
 ],
 targetAudience: [
 "Data analysts",
@@ -282,7 +282,7 @@ marketTrend: "Growing data analytics adoption with 50% annual growth",
 industryFocus: ["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
 scalability: "Enterprise data platform with unlimited data processing",
 customizationLevel: "Custom analytics solutions and reporting dashboards",
-serviceLevel: "24/7 data monitoring and support",
+serviceLevel: "24/7 data monitoring and support"
 },
 
 // Network Infrastructure & Management Services;
@@ -345,7 +345,7 @@ marketTrend: "Growing network infrastructure demand with 40% annual growth",
 industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Education"],
 scalability: "Enterprise network infrastructure with unlimited scalability",
 customizationLevel: "Custom network solutions and security configurations",
-serviceLevel: "24/7 network monitoring and support",
+serviceLevel: "24/7 network monitoring and support"
 },
 
 // IT Consulting & Strategic Planning Services;
@@ -409,7 +409,7 @@ marketTrend: "Growing IT consulting demand with 35% annual growth",
 industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
 scalability: "Consulting services for organizations of all sizes",
 customizationLevel: "Custom strategic plans and technology roadmaps",
-serviceLevel: "Flexible consulting engagement models",
+serviceLevel: "Flexible consulting engagement models"
 },
 
 // IT Support & Help Desk Services;
@@ -472,7 +472,7 @@ marketTrend: "Growing IT support demand with 40% annual growth",
 industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
 scalability: "Multi-organization support platform with unlimited user support",
 customizationLevel: "Custom support workflows and knowledge bases",
-serviceLevel: "24/7 technical support and monitoring",
+serviceLevel: "24/7 technical support and monitoring"
 },
 
 // Software Development & Custom Solutions;
@@ -535,7 +535,7 @@ marketTrend: "Growing custom software demand with 55% annual growth",
 industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
 scalability: "Enterprise development platform with unlimited customization",
 customizationLevel: "Fully custom software solutions and integrations",
-serviceLevel: "Comprehensive development and ongoing support",
+serviceLevel: "Comprehensive development and ongoing support"
 },
 
 // IT Project Management & Implementation Services;
@@ -598,7 +598,7 @@ marketTrend: "Growing IT support demand with 40% annual growth",
 industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
 scalability: "Multi-organization support platform with unlimited user support",
 customizationLevel: "Custom support workflows and knowledge bases",
-serviceLevel: "24/7 technical support and monitoring",
+serviceLevel: "24/7 technical support and monitoring"
 },
 
 // Software Development & Custom Solutions;
@@ -661,7 +661,7 @@ marketTrend: "Growing custom software demand with 55% annual growth",
 industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
 scalability: "Enterprise development platform with unlimited customization",
 customizationLevel: "Fully custom software solutions and integrations",
-serviceLevel: "Comprehensive development and ongoing support",
+serviceLevel: "Comprehensive development and ongoing support"
 },
 
 // IT Project Management & Implementation Services;
@@ -1026,7 +1026,7 @@ marketTrend: "Growing cloud adoption with 45% annual growth",
 industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"],
 scalability: "Enterprise-grade with unlimited scalability",
 customizationLevel: "Custom cloud solutions and migration strategies",
-serviceLevel: "24/7 managed cloud services",
+serviceLevel: "24/7 managed cloud services"
 },
 
 // Cybersecurity & Information Security Services;
@@ -1089,7 +1089,7 @@ marketTrend: "High demand for cybersecurity with 65% annual growth",
 industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
 scalability: "Enterprise security infrastructure with unlimited protection",
 customizationLevel: "Custom security frameworks and compliance solutions",
-serviceLevel: "24/7 security monitoring and response",
+serviceLevel: "24/7 security monitoring and response"
 },
 
 // DevOps & CI/CD Pipeline Services;
@@ -1152,7 +1152,7 @@ marketTrend: "Growing DevOps adoption with 55% annual growth",
 industryFocus: ["Technology", "Finance", "Healthcare", "E-commerce", "SaaS"],
 scalability: "Enterprise DevOps platform with unlimited pipeline support",
 customizationLevel: "Custom DevOps workflows and automation rules",
-serviceLevel: "24/7 DevOps support and monitoring",
+serviceLevel: "24/7 DevOps support and monitoring"
 },
 
 // Data Management & Analytics Services;
@@ -1215,7 +1215,7 @@ marketTrend: "Growing data analytics adoption with 50% annual growth",
 industryFocus: ["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
 scalability: "Enterprise data platform with unlimited data processing",
 customizationLevel: "Custom analytics solutions and reporting dashboards",
-serviceLevel: "24/7 data monitoring and support",
+serviceLevel: "24/7 data monitoring and support"
 },
 
 // Network Infrastructure & Management Services;
@@ -1278,7 +1278,7 @@ marketTrend: "Growing network infrastructure demand with 40% annual growth",
 industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Education"],
 scalability: "Enterprise network infrastructure with unlimited scalability",
 customizationLevel: "Custom network solutions and security configurations",
-serviceLevel: "24/7 network monitoring and support",
+serviceLevel: "24/7 network monitoring and support"
 },
 
 // IT Consulting & Strategic Planning Services;
@@ -1342,7 +1342,7 @@ marketTrend: "Growing IT consulting demand with 35% annual growth",
 industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
 scalability: "Consulting services for organizations of all sizes",
 customizationLevel: "Custom strategic plans and technology roadmaps",
-serviceLevel: "Flexible consulting engagement models",
+serviceLevel: "Flexible consulting engagement models"
 },
 
 // IT Support & Help Desk Services;
@@ -1405,7 +1405,7 @@ marketTrend: "Growing IT support demand with 40% annual growth",
 industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
 scalability: "Multi-organization support platform with unlimited user support",
 customizationLevel: "Custom support workflows and knowledge bases",
-serviceLevel: "24/7 technical support and monitoring",
+serviceLevel: "24/7 technical support and monitoring"
 },
 
 // Software Development & Custom Solutions;
@@ -1468,7 +1468,7 @@ marketTrend: "Growing custom software demand with 55% annual growth",
 industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
 scalability: "Enterprise development platform with unlimited customization",
 customizationLevel: "Fully custom software solutions and integrations",
-serviceLevel: "Comprehensive development and ongoing support",
+serviceLevel: "Comprehensive development and ongoing support"
 },
 
 // IT Project Management & Implementation Services;
@@ -1531,7 +1531,7 @@ marketTrend: "Growing project management demand with 45% annual growth",
 industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
 scalability: "Project management services for projects of all sizes",
 customizationLevel: "Custom project management methodologies and tools",
-serviceLevel: "Comprehensive project management and support",
+serviceLevel: "Comprehensive project management and support"
 }
 ];
 

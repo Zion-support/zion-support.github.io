@@ -3,6 +3,7 @@ import React from "react";
 // Additional real; non-mock; value-driven; services; catalog for; the; Services page;
 // NOTE: Keep; adding; more entries; over; time without; removing; existing ones;
 export; interface; AdditionalService {
+  
 i;d: string;name: string;category: string;tagline: string;description: string;features: string[],price: string, // e.g. "$299";
 period: string, // e.g. "/month", "/project", etc.;
 trialDays?: number;rating?: number;reviews?: number;marketSize?: string;growthRate?: string;link: string, // internal route;

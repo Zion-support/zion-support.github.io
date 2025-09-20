@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";,
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/router";
 interface TalentCardSaveButtonProps {
+  
   profileId: string;
 profileName: string;
   isSaved: boolean;

@@ -6,6 +6,7 @@ import { Textarea } from "../ui/Textarea, ";
 import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
 
 interface HireNowCTAProps {
+  
 talentName: string;
 hourlyRate?: number;
 onHire?: (data: HireData) => void;
@@ -13,6 +14,7 @@ onHire?: (data: HireData) => void;
 }
 };
 interface HireData {
+  
 projectDescription: string;
 budget: string;
 startDate: string;

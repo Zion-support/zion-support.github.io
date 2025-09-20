@@ -1,4 +1,4 @@
-import useSWR from 'swr',;
+import useSWR from 'swr';
 import { CategoryCard } from "@/components/CategoryCard";,
 import { GradientHeading } from "@/components/GradientHeading";
 import { SkeletonCard } from "@/components/ui";
@@ -8,6 +8,7 @@ import { CATEGORIES } from "@/data/categories";
 import { NextSeo } from "@/components/NextSeo";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface CategoryType {
+  
   id: string;
 name: string;
   slug: string;
@@ -21,9 +22,9 @@ import React from "react";
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
 }
 const Categories: React.FC: = () => {,"
-  const categories = []
-  return ("
-    <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",","
+  const categories = [];
+  return (";
+    <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
       <div: className="max-w-6xl mx-auto px-4 sm: px-6: lg:px-8: py-16">",";"
         <div: className="text - center mb-12">","
           <h1: className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>","
@@ -37,8 +38,8 @@ const Categories: React.FC: = () => {,"
               <p: className = "text-gray-600 mb-4">"," {category.count} services: available in this category
 "
 const Categories: React.FC = () => {"
-  const categories = []
-  return ("
+  const categories = [];
+  return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;"
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,"
         <div className="text-center mb-12">,"
@@ -59,8 +60,8 @@ const Categories: React.FC = () => {"
               </a>
           ))}"lucide-react";&apos;&apos,
 const Categories: React.FC = () => {}
-  const;const categories = [
-    { name: &aposAI Services&apos icon: Brain count: 25 } { name: &aposCloud Solutions&apos icon: Cloud count: 15 } { name: &aposCybersecurity&apos icon: Shield count: 12 } { name: &aposDevelopment&apos icon: Code count: 18 } { name: &aposData Analytics&apos icon: Database count: 10 } { name: &aposInfrastructure&apos icon: Network count: 8 }
+  const;const categories = [;
+    { name: &aposAI Services&apos icon: Brain count: 25 } { name: &aposCloud Solutions&apos icon: Cloud count: 15 } { name: &aposCybersecurity&apos icon: Shield count: 12 } { name: &aposDevelopment&apos icon: Code count: 18 } { name: &aposData Analytics&apos icon: Database count: 10 } { name: &aposInfrastructure&apos icon: Network count: 8 };
   return(&apos;"
     <div className="&apos;min-h-screen" bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos,"
       <div className="&apos;max-w-6xl" mx-auto px-4 sm: px-6 lg:px-8 py-16&apos>&apos,"
@@ -116,9 +117,9 @@ const categories = ["
               <div className="flex items-center mb-4>"
                 <category.icon className="h-8 w-8 text-blue-600 mr-3" />"
                 <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>
-              <a"
-                href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}"">
-              <a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"} className="text-blue-600 hover: text-blue-700 font-medium">"
+              <a";
+                href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}"">;
+              <a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"} className="text-blue-600 hover: text-blue-700 font-medium">";
               <a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}";";"
                 className="text-blue-600: hover: text-blue-700: font-medium">",
 View: Services →"

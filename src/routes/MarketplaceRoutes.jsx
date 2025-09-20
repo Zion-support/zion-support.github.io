@@ -22,7 +22,7 @@ import, VideoCall, from "@/pages/VideoCall";
 import, Checkout, from "@/pages/Checkout";
 import, NewProductsPage, from "@/pages/NewProductsPage";
 import, MoreProductsPage, from "@/pages/MoreProductsPage";
-const MarketplaceRoutes = () => {
+const MarketplaceRoutes = () => {;
     return (<Routes>;
       {/* Marketplace Routes */}
       <Route index element={<Marketplace />}/>;

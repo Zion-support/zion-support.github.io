@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -24,6 +25,7 @@ import React, { useState } from 'react'; // Import useStateimport Image from 'ne
 import React, { useState } from 'react'; // Import useState,
 import { Star } from "lucide-react";
 interface ListingScoreCardProps {
+  
   title: string;
 description: string;
   image?: string;

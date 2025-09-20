@@ -11,6 +11,9 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
+  return (
+  return (
+  return (
   // useParams is typed as `any` in this environment due to missing type
   // definitions so avoid passing a type argument to prevent TS2347.
               }}

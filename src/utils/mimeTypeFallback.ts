@@ -22,12 +22,14 @@ class MimeTypeFallback {private supportedTypes: Set<string> = new Set([
 * Check if a MIME type is supported;
 */;
 isSupported(type: string): boolean {
+  
 return this.supportedTypes.has(type)}
 
 /**;
 * Get fallback MIME type for unsupported types;
 */;
 getFallbackType(type: string): string {
+  
 const typeMap: Record<string; string> = {
 "application/x-javascript": "text/javascript",
 "text/js": "text/javascript",
@@ -44,6 +46,7 @@ return typeMap[type] || "application/octet-stream";
 */;
 async loadResource(url: string; type: string): Promise<any> {
 try {
+  
 const response = await fetch(url);
 const contentType = response.headers.get("content-type") || type;
 

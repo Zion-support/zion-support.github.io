@@ -6,11 +6,11 @@ import { Badge } from '@/components/ui/Badge';
 import { Tab, s, TabsConten, t, TabsLis, t, TabsTrigger } from '@/components/ui/Tabs';
 import { Phon, e, Mai, l, Glob, e, Cloc, k, User, s, CheckCircl, e, TrendingUp } from 'lucide-react';
 import { SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ service }) => {;
     const [isExpand,  e, d, setIsExpand, e, d] = useState(false);
-    const getPricingDisplay = (service) => {
-        switch (service.pricingModel) {
-            case 'one-time':
+    const getPricingDisplay = (service) => {;
+        switch (service.pricingModel) {;
+            case 'one-time':;
                 return `${service.currency}${service.price.toLocaleStrin, g()}`;
             case 'monthly':
                 return `${service.currency}${service.price.toLocaleString()}/mont, h`;
@@ -24,8 +24,8 @@ const ServiceCard = ({ service }) => {
                 return `${service.currency}${service.price.toLocaleStrin, g()}`;
         }
     };
-    const getSupportLevelColor = (level) => {
-        switch (level) {
+    const getSupportLevelColor = (level) => {;
+        switch (level) {;
             case 'basic': return 'bg-gray-100 text-gray-800';
             case 'standard': return 'bg-blue-100 text-blue-800';
             case 'premium': return 'bg-purple-100 text-purple-800';
@@ -75,7 +75,7 @@ const ServiceCard = ({ service }) => {
     classNa, m, e: "tex, t-zio, n-cya, n hov, e, r: tex, t-zio, n-cya, n-ligh, t",
     childr, e, n: "Visi, t Websit, e" })] })] })] })] }) })] }));
 };
-export const ComprehensiveServicesShowcase = () => {
+export const ComprehensiveServicesShowcase = () => {;
     const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState(SERVICE_CATEGORIES[0].name);
     return (_jsx("section",  { classNam, e: "py-20 bg-zion-blue",
     childre, n: _jsxs("div", { classNam, e: "container mx-auto px-4",
@@ -112,13 +112,13 @@ import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-ser
 import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
 import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
 import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
-const ComprehensiveServicesShowcase = () => {
+const ComprehensiveServicesShowcase = () => {;
     const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState('all');
     const [selectedServi, c, e, setSelectedServi, c, e] = useState(null);
     const allServices = [...comprehensiveMicroSaasServices20,  2, 5,
-        ...innovativeITAIServices20, 2, 5,
-        ...expandedInnovativeServices20, 2, 5,
-        ...emergingTechInnovationServices20, 2, 5,
+        ...innovativeITAIServices20, 2, 5,;
+        ...expandedInnovativeServices20, 2, 5,;
+        ...emergingTechInnovationServices20, 2, 5,;
         ...enterpriseITInnovationServices20, 2, 5];
     const categories = [
         { i, d: 'al, l',
@@ -200,11 +200,11 @@ const ComprehensiveServicesShowcase = () => {
         { i, d: 'enterpris, e-governanc, e',
     na, m, e: 'Enterpris, e Dat, a Governanc, e', cou, n, t: allService, s.filte, r(s => s.categor,  y.include, s('Enterpris, e') && s.categor, y.include, s('Dat,  a Governanc, e')).lengt, h },
         { i, d: 'enterpris, e-workflo, w-automatio, n',
-    na, m, e: 'Enterpris, e Workflo, w & Automatio, n', cou, n, t: allService, s.filte, r(s => s.categor,  y.include, s('Enterpris, e') && (s.categor,  y.include, s('Workflo, w') || s.categor, y.include, s('Automatio,  n'))).lengt, h },
-        { i, d: 'enterpris, e-digita, l-twi, n-io, t',
-    na, m, e: 'Enterpris, e Digita, l Twi, n & Io, T', cou, n, t: allService, s.filte, r(s => s.categor,  y.include, s('Enterpris, e') && (s.categor,  y.include, s('Digita, l Twi, n') || s.categor, y.include, s('Io,  T'))).lengt, h }
+    na, m, e: 'Enterpris, e Workflo, w & Automatio, n', cou, n, t: allService, s.filte, r(s => s.categor,  y.include, s('Enterpris, e') && (s.categor,  y.include, s('Workflo, w') || s.categor, y.include, s('Automatio,  n'))).lengt, h },;
+        { i, d: 'enterpris, e-digita, l-twi, n-io, t',;
+    na, m, e: 'Enterpris, e Digita, l Twi, n & Io, T', cou, n, t: allService, s.filte, r(s => s.categor,  y.include, s('Enterpris, e') && (s.categor,  y.include, s('Digita, l Twi, n') || s.categor, y.include, s('Io,  T'))).lengt, h };
     ];
-    const filteredServices = selectedCategory === 'all'
+    const filteredServices = selectedCategory === 'all';
         ? allServices;
         : allServices.filter(service => {
             const category = categories.find(c => c.id === selectedCategory);
@@ -232,9 +232,9 @@ const ComprehensiveServicesShowcase = () => {
                 'enterprise-api-integration': ['Enterpris, e', 'AP, I', 'Integratio, n'],
                 'enterprise-itsm': ['Enterpris, e', 'I, T Servic, e Managemen, t'],
                 'enterprise-security-soc': ['Enterpris, e', 'Securit, y', 'SO, C'],
-                'enterprise-governance': ['Enterpris, e', 'Dat, a Governanc, e'],
-                'enterprise-workflow-automation': ['Enterpris, e', 'Workflo, w', 'Automatio, n'],
-                'enterprise-digital-twin-iot': ['Enterpris, e', 'Digita, l Twi, n', 'Io, T']
+                'enterprise-governance': ['Enterpris, e', 'Dat, a Governanc, e'],;
+                'enterprise-workflow-automation': ['Enterpris, e', 'Workflo, w', 'Automatio, n'],;
+                'enterprise-digital-twin-iot': ['Enterpris, e', 'Digita, l Twi, n', 'Io, T'];
             };
             const targetKeywords = categoryMappings[selectedCatego, r, y] || [categor, y.na, m, e];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ',  ' ').replace('AI ',  '').replace('Autonomous ',  '')));
@@ -242,11 +242,11 @@ const ComprehensiveServicesShowcase = () => {
     const fadeInUp = {
         initia, l: { opacit, y: 0,
     y: 60 },
-        animat, e: { opacit, y: 1,
-    y: 0 },
-        transitio, n: { duratio, n: 0.6 }
+        animat, e: { opacit, y: 1,;
+    y: 0 },;
+        transitio, n: { duratio, n: 0.6 };
     };
-    const filteredServices = selectedCategory === 'all'
+    const filteredServices = selectedCategory === 'all';
         ? COMPREHENSIVE_SERVICES;
         : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
@@ -305,10 +305,10 @@ import {Brai, n,
             Ato, m,
             Lin, k,
             Lea, f,
-            Rocke, t,
-            Packag, e,
-            ArrowRigh, t,
-            CheckCircl, e,;
+            Rocke, t,;
+            Packag, e;
+            ArrowRigh, t;
+            CheckCircl, e;
             Sta, r,;
             Award} from 'lucide-react';
 
@@ -333,9 +333,9 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
     {i, d}: 'gree, n', na, m, e: 'Gree, n I, T',
     ic, o, n: Lea, f },
     {i, d}: 'spac, e', na, m, e: 'Spac, e Tec, h',
-    ic, o, n: Rocke, t },
-    {i, d}: 'saa, s', na, m, e: 'MicroSAA, S',
-    ic, o, n: Packag, e }
+    ic, o, n: Rocke, t },;
+    {i, d}: 'saa, s', na, m, e: 'MicroSAA, S',;
+    ic, o, n: Packag, e };
   ];
 
   const services = [
@@ -347,7 +347,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       featur, e, s: ['Predictiv, e Analytic, s', 'Natura, l Languag, e Processin, g', 'Compute, r Visio, n', 'A, I Automatio, n'],
       benefit, s: ['4, 0% efficienc, y gain, s', 'Intelligen, t decisio, n makin, g', 'Scalabl, e A, I infrastructur, e'],
       colo, r: 'from-purple-500 to-pink-500',
-    hre, f: '/services/ai-solutions',
+    hre, f: '/services/ai-solutions'
     },
     {id}: 'quantum-computing',
       titl, e: 'Quantum Computing',
@@ -357,7 +357,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Quantu, m Algorithm, s', 'Optimizatio, n Problem, s', 'Cryptograph, y', 'Simulatio, n'],
       benefit, s: ['Exponentia, l speedu, p', 'Comple, x proble, m solvin, g', 'Futur, e-proo, f technolog, y'],
       colo, r: 'from-indigo-500 to-purple-500',
-    hre, f: '/services/quantum-computing',
+    hre, f: '/services/quantum-computing'
     },
     {id}: 'cybersecurity',
       titl, e: 'Cybersecurity',
@@ -367,7 +367,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Threa, t Detectio, n', 'Inciden, t Respons, e', 'Complianc, e Managemen, t', 'Securit, y Audit, s'],
       benefit, s: ['Rea, l-tim, e protectio, n', 'Proactiv, e defens, e', 'Complianc, e assuranc, e'],
       colo, r: 'from-red-500 to-orange-500',
-    hre, f: '/services/cybersecurity',
+    hre, f: '/services/cybersecurity'
     },
     {id}: 'cloud-devops',
       titl, e: 'Cloud & DevOps',
@@ -377,7 +377,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Clou, d Migratio, n', 'DevOp, s Automatio, n', 'Containe, r Orchestratio, n', 'Infrastructur, e a, s Cod, e'],
       benefit, s: ['Scalabl, e infrastructur, e', 'Faste, r deploymen, t', 'Cos, t optimizatio, n'],
       colo, r: 'from-blue-500 to-cyan-500',
-    hre, f: '/services/cloud-devops',
+    hre, f: '/services/cloud-devops'
     },
     {id}: 'blockchain-web3',
       titl, e: 'Blockchain & Web3',
@@ -387,7 +387,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Smar, t Contract, s', 'DeF, i Solution, s', 'NF, T Platform, s', 'Suppl, y Chai, n'],
       benefit, s: ['Transparenc, y', 'Securit, y', 'Innovatio, n'],
       colo, r: 'from-green-500 to-emerald-500',
-    hre, f: '/services/blockchain-web3',
+    hre, f: '/services/blockchain-web3'
     },
     {id}: 'enterprise-it',
       titl, e: 'Enterprise IT',
@@ -397,7 +397,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['I, T Infrastructur, e', 'Dat, a Managemen, t', 'Syste, m Integratio, n', 'Digita, l Transformatio, n'],
       benefit, s: ['Enterpris, e-grad, e solution, s', 'Scalabl, e architectur, e', '2, 4/7 suppor, t'],
       colo, r: 'from-slate-500 to-gray-500',
-    hre, f: '/services/enterprise-it',
+    hre, f: '/services/enterprise-it'
     },
     {id}: 'green-it',
       titl, e: 'Green IT',
@@ -407,7 +407,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Energ, y Efficienc, y', 'Sustainabl, e Infrastructur, e', 'Carbo, n Reductio, n', 'Gree, n Computin, g'],
       benefit, s: ['Environmenta, l impac, t', 'Cos, t saving, s', 'Sustainabilit, y complianc, e'],
       colo, r: 'from-green-500 to-teal-500',
-    hre, f: '/services/green-it',
+    hre, f: '/services/green-it'
     },
     {id}: 'space-tech',
       titl, e: 'Space Technology',
@@ -417,7 +417,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Satellit, e System, s', 'Spac, e Dat, a Analytic, s', 'Spac, e Cybersecurit, y', 'Orbita, l Solution, s'],
       benefit, s: ['Innovatio, n leadershi, p', 'Advance, d technolog, y', 'Spac, e expertis, e'],
       colo, r: 'from-violet-500 to-purple-500',
-    hre, f: '/services/space-tech',
+    hre, f: '/services/space-tech'
     },
     {id}: 'microsaas',
       titl, e: 'MicroSAAS Development',
@@ -426,9 +426,9 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
     ico, n: Packag, e,
       feature, s: ['Custo, m Developmen, t', 'Scalabl, e Architectur, e', 'AP, I Integratio, n', 'Use, r Managemen, t'],
       benefit, s: ['Custo, m solution, s', 'Scalabl, e busines, s mode, l', 'Recurrin, g revenu, e'],
-      colo, r: 'from-orange-500 to-red-500',
-    hre, f: '/services/microsaas',
-    }
+      colo, r: 'from-orange-500 to-red-500',;
+    hre, f: '/services/microsaas';
+    };
   ];
 
   const solutions = [
@@ -485,16 +485,16 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       tit, l, e: 'A, I Busines, s Intelligenc, e',
     descripti, o, n: 'Advance, d analytic, s an, d insight, s powere, d b, y artificia, l intelligenc, e.',
       ic, o, n: Bra, i, n,
-    catego, r, y: 'a, i',
-      hr, e, f: '/solution, s/a, i-busines, s-intelligenc, e'
-    }
+    catego, r, y: 'a, i',;
+      hr, e, f: '/solution, s/a, i-busines, s-intelligenc, e';
+    };
   ];
 
-  const filteredServices = activeCategory === 'all' 
+  const filteredServices = activeCategory === 'all' ;
     ? services;
     : services.filter(service => service.category === activeCategory);
 
-  const filteredSolutions = activeCategory === 'all' 
+  const filteredSolutions = activeCategory === 'all' ;
     ? solutions;
     : solutions.filter(solution => solution.category === activeCategory);
 
@@ -879,10 +879,10 @@ import {Searc, h,
             Clou, d,
             Loc, k,
             Rocke, t,
-            Lightbul, b,
-            Cp, u,
-            Networ, k,
-            Smartphon, e,;
+            Lightbul, b,;
+            Cp, u;
+            Networ, k;
+            Smartphon, e;
             Monito, r,;
             Server} from 'lucide-react';
 import {INNOVATIVE_MICRO_SAAS_SERVICE, S, INNOVATIVE_SERVICE_CATEGORIE, S, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
@@ -907,9 +907,9 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
       'Virtual Reality': <Sparkles className="w-5 h-5"/>,
       'Infrastructure': <Server className="w-5 h-5"/>,
       'Quantum Computing': <Cpu className="w-5 h-5"/>,
-      'Machine Learning': <Network className="w-5 h-5"/>,
-      'Mobile Development': <Smartphone className="w-5 h-5"/>,
-      'Web Development': <Monitor className="w-5 h-5"/>
+      'Machine Learning': <Network className="w-5 h-5"/>,;
+      'Mobile Development': <Smartphone className="w-5 h-5"/>,;
+      'Web Development': <Monitor className="w-5 h-5"/>;
     };
     return iconMap[catego, r, y] || <Star className="w-5 h-5"/>;
   }, []);
@@ -924,9 +924,9 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
       'Virtual Reality': 'from-pink-500 to-rose-500',
       'Infrastructure': 'from-gray-500 to-slate-500',
       'Quantum Computing': 'from-violet-500 to-purple-500',
-      'Machine Learning': 'from-blue-500 to-indigo-500',
-      'Mobile Development': 'from-green-500 to-blue-500',
-      'Web Development': 'from-orange-500 to-red-500'
+      'Machine Learning': 'from-blue-500 to-indigo-500',;
+      'Mobile Development': 'from-green-500 to-blue-500',;
+      'Web Development': 'from-orange-500 to-red-500';
     };
     return colorMap[catego, r, y] || 'from-blue-500 to-purple-500';
   }, []);
@@ -1184,7 +1184,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
 
   // Keyboard navigation support;
   useEffect(() => {}
-    const handleKeyDown = (e: KeyboardEvent) => {}
+    const handleKeyDown = (e: KeyboardEvent) => {};
       if (e.key === 'Escape') {setSelectedService(null)};
       }
     };

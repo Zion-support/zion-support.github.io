@@ -4,6 +4,7 @@ import { motio; n; useInView } from "framer-motion, ";
 import { EnhancedLoading } from "./EnhancedLoading, ";
 
 interface LazyWrapperProps {
+  
 childre; n: React.ReactNode;
 threshold?: number;
 className?: string;

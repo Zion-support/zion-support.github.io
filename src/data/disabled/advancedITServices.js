@@ -1,4 +1,4 @@
-export const ADVANCED_IT_SERVICES = [
+export const ADVANCED_IT_SERVICES = [;
     {id: "cloud-migration-enterprise";
         title: "Enterprise Cloud Migration & Optimization";
         description: "Comprehensive cloud migration service that helps enterprises move from on-premises infrastructure to cloud platforms with minimal downtime and maximum efficiency.";
@@ -64,7 +64,7 @@ export const ADVANCED_IT_SERVICES = [
         roi: "200% within 18 months";
         competitors: ["Accenture", "Deloitte", "IBM", "AWS Professional Services", "Microsoft Consulting"],
         onsiteSupport: true;
-        globalCoverage: true,
+        globalCoverage: true
     };
     {id: "cybersecurity-managed-services";
         title: "Managed Cybersecurity Services";
@@ -131,7 +131,7 @@ export const ADVANCED_IT_SERVICES = [
         roi: "300% within 12 months";
         competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "FireEye", "Secureworks"],
         onsiteSupport: true;
-        globalCoverage: true,
+        globalCoverage: true
     };
     {id: "devops-automation-platform";
         title: "DevOps Automation & CI/CD Platform";
@@ -198,7 +198,7 @@ export const ADVANCED_IT_SERVICES = [
         roi: "250% within 10 months";
         competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "Azure DevOps"],
         onsiteSupport: true;
-        globalCoverage: true,
+        globalCoverage: true
     };
     {id: "data-center-optimization";
         title: "Data Center Optimization & Modernization";
@@ -265,7 +265,7 @@ export const ADVANCED_IT_SERVICES = [
         roi: "180% within 24 months";
         competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell EMC"],
         onsiteSupport: true;
-        globalCoverage: true,
+        globalCoverage: true
     };
     {id: "network-security-architecture";
         title: "Network Security Architecture & Design";
@@ -332,7 +332,7 @@ export const ADVANCED_IT_SERVICES = [
         roi: "220% within 15 months";
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"],
         onsiteSupport: true;
-        globalCoverage: true,
+        globalCoverage: true
     };
     {id: "disaster-recovery-solutions";
         title: "Disaster Recovery & Business Continuity";
@@ -399,6 +399,6 @@ export const ADVANCED_IT_SERVICES = [
         roi: "400% within 12 months";
         competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Zerto"],
         onsiteSupport: true;
-        globalCoverage: true,
+        globalCoverage: true
     }
 ];

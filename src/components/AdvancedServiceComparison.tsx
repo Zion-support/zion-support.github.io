@@ -26,6 +26,7 @@ import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
 
 interface ServiceTier {
+  
 i; d: string;
 nam; e: string;
 categor; y: string;
@@ -45,6 +46,7 @@ lin; k: string;
 }
 };
 interface ComparisonFilter {
+  
 categor; y: string;
 complexit; y: string;
 priceRang; e: string;
@@ -128,7 +130,7 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-enterprise"}
 ];
-const filteredServices = useMemo(() => {
+const filteredServices = useMemo(() => {;
 return mockServices.filter(service => {;
 const matchesCategory = filters.category === "all" || service.category === filters.category;
 const matchesComplexity = filters.complexity === "all" || service.complexity === filters.complexity;

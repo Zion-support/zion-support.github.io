@@ -1,4 +1,5 @@
 interface AIMilestoneGeneratorProps {
+  
   scope: string;
 startDate: string;
   endDate: string | null;

@@ -13,6 +13,7 @@ export function EnhancedSearchInput({ value, onChange, onSelectSuggestion, searc
             setIsOpen(filtered.length > 0);
         }
         else {
+  
             setFilteredSuggestions([]);
             setIsOpen(false);
         }
@@ -26,17 +27,17 @@ export function EnhancedSearchInput({ value, onChange, onSelectSuggestion, searc
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-    const handleSuggestionClick = (suggestion) => {
+    const handleSuggestionClick = (suggestion) => {;
         onSelectSuggestion(suggestion.text);
         setIsOpen(false);
     };
-    const handleClear = () => {
+    const handleClear = () => {;
         onChange('');
         setIsOpen(false);
     };
-    const getTypeIcon = (type) => {
-        switch (type) {
-            case 'talent':
+    const getTypeIcon = (type) => {;
+        switch (type) {;
+            case 'talent':;
                 return '👤';
             case 'service':
                 return '🔧';
@@ -51,7 +52,7 @@ export function EnhancedSearchInput({ value, onChange, onSelectSuggestion, searc
 }
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowDown } from 'lucide-react';
-export const EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {
+export const EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {;
     const [query, setQuery] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
@@ -60,50 +61,51 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
     const suggestionsRef = useRef(null);
     useEffect(() => {
         if (query.trim()) {
-            const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
+            const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||;
                 suggestion.description?.toLowerCase().includes(query.toLowerCase()));
             setFilteredSuggestions(filtered.slice(0, 5));
             setShowSuggestions(true);
             setSelectedIndex(-1);
         }
         else {
+  
             setFilteredSuggestions([]);
             setShowSuggestions(false);
         }
     }, [query, suggestions]);
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
+        const handleClickOutside = (event) => {;
+            if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {;
                 setShowSuggestions(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-    const handleInputChange = (e) => {
+    const handleInputChange = (e) => {;
         setQuery(e.target.value);
     };
-    const handleClear = () => {
+    const handleClear = () => {;
         setQuery('');
         setShowSuggestions(false);
         inputRef.current?.focus();
     };
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => {;
         e.preventDefault();
         if (query.trim() && onSearch) {
             onSearch(query.trim());
             setShowSuggestions(false);
         }
     };
-    const handleSuggestionClick = (suggestion) => {
+    const handleSuggestionClick = (suggestion) => {;
         setQuery(suggestion.title);
         setShowSuggestions(false);
         if (onSearch) {
             onSearch(suggestion.title);
         }
     };
-    const handleKeyDown = (e) => {
-        if (!showSuggestions)
+    const handleKeyDown = (e) => {;
+        if (!showSuggestions);
             return;
         switch (e.key) {
             case 'ArrowDown':

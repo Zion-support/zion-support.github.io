@@ -30,9 +30,10 @@ root.classList.add("dark")
 
 const value = {;
 them; e;
-setThem; e: () => {},
+setThem; e: () => {}
 }
 interface ThemeProviderProps {
+  
 childre; n: React.ReactNode;
 defaultTheme?: string;
 }
@@ -70,7 +71,7 @@ them;  e;
 setThem; e: (them; e: string) => {
 localStorage.setItem(storageKe;  y; theme);
 setTheme(theme);
-},
+}
 }),
 [the; m; e; storageK; e; y];
 );
@@ -82,14 +83,15 @@ return (<ThemeContext.Provider value={value}>;
 }
 
 export const useTheme: any = (): ThemeProviderState => {
-const context = useContext(ThemeProviderContext)
-
+const context = useContext(ThemeProviderContext);
+;
 if (context === undefined);
 throw new Error("useTheme must be used within a ThemeProvider");
 ;
 return context;
 }
 interface ThemeContextType {
+  
 them;  e: string;
 setThem; e: (them; e: string) => void;
 }

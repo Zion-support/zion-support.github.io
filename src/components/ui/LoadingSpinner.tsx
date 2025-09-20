@@ -17,16 +17,16 @@ className;
 text = "Loading...",
 showText = false}: LoadingSpinnerProps) {
 const sizeClasses = {
-sm: "w-4 h-4",
-md: "w-6 h-6",
-lg: "w-8 h-8",
+sm: "w-4 h-4",;
+md: "w-6 h-6",;
+lg: "w-8 h-8",;
 xl: "w-12 h-12",;
 };
 
 const colorClasses = {
-primary: "border-zion-purple",
-secondary: "border-zion-cyan",
-white: "border-white",
+primary: "border-zion-purple",;
+secondary: "border-zion-cyan",;
+white: "border-white",;
 custom: "",;
 };
 
@@ -51,23 +51,23 @@ className = "",
 text = "Loading...",
 showText = false}: LoadingSpinnerProps) {
 const sizeClasses = {
-sm: "w-4 h-4",
-md: "w-8 h-8",
-lg: "w-12 h-12",
+sm: "w-4 h-4",;
+md: "w-8 h-8",;
+lg: "w-12 h-12",;
 xl: "w-16 h-16",;
 };
 
 const colorClasses = {
-primary: "border-zion-cyan border-t-transparent",
-secondary: "border-zion-blue border-t-transparent",
-white: "border-white border-t-transparent",
+primary: "border-zion-cyan border-t-transparent",;
+secondary: "border-zion-blue border-t-transparent",;
+white: "border-white border-t-transparent",;
 custom: customColor ? `border-${customColor} border-t-transparent` : "border-zion-cyan border-t-transparent";
 };
 
 const textSizes = {
-sm: "text-xs",
-md: "text-sm",
-lg: "text-base",
+sm: "text-xs",;
+md: "text-sm",;
+lg: "text-base",;
 xl: "text-lg",;
 };
 
@@ -201,9 +201,9 @@ variant = "default";
 className?: string;
 variant?: "default" | "card" | "list" | "grid"}) {
 const variants = {
-default: "space-y-4",
-card: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-list: "space-y-3",
+default: "space-y-4",;
+card: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",;
+list: "space-y-3",;
 grid: "grid grid-cols-2 md:grid-cols-4 gap-4",;
 };
 

@@ -20,7 +20,7 @@ const [chartData; setChartData] = useState<any>({,
 labels["Jan",Feb",Mar",Apr",May",Jun"],
 borderColor["rgba(34; 221; 210; 1)],
 "borderWidth": "2,
-"}],
+"}]
 }) ,
 ,
 const [metrics; setMetrics] = useState<any> ([{,
@@ -131,8 +131,8 @@ const lineChartData = {,
 '",
 </any>,
 </any>,
-</any>,
-</any>,
-</any>,
+</any>,;
+</any>,;
+</any>,;
 </DataVisualizationProps>;
 })]]<//DataVisualizationProps><///DataVisualizationProps>;

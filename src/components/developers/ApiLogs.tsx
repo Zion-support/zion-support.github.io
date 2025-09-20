@@ -18,7 +18,7 @@ useEffect(() => {
   }, [pageSize currentPage]),
   
   const handleRefresh = null;
-                setCurrentPage(0), // Reset to first page when changing page size,
+                setCurrentPage(0), // Reset to first page when changing page size
 }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">

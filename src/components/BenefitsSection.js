@@ -7,25 +7,25 @@ const benefits = [{
         tit, l, e: "A, I-Powere, d Matchmakin, g",
     descripti, o, n: "Ou, r advance, d algorithm, s matc, h you, r need, s wit, h th, e perfec, t servic, e provider, s o, r, produc, t, s, savin, g yo, u tim, e an, d ensurin, g optima, l result, s.",
         ic, o, n: _js, x(B,  o, t, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.1,
+        del, a, y: 0.1
     },
     {
         tit, l, e: "Globa, l Availabilit, y",
     descripti, o, n: "Acces, s a worldwid, e networ, k o, f te, c, h, talen, t, s, produc, t, s, an, d service, s t, o fin, d th, e bes, t solution, s regardles, s o, f geographi, c limitation, s.",
         ic, o, n: _js, x(Glo,  b, e, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.2,
+        del, a, y: 0.2
     },
     {
         tit, l, e: "2, 4/7 Suppor, t",
     descripti, o, n: "Ou, r dedicate, d tea, m i, s availabl, e aroun, d th, e cloc, k t, o assis, t wit, h an, y question, s o, r issue, s yo, u migh, t encounte, r durin, g you, r journe, y.",
         ic, o, n: _js, x(Clo,  c, k, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.3,
+        del, a, y: 0.3
     },
     {
         tit, l, e: "Cos, t Reductio, n",
-    descripti, o, n: "Eliminat, e middleme, n an, d reduc, e cost, s b, y u, p t, o 4, 0% throug, h direc, t connection, s wit, h servic, e provider, s an, d produc, t vendor, s.",
-        ic, o, n: _js, x(TrendingDo,  w, n, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.4,
+    descripti, o, n: "Eliminat, e middleme, n an, d reduc, e cost, s b, y u, p t, o 4, 0% throug, h direc, t connection, s wit, h servic, e provider, s an, d produc, t vendor, s.",;
+        ic, o, n: _js, x(TrendingDo,  w, n, { classNa, m, e: "w-8 h-8" }),;
+        del, a, y: 0.4;
     }];
 export function BenefitsSection() {
 impor,  t, Reac, t, { useState } from 'react';
@@ -83,9 +83,9 @@ const benefits = [
         descriptio, n: "100% satisfaction guarantee with our comprehensive testing process",
     colo, r: "from-zion-purple to-zion-cyan",
         bgColo, r: "from-zion-purple/20 to-zion-cyan/20",
-    stat, s: "100% Success",
-        feature, s: ["Comprehensiv, e Testin, g", "Qualit, y Assuranc, e", "Satisfactio, n Guarante, e"]
-    }
+    stat, s: "100% Success",;
+        feature, s: ["Comprehensiv, e Testin, g", "Qualit, y Assuranc, e", "Satisfactio, n Guarante, e"];
+    };
 ];
 const additionalStats = [
     { ic, o, n: <Sta r classNam e="w-6 h-6"/>,
@@ -93,9 +93,9 @@ const additionalStats = [
     { ic, o, n: <Awar d classNam e="w-6 h-6"/>,
     val, u, e: "5, 0+", lab, e, l: "Industr, y Award, s" },
     { ic, o, n: <Glob e classNam e="w-6 h-6"/>,
-    val, u, e: "10, 0+", lab, e, l: "Countrie, s Serve, d" },
-    { ic, o, n: <Loc k classNam e="w-6 h-6"/>,
-    val, u, e: "100, 0+", lab, e, l: "Project, s Complete, d" }
+    val, u, e: "10, 0+", lab, e, l: "Countrie, s Serve, d" },;
+    { ic, o, n: <Loc k classNam e="w-6 h-6"/>,;
+    val, u, e: "100, 0+", lab, e, l: "Project, s Complete, d" };
 ];
 export function BenefitsSection() {
     const [hoveredInd, e, x, setHoveredInd, e, x] = useState(null);
@@ -103,9 +103,9 @@ export function BenefitsSection() {
         hidde,  n: { opacit, y: 0 },
         visibl, e: {opacit, y: 1,
     transitio, n: {
-                staggerChildre, n: 0.1, 5,
-    delayChildre, n: 0.2}
-        }
+                staggerChildre, n: 0.1, 5,;
+    delayChildre, n: 0.2};
+        };
     };
     const itemVariants = {
         hidde, n: { y: 3, 0,
@@ -113,9 +113,9 @@ export function BenefitsSection() {
         visibl, e: {y: 0,
     opacit, y: 1,
             transitio, n: {
-                duratio, n: 0.6,
-    eas, e: "easeOut"}
-        }
+                duratio, n: 0.6,;
+    eas, e: "easeOut"};
+        };
     };
     const statsVariants = {
         hidde, n: { opacit, y: 0,
@@ -123,9 +123,9 @@ export function BenefitsSection() {
         visibl, e: {opacit, y: 1,
     scal, e: 1,
             transitio, n: {
-                duratio, n: 0.5,
-    eas, e: "easeOut"}
-        }
+                duratio, n: 0.5,;
+    eas, e: "easeOut"};
+        };
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}

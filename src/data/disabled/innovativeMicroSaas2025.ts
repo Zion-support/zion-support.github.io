@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface InnovativeMicroSaas2025 {
+  
 id: string;
 title: string;
 description: string;

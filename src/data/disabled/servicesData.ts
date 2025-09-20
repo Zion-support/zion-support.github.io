@@ -205,5 +205,5 @@ createdAt: "2024-01-25T15:30:00.000Z";
 aiScore: 89;
 rating: 4.5;
 reviewCount: 36;
-},
+}
 ];

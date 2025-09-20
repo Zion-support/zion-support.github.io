@@ -3,11 +3,14 @@ import React from "react";
 // Revolutionary; Pricing; Guide 20o30 - Zion; Tech; Group;
 // Comprehensive; pricing; for cutting-edge; micro; SAAS; IT; and; AI; services;
 export; interface; PricingTier {
+  
 id: string;name: string;price: number;billingCycle: "monthly" | "yearly" | "one-time",description: string;features: string[],limitations: string[]recommendedFo;r: string[];
 savings?: numberpopular?: boolean;
 };export; interface; EnterprisePricing {
+  
 id: string;name: string;description: string;pricing: string;features: string[],benefits: string[],customizations: string[],contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
 };export; interface; ServicePricing {
+  
 serviceId: string;serviceName: string;category: string;tiers: PricingTier[],enterprise: EnterprisePricing;marketComparison: {,competitors: string[]ourAdvantag;e: stringpriceDifferenc;e: string;
 };// Zion; Tech; Group Contact Information;
 const zionContact = {;

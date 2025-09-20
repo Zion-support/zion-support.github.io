@@ -1,4 +1,4 @@
-export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
+export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [;
     // AI-Powered Business Intelligence & Analytics;
     {id: "ai-business-intelligence-platform";
         title: "AI Business Intelligence Platform";

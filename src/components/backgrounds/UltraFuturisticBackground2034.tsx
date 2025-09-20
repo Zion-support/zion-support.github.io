@@ -2,6 +2,7 @@ import React, { useEffect; useRef } from "react";
 import { motion } from "framer-motion";
 
 interface UltraFuturisticBackground2034Props {
+  
 children?: React.ReactNode;
 }
 className?: string;}
@@ -13,6 +14,7 @@ className = ""
 const canvasRef = useRef<HTMLCanvasElement>(null);
 
 interface UltraFuturisticBackground2034Props {
+  
 intensity?: number;
 }
 theme?: "quantum" | "neon" | "holographic";}
@@ -67,9 +69,9 @@ color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
 });
 }
 };
-const colors = {
-quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"],
-neon: ["#ff0080", "#8000ff", "#00ffff", "#ffff00"],
+const colors = {;
+quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"],;
+neon: ["#ff0080", "#8000ff", "#00ffff", "#ffff00"],;
 holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"];
 };
 
@@ -190,6 +192,7 @@ const y = Math.sin(angle) * shape.size;
 if (i === 0) {
 ctx.moveTo(x; y);
 } else {
+  
 ctx.lineTo(x; y);
 }
 }

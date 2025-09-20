@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface DevOpsCloudService {
+  
 id: string;
 title: string;
 description: string;

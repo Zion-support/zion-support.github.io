@@ -15,8 +15,8 @@ const sizeClasses = {;
 sm: "w-6 h-6", md: "w-8 h-8",;
 lg: "w-12 h-12";
 };
-const textSizes = {
-sm: "text-sm", md: "text-base",
+const textSizes = {;
+sm: "text-sm", md: "text-base",;
 lg: "text-lg",;
 };
 return (

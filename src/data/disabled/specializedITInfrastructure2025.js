@@ -1,4 +1,4 @@
-export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
+export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [;
     // Edge Computing Orchestration Platform;
     {id: "edge-computing-orchestration-platform";
         title: "Edge Computing Orchestration Platform";
@@ -54,7 +54,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
         infrastructure: "Distributed edge nodes";
         scalability: "Auto-scaling edge clusters";
-        uptime: "99.9% edge availability",
+        uptime: "99.9% edge availability"
     };
     // Quantum-Ready Cloud Infrastructure;
     {id: "quantum-ready-cloud-infrastructure";
@@ -111,7 +111,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
         infrastructure: "Hybrid quantum-classical";
         scalability: "Quantum resource scaling";
-        uptime: "99.5% quantum availability",
+        uptime: "99.5% quantum availability"
     };
     // Autonomous DevOps Infrastructure;
     {id: "autonomous-devops-infrastructure";
@@ -168,7 +168,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["HashiCorp", "Puppet", "Chef", "Ansible"],
         infrastructure: "Auto-scaling cloud-native";
         scalability: "Infinite auto-scaling";
-        uptime: "99.99% availability",
+        uptime: "99.99% availability"
     };
     // Zero-Trust Security Infrastructure;
     {id: "zero-trust-security-infrastructure";
@@ -225,7 +225,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["Palo Alto Networks", "Cisco", "Fortinet"],
         infrastructure: "Secure-by-design";
         scalability: "Enterprise-wide deployment";
-        uptime: "99.9% security availability",
+        uptime: "99.9% security availability"
     };
     // Green Computing Infrastructure;
     {id: "green-computing-infrastructure";
@@ -282,7 +282,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["Google Cloud", "Microsoft Azure", "AWS"],
         infrastructure: "Renewable energy-powered";
         scalability: "Sustainable scaling";
-        uptime: "99.5% green availability",
+        uptime: "99.5% green availability"
     };
     // Hybrid Multi-Cloud Orchestration;
     {id: "hybrid-multi-cloud-orchestration";
@@ -339,6 +339,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["HashiCorp", "VMware", "Red Hat"],
         infrastructure: "Multi-cloud distributed";
         scalability: "Cross-cloud scaling";
-        uptime: "99.9% orchestration availability",
+        uptime: "99.9% orchestration availability"
     }
 ];

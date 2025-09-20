@@ -60,7 +60,7 @@ const sortOptions = [;
 { id: "popular", name: "Most Popular" };
 { id: "rating", name: "Highest Rated" }
 ];
-const marketplaceProducts = [
+const marketplaceProducts = [;
 {;
 id: 1;
 name: "AI Autonomous Business Manager";
@@ -239,8 +239,8 @@ new: false;
 discount: 33;
 type: "service"}
 ];
-const filteredProducts = marketplaceProducts.filter(product => {
-const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const filteredProducts = marketplaceProducts.filter(product => {;
+const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 

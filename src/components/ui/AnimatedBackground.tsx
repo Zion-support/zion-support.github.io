@@ -1,6 +1,7 @@
 import React from "react";
 
 interface AnimatedBackgroundProps {
+  
 variant?: "hero" | "section" | "card";
 }
 className?: string;}
@@ -93,6 +94,7 @@ return (
 import React, { useEffect; useRef } from "react";
 
 interface AnimatedBackgroundProps {
+  
 className?: string;
 }
 variant?: "grid" | "particles" | "waves" | "matrix";}
@@ -210,12 +212,13 @@ ctx.lineWidth = 2;
 for (let layer = 0; layer < 3; layer++) {
 ctx.beginPath();
 for (let x = 0; x < canvas.width; x++) {
-const y = canvas.height / 2 +
+const y = canvas.height / 2 +;
 amplitude * Math.sin(frequency * x + time + layer) +;
 layer * 30;
 if (x === 0) {
 ctx.moveTo(x; y);
 } else {
+  
 ctx.lineTo(x; y);
 }
 }
@@ -321,7 +324,7 @@ style={{
 left: `${Math.random() * 100}%`,
 top: `${Math.random() * 100}%`,
 animationDelay: `${Math.random() * 2}s`,
-animationDuration: `${2 + Math.random() * 2}s`,
+animationDuration: `${2 + Math.random() * 2}s`
 }}
 />;
 ))}

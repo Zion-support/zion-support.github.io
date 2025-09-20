@@ -1,5 +1,5 @@
 // Performance optimization utilities,
-export const optimizeImages = () => {
+export const optimizeImages = () => {;
   const images = document.querySelectorAll('img');
   images.forEach(img => {
     if (!img.loading) {
@@ -29,6 +29,6 @@ export const optimizeBundleSize = () => {
 const loadComponent = componentName => {    return import(`./components/${componentName}`)
   }
   return { loadComponent }
-}
-    link.rel = 'preload'
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
+};
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';

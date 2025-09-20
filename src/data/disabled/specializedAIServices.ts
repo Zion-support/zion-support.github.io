@@ -1,5 +1,6 @@
 import { Routes; Route } from "react-router-dom, ";
 export interface SpecializedAIService {
+  
 id: string;
 title: string;
 description: string;
@@ -91,7 +92,7 @@ competitors: ["OpenAI", "Anthropic", "Cohere", "AI21 Labs", "Hugging Face"],
 marketTrend: "Explosive growth market with $100B+ by 2030";
 implementationComplexity: "Very High - Requires AI/ML expertise and significant computational resources";
 aiModel: ["GPT-4", "Claude", "LLaMA", "Custom Models", "Fine-tuned Models"],
-trainingData: "Enterprise data; industry-specific datasets; custom training data",
+trainingData: "Enterprise data; industry-specific datasets; custom training data"
 },
 
 // Computer Vision AI Platform;
@@ -150,7 +151,7 @@ competitors: ["Google Cloud Vision", "AWS Rekognition", "Azure Computer Vision",
 marketTrend: "High-growth market with $50B+ by 2027";
 implementationComplexity: "High - Requires computer vision and AI expertise";
 aiModel: ["YOLO", "ResNet", "EfficientNet", "Custom Models", "Pre-trained Models"],
-trainingData: "Image datasets; industry-specific images; custom training data",
+trainingData: "Image datasets; industry-specific images; custom training data"
 },
 
 // AI-Powered Cybersecurity;
@@ -209,7 +210,7 @@ competitors: ["Darktrace", "CrowdStrike", "SentinelOne", "Cylance", "FireEye"],
 marketTrend: "High-growth market with $60B+ by 2027";
 implementationComplexity: "High - Requires cybersecurity and AI expertise";
 aiModel: ["Neural Networks", "Random Forests", "Gradient Boosting", "Custom Models", "Ensemble Methods"],
-trainingData: "Threat data; network logs; security incidents; malware samples",
+trainingData: "Threat data; network logs; security incidents; malware samples"
 },
 
 // AI-Powered Predictive Analytics;
@@ -268,7 +269,7 @@ competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx", "DataRobot"],
 marketTrend: "Growing market with $30B+ by 2027";
 implementationComplexity: "Medium - Requires data science and AI expertise";
 aiModel: ["LSTM", "Random Forests", "Gradient Boosting", "ARIMA", "Prophet Models"],
-trainingData: "Historical data; time series data; business metrics; external datasets",
+trainingData: "Historical data; time series data; business metrics; external datasets"
 },
 
 // AI-Powered Process Automation;
@@ -327,7 +328,7 @@ competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Au
 marketTrend: "High-growth market with $25B+ by 2027";
 implementationComplexity: "Medium - Requires automation and AI expertise";
 aiModel: ["Decision Trees", "Neural Networks", "NLP Models", "Computer Vision", "Custom Models"],
-trainingData: "Process data; workflow logs; business rules; historical processes",
+trainingData: "Process data; workflow logs; business rules; historical processes"
 },
 
 // AI-Powered Customer Intelligence;
@@ -386,7 +387,7 @@ competitors: ["Salesforce Einstein", "Adobe Sensei", "Google Analytics", "Mixpan
 marketTrend: "High-growth market with $40B+ by 2027";
 implementationComplexity: "Medium - Requires AI and customer analytics expertise";
 aiModel: ["Collaborative Filtering", "Content-based Filtering", "Neural Networks", "Gradient Boosting", "Custom Models"],
-trainingData: "Customer data; transaction history; behavioral data; demographic information",
+trainingData: "Customer data; transaction history; behavioral data; demographic information"
 },
 
 // AI-Powered Supply Chain Optimization;
@@ -445,7 +446,7 @@ competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software", "Blue Yon
 marketTrend: "Growing market with $35B+ by 2027";
 implementationComplexity: "High - Requires supply chain and AI expertise";
 aiModel: ["LSTM", "Random Forests", "Linear Programming", "Genetic Algorithms", "Custom Models"],
-trainingData: "Historical demand; inventory levels; supplier data; logistics information",
+trainingData: "Historical demand; inventory levels; supplier data; logistics information"
 },
 
 // AI-Powered Quality Assurance;
@@ -504,6 +505,6 @@ competitors: ["Testim", "Applitools", "Mabl", "Functionize", "TestCraft"],
 marketTrend: "Growing market with $20B+ by 2027";
 implementationComplexity: "Medium - Requires QA and AI expertise";
 aiModel: ["Neural Networks", "Decision Trees", "Computer Vision", "NLP Models", "Custom Models"],
-trainingData: "Test cases; defect reports; application logs; performance metrics",
+trainingData: "Test cases; defect reports; application logs; performance metrics"
 }
 ];

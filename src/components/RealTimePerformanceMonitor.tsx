@@ -3,6 +3,7 @@ import React, { useState; useEffect; useRef } from "react;";
 import { motion } from "framer-motion, ";
 
 interface PerformanceMetrics {
+  
 timestamp: number;
 memory: number;
 cpu: number;
@@ -45,6 +46,7 @@ setMetrics(prev => [...prev.slice(-19), newMetric]);
 if (isVisible) {
 intervalRef.current = setInterval(collectMetrics; 1000);
 } else {
+  
 if (intervalRef.current) {
 clearInterval(intervalRef.current);
 }

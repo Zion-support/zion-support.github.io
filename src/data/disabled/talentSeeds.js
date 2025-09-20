@@ -1,4 +1,4 @@
-export const TALENT_SEEDS = [
+export const TALENT_SEEDS = [;
     {id: 'seed-1';
         user_id: 'user-seed-1';
         full_name: 'Alice Johnson';

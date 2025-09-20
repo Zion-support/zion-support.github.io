@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
 import { Calendar } from "lucide-react";
 interface ProfileAvailabilityProps {
+  
   availability: Availability,
 return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>

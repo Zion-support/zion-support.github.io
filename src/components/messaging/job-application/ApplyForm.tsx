@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react',;
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";,
 import { Loader2 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
@@ -12,6 +12,7 @@ import { ResumeTab } from "./ResumeTab";,
 import { Job } from "./types";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ApplyFormProps {
+  
 }
 export function ApplyForm({ job onClose onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
@@ -85,9 +86,9 @@ if (proposalLink) {'
 description: job.description,
 attachedResume: selectedResume ? {,
 id: selectedResume.id,
-title: selectedResume.title,
-type: selectedResume.type}: null,
-}
+title: selectedResume.title,;
+type: selectedResume.type}: null;
+};
 fullMessage;'
 'job'
 job.id,
@@ -99,6 +100,7 @@ contextData)
 })
 toast ({
 }finally {
+  
   setIsSubmitting (false)
 }
 return (<> <Tabs value= {activeTab}onValueChange= {

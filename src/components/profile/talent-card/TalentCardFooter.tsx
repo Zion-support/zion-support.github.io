@@ -1,4 +1,4 @@
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";,
 import { ExternalLink } from "lucide-react";
@@ -8,6 +8,7 @@ import { useAuthStatus } from "@/hooks/talent";
 import type { UserProfile } from "@/types/auth";
 import { useRouter } from "next/router";
 interface TalentCardFooterProps {
+  
 }
 export function TalentCardFooter({ profile onViewProfile onRequestHire }: TalentCardFooterProps) {
 return (

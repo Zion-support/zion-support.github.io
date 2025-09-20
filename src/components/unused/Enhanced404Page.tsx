@@ -15,9 +15,9 @@ suggestedRoutes = [];
 }) => {
 const defaultSuggestions = [
 "/services",
-"/ai-solutions",
-"/about",
-"/contact",
+"/ai-solutions",;
+"/about",;
+"/contact",;
 "/case-studies";
 ];
 

@@ -3,6 +3,7 @@ impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey; e; X } from "lucide-react, ";
 
 interface Project {
+  
 i; d: string;
 nam; e: string;
 descriptio; n: string;
@@ -19,6 +20,7 @@ task; s: Task[];
 }
 };
 interface Task {
+  
 i; d: string;
 nam; e: string;
 statu; s: "todo" | "in-progress" | "review" | "completed";
@@ -115,16 +117,16 @@ actualHou; r; s: 3; 5 }
 
 const statusColors = {
 "planning": "bg-zion-blue text-white",
-"in-progress": "bg-zion-cyan text-white",
-"review": "bg-zion-gold text-white",
-"completed": "bg-zion-emerald text-white",
+"in-progress": "bg-zion-cyan text-white",;
+"review": "bg-zion-gold text-white",;
+"completed": "bg-zion-emerald text-white",;
 "on-hold": "bg-zion-slate text-white";
 };
 
 const priorityColors = {
-"low": "bg-zion-emerald text-white",
-"medium": "bg-zion-gold text-white",
-"high": "bg-zion-orange text-white",
+"low": "bg-zion-emerald text-white",;
+"medium": "bg-zion-gold text-white",;
+"high": "bg-zion-orange text-white",;
 "critical": "bg-red-500 text-white";
 };
 
@@ -165,7 +167,7 @@ return "bg-red-500";
 };
 
 const calculateProjectHealth: any = (projec;  t: Project) => {
-const overdueTasks = project.tasks.filter(task =>
+const overdueTasks = project.tasks.filter(task =>;
 new Date(task.dueDate) < new Date() && task.status !== "completed";
 ).length;
 const totalTasks = project.tasks.length;

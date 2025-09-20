@@ -16,7 +16,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {const [isFormOpe
         budget: '',
         startDate: '',
         message: ''});
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => {;
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -28,9 +28,9 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {const [isFormOpe
             message: ''});
         setIsFormOpen(false);
     };
-    const handleChange = (e) => {
-        setFormData(prev => ({
-            ...prev,
+    const handleChange = (e) => {;
+        setFormData(prev => ({;
+            ...prev,;
             [e.target.name]: e.target.value;
         }));
     };

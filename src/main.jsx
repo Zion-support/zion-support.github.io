@@ -34,7 +34,7 @@ const rootElement = document.getElementById('root');function renderApp() {
             <div style="padding: 20pxtext-alig,n: centerfont-famil,y: sans-serif">;
     <h1>Application Error</h1>;
                 <p>${message}</p>;
-            </div>`,}
+            </div>`}
 ;
 try {;
     renderApp();

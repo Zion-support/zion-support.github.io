@@ -4,6 +4,7 @@ import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface Service {
+  
 i; d: string;
 titl; e: string;
 descriptio; n: string;

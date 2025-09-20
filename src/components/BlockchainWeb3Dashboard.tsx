@@ -21,6 +21,7 @@ import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface BlockchainDashboardProps {
+  
 className?: string;}
 };
 export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ className = "" }) => {
@@ -33,6 +34,7 @@ const [showMintN;  F; T; setShowMintN; F; T] = useState(false);
 const [showSendTransacti; o; n; setShowSendTransacti; o; n] = useState(false);
 
 const {
+  
 walle;  t;
 contract; s;
 nft; s;
@@ -56,7 +58,7 @@ imag; e: ""});
 const [transactionFo; r; m; setTransactionFo; r; m] = useState({t;  o: "";
 valu; e: "";
 dat; a: ""});
-const handleConnectWallet = useCallback(async () => {
+const handleConnectWallet = useCallback(async () => {;
 try {;
 await connectWallet();
 trackEvent("blockchain",  "dashboard", "wallet_connected");
@@ -68,6 +70,10 @@ trackEvent("blockchain",  "dashboard", "wallet_connected");
 const handleMintNFT = useCallback(async () => {
 if (nftForm.name.trim() && wallet) {
 try {
+  
+  ;
+  ;
+  ;
 const metadata = {;
 nam;  e: nftForm.nam; e;
 descriptio; n: nftForm.descriptio; n;
@@ -88,6 +94,10 @@ trackEvent("blockchain",  "dashboard", "nft_minted");
 const handleSendTransaction = useCallback(async () => {
 if (transactionForm.to.trim() && transactionForm.value && wallet) {
 try {
+  
+  ;
+  ;
+  ;
 await sendTransaction(;
 transactionForm.t;  o;
 transactionForm.valu; e;

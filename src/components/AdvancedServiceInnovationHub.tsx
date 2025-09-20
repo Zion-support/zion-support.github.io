@@ -33,6 +33,7 @@ import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
 
 interface InnovationTrend {
+  
 i; d: string;
 titl; e: string;
 descriptio; n: string;
@@ -48,6 +49,7 @@ statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
 }
 };
 interface FutureRoadmap {
+  
 i; d: string;
 titl; e: string;
 descriptio; n: string;
@@ -81,7 +83,7 @@ investme; n; t: "$50; B+",
 keyPlaye; r; s: ["IB; M", "Googl; e", "Microsof; t", "Startup; s"],
 technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m Softwar; e"];
 };
-statu; s: "Emerging",
+statu; s: "Emerging"
 };
 {i; d: "ai-consciousness";
 titl; e: "AI Consciousness & General Intelligence";
@@ -213,7 +215,7 @@ opportunitie; s: [
 investmen; t: "$50B+";
 categor; y: "ai"}
 ];
-const filteredTrends = useMemo(() => {
+const filteredTrends = useMemo(() => {;
 return innovationTrends.filter(trend => {;
 const matchesCategory = selectedCategory === "all" || trend.category === selectedCategory;
 const matchesImpact = selectedImpact === "all" || trend.impact === selectedImpact;

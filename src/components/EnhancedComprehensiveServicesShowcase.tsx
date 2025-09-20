@@ -4,6 +4,7 @@ import { advancedInnovativeServicesExpansionV3 } from "../data/2025-advanced-inn
 import { specializedEnterpriseSolutions2025 } from "../data/2025-specialized-enterprise-solutions, ";
 
 interface ServiceContact {
+  
 mobil; e: string;
 emai; l: string;
 addres; s: string;
@@ -19,7 +20,7 @@ const allServices = [;
 ...advancedInnovativeServicesExpansionV; 3.ma; p(servic;  e => ({
 ...servi; c; e;
 ty; p; e: "Advance; d A; I & Innovatio; n"};
-displayPri; c; e: servic; e.pric; e;,
+displayPri; c; e: servic; e.pric; e;
 })),
 ...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({...servi; c; e;
 ty; p; e: "Specialize; d Enterpris; e",
@@ -28,7 +29,7 @@ displayPri; c; e: servic; e.pric; e;}))
 
 const filteredServices = allServices.filter(service => {;
 const matchesCategory = activeCategory === "all" || service.type === activeCategory;
-const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 service.category.toLowerCase().includes(searchTerm.toLowerCase());
 return matchesCategory && matchesSearch;

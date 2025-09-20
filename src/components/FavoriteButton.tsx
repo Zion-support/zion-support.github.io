@@ -4,9 +4,10 @@
 import React from 'react';
 import { Heart } from "lucide-react";
 interface FavoriteButtonProps {
+  
   itemId: string;
 }
-  className?: string,}
+  className?: string}
 export function FavoriteButton({ itemId className }: FavoriteButtonProps) {
             </button>
           </TooltipTrigger>

@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface CuttingEdgeService {
+  
 id: string;
 title: string;
 description: string;
@@ -98,7 +99,7 @@ caseStudies: ["Hedge fund 400% returns increase", "Bank 80% risk reduction"],
 websiteUrl: "https://ziontechgroup.com/services/quantum-financial-ai";
 industryTrends: ["Quantum supremacy in finance", "AI-driven trading", "RegTech innovation"],
 marketSize: "$12.5 billion by 2027";
-growthPotential: "High - 45% CAGR expected",
+growthPotential: "High - 45% CAGR expected"
 };
 // 2. Neuromorphic Edge AI Platform;
 {id: "neuromorphic-edge-ai-elite";
@@ -160,7 +161,7 @@ caseStudies: ["Smart city 70% energy savings", "IoT network 10x efficiency"],
 websiteUrl: "https://ziontechgroup.com/services/neuromorphic-edge-ai";
 industryTrends: ["Edge computing growth", "Neuromorphic hardware", "AI efficiency"],
 marketSize: "$8.9 billion by 2026";
-growthPotential: "Very High - 55% CAGR expected",
+growthPotential: "Very High - 55% CAGR expected"
 };
 // 3. Federated Learning Privacy Platform;
 {id: "federated-learning-privacy-pro";
@@ -222,7 +223,7 @@ caseStudies: ["Healthcare consortium 3x model accuracy", "Bank collaboration 100
 websiteUrl: "https://ziontechgroup.com/services/federated-learning";
 industryTrends: ["Privacy-first AI", "Collaborative learning", "Regulatory compliance"],
 marketSize: "$6.2 billion by 2026";
-growthPotential: "High - 40% CAGR expected",
+growthPotential: "High - 40% CAGR expected"
 };
 // 4. AI Ethics & Governance Platform;
 {id: "ai-ethics-governance-elite";
@@ -284,7 +285,7 @@ caseStudies: ["Bank 100% compliance rate", "Healthcare 0 bias incidents"],
 websiteUrl: "https://ziontechgroup.com/services/ai-ethics-governance";
 industryTrends: ["AI regulation", "Ethical AI", "Responsible development"],
 marketSize: "$4.8 billion by 2026";
-growthPotential: "High - 35% CAGR expected",
+growthPotential: "High - 35% CAGR expected"
 };
 // 5. Quantum-Safe Cybersecurity Suite;
 {id: "quantum-safe-cybersecurity-elite";
@@ -346,7 +347,7 @@ caseStudies: ["Government 100% quantum-safe", "Bank 0 security breaches"],
 websiteUrl: "https://ziontechgroup.com/services/quantum-safe-cybersecurity";
 industryTrends: ["Quantum threats", "Post-quantum crypto", "AI security"],
 marketSize: "$15.3 billion by 2027";
-growthPotential: "Very High - 50% CAGR expected",
+growthPotential: "Very High - 50% CAGR expected"
 };
 // 6. Autonomous DevOps Platform;
 {id: "autonomous-devops-elite";
@@ -408,7 +409,7 @@ caseStudies: ["E-commerce 99.99% uptime", "SaaS 90% cost reduction"],
 websiteUrl: "https://ziontechgroup.com/services/autonomous-devops";
 industryTrends: ["Autonomous operations", "AI-driven DevOps", "Self-healing systems"],
 marketSize: "$18.7 billion by 2026";
-growthPotential: "High - 42% CAGR expected",
+growthPotential: "High - 42% CAGR expected"
 };
 // 7. Edge AI Orchestration Platform;
 {id: "edge-ai-orchestration-elite";
@@ -470,7 +471,7 @@ caseStudies: ["Smart city 60% latency reduction", "IoT network 3x efficiency"],
 websiteUrl: "https://ziontechgroup.com/services/edge-ai-orchestration";
 industryTrends: ["Edge computing growth", "AI at the edge", "5G networks"],
 marketSize: "$11.2 billion by 2026";
-growthPotential: "Very High - 48% CAGR expected",
+growthPotential: "Very High - 48% CAGR expected"
 };
 // 8. Blockchain AI Integration Platform;
 {id: "blockchain-ai-integration-elite";
@@ -532,7 +533,7 @@ caseStudies: ["DeFi platform 10x user growth", "Supply chain 100% transparency"]
 websiteUrl: "https://ziontechgroup.com/services/blockchain-ai-integration";
 industryTrends: ["Web3 adoption", "AI decentralization", "DeFi growth"],
 marketSize: "$19.8 billion by 2027";
-growthPotential: "Very High - 55% CAGR expected",
+growthPotential: "Very High - 55% CAGR expected"
 }
 ];
 export default CUTTING_EDGE_SERVICES_2025;

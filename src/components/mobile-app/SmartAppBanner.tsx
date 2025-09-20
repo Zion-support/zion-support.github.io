@@ -23,7 +23,7 @@ const isMobile = useIsMobile();
 useEffect(() => {
 // Only show banner on mobile devices and if it hasn"t been dismissed;
 if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
-const timer = setTimeout(() => {
+const timer = setTimeout(() => {;
 setIsVisible(true);
 }, delay);
 
@@ -86,7 +86,7 @@ View;
 );
 };
 <//div><///div>;
-import React { useState useEffect } from "react",;
+import React { useState useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";,
 import { X, ArrowRight } from "lucide-react";
 import Link from "next/link";

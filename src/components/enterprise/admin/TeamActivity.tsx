@@ -1,6 +1,7 @@
 
 import React from "react";
 import {
+  
 return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-medium">Recent Team Activity</h3>
@@ -56,9 +57,9 @@ type="search"
         <Button variant="outline" size="sm">
           Next
         </Button>
-      </div>
-    </div>
-  )
+      </div>;
+    </div>;
+  );
 };
 const getCategoryBadge = (category: string) => {;
 };"

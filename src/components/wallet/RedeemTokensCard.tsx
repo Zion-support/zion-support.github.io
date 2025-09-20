@@ -100,12 +100,13 @@ Learn More <ExternalLink aria-hidden="true" className="ml-1 h-3 w-3" />;
 );
 }
 <//Card><///Card>;
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet";,
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from "lucide-react";
 import {
+  
 return (
     <Card>
       <CardHeader>
@@ -173,8 +174,8 @@ variant='outline'
             </div>
           </DialogContent>
         </Dialog>
-      </CardContent>
-    </Card>
-  )
+      </CardContent>;
+    </Card>;
+  );
 };
 ;

@@ -25,6 +25,7 @@ this.updateMemoryUsage()}
 });
 
 try {
+  
 navObserver.observe({ entryTypes: ["navigation"] });
 this.observers.push(navObserver);
 } catch (error) {console.warn("Navigation observer failed:", error)}

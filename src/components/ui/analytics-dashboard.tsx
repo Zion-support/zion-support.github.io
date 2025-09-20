@@ -32,7 +32,7 @@ growth: 23.5});
 // Simulate real-time data updates;
 useEffect(() => {if (!enabled || !isExpanded) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setMetrics(prev => ({;
 ...prev;
 revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;

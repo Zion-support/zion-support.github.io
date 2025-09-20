@@ -1,5 +1,5 @@
 // Enhanced IT Services for 2025;
-export const enhancedITServices2025 = [
+export const enhancedITServices2025 = [;
     {id: 1;
         name: "Cloud Migration & Strategy";
         category: "Cloud Services";
@@ -51,7 +51,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 2;
         name: "Cybersecurity Assessment & Implementation";
@@ -104,7 +104,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 3;
         name: "DevOps Implementation & Automation";
@@ -157,7 +157,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 4;
         name: "Data Center Design & Implementation";
@@ -210,7 +210,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 5;
         name: "Network Security & Firewall Implementation";
@@ -263,7 +263,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 6;
         name: "Business Intelligence & Analytics Implementation";
@@ -316,7 +316,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 7;
         name: "Mobile App Development & Integration";
@@ -369,7 +369,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: false;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 8;
         name: "IT Consulting & Digital Transformation";
@@ -422,7 +422,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: false;
         backupSolutions: false;
         monitoringTools: false;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 9;
         name: "Managed IT Services & Support";
@@ -475,7 +475,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     };
     {id: 10;
         name: "Web Application Development & Hosting";
@@ -528,7 +528,7 @@ export const enhancedITServices2025 = [
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
-        reportingCapabilities: true,
+        reportingCapabilities: true
     }
 ];
     export default enhancedITServices2025;

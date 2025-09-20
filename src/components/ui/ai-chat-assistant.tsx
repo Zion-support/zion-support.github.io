@@ -17,6 +17,7 @@ Smile;
 import { Button } from "./button, ";
 
 interface ChatMessage {
+  
 id: string;
 type: "user" | "assistant";
 content: string;
@@ -31,6 +32,7 @@ relatedTopics?: string[];}
 }
 
 interface AIChatAssistantProps {
+  
 enabled?: boolean;
 className?: string;
 onMessageSend?: (message: string) => void;
@@ -98,7 +100,7 @@ setIsTyping(true);
 // Simulate API call delay;
 const timer = setTimeout(() => {;
 // Mock AI responses based on user input;
-const responses = [
+const responses = [;
 {;,
 content: "That"s a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models; natural language processing; and predictive analytics.",
 suggestions: ["Tell me more about AI pricing", "What industries do you serve?", "Can you provide a demo?"];

@@ -3,7 +3,7 @@ interface ContractTypeCardsProps {onStandardClick: () => void,
 onSmartClick: () => void,
 export function ContractTypeCards({
 }
-  onStandardClick,}
+  onStandardClick}
 onSmartClick}: ContractTypeCardsProps) {return (
     <div className='grid md:grid-cols-2 gap-6 mb-10'>
       <Card>
@@ -13,6 +13,7 @@ onSmartClick}: ContractTypeCardsProps) {return (
           <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
 interface ContractTypeCardsProps {
+  
 onSmartClick: () => void}
 export function ContractTypeCards({ onStandardClick onSmartClick }: ContractTypeCardsProps) {
   return (

@@ -18,6 +18,7 @@ useEffect(() => {
 const loadInterviews = async () => {;
 setIsLoading(true);
 try {
+  
 const interviews = await fetchInterviews();
 
 // Filter for confirmed interviews in the future;
@@ -35,6 +36,7 @@ setUpcomingInterviews(upcoming);
 } catch (error) {
 
 } finally {
+  
 setIsLoading(false);
 import React { useEffect useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

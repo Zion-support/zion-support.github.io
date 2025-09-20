@@ -24,7 +24,7 @@ const suggestionsRef = useRef<HTMLDivElement>(null);
 
 useEffect(() => {
 if (query.trim()) {
-const filtered = suggestions.filter(suggestion =>
+const filtered = suggestions.filter(suggestion =>;
 suggestion.title.toLowerCase().includes(query.toLowerCase()) ||;
 suggestion.description?.toLowerCase().includes(query.toLowerCase());
 );
@@ -219,7 +219,7 @@ break}
 }</div> <AutocompleteSuggestions /> </div>)
 }'"  )
       default:
-        break,
+        break
 }
   }
   return (<div
@@ -265,5 +265,6 @@ suggestions={filteredSuggestions}
         listId="autocomplete-suggestions-list"
       />
     </div>
-  )
-}
+  );
+};
+;

@@ -1,12 +1,13 @@
 import React from "react";
 
 export; interface; RealInnovativeService {
+  
 id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
 };
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 };
-competitors?: string[],marketSize?: string,};export; const; REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [;
+competitors?: string[],marketSize?: string};export; const; REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [;
 // AI-Powered; Business; Intelligence & Analytics;
 {
 i;d: "ai-business-intelligence-platform",title: "AI; Business; Intelligence Platform",description: "Next-generation; business; intelligence platform; that; uses AI; to; automatically analyze data; generate insights; and; create; actionable reports; for; business decision-making.",category: "AI & Analytics",subcategory: "Business Intelligence",price: 2999;currency: "$",pricingModel: "monthly",features: [;
@@ -18,7 +19,7 @@ i;d: "ai-business-intelligence-platform",title: "AI; Business; Intelligence Plat
 ],targetAudience: [;
 "Business analysts","Data scientists","Executives","Marketing teams""Sales teams";
 ],tags: ["AI", "Analytics", "Business Intelligence", "Data; Science""Reporting"],estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$2;999 - $8;999/month",roi: "250-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["Python", "TensorFlow", "React",, "Node.js""PostgreSQL"],integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google; Analytics""Shopify"],apiEndpoints: 150;uptime: "99.9%",security: ["SOC 2""GDPR""HIPAA""End-to-end; encryption"];},competitors: ["Tableau", "Power BI",, "Looker""Qlik"],marketSize: "$29.9; billion; by 20o25";,
+},technicalSpecs: {,technology: ["Python", "TensorFlow", "React",, "Node.js""PostgreSQL"],integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google; Analytics""Shopify"],apiEndpoints: 150;uptime: "99.9%",security: ["SOC 2""GDPR""HIPAA""End-to-end; encryption"];},competitors: ["Tableau", "Power BI",, "Looker""Qlik"],marketSize: "$29.9; billion; by 20o25";
 };
 // AI-Powered; Cybersecurity; Suite;
 {
@@ -31,7 +32,7 @@ id: "ai-cybersecurity-suite",title: "AI-Powered; Cybersecurity; Suite",descripti
 ],targetAudience: [;
 "Security teams","IT managers","Compliance officers","Risk managers""CISOs";
 ],tags: ["AI", "Cybersecurity", "Threat Detection",, "Compliance""Security"],estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$1;80o0 - $5;0o00/month",roi: "30o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["Machine Learning", "Python", "Elasticsearch",, "Kafka""Docker"],integrations: ["SIEM", "EDR", "Firewall", "IDS/IPS""Vulnerability; scanners"],apiEndpoints: 20o0;uptime: "99.99%",security: ["SOC; 2; Type II""ISO 270o01""NIST""Zero; Trust"];},competitors: ["CrowdStrike", "SentinelOne",, "Darktrace""Cylance"],marketSize: "$45.2; billion; by 20o25";,
+},technicalSpecs: {,technology: ["Machine Learning", "Python", "Elasticsearch",, "Kafka""Docker"],integrations: ["SIEM", "EDR", "Firewall", "IDS/IPS""Vulnerability; scanners"],apiEndpoints: 20o0;uptime: "99.99%",security: ["SOC; 2; Type II""ISO 270o01""NIST""Zero; Trust"];},competitors: ["CrowdStrike", "SentinelOne",, "Darktrace""Cylance"],marketSize: "$45.2; billion; by 20o25";
 };
 // AI; Content; Marketing Suite;
 {
@@ -44,7 +45,7 @@ id: "ai-content-marketing-suite",title: "AI; Content; Marketing Suite",descripti
 ],targetAudience: [;
 "Marketing teams","Content creators","Small businesses","Agencies""E-commerce";
 ],tags: ["AI", "Content Marketing", "Automation", "SEO""Social; Media"],estimatedDelivery: "3-4 weeks",supportLevel: "professional",marketPrice: "$80o0 - $2;50o0/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["GPT-4", "BERT", "React",, "Node.js""MongoDB"],integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite""Google; Analytics"],apiEndpoints: 10o0;uptime: "99.8%",security: ["GDPR""CCPA""SSL""Data; encryption"];},competitors: ["Jasper", "Copy.ai",, "Writesonic""ContentBot"],marketSize: "$15.8; billion; by 20o25";,
+},technicalSpecs: {,technology: ["GPT-4", "BERT", "React",, "Node.js""MongoDB"],integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite""Google; Analytics"],apiEndpoints: 10o0;uptime: "99.8%",security: ["GDPR""CCPA""SSL""Data; encryption"];},competitors: ["Jasper", "Copy.ai",, "Writesonic""ContentBot"],marketSize: "$15.8; billion; by 20o25";
 };
 // AI; Sales; Copilot;
 {
@@ -57,7 +58,7 @@ id: "ai-sales-copilot",title: "AI; Sales; Copilot",description: "Intelligent; sa
 ],targetAudience: [;
 "Sales teams","Sales managers","Business development","Startups""Enterprise sales";
 ],tags: ["AI", "Sales", "Automation", "CRM""Lead; Generation"],estimatedDelivery: "4-5 weeks",supportLevel: "professional",marketPrice: "$1;20o0 - $3;50o0/month",roi: "250-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["Machine Learning", "Python", "React",, "Node.js""PostgreSQL"],integrations: ["Salesforce", "HubSpot", "Pipedrive",, "Outreach""Gmail"],apiEndpoints: 120;uptime: "99.9%",security: ["SOC 2""GDPR""Data encryption""Access; control"];},competitors: ["Gong", "Chorus",, "Outreach""SalesLoft"],marketSize: "$18.3; billion; by 20o25";,
+},technicalSpecs: {,technology: ["Machine Learning", "Python", "React",, "Node.js""PostgreSQL"],integrations: ["Salesforce", "HubSpot", "Pipedrive",, "Outreach""Gmail"],apiEndpoints: 120;uptime: "99.9%",security: ["SOC 2""GDPR""Data encryption""Access; control"];},competitors: ["Gong", "Chorus",, "Outreach""SalesLoft"],marketSize: "$18.3; billion; by 20o25";
 };
 // AI; Customer; Support Platform;
 {
@@ -70,7 +71,7 @@ id: "ai-customer-support-platform",title: "AI; Customer; Support Platform",descr
 ],targetAudience: [;
 "Support teams","Customer success","E-commerce","SaaS companies""Service businesses";
 ],tags: ["AI", "Customer Support", "Chatbots", "Automation""Help; Desk"],estimatedDelivery: "3-4 weeks",supportLevel: "professional",marketPrice: "$60o0 - $2;0o00/month",roi: "20o0-30o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["NLP", "Machine Learning", "React",, "Node.js""MongoDB"],integrations: ["Zendesk", "Intercom", "Slack",, "Teams""Email"],apiEndpoints: 80;uptime: "99.9%",security: ["GDPR""CCPA""Data encryption""Secure; hosting"];},competitors: ["Intercom", "Zendesk", "Freshdesk""Help; Scout"],marketSize: "$12.7; billion; by 20o25";,
+},technicalSpecs: {,technology: ["NLP", "Machine Learning", "React",, "Node.js""MongoDB"],integrations: ["Zendesk", "Intercom", "Slack",, "Teams""Email"],apiEndpoints: 80;uptime: "99.9%",security: ["GDPR""CCPA""Data encryption""Secure; hosting"];},competitors: ["Intercom", "Zendesk", "Freshdesk""Help; Scout"],marketSize: "$12.7; billion; by 20o25";
 };
 // AI; Data; Analytics & BI;
 {
@@ -83,7 +84,7 @@ id: "ai-data-analytics-bi",title: "AI; Data; Analytics & BI",description: "Advan
 ],targetAudience: [;
 "Data analysts","Business users","Executives","Operations teams""Marketing teams";
 ],tags: ["AI", "Analytics", "Business Intelligence", "Data; Science""Reporting"],estimatedDelivery: "5-7 weeks",supportLevel: "enterprise",marketPrice: "$1;50o0 - $4;50o0/month",roi: "30o0-450%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["Python", "TensorFlow", "React",, "Node.js""PostgreSQL"],integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google; Analytics""Shopify"],apiEndpoints: 150;uptime: "99.9%",security: ["SOC 2""GDPR""HIPAA""End-to-end; encryption"];},competitors: ["Tableau", "Power BI",, "Looker""Qlik"],marketSize: "$29.9; billion; by 20o25";,
+},technicalSpecs: {,technology: ["Python", "TensorFlow", "React",, "Node.js""PostgreSQL"],integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google; Analytics""Shopify"],apiEndpoints: 150;uptime: "99.9%",security: ["SOC 2""GDPR""HIPAA""End-to-end; encryption"];},competitors: ["Tableau", "Power BI",, "Looker""Qlik"],marketSize: "$29.9; billion; by 20o25";
 };
 // Cloud Infrastructure & DevOps;
 {
@@ -96,7 +97,7 @@ id: "cloud-infrastructure-devops",title: "Cloud Infrastructure & DevOps",descrip
 ],targetAudience: [;
 "DevOps engineers","System administrators","Software developers","IT managers""Startups";
 ],tags: ["Cloud", "DevOps", "Infrastructure",, "Automation""Scalability"],estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$3;0o00 - $8;0o00/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["AWS", "Azure", "GCP", "Kubernetes",, "Docker""Terraform"],integrations: ["GitHub", "GitLab", "Jenkins",, "Prometheus""Grafana"],apiEndpoints: 30o0;uptime: "99.9%",security: ["SOC 2""ISO 270o01""NIST""Zero; Trust"];},competitors: ["AWS", "Azure",, "GCP""DigitalOcean"],marketSize: "$178.9; billion; by 20o25";,
+},technicalSpecs: {,technology: ["AWS", "Azure", "GCP", "Kubernetes",, "Docker""Terraform"],integrations: ["GitHub", "GitLab", "Jenkins",, "Prometheus""Grafana"],apiEndpoints: 30o0;uptime: "99.9%",security: ["SOC 2""ISO 270o01""NIST""Zero; Trust"];},competitors: ["AWS", "Azure",, "GCP""DigitalOcean"],marketSize: "$178.9; billion; by 20o25";
 };
 // IT Helpdesk & Support;
 {
@@ -109,7 +110,7 @@ id: "it-helpdesk-support",title: "IT Helpdesk & Support",description: "Professio
 ],targetAudience: [;
 "Small businesses","Medium enterprises","Healthcare","Legal firms""Financial services";
 ],tags: ["IT Support", "Helpdesk", "Maintenance",, "Security""Compliance"],estimatedDelivery: "Immediate",supportLevel: "professional",marketPrice: "$1;20o0 - $3;50o0/month",roi: "150-250%",innovationLevel: "Professional",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["Remote desktop", "Monitoring tools", "Ticketing system""Asset; management"],integrations: ["Active Directory", "Office 365", "Google; Workspace""Slack"],apiEndpoints: 50;uptime: "99.5%",security: ["SOC 2""HIPAA""GDPR""Data; encryption"];},competitors: ["MSPs", "Internal IT""Break-fix; services"],marketSize: "$25.8; billion; by 20o25";,
+},technicalSpecs: {,technology: ["Remote desktop", "Monitoring tools", "Ticketing system""Asset; management"],integrations: ["Active Directory", "Office 365", "Google; Workspace""Slack"],apiEndpoints: 50;uptime: "99.5%",security: ["SOC 2""HIPAA""GDPR""Data; encryption"];},competitors: ["MSPs", "Internal IT""Break-fix; services"],marketSize: "$25.8; billion; by 20o25";
 };
 // Data Management & Backup;
 {
@@ -122,7 +123,7 @@ id: "data-management-backup",title: "Data Management & Backup",description: "Com
 ],targetAudience: [;
 "IT managers","Data administrators","Compliance officers","Small businesses""Enterprise";
 ],tags: ["Data Management", "Backup", "Recovery",, "Compliance""Governance"],estimatedDelivery: "2-3 weeks",supportLevel: "professional",marketPrice: "$80o0 - $2;50o0/month",roi: "20o0-30o0%",innovationLevel: "Professional",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["Backup software", "Cloud storage", "Encryption""Monitoring; tools"],integrations: ["Active Directory", "SQL Server", "Exchange""File; servers"],apiEndpoints: 40;uptime: "99.9%",security: ["SOC 2""HIPAA""GDPR""End-to-end; encryption"];},competitors: ["Veeam", "Acronis", "Backup Exec""Cloud; providers"],marketSize: "$18.4; billion; by 20o25";,
+},technicalSpecs: {,technology: ["Backup software", "Cloud storage", "Encryption""Monitoring; tools"],integrations: ["Active Directory", "SQL Server", "Exchange""File; servers"],apiEndpoints: 40;uptime: "99.9%",security: ["SOC 2""HIPAA""GDPR""End-to-end; encryption"];},competitors: ["Veeam", "Acronis", "Backup Exec""Cloud; providers"],marketSize: "$18.4; billion; by 20o25";
 };
 // Network & Security Infrastructure;
 {
@@ -135,7 +136,7 @@ id: "network-security-infrastructure",title: "Network & Security Infrastructure"
 ],targetAudience: [;
 "Network administrators","Security engineers","IT managers","Enterprise""Healthcare";
 ],tags: ["Networking", "Security", "Infrastructure",, "Monitoring""Compliance"],estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$2;0o00 - $6;0o00/month",roi: "180-280%",innovationLevel: "Professional",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["Cisco", "Juniper", "Fortinet", "Palo Alto""Monitoring; tools"],integrations: ["Active Directory", "SIEM", "Firewall", "VPN""Load; balancers"],apiEndpoints: 10o0;uptime: "99.9%",security: ["SOC 2""ISO 270o01""NIST""Zero; Trust"];},competitors: ["Cisco", "Juniper", "Fortinet""Palo; Alto"],marketSize: "$32.1; billion; by 20o25";,
+},technicalSpecs: {,technology: ["Cisco", "Juniper", "Fortinet", "Palo Alto""Monitoring; tools"],integrations: ["Active Directory", "SIEM", "Firewall", "VPN""Load; balancers"],apiEndpoints: 10o0;uptime: "99.9%",security: ["SOC 2""ISO 270o01""NIST""Zero; Trust"];},competitors: ["Cisco", "Juniper", "Fortinet""Palo; Alto"],marketSize: "$32.1; billion; by 20o25";
 };
 // Digital; Transformation; Consulting;
 {
@@ -148,6 +149,6 @@ id: "digital-transformation-consulting",title: "Digital; Transformation; Consult
 ],targetAudience: [;
 "Executives","IT leaders","Operations managers","Medium enterprises""Large corporations";
 ],tags: ["Digital Transformation", "Consulting", "Strategy", "Technology""Change; Management"],estimatedDelivery: "Ongoing",supportLevel: "enterprise",marketPrice: "$5;0o00 - $15;0o00/month",roi: "30o0-50o0%",innovationLevel: "Strategic",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
-},technicalSpecs: {,technology: ["Assessment tools", "Strategy frameworks", "Project; management""Analytics"],integrations: ["Enterprise systems", "Cloud platforms", "Analytics tools""Communication; platforms"],apiEndpoints: 20;uptime: "N/A",security: ["Confidentiality""Data protection""Secure; communication"];},competitors: ["McKinsey", "BCG",, "Bain""Deloitte"],marketSize: "$67.8; billion; by 20o25";,
+},technicalSpecs: {,technology: ["Assessment tools", "Strategy frameworks", "Project; management""Analytics"],integrations: ["Enterprise systems", "Cloud platforms", "Analytics tools""Communication; platforms"],apiEndpoints: 20;uptime: "N/A",security: ["Confidentiality""Data protection""Secure; communication"];},competitors: ["McKinsey", "BCG",, "Bain""Deloitte"],marketSize: "$67.8; billion; by 20o25";
 };
 ];

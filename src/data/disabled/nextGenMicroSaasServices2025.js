@@ -1,4 +1,4 @@
-export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
+export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [;
     // AI-Powered Content Creation Suite;
     {id: 'ai-content-creation-suite-2025';
         title: 'Zion AI Content Creation Suite 2025';

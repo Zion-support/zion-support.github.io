@@ -5,7 +5,9 @@ import TalentDirectory from "@/pages/TalentDirectory;";
 import TalentsPage from "@/pages/TalentsPage;";
 
 export default function TalentRoutes() {
-return (
+  return (
+  return (
+  return (
 <>;
 <Route path="directory" element={<TalentDirectory />} />;
 <Route path="list" element={<TalentsPage />} />;

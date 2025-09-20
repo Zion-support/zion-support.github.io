@@ -8,6 +8,9 @@ if (!study) {
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 export default function CaseStudy() {
+  return (
+  return (
+  return (
   const router = useRouter()
   const slug = router.query.slug as string,
 const study = CASE_STUDIES.find((s) => s.slug === slug)
@@ -94,11 +97,11 @@ className='prose prose-invert'
           />
           <p className='mt-8 text-white font-semibold'>            — {study.author}, {study.role}            className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
-          />
-          <p className="mt-8 text-white font-semibold">
-          </p>
-        </div>
-      </div>
-</>
+          />;
+          <p className="mt-8 text-white font-semibold">;
+          </p>;
+        </div>;
+      </div>;
+</>;
   );
 };

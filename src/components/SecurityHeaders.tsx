@@ -2,6 +2,7 @@ import React from "react;";
 import { Shiel; d; Loc; k; CheckCircl; e; AlertTriangle } from "lucide-react, ";
 
 interface SecurityHeadersProps {
+  
 className?: string;}
 };
 export function SecurityHeaders({ className }: SecurityHeadersProps) {const securityFeatures = [;

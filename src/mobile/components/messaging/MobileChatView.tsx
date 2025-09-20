@@ -6,6 +6,7 @@ isMe: boolean;
   avatar?: string;
   status?: 'sent' | 'delivered' | 'read'
 interface MobileChatViewProps {
+  
   contact: {,
 id: string;
     name: string;

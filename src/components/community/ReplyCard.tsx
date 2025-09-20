@@ -6,8 +6,10 @@ className?: string;
 }
 onMarkAnswer?: () => void;}
 canMarkAnswer?: boolean};
-export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
-return (
+export default function ReplyCard() {
+  return (
+  return (
+  return (
 <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}>;
 <div className="flex items-start space-x-3">;
 <img;
@@ -54,4 +56,5 @@ import { Badge } from "@/components/ui/badge";,
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {
+  
 }

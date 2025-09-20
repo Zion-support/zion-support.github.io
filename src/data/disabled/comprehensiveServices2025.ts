@@ -1,5 +1,6 @@
 import { Routes; Route } from "react-router-dom, ";
 export interface ServiceContact {
+  
 phone: string;
 email: string;
 website: string;
@@ -9,6 +10,7 @@ address: string;
 }
 
 export interface MicroSaasService {
+  
 id: number;
 name: string;
 category: string;
@@ -34,6 +36,7 @@ trialPeriod: string;
 }
 
 export interface ITService {
+  
 id: number;
 name: string;
 category: string;
@@ -56,6 +59,7 @@ support: string;
 }
 
 export interface AIService {
+  
 id: number;
 name: string;
 category: string;
@@ -120,7 +124,7 @@ roi: "300% within 6 months";
 setupTime: "15 minutes";
 integrations: ["Slack", "Microsoft Teams", "Google Workspace", "Zapier"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 2;
 name: "InvoiceGenius AI";
@@ -161,7 +165,7 @@ roi: "400% within 3 months";
 setupTime: "30 minutes";
 integrations: ["Stripe", "PayPal", "Bank APIs", "Accounting software"],
 freeTier: true;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 3;
 name: "SocialSync Pro";
@@ -202,7 +206,7 @@ roi: "250% within 4 months";
 setupTime: "45 minutes";
 integrations: ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok"],
 freeTier: true;
-trialPeriod: "7 days",
+trialPeriod: "7 days"
 };
 {id: 4;
 name: "CustomerFlow CRM";
@@ -243,7 +247,7 @@ roi: "350% within 5 months";
 setupTime: "1 hour";
 integrations: ["Gmail", "Outlook", "Slack", "Zapier", "Stripe"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 5;
 name: "DataViz Studio";
@@ -284,7 +288,7 @@ roi: "280% within 6 months";
 setupTime: "2 hours";
 integrations: ["Google Analytics", "Salesforce", "HubSpot", "MySQL", "PostgreSQL"],
 freeTier: true;
-trialPeriod: "21 days",
+trialPeriod: "21 days"
 };
 {id: 6;
 name: "ScheduleMaster AI";
@@ -325,7 +329,7 @@ roi: "320% within 4 months";
 setupTime: "30 minutes";
 integrations: ["Google Calendar", "Outlook", "Slack", "Zapier", "Stripe"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 // NEW INNOVATIVE MICRO SAAS SERVICES;
 {id: 7;
@@ -367,7 +371,7 @@ roi: "1000% within 2 years";
 setupTime: "16-32 weeks";
 integrations: ["Quantum hardware", "Classical computing", "Cloud platforms", "Research tools"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 8;
 name: "Neuromorphic Computing Platform";
@@ -408,7 +412,7 @@ roi: "800% within 3 years";
 setupTime: "20-40 weeks";
 integrations: ["Neuromorphic chips", "AI frameworks", "IoT devices", "Robotics platforms"],
 freeTier: false;
-trialPeriod: "60 days",
+trialPeriod: "60 days"
 };
 {id: 9;
 name: "Edge AI Orchestration Platform";
@@ -449,7 +453,7 @@ roi: "400% within 18 months";
 setupTime: "12-24 weeks";
 integrations: ["Edge devices", "Cloud platforms", "AI models", "IoT protocols"],
 freeTier: false;
-trialPeriod: "45 days",
+trialPeriod: "45 days"
 };
 {id: 10;
 name: "Federated Learning Platform";
@@ -490,7 +494,7 @@ roi: "500% within 2 years";
 setupTime: "16-28 weeks";
 integrations: ["AI frameworks", "Data sources", "Cloud platforms", "Security tools"],
 freeTier: false;
-trialPeriod: "60 days",
+trialPeriod: "60 days"
 };
 {id: 11;
 name: "AI Ethics & Governance Platform";
@@ -531,7 +535,7 @@ roi: "300% within 2 years";
 setupTime: "12-20 weeks";
 integrations: ["AI platforms", "Compliance tools", "Risk management", "Training systems"],
 freeTier: false;
-trialPeriod: "45 days",
+trialPeriod: "45 days"
 };
 {id: 12;
 name: "AI Marketplace Platform";
@@ -572,7 +576,7 @@ roi: "400% within 18 months";
 setupTime: "10-18 weeks";
 integrations: ["AI frameworks", "Cloud platforms", "Payment systems", "Collaboration tools"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 13;
 name: "SmartInvoice AI";
@@ -613,7 +617,7 @@ roi: "300% in 6 months";
 setupTime: "2-3 days";
 integrations: ["QuickBooks", "Xero", "Sage", "Stripe", "PayPal"],
 freeTier: false;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 14;
 name: "ContentGenius Pro";
@@ -654,7 +658,7 @@ roi: "250% in 3 months";
 setupTime: "1 day";
 integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
 freeTier: false;
-trialPeriod: "7 days",
+trialPeriod: "7 days"
 };
 {id: 15;
 name: "LeadFlow CRM";
@@ -695,7 +699,7 @@ roi: "400% in 6 months";
 setupTime: "3-5 days";
 integrations: ["Gmail", "Outlook", "Slack", "Zoom", "Stripe"],
 freeTier: true;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 16;
 name: "DataViz Studio";
@@ -736,7 +740,7 @@ roi: "350% in 4 months";
 setupTime: "1 week";
 integrations: ["Salesforce", "HubSpot", "Google Analytics", "MySQL", "PostgreSQL"],
 freeTier: false;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 17;
 name: "SmartScheduler AI";
@@ -777,7 +781,7 @@ roi: "280% in 3 months";
 setupTime: "2-3 days";
 integrations: ["Google Calendar", "Outlook", "Slack", "Zoom", "Teams"],
 freeTier: true;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 18;
 name: "QuantumCode Studio";
@@ -818,7 +822,7 @@ roi: "500% in 12 months";
 setupTime: "2-3 weeks";
 integrations: ["Python", "Jupyter", "Git", "Cloud platforms", "Research tools"],
 freeTier: false;
-trialPeriod: "7 days",
+trialPeriod: "7 days"
 };
 {id: 19;
 name: "EdgeCompute Pro";
@@ -859,7 +863,7 @@ roi: "400% in 8 months";
 setupTime: "2-4 weeks";
 integrations: ["AWS", "Azure", "GCP", "MQTT", "REST APIs"],
 freeTier: false;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 20;
 name: "PrivacyGuard AI";
@@ -900,7 +904,7 @@ roi: "350% in 6 months";
 setupTime: "1-2 weeks";
 integrations: ["Salesforce", "HubSpot", "AWS", "Azure", "Database systems"],
 freeTier: false;
-trialPeriod: "21 days",
+trialPeriod: "21 days"
 };
 {id: 21;
 name: "AI Governance Suite";
@@ -941,7 +945,7 @@ roi: "600% in 12 months";
 setupTime: "3-4 weeks";
 integrations: ["ML platforms", "Cloud services", "Monitoring tools", "Compliance systems"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 22;
 name: "EcoSystem AI";
@@ -982,7 +986,7 @@ roi: "450% in 8 months";
 setupTime: "2-3 weeks";
 integrations: ["All major AI platforms", "Cloud services", "Data sources", "Business tools"],
 freeTier: false;
-trialPeriod: "21 days",
+trialPeriod: "21 days"
 };
 {id: 23;
 name: "Blockchain Analytics Pro";
@@ -1023,7 +1027,7 @@ roi: "500% in 9 months";
 setupTime: "3-4 weeks";
 integrations: ["Major blockchains", "Financial systems", "Regulatory databases", "Analytics tools"],
 freeTier: false;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 24;
 name: "SmartContract AI";
@@ -1064,7 +1068,7 @@ roi: "400% in 6 months";
 setupTime: "1-2 weeks";
 integrations: ["Ethereum", "Solana", "Polygon", "Development tools", "Testing frameworks"],
 freeTier: false;
-trialPeriod: "21 days",
+trialPeriod: "21 days"
 };
 {id: 25;
 name: "Quantum Security Vault";
@@ -1105,7 +1109,7 @@ roi: "600% in 18 months";
 setupTime: "4-6 weeks";
 integrations: ["Security systems", "Cloud platforms", "Identity providers", "Compliance tools"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Enhanced IT Services for 2025;
@@ -1148,7 +1152,7 @@ responseTime: "2 hours";
 sla: "99.9% uptime";
 certifications: ["Cisco CCIE", "Juniper JNCIE", "AWS Advanced Networking"],
 deliveryTime: "8-12 weeks";
-support: "24/7 enterprise support",
+support: "24/7 enterprise support"
 };
 {id: 2;
 name: "Cloud Migration & Optimization";
@@ -1188,7 +1192,7 @@ responseTime: "4 hours";
 sla: "99.95% availability";
 certifications: ["AWS Solutions Architect", "Azure Solutions Architect", "Google Cloud Professional"],
 deliveryTime: "12-16 weeks";
-support: "24/7 cloud support",
+support: "24/7 cloud support"
 };
 {id: 3;
 name: "AI-Powered Cybersecurity";
@@ -1228,7 +1232,7 @@ responseTime: "1 hour";
 sla: "99.99% security";
 certifications: ["CISSP", "CEH", "OSCP", "GIAC"],
 deliveryTime: "6-10 weeks";
-support: "24/7 security support",
+support: "24/7 security support"
 };
 {id: 4;
 name: "Data Center Modernization";
@@ -1268,7 +1272,7 @@ responseTime: "6 hours";
 sla: "99.99% uptime";
 certifications: ["Data Center Design", "Energy Management", "Infrastructure Architecture"],
 deliveryTime: "16-24 weeks";
-support: "24/7 data center support",
+support: "24/7 data center support"
 };
 {id: 5;
 name: "DevOps & AI Automation";
@@ -1308,7 +1312,7 @@ responseTime: "3 hours";
 sla: "99.9% deployment success";
 certifications: ["AWS DevOps", "Azure DevOps", "Kubernetes", "Docker"],
 deliveryTime: "10-14 weeks";
-support: "24/7 DevOps support",
+support: "24/7 DevOps support"
 };
 {id: 6;
 name: "AI Business Intelligence Platform";
@@ -1348,7 +1352,7 @@ responseTime: "4 hours";
 sla: "99.9% data accuracy";
 certifications: ["Data Science", "Machine Learning", "Business Intelligence", "Analytics"],
 deliveryTime: "14-20 weeks";
-support: "24/7 analytics support",
+support: "24/7 analytics support"
 };
 {id: 7;
 name: "DevOps Automation Platform";
@@ -1386,7 +1390,7 @@ responseTime: "4 hours";
 sla: "99.9% availability";
 certifications: ["AWS DevOps", "Azure DevOps", "Kubernetes CKA"],
 deliveryTime: "8-12 weeks";
-support: "24/7 DevOps support",
+support: "24/7 DevOps support"
 };
 {id: 8;
 name: "Data Center Modernization";
@@ -1424,7 +1428,7 @@ responseTime: "6 hours";
 sla: "99.99% uptime";
 certifications: ["Data Center Design", "Energy Management", "Cloud Architecture"],
 deliveryTime: "16-24 weeks";
-support: "24/7 infrastructure support",
+support: "24/7 infrastructure support"
 };
 {id: 9;
 name: "IoT Infrastructure & Management";
@@ -1462,7 +1466,7 @@ responseTime: "4 hours";
 sla: "99.8% availability";
 certifications: ["IoT Architecture", "Edge Computing", "Security"],
 deliveryTime: "12-18 weeks";
-support: "24/7 IoT support",
+support: "24/7 IoT support"
 };
 {id: 10;
 name: "Digital Transformation Consulting";
@@ -1500,7 +1504,7 @@ responseTime: "8 hours";
 sla: "99.5% satisfaction";
 certifications: ["Digital Transformation", "Change Management", "Project Management"],
 deliveryTime: "20-32 weeks";
-support: "Business hours consulting support",
+support: "Business hours consulting support"
 };
 {id: 11;
 name: "Legacy System Modernization";
@@ -1538,7 +1542,7 @@ responseTime: "6 hours";
 sla: "99.7% availability";
 certifications: ["Cloud Architecture", "API Development", "Microservices"],
 deliveryTime: "16-24 weeks";
-support: "24/7 modernization support",
+support: "24/7 modernization support"
 };
 {id: 12;
 name: "Enterprise Software Development";
@@ -1576,7 +1580,7 @@ responseTime: "4 hours";
 sla: "99.8% satisfaction";
 certifications: ["Software Development", "Cloud Architecture", "AI Integration"],
 deliveryTime: "20-28 weeks";
-support: "24/7 development support",
+support: "24/7 development support"
 }
 ];
 // Enhanced AI Services for 2025;

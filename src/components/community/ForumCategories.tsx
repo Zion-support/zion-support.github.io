@@ -38,7 +38,7 @@ return (
 <span>Last: {category.lastPost.title} by {category.lastPost.author}</span>;
 )}
 
-interface ForumCategoriesProps {categories: Array<{,}
+interface ForumCategoriesProps {categories: Array<{}
 id: string; name: string; description: string; postCount: number}>;
 }
 
@@ -64,7 +64,7 @@ export default ForumCategories;
 }
 }
 <//div><///div>)))
-import Link from "next/link",;
+import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";,
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from "lucide-react";

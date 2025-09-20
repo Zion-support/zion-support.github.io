@@ -7,7 +7,7 @@ export function FooterNewsletter() {
     const [ema,  i, l, setEma, i, l] = useState('');
     const [isSubscrib, e, d, setIsSubscrib, e, d] = useState(false);
     const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false);
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {;
         e.preventDefault();
         if (!email.trim())
             return;
@@ -37,7 +37,7 @@ impor, t, Reac, t, { useState } from 'react';
 export function FooterNewsletter() {
     const [ema,  i, l, setEma, i, l] = useState('');
     const [isSubscrib, e, d, setIsSubscrib, e, d] = useState(false);
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => {;
         e.preventDefault();
         // Here you would typically send the email to your newsletter service;
         setIsSubscribed(true);

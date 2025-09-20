@@ -1,5 +1,5 @@
-import React from "react,,
-,;
+import React from "react;
+;
 import { SEO  } from "@/components/SEO";
 export default function ChatAssistant(props: any) {return (,
 <div className="min-h-screen bg-white">,
@@ -16,8 +16,10 @@ Professional ChatAssistant services to help your business grow.,
   const isGuest = !auth?.isAuthenticated,
 const handleSendMessage = async (messageContent: string) => {if (!messageContent.trim()) return,
 import React {
+  
 read?: boolean}
 export interface ChatAssistantProps {
+  
   /** Optional canned questions shown when the chat is empty */
 }
   starterQuestions?: string[]}
@@ -129,11 +131,11 @@ onClick = {handleModalSendConfirm}
                 Send
               </Button>
             </div>
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}
+          </div>;
+        </div>;
+      )};
+    </div>;
+  );
+};
 };
 ;

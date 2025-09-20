@@ -55,6 +55,8 @@ defaultValue='kanban'
 }
 export default function HiringTracker() {
   return (
+  return (
+  return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>

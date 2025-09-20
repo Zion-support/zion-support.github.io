@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface SpecializedAIService2025 {
+  
 id: string;
 title: string;
 description: string;
@@ -93,7 +94,7 @@ competitors: ["OpenAI", "Google AI", "Microsoft AI", "Anthropic"],
 innovationLevel: "Breakthrough",
 marketTrend: "Explosive Growth",
 aiModel: "GPT-5 + Multimodal Models",
-trainingData: "Proprietary + Public Datasets",
+trainingData: "Proprietary + Public Datasets"
 },
 
 // AI-Powered Predictive Healthcare Analytics;
@@ -153,7 +154,7 @@ competitors: ["Insilico Medicine", "Atomwise", "BenevolentAI", "Exscientia"],
 innovationLevel: "Revolutionary",
 marketTrend: "High Growth",
 aiModel: "Custom Drug Discovery Models",
-trainingData: "Proprietary Pharmaceutical Data",
+trainingData: "Proprietary Pharmaceutical Data"
 },
 
 // Autonomous Financial Trading AI;
@@ -213,7 +214,7 @@ competitors: ["Quantopian", "Alpaca", "Interactive Brokers", "TD Ameritrade"],
 innovationLevel: "Advanced",
 marketTrend: "High Growth",
 aiModel: "Custom Financial AI Models",
-trainingData: "Market Data + Historical Trading Data",
+trainingData: "Market Data + Historical Trading Data"
 },
 
 // AI-Powered Supply Chain Optimization;
@@ -273,7 +274,7 @@ competitors: ["IBM Weather", "AccuWeather", "The Weather Company", "Climate AI"]
 innovationLevel: "Advanced",
 marketTrend: "Growing",
 aiModel: "Custom Climate Prediction Models",
-trainingData: "Satellite + Historical Climate Data",
+trainingData: "Satellite + Historical Climate Data"
 },
 
 // AI-Powered Legal Research Assistant;
@@ -332,7 +333,7 @@ competitors: ["LexisNexis", "Westlaw", "Casetext", "Ravel Law"],
 innovationLevel: "Advanced",
 marketTrend: "Growing",
 aiModel: "Custom Legal AI Models",
-trainingData: "Legal Documents + Case Law",
+trainingData: "Legal Documents + Case Law"
 },
 
 // AI-Powered Educational Personalization;
@@ -392,6 +393,6 @@ competitors: ["Canva", "Adobe", "Figma", "Midjourney"],
 innovationLevel: "Breakthrough",
 marketTrend: "Explosive Growth",
 aiModel: "DALL-E + Custom Design Models",
-trainingData: "Creative Design Datasets",
+trainingData: "Creative Design Datasets"
 }
 ];

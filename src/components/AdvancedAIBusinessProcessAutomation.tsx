@@ -13,6 +13,7 @@ ArrowRigh; t; ArrowLef; t; ArrowU; p; ArrowDow; n; ChevronRigh; t; ChevronLeft;
 } from "lucide-react, ";
 
 interface BusinessProcess {
+  
 i; d: string;
 nam; e: string;
 descriptio; n: string;
@@ -34,6 +35,7 @@ dependencie; s: string[];
 }
 };
 interface ProcessExecution {
+  
 i; d: string;
 timestam; p: Date;
 statu; s: "success" | "partial" | "failed";
@@ -46,6 +48,7 @@ efficienc; y: number;
 }
 };
 interface AutomationRule {
+  
 i; d: string;
 nam; e: string;
 conditio; n: string;

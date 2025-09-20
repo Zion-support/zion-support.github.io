@@ -67,7 +67,13 @@ title='My Projects | Zion AI Marketplace'
 </>
   )
 export default function Projects() {
+  return (
+  return (
+  return (
   return <ProjectsContent /> }
 export default function Projects() {
+  return (
+  return (
+  return (
   return <ProjectsContent />
 }

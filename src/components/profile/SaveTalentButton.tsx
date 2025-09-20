@@ -6,7 +6,7 @@ interface SaveTalentButtonProps {talentId: string,
 onSave: (talentId: string) => void,
 isSaved: boolean,
 export function SaveTalentButton({
-  talentId,
+  talentId
 }
 onSave}
   isSaved}: SaveTalentButtonProps) {
@@ -20,6 +20,7 @@ onSave}
       }    >
 import { Button } from "@/components/ui/button";
 interface SaveTalentButtonProps {
+  
 isSaved: boolean;
 }
 }

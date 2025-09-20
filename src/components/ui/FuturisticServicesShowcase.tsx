@@ -5,6 +5,7 @@ ArrowRight; CheckCircle; TrendingUp; Users; Award;
 } from "lucide-react, ";
 
 interface Service {
+  
 id: string;
 name: string;
 description: string;

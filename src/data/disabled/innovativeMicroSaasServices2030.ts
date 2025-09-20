@@ -64,7 +64,7 @@ WordPress", ",
 Shopify", ",
 HubSpot", ",
 Mailchimp"",
-Social; Media,, Platforms"],},
+Social; Media,, Platforms"]},
 {
 id: ",
 ai-customer-support-automation-suite",
@@ -191,5 +191,5 @@ Shopify", ",
 WooCommerce", ",
 Google Analytics", ",
 Facebook Ads"",
-Google; Ads"],};
+Google; Ads"]};
 ];

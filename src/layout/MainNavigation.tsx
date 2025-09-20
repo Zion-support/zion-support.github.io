@@ -32,12 +32,14 @@ DropdownMenuItem;
 DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 interface MainNavigationProps {
+  
 isAdmin?: boolean;
 unreadCount?: number;
 }
 className?: string;}
 };
 interface NavigationLink {
+  
 key: string;
 href: string;
 name: string;
@@ -85,15 +87,15 @@ const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
 
 const serviceLinks = [
 { key: "ai-analytics", href: "/ai-analytics-dashboard", name: "AI Analytics" },
-{ key: "ai-content", href: "/ai-content-generator", name: "AI Content Generator" },
-{ key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },
-{ key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },
+{ key: "ai-content", href: "/ai-content-generator", name: "AI Content Generator" },;
+{ key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },;
+{ key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },;
 { key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" };
 ];
 
 let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
 matches: (path: string) => path.startsWith("/blog"),
-name: t("nav.blog"),
+name: t("nav.blog")
 }
 ];
 
@@ -214,9 +216,9 @@ matches: (path: string) => path.startsWith("/partners"),
 name: "Talent",
 matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard"),
 dropdown: [
-{ href: "/talent", label: "Find Talent" },
-{ href: "/talent/apply", label: "Apply as Talent" },
-{ href: "/zion-hire-ai", label: "AI Hiring" }
+{ href: "/talent", label: "Find Talent" },;
+{ href: "/talent/apply", label: "Apply as Talent" },;
+{ href: "/zion-hire-ai", label: "AI Hiring" };
 ];
 },
 {
@@ -232,7 +234,7 @@ dropdown: [
 ];
 key: "equipment",
 href: "/equipment",
-matches: (path: string) => path.startsWith("/equipment"),
+matches: (path: string) => path.startsWith("/equipment")
 },
 {key: "community",
 href: "/community",
@@ -292,9 +294,9 @@ items: [
 { name: "AI Chatbot Builder", href: "/chatbot-builder" },
 { name: "AI-Powered Testing", href: "/ai-testing" },
 { name: "AI Legal Assistant", href: "/legal-ai" },
-{ name: "AI Translation", href: "/ai-translation" },
-{ name: "AI Financial Advisor", href: "/financial-ai" },
-{ name: "AI Design Assistant", href: "/design-ai" }
+{ name: "AI Translation", href: "/ai-translation" },;
+{ name: "AI Financial Advisor", href: "/financial-ai" },;
+{ name: "AI Design Assistant", href: "/design-ai" };
 ];
 },
 {
@@ -335,15 +337,15 @@ items: [
 }
 const serviceLinks = [
 { key: "ai-analytics", href: "/ai-analytics-dashboard", name: "AI Analytics" },
-{ key: "ai-content", href: "/ai-content-generator", name: "AI Content Generator" },
-{ key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },
-{ key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },
+{ key: "ai-content", href: "/ai-content-generator", name: "AI Content Generator" },;
+{ key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },;
+{ key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },;
 { key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" };
 ];
 
 let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
 matches: (path: string) => path.startsWith("/blog"),
-name: t("nav.blog"),
+name: t("nav.blog")
 }
 ];
 
@@ -366,7 +368,7 @@ name: "About",
 matches: (path: string) => path.startsWith("/about") || path === "/careers" || path === "/contact",
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-                    ),}
+                    )}
                   >
                     <ShoppingCart className='w-4 h-4 mr-1' />
                     {t('nav.cart', 'Cart')}

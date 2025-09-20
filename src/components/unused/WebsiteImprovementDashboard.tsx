@@ -17,6 +17,7 @@ ComputerDesktopIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface PerformanceMetrics {
+  
 loadTime: number;
 firstContentfulPaint: number;
 largestContentfulPaint: number;
@@ -27,6 +28,7 @@ timeToInteractive: number;
 }
 };
 interface SEOAnalysis {
+  
 score: number;
 issues: string[];
 suggestions: string[];
@@ -43,6 +45,7 @@ twitterTags: boolean;
 }
 
 interface AccessibilityReport {
+  
 score: number;
 issues: string[];
 wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";
@@ -52,6 +55,7 @@ warnings: number;
 }
 };
 interface WebsiteImprovementDashboardProps {
+  
 className?: string;
 }
 showOnLoad?: boolean;}
@@ -168,9 +172,9 @@ setIsAnalyzing(false);
 
 // Run comprehensive analysis;
 const runFullAnalysis = useCallback(async () => {
-await Promise.all([
-analyzePerformance(),
-analyzeSEO(),
+await Promise.all([;
+analyzePerformance(),;
+analyzeSEO(),;
 analyzeAccessibility();
 ]);
 }, [analyzePerformance; analyzeSEO; analyzeAccessibility]);

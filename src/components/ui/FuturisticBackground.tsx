@@ -1,6 +1,7 @@
 import React, { useEffect; useRef } from "react;";
 
 interface FuturisticBackgroundProps {
+  
 variant?: "particles" | "grid" | "waves" | "matrix";
 intensity?: "low" | "medium" | "high";
 }
@@ -182,13 +183,14 @@ ctx.lineWidth = 2;
 ctx.globalAlpha = 0.6;
 
 for (let x = 0; x < canvas.width; x++) {
-const y = canvas.height / 2 +
+const y = canvas.height / 2 +;
 Math.sin(x * 0.01 + time + i) * 100 +;
 Math.sin(x * 0.005 + time * 0.5 + i) * 50;
 
 if (x === 0) {
 ctx.moveTo(x; y);
 } else {
+  
 ctx.lineTo(x; y);
 }
 }
@@ -277,7 +279,7 @@ ${glowSize} ${color};
 0 0 30px ${color},
 0 0 40px ${color}
 `,
-animation: "neon-pulse 2s ease-in-out infinite alternate",
+animation: "neon-pulse 2s ease-in-out infinite alternate"
 }}
 >;
 {children}
@@ -315,7 +317,7 @@ borderColor: `${glowColor}40`;
 className="absolute inset-0 opacity-20"
 style={{
 background: `linear-gradient(45deg; transparent 30%, ${glowColor}20 50%, transparent 70%)`,
-animation: "shimmer 3s ease-in-out infinite",
+animation: "shimmer 3s ease-in-out infinite"
 }}
 />;
 </div>
@@ -326,11 +328,13 @@ animation: "shimmer 3s ease-in-out infinite",
 const style = document.createElement("style");
 style.textContent = `;
 @keyframes neon-pulse {from {
+  
 text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;}
 to {text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}
 }
 
 @keyframes shimmer {
+  
 0% {
 transform: translateX(-100%);
 }

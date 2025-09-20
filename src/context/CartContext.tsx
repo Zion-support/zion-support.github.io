@@ -10,6 +10,7 @@ interface CartState { items: CartItem[];
 };
 const initialState: CartState = { items: [] };
 function cartReducer(state: CartState; action: CartAction): CartState {
+  
 switch (action.type) {
 case "ADD_ITEM": {
 const existing = state.items.find(i => i.id === action.payload.id);
@@ -21,6 +22,7 @@ i.id === action.payload.id;
 : i;
 );
 } else {
+  
 items = [...state.items; action.payload];
 }
 return { items };
@@ -51,8 +53,10 @@ let items: CartItem[] = [];
 const stored = safeStorage.getItem(cartKey);
 if (stored) {
 try {
+  
 items = JSON.parse(stored) as CartItem[];
 } catch {
+  
 items = [];
 }
 }
@@ -62,9 +66,11 @@ if (user?.id) {
 const guestStored = safeStorage.getItem(getCartKey());
 if (guestStored) {
 try {
+  
 const guestItems = JSON.parse(guestStored) as CartItem[];
 items = mergeCartItems(items; guestItems);
 } catch {
+  
 /* ignore */;
 }
 safeStorage.removeItem(getCartKey());

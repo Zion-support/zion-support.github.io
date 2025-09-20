@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface AdvancedInnovativeMicroSaasService {
+  
 id: string;
 title: string;
 description: string;
@@ -88,7 +89,7 @@ technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "Secure
 integrationOptions: ["Brokerage APIs", "Banking Systems", "Tax Software", "CRM Systems"],
 complianceStandards: ["SEC Compliance", "FINRA Guidelines", "GDPR", "SOC 2 Type II"],
 sla: "99.9% portfolio accuracy";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // Quantum-Safe Cybersecurity;
 {id: "quantum-safe-cybersecurity-suite";
@@ -143,7 +144,7 @@ technicalSpecs: ["Post-Quantum Algorithms", "Hybrid Encryption", "Zero-Trust Arc
 integrationOptions: ["SIEM Systems", "EDR Solutions", "Identity Providers", "Cloud Platforms"],
 complianceStandards: ["NIST Standards", "ISO 27001", "SOC 2", "FedRAMP", "HIPAA"],
 sla: "99.95% threat detection";
-uptime: "99.99%",
+uptime: "99.99%"
 };
 // AI-Powered Healthcare Analytics;
 {id: "ai-healthcare-analytics-platform";

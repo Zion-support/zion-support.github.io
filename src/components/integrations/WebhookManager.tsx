@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -16,9 +17,9 @@ return (,
 </div>)},
 export default WebhookManager,;<//div><///div>
 import React { useEffect useState } from 'react'
-import { Card,
-CardContent
-, CardDescription,
+import { Card,;
+CardContent;
+, CardDescription;
 CardFooter;
 , CardHeader,;
 CardTitle } from "@/components/ui/card";
@@ -325,7 +326,7 @@ newWebhook.secret |undefined);"
   webhook.name "
 }</CardTitle> <CardDescription className="truncate max-w-md"> {
   webhook.url "
-}</CardDescription> </div> <div className="flex items-center"> <div className="mr-2 flex items-center"> <div className= {
+}</CardDescription> </div> <div className="flex items-center"> <div className="mr-2 flex items-center"> <div className={
   `h-2 w-2 rounded-full mr-2 $ {
   webhook.is active ? 'bg-green-500' : 'bg-gray-400'
 }` "
@@ -344,7 +345,7 @@ newWebhook.secret |undefined);"
 }</SelectContent> </Select> </CardFooter> </Card>) )
 }</div>)
 }{"
-  testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <span className= {'
+  testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <span className={'
   testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'
 }> {testResult.status}{
   testResult.statusText "

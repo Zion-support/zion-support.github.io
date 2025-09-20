@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Header } from "@/components/Header";,
 import { SEO } from "@/components/SEO";,
 import { useAuth } from "@/hooks/useAuth";,
@@ -15,6 +15,9 @@ import { supabase } from "@/integrations/supabase/client";,
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from "@/utils/productionLogger";
 export default function TenantOnboarding() {
+  return (
+  return (
+  return (
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);

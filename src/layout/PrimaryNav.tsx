@@ -87,7 +87,7 @@ unreadCount={unreadCount}
 }
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
-//Track analytics event,
+//Track analytics event
 }searchSuggestions= {suggestions}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
   (e) => {
   > {'

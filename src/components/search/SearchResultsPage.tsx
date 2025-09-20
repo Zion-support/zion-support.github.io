@@ -1,4 +1,5 @@
 interface SearchResult {
+  
   id: string;
 title: string;
   description: string;
@@ -12,6 +13,7 @@ type: 'product' | 'talent' | 'blog' | 'service';
   tags?: string[];
   date?: string,
 interface SearchFilters {
+  
   types: string[];
 category: string;
   minPrice: number;
@@ -19,6 +21,7 @@ maxPrice: number;
   minRating: number;
 sort: string,
 interface SearchResponse {
+  
   results: SearchResult[];
 totalCount: number;
   page: number;

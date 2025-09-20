@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react, ';
-export const useAccessibility = () => {const [preferences, setPreferences] = useState({
+export const useAccessibility = () => {const [preferences, setPreferences] = useState({;
         highContrast: false;
         largeText: false;
         reducedMotion: false;
@@ -16,6 +16,7 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedPreferences) {
             try {
+  
                 setPreferences(JSON.parse(savedPreferences));
             }
             catch (error) {
@@ -24,6 +25,7 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
         }
         if (savedSettings) {
             try {
+  
                 setSettings(JSON.parse(savedSettings));
             }
             catch (error) {
@@ -32,12 +34,12 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
         }
     }, []);
     // Save preferences to localStorage;
-    const savePreferences = useCallback((newPreferences) => {
+    const savePreferences = useCallback((newPreferences) => {;
         const updatedPreferences = { ...preferences, ...newPreferences };
         setPreferences(updatedPreferences);
         localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences));
     }, [preferences]);
-    const saveSettings = useCallback((newSettings) => {
+    const saveSettings = useCallback((newSettings) => {;
         const updatedSettings = { ...settings, ...newSettings };
         setSettings(updatedSettings);
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings));
@@ -51,6 +53,7 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
             root.style.setProperty('--contrast-multiplier', '1.5');
         }
         else {
+  
             root.classList.remove('high-contrast');
             root.style.removeProperty('--contrast-multiplier');
         }
@@ -60,6 +63,7 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
             root.style.setProperty('--font-size-multiplier', '1.2');
         }
         else {
+  
             root.classList.remove('large-text');
             root.style.removeProperty('--font-size-multiplier');
         }
@@ -69,6 +73,7 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
             root.style.setProperty('--motion-reduction', '0.5');
         }
         else {
+  
             root.classList.remove('reduced-motion');
             root.style.removeProperty('--motion-reduction');
         }
@@ -77,6 +82,7 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
             root.classList.add('focus-visible');
         }
         else {
+  
             root.classList.remove('focus-visible');
         }
     }, [preferences]);
@@ -84,7 +90,7 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
     useEffect(() => {
         if (!preferences.keyboardNavigation)
             return;
-        const handleKeyDown = (event) => {
+        const handleKeyDown = (event) => {;
             // Skip to main content;
             if (event.key === 'Tab' && event.altKey) {
                 event.preventDefault();
@@ -108,8 +114,8 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, [preferences.keyboardNavigation]);
     // Screen reader announcements;
-    const announceToScreenReader = useCallback((message) => {
-        if (preferences.screenReader) {
+    const announceToScreenReader = useCallback((message) => {;
+        if (preferences.screenReader) {;
             const announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
             announcement.setAttribute('aria-atomic', 'true');
@@ -122,14 +128,14 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
         }
     }, [preferences.screenReader]);
     // Focus management;
-    const focusFirstInteractive = useCallback((container) => {
+    const focusFirstInteractive = useCallback((container) => {;
         const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusableElements.length > 0) {
             focusableElements[0].focus();
         }
     }, []);
-    const trapFocus = useCallback((container) => {
-        const focusableElements = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => {
+    const trapFocus = useCallback((container) => {;
+        const focusableElements = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => {;
             const element = el;
             return !element.disabled;
         });
@@ -138,14 +144,15 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
         const handleTabKey = (event) => {
-            if (event.key === 'Tab') {
-                if (event.shiftKey) {
-                    if (document.activeElement === firstElement) {
+            if (event.key === 'Tab') {;
+                if (event.shiftKey) {;
+                    if (document.activeElement === firstElement) {;
                         event.preventDefault();
                         lastElement.focus();
                     }
                 }
                 else {
+  
                     if (document.activeElement === lastElement) {
                         event.preventDefault();
                         firstElement.focus();
@@ -157,6 +164,7 @@ export const useAccessibility = () => {const [preferences, setPreferences] = use
         return () => container.removeEventListener('keydown', handleTabKey);
     }, []);
     return {
+  
         preferences,
         settings,
         savePreferences,

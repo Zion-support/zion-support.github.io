@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Clock, MapPin, Building, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 
 interface Application {
+  
   id: string;
   jobTitle: string;
   company: string;
@@ -47,9 +48,9 @@ const mockApplications: Application[] = [
 const statusConfig = {
   pending: { label: 'Pending', color: 'bg-yellow-100 text-yellow-800', icon: Clock },
   reviewed: { label: 'Under Review', color: 'bg-blue-100 text-blue-800', icon: AlertCircle },
-  interview: { label: 'Interview', color: 'bg-purple-100 text-purple-800', icon: CheckCircle },
-  rejected: { label: 'Rejected', color: 'bg-red-100 text-red-800', icon: XCircle },
-  accepted: { label: 'Accepted', color: 'bg-green-100 text-green-800', icon: CheckCircle }
+  interview: { label: 'Interview', color: 'bg-purple-100 text-purple-800', icon: CheckCircle },;
+  rejected: { label: 'Rejected', color: 'bg-red-100 text-red-800', icon: XCircle },;
+  accepted: { label: 'Accepted', color: 'bg-green-100 text-green-800', icon: CheckCircle };
 };
 
 export function ApplicationsTracker() {

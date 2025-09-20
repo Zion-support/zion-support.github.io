@@ -25,6 +25,7 @@ Activity;
 } from "lucide-react, ";
 
 interface BusinessMetric {
+  
 i; d: string;
 nam; e: string;
 valu; e: number;
@@ -39,6 +40,7 @@ lastUpdate; d: string;
 }
 };
 interface AIInsight {
+  
 i; d: string;
 typ; e: "prediction" | "anomaly" | "opportunity" | "risk";
 titl; e: string;
@@ -53,6 +55,7 @@ action; s: string[];
 }
 };
 interface PredictiveModel {
+  
 i; d: string;
 nam; e: string;
 accurac; y: number;

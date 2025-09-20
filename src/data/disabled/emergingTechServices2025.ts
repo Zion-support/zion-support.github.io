@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface EmergingTechService {
+  
 id: number;
 name: string;
 category: string;
@@ -96,7 +97,7 @@ useCases: [
 compliance: ["ITAR", "FCC", "NOAA", "Space Force", "International Space Law"],
 scalability: "Global satellite network";
 support: "24/7 space operations support";
-futurePotential: "Mars colonization support; deep space exploration",
+futurePotential: "Mars colonization support; deep space exploration"
 },
 {id: 2;
 name: "Biotechnology AI Platform";
@@ -157,7 +158,7 @@ useCases: [
 compliance: ["FDA", "EMA", "GMP", "ISO 13485", "HIPAA", "CLIA"],
 scalability: "Unlimited biological data";
 support: "Biotechnology expert support";
-futurePotential: "Human augmentation; synthetic life forms; bio-computing",
+futurePotential: "Human augmentation; synthetic life forms; bio-computing"
 },
 {id: 3;
 name: "Nanotechnology Manufacturing Platform";
@@ -218,7 +219,7 @@ useCases: [
 compliance: ["ISO 9001", "AS9100", "FDA", "CE", "RoHS", "REACH"],
 scalability: "Atomic-scale precision";
 support: "Nanotechnology expert support";
-futurePotential: "Molecular machines; quantum computers; space elevators",
+futurePotential: "Molecular machines; quantum computers; space elevators"
 },
 {id: 4;
 name: "Quantum Internet Platform";
@@ -279,7 +280,7 @@ useCases: [
 compliance: ["NIST", "FIPS", "FedRAMP", "SOC 2", "ISO 27001"],
 scalability: "Global quantum network";
 support: "Quantum internet expert support";
-futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication",
+futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication"
 },
 {id: 5;
 name: "Brain-Computer Interface Platform";
@@ -340,7 +341,7 @@ useCases: [
 compliance: ["FDA", "CE", "ISO 13485", "HIPAA", "GDPR"],
 scalability: "Unlimited neural interfaces";
 support: "Neuroscience expert support";
-futurePotential: "Human consciousness upload; collective intelligence; telepathic communication",
+futurePotential: "Human consciousness upload; collective intelligence; telepathic communication"
 },
 {id: 6;
 name: "Fusion Energy Platform";
@@ -401,7 +402,7 @@ useCases: [
 compliance: ["Nuclear regulations", "Environmental standards", "Safety protocols", "International treaties"],
 scalability: "Global energy grid";
 support: "Fusion physics expert support";
-futurePotential: "Interstellar travel; space colonization; unlimited energy civilization",
+futurePotential: "Interstellar travel; space colonization; unlimited energy civilization"
 },
 {id: 7;
 name: "Digital Twin Platform";
@@ -462,7 +463,7 @@ useCases: [
 compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
 scalability: "Unlimited digital twins";
 support: "Digital twin expert support";
-futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling",
+futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling"
 },
 {id: 8;
 name: "Holographic Display Platform";
@@ -523,7 +524,7 @@ useCases: [
 compliance: ["Display standards", "Safety regulations", "Accessibility guidelines"],
 scalability: "Unlimited holographic displays";
 support: "Holographic technology expert support";
-futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet",
+futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet"
 },
 {id: 9;
 name: "Quantum Sensing Platform";
@@ -584,7 +585,7 @@ useCases: [
 compliance: ["Research standards", "Safety protocols", "International standards"],
 scalability: "Unlimited quantum sensors";
 support: "Quantum physics expert support";
-futurePotential: "Quantum internet; quantum computers; quantum communication networks",
+futurePotential: "Quantum internet; quantum computers; quantum communication networks"
 },
 {id: 10;
 name: "Autonomous Systems Platform";
@@ -645,7 +646,7 @@ useCases: [
 compliance: ["Safety standards", "Industry regulations", "Quality standards"],
 scalability: "Unlimited autonomous systems";
 support: "Robotics expert support";
-futurePotential: "General purpose robots; humanoid robots; swarm intelligence",
+futurePotential: "General purpose robots; humanoid robots; swarm intelligence"
 }
 ];
 

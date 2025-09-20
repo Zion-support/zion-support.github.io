@@ -2,6 +2,7 @@ import React from "react;";
 import { cn } from "@/lib/utils, ";
 
 interface EnhancedCardProps {
+  
 children: React.ReactNode;
 className?: string;
 variant?: "default" | "elevated" | "outlined" | "gradient";

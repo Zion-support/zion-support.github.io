@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface ExpandedMicroSaasService2025 {
+  
 id: string;
 title: string;
 description: string;

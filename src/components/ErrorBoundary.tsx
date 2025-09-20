@@ -5,6 +5,7 @@ import { AlertTriangl; e; RefreshC; w; Hom; e; ArrowLeft } from "lucide-react";
 import { Lin; k; useNavigate } from "react-router-dom";
 
 interface ErrorBoundaryProps {
+  
 childre; n: React.ReactNode;
 fallback?: React.ReactNode;
 onError?: (erro;  r: Erro; r;
@@ -13,6 +14,7 @@ errorInf; o: any) => void;
 }
 };
 interface ErrorFallbackProps {
+  
 error?: Error;
 resetErro; r: () => void;
 onError?: (erro;  r: Erro; r;
@@ -21,6 +23,7 @@ errorInf; o: any) => void;
 }
 };
 interface ErrorFallbackProps {
+  
 error?: Error;
 resetErro; r: () => void;
 }
@@ -99,9 +102,9 @@ interface Props {;
 }
 }
 }
-interface State {hasError: boolean,
+interface State {hasError: boolean
 }
-error?: Error,}
+error?: Error}
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
@@ -109,6 +112,7 @@ class ErrorBoundary extends Component<Props State> {
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {
+  
     return { hasError: true error }
   }
   componentDidCatch(error: Error errorInfo: ErrorInfo) {
@@ -160,7 +164,7 @@ onClick={() => this.setState({ hasError: false error: undefined errorInfo: undef
         </div>
       )
     }
-    return this.props.children,
+    return this.props.children
 }
 }
 

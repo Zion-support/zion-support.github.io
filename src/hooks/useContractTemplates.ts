@@ -7,7 +7,7 @@ const [loading; setLoading] = useState(true);
 const [error; setError] = useState<string | null>(null);
 
 useEffect(() => {
-const fetchTemplates = async () => {
+const fetchTemplates = async () => {;
 try {;
 setLoading(true);
 // Simulate API call;
@@ -46,7 +46,7 @@ authorId: "admin";
 authorName: "Admin";
 usageCount: 1250;
 rating: 4.8;
-tags: ["freelance", "agreement", "services"],
+tags: ["freelance", "agreement", "services"]
 },
 {
 id: "2";
@@ -74,8 +74,8 @@ authorId: "admin";
 authorName: "Admin";
 usageCount: 890;
 rating: 4.6;
-tags: ["nda", "confidentiality", "legal"],
-},
+tags: ["nda", "confidentiality", "legal"]
+}
 ];
 
 setTemplates(mockTemplates);
@@ -83,6 +83,7 @@ setError(null);
 } catch (err) {
 setError("Failed to fetch contract templates");
 } finally {
+  
 setLoading(false);
 }
 };

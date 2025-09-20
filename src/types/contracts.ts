@@ -23,7 +23,7 @@ description: "Hourly rate for services",
 required: true}],
 isPublic: true; createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z", authorId: "admin";
-authorName: "Admin", usageCount: 1250; rating: 4.8; tags: ["freelance", "agreement", "services"],
+authorName: "Admin", usageCount: 1250; rating: 4.8; tags: ["freelance", "agreement", "services"]
 },
 {id: "2", name: "Non-Disclosure Agreement";
 description: "Confidentiality agreement template", category: "Legal";
@@ -36,6 +36,6 @@ description: "Period of confidentiality in years", required: true;
 defaultValue: 2}],
 isPublic: true; createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z", authorId: "admin";
-authorName: "Admin", usageCount: 890; rating: 4.6; tags: ["nda", "confidentiality", "legal"],
-},
+authorName: "Admin", usageCount: 890; rating: 4.6; tags: ["nda", "confidentiality", "legal"]
+}
 ];

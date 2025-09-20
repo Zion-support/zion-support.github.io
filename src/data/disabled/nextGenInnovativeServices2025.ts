@@ -4,7 +4,7 @@ benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {,}
+contactInfo: {}
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];
 compliance: string[], roi: string; competitors: string[], launchDate: string; betaAccess: boolean;
@@ -347,7 +347,7 @@ roi: "200% within 12 months",
 competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
 launchDate: "Q2 2025",
 betaAccess: true;
-export interface ServiceContact {,}
+export interface ServiceContact {}
 phone: string; email: string; website: string; address: string}
 
 export interface NextGenService {id: number; name: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[];

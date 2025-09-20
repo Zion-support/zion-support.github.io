@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface AdvancedEnterpriseSolution {
+  
 id: string;
 title: string;
 description: string;
@@ -88,7 +89,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"],
 roi: "400% within 12 months";
 competitors: ["Microsoft", "Oracle", "SAP", "IBM"],
 innovationLevel: "Breakthrough";
-marketTrend: "Rapidly Growing",
+marketTrend: "Rapidly Growing"
 };
 // Quantum Enterprise Solutions;
 {id: "quantum-enterprise-computing";
@@ -144,7 +145,7 @@ compliance: ["NIST", "ISO", "Enterprise Security"],
 roi: "500% within 18 months";
 competitors: ["IBM", "Google", "Microsoft", "Amazon"],
 innovationLevel: "Revolutionary";
-marketTrend: "Emerging",
+marketTrend: "Emerging"
 };
 // Autonomous Business Intelligence;
 {id: "autonomous-business-intelligence";
@@ -200,7 +201,7 @@ compliance: ["GDPR", "SOC 2", "ISO 27001"],
 roi: "350% within 8 months";
 competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
 innovationLevel: "Advanced";
-marketTrend: "Growing",
+marketTrend: "Growing"
 };
 // Next-Gen Cybersecurity Platform;
 {id: "next-gen-cybersecurity";
@@ -256,7 +257,7 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 roi: "450% within 10 months";
 competitors: ["CrowdStrike", "SentinelOne", "Palo Alto", "Cisco"],
 innovationLevel: "Advanced";
-marketTrend: "High Growth",
+marketTrend: "High Growth"
 };
 // Digital Twin Enterprise Platform;
 {id: "digital-twin-enterprise";
@@ -312,6 +313,6 @@ compliance: ["ISO 27001", "Industry Standards"],
 roi: "380% within 12 months";
 competitors: ["Siemens", "GE", "PTC", "Dassault"],
 innovationLevel: "Advanced";
-marketTrend: "Emerging",
+marketTrend: "Emerging"
 }
 ];

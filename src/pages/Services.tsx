@@ -41,9 +41,9 @@ color: "from-red-500 to-orange-600"
       title: "Data Analytics",
 description: "Turn your data into actionable insights with advanced analytics and visualization tools."
       features: ["Business Intelligence", "Data Warehousing", "Real-time Analytics", "Custom Dashboards"]
-      icon: "📊",
-color: "from-indigo-500 to-purple-600"
-    }
+      icon: "📊",;
+color: "from-indigo-500 to-purple-600";
+    };
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

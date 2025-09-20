@@ -1,5 +1,5 @@
 // Additional Advanced AI Services;
-export const additionalAdvancedAIServices2025 = [
+export const additionalAdvancedAIServices2025 = [;
     {id: 1;
         name: "Quantum Neural Networks Pro";
         category: "Quantum AI";
@@ -82,7 +82,7 @@ export const additionalAdvancedAIServices2025 = [
     }
 ];
 // Advanced Blockchain Services;
-export const advancedBlockchainServices2025 = [
+export const advancedBlockchainServices2025 = [;
     {id: 1;
         name: "Cross-Chain Bridge Platform";
         category: "Blockchain Infrastructure";
@@ -122,7 +122,7 @@ export const advancedBlockchainServices2025 = [
         setupTime: "1-2 weeks";
         integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
         freeTier: false;
-        trialPeriod: "7 days",
+        trialPeriod: "7 days"
     };
     {id: 2;
         name: "Decentralized Identity Platform";
@@ -163,11 +163,11 @@ export const advancedBlockchainServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["Ethereum", "Polygon", "Identity protocols", "Enterprise systems"],
         freeTier: true;
-        trialPeriod: "14 days",
+        trialPeriod: "14 days"
     }
 ];
     // Advanced Cybersecurity Services;
-export const advancedCybersecurityServices2025 = [
+export const advancedCybersecurityServices2025 = [;
     {id: 1;
         name: "AI-Powered SOC Platform";
         category: "Security Operations";
@@ -204,7 +204,7 @@ export const advancedCybersecurityServices2025 = [
         sla: "99.99% uptime";
         certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
         deliveryTime: "8-10 weeks";
-        support: "24/7",
+        support: "24/7"
     };
     {id: 2;
         name: "Quantum-Safe Cryptography";
@@ -242,11 +242,11 @@ export const advancedCybersecurityServices2025 = [
         sla: "99.9% uptime";
         certifications: ["Cryptography", "Security", "Quantum Computing"],
         deliveryTime: "12-16 weeks";
-        support: "Business hours",
+        support: "Business hours"
     }
 ];
     // Advanced Cloud & DevOps Services;
-export const advancedCloudDevOpsServices2025 = [
+export const advancedCloudDevOpsServices2025 = [;
     {id: 1;
         name: "AI-Powered DevOps Automation";
         category: "DevOps";
@@ -283,11 +283,11 @@ export const advancedCloudDevOpsServices2025 = [
         sla: "99.5% uptime";
         certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
         deliveryTime: "6-8 weeks";
-        support: "Business hours",
+        support: "Business hours"
     }
 ];
     // Advanced Healthcare Services;
-export const advancedHealthcareServices2025 = [
+export const advancedHealthcareServices2025 = [;
     {id: 1;
         name: "Genomic AI Platform";
         category: "Genomics";
@@ -330,7 +330,7 @@ export const advancedHealthcareServices2025 = [
     }
 ];
 // Advanced IoT Services;
-export const advancedIoTServices2025 = [
+export const advancedIoTServices2025 = [;
     {id: 1;
         name: "Industrial IoT Analytics";
         category: "Industrial IoT";
@@ -370,11 +370,11 @@ export const advancedIoTServices2025 = [
         setupTime: "3-5 weeks";
         integrations: ["SCADA systems", "ERP platforms", "MES systems", "Cloud platforms"],
         freeTier: false;
-        trialPeriod: "30 days",
+        trialPeriod: "30 days"
     }
 ];
     // Advanced Quantum Services;
-export const advancedQuantumServices2025 = [
+export const advancedQuantumServices2025 = [;
     {id: 1;
         name: "Quantum Machine Learning Suite";
         category: "Quantum ML";
@@ -417,7 +417,7 @@ export const advancedQuantumServices2025 = [
     }
 ];
 // Advanced Space Services;
-export const advancedSpaceServices2025 = [
+export const advancedSpaceServices2025 = [;
     {id: 1;
         name: "Space Traffic Management";
         category: "Space Operations";
@@ -457,11 +457,11 @@ export const advancedSpaceServices2025 = [
         setupTime: "4-6 weeks";
         integrations: ["Satellite systems", "Tracking networks", "Regulatory databases", "Communication systems"],
         freeTier: false;
-        trialPeriod: "30 days",
+        trialPeriod: "30 days"
     }
 ];
     // Advanced Sustainability Services;
-export const advancedSustainabilityServices2025 = [
+export const advancedSustainabilityServices2025 = [;
     {id: 1;
         name: "Circular Economy Platform";
         category: "Circular Economy";
@@ -501,11 +501,11 @@ export const advancedSustainabilityServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["ERP systems", "Waste management", "Supply chain platforms", "Sustainability databases"],
         freeTier: true;
-        trialPeriod: "21 days",
+        trialPeriod: "21 days"
     }
 ];
     // Advanced Fintech Services;
-export const advancedFintechServices2025 = [
+export const advancedFintechServices2025 = [;
     {id: 1;
         name: "RegTech Compliance Platform";
         category: "RegTech";
@@ -545,7 +545,7 @@ export const advancedFintechServices2025 = [
         setupTime: "3-4 weeks";
         integrations: ["Banking systems", "Regulatory databases", "Risk management", "Reporting systems"],
         freeTier: false;
-        trialPeriod: "21 days",
+        trialPeriod: "21 days"
     }
 ];
     // Export all additional services;
@@ -560,15 +560,15 @@ export const allAdditionalServices2025 = {advancedAI: additionalAdvancedAIServic
     sustainability: advancedSustainabilityServices2025;
     fintech: advancedFintechServices2025};
     // Combined services export;
-export const allComprehensiveServices2025 = {
+export const allComprehensiveServices2025 = {;
     ...allAdditionalServices2025;
 };
 // Helper functions for additional services;
-export const getAdditionalServicesByCategory = (category) => {
+export const getAdditionalServicesByCategory = (category) => {;
     const allServices = Object.values(allAdditionalServices2025).flat();
     return allServices.filter(service => service.category === category);
 };
-export const getAdditionalServicesByPriceRange = (minPrice, maxPrice) => {
+export const getAdditionalServicesByPriceRange = (minPrice, maxPrice) => {;
     const allServices = Object.values(allAdditionalServices2025).flat();
     return allServices.filter(service => {
         if ('price' in service) {
@@ -580,11 +580,11 @@ export const getAdditionalServicesByPriceRange = (minPrice, maxPrice) => {
         return false;
     });
 };
-export const getAdditionalPopularServices = (limit = 10) => {
+export const getAdditionalPopularServices = (limit = 10) => {;
     const allServices = Object.values(allAdditionalServices2025).flat();
     return allServices.slice(0, limit);
 };
-export const searchAdditionalServices = (query) => {
+export const searchAdditionalServices = (query) => {;
     const allServices = Object.values(allAdditionalServices2025).flat();
     const searchTerm = query.toLowerCase();
     return allServices.filter(service => service.name.toLowerCase().includes(searchTerm) ||

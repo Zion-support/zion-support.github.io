@@ -15,28 +15,28 @@ export const masterComprehensiveServices2025 = {// Original services;
     // Additional services;
     additional: allAdditionalServices2025;
     // Cutting-edge services;
-    cuttingEdge: allCuttingEdgeServices2025,
+    cuttingEdge: allCuttingEdgeServices2025
 };
     // Get all services as a flat array;
 export const getAllServices = () => {
     const allServices = [
         ...enhancedMicroSaasServices2025,
         ...enhancedITServices2025,
-        ...enhancedAIServices2025,
-        ...Object.values(allExpandedServices2025).flat(),
-        ...Object.values(allAdditionalServices2025).flat()
+        ...enhancedAIServices2025,;
+        ...Object.values(allExpandedServices2025).flat(),;
+        ...Object.values(allAdditionalServices2025).flat();
   };
         ...Object.values(allCuttingEdgeServices2025).flat()
     ];
     return allServices;
 };
 // Get services by category across all service types;
-export const getMasterServicesByCategory = (category) => {
+export const getMasterServicesByCategory = (category) => {;
     const allServices = getAllServices();
     return allServices.filter(service => service.category === category);
 };
 // Get services by price range across all service types;
-export const getMasterServicesByPriceRange = (minPrice, maxPrice) => {
+export const getMasterServicesByPriceRange = (minPrice, maxPrice) => {;
     const allServices = getAllServices();
     return allServices.filter(service => {
         if ('price' in service && typeof service.price === 'number') {
@@ -52,12 +52,12 @@ export const getMasterServicesByPriceRange = (minPrice, maxPrice) => {
     });
 };
 // Get popular services across all categories;
-export const getMasterPopularServices = (limit = 20) => {
+export const getMasterPopularServices = (limit = 20) => {;
     const allServices = getAllServices();
     return allServices.slice(0, limit);
 };
 // Search services across all categories;
-export const searchMasterServices = (query) => {
+export const searchMasterServices = (query) => {;
     const allServices = getAllServices();
     const searchTerm = query.toLowerCase();
     return allServices.filter(service => service.name.toLowerCase().includes(searchTerm) ||
@@ -65,7 +65,7 @@ export const searchMasterServices = (query) => {
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
 };
 // Get services by technology/domain;
-export const getMasterServicesByTechnology = (technology) => {
+export const getMasterServicesByTechnology = (technology) => {;
     const allServices = getAllServices();
     const techTerm = technology.toLowerCase();
     return allServices.filter(service => service.tags.some(tag => tag.toLowerCase().includes(techTerm)) ||
@@ -73,13 +73,13 @@ export const getMasterServicesByTechnology = (technology) => {
         service.name.toLowerCase().includes(techTerm));
 };
 // Get services by target audience;
-export const getMasterServicesByAudience = (audience) => {
+export const getMasterServicesByAudience = (audience) => {;
     const allServices = getAllServices();
     const audienceTerm = audience.toLowerCase();
     return allServices.filter(service => service.targetAudience.some(target => target.toLowerCase().includes(audienceTerm)));
 };
 // Get services by pricing tier;
-export const getMasterServicesByPricing = (pricing) => {
+export const getMasterServicesByPricing = (pricing) => {;
     const allServices = getAllServices();
     const pricingTerm = pricing.toLowerCase();
     return allServices.filter(service => {
@@ -91,7 +91,7 @@ export const getMasterServicesByPricing = (pricing) => {
 };
 // Get services statistics;
 export const getMasterServicesStats = () => {const allServices = getAllServices();
-    const stats = {
+    const stats = {;
         totalServices: allServices.length;
         byType: {
             microSaas: allServices.filter(s => 'pricing' in s && 'userLimit' in s).length;
@@ -128,10 +128,10 @@ export const getMasterServicesStats = () => {const allServices = getAllServices(
     return stats;
 };
 // Get featured services (high-value, innovative services)
-export const getMasterFeaturedServices = (limit = 10) => {
+export const getMasterFeaturedServices = (limit = 10) => {;
     const allServices = getAllServices();
     // Score services based on various factors;
-    const scoredServices = allServices.map(service => {
+    const scoredServices = allServices.map(service => {;
         let score = 0;
         // Base score for AI services;
         if ('aiScore' in service && typeof service.aiScore === 'number') {
@@ -157,9 +157,9 @@ export const getMasterFeaturedServices = (limit = 10) => {
             score += service.benefits.length * 2;
         }
         // Bonus for cutting-edge categories;
-        const cuttingEdgeCategories = [
-            'Quantum Computing', 'Neuromorphic Computing', 'Brain-Computer Interface',
-            'Synthetic Biology', 'Fusion Energy', 'Hyperloop', '4D Manufacturing'
+        const cuttingEdgeCategories = [;
+            'Quantum Computing', 'Neuromorphic Computing', 'Brain-Computer Interface',;
+            'Synthetic Biology', 'Fusion Energy', 'Hyperloop', '4D Manufacturing';
         ];
         if (cuttingEdgeCategories.includes(service.category)) {
             score += 25;
@@ -172,9 +172,9 @@ export const getMasterFeaturedServices = (limit = 10) => {
         .slice(0, limit);
 };
 // Get trending services (services with high ROI and innovation)
-export const getMasterTrendingServices = (limit = 10) => {
+export const getMasterTrendingServices = (limit = 10) => {;
     const allServices = getAllServices();
-    const trendingServices = allServices.filter(service => {
+    const trendingServices = allServices.filter(service => {;
         // Look for services with high ROI indicators;
         if ('roi' in service) {
             const roiText = service.roi.toLowerCase();

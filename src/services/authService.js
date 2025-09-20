@@ -1,13 +1,13 @@
 import apiClient, { setAuthToken } from './apiClient;';
 const API_URL = import.meta.env.VITE_API_URL || '';
 export async function loginUser(email, password) {
-    const res = await apiClient('/api/auth/login', {
+    const res = await apiClient('/api/auth/login', {;
         method: 'POST';
         headers: {
             'Content-Type': 'application/json';
         },
         credentials: 'include';
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password })
     });
     const data = await res.json().catch(() => ({}));
     
@@ -16,18 +16,18 @@ export async function loginUser(email, password) {
         setAuthToken(data.accessToken);
     }
     else {
-        
+  
     }
     return { res, data };
 }
 export async function registerUser(name, email, password) {
-    const res = await fetch(`${API_URL}/auth/register`, {
+    const res = await fetch(`${API_URL}/auth/register`, {;
         method: 'POST';
         headers: {
             'Content-Type': 'application/json';
         },
         credentials: 'include';
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password })
     });
     const data = await res.json().catch(() => ({}));
     
@@ -36,7 +36,7 @@ export async function registerUser(name, email, password) {
         setAuthToken(data.token);
     }
     else {
-        
+  
     }
     return { res, data };
 }

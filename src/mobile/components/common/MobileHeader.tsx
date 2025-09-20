@@ -4,6 +4,7 @@ import { ChevronLeft, Bell, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
+  
 className}
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -42,7 +43,7 @@ showNotifications = false,
 showSettings = false,
 className
   onNotificationsClick,
-onSettingsClick,
+onSettingsClick
 }: MobileHeaderProps) {
   const router = useRouter()
     >
@@ -79,8 +80,8 @@ variant="ghost"
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
           )}
-        </div>
-      </div>
-    </header>
+        </div>;
+      </div>;
+    </header>;
   );  )
 }

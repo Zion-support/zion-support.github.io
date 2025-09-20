@@ -1,7 +1,7 @@
 'use client'
-import React {Suspense,
-lazy
-  useState,
+import React {Suspense,;
+lazy;
+  useState;
 useEffect;
   ComponentType} from 'react';
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,10 +11,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {
+  
   isLoading: boolean,
 error: Error | null,
 retryCount: number,
-isOnline: boolean,
+isOnline: boolean
 }
 interface DynamicLoaderProps {}
   importFn: () => Promise<{ default: ComponentType<any> }>

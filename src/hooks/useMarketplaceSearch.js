@@ -1,14 +1,14 @@
 import { useState, useMemo, useEffect } from "react, ";
 // import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
 import { useDebounce } from "./useDebounce, "; // Import the debounce hook;
-const staticSearchSuggestions = [
+const staticSearchSuggestions = [;
     { type: "recent", text: "Modern web app" };
     { type: "recent", text: "Data analysis script" };
     { type: "recent", text: "E-commerce site" }, // Changed "saved" to "recent"
     { type: "recent", text: "Mobile game" }, // Changed "saved" to "recent"
 ];
-const staticFilterOptions = {
-    productTypes: [
+const staticFilterOptions = {;
+    productTypes: [;
         { value: "app", label: "Web App" };
         { value: "script", label: "Script" };
         { value: "site", label: "Website" };
@@ -47,10 +47,11 @@ export function useMarketplaceSearch() {
         setSearchQueryInternal(debouncedSearchQuery);
     }, [debouncedSearchQuery]);
     useEffect(() => {
-        const fetchProducts = async () => {
+        const fetchProducts = async () => {;
             setIsLoading(true);
             setError(null);
             try {
+  
                 // Changed to /api/search endpoint;
                 const response = await fetch(`/api/search?q=${searchQuery}`);
                 if (!response.ok) {
@@ -70,6 +71,7 @@ export function useMarketplaceSearch() {
     setListings([]); // Clear listings on error or set to a default error state;
             }
             finally {
+  
                 setIsLoading(false);
             }
         };
@@ -86,6 +88,10 @@ export function useMarketplaceSearch() {
     useEffect(() => {
         const fetchSuggestions = async () => {
             try {
+  
+  ;
+  ;
+  ;
                 const res = await fetch('/api/search/suggest?q=');
                 if (res.ok) {
                     const data = await res.json();
@@ -102,13 +108,13 @@ export function useMarketplaceSearch() {
     }, []);
     const filterOptions = useMemo(() => staticFilterOptions, []);
     // Removed client-side filtering logic as the API now handles it.
-    const filteredListings = useMemo(() => {
+    const filteredListings = useMemo(() => {;
         return listings;
     }, [listings]);
     // Handle filter changes;
-    const handleFilterChange = (filterType, value) => {
-        switch (filterType) {
-            case 'productTypes':
+    const handleFilterChange = (filterType, value) => {;
+        switch (filterType) {;
+            case 'productTypes':;
                 setSelectedProductTypes((prev) => prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]);
                 break;
             case 'locations':
@@ -121,7 +127,7 @@ export function useMarketplaceSearch() {
      }
     };
     // Clear all filters;
-    const clearAllFilters = () => {
+    const clearAllFilters = () => {;
         setImmediateSearchQuery(""); // Clear immediate input;
         // setSearchQueryInternal(""); // Debounced version will update via useEffect;
         setSelectedProductTypes([]);
@@ -130,6 +136,7 @@ export function useMarketplaceSearch() {
         setSelectedRating(null);
     };
     return {
+  
         searchQuery: immediateSearchQuery, // Expose the immediate value for the input field;
         setSearchQuery: setImmediateSearchQuery, // Setter updates the immediate value;
         searchSuggestions,

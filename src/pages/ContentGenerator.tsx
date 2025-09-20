@@ -1,4 +1,4 @@
-import React { useState useEffect } from 'react',;
+import React { useState useEffect } from 'react';
 import { Header } from "@/components/Header";,
 import { Button } from "@/components/ui/button";,
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";,
@@ -16,7 +16,9 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from "next/router";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ContentGenerator() {
-
+  return (
+  return (
+  return (
   const { user, isLoading } = useAuth();
   const router = null;
   // Check if user is still loading,

@@ -1,4 +1,4 @@
-import { useState  } from "react"
+import { useState  } from "react";
 ;
 interface PricingSuggestion {;
 id: string;
@@ -12,6 +12,7 @@ timestamp: Date;
 }
 
 interface AnalyticsData {
+  
 totalSuggestions: number;
 averageConfidence: number;
 priceAccuracy: number;
@@ -74,6 +75,7 @@ priceAccuracy: 0;
 }
 
 return {
+  
 suggestions;
 analytics;
 addSuggestion;

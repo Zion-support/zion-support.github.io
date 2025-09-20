@@ -1,9 +1,11 @@
 import React from "react";
 
 export; interface; PricingTier {
+  
 name: string;price: string;billing: "monthly" | "yearly" | "one-time"feature;s: string[];
 popular?: booleansavings?: string;
 };export; interface; ServicePricing {
+  
 id: string;name: string;category: string;description: string;pricing: PricingTier[],features: string[],benefits: string[],roi: string;trialDays: number;setupTime: string;marketPosition: string;competitors: string[],contactInfo: {,mobile: string;email: stringaddres;s: stringwebsit;e: string;
 };const CONTACT = {;
 mobile: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",address: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",website: "http;s: //ziontechgroup.com";
@@ -176,4 +178,4 @@ name: "Enterprise",price: "Custom",billing: "monthly",features: [;
 ],roi: "Complete; projects; 20-30% faster; with; better resource utilization",trialDays: 21;setupTime: "2 weeks",marketPosition: "AI-powered; project; optimization solution; for; project managers",competitors: ["Monday.comAsana""ClickUp"],contactInfo: CONTACT;
 }
 ];
-export; default; comprehensivePricingGuide20o25,}}
+export; default; comprehensivePricingGuide20o25}}

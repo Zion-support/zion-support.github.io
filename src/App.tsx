@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -69,6 +70,8 @@ import ServicesPage from './pages/Services'
 import PricingPage from './pages/Pricing'
 export default function App() {
   return (
+  return (
+  return (
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-gray-50">
@@ -85,8 +88,8 @@ export default function App() {
           </main>
           <Footer />
         </div>
-      </Router>
-    </ErrorBoundary>
-  )
+      </Router>;
+    </ErrorBoundary>;
+  );
 };
 ;

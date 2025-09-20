@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -28,7 +29,7 @@ description: "Book a consultation meeting", action: "Book Now",
 href: "/contact",
 color: "from-zion-blue to-zion-purple"}
 ];
-const containerVariants = {
+const containerVariants = {;
 hidden: { opacity: 0 }, visible: {;
 opacity: 1;
 transition: {,

@@ -5,8 +5,8 @@ export function usePostsByCategory(categoryId) {const [posts, setPosts] = useSta
         // Simulate API call;
         setLoading(true);
         setTimeout(() => {
-            const mockPosts = [
-                {
+            const mockPosts = [;
+                {;
                     id: '1';
                     title: 'Sample Post 1';
                     content: 'This is a sample post content...';
@@ -32,7 +32,7 @@ export function usePostsByCategory(categoryId) {const [posts, setPosts] = useSta
                     isAnswered: false;
                     authorName: 'John Doe';
                     authorAvatar: '/avatars/john.jpg';
-                    authorRole: 'user',
+                    authorRole: 'user'
                 }
             ];
     setPosts(mockPosts);

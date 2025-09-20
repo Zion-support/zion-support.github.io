@@ -23,6 +23,7 @@ import { useMachineLearning } from "../hooks/useMachineLearning, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface MLDashboardProps {
+  
 className?: string;}
 };
 export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ className = "" }) => {
@@ -35,6 +36,7 @@ const [showCreateMod;  e; l; setShowCreateMod; e; l] = useState(false);
 const [showImportMod; e; l; setShowImportMod; e; l] = useState(false);
 
 const {
+  
 model;  s;
 trainingJob; s;
 prediction; s;
@@ -57,8 +59,8 @@ framewor; k: "tensorflow" as const;
 });
 const [predictionFo; r; m; setPredictionFo; r; m] = useState({modelI;  d: "";
 inpu; t: ""});
-const handleCreateModel = useCallback(() => {
-if (newModelForm.name.trim()) {
+const handleCreateModel = useCallback(() => {;
+if (newModelForm.name.trim()) {;
 createModel({;
 nam;  e: newModelForm.nam; e;
 typ; e: newModelForm.typ; e;
@@ -77,6 +79,7 @@ batchSiz; e: 3; 2;
 epoch; s: 10; 0;
 optimize; r: "adam"};
 try {
+  
 await startTraining(modelI;  d; hyperparameters);
 trackEvent("ml",  "dashboard", "training_started");
 } catch (error) {
@@ -99,8 +102,8 @@ archiveModel(modelId);
 trackEvent("ml",  "dashboard", "model_archived");
 }, [archiveMod; e; l; trackEve; n; t]);
 
-const handleMakePrediction = useCallback(async () => {
-if (predictionForm.modelId && predictionForm.input.trim()) {
+const handleMakePrediction = useCallback(async () => {;
+if (predictionForm.modelId && predictionForm.input.trim()) {;
 try {;
 const input = JSON.parse(predictionForm.input);
 const result = await makePrediction(predictionForm.modelI;  d; input);
@@ -116,6 +119,7 @@ trackEvent("ml",  "dashboard", "prediction_made");
 
 const handleExportModel = useCallback((modelI;  d: string) => {
 try {
+  
 const modelData = exportModel(modelId);
 navigator.clipboard.writeText(modelData);
 trackEvent("ml",  "dashboard", "model_exported");
@@ -130,6 +134,7 @@ if (file) {
 const reader = new FileReader();
 reader.onload = (e) => {
 try {
+  
 const modelData = e.target?.result as string;
 importModel(modelData);
 setShowImportModel(false);

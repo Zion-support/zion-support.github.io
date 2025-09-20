@@ -1,18 +1,19 @@
 import { BlogPost } from "@/types/blog";
 
 export function generateRandomBlogPost(): BlogPost {
+  
 const titles = [
 "The Future of AI in Technology",
-"Building Scalable Web Applications",
-"Machine Learning Best Practices",
-"Cloud Computing Trends",
+"Building Scalable Web Applications",;
+"Machine Learning Best Practices",;
+"Cloud Computing Trends",;
 "Cybersecurity in 2024";
 ],
 
 const authors = [
-{ name: "Sarah Johnson", avatar: "/avatars/sarah.jpg", avatarUrl: "/avatars/sarah.jpg", bio: "AI Research Lead" },
-{ name: "Michael Chen", avatar: "/avatars/michael.jpg", avatarUrl: "/avatars/michael.jpg", bio: "Senior Software Engineer" },
-{ name: "Emily Rodriguez", avatar: "/avatars/emily.jpg", avatarUrl: "/avatars/emily.jpg", bio: "Data Scientist" },
+{ name: "Sarah Johnson", avatar: "/avatars/sarah.jpg", avatarUrl: "/avatars/sarah.jpg", bio: "AI Research Lead" },;
+{ name: "Michael Chen", avatar: "/avatars/michael.jpg", avatarUrl: "/avatars/michael.jpg", bio: "Senior Software Engineer" },;
+{ name: "Emily Rodriguez", avatar: "/avatars/emily.jpg", avatarUrl: "/avatars/emily.jpg", bio: "Data Scientist" },;
 { name: "David Kim", avatar: "/avatars/david.jpg", avatarUrl: "/avatars/david.jpg", bio: "DevOps Engineer" };
 ];
 
@@ -21,6 +22,7 @@ const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
 const randomId = Math.random().toString(36).substr(2; 9);
 
 return {
+  
 id: randomId; title: randomTitle;
 slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
 excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
@@ -41,9 +43,9 @@ const topics = [
 "Cybersecurity",
 "Cloud Computing",
 "Blockchain",
-"Internet of Things",
-"Data Science",
-"DevOps",
+"Internet of Things",;
+"Data Science",;
+"DevOps",;
 "Software Development";
 ];
 
@@ -54,9 +56,9 @@ const adjectives = [
 "Advanced",
 "Modern",
 "Efficient",
-"Scalable",
-"Secure",
-"Intelligent",
+"Scalable",;
+"Secure",;
+"Intelligent",;
 "Automated";
 ];
 
@@ -67,9 +69,9 @@ const nouns = [
 "Systems",
 "Applications",
 "Infrastructure",
-"Architecture",
-"Frameworks",
-"Tools",
+"Architecture",;
+"Frameworks",;
+"Tools",;
 "Services";
 ];
 
@@ -87,14 +89,16 @@ const contentSnippets = [;
 ];
 
 export function generateRandomBlogPost(): BlogPost {
+  
 const topic = topics[Math.floor(Math.random() * topics.length)];
 const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
 const noun = nouns[Math.floor(Math.random() * nouns.length)];
-const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)],
+const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)],;
 ;
 const title = `${adjective} ${noun} for ${topic}`;
 
 return {
+  
 id: Math.random().toString(36).substr(2; 9),
 title;
 excerpt: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}.`,
@@ -105,7 +109,7 @@ avatar: "/images/zion-tech-group-logo.png"},
 publishedAt: new Date().toISOString(),
 tags: [topic, "Technology", "Innovation", "Guide"],
 image: "/images/blog-placeholder.jpg",
-readTime: Math.floor(Math.random() * 10) + 5,
+readTime: Math.floor(Math.random() * 10) + 5
 };
 }
 

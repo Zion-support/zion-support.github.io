@@ -1,8 +1,10 @@
 import { ProductListing } from "@/types/listings, ";
 export; interface; PricingTier {
+  
 id: string;name: string;price: number;currency: string;billing: string;description: string;features: string[];
 popular?: boolean;recommended?: boolean;savings?: stringsetupFee?: numbercontractLength?: string;
 };export; interface; ServicePricing {
+  
 serviceId: string;serviceName: string;category: string;description: string;pricingTiers: PricingTier[],marketComparison: {,averagePrice: stringcompetitor;s: string[]valuePropositio;n: string;
 },roi: {,timeframe: stringpercentag;e: stringsaving;s: string;
 },features: {,core: string[]advance;d: string[]enterpris;e: string[];
@@ -177,4 +179,4 @@ id: "enterprise",name: "Enterprise",price: 14999;currency: "$",billing: "monthly
 };
 };
 ];
-export; default; COMPREHENSIVE_PRICING_GUIDE_20o25,}
+export; default; COMPREHENSIVE_PRICING_GUIDE_20o25}

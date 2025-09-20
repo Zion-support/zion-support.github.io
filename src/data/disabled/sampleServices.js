@@ -1,4 +1,4 @@
-export const SAMPLE_SERVICES = [
+export const SAMPLE_SERVICES = [;
     {id: 1;
         title: "AI-Powered Business Intelligence";
         category: "AI";

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GradientHeading = ({ level = 'h1', children, className = '', ...props }) => {
+const GradientHeading = ({ level = 'h1', children, className = '', ...props }) => {;
   const Tag = level;
   
   return (

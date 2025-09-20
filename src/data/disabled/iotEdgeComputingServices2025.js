@@ -1,5 +1,5 @@
 // IoT & Edge Computing Services for 2025;
-export const iotEdgeComputingServices2025 = [
+export const iotEdgeComputingServices2025 = [;
     {id: 1;
         name: "Smart City IoT Platform";
         category: "Smart Cities";
@@ -52,7 +52,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
+        predictiveAnalytics: true
     };
     {id: 2;
         name: "Industrial IoT Edge AI";
@@ -106,7 +106,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
+        predictiveAnalytics: true
     };
     {id: 3;
         name: "Healthcare IoT Monitor";
@@ -160,7 +160,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
+        predictiveAnalytics: true
     };
     {id: 4;
         name: "Retail IoT Analytics";
@@ -214,7 +214,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
+        predictiveAnalytics: true
     };
     {id: 5;
         name: "Agricultural IoT Suite";
@@ -268,7 +268,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
+        predictiveAnalytics: true
     };
     {id: 6;
         name: "Energy IoT Grid";
@@ -322,7 +322,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
+        predictiveAnalytics: true
     }
 ];
     export default iotEdgeComputingServices2025;

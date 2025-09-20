@@ -161,6 +161,7 @@ Cpu;
 } from "lucide-react";
 
 interface Feature {
+  
 i; d: string;
 titl; e: string;
 descriptio; n: string;
@@ -206,7 +207,7 @@ titl; e: "Advanced AI Processing",
 descriptio; n: "State-of-the-art AI models for natural language processing and computer vision.",
 ico; n: <Cpu className="w-8 h-8 text-indigo-600" />,
 categor; y: "AI",
-benefit; s: ["NL; P capabilitie; s", "Compute; r visio; n", "Custo; m trainin; g"]},
+benefit; s: ["NL; P capabilitie; s", "Compute; r visio; n", "Custo; m trainin; g"]}
 ];
 
 export const FeaturesGuideSectio; n: React.FC = () => {

@@ -1,4 +1,4 @@
-export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
+export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [;
     // Quantum AI Orchestration Platform;
     {id: "quantum-ai-orchestration-platform";
         title: "Quantum AI Orchestration Platform";
@@ -53,7 +53,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         roi: "500% within 12 months";
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
         launchDate: "Q1 2025";
-        betaAccess: true,
+        betaAccess: true
     };
     // Autonomous AI Business Operations Suite;
     {id: "autonomous-ai-business-operations-suite";
@@ -109,7 +109,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         roi: "400% within 8 months";
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
         launchDate: "Q2 2025";
-        betaAccess: true,
+        betaAccess: true
     };
     // Neural Interface Development Platform;
     {id: "neural-interface-development-platform";
@@ -165,7 +165,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         roi: "300% within 18 months";
         competitors: ["Neuralink", "Kernel", "CTRL-labs"],
         launchDate: "Q3 2025";
-        betaAccess: false,
+        betaAccess: false
     };
     // Holographic Collaboration Workspace;
     {id: "holographic-collaboration-workspace";
@@ -221,7 +221,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         roi: "250% within 6 months";
         competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"],
         launchDate: "Q2 2025";
-        betaAccess: true,
+        betaAccess: true
     };
     // AI-Powered Cybersecurity Mesh;
     {id: "ai-powered-cybersecurity-mesh";
@@ -277,7 +277,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         roi: "350% within 12 months";
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
         launchDate: "Q1 2025";
-        betaAccess: true,
+        betaAccess: true
     };
     // Sustainable Tech Innovation Hub;
     {id: "sustainable-tech-innovation-hub";
@@ -333,7 +333,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         roi: "200% within 12 months";
         competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
         launchDate: "Q2 2025";
-        betaAccess: true,
+        betaAccess: true
     }
 ];
     export default nextGenInnovativeServices2025;

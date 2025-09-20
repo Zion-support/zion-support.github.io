@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";,
 import { Textarea } from "@/components/ui/textarea";,
@@ -12,6 +12,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";,
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
+  
 }
 
 export function TranslatableJobForm({ onSubmit isSubmitting;

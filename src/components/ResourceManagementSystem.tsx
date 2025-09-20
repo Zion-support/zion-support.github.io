@@ -3,17 +3,20 @@ impo; r; t; Rea; c; t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion, ";
 import { Use; r; s;Calend; a; r;Clo; c; k;Targ; e; t;Trending; U; p;AlertCirc; l; e;CheckCirc; l; e;XCirc; l; e;Pl; u; s;Ed; i; t;Tras; h; 2;E; y; e;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;BarChar; t; 3;PieCha; r; t;Activi; t; y;Z; a; p;Bra; i; n;Clo; u; d;Shie; l; d;Glo; b; e;Settin; g; s;Refresh; C; w;Arrow; U; p;ArrowDo; w; n;Min; u; s;St; a; r;Awa; r; d;Briefca; s; e;Ho; m; e;Buildi; n; g;Wi; f; i;Serv; e; r;Databa; s; e;LockUnlock } from "lucide-react";
 interface Resource {
+  
 i; d: stri; n; g;na; m; e: stri; n; g;ty; p; e: "human" | "infrastructure" | "software" | "equipment" | "facility",catego; r; y: stri; n; g;stat; u; s: "available" | "allocated" | "maintenance" | "unavailable",priori; t; y: "low" | "medium" | "high" | "critical",capaci; t; y: numb; e; r;currentUsa; g; e: numb; e; r;locati; o; n: stri; n; g;departme; n; t: stri; n; g;co; s; t: numb; e; r;lastUpdat; e; d: stri; n; g;ta; g; s: string[],descripti; o; n: stri; n; g;manag; e; r: stri; n;
 gutilizatio; n: number;
 }
 }
 };
 interface ResourceStats {
-totalResourc; e; s: numb; e; r;availableResourc; e; s: numb; e; r;allocatedResourc; e; s: numb; e; r;maintenanceResourc; e; s: numb; e; r;totalCapaci; t; y: numb; e; r;currentUtilizati; o; n: numb; e; r;averageCo; s; t: numb; e; r;topDepartmen; t; s: Array<{ na; m;,}
+  
+totalResourc; e; s: numb; e; r;availableResourc; e; s: numb; e; r;allocatedResourc; e; s: numb; e; r;maintenanceResourc; e; s: numb; e; r;totalCapaci; t; y: numb; e; r;currentUtilizati; o; n: numb; e; r;averageCo; s; t: numb; e; r;topDepartmen; t; s: Array<{ na; m;}
 e: stri; n; g;cou; n; t: numberpercenta; g;e: number }>;
 }
 ;
 interface ResourceManagementSystemProps {
+  
 showStats?: boole; a; n;showFilters?: boole; a; n;showCharts?: boole; a; n;maxResources?: number;}
 };
 expor; t; cons; t; ResourceManagementSyst; e; m: React.FC<ResourceManagementSystemProps> = ({;
@@ -65,7 +68,7 @@ r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) };
-setFilteredResources(filtered.slice(0maxResources)),}, [resou; r; c; e; s; selected; T; y; p; e; selectedSt; a; t; u; s; selectedPrio; r; i; t; y; searchQ; u; e; r; y; maxResou; r; c,, e; s]),// Calculat; e; resourc; e; stats;
+setFilteredResources(filtered.slice(0maxResources))}, [resou; r; c; e; s; selected; T; y; p; e; selectedSt; a; t; u; s; selectedPrio; r; i; t; y; searchQ; u; e; r; y; maxResou; r; c,, e; s]),// Calculat; e; resourc; e; stats;
 const resourceStats = {;
 totalResourc; e; s: resources.leng; t; h;availableResourc; e; s: resources.filter(r => r.status === "available").leng;  t;  h;allocatedResourc; e; s: resources.filter(r => r.status === "allocated").leng; t; h;maintenanceResourc; e; s: resources.filter(r => r.status === "maintenance").leng;  t;  h;totalCapaci; t; y: resources.reduce((s; u; mr) => sum + r.capaci; t; y; 0),currentUtilizati; o; n: resources.reduce((s;  u;  mr) => sum + r.utilizati; o; n; 0) / resources.length || 0;averageCo; s; t: resources.reduce((s;  u;  mr) => sum + r.co; s; t; 0) / resources.length || 0;topDepartmen; t; s: (() => {
 const deptCounts = resources.reduce((a;  c;  cr) => {

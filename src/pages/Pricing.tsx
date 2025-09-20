@@ -14,9 +14,9 @@ features: [
         "Email support"
         "5GB storage"
         "Basic analytics"
-        "Standard security"
-      ]
-      color: "from-gray-500 to-gray-600",
+        "Standard security";
+      ];
+      color: "from-gray-500 to-gray-600",;
 popular: false;
 }
     {

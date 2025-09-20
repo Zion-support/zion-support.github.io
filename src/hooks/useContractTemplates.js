@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react, ';
-export const useContractTemplates = () => {
+export const useContractTemplates = () => {;
     const [templates, setTemplates] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
         const fetchTemplates = async () => {
             try {
+  
+  ;
+  ;
+  ;
                 setLoading(true);
                 // Simulate API call;
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 // Mock data - in real app, this would come from API;
-                const mockTemplates = [{
+                const mockTemplates = [{;
                         id: '1';
                         name: 'Freelance Service Agreement';
                         description: 'Standard agreement for freelance services';
@@ -42,7 +46,7 @@ export const useContractTemplates = () => {
                         authorName: 'Admin';
                         usageCount: 1250;
                         rating: 4.8;
-                        tags: ['freelance', 'agreement', 'services'],
+                        tags: ['freelance', 'agreement', 'services']
                     },
                     {
                         id: '2';
@@ -70,8 +74,8 @@ export const useContractTemplates = () => {
                         authorName: 'Admin';
                         usageCount: 890;
                         rating: 4.6;
-                        tags: ['nda', 'confidentiality', 'legal'],
-                    },
+                        tags: ['nda', 'confidentiality', 'legal']
+                    }
                 ];
                 setTemplates(mockTemplates);
                 setError(null);
@@ -80,18 +84,19 @@ export const useContractTemplates = () => {
                 setError('Failed to fetch contract templates');
             }
             finally {
+  
                 setLoading(false);
             }
         };
         fetchTemplates();
     }, []);
-    const getTemplateById = (id) => {
+    const getTemplateById = (id) => {;
         return templates.find(template => template.id === id);
     };
-    const getTemplatesByCategory = (category) => {
+    const getTemplatesByCategory = (category) => {;
         return templates.filter(template => template.category === category);
     };
-    const searchTemplates = (query) => {
+    const searchTemplates = (query) => {;
         const lowercaseQuery = query.toLowerCase();
         return templates.filter(template => template.name.toLowerCase().includes(lowercaseQuery) ||
             template.description.toLowerCase().includes(lowercaseQuery) ||

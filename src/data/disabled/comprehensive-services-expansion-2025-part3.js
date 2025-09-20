@@ -1,5 +1,5 @@
 // Neuromorphic Computing Services;
-export const neuromorphicComputingServices2025 = [
+export const neuromorphicComputingServices2025 = [;
     {id: 1;
         name: "Brain-Inspired AI Platform";
         category: "Neuromorphic Computing";
@@ -42,7 +42,7 @@ export const neuromorphicComputingServices2025 = [
     }
 ];
 // Brain-Computer Interface Services;
-export const brainComputerInterfaceServices2025 = [
+export const brainComputerInterfaceServices2025 = [;
     {id: 1;
         name: "Neural Control Platform";
         category: "Brain-Computer Interface";
@@ -82,11 +82,11 @@ export const brainComputerInterfaceServices2025 = [
         setupTime: "6-8 weeks";
         integrations: ["Medical devices", "Research platforms", "Gaming systems", "Assistive tools"],
         freeTier: false;
-        trialPeriod: "30 days",
+        trialPeriod: "30 days"
     }
 ];
     // Synthetic Biology Services;
-export const syntheticBiologyServices2025 = [
+export const syntheticBiologyServices2025 = [;
     {id: 1;
         name: "Bio-Design Studio";
         category: "Synthetic Biology";
@@ -129,7 +129,7 @@ export const syntheticBiologyServices2025 = [
     }
 ];
 // Advanced Robotics Services;
-export const advancedRoboticsServices2025 = [
+export const advancedRoboticsServices2025 = [;
     {id: 1;
         name: "Autonomous Robotics Platform";
         category: "Advanced Robotics";
@@ -169,11 +169,11 @@ export const advancedRoboticsServices2025 = [
         setupTime: "4-6 weeks";
         integrations: ["Manufacturing systems", "Warehouse management", "Healthcare platforms", "Agricultural systems"],
         freeTier: false;
-        trialPeriod: "30 days",
+        trialPeriod: "30 days"
     }
 ];
     // Advanced Materials Services;
-export const advancedMaterialsServices2025 = [
+export const advancedMaterialsServices2025 = [;
     {id: 1;
         name: "Smart Materials Platform";
         category: "Advanced Materials";
@@ -213,11 +213,11 @@ export const advancedMaterialsServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["CAD systems", "Simulation platforms", "Manufacturing systems", "Research databases"],
         freeTier: true;
-        trialPeriod: "14 days",
+        trialPeriod: "14 days"
     }
 ];
     // Advanced Energy Services;
-export const advancedEnergyServices2025 = [
+export const advancedEnergyServices2025 = [;
     {id: 1;
         name: "Fusion Energy Management";
         category: "Fusion Energy";
@@ -257,11 +257,11 @@ export const advancedEnergyServices2025 = [
         setupTime: "8-12 weeks";
         integrations: ["Grid systems", "Research platforms", "Safety systems", "Energy markets"],
         freeTier: false;
-        trialPeriod: "60 days",
+        trialPeriod: "60 days"
     }
 ];
     // Advanced Transportation Services;
-export const advancedTransportationServices2025 = [
+export const advancedTransportationServices2025 = [;
     {id: 1;
         name: "Hyperloop Management System";
         category: "Advanced Transportation";
@@ -301,11 +301,11 @@ export const advancedTransportationServices2025 = [
         setupTime: "6-8 weeks";
         integrations: ["Transportation systems", "Energy grids", "Safety systems", "Passenger apps"],
         freeTier: false;
-        trialPeriod: "45 days",
+        trialPeriod: "45 days"
     }
 ];
     // Advanced Communication Services;
-export const advancedCommunicationServices2025 = [
+export const advancedCommunicationServices2025 = [;
     {id: 1;
         name: "Quantum Communication Network";
         category: "Quantum Communication";
@@ -345,11 +345,11 @@ export const advancedCommunicationServices2025 = [
         setupTime: "8-12 weeks";
         integrations: ["Communication networks", "Security systems", "Quantum devices", "Enterprise platforms"],
         freeTier: false;
-        trialPeriod: "60 days",
+        trialPeriod: "60 days"
     }
 ];
     // Advanced Manufacturing Services;
-export const advancedManufacturingServices2025 = [
+export const advancedManufacturingServices2025 = [;
     {id: 1;
         name: "4D Printing Platform";
         category: "4D Manufacturing";
@@ -389,11 +389,11 @@ export const advancedManufacturingServices2025 = [
         setupTime: "3-4 weeks";
         integrations: ["3D printers", "Design software", "Material suppliers", "Quality systems"],
         freeTier: true;
-        trialPeriod: "21 days",
+        trialPeriod: "21 days"
     }
 ];
     // Advanced Gaming Services;
-export const advancedGamingServices2025 = [
+export const advancedGamingServices2025 = [;
     {id: 1;
         name: "Neural Gaming Platform";
         category: "Neural Gaming";
@@ -433,7 +433,7 @@ export const advancedGamingServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["Gaming platforms", "VR systems", "BCI devices", "Social platforms"],
         freeTier: true;
-        trialPeriod: "14 days",
+        trialPeriod: "14 days"
     }
 ];
     // Export all cutting-edge services;
@@ -448,15 +448,15 @@ export const allCuttingEdgeServices2025 = {neuromorphic: neuromorphicComputingSe
     manufacturing: advancedManufacturingServices2025;
     gaming: advancedGamingServices2025};
     // Combined all services export;
-export const allUltimateServices2025 = {
+export const allUltimateServices2025 = {;
     ...allCuttingEdgeServices2025;
 };
 // Helper functions for cutting-edge services;
-export const getCuttingEdgeServicesByCategory = (category) => {
+export const getCuttingEdgeServicesByCategory = (category) => {;
     const allServices = Object.values(allCuttingEdgeServices2025).flat();
     return allServices.filter(service => service.category === category);
 };
-export const getCuttingEdgeServicesByPriceRange = (minPrice, maxPrice) => {
+export const getCuttingEdgeServicesByPriceRange = (minPrice, maxPrice) => {;
     const allServices = Object.values(allCuttingEdgeServices2025).flat();
     return allServices.filter(service => {
         if ('price' in service && typeof service.price === 'number') {
@@ -468,11 +468,11 @@ export const getCuttingEdgeServicesByPriceRange = (minPrice, maxPrice) => {
         return false;
     });
 };
-export const getCuttingEdgePopularServices = (limit = 10) => {
+export const getCuttingEdgePopularServices = (limit = 10) => {;
     const allServices = Object.values(allCuttingEdgeServices2025).flat();
     return allServices.slice(0, limit);
 };
-export const searchCuttingEdgeServices = (query) => {
+export const searchCuttingEdgeServices = (query) => {;
     const allServices = Object.values(allCuttingEdgeServices2025).flat();
     const searchTerm = query.toLowerCase();
     return allServices.filter(service => service.name.toLowerCase().includes(searchTerm) ||

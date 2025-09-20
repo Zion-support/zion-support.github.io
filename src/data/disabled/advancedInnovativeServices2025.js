@@ -1,4 +1,4 @@
-export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
+export const ADVANCED_INNOVATIVE_SERVICES_2025 = [;
     // Advanced AI & Machine Learning Services;
     {id: "ai-multimodal-orchestrator";
         title: "AI Multimodal Orchestrator Pro";
@@ -124,7 +124,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["KYC/AML", "GDPR", "Financial regulations"]
         },
         competitors: ["ConsenSys", "Chainalysis", "Alchemy", "Infura"],
-        demoUrl: "https://ziontechgroup.com/demo/blockchain-suite",
+        demoUrl: "https://ziontechgroup.com/demo/blockchain-suite"
     };
     // Quantum Computing Services;
     {id: "quantum-optimization-platform";
@@ -187,7 +187,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["Research ethics", "Data privacy", "Export controls"]
         },
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
-        demoUrl: "https://ziontechgroup.com/demo/quantum-platform",
+        demoUrl: "https://ziontechgroup.com/demo/quantum-platform"
     };
     // Advanced Cybersecurity Services;
     {id: "ai-threat-intelligence-platform";
@@ -250,7 +250,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
         },
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "FireEye"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence",
+        demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence"
     };
     // Edge Computing & IoT Services;
     {id: "edge-ai-orchestrator";
@@ -313,7 +313,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["GDPR", "CCPA", "Industry standards"]
         },
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"],
-        demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator",
+        demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator"
     };
     // Advanced Data Analytics Services;
     {id: "real-time-data-fabric";
@@ -376,7 +376,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"]
         },
         competitors: ["Databricks", "Snowflake", "Confluent", "Apache Kafka"],
-        demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric",
+        demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric"
     };
     // Autonomous Systems Services;
     {id: "autonomous-workflow-orchestrator";
@@ -439,7 +439,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"]
         },
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
-        demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow",
+        demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow"
     };
     // Digital Twin Services;
     {id: "digital-twin-platform";
@@ -502,7 +502,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["Industry standards", "Data privacy", "Security protocols"]
         },
         competitors: ["Siemens", "GE Digital", "PTC", "Bentley Systems"],
-        demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform",
+        demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform"
     };
     // Metaverse Development Services;
     {id: "metaverse-development-platform";
@@ -565,7 +565,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["GDPR", "CCPA", "Content moderation", "Age verification"]
         },
         competitors: ["Roblox", "Decentraland", "Meta", "Unity", "Epic Games"],
-        demoUrl: "https://ziontechgroup.com/demo/metaverse-platform",
+        demoUrl: "https://ziontechgroup.com/demo/metaverse-platform"
     };
     // Green Technology Services;
     {id: "sustainable-tech-optimizer";
@@ -628,6 +628,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["ISO 14001", "LEED certification", "Sustainability standards"]
         },
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-        demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer",
+        demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer"
     }
 ];

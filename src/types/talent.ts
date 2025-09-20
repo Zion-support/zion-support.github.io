@@ -5,7 +5,7 @@ avatar?: string;
 bio?: string;,
 skills: string[], experience: number; hourlyRate: number; currency: string;
 }
-location: {,}
+location: {}
 city: string; country: string; timezone: string};
 availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];
 education: Education[], certifications: Certification[];
@@ -15,7 +15,7 @@ status: "active" | "inactive" | "suspended", verified: boolean; featured: boolea
 
 export interface PortfolioItem {id: string; title: string; description: string; image: string;
 }
-url?: string;,}
+url?: string;}
 technologies: string[], completedAt: Date}
 
 export interface Education {id: string; institution: string; degree: string; field: string; startDate: Date;
@@ -54,7 +54,7 @@ export interface TalentSearchResult {talents: Talent[], total: number; page: num
 
 export interface TalentFormData {name: string; email: string; bio: string; skills: string[], experience: number; hourlyRate: number; currency: string;
 }
-location: {,}
+location: {}
 city: string; country: string; timezone: string};
 availability: string; portfolio: PortfolioItem[], education: Education[];
 certifications: Certification[], languages: Language[];

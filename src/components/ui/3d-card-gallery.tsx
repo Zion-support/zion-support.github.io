@@ -23,6 +23,7 @@ import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
 interface CardItem {
+  
 id: string;
 title: string;
 description: string;
@@ -54,6 +55,7 @@ disabled?: boolean;
 }
 
 interface Card3DGalleryProps {
+  
 enabled?: boolean;
 items: CardItem[];
 columns?: number;
@@ -94,7 +96,7 @@ const galleryRef = useRef<HTMLDivElement>(null);
 // Filter and sort items;
 const filteredAndSortedItems = items;
 .filter(item => {
-const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
@@ -131,6 +133,7 @@ default: return 0;
 if (sortOrder === "asc") {
 return aValue > bValue ? 1 : -1;
 } else {
+  
 return aValue < bValue ? 1 : -1;
 }
 });
@@ -592,6 +595,7 @@ disabled={action.disabled}
 
 // 3D Card Component;
 interface Card3DProps {
+  
 item: CardItem;
 index: number;
 onClick: () => void;

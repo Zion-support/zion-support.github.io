@@ -16,6 +16,7 @@ const checkAuth: any = () => {;
 const storedUser = localStorage.getItem("zion_user");
 if (storedUser) {
 try {
+  
 setUser(JSON.parse(storedUser))} catch (error) {
 
 }

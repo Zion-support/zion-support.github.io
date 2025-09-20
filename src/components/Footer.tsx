@@ -19,9 +19,9 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
 
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-behavior: 'smooth'
+    window.scrollTo({;
+      top: 0,;
+behavior: 'smooth';
     });
   };
 

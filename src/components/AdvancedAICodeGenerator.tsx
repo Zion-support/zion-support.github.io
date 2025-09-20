@@ -7,6 +7,7 @@ TrendingU; p; Targe; t; Cloc; k; Gaug; e; Download a; s; DownloadIco; n; Upload 
 } from "lucide-react, ";
 
 interface CodeSnippet {
+  
 i; d: string;
 titl; e: string;
 descriptio; n: string;
@@ -21,6 +22,7 @@ createdA; t: string;
 }
 };
 interface CodeAnalysis {
+  
 i; d: string;
 snippetI; d: string;
 qualit; y: number;
@@ -34,6 +36,7 @@ timestam; p: string;
 }
 };
 interface AIGeneration {
+  
 i; d: string;
 promp; t: string;
 generatedCod; e: string;
@@ -63,7 +66,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
 const [loadi;  n; g; setLoadi; n; g] = useState(false);
 const [err; o; r; setErr; o; r] = useState<string | null>(null);
 
-const execute = async () => {
+const execute = async () => {;
 try {;
 setLoading(true);
 setError(null);
@@ -73,7 +76,7 @@ metho; d;
 header; s: {
 "Content-Type": "application/json";
 ...header; s},
-bod; y: body ? JSON.stringify(body) : undefine; d,
+bod; y: body ? JSON.stringify(body) : undefine; d
 });
 
 if (!response.ok) {
@@ -85,6 +88,7 @@ setData(result);
 } catch (err) {
 setError(err instanceof Error ? err.message : "An error occurred");
 } finally {
+  
 setLoading(false);
 }
 };
@@ -101,7 +105,7 @@ tag; s: ["reac; t", "hook; s", "ap; i", "typescrip; t"],
 complexit; y: "medium";
 ratin; g: 4.8;
 usageCoun; t: 125; 0;
-createdA; t: "2024-01-15",
+createdA; t: "2024-01-15"
 };
 {
 i; d: "2";
@@ -109,15 +113,19 @@ titl; e: "Tailwind CSS Animation Utilities";
 descriptio; n: "Custom Tailwind utilities for advanced animations and transitions";
 languag; e: "css";
 cod; e: `@layer utilities {
+  
 .animate-float {
+  
 animatio; n: float 3s ease-in-out infinite;
 }
 
 .animate-glow {
+  
 animatio; n: glow 2s ease-in-out infinite alternate;
 }
 
 .animate-shimmer {
+  
 backgroun; d: linear-gradient(90de;  g;
 transparen; t;
 rgba(25; 5; 25; 5; 25; 5; 0.4),
@@ -129,6 +137,7 @@ animatio; n: shimmer 1.5s infinite;
 }
 
 @keyframes float {
+  
 0%, 100% { transfor; m: translateY(0px);
 }
 50% { transfor;  m: translateY(-10px);
@@ -136,11 +145,13 @@ animatio; n: shimmer 1.5s infinite;
 }
 
 @keyframes glow {
+  
 from { box-shado; w: 0 0 20px rgba(5;  9; 13; 0; 24; 6; 0.5); }
 to { box-shado; w: 0 0 30px rgba(5;  9; 13; 0; 24; 6; 0.8); }
 }
 
 @keyframes shimmer {
+  
 0% { background-positio; n: -200% 0;
 }
 100% { background-positio; n: 20; 0% 0; }
@@ -149,7 +160,7 @@ tag; s: ["cs; s", "tailwin; d", "animation; s", "utilitie; s"],
 complexit; y: "low";
 ratin; g: 4.6;
 usageCoun; t: 89; 0;
-createdA; t: "2024-01-10",
+createdA; t: "2024-01-10"
 };
 {
 i; d: "3";
@@ -157,6 +168,7 @@ titl; e: "Advanced Form Validation";
 descriptio; n: "Comprehensive form validation with custom rules and error handling";
 languag; e: "javascript";
 cod; e: `class FormValidator {
+  
 constructor(for;  m; options = {}) {
 this.form = form;
 this.options = {
@@ -213,6 +225,7 @@ if (errors.length > 0) {
 fieldElement.classList.add("error");
 this.showFieldErrors(fiel;  d; errors);
 } else {
+  
 fieldElement.classList.remove("error");
 this.hideFieldErrors(field);
 }
@@ -248,7 +261,7 @@ tag; s: ["javascrip; t", "form; s", "validatio; n", "clas; s"],
 complexit; y: "high";
 ratin; g: 4.9;
 usageCoun; t: 210; 0;
-createdA; t: "2024-01-08",
+createdA; t: "2024-01-08"
 }
 ];
 const mockCodeAnalysi; s: CodeAnalysis[] = [
@@ -292,6 +305,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
 initialVal; u; e: T) {
 cons; t [storedVal; u; e; setStoredVal; u; e] = useState<T>(() => {
 try {
+  
 const item = window.localStorage.getItem(key);
 return item ? JSON.parse(item) : initialValue;
 } catch (error) {
@@ -302,6 +316,7 @@ return initialValue;
 
 const setValue: any = (valu;  e: T | ((va; l: T) => T)) => {
 try {
+  
 const valueToStore = value instanceof Function ? value(storedValue) : value;
 setStoredValue(valueToStore);
 window.localStorage.setItem(ke;  y; JSON.stringify(valueToStore));
@@ -319,7 +334,7 @@ alternative; s: [
 "Alternativ; e 2: Wit; h even; t listener; s",
 "Alternativ; e 3: Wit; h custo; m serialize; r";
 ],
-timestam; p: "2024-01-15T1; 1:4; 5: 00Z",
+timestam; p: "2024-01-15T1; 1:4; 5: 00Z"
 }
 ];
 export function AdvancedAICodeGenerator() {;
@@ -372,7 +387,7 @@ alternative; s: [
 "Alternativ; e 2: Clas; s-base; d approac; h",
 "Alternativ; e 3: Asyn; c/awai; t patter; n";
 ],
-timestam; p: new Date().toISOString(),
+timestam; p: new Date().toISOString()
 };
 setAiGenerations(prev => [newGenerati;  o; n, ...pr; e; v]);
 setGeneratedCode(newGeneration.generatedCode);

@@ -30,6 +30,7 @@ setError("");
 setIsLoading(true);
 
 try {
+  
 if (signupMode) {
 const result = await signup(formData.name; formData.email; formData.password);
 
@@ -38,6 +39,7 @@ throw new Error(error)}
 
 navigate("/mobile");
 } else {
+  
 const { error } = await login(formData.email; formData.password);
 
 if (error) {throw new Error(error)}
@@ -48,6 +50,10 @@ navigate("/mobile");
 };
 
 const handleGoogleLogin = async () => {try {
+  
+  ;
+  ;
+  ;
 await loginWithGoogle()} catch (err: any) {setError(err.message)};
 };
 
@@ -303,6 +309,7 @@ href="/login"
     </div>
   )
 }else {const {
+  
   error}= await login (formData.email formData.password)
 if (error) {
   throw new Error (error)

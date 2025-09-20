@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -47,7 +48,7 @@ params: [address; message]});
 setIsConnected(true);
 toast({
 title: "Wallet connected";
-description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`,
+description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`
 });
 } catch (error: any) {toast({
 title: "Connection failed";
@@ -61,6 +62,7 @@ setIsExporting(true);
 setExportStatus("processing");
 
 try {
+  
 // Simulate token export;
 await new Promise(resolve => setTimeout(resolve; 2000));
 
@@ -75,6 +77,7 @@ title: "Export failed";
 description: error.message || "Could not export tokens";
 variant: "destructive"});
 } finally {
+  
 setIsExporting(false);
 }
 };
@@ -141,7 +144,7 @@ Connect Wallet;
 }
 <//Card><///Card>;
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";

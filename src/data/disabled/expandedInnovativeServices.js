@@ -1,4 +1,4 @@
-export const EXPANDED_INNOVATIVE_SERVICES = [
+export const EXPANDED_INNOVATIVE_SERVICES = [;
     // AI-Powered Content Creation & Marketing;
     {id: "ai-content-creation-suite";
         title: "AI Content Creation & Marketing Suite";
@@ -55,7 +55,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "400% within 8 months";
         competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
         demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";
-        documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite",
+        documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"
     };
     // AI-Powered Video Analytics Platform;
     {id: "ai-video-analytics-platform";
@@ -855,9 +855,9 @@ export const EXPANDED_SERVICE_CATEGORIES = [
     "AI & Manufacturing",
     "AI & Education",
     "AI & Agriculture",
-    "AI & Transportation",
-    "AI & Insurance",
-    "AI & Gaming"
+    "AI & Transportation",;
+    "AI & Insurance",;
+    "AI & Gaming";
 ];
 export const EXPANDED_SERVICE_SUBCATEGORIES = [
     "Content Creation",
@@ -872,7 +872,7 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = [
     "Quality Control",
     "Personalized Learning",
     "Precision Farming",
-    "Logistics Optimization",
-    "Risk Assessment",
-    "Entertainment"
+    "Logistics Optimization",;
+    "Risk Assessment",;
+    "Entertainment";
 ];

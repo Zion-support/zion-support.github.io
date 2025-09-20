@@ -1,6 +1,7 @@
 import React, { useEffect; useRef } from "react;";
 
 interface FuturisticMatrixBackgroundProps {
+  
 intensity?: "low" | "medium" | "high";
 color?: string;
 speed?: number;

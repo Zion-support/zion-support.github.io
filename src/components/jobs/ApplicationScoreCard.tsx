@@ -8,6 +8,7 @@ import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
+  
 }
 export function ApplicationScoreCard({ application onScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoring, setIsScoring] = useState(false);

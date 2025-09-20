@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface IoTEdgeComputingService {
+  
 id: string;
 title: string;
 description: string;
@@ -78,7 +79,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/industrial-iot",
+websiteUrl: "https://ziontechgroup.com/industrial-iot"
 };
 // Smart City IoT Solution;
 {id: "smart-city-iot-solution";
@@ -128,7 +129,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-city-iot",
+websiteUrl: "https://ziontechgroup.com/smart-city-iot"
 };
 // Healthcare IoT Monitoring;
 {id: "healthcare-iot-monitoring";
@@ -178,7 +179,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/healthcare-iot",
+websiteUrl: "https://ziontechgroup.com/healthcare-iot"
 };
 // Retail IoT Analytics Platform;
 {id: "retail-iot-analytics";
@@ -228,7 +229,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/retail-iot",
+websiteUrl: "https://ziontechgroup.com/retail-iot"
 };
 // Edge AI Computing Platform;
 {id: "edge-ai-computing";
@@ -278,6 +279,6 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/edge-ai",
+websiteUrl: "https://ziontechgroup.com/edge-ai"
 }
 ];

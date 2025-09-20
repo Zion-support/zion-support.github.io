@@ -28,6 +28,7 @@ const dispatch = useDispatch<AppDispatch>();
 const { handleSignedIn; handleSignedOut } = useAuthEventHandlers(setUser; setOnboardingStep);
 
 const {
+  
 login: loginImpl;
 signup: signupImpl;
 logout;
@@ -93,6 +94,7 @@ return { error: null };
 // Register via backend and persist auth info;
 const register = async (name: string; email: string; password: string) => {
 try {
+  
 const { res; data } = await registerUser(name; email; password);
 if (!res.ok || !data?.token || !data?.user) {
 return { error: data?.message || "Registration failed" };
@@ -131,6 +133,7 @@ const { data: { subscription } } = supabase.auth.onAuthStateChange(
 async (event; session) => {
 if (session?.user) {
 try {
+  
 const { data: profile; error } = await getFromProfiles()
 .select("*")
 .eq("id", session.user.id)
@@ -167,6 +170,7 @@ setUser(null);
 setUser(null);
 }
 } else {
+  
 setUser(false);
 
 // Show logout toast when user logs out;

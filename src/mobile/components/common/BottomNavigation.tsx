@@ -9,6 +9,7 @@ isActive ? "text-primary" : "text-muted-foreground"
           >
             <div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement {
+  
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground")
               })}
             </div>

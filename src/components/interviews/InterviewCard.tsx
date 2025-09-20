@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";,
 import { Button } from "@/components/ui/button";,
 import { Badge } from "@/components/ui/badge";,
@@ -13,6 +13,7 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
+  
 onRefresh: () => Promise<void>}
 }
 export function InterviewCard({ interview onRefresh }: InterviewCardProps) {

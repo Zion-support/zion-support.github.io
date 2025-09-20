@@ -29,7 +29,7 @@ import, ComprehensiveServices, from "@/pages/ComprehensiveServices";
 import, AIServices, from "@/pages/AIServices";
 import, ITServices, from "@/pages/ITServices";
 import, MicroSaaS, from "@/pages/MicroSaaS";
-const ContentRoutes = () => {
+const ContentRoutes = () => {;
     return (<Routes>;
       {/* Content Routes */}
       <Route path="/" element={<Home />}/>;

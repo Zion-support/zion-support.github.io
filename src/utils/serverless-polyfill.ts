@@ -15,6 +15,7 @@
  */
 // Type declarations for global augmentation,
 declare global {
+  
   var webpackChunk_N_E: any[];
   var __webpack_require__: any;
   var __webpack_exports__: any;

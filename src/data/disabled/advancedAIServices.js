@@ -1,4 +1,4 @@
-export const ADVANCED_AI_SERVICES = [
+export const ADVANCED_AI_SERVICES = [;
     // AI-Powered Financial Trading Platform;
     {id: "ai-financial-trading-platform";
         title: "AI Financial Trading Platform";
@@ -53,7 +53,7 @@ export const ADVANCED_AI_SERVICES = [
         roi: "400% within 12 months";
         competitors: ["Alpaca", "QuantConnect", "Zipline", "Backtrader"],
         marketSize: "$12.5 billion";
-        growthRate: "23.5% annually",
+        growthRate: "23.5% annually"
     };
     // AI-Powered Healthcare Diagnostics;
     {id: "ai-healthcare-diagnostics";
@@ -109,7 +109,7 @@ export const ADVANCED_AI_SERVICES = [
         roi: "250% within 18 months";
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "NVIDIA Clara"],
         marketSize: "$8.2 billion";
-        growthRate: "28.7% annually",
+        growthRate: "28.7% annually"
     };
     // AI-Powered Supply Chain Optimization;
     {id: "ai-supply-chain-optimization";
@@ -165,7 +165,7 @@ export const ADVANCED_AI_SERVICES = [
         roi: "300% within 12 months";
         competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
         marketSize: "$15.8 billion";
-        growthRate: "18.9% annually",
+        growthRate: "18.9% annually"
     };
     // AI-Powered Cybersecurity Threat Detection;
     {id: "ai-cybersecurity-threat-detection";
@@ -221,7 +221,7 @@ export const ADVANCED_AI_SERVICES = [
         roi: "350% within 12 months";
         competitors: ["Darktrace", "CrowdStrike", "SentinelOne", "Cylance"],
         marketSize: "$22.4 billion";
-        growthRate: "31.2% annually",
+        growthRate: "31.2% annually"
     };
     // AI-Powered Content Creation Studio;
     {id: "ai-content-creation-studio";
@@ -277,7 +277,7 @@ export const ADVANCED_AI_SERVICES = [
         roi: "400% within 6 months";
         competitors: ["Jasper", "Copy.ai", "Lumen5", "Canva Pro"],
         marketSize: "$18.7 billion";
-        growthRate: "26.4% annually",
+        growthRate: "26.4% annually"
     };
     // AI-Powered Legal Document Analysis;
     {id: "ai-legal-document-analysis";
@@ -333,7 +333,7 @@ export const ADVANCED_AI_SERVICES = [
         roi: "280% within 12 months";
         competitors: ["Kira Systems", "Luminance", "eBrevia", "ContractPodAi"],
         marketSize: "$6.8 billion";
-        growthRate: "22.1% annually",
+        growthRate: "22.1% annually"
     };
     // AI-Powered Real Estate Analytics;
     {id: "ai-real-estate-analytics";
@@ -389,7 +389,7 @@ export const ADVANCED_AI_SERVICES = [
         roi: "320% within 12 months";
         competitors: ["Zillow Offers", "Redfin", "Opendoor", "Compass"],
         marketSize: "$9.3 billion";
-        growthRate: "19.8% annually",
+        growthRate: "19.8% annually"
     };
     // AI-Powered Energy Management;
     {id: "ai-energy-management";
@@ -445,6 +445,6 @@ export const ADVANCED_AI_SERVICES = [
         roi: "250% within 18 months";
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         marketSize: "$11.2 billion";
-        growthRate: "24.6% annually",
+        growthRate: "24.6% annually"
     }
 ];

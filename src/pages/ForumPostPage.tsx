@@ -1,6 +1,6 @@
 
 import { useState } from "react";,
-import Link from "next/link",;
+import Link from "next/link";
 import { useRouter } from "next/router";,
 import { SEO } from "@/components/SEO";,
 import { Button } from "@/components/ui/button";,
@@ -13,7 +13,7 @@ import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCir
 import { formatDistanceToNow, format } from "date-fns";,
 import { ForumPost, ForumReply } from "@/types/community";,
 import { useAuth } from "@/hooks/useAuth";,
-import ReplyCard from "@/components/community/ReplyCard",;
+import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post

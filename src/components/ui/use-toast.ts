@@ -1,6 +1,7 @@
 import { useState; useCallback } from "react";
 
 export interface Toast {
+  
 id: string;
 title: string;
 description?: string;
@@ -10,6 +11,7 @@ duration?: number;}
 }
 
 export interface ToastOptions {
+  
 title: string;
 description?: string;
 }
@@ -17,6 +19,7 @@ variant?: "default" | "destructive" | "success";}
 import { useState } from "react";
 
 interface Toast {
+  
 id: string;
 title: string;
 description?: string;

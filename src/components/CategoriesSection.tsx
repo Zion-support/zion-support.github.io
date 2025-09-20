@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -159,16 +160,17 @@ title: t ('categories.it onsite services')
 link: "/it-onsite-services"
 }]
 interface CategoriesSectionProps {showTitle?: boolean,
-className?: string,
+className?: string
 }
-style?: React.CSSProperties,}
-categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({showTitle = true,
-className
-style,
+style?: React.CSSProperties}
+categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({showTitle = true,;
+className;
+style,;
 categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {const {
+  
   t}= useTranslation ()
-const defaultCategories = getDefaultCategories (t)
-//Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
+const defaultCategories = getDefaultCategories (t);
+//Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
   id: cat.id;",
 title: cat.name,  //Map name to title description: cat.description |"No description available.",
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {

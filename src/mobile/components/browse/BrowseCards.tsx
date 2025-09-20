@@ -1,4 +1,5 @@
 interface BrowseItem {
+  
   id: string;
 title: string;
   subtitle: string;
@@ -10,10 +11,11 @@ description: string;
   match?: number;
   timePosted?: string,
 interface BrowseCardsProps {
+  
   items: BrowseItem[];
 type: "jobs" | "talents";
 }
-  onViewDetails: (id: string) => void,}
+  onViewDetails: (id: string) => void}
 export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]),
   

@@ -4,9 +4,9 @@ import { Circle } from "lucide-react";
 import {cn} from &quot;@/lib/utils&quot;
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
-  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
->(({ className, ...props }, ref) => {
-  return (
+  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>;
+>(({ className, ...props }, ref) => {;
+  return (;
     <RadioGroupPrimitive.Root className={cn(&quot;grid gap-2&quot;, className)}
       {...props}
       ref={ref}

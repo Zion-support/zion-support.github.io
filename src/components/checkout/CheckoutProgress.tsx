@@ -5,8 +5,10 @@ interface CheckoutProgressProps {currentStep: number;
 }
 }
 className?: string};
-export default function CheckoutProgress({ currentStep; className }: CheckoutProgressProps) {
-return (
+export default function CheckoutProgress() {
+  return (
+  return (
+  return (
 <Steps currentStep={currentStep} className={className}>;
 <Step status="incomplete" label="Shipping" />;
 <Step status="incomplete" label="Payment" />;

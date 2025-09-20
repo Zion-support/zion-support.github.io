@@ -13,9 +13,10 @@ import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
  * Marketplace component props
  */
 export interface MarketplaceProps {
+  
   // All props removed - component now fetches data independently
 }
-// Market insights component,}
+// Market insights component}
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
                     // though ProductCard will reset its state in .finally() regardless.
                     throw error;

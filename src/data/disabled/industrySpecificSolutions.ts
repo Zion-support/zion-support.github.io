@@ -5,7 +5,7 @@ useCases: string[], targetAudience: string[];
 tags: string[], estimatedDelivery: string;
 supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;
 }
-contactInfo: {,}
+contactInfo: {}
 phone: string; email: string; website: string};
 industryExpertise: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; demoUrl: string; documentationUrl: string; technology: string[];
 integrations: string[], compliance: string[];

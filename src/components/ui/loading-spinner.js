@@ -2,13 +2,13 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 export function LoadingSpinner({ size = 'md', className, text, variant = 'default' }) {const sizeClasses = {
-        sm: 'w-4 h-4',
-        md: 'w-8 h-8',
-        lg: 'w-12 h-12',
+        sm: 'w-4 h-4',;
+        md: 'w-8 h-8',;
+        lg: 'w-12 h-12',;
         xl: 'w-16 h-16'};
-    const textSizeClasses = {sm: 'text-xs',
-        md: 'text-sm',
-        lg: 'text-base',
+    const textSizeClasses = {sm: 'text-xs',;
+        md: 'text-sm',;
+        lg: 'text-base',;
         xl: 'text-lg'};
     if (variant === 'pulse') {
         return (_jsxs("div", { className: cn("flex flex-col items-center justify-center", className), children: [_jsx("div", { className: cn("rounded-full bg-zion-purple animate-pulse", sizeClasses[size]) }), text && (_jsx("p", { className: cn("mt-2 text-zion-slate-light text-center", textSizeClasses[size]), children: text }))] }));
@@ -38,13 +38,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 export function LoadingSpinner({ size = 'md', variant = 'default', className = '', text }) {const sizeClasses = {
-        sm: 'w-4 h-4',
-        md: 'w-6 h-6',
-        lg: 'w-8 h-8',
+        sm: 'w-4 h-4',;
+        md: 'w-6 h-6',;
+        lg: 'w-8 h-8',;
         xl: 'w-12 h-12'};
-    const variantClasses = {default: 'text-zion-cyan',
-        primary: 'text-zion-blue',
-        secondary: 'text-zion-purple',
+    const variantClasses = {default: 'text-zion-cyan',;
+        primary: 'text-zion-blue',;
+        secondary: 'text-zion-purple',;
         white: 'text-white'};
     return (<div className={cn("flex flex-col items-center gap-3", className)}>
       <motion.div className={cn('animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size], variantClasses[variant])} role="status" aria-label="Loading">

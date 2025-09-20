@@ -1,9 +1,9 @@
 'use client'
 import React { Component ErrorInfo ReactNode } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import { AlertTriangle,
-RefreshCw
-, Home,
+import { AlertTriangle,;
+RefreshCw;
+, Home;
 Bug;
 , Send,;
 Clipboard } from "lucide-react";
@@ -20,6 +20,7 @@ retryCount: number,
 userFeedback: string,
 showDetails: boolean,
 interface ErrorBoundaryProps {
+  
   children: ReactNode,
 fallback?: ReactNode,
 onError?: (error: Error errorInfo: ErrorInfo) => void,
@@ -27,9 +28,9 @@ enableRetry?: boolean,
 maxRetries?: number,
 showReportButton?: boolean,
 context?: string;  enableRetry?: boolean,
-maxRetries?: number,
+maxRetries?: number
 }
-showReportButton?: boolean,}
+showReportButton?: boolean}
 context?: string}
 export class GlobalErrorBoundary extends Component<
   ErrorBoundaryProps,
@@ -50,10 +51,10 @@ errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>
     </GlobalErrorBoundary>
   )
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
-  return WrappedComponent,
+  return WrappedComponent
 }
 export default GlobalErrorBoundary,
 WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
-  return WrappedComponent,
+  return WrappedComponent
 }
 export default GlobalErrorBoundary

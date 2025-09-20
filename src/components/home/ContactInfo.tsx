@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -53,7 +54,7 @@ action: "https://ziontechgroup.com";
 badge: "Official Site";
 color: "#8c15e9"}
 ];
-const companyStats = [
+const companyStats = [;
 {;
 label: "Years Experience";
 value: "10+";

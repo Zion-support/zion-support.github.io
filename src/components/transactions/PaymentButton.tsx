@@ -1,4 +1,4 @@
-redirectUrl?: string,
+redirectUrl?: string
 }
 export function PaymentButton({
     >
@@ -18,6 +18,7 @@ export function PaymentButton({
 })
 toast ({
 }finally {
+  
   //Reset button state after a short delay setTimeout ( () => {
   setIsProcessing (false)
 }, 1500)

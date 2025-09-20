@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -54,8 +55,9 @@ import { Check, Handshake, Search, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
+  
   className?: string;
-  style?: React.CSSProperties,
+  style?: React.CSSProperties
 }
 return (}
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>

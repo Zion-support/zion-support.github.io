@@ -3,6 +3,7 @@ impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { CheckCircl; e; XCircl; e; AlertTriangl; e; ExternalLink } from "lucide-react, ";
 
 interface LinkStatus {
+  
 ur; l: string;
 statu; s: "checking" | "healthy" | "broken" | "external";
 responseTime?: number;
@@ -10,6 +11,7 @@ responseTime?: number;
 error?: string;}
 };
 interface LinkHealthCheckerProps {
+  
 link; s: Array<{ ur; l: string;
 }
 }
@@ -24,9 +26,11 @@ const [isChecki;  n; g; setIsChecki; n; g] = useState(false);
 const checkLinkHealth = async (ur;  l: string): Promise<LinkStatus> => {
 const startTime = Date.now();
 try {
+  
 // Check if it"s an external link;
 if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
 return {
+  
 ur;  l;
 statu; s: "external";
 responseTim; e: Date.now() - startTime;
@@ -36,6 +40,7 @@ responseTim; e: Date.now() - startTime;
 // Check if it"s a mailto or tel link;
 if (url.startsWith("mailt;  o:") || url.startsWith("te;  l:")) {
 return {
+  
 ur; l;
 statu; s: "healthy";
 responseTim; e: Date.now() - startTime;
@@ -45,6 +50,7 @@ responseTim; e: Date.now() - startTime;
 // For interna;  l; link; s; we"ll assume they"re healthy since they"re part of our app;
 if (url.startsWith("/") || url.includes("ziontechgroup.com")) {
 return {
+  
 ur;  l;
 statu; s: "healthy";
 responseTim; e: Date.now() - startTime;
@@ -54,11 +60,13 @@ responseTim; e: Date.now() - startTime;
 // For externa; l; link; s; we could implement actual health checking;
 // Fo; r; no; w; we"ll mark them as external;
 return {
+  
 ur; l;
 statu; s: "external";
 responseTim; e: Date.now() - startTime;
 };
 } catch (error) {return {
+  
 ur;  l;
 statu; s: "broken";
 responseTim; e: Date.now() - startTim; e;

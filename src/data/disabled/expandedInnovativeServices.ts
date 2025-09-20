@@ -1,5 +1,6 @@
 import { Routes; Route } from "react-router-dom, ";
 export interface ExpandedInnovativeService {
+  
 id: string;
 title: string;
 description: string;
@@ -89,7 +90,7 @@ compliance: ["GDPR", "CCPA", "SOC 2"],
 roi: "400% within 8 months";
 competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
 demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";
-documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite",
+documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"
 };
 // AI-Powered Video Analytics Platform;
 {id: "ai-video-analytics-platform";
@@ -902,9 +903,9 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 "AI & Energy Management",
 "AI & Manufacturing",
 "AI & Education",
-"AI & Agriculture",
-"AI & Transportation",
-"AI & Insurance",
+"AI & Agriculture",;
+"AI & Transportation",;
+"AI & Insurance",;
 "AI & Gaming";
 ];
 
@@ -920,8 +921,8 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = [
 "Sustainability",
 "Quality Control",
 "Personalized Learning",
-"Precision Farming",
-"Logistics Optimization",
-"Risk Assessment",
+"Precision Farming",;
+"Logistics Optimization",;
+"Risk Assessment",;
 "Entertainment";
 ];

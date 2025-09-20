@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
 import { useFormik } from "formik";
-import * as Yup from 'yup',;
-import axios from 'axios',;
+import * as Yup from 'yup';
+import axios from 'axios';
 import Link from 'next/link';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -29,7 +29,7 @@ setSuccessMessage (data.message |message)
 toast ({'
   title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.'
 })
-//Redirect to appropriate page after a short delay,
+//Redirect to appropriate page after a short delay
 }catch (err: unknown) {'
   logErrorToProduction ('Signup error details:', {
   message: err.message response: err.response ? {,
@@ -37,7 +37,7 @@ status: err.response.status  statusText: err.response.statusText data: err.respo
 }: 'No response';'
 request: err.request ? 'Request made but no response': 'No request'
 })
-}return undefined,
+}return undefined
 }, [emailVerificationRequired formik.values.email router])
 //Show loading state only during initial health check if (healthCheckLoading) {
   return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>)
@@ -78,9 +78,9 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import { Form,
-FormControl
-, FormField,
+import { Form,;
+FormControl;
+, FormField;
 FormItem;
 , FormLabel,;
 FormMessage } from "@/components/ui/form";
@@ -95,12 +95,16 @@ password: z.string()
       .regex(/[0-9]/, "Password must contain at least one number")
     confirmPassword: z.string(),
 termsAccepted: z.boolean().refine(val => val === true {
-      message: "You must accept the terms and conditions"}),
+  
+      message: "You must accept the terms and conditions"})
 })
   .refine(data => data.password === data.confirmPassword {message: "Passwords do not match",
 path: ["confirmPassword"]})
 type SignupFormValues = z.infer<typeof signupSchema>
 export default function Signup() {
+  return (
+  return (
+  return (
   const { signup loginWithGoogle loginWithFacebook loginWithTwitter isLoading isAuthenticated user } = useAuth()
   const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false)
@@ -114,17 +118,18 @@ const form = useForm({
     resolver: zodResolver(signupSchema),
 defaultValues: {
       displayName: ",
-email: "
-      password: ",
-confirmPassword: "
+email: ";
+      password: ",;
+confirmPassword: ";
       termsAccepted: false;
 }
 }) as UseFormReturn<SignupFormValues>
   // Form submission handler,
-const onSubmit = async (data: SignupFormValues) => {
+const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return; // Prevent multiple submissions,
 setIsSubmitting(true)
     try {
+  
       const { res data: resData } = await register(
         data.displayName,
 data.email,
@@ -134,7 +139,7 @@ data.password
 if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
         form.setError('email', { message: resData.message })
         toast.error('Email already registered – please login.')
-        return,
+        return
 }
       // Check for successful response,
 if (res.ok && resData.token && resData.user) {
@@ -151,7 +156,7 @@ const { error: sessionError } = await supabase.auth.setSession(resData.session)
           console.error("Error setting session:", sessionError)
           form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
           toast.error(sessionError.message |"Failed to set session. Please try logging in.")
-          return,
+          return
 }
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
@@ -159,16 +164,18 @@ const { error: sessionError } = await supabase.auth.setSession(resData.session)
         toast.success("Welcome to ZionAI 🎉")
         navigate("/dashboard")
 } else {
+  
         // This case might indicate an unexpected response from the API,
 console.error("Registration response did not include session or emailVerificationRequired flag.", resData)
         form.setError("root", { message: "Registration complete but an unexpected issue occurred. Please try logging in." })
         toast.error("Registration complete but an unexpected issue occurred. Please try logging in manually.")
         // Potentially navigate to login or show a more specific error,
-return,
+return
 }
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete not pending verification)
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
         try {
+  
           await mailchimpService.addSubscriber({
             email: data.email,
 mergeFields: { FNAME: data.displayName }
@@ -178,12 +185,13 @@ mergeFields: { FNAME: data.displayName }
           // Non-critical error don't block user flow}
       }
       // Toast and navigation are handled above if session is present
-      // If emailVerificationRequired no toast/navigation here message is shown,
+      // If emailVerificationRequired no toast/navigation here message is shown
 } catch (err: any) {
       const message = err.message ?? "Registration failed"
       form.setError("root", { message })
       toast.error(message)
 } finally {
+  
       setIsSubmitting(false) }
   }
   const onInvalid = (errors: any) => {
@@ -242,11 +250,11 @@ const Signup = () => {
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
               </Link>
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
-              </Link>
-            </div>
-</>  )
-}
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
+                Contact Us;
+              </Link>;
+            </div>;
+</>  );
+};
 }};
 };

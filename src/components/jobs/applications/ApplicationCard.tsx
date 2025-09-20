@@ -1,5 +1,6 @@
 interface ApplicationCardProps {
-  application: JobApplication,}
+  
+  application: JobApplication}
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {
@@ -7,6 +8,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
+  
+  ;
+  ;
+  ;
   application: JobApplication;
 }
 }

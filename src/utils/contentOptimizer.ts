@@ -1,4 +1,5 @@
 export interface ContentAnalysis {
+  
 page: string;
 wordCount: number;
 headingCount: number;
@@ -13,6 +14,7 @@ suggestions: ContentSuggestion[];
 }
 
 export interface ContentIssue {
+  
 type: "missing-headings" | "minimal-content" | "no-images" | "poor-structure" | "missing-keywords";
 severity: "high" | "medium" | "low";
 description: string;
@@ -21,6 +23,7 @@ location?: string;}
 }
 
 export interface ContentSuggestion {
+  
 type: "add-headings" | "expand-content" | "add-images" | "improve-structure" | "add-keywords";
 priority: "high" | "medium" | "low";
 description: string;
@@ -29,12 +32,14 @@ example?: string;}
 }
 
 export class ContentOptimizer {
+  
 private static readonly MIN_WORD_COUNT = 300;
 private static readonly MIN_HEADING_COUNT = 2;
 private static readonly MIN_IMAGE_COUNT = 1;
 private static readonly MIN_LINK_COUNT = 3;
 
 static analyzeContent(content: string; page: string): ContentAnalysis {
+  
 const wordCount = this.countWords(content);
 const headingCount = this.countHeadings(content);
 const imageCount = this.countImages(content);
@@ -52,6 +57,7 @@ linkCount;
 const suggestions = this.generateSuggestions(issues; page);
 
 return {
+  
 page;
 wordCount;
 headingCount;
@@ -65,27 +71,32 @@ suggestions;
 }
 
 private static countWords(content: string): number {
+  
 // Remove HTML tags and count words;
 const textContent = content.replace(/<[^>]*>/g, " ").trim();
 return textContent.split(/\s+/).filter(word => word.length > 0).length;
 }
 
 private static countHeadings(content: string): number {
+  
 const headingMatches = content.match(/<h[1-6][^>]*>/gi);
 return headingMatches ? headingMatches.length : 0;
 }
 
 private static countImages(content: string): number {
+  
 const imageMatches = content.match(/<img[^>]*>/gi);
 return imageMatches ? imageMatches.length : 0;
 }
 
 private static countLinks(content: string): number {
+  
 const linkMatches = content.match(/<a[^>]*>/gi);
 return linkMatches ? linkMatches.length : 0;
 }
 
 private static calculateReadabilityScore(content: string): number {
+  
 const textContent = content.replace(/<[^>]*>/g, " ").trim();
 const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
 const words = textContent.split(/\s+/).filter(w => w.length > 0);
@@ -99,6 +110,7 @@ return Math.max(0; Math.min(100; score));
 }
 
 private static countSyllables(text: string): number {
+  
 // Simplified syllable counting;
 const words = text.toLowerCase().split(/\s+/);
 let syllableCount = 0;
@@ -107,6 +119,7 @@ words.forEach(word => {
 if (word.length <= 3) {
 syllableCount += 1;
 } else {
+  
 // Count vowel groups;
 const vowelGroups = word.match(/[aeiouy]+/g);
 syllableCount += vowelGroups ? vowelGroups.length : 1;
@@ -117,6 +130,7 @@ return syllableCount;
 }
 
 private static calculateSEOScore(content: string; page: string): number {
+  
 let score = 100;
 // Check for title;
 if (!content.includes("<title>")) score -= 20;
@@ -153,7 +167,7 @@ issues.push({
 type: "missing-headings";
 severity: "high";
 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
-location: "Page structure",
+location: "Page structure"
 });
 }
 
@@ -163,7 +177,7 @@ issues.push({
 type: "minimal-content";
 severity: "medium";
 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`;
-location: "Content body",
+location: "Content body"
 });
 }
 
@@ -193,7 +207,7 @@ issues.push({
 type: "missing-keywords";
 severity: "medium";
 description: `Missing important keywords: ${missingKeywords.join(", ")}`,
-location: "Content optimization",
+location: "Content optimization"
 });
 }
 
@@ -274,7 +288,8 @@ return Object.entries(wordCount)
 }
 
 static generateContentTemplate(page: string; contentType: "service" | "about" | "contact" | "blog"): string {
-const templates = {
+  
+const templates = {;
 service: `;
 <h1>Service Title</h1>;
 <p>Comprehensive description of the service and its benefits.</p>;

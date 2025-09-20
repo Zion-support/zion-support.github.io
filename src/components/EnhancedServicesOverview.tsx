@@ -33,13 +33,14 @@ ExternalLink;
 import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
+  
 categor; y: string;
 service; s: typeof ENHANCED_SERVICES;
 }
 }
 };
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
-const categoryServices = services.filter(service =>
+const categoryServices = services.filter(service =>;
 service.category.toLowerCase().includes(category.toLowerCase());
 );
 
@@ -322,7 +323,9 @@ Compare Services;
 </section>;
 );
 export default function EnhancedServicesOverview() {
-return (
+  return (
+  return (
+  return (
 <div className="space-y-16">;
 {/* Hero Section */};
 <div className="text-center">;

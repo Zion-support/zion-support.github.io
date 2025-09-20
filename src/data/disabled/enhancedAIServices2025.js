@@ -1,5 +1,5 @@
 // Enhanced AI Services for 2025;
-export const enhancedAIServices2025 = [
+export const enhancedAIServices2025 = [;
     {id: 1;
         name: "AI Vision Pro";
         category: "Computer Vision";
@@ -52,7 +52,7 @@ export const enhancedAIServices2025 = [
         scalability: "Millions of requests/day";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 2;
         name: "NLP Genius";
@@ -106,7 +106,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 3;
         name: "Predictive Analytics Pro";
@@ -160,7 +160,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 4;
         name: "AI Chatbot Studio";
@@ -214,7 +214,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited conversations";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 5;
         name: "AI Content Creator";
@@ -268,7 +268,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited words";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 6;
         name: "AI Data Scientist";
@@ -322,7 +322,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 7;
         name: "AI Voice Assistant";
@@ -376,7 +376,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 8;
         name: "AI Recommendation Engine";
@@ -430,7 +430,7 @@ export const enhancedAIServices2025 = [
         scalability: "Millions of recommendations";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 9;
         name: "AI Fraud Detection";
@@ -484,7 +484,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
+        industrySpecific: true
     };
     {id: 10;
         name: "AI Process Automation";
@@ -538,7 +538,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
+        industrySpecific: true
     }
 ];
     export default enhancedAIServices2025;

@@ -25,6 +25,7 @@ import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
 
 interface ClientProfile {
+  
 industr; y: string;
 companySiz; e: string;
 budge; t: string;
@@ -36,6 +37,7 @@ challenge; s: string[];
 }
 };
 interface ServiceRecommendation {
+  
 servic; e: {
 i; d: string;
 titl; e: string;
@@ -110,7 +112,7 @@ const challenges = [;
 "Performanc; e Issue; s", "Cos; t Managemen; t", "Technolog; y Deb; t";
 ];
 
-const mockServices = [
+const mockServices = [;
 {;
 i; d: "a; i-cr; m-platfor; m",
 tit; l; e: "A; I-Powere; d CR; M Platfor; m",
@@ -232,6 +234,7 @@ const timeToValue = complexity === "Simple" ? "2-4 months" : ;
 complexity === "Moderate" ? "4-8 months" : "8-12 months";
 
 return {
+  
 servic; e;
 matchScor; e;
 reasonin; g;
@@ -388,6 +391,7 @@ onChange={(e) => {
 if (e.target.checked) {
 setClientProfile(prev => ({ ...pre;  v; primaryGoal; s: [...pre; v.primaryGoa; l; s; go; a; l] }));
 } else {
+  
 setClientProfile(prev => ({ ...pre;  v; primaryGoal; s: prev.primaryGoals.filter(g => g !== goal) }));
 }
 }}
@@ -411,6 +415,7 @@ onChange={(e) => {
 if (e.target.checked) {
 setClientProfile(prev => ({ ...pre;  v; challenge; s: [...pre; v.challeng; e; s; challen; g; e] }));
 } else {
+  
 setClientProfile(prev => ({ ...pre;  v; challenge; s: prev.challenges.filter(c => c !== challenge) }));
 }
 }}

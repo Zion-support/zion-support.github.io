@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
-export const useRealTimeCollaboration = (options, wsConfig) => {
+export const useRealTimeCollaboration = (options, wsConfig) => {;
     const { trackEvent } = useAnalytics({enableTracking: true;
         enableUserBehaviorTracking: true});
     const [state, setState] = useState({users: new Map();
@@ -17,21 +17,22 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
     const presenceUpdateRef = useRef(null);
     // Generate user color;
     const generateUserColor = useCallback((userId) => {
-        const colors = [
-            '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6',
-            '#06B6D4', '#F97316', '#84CC16', '#EC4899', '#6366F1'
+        const colors = [;
+            '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6',;
+            '#06B6D4', '#F97316', '#84CC16', '#EC4899', '#6366F1';
         ];
-        const hash = userId.split('').reduce((a, b) => {
+        const hash = userId.split('').reduce((a, b) => {;
             a = ((a << 5) - a + b.charCodeAt(0)) & 0xffffffff;
             return a;
         }, 0);
         return colors[Math.abs(hash) % colors.length];
     }, []);
     // Initialize WebSocket connection;
-    const initializeConnection = useCallback(() => {
-        if (wsRef.current?.readyState === WebSocket.OPEN)
+    const initializeConnection = useCallback(() => {;
+        if (wsRef.current?.readyState === WebSocket.OPEN);
             return;
         try {
+  
             const wsUrl = wsConfig?.url || `wss: //your-websocket-server.com/collaboration/${options.roomId}`;
     wsRef.current = new WebSocket(wsUrl, wsConfig?.protocols);
             wsRef.current.onopen = () => {
@@ -39,7 +40,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     ...prev;
   };
                     isConnected: true;
-                    connectionStatus: 'connected',
+                    connectionStatus: 'connected'
                 }));
     // Send user join message;
                 sendMessage({type: 'user_join';
@@ -60,6 +61,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             };
             wsRef.current.onmessage = (event) => {
                 try {
+  
                     const message = JSON.parse(event.data);
                     handleIncomingMessage(message);
                 }
@@ -92,23 +94,24 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
     // Send message through WebSocket;
     const sendMessage = useCallback((message) => {
         const fullMessage = {
-            ...message,
-            id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-            timestamp: new Date(),
+            ...message,;
+            id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,;
+            timestamp: new Date();
         };
     if (wsRef.current?.readyState === WebSocket.OPEN) {
             wsRef.current.send(JSON.stringify(fullMessage));
             trackEvent('collaboration', 'message_sent', message.type, undefined, { messageId: fullMessage.id });
      }
         else {
+  
             // Queue message for later;
             messageQueueRef.current.push(fullMessage);
             trackEvent('collaboration', 'message_queued', message.type, undefined, { messageId: fullMessage.id });
      }
     }, [trackEvent]);
     // Handle incoming messages;
-    const handleIncomingMessage = useCallback((message) => {
-        setState(prev => {
+    const handleIncomingMessage = useCallback((message) => {;
+        setState(prev => {;
             const newState = { ...prev };
             newState.lastActivity = new Date();
             switch (message.type) {
@@ -139,7 +142,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             userId: message.userId});
      }, [options.messageRetention, trackEvent]);
     // Handle user join;
-    const handleUserJoin = useCallback((message) => {setState(prev => {
+    const handleUserJoin = useCallback((message) => {setState(prev => {;
             const newUsers = new Map(prev.users);
             newUsers.set(message.userId, {
                 id: message.userId;
@@ -152,8 +155,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      });
     }, []);
     // Handle user leave;
-    const handleUserLeave = useCallback((message) => {
-        setState(prev => {
+    const handleUserLeave = useCallback((message) => {;
+        setState(prev => {;
             const newUsers = new Map(prev.users);
             const user = newUsers.get(message.userId);
             if (user) {
@@ -163,8 +166,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      });
     }, []);
     // Handle presence update;
-    const handlePresenceUpdate = useCallback((message) => {
-        setState(prev => {
+    const handlePresenceUpdate = useCallback((message) => {;
+        setState(prev => {;
             const newUsers = new Map(prev.users);
             const user = newUsers.get(message.userId);
             if (user) {
@@ -174,7 +177,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      });
     }, []);
     // Handle cursor movement;
-    const handleCursorMove = useCallback((message) => {if (!options.enableCursors)
+    const handleCursorMove = useCallback((message) => {if (!options.enableCursors);
             return;
         setState(prev => {
             const newUsers = new Map(prev.users);
@@ -188,7 +191,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      });
     }, [options.enableCursors]);
     // Handle selection change;
-    const handleSelectionChange = useCallback((message) => {if (!options.enableSelection)
+    const handleSelectionChange = useCallback((message) => {if (!options.enableSelection);
             return;
         setState(prev => {
             const newUsers = new Map(prev.users);
@@ -202,7 +205,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      });
     }, [options.enableSelection]);
     // Handle text change;
-    const handleTextChange = useCallback((message) => {if (!options.enableTextSync)
+    const handleTextChange = useCallback((message) => {if (!options.enableTextSync);
             return;
         // Handle conflict resolution;
         if (message.metadata?.conflictResolution) {
@@ -216,14 +219,14 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             }));
      }
         // Emit text change event;
-        const event = new CustomEvent('collaborationTextChange', {
-            detail: { message, userId: message.userId }
+        const event = new CustomEvent('collaborationTextChange', {;
+            detail: { message, userId: message.userId };
         });
     window.dispatchEvent(event);
     }, [options.enableTextSync]);
     // Start heartbeat;
-    const startHeartbeat = useCallback(() => {
-        if (heartbeatIntervalRef.current)
+    const startHeartbeat = useCallback(() => {;
+        if (heartbeatIntervalRef.current);
             return;
         heartbeatIntervalRef.current = setInterval(() => {
             if (wsRef.current?.readyState === WebSocket.OPEN) {
@@ -236,15 +239,15 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         }, options.heartbeatInterval || 30000);
     }, [options.userId, options.heartbeatInterval, sendMessage]);
     // Stop heartbeat;
-    const stopHeartbeat = useCallback(() => {
-        if (heartbeatIntervalRef.current) {
+    const stopHeartbeat = useCallback(() => {;
+        if (heartbeatIntervalRef.current) {;
             clearInterval(heartbeatIntervalRef.current);
             heartbeatIntervalRef.current = null;
         }
     }, []);
     // Start presence updates;
-    const startPresenceUpdates = useCallback(() => {
-        if (presenceUpdateRef.current)
+    const startPresenceUpdates = useCallback(() => {;
+        if (presenceUpdateRef.current);
             return;
         presenceUpdateRef.current = setInterval(() => {
             sendMessage({
@@ -255,15 +258,15 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      }, 10000);
     }, [options.userId, sendMessage]);
     // Stop presence updates;
-    const stopPresenceUpdates = useCallback(() => {
-        if (presenceUpdateRef.current) {
+    const stopPresenceUpdates = useCallback(() => {;
+        if (presenceUpdateRef.current) {;
             clearInterval(presenceUpdateRef.current);
             presenceUpdateRef.current = null;
         }
     }, []);
     // Schedule reconnection;
-    const scheduleReconnection = useCallback(() => {
-        if (reconnectTimeoutRef.current)
+    const scheduleReconnection = useCallback(() => {;
+        if (reconnectTimeoutRef.current);
             return;
         reconnectAttemptsRef.current++;
         setState(prev => ({ ...prev, connectionStatus: 'reconnecting' }));
@@ -273,8 +276,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         }, (options.reconnectDelay || 1000) * Math.pow(2, reconnectAttemptsRef.current - 1));
     }, [options.reconnectDelay, initializeConnection]);
     // Public API methods;
-    const updateCursor = useCallback((x, y, element) => {
-        if (!options.enableCursors)
+    const updateCursor = useCallback((x, y, element) => {;
+        if (!options.enableCursors);
             return;
         sendMessage({
             type: 'cursor_move';
@@ -282,8 +285,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             payload: { x, y, element }
         });
     }, [options.enableCursors, options.userId, sendMessage]);
-    const updateSelection = useCallback((start, end, text) => {
-        if (!options.enableSelection)
+    const updateSelection = useCallback((start, end, text) => {;
+        if (!options.enableSelection);
             return;
         sendMessage({
             type: 'selection_change';
@@ -291,7 +294,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             payload: { start, end, text }
         });
     }, [options.enableSelection, options.userId, sendMessage]);
-    const syncTextChange = useCallback((change) => {if (!options.enableTextSync)
+    const syncTextChange = useCallback((change) => {if (!options.enableTextSync);
             return;
         sendMessage({
             type: 'text_change';
@@ -303,18 +306,18 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                 conflictResolution: options.conflictResolution}
         });
      }, [options.enableTextSync, options.userId, options.roomId, options.conflictResolution, sendMessage]);
-    const resolveConflict = useCallback((conflictId, resolution) => {
-        setState(prev => ({
-            ...prev,
+    const resolveConflict = useCallback((conflictId, resolution) => {;
+        setState(prev => ({;
+            ...prev,;
             conflicts: prev.conflicts.map(conflict => conflict.id === conflictId;
                 ? { ...conflict, resolution }
                 : conflict)
         }));
         trackEvent('collaboration', 'conflict_resolved', resolution, undefined, { conflictId });
     }, [trackEvent]);
-    const disconnect = useCallback(() => {
-        if (wsRef.current) {
-            sendMessage({
+    const disconnect = useCallback(() => {;
+        if (wsRef.current) {;
+            sendMessage({;
                 type: 'user_leave';
                 userId: options.userId;
                 payload: { timestamp: new Date() }
@@ -354,26 +357,26 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         }
     }, [state.isConnected, trackEvent]);
     // Computed values;
-    const onlineUsers = useMemo(() => {
-        return Array.from(state.users.values()).filter((user) => {
+    const onlineUsers = useMemo(() => {;
+        return Array.from(state.users.values()).filter((user) => {;
             return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline;
         });
     }, [state.users]);
-    const offlineUsers = useMemo(() => {
-        return Array.from(state.users.values()).filter((user) => {
+    const offlineUsers = useMemo(() => {;
+        return Array.from(state.users.values()).filter((user) => {;
             return typeof user === 'object' && user !== null && 'isOnline' in user && !user.isOnline;
         });
     }, [state.users]);
-    const activeCursors = useMemo(() => {
-        return Array.from(state.users.values())
-            .filter((user) => {
+    const activeCursors = useMemo(() => {;
+        return Array.from(state.users.values());
+            .filter((user) => {;
             return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline && 'cursor' in user && !!user.cursor;
         })
             .map(user => ({ ...user.cursor, user }));
     }, [state.users]);
-    const activeSelections = useMemo(() => {
-        return Array.from(state.users.values())
-            .filter((user) => {
+    const activeSelections = useMemo(() => {;
+        return Array.from(state.users.values());
+            .filter((user) => {;
             return typeof user === 'object' && user !== null && 'isOnline' in user && user.isOnline && 'selection' in user && !!user.selection;
         })
             .map(user => ({ ...user.selection, user }));

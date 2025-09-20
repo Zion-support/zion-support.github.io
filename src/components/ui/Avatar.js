@@ -1,4 +1,4 @@
-var __rest = (this && this.__rest) || function (s, e) {
+var __rest = (this && this.__rest) || function (s, e) {;
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
         t[p] = s[p];
@@ -12,17 +12,17 @@ var __rest = (this && this.__rest) || function (s, e) {
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
 import { cn } from '@/lib/utils';
-const Avatar = React.forwardRef((_a, ref) => {
+const Avatar = React.forwardRef((_a, ref) => {;
     var { className } = _a, props = __rest(_a, ["className"]);
     return (_jsx("div", Object.assign({ ref: ref, className: cn('relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full', className) }, props)));
 });
 Avatar.displayName = 'Avatar';
-const AvatarImage = React.forwardRef((_a, ref) => {
+const AvatarImage = React.forwardRef((_a, ref) => {;
     var { className, src, alt = '' } = _a, props = __rest(_a, ["className", "src", "alt"]);
     return (_jsx("img", Object.assign({ ref: ref, className: cn('aspect-square h-full w-full', className), src: src, alt: alt }, props)));
 });
 AvatarImage.displayName = 'AvatarImage';
-const AvatarFallback = React.forwardRef((_a, ref) => {
+const AvatarFallback = React.forwardRef((_a, ref) => {;
     var { className } = _a, props = __rest(_a, ["className"]);
     return (_jsx("div", Object.assign({ ref: ref, className: cn('flex h-full w-full items-center justify-center rounded-full bg-muted', className) }, props)));
 });

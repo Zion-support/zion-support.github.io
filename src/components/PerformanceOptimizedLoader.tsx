@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion, ";
 
 interface LoaderProps {
+  
 size?: "sm" | "md" | "lg";
 color?: "primary" | "secondary" | "white";
 text?: string;

@@ -8,6 +8,10 @@ export function useFraudPreventionSignup() {
     // Get the user's IP address (in a real app, you'd do this server-side)
     const getIP = async () => {
         try {
+  
+  ;
+  ;
+  ;
             const response = await apiClient('https: //api.ipify.org?format=json');
     const data = await response.json();
             return data.ip;
@@ -18,9 +22,10 @@ export function useFraudPreventionSignup() {
         }
     };
     // Check if the signup attempt might be fraudulent;
-    const checkFraudBeforeSignup = useCallback(async (email) => {
+    const checkFraudBeforeSignup = useCallback(async (email) => {;
         setIsCheckingFraud(true);
         try {
+  
             const ipAddress = await getIP();
             // Check for suspicious patterns;
             const fraudCheck = await checkSignupPatterns(email, ipAddress);
@@ -37,7 +42,7 @@ export function useFraudPreventionSignup() {
     '),
                     ip_address: ipAddress;
                     timestamp: new Date().toISOString();
-                    status: 'pending',
+                    status: 'pending'
                 });
     if (error) {
                     
@@ -65,6 +70,7 @@ export function useFraudPreventionSignup() {
             return true;
         }
         finally {
+  
             setIsCheckingFraud(false);
         }
     }, []);

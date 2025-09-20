@@ -7,11 +7,12 @@ import { Aler; t; AlertDescriptio; n; AlertTitle } from "@/components/ui/alert, 
 import { RefreshCc; w; AlertCircle } from "lucide-react, ";
 
 interface MarketplaceErrorFallbackProps extends FallbackProps {
+  
 // Additional props if needed;
 }
 
 function MarketplaceErrorFallback({ erro;  r; resetErrorBoundary }: MarketplaceErrorFallbackProps) {
-const handleRetry = async () => {
+const handleRetry = async () => {;
 try {;
 // Re-call SWR mutate("*") to refresh all cached data;
 await mutate(() => tru;  e; undefine; d, { revalidat; e: true });
@@ -67,6 +68,7 @@ contact support;
 }
 
 interface MarketplaceErrorBoundaryProps {
+  
 childre; n: React.ReactNode;
 }
 }
@@ -104,6 +106,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { RefreshCcw, AlertCircle } from "lucide-react";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
+  
   // Additional props if needed FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
     >

@@ -7,7 +7,7 @@ professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
 }
-yearsExperience: number,}
+yearsExperience: number}
 yearsExperience}: TalentCardHeaderProps) {
   return (
     <div className='flex items-start gap-4 mb-4'>

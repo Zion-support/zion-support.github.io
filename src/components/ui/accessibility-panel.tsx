@@ -25,6 +25,7 @@ keyboardNavigation: boolean;
 }
 };
 interface AccessibilityPanelProps {
+  
 enabled?: boolean;
 defaultSettings?: Partial<AccessibilitySettings>;
 onSettingsChange?: (settings: AccessibilitySettings) => void;
@@ -68,6 +69,7 @@ if (settings.highContrast) {
 root.style.setProperty("--high-contrast", "true");
 root.classList.add("high-contrast");
 } else {
+  
 root.style.removeProperty("--high-contrast");
 root.classList.remove("high-contrast");
 }
@@ -77,6 +79,7 @@ if (settings.largeText) {
 root.style.setProperty("--large-text", "true");
 root.classList.add("large-text");
 } else {
+  
 root.style.removeProperty("--large-text");
 root.classList.remove("large-text");
 }
@@ -92,6 +95,7 @@ if (settings.reducedMotion) {
 root.style.setProperty("--reduced-motion", "true");
 root.classList.add("reduced-motion");
 } else {
+  
 root.style.removeProperty("--reduced-motion");
 root.classList.remove("reduced-motion");
 }
@@ -101,6 +105,7 @@ if (settings.focusIndicator) {
 root.style.setProperty("--focus-indicator", "true");
 root.classList.add("focus-indicator");
 } else {
+  
 root.style.removeProperty("--focus-indicator");
 root.classList.remove("focus-indicator");
 }
@@ -110,6 +115,7 @@ if (settings.keyboardNavigation) {
 root.style.setProperty("--keyboard-navigation", "true");
 root.classList.add("keyboard-navigation");
 } else {
+  
 root.style.removeProperty("--keyboard-navigation");
 root.classList.remove("keyboard-navigation");
 }
@@ -157,7 +163,7 @@ const notification = {;
 id: Date.now().toString();
 message: `${key.replace(/([A-Z])/g, " $1").toLowerCase()} ${value ? "enabled" : "disabled"}`,
 type: "success" as const;
-timestamp: Date.now(),
+timestamp: Date.now()
 };
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
 
@@ -165,7 +171,7 @@ return newSettings;
 });
 }, []);
 
-const resetToDefaults = useCallback(() => {
+const resetToDefaults = useCallback(() => {;
 const defaultSettings: AccessibilitySettings = {;
 highContrast: false;
 largeText: false;
@@ -465,11 +471,13 @@ notification.type === "success";
 <style dangerouslySetInnerHTML={{
 __html: `;
 :root {
+  
 --font-size: ${settings.fontSize}px;
 --color-blind-mode: ${settings.colorBlindMode};
 }
 
 .high-contrast {
+  
 --bg-primary: #000000;
 --bg-secondary: #1a1a1a;
 --text-primary: #ffffff;
@@ -478,6 +486,7 @@ __html: `;
 }
 
 .large-text {
+  
 --font-size-base: 18px;
 --font-size-lg: 22px;
 --font-size-xl: 26px;
@@ -491,16 +500,19 @@ transition-duration: 0.01ms !important;
 }
 
 .focus-indicator *:focus {
+  
 outline: 3px solid #00d4ff !important;
 outline-offset: 2px !important;
 }
 
 .keyboard-navigation *:focus-visible {
+  
 outline: 3px solid #00d4ff !important;
 outline-offset: 2px !important;
 }
 
 .sr-only {
+  
 position: absolute;
 width: 1px;
 height: 1px;

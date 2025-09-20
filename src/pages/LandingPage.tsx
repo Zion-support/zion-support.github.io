@@ -1,4 +1,7 @@
 export default function LandingPage() {
+  return (
+  return (
+  return (
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   // Tools and features showcase,

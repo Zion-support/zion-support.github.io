@@ -1,12 +1,13 @@
 import React from "react";
 
 export; interface; FinancialAIService20o28 {
+  
 id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
 };
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 };
-competitors?: string[],marketSize?: string;regulatoryCompliance?: string[],};export; const; SPECIALIZED_FINANCIAL_AI_SERVICES_20o28: FinancialAIService20o28[] = [;
+competitors?: string[],marketSize?: string;regulatoryCompliance?: string[]};export; const; SPECIALIZED_FINANCIAL_AI_SERVICES_20o28: FinancialAIService20o28[] = [;
 // AI-Powered; Algorithmic; Trading Platform;
 {
 i;d: "ai-algorithmic-trading-platform-20o28",title: "AI-Powered; Algorithmic; Trading & Portfolio; Optimization; Platform",description: "Advanced; algorithmic; trading platform; that; uses AI; and; machine learning; to; execute high-frequency trades; optimize portfolios; and; maximize; returns while; minimizing; risks in real-time markets.",category: "Financial AI",subcategory: "Algorithmic Trading",price: 24999;currency: "$",pricingModel: "monthly",features: [;

@@ -5,6 +5,9 @@ import { useRouter } from "next/router";, // Changed from useNavigate,
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 export default function PaymentSuccess() {
+  return (
+  return (
+  return (
   const router = null;
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>

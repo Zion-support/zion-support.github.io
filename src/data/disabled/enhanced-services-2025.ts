@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface EnhancedService {
+  
 id: string;
 name: string;
 tagline: string;

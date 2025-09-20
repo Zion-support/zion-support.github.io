@@ -78,13 +78,13 @@ key = {job.id}
   )
 };"
 return (<div className="grid gap-6 md:grid-cols-2" > {jobs.map ( (job) => (<Card key= {
-  job.id}className= {
+  job.id}className={
   `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
   onSelectJob ? "cursor-pointer" : ""
 }`
 }onClick={
   () => onSelectJob?. (job.id job.title)
-}job.description,
+}job.description
 }</p> + {job.skills.length - 3}more </Badge>) "
 }</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {job.budget.min}- $ {
   job.budget.max "

@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -38,7 +39,7 @@ description: "Data analytics and insights for informed decision-making",
 color: "from-zion-purple to-zion-blue",
 href: "/business-intelligence"}
 ];
-const containerVariants = {
+const containerVariants = {;
 hidden: { opacity: 0 }, visible: {;
 opacity: 1;
 transition: {,

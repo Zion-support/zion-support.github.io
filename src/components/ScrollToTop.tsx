@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -23,6 +24,7 @@ const toggleVisibility: any = () => {
 if (window.pageYOffset > 300) {;
 setIsVisible(true);
 } else {
+  
 setIsVisible(false);
 }
 };

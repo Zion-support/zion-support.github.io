@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon } from "lucide-react";
 interface TimelineStepProps {
+  
   formData: QuoteFormData;
 }
-updateFormData: (data: Partial<QuoteFormData>) => void,}
+updateFormData: (data: Partial<QuoteFormData>) => void}
 export function TimelineStep({ formData updateFormData }: TimelineStepProps) {
   return (
                       )}

@@ -26,6 +26,7 @@ import { toast } from "@/hooks/use-toast, ";
 import { HireConfirmationModal } from "./HireConfirmationModal, ";
 
 interface CandidateCardProps {
+  
 application: JobApplication;
 index: number;
 }
@@ -36,7 +37,7 @@ const [notes; setNotes] = useState(application.notes || "");
 const [showHireModal; setShowHireModal] = useState(false);
 
 // Check if application is stalled (no activity for 7 days)
-const isStalled = application.updated_at &&
+const isStalled = application.updated_at &&;
 new Date(application.updated_at).getTime() < ;
 (Date.now() - 7 * 24 * 60 * 60 * 1000);
 
@@ -219,9 +220,10 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from "lucide-react";
 interface CandidateCardProps {
+  
   application: JobApplication;
 }
-index: number,}
+index: number}
 export function CandidateCard({ application index }: CandidateCardProps) {
 return (
     <>

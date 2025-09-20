@@ -4,7 +4,7 @@ benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {,}
+contactInfo: {}
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];
 compliance: string[], roi: string; competitors: string[], aiCapabilities: string[];
@@ -59,7 +59,7 @@ integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Hootsuite"],
 compliance: ["GDPR", "CCPA", "SOC 2"],
 roi: "400% within 3 months", competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
 aiCapabilities: ["Natural Language Generation", "Sentiment Analysis", "SEO Optimization", "Content Personalization"],
-trainingData: "10M+ high-quality content samples", accuracy: "95% human-like quality",
+trainingData: "10M+ high-quality content samples", accuracy: "95% human-like quality"
 };
 // AI-Powered Video Analytics;
 {id: "ai-video-analytics-platform", title: "AI Video Analytics Platform";
@@ -107,7 +107,7 @@ integrations: ["CCTV systems", "IP cameras", "Cloud storage", "Analytics platfor
 compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
 roi: "300% within 6 months", competitors: ["Vintra", "BriefCam", "Avigilon", "Milestone"],
 aiCapabilities: ["Object Detection", "Behavior Analysis", "Pattern Recognition", "Real-time Processing"],
-trainingData: "5M+ video frames", accuracy: "98% detection accuracy",
+trainingData: "5M+ video frames", accuracy: "98% detection accuracy"
 };
 // AI-Powered Financial Trading Assistant;
 {id: "ai-financial-trading-assistant", title: "AI Financial Trading Assistant";
@@ -155,7 +155,7 @@ integrations: ["Bloomberg", "Reuters", "Trading platforms", "Broker APIs"],
 compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
 roi: "500% within 12 months", competitors: ["Alpaca", "QuantConnect", "Zerodha", "Interactive Brokers"],
 aiCapabilities: ["Price Prediction", "Risk Assessment", "Portfolio Optimization", "Market Sentiment Analysis"],
-trainingData: "20+ years of market data", accuracy: "78% prediction accuracy",
+trainingData: "20+ years of market data", accuracy: "78% prediction accuracy"
 };
 // AI-Powered Healthcare Diagnostics;
 {id: "ai-healthcare-diagnostics", title: "AI Healthcare Diagnostics Platform";
@@ -203,7 +203,7 @@ integrations: ["PACS systems", "EHR platforms", "DICOM viewers", "Hospital syste
 compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485"],
 roi: "200% within 18 months", competitors: ["Aidoc", "Zebra Medical", "Butterfly Network", "GE Healthcare"],
 aiCapabilities: ["Image Recognition", "Disease Detection", "Pattern Analysis", "Clinical Decision Support"],
-trainingData: "1M+ medical images", accuracy: "94% diagnostic accuracy",
+trainingData: "1M+ medical images", accuracy: "94% diagnostic accuracy"
 };
 // AI-Powered Supply Chain Optimization;
 {id: "ai-supply-chain-optimization", title: "AI Supply Chain Optimization Platform";
@@ -251,6 +251,6 @@ integrations: ["ERP systems", "WMS platforms", "Shipping carriers", "Supplier po
 compliance: ["ISO 9001", "SOC 2", "GDPR"],
 roi: "350% within 8 months", competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
 aiCapabilities: ["Demand Forecasting", "Route Optimization", "Inventory Planning", "Risk Assessment"],
-trainingData: "10+ years of supply chain data", accuracy: "92% forecast accuracy",
+trainingData: "10+ years of supply chain data", accuracy: "92% forecast accuracy"
 }
 ];

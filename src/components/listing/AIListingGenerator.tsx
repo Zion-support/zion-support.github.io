@@ -1,4 +1,4 @@
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";,
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";,
 import { Sparkles } from "lucide-react";
@@ -8,6 +8,7 @@ import { GeneratedContentDisplay } from "./GeneratedContentDisplay";,
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface GeneratedContent {
+  
 max: number;
 }
 }
@@ -48,6 +49,7 @@ onSubmit = {handleGenerate}
     </div>
   )
 }: AIListingGeneratorProps) {const {
+  
   toast}= useToast ()
 const [isLoading, setIsLoading] = useState (false)
 const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null> (null)
@@ -55,13 +57,15 @@ const handleGenerate = async ({title,
 category
 keyFeatures,
 targetAudience}: {
-  title: string,
-category: string,
-keyFeatures: string,
+  title: string,;
+category: string,;
+keyFeatures: string,;
 targetAudience: string;
 }) => {setIsLoading (true)
 try {
+  
   const {
+  
   data error}= await supabase.functions.invoke ('ai-listing-generator', {body: {
   title category  keyFeatures targetAudience})
 if (error) {
@@ -76,6 +80,7 @@ toast ({
 })
 toast ({
 }finally {
+  
   setIsLoading (false)
 }
 const handleApply = () => {
@@ -87,6 +92,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   isLoading && <LoadingContentSkeleton />
 }{generatedContent && !isLoading && (<GeneratedContentDisplay content= {
   generatedContent}onApply= {handleApply}/>)
-}</div>)
-}'"
-}
+}</div>);
+}'";
+};

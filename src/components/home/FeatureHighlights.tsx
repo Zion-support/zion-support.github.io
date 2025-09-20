@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -48,8 +49,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
+  
   className?: string;
-  style?: React.CSSProperties,
+  style?: React.CSSProperties
 }
 return (}
     <section className={cn('py-16 bg-zion-blue', className)} style={style}>
@@ -156,9 +158,9 @@ export function FeatureHighlights() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div          className="text-center mb-16"
-          initial = {
-  { opacity: 0,
+        <motion.div          className="text-center mb-16";
+          initial = {;
+  { opacity: 0,;
 y: 20;
 }}
           whileInView = {

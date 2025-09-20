@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
+  
   stats: FraudStats;
 }
 }

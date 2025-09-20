@@ -54,7 +54,7 @@ loading: {
 icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />;
 title: "Loading...";
 description: "We\"re fetching the latest data for you. This should only take a moment.";
-},
+}
 };
 
 export function EmptyState({;

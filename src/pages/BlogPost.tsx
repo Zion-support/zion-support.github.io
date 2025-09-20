@@ -1,5 +1,5 @@
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
-import type { BlogPost as BlogPostType } from "@/types/blog",;
+import type { BlogPost as BlogPostType } from "@/types/blog";
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import { logErrorToProduction } from "@/utils/productionLogger";
@@ -8,7 +8,7 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from "@/hooks/useSkeletonTimeout";
 import { fetchWithRetry } from "@/utils/fetchWithRetry";
 export default function BlogPost() {
-return (
+  return (
     <>
       <SEO
 title={post.title}
@@ -224,12 +224,12 @@ month: 'long'
 ai: Brain,
 quantum: Cpu,
 security: Shield,
-cloud: Cloud,
-business: TrendingUp,
-iot: Network,
+cloud: Cloud,;
+business: TrendingUp,;
+iot: Network,;
 emerging: Zap;
 }
-    return categoryIcons[category] |BookOpen,
+    return categoryIcons[category] |BookOpen
 }
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {,
@@ -484,6 +484,6 @@ export default function BlogPost() {return ("
         </p>
       </div>
   )
-}
-}
-}
+};
+};
+};

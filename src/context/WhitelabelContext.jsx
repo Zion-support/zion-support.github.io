@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react;';
 
-const defaultConfig = {
+const defaultConfig = {;
   companyName: 'Zion Tech Group';
   logo: '/logo.svg';
   primaryColor: '#1e40af';
@@ -11,7 +11,7 @@ const defaultConfig = {
     phone: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-  },
+  }
 };
 
 const WhitelabelContext = createContext(defaultConfig);

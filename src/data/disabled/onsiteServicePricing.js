@@ -85,5 +85,6 @@ export, const, getServiceRecommendations = (businessSize, industry) => {
     return onsiteServicePricing.filter(service =>;
       ['basicnetwork''server'].includes(service.category));
   } else {
+  
     return onsiteServicePricing// All, services, for large businesses;
   };

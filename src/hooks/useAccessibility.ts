@@ -1,6 +1,7 @@
 import { useState; useEffect; useCallback } from "react, ";
 
 interface AccessibilityPreferences {
+  
 highContrast: boolean;
 largeText: boolean;
 reducedMotion: boolean;
@@ -12,6 +13,7 @@ keyboardNavigation: boolean;
 }
 
 interface AccessibilitySettings {
+  
 fontSize: "small" | "medium" | "large" | "xlarge";
 colorScheme: "default" | "high-contrast" | "dark" | "light";
 motionPreference: "reduce" | "no-preference";
@@ -40,6 +42,7 @@ const savedSettings = localStorage.getItem("zion-accessibility-settings");
 
 if (savedPreferences) {
 try {
+  
 setPreferences(JSON.parse(savedPreferences));
 } catch (error) {
 
@@ -48,6 +51,7 @@ setPreferences(JSON.parse(savedPreferences));
 
 if (savedSettings) {
 try {
+  
 setSettings(JSON.parse(savedSettings));
 } catch (error) {
 
@@ -77,6 +81,7 @@ if (preferences.highContrast) {
 root.classList.add("high-contrast");
 root.style.setProperty("--contrast-multiplier", "1.5");
 } else {
+  
 root.classList.remove("high-contrast");
 root.style.removeProperty("--contrast-multiplier");
 }
@@ -86,6 +91,7 @@ if (preferences.largeText) {
 root.classList.add("large-text");
 root.style.setProperty("--font-size-multiplier", "1.2");
 } else {
+  
 root.classList.remove("large-text");
 root.style.removeProperty("--font-size-multiplier");
 }
@@ -95,6 +101,7 @@ if (preferences.reducedMotion) {
 root.classList.add("reduced-motion");
 root.style.setProperty("--motion-reduction", "0.5");
 } else {
+  
 root.classList.remove("reduced-motion");
 root.style.removeProperty("--motion-reduction");
 }
@@ -103,6 +110,7 @@ root.style.removeProperty("--motion-reduction");
 if (preferences.focusIndicator) {
 root.classList.add("focus-visible");
 } else {
+  
 root.classList.remove("focus-visible");
 }
 }, [preferences]);
@@ -138,7 +146,7 @@ return () => document.removeEventListener("keydown", handleKeyDown);
 }, [preferences.keyboardNavigation]);
 
 // Screen reader announcements;
-const announceToScreenReader = useCallback((message: string) => {
+const announceToScreenReader = useCallback((message: string) => {;
 if (preferences.screenReader) {;
 const announcement = document.createElement("div");
 announcement.setAttribute("aria-live", "polite");
@@ -155,7 +163,7 @@ document.body.removeChild(announcement);
 }, [preferences.screenReader]);
 
 // Focus management;
-const focusFirstInteractive = useCallback((container: HTMLElement) => {
+const focusFirstInteractive = useCallback((container: HTMLElement) => {;
 const focusableElements = container.querySelectorAll(;
 "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])";
 );
@@ -165,8 +173,8 @@ if (focusableElements.length > 0) {
 }
 }, []);
 
-const trapFocus = useCallback((container: HTMLElement) => {
-const focusableElements = Array.from(
+const trapFocus = useCallback((container: HTMLElement) => {;
+const focusableElements = Array.from(;
 container.querySelectorAll(;
 "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])";
 )
@@ -188,6 +196,7 @@ event.preventDefault();
 lastElement.focus();
 }
 } else {
+  
 if (document.activeElement === lastElement) {
 event.preventDefault();
 firstElement.focus();
@@ -201,6 +210,7 @@ return () => container.removeEventListener("keydown", handleTabKey);
 }, []);
 
 return {
+  
 preferences;
 settings;
 savePreferences;

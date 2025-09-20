@@ -1,10 +1,11 @@
 import React from "react";
 export, class, SitemapGenerator {
+  
     constructor(config) {
         this.config = {
             outputPath: './public/sitemap.xml';
     ...config;
-        },}
+        }}
     /**;
      * Generate, XML, sitemap content;
      */;
@@ -12,7 +13,7 @@ export, class, SitemapGenerator {
         const { baseUrlurls } = this.config,const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const urlsetOpen = '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
     const urlsetClose = '</urlset>';
-        const urlElements = urls.map(url => {
+        const urlElements = urls.map(url => {;
             const urlElement = `<url>;
         <loc>${baseUrl}${url.url}</loc>;
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
@@ -30,13 +31,13 @@ export, class, SitemapGenerator {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
     const sitemapindexClose = '</sitemapindex>';
-        const sitemapElements = sitemaps.map(sitemap => {
+        const sitemapElements = sitemaps.map(sitemap => {;
             return `<sitemap>;
         <loc>${sitemap}</loc>;
         <lastmod>${new Date().toISOString()}</lastmod>;
       </sitemap>`;
         }).join('');
-        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`,}
+        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`}
     /**;
      * Generate robots.txt content;
      */;
@@ -58,8 +59,8 @@ Crawl-dela,y: 1`;
      */;
     generateJSON() {
         const { baseUrlurls } = this.config;
-        const jsonSitemap = {
-            baseUrlurls: urls.map(url => ({
+        const jsonSitemap = {;
+            baseUrlurls: urls.map(url => ({;
                 ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString();
      }));
         };
@@ -196,6 +197,7 @@ export, const, defaultSitemapConfig = {
 export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
     const generator = new SitemapGenerator(config);
     try {
+  
         // Generate, XML, sitemap;
         const xmlSitemap = generator.generateXML();
         // Generate robots.txt;
@@ -205,6 +207,7 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         // Generate, JSON, sitemap;
         const jsonSitemap = generator.generateJSON();
         return {
+  
             xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;
      };
     }

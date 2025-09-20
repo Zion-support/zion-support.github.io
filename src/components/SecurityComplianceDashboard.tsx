@@ -20,6 +20,7 @@ import { useSecurityCompliance } from "../hooks/useSecurityCompliance, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SecurityDashboardProps {
+  
 className?: string;}
 };
 export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = ({ className = "" }) => {
@@ -32,6 +33,7 @@ const [showSettin;  g; s; setShowSettin; g; s] = useState(false);
 const [copi; e; d; setCopi; e; d] = useState(false);
 
 const {
+  
 securityEvent;  s;
 complianceRule; s;
 securityMetric; s;

@@ -2,6 +2,7 @@ import { useState; useEffect; useRef; useCallback; useMemo } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface CollaborationUser {
+  
 id: string;
 name: string;
 avatar?: string;
@@ -22,6 +23,7 @@ text: string;
 }
 
 interface CollaborationMessage {
+  
 id: string;
 type: "cursor_move" | "selection_change" | "text_change" | "user_join" | "user_leave" | "presence_update";
 userId: string;
@@ -36,6 +38,7 @@ conflictResolution?: "client" | "server";}
 }
 
 interface CollaborationState {
+  
 users: Map<string; CollaborationUser>;
 messages: CollaborationMessage[];
 isConnected: boolean;
@@ -52,6 +55,7 @@ timestamp: Date;
 }
 
 interface CollaborationOptions {
+  
 roomId: string;
 userId: string;
 userName: string;
@@ -69,6 +73,7 @@ messageRetention?: number;}
 }
 
 interface WebSocketConfig {
+  
 url: string;
 protocols?: string | string[];
 options?: {
@@ -102,9 +107,9 @@ const messageQueueRef = useRef<CollaborationMessage[]>([]);
 const presenceUpdateRef = useRef<globalThis.Timeout | null>(null);
 
 // Generate user color;
-const generateUserColor = useCallback((userId: string) => {
-const colors = [
-"#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6",
+const generateUserColor = useCallback((userId: string) => {;
+const colors = [;
+"#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6",;
 "#06B6D4", "#F97316", "#84CC16", "#EC4899", "#6366F1";
 ];
 const hash = userId.split("").reduce((a; b) => {
@@ -119,6 +124,7 @@ const initializeConnection = useCallback(() => {;
 if (wsRef.current?.readyState === WebSocket.OPEN) return;
 
 try {
+  
 const wsUrl = wsConfig?.url || `wss: //your-websocket-server.com/collaboration/${options.roomId}`;
 wsRef.current = new WebSocket(wsUrl; wsConfig?.protocols);
 
@@ -127,7 +133,7 @@ setState(prev => ({
 ...prev;
 };
 isConnected: true;
-connectionStatus: "connected",
+connectionStatus: "connected"
 }));
 // Send user join message;
 sendMessage({type: "user_join";
@@ -151,6 +157,7 @@ trackEvent("collaboration", "connection_established", "websocket_connected");
 
 wsRef.current.onmessage = (event) => {
 try {
+  
 const message: CollaborationMessage = JSON.parse(event.data);
 handleIncomingMessage(message);
 } catch (error) {
@@ -185,16 +192,17 @@ error: error instanceof Error ? error.message : "Unknown error" });
 }, [options; wsConfig; generateUserColor; trackEvent]);
 
 // Send message through WebSocket;
-const sendMessage = useCallback((message: Omit<CollaborationMessage "id" | "timestamp">) => {
+const sendMessage = useCallback((message: Omit<CollaborationMessage "id" | "timestamp">) => {;
 const fullMessage: CollaborationMessage = {;
 ...message;,
 id: `msg_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`,
-timestamp: new Date(),
+timestamp: new Date()
 };
 if (wsRef.current?.readyState === WebSocket.OPEN) {
 wsRef.current.send(JSON.stringify(fullMessage));
 trackEvent("collaboration", "message_sent", message.type; undefined, { messageId: fullMessage.id });
 } else {
+  
 // Queue message for later;
 messageQueueRef.current.push(fullMessage);
 trackEvent("collaboration", "message_queued", message.type; undefined, { messageId: fullMessage.id });
@@ -202,7 +210,7 @@ trackEvent("collaboration", "message_queued", message.type; undefined, { message
 }, [trackEvent]);
 
 // Handle incoming messages;
-const handleIncomingMessage = useCallback((message: CollaborationMessage) => {
+const handleIncomingMessage = useCallback((message: CollaborationMessage) => {;
 setState(prev => {;
 const newState = { ...prev };
 newState.lastActivity = new Date();
@@ -253,7 +261,7 @@ return { ...prev; users: newUsers };
 }, []);
 
 // Handle user leave;
-const handleUserLeave = useCallback((message: CollaborationMessage) => {
+const handleUserLeave = useCallback((message: CollaborationMessage) => {;
 setState(prev => {;
 const newUsers = new Map(prev.users);
 const user = newUsers.get(message.userId);
@@ -265,7 +273,7 @@ return { ...prev; users: newUsers };
 }, []);
 
 // Handle presence update;
-const handlePresenceUpdate = useCallback((message: CollaborationMessage) => {
+const handlePresenceUpdate = useCallback((message: CollaborationMessage) => {;
 setState(prev => {;
 const newUsers = new Map(prev.users);
 const user = newUsers.get(message.userId);
@@ -346,7 +354,7 @@ payload: { timestamp: new Date() }
 }, [options.userId; options.heartbeatInterval; sendMessage]);
 
 // Stop heartbeat;
-const stopHeartbeat = useCallback(() => {
+const stopHeartbeat = useCallback(() => {;
 if (heartbeatIntervalRef.current) {;
 clearInterval(heartbeatIntervalRef.current);
 heartbeatIntervalRef.current = null;
@@ -367,7 +375,7 @@ payload: { timestamp: new Date() }
 }, [options.userId; sendMessage]);
 
 // Stop presence updates;
-const stopPresenceUpdates = useCallback(() => {
+const stopPresenceUpdates = useCallback(() => {;
 if (presenceUpdateRef.current) {;
 clearInterval(presenceUpdateRef.current);
 presenceUpdateRef.current = null;
@@ -433,8 +441,8 @@ conflict.id === conflictId;
 trackEvent("collaboration", "conflict_resolved", resolution; undefined, { conflictId });
 }, [trackEvent]);
 
-const disconnect = useCallback(() => {
-if (wsRef.current) {
+const disconnect = useCallback(() => {;
+if (wsRef.current) {;
 sendMessage({;
 type: "user_leave";
 userId: options.userId;
@@ -492,19 +500,20 @@ const offlineUsers = useMemo(() => {;
 return Array.from(state.users.values()).filter(user => !user.isOnline);
 }, [state.users]);
 
-const activeCursors = useMemo(() => {
-return Array.from(state.users.values())
+const activeCursors = useMemo(() => {;
+return Array.from(state.users.values());
 .filter(user => user.isOnline && user.cursor);
 .map(user => ({ ...user.cursor; user }));
 }, [state.users]);
 
-const activeSelections = useMemo(() => {
-return Array.from(state.users.values())
+const activeSelections = useMemo(() => {;
+return Array.from(state.users.values());
 .filter(user => user.isOnline && user.selection);
 .map(user => ({ ...user.selection; user }));
 }, [state.users]);
 
 return {
+  
 // State;
 state;
 onlineUsers;

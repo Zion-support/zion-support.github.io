@@ -1,5 +1,5 @@
 // Enhanced real micro SAAS services and solutions;
-export const ENHANCED_SERVICES = [
+export const ENHANCED_SERVICES = [;
     // AI & Machine Learning Services;
     {id: "ai-automation-suite";
         title: "AI Process Automation Suite";
@@ -20,7 +20,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 96,
+        aiScore: 96
     };
     {id: "ai-customer-insights";
         title: "AI-Powered Customer Insights Platform";
@@ -39,7 +39,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "1-2 Weeks";
-        aiScore: 93,
+        aiScore: 93
     };
     {id: "ai-content-optimization";
         title: "AI Content Optimization Engine";
@@ -58,7 +58,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 234;
         location: "Global";
         availability: "Immediate";
-        aiScore: 91,
+        aiScore: 91
     };
     // Cloud & Infrastructure Services;
     {id: "multi-cloud-orchestration";
@@ -79,7 +79,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "3-4 Weeks";
-        aiScore: 94,
+        aiScore: 94
     };
     {id: "edge-computing-solution";
         title: "Edge Computing Infrastructure Solution";
@@ -98,7 +98,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 45;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 92,
+        aiScore: 92
     };
     // Cybersecurity Services;
     {id: "ai-threat-detection";
@@ -119,7 +119,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "3-4 Weeks";
-        aiScore: 95,
+        aiScore: 95
     };
     {id: "zero-trust-security";
         title: "Zero Trust Security Implementation";
@@ -138,7 +138,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 93,
+        aiScore: 93
     };
     // Data & Analytics Services;
     {id: "real-time-data-pipeline";
@@ -158,7 +158,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 90,
+        aiScore: 90
     };
     {id: "predictive-maintenance-ai";
         title: "AI-Powered Predictive Maintenance";
@@ -177,7 +177,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 56;
         location: "Global";
         availability: "4-5 Weeks";
-        aiScore: 92,
+        aiScore: 92
     };
     // Business Intelligence & Reporting;
     {id: "ai-business-intelligence";
@@ -198,7 +198,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "1-2 Weeks";
-        aiScore: 94,
+        aiScore: 94
     };
     // Development & DevOps Services;
     {id: "ai-code-review";
@@ -218,7 +218,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 234;
         location: "Global";
         availability: "Immediate";
-        aiScore: 93,
+        aiScore: 93
     };
     {id: "devops-automation";
         title: "DevOps Automation Platform";
@@ -237,7 +237,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 98;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 91,
+        aiScore: 91
     };
     // Digital Transformation Services;
     {id: "digital-transformation-consulting";
@@ -258,7 +258,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 95,
+        aiScore: 95
     };
     // Industry-Specific Solutions;
     {id: "healthcare-ai-platform";
@@ -278,7 +278,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 34;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 94,
+        aiScore: 94
     };
     {id: "fintech-compliance-ai";
         title: "FinTech Compliance & Fraud Detection AI";
@@ -297,7 +297,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 93,
+        aiScore: 93
     };
     // Emerging Technology Services;
     {id: "blockchain-enterprise";
@@ -318,7 +318,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 95,
+        aiScore: 95
     };
     {id: "quantum-computing-readiness";
         title: "Quantum Computing Readiness Assessment";
@@ -337,11 +337,11 @@ export const ENHANCED_SERVICES = [
         reviewCount: 12;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 94,
+        aiScore: 94
     }
 ];
     // Service categories for filtering;
-export const ENHANCED_SERVICE_CATEGORIES = [
+export const ENHANCED_SERVICE_CATEGORIES = [;
     { label: 'AI & Machine Learning', value: 'ai-ml' };
     { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' };
     { label: 'Cybersecurity', value: 'cybersecurity' };
@@ -355,7 +355,7 @@ export const ENHANCED_SERVICE_CATEGORIES = [
     { label: 'Quantum Computing', value: 'quantum-computing' }
 ];
     // Pricing tiers for different service levels;
-export const SERVICE_PRICING_TIERS = {
+export const SERVICE_PRICING_TIERS = {;
     basic: { range: "$500 - $2,000", description: "Essential services for small businesses" };
     professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies" };
     enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }

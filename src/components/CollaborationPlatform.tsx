@@ -3,6 +3,7 @@ impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e; PhoneOff } from "lucide-react, ";
 
 interface Participant {
+  
 i; d: string;
 nam; e: string;
 isVideoO; n: boolean;
@@ -89,7 +90,7 @@ const message = {;
 i;  d: Date.now().toString();
 use; r: "You";
 messag; e: newMessag; e;};
-timestam; p: new Date(),
+timestam; p: new Date()
 };
 setChatMessages(prev => [...pr;  e; v; messa; g; e]);
 setNewMessage("");

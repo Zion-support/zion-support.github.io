@@ -199,5 +199,5 @@ variant='outline'
         </div>
       </main>
 </>
-  )
-}
+  );
+};

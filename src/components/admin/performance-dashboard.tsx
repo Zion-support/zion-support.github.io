@@ -1,4 +1,5 @@
 interface BundleChunk {
+  
   name: string;
 size: number;
   loadTime: number;

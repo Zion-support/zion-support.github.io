@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface ServiceContact {
+  
 phone: string;
 email: string;
 website: string;
@@ -10,6 +11,7 @@ address: string;
 }
 
 export interface MicroSaasService {
+  
 id: number;
 name: string;
 category: string;
@@ -35,6 +37,7 @@ trialPeriod: string;
 }
 
 export interface ITService {
+  
 id: number;
 name: string;
 category: string;
@@ -57,6 +60,7 @@ support: string;
 }
 
 export interface AIService {
+  
 id: number;
 name: string;
 category: string;
@@ -121,7 +125,7 @@ roi: "400% within 8 months";
 setupTime: "2 hours";
 integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 2;
 name: "CyberShield Pro";
@@ -162,7 +166,7 @@ roi: "500% within 6 months";
 setupTime: "4 hours";
 integrations: ["SIEM systems", "Firewalls", "EDR", "Cloud platforms"],
 freeTier: false;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 3;
 name: "CloudMatrix Orchestrator";
@@ -203,7 +207,7 @@ roi: "350% within 5 months";
 setupTime: "3 hours";
 integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
 freeTier: true;
-trialPeriod: "21 days",
+trialPeriod: "21 days"
 };
 {id: 4;
 name: "DataVault Enterprise";
@@ -244,7 +248,7 @@ roi: "450% within 7 months";
 setupTime: "6 hours";
 integrations: ["Databases", "Cloud platforms", "BI tools", "ETL systems"],
 freeTier: false;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 5;
 name: "AIStudio Creator";
@@ -285,7 +289,7 @@ roi: "300% within 4 months";
 setupTime: "1 hour";
 integrations: ["Cloud platforms", "Databases", "APIs", "Webhooks"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 6;
 name: "GreenTech Carbon Tracker";
@@ -326,7 +330,7 @@ roi: "300% within 6 months";
 setupTime: "2 hours";
 integrations: ["ERP systems", "IoT sensors", "Cloud platforms", "Sustainability databases"],
 freeTier: true;
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 };
 {id: 7;
 name: "EdgeAI IoT Platform";
@@ -367,7 +371,7 @@ roi: "400% within 8 months";
 setupTime: "4 hours";
 integrations: ["MQTT", "CoAP", "HTTP", "Cloud platforms", "Database systems"],
 freeTier: true;
-trialPeriod: "21 days",
+trialPeriod: "21 days"
 };
 {id: 8;
 name: "Blockchain Supply Chain Tracker";
@@ -408,7 +412,7 @@ roi: "500% within 12 months";
 setupTime: "8 hours";
 integrations: ["ERP systems", "WMS", "Logistics platforms", "E-commerce", "Mobile apps"],
 freeTier: false;
-trialPeriod: "1000 transactions",
+trialPeriod: "1000 transactions"
 };
 {id: 9;
 name: "AR/VR Training Simulator";
@@ -449,7 +453,7 @@ roi: "350% within 9 months";
 setupTime: "6 hours";
 integrations: ["LMS platforms", "HR systems", "Analytics tools", "VR devices", "Mobile apps"],
 freeTier: true;
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 };
 {id: 10;
 name: "Quantum Cryptography Platform";
@@ -490,7 +494,7 @@ roi: "600% within 18 months";
 setupTime: "24 hours";
 integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
 freeTier: false;
-trialPeriod: "7 days",
+trialPeriod: "7 days"
 }
 ];
 // Enhanced IT Services for 2025;
@@ -531,7 +535,7 @@ responseTime: "24 hours";
 sla: "99.9% uptime";
 certifications: ["PMP", "ITIL", "Agile", "Scrum"],
 deliveryTime: "3-6 months";
-support: "24/7 dedicated support",
+support: "24/7 dedicated support"
 };
 {id: 2;
 name: "Cloud Migration & Optimization";
@@ -569,7 +573,7 @@ responseTime: "4 hours";
 sla: "99.5% uptime";
 certifications: ["AWS", "Azure", "GCP", "Kubernetes"],
 deliveryTime: "2-4 months";
-support: "Business hours + emergency support",
+support: "Business hours + emergency support"
 };
 {id: 3;
 name: "Cybersecurity Assessment & Implementation";
@@ -607,7 +611,7 @@ responseTime: "2 hours";
 sla: "99.9% security uptime";
 certifications: ["CISSP", "CISM", "CEH", "CompTIA Security+"],
 deliveryTime: "1-3 months";
-support: "24/7 security monitoring",
+support: "24/7 security monitoring"
 };
 {id: 4;
 name: "DevOps & CI/CD Implementation";
@@ -645,7 +649,7 @@ responseTime: "8 hours";
 sla: "99.5% uptime";
 certifications: ["AWS", "Azure", "Docker", "Kubernetes", "Jenkins"],
 deliveryTime: "2-3 months";
-support: "Business hours + on-call support",
+support: "Business hours + on-call support"
 };
 {id: 5;
 name: "Data Engineering & Analytics";
@@ -683,7 +687,7 @@ responseTime: "12 hours";
 sla: "99.7% uptime";
 certifications: ["AWS", "Azure", "Snowflake", "Databricks", "Apache"],
 deliveryTime: "3-5 months";
-support: "Business hours + emergency support",
+support: "Business hours + emergency support"
 };
 {id: 6;
 name: "API Development & Integration";
@@ -721,7 +725,7 @@ responseTime: "16 hours";
 sla: "99.5% uptime";
 certifications: ["AWS", "Azure", "MuleSoft", "Apigee", "Kong"],
 deliveryTime: "1-3 months";
-support: "Business hours support",
+support: "Business hours support"
 };
 {id: 7;
 name: "Legacy System Modernization";
@@ -759,7 +763,7 @@ responseTime: "24 hours";
 sla: "99.8% uptime";
 certifications: ["AWS", "Azure", "GCP", "TOGAF", "Architecture"],
 deliveryTime: "6-12 months";
-support: "24/7 dedicated support",
+support: "24/7 dedicated support"
 };
 {id: 8;
 name: "IoT Solution Development";
@@ -797,7 +801,7 @@ responseTime: "12 hours";
 sla: "99.5% uptime";
 certifications: ["AWS IoT", "Azure IoT", "IoT Security", "Embedded Systems"],
 deliveryTime: "3-6 months";
-support: "Business hours + emergency support",
+support: "Business hours + emergency support"
 }
 ];
 // Enhanced AI Services for 2025;

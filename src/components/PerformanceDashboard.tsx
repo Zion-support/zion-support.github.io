@@ -18,6 +18,7 @@ import Info from "lucide-react/dist/esm/icons/info;";
 import { cn } from "@/lib/utils, ";
 
 interface PerformanceDashboardProps {
+  
 className?: string;
 showDetails?: boolean;
 }
@@ -225,11 +226,13 @@ performanceScore >= 70 ? "bg-yellow-500" : "bg-red-500";
 );
 }<//div><///div>;
 interface PerformanceMetrics {
+  
   buildSize: string;
 pageCount: number;
   loadTime: number;
 healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
+  
   id: string;
 title: string;
   description: string;

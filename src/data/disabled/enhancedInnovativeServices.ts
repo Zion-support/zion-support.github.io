@@ -1,5 +1,6 @@
 import { Routes; Route } from "react-router-dom, ";
 export interface EnhancedInnovativeService {
+  
 id: string;
 title: string;
 description: string;
@@ -744,7 +745,7 @@ complianceStandards: ["SEC", "FINRA", "GDPR", "SOC 2", "Real Estate Regulations"
 integrationOptions: ["MLS Systems", "Property Databases", "Financial Platforms", "Tax Software", "CRM Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Education & Learning Platform;
 {id: "ai-education-platform";
@@ -802,7 +803,7 @@ complianceStandards: ["FERPA", "COPPA", "GDPR", "SOC 2", "Educational Standards"
 integrationOptions: ["LMS Systems", "Student Information Systems", "Assessment Tools", "Content Management", "Communication Platforms"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Energy Management Platform;
 {id: "ai-energy-management";
@@ -860,7 +861,7 @@ complianceStandards: ["ISO 50001", "LEED", "Energy Star", "SOC 2", "Environmenta
 integrationOptions: ["Building Management Systems", "IoT Sensors", "Utility Meters", "Renewable Energy Systems", "SCADA Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Agriculture & Precision Farming;
 {id: "ai-precision-agriculture";
@@ -918,7 +919,7 @@ complianceStandards: ["Organic Standards", "Food Safety", "Environmental Regulat
 integrationOptions: ["IoT Sensors", "Drone Systems", "Weather APIs", "Soil Testing Equipment", "Irrigation Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Construction & Project Management;
 {id: "ai-construction-management";
@@ -976,7 +977,7 @@ complianceStandards: ["OSHA", "Building Codes", "Safety Standards", "SOC 2", "Co
 integrationOptions: ["Project Management Software", "Safety Systems", "IoT Sensors", "Financial Systems", "Communication Platforms"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Hospitality & Tourism;
 {id: "ai-hospitality-platform";
@@ -1034,7 +1035,7 @@ complianceStandards: ["PCI DSS", "GDPR", "SOC 2", "Hospitality Standards", "Data
 integrationOptions: ["PMS Systems", "Booking Engines", "Payment Gateways", "CRM Systems", "Communication Platforms"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Insurance & Risk Assessment;
 {id: "ai-insurance-platform";
@@ -1092,7 +1093,7 @@ complianceStandards: ["NAIC", "State Regulations", "SOC 2", "Data Privacy", "Ins
 integrationOptions: ["Policy Management Systems", "Claims Systems", "CRM Platforms", "Financial Systems", "Third-party Data"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Legal Research & Document Analysis;
 {id: "ai-legal-research";
@@ -1150,7 +1151,7 @@ complianceStandards: ["GDPR", "CCPA", "SOC 2", "Legal Standards", "Data Privacy"
 integrationOptions: ["Legal Research Databases", "Document Management Systems", "Case Management Software", "Legal Libraries", "Court Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Media & Content Creation;
 {id: "ai-media-platform";
@@ -1208,7 +1209,7 @@ complianceStandards: ["Copyright", "Content Rights", "SOC 2", "Media Standards",
 integrationOptions: ["Video Editing Software", "Audio Processing Tools", "Content Management Systems", "Social Media Platforms", "Analytics Tools"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Gaming & Entertainment;
 {id: "ai-gaming-platform";
@@ -1266,7 +1267,7 @@ complianceStandards: ["COPPA", "GDPR", "SOC 2", "Gaming Standards", "Data Privac
 integrationOptions: ["Game Engines", "Analytics Platforms", "Payment Systems", "Social Platforms", "Advertising Networks"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Cybersecurity & Threat Intelligence;
 {id: "ai-cybersecurity-intelligence";
@@ -1324,7 +1325,7 @@ complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 integrationOptions: ["SIEM Systems", "EDR Platforms", "Firewalls", "Identity Management", "Security Tools"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.99%";
-uptime: "99.99%",
+uptime: "99.99%"
 };
 // AI-Powered Supply Chain & Logistics;
 {id: "ai-supply-chain-platform";
@@ -1382,7 +1383,7 @@ complianceStandards: ["ISO 28000", "C-TPAT", "SOC 2", "Supply Chain Standards", 
 integrationOptions: ["ERP Systems", "WMS Platforms", "TMS Solutions", "Supplier Portals", "Financial Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Customer Experience & Support;
 {id: "ai-customer-experience";
@@ -1440,7 +1441,7 @@ complianceStandards: ["GDPR", "CCPA", "SOC 2", "Data Privacy", "Customer Service
 integrationOptions: ["CRM Systems", "Help Desk Platforms", "Communication Tools", "Analytics Platforms", "Social Media"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered HR & Talent Management;
 {id: "ai-hr-talent-platform";
@@ -1498,7 +1499,7 @@ complianceStandards: ["EEOC", "ADA", "GDPR", "SOC 2", "HR Compliance Standards"]
 integrationOptions: ["ATS Systems", "HRIS Platforms", "Job Boards", "Background Check Services", "Assessment Tools"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";
-uptime: "99.95%",
+uptime: "99.95%"
 };
 // AI-Powered Data Governance & Privacy;
 {id: "ai-data-governance";
@@ -1556,7 +1557,7 @@ complianceStandards: ["GDPR", "CCPA", "HIPAA", "SOC 2", "Data Privacy Regulation
 integrationOptions: ["Data Warehouses", "CRM Systems", "ERP Platforms", "Security Tools", "Analytics Platforms"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.99%";
-uptime: "99.99%",
+uptime: "99.99%"
 }
 ];
 export const getInnovativeServiceByCategory: any = (category: string) => {;

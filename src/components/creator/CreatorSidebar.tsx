@@ -1,9 +1,9 @@
 
-import { //, SidebarMenu, //, Removed
+import { //, SidebarMenu, //, Removed;
 , //, SidebarMenuButton, //, Removed;
 , //, SidebarGroupLabel, //, Not, needed;
 , //, SidebarGroupContent, //, Not, needed } from "@/components/ui/sidebar";
-  // SidebarGroupContent, // Not needed,
+  // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
   Sidebar,
 SidebarContent
@@ -12,7 +12,7 @@ SidebarMenuItem
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
-  // SidebarGroupContent, // Not needed,
+  // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
 export function AppSidebar() {
   return (

@@ -13,6 +13,7 @@ Zap;
 } from "lucide-react, ";
 
 interface LinkStatus {
+  
 ur; l: string;
 statu; s: "healthy" | "broken" | "external" | "checking";
 statusCode?: number;
@@ -23,6 +24,7 @@ parentPage?: string;
 linkText?: string;}
 };
 interface LinkHealthReport {
+  
 totalLink; s: number;
 healthyLink; s: number;
 brokenLink; s: number;
@@ -47,7 +49,7 @@ statusCo; d; e: 4; 0; 4;
 responseTi; m; e: 12; 0; 0;
 lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Homepag; e"};
-linkTe; x; t: "LinkedI; n",
+linkTe; x; t: "LinkedI; n"
 },
 {u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",
 stat; u; s: "externa; l",

@@ -1,4 +1,5 @@
 interface HealthData {
+  
   status: 'healthy' | 'warning' | 'critical';
 timestamp: string;
   uptime: number;

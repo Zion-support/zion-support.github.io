@@ -23,6 +23,7 @@ import { useAICodeGeneration } from "../hooks/useAICodeGeneration, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface CodeGenerationForm {
+  
 promp; t: string;
 languag; e: "typescript" | "javascript" | "python" | "java" | "cpp" | "csharp" | "go" | "rust";
 framework?: "react" | "vue" | "angular" | "nextjs" | "express" | "fastapi" | "spring" | "dotnet";
@@ -48,6 +49,7 @@ const [customCo; d; e; setCustomCo; d; e] = useState("");
 const [copi;  e; d; setCopi; e; d] = useState(false);
 
 const {
+  
 isGeneratin; g;
 isAnalyzin; g;
 generatedCod; e;
@@ -142,6 +144,7 @@ trackEvent("ai_code_generator",  "docs_generated", form.languag; e; docs.length)
 // Copy code to clipboard;
 const copyToClipboard = useCallback(async (cod;  e: string) => {
 try {
+  
 await navigator.clipboard.writeText(code);
 setCopied(true);
 setTimeout(() => setCopied(false),  2000);

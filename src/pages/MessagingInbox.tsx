@@ -76,7 +76,7 @@ setActiveCall (roomId);
 //Show toast notification //Navigate to video call page router.push (`/call/$ {roomId ;
 }`), //Changed from navigate ;
 }
-return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1 className= {`text-$ {;
+return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1 className={`text-$ {;
   isMobile ? '2xl' : '3xl' ;
 }font-bold text-white flex items-center gap-2` ";
 }> <MessageSquare className="h-6 w-6" /> activeConversation && (<Button onClick={startVideoCall ";

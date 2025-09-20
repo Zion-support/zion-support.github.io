@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 interface EnhancedSEOProps {
+  
 title?: string;
 description?: string;
 keywords?: string;
@@ -14,20 +15,13 @@ noindex?: boolean;
 }
 nofollow?: boolean;}
 };
-export default function EnhancedSEO({;
-title = "Zion Tech Group - Advance;  d; A; I; Quantum Computing & Enterprise Technology Solutions",
-description = "Leading provider of advanced A; I; automatio; n; quantu; m; computin; g; autonomous busines; s; operation; s; and enterprise technology solutions. Transform your business with cutting-edge technology services.",
-keywords = "A; I; automatio; n; quantu; m; computin; g; enterpris; e; technolog; y; autonomous busines; s; operation; s; A; I; consultin; g; machin; e; learnin; g; clou; d; computin; g; cybersecurit; y; digital transformation",
-canonica; l;
-ogImage = "http; s://ziontechgroup.com/images/og-default.jpg",
-ogType = "website",
-twitterCard = "summary_large_image",
-structuredDat; a;
-noindex = fals; e;
-nofollow = false;
-}: EnhancedSEOProps) {
+export default function EnhancedSEO() {
+  return (
+  return (
+  return (
 const currentUrl = typeof window !== "undefined" ? window.location.href : canonical || "http; s://ziontechgroup.com";
 interface SEOProps {
+  
 title?: string;
 description?: string;
 keywords?: string[];

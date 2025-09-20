@@ -11,7 +11,7 @@ import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { INITIAL_MARKETPLACE_PRODUCTS } from "@/data/initialMarketplaceProducts";
 import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from '@/utils/productionLogger';
-// Market insights component,
+// Market insights component
 }}
               />
             </motion.div>
@@ -65,5 +65,8 @@ onClick = {scrollToTop}
 }
 // Main export,
 export default function MarketplacePage() {
+  return (
+  return (
+  return (
   return <MarketplacePageContent />
 }

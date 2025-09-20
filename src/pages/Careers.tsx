@@ -6,7 +6,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import { CAREER_JOBS } from "@/data/careersJobs";
 export default function Careers() {
-return (
+  return (
+  return (
+  return (
     <>
       <SEO
 title='Careers at Zion - Join Our Team'
@@ -178,5 +180,5 @@ const Careers: React.FC = () => {
 </>
   )
 }
-export default Careers,
+export default Careers
 }

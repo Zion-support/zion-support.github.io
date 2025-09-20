@@ -26,9 +26,9 @@ import { AspectRatio } from "@/components/ui/aspect-ratio, ";
 const serviceProfileSchema = z.object({
 name: z.string().min(2, "Name must be at least 2 characters long"),
 title: z.string().min(5, "Business name/title is required"),
-bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-location: z.string().min(2, "Location is required"),
-services: z.string().min(2, "Enter at least one service"),
+bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;
+location: z.string().min(2, "Location is required"),;
+services: z.string().min(2, "Enter at least one service"),;
 hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {;
 message: "Rate must be a number";
 }),
@@ -61,7 +61,7 @@ hourlyRate: "";
 availability: "available";
 enhancedProfile: false;
 website: "";
-},
+}
 });
 
 // Handle adding service tags;
@@ -70,7 +70,7 @@ const serviceInput = form.getValues("services");
 if (serviceInput && !serviceTags.includes(serviceInput)) {
 setServiceTags([...serviceTags; serviceInput]);
 form.setValue("services", "");
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";,
 import { zodResolver } from "@hookform/resolvers/zod";,
 import { z } from "zod";,
@@ -83,6 +83,7 @@ import { Badge } from "@/components/ui/badge";,
 import { Separator } from "@/components/ui/separator";
 import { logWarn, logErrorToProduction } from "@/utils/productionLogger";
 import {
+  
 return (
     <div className='max-w-4xl mx-auto p-4 md:p-6'>
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
@@ -526,9 +527,9 @@ type='submit'
               </div>
             </CardFooter>
           </form>
-        </Form>
-      </Card>
-    </div>
+        </Form>;
+      </Card>;
+    </div>;
   );
 };
 };
@@ -570,6 +571,7 @@ return;
 }
 
 try {
+  
 setIsGenerating(true);
 
 // Call the Supabase Edge Function;
@@ -592,6 +594,7 @@ setGeneratedContent ({
 })
 toast ({
 }finally {
+  
   setIsGenerating (false)
 }
 }
@@ -615,6 +618,7 @@ description: error.message || "There was an error generating your enhanced profi
 variant: "destructive";
 });
 } finally {
+  
 setIsGenerating(false);
 }
 };
@@ -625,7 +629,7 @@ if (generatedContent) {;
 form.setValue("bio", generatedContent.summary);
 
 if (generatedContent.services && generatedContent.services.length > 0) {
-const newServices = generatedContent.services.filter(
+const newServices = generatedContent.services.filter(;
 service => typeof service === "string" && service && !serviceTags.includes(service);
 );
 
@@ -637,8 +641,8 @@ setServiceTags([...serviceTags, ...newServices]);
 };
 
 // Handle form submission;
-const onSubmit = async (values: ServiceFormValues) => {
-if (serviceTags.length === 0) {
+const onSubmit = async (values: ServiceFormValues) => {;
+if (serviceTags.length === 0) {;
 toast({;
 title: "Services required";
 description: "Please add at least one service to your profile.";
@@ -650,6 +654,7 @@ return;
 setIsSubmitting(true);
 
 try {
+  
 // For actual implementation with Supabase;
 if (!user?.id) {
 throw new Error("User not authenticated");
@@ -661,6 +666,7 @@ let finalServices = serviceTags;
 
 if (values.enhancedProfile && !generatedContent) {
 try {
+  
 const { data: aiData } = await supabase.functions.invoke("service-profile-enhancer", {
 body: {
 providerData: {
@@ -729,6 +735,7 @@ if (serviceError) throw serviceError;
 // Send notification email if available;
 if (userEmail && values.enhancedProfile) {
 try {
+  
 await supabase.functions.invoke("send-email", {
 body: {
 to: userEmail;
@@ -778,6 +785,7 @@ description: error.message || "There was an error creating your profile. Please 
 variant: "destructive";
 });
 } finally {
+  
 setIsSubmitting(false);
 }
 };
@@ -1220,30 +1228,35 @@ disabled={isSubmitting}
   toast ({
   return}setIsSubmitting (true)
 try {
+  
   //For actual implementation with Supabase if (!user?.id) {
 }//Enhance profile if not already done let finalSummary = values.bio,
 let finalServices = serviceTags,
 try {
+  
   const {
+  
   data: aiData '
 }= await supabase.functions.invoke ('service-profile-enhancer', {body: {,
 providerData: {
   name: values.name title: values.title bio: values.bio  services: serviceTags location: values.location})
 //Create the service profile const {
+  
   data: profileData error '
 }= await supabase .from ('profiles') .eq ('id', user.id) .select ()
 if (error) throw error
 //Store service-specific data in service profiles table // (This assumes you have a service profiles table in your database) /* const {
+  
   error: serviceError '
 }= await supabase .from ('service profiles') if (serviceError) throw serviceError
 */ //Send notification email if available if (userEmail && values.enhancedProfile) {
-  try {'
-  await supabase.functions.invoke ('send-email', {
-  body: {'
+  try {';
+  await supabase.functions.invoke ('send-email', {;
+  body: {';
   <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px padding-top: 20px border-top: 1px solid #eee, "> <p style="color: #666  font-size: 12px; ">© $ {
   new Date () .getFullYear ()
 }Zion Marketplace</p>
-}//Continue with submission even if email fails,
+}//Continue with submission even if email fails
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard')
 }, 1500)
@@ -1253,6 +1266,7 @@ if (error) throw error
 })
 toast ({
 }finally {
+  
   setIsSubmitting (false)
 };"
 max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className=" text-2xl text-white">Create Your Service Provider Profile</CardTitle> <CardDescription className=" text-zion-slate"> Showcase your services and expertise to potential clients. </CardDescription> </CardHeader> <FormItem> <FormLabel className=" text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className=" relative"> <UserRound className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "

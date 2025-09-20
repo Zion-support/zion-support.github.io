@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface InnovativeNewService {
+  
 id: string;
 title: string;
 description: string;

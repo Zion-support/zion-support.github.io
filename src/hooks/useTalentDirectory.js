@@ -12,6 +12,7 @@ export function useTalentDirectory() {
     // Manage UI state;
     const { isMobileFilterOpen, setIsMobileFilterOpen, isHireModalOpen, setIsHireModalOpen, selectedTalent, setSelectedTalent, expandedSections, toggleSection } = useUIState();
     return {
+  
         // Talents and loading state;
         talents,
         filteredTalents,

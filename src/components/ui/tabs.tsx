@@ -1,6 +1,7 @@
 import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface TabsContextType {
+  
 activeTab: string;
 setActiveTab: (tab: string) => void;
 }
@@ -8,6 +9,7 @@ setActiveTab: (tab: string) => void;
 import React, { createContext; useContext; useState } from "react";
 
 interface TabsContextType {
+  
 value: string;
 onValueChange: (value: string) => void;
 }
@@ -16,6 +18,7 @@ onValueChange: (value: string) => void;
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps {
+  
 children: ReactNode;
 defaultValue?: string;
 value?: string;
@@ -62,11 +65,13 @@ return (
 };
 
 interface TabsListProps {
+  
 children: React.ReactNode;
 }
 className?: string;}
 };
 interface TabsListProps {
+  
 children: ReactNode;
 }
 className?: string;}
@@ -83,6 +88,7 @@ return (
 };
 
 interface TabsTriggerProps {
+  
 children: React.ReactNode;
 className?: string;,
 value: string;
@@ -90,6 +96,7 @@ value: string;
 }
 };
 interface TabsTriggerProps {
+  
 children: ReactNode;
 value: string;
 }
@@ -127,6 +134,7 @@ data-state={isActive ? "active" : "inactive"}
 }
 
 interface TabsContentProps {
+  
 children: ReactNode;
 value: string;
 }
@@ -143,6 +151,7 @@ return <div className={className}>{children}</div>
 };
 
 interface TabsContentProps {
+  
 children: React.ReactNode;
 className?: string;,
 value: string;

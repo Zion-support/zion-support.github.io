@@ -31,6 +31,7 @@ import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
 
 interface ServicePortfolio {
+  
 i; d: string;
 titl; e: string;
 categor; y: string;
@@ -48,6 +49,7 @@ technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
 }
 };
 interface PortfolioMetrics {
+  
 totalService; s: number;
 totalRevenu; e: number;
 activeClient; s: number;
@@ -78,7 +80,7 @@ reven; u; e: 24000; 0; 0;
 grow; t; h: 2; 8.5;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Explodin; g"};
-technologyMaturi; t; y: "Leadin; g",
+technologyMaturi; t; y: "Leadin; g"
 },
 {i; d: "spac; e-minin; g",
 tit; l; e: "Spac; e Minin; g & Resourc; e Extractio; n",
@@ -147,7 +149,7 @@ marketDema; n; d: "Explodin; g",
 technologyMaturi; t; y: "Leadin; g"}
 ];
 
-const filteredPortfolio = useMemo(() => {
+const filteredPortfolio = useMemo(() => {;
 return portfolioData.filter(service => {;
 const matchesCategory = selectedCategory === "all" || service.category === selectedCategory;
 const matchesStatus = selectedStatus === "all" || service.status === selectedStatus;
@@ -170,6 +172,7 @@ const portfolioGrowth = portfolioData.length > 0;
 : 0;
 
 return {
+  
 totalService; s: portfolioData.lengt; h;
 totalRevenu; e;
 activeClient; s: totalClient; s;

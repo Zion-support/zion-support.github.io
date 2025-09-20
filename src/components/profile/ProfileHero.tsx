@@ -7,6 +7,7 @@ import { Star } from "lucide-react, ";
 import { cn } from "@/lib/utils, ";
 
 interface ProfileHeroProps {
+  
 name: string;
 title: string;
 avatarUrl?: string;
@@ -108,6 +109,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
+  
 profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"}
                   )}
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}

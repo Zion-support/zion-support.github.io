@@ -24,6 +24,7 @@ data: T[];
 options: SearchOptions<T>;
 ) => {
 const {
+  
 searchFields;
 debounceMs = 300;
 fuzzySearch = true;
@@ -121,6 +122,7 @@ comparison = aValue.localeCompare(bValue);
 } else if (typeof aValue === "number" && typeof bValue === "number") {
 comparison = aValue - bValue;
 } else {
+  
 comparison = String(aValue).localeCompare(String(bValue));
 }
 
@@ -163,13 +165,13 @@ sortOrder: order;
 }, []);
 
 // Clear search;
-const clearSearch = useCallback(() => {
+const clearSearch = useCallback(() => {;
 setSearchState(prev => ({;
 ...prev;
 query: "";
 filters: {};
 sortBy: null;
-sortOrder: "asc",
+sortOrder: "asc"
 }));
 }, []);
 
@@ -209,6 +211,7 @@ hasPrevPage: page > 1;
 }, [searchState.results; searchState.totalResults]);
 
 return {
+  
 ...searchState;
 setQuery;
 setFilter;

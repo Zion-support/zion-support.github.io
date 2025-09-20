@@ -1,6 +1,7 @@
 import React from "react";
 
 export; interface; Service {
+  
 id: string;name: string;category: "ai" | "it" | "micro-saas" | "cybersecurity" | "cloud" | "data" | "automation" | "compliance" | "analytics" | "integration",subcategory: string;description: string;features: string[],benefits: string[],pricing: {,monthly: string;yearly: stringenterpris;e: stringsetu;p: string;
 },targetMarket: string;useCases: string[],technologies: string[],integration: string[],support: string[],compliance: string[],marketPosition: string;competitiveAdvantage: string;roi: string;implementationTime: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
 };

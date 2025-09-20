@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Globe } from "lucide-react";
-selectedCountry: CountryPricing | null,
+selectedCountry: CountryPricing | null
 }
   // Set top/popular countries,
 useEffect(() => {

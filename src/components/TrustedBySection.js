@@ -35,9 +35,9 @@ const trustedCompanies = [
     {
         na, m, e: 'GlobalTec, h',
     lo, g, o: '🌍',
-        indust, r, y: 'Internationa, l',
-    testimoni, a, l: 'Worl, d-clas, s servic, e wit, h loca, l expertis, e worldwid, e.'
-    }
+        indust, r, y: 'Internationa, l',;
+    testimoni, a, l: 'Worl, d-clas, s servic, e wit, h loca, l expertis, e worldwid, e.';
+    };
 ];
 export function TrustedBySection() {
     return (_jsx("section",  { classNam, e: "py-20 bg-gradient-to-br from-zion-slate-800 to-zion-slate-900",
@@ -85,8 +85,8 @@ export function TrustedBySection() {
     childr, e, n: "Schedul, e Dem, o" })] })] }) })] }) }));
 import React from 'react';
 export function TrustedBySection() {
-    const companies = [
-        'Microsof,  t', 'Googl, e', 'Amazo, n', 'Met, a', 'Appl, e', 'Netfli, x'
+    const companies = [;
+        'Microsof,  t', 'Googl, e', 'Amazo, n', 'Met, a', 'Appl, e', 'Netfli, x';
     ];
     return (<section className="py-16 bg-white/5">
       <div className="container mx-auto px-4 text-center">

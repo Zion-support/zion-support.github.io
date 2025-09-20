@@ -1,4 +1,5 @@
 interface Service {
+  
 id: string;
 name: string;
 }
@@ -26,6 +27,7 @@ import { useAuth } from "@/context/auth/AuthProvider";,
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
+  
 if (firstError) {
             form.setFocus(firstError)
           }        })}
@@ -172,17 +174,19 @@ href='/signup'
     </Form>
   )
 }else {
+  
   fireEvent ('login', {'
   method: 'email'
 })
 }finally {
+  
   setIsSubmitting (false)
 }
-const handleResendEmail = async () => {'
-  const email = form.getValues ('email')
-if (!email) {'
-  form.setError ('root', {'
-  message: 'Please enter your email address.'
+const handleResendEmail = async () => {';
+  const email = form.getValues ('email');
+if (!email) {';
+  form.setError ('root', {';
+  message: 'Please enter your email address.';
 });
 return,;
 }setIsResending (true);'
@@ -203,6 +207,7 @@ if (response.ok) {'
 }catch (err) {'
   setVerificationMessage ('Failed to resend verification email.')
 }finally {
+  
   setIsResending (false)
 }
 const handleCheckStatus = () => {'
@@ -211,7 +216,7 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-return,
+return
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -226,5 +231,6 @@ return,
 }/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {verificationMessage}</p>) "
 }<div className=" flex justify-between mt-4" > <Button > {'
   isResending ? 'Sending...': 'Resend / Verify e-mail'
-}</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
-}'"}
+}</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
+}'"};
+;

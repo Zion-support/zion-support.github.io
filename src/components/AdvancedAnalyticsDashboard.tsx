@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnalyticsData {
+  
 visitors: number;
 pageViews: number;
 conversionRate: number;

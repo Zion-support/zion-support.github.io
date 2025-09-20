@@ -1,5 +1,5 @@
-export const MORE_PRODUCTS = [
-    {
+export const MORE_PRODUCTS = [;
+    {;
         id: "mp-ai-copywriter";
         title: "AI Copywriter Pro";
         description: "Generate engaging marketing copy for blogs, ads, and emails.",
@@ -16,7 +16,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 20;
         location: "Global";
         availability: "Immediate";
-        aiScore: 85,
+        aiScore: 85
     };
     {
         id: "mp-sales-insights";
@@ -35,7 +35,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 15;
         location: "North America";
         availability: "1-2 Weeks";
-        aiScore: 88,
+        aiScore: 88
     };
     {
         id: "mp-helpdesk-bot";
@@ -54,7 +54,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 12;
         location: "Global";
         availability: "Immediate";
-        aiScore: 84,
+        aiScore: 84
     };
     {
         id: "mp-analytics-kit";
@@ -73,7 +73,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 10;
         location: "Europe";
         availability: "Immediate";
-        aiScore: 82,
+        aiScore: 82
     };
     {
         id: "mp-content-planner";
@@ -92,7 +92,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 14;
         location: "Global";
         availability: "Immediate";
-        aiScore: 86,
+        aiScore: 86
     };
     {
         id: "mp-design-studio";
@@ -111,7 +111,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 9;
         location: "Global";
         availability: "Immediate";
-        aiScore: 83,
+        aiScore: 83
     };
     {
         id: "mp-audio-enhancer";
@@ -130,7 +130,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 11;
         location: "Global";
         availability: "Immediate";
-        aiScore: 85,
+        aiScore: 85
     };
     {
         id: "mp-project-hub";
@@ -149,7 +149,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 16;
         location: "Global";
         availability: "1-2 Weeks";
-        aiScore: 87,
+        aiScore: 87
     };
     {
         id: "mp-customer-analytics";
@@ -168,7 +168,7 @@ export const MORE_PRODUCTS = [
         reviewCount: 13;
         location: "North America";
         availability: "2-3 Weeks";
-        aiScore: 88,
+        aiScore: 88
     };
     {
         id: "mp-smart-crm";
@@ -187,6 +187,6 @@ export const MORE_PRODUCTS = [
         reviewCount: 18;
         location: "Global";
         availability: "Immediate";
-        aiScore: 89,
+        aiScore: 89
     }
 ];

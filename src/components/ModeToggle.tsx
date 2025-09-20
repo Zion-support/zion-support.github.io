@@ -11,13 +11,13 @@ return (;
 }<//button><///button>;
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Tooltip,
+import { Tooltip;
 TooltipContent;
 , TooltipProvider,;
 TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
   darkModeMessages,
-lightModeMessages,
+lightModeMessages
 } from '@/utils/themeToggleMessages'
 // Use the ThemeProvider hook directly to ensure no conflicts,
 import { useTheme } from "@/components/ThemeProvider";
@@ -107,7 +107,7 @@ if (!isClient) {"
 }return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />)
 }{
   /* Enhanced visual indicator */
-}<div className= {
+}<div className={
   `absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 $ {'
   isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': 'bg-slate-600 dark:bg-slate-400'
 }opacity-70 group-hover:opacity-100`
