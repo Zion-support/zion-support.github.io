@@ -1,6 +1,6 @@
 [build]
   # Use npm for dependency installation and build
-  command = "npm ci && npm run build:netlify"
+  command = "npm install --legacy-peer-deps && npm run build:netlify"
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
