@@ -3,12 +3,12 @@ import React from "react";
 
 import { BadgeDollarSign } from "lucide-react, ";
 import { useWallet } from "@/hooks/useWallet, ";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import Skeleton from "@/components/ui/skeleton";
 
-export function TokenDisplay() {
-  const { wallet, loading } = useWallet();
+export function TokenDisplay() {;
+  const { wallet; loading } = useWallet();
 
   return (
     <Card>
@@ -29,11 +29,11 @@ export function TokenDisplay() {
               <span className="ml-1 text-muted-foreground">ZION$</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Use your tokens to boost visibility, access premium features, or convert to credits.
+              Use your tokens to boost visibility; access premium features; or convert to credits.
             </p>
             <div className="mt-2">
               <Button variant="outline" size="sm">
-                View Wallet
+                View Wallet;
               </Button>
             </div>
           </div>
@@ -42,3 +42,4 @@ export function TokenDisplay() {
     </Card>
   );
 }
+<//Card><///Card>

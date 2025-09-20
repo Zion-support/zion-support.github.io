@@ -1,7 +1,7 @@
-import React from 'react,,
+import React from "react,,
     ,
-import { SEO  } from '@/components/SEO',
-export default function ModernUIEnhancer(props: any) {return (;
+import { SEO  } from "@/components/SEO",
+export default function ModernUIEnhancer(props: any) {return (,
         <div className="min-h-screen bg-white">,
       <SEO title="ModernUIEnhancer - Zion Tech Group" description="Professional ModernUIEnhancer services by Zion Tech Group"  />,
       <div className="container mx-auto px-4 py-20">,
@@ -9,7 +9,7 @@ export default function ModernUIEnhancer(props: any) {return (;
         <p className="text-gray-300 text-lg">,
           Professional ModernUIEnhancer services to help your business grow.,
         </p>,
-      </div>',
-    </div>,
-  ),,',
-"}, ";
+      </div>",
+    </div>,;
+  ),,',;
+"}, ";<//div><///div>

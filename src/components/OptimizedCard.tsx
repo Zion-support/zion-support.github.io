@@ -1,15 +1,13 @@
-import React from 'react;';
+import React from "react;";
 
 interface CardProps {
-  title: string;
-    children: React.ReactNode;
-    className?: string;
-}
-
-export const OptimizedCard = React.memo<CardProps>(({ 
-  title, 
-  children, 
-  className = '' 
+  title: string; children: React.ReactNode;
+    className?: string,
+};
+export const OptimizedCard = React.memo<CardProps>(({ ;
+  title; 
+  children; 
+  className = "" 
 }) => {
   return (
     <div className={`card ${className}`}>
@@ -21,4 +19,5 @@ export const OptimizedCard = React.memo<CardProps>(({
   );
 });
 
-OptimizedCard.displayName = 'OptimizedCard';
+OptimizedCard.displayName = "OptimizedCard";
+<//div><///div>

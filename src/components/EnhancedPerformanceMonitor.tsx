@@ -1,4 +1,4 @@
-import React from 'react;';
+import React from "react;";
 
 const EnhancedPerformanceMonitor: React.FC = () => {
   return (
@@ -8,4 +8,4 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   );
 };
 
-export default EnhancedPerformanceMonitor;
+export default EnhancedPerformanceMonitor;<//div><///div>

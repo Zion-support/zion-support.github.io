@@ -16,7 +16,7 @@ export interface CuttingEdgeService {
     phone: string;
     email: string;
     website: string;
-    address: string;
+    address: string;,
      };
   marketPrice: string;
     competitors: string[];
@@ -27,11 +27,11 @@ export interface CuttingEdgeService {
     trialPeriod: string;
     technology: string[];
     compliance: string[];
-    useCases: string[];
+    useCases: string[];,
 }
 
 export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
-  // AI-Powered Micro SAAS Services
+  // AI-Powered Micro SAAS Services;
   {
     id: 1;
     name: "QuantumAI Studio";
@@ -66,7 +66,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantumai-studio";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$299-999/month";
     competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
@@ -84,7 +84,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     name: "NeuroSync Platform";
     category: "AI Services";
     subcategory: "Neural Networks";
-    description: "Advanced neural network architecture platform with automated model design, training, and deployment for enterprise AI applications",
+    description: "Advanced neural network architecture platform with automated model design; training; and deployment for enterprise AI applications",
     pricing: "Tiered";
     price: 199;
     pricingModel: "monthly";
@@ -113,7 +113,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/neurosync-platform";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$199-599/month";
     competitors: ["Weights & Biases", "MLflow", "Neptune.ai"],
@@ -131,7 +131,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     name: "EdgeAI Orchestrator";
     category: "AI Services";
     subcategory: "Edge Computing";
-    description: "Intelligent edge AI deployment and management platform for IoT devices, enabling real-time AI inference at the network edge",
+    description: "Intelligent edge AI deployment and management platform for IoT devices; enabling real-time AI inference at the network edge",
     pricing: "Usage-based";
     price: 0.05;
     pricingModel: "per inference";
@@ -160,7 +160,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/edgeai-orchestrator";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$0.05-0.15 per inference";
     competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Edge TPU"],
@@ -174,13 +174,13 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     useCases: ["Predictive maintenance", "Quality control", "Traffic management", "Health monitoring"]
   },
 
-  // Advanced IT Infrastructure Services
+  // Advanced IT Infrastructure Services;
   {
     id: 4;
     name: "ZeroTrust Network Fabric";
     category: "IT Infrastructure";
     subcategory: "Cybersecurity";
-    description: "Next-generation zero-trust network architecture with AI-powered threat detection, micro-segmentation, and automated security response",
+    description: "Next-generation zero-trust network architecture with AI-powered threat detection; micro-segmentation; and automated security response",
     pricing: "Enterprise";
     price: 599;
     pricingModel: "monthly";
@@ -209,7 +209,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/zerotrust-network-fabric";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$599-1999/month";
     competitors: ["Cisco Zero Trust", "Palo Alto Networks", "Fortinet"],
@@ -256,7 +256,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantumcloud-platform";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$399-1299/month";
     competitors: ["IBM Cloud", "AWS Braket", "Azure Quantum"],
@@ -270,13 +270,13 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     useCases: ["Financial modeling", "Drug discovery", "Logistics optimization", "Climate research"]
   },
 
-  // Emerging Technology Services
+  // Emerging Technology Services;
   {
     id: 6;
     name: "Metaverse Development Studio";
     category: "Emerging Tech";
     subcategory: "Metaverse";
-    description: "Complete metaverse development platform with 3D world creation, avatar customization, and virtual reality integration for businesses and creators",
+    description: "Complete metaverse development platform with 3D world creation; avatar customization; and virtual reality integration for businesses and creators",
     pricing: "Freemium";
     price: 89;
     pricingModel: "monthly";
@@ -305,7 +305,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/metaverse-development-studio";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$89-299/month";
     competitors: ["Roblox Studio", "Unity", "Unreal Engine"],
@@ -323,7 +323,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     name: "Blockchain Enterprise Suite";
     category: "Emerging Tech";
     subcategory: "Blockchain";
-    description: "Enterprise-grade blockchain platform with smart contract automation, DeFi integration, and regulatory compliance for financial services and supply chain",
+    description: "Enterprise-grade blockchain platform with smart contract automation; DeFi integration; and regulatory compliance for financial services and supply chain",
     pricing: "Enterprise";
     price: 799;
     pricingModel: "monthly";
@@ -352,7 +352,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/blockchain-enterprise-suite";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$799-2499/month";
     competitors: ["IBM Blockchain", "ConsenSys", "R3 Corda"],
@@ -366,13 +366,13 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     useCases: ["Supply chain tracking", "Digital identity", "Cross-border payments", "Asset tokenization"]
   },
 
-  // Advanced AI Automation Services
+  // Advanced AI Automation Services;
   {
     id: 8;
     name: "HyperAutomation Hub";
     category: "AI Services";
     subcategory: "Automation";
-    description: "Comprehensive hyperautomation platform combining RPA, AI, and process mining to automate complex business processes end-to-end",
+    description: "Comprehensive hyperautomation platform combining RPA; AI; and process mining to automate complex business processes end-to-end",
     pricing: "Tiered";
     price: 299;
     pricingModel: "monthly";
@@ -401,7 +401,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/hyperautomation-hub";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$299-899/month";
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
@@ -419,7 +419,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     name: "AI Ethics & Governance Platform";
     category: "AI Services";
     subcategory: "Ethics & Compliance";
-    description: "Comprehensive AI ethics and governance platform ensuring responsible AI development, deployment, and monitoring with bias detection and fairness metrics",
+    description: "Comprehensive AI ethics and governance platform ensuring responsible AI development; deployment; and monitoring with bias detection and fairness metrics",
     pricing: "Enterprise";
     price: 449;
     pricingModel: "monthly";
@@ -448,7 +448,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-ethics-governance";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$449-1499/month";
     competitors: ["Fiddler AI", "Weights & Biases", "Arize AI"],
@@ -462,13 +462,13 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     useCases: ["Credit scoring", "Hiring decisions", "Medical diagnosis", "Criminal justice"]
   },
 
-  // Specialized Industry Solutions
+  // Specialized Industry Solutions;
   {
     id: 10;
     name: "SmartCity IoT Platform";
     category: "Industry Solutions";
     subcategory: "Smart Cities";
-    description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated infrastructure control",
+    description: "Comprehensive IoT platform for smart city management with real-time monitoring; predictive analytics; and automated infrastructure control",
     pricing: "Municipal";
     price: 1299;
     pricingModel: "monthly";
@@ -497,7 +497,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/smartcity-iot-platform";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$1299-4999/month";
     competitors: ["Cisco Smart Cities", "Siemens", "Schneider Electric"],
@@ -512,7 +512,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
   }
 ];
 
-// Utility functions for service management
+// Utility functions for service management;
 export const getServicesByCategory = (category: string): CuttingEdgeService[] => {
   return cuttingEdgeInnovations2025.filter(service => service.category === category);
 };
@@ -521,12 +521,12 @@ export const getServicesBySubcategory = (subcategory: string): CuttingEdgeServic
   return cuttingEdgeInnovations2025.filter(service => service.subcategory === subcategory);
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number): CuttingEdgeService[] => {
+export const getServicesByPriceRange = (minPrice: number; maxPrice: number): CuttingEdgeService[] => {
   return cuttingEdgeInnovations2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
 
 export const getPopularServices = (limit: number = 6): CuttingEdgeService[] => {
-  return cuttingEdgeInnovations2025.slice(0, limit);
+  return cuttingEdgeInnovations2025.slice(0; limit);
 };
 
 export const getServicesByTechnology = (technology: string): CuttingEdgeService[] => {

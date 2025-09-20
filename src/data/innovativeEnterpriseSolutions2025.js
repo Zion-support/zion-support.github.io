@@ -1,5 +1,5 @@
 export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
-    // Autonomous Digital Transformation Platform
+    // Autonomous Digital Transformation Platform;
     {
         id: "autonomous-digital-transformation-platform-2025";
         title: "Autonomous Digital Transformation Platform 2025";
@@ -52,7 +52,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/autonomous-digital-transformation-platform-2025";
         technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Analytics", "Integration Platforms"],
@@ -62,7 +62,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         competitiveAdvantages: ["Fully autonomous operation", "AI-powered optimization", "Comprehensive transformation", "Minimal business disruption"],
         industryApplications: ["Manufacturing", "Healthcare", "Financial Services", "Retail", "Government", "Energy"]
     },
-    // Quantum-Enhanced Data Analytics Platform
+    // Quantum-Enhanced Data Analytics Platform;
     {
         id: "quantum-enhanced-data-analytics-2025";
         title: "Quantum-Enhanced Data Analytics Platform 2025";
@@ -115,7 +115,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/quantum-enhanced-data-analytics-2025";
         technologyStack: ["Quantum Computing", "Advanced Analytics", "Machine Learning", "Big Data", "Cloud Computing"],
@@ -125,7 +125,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         competitiveAdvantages: ["Quantum computing advantage", "Unlimited data processing", "Real-time analytics", "Future-proof technology"],
         industryApplications: ["Financial Services", "Healthcare", "Research", "Manufacturing", "Energy", "Transportation"]
     },
-    // AI-Powered Autonomous IT Infrastructure Management
+    // AI-Powered Autonomous IT Infrastructure Management;
     {
         id: "ai-autonomous-it-infrastructure-management-2025";
         title: "AI Autonomous IT Infrastructure Management Platform 2025";
@@ -178,7 +178,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-it-infrastructure-management-2025";
         technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Monitoring Tools", "Integration Platforms"],
@@ -188,7 +188,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         competitiveAdvantages: ["Fully autonomous operation", "AI-powered optimization", "Multi-cloud support", "24/7 monitoring"],
         industryApplications: ["Technology", "Financial Services", "Healthcare", "Manufacturing", "Government", "Retail"]
     },
-    // Blockchain-Based Digital Identity Management
+    // Blockchain-Based Digital Identity Management;
     {
         id: "blockchain-digital-identity-management-2025";
         title: "Blockchain-Based Digital Identity Management Platform 2025";
@@ -241,7 +241,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/blockchain-digital-identity-management-2025";
         technologyStack: ["Blockchain", "Cryptography", "Zero-Knowledge Proofs", "Mobile Apps", "Web Applications"],
@@ -251,7 +251,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         competitiveAdvantages: ["Blockchain-based security", "Self-sovereign identity", "Privacy-preserving", "Decentralized architecture"],
         industryApplications: ["Financial Services", "Healthcare", "Government", "E-commerce", "Education", "Technology"]
     },
-    // AI-Powered Autonomous Research and Development Platform
+    // AI-Powered Autonomous Research and Development Platform;
     {
         id: "ai-autonomous-research-development-platform-2025";
         title: "AI Autonomous Research and Development Platform 2025";
@@ -304,7 +304,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-research-development-platform-2025";
         technologyStack: ["AI/ML", "Research Tools", "Data Analytics", "Cloud Computing", "Collaboration Platforms"],
@@ -314,7 +314,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         competitiveAdvantages: ["Fully autonomous research", "AI-powered analysis", "24/7 operation", "Interdisciplinary collaboration"],
         industryApplications: ["Academic Research", "Pharmaceutical", "Technology", "Government", "Industrial", "Healthcare"]
     },
-    // Quantum-Enhanced Machine Learning Platform
+    // Quantum-Enhanced Machine Learning Platform;
     {
         id: "quantum-enhanced-machine-learning-2025";
         title: "Quantum-Enhanced Machine Learning Platform 2025";
@@ -367,7 +367,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/quantum-enhanced-machine-learning-2025";
         technologyStack: ["Quantum Computing", "Machine Learning", "AI Frameworks", "Cloud Computing", "Advanced Algorithms"],
@@ -377,7 +377,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         competitiveAdvantages: ["Quantum computing advantage", "Unlimited data processing", "Advanced algorithms", "Future-proof technology"],
         industryApplications: ["Technology", "Financial Services", "Healthcare", "Research", "Manufacturing", "Transportation"]
     },
-    // Autonomous Edge Computing Platform
+    // Autonomous Edge Computing Platform;
     {
         id: "autonomous-edge-computing-platform-2025";
         title: "Autonomous Edge Computing Platform 2025";
@@ -430,7 +430,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/autonomous-edge-computing-platform-2025";
         technologyStack: ["Edge Computing", "IoT", "AI/ML", "Cloud Computing", "Distributed Systems"],
@@ -440,7 +440,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         competitiveAdvantages: ["Autonomous edge management", "Real-time processing", "Scalable infrastructure", "Advanced edge AI"],
         industryApplications: ["IoT", "Telecommunications", "Industrial", "Content Delivery", "Mobile", "Automotive"]
     },
-    // AI-Powered Autonomous Compliance Management
+    // AI-Powered Autonomous Compliance Management;
     {
         id: "ai-autonomous-compliance-management-2025";
         title: "AI Autonomous Compliance Management Platform 2025";
@@ -493,7 +493,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-compliance-management-2025";
         technologyStack: ["AI/ML", "Compliance Tools", "Analytics", "Cloud Computing", "Integration Platforms"],

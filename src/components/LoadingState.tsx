@@ -1,32 +1,33 @@
 
-import React from 'react;';
-import { motion } from 'framer-motion, ';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 interface LoadingStateProps {
   type?: 'spinner' | 'skeleton' | 'pulse' | 'dots';
   size?: 'sm' | 'md' | 'lg';
   color?: string;
   text?: string;
-}
-
+};
 export const LoadingState: React.FC<LoadingStateProps> = ({
-  type = 'spinner';
+  type = 'spinner',
   size = 'md',
   color = 'blue',
   text
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4';
-    md: 'w-8 h-8';
-    lg: 'w-12 h-12'
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',;
+    lg: 'w-12 h-12';,
   };
-    const colorClasses = {
-    blue: 'border-blue-500';
-    green: 'border-green-500';
-    purple: 'border-purple-500';
-    red: 'border-red-500'
+
+  const colorClasses = {
+    blue: 'border-blue-500',
+    green: 'border-green-500',
+    purple: 'border-purple-500',
+    red: 'border-red-500',
   };
-    const renderLoading = () => {
+
+  const renderLoading = () => {
     switch (type) {
       case 'spinner':
         return (
@@ -36,7 +37,8 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           />
         );
-    case 'skeleton':
+      
+      case 'skeleton':
         return (
           <div className="animate-pulse">
             <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
@@ -52,7 +54,8 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             transition={{ duration: 1, repeat: Infinity }}
           />
         );
-    case 'dots':
+      
+      case 'dots':
         return (
           <div className="flex space-x-1">
             {[0, 1, 2].map((i) => (
@@ -61,16 +64,17 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
                 className={\`w-2 h-2 bg-${color}-500 rounded-full\`}
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{
-                  duration: 0.6;
-                  repeat: Infinity;
-                  delay: i * 0.2
+                  duration: 0.6,
+                  repeat: Infinity,
+                  delay: i * 0.2,
                 }}
               />
             ))}
           </div>
         );
-    default: return null;
-     }
+      
+      default: return null;,
+    }
   };
 
   return (
@@ -90,3 +94,4 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
 };
 
 export default LoadingState;
+<//div><///div>

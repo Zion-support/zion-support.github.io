@@ -23,7 +23,7 @@ export interface SpecializedITInfrastructureService2025 {
     phone: string;
     email: string;
     website: string;
-    address: string;
+    address: string;,
      };
   demoUrl?: string;
   documentationUrl?: string;
@@ -31,17 +31,17 @@ export interface SpecializedITInfrastructureService2025 {
     freeTrialDays: number;
     uniqueValueProposition: string;
     marketSize: string;
-    growthPotential: string;
+    growthPotential: string;,
 }
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
-  // AI-Powered Edge Computing Platform
+  // AI-Powered Edge Computing Platform;
   {
     id: "edge-computing-ai-platform";
     name: "EdgeAI Computing Platform";
     category: "Edge Computing";
     subcategory: "AI-Powered Infrastructure";
-    description: "Revolutionary AI-powered edge computing platform that brings machine learning capabilities to edge devices, enabling real-time processing, reduced latency, and improved performance for IoT and mobile applications.",
+    description: "Revolutionary AI-powered edge computing platform that brings machine learning capabilities to edge devices; enabling real-time processing; reduced latency; and improved performance for IoT and mobile applications.",
     price: 1800;
     pricingModel: "monthly";
     userLimit: "Up to 1000 edge nodes";
@@ -70,7 +70,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       "Retail chains"
     ],
     tags: ["Edge Computing", "AI", "IoT", "Machine Learning", "Real-time Processing"],
-    marketPrice: "$1,800 - $6,000/month",
+    marketPrice: "$1;800 - $6;000/month",
     roi: "450% within 8 months";
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
     technology: ["TensorFlow Lite", "PyTorch Mobile", "Kubernetes", "Docker", "React", "Python"],
@@ -82,7 +82,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     demoUrl: "https://ziontechgroup.com/demo/edge-computing-ai";
     documentationUrl: "https://ziontechgroup.com/docs/edge-computing-ai";
@@ -90,15 +90,15 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     freeTrialDays: 14;
     uniqueValueProposition: "First AI-powered edge computing platform achieving 80% latency reduction and 200% performance improvement";
     marketSize: "$8.6 billion (edge computing market)";
-    growthPotential: "400% annual growth expected"
+    growthPotential: "400% annual growth expected",
   };
-  // AI-Powered Zero Trust Security Platform
+  // AI-Powered Zero Trust Security Platform;
   {
     id: "zero-trust-security-ai";
     name: "ZeroTrust AI Security Platform";
     category: "Cybersecurity";
     subcategory: "Zero Trust Architecture";
-    description: "Advanced AI-powered zero trust security platform that continuously monitors, authenticates, and authorizes every user and device in real-time, providing enterprise-grade security for modern hybrid work environments.",
+    description: "Advanced AI-powered zero trust security platform that continuously monitors; authenticates; and authorizes every user and device in real-time; providing enterprise-grade security for modern hybrid work environments.",
     price: 2500;
     pricingModel: "monthly";
     userLimit: "Up to 5000 users";
@@ -127,7 +127,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       "Educational institutions"
     ],
     tags: ["Cybersecurity", "Zero Trust", "AI", "Identity Management", "Network Security"],
-    marketPrice: "$2,500 - $10,000/month",
+    marketPrice: "$2;500 - $10;000/month",
     roi: "600% within 10 months";
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
     technology: ["TensorFlow", "Machine Learning", "React", "Python", "Kubernetes", "Docker"],
@@ -139,7 +139,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     demoUrl: "https://ziontechgroup.com/demo/zero-trust-security";
     documentationUrl: "https://ziontechgroup.com/docs/zero-trust-security";
@@ -147,15 +147,15 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     freeTrialDays: 14;
     uniqueValueProposition: "First AI-powered zero trust platform achieving 90% security incident reduction";
     marketSize: "$19.6 billion (zero trust security market)";
-    growthPotential: "500% annual growth expected"
+    growthPotential: "500% annual growth expected",
   };
-  // AI-Powered Hybrid Cloud Management Platform
+  // AI-Powered Hybrid Cloud Management Platform;
   {
     id: "hybrid-cloud-management-ai";
     name: "HybridCloud AI Management";
     category: "Cloud Management";
     subcategory: "Hybrid Cloud";
-    description: "Intelligent AI-powered hybrid cloud management platform that optimizes workloads across multiple cloud providers, on-premises infrastructure, and edge locations for maximum performance and cost efficiency.",
+    description: "Intelligent AI-powered hybrid cloud management platform that optimizes workloads across multiple cloud providers; on-premises infrastructure; and edge locations for maximum performance and cost efficiency.",
     price: 2200;
     pricingModel: "monthly";
     userLimit: "Up to 2000 workloads";
@@ -184,7 +184,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       "Financial institutions"
     ],
     tags: ["Cloud Management", "Hybrid Cloud", "AI", "Multi-cloud", "DevOps"],
-    marketPrice: "$2,200 - $8,000/month",
+    marketPrice: "$2;200 - $8;000/month",
     roi: "500% within 9 months";
     competitors: ["VMware", "Red Hat", "HashiCorp", "Terraform", "Ansible"],
     technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "React", "Python"],
@@ -196,7 +196,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     demoUrl: "https://ziontechgroup.com/demo/hybrid-cloud-management";
     documentationUrl: "https://ziontechgroup.com/docs/hybrid-cloud-management";
@@ -204,15 +204,15 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     freeTrialDays: 14;
     uniqueValueProposition: "First AI-powered hybrid cloud management platform achieving 35% cost reduction and 40% performance improvement";
     marketSize: "$12.3 billion (hybrid cloud market)";
-    growthPotential: "450% annual growth expected"
+    growthPotential: "450% annual growth expected",
   };
-  // AI-Powered Data Center Automation Platform
+  // AI-Powered Data Center Automation Platform;
   {
     id: "data-center-automation-ai";
     name: "DataCenter AI Automation";
     category: "Data Center";
     subcategory: "Automation & AI";
-    description: "Next-generation AI-powered data center automation platform that optimizes operations, reduces energy consumption, and ensures maximum uptime through intelligent monitoring and predictive maintenance.",
+    description: "Next-generation AI-powered data center automation platform that optimizes operations; reduces energy consumption; and ensures maximum uptime through intelligent monitoring and predictive maintenance.",
     price: 3000;
     pricingModel: "monthly";
     userLimit: "Up to 100 data centers";
@@ -241,7 +241,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       "Government agencies"
     ],
     tags: ["Data Center", "Automation", "AI", "Energy Management", "Predictive Maintenance"],
-    marketPrice: "$3,000 - $15,000/month",
+    marketPrice: "$3;000 - $15;000/month",
     roi: "700% within 12 months";
     competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell"],
     technology: ["TensorFlow", "IoT sensors", "React", "Python", "Kubernetes", "Machine Learning"],
@@ -253,7 +253,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     demoUrl: "https://ziontechgroup.com/demo/data-center-automation";
     documentationUrl: "https://ziontechgroup.com/docs/data-center-automation";
@@ -261,15 +261,15 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     freeTrialDays: 7;
     uniqueValueProposition: "First AI-powered data center automation platform achieving 99.999% uptime and 30% energy cost reduction";
     marketSize: "$25.8 billion (data center automation market)";
-    growthPotential: "600% annual growth expected"
+    growthPotential: "600% annual growth expected",
   };
-  // AI-Powered Network Performance Optimization Platform
+  // AI-Powered Network Performance Optimization Platform;
   {
     id: "network-performance-optimization-ai";
     name: "NetworkAI Performance";
     category: "Network Management";
     subcategory: "Performance Optimization";
-    description: "Advanced AI-powered network performance optimization platform that continuously monitors, analyzes, and optimizes network performance in real-time, ensuring maximum efficiency and user experience.",
+    description: "Advanced AI-powered network performance optimization platform that continuously monitors; analyzes; and optimizes network performance in real-time; ensuring maximum efficiency and user experience.",
     price: 1900;
     pricingModel: "monthly";
     userLimit: "Up to 10000 network devices";
@@ -298,7 +298,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       "Government agencies"
     ],
     tags: ["Network Management", "Performance Optimization", "AI", "Monitoring", "Automation"],
-    marketPrice: "$1,900 - $7,000/month",
+    marketPrice: "$1;900 - $7;000/month",
     roi: "550% within 9 months";
     competitors: ["Cisco", "Juniper", "Aruba", "Extreme Networks", "Fortinet"],
     technology: ["TensorFlow", "Network protocols", "React", "Python", "SNMP", "NetFlow"],
@@ -310,7 +310,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     demoUrl: "https://ziontechgroup.com/demo/network-performance";
     documentationUrl: "https://ziontechgroup.com/docs/network-performance";
@@ -318,6 +318,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     freeTrialDays: 14;
     uniqueValueProposition: "First AI-powered network performance platform achieving 50% performance improvement and 80% downtime reduction";
     marketSize: "$15.7 billion (network management market)";
-    growthPotential: "500% annual growth expected"
+    growthPotential: "500% annual growth expected",
   }
 ];

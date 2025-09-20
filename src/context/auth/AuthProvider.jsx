@@ -13,7 +13,7 @@ import { toast } from "@/hooks/use-toast, ";
 import { useDispatch } from 'react-redux, ';
 import { addItem } from '@/store/cartSlice, ';
 
-export const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {;
   const { user, setUser, isLoading, setIsLoading, onboardingStep, setOnboardingStep, tokens, setTokens } = useAuthState();
   const navigate = useNavigate();
   const location = useLocation();
@@ -146,4 +146,4 @@ export const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
-};
+};<//AuthContext.Provider><///AuthContext.Provider>

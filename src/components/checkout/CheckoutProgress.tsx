@@ -1,12 +1,11 @@
-import React from 'react;';
-import { Steps, Step } from '@/components/ui/steps, ';
+import React from "react;";
+import { Steps; Step } from "@/components/ui/steps, ";
 
 interface CheckoutProgressProps {
   currentStep: number;
-    className?: string;
-}
-
-export default function CheckoutProgress({ currentStep, className }: CheckoutProgressProps) {
+    className?: string,
+};
+export default function CheckoutProgress({ currentStep; className }: CheckoutProgressProps) {
   return (
     <Steps currentStep={currentStep} className={className}>
       <Step status="incomplete" label="Shipping" />
@@ -15,3 +14,4 @@ export default function CheckoutProgress({ currentStep, className }: CheckoutPro
     </Steps>
   );
 }
+<//Steps><///Steps>

@@ -1,37 +1,37 @@
-import React, { useState } from 'react;';
-import { Link } from 'react-router-dom, ';
-import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react, ';
-import { Button } from '@/components/ui/button, ';
+import React, { useState } from "react;";
+import { Link } from "react-router-dom, ";
+import { Menu; X; Search; User; Briefcase; HardDrive; Users; Lightbulb } from "lucide-react, ";
+import { Button } from "@/components/ui/button, ";
 
 const mobileMenuItems = [
-  { name: 'Services', icon: <Briefcase className="w-5 h-5" />, href: '/services' };
-  { name: 'Talent', icon: <Users className="w-5 h-5" />, href: '/talent' };
-  { name: 'Equipment', icon: <HardDrive className="w-5 h-5" />, href: '/equipment' };
-  { name: 'Innovation', icon: <Lightbulb className="w-5 h-5" />, href: '/category/innovation' };
+  { name: "Services", icon: <Briefcase className="w-5 h-5" />, href: "/services" };
+  { name: "Talent", icon: <Users className="w-5 h-5" />, href: "/talent" };
+  { name: "Equipment", icon: <HardDrive className="w-5 h-5" />, href: "/equipment" };
+  { name: "Innovation", icon: <Lightbulb className="w-5 h-5" />, href: "/category/innovation" };
 ];
 
-export function MobileNavigation() {
-  const [isOpen, setIsOpen] = useState(false);
+export function MobileNavigation() {;
+  const [isOpen; setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    // Prevent body scroll when menu is open
+    // Prevent body scroll when menu is open;
     if (!isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
   };
 
   const closeMenu = () => {
     setIsOpen(false);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   };
 
   return (
     <div className="lg:hidden">
       {/* Mobile menu button */}
-      <Button
+      <Button;
         variant="ghost"
         size="sm"
         onClick={toggleMenu}
@@ -49,7 +49,7 @@ export function MobileNavigation() {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-zion-blue-light">
               <h2 className="text-xl font-bold text-white">Menu</h2>
-              <Button
+              <Button;
                 variant="ghost"
                 size="sm"
                 onClick={closeMenu}
@@ -63,9 +63,9 @@ export function MobileNavigation() {
             <div className="p-6 border-b border-zion-blue-light">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                <input
+                <input;
                   type="text"
-                  placeholder="Search services, talent, equipment..."
+                  placeholder="Search services; talent; equipment..."
                   className="w-full pl-10 pr-4 py-3 bg-zion-blue border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
               </div>
@@ -76,7 +76,7 @@ export function MobileNavigation() {
               <ul className="space-y-4">
                 {mobileMenuItems.map((item) => (
                   <li key={item.name}>
-                    <Link
+                    <Link;
                       to={item.href}
                       onClick={closeMenu}
                       className="flex items-center space-x-3 p-3 rounded-lg text-white hover:bg-zion-blue transition-colors duration-200"
@@ -93,22 +93,22 @@ export function MobileNavigation() {
 
             {/* Auth buttons */}
             <div className="p-6 border-t border-zion-blue-light space-y-3">
-              <Button
-                asChild
+              <Button;
+                asChild;
                 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               >
                 <Link to="/signup" onClick={closeMenu}>
                   <User className="w-4 h-4 mr-2" />
-                  Sign Up
+                  Sign Up;
                 </Link>
               </Button>
-              <Button
+              <Button;
                 variant="outline"
-                asChild
+                asChild;
                 className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark"
               >
                 <Link to="/login" onClick={closeMenu}>
-                  Log In
+                  Log In;
                 </Link>
               </Button>
             </div>
@@ -125,4 +125,4 @@ export function MobileNavigation() {
       )}
     </div>
   );
-}
+}<//div><///div>

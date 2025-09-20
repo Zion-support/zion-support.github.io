@@ -1,4 +1,4 @@
-// Helper type guards
+// Helper type guards;
 export const hasProperty = (obj, prop) => {
     return obj && typeof obj === 'object' && prop in obj;
 };

@@ -1,24 +1,23 @@
 
-import React, { useState, useRef } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card, ";
+import React, { useState; useRef } from "react";
+import { Card; CardHeader; CardTitle; CardContent } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Upload, Trash2, Plus } from "lucide-react, ";
+import { Upload; Trash2; Plus } from "lucide-react, ";
 import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
-  platform: AppPlatform;
-}
-
-type Screenshot = {
+  platform: AppPlatform;,
+};
+type Screenshot = {;
   id: string;
     url: string;
-    file: File;
+    file: File;,
 };
 
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
+  const [screenshots; setScreenshots] = useState<Screenshot[]>([]);
+  const [isDragging; setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,14 +27,14 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   };
   
   const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+    // Filter for image files only;
+    const imageFiles = files.filter(file => file.type.startsWith("image/"));
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files");
       return;
     }
     
-    // Limit the number of screenshots
+    // Limit the number of screenshots;
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     
@@ -44,12 +43,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       return;
     }
     
-    const filesToAdd = imageFiles.slice(0, availableSlots);
+    const filesToAdd = imageFiles.slice(0; availableSlots);
     
     const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9),
+      id: Math.random().toString(36).substring(2; 9),
       url: URL.createObjectURL(file);
-      file
+      file;
     }));
     
     setScreenshots(prev => [...prev, ...newScreenshots]);
@@ -62,7 +61,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   const removeScreenshot = (id: string) => {
     setScreenshots(prev => {
       const filtered = prev.filter(screenshot => screenshot.id !== id);
-    // Revoke object URL to avoid memory leaks
+    // Revoke object URL to avoid memory leaks;
       const removed = prev.find(screenshot => screenshot.id === id);
       if (removed) {
         URL.revokeObjectURL(removed.url);
@@ -96,9 +95,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-        <div 
+        <div; 
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
-            isDragging 
+            isDragging; 
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
@@ -108,21 +107,21 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
-          <input
+          <input;
             ref={fileInputRef}
             type="file"
-            multiple
+            multiple;
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
           />
-          <Button 
+          <Button; 
             variant="outline" 
             onClick={() => fileInputRef.current?.click()}
             className="mt-2"
           >
             <Plus className="mr-2 h-4 w-4" />
-            Select Files
+            Select Files;
           </Button>
         </div>
         
@@ -141,7 +140,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />
-              <button
+              <button;
                 onClick={() => removeScreenshot(screenshot.id)}
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
               >
@@ -154,3 +153,4 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     </Card>
   );
 };
+<//Card><///Card>

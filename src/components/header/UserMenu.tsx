@@ -1,12 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react;';
-import { Link } from 'react-router-dom, ';
-import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react, ';
-import { useAuth } from '../../hooks/useAuth, ';
+import React, { useState; useRef; useEffect } from "react;";
+import { Link } from "react-router-dom, ";
+import { User; Settings; LogOut; ChevronDown; Bell; ShoppingCart } from "lucide-react, ";
+import { useAuth } from "../../hooks/useAuth, ";
 
-export const UserMenu: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export const UserMenu: React.FC = () => {;
+  const [isOpen; setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { user, logout } = useAuth();
+  const { user; logout } = useAuth();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -15,8 +15,8 @@ export const UserMenu: React.FC = () => {
      }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleLogout = async () => {
@@ -34,7 +34,7 @@ export const UserMenu: React.FC = () => {
 
   return (
     <div className="relative" ref={menuRef}>
-      <button
+      <button;
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan transition-colors cursor-pointer"
       >
@@ -42,7 +42,7 @@ export const UserMenu: React.FC = () => {
           <User className="w-4 h-4 text-black" />
         </div>
         <span className="text-sm font-medium hidden sm:block">{user.name || user.email}</span>
-        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
       {isOpen && (
@@ -50,57 +50,57 @@ export const UserMenu: React.FC = () => {
           <div className="py-2">
             {/* User Info */}
             <div className="px-4 py-3 border-b border-gray-800">
-              <div className="text-sm font-medium text-white">{user.name || 'User'}</div>
+              <div className="text-sm font-medium text-white">{user.name || "User"}</div>
               <div className="text-xs text-gray-400">{user.email}</div>
             </div>
 
             {/* Menu Items */}
             <div className="py-1">
-              <Link
+              <Link;
                 to="/profile"
                 className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 <User className="w-4 h-4" />
-                Profile
+                Profile;
               </Link>
               
-              <Link
+              <Link;
                 to="/notifications"
                 className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 <Bell className="w-4 h-4" />
-                Notifications
+                Notifications;
               </Link>
               
-              <Link
+              <Link;
                 to="/orders"
                 className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 <ShoppingCart className="w-4 h-4" />
-                Orders
+                Orders;
               </Link>
               
-              <Link
+              <Link;
                 to="/settings"
                 className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 <Settings className="w-4 h-4" />
-                Settings
+                Settings;
               </Link>
             </div>
 
             {/* Logout */}
             <div className="border-t border-gray-800 pt-1">
-              <button
+              <button;
                 onClick={handleLogout}
                 className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-900/20 transition-colors"
               >
                 <LogOut className="w-4 h-4" />
-                Sign Out
+                Sign Out;
               </button>
             </div>
           </div>
@@ -108,4 +108,4 @@ export const UserMenu: React.FC = () => {
       )}
     </div>
   );
-};
+};<//div><///div>

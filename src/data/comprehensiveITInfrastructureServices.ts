@@ -18,7 +18,7 @@ export interface ComprehensiveITInfrastructureService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -27,15 +27,15 @@ export interface ComprehensiveITInfrastructureService {
     competitors: string[];
     uniqueValue: string;
     sla: string;
-    uptime: string;
+    uptime: string;,
 }
 
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastructureService[] = [
-  // Cloud-Native Infrastructure
+  // Cloud-Native Infrastructure;
   {
     id: "cloud-native-infrastructure-platform";
     title: "Cloud-Native Infrastructure Platform";
-    description: "Enterprise-grade cloud-native infrastructure platform that provides seamless multi-cloud management, container orchestration, and automated scaling.",
+    description: "Enterprise-grade cloud-native infrastructure platform that provides seamless multi-cloud management; container orchestration; and automated scaling.",
     category: "Cloud Infrastructure";
     subcategory: "Cloud-Native";
     price: 1200;
@@ -75,11 +75,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Cloud", "Kubernetes", "DevOps", "Infrastructure", "Automation"],
     estimatedDelivery: "2-4 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,200 - $5,000/month",
+    marketPrice: "$1;200 - $5;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes", "Docker", "Terraform", "AWS", "Azure", "GCP"],
     integrations: ["CI/CD pipelines", "Monitoring tools", "Security platforms", "Backup systems"],
@@ -88,9 +88,9 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["AWS EKS", "Azure AKS", "Google GKE", "Red Hat OpenShift"],
     uniqueValue: "Unified multi-cloud management with automated optimization and cost control";
     sla: "99.99% uptime with 4-hour response time";
-    uptime: "99.99%"
+    uptime: "99.99%",
   };
-  // Edge Computing Infrastructure
+  // Edge Computing Infrastructure;
   {
     id: "edge-computing-infrastructure";
     title: "Edge Computing Infrastructure Platform";
@@ -134,11 +134,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Edge Computing", "5G", "IoT", "Low Latency", "Distributed Systems"],
     estimatedDelivery: "3-5 weeks";
     supportLevel: "premium";
-    marketPrice: "$899 - $3,000/month",
+    marketPrice: "$899 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes Edge", "5G Core", "Edge AI", "MQTT", "WebRTC"],
     integrations: ["IoT platforms", "Cloud services", "5G networks", "Enterprise systems"],
@@ -147,13 +147,13 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
     uniqueValue: "Comprehensive edge infrastructure with 5G optimization and AI deployment";
     sla: "99.9% uptime with 2-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   };
-  // Hybrid Cloud Management
+  // Hybrid Cloud Management;
   {
     id: "hybrid-cloud-management-platform";
     title: "Hybrid Cloud Management Platform";
-    description: "Unified platform for managing hybrid cloud environments, providing seamless integration between on-premises and cloud infrastructure.",
+    description: "Unified platform for managing hybrid cloud environments; providing seamless integration between on-premises and cloud infrastructure.",
     category: "Cloud Infrastructure";
     subcategory: "Hybrid Cloud";
     price: 1500;
@@ -193,11 +193,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Hybrid Cloud", "Multi-Cloud", "Infrastructure", "Management", "Integration"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,500 - $6,000/month",
+    marketPrice: "$1;500 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Terraform", "Ansible", "Kubernetes", "VMware", "OpenStack"],
     integrations: ["AWS", "Azure", "GCP", "On-premises systems", "Monitoring tools"],
@@ -206,13 +206,13 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["VMware vCloud", "Microsoft Azure Stack", "AWS Outposts", "Google Anthos"],
     uniqueValue: "Unified hybrid cloud management with automated optimization and compliance";
     sla: "99.95% uptime with 6-hour response time";
-    uptime: "99.95%"
+    uptime: "99.95%",
   };
-  // Network Security Infrastructure
+  // Network Security Infrastructure;
   {
     id: "network-security-infrastructure";
     title: "Advanced Network Security Infrastructure";
-    description: "Comprehensive network security platform that provides next-generation firewall, intrusion detection, and threat intelligence capabilities.",
+    description: "Comprehensive network security platform that provides next-generation firewall; intrusion detection; and threat intelligence capabilities.",
     category: "Network Security";
     subcategory: "Infrastructure";
     price: 1800;
@@ -252,11 +252,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Network Security", "Firewall", "Threat Detection", "VPN", "Compliance"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,800 - $7,000/month",
+    marketPrice: "$1;800 - $7;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Custom solutions"],
     integrations: ["SIEM systems", "Identity providers", "Cloud platforms", "Monitoring tools"],
@@ -265,13 +265,13 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
     uniqueValue: "Comprehensive network security with AI-powered threat detection and response";
     sla: "99.99% uptime with 1-hour response time";
-    uptime: "99.99%"
+    uptime: "99.99%",
   };
-  // Data Center Infrastructure
+  // Data Center Infrastructure;
   {
     id: "data-center-infrastructure";
     title: "Modern Data Center Infrastructure";
-    description: "Enterprise-grade data center infrastructure with high availability, redundancy, and energy-efficient design for mission-critical applications.",
+    description: "Enterprise-grade data center infrastructure with high availability; redundancy; and energy-efficient design for mission-critical applications.",
     category: "Data Center";
     subcategory: "Infrastructure";
     price: 2500;
@@ -311,11 +311,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Data Center", "High Availability", "Redundancy", "Energy Efficiency", "Monitoring"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$2,500 - $10,000/month",
+    marketPrice: "$2;500 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["VMware", "Hyper-V", "Storage arrays", "Network switches", "UPS systems"],
     integrations: ["Monitoring tools", "Backup systems", "Cloud platforms", "Management tools"],
@@ -324,13 +324,13 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["Equinix", "Digital Realty", "CoreSite", "Cyxtera"],
     uniqueValue: "Modern data center infrastructure with energy efficiency and automation";
     sla: "99.999% uptime with 4-hour response time";
-    uptime: "99.999%"
+    uptime: "99.999%",
   };
-  // Storage Infrastructure
+  // Storage Infrastructure;
   {
     id: "storage-infrastructure-platform";
     title: "Enterprise Storage Infrastructure Platform";
-    description: "Scalable storage infrastructure platform that provides high-performance, reliable, and cost-effective storage solutions for enterprise applications.",
+    description: "Scalable storage infrastructure platform that provides high-performance; reliable; and cost-effective storage solutions for enterprise applications.",
     category: "Storage";
     subcategory: "Infrastructure";
     price: 999;
@@ -370,11 +370,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Storage", "High Performance", "Data Management", "Backup", "Virtualization"],
     estimatedDelivery: "2-4 weeks";
     supportLevel: "premium";
-    marketPrice: "$999 - $4,000/month",
+    marketPrice: "$999 - $4;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["NetApp", "EMC", "Pure Storage", "HPE", "Custom solutions"],
     integrations: ["Backup systems", "Monitoring tools", "Cloud platforms", "Management tools"],
@@ -383,13 +383,13 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["NetApp", "EMC", "Pure Storage", "HPE", "Dell"],
     uniqueValue: "Intelligent storage infrastructure with automated optimization and management";
     sla: "99.9% uptime with 4-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   };
-  // Backup and Disaster Recovery
+  // Backup and Disaster Recovery;
   {
     id: "backup-disaster-recovery-platform";
     title: "Comprehensive Backup & Disaster Recovery Platform";
-    description: "Enterprise-grade backup and disaster recovery platform that ensures business continuity with automated backup, replication, and recovery capabilities.",
+    description: "Enterprise-grade backup and disaster recovery platform that ensures business continuity with automated backup; replication; and recovery capabilities.",
     category: "Backup & Recovery";
     subcategory: "Disaster Recovery";
     price: 699;
@@ -429,11 +429,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Backup", "Disaster Recovery", "Business Continuity", "Compliance", "Automation"],
     estimatedDelivery: "1-2 weeks";
     supportLevel: "premium";
-    marketPrice: "$699 - $2,500/month",
+    marketPrice: "$699 - $2;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Custom solutions"],
     integrations: ["Storage systems", "Cloud platforms", "Monitoring tools", "Management tools"],
@@ -442,13 +442,13 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Dell EMC"],
     uniqueValue: "Comprehensive backup and recovery with automated testing and compliance";
     sla: "99.9% uptime with 2-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   };
-  // Network Monitoring Infrastructure
+  // Network Monitoring Infrastructure;
   {
     id: "network-monitoring-infrastructure";
     title: "Advanced Network Monitoring Infrastructure";
-    description: "Comprehensive network monitoring platform that provides real-time visibility, performance analysis, and proactive alerting for network infrastructure.",
+    description: "Comprehensive network monitoring platform that provides real-time visibility; performance analysis; and proactive alerting for network infrastructure.",
     category: "Network Monitoring";
     subcategory: "Infrastructure";
     price: 599;
@@ -488,11 +488,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Network Monitoring", "Performance", "Analytics", "Alerting", "Reporting"],
     estimatedDelivery: "1-2 weeks";
     supportLevel: "premium";
-    marketPrice: "$599 - $2,000/month",
+    marketPrice: "$599 - $2;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Custom solutions"],
     integrations: ["Network devices", "Cloud platforms", "Management tools", "Alerting systems"],
@@ -501,13 +501,13 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
     uniqueValue: "Intelligent network monitoring with AI-powered analytics and automation";
     sla: "99.9% uptime with 4-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   };
-  // Virtualization Infrastructure
+  // Virtualization Infrastructure;
   {
     id: "virtualization-infrastructure-platform";
     title: "Enterprise Virtualization Infrastructure Platform";
-    description: "High-performance virtualization platform that maximizes resource utilization, improves scalability, and reduces infrastructure costs.",
+    description: "High-performance virtualization platform that maximizes resource utilization; improves scalability; and reduces infrastructure costs.",
     category: "Virtualization";
     subcategory: "Infrastructure";
     price: 799;
@@ -547,11 +547,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     tags: ["Virtualization", "Server", "Desktop", "Application", "Management"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$799 - $3,000/month",
+    marketPrice: "$799 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["VMware", "Hyper-V", "KVM", "Xen", "Custom solutions"],
     integrations: ["Storage systems", "Network infrastructure", "Management tools", "Monitoring tools"],
@@ -560,6 +560,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     competitors: ["VMware", "Microsoft Hyper-V", "Red Hat", "Citrix", "Oracle"],
     uniqueValue: "Comprehensive virtualization platform with automated optimization and management";
     sla: "99.9% uptime with 4-hour response time";
-    uptime: "99.9%"
+    uptime: "99.9%",
   }
 ];

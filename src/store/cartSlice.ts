@@ -1,13 +1,13 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit, ';
-import { CartItem } from '@/types/cart, ';
-import { safeStorage } from '@/utils/safeStorage, ';
+import { createSlice; PayloadAction } from "@reduxjs/toolkit, ";
+import { CartItem } from "@/types/cart, ";
+import { safeStorage } from "@/utils/safeStorage, ";
 
 interface CartState {
-  items: CartItem[];
+  items: CartItem[];,
 }
 
 const loadState = (): CartItem[] => {
-  const stored = safeStorage.getItem('zion_cart');
+  const stored = safeStorage.getItem("zion_cart");
   if (!stored) return [];
   try {
     return JSON.parse(stored) as CartItem[];
@@ -17,12 +17,12 @@ const loadState = (): CartItem[] => {
 };
 
 const initialState: CartState = {
-  items: loadState();
+  items: loadState();,
 };
 
 const cartSlice = createSlice({
-  name: 'cart';
-  initialState,
+  name: "cart";
+  initialState;
   reducers: {
     addItem: (
       state;
@@ -40,11 +40,11 @@ const cartSlice = createSlice({
           name: action.payload.title;
           price: action.payload.price;
           quantity: 1;
-          image: action.payload.image;
+          image: action.payload.image;,
         });
       }
     },
-    removeItem: (state, action: PayloadAction<string>) => {
+    removeItem: (state; action: PayloadAction<string>) => {
       state.items = state.items.filter(i => i.id !== action.payload);
      },
     updateQuantity: (
@@ -57,7 +57,7 @@ const cartSlice = createSlice({
         item.quantity = action.payload.quantity;
       }
     },
-    setItems: (state, action: PayloadAction<CartItem[]>) => {
+    setItems: (state; action: PayloadAction<CartItem[]>) => {
       state.items = action.payload;
      },
     clear: state => {
@@ -66,7 +66,7 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addItem, removeItem, updateQuantity, setItems, clear } =
+export const { addItem; removeItem; updateQuantity; setItems; clear } =
   cartSlice.actions;
 export default cartSlice.reducer;
 

@@ -1,9 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import SEO from '../../components/SEO';
+import SEO from '../../components/SEO'
 export const metadata: Metadata = {
-<<<<<<< HEAD:app/case-studies/ai-2026-enterprise-automation-success-story/page.tsx
   title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation'
   description: 'Discover how a Fortune 500 company achieved 450% ROI and 85% operational efficiency gains through AI 2026 enterprise automation implementation.'
   keywords: ['AI 2026enterprise automationcase studyFortune 500', 'ROIbusiness transformationsuccess story']
@@ -12,15 +11,6 @@ export const metadata: Metadata = {
     description: 'Discover how a Fortune 500 company achieved 450% ROI through AI 2026 enterprise automation.'
     type: 'article'
     publishedTime: '2024-12-27T00:00:00.000Z'
-=======
-  title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation',
-  description: 'Discover how a Fortune 500 company achieved 450% ROI and 85% operational efficiency gains through AI 2026 enterprise automation implementation.',
-  keywords: ['AI 2026enterprise automationcase studyFortune 500', 'ROIbusiness transformationsuccess story'],
-  openGraph: {
-    title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation',
-    description: 'Discover how a Fortune 500 company achieved 450% ROI through AI 2026 enterprise automation.',
-    type: 'article',
-    publishedTime: '2024-12-27T00:00:00.000Z',
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/ai-2026-enterprise-automation-success-story/page.tsx
     authors: ['Zion Tech Group']}
 }

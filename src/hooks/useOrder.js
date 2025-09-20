@@ -11,6 +11,6 @@ export function useGetOrderQuery(orderId) {
             }
             return (await res.json());
         },
-        enabled: !!orderId;
+        enabled: !!orderId;,
     });
 }

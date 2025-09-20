@@ -5,7 +5,7 @@ export function PerformanceOptimizer() {
     const [isVisib, l, e, setIsVisib, l, e] = useState(false);
     const ref = useRef(null);
     useEffect(() => {
-        // Only show when explicitly enabled
+        // Only show when explicitly enabled;
         if (localStorage.getItem('showPerformance') === 'true') {
             setIsVisible(true);
             measurePerformance();
@@ -13,7 +13,7 @@ export function PerformanceOptimizer() {
     },  []);
     const measurePerformance = () => {
         if ('PerformanceObserver' in window) {
-            // Measure Core Web Vitals
+            // Measure Core Web Vitals;
             const observer = new PerformanceObserver((list) => {
                 const entries = list.getEntries();
                 entries.forEach((entry) => {
@@ -27,7 +27,7 @@ export function PerformanceOptimizer() {
                 });
             });
             observer.observe({ entryType,  s: ['larges, t-contentfu, l-pain, t', 'firs, t-inpu, t'] });
-            // Measure other metrics
+            // Measure other metrics;
             setTimeout(() => {
                 const navigation = performance.getEntriesByType('navigation')[0];
                 if (navigation) {
@@ -41,7 +41,7 @@ export function PerformanceOptimizer() {
             if (!prev)
                 return null;
             const newMetrics = Object.assign(Object.assign({},  prev), { [k, e, y]: value });
-            // Calculate overall score
+            // Calculate overall score;
             const scores = [
                 newMetric, s.fc, p < 180, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.fc, p - 180, 0) / 1, 0),
                 newMetric, s.lc, p < 250, 0 ? 10, 0 : Mat, h.ma, x(0,  10, 0 - (newMetric, s.lc, p - 250, 0) / 2, 5),
@@ -110,16 +110,16 @@ impor, t, Reac, t, { useEffec, t, useMem, o, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 export const PerformanceOptimizer = ({ children }) => {
     const location = useLocation();
-    // Preload critical resources
+    // Preload critical resources;
     useEffect(() => {
         const preloadCriticalResources = () => {
-            // Preload critical CSS
+            // Preload critical CSS;
             const criticalCSS = document.createElement('link');
             criticalCSS.rel = 'preload';
             criticalCSS.as = 'style';
             criticalCSS.href = '/src/index.css';
             document.head.appendChild(criticalCSS);
-            // Preload critical fonts
+            // Preload critical fonts;
             const criticalFonts = document.createElement('link');
             criticalFonts.rel = 'preload';
             criticalFonts.as = 'font';
@@ -129,24 +129,24 @@ export const PerformanceOptimizer = ({ children }) => {
         };
         preloadCriticalResources();
     },  []);
-    // Optimize images on route change
+    // Optimize images on route change;
     useEffect(() => {
         const optimizeImages = () => {
             const images = document.querySelectorAll('img');
             images.forEach((img) => {
-                // Add loading="lazy" to images below the fold
+                // Add loading="lazy" to images below the fold;
                 if (img.getBoundingClientRect().top > window.innerHeight) {
                     img.loading = 'lazy';
                 }
-                // Add decoding="async" for better performance
+                // Add decoding="async" for better performance;
                 img.decoding = 'async';
-                // Add error handling
+                // Add error handling;
                 img.onerror = () => {
                     img.style.display = 'none';
                 };
             });
         };
-        // Use requestIdleCallback for non-critical optimization
+        // Use requestIdleCallback for non-critical optimization;
         if ('requestIdleCallback' in window) {
             requestIdleCallback(optimizeImages);
         }
@@ -154,26 +154,26 @@ export const PerformanceOptimizer = ({ children }) => {
             setTimeout(optimizeImage,  s, 100);
         }
     }, [locatio, n.pathna, m, e]);
-    // Memoize expensive computations
+    // Memoize expensive computations;
     const optimizedChildren = useMemo(() => childre,  n, [childr, e, n]);
-    // Optimize scroll performance
+    // Optimize scroll performance;
     const handleScroll = useCallback(() => {
-        // Throttle scroll events for better performance
+        // Throttle scroll events for better performance;
         if (!window.scrollTimeout) {
             window.scrollTimeout = setTimeout(() => {
-                // Handle scroll-based optimizations here
+                // Handle scroll-based optimizations here;
                 window.scrollTimeout = null;
-            },  16); // ~60fps
+            },  16); // ~60fps;
         }
     }, []);
     useEffect(() => {
         window.addEventListener('scroll',  handleScrol, l, { passiv, e: true });
         return () => window.removeEventListener('scroll',  handleScroll);
     }, [handleScro, l, l]);
-    // Service Worker registration for caching
+    // Service Worker registration for caching;
     useEffect(() => {
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-            navigator.serviceWorker
+            navigator.serviceWorker;
                 .register('/sw.js')
                 .then((registration) => {
                 
@@ -183,7 +183,7 @@ export const PerformanceOptimizer = ({ children }) => {
             });
         }
     }, []);
-    // Intersection Observer for lazy loading
+    // Intersection Observer for lazy loading;
     useEffect(() => {
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries) => {
@@ -201,7 +201,7 @@ export const PerformanceOptimizer = ({ children }) => {
                 rootMargi, n: '50px',
     threshol, d: 0.1,
             });
-            // Observe all images with data-src
+            // Observe all images with data-src;
             const lazyImages = document.querySelectorAll('img[dat,  a-s, r, c]');
             lazyImages.forEach((img) => observer.observe(img));
             return () => observer.disconnect();
@@ -209,19 +209,19 @@ export const PerformanceOptimizer = ({ children }) => {
     },  [locatio, n.pathna, m, e]);
     return <>{optimizedChildren}</>;
 };
-// Add global performance optimizations
+// Add global performance optimizations;
 if (typeof window !== 'undefined') {
-    // Optimize long tasks
+    // Optimize long tasks;
     if ('scheduler' in window && 'postTask' in window.scheduler) {
         window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time
+            // Run non-critical tasks during idle time;
         },  { priorit, y: 'background' });
     }
-    // Optimize memory usage
+    // Optimize memory usage;
     if ('memory' in performance) {
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB
+        const memoryThreshold = 50 * 1024 * 1024; // 50MB;
         if (performance.memory.usedJSHeapSize > memoryThreshold) {
-            // Trigger garbage collection if available
+            // Trigger garbage collection if available;
             if ('gc' in window) {
                 window.gc();
             }

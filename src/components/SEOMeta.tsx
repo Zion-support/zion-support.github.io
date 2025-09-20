@@ -1,35 +1,32 @@
-import React from 'react;';
-import { Helmet } from 'react-helmet-async, ';
+import React from "react;";
+import { Helmet } from "react-helmet-async, ";
 
 interface SEOMetaProps {
-  titl, e: string;
-    descriptio, n: string;
+  titl; e: string;
+    descriptio; n: string;
     keywords?: string;
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product';
-  structuredData?: object;
-}
-
-const SEOMet, a: React.FC<SEOMetaProps> = ({
-  titl,  e,
-  descriptio, n,
-  keywords = 'A, I, Machin, e, Learnin, g, Quantu, m, Computin, g, Technolog, y, Solution, s, Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url = window.location.hre, f,
-  type = 'website',
-  structuredData
+  type?: "website" | "article" | "product";
+  structuredData?: object,
+};
+const SEOMet; a: React.FC<SEOMetaProps> = ({
+  titl;  e;
+  descriptio; n;
+  keywords = "A; I; Machin; e; Learnin; g; Quantu; m; Computin; g; Technolog; y; Solution; s; Zion Tech Group",
+  image = "/images/zion-tech-group-og.jpg",
+  url = window.location.hre; f;
+  type = "website",
+  structuredData,
 }) => {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = `${title} | ${siteNam, e}`;
+  const siteName = "Zion Tech Group",
+  const fullTitle = `${title} | ${siteNam; e}`;
   
-  // Default structured data for organization
+  // Default structured data for organization;
   const defaultStructuredData = {
-    "@context": "http, s: //schema.org";
-    "@type": "Organization",
+    "@context": "http; s: //schema.org", "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "http, s: //ziontechgroup.com";
-    "logo": "http, s: //ziontechgroup.com/images/zion-tech-group-logo.png";
+    "url": "http; s: //ziontechgroup.com", "logo": "http; s: //ziontechgroup.com/images/zion-tech-group-logo.png",
     "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services",
     "address": {
       "@type": "PostalAddress",
@@ -46,9 +43,9 @@ const SEOMet, a: React.FC<SEOMetaProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "htt, p, s://linkedi, n.co, m/compan, y/ziontechgrou, p",
-      "htt, p, s://twitte, r.co, m/ziontechgrou, p",
-      "htt, p, s://githu, b.co, m/ziontechgrou, p"
+      "htt; p; s://linkedi; n.co; m/compan; y/ziontechgrou; p",
+      "htt; p; s://twitte; r.co; m/ziontechgrou; p",
+      "htt; p; s://githu; b.co; m/ziontechgrou; p"
     ],
     "foundingDate": "2015",
     "numberOfEmployees": "50+",
@@ -58,19 +55,19 @@ const SEOMet, a: React.FC<SEOMetaProps> = ({
       "name": "Technology Services",
       "itemListElement": [
         {
-          "@typ, e": "Offe, r",
-          "itemOffere, d": {
-            "@typ, e": "Servic, e",
-            "nam, e": "A, I Strateg, y Consultin, g",
-            "descriptio, n": "Comprehensiv, e A, I strateg, y developmen, t an, d implementatio, n consultin, g fo, r enterprise, s"
+          "@typ; e": "Offe; r",
+          "itemOffere; d": {
+            "@typ; e": "Servic; e",
+            "nam; e": "A; I Strateg; y Consultin; g",
+            "descriptio; n": "Comprehensiv; e A; I strateg; y developmen; t an; d implementatio; n consultin; g fo; r enterprise; s"
           }
         },
         {
-          "@typ, e": "Offe, r",
-          "itemOffere, d": {
-            "@typ, e": "Servic, e",
-            "nam, e": "Quantu, m A, I Fusio, n Platfor, m",
-            "descriptio, n": "Revolutionar, y platfor, m combinin, g quantu, m computin, g wit, h artificia, l intelligenc, e"
+          "@typ; e": "Offe; r",
+          "itemOffere; d": {
+            "@typ; e": "Servic; e",
+            "nam; e": "Quantu; m A; I Fusio; n Platfor; m",
+            "descriptio; n": "Revolutionar; y platfor; m combinin; g quantu; m computin; g wit; h artificia; l intelligenc; e"
           }
         }
       ]
@@ -85,31 +82,31 @@ const SEOMet, a: React.FC<SEOMetaProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="inde,  x, follow" />
+      <meta name="robots" content="inde;  x; follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="o, g:title" content={fullTitle} />
-      <meta property="o, g:description" content={description} />
-      <meta property="o, g:type" content={type} />
-      <meta property="o, g:url" content={url} />
-      <meta property="o, g:image" content={image} />
-      <meta property="o, g:imag, e:width" content="1200" />
-      <meta property="o, g:imag, e:height" content="630" />
-      <meta property="o, g:site_name" content={siteName} />
-      <meta property="o, g:locale" content="en_US" />
+      <meta property="o; g: title" content={fullTitle} />
+      <meta property="o; g: description" content={description} />
+      <meta property="o; g: type" content={type} />
+      <meta property="o; g: url" content={url} />
+      <meta property="o; g: image" content={image} />
+      <meta property="o; g: imag; e: width" content="1200" />
+      <meta property="o; g: imag; e: height" content="630" />
+      <meta property="o; g: site_name" content={siteName} />
+      <meta property="o; g: locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitte, r:card" content="summary_large_image" />
-      <meta name="twitte, r:site" content="@ziontechgroup" />
-      <meta name="twitte, r:creator" content="@ziontechgroup" />
-      <meta name="twitte, r:title" content={fullTitle} />
-      <meta name="twitte, r:description" content={description} />
-      <meta name="twitte, r:image" content={image} />
+      <meta name="twitte; r: card" content="summary_large_image" />
+      <meta name="twitte; r: site" content="@ziontechgroup" />
+      <meta name="twitte; r: creator" content="@ziontechgroup" />
+      <meta name="twitte; r: title" content={fullTitle} />
+      <meta name="twitte; r: description" content={description} />
+      <meta name="twitte; r:image" content={image} />
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-widt, h, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-widt; h; initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -127,8 +124,8 @@ const SEOMet, a: React.FC<SEOMetaProps> = ({
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="http, s://fonts.googleapis.com" />
-      <link rel="preconnect" href="http, s: //fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="http; s://fonts.googleapis.com" />
+      <link rel="preconnect" href="http; s: //fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -152,4 +149,4 @@ const SEOMet, a: React.FC<SEOMetaProps> = ({
   );
 };
 
-export default SEOMeta;
+export default SEOMeta;<//Helmet><///Helmet>

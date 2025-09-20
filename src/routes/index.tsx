@@ -1,7 +1,7 @@
-import { Routes, Route } from "react-router-dom, ";
-import React from 'react;';
+import { Routes; Route } from "react-router-dom, ";
+import React from "react;";
 
-// Placeholder route components
+// Placeholder route components;
 export const AuthRoutes = () => <></>;
 export const DashboardRoutes = () => <></>;
 export const MarketplaceRoutes = () => <></>;
@@ -12,4 +12,4 @@ export const ContentRoutes = () => <></>;
 export const ErrorRoutes = () => <></>;
 export const EnterpriseRoutes = () => <></>;
 export const CommunityRoutes = () => <></>;
-export const DeveloperRoutes = () => <></>;
+export const DeveloperRoutes = () => <></>;<//><///>

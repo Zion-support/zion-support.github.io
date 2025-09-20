@@ -1,5 +1,5 @@
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
-    // Green Computing Infrastructure
+    // Green Computing Infrastructure;
     {
         id: "green-computing-infrastructure";
         title: "Green Computing Infrastructure";
@@ -47,7 +47,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Intel Xeon", "AMD EPYC", "NVIDIA GPUs", "Smart cooling", "Renewable energy systems"],
         integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
@@ -55,7 +55,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         roi: "250% within 12 months";
         competitors: ["Dell Green Computing", "HP Sustainable IT", "IBM Green Data Centers", "Cisco Green IT"]
     },
-    // Edge Computing Infrastructure
+    // Edge Computing Infrastructure;
     {
         id: "edge-computing-infrastructure";
         title: "Edge Computing Infrastructure";
@@ -103,7 +103,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Kubernetes", "Docker", "Node.js", "Redis", "MQTT", "5G networks"],
         integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
@@ -111,7 +111,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         roi: "300% within 8 months";
         competitors: ["AWS Edge", "Azure Edge", "Google Cloud Edge", "IBM Edge", "Cisco Edge"]
     },
-    // Quantum-Ready Infrastructure
+    // Quantum-Ready Infrastructure;
     {
         id: "quantum-ready-infrastructure";
         title: "Quantum-Ready Infrastructure";
@@ -159,7 +159,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Qiskit", "PennyLane", "Cirq", "Classical infrastructure", "Quantum simulators"],
         integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
@@ -167,7 +167,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         roi: "500% within 18 months";
         competitors: ["IBM Quantum Infrastructure", "Google Quantum Infrastructure", "Microsoft Quantum", "Amazon Braket"]
     },
-    // Zero-Trust Security Infrastructure
+    // Zero-Trust Security Infrastructure;
     {
         id: "zero-trust-security-infrastructure";
         title: "Zero-Trust Security Infrastructure";
@@ -215,7 +215,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Okta", "Palo Alto", "CrowdStrike", "Splunk", "Microsoft Defender"],
         integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems"],
@@ -223,7 +223,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         roi: "400% within 10 months";
         competitors: ["Cisco Zero Trust", "Microsoft Zero Trust", "Google BeyondCorp", "VMware Zero Trust"]
     },
-    // AI-Optimized Infrastructure
+    // AI-Optimized Infrastructure;
     {
         id: "ai-optimized-infrastructure";
         title: "AI-Optimized Infrastructure";
@@ -271,7 +271,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "Prometheus", "Grafana"],
         integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack", "Ansible"],

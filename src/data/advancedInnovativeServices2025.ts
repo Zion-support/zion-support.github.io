@@ -20,7 +20,7 @@ export interface AdvancedInnovativeService2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technicalSpecs?: {
     technology: string[];
@@ -28,7 +28,7 @@ export interface AdvancedInnovativeService2025 {
     apiEndpoints: number;
     uptime: string;
     security: string[];
-    compliance: string[];
+    compliance: string[];,
      };
   competitors: string[];
     demoUrl?: string;
@@ -36,11 +36,11 @@ export interface AdvancedInnovativeService2025 {
 }
 
 export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] = [
-  // Advanced AI & Machine Learning Services
+  // Advanced AI & Machine Learning Services;
   {
     id: "ai-multimodal-orchestrator";
     title: "AI Multimodal Orchestrator Pro";
-    description: "Revolutionary AI platform that seamlessly orchestrates text, image, video, and audio processing for comprehensive content understanding and generation.",
+    description: "Revolutionary AI platform that seamlessly orchestrates text; image; video; and audio processing for comprehensive content understanding and generation.",
     category: "Advanced AI & ML";
     subcategory: "Multimodal AI";
     price: 2499;
@@ -82,13 +82,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["AI", "Multimodal", "Content Generation", "Machine Learning", "Automation"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$2,499 - $8,000/month",
+    marketPrice: "$2;499 - $8;000/month",
     roi: "400-600%";
     innovationLevel: "Cutting-edge";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["GPT-4", "DALL-E 3", "Whisper", "React", "Python", "TensorFlow"],
@@ -103,18 +103,18 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     caseStudies: ["Media company 300% efficiency boost", "E-commerce 5x content output"]
   },
 
-  // Blockchain & Web3 Services
+  // Blockchain & Web3 Services;
   {
     id: "blockchain-enterprise-suite";
     title: "Blockchain Enterprise Suite Pro";
-    description: "Comprehensive enterprise blockchain solution for supply chain transparency, smart contracts, and decentralized applications with enterprise-grade security.",
+    description: "Comprehensive enterprise blockchain solution for supply chain transparency; smart contracts; and decentralized applications with enterprise-grade security.",
     category: "Blockchain & Web3";
     subcategory: "Enterprise Blockchain";
     price: 3999;
     currency: "$";
     pricingModel: "monthly";
     features: [
-      "Multi-chain support (Ethereum, Polygon, Solana)",
+      "Multi-chain support (Ethereum; Polygon; Solana)",
       "Smart contract development & auditing",
       "Supply chain transparency tracking",
       "DeFi integration capabilities",
@@ -149,13 +149,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFTs"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$3,999 - $15,000/month",
+    marketPrice: "$3;999 - $15;000/month",
     roi: "300-500%";
     innovationLevel: "Revolutionary";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["Ethereum", "Solidity", "React", "Node.js", "IPFS", "Web3.js"],
@@ -166,13 +166,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["KYC/AML", "GDPR", "Financial regulations"]
     },
     competitors: ["ConsenSys", "Chainalysis", "Alchemy", "Infura"],
-    demoUrl: "https://ziontechgroup.com/demo/blockchain-suite"
+    demoUrl: "https://ziontechgroup.com/demo/blockchain-suite",
   };
-  // Quantum Computing Services
+  // Quantum Computing Services;
   {
     id: "quantum-optimization-platform";
     title: "Quantum Optimization Platform Elite";
-    description: "Advanced quantum computing platform for solving complex optimization problems in logistics, finance, and scientific research with hybrid quantum-classical algorithms.",
+    description: "Advanced quantum computing platform for solving complex optimization problems in logistics; finance; and scientific research with hybrid quantum-classical algorithms.",
     category: "Quantum Computing";
     subcategory: "Optimization";
     price: 5999;
@@ -214,13 +214,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Quantum Computing", "Optimization", "AI", "Research", "Enterprise"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$5,999 - $25,000/month",
+    marketPrice: "$5;999 - $25;000/month",
     roi: "400-800%";
     innovationLevel: "Revolutionary";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Python", "Quantum algorithms"],
@@ -231,13 +231,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["Research ethics", "Data privacy", "Export controls"]
     },
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
-    demoUrl: "https://ziontechgroup.com/demo/quantum-platform"
+    demoUrl: "https://ziontechgroup.com/demo/quantum-platform",
   };
-  // Advanced Cybersecurity Services
+  // Advanced Cybersecurity Services;
   {
     id: "ai-threat-intelligence-platform";
     title: "AI Threat Intelligence Platform Pro";
-    description: "Next-generation cybersecurity platform that uses AI to detect, analyze, and respond to advanced threats in real-time with predictive capabilities.",
+    description: "Next-generation cybersecurity platform that uses AI to detect; analyze; and respond to advanced threats in real-time with predictive capabilities.",
     category: "Advanced Cybersecurity";
     subcategory: "Threat Intelligence";
     price: 3499;
@@ -279,13 +279,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Cybersecurity", "AI", "Threat Intelligence", "SOC", "Compliance"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$3,499 - $12,000/month",
+    marketPrice: "$3;499 - $12;000/month",
     roi: "300-500%";
     innovationLevel: "Cutting-edge";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["Machine Learning", "NLP", "Python", "Elasticsearch", "Kafka", "React"],
@@ -296,13 +296,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
     },
     competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "FireEye"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence"
+    demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence",
   };
-  // Edge Computing & IoT Services
+  // Edge Computing & IoT Services;
   {
     id: "edge-ai-orchestrator";
     title: "Edge AI Orchestrator Platform";
-    description: "Intelligent edge computing platform that brings AI processing closer to data sources for real-time analytics, automation, and decision-making.",
+    description: "Intelligent edge computing platform that brings AI processing closer to data sources for real-time analytics; automation; and decision-making.",
     category: "Edge Computing & IoT";
     subcategory: "Edge AI";
     price: 1999;
@@ -344,13 +344,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Edge Computing", "IoT", "AI", "Real-time Analytics", "Automation"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,999 - $8,000/month",
+    marketPrice: "$1;999 - $8;000/month",
     roi: "350-600%";
     innovationLevel: "Cutting-edge";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["Kubernetes", "Docker", "Python", "TensorFlow Lite", "MQTT", "React"],
@@ -361,13 +361,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["GDPR", "CCPA", "Industry standards"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"],
-    demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator"
+    demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator",
   };
-  // Advanced Data Analytics Services
+  // Advanced Data Analytics Services;
   {
     id: "real-time-data-fabric";
     title: "Real-Time Data Fabric Platform";
-    description: "Unified data platform that provides real-time data processing, analytics, and insights across multiple sources with AI-powered automation.",
+    description: "Unified data platform that provides real-time data processing; analytics; and insights across multiple sources with AI-powered automation.",
     category: "Advanced Data Analytics";
     subcategory: "Real-time Processing";
     price: 2799;
@@ -409,13 +409,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Data Analytics", "Real-time Processing", "AI", "Data Integration", "Business Intelligence"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$2,799 - $10,000/month",
+    marketPrice: "$2;799 - $10;000/month",
     roi: "400-700%";
     innovationLevel: "Cutting-edge";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["Apache Kafka", "Apache Spark", "Python", "React", "PostgreSQL", "Redis"],
@@ -426,13 +426,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"]
     },
     competitors: ["Databricks", "Snowflake", "Confluent", "Apache Kafka"],
-    demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric"
+    demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric",
   };
-  // Autonomous Systems Services
+  // Autonomous Systems Services;
   {
     id: "autonomous-workflow-orchestrator";
     title: "Autonomous Workflow Orchestrator Pro";
-    description: "Intelligent workflow automation platform that uses AI to design, optimize, and execute complex business processes autonomously.",
+    description: "Intelligent workflow automation platform that uses AI to design; optimize; and execute complex business processes autonomously.",
     category: "Autonomous Systems";
     subcategory: "Workflow Automation";
     price: 1899;
@@ -474,13 +474,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Automation", "AI", "Workflow", "Process Optimization", "RPA"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,899 - $7,000/month",
+    marketPrice: "$1;899 - $7;000/month",
     roi: "300-500%";
     innovationLevel: "Cutting-edge";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -491,13 +491,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"]
     },
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
-    demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow"
+    demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow",
   };
-  // Digital Twin Services
+  // Digital Twin Services;
   {
     id: "digital-twin-platform";
     title: "Digital Twin Platform Elite";
-    description: "Advanced digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive capabilities.",
+    description: "Advanced digital twin platform for creating virtual replicas of physical assets; processes; and systems with real-time monitoring and predictive capabilities.",
     category: "Digital Twin Technology";
     subcategory: "Asset Management";
     price: 4499;
@@ -539,13 +539,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Digital Twin", "IoT", "Predictive Maintenance", "3D Modeling", "Asset Management"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$4,499 - $18,000/month",
+    marketPrice: "$4;499 - $18;000/month",
     roi: "400-800%";
     innovationLevel: "Cutting-edge";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["Unity 3D", "Unreal Engine", "Python", "React", "Three.js", "WebGL"],
@@ -556,13 +556,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["Industry standards", "Data privacy", "Security protocols"]
     },
     competitors: ["Siemens", "GE Digital", "PTC", "Bentley Systems"],
-    demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform"
+    demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform",
   };
-  // Metaverse Development Services
+  // Metaverse Development Services;
   {
     id: "metaverse-development-platform";
     title: "Metaverse Development Platform Pro";
-    description: "Comprehensive platform for building immersive metaverse experiences, virtual worlds, and digital environments with advanced 3D graphics and AI integration.",
+    description: "Comprehensive platform for building immersive metaverse experiences; virtual worlds; and digital environments with advanced 3D graphics and AI integration.",
     category: "Metaverse & VR/AR";
     subcategory: "Development Platform";
     price: 3299;
@@ -604,13 +604,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Metaverse", "VR/AR", "3D Development", "Gaming", "Virtual Reality"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "premium";
-    marketPrice: "$3,299 - $12,000/month",
+    marketPrice: "$3;299 - $12;000/month",
     roi: "350-600%";
     innovationLevel: "Revolutionary";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["Unity 3D", "Unreal Engine", "WebXR", "Three.js", "React", "Node.js"],
@@ -621,13 +621,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["GDPR", "CCPA", "Content moderation", "Age verification"]
     },
     competitors: ["Roblox", "Decentraland", "Meta", "Unity", "Epic Games"],
-    demoUrl: "https://ziontechgroup.com/demo/metaverse-platform"
+    demoUrl: "https://ziontechgroup.com/demo/metaverse-platform",
   };
-  // Green Technology Services
+  // Green Technology Services;
   {
     id: "sustainable-tech-optimizer";
     title: "Sustainable Technology Optimizer";
-    description: "AI-powered platform for optimizing energy consumption, reducing carbon footprint, and implementing sustainable technology solutions across organizations.",
+    description: "AI-powered platform for optimizing energy consumption; reducing carbon footprint; and implementing sustainable technology solutions across organizations.",
     category: "Green Technology";
     subcategory: "Sustainability";
     price: 1599;
@@ -669,13 +669,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     tags: ["Sustainability", "Green Technology", "Energy Optimization", "Carbon Tracking", "Compliance"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,599 - $6,000/month",
+    marketPrice: "$1;599 - $6;000/month",
     roi: "250-400%";
     innovationLevel: "Cutting-edge";
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technicalSpecs: {
       technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
@@ -686,6 +686,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
       compliance: ["ISO 14001", "LEED certification", "Sustainability standards"]
     },
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-    demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer"
+    demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer",
   }
 ];

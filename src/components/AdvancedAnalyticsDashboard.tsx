@@ -1,50 +1,49 @@
 
-import React, { useState, useEffect } from 'react;';
-import { motion } from 'framer-motion, ';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface AnalyticsData {
   visitors: number;
-    pageViews: number;
-    conversionRate: number;
-    bounceRate: number;
-    avgSessionDuration: number;
-    topPages: Array<{ page: string;
-    views: number }>;
-    trafficSources: Array<{ source: string;
-    percentage: number }>;
+  pageViews: number;
+  conversionRate: number;
+  bounceRate: number;
+  avgSessionDuration: number;
+  topPages: Array<{ page: string; views: number }>;
+  trafficSources: Array<{ source: string; percentage: number }>;
 }
 
 export const AdvancedAnalyticsDashboard: React.FC = () => {
   const [data, setData] = useState<AnalyticsData>({
-    visitors: 0;
-    pageViews: 0;
-    conversionRate: 0;
-    bounceRate: 0;
-    avgSessionDuration: 0;
-    topPages: [];
-    trafficSources: []
+    visitors: 0,
+    pageViews: 0,
+    conversionRate: 0,
+    bounceRate: 0,
+    avgSessionDuration: 0,
+    topPages: [],;
+    trafficSources: [];,
   });
-    useEffect(() => {
+
+  useEffect(() => {
     // Simulate data loading
     setData({
-      visitors: 15420;
-      pageViews: 89230;
-      conversionRate: 3.2;
-      bounceRate: 45.8;
-      avgSessionDuration: 4.2;
+      visitors: 15420,
+      pageViews: 89230,
+      conversionRate: 3.2,
+      bounceRate: 45.8,
+      avgSessionDuration: 4.2,
       topPages: [
-        { page: '/services', views: 12340 };
-        { page: '/about', views: 8920 };
+        { page: '/services', views: 12340 },
+        { page: '/about', views: 8920 },
         { page: '/contact', views: 6780 }
-      ];
+      ],
       trafficSources: [
-        { source: 'Organic Search', percentage: 45 };
-        { source: 'Direct', percentage: 30 };
-        { source: 'Social Media', percentage: 15 };
+        { source: 'Organic Search', percentage: 45 },
+        { source: 'Direct', percentage: 30 },
+        { source: 'Social Media', percentage: 15 },
         { source: 'Referral', percentage: 10 }
       ]
     });
-     }, []);
+  }, []);
 
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
@@ -58,9 +57,9 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
         {/* Key Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {[
-            { label: 'Total Visitors', value: data.visitors.toLocaleString(), color: 'bg-blue-500' };
-            { label: 'Page Views', value: data.pageViews.toLocaleString(), color: 'bg-green-500' };
-            { label: 'Conversion Rate', value: \`\${data.conversionRate}%\`, color: 'bg-purple-500' };
+            { label: 'Total Visitors', value: data.visitors.toLocaleString(), color: 'bg-blue-500' },
+            { label: 'Page Views', value: data.pageViews.toLocaleString(), color: 'bg-green-500' },
+            { label: 'Conversion Rate', value: \`\${data.conversionRate}%\`, color: 'bg-purple-500' },
             { label: 'Bounce Rate', value: \`\${data.bounceRate}%\`, color: 'bg-red-500' }
           ].map((metric, index) => (
             <motion.div
@@ -118,3 +117,4 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
 };
 
 export default AdvancedAnalyticsDashboard;
+<//div><///div>

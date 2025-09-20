@@ -5,10 +5,9 @@ import { Footer } from "@/components/Footer, ";
 
 interface AppLayoutProps {
 	children?: React.ReactNode;
-	hideFooter?: boolean;
-}
-
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+	hideFooter?: boolean,
+};
+export function AppLayout({ children; hideFooter = false }: AppLayoutProps) {
 	return (
 		<div className="flex flex-col min-h-screen bg-background">
 			<span id="top" aria-hidden="true" className="sr-only" />
@@ -20,3 +19,4 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 		</div>
 	);
 }
+<//div><///div>

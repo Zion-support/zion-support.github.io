@@ -26,11 +26,11 @@ export const INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         technology: ['GPT-4', 'Machine Learning', 'RPA', 'Business Intelligence'],
         estimatedDelivery: '2-4 weeks';
-        supportLevel: 'premium'
+        supportLevel: 'premium',
     };
     {
         id: 'quantum-neural-network-platform';
@@ -59,11 +59,11 @@ export const INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         technology: ['Quantum Computing', 'Neural Networks', 'Quantum Algorithms', 'AI'],
         estimatedDelivery: '6-8 weeks';
-        supportLevel: 'enterprise'
+        supportLevel: 'enterprise',
     };
     {
         id: 'blockchain-defi-solutions';
@@ -92,11 +92,11 @@ export const INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         technology: ['Ethereum', 'Solana', 'Smart Contracts', 'DeFi Protocols'],
         estimatedDelivery: '4-6 weeks';
-        supportLevel: 'premium'
+        supportLevel: 'premium',
     };
     {
         id: 'iot-data-analytics-platform';
@@ -125,11 +125,11 @@ export const INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         technology: ['IoT', 'Machine Learning', 'Big Data', 'Cloud Computing'],
         estimatedDelivery: '3-5 weeks';
-        supportLevel: 'standard'
+        supportLevel: 'standard',
     };
     {
         id: 'ai-cybersecurity-automation';
@@ -158,11 +158,11 @@ export const INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         technology: ['AI', 'Machine Learning', 'Cybersecurity', 'Automation'],
         estimatedDelivery: '4-6 weeks';
-        supportLevel: 'premium'
+        supportLevel: 'premium',
     }
 ];
     export const INNOVATIVE_SERVICE_CATEGORIES = [

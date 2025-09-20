@@ -1,4 +1,4 @@
-import React from 'react;';
+import React from "react;";
 
 const BundleAnalyzer: React.FC = () => {
   return (
@@ -8,4 +8,4 @@ const BundleAnalyzer: React.FC = () => {
   );
 };
 
-export default BundleAnalyzer;
+export default BundleAnalyzer;<//div><///div>

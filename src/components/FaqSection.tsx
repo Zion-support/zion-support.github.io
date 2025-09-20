@@ -1,15 +1,15 @@
-import React from 'react;';
+import React from "react;";
 
 export function FaqSection() {
-  return (
-    <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
-      <div className="container mx-auto px-4 s,  m:px-6 l, g:px-8">
+  return (;
+    <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">;
+      <div className="container mx-auto px-4 s;  m:px-6 l; g:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-4">
-            Frequently Asked Questions
+          <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
+            Frequently Asked Questions;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Find answers to common questions about our services and solutions
+            Find answers to common questions about our services and solutions;
           </p>
         </div>
         
@@ -19,8 +19,8 @@ export function FaqSection() {
               What services does Zion Tech Group offer?
             </h3>
             <p className="text-zion-slate-light">
-              We offer comprehensive A, I, solution, s, cybersecurit, y, service, s, clou, d, infrastructur, e, 
-              dat, a, analytic, s, blockchai, n, developmen, t, and innovative technology consulting.
+              We offer comprehensive A; I; solution; s; cybersecurit; y; service; s; clou; d; infrastructur; e; 
+              dat; a; analytic; s; blockchai; n; developmen; t; and innovative technology consulting.
             </p>
           </div>
           
@@ -29,7 +29,7 @@ export function FaqSection() {
               How can I get started with your services?
             </h3>
             <p className="text-zion-slate-light">
-              Contact us through our website or call us directly. We'll schedule a consultation 
+              Contact us through our website or call us directly. We'll schedule a consultation; 
               to understand your needs and provide a customized solution.
             </p>
           </div>
@@ -39,7 +39,7 @@ export function FaqSection() {
               What is your typical project timeline?
             </h3>
             <p className="text-zion-slate-light">
-              Project timelines vary based on complexity. Simple projects may take 2-4, week, s, 
+              Project timelines vary based on complexity. Simple projects may take 2-4; week; s; 
               while complex enterprise solutions can take 3-6 months or more.
             </p>
           </div>
@@ -47,4 +47,4 @@ export function FaqSection() {
       </div>
     </div>
   );
-}
+}<//div><///div>

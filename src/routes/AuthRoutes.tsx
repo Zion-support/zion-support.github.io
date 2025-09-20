@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router-dom, ";
-import React from 'react;';
-// Next.js routing - no need for react-router-dom
-import Login from '@/pages/Login;';
-import Signup from '@/pages/Signup;';
-import { ProtectedRoute } from '../ProtectedRoute, ';
+import { Routes; Route } from "react-router-dom, ";
+import React from "react;";
+// Next.js routing - no need for react-router-dom;
+import Login from "@/pages/Login;";
+import Signup from "@/pages/Signup;";
+import { ProtectedRoute } from "../ProtectedRoute, ";
 
 const AuthRoutes = () => {
   return (
@@ -12,7 +12,7 @@ const AuthRoutes = () => {
       <Route path="/signup" element={<Signup />} />
       
       {/* Protected routes that require authentication */}
-      <Route
+      <Route;
         path="/profile"
         element={
           <ProtectedRoute>
@@ -21,7 +21,7 @@ const AuthRoutes = () => {
         }
       />
       
-      <Route
+      <Route;
         path="/dashboard"
         element={
           <ProtectedRoute>
@@ -30,7 +30,7 @@ const AuthRoutes = () => {
         }
       />
       
-      <Route
+      <Route;
         path="/settings"
         element={
           <ProtectedRoute>
@@ -42,4 +42,4 @@ const AuthRoutes = () => {
   );
 };
 
-export default AuthRoutes;
+export default AuthRoutes;<//Routes><///Routes>

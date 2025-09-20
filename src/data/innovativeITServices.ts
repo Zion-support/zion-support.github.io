@@ -18,7 +18,7 @@ export interface InnovativeITService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -26,7 +26,7 @@ export interface InnovativeITService {
     roi: string;
     competitors: string[];
     marketSize: string;
-    growthRate: string;
+    growthRate: string;,
 }
 
 export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
@@ -34,7 +34,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
   {
     id: "quantum-computing-as-a-service";
     title: "Quantum Computing as a Service (QCaaS)";
-    description: "Enterprise-grade quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools through the cloud.",
+    description: "Enterprise-grade quantum computing platform that provides access to quantum processors; quantum algorithms; and quantum software development tools through the cloud.",
     category: "Quantum Technology";
     subcategory: "Cloud Computing";
     price: 5000;
@@ -75,11 +75,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Quantum Computing", "Cloud Services", "Research", "Innovation", "Advanced Computing"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$5,000 - $25,000/month",
+    marketPrice: "$5;000 - $25;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["IBM Q", "Google Quantum", "Microsoft Q#", "Qiskit", "Cirq", "PennyLane"],
     integrations: ["AWS", "Azure", "Google Cloud", "Research databases", "Scientific computing tools"],
@@ -87,13 +87,13 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     roi: "200% within 24 months";
     competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
     marketSize: "$1.9 billion";
-    growthRate: "56.7% annually"
+    growthRate: "56.7% annually",
   };
-  // Edge Computing Infrastructure
+  // Edge Computing Infrastructure;
   {
     id: "edge-computing-infrastructure";
     title: "Edge Computing Infrastructure Platform";
-    description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving real-time processing capabilities.",
+    description: "Distributed edge computing platform that brings computation and data storage closer to data sources; reducing latency and improving real-time processing capabilities.",
     category: "Edge Computing";
     subcategory: "Infrastructure";
     price: 1200;
@@ -134,11 +134,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Edge Computing", "IoT", "5G", "Real-time Processing", "Distributed Systems"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,200 - $4,500/month",
+    marketPrice: "$1;200 - $4;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes", "Docker", "Node.js", "Python", "Redis", "PostgreSQL"],
     integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "5G networks", "IoT platforms"],
@@ -146,13 +146,13 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     roi: "280% within 18 months";
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
     marketSize: "$15.7 billion";
-    growthRate: "37.4% annually"
+    growthRate: "37.4% annually",
   };
-  // Zero Trust Security Architecture
+  // Zero Trust Security Architecture;
   {
     id: "zero-trust-security-architecture";
     title: "Zero Trust Security Architecture Platform";
-    description: "Comprehensive zero trust security platform that implements continuous verification, least privilege access, and micro-segmentation to protect modern IT environments.",
+    description: "Comprehensive zero trust security platform that implements continuous verification; least privilege access; and micro-segmentation to protect modern IT environments.",
     category: "Cybersecurity";
     subcategory: "Zero Trust";
     price: 2500;
@@ -193,11 +193,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Zero Trust", "Cybersecurity", "Identity Management", "Network Security", "Compliance"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$2,500 - $8,000/month",
+    marketPrice: "$2;500 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["OAuth 2.0", "SAML", "OIDC", "Zero Trust Network Access", "Identity providers", "SIEM"],
     integrations: ["Active Directory", "Okta", "Azure AD", "Google Workspace", "CrowdStrike", "Palo Alto"],
@@ -205,13 +205,13 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     roi: "320% within 18 months";
     competitors: ["Okta", "Ping Identity", "ForgeRock", "CyberArk", "Palo Alto Networks"],
     marketSize: "$19.6 billion";
-    growthRate: "17.4% annually"
+    growthRate: "17.4% annually",
   };
-  // Multi-Cloud Management Platform
+  // Multi-Cloud Management Platform;
   {
     id: "multi-cloud-management-platform";
     title: "Multi-Cloud Management Platform";
-    description: "Unified platform for managing multiple cloud providers, optimizing costs, ensuring compliance, and providing seamless workload portability across different cloud environments.",
+    description: "Unified platform for managing multiple cloud providers; optimizing costs; ensuring compliance; and providing seamless workload portability across different cloud environments.",
     category: "Cloud Management";
     subcategory: "Multi-Cloud";
     price: 800;
@@ -252,11 +252,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Multi-Cloud", "Cloud Management", "Cost Optimization", "DevOps", "Compliance"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$800 - $3,000/month",
+    marketPrice: "$800 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Terraform", "Kubernetes", "Docker", "Python", "React", "PostgreSQL"],
     integrations: ["AWS", "Azure", "Google Cloud", "Oracle Cloud", "IBM Cloud", "Monitoring tools"],
@@ -264,13 +264,13 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     roi: "250% within 12 months";
     competitors: ["Flexera", "CloudHealth", "CloudCheckr", "RightScale", "Scalr"],
     marketSize: "$6.3 billion";
-    growthRate: "28.9% annually"
+    growthRate: "28.9% annually",
   };
-  // API Management and Governance
+  // API Management and Governance;
   {
     id: "api-management-governance";
     title: "API Management and Governance Platform";
-    description: "Comprehensive API management platform that provides design, development, security, monitoring, and governance capabilities for enterprise API ecosystems.",
+    description: "Comprehensive API management platform that provides design; development; security; monitoring; and governance capabilities for enterprise API ecosystems.",
     category: "API Management";
     subcategory: "Governance";
     price: 600;
@@ -311,11 +311,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["API Management", "Microservices", "Developer Experience", "Integration", "Governance"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "premium";
-    marketPrice: "$600 - $2,500/month",
+    marketPrice: "$600 - $2;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "React"],
     integrations: ["CI/CD pipelines", "Identity providers", "Monitoring tools", "Documentation platforms"],
@@ -323,13 +323,13 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     roi: "300% within 12 months";
     competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management", "MuleSoft"],
     marketSize: "$4.5 billion";
-    growthRate: "32.7% annually"
+    growthRate: "32.7% annually",
   };
-  // DevOps Automation Platform
+  // DevOps Automation Platform;
   {
     id: "devops-automation-platform";
     title: "DevOps Automation Platform";
-    description: "Comprehensive DevOps automation platform that streamlines software development, testing, deployment, and operations through intelligent automation and orchestration.",
+    description: "Comprehensive DevOps automation platform that streamlines software development; testing; deployment; and operations through intelligent automation and orchestration.",
     category: "DevOps";
     subcategory: "Automation";
     price: 450;
@@ -370,11 +370,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["DevOps", "Automation", "CI/CD", "Infrastructure as Code", "Monitoring"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "premium";
-    marketPrice: "$450 - $1,800/month",
+    marketPrice: "$450 - $1;800/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Kubernetes"],
     integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners", "Chat platforms"],
@@ -382,13 +382,13 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     roi: "350% within 12 months";
     competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "TeamCity"],
     marketSize: "$8.9 billion";
-    growthRate: "24.3% annually"
+    growthRate: "24.3% annually",
   };
-  // Data Mesh Architecture Platform
+  // Data Mesh Architecture Platform;
   {
     id: "data-mesh-architecture-platform";
     title: "Data Mesh Architecture Platform";
-    description: "Modern data architecture platform that implements data mesh principles, enabling decentralized data ownership, self-service data infrastructure, and domain-driven data products.",
+    description: "Modern data architecture platform that implements data mesh principles; enabling decentralized data ownership; self-service data infrastructure; and domain-driven data products.",
     category: "Data Architecture";
     subcategory: "Data Mesh";
     price: 1500;
@@ -429,11 +429,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Data Mesh", "Data Architecture", "Data Governance", "Microservices", "Data Products"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,500 - $6,000/month",
+    marketPrice: "$1;500 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Apache Kafka", "Apache Airflow", "DataHub", "Amundsen", "Great Expectations", "dbt"],
     integrations: ["Data warehouses", "Data lakes", "Streaming platforms", "BI tools", "ML platforms"],
@@ -441,13 +441,13 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     roi: "280% within 18 months";
     competitors: ["DataHub", "Amundsen", "Collibra", "Alation", "Informatica"],
     marketSize: "$12.8 billion";
-    growthRate: "21.4% annually"
+    growthRate: "21.4% annually",
   };
-  // Green IT Infrastructure
+  // Green IT Infrastructure;
   {
     id: "green-it-infrastructure";
     title: "Green IT Infrastructure Platform";
-    description: "Sustainable IT infrastructure platform that optimizes energy consumption, reduces carbon footprint, and implements green computing practices for environmentally conscious organizations.",
+    description: "Sustainable IT infrastructure platform that optimizes energy consumption; reduces carbon footprint; and implements green computing practices for environmentally conscious organizations.",
     category: "Green IT";
     subcategory: "Sustainability";
     price: 800;
@@ -488,11 +488,11 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     tags: ["Green IT", "Sustainability", "Energy Efficiency", "ESG", "Environmental Compliance"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$800 - $3,000/month",
+    marketPrice: "$800 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["IoT sensors", "Energy monitoring", "Sustainability analytics", "Green computing tools", "Reporting platforms"],
     integrations: ["Building management systems", "Energy providers", "Sustainability platforms", "ESG reporting tools"],
@@ -500,6 +500,6 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     roi: "200% within 18 months";
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "Sustainability platforms"],
     marketSize: "$7.6 billion";
-    growthRate: "19.2% annually"
+    growthRate: "19.2% annually",
   }
 ];

@@ -1,5 +1,5 @@
 export const enhanced2025ComprehensiveServices = [
-    // AI-Powered Business Intelligence & Analytics
+    // AI-Powered Business Intelligence & Analytics;
     {
         id: 'ai-business-intelligence-suite';
         name: 'AI Business Intelligence Suite';
@@ -36,7 +36,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 21;
         setupTime: '2-3 business days';
@@ -51,7 +51,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.9%';
         securityFeatures: ['End-to-end encryption', 'Multi-factor authentication', 'Role-based access control', 'Audit logging']
     },
-    // Quantum-Safe Cybersecurity Platform
+    // Quantum-Safe Cybersecurity Platform;
     {
         id: 'quantum-safe-cybersecurity-platform';
         name: 'Quantum-Safe Cybersecurity Platform';
@@ -88,7 +88,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 30;
         setupTime: '1-2 weeks';
@@ -103,7 +103,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.99%';
         securityFeatures: ['Quantum-resistant encryption', 'Multi-layer security', 'Real-time threat intelligence', 'Automated response']
     },
-    // Autonomous DevOps Platform
+    // Autonomous DevOps Platform;
     {
         id: 'autonomous-devops-platform';
         name: 'Autonomous DevOps Platform';
@@ -140,7 +140,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 14;
         setupTime: '3-5 business days';
@@ -155,7 +155,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.95%';
         securityFeatures: ['Automated security updates', 'Access control', 'Audit logging', 'Encryption at rest']
     },
-    // Blockchain Supply Chain Transparency Platform
+    // Blockchain Supply Chain Transparency Platform;
     {
         id: 'blockchain-supply-chain-transparency';
         name: 'Blockchain Supply Chain Transparency Platform';
@@ -192,7 +192,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 30;
         setupTime: '2-4 weeks';
@@ -207,7 +207,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.8%';
         securityFeatures: ['Immutable records', 'Cryptographic verification', 'Access control', 'Audit trails']
     },
-    // AI-Powered Healthcare Analytics Platform
+    // AI-Powered Healthcare Analytics Platform;
     {
         id: 'ai-healthcare-analytics-platform';
         name: 'AI Healthcare Analytics Platform';
@@ -244,7 +244,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 45;
         setupTime: '4-6 weeks';
@@ -259,7 +259,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.99%';
         securityFeatures: ['HIPAA compliance', 'End-to-end encryption', 'Access control', 'Audit logging']
     },
-    // Quantum Machine Learning Platform
+    // Quantum Machine Learning Platform;
     {
         id: 'quantum-machine-learning-platform';
         name: 'Quantum Machine Learning Platform';
@@ -296,7 +296,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 60;
         setupTime: '6-8 weeks';
@@ -311,7 +311,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.5%';
         securityFeatures: ['Quantum encryption', 'Secure access', 'Data protection', 'Research protocols']
     },
-    // Autonomous Financial Trading Platform
+    // Autonomous Financial Trading Platform;
     {
         id: 'autonomous-financial-trading-platform';
         name: 'Autonomous Financial Trading Platform';
@@ -348,7 +348,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 30;
         setupTime: '2-3 weeks';
@@ -363,7 +363,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.99%';
         securityFeatures: ['Multi-factor authentication', 'Encryption', 'Audit trails', 'Regulatory compliance']
     },
-    // IoT Edge Computing Platform
+    // IoT Edge Computing Platform;
     {
         id: 'iot-edge-computing-platform';
         name: 'IoT Edge Computing Platform';
@@ -400,7 +400,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 21;
         setupTime: '1-2 weeks';
@@ -415,7 +415,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.9%';
         securityFeatures: ['Edge encryption', 'Secure communication', 'Access control', 'Device authentication']
     },
-    // AI-Powered Legal Research Platform
+    // AI-Powered Legal Research Platform;
     {
         id: 'ai-legal-research-platform';
         name: 'AI Legal Research Platform';
@@ -452,7 +452,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 14;
         setupTime: '1-2 business days';
@@ -467,7 +467,7 @@ export const enhanced2025ComprehensiveServices = [
         uptime: '99.9%';
         securityFeatures: ['Client confidentiality', 'Data encryption', 'Access control', 'Audit logging']
     },
-    // Autonomous Marketing Campaign Platform
+    // Autonomous Marketing Campaign Platform;
     {
         id: 'autonomous-marketing-campaign-platform';
         name: 'Autonomous Marketing Campaign Platform';
@@ -504,7 +504,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 14;
         setupTime: '2-3 business days';
@@ -520,9 +520,9 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['Data encryption', 'Access control', 'Compliance monitoring', 'Audit trails']
     }
 ];
-// Additional specialized services for different industries
+// Additional specialized services for different industries;
 export const specializedIndustryServices = [
-    // Renewable Energy Management Platform
+    // Renewable Energy Management Platform;
     {
         id: 'renewable-energy-management-platform';
         name: 'Renewable Energy Management Platform';
@@ -559,7 +559,7 @@ export const specializedIndustryServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 30;
         setupTime: '2-4 weeks';
@@ -574,7 +574,7 @@ export const specializedIndustryServices = [
         uptime: '99.9%';
         securityFeatures: ['Grid security', 'Data encryption', 'Access control', 'Audit logging']
     },
-    // Autonomous Logistics Platform
+    // Autonomous Logistics Platform;
     {
         id: 'autonomous-logistics-platform';
         name: 'Autonomous Logistics Platform';
@@ -611,7 +611,7 @@ export const specializedIndustryServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 21;
         setupTime: '2-3 weeks';
@@ -627,8 +627,8 @@ export const specializedIndustryServices = [
         securityFeatures: ['Fleet security', 'Data encryption', 'Access control', 'Real-time monitoring']
     }
 ];
-// Export all services combined
+// Export all services combined;
 export const allEnhancedServices = [
     ...enhanced2025ComprehensiveServices,
-    ...specializedIndustryServices
+    ...specializedIndustryServices,
 ];

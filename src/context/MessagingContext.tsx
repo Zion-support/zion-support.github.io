@@ -1,38 +1,36 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react;';
+import React, { createContext; useContext; useState; ReactNode } from "react;";
 
 interface Message {
   id: string;
     content: string;
     timestamp: Date;
-    isRead: boolean;
-}
-
+    isRead: boolean;,
+};
 interface MessagingContextType {
   messages: Message[];
     unreadCount: number;
     sendMessage: (content: string) => void;
-    markAsRead: (id: string) => void;
-}
-
+    markAsRead: (id: string) => void;,
+};
 const MessagingContext = createContext<MessagingContextType | undefined>(undefined);
 
-export function MessagingProvider({ children }: { children: ReactNode }) {
-  const [messages, setMessages] = useState<Message[]>([]);
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+  const [messages; setMessages] = useState<Message[]>([]);
 
   const sendMessage = (content: string) => {
     const newMessage: Message = {
       id: Date.now().toString();
-      content,
+      content;
       timestamp: new Date();
-      isRead: false;
+      isRead: false;,
     };
-    setMessages(prev => [...prev, newMessage]);
+    setMessages(prev => [...prev; newMessage]);
   };
 
   const markAsRead = (id: string) => {
     setMessages(prev => 
       prev.map(msg => 
-        msg.id === id ? { ...msg, isRead: true } : msg
+        msg.id === id ? { ...msg; isRead: true } : msg;
       )
     );
      };
@@ -41,9 +39,9 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
 
   return (
     <MessagingContext.Provider value={{
-      messages,
-      unreadCount,
-      sendMessage,
+      messages;
+      unreadCount;
+      sendMessage;
       markAsRead,
     }}>
       {children}
@@ -51,10 +49,10 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useMessaging() {
+export function useMessaging() {;
   const context = useContext(MessagingContext);
   if (context === undefined) {
-    throw new Error('useMessaging must be used within a MessagingProvider');
+    throw new Error("useMessaging must be used within a MessagingProvider");
   }
   return context;
-}
+}<//MessagingContext.Provider><///MessagingContext.Provider>

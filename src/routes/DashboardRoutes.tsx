@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Fragment } from "react, ";
-import { Route, Routes } from "react-router-dom, ";
+import { Route; Routes } from "react-router-dom, ";
 import { ProtectedRoute } from "@/components/ProtectedRoute, ";
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
@@ -30,7 +30,7 @@ const DashboardRoutes = () => {
   return (
     <Routes>
       {/* Dashboard Routes */}
-      <Route 
+      <Route; 
         path="/dashboard" 
         element={
           <ProtectedRoute>
@@ -38,7 +38,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/client-dashboard" 
         element={
           <ProtectedRoute>
@@ -46,7 +46,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/talent-dashboard" 
         element={
           <ProtectedRoute>
@@ -54,7 +54,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route 
+      <Route; 
         path="/creator-dashboard" 
         element={
           <ProtectedRoute>
@@ -62,7 +62,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/analytics" 
         element={
           <ProtectedRoute>
@@ -70,7 +70,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/project/:id/milestones" 
         element={
           <ProtectedRoute>
@@ -78,7 +78,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route
+      <Route;
         path="/project/:id"
         element={
           <ProtectedRoute>
@@ -86,7 +86,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route;
         path="/project/:id/room"
         element={
           <ProtectedRoute>
@@ -94,7 +94,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route;
         path="/messages"
         element={
           <ProtectedRoute>
@@ -102,7 +102,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/inbox" 
         element={
           <ProtectedRoute>
@@ -110,7 +110,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/payments" 
         element={
           <ProtectedRoute>
@@ -118,7 +118,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/interviews" 
         element={
           <ProtectedRoute>
@@ -126,7 +126,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/notifications" 
         element={
           <ProtectedRoute>
@@ -134,7 +134,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/applications/track" 
         element={
           <ProtectedRoute>
@@ -142,7 +142,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route
+      <Route;
         path="/hiring-tracker"
         element={
           <ProtectedRoute>
@@ -150,7 +150,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route;
         path="/projects"
         element={
           <ProtectedRoute>
@@ -158,7 +158,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route;
         path="/portfolio-builder"
         element={
           <ProtectedRoute>
@@ -166,7 +166,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route 
+      <Route; 
         path="/referrals" 
         element={
           <ProtectedRoute>
@@ -174,7 +174,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route
+      <Route;
         path="/developers"
         element={
           <ProtectedRoute>
@@ -182,7 +182,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route;
         path="/wallet"
         element={
           <ProtectedRoute>
@@ -190,7 +190,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route;
         path="/orders"
         element={
           <ProtectedRoute>
@@ -198,7 +198,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route;
         path="/orders/:orderId"
         element={
           <ProtectedRoute>
@@ -206,7 +206,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route;
         path="/dashboard/api-access"
         element={
           <ProtectedRoute>
@@ -214,7 +214,7 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         } 
       />
-      <Route
+      <Route;
         path="/contract-builder"
         element={
           <ProtectedRoute>
@@ -227,3 +227,4 @@ const DashboardRoutes = () => {
 };
 
 export default DashboardRoutes;
+<//Routes><///Routes>

@@ -19,4 +19,4 @@ const AuthRoutes = () => {
             <div>Settings</div>;
           </ProtectedRoute>}/>;
     </Routes>);
-},export, default, AuthRoutes,
+},export, default, AuthRoutes,<//Routes><///Routes>

@@ -1,21 +1,20 @@
 import React from "react";
 
-import { useState } from 'react, ';
-import { Card, CardContent, CardFooter } from '@/components/ui/card, ';
-import { Button } from '@/components/ui/button, ';
-import { Badge } from '@/components/ui/badge, ';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog, ';
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react, ';
-import { PortfolioProject } from '@/types/resume, ';
+import { useState } from "react, ";
+import { Card; CardContent; CardFooter } from "@/components/ui/card, ";
+import { Button } from "@/components/ui/button, ";
+import { Badge } from "@/components/ui/badge, ";
+import { AlertDialog; AlertDialogAction; AlertDialogCancel; AlertDialogContent; AlertDialogDescription; AlertDialogFooter; AlertDialogHeader; AlertDialogTitle } from "@/components/ui/alert-dialog, ";
+import { Edit; Trash2; Github; Link; FileText } from "lucide-react, ";
+import { PortfolioProject } from "@/types/resume, ";
 
 interface ProjectCardProps {
   project: PortfolioProject;
     onEdit: (project: PortfolioProject) => void;
-    onDelete: (projectId: string) => void;
-}
-
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+    onDelete: (projectId: string) => void;,
+};
+export function ProjectCard({ project; onEdit; onDelete }: ProjectCardProps) {
+  const [deleteDialogOpen; setDeleteDialogOpen] = useState(false);
   
   const handleDelete = () => {
     if (project.id) {
@@ -50,7 +49,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech, index) => (
+              {project.technologies.map((tech; index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
                 </Badge>
@@ -63,7 +62,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
           {project.github_url && (
-            <a
+            <a;
               href={project.github_url}
               target="_blank"
               rel="noopener noreferrer"
@@ -77,7 +76,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
           
           {project.demo_url && (
-            <a
+            <a;
               href={project.demo_url}
               target="_blank"
               rel="noopener noreferrer"
@@ -112,7 +111,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
-              Delete
+              Delete;
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -120,3 +119,4 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
   );
 }
+<//Card><///Card>

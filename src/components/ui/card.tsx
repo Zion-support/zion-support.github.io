@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-const Card: React.FC<{ className?: string; children: React.ReactNode }> = ({ className = '', children }) => {
+const Card: React.FC<{ className?: string; children: React.ReactNode }> = ({ className = "", children }) => {
   return (
     <div className={`p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {children}
@@ -8,4 +8,4 @@ const Card: React.FC<{ className?: string; children: React.ReactNode }> = ({ cla
   )
 }
 
-export default Card
+export default Card;<//div><///div>

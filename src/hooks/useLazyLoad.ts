@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react, ';
+import { useEffect; useRef; useState; useCallback } from "react, ";
 
 interface UseLazyLoadOptions {
   threshold?: number;
@@ -10,19 +10,19 @@ interface UseLazyLoadOptions {
 interface UseLazyLoadReturn {
   isVisible: boolean;
     ref: React.RefObject<HTMLElement>;
-    load: () => void;
+    load: () => void;,
 }
 
 export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
   const {
     threshold = 0.1;
-    rootMargin = '50px',
-    preload = true,
-    preloadDistance = 100
+    rootMargin = "50px",
+    preload = true;
+    preloadDistance = 100;
   } = options;
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible; setIsVisible] = useState(false);
+  const [isLoaded; setIsLoaded] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   const load = useCallback(() => {
@@ -45,8 +45,8 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn
         });
       },
       {
-        threshold,
-        rootMargin: preload ? `${preloadDistance}px` : rootMargin
+        threshold;
+        rootMargin: preload ? `${preloadDistance}px` : rootMargin;
       }
     );
     observer.observe(element);
@@ -54,15 +54,15 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn
     return () => {
       observer.unobserve(element);
     };
-  }, [threshold, rootMargin, preload, preloadDistance, load]);
+  }, [threshold; rootMargin; preload; preloadDistance; load]);
 
-  return { isVisible, ref, load };
+  return { isVisible; ref; load };
 };
 
-// Enhanced lazy loading for images
-export const useLazyImage = (src: string, options: UseLazyLoadOptions = {}) => {
-  const { isVisible, ref } = useLazyLoad(options);
-  const [imageSrc, setImageSrc] = useState<string>('');
+// Enhanced lazy loading for images;
+export const useLazyImage = (src: string; options: UseLazyLoadOptions = {}) => {
+  const { isVisible; ref } = useLazyLoad(options);
+  const [imageSrc; setImageSrc] = useState<string>("");
 
   useEffect(() => {
     if (isVisible && src) {
@@ -70,19 +70,19 @@ export const useLazyImage = (src: string, options: UseLazyLoadOptions = {}) => {
       img.onload = () => setImageSrc(src);
       img.src = src;
     }
-  }, [isVisible, src]);
+  }, [isVisible; src]);
 
-  return { imageSrc, ref, isVisible };
+  return { imageSrc; ref; isVisible };
 };
 
-// Enhanced lazy loading for components
+// Enhanced lazy loading for components;
 export const useLazyComponent = <T extends any>(
   importFn: () => Promise<{ default: T }>;
   options: UseLazyLoadOptions = {}
 ) => {
-  const { isVisible, ref } = useLazyLoad(options);
-  const [Component, setComponent] = useState<T | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const { isVisible; ref } = useLazyLoad(options);
+  const [Component; setComponent] = useState<T | null>(null);
+  const [isLoading; setIsLoading] = useState(false);
 
   useEffect(() => {
     if (isVisible && !Component && !isLoading) {
@@ -98,7 +98,7 @@ export const useLazyComponent = <T extends any>(
           setIsLoading(false);
         });
     }
-  }, [isVisible, Component, isLoading, importFn]);
+  }, [isVisible; Component; isLoading; importFn]);
 
-  return { Component, ref, isVisible, isLoading };
+  return { Component; ref; isVisible; isLoading };
 };

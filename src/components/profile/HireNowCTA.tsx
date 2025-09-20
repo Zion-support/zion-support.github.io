@@ -1,42 +1,40 @@
-import React, { useState } from 'react;';
-import { Button } from '../ui/Button, ';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card, ';
-import { Input } from '../ui/Input, ';
-import { Textarea } from '../ui/Textarea, ';
-import { Mail, Calendar, DollarSign, MessageSquare } from 'lucide-react, ';
+import React, { useState } from "react;";
+import { Button } from "../ui/Button, ";
+import { Card; CardContent; CardHeader; CardTitle } from "../ui/Card, ";
+import { Input } from "../ui/Input, ";
+import { Textarea } from "../ui/Textarea, ";
+import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
 
 interface HireNowCTAProps {
   talentName: string;
     hourlyRate?: number;
-  onHire?: (data: HireData) => void;
-}
-
+  onHire?: (data: HireData) => void;,
+};
 interface HireData {
   projectDescription: string;
     budget: string;
     startDate: string;
-    message: string;
-}
-
-export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [formData, setFormData] = useState<HireData>({
-    projectDescription: '';
-    budget: '';
-    startDate: '';
-    message: ''
+    message: string;,
+};
+export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {
+  const [isFormOpen; setIsFormOpen] = useState(false);
+  const [formData; setFormData] = useState<HireData>({
+    projectDescription: "";
+    budget: "";
+    startDate: "";
+    message: "",
   });
     const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onHire) {
       onHire(formData);
     }
-    // Reset form and close
+    // Reset form and close;
     setFormData({
-      projectDescription: '';
-      budget: '';
-      startDate: '';
-      message: ''
+      projectDescription: "";
+      budget: "";
+      startDate: "";
+      message: "",
     });
     setIsFormOpen(false);
   };
@@ -44,7 +42,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev;
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value;
     }));
   };
 
@@ -68,67 +66,67 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
             <p className="text-zion-slate-light text-sm">
               Ready to start your project? Send a message to discuss details and get started.
             </p>
-            <Button
+            <Button;
               onClick={() => setIsFormOpen(true)}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
-              Start Project Discussion
+              Start Project Discussion;
             </Button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">
-                Project Description
+                Project Description;
               </label>
-              <Textarea
+              <Textarea;
                 id="projectDescription"
                 name="projectDescription"
                 value={formData.projectDescription}
                 onChange={handleChange}
                 placeholder="Describe your project requirements..."
                 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                required
+                required;
               />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
-                  Budget Range
+                  Budget Range;
                 </label>
-                <Input
+                <Input;
                   id="budget"
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
                   placeholder="e.g., $1000-5000"
                   className="bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan"
-                  required
+                  required;
                 />
               </div>
 
               <div>
                 <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
-                  Start Date
+                  Start Date;
                 </label>
-                <Input
+                <Input;
                   id="startDate"
                   name="startDate"
                   type="date"
                   value={formData.startDate}
                   onChange={handleChange}
                   className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan"
-                  required
+                  required;
                 />
               </div>
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                Additional Message
+                Additional Message;
               </label>
-              <Textarea
+              <Textarea;
                 id="message"
                 name="message"
                 value={formData.message}
@@ -140,19 +138,19 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
             </div>
 
             <div className="flex gap-3">
-              <Button
+              <Button;
                 type="submit"
                 className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               >
-                Send Message
+                Send Message;
               </Button>
-              <Button
+              <Button;
                 type="button"
                 variant="outline"
                 onClick={() => setIsFormOpen(false)}
                 className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
               >
-                Cancel
+                Cancel;
               </Button>
             </div>
           </form>
@@ -160,4 +158,4 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
       </CardContent>
     </Card>
   );
-}
+}<//Card><///Card>

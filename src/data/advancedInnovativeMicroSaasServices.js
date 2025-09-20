@@ -1,5 +1,5 @@
 export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
-    // AI-Powered Financial Services
+    // AI-Powered Financial Services;
     {
         id: "ai-financial-advisory-platform";
         title: "AI Financial Advisory Platform";
@@ -47,16 +47,16 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-financial-advisory";
         technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "Secure API Integration", "Multi-platform Support"],
         integrationOptions: ["Brokerage APIs", "Banking Systems", "Tax Software", "CRM Systems"],
         complianceStandards: ["SEC Compliance", "FINRA Guidelines", "GDPR", "SOC 2 Type II"],
         sla: "99.9% portfolio accuracy";
-        uptime: "99.95%"
+        uptime: "99.95%",
     };
-    // Quantum-Safe Cybersecurity
+    // Quantum-Safe Cybersecurity;
     {
         id: "quantum-safe-cybersecurity-suite";
         title: "Quantum-Safe Cybersecurity Suite";
@@ -104,16 +104,16 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/quantum-safe-cybersecurity";
         technicalSpecs: ["Post-Quantum Algorithms", "Hybrid Encryption", "Zero-Trust Architecture", "AI-Powered Detection"],
         integrationOptions: ["SIEM Systems", "EDR Solutions", "Identity Providers", "Cloud Platforms"],
         complianceStandards: ["NIST Standards", "ISO 27001", "SOC 2", "FedRAMP", "HIPAA"],
         sla: "99.95% threat detection";
-        uptime: "99.99%"
+        uptime: "99.99%",
     };
-    // AI-Powered Healthcare Analytics
+    // AI-Powered Healthcare Analytics;
     {
         id: "ai-healthcare-analytics-platform";
         title: "AI Healthcare Analytics Platform";
@@ -161,14 +161,14 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-healthcare-analytics";
         technicalSpecs: ["Machine Learning Models", "Real-time Processing", "Secure Data Pipeline", "Scalable Architecture"],
         integrationOptions: ["EHR Systems", "PACS", "Lab Systems", "Insurance Platforms"],
         complianceStandards: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA Guidelines"]
     },
-    // Autonomous Supply Chain Management
+    // Autonomous Supply Chain Management;
     {
         id: "autonomous-supply-chain-platform";
         title: "Autonomous Supply Chain Management Platform";
@@ -216,14 +216,14 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/autonomous-supply-chain";
         technicalSpecs: ["AI Algorithms", "IoT Integration", "Real-time Analytics", "Predictive Modeling"],
         integrationOptions: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
         complianceStandards: ["ISO 9001", "ISO 14001", "SOC 2", "GDPR"]
     },
-    // Quantum Machine Learning Platform
+    // Quantum Machine Learning Platform;
     {
         id: "quantum-machine-learning-platform";
         title: "Quantum Machine Learning Platform";
@@ -271,14 +271,14 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/quantum-machine-learning";
         technicalSpecs: ["Quantum Algorithms", "Hybrid Computing", "Cloud Infrastructure", "Real-time Processing"],
         integrationOptions: ["Research Tools", "Data Platforms", "Cloud Services", "Scientific Software"],
         complianceStandards: ["Research Ethics", "Data Privacy", "Export Controls", "Academic Standards"]
     },
-    // AI-Powered Legal Research Assistant
+    // AI-Powered Legal Research Assistant;
     {
         id: "ai-legal-research-assistant";
         title: "AI Legal Research Assistant";
@@ -326,14 +326,14 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-legal-research";
         technicalSpecs: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Secure Access"],
         integrationOptions: ["Legal Research Platforms", "Document Management", "Case Management", "Legal Databases"],
         complianceStandards: ["Attorney-Client Privilege", "Data Security", "Legal Ethics", "GDPR"]
     },
-    // Autonomous Energy Management System
+    // Autonomous Energy Management System;
     {
         id: "autonomous-energy-management-system";
         title: "Autonomous Energy Management System";
@@ -381,14 +381,14 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/autonomous-energy-management";
         technicalSpecs: ["AI Algorithms", "IoT Sensors", "Real-time Analytics", "Predictive Modeling"],
         integrationOptions: ["Building Management Systems", "Smart Meters", "Solar Panels", "Battery Storage"],
         complianceStandards: ["Energy Star", "LEED", "ISO 50001", "Local Energy Codes"]
     },
-    // AI-Powered Content Creation Studio
+    // AI-Powered Content Creation Studio;
     {
         id: "ai-content-creation-studio";
         title: "AI Content Creation Studio";
@@ -436,14 +436,14 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-content-creation";
         technicalSpecs: ["Natural Language Generation", "Computer Vision", "Machine Learning", "Content Optimization"],
         integrationOptions: ["CMS Platforms", "Social Media", "Email Marketing", "Analytics Tools"],
         complianceStandards: ["Content Guidelines", "Copyright Compliance", "Brand Safety", "GDPR"]
     },
-    // Quantum Internet Security Protocol
+    // Quantum Internet Security Protocol;
     {
         id: "quantum-internet-security-protocol";
         title: "Quantum Internet Security Protocol";
@@ -491,14 +491,14 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/quantum-internet-security";
         technicalSpecs: ["Quantum Key Distribution", "Quantum Networks", "Post-Quantum Cryptography", "Secure Protocols"],
         integrationOptions: ["Government Networks", "Military Systems", "Financial Networks", "Critical Infrastructure"],
         complianceStandards: ["NIST Standards", "Government Security", "FIPS", "ISO 27001", "FedRAMP"]
     },
-    // AI-Powered Talent Acquisition Platform
+    // AI-Powered Talent Acquisition Platform;
     {
         id: "ai-talent-acquisition-platform";
         title: "AI Talent Acquisition Platform";
@@ -546,7 +546,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-talent-acquisition";
         technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Integration APIs"],

@@ -26,7 +26,7 @@ AccordionItem.displayName = 'AccordionItem';
 const AccordionTrigger = React.forwardRef((_a, ref) => {
     var { className, children, isOpen = false } = _a, props = __rest(_a, ["className", "children", "isOpen"]);
     return (_jsxs("button", Object.assign({ ref: ref, className: cn('flex flex-1 items-center justify-between py-4 font-medium transition-all hover:text-zion-cyan [&[data-state=open]>svg]:rotate-180', className) }, props, { children: [children, _jsx(ChevronDown, { className: cn('h-4 w-4 shrink-0 transition-transform duration-200', {
-                    'rotate-180': isOpen
+                    'rotate-180': isOpen;
                 }) })] })));
 });
 AccordionTrigger.displayName = 'AccordionTrigger';
