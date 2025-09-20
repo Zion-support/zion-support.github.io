@@ -1,10 +1,9 @@
 [build]
-  # Use npm for dependency installation and build
+  # Use npm for dependency installation and build (skip linting for now)
   command = "npm ci && npm run build"
   publish = "dist"
-  # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
+  # Explicitly specify this is a Vite static site, not a framework
   base = "."
- # ci: retrigger Netlify deploy (no functional change) 2025-09-17T12:00:01Z
 
 [build.environment]
   NODE_VERSION = "20"
