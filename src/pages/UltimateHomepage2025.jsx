@@ -3,8 +3,8 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from "lucide-react";
 import ultimateInnovativeServices2025 from "../../data/2025-ultimate-innovative-services-expansion";
-export default function UltimateHomepage2025() {;
-    const [currentServiceIndex, setCurrentServiceIndex] = useState(0)
+export default function UltimateHomepage2025() {
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0)
     const [isVisible, setIsVisible] = useState(false)
     useEffect(() => {
         setIsVisible(true)
@@ -15,40 +15,51 @@ export default function UltimateHomepage2025() {;
     }, [])
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6)
     const allServices = ultimateInnovativeServices2025.slice(0, 9)
-    const stats = [;
-        {{ number: '10+', label: 'Revolutionary Services', icon: Rocket }}
-        {{ number: '500+', label: 'Happy Customers', icon: Users }}
-        {{ number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck }}
-        {{ number: '24/7', label: 'Expert Support', icon: Clock }}
-    ]
-    const benefits = [;
-        {;
-            icon: Brain,title: 'AI-Powered Intelligence',description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.';
-            color: 'from-blue-500 to-cyan-500';
-        }
-        {;
-            icon: Shield,title: 'Quantum-Secure Protection',description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',color: 'from-green-500 to-emerald-500';
-        }
-        {;
-            icon: Zap,title: 'Autonomous Operations',description: 'Self-managing systems that run your business operations with minimal human intervention.',color: 'from-purple-500 to-indigo-500';
-        }
-        {;
-            icon: BarChart3,title: 'Predictive Analytics',description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.';
-            color: 'from-orange-500 to-red-500';
-        }
-    ]
-    const industries = [;
-        {{ name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' }}
-        {{ name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' }}
-        {{ name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' }}
-        {{ name: 'Retail & E-commerce', icon: Globe, color: 'from-yellow-500 to-orange-500' }}
-        {{ name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' }}
-        {{ name: 'Government', icon: Shield, color: 'from-gray-500 to-blue-500' }}
-    ]
+    const stats = [
+  {{ number: '10+', label: 'Revolutionary Services', icon: Rocket },
+  },
+  {{ number: '500+', label: 'Happy Customers', icon: Users },
+  },
+  {{ number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },
+  },
+  {{ number: '24/7', label: 'Expert Support', icon: Clock },
+  },
+  ]
+    const benefits = [
+  {
+  icon: Brain,title: 'AI-Powered Intelligence',description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.';
+            color: 'from-blue-500 to-cyan-500'
+},
+  {
+  icon: Shield,title: 'Quantum-Secure Protection',description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',color: 'from-green-500 to-emerald-500'
+},
+  {
+  icon: Zap,title: 'Autonomous Operations',description: 'Self-managing systems that run your business operations with minimal human intervention.',color: 'from-purple-500 to-indigo-500'
+},
+  {
+  icon: BarChart3,title: 'Predictive Analytics',description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.';
+            color: 'from-orange-500 to-red-500'
+},
+  ]
+    const industries = [
+  {{ name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' },
+  },
+  {{ name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' },
+  },
+  {{ name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' },
+  },
+  {{ name: 'Retail & E-commerce', icon: Globe, color: 'from-yellow-500 to-orange-500' },
+  },
+  {{ name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' },
+  },
+  {{ name: 'Government', icon: Shield, color: 'from-gray-500 to-blue-500' },
+  },
+  ]
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025" description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology." keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"/>
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -110,13 +121,16 @@ export default function UltimateHomepage2025() {;
                       <span className="text-4xl">{ultimateInnovativeServices2025[currentServiceIndex].icon}</span>
                     </div>
                     <h4 className="text-xl font-bold text-white mb-2">
-                      {{ultimateInnovativeServices2025[currentServiceIndex].name}}
+                      {{ultimateInnovativeServices2025[currentServiceIndex].name},
+  }
                     </h4>
                     <p className="text-gray-300 mb-4">
-                      {{ultimateInnovativeServices2025[currentServiceIndex].tagline}}
+                      {{ultimateInnovativeServices2025[currentServiceIndex].tagline},
+  }
                     </p>
                     <div className="text-3xl font-bold text-blue-400 mb-4">
-                      {{ultimateInnovativeServices2025[currentServiceIndex].price}}
+                      {{ultimateInnovativeServices2025[currentServiceIndex].price},
+  }
                       <span className="text-lg text-gray-400">{ultimateInnovativeServices2025[currentServiceIndex].period}</span>
                     </div>
                     <Link to={`/ultimate-services-showcase-2025`} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
@@ -130,7 +144,8 @@ export default function UltimateHomepage2025() {;
         </div>
       </div>
 
-      {{/* Contact Information Banner */}}
+      {{/* Contact Information Banner */},
+  }
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -165,7 +180,8 @@ export default function UltimateHomepage2025() {;
         </div>
       </div>
 
-      {{/* Stats Section */}}
+      {{/* Stats Section */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (<div key={index} className="text-center">
@@ -178,7 +194,8 @@ export default function UltimateHomepage2025() {;
         </div>
       </div>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -200,7 +217,8 @@ export default function UltimateHomepage2025() {;
         </div>
       </div>
 
-      {{/* Featured Services Section */}}
+      {{/* Featured Services Section */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -221,13 +239,16 @@ export default function UltimateHomepage2025() {;
                 </span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                {{service.name}}
+                {{service.name},
+  }
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                {{service.tagline}}
+                {{service.tagline},
+  }
               </p>
               <div className="text-2xl font-bold text-blue-400 mb-4">
-                {{service.price}}
+                {{service.price},
+  }
                 <span className="text-lg text-gray-400">{service.period}</span>
               </div>
               <div className="mb-6">
@@ -253,7 +274,8 @@ export default function UltimateHomepage2025() {;
         </div>
       </div>
 
-      {{/* Industries Section */}}
+      {{/* Industries Section */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -270,13 +292,15 @@ export default function UltimateHomepage2025() {;
                 <industry.icon className="w-8 h-8 text-white"/>
               </div>
               <h3 className="text-white font-semibold group-hover:text-blue-400 transition-colors">
-                {{industry.name}}
+                {{industry.name},
+  }
               </h3>
             </div>))}
         </div>
       </div>
 
-      {{/* All Services Preview */}}
+      {{/* All Services Preview */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -294,13 +318,15 @@ export default function UltimateHomepage2025() {;
                 </div>
                 <div>
                   <h3 className="text-white font-semibold group-hover:text-blue-400 transition-colors">
-                    {{service.name}}
+                    {{service.name},
+  }
                   </h3>
                   <p className="text-sm text-gray-400">{service.category}</p>
                 </div>
               </div>
               <p className="text-gray-300 text-sm mb-4 line-clamp-2">
-                {{service.description}}
+                {{service.description},
+  }
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-blue-400 font-semibold">{service.price}</span>
@@ -318,7 +344,8 @@ export default function UltimateHomepage2025() {;
         </div>
       </div>
 
-      {{/* Call to Action Section */}}
+      {{/* Call to Action Section */},
+  }
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">

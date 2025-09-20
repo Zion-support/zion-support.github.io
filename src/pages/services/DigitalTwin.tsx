@@ -3,115 +3,127 @@ import React from "react";
 import { SEO } from "../../components/SEO";
 import { Eye, Cpu, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Zap, Building, Factory, Car, Heart, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function DigitalTwin() {;
-  const services = [;
-    {;
-      name: 'Industrial Digital Twins',icon: Factory,description: 'Real-time digital replicas of industrial processes and equipment',features: [;
-        'Real-time monitoring and controlPredictive maintenance';
+export default function DigitalTwin() {
+  const services = [
+  {
+  name: 'Industrial Digital Twins',icon: Factory,description: 'Real-time digital replicas of industrial processes and equipment',features: [
+  'Real-time monitoring and controlPredictive maintenance';
         'Performance optimizationAnomaly detection';
-        'Process simulationEnergy efficiency optimization';
-      ]
-      benefits: [;
-        '30% reduction in downtime25% energy savings';
-        'Improved safetyEnhanced productivity';
-      ]
-      color: 'from-blue-500 to-cyan-500';
-    }
-    {;
-      name: 'Smart City Twins',icon: Building,description: 'Digital replicas of urban infrastructure and systems',features: [;
-        'Traffic flow optimizationEnergy grid management';
+        'Process simulationEnergy efficiency optimization'
+]
+      benefits: [
+  '30% reduction in downtime25% energy savings';
+        'Improved safetyEnhanced productivity'
+]
+      color: 'from-blue-500 to-cyan-500'
+},
+  {
+  name: 'Smart City Twins',icon: Building,description: 'Digital replicas of urban infrastructure and systems',features: [
+  'Traffic flow optimizationEnergy grid management';
         'Waste management systemsPublic safety monitoring';
-        'Environmental monitoringUrban planning insights';
-      ]
-      benefits: [;
-        '20% traffic reduction15% energy savings';
-        'Improved public servicesBetter resource allocation';
-      ]
-      color: 'from-green-500 to-emerald-500';
-    }
-    {;
-      name: 'Healthcare Digital Twins',icon: Heart,description: 'Patient and medical device digital replicas',features: [;
-        'Patient health monitoringMedical device simulation';
+        'Environmental monitoringUrban planning insights'
+]
+      benefits: [
+  '20% traffic reduction15% energy savings';
+        'Improved public servicesBetter resource allocation'
+]
+      color: 'from-green-500 to-emerald-500'
+},
+  {
+  name: 'Healthcare Digital Twins',icon: Heart,description: 'Patient and medical device digital replicas',features: [
+  'Patient health monitoringMedical device simulation';
         'Treatment optimizationDrug response modeling';
-        'Surgical planningPreventive care insights';
-      ]
-      benefits: [;
-        'Improved patient outcomesReduced medical errors';
-        'Personalized treatmentsBetter resource utilization';
-      ]
-      color: 'from-red-500 to-pink-500';
-    }
-    {;
-      name: 'Automotive Digital Twins',icon: Car,description: 'Vehicle and manufacturing process digital replicas',features: [;
-        'Vehicle performance simulationManufacturing optimization';
+        'Surgical planningPreventive care insights'
+]
+      benefits: [
+  'Improved patient outcomesReduced medical errors';
+        'Personalized treatmentsBetter resource utilization'
+]
+      color: 'from-red-500 to-pink-500'
+},
+  {
+  name: 'Automotive Digital Twins',icon: Car,description: 'Vehicle and manufacturing process digital replicas',features: [
+  'Vehicle performance simulationManufacturing optimization';
         'Quality control automationSupply chain simulation';
-        'Customer experience modelingPredictive maintenance';
-      ]
-      benefits: [;
-        'Faster time to marketImproved quality';
-        'Reduced costsEnhanced safety';
-      ]
-      color: 'from-purple-500 to-indigo-500';
-    }
-    {;
-      name: 'Infrastructure Twins',icon: Building,description: 'Digital replicas of critical infrastructure systems',features: [;
-        'Structural health monitoringRisk assessment';
+        'Customer experience modelingPredictive maintenance'
+]
+      benefits: [
+  'Faster time to marketImproved quality';
+        'Reduced costsEnhanced safety'
+]
+      color: 'from-purple-500 to-indigo-500'
+},
+  {
+  name: 'Infrastructure Twins',icon: Building,description: 'Digital replicas of critical infrastructure systems',features: [
+  'Structural health monitoringRisk assessment';
         'Maintenance planningDisaster response simulation';
-        'Capacity optimizationLifecycle management';
-      ]
-      benefits: [;
-        'Extended asset lifespanReduced maintenance costs';
-        'Improved safetyBetter planning';
-      ]
-      color: 'from-orange-500 to-red-500';
-    }
-    {;
-      name: 'Energy System Twins',icon: Zap,description: 'Digital replicas of energy generation and distribution',features: [;
-        'Grid optimizationRenewable integration';
+        'Capacity optimizationLifecycle management'
+]
+      benefits: [
+  'Extended asset lifespanReduced maintenance costs';
+        'Improved safetyBetter planning'
+]
+      color: 'from-orange-500 to-red-500'
+},
+  {
+  name: 'Energy System Twins',icon: Zap,description: 'Digital replicas of energy generation and distribution',features: [
+  'Grid optimizationRenewable integration';
         'Demand forecastingEfficiency monitoring';
-        'Predictive maintenanceCarbon footprint tracking';
-      ]
-      benefits: [;
-        'Reduced energy wasteLower operational costs';
-        'Improved reliabilitySustainability gains';
-      ]
-      color: 'from-emerald-500 to-green-500';
-    }
+        'Predictive maintenanceCarbon footprint tracking'
+]
+      benefits: [
+  'Reduced energy wasteLower operational costs';
+        'Improved reliabilitySustainability gains'
+]
+      color: 'from-emerald-500 to-green-500'
+},
   ]
-  const technologies = [;
-    {{ name: 'IoT Sensors', icon: Eye, category: 'Data Collection' }}
-    {{ name: 'AI/ML', icon: Cpu, category: 'Intelligence' }}
-    {{ name: 'Cloud Computing', icon: Cloud, category: 'Infrastructure' }}
-    {{ name: 'Edge Computing', icon: Server, category: 'Processing' }}
-    {{ name: '3D Modeling', icon: Eye, category: 'Visualization' }}
-    {{ name: 'Real-time Analytics', icon: BarChart3, category: 'Analytics' }}
-    {{ name: 'Blockchain', icon: Lock, category: 'Security' }}
-    {{ name: '5G Networks', icon: Globe, category: 'Connectivity' }}
-    {{ name: 'AR/VR', icon: Eye, category: 'Interaction' }}
-    {{ name: 'Predictive Analytics', icon: BarChart3, category: 'Forecasting' }}
-    {{ name: 'Machine Learning', icon: Cpu, category: 'AI' }}
-    {{ name: 'Big Data', icon: Database, category: 'Data Processing' }}
+  const technologies = [
+  {{ name: 'IoT Sensors', icon: Eye, category: 'Data Collection' },
+  },
+  {{ name: 'AI/ML', icon: Cpu, category: 'Intelligence' },
+  },
+  {{ name: 'Cloud Computing', icon: Cloud, category: 'Infrastructure' },
+  },
+  {{ name: 'Edge Computing', icon: Server, category: 'Processing' },
+  },
+  {{ name: '3D Modeling', icon: Eye, category: 'Visualization' },
+  },
+  {{ name: 'Real-time Analytics', icon: BarChart3, category: 'Analytics' },
+  },
+  {{ name: 'Blockchain', icon: Lock, category: 'Security' },
+  },
+  {{ name: '5G Networks', icon: Globe, category: 'Connectivity' },
+  },
+  {{ name: 'AR/VR', icon: Eye, category: 'Interaction' },
+  },
+  {{ name: 'Predictive Analytics', icon: BarChart3, category: 'Forecasting' },
+  },
+  {{ name: 'Machine Learning', icon: Cpu, category: 'AI' },
+  },
+  {{ name: 'Big Data', icon: Database, category: 'Data Processing' },
+  },
   ]
-  const caseStudies = [;
-    {;
-      company: 'ManufacturingCorp',industry: 'Manufacturing',challenge: 'Unplanned downtime costing $2M annually with limited visibility into equipment health',solution: 'Implemented comprehensive digital twin for all production lines with real-time monitoring',results: [;
-        '40% reduction in unplanned downtime25% improvement in equipment efficiency';
-        'Predictive maintenance accuracy of 95%';
-      ]
-    }
-    {;
-      company: 'SmartCity Metro',industry: 'Municipal',challenge: 'Traffic congestion and inefficient public transportation causing citizen complaints',solution: 'Created city-wide digital twin integrating traffic, transit, and infrastructure systems';
-      results: [;
-        '30% reduction in traffic congestion20% improvement in transit efficiency';
-        '15% reduction in energy consumption';
-      ]
-    }
-    {;
-      company: 'HealthTech Hospital',industry: 'Healthcare',challenge: 'Medical device failures and inefficient patient care processes',solution: 'Developed digital twins for critical medical devices and patient care workflows',results: [;
-        'Zero critical device failures25% improvement in patient outcomes';
-        '30% reduction in operational costs';
-      ]
-    }
+  const caseStudies = [
+  {
+  company: 'ManufacturingCorp',industry: 'Manufacturing',challenge: 'Unplanned downtime costing $2M annually with limited visibility into equipment health',solution: 'Implemented comprehensive digital twin for all production lines with real-time monitoring',results: [
+  '40% reduction in unplanned downtime25% improvement in equipment efficiency';
+        'Predictive maintenance accuracy of 95%'
+],
+  },
+  {
+  company: 'SmartCity Metro',industry: 'Municipal',challenge: 'Traffic congestion and inefficient public transportation causing citizen complaints',solution: 'Created city-wide digital twin integrating traffic, transit, and infrastructure systems';
+      results: [
+  '30% reduction in traffic congestion20% improvement in transit efficiency';
+        '15% reduction in energy consumption'
+],
+  },
+  {
+  company: 'HealthTech Hospital',industry: 'Healthcare',challenge: 'Medical device failures and inefficient patient care processes',solution: 'Developed digital twins for critical medical devices and patient care workflows',results: [
+  'Zero critical device failures25% improvement in patient outcomes';
+        '30% reduction in operational costs'
+],
+  },
   ]
 
   return (
@@ -121,7 +133,8 @@ export default function DigitalTwin() {;
         description="Transform your operations with our advanced Digital Twin technology solutions. Create real-time digital replicas for predictive maintenance, optimization, and innovation across industries.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container-responsive relative z-10">
@@ -152,7 +165,8 @@ export default function DigitalTwin() {;
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -166,9 +180,10 @@ export default function DigitalTwin() {;
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (;
-              <div;
-                key={{service.name}}
+            {services.map((service, index) => (
+  <div;
+                key={{service.name},
+  }
                 className="className="group p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -181,10 +196,11 @@ export default function DigitalTwin() {;
                 <div className="space-y-3 mb-6">
                   <h4 className="font-semibold text-cyan-400">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (;
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                    {service.features.map((feature, idx) => (
+  <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        {{feature}}
+                        {{feature},
+  }
                       </li>
                     ))}
                   </ul>
@@ -193,10 +209,11 @@ export default function DigitalTwin() {;
                 <div className="space-y-3 mb-6">
                   <h4 className="font-semibold text-green-400">Key Benefits:</h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (;
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                    {service.benefits.map((benefit, idx) => (
+  <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <Zap className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        {{benefit}}
+                        {{benefit},
+  }
                       </li>
                     ))}
                   </ul>
@@ -215,7 +232,8 @@ export default function DigitalTwin() {;
         </div>
       </section>
 
-      {{/* Technology Stack */}}
+      {{/* Technology Stack */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -228,8 +246,8 @@ export default function DigitalTwin() {;
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (;
-              <div key={index} className="text-center group">
+            {technologies.map((tech, index) => (
+  <div key={index} className="text-center group">
                 <div className="w-20 h-20 mx-auto mb-4 bg-slate-700/50 rounded-xl flex items-center justify-center group-hover:bg-slate-700 transition-colors duration-300">
                   <tech.icon className="w-10 h-10 text-cyan-400" />
                 </div>
@@ -241,7 +259,8 @@ export default function DigitalTwin() {;
         </div>
       </section>
 
-      {{/* Case Studies */}}
+      {{/* Case Studies */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -254,8 +273,8 @@ export default function DigitalTwin() {;
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (;
-              <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+            {caseStudies.map((study, index) => (
+  <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-white mb-2">{study.company}</h3>
                   <p className="text-sm text-cyan-400 mb-1">{study.industry}</p>
@@ -275,10 +294,11 @@ export default function DigitalTwin() {;
                 <div>
                   <h4 className="font-semibold text-white mb-3">Results:</h4>
                   <ul className="space-y-2">
-                    {study.results.map((result, idx) => (;
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                    {study.results.map((result, idx) => (
+  <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        {{result}}
+                        {{result},
+  }
                       </li>
                     ))}
                   </ul>
@@ -289,7 +309,8 @@ export default function DigitalTwin() {;
         </div>
       </section>
 
-      {{/* Process Section */}}
+      {{/* Process Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -302,23 +323,24 @@ export default function DigitalTwin() {;
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
-            {[;
-              {;
-                step: '01',title: 'Assessment & Planning',description: 'Analyze assets and define digital twin scope and objectives',icon: BarChart3;
-              }
-              {;
-                step: '02',title: 'Data Integration',description: 'Connect IoT sensors and integrate existing data sources',icon: Database;
-              }
-              {;
-                step: '03',title: 'Model Development',description: 'Create accurate digital replicas with AI and ML capabilities',icon: Cpu;
-              }
-              {;
-                step: '04',title: 'Deployment & Optimization',description: 'Deploy and continuously optimize the digital twin system',icon: RefreshCw;
-              }
-            ].map((phase, index) => (;
-              <div key={index} className="text-center">
+            {[
+  {
+  step: '01',title: 'Assessment & Planning',description: 'Analyze assets and define digital twin scope and objectives',icon: BarChart3
+},
+  {
+  step: '02',title: 'Data Integration',description: 'Connect IoT sensors and integrate existing data sources',icon: Database
+},
+  {
+  step: '03',title: 'Model Development',description: 'Create accurate digital replicas with AI and ML capabilities',icon: Cpu
+},
+  {
+  step: '04',title: 'Deployment & Optimization',description: 'Deploy and continuously optimize the digital twin system',icon: RefreshCw
+},
+  ].map((phase, index) => (
+  <div key={index} className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
-                  {{phase.step}}
+                  {{phase.step},
+  }
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
@@ -328,7 +350,8 @@ export default function DigitalTwin() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center">

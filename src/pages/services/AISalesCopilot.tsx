@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SEO } from "../../components/SEO";
-import { ;
+import {
   Users;
-  TrendingUp, ;
-  Target, ;
-  Zap, ;
-  MessageCircle, ;
-  BarChart3, ;
-  Clock, ;
-  Award, ;
+  TrendingUp,
+  Target,
+  Zap,
+  MessageCircle,
+  BarChart3,
+  Clock,
+  Award,
   Star;
   Globe;
   Cpu;
@@ -23,75 +23,75 @@ import { ;
   Calendar;
   CheckCircle;
   Shield;
-  FileText;
+  FileText
 } from "lucide-react";
 const AISalesCopilot = () => {
-  const features = [;
-    {;
-      icon: Users,title: "Lead Scoring & Qualification",description: "AI-powered lead analysis and prioritization to focus on high-value prospects.";
-    }
-    {;
-      icon: MessageCircle,title: "Intelligent Conversation AI",description: "Natural language processing for personalized customer interactions and support.";
-    }
-    {;
-      icon: TrendingUp,title: "Sales Forecasting",description: "Predictive analytics for accurate revenue forecasting and pipeline management.";
-    }
-    {;
-      icon: Target,title: "Opportunity Management",description: "Smart tracking and optimization of sales opportunities throughout the funnel.";
-    }
-    {;
-      icon: Zap,title: "Automated Follow-ups",description: "Intelligent scheduling and automated follow-up sequences for better conversion.";
-    }
-    {;
-      icon: BarChart3,title: "Performance Analytics",description: "Comprehensive insights into sales performance, trends, and optimization opportunities.";
-    }
+  const features = [
+  {
+  icon: Users,title: "Lead Scoring & Qualification",description: "AI-powered lead analysis and prioritization to focus on high-value prospects."
+},
+  {
+  icon: MessageCircle,title: "Intelligent Conversation AI",description: "Natural language processing for personalized customer interactions and support."
+},
+  {
+  icon: TrendingUp,title: "Sales Forecasting",description: "Predictive analytics for accurate revenue forecasting and pipeline management."
+},
+  {
+  icon: Target,title: "Opportunity Management",description: "Smart tracking and optimization of sales opportunities throughout the funnel."
+},
+  {
+  icon: Zap,title: "Automated Follow-ups",description: "Intelligent scheduling and automated follow-up sequences for better conversion."
+},
+  {
+  icon: BarChart3,title: "Performance Analytics",description: "Comprehensive insights into sales performance, trends, and optimization opportunities."
+},
   ]
 
-  const benefits = [;
-    "Increase sales revenue by 25-40% with AI-powered insights";
+  const benefits = [
+  "Increase sales revenue by 25-40% with AI-powered insights";
     "Reduce sales cycle time by 30-50% through automation";
     "Improve lead conversion rates by 35-60%";
     "Enhance customer engagement and satisfaction by 45%";
     "Reduce manual sales tasks by 70%";
-    "Optimize pricing strategies with AI-driven recommendations";
-  ]
+    "Optimize pricing strategies with AI-driven recommendations"
+]
 
-  const salesProcess = [;
-    {;
-      stage: "Lead Generation",description: "AI-powered prospecting and lead identification",icon: Search;
-    }
-    {;
-      stage: "Qualification",description: "Intelligent lead scoring and prioritization",icon: Target;
-    }
-    {;
-      stage: "Engagement",description: "Personalized communication and relationship building",icon: MessageCircle;
-    }
-    {;
-      stage: "Proposal",description: "AI-generated proposals and pricing optimization",icon: FileText;
-    }
-    {;
-      stage: "Closing",description: "Smart negotiation support and deal acceleration",icon: CheckCircle;
-    }
-    {;
-      stage: "Retention",description: "Customer success and expansion opportunities",icon: Users;
-    }
+  const salesProcess = [
+  {
+  stage: "Lead Generation",description: "AI-powered prospecting and lead identification",icon: Search
+},
+  {
+  stage: "Qualification",description: "Intelligent lead scoring and prioritization",icon: Target
+},
+  {
+  stage: "Engagement",description: "Personalized communication and relationship building",icon: MessageCircle
+},
+  {
+  stage: "Proposal",description: "AI-generated proposals and pricing optimization",icon: FileText
+},
+  {
+  stage: "Closing",description: "Smart negotiation support and deal acceleration",icon: CheckCircle
+},
+  {
+  stage: "Retention",description: "Customer success and expansion opportunities",icon: Users
+},
   ]
-  const useCases = [;
-    {;
-      industry: "B2B Software",description: "Enterprise sales automation, lead qualification, and customer success management";
-    }
-    {;
-      industry: "Financial Services",description: "Investment advisory, loan processing, and financial product sales optimization";
-    }
-    {;
-      industry: "Healthcare",description: "Medical device sales, pharmaceutical marketing, and healthcare service optimization";
-    }
-    {;
-      industry: "Manufacturing",description: "Industrial equipment sales, supply chain optimization, and B2B relationship management";
-    }
-    {;
-      industry: "Real Estate",description: "Property sales automation, lead management, and client relationship optimization";
-    }
+  const useCases = [
+  {
+  industry: "B2B Software",description: "Enterprise sales automation, lead qualification, and customer success management"
+},
+  {
+  industry: "Financial Services",description: "Investment advisory, loan processing, and financial product sales optimization"
+},
+  {
+  industry: "Healthcare",description: "Medical device sales, pharmaceutical marketing, and healthcare service optimization"
+},
+  {
+  industry: "Manufacturing",description: "Industrial equipment sales, supply chain optimization, and B2B relationship management"
+},
+  {
+  industry: "Real Estate",description: "Property sales automation, lead management, and client relationship optimization"
+},
   ]
 
   return (
@@ -101,14 +101,18 @@ const AISalesCopilot = () => {
         description="Transform your sales process with AI-powered automation, lead optimization, and intelligent sales insights. Boost revenue and efficiency.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full border border-blue-400/30 mb-6">
@@ -130,15 +134,19 @@ const AISalesCopilot = () => {
             ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/25";"
               >
                 Start Free Trial;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-300";"
               >
                 Schedule Demo;
@@ -148,13 +156,17 @@ const AISalesCopilot = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -167,12 +179,16 @@ const AISalesCopilot = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{feature.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{feature.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-blue-400/30 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -186,13 +202,17 @@ const AISalesCopilot = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -208,12 +228,16 @@ const AISalesCopilot = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (;
-                  <motion.div;
-                    key={{index}}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                {benefits.map((benefit, index) => (
+  <motion.div;
+                    key={{index},
+  }
+                    initial={{ opacity: 0, x: -20 },
+  }
+                    whileInView={{ opacity: 1, x: 0 },
+  }
+                    transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                     className="className="flex items-start space-x-3";"
                   >
                     <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
@@ -252,13 +276,17 @@ const AISalesCopilot = () => {
         </div>
       </section>
 
-      {{/* Sales Process Section */}}
+      {{/* Sales Process Section */},
+  }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -271,12 +299,16 @@ const AISalesCopilot = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {salesProcess.map((stage, index) => (;
-              <motion.div;
-                key={{stage.stage}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {salesProcess.map((stage, index) => (
+  <motion.div;
+                key={{stage.stage},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-blue-400/30 transition-all duration-300";"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -292,13 +324,17 @@ const AISalesCopilot = () => {
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -311,12 +347,16 @@ const AISalesCopilot = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{useCase.industry}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{useCase.industry},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-blue-400/30 transition-all duration-300";"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -332,13 +372,17 @@ const AISalesCopilot = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 p-12 rounded-2xl border border-blue-400/20 text-center";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -350,15 +394,19 @@ const AISalesCopilot = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/25";"
               >
                 Start Free Trial;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover: bg-blue-400/10 transition-all duration-300";"
               >
                 Contact Sales;

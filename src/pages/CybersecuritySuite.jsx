@@ -5,9 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Check, Shield, AlertTriangle, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function CybersecuritySuite() {;
-    const features = [;
-        "24/7 threat monitoring and detection";
+export default function CybersecuritySuite() {
+  const features = [
+  "24/7 threat monitoring and detection";
         "Real-time security incident response";
         "Advanced threat intelligence feeds";
         "Automated vulnerability scanning";
@@ -18,37 +18,37 @@ export default function CybersecuritySuite() {;
         "Network traffic analysis";
         "Cloud security monitoring";
         "Incident response automation";
-        "Security metrics and dashboards";
-    ]
-    const pricingPlans = [;
-        {;
-            name: "Essential",price: "$199",period: "/month",description: "Perfect for small businesses and startups",features: [;
-                "Basic threat monitoring";
+        "Security metrics and dashboards"
+]
+    const pricingPlans = [
+  {
+  name: "Essential",price: "$199",period: "/month",description: "Perfect for small businesses and startups",features: [
+  "Basic threat monitoring";
                 "Vulnerability scanning (monthly)";
                 "Security awareness training";
                 "Basic incident response";
                 "Email support";
-                "Security dashboard";
-            ]
-            popular: false;
-        }
-        {;
-            name: "Professional",price: "$499",period: "/month",description: "Ideal for growing businesses",features: [;
-                "Advanced threat monitoring";
+                "Security dashboard"
+]
+            popular: false
+},
+  {
+  name: "Professional",price: "$499",period: "/month",description: "Ideal for growing businesses",features: [
+  "Advanced threat monitoring";
                 "Real-time vulnerability scanning";
                 "Penetration testing (quarterly)";
                 "Automated incident response";
                 "Priority support";
                 "Advanced analytics";
                 "Compliance reporting";
-                "Security team training";
-            ]
-            popular: true;
-        }
-        {;
-            name: "Enterprise",price: "$1,299";
-            period: "/month",description: "For large organizations with advanced security needs",features: [;
-                "Full-spectrum threat monitoring";
+                "Security team training"
+]
+            popular: true
+},
+  {
+  name: "Enterprise",price: "$1,299";
+            period: "/month",description: "For large organizations with advanced security needs",features: [
+  "Full-spectrum threat monitoring";
                 "Continuous vulnerability assessment";
                 "Advanced penetration testing";
                 "Custom incident response playbooks";
@@ -57,40 +57,41 @@ export default function CybersecuritySuite() {;
                 "Dedicated security analyst";
                 "Advanced compliance frameworks";
                 "Custom security training";
-                "API access & integrations";
-            ]
-            popular: false;
-        }
-    ]
-    const securityServices = [;
-        {;
-            title: "Threat Detection & Response",description: "Advanced AI-powered threat detection with automated response capabilities to neutralize threats in real-time.",icon: <Eye className="h-8 w-8 text-zion-cyan"/>
-        }
-        {;
-            title: "Vulnerability Management",description: "Continuous vulnerability assessment and prioritization with automated remediation workflows.",icon: <AlertTriangle className="h-8 w-8 text-zion-purple"/>
-        }
-        {;
-            title: "Security Compliance",description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.";
+                "API access & integrations"
+]
+            popular: false
+},
+  ]
+    const securityServices = [
+  {
+  title: "Threat Detection & Response",description: "Advanced AI-powered threat detection with automated response capabilities to neutralize threats in real-time.",icon: <Eye className="h-8 w-8 text-zion-cyan"/>
+        },
+  {
+  title: "Vulnerability Management",description: "Continuous vulnerability assessment and prioritization with automated remediation workflows.",icon: <AlertTriangle className="h-8 w-8 text-zion-purple"/>
+        },
+  {
+  title: "Security Compliance",description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.";
             icon: <Shield className="h-8 w-8 text-zion-cyan"/>
-        }
-        {;
-            title: "Incident Response",description: "Rapid incident response with automated playbooks and expert security team support.",icon: <Shield className="h-8 w-8 text-zion-purple"/>
-        }
-    ]
-    const complianceFrameworks = [;
-        "GDPR (General Data Protection Regulation)";
+        },
+  {
+  title: "Incident Response",description: "Rapid incident response with automated playbooks and expert security team support.",icon: <Shield className="h-8 w-8 text-zion-purple"/>
+        },
+  ]
+    const complianceFrameworks = [
+  "GDPR (General Data Protection Regulation)";
         "HIPAA (Health Insurance Portability and Accountability Act)";
         "SOC 2 (System and Organization Controls)";
         "ISO 27001 (Information Security Management)";
         "PCI DSS (Payment Card Industry Data Security Standard)";
         "NIST Cybersecurity Framework";
         "CIS Controls";
-        "FedRAMP (Federal Risk and Authorization Management Program)";
-    ]
+        "FedRAMP (Federal Risk and Authorization Management Program)"
+]
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
       <SEO title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199/month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com/cybersecurity-suite"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
           <div className="mb-8">
@@ -117,7 +118,8 @@ export default function CybersecuritySuite() {;
         </div>
       </section>
 
-      {{/* Security Services */}}
+      {{/* Security Services */},
+  }
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -133,7 +135,8 @@ export default function CybersecuritySuite() {;
             {securityServices.map((service, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 text-center">
                 <CardContent className="p-6">
                   <div className="mb-4 flex justify-center">
-                    {{service.icon}}
+                    {{service.icon},
+  }
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-white">{service.title}</h3>
                   <p className="text-zion-slate-light text-sm">{service.description}</p>
@@ -143,7 +146,8 @@ export default function CybersecuritySuite() {;
         </div>
       </section>
 
-      {{/* Features Grid */}}
+      {{/* Features Grid */},
+  }
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -168,7 +172,8 @@ export default function CybersecuritySuite() {;
         </div>
       </section>
 
-      {{/* Compliance Section */}}
+      {{/* Compliance Section */},
+  }
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -191,7 +196,8 @@ export default function CybersecuritySuite() {;
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -234,7 +240,8 @@ export default function CybersecuritySuite() {;
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">

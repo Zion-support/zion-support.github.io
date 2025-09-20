@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {;
+import {
   FileText;
   Shield;
   Users;
@@ -14,89 +14,89 @@ import {;
   ExternalLink;
   Scale;
   Gavel;
-  BookOpen;
+  BookOpen
 } from "lucide-react";
 const TermsOfService = () => {
   const lastUpdated = '2025-01-15';
   ;
-  const sections = [;
-    {;
-      id: 'acceptance',title: 'Acceptance of Terms',icon: CheckCircle,content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`;
-    }
-    {;
-      id: 'services',title: 'Description of Services',icon: BookOpen,content: `Zion Tech Group provides AI-powered business intelligence, cloud infrastructure, cybersecurity, and digital transformation services. Our services include software solutions, consulting, implementation, and ongoing support.`;
-    }
-    {;
-      id: 'user-accounts',title: 'User Accounts and Registration',icon: Users,content: `To access certain services, you may be required to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.`;
-    }
-    {;
-      id: 'acceptable-use',title: 'Acceptable Use Policy',icon: Shield,content: `You agree to use our services only for lawful purposes and in accordance with these Terms. You may not use our services to transmit harmful code, violate intellectual property rights, or engage in any illegal activities.`;
-    }
-    {;
-      id: 'intellectual-property',title: 'Intellectual Property Rights',icon: Lock,content: `All content, features, and functionality on our website and services are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.`;
-    }
-    {;
-      id: 'privacy',title: 'Privacy and Data Protection',icon: Shield,content: `Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services, to understand our practices regarding the collection and use of your information.`;
-    }
-    {;
-      id: 'payment-terms',title: 'Payment Terms and Billing',icon: CheckCircle,content: `Payment terms vary by service. Some services require upfront payment, while others may be billed on a subscription basis. All fees are non-refundable unless otherwise specified in your service agreement.`;
-    }
-    {;
-      id: 'service-levels',title: 'Service Levels and Availability',icon: Globe,content: `We strive to maintain high service availability but do not guarantee uninterrupted access. Service levels are defined in individual service agreements and may include uptime guarantees and support response times.`;
-    }
-    {;
-      id: 'limitation-liability',title: 'Limitation of Liability',icon: AlertTriangle,content: `To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`;
-    }
-    {;
-      id: 'indemnification',title: 'Indemnification',icon: Shield,content: `You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from your use of our services or violation of these Terms.`;
-    }
-    {;
-      id: 'termination',title: 'Termination and Suspension',icon: AlertTriangle,content: `We may terminate or suspend your access to our services at any time for violation of these Terms or for any other reason. You may terminate your account at any time by contacting us.`;
-    }
-    {;
-      id: 'governing-law',title: 'Governing Law and Disputes',icon: Gavel,content: `These Terms are governed by the laws of the jurisdiction where Zion Tech Group is incorporated. Any disputes shall be resolved through binding arbitration in accordance with our dispute resolution procedures.`;
-    }
-    {;
-      id: 'changes',title: 'Changes to Terms',icon: AlertTriangle,content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`;
-    }
-    {;
-      id: 'contact',title: 'Contact Information',icon: Mail,content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`;
-    }
+const sections = [
+  {
+  id: 'acceptance',title: 'Acceptance of Terms',icon: CheckCircle,content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`
+},
+  {
+  id: 'services',title: 'Description of Services',icon: BookOpen,content: `Zion Tech Group provides AI-powered business intelligence, cloud infrastructure, cybersecurity, and digital transformation services. Our services include software solutions, consulting, implementation, and ongoing support.`
+},
+  {
+  id: 'user-accounts',title: 'User Accounts and Registration',icon: Users,content: `To access certain services, you may be required to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.`
+},
+  {
+  id: 'acceptable-use',title: 'Acceptable Use Policy',icon: Shield,content: `You agree to use our services only for lawful purposes and in accordance with these Terms. You may not use our services to transmit harmful code, violate intellectual property rights, or engage in any illegal activities.`
+},
+  {
+  id: 'intellectual-property',title: 'Intellectual Property Rights',icon: Lock,content: `All content, features, and functionality on our website and services are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.`
+},
+  {
+  id: 'privacy',title: 'Privacy and Data Protection',icon: Shield,content: `Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services, to understand our practices regarding the collection and use of your information.`
+},
+  {
+  id: 'payment-terms',title: 'Payment Terms and Billing',icon: CheckCircle,content: `Payment terms vary by service. Some services require upfront payment, while others may be billed on a subscription basis. All fees are non-refundable unless otherwise specified in your service agreement.`
+},
+  {
+  id: 'service-levels',title: 'Service Levels and Availability',icon: Globe,content: `We strive to maintain high service availability but do not guarantee uninterrupted access. Service levels are defined in individual service agreements and may include uptime guarantees and support response times.`
+},
+  {
+  id: 'limitation-liability',title: 'Limitation of Liability',icon: AlertTriangle,content: `To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`
+},
+  {
+  id: 'indemnification',title: 'Indemnification',icon: Shield,content: `You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from your use of our services or violation of these Terms.`
+},
+  {
+  id: 'termination',title: 'Termination and Suspension',icon: AlertTriangle,content: `We may terminate or suspend your access to our services at any time for violation of these Terms or for any other reason. You may terminate your account at any time by contacting us.`
+},
+  {
+  id: 'governing-law',title: 'Governing Law and Disputes',icon: Gavel,content: `These Terms are governed by the laws of the jurisdiction where Zion Tech Group is incorporated. Any disputes shall be resolved through binding arbitration in accordance with our dispute resolution procedures.`
+},
+  {
+  id: 'changes',title: 'Changes to Terms',icon: AlertTriangle,content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
+},
+  {
+  id: 'contact',title: 'Contact Information',icon: Mail,content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`
+},
   ]
 
-  const keyProvisions = [;
-    {;
-      title: 'Service Usage',description: 'Services are provided "as is" without warranties of any kind',icon: CheckCircle;
-    }
-    {;
-      title: 'Data Security',description: 'We implement industry-standard security measures to protect your data',icon: Shield;
-    }
-    {;
-      title: 'Payment Terms',description: 'Fees are billed according to your service agreement and are non-refundable',icon: CheckCircle;
-    }
-    {;
-      title: 'Intellectual Property',description: 'All content and services remain the property of Zion Tech Group',icon: Lock;
-    }
-    {;
-      title: 'Liability Limits',description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',icon: AlertTriangle;
-    }
-    {;
-      title: 'Termination Rights',description: 'Either party may terminate services with appropriate notice as specified in service agreements',icon: AlertTriangle;
-    }
+  const keyProvisions = [
+  {
+  title: 'Service Usage',description: 'Services are provided "as is" without warranties of any kind',icon: CheckCircle
+},
+  {
+  title: 'Data Security',description: 'We implement industry-standard security measures to protect your data',icon: Shield
+},
+  {
+  title: 'Payment Terms',description: 'Fees are billed according to your service agreement and are non-refundable',icon: CheckCircle
+},
+  {
+  title: 'Intellectual Property',description: 'All content and services remain the property of Zion Tech Group',icon: Lock
+},
+  {
+  title: 'Liability Limits',description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',icon: AlertTriangle
+},
+  {
+  title: 'Termination Rights',description: 'Either party may terminate services with appropriate notice as specified in service agreements',icon: AlertTriangle
+},
   ]
-  const disputeResolution = [;
-    {;
-      step: '1',title: 'Direct Communication',description: 'Attempt to resolve disputes through direct communication with our support team';
-    }
-    {;
-      step: '2',title: 'Escalation',description: 'If direct communication fails, escalate to management for resolution';
-    }
-    {;
-      step: '3',title: 'Mediation',description: 'For complex disputes, engage in mediation with a neutral third party';
-    }
-    {;
-      step: '4',title: 'Arbitration',description: 'As a last resort, resolve disputes through binding arbitration';
-    }
+  const disputeResolution = [
+  {
+  step: '1',title: 'Direct Communication',description: 'Attempt to resolve disputes through direct communication with our support team'
+},
+  {
+  step: '2',title: 'Escalation',description: 'If direct communication fails, escalate to management for resolution'
+},
+  {
+  step: '3',title: 'Mediation',description: 'For complex disputes, engage in mediation with a neutral third party'
+},
+  {
+  step: '4',title: 'Arbitration',description: 'As a last resort, resolve disputes through binding arbitration'
+},
   ]
 
   return (
@@ -108,13 +108,17 @@ const TermsOfService = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-        {{/* Hero Section */}}
+        {{/* Hero Section */},
+  }
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
               className="className="text-center";"
             >
               <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -122,12 +126,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Services Description */}}
+            {{/* Services Description */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.1 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -167,12 +176,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* User Accounts */}}
+            {{/* User Accounts */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.2 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -208,12 +222,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Acceptable Use */}}
+            {{/* Acceptable Use */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.3 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -257,12 +276,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Intellectual Property */}}
+            {{/* Intellectual Property */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.4 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -301,12 +325,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Privacy and Data */}}
+            {{/* Privacy and Data */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.5 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -327,12 +356,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Limitation of Liability */}}
+            {{/* Limitation of Liability */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.6 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -368,12 +402,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Disclaimers */}}
+            {{/* Disclaimers */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.7 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -412,12 +451,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Indemnification */}}
+            {{/* Indemnification */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.8 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -450,12 +494,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Termination */}}
+            {{/* Termination */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.9 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -476,12 +525,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Governing Law */}}
+            {{/* Governing Law */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 1.0 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -502,12 +556,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Changes to Terms */}}
+            {{/* Changes to Terms */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 1.1 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -528,12 +587,17 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {{/* Contact Information */}}
+            {{/* Contact Information */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 1.2 },
+  }
+              viewport={{ once: true },
+  }
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
@@ -578,26 +642,34 @@ const TermsOfService = () => {
           </div>
         </section>
 
-        {{/* Table of Contents */}}
+        {{/* Table of Contents */},
+  }
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.2 },
+  }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Table of Contents;
               </h2>
               ;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index) => (;
-                  <motion.a;
-                    key={{section.id}}
+                {sections.map((section, index) => (
+  <motion.a;
+                    key={{section.id},
+  }
                     href={`#${section.id}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial={{ opacity: 0, y: 20 },
+  }
+                    animate={{ opacity: 1, y: 0 },
+  }
+                    transition={{ duration: 0.6, delay: 0.1 * index },
+  }
                     className="className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300";"
                   >
                     <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -612,25 +684,33 @@ const TermsOfService = () => {
           </div>
         </section>
 
-        {{/* Key Provisions */}}
+        {{/* Key Provisions */},
+  }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.4 },
+  }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Key Provisions;
               </h2>
               ;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {keyProvisions.map((provision, index) => (;
-                  <motion.div;
-                    key={{provision.title}}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                {keyProvisions.map((provision, index) => (
+  <motion.div;
+                    key={{provision.title},
+  }
+                    initial={{ opacity: 0, y: 20 },
+  }
+                    animate={{ opacity: 1, y: 0 },
+  }
+                    transition={{ duration: 0.6, delay: 0.1 * index },
+  }
                     className="className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-purple-200";"
                   >
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -645,16 +725,20 @@ const TermsOfService = () => {
           </div>
         </section>
 
-        {{/* Terms Content */}}
+        {{/* Terms Content */},
+  }
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.6 },
+  }
             >
-              {sections.map((section, index) => (;
-                <div key={section.id} id={section.id} className="mb-16">
+              {sections.map((section, index) => (
+  <div key={section.id} id={section.id} className="mb-16">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
                       <section.icon className="w-6 h-6 text-white" />
@@ -671,25 +755,33 @@ const TermsOfService = () => {
           </div>
         </section>
 
-        {{/* Dispute Resolution */}}
+        {{/* Dispute Resolution */},
+  }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.8 },
+  }
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Dispute Resolution Process;
               </h2>
               ;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {disputeResolution.map((step, index) => (;
-                  <motion.div;
-                    key={{step.step}}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                {disputeResolution.map((step, index) => (
+  <motion.div;
+                    key={{step.step},
+  }
+                    initial={{ opacity: 0, y: 20 },
+  }
+                    animate={{ opacity: 1, y: 0 },
+  }
+                    transition={{ duration: 0.6, delay: 0.1 * index },
+  }
                     className="className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-indigo-200 text-center";"
                   >
                     <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -704,13 +796,17 @@ const TermsOfService = () => {
           </div>
         </section>
 
-        {{/* Contact Section */}}
+        {{/* Contact Section */},
+  }
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 1.0 },
+  }
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                 Questions About These Terms?;

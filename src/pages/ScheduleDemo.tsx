@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SEO } from "../components/SEO";
-import { ;
+import {
   Calendar;
-  Clock, ;
-  Users, ;
-  Video, ;
-  MessageCircle, ;
-  Phone, ;
-  Mail, ;
-  MapPin, ;
+  Clock,
+  Users,
+  Video,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
   CheckCircle;
   Star;
   Zap;
@@ -27,75 +27,75 @@ import { ;
   MessageSquare;
   PhoneCall;
   Mail as MailIcon;
-  ExternalLink;
+  ExternalLink
 } from "lucide-react";
-export default function ScheduleDemo() {;
+export default function ScheduleDemo() {
   const [selectedService, setSelectedService] = useState('')
   const [selectedDate, setSelectedDate] = useState('')
   const [selectedTime, setSelectedTime] = useState('')
-  const [formData, setFormData] = useState({;
-    firstName: '',lastName: '',email: '',company: '',phone: '',attendees: 1,message: '';
-  })
-  const demoServices = [;
-    {;
-      id: 'ai-platform',name: 'AI Platform Demo',description: 'Experience our comprehensive AI platform with real-time demonstrations',icon: Brain,color: 'from-purple-500 to-pink-500',duration: '45 min',features: ['AI Model TrainingReal-time Analytics', 'Custom WorkflowsIntegration Examples']
-      popular: true;
-    }
-    {;
-      id: 'cybersecurity',name: 'Cybersecurity Solutions',description: 'See our advanced security platform in action with threat simulation',icon: Shield,color: 'from-red-500 to-orange-500',duration: '60 min',features: ['Threat DetectionIncident Response', 'Compliance DashboardSecurity Analytics']
-      popular: false;
-    }
-    {;
-      id: 'cloud-infrastructure',name: 'Cloud Infrastructure',description: 'Explore our cloud-native solutions and DevOps automation',icon: Cloud,color: 'from-blue-500 to-cyan-500',duration: '50 min',features: ['Multi-cloud ManagementDevOps Automation', 'Cost OptimizationPerformance Monitoring']
-      popular: true;
-    }
-    {;
-      id: 'quantum-computing',name: 'Quantum Computing',description: 'Discover quantum algorithms and quantum-classical hybrid solutions',icon: Cpu,color: 'from-indigo-500 to-purple-500',duration: '75 min',features: ['Quantum AlgorithmsHybrid Solutions', 'Performance BenchmarksUse Case Examples']
-      popular: false;
-    }
-    {;
-      id: 'data-analytics',name: 'Data Analytics Platform',description: 'Visualize and analyze your data with our advanced analytics tools',icon: Globe,color: 'from-green-500 to-emerald-500',duration: '40 min',features: ['Real-time DashboardsPredictive Analytics', 'Data VisualizationCustom Reports']
-      popular: false;
-    }
-    {;
-      id: 'custom-solution',name: 'Custom Solution Demo',description: 'Tailored demonstration based on your specific business needs',icon: Zap,color: 'from-yellow-500 to-orange-500',duration: '60 min',features: ['Custom WorkflowsIntegration Planning', 'ROI AnalysisImplementation Roadmap']
-      popular: false;
-    }
+  const [formData, setFormData] = useState({
+  firstName: '',lastName: '',email: '',company: '',phone: '',attendees: 1,message: ''
+})
+  const demoServices = [
+  {
+  id: 'ai-platform',name: 'AI Platform Demo',description: 'Experience our comprehensive AI platform with real-time demonstrations',icon: Brain,color: 'from-purple-500 to-pink-500',duration: '45 min',features: ['AI Model TrainingReal-time Analytics', 'Custom WorkflowsIntegration Examples']
+      popular: true
+},
+  {
+  id: 'cybersecurity',name: 'Cybersecurity Solutions',description: 'See our advanced security platform in action with threat simulation',icon: Shield,color: 'from-red-500 to-orange-500',duration: '60 min',features: ['Threat DetectionIncident Response', 'Compliance DashboardSecurity Analytics']
+      popular: false
+},
+  {
+  id: 'cloud-infrastructure',name: 'Cloud Infrastructure',description: 'Explore our cloud-native solutions and DevOps automation',icon: Cloud,color: 'from-blue-500 to-cyan-500',duration: '50 min',features: ['Multi-cloud ManagementDevOps Automation', 'Cost OptimizationPerformance Monitoring']
+      popular: true
+},
+  {
+  id: 'quantum-computing',name: 'Quantum Computing',description: 'Discover quantum algorithms and quantum-classical hybrid solutions',icon: Cpu,color: 'from-indigo-500 to-purple-500',duration: '75 min',features: ['Quantum AlgorithmsHybrid Solutions', 'Performance BenchmarksUse Case Examples']
+      popular: false
+},
+  {
+  id: 'data-analytics',name: 'Data Analytics Platform',description: 'Visualize and analyze your data with our advanced analytics tools',icon: Globe,color: 'from-green-500 to-emerald-500',duration: '40 min',features: ['Real-time DashboardsPredictive Analytics', 'Data VisualizationCustom Reports']
+      popular: false
+},
+  {
+  id: 'custom-solution',name: 'Custom Solution Demo',description: 'Tailored demonstration based on your specific business needs',icon: Zap,color: 'from-yellow-500 to-orange-500',duration: '60 min',features: ['Custom WorkflowsIntegration Planning', 'ROI AnalysisImplementation Roadmap']
+      popular: false
+},
   ]
-  const availableTimes = [;
-    '9:00 AM9:30 AM', '10:00 AM10:30 AM', '11: 00 AM11:30 AM';
+  const availableTimes = [
+  '9:00 AM9:30 AM', '10:00 AM10:30 AM', '11: 00 AM11:30 AM';
     '1:00 PM1:30 PM', '2:00 PM2:30 PM', '3: 00 PM3:30 PM';
-    '4:00 PM4:30 PM', '5: 00 PM';
+    '4:00 PM4:30 PM', '5: 00 PM'
+]
+  const demoBenefits = [
+  {
+  title: 'Personalized Experience',description: 'Tailored demonstrations based on your business needs and use cases',icon: User,color: 'text-blue-400'
+},
+  {
+  title: 'Expert Guidance',description: 'Learn from our certified professionals with deep industry expertise',icon: Star,color: 'text-yellow-400'
+},
+  {
+  title: 'Interactive Sessions',description: 'Ask questions and explore features in real-time during the demo',icon: MessageSquare,color: 'text-green-400'
+},
+  {
+  title: 'Follow-up Support',description: 'Comprehensive follow-up materials and next steps after your demo',icon: CheckCircle,color: 'text-cyan-400'
+},
   ]
-  const demoBenefits = [;
-    {;
-      title: 'Personalized Experience',description: 'Tailored demonstrations based on your business needs and use cases',icon: User,color: 'text-blue-400';
-    }
-    {;
-      title: 'Expert Guidance',description: 'Learn from our certified professionals with deep industry expertise',icon: Star,color: 'text-yellow-400';
-    }
-    {;
-      title: 'Interactive Sessions',description: 'Ask questions and explore features in real-time during the demo',icon: MessageSquare,color: 'text-green-400';
-    }
-    {;
-      title: 'Follow-up Support',description: 'Comprehensive follow-up materials and next steps after your demo',icon: CheckCircle,color: 'text-cyan-400';
-    }
-  ]
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault()
+  const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault()
     // Handle form submission;
-    console.log('Demo request submitted:', {;
-      service: selectedService,date: selectedDate,time: selectedTime;
-      ...formData;
-    })
+    console.log('Demo request submitted:', {
+  service: selectedService,date: selectedDate,time: selectedTime;
+      ...formData
+})
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-    const { name, value } = e.target;
-    setFormData(prev => ({;
-      ...prev;
-      [name]: value;
-    }))
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const { name, value } = e.target;
+    setFormData(prev => ({
+  ...prev;
+      [name]: value
+}))
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -104,13 +104,17 @@ export default function ScheduleDemo() {;
         description="Schedule a personalized demo of our AI, cybersecurity, cloud, and quantum computing solutions. Experience our technology firsthand with expert guidance.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -121,7 +125,8 @@ export default function ScheduleDemo() {;
               demonstration with our experts and discover how Zion Tech Group can transform your business.;
             </p>
             ;
-            {{/* Quick Stats */}}
+            {{/* Quick Stats */},
+  }
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center">
                 <div className="text-2xl font-bold text-cyan-400">500+</div>
@@ -144,14 +149,19 @@ export default function ScheduleDemo() {;
         </div>
       </section>
 
-      {{/* Demo Services */}}
+      {{/* Demo Services */},
+  }
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
+            viewport={{ once: true },
+  }
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Choose Your Demo</h2>
@@ -161,25 +171,32 @@ export default function ScheduleDemo() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {demoServices.map((service, index) => (;
-              <motion.div;
-                key={{service.id}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${;
-                  selectedService === service.id ? 'ring-2 ring-cyan-400/50' : '';
-                }`}
-                onClick={{onClick={() => setSelectedService(service.id)}}}
+            {demoServices.map((service, index) => (
+  <motion.div;
+                key={{service.id},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
+                className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${
+  selectedService === service.id ? 'ring-2 ring-cyan-400/50' : ''
+}`}
+                onClick={{onClick={() => setSelectedService(service.id)},
+  },
+  }
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-br ${service.color}`}>
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    {service.popular && (;
-                      <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
+                    {service.popular && (
+  <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
                         Popular;
                       </span>
                     )}
@@ -190,24 +207,27 @@ export default function ScheduleDemo() {;
 
                   <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
                     <Clock className="w-4 h-4" />
-                    {{service.duration}}
+                    {{service.duration},
+  }
                   </div>
 
                   <div className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (;
-                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                    {service.features.map((feature, idx) => (
+  <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400" />
-                        {{feature}}
+                        {{feature},
+  }
                       </div>
                     ))}
                   </div>
 
-                  <div className={`w-full py-2 px-4 rounded-lg text-center font-medium transition-all duration-300 ${;
-                    selectedService === service.id;
+                  <div className={`w-full py-2 px-4 rounded-lg text-center font-medium transition-all duration-300 ${
+  selectedService === service.id;
                       ? 'bg-cyan-500 text-white';
-                      : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50';
-                  }`}>
-                    {{selectedService === service.id ? 'Selected' : 'Select Demo'}}
+                      : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50'
+}`}>
+                    {{selectedService === service.id ? 'Selected' : 'Select Demo'},
+  }
                   </div>
                 </div>
               </motion.div>
@@ -216,14 +236,19 @@ export default function ScheduleDemo() {;
         </div>
       </section>
 
-      {{/* Demo Benefits */}}
+      {{/* Demo Benefits */},
+  }
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
+            viewport={{ once: true },
+  }
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Why Schedule a Demo?</h2>
@@ -233,13 +258,18 @@ export default function ScheduleDemo() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {demoBenefits.map((benefit, index) => (;
-              <motion.div;
-                key={{benefit.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {demoBenefits.map((benefit, index) => (
+  <motion.div;
+                key={{benefit.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="text-center";"
               >
                 <div className={`p-4 rounded-xl bg-slate-700/30 mx-auto mb-4 w-16 h-16 flex items-center justify-center`}>
@@ -253,15 +283,20 @@ export default function ScheduleDemo() {;
         </div>
       </section>
 
-      {{/* Demo Scheduling Form */}}
+      {{/* Demo Scheduling Form */},
+  }
       <section className="py-16">
         <div className="container-responsive">
           <div className="max-w-4xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
+              viewport={{ once: true },
+  }
               className="className="mb-8";"
             >
               <h2 className="text-3xl font-bold text-white text-center mb-4">Schedule Your Demo</h2>
@@ -271,15 +306,21 @@ export default function ScheduleDemo() {;
             </motion.div>
 
             <motion.form;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              onSubmit={{handleSubmit}}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.2 },
+  }
+              viewport={{ once: true },
+  }
+              onSubmit={{handleSubmit},
+  }
               className="className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8";"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                {{/* Date and Time Selection */}}
+                {{/* Date and Time Selection */},
+  }
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -287,8 +328,10 @@ export default function ScheduleDemo() {;
                     </label>
                     <input;
                       type="date";
-                      value={{selectedDate}}
-                      onChange={{(e) => setSelectedDate(e.target.value)}}
+                      value={{selectedDate},
+  }
+                      onChange={{(e) => setSelectedDate(e.target.value)},
+  }
                       className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                       required;
                     />
@@ -298,39 +341,45 @@ export default function ScheduleDemo() {;
                       Preferred Time;
                     </label>
                     <select;
-                      value={{selectedTime}}
-                      onChange={{(e) => setSelectedTime(e.target.value)}}
+                      value={{selectedTime},
+  }
+                      onChange={{(e) => setSelectedTime(e.target.value)},
+  }
                       className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                       required;
                     >
                       <option value="">Select a time</option>
-                      {availableTimes.map(time => (;
-                        <option key={time} value={time}>{time}</option>
+                      {availableTimes.map(time => (
+  <option key={time} value={time}>{time}</option>
                       ))}
                     </select>
                   </div>
                 </div>
 
-                {{/* Service Selection */}}
+                {{/* Service Selection */},
+  }
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Demo Service;
                   </label>
                   <select;
-                    value={{selectedService}}
-                    onChange={{(e) => setSelectedService(e.target.value)}}
+                    value={{selectedService},
+  }
+                    onChange={{(e) => setSelectedService(e.target.value)},
+  }
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   >
                     <option value="">Select a service</option>
-                    {demoServices.map(service => (;
-                      <option key={service.id} value={service.id}>{service.name}</option>
+                    {demoServices.map(service => (
+  <option key={service.id} value={service.id}>{service.name}</option>
                     ))}
                   </select>
                 </div>
               </div>
 
-              {{/* Personal Information */}}
+              {{/* Personal Information */},
+  }
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -339,8 +388,10 @@ export default function ScheduleDemo() {;
                   <input;
                     type="text";
                     name="firstName";
-                    value={{formData.firstName}}
-                    onChange={{handleInputChange}}
+                    value={{formData.firstName},
+  }
+                    onChange={{handleInputChange},
+  }
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   />
@@ -352,8 +403,10 @@ export default function ScheduleDemo() {;
                   <input;
                     type="text";
                     name="lastName";
-                    value={{formData.lastName}}
-                    onChange={{handleInputChange}}
+                    value={{formData.lastName},
+  }
+                    onChange={{handleInputChange},
+  }
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   />
@@ -368,8 +421,10 @@ export default function ScheduleDemo() {;
                   <input;
                     type="email";
                     name="email";
-                    value={{formData.email}}
-                    onChange={{handleInputChange}}
+                    value={{formData.email},
+  }
+                    onChange={{handleInputChange},
+  }
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   />
@@ -381,8 +436,10 @@ export default function ScheduleDemo() {;
                   <input;
                     type="text";
                     name="company";
-                    value={{formData.company}}
-                    onChange={{handleInputChange}}
+                    value={{formData.company},
+  }
+                    onChange={{handleInputChange},
+  }
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   />
@@ -397,8 +454,10 @@ export default function ScheduleDemo() {;
                   <input;
                     type="tel";
                     name="phone";
-                    value={{formData.phone}}
-                    onChange={{handleInputChange}}
+                    value={{formData.phone},
+  }
+                    onChange={{handleInputChange},
+  }
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                   />
                 </div>
@@ -408,12 +467,15 @@ export default function ScheduleDemo() {;
                   </label>
                   <select;
                     name="attendees";
-                    value={{formData.attendees}}
-                    onChange={{handleInputChange}}
+                    value={{formData.attendees},
+  }
+                    onChange={{handleInputChange},
+  }
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                   >
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (;
-                      <option key={num} value={num}>{num} {num === 1 ? 'person' : 'people'}</option>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
+  <option key={num} value={num}>{num},
+  {num === 1 ? 'person' : 'people'}</option>
                     ))}
                   </select>
                 </div>
@@ -425,9 +487,12 @@ export default function ScheduleDemo() {;
                 </label>
                 <textarea;
                   name="message";
-                  value={{formData.message}}
-                  onChange={{handleInputChange}}
-                  rows={{4}}
+                  value={{formData.message},
+  }
+                  onChange={{handleInputChange},
+  }
+                  rows={{4},
+  }
                   placeholder="Tell us about your specific needs, questions, or any special requirements for the demo...";
                   className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 />
@@ -447,14 +512,19 @@ export default function ScheduleDemo() {;
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-8">Need Immediate Assistance?</h2>

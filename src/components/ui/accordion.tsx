@@ -4,8 +4,8 @@ interface AccordionProps {
   children: React.ReactNode;
   className?: string,
   type?: 'single' | 'multiple',
-  defaultValue?: string | string[]
-}
+  defaultValue?: string | string[],
+  }
 
 export function Accordion({
   children,
@@ -16,7 +16,7 @@ export function Accordion({
   const [openItems, setOpenItems] = useState<string[]>(
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
   );
-  const handleToggle = (value: string) => {
+const handleToggle = (value: string) => {
     if (type === 'single') {
       setOpenItems(openItems.includes(value) ? [] : [value])
     } else {
@@ -24,8 +24,8 @@ export function Accordion({
         prev.includes(value)
           ? prev.filter(item => item !== value)
           : [...prev, value]
-      );
-    }
+      )
+},
   };
   return (
     <div className={`space-y-1 ${className}`}>
@@ -33,10 +33,10 @@ export function Accordion({
         if (React.isValidElement(child)) {
           return React.cloneElement(child, {
             isOpen: openItems.includes(child.props.value),onToggle: () => handleToggle(child.props.value)
-          });
-        }
-        return child;
-      })}
+          })
+}
+        return child
+})}
     </div>
   ),
 }
@@ -58,12 +58,12 @@ export function AccordionItem({
     <div className={`border-b border-gray-200 ${className}`}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, { isOpen, onToggle });
-        }
-        return child;
-      })}
+          return React.cloneElement(child, { isOpen, onToggle })
+}
+        return child
+})}
     </div>
-  );
+  )
 }
 
 interface AccordionTriggerProps {
@@ -91,7 +91,7 @@ export function AccordionTrigger({
         }`}
       />
     </button>
-  );
+  )
 }
 
 interface AccordionContentProps {
@@ -110,5 +110,5 @@ export function AccordionContent({
     <div className={`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>
       {children}
     </div>
-  );
+  )
 }

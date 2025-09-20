@@ -7,13 +7,13 @@ export function EnhancedAccessibilityEnhancer() {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
   });
-  const [isVisible, setIsVisible] = useState(false);
-  const [announcements, setAnnouncements] = useState<string[]>([]),
+const [isVisible, setIsVisible] = useState(false);
+const [announcements, setAnnouncements] = useState<string[]>([]),
 
   useEffect(() => {
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,highContrast: prefersHighContrast
@@ -21,10 +21,10 @@ export function EnhancedAccessibilityEnhancer() {
     // Apply accessibility settings to document
     const root = document.documentElement;
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+      root.classList.add('high-contrast')
+} else {
+      root.classList.remove('high-contrast')
+}
 
     if (settings.largeText) {
       root.classList.add('large-text');
@@ -37,24 +37,24 @@ export function EnhancedAccessibilityEnhancer() {
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
       root.style.setProperty('--animation-duration0.01ms');
-      root.style.setProperty('--animation-iteration-count1');
-    } else {
+      root.style.setProperty('--animation-iteration-count1')
+} else {
       root.classList.remove('reduced-motion');
       root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--animation-iteration-count');
-    }
+      root.style.removeProperty('--animation-iteration-count')
+}
 
     // Show accessibility panel on Ctrl+Shift+A
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
         setIsVisible(!isVisible);
         announce('Accessibility panel toggled')
-      }
-    },
+      },
+  },
 
     window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [settings, isVisible]),
+    return () => window.removeEventListener('keydown', handleKeyPress)
+}, [settings, isVisible]),
 
   const announce = (message: string) => {
     setAnnouncements(prev => [...prev.slice(-2), message]),
@@ -67,8 +67,8 @@ export function EnhancedAccessibilityEnhancer() {
     announcement.textContent = message,
     document.body.appendChild(announcement);
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000),
+      document.body.removeChild(announcement)
+}, 1000),
   },
 
   const toggleSetting = (setting: keyof AccessibilitySettings) => {
@@ -78,22 +78,24 @@ export function EnhancedAccessibilityEnhancer() {
     const settingNames = {
       highContrast: 'High contrast mode',largeText: 'Large text',reducedMotion: 'Reduced motion',focusVisible: 'Focus indicators',screenReader: 'Screen reader mode',keyboardNavigation: 'Keyboard navigation'
     };
-    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
-  },
+    announce(`${settingNames[setting],
+  } ${newValue ? 'enabled' : 'disabled'}`)
+},
 
   const resetSettings = () => {
     setSettings({
       highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
     });
-    announce('Accessibility settings reset');
-  },
+    announce('Accessibility settings reset')
+},
 
   if (!isVisible) return null;
   return (
     <>
       {/* Screen reader announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
-        {announcements[announcements.length - 1]}
+        {announcements[announcements.length - 1],
+  }
       </div>
 
       <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">

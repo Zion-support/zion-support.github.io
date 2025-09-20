@@ -7,7 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-const const categoryIcons = {; = {
+const const categoryIcons = {
+  = {
     'AI Business Solutions': Brain;
     'IT Infrastructure': Cloud;
     'Data Analytics': BarChart3;
@@ -15,39 +16,40 @@ const const categoryIcons = {; = {
     'FinTech': DollarSign;
     'HealthTech': Heart;
     'E-commerce': ShoppingCart;
-    'EdTech': GraduationCap;
+    'EdTech': GraduationCap
 }
-const benefits = [;
-    {;
-        icon: <Zap className="h-6 w-6"/>,title: "Immediate Deployment",description: "All services are ready for immediate deployment with no setup delays";
-    }
-    {;
-        icon: <Shield className="h-6 w-6"/>,title: "Enterprise Security",description: "Bank-level security with SOC 2 compliance and 24/7 monitoring";
-    }
-    {;
-        icon: <Users className="h-6 w-6"/>,title: "Dedicated Support",description: "24/7 technical support with dedicated account managers";
-    }
-    {;
-        icon: <TrendingUp className="h-6 w-6"/>,title: "Proven ROI",description: "Average 300% ROI within 6 months of implementation";
-    }
-]
-const features = [;
-    "AI-Powered Automation";
+const benefits = [
+  {
+  icon: <Zap className="h-6 w-6"/>,title: "Immediate Deployment",description: "All services are ready for immediate deployment with no setup delays"
+},
+  {
+  icon: <Shield className="h-6 w-6"/>,title: "Enterprise Security",description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
+},
+  {
+  icon: <Users className="h-6 w-6"/>,title: "Dedicated Support",description: "24/7 technical support with dedicated account managers"
+},
+  {
+  icon: <TrendingUp className="h-6 w-6"/>,title: "Proven ROI",description: "Average 300% ROI within 6 months of implementation"
+},
+  ]
+const features = [
+  "AI-Powered Automation";
     "Real-time Analytics";
     "Multi-cloud Support";
     "API-First Architecture";
     "Scalable Infrastructure";
     "Custom Integrations";
     "White-label Solutions";
-    "Comprehensive Documentation";
+    "Comprehensive Documentation"
 ]
-export default function MicroSaasServices() {;
-    const [selectedCategory, setSelectedCategory] = useState('all')
+export default function MicroSaasServices() {
+  const [selectedCategory, setSelectedCategory] = useState('all')
     const filteredServices = selectedCategory === 'all';
         ? MICRO_SAAS_SERVICES;
         : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory)
     return (<div className="min-h-screen bg-background">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -70,7 +72,8 @@ export default function MicroSaasServices() {;
         </div>
       </div>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -86,7 +89,8 @@ export default function MicroSaasServices() {;
             {benefits.map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <CardHeader className="text-center">
                   <div className="mx-auto w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mb-4">
-                    {{benefit.icon}}
+                    {{benefit.icon},
+  }
                   </div>
                   <CardTitle className="text-xl">{benefit.title}</CardTitle>
                 </CardHeader>
@@ -98,7 +102,8 @@ export default function MicroSaasServices() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -121,7 +126,8 @@ export default function MicroSaasServices() {;
         </div>
       </section>
 
-      {{/* Pricing Tiers */}}
+      {{/* Pricing Tiers */},
+  }
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -134,24 +140,28 @@ export default function MicroSaasServices() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[;
-  {;
-    key: 'starter',name: 'Starter',price: '$29',features: [['Basic featuresEmail support', '1 user'];]
-  }
-  {;
-    key: 'professional',name: 'Professional',price: '$99',features: [['Advanced featuresPriority support', '5 users'];]
-  }
-  {;
-    key: 'enterprise',name: 'Enterprise',price: '$299',features: [['Custom features24/7 support', 'Unlimited users'];]
-  }
-].map((tier) => (<Card key={tier.key} className={`relative ${tier.key === 'professional' ? 'border-zion-purple border-2 scale-105' : ''}`}>
+            {[
+  {
+  key: 'starter',name: 'Starter',price: '$29',features: [['Basic featuresEmail support', '1 user'],
+  ],
+  },
+  {
+  key: 'professional',name: 'Professional',price: '$99',features: [['Advanced featuresPriority support', '5 users'],
+  ],
+  },
+  {
+  key: 'enterprise',name: 'Enterprise',price: '$299',features: [['Custom features24/7 support', 'Unlimited users'],
+  ],
+  },
+  ].map((tier) => (<Card key={tier.key} className={`relative ${tier.key === 'professional' ? 'border-zion-purple border-2 scale-105' : ''}`}>
                 {tier.key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-zion-purple text-white px-4 py-2">Most Popular</Badge>
                   </div>)}
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-zion-blue">{tier.name}</CardTitle>
                   <CardDescription>
-                    Perfect for {{tier.key === 'starter' ? 'startups' : tier.key === 'professional' ? 'growing businesses' : 'enterprises'}}
+                    Perfect for {{tier.key === 'starter' ? 'startups' : tier.key === 'professional' ? 'growing businesses' : 'enterprises'},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -160,10 +170,11 @@ export default function MicroSaasServices() {;
                     <span className="text-gray-600 ml-2">per month</span>
                   </div>
                   <ul className="text-left space-y-2 mb-6">
-                    {tier.features.map((feature, index) => (;
-                      <li key={index} className="flex items-center">
+                    {tier.features.map((feature, index) => (
+  <li key={index} className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2"/>
-                        {{feature}}
+                        {{feature},
+  }
                       </li>
                     ))}
                   </ul>
@@ -176,7 +187,8 @@ export default function MicroSaasServices() {;
         </div>
       </section>
 
-      {{/* Services by Category */}}
+      {{/* Services by Category */},
+  }
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -191,11 +203,15 @@ export default function MicroSaasServices() {;
           <Tabs defaultValue="all" className="w-full" onValueChange={(value) => setSelectedCategory(value)}>
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
-              {getMicroSaasCategories().map((category) => {;
-            const IconComponent = categoryIcons[[category.label];]
+              {getMicroSaasCategories().map((category) => {
+  const IconComponent = categoryIcons[[category.label],
+  ]
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">
-                    {{IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}}
-                    {{category.label.split(' ')[0]}}
+                    {{IconComponent && <IconComponent className="h-4 w-4 mr-2"/>},
+  },
+  {{category.label.split(' ')[0],
+  },
+  }
                   </TabsTrigger>)
         })}
             </TabsList>
@@ -204,9 +220,11 @@ export default function MicroSaasServices() {;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                     <div className="relative">
-                      <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                      <img src={service.images[0],
+  } alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                       <Badge className="absolute top-4 right-4 bg-zion-purple">
-                        {{service.category}}
+                        {{service.category},
+  }
                       </Badge>
                     </div>
                     <CardHeader>
@@ -223,12 +241,14 @@ export default function MicroSaasServices() {;
                           <span className="text-zion-slate-light text-sm ml-1">({service.reviewCount})</span>
                         </div>
                         <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
-                          AI Score: {{service.aiScore}}
+                          AI Score: {{service.aiScore},
+  }
                         </Badge>
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="text-2xl font-bold text-zion-cyan">
-                          ${{service.price}}
+                          ${{service.price},
+  }
                           <span className="text-sm text-zion-slate-light">/month</span>
                         </div>
                         <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark">
@@ -243,7 +263,8 @@ export default function MicroSaasServices() {;
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -285,7 +306,8 @@ export default function MicroSaasServices() {;
                   <div>
                     <p className="font-medium">Website</p>
                     <a href={CONTACT_INFO.website} className="text-zion-cyan hover:underline">
-                      {{CONTACT_INFO.website}}
+                      {{CONTACT_INFO.website},
+  }
                     </a>
                   </div>
                 </div>
@@ -327,7 +349,8 @@ export default function MicroSaasServices() {;
         </div>
       </section>
 
-      {{/* Trusted By Section */}}
+      {{/* Trusted By Section */},
+  }
       <TrustedBySection />
     </div>)
 }

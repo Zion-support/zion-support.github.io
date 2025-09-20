@@ -26,195 +26,196 @@ import Projects from "@/pages/Projects";
 const DashboardRoutes = () => {
   return (
     <Routes>
-      {{/* Dashboard Routes */}}
+      {{/* Dashboard Routes */},
+  }
       <Route;
         path="/dashboard";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/client-dashboard";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/talent-dashboard";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/creator-dashboard";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/analytics";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/project/:id/milestones";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/project/:id";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/project/:id/room";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/messages";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <div>Messages Page</div>
           </ProtectedRoute>
         }
       />
       <Route;
         path="/inbox";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <div>Inbox Page</div>
           </ProtectedRoute>
         }
       />
       <Route;
         path="/payments";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/interviews";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/notifications";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/applications/track";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/hiring-tracker";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/projects";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <Projects />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/portfolio-builder";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/referrals";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <div>Referrals Page</div>
           </ProtectedRoute>
         }
       />
       <Route;
         path="/developers";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/wallet";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <div>Wallet Page</div>
           </ProtectedRoute>
         }
       />
       <Route;
         path="/orders";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <OrdersPage />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/orders/:orderId";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/dashboard/api-access";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
         }
       />
       <Route;
         path="/contract-builder";
-        element={;
-          <ProtectedRoute>
+        element={
+  <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
         }

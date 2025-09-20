@@ -2,32 +2,32 @@ import React from "react";
 import { SEO } from "../../components/SEO";
 import { motion } from "framer-motion";
 import { Workflow, Zap, Brain, Target, TrendingUp, Shield, Users, Clock, BarChart3, CheckCircle } from "lucide-react";
-export default function AIWorkflowAutomation() {;
-  const features = [;
-    {;
-      icon: Workflow,title: 'Intelligent Process Automation',description: 'AI-powered workflow automation that learns and optimizes your business processes automatically.';
-    }
-    {;
-      icon: Brain,title: 'Machine Learning Integration',description: 'Seamless integration with ML models for predictive workflow optimization and decision-making.';
-    }
-    {;
-      icon: Target,title: 'Goal-Oriented Automation',description: 'Workflows that adapt and optimize based on your business objectives and KPIs.';
-    }
-    {;
-      icon: TrendingUp,title: 'Performance Analytics',description: 'Real-time insights into workflow efficiency and optimization opportunities.';
-    }
-    {;
-      icon: Shield,title: 'Secure & Compliant',description: 'Enterprise-grade security with built-in compliance monitoring and audit trails.';
-    }
-    {;
-      icon: Users,title: 'Team Collaboration',description: 'Enhanced team productivity with intelligent task routing and workload balancing.';
-    }
+export default function AIWorkflowAutomation() {
+  const features = [
+  {
+  icon: Workflow,title: 'Intelligent Process Automation',description: 'AI-powered workflow automation that learns and optimizes your business processes automatically.'
+},
+  {
+  icon: Brain,title: 'Machine Learning Integration',description: 'Seamless integration with ML models for predictive workflow optimization and decision-making.'
+},
+  {
+  icon: Target,title: 'Goal-Oriented Automation',description: 'Workflows that adapt and optimize based on your business objectives and KPIs.'
+},
+  {
+  icon: TrendingUp,title: 'Performance Analytics',description: 'Real-time insights into workflow efficiency and optimization opportunities.'
+},
+  {
+  icon: Shield,title: 'Secure & Compliant',description: 'Enterprise-grade security with built-in compliance monitoring and audit trails.'
+},
+  {
+  icon: Users,title: 'Team Collaboration',description: 'Enhanced team productivity with intelligent task routing and workload balancing.'
+},
   ]
-  const benefits = [;
-    'Reduce manual tasks by up to 80%Improve process efficiency by 60%';
+  const benefits = [
+  'Reduce manual tasks by up to 80%Improve process efficiency by 60%';
     'Cut operational costs by 40%Enhance customer satisfaction';
-    'Ensure regulatory complianceScale operations seamlessly';
-  ]
+    'Ensure regulatory complianceScale operations seamlessly'
+]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -35,14 +35,18 @@ export default function AIWorkflowAutomation() {;
         description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasks, improve efficiency, and scale operations seamlessly.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
@@ -68,13 +72,17 @@ export default function AIWorkflowAutomation() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -87,12 +95,16 @@ export default function AIWorkflowAutomation() {;
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -106,14 +118,18 @@ export default function AIWorkflowAutomation() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Transform Your Business Operations;
@@ -123,8 +139,8 @@ export default function AIWorkflowAutomation() {;
                 From cost reduction to improved customer satisfaction, the benefits are clear and quantifiable.;
               </p>
               <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (;
-                  <div key={index} className="flex items-center space-x-3">
+                {benefits.map((benefit, index) => (
+  <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <span className="text-slate-300">{benefit}</span>
                   </div>
@@ -133,9 +149,12 @@ export default function AIWorkflowAutomation() {;
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
               className="className="relative";"
             >
               <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-400/30">
@@ -157,13 +176,17 @@ export default function AIWorkflowAutomation() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="max-w-3xl mx-auto";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">

@@ -42,12 +42,12 @@ export const SEO: React.FC<SEOProps> = ({
   publishedTime,
   modifiedTime,
   section,
-  tags = []
-}) => {
+  tags = [],
+  }) => {
   // Default values
   const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg';
-  const defaultOgUrl = ogUrl || window.location.href;
-  const defaultCanonicalUrl = canonicalUrl || window.location.href;
+const defaultOgUrl = ogUrl || window.location.href;
+const defaultCanonicalUrl = canonicalUrl || window.location.href;
   
   // Enhanced title with brand
   const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -111,24 +111,24 @@ export const SEO: React.FC<SEOProps> = ({
           "itemOffered": {
             "@type": "Service",
             "name": "AI Business Intelligence"
-          }
-        },
+          },
+  },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "Cloud & DevOps"
-          }
-        },
+          },
+  },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "Cybersecurity"
-          }
-        }
-      ]
-    }
+          },
+  },
+  ],
+  },
   };
 
   // Generate structured data for website
@@ -146,7 +146,7 @@ export const SEO: React.FC<SEOProps> = ({
       "@type": "SearchAction",
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
-    }
+    },
   };
 
   // Generate structured data for local business
@@ -183,7 +183,7 @@ export const SEO: React.FC<SEOProps> = ({
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services"
-    }
+    },
   };
 
   // Combine structured data
@@ -211,9 +211,12 @@ export const SEO: React.FC<SEOProps> = ({
     { name: 'application-name', content: 'Zion Tech Group' },
     { name: 'format-detection', content: 'telephone=no' },
     ...(tags.map(tag => ({ name: 'article:tag', content: tag }))),
-    ...(section ? [{ name: 'article:section', content: section }] : []),
-    ...(publishedTime ? [{ name: 'article:published_time', content: publishedTime }] : []),
-    ...(modifiedTime ? [{ name: 'article:modified_time', content: modifiedTime }] : [])
+    ...(section ? [{ name: 'article:section', content: section },
+  ] : []),
+    ...(publishedTime ? [{ name: 'article:published_time', content: publishedTime },
+  ] : []),
+    ...(modifiedTime ? [{ name: 'article:modified_time', content: modifiedTime },
+  ] : [])
   ];
   // Additional links for better SEO and performance
   const enhancedAdditionalLinks = [
@@ -227,7 +230,7 @@ export const SEO: React.FC<SEOProps> = ({
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-    { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#06b6d4' }
+    { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#06b6d4' },
   ];
   // Performance optimization
   useEffect(() => {
@@ -244,8 +247,8 @@ export const SEO: React.FC<SEOProps> = ({
         link.rel = 'preload';
         link.href = href;
         link.as = 'style';
-        document.head.appendChild(link);
-      });
+        document.head.appendChild(link)
+});
 
       // Preload critical images
       const criticalImages = [
@@ -258,23 +261,23 @@ export const SEO: React.FC<SEOProps> = ({
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
-        document.head.appendChild(link);
-      });
-    };
+        document.head.appendChild(link)
+})
+};
 
     // Add resource hints
     const addResourceHints = () => {
       const hints = [
         { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' },
-        { rel: 'dns-prefetch', href: '//cdn.jsdelivr.net' }
-      ];
+        { rel: 'dns-prefetch', href: '//cdn.jsdelivr.net' },
+  ];
       hints.forEach(hint => {
         const link = document.createElement('link');
         link.rel = hint.rel;
         link.href = hint.href;
-        document.head.appendChild(link);
-      });
-    };
+        document.head.appendChild(link)
+})
+};
 
     // Initialize optimizations
     preloadCriticalResources();
@@ -286,10 +289,10 @@ export const SEO: React.FC<SEOProps> = ({
       const dynamicLinks = document.querySelectorAll('link[rel="preload"], link[rel="preconnect"], link[rel="dns-prefetch"]');
       dynamicLinks.forEach(link => {
         if (link.getAttribute('data-dynamic')) {
-          link.remove();
-        }
-      });
-    };
+          link.remove()
+},
+  })
+},
   }, []);
 
   return (
@@ -325,17 +328,18 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={defaultOgImage} />
       <meta name="twitter:image:alt" content="Zion Tech Group - AI-Powered Business Solutions" />
       
-      {/* Additional Meta Tags */}
-      {enhancedAdditionalMeta.map((meta, index) => (
+      {/* Additional Meta Tags */},
+  {enhancedAdditionalMeta.map((meta, index) => (
         <meta key={index} name={meta.name} content={meta.content} />
-      ))}
-      
-      {/* Additional Links */}
-      {enhancedAdditionalLinks.map((link, index) => (
-        <link key={index} rel={link.rel} href={link.href} {...(link.type && { type: link.type })} {...(link.sizes && { sizes: link.sizes })} {...(link.color && { color: link.color })} />
-      ))}
-      
-      {/* Structured Data */}
+      ))},
+  {/* Additional Links */},
+  {enhancedAdditionalLinks.map((link, index) => (
+        <link key={index} rel={link.rel} href={link.href},
+  {...(link.type && { type: link.type })},
+  {...(link.sizes && { sizes: link.sizes })},
+  {...(link.color && { color: link.color })} />
+      ))},
+  {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(combinedStructuredData)}
       </script>
@@ -352,9 +356,8 @@ export const SEO: React.FC<SEOProps> = ({
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
-  );
+  )
 };
-
 export function HomePageSEO() {
   return (
     <SEO
@@ -372,9 +375,10 @@ export function HomePageSEO() {
         },
         "serviceType": "AI Solutions, Quantum Computing, IT Services",
         "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
-      }}
+      },
+  }
     />
-  );
+  )
 }
 
 export function ContactPageSEO() {
@@ -397,11 +401,12 @@ export function ContactPageSEO() {
             "telephone": "+1-555-0123",
             "contactType": "customer service",
             "email": "info@ziontechgroup.com"
-          }
-        }
-      }}
+          },
+  },
+  },
+  }
     />
-  );
+  )
 }
 
 export function BlogPostSEO({ 
@@ -417,7 +422,7 @@ export function BlogPostSEO({
   author: string;
   publishedDate: string;
   image: string;
-  slug: string;
+  slug: string
 }) {
   return (
     <SEO
@@ -442,15 +447,16 @@ export function BlogPostSEO({
           "logo": {
             "@type": "ImageObject",
             "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
-          }
-        },
+          },
+  },
         "datePublished": publishedDate,
         "dateModified": publishedDate,
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": `https://ziontechgroup.com/blog/${slug}`
-        }
-      }}
+        },
+  },
+  }
     />
-  );
+  )
 }

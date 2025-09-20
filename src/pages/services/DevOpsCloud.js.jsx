@@ -2,146 +2,147 @@ import React from "react";
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from "lucide-react";
-export default function DevOpsCloudServices() {;
-    const devopsServices = [;
-        {;
-            icon: Cloud,title: 'Cloud Migration & Strategy',description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',price: 'From $8,500/project';
+export default function DevOpsCloudServices() {
+  const devopsServices = [
+  {
+  icon: Cloud,title: 'Cloud Migration & Strategy',description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',price: 'From $8,500/project';
             marketPrice: '$7,000 - $25,000/project';
-            features: [;
-                'Cloud readiness assessmentMulti-cloud strategy planning';
+            features: [
+  'Cloud readiness assessmentMulti-cloud strategy planning';
                 'Migration roadmap developmentCost optimization analysis';
-                'Security and compliance reviewPerformance benchmarking';
-            ]
-            benefits: [;
-                'Reduced infrastructure costs by 30-50%Improved scalability and flexibility';
-                'Enhanced disaster recoveryBetter resource utilization';
-            ]
-        }
-        {;
-            icon: Zap,title: 'CI/CD Pipeline Development',description: 'Automated continuous integration and deployment pipelines for faster, reliable software delivery.';
+                'Security and compliance reviewPerformance benchmarking'
+]
+            benefits: [
+  'Reduced infrastructure costs by 30-50%Improved scalability and flexibility';
+                'Enhanced disaster recoveryBetter resource utilization'
+],
+  },
+  {
+  icon: Zap,title: 'CI/CD Pipeline Development',description: 'Automated continuous integration and deployment pipelines for faster, reliable software delivery.';
             price: 'From $6,500/project';
             marketPrice: '$5,500 - $18,000/project';
-            features: [;
-                'Automated build and test pipelinesDeployment automation';
+            features: [
+  'Automated build and test pipelinesDeployment automation';
                 'Environment managementRollback and recovery';
-                'Pipeline monitoring and alertsSecurity scanning integration';
-            ]
-            benefits: [;
-                'Faster time to marketReduced deployment errors';
-                'Improved code qualityEnhanced team productivity';
-            ]
-        }
-        {;
-            icon: Shield,title: 'Infrastructure as Code (IaC)',description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.',price: 'From $5,500/project';
+                'Pipeline monitoring and alertsSecurity scanning integration'
+]
+            benefits: [
+  'Faster time to marketReduced deployment errors';
+                'Improved code qualityEnhanced team productivity'
+],
+  },
+  {
+  icon: Shield,title: 'Infrastructure as Code (IaC)',description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.',price: 'From $5,500/project';
             marketPrice: '$4,500 - $15,000/project';
-            features: [;
-                'Terraform and CloudFormationAnsible and Puppet automation';
+            features: [
+  'Terraform and CloudFormationAnsible and Puppet automation';
                 'Infrastructure versioningEnvironment consistency';
-                'Automated scaling policiesCost monitoring and alerts';
-            ]
-            benefits: [;
-                'Consistent infrastructure deploymentReduced manual configuration errors';
-                'Faster environment provisioningBetter cost control and visibility';
-            ]
-        }
-        {;
-            icon: Database,title: 'Container Orchestration & Kubernetes',description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.',price: 'From $7,500/project';
+                'Automated scaling policiesCost monitoring and alerts'
+]
+            benefits: [
+  'Consistent infrastructure deploymentReduced manual configuration errors';
+                'Faster environment provisioningBetter cost control and visibility'
+],
+  },
+  {
+  icon: Database,title: 'Container Orchestration & Kubernetes',description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.',price: 'From $7,500/project';
             marketPrice: '$6,500 - $20,000/project';
-            features: [;
-                'Kubernetes cluster designContainer security and scanning';
+            features: [
+  'Kubernetes cluster designContainer security and scanning';
                 'Auto-scaling and load balancingService mesh implementation';
-                'Monitoring and loggingBackup and disaster recovery';
-            ]
-            benefits: [;
-                'Improved application scalabilityBetter resource utilization';
-                'Enhanced deployment flexibilityReduced operational overhead';
-            ]
-        }
-        {;
-            icon: Users,title: 'DevOps Consulting & Training',description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.',price: 'From $4,500/month';
+                'Monitoring and loggingBackup and disaster recovery'
+]
+            benefits: [
+  'Improved application scalabilityBetter resource utilization';
+                'Enhanced deployment flexibilityReduced operational overhead'
+],
+  },
+  {
+  icon: Users,title: 'DevOps Consulting & Training',description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.',price: 'From $4,500/month';
             marketPrice: '$3,500 - $12,000/month';
-            features: [;
-                'DevOps maturity assessmentProcess optimization';
+            features: [
+  'DevOps maturity assessmentProcess optimization';
                 'Team structure recommendationsTool selection and implementation';
-                'Best practices trainingChange management support';
-            ]
-            benefits: [;
-                'Improved development velocityBetter team collaboration';
-                'Reduced operational costsEnhanced software quality';
-            ]
-        }
-        {;
-            icon: Server,title: 'Monitoring & Observability',description: 'Comprehensive monitoring, logging, and observability solutions for modern applications.';
+                'Best practices trainingChange management support'
+]
+            benefits: [
+  'Improved development velocityBetter team collaboration';
+                'Reduced operational costsEnhanced software quality'
+],
+  },
+  {
+  icon: Server,title: 'Monitoring & Observability',description: 'Comprehensive monitoring, logging, and observability solutions for modern applications.';
             price: 'From $4,800/month';
             marketPrice: '$4,000 - $12,000/month';
-            features: [;
-                'Application performance monitoringInfrastructure monitoring';
+            features: [
+  'Application performance monitoringInfrastructure monitoring';
                 'Centralized logging and analysisReal-time alerting';
-                'Custom dashboardsCapacity planning insights';
-            ]
-            benefits: [;
-                'Proactive issue detectionImproved system reliability';
-                'Better user experienceData-driven optimization';
-            ]
-        }
-    ]
-    const cloudProviders = [;
-        {;
-            name: 'Amazon Web Services (AWS)',services: 'EC2, S3, Lambda, RDS, EKS';
+                'Custom dashboardsCapacity planning insights'
+]
+            benefits: [
+  'Proactive issue detectionImproved system reliability';
+                'Better user experienceData-driven optimization'
+],
+  },
+  ]
+    const cloudProviders = [
+  {
+  name: 'Amazon Web Services (AWS)',services: 'EC2, S3, Lambda, RDS, EKS';
             strengths: 'Market leader, extensive services';
-            pricing: 'Competitive, pay-as-you-use';
-        }
-        {;
-            name: 'Microsoft Azure',services: 'Virtual Machines, Blob Storage, Functions, AKS';
+            pricing: 'Competitive, pay-as-you-use'
+},
+  {
+  name: 'Microsoft Azure',services: 'Virtual Machines, Blob Storage, Functions, AKS';
             strengths: 'Enterprise integration, hybrid cloud';
-            pricing: 'Enterprise discounts, reserved instances';
-        }
-        {;
-            name: 'Google Cloud Platform (GCP)',services: 'Compute Engine, Cloud Storage, Cloud Functions, GKE';
+            pricing: 'Enterprise discounts, reserved instances'
+},
+  {
+  name: 'Google Cloud Platform (GCP)',services: 'Compute Engine, Cloud Storage, Cloud Functions, GKE';
             strengths: 'AI/ML capabilities, global network';
-            pricing: 'Sustained use discounts, committed use';
-        }
-        {;
-            name: 'Multi-Cloud Strategy',services: 'Cross-platform orchestration, hybrid solutions';
+            pricing: 'Sustained use discounts, committed use'
+},
+  {
+  name: 'Multi-Cloud Strategy',services: 'Cross-platform orchestration, hybrid solutions';
             strengths: 'Vendor independence, best-of-breed';
-            pricing: 'Optimized for each workload';
-        }
-    ]
-    const industries = [;
-        'Financial Services & BankingHealthcare & Life Sciences';
+            pricing: 'Optimized for each workload'
+},
+  ]
+    const industries = [
+  'Financial Services & BankingHealthcare & Life Sciences';
         'E-commerce & RetailMedia & Entertainment';
         'Manufacturing & LogisticsEducation & Research';
-        'Government & Public SectorStartups & Scale-ups';
-    ]
-    const technologies = [;
-        'AWS, Azure, GCPKubernetes & Docker';
+        'Government & Public SectorStartups & Scale-ups'
+]
+    const technologies = [
+  'AWS, Azure, GCPKubernetes & Docker';
         'Terraform & AnsibleJenkins & GitLab CI';
         'Prometheus & GrafanaELK Stack & Splunk';
-        'Istio & LinkerdHelm & ArgoCD';
-    ]
-    const benefits = [;
-        'Faster software delivery and deploymentImproved system reliability and uptime';
+        'Istio & LinkerdHelm & ArgoCD'
+]
+    const benefits = [
+  'Faster software delivery and deploymentImproved system reliability and uptime';
         'Reduced infrastructure costsEnhanced security and compliance';
-        'Better scalability and performanceImproved team collaboration and productivity';
-    ]
-    const useCases = [;
-        {;
-            title: 'Microservices Migration',description: 'Legacy monolithic application migration to microservices architecture with container orchestration.',roi: '40-60% cost reduction',implementation: '20-32 weeks';
-        }
-        {;
-            title: 'Multi-Cloud Strategy',description: 'Implementation of multi-cloud architecture for improved resilience and cost optimization.',roi: '25-45% cost savings',implementation: '16-24 weeks';
-        }
-        {;
-            title: 'DevOps Transformation',description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',roi: '30-50% efficiency improvement',implementation: '24-36 weeks';
-        }
-        {;
-            title: 'Cloud-Native Development',description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',roi: '35-55% faster delivery',implementation: '12-20 weeks';
-        }
-    ]
+        'Better scalability and performanceImproved team collaboration and productivity'
+]
+    const useCases = [
+  {
+  title: 'Microservices Migration',description: 'Legacy monolithic application migration to microservices architecture with container orchestration.',roi: '40-60% cost reduction',implementation: '20-32 weeks'
+},
+  {
+  title: 'Multi-Cloud Strategy',description: 'Implementation of multi-cloud architecture for improved resilience and cost optimization.',roi: '25-45% cost savings',implementation: '16-24 weeks'
+},
+  {
+  title: 'DevOps Transformation',description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',roi: '30-50% efficiency improvement',implementation: '24-36 weeks'
+},
+  {
+  title: 'Cloud-Native Development',description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',roi: '35-55% faster delivery',implementation: '12-20 weeks'
+},
+  ]
     return (<div className="min-h-screen bg-background">
       <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -155,7 +156,8 @@ export default function DevOpsCloudServices() {;
         </div>
       </section>
 
-      {{/* Services Overview */}}
+      {{/* Services Overview */},
+  }
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -180,12 +182,14 @@ export default function DevOpsCloudServices() {;
                 <ul className="space-y-2 mb-4">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
-                      {{feature}}
+                      {{feature},
+  }
                     </li>))}
                 </ul>
                 <div className="space-y-2">
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (<div key={benefitIndex} className="text-sm text-gray-600">
-                      <span className="font-medium">✓</span> {{benefit}}
+                      <span className="font-medium">✓</span> {{benefit},
+  }
                     </div>))}
                 </div>
               </div>))}
@@ -193,7 +197,8 @@ export default function DevOpsCloudServices() {;
         </div>
       </section>
 
-      {{/* Cloud Providers Section */}}
+      {{/* Cloud Providers Section */},
+  }
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -225,7 +230,8 @@ export default function DevOpsCloudServices() {;
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -254,7 +260,8 @@ export default function DevOpsCloudServices() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -299,7 +306,8 @@ export default function DevOpsCloudServices() {;
         </div>
       </section>
 
-      {{/* Industries Section */}}
+      {{/* Industries Section */},
+  }
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -321,7 +329,8 @@ export default function DevOpsCloudServices() {;
         </div>
       </section>
 
-      {{/* Technologies Section */}}
+      {{/* Technologies Section */},
+  }
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -340,7 +349,8 @@ export default function DevOpsCloudServices() {;
         </div>
       </section>
 
-      {{/* Process Section */}}
+      {{/* Process Section */},
+  }
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -416,7 +426,8 @@ export default function DevOpsCloudServices() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your Delivery?</h2>

@@ -5,18 +5,21 @@ import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-export default function TalentMarketplace() {;
-    const const schema = {; = {
+export default function TalentMarketplace() {
+  const const schema = {
+  = {
         "@context": "https: //schema.org";
         "@type": "WebPage";
         "name": "Talent Marketplace";
         "description": "Hire vetted AI and tech professionals from around the world on Zion.";
-        "url": "https: //app.ziontechgroup.com/features/talent-marketplace";
-    }
+        "url": "https: //app.ziontechgroup.com/features/talent-marketplace"
+}
     return (<>
       <SEO title="Talent Marketplace" description="Discover and hire top AI specialists through the Zion talent marketplace." keywords="AI talent marketplace, hire developers, tech freelancers" canonical="https://app.ziontechgroup.com/features/talent-marketplace"/>
-      {{/* Use a normal script tag so JSON-LD is correctly parsed */}}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      {{/* Use a normal script tag so JSON-LD is correctly parsed */},
+  }
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) },
+  }></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">

@@ -1,50 +1,52 @@
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { ArrowRight, CheckCircle, ExternalLink } from "lucide-react";
-const anchor = (url: string, label?: string) => (;
+const anchor = (url: string, label?: string) => (
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">
-    {{label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')}}
+    {{label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')},
+  }
   </a>
 )
 
 const ServicesAdvertising: React.FC = () => {
-  const const contact = {; = {
-    mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-  } as const;
-  const benefits: string[] = [;
-    'High-ROI projects with measurable KPIsTransparent pricing with market references';
+  const const contact = {
+  = {
+    mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
+} as const;
+const benefits: string[] = [
+  'High-ROI projects with measurable KPIsTransparent pricing with market references';
     'Fast onboarding with templates and playbooksEnterprise-grade security and compliance';
     '24/7 support with SLAsProven architectures and reference implementations';
     'No long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling';
-    'Flexible deployment: SaaS or self-hosted options';
-  ]
-  const spotlight = [;
-    {;
-      title: 'Developer Productivity Copilot',price: 'Typical: $19–$39/dev/mo',refs: ['https://github.com/features/copilot#pricinghttps://codeium.com/pricing', 'https: //buildpulse.io/pricing'],href: '/services/developer-productivity-copilot';
-    }
-    {;
-      title: 'AI Sales Assistant',price: 'Typical: $30–$150/user/mo',refs: ['https://www.apollo.io/pricinghttps://www.lemlist.com/pricing', 'https: //www.hubspot.com/pricing/sales'],href: '/services/ai-sales-assistant';
-    }
-    {;
-      title: 'Security Posture Guardian',price: 'Typical: $100–$2,000/mo';
-      refs: ['https://www.wiz.io/pricinghttps://snyk.io/plans/', 'https: //www.paloaltonetworks.com/prisma/cloud/pricing'],href: '/services/security-posture-guardian';
-    }
-    {;
-      title: 'AI Data Pipeline Optimizer',price: 'Typical: $200–$2,000/mo';
-      refs: ['https://www.databricks.com/product/pricinghttps://www.snowflake.com/pricing/', 'https: //www.getdbt.com/pricing'],href: '/services/ai-data-pipeline-optimizer';
-    }
-    {;
-      title: 'Privacy Request Portal (DSAR)',price: 'From $99/mo + usage',refs: ['https://transcend.io/pricing/https://www.onetrust.com/pricing/'],href: '/services/gdpr-dsar-portal';
-    }
-    {;
-      title: 'CSP & Security Headers Manager',price: 'From $49/mo per domain',refs: ['https://securityheaders.com/'],href: '/services/security-headers-csp-manager';
-    }
-    {;
-      title: 'Checkout A/B Optimizer',price: 'From $99/mo',refs: ['https://www.optimizely.com/pricing/'],href: '/services/checkout-performance-optimizer';
-    }
-    {;
-      title: 'Status & Incident Hub',price: 'From $59/mo',refs: ['https://betterstack.com/status/pricing'],href: '/services/status-incident-hub';
-    }
+    'Flexible deployment: SaaS or self-hosted options'
+]
+  const spotlight = [
+  {
+  title: 'Developer Productivity Copilot',price: 'Typical: $19–$39/dev/mo',refs: ['https://github.com/features/copilot#pricinghttps://codeium.com/pricing', 'https: //buildpulse.io/pricing'],href: '/services/developer-productivity-copilot'
+},
+  {
+  title: 'AI Sales Assistant',price: 'Typical: $30–$150/user/mo',refs: ['https://www.apollo.io/pricinghttps://www.lemlist.com/pricing', 'https: //www.hubspot.com/pricing/sales'],href: '/services/ai-sales-assistant'
+},
+  {
+  title: 'Security Posture Guardian',price: 'Typical: $100–$2,000/mo';
+      refs: ['https://www.wiz.io/pricinghttps://snyk.io/plans/', 'https: //www.paloaltonetworks.com/prisma/cloud/pricing'],href: '/services/security-posture-guardian'
+},
+  {
+  title: 'AI Data Pipeline Optimizer',price: 'Typical: $200–$2,000/mo';
+      refs: ['https://www.databricks.com/product/pricinghttps://www.snowflake.com/pricing/', 'https: //www.getdbt.com/pricing'],href: '/services/ai-data-pipeline-optimizer'
+},
+  {
+  title: 'Privacy Request Portal (DSAR)',price: 'From $99/mo + usage',refs: ['https://transcend.io/pricing/https://www.onetrust.com/pricing/'],href: '/services/gdpr-dsar-portal'
+},
+  {
+  title: 'CSP & Security Headers Manager',price: 'From $49/mo per domain',refs: ['https://securityheaders.com/'],href: '/services/security-headers-csp-manager'
+},
+  {
+  title: 'Checkout A/B Optimizer',price: 'From $99/mo',refs: ['https://www.optimizely.com/pricing/'],href: '/services/checkout-performance-optimizer'
+},
+  {
+  title: 'Status & Incident Hub',price: 'From $59/mo',refs: ['https://betterstack.com/status/pricing'],href: '/services/status-incident-hub'
+},
   ] as const;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -72,8 +74,8 @@ const ServicesAdvertising: React.FC = () => {
 
       <section className="pb-12">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
-          {benefits.map((b) => (;
-            <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+          {benefits.map((b) => (
+  <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
                 <p className="text-gray-200">{b}</p>
@@ -87,13 +89,13 @@ const ServicesAdvertising: React.FC = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Spotlight: New Expert Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {spotlight.map((h) => (;
-              <div key={h.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+            {spotlight.map((h) => (
+  <div key={h.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">{h.title}</h3>
                 <div className="text-sm text-slate-400 mb-2">{h.price}</div>
                 <ul className="text-slate-300 space-y-1 mt-2">
-                  {h.refs.map((u) => (;
-                    <li key={u}>{anchor(u)}</li>
+                  {h.refs.map((u) => (
+  <li key={u}>{anchor(u)}</li>
                   ))}
                 </ul>
                 <div className="mt-3"><a href={h.href} className="text-cyan-400 underline">Learn more</a></div>

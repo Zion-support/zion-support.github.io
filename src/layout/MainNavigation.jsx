@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export function MainNavigation() {;
+export function MainNavigation() {
   return (
     <nav className="hidden md: flex space-x-8">
       <Link to="/" className="text-zion-slate-light hover:text-zion-cyan px-3 py-2 text-sm font-medium transition-colors">

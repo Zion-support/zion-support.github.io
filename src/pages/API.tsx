@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "../components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {;
+import {
   Code;
   Search;
   Filter;
@@ -24,88 +24,90 @@ import {;
   Terminal;
   Key;
   Database;
-  Lock;
+  Lock
 } from "lucide-react";
 const API: React.FC = () => {
-  const endpoints = [;
-    {;
-      method: 'GET',path: '/api/v1/services',description: 'Retrieve all available services',auth: 'Required';
-    }
-    {;
-      method: 'POST',path: '/api/v1/quote',description: 'Request a quote for services',auth: 'Required';
-    }
-    {;
-      method: 'GET',path: '/api/v1/analytics',description: 'Get analytics data',auth: 'Required';
-    }
-    {;
-      method: 'PUT',path: '/api/v1/user/profile',description: 'Update user profile',auth: 'Required';
-    }
+  const endpoints = [
+  {
+  method: 'GET',path: '/api/v1/services',description: 'Retrieve all available services',auth: 'Required'
+},
+  {
+  method: 'POST',path: '/api/v1/quote',description: 'Request a quote for services',auth: 'Required'
+},
+  {
+  method: 'GET',path: '/api/v1/analytics',description: 'Get analytics data',auth: 'Required'
+},
+  {
+  method: 'PUT',path: '/api/v1/user/profile',description: 'Update user profile',auth: 'Required'
+},
   ]
-  const features = [;
-    {;
-      icon: Shield,title: 'Secure Authentication',description: 'OAuth 2.0 and API key authentication';
-    }
-    {;
-      icon: Zap,title: 'High Performance',description: 'Sub-100ms response times guaranteed';
-    }
-    {;
-      icon: Globe,title: 'Global CDN',description: 'Worldwide edge locations for fast access';
-    }
-    {;
-      icon: Database,title: 'Real-time Data',description: 'Live data synchronization across all endpoints';
-    }
+  const features = [
+  {
+  icon: Shield,title: 'Secure Authentication',description: 'OAuth 2.0 and API key authentication'
+},
+  {
+  icon: Zap,title: 'High Performance',description: 'Sub-100ms response times guaranteed'
+},
+  {
+  icon: Globe,title: 'Global CDN',description: 'Worldwide edge locations for fast access'
+},
+  {
+  icon: Database,title: 'Real-time Data',description: 'Live data synchronization across all endpoints'
+},
   ]
-  const codeExamples = [;
-    {;
-      title: 'Text Analysis',language: 'Python',description: 'Analyze text sentiment and extract insights using our AI API.',code: `import requests;
+  const codeExamples = [
+  {
+  title: 'Text Analysis',language: 'Python',description: 'Analyze text sentiment and extract insights using our AI API.',code: `import requests;
 
-response = requests.post('https://api.ziontechgroup.com/v1/ai/analyze', json={;
-    "text": "Your text here";
-    "analysis_type": "sentiment";
+response = requests.post('https://api.ziontechgroup.com/v1/ai/analyze', json={
+  "text": "Your text here";
+    "analysis_type": "sentiment"
 })
 
 print(response.json())`;
-      category: 'AI & ML';
-    }
-    {;
-      title: 'Cloud Resource Management',language: 'JavaScript',description: 'Example of managing cloud resources through our infrastructure API.',code: `const axios = require('axios')
-const api = axios.create({;
-    baseURL: 'https://api.ziontechgroup.com/v1/cloud',headers: {{'Authorization': 'Bearer YOUR_API_KEY'}}
-})
+      category: 'AI & ML'
+},
+  {
+  title: 'Cloud Resource Management',language: 'JavaScript',description: 'Example of managing cloud resources through our infrastructure API.',code: `const axios = require('axios')
+const api = axios.create({
+  baseURL: 'https://api.ziontechgroup.com/v1/cloud',headers: {{'Authorization': 'Bearer YOUR_API_KEY'},
+  },
+  })
 const createInstance = async () => {
-    const response = await api.post('/instances', {;
-        type: 'compute',size: 'medium',region: 'us-east-1';
-    })
-    return response.data;
+    const response = await api.post('/instances', {
+  type: 'compute',size: 'medium',region: 'us-east-1'
+})
+    return response.data
 },`;
-      category: 'Cloud & DevOps';
-    }
-    {;
-      title: 'Security Threat Detection',language: 'Python',description: 'Implement real-time threat detection using our security API.',code: `import requests;
+      category: 'Cloud & DevOps'
+},
+  {
+  title: 'Security Threat Detection',language: 'Python',description: 'Implement real-time threat detection using our security API.',code: `import requests;
 
 def check_threat(ip_address):;
     url = "https://api.ziontechgroup.com/v1/security/threat-check";
-    headers = {{"Authorization": "Bearer YOUR_API_KEY"}}
+    headers = {{"Authorization": "Bearer YOUR_API_KEY"},
+  }
 
-    response = requests.post(url, json={;
-        "ip": ip_address;
-        "check_type": "comprehensive";
-    })
+    response = requests.post(url, json={
+  "ip": ip_address;
+        "check_type": "comprehensive"
+})
 
     return response.json()`;
-      category: 'Security';
-    }
+      category: 'Security'
+},
   ]
-  const sdks = [;
-    {;
-      name: 'Node.js SDK',icon: Terminal,link: 'https://github.com/ziontechgroup/node-sdk';
-    }
-    {;
-      name: 'Python SDK',icon: Key,link: 'https://github.com/ziontechgroup/python-sdk';
-    }
-    {;
-      name: 'Go SDK',icon: Database,link: 'https://github.com/ziontechgroup/go-sdk';
-    }
+  const sdks = [
+  {
+  name: 'Node.js SDK',icon: Terminal,link: 'https://github.com/ziontechgroup/node-sdk'
+},
+  {
+  name: 'Python SDK',icon: Key,link: 'https://github.com/ziontechgroup/python-sdk'
+},
+  {
+  name: 'Go SDK',icon: Database,link: 'https://github.com/ziontechgroup/go-sdk'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -114,16 +116,20 @@ def check_threat(ip_address):;
         description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">
@@ -154,13 +160,17 @@ def check_threat(ip_address):;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -172,12 +182,16 @@ def check_threat(ip_address):;
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{feature.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{feature.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -191,13 +205,17 @@ def check_threat(ip_address):;
         </div>
       </section>
 
-      {{/* Code Examples Section */}}
+      {{/* Code Examples Section */},
+  }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -209,20 +227,26 @@ def check_threat(ip_address):;
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {codeExamples.map((example, index) => (;
-              <motion.div;
-                key={{example.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {codeExamples.map((example, index) => (
+  <motion.div;
+                key={{example.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200";"
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-400/30">
-                    {{example.language}}
+                    {{example.language},
+  }
                   </span>
                   <span className="px-3 py-1 bg-slate-600/50 text-slate-300 text-sm rounded-full">
-                    {{example.category}}
+                    {{example.category},
+  }
                   </span>
                 </div>
                 ;
@@ -238,13 +262,17 @@ def check_threat(ip_address):;
         </div>
       </section>
 
-      {{/* SDKs Section */}}
+      {{/* SDKs Section */},
+  }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -256,12 +284,16 @@ def check_threat(ip_address):;
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {sdks.map((sdk, index) => (;
-              <motion.div;
-                key={{sdk.name}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {sdks.map((sdk, index) => (
+  <motion.div;
+                key={{sdk.name},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -269,7 +301,8 @@ def check_threat(ip_address):;
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
                 <a;
-                  href={{sdk.link}}
+                  href={{sdk.link},
+  }
                   target="_blank";
                   rel="noopener noreferrer";
                   className="className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200";"
@@ -282,13 +315,17 @@ def check_threat(ip_address):;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 px-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?;

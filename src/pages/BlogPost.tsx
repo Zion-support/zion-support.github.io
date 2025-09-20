@@ -2,11 +2,11 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ;
+import {
   Calendar;
-  User, ;
-  Clock, ;
-  Tag, ;
+  User,
+  Clock,
+  Tag,
   ArrowLeft;
   ArrowRight;
   Share2;
@@ -21,13 +21,14 @@ import { ;
   Zap;
   Cpu;
   Network;
-  BookOpen;
+  BookOpen
 } from "lucide-react";
 import { SEO } from "../components/SEO";
-export default function BlogPost() {;
+export default function BlogPost() {
   const { slug } = useParams()
   // Mock blog post data - in a real app, this would come from an API;
-  const const blogPost = {; = {
+const const blogPost = {
+  = {
     id: slug,title: 'The Future of AI-Powered Business Intelligence in 2024',excerpt: 'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes across industries.',content: `;
       <p class="mb-6 text-lg text-gray-300 leading-relaxed">
         Artificial Intelligence has fundamentally transformed how businesses approach data analysis and decision-making. ;
@@ -38,8 +39,8 @@ export default function BlogPost() {;
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">The Evolution of Business Intelligence</h2>
       <p class="mb-6 text-gray-300 leading-relaxed">
         Traditional business intelligence relied heavily on historical data analysis and manual reporting processes. ;
-        Today, AI-powered BI systems can process real-time data streams, identify patterns invisible to human analysts, ;
-        and provide predictive insights that drive proactive decision-making.;
+        Today, AI-powered BI systems can process real-time data streams, identify patterns invisible to human analysts,
+  and provide predictive insights that drive proactive decision-making.;
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Key Trends Shaping AI-Powered BI</h2>
@@ -47,8 +48,8 @@ export default function BlogPost() {;
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">1. Natural Language Processing (NLP)</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
         Modern BI platforms now understand natural language queries, allowing business users to ask questions ;
-        in plain English and receive instant insights. This democratizes data access across organizations, ;
-        reducing dependency on data scientists for routine queries.;
+        in plain English and receive instant insights. This democratizes data access across organizations,
+  reducing dependency on data scientists for routine queries.;
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">2. Predictive Analytics</h3>
@@ -60,16 +61,16 @@ export default function BlogPost() {;
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">3. Automated Insights Generation</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        Instead of manually creating reports, AI systems automatically identify significant changes, anomalies, ;
-        and opportunities in your data, delivering actionable insights directly to decision-makers.;
+        Instead of manually creating reports, AI systems automatically identify significant changes, anomalies,
+  and opportunities in your data, delivering actionable insights directly to decision-makers.;
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Real-World Applications</h2>
       ;
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Retail and E-commerce</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        AI-powered BI systems help retailers optimize inventory management, personalize customer experiences, ;
-        and predict demand patterns with remarkable accuracy. Companies like Amazon and Walmart have seen ;
+        AI-powered BI systems help retailers optimize inventory management, personalize customer experiences,
+  and predict demand patterns with remarkable accuracy. Companies like Amazon and Walmart have seen ;
         significant improvements in operational efficiency and customer satisfaction.;
       </p>
 
@@ -82,8 +83,8 @@ export default function BlogPost() {;
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Healthcare</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        Healthcare providers leverage AI BI for patient outcome prediction, resource allocation optimization, ;
-        and treatment effectiveness analysis. This leads to better patient care and more efficient ;
+        Healthcare providers leverage AI BI for patient outcome prediction, resource allocation optimization,
+  and treatment effectiveness analysis. This leads to better patient care and more efficient ;
         healthcare delivery systems.;
       </p>
 
@@ -113,8 +114,8 @@ export default function BlogPost() {;
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Looking Ahead: The Future of AI-Powered BI</h2>
       <p class="mb-6 text-gray-300 leading-relaxed">
         As we move further into 2024 and beyond, we can expect AI-powered BI to become even more ;
-        sophisticated. We'll see increased adoption of edge computing for real-time processing, ;
-        enhanced natural language capabilities, and more advanced predictive models.;
+        sophisticated. We'll see increased adoption of edge computing for real-time processing,
+  enhanced natural language capabilities, and more advanced predictive models.;
       </p>
 
       <p class="mb-6 text-gray-300 leading-relaxed">
@@ -138,45 +139,49 @@ export default function BlogPost() {;
     `;
     author: 'Kleber Santos',authorRole: 'CEO & AI Strategist',authorBio: 'Kleber Santos is the CEO and founder of Zion Tech Group, with over 15 years of experience in AI strategy and business transformation.';
     date: '2024-01-15',readTime: '8 min read',category: 'ai',tags: ['AIBusiness Intelligence', 'Machine LearningData Analytics', 'Digital Transformation']
-    image: '/api/placeholder/800/400',featured: true,views: 2847,likes: 156,comments: 23,relatedPosts: [;
-      {;
-        id: 'quantum-computing-business',title: 'Quantum Computing: Breaking Down the Hype vs. Reality',excerpt: 'A comprehensive analysis of quantum computing\'s current state and its practical applications in business.',category: 'quantum',date: '2024-01-12',readTime: '12 min read';
-      }
-      {;
-        id: 'zero-trust-security',title: 'Zero Trust Security: The New Standard for Enterprise Protection',excerpt: 'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',category: 'security',date: '2024-01-10',readTime: '10 min read';
-      }
-      {;
-        id: 'micro-saas-future',title: 'Micro SaaS: The Future of Niche Software Solutions',excerpt: 'Exploring the rise of micro SaaS platforms and how they\'re changing the software industry landscape.',category: 'business',date: '2024-01-08',readTime: '6 min read';
-      }
-    ]
+    image: '/api/placeholder/800/400',featured: true,views: 2847,likes: 156,comments: 23,relatedPosts: [
+  {
+  id: 'quantum-computing-business',title: 'Quantum Computing: Breaking Down the Hype vs. Reality',excerpt: 'A comprehensive analysis of quantum computing\'s current state and its practical applications in business.',category: 'quantum',date: '2024-01-12',readTime: '12 min read'
+},
+  {
+  id: 'zero-trust-security',title: 'Zero Trust Security: The New Standard for Enterprise Protection',excerpt: 'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',category: 'security',date: '2024-01-10',readTime: '10 min read'
+},
+  {
+  id: 'micro-saas-future',title: 'Micro SaaS: The Future of Niche Software Solutions',excerpt: 'Exploring the rise of micro SaaS platforms and how they\'re changing the software industry landscape.',category: 'business',date: '2024-01-08',readTime: '6 min read'
+},
+  ],
   }
-  const formatDate = (dateString: string) => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',month: 'long',day: 'numeric';
-    })
-  }
-
-  const getCategoryIcon = (category: string) => {;
-    const const categoryIcons: { [key: string]: any } = {; = {
-      ai: Brain,quantum: Cpu,security: Shield,cloud: Cloud,business: TrendingUp,iot: Network,emerging: Zap;
-    }
-    return categoryIcons[category] || BookOpen;
+  const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('en-US', {
+  year: 'numeric',month: 'long',day: 'numeric'
+})
   }
 
-  const getCategoryName = (category: string) => {;
-    const const categoryNames: { [key: string]: string } = {; = {
-      ai: 'Artificial Intelligence',quantum: 'Quantum Computing',security: 'Cybersecurity',cloud: 'Cloud & DevOps',business: 'Business Insights',iot: 'IoT & Edge',emerging: 'Emerging Tech';
-    }
-    return categoryNames[category] || 'Uncategorized';
-  }
+  const getCategoryIcon = (category: string) => {
+  const const categoryIcons: { [key: string]: any } = {
+  = {
+      ai: Brain,quantum: Cpu,security: Shield,cloud: Cloud,business: TrendingUp,iot: Network,emerging: Zap
+}
+    return categoryIcons[category] || BookOpen
+}
+
+  const getCategoryName = (category: string) => {
+  const const categoryNames: { [key: string]: string } = {
+  = {
+      ai: 'Artificial Intelligence',quantum: 'Quantum Computing',security: 'Cybersecurity',cloud: 'Cloud & DevOps',business: 'Business Insights',iot: 'IoT & Edge',emerging: 'Emerging Tech'
+}
+    return categoryNames[category] || 'Uncategorized'
+}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
         title={`${blogPost.title} - Zion Tech Group Blog`}
-        description={{blogPost.excerpt}}
+        description={{blogPost.excerpt},
+  }
       />
       ;
-      {{/* Navigation */}}
+      {{/* Navigation */},
+  }
       <section className="py-6 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <Link;
@@ -189,39 +194,49 @@ export default function BlogPost() {;
         </div>
       </section>
 
-      {{/* Article Header */}}
+      {{/* Article Header */},
+  }
       <section className="py-12">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="max-w-4xl mx-auto";"
           >
-            {{/* Category and Featured Badge */}}
+            {{/* Category and Featured Badge */},
+  }
             <div className="flex items-center space-x-3 mb-6">
                               <span className="px-4 py-2 bg-cyan-500/20 text-cyan-400 text-sm rounded-full font-medium flex items-center space-x-2">
                   {React.createElement(getCategoryIcon(blogPost.category), { className: "w-4 h-4" })}
                   <span>{getCategoryName(blogPost.category)}</span>
                 </span>
-              {blogPost.featured && (;
-                <span className="px-4 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded-full font-medium">
+              {blogPost.featured && (
+  <span className="px-4 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded-full font-medium">
                   Featured Article;
                 </span>
               )}
             </div>
 
-            {{/* Title */}}
+            {{/* Title */},
+  }
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              {{blogPost.title}}
+              {{blogPost.title},
+  }
             </h1>
 
-            {{/* Excerpt */}}
+            {{/* Excerpt */},
+  }
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              {{blogPost.excerpt}}
+              {{blogPost.excerpt},
+  }
             </p>
 
-            {{/* Article Meta */}}
+            {{/* Article Meta */},
+  }
             <div className="flex flex-wrap items-center justify-between gap-4 py-6 border-t border-b border-slate-700/50">
               <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
@@ -258,17 +273,22 @@ export default function BlogPost() {;
         </div>
       </section>
 
-      {{/* Article Content */}}
+      {{/* Article Content */},
+  }
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
               className="className="prose prose-invert prose-lg max-w-none";"
             >
-              {{/* Featured Image */}}
+              {{/* Featured Image */},
+  }
               <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 flex items-center justify-center mb-12">
                 <div className="text-center">
                   <BookOpen className="w-20 h-20 text-cyan-400 mx-auto mb-4" />
@@ -276,17 +296,20 @@ export default function BlogPost() {;
                 </div>
               </div>
 
-              {{/* Article Content */}}
+              {{/* Article Content */},
+  }
               <div ;
                 className="className="text-gray-300 leading-relaxed";"
-                dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                dangerouslySetInnerHTML={{ __html: blogPost.content },
+  }
               />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {{/* Tags */}}
+      {{/* Tags */},
+  }
       <section className="py-8 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -294,12 +317,14 @@ export default function BlogPost() {;
               <Tag className="w-5 h-5 text-cyan-400" />
               <span className="text-white font-medium">Tags:</span>
               <div className="flex flex-wrap gap-2">
-                {blogPost.tags.map((tag) => (;
-                  <span;
-                    key={{tag}}
+                {blogPost.tags.map((tag) => (
+  <span;
+                    key={{tag},
+  }
                     className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-200";"
                   >
-                    {{tag}}
+                    {{tag},
+  }
                   </span>
                 ))}
               </div>
@@ -308,14 +333,18 @@ export default function BlogPost() {;
         </div>
       </section>
 
-      {{/* Author Bio */}}
+      {{/* Author Bio */},
+  }
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
               className="className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50";"
             >
               <h3 className="text-2xl font-bold text-white mb-4">About the Author</h3>
@@ -334,13 +363,17 @@ export default function BlogPost() {;
         </div>
       </section>
 
-      {{/* Related Posts */}}
+      {{/* Related Posts */},
+  }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Related Articles</h2>
@@ -350,12 +383,16 @@ export default function BlogPost() {;
           </motion.div>
           ;
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPost.relatedPosts.map((post, index) => (;
-              <motion.article;
-                key={{post.id}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {blogPost.relatedPosts.map((post, index) => (
+  <motion.article;
+                key={{post.id},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group";"
               >
                 <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
@@ -365,16 +402,19 @@ export default function BlogPost() {;
                 <div className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
-                      {{getCategoryName(post.category)}}
+                      {{getCategoryName(post.category)},
+  }
                     </span>
                   </div>
                   ;
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
-                    {{post.title}}
+                    {{post.title},
+  }
                   </h3>
                   ;
                   <p className="text-gray-300 mb-4 line-clamp-3">
-                    {{post.excerpt}}
+                    {{post.excerpt},
+  }
                   </p>
                   ;
                   <div className="flex items-center justify-between text-sm text-gray-400">
@@ -394,13 +434,17 @@ export default function BlogPost() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>

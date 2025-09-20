@@ -8,9 +8,9 @@ export const QuoteRequestForm = () => {
   const [formData, setFormData] = useState({
     name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',description: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleChange = (e) => {
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitted, setIsSubmitted] = useState(false);
+const handleChange = (e) => {
     const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
@@ -32,8 +32,8 @@ export const QuoteRequestForm = () => {
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
     setIsSubmitting(false);
-    setIsSubmitted(true);
-  },
+    setIsSubmitted(true)
+},
 
   if (isSubmitted) {
     return (
@@ -46,8 +46,8 @@ export const QuoteRequestForm = () => {
           </p>
         </CardContent>
       </Card>
-    );
-  }
+    )
+}
 
   return (
     <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
@@ -215,5 +215,5 @@ export const QuoteRequestForm = () => {
         </form>
       </CardContent>
     </Card>
-  );
+  )
 };

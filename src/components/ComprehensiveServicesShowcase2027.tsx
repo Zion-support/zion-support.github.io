@@ -61,8 +61,8 @@ const benefits = [
   };
   {
     icon: <CheckCircle className="h-6 w-6"/>,title: "Quality Guaranteed",description: "30-day money-back guarantee with free migration support"
-  }
-];
+  },
+  ];
 const contactInfo = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
 };
@@ -78,13 +78,13 @@ export function ComprehensiveServicesShowcase2027() {
   // Filter services based on selection and search
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = searchQuery === '' ||
+const matchesSearch = searchQuery === '' ||
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
+    return matchesCategory && matchesSearch
+});
+const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
   return (
     <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
@@ -356,7 +356,7 @@ export function ComprehensiveServicesShowcase2027() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default ComprehensiveServicesShowcase2027;

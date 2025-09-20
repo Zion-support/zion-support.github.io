@@ -13,12 +13,12 @@ const CustomerSupportChatbot: React.FC = () => {
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[;
-            'RAG answers with vector search and citationsZendesk, Freshdesk, Intercom integrations';
+          {[
+  'RAG answers with vector search and citationsZendesk, Freshdesk, Intercom integrations';
             'Multilingual (50+ locales) and tone controlAuto-categorize, prioritize, and tag tickets';
-            'Secure PII redaction and audit logsFallback to live agents with summaries';
-          ].map((b) => (;
-            <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
+            'Secure PII redaction and audit logsFallback to live agents with summaries'
+].map((b) => (
+  <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
             </div>

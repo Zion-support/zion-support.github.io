@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Brain;
-  TrendingUp, ;
-  Shield, ;
-  Zap, ;
-  Atom, ;
-  BarChart3, ;
-  DollarSign, ;
+  TrendingUp,
+  Shield,
+  Zap,
+  Atom,
+  BarChart3,
+  DollarSign,
   Target;
   CheckCircle;
   Star;
@@ -19,95 +19,99 @@ import { ;
   Clock;
   Phone;
   Mail;
-  MapPin;
+  MapPin
 } from "lucide-react";
 const AIQuantumFinancialTrading = () => {
-  const features = [;
-    {;
-      title: "Quantum-AI Algorithm Trading",description: "Advanced quantum computing algorithms combined with AI for ultra-fast market analysis and execution",icon: Brain,color: "from-purple-500 to-pink-500";
-    }
-    {;
-      title: "Real-time Market Prediction",description: "Machine learning models that predict market movements with 85%+ accuracy using quantum-enhanced analytics",icon: TrendingUp,color: "from-green-500 to-emerald-500";
-    }
-    {;
-      title: "Risk Management System",description: "AI-powered risk assessment and portfolio optimization with quantum computing speed",icon: Shield,color: "from-red-500 to-orange-500";
-    }
-    {;
-      title: "Multi-Asset Trading",description: "Support for stocks, forex, crypto, commodities, and derivatives with unified interface";
-      icon: BarChart3,color: "from-blue-500 to-indigo-500";
-    }
-    {;
-      title: "Regulatory Compliance",description: "Automated compliance monitoring for SEC, FINRA, and international regulations";
-      icon: Lock,color: "from-yellow-500 to-orange-500";
-    }
-    {;
-      title: "Portfolio Analytics",description: "Advanced portfolio performance tracking with quantum-enhanced optimization",icon: Target,color: "from-cyan-500 to-blue-500";
-    }
+  const features = [
+  {
+  title: "Quantum-AI Algorithm Trading",description: "Advanced quantum computing algorithms combined with AI for ultra-fast market analysis and execution",icon: Brain,color: "from-purple-500 to-pink-500"
+},
+  {
+  title: "Real-time Market Prediction",description: "Machine learning models that predict market movements with 85%+ accuracy using quantum-enhanced analytics",icon: TrendingUp,color: "from-green-500 to-emerald-500"
+},
+  {
+  title: "Risk Management System",description: "AI-powered risk assessment and portfolio optimization with quantum computing speed",icon: Shield,color: "from-red-500 to-orange-500"
+},
+  {
+  title: "Multi-Asset Trading",description: "Support for stocks, forex, crypto, commodities, and derivatives with unified interface";
+      icon: BarChart3,color: "from-blue-500 to-indigo-500"
+},
+  {
+  title: "Regulatory Compliance",description: "Automated compliance monitoring for SEC, FINRA, and international regulations";
+      icon: Lock,color: "from-yellow-500 to-orange-500"
+},
+  {
+  title: "Portfolio Analytics",description: "Advanced portfolio performance tracking with quantum-enhanced optimization",icon: Target,color: "from-cyan-500 to-blue-500"
+},
   ]
-  const pricingPlans = [;
-    {;
-      name: "Starter",price: "$2,999";
-      period: "/month",description: "Perfect for individual traders and small funds",features: [;
-        "Quantum-AI trading algorithms";
+  const pricingPlans = [
+  {
+  name: "Starter",price: "$2,999";
+      period: "/month",description: "Perfect for individual traders and small funds",features: [
+  "Quantum-AI trading algorithms";
         "Real-time market data";
         "Basic risk management";
         "5 trading strategies";
         "Email support";
-        "Mobile app access";
-      ]
-      popular: false;
-    }
-    {;
-      name: "Professional",price: "$7,999";
-      period: "/month",description: "Ideal for professional traders and medium funds",features: [;
-        "Advanced quantum algorithms";
+        "Mobile app access"
+]
+      popular: false
+},
+  {
+  name: "Professional",price: "$7,999";
+      period: "/month",description: "Ideal for professional traders and medium funds",features: [
+  "Advanced quantum algorithms";
         "Custom strategy development";
         "Advanced risk management";
         "Unlimited trading strategies";
         "Priority support";
         "API access";
-        "White-label options";
-      ]
-      popular: true;
-    }
-    {;
-      name: "Enterprise",price: "$19,999";
-      period: "/month",description: "For large institutions and hedge funds",features: [;
-        "Custom quantum computing integration";
+        "White-label options"
+]
+      popular: true
+},
+  {
+  name: "Enterprise",price: "$19,999";
+      period: "/month",description: "For large institutions and hedge funds",features: [
+  "Custom quantum computing integration";
         "Dedicated support team";
         "Custom compliance modules";
         "Multi-tenant architecture";
         "Advanced analytics dashboard";
         "SLA guarantees";
-        "On-premise deployment";
-      ]
-      popular: false;
-    }
+        "On-premise deployment"
+]
+      popular: false
+},
   ]
-  const benefits = [;
-    {;
-      title: "Increased Trading Speed",description: "Quantum computing reduces execution time from milliseconds to microseconds",metric: "1000x faster";
-    }
-    {;
-      title: "Higher Accuracy",description: "AI algorithms combined with quantum processing improve prediction accuracy",metric: "85%+ accuracy";
-    }
-    {;
-      title: "Risk Reduction",description: "Advanced risk management reduces portfolio volatility and losses",metric: "40% less risk";
-    }
-    {;
-      title: "Cost Savings",description: "Automated trading reduces manual intervention and operational costs",metric: "60% cost reduction";
-    }
+  const benefits = [
+  {
+  title: "Increased Trading Speed",description: "Quantum computing reduces execution time from milliseconds to microseconds",metric: "1000x faster"
+},
+  {
+  title: "Higher Accuracy",description: "AI algorithms combined with quantum processing improve prediction accuracy",metric: "85%+ accuracy"
+},
+  {
+  title: "Risk Reduction",description: "Advanced risk management reduces portfolio volatility and losses",metric: "40% less risk"
+},
+  {
+  title: "Cost Savings",description: "Automated trading reduces manual intervention and operational costs",metric: "60% cost reduction"
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <div className="flex items-center justify-center mb-6">
               <Atom className="w-12 h-12 text-purple-400 mr-3" />
@@ -138,14 +142,19 @@ const AIQuantumFinancialTrading = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -158,13 +167,18 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -178,14 +192,19 @@ const AIQuantumFinancialTrading = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -197,13 +216,18 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="text-center";"
               >
                 <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>
@@ -215,14 +239,19 @@ const AIQuantumFinancialTrading = () => {
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -234,21 +263,26 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${;
-                  plan.popular ;
+            {pricingPlans.map((plan, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
+                className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
+  plan.popular ;
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/20' ;
-                    : 'border-slate-600';
-                }`}
+                    : 'border-slate-600'
+}`}
               >
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -265,8 +299,8 @@ const AIQuantumFinancialTrading = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
@@ -275,11 +309,11 @@ const AIQuantumFinancialTrading = () => {
 
                 <a;
                   href="/contact";
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
-                    plan.popular;
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+  plan.popular;
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600';
-                      : 'bg-slate-600 text-white hover:bg-slate-500';
-                  }`}
+                      : 'bg-slate-600 text-white hover:bg-slate-500'
+}`}
                 >
                   Get Started;
                 </a>
@@ -289,14 +323,19 @@ const AIQuantumFinancialTrading = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Trading?;
@@ -324,7 +363,8 @@ const AIQuantumFinancialTrading = () => {
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-16 bg-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>

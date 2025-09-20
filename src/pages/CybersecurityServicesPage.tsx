@@ -4,7 +4,7 @@ import { SEOHead } from "../components/seo/SEOHead";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {;
+import {
   Shield;
   Lock;
   Eye;
@@ -29,7 +29,7 @@ import {;
   FileText;
   Clock;
   DollarSign;
-  Code;
+  Code
 } from "lucide-react";
 import { ENHANCED_SERVICES } from "@/data/enhancedServices";
 import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
@@ -37,92 +37,99 @@ import { TrustedBySection } from "@/components/TrustedBySection";
 import { QuoteFormSection } from "@/components/QuoteFormSection";
 // Filter cybersecurity services;
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
-  service.category === 'Cybersecurity';
+  service.category === 'Cybersecurity'
 )
-const SECURITY_SERVICE_CATEGORIES = [;
-  {;
-    id: 'threat-detection',name: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',icon: Eye,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
-  }
-  {;
-    id: 'zero-trust',name: 'Zero Trust Security',description: 'Identity verification and access management',icon: Lock,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
-  }
-]
-export default function CybersecurityServicesPage() {;
+const SECURITY_SERVICE_CATEGORIES = [
+  {
+  id: 'threat-detection',name: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',icon: Eye,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
+  },
+  {
+  id: 'zero-trust',name: 'Zero Trust Security',description: 'Identity verification and access management',icon: Lock,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
+  },
+  ]
+export default function CybersecurityServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   ;
   // Data arrays;
-  const securityTechnologies = [;
-    'SIEM PlatformsEDR Solutions';
+const securityTechnologies = [
+  'SIEM PlatformsEDR Solutions';
     'Zero Trust NetworkIdentity Management';
     'Threat IntelligenceVulnerability Management';
-    'Incident ResponseSecurity Automation';
-  ]
+    'Incident ResponseSecurity Automation'
+]
 
-  const complianceStandards = [;
-    'SOC 2 Type IIISO 27001';
+  const complianceStandards = [
+  'SOC 2 Type IIISO 27001';
     'PCI DSSNIST Framework';
     'GDPR ComplianceHIPAA Security';
-    'FedRAMPCIS Controls';
-  ]
+    'FedRAMPCIS Controls'
+]
 
-  const threatIntelligence = [;
-    'Dark Web MonitoringThreat Hunting';
+  const threatIntelligence = [
+  'Dark Web MonitoringThreat Hunting';
     'Malware AnalysisAPT Detection';
     'IOC ManagementThreat Modeling';
-    'Risk AssessmentSecurity Metrics';
+    'Risk AssessmentSecurity Metrics'
+]
+  const securityServices = [
+  {
+  id: 1,title: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',category: 'Security',icon: '🛡️',features: ['Real-time monitoringAI threat detection', 'Incident response']
+      price: 2500,currency: '$',duration: 'Monthly'
+},
+  {
+  id: 2,title: 'Zero Trust Security',description: 'Identity verification and access management',category: 'Security',icon: '🔐',features: ['Identity managementAccess control', 'Multi-factor auth']
+      price: 1800,currency: '$',duration: 'Monthly'
+},
+  {
+  id: 3,title: 'Compliance Management',description: 'Regulatory compliance and audit support',category: 'Security',icon: '📋',features: ['SOC 2 complianceISO 27001', 'GDPR support']
+      price: 3200,currency: '$',duration: 'Monthly'
+},
   ]
-  const securityServices = [;
-    {;
-      id: 1,title: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',category: 'Security',icon: '🛡️',features: ['Real-time monitoringAI threat detection', 'Incident response']
-      price: 2500,currency: '$',duration: 'Monthly';
-    }
-    {;
-      id: 2,title: 'Zero Trust Security',description: 'Identity verification and access management',category: 'Security',icon: '🔐',features: ['Identity managementAccess control', 'Multi-factor auth']
-      price: 1800,currency: '$',duration: 'Monthly';
-    }
-    {;
-      id: 3,title: 'Compliance Management',description: 'Regulatory compliance and audit support',category: 'Security',icon: '📋',features: ['SOC 2 complianceISO 27001', 'GDPR support']
-      price: 3200,currency: '$',duration: 'Monthly';
-    }
-  ]
-  const getCategoryIcon = (category: string) => {;
-    const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category)
-    return categoryData?.icon || Shield;
-  }
-  const getPricingModelLabel = (model: string) => {;
-    switch (model) {;
-      case 'one-time': return 'One-time';
+  const getCategoryIcon = (category: string) => {
+  const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category)
+    return categoryData?.icon || Shield
+}
+  const getPricingModelLabel = (model: string) => {
+  switch (model) {
+  case 'one-time': return 'One-time';
       case 'monthly': return 'Monthly';
       case 'hourly': return 'Hourly';
       case 'project-based': return 'Project-based';
-      default: return model;
-    }
+      default: return model
+},
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
       <SEOHead;
         title="Cybersecurity Services - Zion Tech Group";
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business.";
-        keywords={{['cybersecuritysecurity services', 'threat detectioncompliance', 'zero trust']}}
-        structuredData={{;
-          "@context": "https: //schema.org";
+        keywords={{['cybersecuritysecurity services', 'threat detectioncompliance', 'zero trust'],
+  },
+  }
+        structuredData={{
+  "@context": "https: //schema.org";
           "@type": "Service";
           "name": "Cybersecurity Services";
           "description": "Comprehensive cybersecurity solutions";
           "url": "https: //ziontechgroup.com/services/cybersecurity";
-          "provider": {;
-            "@type": "Organization";
-            "name": "Zion Tech Group";
-          }
-        }}
+          "provider": {
+  "@type": "Organization";
+            "name": "Zion Tech Group"
+},
+  },
+  }
       />
-        {{/* Hero Section */}}
+        {{/* Hero Section */},
+  }
         <section className="py-32 px-4 relative overflow-hidden">
-          {{/* Background Elements */}}
+          {{/* Background Elements */},
+  }
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse" />
-            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
-            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
+            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' },
+  } />
+            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' },
+  } />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -153,7 +160,8 @@ export default function CybersecurityServicesPage() {;
             </div>
           </div>
         </section>
-        {{/* Security Service Categories */}}
+        {{/* Security Service Categories */},
+  }
         <section className="py-16 bg-zion-blue-dark">
           <div className="container mx-auto px-4 md: px-6">
             <div className="text-center mb-12">
@@ -163,8 +171,8 @@ export default function CybersecurityServicesPage() {;
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
-              {SECURITY_SERVICE_CATEGORIES.map((category) => {;
-                const IconComponent = category.icon;
+              {SECURITY_SERVICE_CATEGORIES.map((category) => {
+  const IconComponent = category.icon;
                 return (
                   <Card key={category.id} className="text-center hover: shadow-lg transition-shadow cursor-pointer border-red-500/20">
                     <CardHeader>
@@ -185,7 +193,8 @@ export default function CybersecurityServicesPage() {;
             </div>
           </div>
         </section>
-        {{/* Security Services Showcase */}}
+        {{/* Security Services Showcase */},
+  }
         <section className="py-16 bg-zion-blue">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -197,24 +206,25 @@ export default function CybersecurityServicesPage() {;
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
               <TabsList className="grid w-full grid-cols-3 mb-8">
                 <TabsTrigger value="all">All Security Services</TabsTrigger>
-                {SECURITY_SERVICE_CATEGORIES.map((category) => (;
-                  <TabsTrigger key={category.id} value={category.id}>
-                    {{category.name}}
+                {SECURITY_SERVICE_CATEGORIES.map((category) => (
+  <TabsTrigger key={category.id} value={category.id}>
+                    {{category.name},
+  }
                   </TabsTrigger>
                 ))}
               </TabsList>
               <TabsContent value="all" className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {CYBERSECURITY_SERVICES.map((service) => (;
-                    <SecurityServiceCard key={service.id} service={service} />
+                  {CYBERSECURITY_SERVICES.map((service) => (
+  <SecurityServiceCard key={service.id} service={service} />
                   ))}
                 </div>
               </TabsContent>
-              {SECURITY_SERVICE_CATEGORIES.map((category) => (;
-                <TabsContent key={category.id} value={category.id} className="space-y-6">
+              {SECURITY_SERVICE_CATEGORIES.map((category) => (
+  <TabsContent key={category.id} value={category.id} className="space-y-6">
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {category.services.map((service) => (;
-                      <SecurityServiceCard key={service.id} service={service} />
+                    {category.services.map((service) => (
+  <SecurityServiceCard key={service.id} service={service} />
                     ))}
                   </div>
                 </TabsContent>
@@ -222,7 +232,8 @@ export default function CybersecurityServicesPage() {;
             </Tabs>
           </div>
         </section>
-        {{/* Security Benefits Section */}}
+        {{/* Security Benefits Section */},
+  }
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -271,7 +282,8 @@ export default function CybersecurityServicesPage() {;
             </div>
           </div>
         </section>
-        {{/* Security Implementation Process */}}
+        {{/* Security Implementation Process */},
+  }
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -320,7 +332,8 @@ export default function CybersecurityServicesPage() {;
             </div>
           </div>
         </section>
-        {{/* Compliance & Standards */}}
+        {{/* Compliance & Standards */},
+  }
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -330,37 +343,47 @@ export default function CybersecurityServicesPage() {;
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
-              {[;
-                {{ name: 'SOC2', icon: '🔒', description: 'Security Controls' }}
-                {{ name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' }}
-                {{ name: 'HIPAA', icon: '🏥', description: 'Healthcare' }}
-                {{ name: 'PCI DSS', icon: '💳', description: 'Payment Security' }}
-                {{ name: 'ISO 27001', icon: '🌐', description: 'Information Security' }}
-                {{ name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }}
-              ].map((standard) => (;
-                <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
+              {[
+  {{ name: 'SOC2', icon: '🔒', description: 'Security Controls' },
+  },
+  {{ name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' },
+  },
+  {{ name: 'HIPAA', icon: '🏥', description: 'Healthcare' },
+  },
+  {{ name: 'PCI DSS', icon: '💳', description: 'Payment Security' },
+  },
+  {{ name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
+  },
+  {{ name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' },
+  },
+  ].map((standard) => (
+  <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-lg w-16 h-16 mb-4 flex items-center justify-center">
                       <service.icon className="h-8 w-8 text-white" />
                     </div>
                     <CardTitle className="text-xl text-white">
-                      {{service.title}}
+                      {{service.title},
+  }
                     </CardTitle>
                     <CardDescription className="text-gray-400">
-                      {{service.description}}
+                      {{service.description},
+  }
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (;
-                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                      {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                          {{feature}}
+                          {{feature},
+  }
                         </li>
                       ))}
                     </ul>
                     <div className="text-2xl font-bold text-red-400 mb-4">
-                      {{service.price}}
+                      {{service.price},
+  }
                     </div>
                     <Button className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600">
                       Get Started;
@@ -371,7 +394,8 @@ export default function CybersecurityServicesPage() {;
             </div>
           </div>
         </section>
-        {{/* Contact CTA */}}
+        {{/* Contact CTA */},
+  }
         <section className="py-16 bg-zion-blue">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -397,7 +421,8 @@ export default function CybersecurityServicesPage() {;
             </div>
           </div>
         </section>
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
@@ -426,7 +451,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </div>
-      {{/* Contact Information Banner */}}
+      {{/* Contact Information Banner */},
+  }
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -458,7 +484,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </div>
-      {{/* Security Threats Overview */}}
+      {{/* Security Threats Overview */},
+  }
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -501,7 +528,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </div>
-      {{/* Cybersecurity Services Grid */}}
+      {{/* Cybersecurity Services Grid */},
+  }
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -513,16 +541,19 @@ export default function CybersecurityServicesPage() {;
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CYBERSECURITY_SERVICES.map((service) => (;
-              <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
+            {CYBERSECURITY_SERVICES.map((service) => (
+  <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
                 <div className="relative">
                   <img;
-                    src={{service.images[0]}}
-                    alt={{service.title}}
+                    src={{service.images[0],
+  },
+  }
+                    alt={{service.title},
+  }
                     className="className="w-full h-64 object-cover rounded-t-lg";"
                   />
-                  {service.featured && (;
-                    <Badge className="absolute top-4 right-4 bg-red-600 text-white">
+                  {service.featured && (
+  <Badge className="absolute top-4 right-4 bg-red-600 text-white">
                       Featured;
                     </Badge>
                   )}
@@ -530,7 +561,8 @@ export default function CybersecurityServicesPage() {;
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
                     <Badge className="bg-red-100 text-red-800 border-red-200">
-                      {{service.category}}
+                      {{service.category},
+  }
                     </Badge>
                     <div className="flex items-center gap-1 text-sm text-gray-600">
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
@@ -540,13 +572,16 @@ export default function CybersecurityServicesPage() {;
                   </div>
                   <CardTitle className="text-xl leading-tight">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
-                    {{service.description}}
+                    {{service.description},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-3xl font-bold text-red-600">
-                      {service.currency}{{service.price?.toLocaleString()}}
+                      {service.currency},
+  {{service.price?.toLocaleString()},
+  }
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Clock className="h-4 w-4" />
@@ -554,9 +589,10 @@ export default function CybersecurityServicesPage() {;
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.map((tag) => (;
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        {{tag}}
+                    {service.tags.map((tag) => (
+  <Badge key={tag} variant="secondary" className="text-xs">
+                        {{tag},
+  }
                       </Badge>
                     ))}
                   </div>
@@ -575,22 +611,24 @@ export default function CybersecurityServicesPage() {;
               </Card>
             ))}
           </div>
-          {filteredServices.length === 0 && (;
-            <div className="text-center py-16">
+          {filteredServices.length === 0 && (
+  <div className="text-center py-16">
               <h3 className="text-xl font-semibold text-zion-slate-light mb-2">No security services found</h3>
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all security categories</p>
               <Button onClick={() => {
                 setSearchQuery('')
                 setSelectedSubcategory('all')
                 setPriceRange('all')
-              }}>
+              },
+  }>
                 Clear Filters;
               </Button>
             </div>
           )}
         </div>
       </section>
-      {{/* Security Statistics */}}
+      {{/* Security Statistics */},
+  }
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -623,7 +661,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </section>
-      {{/* Security Services Grid */}}
+      {{/* Security Services Grid */},
+  }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -636,12 +675,13 @@ export default function CybersecurityServicesPage() {;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securityServices.map((service) => (;
-              <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
+            {securityServices.map((service) => (
+  <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg mr-4">
                     <div className="text-white">
-                      {{service.icon}}
+                      {{service.icon},
+  }
                     </div>
                   </div>
                   <div>
@@ -653,10 +693,11 @@ export default function CybersecurityServicesPage() {;
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, index) => (;
-                      <li key={index} className="text-zion-slate-light text-sm flex items-center">
+                    {service.features.slice(0, 3).map((feature, index) => (
+  <li key={index} className="text-zion-slate-light text-sm flex items-center">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {{feature}}
+                        {{feature},
+  }
                       </li>
                     ))}
                   </ul>
@@ -665,7 +706,8 @@ export default function CybersecurityServicesPage() {;
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center text-zion-cyan">
                       <DollarSign className="w-4 h-4 mr-1" />
-                      <span className="font-semibold">{service.currency}{service.price.toLocaleString()}</span>
+                      <span className="font-semibold">{service.currency},
+  {service.price.toLocaleString()}</span>
                     </div>
                     <div className="flex items-center text-zion-slate-light">
                       <Clock className="w-4 h-4 mr-1" />
@@ -683,7 +725,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </section>
-      {{/* Security Technologies */}}
+      {{/* Security Technologies */},
+  }
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -696,8 +739,8 @@ export default function CybersecurityServicesPage() {;
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {securityTechnologies.map((tech, index) => (;
-              <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
+            {securityTechnologies.map((tech, index) => (
+  <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -707,7 +750,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </section>
-      {{/* Compliance Standards */}}
+      {{/* Compliance Standards */},
+  }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -720,8 +764,8 @@ export default function CybersecurityServicesPage() {;
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {complianceStandards.map((standard, index) => (;
-              <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
+            {complianceStandards.map((standard, index) => (
+  <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-white" />
                 </div>
@@ -731,7 +775,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </section>
-      {{/* Threat Intelligence */}}
+      {{/* Threat Intelligence */},
+  }
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -744,8 +789,8 @@ export default function CybersecurityServicesPage() {;
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {threatIntelligence.map((intel, index) => (;
-              <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
+            {threatIntelligence.map((intel, index) => (
+  <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
@@ -755,7 +800,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </section>
-      {{/* Why Choose ZionTech for Security */}}
+      {{/* Why Choose ZionTech for Security */},
+  }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -801,7 +847,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </section>
-      {{/* Security Pricing */}}
+      {{/* Security Pricing */},
+  }
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -873,7 +920,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </section>
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -929,7 +977,8 @@ export default function CybersecurityServicesPage() {;
       </section>
       <TrustedBySection />
       <QuoteFormSection />
-      {{/* Security Framework */}}
+      {{/* Security Framework */},
+  }
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -972,7 +1021,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </div>
-      {{/* Security Process */}}
+      {{/* Security Process */},
+  }
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1015,7 +1065,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </div>
-      {{/* Security Tools & Technologies */}}
+      {{/* Security Tools & Technologies */},
+  }
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1174,7 +1225,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </div>
-      {{/* Call to Action */}}
+      {{/* Call to Action */},
+  }
       <div className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1199,7 +1251,8 @@ export default function CybersecurityServicesPage() {;
           </div>
         </div>
       </div>
-      {{/* Footer Contact */}}
+      {{/* Footer Contact */},
+  }
       <div className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md: grid-cols-2 gap-8">

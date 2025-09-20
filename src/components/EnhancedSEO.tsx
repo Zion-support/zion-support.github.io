@@ -19,7 +19,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   structuredData
 }) => {
   const defaultOgImage = '/images/zion-tech-group-og.jpg';
-  const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformation, Zion Tech Group',
+const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformation, Zion Tech Group',
   
   return (
     <Helmet>
@@ -42,17 +42,15 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage || defaultOgImage} />
       
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Structured Data */}
-      {structuredData && (
+      {/* Canonical URL */},
+  {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+  {/* Structured Data */},
+  {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-      )}
-      
-      {/* Additional SEO Meta Tags */}
+      )},
+  {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />

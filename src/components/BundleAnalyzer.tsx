@@ -19,12 +19,12 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     totalSize: 0,chunkCount: 0,largestChunk: { name: '', size: 0 };
     averageChunkSize: 0,gzipSavings: 0
   });
-  const analyzeBundle = useCallback(() => {
+const analyzeBundle = useCallback(() => {
     if (!enabled) return;
     try {
       // Get performance entries
       const navigationEntries = performance.getEntriesByType('navigation');
-      const resourceEntries = performance.getEntriesByType('resource');
+const resourceEntries = performance.getEntriesByType('resource');
       // Calculate bundle metrics
       let totalSize = 0,
       let chunkCount = 0,
@@ -37,12 +37,12 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
           
           if (size > largestChunk.size) {
             largestChunk = { name: entry.name, size },
-          }
-        }
-      }),
+          },
+  },
+  }),
 
       const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0;
-      const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
+const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
 
       setMetrics({
         totalSize,
@@ -60,21 +60,21 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
       // Performance recommendations
       if (totalSize > 5 * 1024 * 1024) { // 5MB
-        console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.');
-      }
+        console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')
+}
       
       if (chunkCount > 20) {
-        console.warn('⚠️ Too many chunks. Consider consolidating small chunks.');
-      }
+        console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')
+}
       
       if (largestChunk.size > 2 * 1024 * 1024) { // 2MB
-        console.warn('⚠️ Largest chunk is too big. Consider splitting it further.');
-      }
+        console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')
+}
       
-      console.groupEnd();
-    } catch (error) {
-      console.error('Bundle analysis failed:', error);
-    }
+      console.groupEnd()
+} catch (error) {
+      console.error('Bundle analysis failed:', error)
+},
   }, [enabled]),
 
   const optimizeBundle = useCallback(() => {
@@ -89,28 +89,28 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     if (metrics.chunkCount > 20) {
       optimizations.push('Consolidate small chunks');
-      optimizations.push('Use webpack chunk optimization');
-    }
+      optimizations.push('Use webpack chunk optimization')
+}
 
     if (metrics.largestChunk.size > 2 * 1024 * 1024) {
       optimizations.push('Split large components');
-      optimizations.push('Implement tree shaking');
-    }
+      optimizations.push('Implement tree shaking')
+}
 
     // Apply optimizations
     optimizations.forEach(optimization => {
 
     });
-    return optimizations;
-  }, [enabled, metrics]),
+    return optimizations
+}, [enabled, metrics]),
 
   useEffect(() => {
     if (!enabled) return,
 
     // Analyze bundle after page load
     const timer = setTimeout(analyzeBundle, 2000);
-    return () => clearTimeout(timer);
-  }, [enabled, analyzeBundle]),
+    return () => clearTimeout(timer)
+}, [enabled, analyzeBundle]),
 
   useEffect(() => {
     if (!enabled) return,
@@ -118,14 +118,14 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     // Run optimization analysis
     const optimizations = optimizeBundle();
     if (optimizations && optimizations.length > 0) {
-      console.log('📊 Bundle optimization recommendations:', optimizations);
-    }
+      console.log('📊 Bundle optimization recommendations:', optimizations)
+},
   }, [enabled, optimizeBundle]),
 
   // Don't render UI unless explicitly requested
   if (!showUI) {
-    return null;
-  }
+    return null
+}
 
   return (
     <div className="fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">
@@ -137,5 +137,5 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         <div>Gzip Savings: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>
       </div>
     </div>
-  );
+  )
 };

@@ -7,7 +7,6 @@ const Contact: React.FC = () => {
         {/* Animated background */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-600/10 via-transparent to-transparent"></div>
-        
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(15)].map((_, i) => (
@@ -71,7 +70,6 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default Contact;

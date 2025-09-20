@@ -11,20 +11,22 @@ import useJobDetails from "@/hooks/useJobDetails";
 import { ApplyToJobModal } from "@/components/messaging/job-application";
 import SEO from "@/components/SEO";
 import { useWhitelabel } from "@/context/WhitelabelContext";
-export default function JobDetails() {;
-    // Cast to specify the expected route param type since useParams may be untyped;
-    const { jobId } = useParams()
+export default function JobDetails() {
+  // Cast to specify the expected route param type since useParams may be untyped;
+const { jobId } = useParams()
     const { job, isLoading, error } = useJobDetails(jobId)
     const { user, isAuthenticated } = useAuth()
     const navigate = useNavigate()
     const { isWhitelabel, brandName } = useWhitelabel()
     const [isApplyModalOpen, setIsApplyModalOpen] = useState(false)
-    if (if (isLoading) {;) {
+    if (if (isLoading) {
+  ) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>)
     }
-    if (if (error || !job) {;) {
+    if (if (error || !job) {
+  ) {
         return (<>
         ;
         <div className="container mx-auto px-4 py-16 text-center">
@@ -36,26 +38,28 @@ export default function JobDetails() {;
       </>)
     }
     const handleApply = () => {
-        if (if (!isAuthenticated) {;) {
+        if (if (!isAuthenticated) {
+  ) {
             toast.error("Please log in to apply for this job")
             navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`))
-            return;
-        }
-        if (if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;) {
+            return
+}
+        if (if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
+  ) {
             toast.error("Only job seekers can apply for jobs")
-            return;
-        }
+            return
+}
         setIsApplyModalOpen(true)
     }
-    const handleApplySuccess = async (appliedJobId) => {;
-        toast.success("Application submitted successfully!")
+    const handleApplySuccess = async (appliedJobId) => {
+  toast.success("Application submitted successfully!")
         setIsApplyModalOpen(false)
     }
-    const formatBudget = (budget) => {;
-        if (!budget)
+    const formatBudget = (budget) => {
+  if (!budget)
             return "Not specified";
-        return `$${budget.min} - $${budget.max}`;
-    }
+        return `$${budget.min} - $${budget.max}`
+}
     const isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
@@ -86,7 +90,8 @@ export default function JobDetails() {;
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>
                   <div className="whitespace-pre-wrap">
-                    {{job.description}}
+                    {{job.description},
+  }
                   </div>
                 </div>
                 ;
@@ -94,7 +99,8 @@ export default function JobDetails() {;
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill, i) => (<Badge key={i} variant="secondary">
-                        {{skill}}
+                        {{skill},
+  }
                       </Badge>))}
                   </div>
                 </div>
@@ -118,7 +124,8 @@ export default function JobDetails() {;
                   <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Deadline</p>
                     <p className="font-medium">
-                      {{job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}}
+                      {{job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"},
+  }
                     </p>
                   </div>
                 </div>
@@ -145,9 +152,11 @@ export default function JobDetails() {;
       </main>
       ;
       ;
-      {{/* Job application modal */}}
-      {job && (<ApplyToJobModal job={{;
-                id: job.id,title: job.title,description: job.description,company_name: job.company_name || "Company",budget: job.budget,client_id: job.client_id;
-            }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
+      {{/* Job application modal */},
+  },
+  {job && (<ApplyToJobModal job={{
+  id: job.id,title: job.title,description: job.description,company_name: job.company_name || "Company",budget: job.budget,client_id: job.client_id
+},
+  } isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>)
 }

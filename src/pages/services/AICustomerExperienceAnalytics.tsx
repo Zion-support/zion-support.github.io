@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Brain;
-  Users, ;
-  BarChart3, ;
-  Heart, ;
-  MessageCircle, ;
-  TrendingUp, ;
-  Eye, ;
-  Target, ;
+  Users,
+  BarChart3,
+  Heart,
+  MessageCircle,
+  TrendingUp,
+  Eye,
+  Target,
   Zap;
   CheckCircle;
   Star;
@@ -21,83 +21,91 @@ import { ;
   Shield;
   Activity;
   PieChart;
-  LineChart;
+  LineChart
 } from "lucide-react";
 const AICustomerExperienceAnalytics: React.FC = () => {
-  const features = [;
-    {;
-      icon: Brain,title: 'AI-Powered Sentiment Analysis',description: 'Advanced natural language processing to understand customer emotions and feedback in real-time.',price: '$299/month';
-    }
-    {;
-      icon: Eye,title: 'Customer Journey Mapping',description: 'Visualize and track customer interactions across all touchpoints with predictive analytics.',price: '$199/month';
-    }
-    {;
-      icon: Target,title: 'Churn Prediction & Prevention',description: 'Machine learning algorithms to identify at-risk customers and recommend retention strategies.',price: '$249/month';
-    }
-    {;
-      icon: BarChart3,title: 'ROI Optimization Insights',description: 'Data-driven recommendations to maximize customer lifetime value and marketing effectiveness.',price: '$179/month';
-    }
+  const features = [
+  {
+  icon: Brain,title: 'AI-Powered Sentiment Analysis',description: 'Advanced natural language processing to understand customer emotions and feedback in real-time.',price: '$299/month'
+},
+  {
+  icon: Eye,title: 'Customer Journey Mapping',description: 'Visualize and track customer interactions across all touchpoints with predictive analytics.',price: '$199/month'
+},
+  {
+  icon: Target,title: 'Churn Prediction & Prevention',description: 'Machine learning algorithms to identify at-risk customers and recommend retention strategies.',price: '$249/month'
+},
+  {
+  icon: BarChart3,title: 'ROI Optimization Insights',description: 'Data-driven recommendations to maximize customer lifetime value and marketing effectiveness.',price: '$179/month'
+},
   ]
-  const pricingPlans = [;
-    {;
-      name: 'Starter',price: '$99',period: '/month',description: 'Perfect for small businesses starting their customer analytics journey',features: [;
-        'Up to 10,000 customer interactionsBasic sentiment analysis';
+  const pricingPlans = [
+  {
+  name: 'Starter',price: '$99',period: '/month',description: 'Perfect for small businesses starting their customer analytics journey',features: [
+  'Up to 10,000 customer interactionsBasic sentiment analysis';
         'Standard reportingEmail support';
-        'Basic journey mapping';
-      ]
-      cta: 'Get Started',popular: false;
-    }
-    {;
-      name: 'Professional',price: '$299',period: '/month',description: 'Ideal for growing companies with comprehensive customer experience needs',features: [;
-        'Up to 100,000 customer interactionsAdvanced AI analytics';
+        'Basic journey mapping'
+]
+      cta: 'Get Started',popular: false
+},
+  {
+  name: 'Professional',price: '$299',period: '/month',description: 'Ideal for growing companies with comprehensive customer experience needs',features: [
+  'Up to 100,000 customer interactionsAdvanced AI analytics';
         'Full journey mappingPriority support';
-        'Churn predictionCustom dashboards';
-      ]
-      cta: 'Start Free Trial',popular: true;
-    }
-    {;
-      name: 'Enterprise',price: '$799',period: '/month',description: 'For large organizations requiring enterprise-grade customer analytics',features: [;
-        'Unlimited customer interactionsCustom AI models';
+        'Churn predictionCustom dashboards'
+]
+      cta: 'Start Free Trial',popular: true
+},
+  {
+  name: 'Enterprise',price: '$799',period: '/month',description: 'For large organizations requiring enterprise-grade customer analytics',features: [
+  'Unlimited customer interactionsCustom AI models';
         'White-label solution24/7 dedicated support';
-        'Advanced security featuresSLA guarantees';
-      ]
-      cta: 'Contact Sales',popular: false;
-    }
+        'Advanced security featuresSLA guarantees'
+]
+      cta: 'Contact Sales',popular: false
+},
   ]
-  const benefits = [;
-    'Increase customer satisfaction by 40%Reduce churn rate by 35%';
+  const benefits = [
+  'Increase customer satisfaction by 40%Reduce churn rate by 35%';
     'Improve customer lifetime value by 50%Boost conversion rates by 25%';
-    'Reduce support costs by 30%';
-  ]
+    'Reduce support costs by 30%'
+]
 
-  const analyticsCapabilities = [;
-    'Real-time customer sentiment trackingMulti-channel interaction analysis';
+  const analyticsCapabilities = [
+  'Real-time customer sentiment trackingMulti-channel interaction analysis';
     'Predictive customer behavior modelingAutomated customer feedback processing';
-    'Advanced segmentation and targetingCompetitive benchmarking insights';
-  ]
+    'Advanced segmentation and targetingCompetitive benchmarking insights'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white">
-      {{/* Animated Background */}}
+      {{/* Animated Background */},
+  }
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_50%)]" />
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(16,185,129,0.1)_25%,rgba(16,185,129,0.1)_50%,transparent_50%,transparent_75%,rgba(16,185,129,0.1)_75%)] bg-[length:20px_20px] animate-pulse" />
       </div>
 
       <div className="relative z-10">
-        {{/* Header Section */}}
+        {{/* Header Section */},
+  }
         <motion.header ;
           className="className="pt-20 pb-16 text-center";"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: -50 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
         >
           <div className="max-w-4xl mx-auto px-6">
             <motion.div ;
               className="className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-300 mb-6";"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+              initial={{ scale: 0.8, opacity: 0 },
+  }
+              animate={{ scale: 1, opacity: 1 },
+  }
+              transition={{ delay: 0.2, duration: 0.5 },
+  }
             >
               <Users className="w-4 h-4" />
               AI-Powered Customer Analytics;
@@ -114,16 +122,20 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button ;
                 className="className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2";"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
               >
                 <Play className="w-5 h-5" />
                 Start Free Trial;
               </motion.button>
               <motion.button ;
                 className="className="px-8 py-4 border border-emerald-500/30 text-emerald-300 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 flex items-center gap-2";"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
               >
                 <Settings className="w-5 h-5" />
                 Schedule Demo;
@@ -132,13 +144,18 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </div>
         </motion.header>
 
-        {{/* Features Grid */}}
+        {{/* Features Grid */},
+  }
         <motion.section ;
           className="className="py-20 px-6";"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
+          viewport={{ once: true },
+  }
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -151,15 +168,21 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             </div>
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (;
-                <motion.div;
-                  key={{feature.title}}
+              {features.map((feature, index) => (
+  <motion.div;
+                  key={{feature.title},
+  }
                   className="className="group relative p-6 rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm hover:border-emerald-500/40 transition-all duration-300";"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5, scale: 1.02 }}
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  whileInView={{ opacity: 1, y: 0 },
+  }
+                  transition={{ delay: index * 0.1, duration: 0.6 },
+  }
+                  viewport={{ once: true },
+  }
+                  whileHover={{ y: -5, scale: 1.02 },
+  }
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-teal-500/5 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                   ;
@@ -169,15 +192,18 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                     </div>
                     ;
                     <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-emerald-300 transition-colors">
-                      {{feature.title}}
+                      {{feature.title},
+  }
                     </h3>
                     ;
                     <p className="text-gray-400 mb-4 leading-relaxed">
-                      {{feature.description}}
+                      {{feature.description},
+  }
                     </p>
                     ;
                     <div className="text-2xl font-bold text-emerald-400">
-                      {{feature.price}}
+                      {{feature.price},
+  }
                     </div>
                   </div>
                 </motion.div>
@@ -186,13 +212,18 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </div>
         </motion.section>
 
-        {{/* Analytics Capabilities */}}
+        {{/* Analytics Capabilities */},
+  }
         <motion.section ;
           className="className="py-20 px-6 bg-gradient-to-br from-emerald-900/20 via-slate-900/50 to-teal-900/20";"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
+          viewport={{ once: true },
+  }
         >
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -205,14 +236,19 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             </div>
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {analyticsCapabilities.map((capability, index) => (;
-                <motion.div;
-                  key={{capability}}
+              {analyticsCapabilities.map((capability, index) => (
+  <motion.div;
+                  key={{capability},
+  }
                   className="className="flex items-start gap-4 p-4 rounded-xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10";"
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ delay: index * 0.1, duration: 0.6 },
+  }
+                  viewport={{ once: true },
+  }
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <BarChart3 className="w-5 h-5 text-white" />
@@ -224,13 +260,18 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </div>
         </motion.section>
 
-        {{/* Pricing Section */}}
+        {{/* Pricing Section */},
+  }
         <motion.section ;
           className="className="py-20 px-6";"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
+          viewport={{ once: true },
+  }
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -243,22 +284,28 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             </div>
             ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (;
-                <motion.div;
-                  key={{plan.name}}
-                  className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${;
-                    plan.popular ;
+              {pricingPlans.map((plan, index) => (
+  <motion.div;
+                  key={{plan.name},
+  }
+                  className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
+  plan.popular ;
                       ? 'border-emerald-500 bg-gradient-to-br from-emerald-500/20 to-teal-500/20' ;
-                      : 'border-emerald-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50';
-                  }`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5, scale: 1.02 }}
+                      : 'border-emerald-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
+}`}
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  whileInView={{ opacity: 1, y: 0 },
+  }
+                  transition={{ delay: index * 0.1, duration: 0.6 },
+  }
+                  viewport={{ once: true },
+  }
+                  whileHover={{ y: -5, scale: 1.02 },
+  }
                 >
-                  {plan.popular && (;
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular;
                       </span>
@@ -275,8 +322,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                   </div>
                   ;
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature) => (;
-                      <li key={feature} className="flex items-center gap-3">
+                    {plan.features.map((feature) => (
+  <li key={feature} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
@@ -284,13 +331,15 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                   </ul>
                   ;
                   <motion.button ;
-                    className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${;
-                      plan.popular;
+                    className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+  plan.popular;
                         ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700';
-                        : 'border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10';
-                    }`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                        : 'border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10'
+}`}
+                    whileHover={{ scale: 1.02 },
+  }
+                    whileTap={{ scale: 0.98 },
+  }
                   >
                     Get Started;
                   </motion.button>
@@ -300,13 +349,18 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </div>
         </motion.section>
 
-        {{/* Benefits Section */}}
+        {{/* Benefits Section */},
+  }
         <motion.section ;
           className="className="py-20 px-6 bg-gradient-to-br from-emerald-900/20 via-slate-900/50 to-teal-900/20";"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
+          viewport={{ once: true },
+  }
         >
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -319,14 +373,19 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             </div>
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (;
-                <motion.div;
-                  key={{benefit}}
+              {benefits.map((benefit, index) => (
+  <motion.div;
+                  key={{benefit},
+  }
                   className="className="flex items-start gap-4 p-6 rounded-xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10";"
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ delay: index * 0.1, duration: 0.6 },
+  }
+                  viewport={{ once: true },
+  }
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <TrendingUp className="w-5 h-5 text-white" />
@@ -338,13 +397,18 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </div>
         </motion.section>
 
-        {{/* CTA Section */}}
+        {{/* CTA Section */},
+  }
         <motion.section ;
           className="className="py-20 px-6 text-center";"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
+          viewport={{ once: true },
+  }
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
@@ -356,16 +420,20 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button ;
                 className="className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25 flex items-center gap-2";"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
               >
                 Start Free Trial;
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               <motion.button ;
                 className="className="px-8 py-4 border border-emerald-500/30 text-emerald-300 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 flex items-center gap-2";"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
               >
                 <Users className="w-5 h-5" />
                 Contact Sales;

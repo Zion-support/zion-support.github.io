@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -6,21 +7,21 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean,
+  hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null,
+  errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-      this.state = { 
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null
-      };
+    this.state = { 
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -50,7 +51,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
       // Example: Send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo });
+      // errorReportingService.captureException(error, { extra: errorInfo })
     }
   }
 

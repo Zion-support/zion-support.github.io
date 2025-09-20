@@ -13,12 +13,12 @@ const LandingPageGenerator: React.FC = () => {
         </p>
 
         <div className="mt-10 grid gap-6 sm: grid-cols-2 lg:grid-cols-3">
-          {[;
-            'On-brand copy and image generationSEO-ready metadata and schema';
+          {[
+  'On-brand copy and image generationSEO-ready metadata and schema';
             'A/B testing and analytics hooksOne-click deploy to Vercel/Netlify/S3';
-            'Forms with spam protection and CRM syncLocalization and accessibility checks';
-          ].map((b) => (;
-            <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
+            'Forms with spam protection and CRM syncLocalization and accessibility checks'
+].map((b) => (
+  <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
             </div>

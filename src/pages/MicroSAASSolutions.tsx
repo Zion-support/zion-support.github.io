@@ -1,6 +1,6 @@
 import React from "react";
 import { SEO } from "../components/SEO";
-import {;
+import {
   Code;
   Zap;
   Users;
@@ -21,75 +21,80 @@ import {;
   CheckCircle;
   Star;
   ArrowRight;
-  Brain;
+  Brain
 } from "lucide-react";
-export default function MicroSAASSolutions() {;
-  const services = [;
-    {;
-      title: "Custom SAAS Development",description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",icon: Code,features: [["Custom workflows", "API integration", "User management", "Scalable architecture"];]
-    }
-    {;
-      title: "Multi-tenant Architecture",description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",icon: Users,features: [["Data isolation", "Resource sharing", "Customization options", "Performance optimization"];]
-    }
-    {;
-      title: "Subscription Management",description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",icon: BarChart3,features: [["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"];]
-    }
-    {;
-      title: "API Development & Integration",description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",icon: Cpu,features: [["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"];]
-    }
-    {;
-      title: "Analytics & Reporting",description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.";
-      icon: TrendingUp,features: [["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];]
-    }
+export default function MicroSAASSolutions() {
+  const services = [
+  {
+  title: "Custom SAAS Development",description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",icon: Code,features: [["Custom workflows", "API integration", "User management", "Scalable architecture"],
+  ],
+  },
+  {
+  title: "Multi-tenant Architecture",description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",icon: Users,features: [["Data isolation", "Resource sharing", "Customization options", "Performance optimization"],
+  ],
+  },
+  {
+  title: "Subscription Management",description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",icon: BarChart3,features: [["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"],
+  ],
+  },
+  {
+  title: "API Development & Integration",description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",icon: Cpu,features: [["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"],
+  ],
+  },
+  {
+  title: "Analytics & Reporting",description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.";
+      icon: TrendingUp,features: [["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"],
+  ],
+  },
   ]
 
-  const benefits = [;
-    {;
-      title: "Rapid Deployment",description: "Quick time-to-market with agile development methodologies",icon: Zap;
-    }
-    {;
-      title: "Scalability",description: "Built to grow with your business from day one",icon: TrendingUp;
-    }
-    {;
-      title: "Cost Efficiency",description: "Reduced infrastructure costs with cloud-native solutions",icon: BarChart3;
-    }
-    {;
-      title: "Security",description: "Enterprise-grade security and compliance standards",icon: Shield;
-    }
+  const benefits = [
+  {
+  title: "Rapid Deployment",description: "Quick time-to-market with agile development methodologies",icon: Zap
+},
+  {
+  title: "Scalability",description: "Built to grow with your business from day one",icon: TrendingUp
+},
+  {
+  title: "Cost Efficiency",description: "Reduced infrastructure costs with cloud-native solutions",icon: BarChart3
+},
+  {
+  title: "Security",description: "Enterprise-grade security and compliance standards",icon: Shield
+},
   ]
-  const industries = [;
-    {;
-      name: "Healthcare",description: "HIPAA-compliant patient management systems",icon: Building;
-    }
-    {;
-      name: "Finance",description: "Regulatory-compliant financial tools",icon: Building;
-    }
-    {;
-      name: "Education",description: "Learning management and student tracking",icon: Building;
-    }
-    {;
-      name: "Manufacturing",description: "Production planning and inventory management",icon: Building;
-    }
-    {;
-      name: "Retail",description: "E-commerce and point-of-sale solutions",icon: Building;
-    }
-    {;
-      name: "Real Estate",description: "Property management and client portals",icon: Building;
-    }
+  const industries = [
+  {
+  name: "Healthcare",description: "HIPAA-compliant patient management systems",icon: Building
+},
+  {
+  name: "Finance",description: "Regulatory-compliant financial tools",icon: Building
+},
+  {
+  name: "Education",description: "Learning management and student tracking",icon: Building
+},
+  {
+  name: "Manufacturing",description: "Production planning and inventory management",icon: Building
+},
+  {
+  name: "Retail",description: "E-commerce and point-of-sale solutions",icon: Building
+},
+  {
+  name: "Real Estate",description: "Property management and client portals",icon: Building
+},
   ]
-  const processSteps = [;
-    {;
-      step: 1,title: "Discovery & Planning",description: "Understanding your business requirements and creating a comprehensive project plan",icon: Target,duration: "1-2 weeks";
-    }
-    {;
-      step: 2,title: "Design & Architecture",description: "Creating the system architecture and user interface designs",icon: Code,duration: "2-4 weeks";
-    }
-    {;
-      step: 3,title: "Development",description: "Building the core application with iterative development cycles",icon: Cpu,duration: "8-16 weeks";
-    }
-    {;
-      step: 4,title: "Testing & Deployment",description: "Comprehensive testing and production deployment",icon: Rocket,duration: "2-4 weeks";
-    }
+  const processSteps = [
+  {
+  step: 1,title: "Discovery & Planning",description: "Understanding your business requirements and creating a comprehensive project plan",icon: Target,duration: "1-2 weeks"
+},
+  {
+  step: 2,title: "Design & Architecture",description: "Creating the system architecture and user interface designs",icon: Code,duration: "2-4 weeks"
+},
+  {
+  step: 3,title: "Development",description: "Building the core application with iterative development cycles",icon: Cpu,duration: "8-16 weeks"
+},
+  {
+  step: 4,title: "Testing & Deployment",description: "Comprehensive testing and production deployment",icon: Rocket,duration: "2-4 weeks"
+},
   ]
   return (
     <>
@@ -100,7 +105,8 @@ export default function MicroSAASSolutions() {;
       />
 
       <div className="min-h-screen bg-futuristic">
-        {{/* Hero Section */}}
+        {{/* Hero Section */},
+  }
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
           <div className="absolute inset-0">
@@ -142,7 +148,8 @@ export default function MicroSAASSolutions() {;
           </div>
         </section>
 
-        {{/* Services Section */}}
+        {{/* Services Section */},
+  }
         <section className="py-20 bg-zion-blue-dark/50">
           <div className="container-responsive">
             <div className="text-center mb-16">
@@ -153,9 +160,10 @@ export default function MicroSAASSolutions() {;
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (;
-                <div;
-                  key={{service.title}}
+              {services.map((service, index) => (
+  <div;
+                  key={{service.title},
+  }
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
@@ -166,8 +174,8 @@ export default function MicroSAASSolutions() {;
                   <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
 
                   <div className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (;
-                      <div key={featureIndex} className="flex items-center gap-3">
+                    {service.features.map((feature, featureIndex) => (
+  <div key={featureIndex} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
                         <span className="text-zion-slate-light text-sm">{feature}</span>
                       </div>
@@ -179,7 +187,8 @@ export default function MicroSAASSolutions() {;
           </div>
         </section>
 
-        {{/* Benefits Section */}}
+        {{/* Benefits Section */},
+  }
         <section className="py-20">
           <div className="container-responsive">
             <div className="text-center mb-16">
@@ -190,9 +199,10 @@ export default function MicroSAASSolutions() {;
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (;
-                <div;
-                  key={{benefit.title}}
+              {benefits.map((benefit, index) => (
+  <div;
+                  key={{benefit.title},
+  }
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -207,7 +217,8 @@ export default function MicroSAASSolutions() {;
           </div>
         </section>
 
-        {{/* Industries Section */}}
+        {{/* Industries Section */},
+  }
         <section className="py-20 bg-zion-blue-dark/50">
           <div className="container-responsive">
             <div className="text-center mb-16">
@@ -218,9 +229,10 @@ export default function MicroSAASSolutions() {;
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (;
-                <div;
-                  key={{industry.name}}
+              {industries.map((industry, index) => (
+  <div;
+                  key={{industry.name},
+  }
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
@@ -235,7 +247,8 @@ export default function MicroSAASSolutions() {;
           </div>
         </section>
 
-        {{/* Process Section */}}
+        {{/* Process Section */},
+  }
         <section className="py-20">
           <div className="container-responsive">
             <div className="text-center mb-16">
@@ -246,21 +259,23 @@ export default function MicroSAASSolutions() {;
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (;
-                <div key={step.step} className="text-center">
+              {processSteps.map((step, index) => (
+  <div key={step.step} className="text-center">
                   <div className="relative mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                       <step.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
-                      {{step.step}}
+                      {{step.step},
+  }
                     </div>
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                   <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
-                    {{step.duration}}
+                    {{step.duration},
+  }
                   </span>
                 </div>
               ))}
@@ -268,7 +283,8 @@ export default function MicroSAASSolutions() {;
           </div>
         </section>
 
-        {{/* CTA Section */}}
+        {{/* CTA Section */},
+  }
         <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
           <div className="container-responsive">
             <div className="text-center max-w-4xl mx-auto">
