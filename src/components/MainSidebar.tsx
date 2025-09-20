@@ -35,81 +35,81 @@ interface SidebarSection {
 export function MainSidebar() {
   const location = useLocation();
 
-  const sidebarSection,  s: SidebarSection[] = [
+  const sidebarSections: SidebarSection[] = [
     {
-      tit, l, e: 'Mai, n',
-    ite, m, s: [
-        { k, e, y: 'hom, e',
-    hr, e, f: '/', ic, o, n: <Hom, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Hom, e' },
-        { k, e, y: 'marketplac, e',
-    hr, e, f: '/marketplac, e', ic, o, n: <ShoppingCar, t classNam, e="w-4 h-4" />,
-    lab, e, l: 'Marketplac, e' },
-        { k, e, y: 'service, s',
-    hr, e, f: '/service, s', ic, o, n: <Setting, s classNam, e="w-4 h-4" />,
-    lab, e, l: 'Service, s' },
-        { k, e, y: 'talen, t',
-    hr, e, f: '/talen, t', ic, o, n: <User, s classNam, e="w-4 h-4" />,
-    lab, e, l: 'Talen, t' },
-        { k, e, y: 'equipmen, t',
-    hr, e, f: '/equipmen, t', ic, o, n: <BarChart, 3 classNam, e="w-4 h-4" />,
-    lab, e, l: 'Equipmen, t' },
+      title: 'Main',
+      items: [
+        { key: 'home',
+    href: '/', icon: <Home className="w-4 h-4" />,
+    label: 'Home' },
+        { key: 'marketplace',
+    href: '/marketplace', icon: <ShoppingCart className="w-4 h-4" />,
+    label: 'Marketplace' },
+        { key: 'services',
+    href: '/services', icon: <Settings className="w-4 h-4" />,
+    label: 'Services' },
+        { key: 'talent',
+    href: '/talent', icon: <Users className="w-4 h-4" />,
+    label: 'Talent' },
+        { key: 'equipment',
+    href: '/equipment', icon: <BarChart3 className="w-4 h-4" />,
+    label: 'Equipment' },
       ]
     },
     {
-      titl, e: 'Company';
-    item, s: [
-        { k, e, y: 'abou, t',
-    hr, e, f: '/abou, t', ic, o, n: <Buildin, g classNam, e="w-4 h-4" />,
-    lab, e, l: 'Abou, t U, s' },
-        { k, e, y: 'career, s',
-    hr, e, f: '/career, s', ic, o, n: <Briefcas, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Career, s' },
-        { k, e, y: 'partner, s',
-    hr, e, f: '/partner, s', ic, o, n: <User, s classNam, e="w-4 h-4" />,
-    lab, e, l: 'Partner, s' },
-        { k, e, y: 'contac, t',
-    hr, e, f: '/contac, t', ic, o, n: <Mai, l classNam, e="w-4 h-4" />,
-    lab, e, l: 'Contac, t' },
+      title: 'Company',
+      items: [
+        { key: 'about',
+    href: '/about', icon: <Building className="w-4 h-4" />,
+    label: 'About Us' },
+        { key: 'careers',
+    href: '/careers', icon: <Briefcase className="w-4 h-4" />,
+    label: 'Careers' },
+        { key: 'partners',
+    href: '/partners', icon: <Users className="w-4 h-4" />,
+    label: 'Partners' },
+        { key: 'contact',
+    href: '/contact', icon: <Mail className="w-4 h-4" />,
+    label: 'Contact' },
       ]
     },
     {
-      titl, e: 'Resources';
-    item, s: [
-        { k, e, y: 'blo, g',
-    hr, e, f: '/blo, g', ic, o, n: <FileTex, t classNam, e="w-4 h-4" />,
-    lab, e, l: 'Blo, g' },
-        { k, e, y: 'communit, y',
-    hr, e, f: '/communit, y', ic, o, n: <Glob, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Communit, y' },
-        { k, e, y: 'gree, n-i, t',
-    hr, e, f: '/gree, n-i, t', ic, o, n: <Lea, f classNam, e="w-4 h-4" />,
-    lab, e, l: 'Gree, n I, T' },
-        { k, e, y: 'zio, n-hir, e-a, i',
-    hr, e, f: '/zio, n-hir, e-a, i', ic, o, n: <Za, p classNam, e="w-4 h-4" />,
-    lab, e, l: 'A, I Hirin, g' },
+      title: 'Resources',
+      items: [
+        { key: 'blog',
+    href: '/blog', icon: <FileText className="w-4 h-4" />,
+    label: 'Blog' },
+        { key: 'community',
+    href: '/community', icon: <Globe className="w-4 h-4" />,
+    label: 'Community' },
+        { key: 'green-it',
+    href: '/green-it', icon: <Leaf className="w-4 h-4" />,
+    label: 'Green IT' },
+        { key: 'zion-hire-ai',
+    href: '/zion-hire-ai', icon: <Zap className="w-4 h-4" />,
+    label: 'AI Hiring' },
       ]
     },
     {
-      titl, e: 'Support';
-    item, s: [
-        { k, e, y: 'hel, p',
-    hr, e, f: '/hel, p', ic, o, n: <HelpCircl, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Hel, p Cente, r' },
-        { k, e, y: 'developer, s',
-    hr, e, f: '/developer, s', ic, o, n: <Cod, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Develope, r Porta, l' },
-        { k, e, y: 'ap, i-doc, s',
-    hr, e, f: '/ap, i-doc, s', ic, o, n: <Cod, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'AP, I Doc, s' },
-        { k, e, y: 'sitema, p',
-    hr, e, f: '/sitema, p', ic, o, n: <Calenda, r classNam, e="w-4 h-4" />,
-    lab, e, l: 'Sitema, p' },
+      title: 'Support',
+      items: [
+        { key: 'help',
+    href: '/help', icon: <HelpCircle className="w-4 h-4" />,
+    label: 'Help Center' },
+        { key: 'developers',
+    href: '/developers', icon: <Code className="w-4 h-4" />,
+    label: 'Developer Portal' },
+        { key: 'api-docs',
+    href: '/api-docs', icon: <Code className="w-4 h-4" />,
+    label: 'API Docs' },
+        { key: 'sitemap',
+    href: '/sitemap', icon: <Calendar className="w-4 h-4" />,
+    label: 'Sitemap' },
       ]
     }
   ];
 
-  const isActive = (hre, f: string) => {
+  const isActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/';
      }
