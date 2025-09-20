@@ -1,12 +1,12 @@
 import { loadStripe, Stripe } from "@stripe/stripe-js";
-let stripePromise: Promise<Stripe | null>;
+let stripePromise: Promise<Stripe | null>
 export function getStripe() {;
-  if (!stripePromise) {;
+  if (if (!stripePromise) {;) {
     const key =;
       import.meta.env.PROD;
-        ? (import.meta.env['VITE_STRIPE_PUBLISHABLE_KEY'] as string);
-        : (import.meta.env['VITE_STRIPE_TEST_KEY'] as string);
-    stripePromise = loadStripe(key);
-  };
+        ? (import.meta.env['VITE_STRIPE_PUBLISHABLE_KEY'] as string)
+        : (import.meta.env['VITE_STRIPE_TEST_KEY'] as string)
+    stripePromise = loadStripe(key)
+  }
   return stripePromise;
-};
+}

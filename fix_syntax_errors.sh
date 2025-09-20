@@ -1,43 +1,54 @@
 #!/bin/bash
 
-echo "Fixing syntax errors in React components..."
+# Fix Syntax Errors Script
+# This script will fix common syntax errors introduced during merge conflicts
 
-# Function to fix missing closing braces in React components
-fix_component() {
-    local file="$1"
-    echo "Fixing: $file"
+echo "🔧 Starting syntax error fixes..."
+
+# Find all TypeScript and JavaScript files with syntax errors
+echo "Finding files with syntax errors..."
+
+# Fix common patterns:
+# 1. Extra semicolons after function declarations
+# 2. Extra semicolons after return statements
+# 3. Extra semicolons after JSX elements
+
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+    echo "Fixing syntax errors in: $file"
     
-    if [ -f "$file" ]; then
-        # Fix missing closing braces before export statements
-        sed -i 's/^  export default/  };\n\nexport default/g' "$file"
-        sed -i 's/^export default/};\n\nexport default/g' "$file"
-        
-        # Fix missing closing braces for functions
-        sed -i 's/  );$/  );\n};/g' "$file"
-        
-        echo "Fixed: $file"
-    fi
-}
-
-# Fix all JSX and TSX files in pages and components
-echo "Fixing syntax errors in pages..."
-find src/pages -name "*.jsx" -o -name "*.tsx" | while read file; do
-    fix_component "$file"
+    # Fix function declarations with extra semicolons
+    sed -i 's/() => {;/() => {/g' "$file"
+    sed -i 's/() => {;/() => {/g' "$file"
+    sed -i 's/React.FC = () => {;/React.FC = () => {/g' "$file"
+    
+    # Fix return statements with extra semicolons
+    sed -i 's/return (;/return (/g' "$file"
+    
+    # Fix JSX elements with extra semicolons at the end
+    sed -i 's/>;/>/g' "$file"
+    
+    # Fix closing tags with extra semicolons
+    sed -i 's/<\/[^>]*>;/<\/&>/g' "$file"
+    
+    # Fix JSX attributes with extra semicolons
+    sed -i 's/className="[^"]*";/className="&"/g' "$file"
+    sed -i 's/onClick={[^}]*};/onClick={&}/g' "$file"
+    
+    # Fix JSX expressions with extra semicolons
+    sed -i 's/{[^}]*};/{&}/g' "$file"
+    
+    # Fix closing braces with extra semicolons
+    sed -i 's/};/}/g' "$file"
+    
+    # Fix conditional statements with extra semicolons
+    sed -i 's/if ([^)]*) {;/if (&) {/g' "$file"
+    sed -i 's/else {;/else {/g' "$file"
+    
+    # Fix object properties with extra semicolons
+    sed -i 's/const [^=]* = {;/const & = {/g' "$file"
+    
+    # Fix array elements with extra semicolons
+    sed -i 's/\[[^]]*\];/\[&\]/g' "$file"
 done
 
-echo "Fixing syntax errors in components..."
-find src/components -name "*.jsx" -o -name "*.tsx" | while read file; do
-    fix_component "$file"
-done
-
-echo "Syntax fixes completed!"
-
-# Test the build
-echo "Testing build after syntax fixes..."
-if npm run build; then
-    echo "✅ Build successful after syntax fixes!"
-else
-    echo "❌ Build still has issues, but syntax errors are fixed."
-fi
-
-echo "All syntax fixes completed!"
+echo "✅ Syntax error fixes completed!"

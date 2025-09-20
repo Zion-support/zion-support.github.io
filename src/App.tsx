@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
 // Lazy load components for better performance
-const LazyHome = React.lazy(() => import('./components/Home'));
-const LazyServices = React.lazy(() => import('./components/Services'));
-const LazyAbout = React.lazy(() => import('./components/About'));
-const LazyContact = React.lazy(() => import('./components/Contact'));
+const LazyHome = React.lazy(() => import('./components/Home'))
+const LazyServices = React.lazy(() => import('./components/Services'))
+const LazyAbout = React.lazy(() => import('./components/About'))
+const LazyContact = React.lazy(() => import('./components/Contact'))
 
 const App: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const App: React.FC = () => {
         </Routes>
       </React.Suspense>
     </div>
-  );
-};
+  )
+}
 
 export default App;
