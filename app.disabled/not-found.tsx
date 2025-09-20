@@ -1,6 +1,10 @@
 'use client';
 
+<<<<<<< HEAD:app/not-found.tsx
+import Link from 'next/link'
+=======
 import Link from 'next/link';
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/not-found.tsx
 
 export default function NotFound() {
   return (

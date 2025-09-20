@@ -1,11 +1,19 @@
 import React from "react";
+<<<<<<< HEAD:app/services/ai-social-scheduler/page.tsx
+import { Metadata } from 'next'
+=======
 import { Metadata } from 'next';
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/services/ai-social-scheduler/page.tsx
 
 export const metadata: Metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group';
   description: 'Intelligent social media management with optimal posting times and content suggestions. Maximize engagement across all platforms.';
   keywords: 'social media scheduler, AI social media, content scheduling, social media automation, engagement optimization'
+<<<<<<< HEAD:app/services/ai-social-scheduler/page.tsx
+}
+=======
 };
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/services/ai-social-scheduler/page.tsx
 
 export default function ServicePage() {
   return (

@@ -1,3 +1,12 @@
+<<<<<<< HEAD:app/components/UltimateDigitalTransformationShowcase2025.tsx
+import React from 'react'
+const UltimateDigitalTransformationShowcase2025: React.FC = () => {;
+  return (
+    <div>
+      <h3 className="text-xl font-bold mb-4">UltimateDigitalTransformationShowcase2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>)}
+=======
 import React from 'react';
 const UltimateDigitalTransformationShowcase2025: React.FC = () => {;
   return (
@@ -5,4 +14,5 @@ const UltimateDigitalTransformationShowcase2025: React.FC = () => {;
       <h3 className="text-xl font-bold mb-4">UltimateDigitalTransformationShowcase2025</h3>;
       <p className="text-gray-300">Revolutionary technology component</p>;
     </div>)};
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/components/UltimateDigitalTransformationShowcase2025.tsx
 export default UltimateDigitalTransformationShowcase2025;

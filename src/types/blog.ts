@@ -67,5 +67,3 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 12,
   },
 ];
-=======
-=======
