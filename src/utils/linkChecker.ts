@@ -1,122 +1,52 @@
-
-}
-anchor?: string;}
-error?: string}
-
-export interface PageInfo {path: string, title: string, links: LinkInfo[];
-}
-}
-exists: boolean}
-
-export class LinkChecker {private baseUrl: string;
-private visitedUrls: Set<string> = new Set();
-private brokenLinks: LinkInfo[] = [];
-private missingPages: string[] = [];
-
-constructor(baseUrl: string = "https://ziontechgroup.com") {
-this.baseUrl = baseUrl}
-
-isInternalLink(url: string): boolean {return url.startsWith("/") ||;
-url.startsWith(this.baseUrl) ||;
-url.startsWith("./") ||;
-url.startsWith("../")}
-
-normalizeUrl(url: string, basePage: string): string {if (url.startsWith("http")) {
-return url}
-
-if (url.startsWith("/")) {
-return `${this.baseUrl}${url}`;
+export interface LinkInfo {
+  url: string;
+  text: string;
+  anchor?: string;
+  error?: string;
 }
 
-try {
-return `${this.baseUrl}${basePage}/${url}`;
-} catch {return url}
+export interface PageInfo {
+  path: string;
+  title: string;
+  links: LinkInfo[];
 }
 
-extractLinks(pageContent: string, pagePath: string): LinkInfo[] {const links: LinkInfo[] = [];
-const hrefRegex = /href=[""]([^""]+)[""]/g;
-let match;
-
-while ((match = hrefRegex.exec(pageContent)) !== null) {
-const url = match[1];
-const normalizedUrl = this.normalizeUrl(url, pagePath);
-
-links.push({,
-url: normalizedUrl, status: "working"
-page: pagePath;,
-anchor: url.startsWith("#") ? url : undefined});
+export interface LinkCheckResult {
+  exists: boolean;
+  statusCode?: number;
+  error?: string;
 }
 
-// Also check for src attributes in images;
-const srcRegex = /src=[""]([^""]+)[""]/g;
-let srcMatch;
+export class LinkChecker {
+  static async checkLink(url: string): Promise<LinkCheckResult> {
+    try {
+      const response = await fetch(url, { method: "HEAD" });
+      return {
+        exists: response.ok,
+        statusCode: response.status
+      };
+    } catch (error) {
+      return {
+        exists: false,
+        error: error instanceof Error ? error.message : "Unknown error"
+      };
+    }
+  }
 
-while ((srcMatch = srcRegex.exec(pageContent)) !== null) {const url = srcMatch[1];
-const normalizedUrl = this.normalizeUrl(url, pagePath);
+  static async checkPageLinks(page: PageInfo): Promise<PageInfo> {
+    const checkedLinks = await Promise.all(
+      page.links.map(async (link) => {
+        const result = await this.checkLink(link.url);
+        return {
+          ...link,
+          error: result.exists ? undefined : result.error || "Link not found"
+        };
+      })
+    );
 
-links.push({
-url: normalizedUrl;,
-status: "working"
-page: pagePath});
+    return {
+      ...page,
+      links: checkedLinks
+    };
+  }
 }
-
-return links;
-}
-
-async checkPageExists(url: string): Promise<boolean> {
-try {
-const response = await fetch(url, { method: "HEAD" });
-return response.ok;
-} catch {return false}
-}
-
-async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {const links = this.extractLinks(pageContent, pagePath);
-const checkedLinks: LinkInfo[] = [];
-
-for (const link of links) {
-if (this.isInternalLink(link.url)) {
-const exists = await this.checkPageExists(link.url);
-if (!exists) {
-link.status = "missing";
-this.missingPages.push(link.url)}
-} else {link.status = "external"}
-
-checkedLinks.push(link);
-}
-
-return {path: pagePath, title: this.extractPageTitle(pageContent)
-links: checkedLinks, exists: true};
-}
-
-private extractPageTitle(content: string): string {const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
-return titleMatch ? titleMatch[1].trim() : "Untitled"}
-
-getSummary() {return {
-totalLinks: this.visitedUrls.size, brokenLinks: this.brokenLinks.length;,
-missingPages: this.missingPages.length, externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
-}
-
-getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
-
-getMissingPages(): string[] {return this.missingPages}
-}
-
-private extractPageTitle(content: string): string {
-const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
-return titleMatch ? titleMatch[1].trim() : "Untitled"}
-
-getSummary() {
-return {
-totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
-missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
-}
-
-getBrokenLinks(): LinkInfo[] {
-return this.brokenLinks}
-
-getMissingPages(): string[] {
-return this.missingPages}
-}
-
-export default LinkChecker;
-
