@@ -1,17 +1,17 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeftIcon; CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline',
+import { ArrowLeftIcon; CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
 export const metadata: Metadata = {
-  title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story',
-  description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
-  keywords: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations'],
-  openGraph: {,
-    title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story',
-    description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
-    type: 'article',
-    publishedTime: '2025-01-14T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
+  title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story'
+  description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.'
+  keywords: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations']
+  openGraph: {
+    title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story'
+    description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.'
+    type: 'article'
+    publishedTime: '2025-01-14T00:00:00.000Z'
+    authors: ['Zion Tech Group']
     tags: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations']
   }
 }
@@ -22,51 +22,51 @@ export default function CaseStudy() {
       <div>
         <div>
           <div>
-            <Link,
-              href="/case-studies",
+            <Link
+              href="/case-studies"
               className="inline-flex items-center text-white hover:text-gray-200 transition-colors"
             >
               <ArrowLeftIcon className="w-5 h-5 mr-2" />
-              Back to Case Studies,
+              Back to Case Studies
             </Link>
           </div>
           <div>
             <div>
               <CalendarIcon className="w-4 h-4 mr-2" />
-              January 14, 2025,
+              January 14, 2025
             </div>
             <div>
               <ClockIcon className="w-4 h-4 mr-2" />
-              12 min read,
+              12 min read
             </div>
             <div>
               <UserIcon className="w-4 h-4 mr-2" />
-              Zion Tech Group,
+              Zion Tech Group
             </div>
             <div>
               <BuildingOfficeIcon className="w-4 h-4 mr-2" />
-              Fortune 100,
+              Fortune 100
             </div>
           </div>
           <h1 className="text-4xl md: text-5xl font-black mb-6">
-            AI 2025 Ultimate Transformation: 50,000% ROI Success Story,
+            AI 2025 Ultimate Transformation: 50,000% ROI Success Story
           </h1>
           <p>
-            Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation,
-            revolutionizing operations across 47 facilities worldwide.,
+            Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation
+            revolutionizing operations across 47 facilities worldwide.
           </p>
           <div>
             <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-bold">
-              50,000% ROI,
+              50,000% ROI
             </span>
             <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">
-              Fortune 100,
+              Fortune 100
             </span>
             <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">
-              Manufacturing,
+              Manufacturing
             </span>
             <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">
-              AI Transformation,
+              AI Transformation
             </span>
           </div>
         </div>
@@ -78,9 +78,9 @@ export default function CaseStudy() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
             <p>
-              A Fortune 100 global manufacturing conglomerate achieved an unprecedented <strong>50,000% ROI</strong> through comprehensive AI transformation,
-              revolutionizing their operations across 47 facilities worldwide. This case study details the complete transformation journey,
-              from initial assessment to full-scale implementation of autonomous business systems.,
+              A Fortune 100 global manufacturing conglomerate achieved an unprecedented <strong>50,000% ROI</strong> through comprehensive AI transformation
+              revolutionizing their operations across 47 facilities worldwide. This case study details the complete transformation journey
+              from initial assessment to full-scale implementation of autonomous business systems.
             </p>
             <div>
               <div>
@@ -131,7 +131,7 @@ export default function CaseStudy() {
           <h2>The Solution</h2>
           <h3>Comprehensive AI Transformation Strategy</h3>
           <p>
-            Zion Tech Group designed and implemented a complete AI ecosystem across all manufacturing operations:,
+            Zion Tech Group designed and implemented a complete AI ecosystem across all manufacturing operations:
           </p>
           <div>
             <div>
@@ -337,8 +337,8 @@ export default function CaseStudy() {
           </div>
           <h2>Conclusion</h2>
           <p>
-            This case study demonstrates the transformative power of comprehensive AI implementation in manufacturing.,
-            The 50,000% ROI achieved by this Fortune 100 company showcases the potential for AI to revolutionize entire industries.,
+            This case study demonstrates the transformative power of comprehensive AI implementation in manufacturing.
+            The 50,000% ROI achieved by this Fortune 100 company showcases the potential for AI to revolutionize entire industries.
           </p>
           <div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Key Takeaways</h3>
@@ -352,7 +352,7 @@ export default function CaseStudy() {
           {/* Client Testimonial */}
           <div>
             <blockquote className="text-lg italic mb-4">
-              "The AI transformation with Zion Tech Group has been nothing short of revolutionary. We've achieved results that exceeded our wildest expectations. The 50,000% ROI speaks for itself, but the real value is in the operational excellence and competitive advantage we've gained. This partnership has positioned us as the industry leader for the next decade.",
+              "The AI transformation with Zion Tech Group has been nothing short of revolutionary. We've achieved results that exceeded our wildest expectations. The 50,000% ROI speaks for itself, but the real value is in the operational excellence and competitive advantage we've gained. This partnership has positioned us as the industry leader for the next decade."
             </blockquote>
             <cite className="text-sm opacity-90">— CEO, Global Manufacturing Conglomerate</cite>
           </div>
@@ -360,21 +360,21 @@ export default function CaseStudy() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Ready to Start Your AI Transformation?</h3>
             <p>
-              If your organization is ready to embark on a similar transformation journey, Zion Tech Group can help.,
-              Our proven methodology, experienced team, and track record of success make us the ideal partner for your AI transformation.,
+              If your organization is ready to embark on a similar transformation journey, Zion Tech Group can help.
+              Our proven methodology, experienced team, and track record of success make us the ideal partner for your AI transformation.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-colors text-center"
               >
-                Contact Our Team,
+                Contact Our Team
               </Link>
-              <Link,
-                href="/tools/ai-roi-calculator",
+              <Link
+                href="/tools/ai-roi-calculator"
                 className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
-                Calculate Your ROI,
+                Calculate Your ROI
               </Link>
             </div>
           </div>

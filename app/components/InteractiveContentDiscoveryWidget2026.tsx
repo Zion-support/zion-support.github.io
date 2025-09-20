@@ -7,11 +7,11 @@ export default function InteractiveContentDiscoveryWidget2026() {
         {/* Header */}
         <div>
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
-            Discover Your Perfect AI 2026 Content,
+            Discover Your Perfect AI 2026 Content
           </h2>
           <p>
-            Explore our comprehensive library of AI 2026 insights, guides, and breakthrough content,
-            tailored to your business needs and interests.,
+            Explore our comprehensive library of AI 2026 insights, guides, and breakthrough content
+            tailored to your business needs and interests.
           </p>
         </div>
         {/* Interactive Content Categories */}
@@ -21,13 +21,13 @@ export default function InteractiveContentDiscoveryWidget2026() {
             <div className="text-3xl mb-4">🤖</div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">Autonomous Systems</h3>
             <p>
-              Self-managing AI systems and autonomous business operations,
+              Self-managing AI systems and autonomous business operations
             </p>
-            <Link,
-              href="/blog/ai-2026-next-generation-autonomous-business-systems-revolution",
+            <Link
+              href="/blog/ai-2026-next-generation-autonomous-business-systems-revolution"
               className="text-purple-600 font-semibold text-sm hover: text-purple-800 transition-colors"
             >
-              Explore Content →,
+              Explore Content →
             </Link>
           </div>
           {/* Quantum AI */}
@@ -35,13 +35,13 @@ export default function InteractiveContentDiscoveryWidget2026() {
             <div className="text-3xl mb-4">⚛️</div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">Quantum AI</h3>
             <p>
-              Quantum computing and machine learning breakthroughs,
+              Quantum computing and machine learning breakthroughs
             </p>
-            <Link,
-              href="/blog/ai-2026-quantum-machine-learning-business-breakthrough",
+            <Link
+              href="/blog/ai-2026-quantum-machine-learning-business-breakthrough"
               className="text-purple-600 font-semibold text-sm hover: text-purple-800 transition-colors"
             >
-              Explore Content →,
+              Explore Content →
             </Link>
           </div>
           {/* Enterprise Automation */}
@@ -49,13 +49,13 @@ export default function InteractiveContentDiscoveryWidget2026() {
             <div className="text-3xl mb-4">🏢</div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">Enterprise Automation</h3>
             <p>
-              Complete automation strategies and implementation guides,
+              Complete automation strategies and implementation guides
             </p>
-            <Link,
-              href="/blog/ai-2026-enterprise-automation-breakthrough-ultimate-guide",
+            <Link
+              href="/blog/ai-2026-enterprise-automation-breakthrough-ultimate-guide"
               className="text-purple-600 font-semibold text-sm hover: text-purple-800 transition-colors"
             >
-              Explore Content →,
+              Explore Content →
             </Link>
           </div>
           {/* AI Tools & Assessments */}
@@ -63,13 +63,13 @@ export default function InteractiveContentDiscoveryWidget2026() {
             <div className="text-3xl mb-4">🔧</div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">AI Tools & Assessments</h3>
             <p>
-              Interactive tools and readiness assessments,
+              Interactive tools and readiness assessments
             </p>
-            <Link,
-              href="/tools",
+            <Link
+              href="/tools"
               className="text-purple-600 font-semibold text-sm hover: text-purple-800 transition-colors"
             >
-              Explore Tools →,
+              Explore Tools →
             </Link>
           </div>
         </div>
@@ -86,13 +86,13 @@ export default function InteractiveContentDiscoveryWidget2026() {
                 </div>
               </div>
               <p>
-                Discover how self-managing AI systems will revolutionize enterprise operations with predictive decision-making.,
+                Discover how self-managing AI systems will revolutionize enterprise operations with predictive decision-making.
               </p>
-              <Link,
-                href="/blog/ai-2026-next-generation-autonomous-business-systems-revolution",
+              <Link
+                href="/blog/ai-2026-next-generation-autonomous-business-systems-revolution"
                 className="text-purple-600 font-semibold text-sm hover: text-purple-800 transition-colors"
               >
-                Read Full Article →,
+                Read Full Article →
               </Link>
             </div>
             <div>
@@ -104,13 +104,13 @@ export default function InteractiveContentDiscoveryWidget2026() {
                 </div>
               </div>
               <p>
-                Explore how quantum algorithms will transform business optimization with unprecedented computational power.,
+                Explore how quantum algorithms will transform business optimization with unprecedented computational power.
               </p>
-              <Link,
-                href="/blog/ai-2026-quantum-machine-learning-business-breakthrough",
+              <Link
+                href="/blog/ai-2026-quantum-machine-learning-business-breakthrough"
                 className="text-purple-600 font-semibold text-sm hover: text-purple-800 transition-colors"
               >
-                Read Full Article →,
+                Read Full Article →
               </Link>
             </div>
             <div>
@@ -122,13 +122,13 @@ export default function InteractiveContentDiscoveryWidget2026() {
                 </div>
               </div>
               <p>
-                Complete guide to enterprise automation breakthrough with implementation frameworks and strategies.,
+                Complete guide to enterprise automation breakthrough with implementation frameworks and strategies.
               </p>
-              <Link,
-                href="/blog/ai-2026-enterprise-automation-breakthrough-ultimate-guide",
+              <Link
+                href="/blog/ai-2026-enterprise-automation-breakthrough-ultimate-guide"
                 className="text-purple-600 font-semibold text-sm hover: text-purple-800 transition-colors"
               >
-                Read Full Article →,
+                Read Full Article →
               </Link>
             </div>
           </div>
@@ -138,20 +138,20 @@ export default function InteractiveContentDiscoveryWidget2026() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Ready to Start Your AI Journey?</h3>
             <p>
-              Take our AI readiness assessment and discover personalized recommendations for your business.,
+              Take our AI readiness assessment and discover personalized recommendations for your business.
             </p>
             <div>
-              <Link,
-                href="/tools/ai-transformation-readiness-assessment",
+              <Link
+                href="/tools/ai-transformation-readiness-assessment"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Take AI Readiness Assessment,
+                Take AI Readiness Assessment
               </Link>
-              <Link,
-                href="/blog",
+              <Link
+                href="/blog"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Browse All Content,
+                Browse All Content
               </Link>
             </div>
           </div>

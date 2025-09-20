@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata = {
-  title: 'Enterprise AI Governance Blueprint 2026 | Zion Tech Group',
+  title: 'Enterprise AI Governance Blueprint 2026 | Zion Tech Group'
   description:
     'Practical governance for AI systems in 2026: policies, controls, evals, and risk management to ship trustworthy AI at scale.'
 }
@@ -12,16 +12,16 @@ export default function EnterpriseAIGovernance2026Page() {
         <p className="text-sm font-semibold text-purple-700">Blueprint • 2026</p>
         <h1 className="text-4xl font-bold text-gray-900 mt-2">Enterprise AI Governance Blueprint 2026</h1>
         <p>
-          A field-tested blueprint for establishing outcome-driven AI governance across the enterprise: policy-as-code,
-          evaluation-first development, model and data controls, monitoring, and risk workflows that keep velocity high,
-          without compromising safety.,
+          A field-tested blueprint for establishing outcome-driven AI governance across the enterprise: policy-as-code
+          evaluation-first development, model and data controls, monitoring, and risk workflows that keep velocity high
+          without compromising safety.
         </p>
       </header>
       <section className="prose prose-lg max-w-none">
         <h2>Why governance now</h2>
         <p>
-          As AI systems automate more decisions, organizations need consistent guardrails that translate business risk into,
-          technical controls. This blueprint focuses on measurable outcomes, lightweight processes, and automation.,
+          As AI systems automate more decisions, organizations need consistent guardrails that translate business risk into
+          technical controls. This blueprint focuses on measurable outcomes, lightweight processes, and automation.
         </p>
         <h3>Core principles</h3>
         <ul>
@@ -41,9 +41,9 @@ export default function EnterpriseAIGovernance2026Page() {
         </ol>
         <h3>Quick start</h3>
         <p>
-          Start by defining your critical use cases and risks, then wire evaluations into CI. Add a policy layer for,
-          prompts and tools, and standardize deployment through the registry. Iterate with weekly governance reviews,
-          focused on real incidents and improvements.,
+          Start by defining your critical use cases and risks, then wire evaluations into CI. Add a policy layer for
+          prompts and tools, and standardize deployment through the registry. Iterate with weekly governance reviews
+          focused on real incidents and improvements.
         </p>
       </section>
       <footer className="mt-12 flex items-center gap-4">

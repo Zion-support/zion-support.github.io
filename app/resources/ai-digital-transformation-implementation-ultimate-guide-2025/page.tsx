@@ -2,15 +2,15 @@ import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
 export const metadata: Metadata = {
-  title: 'AI Digital Transformation Implementation Ultimate Guide 2025: Complete Roadmap to 30,000% ROI',
-  description: 'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results. Complete roadmap to 30,000% ROI.',
-  keywords: ['Implementation GuideDigital TransformationROIStrategy', 'Framework30,000% ROI'],
-  openGraph: {,
-    title: 'AI Digital Transformation Implementation Ultimate Guide 2025: Complete Roadmap to 30,000% ROI',
-    description: 'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results.',
-    type: 'article',
-    publishedTime: '2025-01-17T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
+  title: 'AI Digital Transformation Implementation Ultimate Guide 2025: Complete Roadmap to 30,000% ROI'
+  description: 'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results. Complete roadmap to 30,000% ROI.'
+  keywords: ['Implementation GuideDigital TransformationROIStrategy', 'Framework30,000% ROI']
+  openGraph: {
+    title: 'AI Digital Transformation Implementation Ultimate Guide 2025: Complete Roadmap to 30,000% ROI'
+    description: 'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results.'
+    type: 'article'
+    publishedTime: '2025-01-17T00:00:00.000Z'
+    authors: ['Zion Tech Group']
     tags: ['Implementation GuideDigital TransformationROIStrategy']
   }
 }
@@ -25,23 +25,23 @@ export default function AIDigitalTransformationImplementationGuidePage() {
               <span className="text-sm font-medium">📚 ULTIMATE GUIDE</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Digital Transformation Implementation Ultimate Guide 2025,
+              AI Digital Transformation Implementation Ultimate Guide 2025
             </h1>
             <p>
-              Complete Roadmap to 30,000% ROI,
+              Complete Roadmap to 30,000% ROI
             </p>
             <div>
-              <Link,
-                href="/services",
+              <Link
+                href="/services"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Implementation Help,
+                Get Implementation Help
               </Link>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                Contact Our Experts,
+                Contact Our Experts
               </Link>
             </div>
           </div>
@@ -107,13 +107,13 @@ export default function AIDigitalTransformationImplementationGuidePage() {
             <div>
               <h3 className="text-lg font-semibold text-blue-800 mb-2">Executive Summary</h3>
               <p>
-                This comprehensive guide provides a complete roadmap for implementing AI-driven digital transformation that delivers extraordinary ROI. Based on analysis of 500+ successful transformations, this guide reveals the strategies, technologies, and methodologies that enable organizations to achieve 30,000% ROI through strategic AI implementation.,
+                This comprehensive guide provides a complete roadmap for implementing AI-driven digital transformation that delivers extraordinary ROI. Based on analysis of 500+ successful transformations, this guide reveals the strategies, technologies, and methodologies that enable organizations to achieve 30,000% ROI through strategic AI implementation.
               </p>
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">The AI Digital Transformation Landscape</h2>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Market Overview</h3>
             <p>
-              The AI digital transformation market has reached $2.8 trillion in 2025, with enterprise adoption accelerating rapidly. Key trends include: ,
+              The AI digital transformation market has reached $2.8 trillion in 2025, with enterprise adoption accelerating rapidly. Key trends include: 
             </p>
             <ul className="list-disc list-inside text-gray-700 mb-8 space-y-2">
               <li><strong>AI-First Strategies:</strong> 98% of Fortune 500 companies have AI initiatives</li>
@@ -366,7 +366,7 @@ export default function AIDigitalTransformationImplementationGuidePage() {
               </ol>
             </div>
             <p>
-              The AI digital transformation revolution is here, and organizations that embrace it will achieve extraordinary success. The question isn't whether to transform, but how quickly you can achieve it.,
+              The AI digital transformation revolution is here, and organizations that embrace it will achieve extraordinary success. The question isn't whether to transform, but how quickly you can achieve it.
             </p>
           </div>
         </div>
@@ -376,20 +376,20 @@ export default function AIDigitalTransformationImplementationGuidePage() {
         <div>
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Transformation?</h2>
           <p>
-            Get expert guidance on implementing AI-driven digital transformation that delivers extraordinary ROI.,
+            Get expert guidance on implementing AI-driven digital transformation that delivers extraordinary ROI.
           </p>
           <div>
-            <Link,
-              href="/services",
+            <Link
+              href="/services"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Free Consultation,
+              Get Free Consultation
             </Link>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
-              Contact Our Experts,
+              Contact Our Experts
             </Link>
           </div>
         </div>

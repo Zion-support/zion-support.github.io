@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata: Metadata = {
-  title: 'Quantum Computing Business Applications 2025: The Ultimate Breakthrough Guide',
-  description: 'Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success.',
+  title: 'Quantum Computing Business Applications 2025: The Ultimate Breakthrough Guide'
+  description: 'Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success.'
   keywords: ['quantum computingbusiness applicationsAIinnovation', 'technology2025']
 }
 export default function QuantumComputingBusinessApplicationsPage() {
@@ -24,23 +24,23 @@ export default function QuantumComputingBusinessApplicationsPage() {
               <span className="text-sm font-medium">⚛️ QUANTUM BREAKTHROUGH</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Quantum Computing Business Applications 2025,
+              Quantum Computing Business Applications 2025
             </h1>
             <p>
-              Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success.,
+              Discover how quantum computing is revolutionizing business operations in 2025. Real-world applications, case studies, and implementation strategies for enterprise success.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Quantum Assessment,
+                Get Quantum Assessment
               </Link>
-              <Link,
-                href="/services",
+              <Link
+                href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                Explore Quantum Services,
+                Explore Quantum Services
               </Link>
             </div>
           </div>
@@ -52,14 +52,14 @@ export default function QuantumComputingBusinessApplicationsPage() {
           <div>
             <h2>The Quantum Revolution is Here: Transform Your Business Today</h2>
             <p>
-              The year 2025 marks a pivotal moment in business history. Quantum computing has moved from experimental labs to real-world business applications, delivering unprecedented computational power that's revolutionizing industries across the globe.,
+              The year 2025 marks a pivotal moment in business history. Quantum computing has moved from experimental labs to real-world business applications, delivering unprecedented computational power that's revolutionizing industries across the globe.
             </p>
             <p>
-              Companies leveraging quantum computing are seeing <strong>1000x performance improvements</strong> <strong>90% reduction in complex problem-solving time</strong> and <strong>$500M+ in new revenue opportunities</strong>. This isn't the future – it's happening now.,
+              Companies leveraging quantum computing are seeing <strong>1000x performance improvements</strong> <strong>90% reduction in complex problem-solving time</strong> and <strong>$500M+ in new revenue opportunities</strong>. This isn't the future – it's happening now.
             </p>
             <h3>🌟 What is Quantum Computing?</h3>
             <p>
-              Quantum computing harnesses the principles of quantum mechanics to process information in ways that classical computers cannot. Unlike traditional bits that exist in either 0 or 1 states, quantum bits (qubits) can exist in multiple states simultaneously, enabling exponential computational power.,
+              Quantum computing harnesses the principles of quantum mechanics to process information in ways that classical computers cannot. Unlike traditional bits that exist in either 0 or 1 states, quantum bits (qubits) can exist in multiple states simultaneously, enabling exponential computational power.
             </p>
             <h3>🏢 Real-World Business Applications</h3>
             <div>
@@ -153,20 +153,20 @@ export default function QuantumComputingBusinessApplicationsPage() {
             <div>
               <h3>Ready for the Quantum Revolution?</h3>
               <p>
-                The quantum computing revolution is happening now. Companies that act today will dominate tomorrow. Don't let your competitors get ahead.,
+                The quantum computing revolution is happening now. Companies that act today will dominate tomorrow. Don't let your competitors get ahead.
               </p>
               <div>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300"
                 >
-                  Get Quantum Assessment,
+                  Get Quantum Assessment
                 </Link>
-                <Link,
-                  href="/services",
+                <Link
+                  href="/services"
                   className="border-2 border-indigo-500 text-indigo-500 px-8 py-4 rounded-lg font-bold hover:bg-indigo-500 hover:text-white transition-all duration-300"
                 >
-                  Explore Quantum Services,
+                  Explore Quantum Services
                 </Link>
               </div>
             </div>

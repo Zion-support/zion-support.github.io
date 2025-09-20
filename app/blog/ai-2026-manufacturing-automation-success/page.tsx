@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'AI 2026 Manufacturing Automation: $50M Success Story',
-  description: 'How a Fortune 500 manufacturer achieved $50M in annual savings through AI-driven automation, predictive maintenance, and intelligent quality control.',
+  title: 'AI 2026 Manufacturing Automation: $50M Success Story'
+  description: 'How a Fortune 500 manufacturer achieved $50M in annual savings through AI-driven automation, predictive maintenance, and intelligent quality control.'
   keywords: ['manufacturing AIpredictive maintenancequality controlautomation', 'AI case studymanufacturing 2026']
 }
 export default function AI2026ManufacturingAutomationSuccess() {
@@ -20,11 +20,11 @@ export default function AI2026ManufacturingAutomationSuccess() {
             <span>2026</span>
           </div>
           <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
-            AI 2026 Manufacturing Automation: $50M Success Story,
+            AI 2026 Manufacturing Automation: $50M Success Story
           </h1>
           <p>
-            How a Fortune 500 manufacturer transformed their operations with AI, achieving $50M in annual savings,
-            through predictive maintenance, intelligent quality control, and autonomous process optimization.,
+            How a Fortune 500 manufacturer transformed their operations with AI, achieving $50M in annual savings
+            through predictive maintenance, intelligent quality control, and autonomous process optimization.
           </p>
         </div>
         {/* Executive Summary */}
@@ -48,10 +48,10 @@ export default function AI2026ManufacturingAutomationSuccess() {
           </div>
           <div>
             <p>
-              This case study details how a leading automotive manufacturer successfully implemented AI-driven,
-              automation across their production facilities, resulting in unprecedented operational efficiency,
-              and cost savings. The implementation spanned predictive maintenance, quality control, supply chain,
-              optimization, and autonomous process control.,
+              This case study details how a leading automotive manufacturer successfully implemented AI-driven
+              automation across their production facilities, resulting in unprecedented operational efficiency
+              and cost savings. The implementation spanned predictive maintenance, quality control, supply chain
+              optimization, and autonomous process control.
             </p>
           </div>
         </section>
@@ -358,20 +358,20 @@ export default function AI2026ManufacturingAutomationSuccess() {
           <div>
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Manufacturing Operations?</h2>
             <p>
-              Learn how AI can revolutionize your manufacturing processes and deliver similar results.,
+              Learn how AI can revolutionize your manufacturing processes and deliver similar results.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
-                Schedule Consultation,
+                Schedule Consultation
               </Link>
-              <Link,
-                href="/services/manufacturing-ai",
+              <Link
+                href="/services/manufacturing-ai"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
               >
-                View Manufacturing AI Services,
+                View Manufacturing AI Services
               </Link>
             </div>
           </div>

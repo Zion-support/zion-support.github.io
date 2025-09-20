@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 export const metadata = {
-  title: 'Guide: Enterprise AI Governance (2026)',
-  description: ,
+  title: 'Guide: Enterprise AI Governance (2026)'
+  description: 
     'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.'}
 export default function Page() {
   return (
@@ -11,7 +11,7 @@ export default function Page() {
         <div>
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Enterprise AI Governance (2026)</h1>
           <p>
-            A hands-on guide for implementing controls that scale with your AI adoption.,
+            A hands-on guide for implementing controls that scale with your AI adoption.
           </p>
         </div>
       </section>
@@ -19,8 +19,8 @@ export default function Page() {
         <div>
           <h2>What You Will Build</h2>
           <p>
-            A governance control plane that integrates with CI/CD, evaluation harnesses, and runtime gateways,
-            enabling provable compliance and rapid iteration.,
+            A governance control plane that integrates with CI/CD, evaluation harnesses, and runtime gateways
+            enabling provable compliance and rapid iteration.
           </p>
           <h2>Prerequisites</h2>
           <ul>

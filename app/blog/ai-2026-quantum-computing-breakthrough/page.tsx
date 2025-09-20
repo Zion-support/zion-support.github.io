@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 export const metadata: Metadata = {
-  title: 'AI 2026: Quantum Computing Breakthrough - Zion Tech Group',
-  description: 'Explore the revolutionary quantum computing breakthroughs that will transform AI and enterprise computing in 2026. Quantum supremacy, quantum AI, and practical applications.',
+  title: 'AI 2026: Quantum Computing Breakthrough - Zion Tech Group'
+  description: 'Explore the revolutionary quantum computing breakthroughs that will transform AI and enterprise computing in 2026. Quantum supremacy, quantum AI, and practical applications.'
   keywords: ['quantum computing 2026quantum AIquantum supremacyquantum algorithms', 'enterprise quantum']
 }
 export default function AI2026QuantumComputingBreakthrough() {
@@ -13,14 +13,14 @@ export default function AI2026QuantumComputingBreakthrough() {
           {/* Header */}
           <div>
             <div>
-              🔬 Quantum Research • December 2025,
+              🔬 Quantum Research • December 2025
             </div>
             <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
-              AI 2026: Quantum Computing Breakthrough,
+              AI 2026: Quantum Computing Breakthrough
             </h1>
             <p>
-              The definitive guide to quantum computing breakthroughs that will revolutionize AI,
-              cryptography, and enterprise computing in 2026 and beyond.,
+              The definitive guide to quantum computing breakthroughs that will revolutionize AI
+              cryptography, and enterprise computing in 2026 and beyond.
             </p>
           </div>
           {/* Quantum Supremacy Alert */}
@@ -30,8 +30,8 @@ export default function AI2026QuantumComputingBreakthrough() {
               <h2 className="text-2xl font-bold">Quantum Supremacy Achieved</h2>
             </div>
             <p>
-              By 2026, quantum computers will solve problems that are impossible for classical computers,
-              ushering in a new era of computational capabilities.,
+              By 2026, quantum computers will solve problems that are impossible for classical computers
+              ushering in a new era of computational capabilities.
             </p>
             <div>
               <div>
@@ -58,8 +58,8 @@ export default function AI2026QuantumComputingBreakthrough() {
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">Quantum Neural Networks</h3>
                     <p>
-                      Quantum-enhanced neural networks that leverage quantum superposition and entanglement,
-                      to achieve unprecedented learning capabilities and computational efficiency.,
+                      Quantum-enhanced neural networks that leverage quantum superposition and entanglement
+                      to achieve unprecedented learning capabilities and computational efficiency.
                     </p>
                     <ul className="grid md: grid-cols-2 gap-2 text-sm text-gray-600">
                       <li>• Exponential speedup in training</li>
@@ -76,8 +76,8 @@ export default function AI2026QuantumComputingBreakthrough() {
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">Quantum Cryptography</h3>
                     <p>
-                      Unbreakable encryption methods using quantum key distribution and post-quantum cryptography,
-                      to secure enterprise data and communications.,
+                      Unbreakable encryption methods using quantum key distribution and post-quantum cryptography
+                      to secure enterprise data and communications.
                     </p>
                     <ul className="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
                       <li>• Quantum key distribution (QKD)</li>
@@ -94,8 +94,8 @@ export default function AI2026QuantumComputingBreakthrough() {
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">Quantum Optimization</h3>
                     <p>
-                      Quantum algorithms that solve complex optimization problems in logistics, finance,
-                      and resource allocation with exponential speed improvements.,
+                      Quantum algorithms that solve complex optimization problems in logistics, finance
+                      and resource allocation with exponential speed improvements.
                     </p>
                     <ul className="grid md: grid-cols-2 gap-2 text-sm text-gray-600">
                       <li>• Supply chain optimization</li>
@@ -116,12 +116,12 @@ export default function AI2026QuantumComputingBreakthrough() {
                 <div className="text-4xl mb-4">🏦</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Financial Services</h3>
                 <p>
-                  Quantum algorithms for risk analysis, fraud detection, and high-frequency trading,
-                  with millisecond response times.,
+                  Quantum algorithms for risk analysis, fraud detection, and high-frequency trading
+                  with millisecond response times.
                 </p>
                 <div>
                   <div>
-                    <strong>Impact:</strong> 99.9% accuracy in fraud detection, 1000x faster risk calculations,
+                    <strong>Impact:</strong> 99.9% accuracy in fraud detection, 1000x faster risk calculations
                   </div>
                 </div>
               </div>
@@ -129,12 +129,12 @@ export default function AI2026QuantumComputingBreakthrough() {
                 <div className="text-4xl mb-4">🏭</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Manufacturing</h3>
                 <p>
-                  Quantum optimization for production scheduling, quality control, and supply chain,
-                  management across global operations.,
+                  Quantum optimization for production scheduling, quality control, and supply chain
+                  management across global operations.
                 </p>
                 <div>
                   <div>
-                    <strong>Impact:</strong> 40% reduction in production costs, 60% faster delivery times,
+                    <strong>Impact:</strong> 40% reduction in production costs, 60% faster delivery times
                   </div>
                 </div>
               </div>
@@ -142,12 +142,12 @@ export default function AI2026QuantumComputingBreakthrough() {
                 <div className="text-4xl mb-4">🧬</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Healthcare & Life Sciences</h3>
                 <p>
-                  Quantum simulation for drug discovery, molecular modeling, and personalized medicine,
-                  with unprecedented accuracy.,
+                  Quantum simulation for drug discovery, molecular modeling, and personalized medicine
+                  with unprecedented accuracy.
                 </p>
                 <div>
                   <div>
-                    <strong>Impact:</strong> 10x faster drug discovery, 95% accuracy in molecular predictions,
+                    <strong>Impact:</strong> 10x faster drug discovery, 95% accuracy in molecular predictions
                   </div>
                 </div>
               </div>
@@ -155,12 +155,12 @@ export default function AI2026QuantumComputingBreakthrough() {
                 <div className="text-4xl mb-4">🌐</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Cybersecurity</h3>
                 <p>
-                  Quantum-resistant encryption and quantum-enhanced threat detection to protect,
-                  against next-generation cyber attacks.,
+                  Quantum-resistant encryption and quantum-enhanced threat detection to protect
+                  against next-generation cyber attacks.
                 </p>
                 <div>
                   <div>
-                    <strong>Impact:</strong> Unbreakable encryption, 99.99% threat detection accuracy,
+                    <strong>Impact:</strong> Unbreakable encryption, 99.99% threat detection accuracy
                   </div>
                 </div>
               </div>
@@ -206,20 +206,20 @@ export default function AI2026QuantumComputingBreakthrough() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Prepare for the Quantum Revolution</h2>
             <p>
-              Don't get left behind in the quantum computing era. Start your transformation today.,
+              Don't get left behind in the quantum computing era. Start your transformation today.
             </p>
             <div>
-              <Link,
-                href="/services/quantum-computing",
+              <Link
+                href="/services/quantum-computing"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Explore Quantum Solutions,
+                Explore Quantum Solutions
               </Link>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                Schedule Quantum Consultation,
+                Schedule Quantum Consultation
               </Link>
             </div>
           </div>

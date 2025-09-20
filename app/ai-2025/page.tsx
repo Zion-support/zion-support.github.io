@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'AI 2025 - Revolutionary AI Solutions | Zion Tech Group',
-  description: 'Discover the latest AI innovations and solutions for 2025. Advanced neural networks, automation, and cutting-edge technology.',
+  title: 'AI 2025 - Revolutionary AI Solutions | Zion Tech Group'
+  description: 'Discover the latest AI innovations and solutions for 2025. Advanced neural networks, automation, and cutting-edge technology.'
   keywords: ['AI 2025artificial intelligenceneural networksautomation', 'machine learning']
 }
 export default function AI2025Page() {
@@ -19,11 +19,11 @@ export default function AI2025Page() {
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
         <div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            AI 2025 Revolution,
+            AI 2025 Revolution
           </h1>
           <p>
-            Experience the future of artificial intelligence with our comprehensive suite of,
-            AI solutions, tools, and technologies designed for 2025 and beyond.,
+            Experience the future of artificial intelligence with our comprehensive suite of
+            AI solutions, tools, and technologies designed for 2025 and beyond.
           </p>
           <div>
             <Link
@@ -50,7 +50,7 @@ export default function AI2025Page() {
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Advanced Neural Networks</h3>
               <p>
-                Next-generation neural network architectures with unprecedented accuracy and efficiency.,
+                Next-generation neural network architectures with unprecedented accuracy and efficiency.
               </p>
               <Link href="/ai-2025/neural-networks" className="text-purple-600 font-semibold hover:text-purple-800">
                 Learn More →
@@ -60,7 +60,7 @@ export default function AI2025Page() {
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Intelligent Automation</h3>
               <p>
-                AI-powered automation solutions that learn, adapt, and optimize business processes.,
+                AI-powered automation solutions that learn, adapt, and optimize business processes.
               </p>
               <Link href="/ai-2025/automation" className="text-purple-600 font-semibold hover:text-purple-800">
                 Learn More →
@@ -70,7 +70,7 @@ export default function AI2025Page() {
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Analytics Revolution</h3>
               <p>
-                Real-time analytics and predictive intelligence for data-driven decision making.,
+                Real-time analytics and predictive intelligence for data-driven decision making.
               </p>
               <Link href="/ai-2025/analytics" className="text-purple-600 font-semibold hover:text-purple-800">
                 Learn More →
@@ -83,10 +83,10 @@ export default function AI2025Page() {
       <section className="bg-gray-50 py-16">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Business with AI?,
+            Ready to Transform Your Business with AI?
           </h2>
           <p>
-            Join thousands of companies already using our AI solutions to drive innovation and growth.,
+            Join thousands of companies already using our AI solutions to drive innovation and growth.
           </p>
           <Link
             href="/contact"

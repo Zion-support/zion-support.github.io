@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import SEO from '../../../components/SEO';
 export const metadata = {
-  title: 'AI 2026: Agent Fleet Management Handbook | Zion Tech Group',
+  title: 'AI 2026: Agent Fleet Management Handbook | Zion Tech Group'
   description:
     'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.'
 }
@@ -19,8 +19,8 @@ export default function AgentFleetManagementHandbook2026() {
         <div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Agent Fleet Management Handbook</h1>
           <p>
-            A practical guide to scale from dozens to thousands of agents with safety, cost,
-            and reliability guardrails.,
+            A practical guide to scale from dozens to thousands of agents with safety, cost
+            and reliability guardrails.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function AgentFleetManagementHandbook2026() {
           <div>
             <p className="mb-2 font-semibold text-purple-800">Need help operating at scale?</p>
             <Link href="/contact" className="text-purple-700 font-semibold hover: text-purple-900">
-              Talk to our platform team →,
+              Talk to our platform team →
             </Link>
           </div>
         </div>

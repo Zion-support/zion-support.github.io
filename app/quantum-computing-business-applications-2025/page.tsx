@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'Quantum Computing Business Applications 2025: Ultimate Guide',
-  description: 'Explore how quantum computing is revolutionizing business operations in 2025. Learn about practical applications, implementation strategies, and real-world success stories.',
+  title: 'Quantum Computing Business Applications 2025: Ultimate Guide'
+  description: 'Explore how quantum computing is revolutionizing business operations in 2025. Learn about practical applications, implementation strategies, and real-world success stories.'
   keywords: ['quantum computingbusiness applications2025technology innovation', 'digital transformation']
 }
 export default function QuantumComputingBusinessPage() {
@@ -24,23 +24,23 @@ export default function QuantumComputingBusinessPage() {
                 <span className="text-sm font-medium">⚛️ QUANTUM COMPUTING</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Quantum Computing Business Applications 2025,
+                Quantum Computing Business Applications 2025
               </h1>
               <p>
-                Ultimate Guide to Revolutionary Business Solutions,
+                Ultimate Guide to Revolutionary Business Solutions
               </p>
               <div>
-                <Link,
-                  href="#applications",
+                <Link
+                  href="#applications"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Explore Applications,
+                  Explore Applications
                 </Link>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Get Expert Consultation,
+                  Get Expert Consultation
                 </Link>
               </div>
             </div>
@@ -78,60 +78,60 @@ export default function QuantumComputingBusinessPage() {
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Financial Services</h3>
                 <p>
-                  Portfolio optimization, risk assessment, fraud detection, and algorithmic trading with quantum-enhanced speed.,
+                  Portfolio optimization, risk assessment, fraud detection, and algorithmic trading with quantum-enhanced speed.
                 </p>
                 <div>
-                  <strong>Impact:</strong> 40% better returns, 3-minute optimization,
+                  <strong>Impact:</strong> 40% better returns, 3-minute optimization
                 </div>
               </div>
               <div>
                 <div className="text-4xl mb-4">🚚</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Supply Chain</h3>
                 <p>
-                  Multi-vehicle routing, dynamic rebalancing, inventory management, and sustainability optimization.,
+                  Multi-vehicle routing, dynamic rebalancing, inventory management, and sustainability optimization.
                 </p>
                 <div>
-                  <strong>Impact:</strong> 25% delivery time reduction, 30% fuel savings,
+                  <strong>Impact:</strong> 25% delivery time reduction, 30% fuel savings
                 </div>
               </div>
               <div>
                 <div className="text-4xl mb-4">💊</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Drug Discovery</h3>
                 <p>
-                  Molecular simulation, protein folding, drug design, and personalized medicine development.,
+                  Molecular simulation, protein folding, drug design, and personalized medicine development.
                 </p>
                 <div>
-                  <strong>Impact:</strong> 7-year time reduction, 5 new drug candidates,
+                  <strong>Impact:</strong> 7-year time reduction, 5 new drug candidates
                 </div>
               </div>
               <div>
                 <div className="text-4xl mb-4">🔒</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Cybersecurity</h3>
                 <p>
-                  Post-quantum cryptography, quantum key distribution, threat detection, and identity verification.,
+                  Post-quantum cryptography, quantum key distribution, threat detection, and identity verification.
                 </p>
                 <div>
-                  <strong>Impact:</strong> Unbreakable encryption, enhanced security,
+                  <strong>Impact:</strong> Unbreakable encryption, enhanced security
                 </div>
               </div>
               <div>
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">AI & Machine Learning</h3>
                 <p>
-                  Quantum neural networks, optimization problems, feature selection, and accelerated model training.,
+                  Quantum neural networks, optimization problems, feature selection, and accelerated model training.
                 </p>
                 <div>
-                  <strong>Impact:</strong> 1000x speedup, 50% accuracy improvement,
+                  <strong>Impact:</strong> 1000x speedup, 50% accuracy improvement
                 </div>
               </div>
               <div>
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Energy & Utilities</h3>
                 <p>
-                  Grid optimization, renewable energy, carbon capture, and energy trading strategies.,
+                  Grid optimization, renewable energy, carbon capture, and energy trading strategies.
                 </p>
                 <div>
-                  <strong>Impact:</strong> Optimized energy distribution, reduced costs,
+                  <strong>Impact:</strong> Optimized energy distribution, reduced costs
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function QuantumComputingBusinessPage() {
                 <div className="text-4xl mb-4">📊</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Phase 1: Assessment</h3>
                 <p>
-                  Identify quantum-suitable problems, evaluate technology platforms, and assess organizational readiness.,
+                  Identify quantum-suitable problems, evaluate technology platforms, and assess organizational readiness.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li>• Problem identification</li>
@@ -159,7 +159,7 @@ export default function QuantumComputingBusinessPage() {
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Phase 2: Pilot</h3>
                 <p>
-                  Start with proof of concept projects to demonstrate value and build expertise.,
+                  Start with proof of concept projects to demonstrate value and build expertise.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li>• Small-scale testing</li>
@@ -172,7 +172,7 @@ export default function QuantumComputingBusinessPage() {
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Phase 3: Scale</h3>
                 <p>
-                  Deploy quantum solutions across the organization with full infrastructure support.,
+                  Deploy quantum solutions across the organization with full infrastructure support.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li>• Infrastructure deployment</li>
@@ -198,11 +198,11 @@ export default function QuantumComputingBusinessPage() {
                   </div>
                 </div>
                 <p>
-                  Reduced portfolio optimization time from 3 hours to 3 minutes using quantum algorithms,
-                  achieving 40% better risk-adjusted returns.,
+                  Reduced portfolio optimization time from 3 hours to 3 minutes using quantum algorithms
+                  achieving 40% better risk-adjusted returns.
                 </p>
                 <div>
-                  <strong>Technology: </strong> Quantum portfolio optimization algorithms,
+                  <strong>Technology: </strong> Quantum portfolio optimization algorithms
                 </div>
               </div>
               <div>
@@ -214,11 +214,11 @@ export default function QuantumComputingBusinessPage() {
                   </div>
                 </div>
                 <p>
-                  Achieved 25% reduction in delivery times and 30% fuel savings through quantum route optimization,
-                  for their massive logistics network.,
+                  Achieved 25% reduction in delivery times and 30% fuel savings through quantum route optimization
+                  for their massive logistics network.
                 </p>
                 <div>
-                  <strong>Technology:</strong> Quantum logistics optimization,
+                  <strong>Technology:</strong> Quantum logistics optimization
                 </div>
               </div>
               <div>
@@ -230,11 +230,11 @@ export default function QuantumComputingBusinessPage() {
                   </div>
                 </div>
                 <p>
-                  Reduced drug discovery time from 10 years to 3 years using quantum molecular simulation,
-                  identifying 5 new drug candidates.,
+                  Reduced drug discovery time from 10 years to 3 years using quantum molecular simulation
+                  identifying 5 new drug candidates.
                 </p>
                 <div>
-                  <strong>Technology: </strong> Quantum molecular simulation,
+                  <strong>Technology: </strong> Quantum molecular simulation
                 </div>
               </div>
               <div>
@@ -246,11 +246,11 @@ export default function QuantumComputingBusinessPage() {
                   </div>
                 </div>
                 <p>
-                  Achieved 1000x speedup in certain machine learning tasks and 50% improvement in model accuracy,
-                  using quantum machine learning algorithms.,
+                  Achieved 1000x speedup in certain machine learning tasks and 50% improvement in model accuracy
+                  using quantum machine learning algorithms.
                 </p>
                 <div>
-                  <strong>Technology:</strong> Quantum machine learning,
+                  <strong>Technology:</strong> Quantum machine learning
                 </div>
               </div>
             </div>
@@ -261,21 +261,21 @@ export default function QuantumComputingBusinessPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Ready to Harness Quantum Computing?</h2>
             <p>
-              Join the organizations already leveraging quantum computing to gain unprecedented competitive advantages,
-              and drive innovation in their industries.,
+              Join the organizations already leveraging quantum computing to gain unprecedented competitive advantages
+              and drive innovation in their industries.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Expert Consultation,
+                Get Expert Consultation
               </Link>
-              <Link,
-                href="/services",
+              <Link
+                href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Explore Our Services,
+                Explore Our Services
               </Link>
             </div>
           </div>

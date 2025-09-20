@@ -1,6 +1,6 @@
 import React from 'react'
 export const metadata = {
-  title: 'AI 2026: Agentic Evaluation Checklists',
+  title: 'AI 2026: Agentic Evaluation Checklists'
   description:
     'Practical checklists for red-teaming, reliability, and safety evaluations of agentic systems across the SDLC.'
 }
@@ -10,9 +10,9 @@ export default function Page() {
       <article className="prose prose-lg">
         <h1>AI 2026: Agentic Evaluation Checklists</h1>
         <p>
-          Use these evaluation checklists to systematically test agent behavior,
-          safety guardrails, and end-to-end outcomes before promotion to,
-          production.,
+          Use these evaluation checklists to systematically test agent behavior
+          safety guardrails, and end-to-end outcomes before promotion to
+          production.
         </p>
         <h2>Checklist categories</h2>
         <ul>
@@ -24,8 +24,8 @@ export default function Page() {
         </ul>
         <h2>How to apply</h2>
         <p>
-          Attach these checklists to your CI/CD gates and use automated eval,
-          harnesses to measure pass/fail thresholds aligned to SLOs.,
+          Attach these checklists to your CI/CD gates and use automated eval
+          harnesses to measure pass/fail thresholds aligned to SLOs.
         </p>
       </article>
     </main>)

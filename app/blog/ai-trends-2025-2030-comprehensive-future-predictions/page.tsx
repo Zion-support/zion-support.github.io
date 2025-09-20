@@ -1,17 +1,17 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft; Calendar, Clock, User,  Share2, BookOpen, Download, TrendingUp, Brain, Zap,  ArrowUpRight, Star, Award } from 'lucide-react',
+import { ArrowLeft; Calendar, Clock, User,  Share2, BookOpen, Download, TrendingUp, Brain, Zap,  ArrowUpRight, Star, Award } from 'lucide-react'
 export const metadata: Metadata = {
-  title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact',
-  description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.',
-  keywords: ['AI TrendsFuture TechnologyEnterprise AIPredictions', '2025-2030Quantum AIAGINeural Interfaces'],
-  openGraph: {,
-    title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact',
-    description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.',
-    type: 'article',
-    publishedTime: '2025-01-17T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
+  title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact'
+  description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.'
+  keywords: ['AI TrendsFuture TechnologyEnterprise AIPredictions', '2025-2030Quantum AIAGINeural Interfaces']
+  openGraph: {
+    title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact'
+    description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.'
+    type: 'article'
+    publishedTime: '2025-01-17T00:00:00.000Z'
+    authors: ['Zion Tech Group']
     tags: ['AI TrendsFuture TechnologyEnterprise AIPredictions', '2025-2030']
   }
 }
@@ -46,23 +46,23 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
               <span className="text-sm font-medium">FUTURE AI PREDICTIONS</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Trends 2025-2030,
+              AI Trends 2025-2030
             </h1>
             <p>
-              Comprehensive Future Predictions & Enterprise Impact,
+              Comprehensive Future Predictions & Enterprise Impact
             </p>
             <div>
               <div>
                 <Calendar className="w-4 h-4 mr-2" />
-                January 17, 2025,
+                January 17, 2025
               </div>
               <div>
                 <Clock className="w-4 h-4 mr-2" />
-                15 min read,
+                15 min read
               </div>
               <div>
                 <User className="w-4 h-4 mr-2" />
-                Zion Tech Group,
+                Zion Tech Group
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
               <Award className="w-8 h-8 mr-3 text-blue-600" />
-              Executive Summary,
+              Executive Summary
             </h2>
             <div>
               <div>
@@ -135,7 +135,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
             <ArrowUpRight className="w-8 h-8 mr-3 text-purple-600" />
-            AI Evolution Timeline 2025-2030,
+            AI Evolution Timeline 2025-2030
           </h2>
           <div>
             {/* 2025 */}
@@ -299,7 +299,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
             <Zap className="w-8 h-8 mr-3 text-yellow-600" />
-            Implementation Roadmap for Enterprises,
+            Implementation Roadmap for Enterprises
           </h2>
           <div>
             <div>
@@ -344,7 +344,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
             <Star className="w-8 h-8 mr-3 text-yellow-600" />
-            Investment Recommendations,
+            Investment Recommendations
           </h2>
           <div>
             <div>
@@ -380,20 +380,20 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         <section className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p>
-            The future belongs to those who act today. Start your AI transformation journey with expert guidance.,
+            The future belongs to those who act today. Start your AI transformation journey with expert guidance.
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Schedule Consultation,
+              Schedule Consultation
             </Link>
-            <Link,
-              href="/resources/ai-implementation-roadmap-2025",
+            <Link
+              href="/resources/ai-implementation-roadmap-2025"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Download Roadmap,
+              Download Roadmap
             </Link>
           </div>
         </section>

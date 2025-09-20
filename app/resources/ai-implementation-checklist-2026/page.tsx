@@ -2,14 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'AI Implementation Checklist 2026: Complete Guide to Success',
-  description: 'The ultimate checklist for AI implementation in 2026. Ensure your AI projects succeed with our comprehensive, step-by-step guide covering strategy, execution, and optimization.',
-  keywords: ['AI implementationAI checklistAI strategyAI project management', 'AI best practices'],
-  openGraph: {,
-    title: 'AI Implementation Checklist 2026: Complete Guide to Success',
-    description: 'The ultimate checklist for AI implementation in 2026.',
-    type: 'article',
-    publishedTime: '2025-01-17T00:00:00.000Z',
+  title: 'AI Implementation Checklist 2026: Complete Guide to Success'
+  description: 'The ultimate checklist for AI implementation in 2026. Ensure your AI projects succeed with our comprehensive, step-by-step guide covering strategy, execution, and optimization.'
+  keywords: ['AI implementationAI checklistAI strategyAI project management', 'AI best practices']
+  openGraph: {
+    title: 'AI Implementation Checklist 2026: Complete Guide to Success'
+    description: 'The ultimate checklist for AI implementation in 2026.'
+    type: 'article'
+    publishedTime: '2025-01-17T00:00:00.000Z'
     authors: ['Zion Tech Group']}
 }
 export default function AIImplementationChecklist() {
@@ -19,15 +19,15 @@ export default function AIImplementationChecklist() {
         <header className="mb-8">
           <div>
             <h1 className="text-4xl font-bold mb-4">
-              AI Implementation Checklist 2026,
+              AI Implementation Checklist 2026
             </h1>
             <p>
-              The complete guide to successful AI implementation in 2026,
+              The complete guide to successful AI implementation in 2026
             </p>
             <div>
               <p>
-                Ensure your AI projects succeed with our comprehensive, step-by-step guide,
-                covering strategy, execution, and optimization.,
+                Ensure your AI projects succeed with our comprehensive, step-by-step guide
+                covering strategy, execution, and optimization.
               </p>
             </div>
           </div>
@@ -362,27 +362,27 @@ export default function AIImplementationChecklist() {
         <div>
           <h3 className="text-xl font-semibold text-gray-900 mb-3">Need Help with Your AI Implementation?</h3>
           <p>
-            Our AI experts can guide you through every step of the implementation process.,
-            From strategy to deployment, we provide comprehensive support to ensure your success.,
+            Our AI experts can guide you through every step of the implementation process.
+            From strategy to deployment, we provide comprehensive support to ensure your success.
           </p>
           <div>
-            <Link,
-              href="/services/ai-consulting",
+            <Link
+              href="/services/ai-consulting"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
             >
-              Get Expert Guidance,
+              Get Expert Guidance
             </Link>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              Schedule Consultation,
+              Schedule Consultation
             </Link>
-            <Link,
-              href="/resources",
+            <Link
+              href="/resources"
               className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              Browse More Resources,
+              Browse More Resources
             </Link>
           </div>
         </div>

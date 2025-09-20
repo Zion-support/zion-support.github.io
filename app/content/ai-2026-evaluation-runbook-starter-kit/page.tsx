@@ -2,8 +2,8 @@ import Link from 'next/link'
 import React from 'react'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'AI 2026: Evaluation Runbook Starter Kit',
-  description: 'Standardized procedures, checklists, and templates to operate evals for autonomous agents.',
+  title: 'AI 2026: Evaluation Runbook Starter Kit'
+  description: 'Standardized procedures, checklists, and templates to operate evals for autonomous agents.'
   keywords: ['evaluationsrunbookSOPchecklist', 'autonomous agents']
 }
 export default function EvaluationRunbookStarterKitPage() {
@@ -37,10 +37,10 @@ export default function EvaluationRunbookStarterKitPage() {
           </article>
           <div>
             <Link href="/blog/ai-2026-llm-evals-maturity-model" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-700">
-              Evals Maturity Model,
+              Evals Maturity Model
             </Link>
             <Link href="/content/ai-2026-evaluation-hub" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
-              Evaluation Hub,
+              Evaluation Hub
             </Link>
           </div>
         </div>

@@ -2,19 +2,19 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-	title: 'AI 2025: Multimodal Agents in the Enterprise - Practical Guide',
+	title: 'AI 2025: Multimodal Agents in the Enterprise - Practical Guide'
 	description:
-		'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 2025 playbook with architecture and ROI.',
-	keywords: [,
-		'multimodal AIAI agentsenterprise automationcustomer experience',
+		'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 2025 playbook with architecture and ROI.'
+	keywords: [
+		'multimodal AIAI agentsenterprise automationcustomer experience'
 		'analytics2025 AI guide'
-	],
-	openGraph: {,
-		title: 'AI 2025: Multimodal Agents in the Enterprise - Practical Guide',
+	]
+	openGraph: {
+		title: 'AI 2025: Multimodal Agents in the Enterprise - Practical Guide'
 		description:
-			'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 2025 playbook with architecture and ROI.',
-		type: 'article',
-		publishedTime: '2025-09-15T00:00:00.000Z',
+			'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 2025 playbook with architecture and ROI.'
+		type: 'article'
+		publishedTime: '2025-09-15T00:00:00.000Z'
 		authors: ['Zion Tech Group']}
 }
 export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {;
@@ -24,14 +24,14 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {;
 				{/* Hero */}
 				<div>
 					<div>
-						🤖 Multimodal Agents 2025,
+						🤖 Multimodal Agents 2025
 					</div>
 					<h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-						Multimodal Agents in the Enterprise,
+						Multimodal Agents in the Enterprise
 						<span className="block text-indigo-600">A Practical 2025 Playbook</span>
 					</h1>
 					<p>
-						A step-by-step guide to designing, deploying, and scaling multimodal AI agents that understand text, images, audio, and structured data—driving measurable business outcomes.,
+						A step-by-step guide to designing, deploying, and scaling multimodal AI agents that understand text, images, audio, and structured data—driving measurable business outcomes.
 					</p>
 					<div>
 						<span>📅 September 15, 2025</span>
@@ -78,7 +78,7 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {;
 					<section id="why-now" className="mb-16">
 						<h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Why Multimodal Agents Now</h2>
 						<p>
-							Advances in foundation models, vector databases, and low-latency streaming enable agents that reason across text, images, audio, and tabular data. This unlocks cross-channel automation, better analytics, and exceptional customer experiences.,
+							Advances in foundation models, vector databases, and low-latency streaming enable agents that reason across text, images, audio, and tabular data. This unlocks cross-channel automation, better analytics, and exceptional customer experiences.
 						</p>
 					</section>
 					<section id="architecture" className="mb-16">
@@ -154,18 +154,18 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {;
 					<section id="conclusion" className="mb-4">
 						<h2 className="text-3xl font-bold text-gray-900 mb-6">✅ Conclusion</h2>
 						<p>
-							Enterprises that operationalize multimodal agents today will build durable advantages in customer experience, efficiency, and innovation velocity.,
+							Enterprises that operationalize multimodal agents today will build durable advantages in customer experience, efficiency, and innovation velocity.
 						</p>
 					</section>
 				</article>
 				{/* CTA */}
 				<div>
 					<h3 className="text-2xl font-bold mb-4">Ready to launch multimodal agents?</h3>
-					<Link,
-						href="/contact",
+					<Link
+						href="/contact"
 						className="bg-white text-indigo-700 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors inline-block"
 					>
-						Talk to our experts →,
+						Talk to our experts →
 					</Link>
 				</div>
 			</div>

@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'Quantum AI 2026: The Ultimate Business Transformation Guide',
-  description: 'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 2026. Learn about quantum AI applications, implementation strategies, and future possibilities.',
+  title: 'Quantum AI 2026: The Ultimate Business Transformation Guide'
+  description: 'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 2026. Learn about quantum AI applications, implementation strategies, and future possibilities.'
   keywords: ['Quantum ComputingAIBusiness Transformation2026 Trends', 'Innovation']
 }
 export default function QuantumAI2026Page() {
@@ -24,24 +24,24 @@ export default function QuantumAI2026Page() {
                 <span className="text-sm font-medium">⚛️ QUANTUM AI 2026</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Quantum AI 2026: The Ultimate Business Transformation,
+                Quantum AI 2026: The Ultimate Business Transformation
               </h1>
               <p>
-                Explore how quantum computing and AI are converging to create unprecedented,
-                business opportunities with exponential speedups and revolutionary capabilities.,
+                Explore how quantum computing and AI are converging to create unprecedented
+                business opportunities with exponential speedups and revolutionary capabilities.
               </p>
               <div>
-                <Link,
-                  href="#content",
+                <Link
+                  href="#content"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Read Full Guide,
+                  Read Full Guide
                 </Link>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Explore Quantum Solutions,
+                  Explore Quantum Solutions
                 </Link>
               </div>
             </div>
@@ -77,8 +77,8 @@ export default function QuantumAI2026Page() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">The Quantum AI Revolution: What's Changed in 2026</h2>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Breakthrough Achievements</h3>
               <p>
-                2026 has witnessed remarkable progress in quantum AI capabilities, with quantum machine learning,
-                quantum neural networks, and quantum optimization creating unprecedented business opportunities.,
+                2026 has witnessed remarkable progress in quantum AI capabilities, with quantum machine learning
+                quantum neural networks, and quantum optimization creating unprecedented business opportunities.
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">
                 <li><strong>Quantum Machine Learning: </strong> Algorithms leveraging quantum superposition and entanglement for exponential speedups</li>
@@ -91,8 +91,8 @@ export default function QuantumAI2026Page() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum Machine Learning (QML)</h3>
                   <p>
-                    Quantum machine learning leverages quantum mechanical properties to process information,
-                    in ways impossible with classical computers, providing exponential speedups for certain tasks.,
+                    Quantum machine learning leverages quantum mechanical properties to process information
+                    in ways impossible with classical computers, providing exponential speedups for certain tasks.
                   </p>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Quantum feature maps</li>
@@ -103,8 +103,8 @@ export default function QuantumAI2026Page() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum Optimization</h3>
                   <p>
-                    Quantum optimization solves complex business problems with exponential speedup,
-                    enabling solutions to previously intractable optimization challenges.,
+                    Quantum optimization solves complex business problems with exponential speedup
+                    enabling solutions to previously intractable optimization challenges.
                   </p>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Traveling salesman problem</li>
@@ -154,10 +154,10 @@ export default function QuantumAI2026Page() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Global Investment Bank</h3>
                   <p>
-                    <strong>Challenge:</strong> Portfolio optimization for 10,000+ assets with complex constraints.,
+                    <strong>Challenge:</strong> Portfolio optimization for 10,000+ assets with complex constraints.
                   </p>
                   <p>
-                    <strong>Solution: </strong> Implemented quantum annealing algorithms for real-time portfolio optimization.,
+                    <strong>Solution: </strong> Implemented quantum annealing algorithms for real-time portfolio optimization.
                   </p>
                   <div>
                     <div>
@@ -177,10 +177,10 @@ export default function QuantumAI2026Page() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Pharmaceutical Company</h3>
                   <p>
-                    <strong>Challenge:</strong> Accelerating drug discovery process for cancer treatments.,
+                    <strong>Challenge:</strong> Accelerating drug discovery process for cancer treatments.
                   </p>
                   <p>
-                    <strong>Solution:</strong> Deployed quantum simulation for molecular interaction modeling.,
+                    <strong>Solution:</strong> Deployed quantum simulation for molecular interaction modeling.
                   </p>
                   <div>
                     <div>
@@ -247,21 +247,21 @@ export default function QuantumAI2026Page() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with Quantum AI?</h2>
             <p>
-              Contact Zion Tech Group today to learn how we can help you implement,
-              cutting-edge quantum computing solutions that drive real business results.,
+              Contact Zion Tech Group today to learn how we can help you implement
+              cutting-edge quantum computing solutions that drive real business results.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Started Today,
+                Get Started Today
               </Link>
-              <Link,
-                href="/services/quantum-technology",
+              <Link
+                href="/services/quantum-technology"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                View Quantum Services,
+                View Quantum Services
               </Link>
             </div>
           </div>

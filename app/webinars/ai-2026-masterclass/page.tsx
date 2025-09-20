@@ -2,14 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'AI 2026 Masterclass: Transform Your Business with Next-Gen AI',
-  description: 'Join our exclusive AI 2026 Masterclass and learn how to implement cutting-edge AI solutions that drive real business results. Live session with Q&A.',
-  keywords: ['AI masterclassAI 2026AI trainingAI implementation', 'business AI'],
-  openGraph: {,
-    title: 'AI 2026 Masterclass: Transform Your Business with Next-Gen AI',
-    description: 'Join our exclusive AI 2026 Masterclass and learn how to implement cutting-edge AI solutions.',
-    type: 'event',
-    startTime: '2025-02-15T14:00:00.000Z',
+  title: 'AI 2026 Masterclass: Transform Your Business with Next-Gen AI'
+  description: 'Join our exclusive AI 2026 Masterclass and learn how to implement cutting-edge AI solutions that drive real business results. Live session with Q&A.'
+  keywords: ['AI masterclassAI 2026AI trainingAI implementation', 'business AI']
+  openGraph: {
+    title: 'AI 2026 Masterclass: Transform Your Business with Next-Gen AI'
+    description: 'Join our exclusive AI 2026 Masterclass and learn how to implement cutting-edge AI solutions.'
+    type: 'event'
+    startTime: '2025-02-15T14:00:00.000Z'
     endTime: '2025-02-15T16:00:00.000Z'}
 }
 export default function AI2026Masterclass() {
@@ -20,23 +20,23 @@ export default function AI2026Masterclass() {
           <div>
             <div>
               <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                LIVE WEBINAR,
+                LIVE WEBINAR
               </span>
               <span className="text-sm">
-                February 15, 2025 • 2: 00 PM EST,
+                February 15, 2025 • 2: 00 PM EST
               </span>
             </div>
             <h1 className="text-4xl font-bold mb-4">
-              AI 2026 Masterclass,
+              AI 2026 Masterclass
             </h1>
             <p>
-              Transform Your Business with Next-Generation AI Solutions,
+              Transform Your Business with Next-Generation AI Solutions
             </p>
             <div>
               <p>
-                Join industry experts for an exclusive deep-dive into the AI trends and technologies,
-                that will reshape business in 2026. Learn practical implementation strategies and,
-                get hands-on experience with cutting-edge AI tools.,
+                Join industry experts for an exclusive deep-dive into the AI trends and technologies
+                that will reshape business in 2026. Learn practical implementation strategies and
+                get hands-on experience with cutting-edge AI tools.
               </p>
             </div>
           </div>
@@ -48,22 +48,22 @@ export default function AI2026Masterclass() {
               <div>
                 <h3 className="font-semibold text-blue-900 mb-2">🚀 AI Trends 2026</h3>
                 <p>
-                  Discover the revolutionary AI technologies that will transform industries,
-                  from quantum AI to neural interfaces and autonomous systems.,
+                  Discover the revolutionary AI technologies that will transform industries
+                  from quantum AI to neural interfaces and autonomous systems.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-green-900 mb-2">💼 Business Implementation</h3>
                 <p>
-                  Learn proven strategies for implementing AI in your organization,
-                  including change management and ROI optimization.,
+                  Learn proven strategies for implementing AI in your organization
+                  including change management and ROI optimization.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-purple-900 mb-2">🔧 Hands-On Demos</h3>
                 <p>
-                  Get practical experience with the latest AI tools and platforms,
-                  through interactive demonstrations and workshops.,
+                  Get practical experience with the latest AI tools and platforms
+                  through interactive demonstrations and workshops.
                 </p>
               </div>
             </div>
@@ -71,22 +71,22 @@ export default function AI2026Masterclass() {
               <div>
                 <h3 className="font-semibold text-yellow-900 mb-2">📊 Real Case Studies</h3>
                 <p>
-                  Explore detailed case studies of successful AI transformations,
-                  across different industries and company sizes.,
+                  Explore detailed case studies of successful AI transformations
+                  across different industries and company sizes.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-indigo-900 mb-2">🛡️ AI Governance</h3>
                 <p>
-                  Understand the latest regulations and best practices for,
-                  responsible AI development and deployment.,
+                  Understand the latest regulations and best practices for
+                  responsible AI development and deployment.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-pink-900 mb-2">🎯 Future Planning</h3>
                 <p>
-                  Develop a roadmap for your organization's AI journey,
-                  and prepare for the next wave of innovation.,
+                  Develop a roadmap for your organization's AI journey
+                  and prepare for the next wave of innovation.
                 </p>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function AI2026Masterclass() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Opening & AI Landscape 2026 (15 min)</h3>
                   <p>
-                    Overview of revolutionary AI trends and technologies that will reshape business in 2026,
+                    Overview of revolutionary AI trends and technologies that will reshape business in 2026
                   </p>
                 </div>
                 <div className="text-sm text-gray-500">2: 00 - 2:15 PM</div>
@@ -113,7 +113,7 @@ export default function AI2026Masterclass() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Quantum AI & Neural Interfaces (20 min)</h3>
                   <p>
-                    Deep dive into cutting-edge AI technologies and their practical business applications,
+                    Deep dive into cutting-edge AI technologies and their practical business applications
                   </p>
                 </div>
                 <div className="text-sm text-gray-500">2:15 - 2:35 PM</div>
@@ -125,7 +125,7 @@ export default function AI2026Masterclass() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Implementation Strategies (25 min)</h3>
                   <p>
-                    Proven frameworks for AI implementation, including change management and ROI optimization,
+                    Proven frameworks for AI implementation, including change management and ROI optimization
                   </p>
                 </div>
                 <div className="text-sm text-gray-500">2: 35 - 3:00 PM</div>
@@ -137,7 +137,7 @@ export default function AI2026Masterclass() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Live Demo & Workshop (30 min)</h3>
                   <p>
-                    Hands-on experience with the latest AI tools and platforms,
+                    Hands-on experience with the latest AI tools and platforms
                   </p>
                 </div>
                 <div className="text-sm text-gray-500">3:00 - 3:30 PM</div>
@@ -149,7 +149,7 @@ export default function AI2026Masterclass() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Case Studies & Q&A (25 min)</h3>
                   <p>
-                    Real-world success stories and interactive Q&A session with experts,
+                    Real-world success stories and interactive Q&A session with experts
                   </p>
                 </div>
                 <div className="text-sm text-gray-500">3:30 - 3:55 PM</div>
@@ -161,7 +161,7 @@ export default function AI2026Masterclass() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Next Steps & Resources (5 min)</h3>
                   <p>
-                    Action items and additional resources to continue your AI journey,
+                    Action items and additional resources to continue your AI journey
                   </p>
                 </div>
                 <div className="text-sm text-gray-500">3:55 - 4:00 PM</div>
@@ -175,7 +175,7 @@ export default function AI2026Masterclass() {
             <div>
               <div>
                 <div>
-                  SK,
+                  SK
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Sarah Kim</h3>
@@ -183,15 +183,15 @@ export default function AI2026Masterclass() {
                 </div>
               </div>
               <p>
-                Sarah leads AI strategy for Fortune 500 companies and has implemented,
-                AI solutions that have generated over $2B in business value. She holds,
-                a PhD in Machine Learning from MIT and has published 50+ research papers.,
+                Sarah leads AI strategy for Fortune 500 companies and has implemented
+                AI solutions that have generated over $2B in business value. She holds
+                a PhD in Machine Learning from MIT and has published 50+ research papers.
               </p>
             </div>
             <div>
               <div>
                 <div>
-                  MC,
+                  MC
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Michael Chen</h3>
@@ -199,9 +199,9 @@ export default function AI2026Masterclass() {
                 </div>
               </div>
               <p>
-                Michael specializes in quantum AI and neural interfaces. He previously,
-                worked at Google DeepMind and has led breakthrough research in,
-                brain-computer interfaces and autonomous systems.,
+                Michael specializes in quantum AI and neural interfaces. He previously
+                worked at Google DeepMind and has led breakthrough research in
+                brain-computer interfaces and autonomous systems.
               </p>
             </div>
           </div>
@@ -212,19 +212,19 @@ export default function AI2026Masterclass() {
             <div>
               <h4 className="font-semibold text-blue-900 mb-2">C-Level Executives</h4>
               <p>
-                CEOs, CTOs, and other executives looking to understand AI's strategic impact,
+                CEOs, CTOs, and other executives looking to understand AI's strategic impact
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-green-900 mb-2">AI Practitioners</h4>
               <p>
-                Data scientists, ML engineers, and AI professionals seeking latest trends,
+                Data scientists, ML engineers, and AI professionals seeking latest trends
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-purple-900 mb-2">Business Leaders</h4>
               <p>
-                Product managers, consultants, and decision-makers driving AI initiatives,
+                Product managers, consultants, and decision-makers driving AI initiatives
               </p>
             </div>
           </div>
@@ -259,22 +259,22 @@ export default function AI2026Masterclass() {
         <div>
           <h2 className="text-3xl font-semibold mb-4">Ready to Transform Your Business?</h2>
           <p>
-            Join us for this exclusive masterclass and take the first step toward,
-            AI-powered transformation.,
+            Join us for this exclusive masterclass and take the first step toward
+            AI-powered transformation.
           </p>
           <div>
             <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Register Now - Free,
+              Register Now - Free
             </button>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              Contact Us,
+              Contact Us
             </Link>
           </div>
           <p>
-            Limited seats available. Registration closes February 10, 2025.,
+            Limited seats available. Registration closes February 10, 2025.
           </p>
         </div>
         <div>
@@ -283,29 +283,29 @@ export default function AI2026Masterclass() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Is this webinar free?</h3>
               <p>
-                Yes, this masterclass is completely free. We believe in democratizing AI knowledge,
-                and helping organizations succeed with AI transformation.,
+                Yes, this masterclass is completely free. We believe in democratizing AI knowledge
+                and helping organizations succeed with AI transformation.
               </p>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Will the session be recorded?</h3>
               <p>
-                Yes, all registered attendees will receive a recording of the session along with,
-                all presentation materials and resources.,
+                Yes, all registered attendees will receive a recording of the session along with
+                all presentation materials and resources.
               </p>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Do I need technical background?</h3>
               <p>
-                No technical background is required. The masterclass is designed for both technical,
-                and non-technical audiences, with content tailored to different experience levels.,
+                No technical background is required. The masterclass is designed for both technical
+                and non-technical audiences, with content tailored to different experience levels.
               </p>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Can I ask questions during the session?</h3>
               <p>
-                Absolutely! We encourage questions and have dedicated Q&A sessions throughout,
-                the masterclass. You can also submit questions in advance when you register.,
+                Absolutely! We encourage questions and have dedicated Q&A sessions throughout
+                the masterclass. You can also submit questions in advance when you register.
               </p>
             </div>
           </div>

@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata: Metadata = {
-  title: 'AI 2025 Enterprise Automation Success Stories: Ultimate Guide',
-  description: 'Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.',
+  title: 'AI 2025 Enterprise Automation Success Stories: Ultimate Guide'
+  description: 'Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.'
   keywords: ['AI automationenterprisecase studiesROI', 'success storiesFortune 500']
 }
 export default function AIEnterpriseAutomationSuccessStoriesPage() {
@@ -24,23 +24,23 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {
               <span className="text-sm font-medium">🚀 AI SUCCESS STORIES</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI 2025 Enterprise Automation Success Stories,
+              AI 2025 Enterprise Automation Success Stories
             </h1>
             <p>
-              Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.,
+              Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Free Consultation,
+                Get Free Consultation
               </Link>
-              <Link,
-                href="/services",
+              <Link
+                href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Explore Our Services,
+                Explore Our Services
               </Link>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {
           <div>
             <h2>Transform Your Business with Proven AI Automation Strategies</h2>
             <p>
-              In 2025, artificial intelligence has become the cornerstone of enterprise success. Companies that have embraced AI automation are seeing unprecedented results: <strong>300% average ROI increase</strong> <strong>85% reduction in operational costs</strong> and <strong>95% improvement in customer satisfaction</strong>.,
+              In 2025, artificial intelligence has become the cornerstone of enterprise success. Companies that have embraced AI automation are seeing unprecedented results: <strong>300% average ROI increase</strong> <strong>85% reduction in operational costs</strong> and <strong>95% improvement in customer satisfaction</strong>.
             </p>
             <h3>🏆 Fortune 500 Success Stories</h3>
             <div>
@@ -117,20 +117,20 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {
             <div>
               <h3>Ready to Transform Your Business?</h3>
               <p>
-                Don't let your competitors get ahead. The AI revolution is happening now, and companies that act today will dominate tomorrow.,
+                Don't let your competitors get ahead. The AI revolution is happening now, and companies that act today will dominate tomorrow.
               </p>
               <div>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
                 >
-                  Get Free AI Assessment,
+                  Get Free AI Assessment
                 </Link>
-                <Link,
-                  href="/case-studies",
+                <Link
+                  href="/case-studies"
                   className="border-2 border-purple-500 text-purple-500 px-8 py-4 rounded-lg font-bold hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
-                  View More Case Studies,
+                  View More Case Studies
                 </Link>
               </div>
             </div>

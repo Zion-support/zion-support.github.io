@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Agent Safety Evidence Hub',
+  title: 'AI 2026: Agent Safety Evidence Hub'
   description: 'Centralize eval results, incidents, and approvals to prove safety at scale.'
 }
 export default function Page() {

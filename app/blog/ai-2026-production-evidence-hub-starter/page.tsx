@@ -4,8 +4,8 @@ export default function Page() {
       <h1>AI 2026: Production Evidence Hub — Starter Guide</h1>
       <p className="text-gray-600">Date: 2025-09-16 • Tags: Evidence, Governance, Observability, 2026</p>
       <p>
-        Stand up a minimum viable Evidence Hub to centralize traces, eval results, policy events,
-        and scorecards. Ship faster with provable safety and compliance across agent lifecycles.,
+        Stand up a minimum viable Evidence Hub to centralize traces, eval results, policy events
+        and scorecards. Ship faster with provable safety and compliance across agent lifecycles.
       </p>
       <h2>Starter Components</h2>
       <ul>
@@ -21,8 +21,8 @@ export default function Page() {
         <li>Objective gates for production readiness</li>
       </ul>
       <p>
-        Looking for a production-ready blueprint? We can help you design and deploy an,
-        enterprise-grade Evidence Hub aligned to your risk profile.,
+        Looking for a production-ready blueprint? We can help you design and deploy an
+        enterprise-grade Evidence Hub aligned to your risk profile.
       </p>
     </main>)
 }

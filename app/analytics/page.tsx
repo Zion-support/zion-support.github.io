@@ -3,8 +3,8 @@ import Link from 'next/link'
 import SEO from '../../components/SEO'
 
 export const metadata = {
-  title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group',
-  description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.',
+  title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group'
+  description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.'
   keywords: ['analytics', 'data analytics', 'business intelligence', 'predictive analytics', 'real-time analytics']
 }
 

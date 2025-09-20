@@ -2,14 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain',
-  description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation, reducing costs by 40% and improving efficiency by 60%.',
-  keywords: ['AI transformationlogistics automationsupply chain AIcost reduction', 'efficiency gains'],
-  openGraph: {,
-    title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain',
-    description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation.',
-    type: 'article',
-    publishedTime: '2025-01-17T00:00:00.000Z',
+  title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain'
+  description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation, reducing costs by 40% and improving efficiency by 60%.'
+  keywords: ['AI transformationlogistics automationsupply chain AIcost reduction', 'efficiency gains']
+  openGraph: {
+    title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain'
+    description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation.'
+    type: 'article'
+    publishedTime: '2025-01-17T00:00:00.000Z'
     authors: ['Zion Tech Group']}
 }
 export default function GlobalLogisticsCaseStudy() {
@@ -19,10 +19,10 @@ export default function GlobalLogisticsCaseStudy() {
         <header className="mb-8">
           <div>
             <h1 className="text-4xl font-bold mb-4">
-              Global Logistics AI Transformation,
+              Global Logistics AI Transformation
             </h1>
             <p>
-              How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation,
+              How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation
             </p>
             <div>
               <div>
@@ -43,10 +43,10 @@ export default function GlobalLogisticsCaseStudy() {
         <div>
           <h2 className="text-3xl font-semibold text-gray-900 mb-4">The Challenge</h2>
           <p>
-            A leading global logistics company with operations in 150+ countries was struggling with,
-            rising operational costs, inefficient route optimization, and increasing customer demands,
-            for faster delivery times. Their legacy systems were unable to handle the complexity of,
-            modern supply chain management.,
+            A leading global logistics company with operations in 150+ countries was struggling with
+            rising operational costs, inefficient route optimization, and increasing customer demands
+            for faster delivery times. Their legacy systems were unable to handle the complexity of
+            modern supply chain management.
           </p>
           <div>
             <h3 className="font-semibold text-red-900 mb-3">Key Pain Points: </h3>
@@ -62,15 +62,15 @@ export default function GlobalLogisticsCaseStudy() {
         <div>
           <h2 className="text-3xl font-semibold text-gray-900 mb-4">Our AI Solution</h2>
           <p>
-            We implemented a comprehensive AI ecosystem that transformed every aspect of their,
-            logistics operations, from predictive analytics to autonomous decision-making systems.,
+            We implemented a comprehensive AI ecosystem that transformed every aspect of their
+            logistics operations, from predictive analytics to autonomous decision-making systems.
           </p>
           <div>
             <div>
               <h3 className="font-semibold text-blue-900 mb-3">1. Intelligent Route Optimization</h3>
               <p>
-                AI-powered algorithms that consider real-time traffic, weather, fuel costs,
-                and delivery priorities to optimize routes dynamically.,
+                AI-powered algorithms that consider real-time traffic, weather, fuel costs
+                and delivery priorities to optimize routes dynamically.
               </p>
               <ul className="list-disc list-inside text-blue-700 text-sm space-y-1">
                 <li>Real-time traffic integration</li>
@@ -82,8 +82,8 @@ export default function GlobalLogisticsCaseStudy() {
             <div>
               <h3 className="font-semibold text-green-900 mb-3">2. Predictive Inventory Management</h3>
               <p>
-                Machine learning models that predict demand patterns and optimize inventory,
-                levels across all warehouses and distribution centers.,
+                Machine learning models that predict demand patterns and optimize inventory
+                levels across all warehouses and distribution centers.
               </p>
               <ul className="list-disc list-inside text-green-700 text-sm space-y-1">
                 <li>Demand forecasting algorithms</li>
@@ -95,8 +95,8 @@ export default function GlobalLogisticsCaseStudy() {
             <div>
               <h3 className="font-semibold text-purple-900 mb-3">3. Autonomous Customer Service</h3>
               <p>
-                AI chatbots and virtual assistants that handle 80% of customer inquiries,
-                with human-level understanding and response quality.,
+                AI chatbots and virtual assistants that handle 80% of customer inquiries
+                with human-level understanding and response quality.
               </p>
               <ul className="list-disc list-inside text-purple-700 text-sm space-y-1">
                 <li>Natural language processing</li>
@@ -108,8 +108,8 @@ export default function GlobalLogisticsCaseStudy() {
             <div>
               <h3 className="font-semibold text-orange-900 mb-3">4. Predictive Maintenance</h3>
               <p>
-                IoT sensors and AI models that predict equipment failures before they occur,
-                reducing downtime and maintenance costs.,
+                IoT sensors and AI models that predict equipment failures before they occur
+                reducing downtime and maintenance costs.
               </p>
               <ul className="list-disc list-inside text-orange-700 text-sm space-y-1">
                 <li>Sensor data analysis</li>
@@ -128,8 +128,8 @@ export default function GlobalLogisticsCaseStudy() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">Discovery & Assessment (Weeks 1-4)</h3>
                 <p>
-                  Comprehensive analysis of existing systems, data flows, and operational processes.,
-                  Identified key optimization opportunities and technical requirements.,
+                  Comprehensive analysis of existing systems, data flows, and operational processes.
+                  Identified key optimization opportunities and technical requirements.
                 </p>
               </div>
             </div>
@@ -138,8 +138,8 @@ export default function GlobalLogisticsCaseStudy() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">Pilot Implementation (Weeks 5-12)</h3>
                 <p>
-                  Deployed AI solutions in select regions and warehouses to validate effectiveness,
-                  and gather performance data before full-scale rollout.,
+                  Deployed AI solutions in select regions and warehouses to validate effectiveness
+                  and gather performance data before full-scale rollout.
                 </p>
               </div>
             </div>
@@ -148,8 +148,8 @@ export default function GlobalLogisticsCaseStudy() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">Full Deployment (Weeks 13-24)</h3>
                 <p>
-                  Rolled out AI systems across all operations globally, with comprehensive,
-                  training and change management support for all employees.,
+                  Rolled out AI systems across all operations globally, with comprehensive
+                  training and change management support for all employees.
                 </p>
               </div>
             </div>
@@ -158,8 +158,8 @@ export default function GlobalLogisticsCaseStudy() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">Optimization & Scaling (Weeks 25-36)</h3>
                 <p>
-                  Continuous monitoring and optimization of AI models, with additional features,
-                  and capabilities added based on performance data and user feedback.,
+                  Continuous monitoring and optimization of AI models, with additional features
+                  and capabilities added based on performance data and user feedback.
                 </p>
               </div>
             </div>
@@ -218,19 +218,19 @@ export default function GlobalLogisticsCaseStudy() {
             <div>
               <h4 className="font-semibold text-yellow-900 mb-2">Executive Sponsorship</h4>
               <p>
-                Strong leadership support and clear communication of AI transformation goals.,
+                Strong leadership support and clear communication of AI transformation goals.
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-indigo-900 mb-2">Data Quality</h4>
               <p>
-                Comprehensive data cleaning and integration before AI model training.,
+                Comprehensive data cleaning and integration before AI model training.
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-pink-900 mb-2">Change Management</h4>
               <p>
-                Extensive training and support for employees adapting to new AI systems.,
+                Extensive training and support for employees adapting to new AI systems.
               </p>
             </div>
           </div>
@@ -242,29 +242,29 @@ export default function GlobalLogisticsCaseStudy() {
               <li className="flex items-start">
                 <span className="text-blue-600 mr-3">•</span>
                 <span className="text-gray-700">
-                  <strong>Start with pilot projects:</strong> Testing AI solutions in controlled environments,
-                  before full deployment reduces risk and builds confidence.,
+                  <strong>Start with pilot projects:</strong> Testing AI solutions in controlled environments
+                  before full deployment reduces risk and builds confidence.
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 mr-3">•</span>
                 <span className="text-gray-700">
-                  <strong>Invest in data infrastructure:</strong> High-quality, clean data is essential,
-                  for AI success. This investment pays dividends throughout the transformation.,
+                  <strong>Invest in data infrastructure:</strong> High-quality, clean data is essential
+                  for AI success. This investment pays dividends throughout the transformation.
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 mr-3">•</span>
                 <span className="text-gray-700">
-                  <strong>Focus on user adoption: </strong> The best AI system is useless without proper,
-                  training and user buy-in. Change management is critical.,
+                  <strong>Focus on user adoption: </strong> The best AI system is useless without proper
+                  training and user buy-in. Change management is critical.
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 mr-3">•</span>
                 <span className="text-gray-700">
-                  <strong>Measure everything:</strong> Comprehensive metrics and KPIs are essential,
-                  for demonstrating value and identifying optimization opportunities.,
+                  <strong>Measure everything:</strong> Comprehensive metrics and KPIs are essential
+                  for demonstrating value and identifying optimization opportunities.
                 </span>
               </li>
             </ul>
@@ -273,27 +273,27 @@ export default function GlobalLogisticsCaseStudy() {
         <div>
           <h3 className="text-xl font-semibold text-gray-900 mb-3">Ready to Transform Your Logistics Operations?</h3>
           <p>
-            Our AI experts can help you achieve similar results in your organization.,
-            From initial assessment to full implementation, we provide end-to-end support.,
+            Our AI experts can help you achieve similar results in your organization.
+            From initial assessment to full implementation, we provide end-to-end support.
           </p>
           <div>
-            <Link,
-              href="/services/ai-consulting",
+            <Link
+              href="/services/ai-consulting"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
             >
-              Start Your AI Journey,
+              Start Your AI Journey
             </Link>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              Schedule Consultation,
+              Schedule Consultation
             </Link>
-            <Link,
-              href="/resources/ai-implementation-playbook-2025",
+            <Link
+              href="/resources/ai-implementation-playbook-2025"
               className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              Download Playbook,
+              Download Playbook
             </Link>
           </div>
         </div>

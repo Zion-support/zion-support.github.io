@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'AI 2026: Operational Excellence Handbook — Running Agent Platforms',
+  title: 'AI 2026: Operational Excellence Handbook — Running Agent Platforms'
   description:
     'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.'
 }
@@ -10,8 +10,8 @@ export default function Page() {
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">AI 2026: Operational Excellence Handbook</h1>
           <p>
-            Practical SLOs, readiness checks, runbooks, and evaluation gates to keep autonomous agents safe and fast in,
-            production.,
+            Practical SLOs, readiness checks, runbooks, and evaluation gates to keep autonomous agents safe and fast in
+            production.
           </p>
         </div>
       </section>
@@ -37,9 +37,9 @@ export default function Page() {
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'AI 2026: Operational Excellence Handbook | Zion Tech Group',
+  title: 'AI 2026: Operational Excellence Handbook | Zion Tech Group'
   description:
-    'Practical handbook to run safe, reliable, and cost‑efficient autonomous agent platforms at scale.',
+    'Practical handbook to run safe, reliable, and cost‑efficient autonomous agent platforms at scale.'
   keywords: ['operational excellenceagentsreliabilitycost optimization', 'governance']
 }
 export default function OperationalExcellenceHandbookPage() {

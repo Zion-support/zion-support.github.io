@@ -2,15 +2,15 @@ import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
 export const metadata: Metadata = {
-  title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management | Zion Tech Group',
-  description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025. Learn about self-managing systems, automated decision-making, and the future of work.',
-  keywords: ['autonomous operationsAI 2025business automationenterprise management', 'future of workAI automation'],
-  openGraph: {,
-    title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management',
-    description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025.',
-    type: 'article',
-    publishedTime: '2025-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
+  title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management | Zion Tech Group'
+  description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025. Learn about self-managing systems, automated decision-making, and the future of work.'
+  keywords: ['autonomous operationsAI 2025business automationenterprise management', 'future of workAI automation']
+  openGraph: {
+    title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management'
+    description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025.'
+    type: 'article'
+    publishedTime: '2025-01-15T00:00:00.000Z'
+    authors: ['Zion Tech Group']
     tags: ['autonomous operationsAI 2025business automation']
   }
 }
@@ -25,23 +25,23 @@ export default function AutonomousBusinessOperationsPage() {
               <span className="text-sm font-medium">🤖 AUTONOMOUS REVOLUTION</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI 2025: Autonomous Business Operations,
+              AI 2025: Autonomous Business Operations
             </h1>
             <p>
-              Experience the future of enterprise management with AI-powered autonomous business operations that make independent decisions and continuously optimize performance,
+              Experience the future of enterprise management with AI-powered autonomous business operations that make independent decisions and continuously optimize performance
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Transform Your Business,
+                Transform Your Business
               </Link>
-              <Link,
-                href="/blog",
+              <Link
+                href="/blog"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
-                View All Articles,
+                View All Articles
               </Link>
             </div>
           </div>
@@ -60,9 +60,9 @@ export default function AutonomousBusinessOperationsPage() {
           <div>
             <h2 className="text-3xl font-bold mb-4 text-gray-900">The Autonomous Business Revolution</h2>
             <p>
-              Autonomous business operations represent the next evolutionary step in enterprise management.,
-              Unlike traditional automation that follows predetermined rules, autonomous systems use advanced AI,
-              to make independent decisions, adapt to changing conditions, and continuously optimize performance without human oversight.,
+              Autonomous business operations represent the next evolutionary step in enterprise management.
+              Unlike traditional automation that follows predetermined rules, autonomous systems use advanced AI
+              to make independent decisions, adapt to changing conditions, and continuously optimize performance without human oversight.
             </p>
             <div>
               <div>
@@ -234,21 +234,21 @@ export default function AutonomousBusinessOperationsPage() {
           </div>
           <div>
             <p>
-              Autonomous business operations represent the future of enterprise management. Companies that embrace this,
-              transformation today will gain significant competitive advantages in efficiency, agility, and innovation.,
+              Autonomous business operations represent the future of enterprise management. Companies that embrace this
+              transformation today will gain significant competitive advantages in efficiency, agility, and innovation.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300"
               >
-                Start Your Autonomous Journey,
+                Start Your Autonomous Journey
               </Link>
-              <Link,
-                href="/blog",
+              <Link
+                href="/blog"
                 className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
               >
-                Explore More Articles,
+                Explore More Articles
               </Link>
             </div>
           </div>

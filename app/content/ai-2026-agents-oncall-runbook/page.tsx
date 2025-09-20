@@ -2,9 +2,9 @@ import Link from 'next/link'
 import React from 'react'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'AI 2026: Agents‑On‑Call Runbook | Zion Tech Group',
+  title: 'AI 2026: Agents‑On‑Call Runbook | Zion Tech Group'
   description:
-    'Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation.',
+    'Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation.'
   keywords: ['agents-on-callai opsincident responseevals', 'runbook']
 }
 const AgentsOnCallRunbook2026: React.FC = () => {;
@@ -21,7 +21,7 @@ const AgentsOnCallRunbook2026: React.FC = () => {;
           <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Operations</p>
           <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Agents‑On‑Call Runbook</h1>
           <p>
-            Practical runbook to operate autonomous Agents‑On‑Call safely with eval gates, guardrails, and human‑in‑the‑loop.,
+            Practical runbook to operate autonomous Agents‑On‑Call safely with eval gates, guardrails, and human‑in‑the‑loop.
           </p>
         </header>
         <div>
@@ -41,13 +41,13 @@ const AgentsOnCallRunbook2026: React.FC = () => {;
           </ol>
           <h2>Policy & Evals</h2>
           <p>
-{`risk_policies: ,
-  P0:,
-    actions: [rollback, traffic_shift],
-    eval_gates: [safety_regression < 0.5, blast_radius <= service],
-  P1:,
-    actions: [cache_flush, service_restart],
-    eval_gates: [error_budget_remaining > 20%],
+{`risk_policies: 
+  P0:
+    actions: [rollback, traffic_shift]
+    eval_gates: [safety_regression < 0.5, blast_radius <= service]
+  P1:
+    actions: [cache_flush, service_restart]
+    eval_gates: [error_budget_remaining > 20%]
 `}
           </pre>
           <h2>Metrics & SLOs</h2>
